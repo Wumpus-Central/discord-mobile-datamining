@@ -11,16 +11,16 @@ function getCollectibleTypeName(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl5 = tmp(1236).intl;
     return intl5.string(messagesProxyDefault.obi47v);
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+  } else if (tmp(1950).CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl4 = tmp(1236).intl;
     return intl4.string(messagesProxyDefault.RX8BMR);
-  } else if (tmp(1949).CollectiblesItemType.NAMEPLATE === type) {
+  } else if (tmp(1950).CollectiblesItemType.NAMEPLATE === type) {
     const intl3 = tmp(1236).intl;
     return intl3.string(messagesProxyDefault.nNGEHk);
-  } else if (tmp(1949).CollectiblesItemType.BUNDLE === type) {
+  } else if (tmp(1950).CollectiblesItemType.BUNDLE === type) {
     const intl2 = tmp(1236).intl;
     return intl2.string(messagesProxyDefault.VS1fKo);
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_FRAME === type) {
+  } else if (tmp(1950).CollectiblesItemType.PROFILE_FRAME === type) {
     const intl = tmp(1236).intl;
     return intl.string(messagesProxyDefault.JiIY1l);
   } else {

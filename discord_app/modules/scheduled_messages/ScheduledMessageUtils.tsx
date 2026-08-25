@@ -4,9 +4,10 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import isPremiumAtLeast from "../../utils/PremiumTypeUtils.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import regExp from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
 import regExpDefault from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
+import ScheduledMessageSendState from "ScheduledMessageTypes.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../records/MessageRecord.tsx";
 import closure_5 from "../../stores/UserStore.tsx";
@@ -32,7 +33,7 @@ _modDef38(true, "Config is missing scheduled message limit");
 ApexExperiment.enabled = false;
 ApexExperiment.limit = 0;
 ApexExperiment[2] = ApexExperiment;
-const obj1 = {
+let obj1 = {
   1: null,
   2: (arg0) => {
     const parsed = JSON.parse(arg0);
@@ -86,8 +87,8 @@ export const parseContentAndFlagsForSilentMessage = function parseContentAndFlag
   }
   return tmp4;
 };
-export const unparseContentAndFlagsForSilentMessage = function unparseContentAndFlagsForSilentMessage(arg0) {
-  ({ content, flags } = arg0);
+export const unparseContentAndFlagsForSilentMessage = function unparseContentAndFlagsForSilentMessage(scheduledMessage) {
+  ({ content, flags } = scheduledMessage);
   if (flags == null) {
     flags = 0;
   }
@@ -105,10 +106,10 @@ export const canUseScheduledMessages = function canUseScheduledMessages(location
   return store.getConfig({ location }).enabled;
 };
 export const getDefaultScheduledTime = function getDefaultScheduledTime() {
-  const obj = tDefault();
-  const addResult = tDefault().add(closure_9, "seconds");
-  const obj2 = tDefault();
-  const addResult1 = tDefault().startOf("hour").add(1, "hour");
+  const obj = hooksDefault();
+  const addResult = hooksDefault().add(closure_9, "seconds");
+  const obj2 = hooksDefault();
+  const addResult1 = hooksDefault().startOf("hour").add(1, "hour");
   let addResult2 = addResult1;
   if (addResult1.isBefore(addResult)) {
     addResult2 = addResult1.add(1, "hour");
@@ -140,10 +141,45 @@ export const convertServerScheduledMessageSend = function convertServerScheduled
     attachment_uploads = [];
   }
   obj[5] = attachment_uploads.map((filename) => ({ filename: filename.filename, uploadedFilename: filename.uploaded_filename, description: filename.description, title: filename.title }));
-  obj = { id: body.scheduled_message_id, content: body.scheduled_message.content, author: authStore.getUser(body.user_id), timestamp: tDefault(body.send_at_timestamp).toDate(), channel_id: body.scheduled_message.channel_id };
-  const obj4 = tDefault(body.send_at_timestamp);
+  obj = { id: body.scheduled_message_id, content: body.scheduled_message.content, author: authStore.getUser(body.user_id), timestamp: hooksDefault(body.send_at_timestamp).toDate(), channel_id: body.scheduled_message.channel_id };
+  const obj4 = hooksDefault(body.send_at_timestamp);
   obj[6] = new closure_4(obj);
   return obj;
+};
+export const getMessageForState = function getMessageForState(state) {
+  if (ScheduledMessageSendState.ScheduledMessageSendState.SCHEDULED === state) {
+    let obj = { isError: false, stateMessage: null };
+    const intl6 = tmp(1236).intl;
+    obj[1] = intl6.string(tmp(1236).t.Fn6Odn);
+    return obj;
+  } else if (tmp(11573).ScheduledMessageSendState.ERROR_CHANNEL_NOT_FOUND === state) {
+    obj = { isError: true, stateMessage: null };
+    const intl5 = tmp(1236).intl;
+    obj[1] = intl5.string(tmp(1236).t.v5O2dK);
+    return obj;
+  } else if (tmp(11573).ScheduledMessageSendState.ERROR_USER_NOT_FOUND === state) {
+    obj1 = { isError: true, stateMessage: null };
+    const intl4 = tmp(1236).intl;
+    obj1[1] = intl4.string(tmp(1236).t.j8uIfG);
+    return obj1;
+  } else if (tmp(11573).ScheduledMessageSendState.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES === state) {
+    const obj2 = { isError: true, stateMessage: null };
+    const intl3 = tmp(1236).intl;
+    obj2[1] = intl3.string(tmp(1236).t["w6zHX/"]);
+    return obj2;
+  } else if (tmp(11573).ScheduledMessageSendState.ERROR_SEND_FAILED === state) {
+    const obj3 = { isError: true, stateMessage: null };
+    const intl2 = tmp(1236).intl;
+    obj3[1] = intl2.string(tmp(1236).t.pflV7z);
+    return obj3;
+  } else if (tmp(11573).ScheduledMessageSendState.ERROR_SCHEDULED_MESSAGES_DISABLED === state) {
+    const obj4 = { isError: true, stateMessage: null };
+    const intl = tmp(1236).intl;
+    obj4[1] = intl.string(tmp(1236).t.j8uIfG);
+    return obj4;
+  } else {
+    tmp(1370).assertNever(state);
+  }
 };
 export const convertServerScheduledMessage = function convertServerScheduledMessage(channelId) {
   return { channelId: channelId.channel_id, content: channelId.content, type: channelId.type, flags: channelId.flags, messageReference: channelId.message_reference };

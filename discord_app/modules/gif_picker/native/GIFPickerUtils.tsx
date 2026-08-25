@@ -25,7 +25,7 @@ function transformFavoriteGifUrl(url) {
       const result1 = searchParams2.set("animated", "true");
       return str.toString();
     } else {
-      const tmp14Result = tmp14(9122);
+      const tmp14Result = tmp14(9902);
     }
     obj6 = isRefreshableAttachmentUrlAll;
     tmp14 = importAll;
@@ -58,7 +58,7 @@ let result = require("set").fileFinishedImporting("modules/gif_picker/native/GIF
 
 export const GIF_HEADER_HEIGHT = 56;
 export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
-  let obj = sortedFavoriteGIFs(10238);
+  let obj = sortedFavoriteGIFs(10089);
   sortedFavoriteGIFs = obj.useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
   obj = {

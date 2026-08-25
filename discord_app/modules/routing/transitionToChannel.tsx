@@ -2,7 +2,7 @@
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import transitionTo from "router_utils.tsx";
 import useGuildIdForChannelRoute from "useGuildIdForChannelRoute.tsx";
-import _modDef4775 from "../../actions/ChannelActionCreators.tsx";
+import _modDef4393 from "../../actions/ChannelActionCreators.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";
 import { Routes } from "../../Constants.tsx";
 
@@ -15,8 +15,8 @@ export const transitionToChannel = function transitionToChannel(id, openTextInVo
     const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
     const obj3 = useGuildIdForChannelRoute;
     const tmp7 = importDefault;
-    _modDef4775.preload(channel.guild_id, channel.id);
-    const obj4 = _modDef4775;
+    _modDef4393.preload(channel.guild_id, channel.id);
+    const obj4 = _modDef4393;
     const obj = { openChannel: true };
     const obj5 = transitionTo;
     const merged = Object.assign(openTextInVoiceIfVoiceChannel);
@@ -29,8 +29,8 @@ export const transitionToChannel = function transitionToChannel(id, openTextInVo
       prop = channel.isGuildVocal();
     }
     if (prop) {
-      tmp7(8703).updateChatOpen(channel.id, true);
-      const tmp7Result = tmp7(8703);
+      tmp7(4609).updateChatOpen(channel.id, true);
+      const tmp7Result = tmp7(4609);
     }
     const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id);
   }
@@ -71,8 +71,8 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
       const guildIdForGenericRedirect1 = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel1);
       const obj7 = useGuildIdForChannelRoute;
       const tmp20 = importDefault;
-      _modDef4775.preload(channel1.guild_id, channel1.id);
-      const obj8 = _modDef4775;
+      _modDef4393.preload(channel1.guild_id, channel1.id);
+      const obj8 = _modDef4393;
       obj = { openChannel: true };
       const obj9 = transitionTo;
       const merged1 = Object.assign(arg3);
@@ -85,8 +85,8 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
         prop = channel1.isGuildVocal();
       }
       if (prop) {
-        tmp20(8703).updateChatOpen(channel1.id, true);
-        const tmp20Result = tmp20(8703);
+        tmp20(4609).updateChatOpen(channel1.id, true);
+        const tmp20Result = tmp20(4609);
       }
       const CHANNELResult1 = Routes.CHANNEL(guildIdForGenericRedirect1, channel1.id);
     }

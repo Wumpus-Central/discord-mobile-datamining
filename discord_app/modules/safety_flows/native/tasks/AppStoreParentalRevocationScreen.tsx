@@ -2,13 +2,13 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../SafetyFlows.messages.js";
-import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import ModalScreen from "../../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../../design/components/Modal/native/ModalContent.native.tsx";
 import LinkExternalSmallIcon from "../../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
-import ModalFooter from "../../../../design/components/Modal/native/ModalFooter.native.tsx";
 import ModalActionButton from "../../../../design/components/Modal/native/ModalActionButton.native.tsx";
+import ModalFooter from "../../../../design/components/Modal/native/ModalFooter.native.tsx";
 import LogOutDisclaimerDefault from "../LogOutDisclaimer.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";

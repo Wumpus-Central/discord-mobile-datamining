@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../../parent_tools/FamilyCenter.messages.js";
-import openIncodeAgeVerificationModalDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import useSelectedTeen from "../../../parent_tools/hooks/useSelectedTeen.tsx";
+import openIncodeAgeVerificationModalDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import result2 from "../../family_center/ParentalControlledUserSettings.tsx";
 import shouldAgeVerifyForDMDefaultOff from "../../content_and_social/DefaultDMSettingsExperiment.tsx";
@@ -41,7 +41,7 @@ createToggle = {
         let obj = shouldAgeVerifyForDMDefaultOff;
         if (obj.shouldAgeVerifyForDMDefaultOff()) {
           obj = { entryPoint: null };
-          obj[0] = tmp2(5259).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS;
+          obj[0] = tmp2(7944).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS;
           const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
           const obj2 = openIncodeAgeVerificationModalDefault;
         }

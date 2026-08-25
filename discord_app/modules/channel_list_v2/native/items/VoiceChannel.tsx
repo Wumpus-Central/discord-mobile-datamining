@@ -32,7 +32,7 @@ function _handleVoiceChannelPress() {
           obj[0] = openMemberVerificationModal;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -93,7 +93,7 @@ function _handleVoiceChannelPress() {
           } else {
             openMemberVerificationModal.openGuildVoiceModal(guildId, "Channel List");
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp14) {
           c3 = tmp;

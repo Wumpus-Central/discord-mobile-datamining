@@ -5,9 +5,9 @@ import DismissibleContent from "../../../../../../discord_common/js/packages/pro
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
-import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
+import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import SearchField from "../../../../../design/components/TextField/native/SearchField.native.tsx";
 import getSearchEmptySource from "../../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
@@ -89,7 +89,7 @@ export default function DevToolsDismissableContentsScreen() {
   const tmp = callback4();
   const ref = first.useRef(null);
   importDefault = first.useRef(0);
-  let obj = ref(12583);
+  let obj = ref(10896);
   let tmp2 = useSafeAreaInsetsDefault();
   [dependencyMap, tmp5] = callback(obj.useLocalStorageState("devtools-dc-search", ""), 2);
   callback = tmp5;
@@ -140,7 +140,7 @@ export default function DevToolsDismissableContentsScreen() {
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
   const newUserMinAgeRequiredOverridden = stateFromStoresObject.newUserMinAgeRequiredOverridden;
   let tmp4 = callback(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  let tmp9 = callback(ref(14435).useForceBountiesSwipeUpNux(), 2);
+  let tmp9 = callback(ref(14465).useForceBountiesSwipeUpNux(), 2);
   const first2 = tmp9[0];
   callback4 = tmp11;
   const items1 = [tmp9[1]];
@@ -217,6 +217,6 @@ export default function DevToolsDismissableContentsScreen() {
   };
   obj[9] = callback4;
   obj[10] = callback3;
-  obj[1] = dailyCapOverridden(ref(8068).FlashList, obj);
+  obj[1] = dailyCapOverridden(ref(7890).FlashList, obj);
   return dailyCapOverridden(first1, obj);
 };

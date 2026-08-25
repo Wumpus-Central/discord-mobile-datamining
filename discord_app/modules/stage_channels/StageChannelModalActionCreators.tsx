@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/StageChannelModalActionCreators.tsx
-import _modDef4980 from "../../actions/SelectedChannelActionCreators.tsx";
+import _modDef5236 from "../../actions/SelectedChannelActionCreators.tsx";
 import openStageChannelSettingsAll from "StageChannelActionCreatorExtras.native.tsx";
 import _initializeDefault from "StageChannelNewUserManager.tsx";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -23,11 +23,11 @@ function connectToStage(channel, flag) {
     if (canResult) {
       let num = openStageChannelSettingsAll.shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
       if (num) {
-        const result = tmp7(8097).openStageBlockedUsersSheet(channel, () => {
+        const result = tmp7(7919).openStageBlockedUsersSheet(channel, () => {
           closure_1_11(closure_0, true);
         });
         num = 1;
-        const tmp7Result = tmp7(8097);
+        const tmp7Result = tmp7(7919);
       }
       tmp6 = num;
       const obj2 = openStageChannelSettingsAll;
@@ -40,7 +40,7 @@ function connectToStage(channel, flag) {
   _initializeDefault.initialize();
   const obj = closure_9;
   const obj4 = _initializeDefault;
-  const voiceChannel = _modDef4980.selectVoiceChannel(channel.id);
+  const voiceChannel = _modDef5236.selectVoiceChannel(channel.id);
   if (obj.getVoiceChannelId() !== channel.id) {
     return false;
   } else {
@@ -52,7 +52,7 @@ function connectToStage(channel, flag) {
     }
     return true;
   }
-  const obj5 = _modDef4980;
+  const obj5 = _modDef5236;
 }
 function connectAndOpen(channel, flag) {
   const _require = channel;
@@ -77,15 +77,15 @@ function connectAndOpen(channel, flag) {
     const obj = shouldShowVoiceChannelChangeConfirmation;
   }
   if (result) {
-    result = flag2(8097).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(7919).showChannelChangeConfirmationAlert(channel, () => {
       closure_1_11(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(8097);
+    const obj2 = flag2(7919);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(8097).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(8097);
+      flag2(7919).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(7919);
     }
   }
 }
@@ -113,7 +113,7 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -187,7 +187,7 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
               return flag;
             });
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp20) {
           c4 = tmp;

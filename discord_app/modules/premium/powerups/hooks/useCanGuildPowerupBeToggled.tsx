@@ -52,7 +52,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
           if (null != found1) {
             if (null != allPowerups[found1]) {
               const intl = callback(1236).intl;
-              const tmp11 = lib(2368);
+              const tmp11 = lib(2369);
               let title;
               if (allPowerups[found1] != null) {
                 title = tmp13.title;

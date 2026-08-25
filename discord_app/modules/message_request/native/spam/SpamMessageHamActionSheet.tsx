@@ -44,15 +44,15 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   obj = {
     user: stateFromStores,
     onError() {
-      let obj = callback(4097);
+      let obj = callback(4098);
       obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = recipientId(1236).intl;
       obj[1] = intl.string(recipientId(1236).t["EDYbS+"]);
-      obj[2] = callback(8594);
+      obj[2] = callback(8602);
       obj.open(obj);
     },
     onAcceptSuccess(arg0) {
-      callback(4346).hideActionSheet();
+      callback(4347).hideActionSheet();
     }
   };
   const messageRequestActions = obj1.useMessageRequestActions(obj);

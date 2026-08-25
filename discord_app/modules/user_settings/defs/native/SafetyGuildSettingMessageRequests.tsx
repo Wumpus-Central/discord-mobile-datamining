@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/SafetyGuildSettingMessageRequests.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
-import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
 import setDefault from "../../../../actions/AlertActionCreators.tsx";
-import AgeVerificationModalEntryPoint from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
-import openIncodeAgeVerificationModalDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
 import getSanitizedRestrictedGuilds from "../../../../utils/UserSettingsUtils.tsx";
+import openIncodeAgeVerificationModalDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
+import AgeVerificationModalEntryPoint from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import useDefaultGuildsRestricted from "../../privacy_and_safety/DefultGuildsRestrictedSetting.tsx";
 import shouldAgeVerifyForDMDefaultOff from "../../content_and_social/DefaultDMSettingsExperiment.tsx";
@@ -72,9 +72,9 @@ createToggle = {
       }
       tmp7 = hasItem;
     }
-    const MessageRequestRestrictedDefault = tmp(4069).MessageRequestRestrictedDefault;
+    const MessageRequestRestrictedDefault = tmp(4070).MessageRequestRestrictedDefault;
     const obj3 = useParentalControlledExplicitContentSettings;
-    const MessageRequestRestrictedGuildIds = tmp(4069).MessageRequestRestrictedGuildIds;
+    const MessageRequestRestrictedGuildIds = tmp(4070).MessageRequestRestrictedGuildIds;
     const setting1 = MessageRequestRestrictedGuildIds.useSetting();
     let tmp9 = !setting1.includes(selectedGuildId);
     let tmp10 = !tmp7;

@@ -32,7 +32,7 @@ function _getDeliveredNotifications() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -109,7 +109,7 @@ function _updateAndClearStaleNotifications() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -188,7 +188,7 @@ function _updateAndClearStaleNotifications() {
             }
           })();
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp8) {
         c2 = tmp;
@@ -213,8 +213,8 @@ let prototype = function NativeNotificationsManager() {
   applyArgumentsResult.handleAck = function handleAck(channelId) {
     channelId = channelId.channelId;
     if (obj.isIOS()) {
-      const result = callback(11628).setApplicationIconBadgeNumber(totalMentionCount.getTotalMentionCount());
-      const obj2 = callback(11628);
+      const result = callback(10861).setApplicationIconBadgeNumber(totalMentionCount.getTotalMentionCount());
+      const obj2 = callback(10861);
     }
     if (null != channelId) {
       const DCDNotificationManager = closure_4.DCDNotificationManager;
@@ -236,7 +236,7 @@ let prototype = function NativeNotificationsManager() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -382,7 +382,7 @@ let prototype = function NativeNotificationsManager() {
                 if (null == closure_3) {
                   c6 = 0;
                   logger = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   const _Map = Map;
                   map = new Map();

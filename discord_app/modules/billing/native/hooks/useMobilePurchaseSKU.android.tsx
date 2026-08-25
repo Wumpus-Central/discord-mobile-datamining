@@ -49,11 +49,12 @@ export default function useMobilePurchaseSKU(skuId) {
   closure_14 = tmp4;
   const tmp5 = onPurchaseComplete((setCheckoutSucceeded) => setCheckoutSucceeded.setCheckoutSucceeded);
   closure_15 = tmp5;
+  let tmp6 = onPurchaseComplete((contextMetadata) => contextMetadata.contextMetadata.loadId);
   closure_16 = analyticsData.useRef(false);
-  const tmp6 = undefined !== currentUser && currentUser.isStaff();
-  closure_17 = tmp6;
-  const tmp7 = platformSkuId(tmp[9])(() => callback(analyticsLocations[10]).getNewAnalyticsLoadId());
+  const tmp7 = undefined !== currentUser && currentUser.isStaff();
+  closure_17 = tmp7;
   flag2 = undefined;
+  let obj3 = _require(analyticsLocations[8]);
   if (giftParams != null) {
     flag2 = giftParams.isGift;
   }
@@ -61,8 +62,11 @@ export default function useMobilePurchaseSKU(skuId) {
     flag2 = false;
   }
   if (null == analyticsLoadId) {
-    callback = tmp7;
-    analyticsLoadId = tmp7;
+    if (tmp6 == null) {
+      tmp6 = tmp8;
+    }
+    callback = tmp6;
+    analyticsLoadId = tmp6;
   }
   const items = [onPurchaseComplete, tmp5];
   callback = obj4.useCallback(() => {
@@ -97,7 +101,7 @@ export default function useMobilePurchaseSKU(skuId) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -118,7 +122,7 @@ export default function useMobilePurchaseSKU(skuId) {
               if (lib.billingResult === onPurchasePending.OK) {
                 closure_1_8();
                 v0 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 let obj5 = platformSkuId(analyticsLocations[11]);
                 obj5.unsubscribe("GPLAY_PURCHASE_VERIFIED", closure_1_19);
@@ -215,7 +219,7 @@ export default function useMobilePurchaseSKU(skuId) {
       closure_1_1(closure_1_2[11]).unsubscribe("GPLAY_PURCHASE_VERIFICATION_FAILED", closure_20);
     };
   }, items3);
-  const items4 = [skuId, platformSkuId, tmp6, flag2, handlePremiumPurchase, onPurchaseComplete, onPurchaseError, freePurchaseCallback, analyticsLoadId, analyticsLocations, analyticsData, giftParams, flag, orderId, androidShopOrdersEnabled];
+  const items4 = [skuId, platformSkuId, tmp7, flag2, handlePremiumPurchase, onPurchaseComplete, onPurchaseError, freePurchaseCallback, analyticsLoadId, analyticsLocations, analyticsData, giftParams, flag, orderId, androidShopOrdersEnabled];
   return analyticsData.useCallback(callback(function*() {
     if (v02 === 2) {
       v02 = 3;
@@ -234,7 +238,7 @@ export default function useMobilePurchaseSKU(skuId) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -379,7 +383,7 @@ export default function useMobilePurchaseSKU(skuId) {
             c4 = 0;
             closure_16.current = false;
             v02 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
           obj9 = { productId: null, skuId: null, isOneTimePurchase: true, analyticsLoadId: null, analyticsLocations: null, analyticsData: null, isGift: null, giftInfoOptions: null, onPurchaseError: null };
           obj9[0] = closure_1;

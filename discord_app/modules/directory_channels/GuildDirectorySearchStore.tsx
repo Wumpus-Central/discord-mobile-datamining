@@ -61,7 +61,7 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(dispatcherDefaul
     });
     obj = {};
     const merged1 = Object.assign(dependencyMap2[channelId]);
-    obj = { results: items(11520).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
+    obj = { results: items(11871).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
     obj[query.query] = obj;
     dependencyMap2[channelId] = obj;
   },

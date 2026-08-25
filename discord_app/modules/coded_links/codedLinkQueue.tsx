@@ -1,6 +1,6 @@
 // discord_app/modules/coded_links/codedLinkQueue.tsx
 import timestampDefault from "../debug/Logger.tsx";
-import _isNativeReflectConstructDefault from "../../../_runtime/16725__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault from "../../../_runtime/16757__isNativeReflectConstruct.js";
 
 let closure_0 = new timestampDefault("codedLinkQueue");
 const obj = new _isNativeReflectConstructDefault({ concurrency: 5, intervalCap: 10, interval: 2000 });

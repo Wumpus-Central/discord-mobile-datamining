@@ -20,9 +20,9 @@ function validateDiscordTag(arr) {
       }
       obj[2] = str2.length;
       obj[3] = tmp4[0].length;
-      let tmp5Result = tmp5(8818);
+      let tmp5Result = tmp5(9085);
       obj[4] = tmp5Result.isEmail(arr);
-      tmp5Result = tmp5(8818);
+      tmp5Result = tmp5(9085);
       obj[5] = tmp5Result.isInvite(arr);
       obj[6] = regex.test(arr);
       obj.track(constants2.FRIEND_REQUEST_FAILED, obj);

@@ -1,7 +1,7 @@
 // discord_app/stores/GiftCodeStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import tDefault from "../../_runtime/03978_t.js";
+import hooksDefault from "../../_runtime/03979_hooks.js";
 import _resolveGiftCode from "../utils/GiftCodeUtils.tsx";
 import closure_3 from "../records/GiftCodeRecord.tsx";
 import ME from "../Constants.tsx";
@@ -17,14 +17,14 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4263).Timeout();
+      const timeout = new code(4264).Timeout();
       closure_7[code] = timeout;
       value = obj.get(code);
       if (null != value) {
         if (null != value.expiresAt) {
           const expiresAt = value.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - tDefault().valueOf();
+          const diff = valueOfResult - hooksDefault().valueOf();
           if (diff <= 0) {
             obj.delete(code);
             delete tmp2[tmp];
@@ -105,7 +105,7 @@ function updateGiftCode(giftCode) {
               }
             });
           }
-          const obj4 = tDefault();
+          const obj4 = hooksDefault();
         }
       }
       tmp18 = closure_7;

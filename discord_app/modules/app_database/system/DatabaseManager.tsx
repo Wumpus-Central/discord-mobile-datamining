@@ -29,7 +29,7 @@ function _trySpeculativelyOpenDatabaseAsync() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -252,7 +252,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   }
   let tmp3 = null == value;
   if (tmp3) {
-    tmp3 = stateResult !== callback(1956).DatabaseState.Open;
+    tmp3 = stateResult !== callback(1957).DatabaseState.Open;
   }
   if (tmp3) {
     self.remove(id);
@@ -293,7 +293,7 @@ function carefullySpeculativelyOpen(userId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

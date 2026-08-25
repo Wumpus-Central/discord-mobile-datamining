@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemButton.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04761_LinearGradient.js";
-import registerAssetDefault from "../../../../../_runtime/07394_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/08213_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/09725_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/10041_registerAsset.js";
-import registerAssetDefault5 from "../../../../../_runtime/10325_registerAsset.js";
-import registerAssetDefault6 from "../../../../../_runtime/12441_registerAsset.js";
-import registerAssetDefault7 from "../../../../../_runtime/12444_registerAsset.js";
-import registerAssetDefault8 from "../../../../../_runtime/12445_registerAsset.js";
-import registerAssetDefault9 from "../../../../../_runtime/12446_registerAsset.js";
-import registerAssetDefault10 from "../../../../../_runtime/12447_registerAsset.js";
-import registerAssetDefault11 from "../../../../../_runtime/12448_registerAsset.js";
+import LinearGradientDefault from "../../../../../_runtime/04826_LinearGradient.js";
+import registerAssetDefault from "../../../../../_runtime/06121_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/08209_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/09262_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/09266_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/09267_registerAsset.js";
+import registerAssetDefault6 from "../../../../../_runtime/09268_registerAsset.js";
+import registerAssetDefault7 from "../../../../../_runtime/09269_registerAsset.js";
+import registerAssetDefault8 from "../../../../../_runtime/09270_registerAsset.js";
+import registerAssetDefault9 from "../../../../../_runtime/09335_registerAsset.js";
+import registerAssetDefault10 from "../../../../../_runtime/09888_registerAsset.js";
+import registerAssetDefault11 from "../../../../../_runtime/10176_registerAsset.js";
 import keysDefault from "useDesignSystemSettingsState.tsx";
-import registerAssetDefault12 from "../../../../../_runtime/14964_registerAsset.js";
+import registerAssetDefault12 from "../../../../../_runtime/14994_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -76,7 +76,7 @@ function ExampleButton(arg0) {
   obj[8] = tmpResult;
   obj[9] = iconPosition;
   obj[10] = buttonScale;
-  return closure_9(enableLoadingState(4750).Button, obj);
+  return closure_9(enableLoadingState(4815).Button, obj);
 }
 function ExampleIconButton(arg0) {
   ({ variant, showLabel } = arg0);
@@ -119,7 +119,7 @@ function ExampleIconButton(arg0) {
     obj[2] = str2;
     obj[4] = tmp5;
     obj[5] = variant;
-    obj[6] = tmp(7394);
+    obj[6] = tmp(6121);
   } else {
     obj = { disabled: null, onPress: null, accessibilityLabel: null, loading: null, variant: null, size: null, icon: null };
     obj[0] = showDisabled;
@@ -134,9 +134,9 @@ function ExampleIconButton(arg0) {
     obj[3] = tmp5;
     obj[4] = variant;
     obj[5] = tmp3.buttonSize;
-    obj[6] = tmp(7394);
+    obj[6] = tmp(6121);
   }
-  return closure_9(enableLoadingState(8074).IconButton, obj);
+  return closure_9(enableLoadingState(7896).IconButton, obj);
 }
 function ExampleImageButton(arg0) {
   ({ image, label, showLabel } = arg0);
@@ -186,15 +186,15 @@ function ExampleImageButton(arg0) {
     obj[4] = tmp.buttonSize;
     obj[5] = image;
   }
-  return closure_9(enableLoadingState(12450).ImageButton, obj);
+  return closure_9(enableLoadingState(9272).ImageButton, obj);
 }
 function ExampleToggleButton() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
   importDefault = tmp[1];
-  let obj = first(13587);
+  let obj = first(13622);
   obj = { on: null, off: null };
-  obj = { text: "Unfollow", icon: registerAssetDefault4 };
+  obj = { text: "Unfollow", icon: registerAssetDefault10 };
   obj[0] = obj;
   obj[1] = { text: "Follow", icon: registerAssetDefault2 };
   const toggleButtonProps = obj.useToggleButtonProps(obj, first);
@@ -205,17 +205,17 @@ function ExampleToggleButton() {
   };
   obj2.variant = "secondary";
   obj2.size = "md";
-  return callback2(first(4750).Button, obj2);
+  return callback2(first(4815).Button, obj2);
 }
 function ExampleIconToggleButton() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
   importDefault = tmp[1];
-  let obj = first(13587);
+  let obj = first(13622);
   obj = { on: null, off: null };
-  obj = { variant: "destructive", accessibilityLabel: "Mute", icon: registerAssetDefault3 };
+  obj = { variant: "destructive", accessibilityLabel: "Mute", icon: registerAssetDefault9 };
   obj[0] = obj;
-  obj[1] = { variant: "secondary", accessibilityLabel: "Mute", icon: registerAssetDefault3 };
+  obj[1] = { variant: "secondary", accessibilityLabel: "Mute", icon: registerAssetDefault9 };
   const toggleIconButtonProps = obj.useToggleIconButtonProps(obj, first);
   const obj2 = {};
   const merged = Object.assign(toggleIconButtonProps);
@@ -223,7 +223,7 @@ function ExampleIconToggleButton() {
     callback(!first);
   };
   obj2.size = "md";
-  return callback2(first(8074).IconButton, obj2);
+  return callback2(first(7896).IconButton, obj2);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ LIGHT_BACKGROUND_GRADIENT_PRESETS: error, DARK_BACKGROUND_GRADIENT_PRESETS: closure_8 } = ThemeTypes);
@@ -377,7 +377,7 @@ export default function UserSettingsDesignSystemButton() {
       return closure_1_9(closure_1_5, obj, variant);
     })
   };
-  obj22[4] = callback2(require("../../../../design/components/Button/native/Button.native.tsx").Button.Icon, { source: registerAssetDefault5 });
+  obj22[4] = callback2(require("../../../../design/components/Button/native/Button.native.tsx").Button.Icon, { source: registerAssetDefault11 });
   obj21[1] = callback2(require("../../../../design/components/Button/native/Button.native.tsx").Button, obj22);
   const items9 = [callback2(closure_5, obj21), ];
   const obj24 = { style: tmp.buttonContainer, children: null };
@@ -390,8 +390,8 @@ export default function UserSettingsDesignSystemButton() {
     size: "md",
     icon: null
   };
-  const obj23 = { source: registerAssetDefault5 };
-  obj25[4] = callback2(require("../../../../design/components/Button/native/Button.native.tsx").Button.Icon, { variant: "entity", source: registerAssetDefault6 });
+  const obj23 = { source: registerAssetDefault11 };
+  obj25[4] = callback2(require("../../../../design/components/Button/native/Button.native.tsx").Button.Icon, { variant: "entity", source: registerAssetDefault3 });
   obj24[1] = callback2(require("../../../../design/components/Button/native/Button.native.tsx").Button, obj25);
   items9[1] = callback2(closure_5, obj24);
   obj20[0] = items9;
@@ -399,7 +399,7 @@ export default function UserSettingsDesignSystemButton() {
   obj18[0] = items8;
   items1[5] = callback3(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj18);
   const obj27 = { children: null };
-  const obj26 = { variant: "entity", source: registerAssetDefault6 };
+  const obj26 = { variant: "entity", source: registerAssetDefault3 };
   const items10 = [callback2(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, { style: tmp.container, children: callback2(require("../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-lg/bold", children: "Buttons with various text lengths" }) }), ];
   const obj29 = { children: null };
   const obj30 = { style: tmp.buttonContainer, children: null };
@@ -411,7 +411,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: registerAssetDefault5
+    icon: registerAssetDefault11
   });
   const items11 = [callback2(closure_5, obj30), , , ];
   const obj32 = { style: tmp.buttonContainer, children: null };
@@ -422,7 +422,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: registerAssetDefault5
+    icon: registerAssetDefault11
   };
   obj32[1] = callback2(require("../../../../design/components/Button/native/Button.native.tsx").Button, {
     onPress() {
@@ -431,7 +431,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: registerAssetDefault5,
+    icon: registerAssetDefault11,
     iconPosition: "end"
   });
   items11[1] = callback2(closure_5, obj32);
@@ -442,7 +442,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: registerAssetDefault5,
+    icon: registerAssetDefault11,
     iconPosition: "end"
   };
   items11[2] = callback2(closure_5, { style: tmp.buttonContainer, children: callback2(require("../../../../design/components/Button/native/Button.native.tsx").Button, obj35) });
@@ -538,17 +538,17 @@ export default function UserSettingsDesignSystemButton() {
       return closure_1_9(closure_1_5, obj, variant);
     })
   };
-  obj55[1] = callback2(ExampleImageButton, { image: registerAssetDefault9, label: "Telegram" });
+  obj55[1] = callback2(ExampleImageButton, { image: registerAssetDefault6, label: "Telegram" });
   const items22 = [callback2(closure_5, obj55), , ];
   const obj57 = { style: items23, children: null };
   items23 = [tmp.buttonContainer];
-  const obj56 = { image: registerAssetDefault9, label: "Telegram" };
-  obj57[1] = callback2(ExampleImageButton, { image: registerAssetDefault11, label: "WhatsApp" });
+  const obj56 = { image: registerAssetDefault6, label: "Telegram" };
+  obj57[1] = callback2(ExampleImageButton, { image: registerAssetDefault8, label: "WhatsApp" });
   items22[1] = callback2(closure_5, obj57);
   const obj59 = { style: items24, children: null };
   items24 = [tmp.buttonContainer];
-  const obj58 = { image: registerAssetDefault11, label: "WhatsApp" };
-  obj59[1] = callback2(ExampleImageButton, { image: registerAssetDefault10, label: "Twitter" });
+  const obj58 = { image: registerAssetDefault8, label: "WhatsApp" };
+  obj59[1] = callback2(ExampleImageButton, { image: registerAssetDefault7, label: "Twitter" });
   items22[2] = callback2(closure_5, obj59);
   obj54[0] = items22;
   items20[1] = callback3(closure_5, obj54);
@@ -560,7 +560,7 @@ export default function UserSettingsDesignSystemButton() {
   obj62[1] = items25;
   const items26 = [callback3(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj62), , ];
   const obj63 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
-  const obj60 = { image: registerAssetDefault10, label: "Twitter" };
+  const obj60 = { image: registerAssetDefault7, label: "Twitter" };
   obj63[2] = callback2(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: closure_12.map((variant) => callback2(closure_18, { variant, showLabel: true }, variant)) });
   items26[1] = callback2(closure_6, obj63);
   const obj65 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
@@ -634,29 +634,29 @@ export default function UserSettingsDesignSystemButton() {
   const obj72 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
   const obj73 = { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: null };
   const obj71 = { style: tmp.container, children: callback2(require("../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-lg/bold", children: "ImageButton with a label" }) };
-  const items29 = [callback2(ExampleImageButton, { image: registerAssetDefault8, label: "Label", showLabel: true }), , ];
-  const obj74 = { image: registerAssetDefault8, label: "Label", showLabel: true };
-  items29[1] = callback2(ExampleImageButton, { image: registerAssetDefault6, label: "Label", showLabel: true });
-  const obj75 = { image: registerAssetDefault6, label: "Label", showLabel: true };
-  items29[2] = callback2(ExampleImageButton, { image: registerAssetDefault7, label: "Label", showLabel: true });
+  const items29 = [callback2(ExampleImageButton, { image: registerAssetDefault5, label: "Label", showLabel: true }), , ];
+  const obj74 = { image: registerAssetDefault5, label: "Label", showLabel: true };
+  items29[1] = callback2(ExampleImageButton, { image: registerAssetDefault3, label: "Label", showLabel: true });
+  const obj75 = { image: registerAssetDefault3, label: "Label", showLabel: true };
+  items29[2] = callback2(ExampleImageButton, { image: registerAssetDefault4, label: "Label", showLabel: true });
   obj73[3] = items29;
   obj72[2] = callback3(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj73);
   items28[1] = callback2(closure_6, obj72);
   const obj77 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
   const obj78 = { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: null };
-  const obj76 = { image: registerAssetDefault7, label: "Label", showLabel: true };
-  const items30 = [callback2(ExampleImageButton, { image: registerAssetDefault9, label: "Supercalifragilisticexpialidocious", showLabel: true }), , ];
-  const obj79 = { image: registerAssetDefault9, label: "Supercalifragilisticexpialidocious", showLabel: true };
-  items30[1] = callback2(ExampleImageButton, { image: registerAssetDefault11, label: "Supercalifragilisticexpialidocious", showLabel: true });
-  const obj80 = { image: registerAssetDefault11, label: "Supercalifragilisticexpialidocious", showLabel: true };
-  items30[2] = callback2(ExampleImageButton, { image: registerAssetDefault10, label: "Supercalifragilisticexpialidocious", showLabel: true });
+  const obj76 = { image: registerAssetDefault4, label: "Label", showLabel: true };
+  const items30 = [callback2(ExampleImageButton, { image: registerAssetDefault6, label: "Supercalifragilisticexpialidocious", showLabel: true }), , ];
+  const obj79 = { image: registerAssetDefault6, label: "Supercalifragilisticexpialidocious", showLabel: true };
+  items30[1] = callback2(ExampleImageButton, { image: registerAssetDefault8, label: "Supercalifragilisticexpialidocious", showLabel: true });
+  const obj80 = { image: registerAssetDefault8, label: "Supercalifragilisticexpialidocious", showLabel: true };
+  items30[2] = callback2(ExampleImageButton, { image: registerAssetDefault7, label: "Supercalifragilisticexpialidocious", showLabel: true });
   obj78[3] = items30;
   obj77[2] = callback3(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj78);
   items28[2] = callback2(closure_6, obj77);
   obj70[1] = items28;
   items1[13] = callback3(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj70);
   const obj82 = { spacing: 24, children: null };
-  const obj81 = { image: registerAssetDefault10, label: "Supercalifragilisticexpialidocious", showLabel: true };
+  const obj81 = { image: registerAssetDefault7, label: "Supercalifragilisticexpialidocious", showLabel: true };
   const items31 = [callback2(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, { style: tmp.container, children: callback2(require("../../../../design/components/Text/native/Text.tsx").Text, { variant: "heading-lg/bold", children: "Mixing buttons" }) }), ];
   const obj84 = { direction: "horizontal", style: tmp.container, children: null };
   const items32 = [callback2(ExampleButton, { variant: "secondary", text: "Search", grow: true }), callback2(ExampleIconButton, { variant: "secondary" })];

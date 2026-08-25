@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/server/commands/certifiedDevices.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import set2 from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import DesktopSources from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
+import set2 from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import prototypeDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import RPC_SCOPE_CONFIG from "../../Constants.tsx";
@@ -65,7 +65,7 @@ obj[2] = function handler(socket) {
     const tmp10 = new prototypeDefault(obj, "No application.");
     throw tmp10;
   } else {
-    obj = devices(13903);
+    obj = devices(13938);
     obj.setCertifiedDevices(socket.application.id, devices.map((type) => {
       const related = type.related;
       return {

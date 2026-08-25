@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/useUserListData.tsx
 import applyDefault from "../../../../../../_runtime/00012_apply.js";
 import dispatcherDefault from "../../../../../Dispatcher.tsx";
+import getGuildNameSuggestionDefault from "../../../../../utils/GuildUtils.tsx";
 import getAllDefault from "../../../../app_database/modules/UserSearchItems.tsx";
 import cleanString from "../../../UserSearchUtils.tsx";
-import getGuildNameSuggestionDefault from "../../../../../utils/GuildUtils.tsx";
 import getTransformedUserDefault from "../../../../autocompleter/UserSearchManager.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";

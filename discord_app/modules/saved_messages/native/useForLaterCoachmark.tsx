@@ -1,5 +1,5 @@
 // discord_app/modules/saved_messages/native/useForLaterCoachmark.tsx
-import registerAssetDefault from "../../../../_runtime/12787_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12774_registerAsset.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -23,7 +23,7 @@ export default function useForLaterCoachmark(targetRef) {
   } else {
     items1 = [];
   }
-  let tmpResult = tmp(7404);
+  let tmpResult = tmp(6131);
   const tmp4 = callback(tmpResult.useSelectedDismissibleContent(items1, undefined, true), 2);
   const first = tmp4[0];
   closure_1 = tmp6;
@@ -43,7 +43,7 @@ export default function useForLaterCoachmark(targetRef) {
     };
     return obj;
   }, items2);
-  tmpResult = tmp(9351);
+  tmpResult = tmp(8800);
   const coachmark = tmpResult.useCoachmark(targetRef, memo);
   return tmp4[1];
 };

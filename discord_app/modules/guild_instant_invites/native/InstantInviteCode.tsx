@@ -1,8 +1,8 @@
 // discord_app/modules/guild_instant_invites/native/InstantInviteCode.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import computeChannelName from "../../channel/useChannelName.tsx";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
 import componentDidMountDefault from "../../../components_native/common/CountDown.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
@@ -72,11 +72,11 @@ export default function InstantInviteCode(invite) {
   const memo = React.useMemo(() => closure_1_5(invite.channel), items);
   obj = { children: null };
   obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
-  const items1 = [callback(invite(4739).Text, obj), ];
+  const items1 = [callback(invite(4376).Text, obj), ];
   const tmp = callback3();
   items1[1] = callback(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj[0] = items1;
-  obj[1] = callback2(invite(4738).Stack, obj);
+  obj[1] = callback2(invite(4813).Stack, obj);
   return callback(View, obj);
 };
 export { InstantInviteDetails };

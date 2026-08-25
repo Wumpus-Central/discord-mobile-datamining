@@ -36,7 +36,7 @@ function _fetchCurrentAppIcon() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -130,7 +130,7 @@ function _setAppIcon() {
       if (1 === tmp8) {
         c5 = 0;
         dependencyMap = closure_4;
-        obj1 = callback2(4097);
+        obj1 = callback2(4098);
         const obj2 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
         const intl = callback(1236).intl;
         obj2[1] = intl.string(callback(1236).t["c76eo/"]);
@@ -148,7 +148,7 @@ function _setAppIcon() {
         obj3[0] = callback;
         obj3[1] = callback2;
         let TIER_2 = null;
-        if (callback !== callback(7986).FreemiumAppIconIds.DEFAULT) {
+        if (callback !== callback(7808).FreemiumAppIconIds.DEFAULT) {
           TIER_2 = TIER_2.TIER_2;
         }
         obj3[2] = TIER_2;
@@ -192,7 +192,7 @@ function useCurrentAppIcon() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -228,7 +228,7 @@ function useCurrentAppIcon() {
           callback = arg1;
           callback(callback);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp12) {
         c3 = tmp;
@@ -274,7 +274,7 @@ export const useAppIcons = function useAppIcons() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -310,7 +310,7 @@ export const useAppIcons = function useAppIcons() {
           callback = arg1;
           callback(callback);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp12) {
         c3 = tmp;

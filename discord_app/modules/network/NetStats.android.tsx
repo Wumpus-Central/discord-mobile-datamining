@@ -153,7 +153,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -225,7 +225,7 @@ prototype["track"] = function track() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -297,19 +297,19 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
     closure_1_19();
     const obj7 = closure_1_1(closure_1_2[13]);
     let callback = yield obj7.getAppFirstVisibleTimestamp();
-    const obj4 = callback(5059);
+    const obj4 = callback(7069);
     let lib = yield obj4.getSession();
     const obj5 = { type: null, properties: null };
     obj5[0] = constants.APP_NETWORK_USAGE;
     const obj6 = {};
-    const merged = Object.assign(callback(5071).getDeviceMetadata());
+    const merged = Object.assign(callback(7081).getDeviceMetadata());
     const _Date = Date;
     obj6.client_track_timestamp = Date.now();
     if (lib != null) {
       const uuid = lib.uuid;
     }
     obj6.client_heartbeat_session_id = uuid;
-    obj = callback(5071);
+    obj = callback(7081);
     obj6.load_id = obj.currentLoadId();
     obj6.num_guilds = guildCount.getGuildCount();
     obj6.was_authenticated = lib(9).wasAuthenticated;
@@ -366,7 +366,7 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
     obj6.download_bytes_received = closure_10.downloadBytesReceived;
     obj6.download_num_requests = closure_10.downloadNumRequests;
     obj6.media_player_bytes_received = closure_10.mediaPlayerBytesReceived;
-    obj1 = callback(5070);
+    obj1 = callback(7080);
     obj6.rtc_bytes = obj1.getRTCTotalBytes();
     obj6.num_message_sends = closure_15;
     if (0 !== closure_15) {

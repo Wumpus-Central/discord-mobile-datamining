@@ -2,10 +2,10 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
-import _modDef4119 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4120 from "../../reanimated/ReanimatedRexport.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import useCanManageGuildOfficialMessages from "../../messages/GuildOfficialMessageUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/14696_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/14726_registerAsset.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -61,7 +61,7 @@ function MessagePreview(theme) {
   items2[1] = callback2(closure_5, obj2);
   obj[1] = items2;
   obj[2] = callback2(closure_5, obj);
-  return callback(_modDef4119.View, obj);
+  return callback(_modDef4120.View, obj);
 }
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: c9, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: c10 } = MESSAGE_GROUP_SPACING);

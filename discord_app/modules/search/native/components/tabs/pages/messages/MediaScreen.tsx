@@ -23,12 +23,12 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
   let onPressMediaItem;
   let callback1;
   ({ isFocused, width } = searchContext);
-  let obj = searchContext(16006);
+  let obj = searchContext(16038);
   const contentContainerStyles = obj.useContentContainerStyles();
-  const tmp2 = tab(15966)(width);
+  const tmp2 = tab(15998)(width);
   dependencyMap = tmp2;
-  searchMessages = searchContext(16011).useSearchMessages(searchContext, tab);
-  const obj2 = searchContext(16011);
+  searchMessages = searchContext(16043).useSearchMessages(searchContext, tab);
+  const obj2 = searchContext(16043);
   let items = [placeholderCount, memo];
   const items1 = [searchMessages];
   const stateFromStoresArray = searchContext(589).useStateFromStoresArray(items, () => {
@@ -58,14 +58,14 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
   }, items1);
   let obj3 = searchContext(589);
   obj = { searchContext, tab, placeholderHeight: tmp2, numColumns: closure_9 };
-  const searchMessagesLoadingState = searchContext(16012).useSearchMessagesLoadingState(obj);
+  const searchMessagesLoadingState = searchContext(16044).useSearchMessagesLoadingState(obj);
   placeholderCount = searchMessagesLoadingState.placeholderCount;
   const items2 = [searchMessages, searchContext, stateFromStoresArray];
   ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
   memo = searchMessages.useMemo(() => {
     if (null != searchMessages) {
-      let media = searchContext(11558).getMedia(searchContext, tmp);
-      const obj = searchContext(11558);
+      let media = searchContext(11905).getMedia(searchContext, tmp);
+      const obj = searchContext(11905);
     } else {
       media = closure_1_12;
     }
@@ -73,7 +73,7 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
   }, items2);
   const items3 = [searchContext, tab];
   const callback = searchMessages.useCallback(() => {
-    const nextMessages = tab(11558).fetchNextMessages(searchContext, tab, () => {
+    const nextMessages = tab(11905).fetchNextMessages(searchContext, tab, () => {
       let obj = closure_1_0(closure_1_2[15]);
       if (obj.isModalOpen(closure_1_13)) {
         let tmpResult = tmp(tmp2[16]);
@@ -97,8 +97,8 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
       }
     });
   }, items3);
-  let obj4 = searchContext(16012);
-  onPressMediaItem = searchContext(15963).useOnPressMediaItem({ searchContext, allMediaResults: memo, onEndReached: callback, onEndReachedThreshold: 500 });
+  let obj4 = searchContext(16044);
+  onPressMediaItem = searchContext(15995).useOnPressMediaItem({ searchContext, allMediaResults: memo, onEndReached: callback, onEndReachedThreshold: 500 });
   const items4 = [onPressMediaItem, searchContext, searchMessages];
   callback1 = searchMessages.useCallback((media) => {
     media = media.media;
@@ -106,20 +106,20 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
     if (searchMessages != null) {
       found = searchMessages.find((id) => id.id === media.messageId);
     }
-    let obj = searchContext(14246);
+    let obj = searchContext(14276);
     if (obj.shouldAgeVerifyForSearchMedia(media, found)) {
       obj = { entryPoint: null };
-      obj[0] = tmp2(5259).AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW;
-      const result = tab(5433).showAgeVerificationGetStartedModal(obj);
-      const obj4 = tab(5433);
+      obj[0] = tmp2(7944).AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW;
+      const result = tab(7942).showAgeVerificationGetStartedModal(obj);
+      const obj4 = tab(7942);
     } else {
       obj = { searchContext: null, channelId: null, messageId: null, index: null };
       obj[0] = media;
       ({ channelId: obj3[1], messageId: obj3[2] } = media);
       obj[3] = arg1;
-      const result1 = tmp2(16013).trackMessageItemPress(obj);
+      const result1 = tmp2(16045).trackMessageItemPress(obj);
       onPressMediaItem(media, media.originView);
-      const tmp2Result = tmp2(16013);
+      const tmp2Result = tmp2(16045);
     }
   }, items4);
   const items5 = [callback1, memo, tmp2, placeholderCount];
@@ -146,7 +146,7 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
       obj[0] = closure_1_9;
       obj[1] = items.length;
       obj[2] = tmp2;
-      const adjustedPlaceholderCount = searchContext(16017).getAdjustedPlaceholderCount(obj);
+      const adjustedPlaceholderCount = searchContext(16049).getAdjustedPlaceholderCount(obj);
       for (let num = 0; num < adjustedPlaceholderCount; num = num + 1) {
         obj = { type: null, key: null, props: null };
         let tmp3 = closure_1_8;
@@ -158,7 +158,7 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
         obj[0] = dependencyMap;
         let tmp5 = searchContext;
         let tmp6 = dependencyMap;
-        let obj3 = searchContext(11558);
+        let obj3 = searchContext(11905);
         obj1 = { itemIndex: null, numItems: null, numColumns: null, spacing: null };
         obj1[0] = length + num;
         let tmp7 = memo;
@@ -171,17 +171,17 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
         obj[2] = obj;
         let arr = items.push(obj);
       }
-      const obj5 = searchContext(16017);
+      const obj5 = searchContext(16049);
     }
     return items;
   }, items5);
   obj = { data: memo1, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.mediaContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null };
-  const obj6 = searchContext(15963);
-  obj[5] = searchContext(15970).MediaVerticalSeparator;
+  const obj6 = searchContext(15995);
+  obj[5] = searchContext(16002).MediaVerticalSeparator;
   obj[6] = closure_9;
   obj[7] = isFirstPageLoading;
   obj[8] = isNextPageLoading;
-  return jsx(tab(16013), { data: memo1, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.mediaContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null });
+  return jsx(tab(16045), { data: memo1, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.mediaContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null });
 });
 let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/MediaScreen.tsx");
 

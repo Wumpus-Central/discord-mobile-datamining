@@ -13,13 +13,13 @@ export const getFeedbackModalSadDesaturatedSource = function getFeedbackModalSad
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(10857);
+      return callback(11181);
     },
     darker() {
-      return callback(10858);
+      return callback(11182);
     },
     light() {
-      return callback(10859);
+      return callback(11183);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const useFeedbackModalSadDesaturatedSource = function useFeedbackModalSad
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(10857);
+      return callback(11181);
     },
     darker() {
-      return callback(10858);
+      return callback(11182);
     },
     light() {
-      return callback(10859);
+      return callback(11183);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -43,13 +43,13 @@ export const FeedbackModalSadDesaturated = function FeedbackModalSadDesaturated(
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(10857);
+      return callback(11181);
     },
     darker() {
-      return callback(10858);
+      return callback(11182);
     },
     light() {
-      return callback(10859);
+      return callback(11183);
     }
   };
   obj = {};

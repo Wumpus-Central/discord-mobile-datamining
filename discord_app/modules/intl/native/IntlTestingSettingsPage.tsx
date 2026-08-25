@@ -2,9 +2,9 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import tDefault from "../../../../_runtime/03978_t.js";
-import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import hooksDefault from "../../../../_runtime/03979_hooks.js";
 import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import messagesProxyDefault from "../messages/Test.messages.js";
 import messagesProxyDefault2 from "../messages/SecondTest.messages.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -36,7 +36,7 @@ function TestLocaleSelector() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -71,7 +71,7 @@ function TestLocaleSelector() {
             obj = closure_1_1(closure_1_2[11]);
             obj.updateLocale(closure_0);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp14) {
           c4 = tmp;
@@ -103,14 +103,14 @@ function LocaleInfo() {
     return items;
   }), 2);
   const first = tmp[0];
-  [tmp4, require] = callback(React.useState(tDefault.locale), 2);
+  [tmp4, require] = callback(React.useState(hooksDefault.locale), 2);
   const items1 = [first];
   const effect = React.useEffect(() => {
     const timerId = setTimeout(() => {
       callback(closure_1_1(closure_1_2[14]).locale());
     }, 0);
   }, items1);
-  obj1 = tDefault;
+  obj1 = hooksDefault;
   obj = { label: "Active System", trailing: callback3(TableRowInner.TableRow.TrailingText, { text: "@discord/intl" }) };
   const items2 = [callback3(TableRowInner.TableRow, obj), , , , ];
   obj = { label: "App locale", trailing: callback3(TableRowInner.TableRow.TrailingText, { text: first }) };
@@ -118,7 +118,7 @@ function LocaleInfo() {
   obj1 = { label: "System locale", trailing: callback3(TableRowInner.TableRow.TrailingText, { text: tmp[1] }) };
   items2[2] = callback3(TableRowInner.TableRow, obj1);
   const obj2 = { label: "@discord/intl locale", trailing: null };
-  const tmp3 = callback(React.useState(tDefault.locale), 2);
+  const tmp3 = callback(React.useState(hooksDefault.locale), 2);
   const tmp6 = closure_11;
   const tmp7 = callback3;
   obj2[1] = callback3(TableRowInner.TableRow.TrailingText, { text: getSystemLocale.intl.currentLocale });
@@ -185,7 +185,7 @@ export default function IntlTestingSettingsPage() {
   obj6[1] = intl6.format(messagesProxyDefault.XOdbAy, {
     username: "some user",
     usernameHook(children) {
-      obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: callback2(callback(4739).Text, obj) };
+      obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: callback2(callback(4376).Text, obj) };
       obj = { variant: "text-sm/normal", color: "text-overlay-light", children };
       return callback2(closure_6, obj);
     }

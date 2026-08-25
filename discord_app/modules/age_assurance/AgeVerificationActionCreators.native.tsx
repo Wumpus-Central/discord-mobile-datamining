@@ -1,14 +1,16 @@
 // discord_app/modules/age_assurance/AgeVerificationActionCreators.native.tsx
-import _modDef4093 from "../../lib/native/Linking.tsx";
+import _modDef4094 from "../../lib/native/Linking.tsx";
+import useAlertStore from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import ManualReviewPendingAlertModalDefault from "native/ManualReviewPendingAlertModal.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../stores/UserStore.tsx";
 import set from "AgeVerificationConstants.tsx";
-import { AGE_VERIFICATION_INCODE_PATH as closure_9 } from "AgeVerificationIncodeWebViewConstants.tsx";
+import { AGE_VERIFICATION_INCODE_PATH as closure_10 } from "AgeVerificationIncodeWebViewConstants.tsx";
 import { NativePermissionTypes } from "../native_permissions/NativePermissionConstants.tsx";
 import { SafetyToastType } from "../safety_common/Constants.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+require = arg1;
 function openIncodeAgeVerificationModal(arg0) {
   ({ onClose: require, onComplete: importDefault } = arg0);
   let combined;
@@ -30,7 +32,7 @@ function openIncodeAgeVerificationModal(arg0) {
           const obj = /^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/;
         }
         const _HermesInternal = HermesInternal;
-        combined = "" + str3 + WEBAPP_ENDPOINT + closure_9;
+        combined = "" + str3 + WEBAPP_ENDPOINT + closure_10;
       }
       str3 = "http:";
     }
@@ -41,13 +43,13 @@ function openIncodeAgeVerificationModal(arg0) {
       closure_1 = tmp3;
       closure_0 = tmp3;
       dependencyMap = 1;
-      yield closure_1_1(4845).requestPermission(closure_1_10.CAMERA, { showAuthorizationError: true });
+      yield closure_1_1(4964).requestPermission(closure_1_11.CAMERA, { showAuthorizationError: true });
       if (1 === tmp7) {
         dependencyMap = 0;
-        closure_1_1(6584).showFailedToast(closure_1_11.TIGGER_PAWTECT_ERROR);
+        closure_1_1(7929).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
         closure_1_0();
         c4 = 3;
-        const obj5 = closure_1_1(6584);
+        const obj5 = closure_1_1(7929);
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c4 = 3;
@@ -59,7 +61,7 @@ function openIncodeAgeVerificationModal(arg0) {
           obj2[0] = arg1;
           return obj2;
         } else {
-          obj1 = closure_1_1(5265);
+          obj1 = closure_1_1(4611);
           const v0 = 3;
           c4 = 1;
           const obj3 = { value: null, done: false };
@@ -67,7 +69,7 @@ function openIncodeAgeVerificationModal(arg0) {
             closure_0 = tmp2;
             yield closure_1_0(paths[10])(paths[9], paths.paths);
             closure_0 = arg1.default;
-            return () => closure_2_12(closure_0, { webviewUrl: c2, onClose: closure_0, onComplete: c1 });
+            return () => closure_2_13(closure_0, { webviewUrl: c2, onClose: closure_0, onComplete: c1 });
           }), {}, closure_1_5);
           return obj3;
         }
@@ -84,7 +86,7 @@ function openIncodeAgeVerificationModal(arg0) {
   }
   return flag;
 }
-({ AGE_VERIFICATION_MODAL_KEY: c5, AGE_VERIFICATION_GET_STARTED_MODAL_KEY: closure_6, AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY: error, VerificationVendorName: closure_8 } = set);
+({ AGE_VERIFICATION_MODAL_KEY: c5, AGE_VERIFICATION_GET_STARTED_MODAL_KEY: closure_6, AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY: error, MANUAL_REVIEW_PENDING_ALERT_KEY: closure_8, VerificationVendorName: c9 } = set);
 let result = set.fileFinishedImporting("modules/age_assurance/AgeVerificationActionCreators.native.tsx");
 
 export default {
@@ -116,12 +118,12 @@ export default {
               const tmp2Result1 = tmp2(tmp3[12]);
               result.then((arg0) => {
                 if (!arg0) {
-                  webviewUrl(merged[11]).showFailedToast(closure_1_11.TIGGER_PAWTECT_ERROR);
+                  webviewUrl(merged[11]).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
                   fn();
                   const obj = webviewUrl(merged[11]);
                 }
               }).catch(() => {
-                webviewUrl(merged[11]).showFailedToast(closure_1_11.TIGGER_PAWTECT_ERROR);
+                webviewUrl(merged[11]).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
                 fn();
               });
               return true;
@@ -131,12 +133,12 @@ export default {
                 const tmp2Result3 = tmp2(tmp3[13]);
                 result1.then((arg0) => {
                   if (!arg0) {
-                    webviewUrl(merged[11]).showFailedToast(closure_1_11.TIGGER_PAWTECT_ERROR);
+                    webviewUrl(merged[11]).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
                     fn();
                     const obj = webviewUrl(merged[11]);
                   }
                 }).catch(() => {
-                  webviewUrl(merged[11]).showFailedToast(closure_1_11.TIGGER_PAWTECT_ERROR);
+                  webviewUrl(merged[11]).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
                   fn();
                 });
                 return true;
@@ -163,7 +165,7 @@ export default {
           closure_0 = arg1.default;
           return () => {
             merged = Object.assign(c2);
-            return closure_2_12(closure_0, { webviewUrl: c1, onClose: closure_0 });
+            return closure_2_13(closure_0, { webviewUrl: c1, onClose: closure_0 });
           };
         }), {}, closure_5);
         flag = true;
@@ -179,14 +181,14 @@ export default {
     let currentUser;
     let obj = entryPoint(1625);
     if (obj.isMetaQuest()) {
-      let tmpResult = tmp(4663);
-      tmpResult.openAlert(closure_7, jsx(onClose(6588), {}), onClose);
+      let tmpResult = tmp(4746);
+      tmpResult.openAlert(closure_7, jsx(onClose(7965), {}), onClose);
     } else {
-      tmpResult = tmp(4997);
+      tmpResult = tmp(4621);
       let isAgeVerifiedResult = tmpResult.isAgeVerified();
       if (isAgeVerifiedResult) {
-        isAgeVerifiedResult = tmp(4075).hasAgeGatedFeatures();
-        const tmpResult1 = tmp(4075);
+        isAgeVerifiedResult = tmp(4076).hasAgeGatedFeatures();
+        const tmpResult1 = tmp(4076);
       }
       dependencyMap = isAgeVerifiedResult;
       if (tmpResult2.isAgeVerificationIncodeEnabled(entryPoint)) {
@@ -220,11 +222,11 @@ export default {
         }
       } else {
         if (tmpResult3.isExpressiveModalV2Enabled(entryPoint)) {
-          onClose(5265).pushLazy(prop(function*() {
+          onClose(4611).pushLazy(prop(function*() {
             closure_0 = tmp2;
             yield closure_1_0(paths[10])(paths[25], paths.paths);
             closure_0 = arg1.default;
-            return () => closure_2_12(closure_0, {
+            return () => closure_2_13(closure_0, {
               entryPoint: closure_0,
               onClose() {
                 let tmp;
@@ -235,27 +237,27 @@ export default {
               }
             });
           }), {}, closure_6);
-          const obj8 = onClose(5265);
+          const obj8 = onClose(4611);
         } else {
-          currentUser = tmp(6724).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
-          const tmpResult4 = tmp(6724);
-          onClose(5265).pushLazy(prop(function*() {
+          currentUser = tmp(8100).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
+          const tmpResult4 = tmp(8100);
+          onClose(4611).pushLazy(prop(function*() {
             closure_0 = tmp2;
             yield closure_1_0(paths[10])(paths[27], paths.paths);
             closure_0 = arg1.default;
-            return () => closure_2_12(closure_0, { entryPoint: closure_0, isRetry: c2, useEmbeddedMethods: closure_1_4 });
+            return () => closure_2_13(closure_0, { entryPoint: closure_0, isRetry: c2, useEmbeddedMethods: closure_1_4 });
           }), {}, closure_6);
-          const obj7 = onClose(5265);
+          const obj7 = onClose(4611);
         }
-        tmpResult3 = tmp(6591);
+        tmpResult3 = tmp(7968);
       }
-      tmpResult2 = tmp(6589);
+      tmpResult2 = tmp(7966);
     }
   },
   showManualReviewPendingModal() {
-
+    useAlertStore.openAlert(closure_8, jsx(ManualReviewPendingAlertModalDefault, {}));
   },
   openUrl(arg0) {
-    _modDef4093.openURL(arg0);
+    _modDef4094.openURL(arg0);
   }
 };

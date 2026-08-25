@@ -22,7 +22,7 @@ function _getDeepLinkUrl() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -94,7 +94,7 @@ function _getDeepLinkUrl() {
                 const _decodeURIComponent = decodeURIComponent;
                 c4 = 3;
                 obj = { value: null, done: true };
-                obj[0] = lib(9137).buildXboxGamePassStoreDeepLinkUrl(decodeURIComponent(dependencyMap));
+                obj[0] = lib(9430).buildXboxGamePassStoreDeepLinkUrl(decodeURIComponent(dependencyMap));
                 return obj;
               }
               const str = lib.pathname;
@@ -102,12 +102,12 @@ function _getDeepLinkUrl() {
             c4 = 3;
             return { value: null, done: true };
           }
-          if (lib.hostname === lib(9137).XBOX_GAME_PASS_STORE_HOSTNAME) {
-            obj4 = callback(7283);
+          if (lib.hostname === lib(9430).XBOX_GAME_PASS_STORE_HOSTNAME) {
+            obj4 = callback(9429);
             c3 = 2;
             c4 = 1;
             const obj5 = { value: null, done: false };
-            obj5[0] = obj4.isProtocolRegistered(lib(9137).XBOX_GAME_PASS_PROTOCOL);
+            obj5[0] = obj4.isProtocolRegistered(lib(9430).XBOX_GAME_PASS_PROTOCOL);
             return obj5;
           }
         } catch (tmp37) {
@@ -154,7 +154,7 @@ export default function useOpenExternalUrlFromGameProfile(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -197,7 +197,7 @@ export default function useOpenExternalUrlFromGameProfile(arg0) {
           } else if (1 === tmp7) {
             c3 = 0;
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else if (arg0 === 1) {
             c5 = 3;
             throw arg1;

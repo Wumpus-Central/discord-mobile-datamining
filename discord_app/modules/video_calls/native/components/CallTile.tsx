@@ -2,13 +2,13 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef4119 from "../../../reanimated/ReanimatedRexport.tsx";
-import registerAssetDefault from "../../../../../_runtime/09878_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/09924_registerAsset.js";
+import _modDef4120 from "../../../reanimated/ReanimatedRexport.tsx";
+import registerAssetDefault from "../../../../../_runtime/10621_registerAsset.js";
 import StreamPreviewContainerDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import registerAssetDefault3 from "../../../../../_runtime/12673_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/12674_registerAsset.js";
-import registerAssetDefault5 from "../../../../../_runtime/12675_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/11031_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/11032_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/11033_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/11034_registerAsset.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -45,15 +45,15 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = registerAssetDefault3;
+    let tmp3 = registerAssetDefault2;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = registerAssetDefault4;
+      tmp3 = registerAssetDefault3;
     } else if (tmp19.XBOX === voicePlatform) {
       tmp3 = registerAssetDefault;
     } else if (tmp19.PLAYSTATION === voicePlatform) {
-      tmp3 = registerAssetDefault2;
+      tmp3 = registerAssetDefault4;
     } else if (tmp19.QUEST === voicePlatform) {
       tmp3 = registerAssetDefault5;
     }

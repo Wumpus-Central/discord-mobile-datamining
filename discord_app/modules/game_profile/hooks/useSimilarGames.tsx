@@ -8,21 +8,18 @@ let closure_5 = [];
 let closure_6 = [];
 const result = require("set").fileFinishedImporting("modules/game_profile/hooks/useSimilarGames.tsx");
 
-export default function useSimilarGames(arg0, arg1) {
-  let tmp = arg1;
-  if (arg1) {
-    tmp = !set.has(arg0);
-  }
-  let obj = data(9205);
-  const similarGameIds = obj.useSimilarGameIds(arg0, tmp);
+export default function useSimilarGames(arg0) {
+  const hasItem = set.has(arg0);
+  let obj = data(9488);
+  const similarGameIds = obj.useSimilarGameIds(arg0, !hasItem);
   ({ data, isLoading, error } = similarGameIds);
-  if (!tmp) {
+  if (hasItem) {
     let tmp7 = closure_5;
   } else {
     tmp7 = data;
   }
   data = tmp7;
-  let tmp3Result = tmp3(5383);
+  let tmp3Result = tmp3(6033);
   const games = tmp3Result.useGames(tmp7);
   tmp3Result = tmp3(589);
   const items = [closure_2];
@@ -31,14 +28,14 @@ export default function useSimilarGames(arg0, arg1) {
   data(589);
   const items2 = [closure_2, closure_3];
   [][0] = tmp7;
-  if (tmp) {
+  if (hasItem) {
+    obj = { isFetching: false, similarGames: null };
+    obj[1] = closure_6;
+  } else {
     obj = { isFetching: null, similarGames: null };
     obj[0] = null == error && null == data || isLoading || stateFromStores;
     obj[1] = tmp11;
-    const tmp14 = null == error && null == data || isLoading || stateFromStores;
-  } else {
-    obj = { isFetching: false, similarGames: null };
-    obj[1] = closure_6;
+    const tmp13 = null == error && null == data || isLoading || stateFromStores;
   }
   return obj;
 };

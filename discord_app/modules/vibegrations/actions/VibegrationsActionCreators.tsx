@@ -2,7 +2,6 @@
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import _launchFrameOnNativeDefault from "../../frames/FramesActionCreators.native.tsx";
 import vibegrationLocation from "../lib/VibegrationsAnalytics.tsx";
-import frozen from "../VibegrationsTypes.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../frames/FramesStore.tsx";
 import closure_5 from "../stores/VibegrationsProjectStore.tsx";
@@ -65,7 +64,7 @@ function _listProjects() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -339,7 +338,7 @@ function _deleteProject() {
       return callback2;
     })();
   });
-  closure_18 = tmp;
+  closure_19 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -367,7 +366,7 @@ function _refreshPublishedProject() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -476,7 +475,7 @@ function _refreshPublishedProject() {
     iter.next();
     return iter;
   });
-  closure_19 = tmp;
+  closure_20 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -487,6 +486,7 @@ function _refreshPublishedProject() {
 }
 let c9 = null;
 let c10 = null;
+const map = new Map();
 let result = require("set").fileFinishedImporting("modules/vibegrations/actions/VibegrationsActionCreators.tsx");
 
 export const trackPublishFailed = function trackPublishFailed(project_id, message, arg2) {
@@ -503,7 +503,7 @@ export const trackPublishFailed = function trackPublishFailed(project_id, messag
 };
 export { reloadVibegrationsAppFrames };
 export const reloadVibegrationsProjectFrames = function reloadVibegrationsProjectFrames(arg0) {
-  const project = store.getProject(arg0);
+  project = project.getProject(arg0);
   if (null != project) {
     reloadVibegrationsAppFrames(project.application_id);
     let prop = project.preview_application_id;
@@ -530,21 +530,80 @@ export const renameProject = function renameProject(projectId, name) {
   return patchProject(projectId, { name });
 };
 export const setProjectVisibility = function setProjectVisibility(projectId, arg1) {
-  const project = store.getProject(projectId);
-  let num;
-  if (project != null) {
-    num = project.flags;
+  closure_0 = projectId;
+  const f99248 = (arg0) => {
+    const PUBLIC = projectId(nextPromise1[9]).VibegrationsProjectFlags.PUBLIC;
+    if (projectId) {
+      let tmp = arg0 | PUBLIC;
+    } else {
+      tmp = arg0 & ~PUBLIC;
+    }
+    return tmp;
+  };
+  let resolved = map.get(projectId);
+  if (resolved == null) {
+    resolved = Promise.resolve();
   }
-  if (num == null) {
-    num = 0;
+  const nextPromise = resolved.then(() => {
+    const project = closure_1_5.getProject(closure_0);
+    let num;
+    if (project != null) {
+      num = project.flags;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    return closure_1_16(closure_0, { flags: f99249(num) });
+  });
+  const nextPromise1 = nextPromise.then(() => {
+    if (closure_1_18.get(closure_0) === nextPromise1) {
+      closure_1_18.delete(closure_0);
+    }
+  }, () => {
+    if (closure_1_18.get(closure_0) === nextPromise1) {
+      closure_1_18.delete(closure_0);
+    }
+  });
+  const result = map.set(projectId, nextPromise1);
+  return nextPromise;
+};
+export const setProjectSharing = function setProjectSharing(arg0, arg1) {
+  closure_0 = arg0;
+  const f99249 = (arg0) => {
+    const SHAREABLE = callback(nextPromise1[9]).VibegrationsProjectFlags.SHAREABLE;
+    if (callback) {
+      let tmp = arg0 | SHAREABLE;
+    } else {
+      tmp = arg0 & ~SHAREABLE;
+    }
+    return tmp;
+  };
+  let resolved = map.get(arg0);
+  if (resolved == null) {
+    resolved = Promise.resolve();
   }
-  const PUBLIC = frozen.VibegrationsProjectFlags.PUBLIC;
-  if (arg1) {
-    let flags = num | PUBLIC;
-  } else {
-    flags = num & ~PUBLIC;
-  }
-  return patchProject(projectId, { flags });
+  const nextPromise = resolved.then(() => {
+    const project = closure_1_5.getProject(closure_0);
+    let num;
+    if (project != null) {
+      num = project.flags;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    return closure_1_16(closure_0, { flags: f99249(num) });
+  });
+  const nextPromise1 = nextPromise.then(() => {
+    if (closure_1_18.get(closure_0) === nextPromise1) {
+      closure_1_18.delete(closure_0);
+    }
+  }, () => {
+    if (closure_1_18.get(closure_0) === nextPromise1) {
+      closure_1_18.delete(closure_0);
+    }
+  });
+  const result = map.set(arg0, nextPromise1);
+  return nextPromise;
 };
 export const setGuildHints = function setGuildHints(projectId) {
   return patchProject(projectId, arg1);

@@ -17,5 +17,8 @@ export default (getGuildId) => {
   if (!canChatInGuildResult) {
     canChatInGuildResult = getGuildId.isPrivate();
   }
+  if (canChatInGuildResult) {
+    canChatInGuildResult = !getGuildId.isSystemDM();
+  }
   return canChatInGuildResult;
 };

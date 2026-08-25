@@ -56,11 +56,11 @@ function loadThread(channelId) {
         }
         return resolved;
       } else {
-        let tmp13Result = tmp13(4206);
+        let tmp13Result = tmp13(4207);
         const _location = location;
         obj = { path: null, exact: true };
-        const RouteParam = tmp13(4219).RouteParam;
-        const RouteParam2 = tmp13(4219).RouteParam;
+        const RouteParam = tmp13(4220).RouteParam;
+        const RouteParam2 = tmp13(4220).RouteParam;
         obj[0] = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj);
         const HTTP = tmp13(530).HTTP;
@@ -91,7 +91,7 @@ function loadThread(channelId) {
         }).catch(() => {
           closure_1_11[closure_0] = { type: "NOT_FOUND" };
           let obj = lib(closure_1_2[6]);
-          obj = { id: closure_0, guild_id: null, parent_id: "Array" };
+          obj = { id: closure_0, guild_id: null, parent_id: "r" };
           let guildId;
           if (lib != null) {
             const params = lib.params;
@@ -138,7 +138,7 @@ export default {
         let tmp9 = nextResult;
         let tmp10 = items1;
         let tmp11 = dependencyMap;
-        if (nextResult !== items1(5394).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(5949).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           let tmp12 = isStaticChannelRoute;
           let tmp13 = nextResult;
           if (!isStaticChannelRoute(tmp9)) {

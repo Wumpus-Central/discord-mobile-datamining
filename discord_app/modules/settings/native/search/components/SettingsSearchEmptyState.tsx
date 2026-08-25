@@ -1,7 +1,7 @@
 // discord_app/modules/settings/native/search/components/SettingsSearchEmptyState.tsx
 import getSystemLocale from "../../../../../intl/index.native.tsx";
-import Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
+import Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import getNoResultsAltSource from "../../../../../design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";

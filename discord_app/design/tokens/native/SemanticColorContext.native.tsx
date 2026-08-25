@@ -43,7 +43,7 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
       obj[6] = int2hexResult1;
       obj[1] = obj;
       tmp9 = obj;
-      tmpResult1 = tmp(4102);
+      tmpResult1 = tmp(4103);
     }
     gradientThemeMetadata = tmp9;
   }

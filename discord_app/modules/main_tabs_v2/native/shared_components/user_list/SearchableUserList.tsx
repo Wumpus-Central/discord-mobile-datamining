@@ -82,11 +82,13 @@ export default function SearchableUserList(selectedUserIds) {
   if (flag12 === undefined) {
     flag12 = false;
   }
-  ({ defaultNoResultsFound, disableGradient } = selectedUserIds);
+  ({ defaultNoResultsFound, disableGradient, focusOnAdd, disableStickySections, disableThemedGradient } = selectedUserIds);
+  if (focusOnAdd === undefined) {
+    focusOnAdd = true;
+  }
   closure_5 = undefined;
   let memo;
   ref = undefined;
-  ({ disableStickySections, disableThemedGradient } = selectedUserIds);
   const tmp2 = callback();
   let obj = ACTIONS;
   let tmp3 = handleMessage(ACTIONS.useState(""), 2);
@@ -250,7 +252,7 @@ export default function SearchableUserList(selectedUserIds) {
     if (!flag12) {
       const obj4 = { style: null, children: null };
       obj4[0] = tmp2.searchBarContainer;
-      const obj5 = { onChangeText: null, onRemove: null, tags: null, style: null, autoFocus: null };
+      const obj5 = { onChangeText: null, onRemove: null, tags: null, style: null, autoFocus: null, focusOnAdd: null };
       obj5[0] = tmp3[1];
       obj5[1] = callback;
       obj5[2] = memo;
@@ -260,6 +262,7 @@ export default function SearchableUserList(selectedUserIds) {
         flag = someResult;
       }
       obj5[4] = flag;
+      obj5[5] = focusOnAdd;
       obj4[1] = tmp27(tmp4Result, obj5);
       tmp27Result = tmp27(closure_5, obj4);
       const tmp32 = closure_5;

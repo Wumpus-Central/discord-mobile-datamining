@@ -2151,7 +2151,7 @@ class MessagesHandlers {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -2265,7 +2265,7 @@ class MessagesHandlers {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -2284,25 +2284,25 @@ class MessagesHandlers {
                 closure_1 = tmp2;
                 isReveal = undefined;
                 closure_1 = undefined;
-                const nativeSyntheticEventData = callback(10778).getNativeSyntheticEventData(isReveal);
+                const nativeSyntheticEventData = callback(11107).getNativeSyntheticEventData(isReveal);
                 ({ messageId, channelId, isReveal } = nativeSyntheticEventData);
                 ({ attachmentId, embedId } = nativeSyntheticEventData);
-                const obj10 = callback(10778);
+                const obj10 = callback(11107);
                 if (isReveal) {
                   if (obj11.shouldAgeVerifyForExplicitMedia()) {
                     dependencyMap = 1;
                     c4 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = callback(4997).maybePerformReactiveCheck();
+                    obj1[0] = callback(4621).maybePerformReactiveCheck();
                     return obj1;
                   }
                 }
-                let obj3 = callback(5006);
+                let obj3 = callback(7206);
                 const obj2 = { obscure: null };
                 obj2[0] = isReveal;
                 const result = obj3.trackToggleMediaObscurityV2(obj2);
                 c4 = 3;
-                obj11 = callback(5006);
+                obj11 = callback(7206);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -2315,9 +2315,9 @@ class MessagesHandlers {
                 reactiveCheckPassed = closure_1_9.getReactiveCheckPassed();
               }
               if (!reactiveCheckPassed) {
-                obj = closure_1_1(5433);
+                obj = closure_1_1(7942);
                 obj3 = { entryPoint: null };
-                obj3[0] = callback(5259).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
+                obj3[0] = callback(7944).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
                 const result1 = obj.showAgeVerificationGetStartedModal(obj3);
               }
             }
@@ -2420,7 +2420,7 @@ class MessagesHandlers {
         const result1 = callback(tmp2[175]).showAgeVerificationGetStartedModal(obj);
         tmpResult = tmp(tmp2[176]);
         const result2 = tmpResult.trackAgeVerificationDmClicked(tmp(tmp2[176]).AgeVerificationDmCta.RETRY, channelId);
-        const obj5 = callback(tmp2[175]);
+        const obj6 = callback(tmp2[175]);
       } else if (tmp(tmp2[181]).CtaButtonType.CONNECT_TO_TEEN === callback) {
         if (!tmpResult1.resumeFamilyCenterConnection()) {
           obj = { screen: null };
@@ -2431,6 +2431,11 @@ class MessagesHandlers {
         tmpResult1 = tmp(tmp2[183]);
         const result3 = tmp(tmp2[176]).trackAgeVerificationDmClicked(tmp(tmp2[176]).AgeVerificationDmCta.CONNECT_TO_TEEN, channelId);
         const tmpResult3 = tmp(tmp2[176]);
+      } else if (tmp(tmp2[181]).CtaButtonType.AGE_VERIFICATION_MANUAL_REVIEW === callback) {
+        const result4 = callback(tmp2[175]).showManualReviewPendingModal();
+        const obj10 = callback(tmp2[175]);
+        const result5 = tmp(tmp2[176]).trackAgeVerificationDmClicked(tmp(tmp2[176]).AgeVerificationDmCta.MANUAL_REVIEW, channelId);
+        const tmpResult4 = tmp(tmp2[176]);
       }
     };
     obj.handleMessageAccessibilityAction = function handleMessageAccessibilityAction(nativeEvent) {

@@ -16,8 +16,12 @@ function createExecutable(os) {
   if (null != os.arguments) {
     obj.arguments = os.arguments;
   }
-  if (null != os.is_launcher) {
-    obj.isLauncher = os.is_launcher;
+  let isLauncher = os.is_launcher;
+  if (isLauncher == null) {
+    isLauncher = os.isLauncher;
+  }
+  if (null != isLauncher) {
+    obj.isLauncher = isLauncher;
   }
   return obj;
 }

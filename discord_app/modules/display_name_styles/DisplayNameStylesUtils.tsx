@@ -5,12 +5,15 @@ import DisplayNameEffect from "../../../discord_common/js/shared/shared-constant
 import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import items3 from "DisplayNameStylesConstants.tsx";
+import set from "../../../_runtime/00002_set.js";
 import { int2hslRaw } from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
 
 require = arg1;
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: c4, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: c5, FLYWHEEL_EFFECTS: closure_6, FLYWHEEL_FONTS: error, getColorPresetsForEffect: closure_8 } = items3);
-let items = [{ hueShift: -18, saturation: 0.54, lightness: 0.72 }, { hueShift: -5, saturation: 0.66, lightness: 0.6 }, { hueShift: 9, saturation: 0.56, lightness: 0.68 }, { hueShift: 22, saturation: 0.6, lightness: 0.63 }];
-let result = require("set").fileFinishedImporting("modules/display_name_styles/DisplayNameStylesUtils.tsx");
+let items = [require("DisplayNameEffect").DisplayNameEffect.NEON, require("DisplayNameEffect").DisplayNameEffect.TOON, require("DisplayNameEffect").DisplayNameEffect.POP, require("DisplayNameEffect").DisplayNameEffect.GUMMY];
+let set = new Set(items);
+const items1 = [{ hueShift: -18, saturation: 0.54, lightness: 0.72 }, { hueShift: -5, saturation: 0.66, lightness: 0.6 }, { hueShift: 9, saturation: 0.56, lightness: 0.68 }, { hueShift: 22, saturation: 0.6, lightness: 0.63 }];
+let result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesUtils.tsx");
 
 export const getEffectColorCount = function getEffectColorCount(effectId) {
   if (DisplayNameEffect.DisplayNameEffect.GRADIENT === effectId) {
@@ -22,6 +25,9 @@ export const getEffectColorCount = function getEffectColorCount(effectId) {
   } else {
     return 1;
   }
+};
+export const doesEffectImpactLayout = function doesEffectImpactLayout(effectId) {
+  return set.has(effectId);
 };
 export const generateColorVariants = function generateColorVariants(first) {
   let obj = nDefault(first);
@@ -48,7 +54,7 @@ export const generateColorVariants = function generateColorVariants(first) {
 export const wrapHue = function wrapHue(h) {
   return (h % 360 + 360) % 360;
 };
-export const GUMMY_STRIPES = items;
+export const GUMMY_STRIPES = items1;
 export const buildGummyColors = function buildGummyColors(closure_1_11) {
   const tmp = nDefault;
   let obj = int2hslRaw;
@@ -58,9 +64,9 @@ export const buildGummyColors = function buildGummyColors(closure_1_11) {
   if (!Number.isNaN(first)) {
     num = first;
   }
-  items = [num, tmp3[1], tmp3[2]];
+  const items = [num, tmp3[1], tmp3[2]];
   _require = callback(items, 1)[0];
-  return items.map((arg0) => {
+  return items1.map((arg0) => {
     ({ hueShift, saturation, lightness } = arg0);
     const obj = closure_1_1(closure_1_2[3]);
     return closure_1_1(closure_1_2[3]).hsl(((closure_0 + hueShift) % 360 + 360) % 360, saturation, lightness).num();
@@ -82,8 +88,8 @@ export const rebuildGummySourceColor = function rebuildGummySourceColor(selected
     if (!Number.isNaN(first1)) {
       num = first1;
     }
-    items = [num, tmp15[1], tmp15[2]];
-    const result = (callback(items, 1)[0] - items[0].hueShift) % 360;
+    const items = [num, tmp15[1], tmp15[2]];
+    const result = (callback(items, 1)[0] - items1[0].hueShift) % 360;
     const tmp12Result = tmp12(int2hslRaw.int2hex(first));
     const tmp14 = callback;
     const tmp10Result = tmp10(689);
@@ -106,7 +112,7 @@ export const parseServerDisplayNameStyles = function parseServerDisplayNameStyle
 export const generateRandomDisplayNameStyles = function generateRandomDisplayNameStyles(visibleFontOrder, visibleEffectOrder) {
   const tmp = visibleEffectOrder[Math.floor(Math, Math.random(Math) * visibleEffectOrder.length)];
   const arr = callback2(tmp);
-  items = [...arr[Math.floor(Math, Math.random(Math) * arr.length)]];
+  const items = [...arr[Math.floor(Math, Math.random(Math) * arr.length)]];
   return { fontId: visibleFontOrder[Math.floor(Math, Math.random(Math) * visibleFontOrder.length)], effectId: tmp, colors: items };
 };
 export const applyFlywheelViewingFallback = function applyFlywheelViewingFallback(fontId, isDisplayNameStylesFlywheelViewersEnabled) {

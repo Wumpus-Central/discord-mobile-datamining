@@ -33,6 +33,9 @@ prototype["fireClipsInitEvent"] = function fireClipsInitEvent(arg0) {
 prototype["handleStreamEnded"] = function handleStreamEnded(arg0) {
 
 };
+prototype["maybeStartNtpClock"] = function maybeStartNtpClock() {
+
+};
 const clipsManager = new ClipsManager();
 const result = set.fileFinishedImporting("modules/clips/native/ClipsManager.tsx");
 

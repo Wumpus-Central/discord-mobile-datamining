@@ -1,8 +1,8 @@
 // discord_app/lib/InviteQueue.tsx
 import timestampDefault from "../modules/debug/Logger.tsx";
 import setDefault from "../utils/Durations.tsx";
-import enqueueDefault from "../utils/Queue.tsx";
 import trackInviteDefault from "../actions/MessageActionCreators.tsx";
+import enqueueDefault from "../utils/Queue.tsx";
 import closure_2 from "../stores/ChannelStore.tsx";
 
 const sum = setDefault.Millis.SECOND + 10;
@@ -35,8 +35,8 @@ function drain(location, sum, arg2, prototype, arg4, InviteQueue, drain, depende
   if (self.GROUP_DM !== type) {
     if (tmp.CHANNEL !== type) {
       if (tmp.USER === type) {
-        obj = inviteAnalyticsMetadata(4775);
-        inviteAnalyticsMetadata(4775).ensurePrivateChannel(location.user.id).then((arg0) => {
+        obj = inviteAnalyticsMetadata(4393);
+        inviteAnalyticsMetadata(4393).ensurePrivateChannel(location.user.id).then((arg0) => {
           const channel = sum.getChannel(arg0);
           if (null != channel) {
             self._sendInvite(channel, _location.inviteKey, _location, inviteAnalyticsMetadata, sum);
@@ -44,7 +44,7 @@ function drain(location, sum, arg2, prototype, arg4, InviteQueue, drain, depende
             sum(null, false);
           }
         }, () => sum(null, false));
-        const ensurePrivateChannelResult = inviteAnalyticsMetadata(4775).ensurePrivateChannel(location.user.id);
+        const ensurePrivateChannelResult = inviteAnalyticsMetadata(4393).ensurePrivateChannel(location.user.id);
       }
     }
   }

@@ -2,8 +2,8 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
-import items from "../../lib/MessageQueue.tsx";
 import getDecisionOutcomeFromMessage from "AutomodMessageUtils.tsx";
+import items from "../../lib/MessageQueue.tsx";
 import getAutomodErrorMessageFromErrorResponse from "AutomodErrorUtils.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";
 import closure_4 from "../../stores/MessageStore.tsx";
@@ -132,13 +132,13 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(dispatcherDefault,
       const tmp = require;
       let result = getDecisionOutcomeFromMessage.isAutomodMessageRecord(messageRecord);
       if (result) {
-        let flag = tmp(5237).isAutomodNotification(messageRecord);
+        let flag = tmp(7114).isAutomodNotification(messageRecord);
         if (flag) {
           closure_11[guildId] = messageRecord.id;
           flag = true;
         }
         result = flag;
-        const tmpResult = tmp(5237);
+        const tmpResult = tmp(7114);
       }
       return result;
     }

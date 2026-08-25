@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/StageMusicManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import sortKey from "StageChannelParticipants.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import closure_2 from "../../stores/ChannelStore.tsx";
 import importDefaultResult from "../../stores/MediaEngineStore.tsx";
 import closure_4 from "../../stores/SelectedChannelStore.tsx";

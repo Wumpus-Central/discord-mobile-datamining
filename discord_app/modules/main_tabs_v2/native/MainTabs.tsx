@@ -2,9 +2,9 @@
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
 import getGuildThemeNameDefault from "../../client_themes/native/useColorThemeBackground.tsx";
-import useActiveThemeType from "../../client_themes/native/useActiveTheme.tsx";
 import getMixedGradientColorDefault from "../../client_themes/native/ThemedGradient.tsx";
-import _modDef15333 from "panels/MainTabsNavigatorPanel.tsx";
+import useActiveThemeType from "../../client_themes/native/useActiveTheme.tsx";
+import _modDef15363 from "panels/MainTabsNavigatorPanel.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -21,7 +21,7 @@ const memoResult = importAllResult.memo(function MainTabs() {
   obj = { style: items, children: null };
   items = [callback3().container, { marginLeft: rect.left, marginRight: rect.right }];
   obj = { gradient: tmp, children: null };
-  const items1 = [callback(getMixedGradientColorDefault, { absolute: true, mix: isCustomThemeActive }), callback(_modDef15333, {})];
+  const items1 = [callback(getMixedGradientColorDefault, { absolute: true, mix: isCustomThemeActive }), callback(_modDef15363, {})];
   obj[1] = items1;
   obj[1] = callback2(ManaContext.ThemeContextProvider, obj);
   return callback(View, obj);

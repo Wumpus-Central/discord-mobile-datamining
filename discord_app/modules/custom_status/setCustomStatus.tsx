@@ -2,7 +2,7 @@
 import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 import StatusTypes from "Constants.tsx";
 import getClearAfterDurationDefault from "utils/getClearAfterDuration.tsx";
@@ -31,10 +31,10 @@ export default function setCustomStatus(arg0) {
     str2 = "0";
     if (clearAfter !== ClearAfterValues.DONT_CLEAR) {
       const _String = String;
-      const obj2 = tDefault();
-      const addResult = tDefault().add(getClearAfterDurationDefault(clearAfter), "ms");
-      str2 = String(tDefault().add(getClearAfterDurationDefault(clearAfter), "ms").toDate().getTime());
-      const toDateResult = tDefault().add(getClearAfterDurationDefault(clearAfter), "ms").toDate();
+      const obj2 = hooksDefault();
+      const addResult = hooksDefault().add(getClearAfterDurationDefault(clearAfter), "ms");
+      str2 = String(hooksDefault().add(getClearAfterDurationDefault(clearAfter), "ms").toDate().getTime());
+      const toDateResult = hooksDefault().add(getClearAfterDurationDefault(clearAfter), "ms").toDate();
     }
   }
   obj[1] = str2;
@@ -52,9 +52,9 @@ export default function setCustomStatus(arg0) {
   }
   obj[3] = str5;
   if (createdAtMs == null) {
-    const obj5 = tDefault();
-    createdAtMs = tDefault().toDate().getTime();
-    const toDateResult1 = tDefault().toDate();
+    const obj5 = hooksDefault();
+    createdAtMs = hooksDefault().toDate().getTime();
+    const toDateResult1 = hooksDefault().toDate();
   }
   obj[4] = String(createdAtMs);
   const updateSettingResult = CustomStatusSetting2.updateSetting(obj);

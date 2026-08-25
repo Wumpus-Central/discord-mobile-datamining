@@ -1,8 +1,13 @@
 // discord_app/modules/custom_typing_indicator/CustomTypingIndicatorUtils.tsx
+import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import messagesProxyDefault from "intl/CustomTypingIndicator.messages.js";
 import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
-import closure_3 from "../emojis/EmojiStore.tsx";
-import closure_4 from "../../stores/SortedGuildStore.tsx";
+import closure_4 from "../emojis/EmojiStore.tsx";
+import closure_5 from "../user_profile/UserProfileSettingsStore.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/SortedGuildStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import { Permissions } from "../../Constants.tsx";
 import { EmojiIntention } from "../emojis/EmojiConstants.tsx";
 
 const require = arg1;
@@ -32,7 +37,7 @@ export const getSurpriseMeEmojiPool = function getSurpriseMeEmojiPool() {
   const categories = parseRawEmojiObjectDefault.getCategories();
   items = [
     ...categories.flatMap((name) => {
-      const byCategory = callback(table[5]).getByCategory(name);
+      const byCategory = callback(table[9]).getByCategory(name);
       let mapped;
       if (byCategory != null) {
         mapped = byCategory.map((name) => ({ name: name.surrogates }));
@@ -47,8 +52,8 @@ export const getSurpriseMeEmojiPool = function getSurpriseMeEmojiPool() {
   HermesBuiltin.arraySpread(flattenedGuildIds.flatMap((arg0) => {
     usableGuildEmoji = usableGuildEmoji.getUsableGuildEmoji(arg0);
     const found = usableGuildEmoji.filter((emoji) => {
-      obj = callback(table[6]);
-      obj = { emoji, channel: null, guildId: "Array", intention: "\u{1F9DC}\u{1F3FC}\u200D\u2640\uFE0F" };
+      obj = callback(table[10]);
+      obj = { emoji, channel: null, guildId: "Array", intention: true, bypassPremiumEmojiEntitlement: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==" };
       obj[3] = constants.TYPING_INDICATOR;
       return null == obj.getEmojiUnavailableReason(obj);
     });
@@ -77,7 +82,7 @@ export const getRandomCustomTypingIndicatorEmojis = function getRandomCustomTypi
   const categories = parseRawEmojiObjectDefault.getCategories();
   items = [
     ...categories.flatMap((name) => {
-      const byCategory = callback(table[5]).getByCategory(name);
+      const byCategory = callback(table[9]).getByCategory(name);
       let mapped;
       if (byCategory != null) {
         mapped = byCategory.map((name) => ({ name: name.surrogates }));
@@ -92,14 +97,14 @@ export const getRandomCustomTypingIndicatorEmojis = function getRandomCustomTypi
   HermesBuiltin.arraySpread(flattenedGuildIds.flatMap((arg0) => {
     usableGuildEmoji = usableGuildEmoji.getUsableGuildEmoji(arg0);
     const found = usableGuildEmoji.filter((emoji) => {
-      obj = callback(table[6]);
-      obj = { emoji, channel: null, guildId: "Array", intention: "\u{1F9DC}\u{1F3FC}\u200D\u2640\uFE0F" };
+      obj = callback(table[10]);
+      obj = { emoji, channel: null, guildId: "Array", intention: true, bypassPremiumEmojiEntitlement: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==" };
       obj[3] = constants.TYPING_INDICATOR;
       return null == obj.getEmojiUnavailableReason(obj);
     });
     return found.map((id) => ({ id: id.id, name: id.name, animated: id.animated }));
   }), tmp);
-  const bound = Math.min(items(11197).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT, items.length);
+  const bound = Math.min(items(1937).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT, items.length);
   const set = new Set();
   if (set.size < bound) {
     do {
@@ -118,12 +123,89 @@ export const getRandomCustomTypingIndicatorAnimation = function getRandomCustomT
 export function getCustomTypingIndicatorSuggestionPresets() {
   return items;
 }
-export const getCustomTypingIndicatorSuggestionMessage = function getCustomTypingIndicatorSuggestionMessage(first1) {
-  return obj[first1];
+export const getCustomTypingIndicatorSuggestionMessage = function getCustomTypingIndicatorSuggestionMessage(typingSuggestion) {
+  return obj[typingSuggestion];
 };
 export const getCustomTypingIndicatorSuggestionWithNameMessage = function getCustomTypingIndicatorSuggestionWithNameMessage(suggestion) {
   return obj[suggestion];
 };
 export const getRandomCustomTypingIndicatorSuggestion = function getRandomCustomTypingIndicatorSuggestion() {
   return items[Math.floor(Math, Math.random(Math) * items.length)];
+};
+export const getViewableCustomTypingIndicatorConfig = function getViewableCustomTypingIndicatorConfig(customTypingIndicatorConfig, getGuildId, arg2, guildEmojis) {
+  closure_0 = guildEmojis;
+  if (null != getGuildId.getGuildId()) {
+    if (0 !== customTypingIndicatorConfig.emojis.length) {
+      const emojis = customTypingIndicatorConfig.emojis;
+      if (emojis.some((id) => {
+        let tmp = null != id.id;
+        if (tmp) {
+          let tmp3;
+          if (closure_0 != null) {
+            tmp3 = tmp2[id.id];
+          }
+          tmp = null == tmp3;
+        }
+        return tmp;
+      })) {
+        let channel = null;
+        if (getGuildId.isThread()) {
+          channel = null;
+          if (null != getGuildId.parent_id) {
+            channel = channel.getChannel(getGuildId.parent_id);
+          }
+        }
+        obj = fromStringAll;
+        obj = { user: null, context: null };
+        obj[0] = arg2;
+        if (channel == null) {
+          channel = getGuildId;
+        }
+        obj[1] = channel;
+        let tmp7 = customTypingIndicatorConfig;
+        if (!obj.has(obj2.computePermissions(obj), Permissions.USE_EXTERNAL_EMOJIS)) {
+          obj = {};
+          const merged = Object.assign(customTypingIndicatorConfig);
+          obj.emojis = [];
+          tmp7 = obj;
+        }
+        return tmp7;
+      } else {
+        return customTypingIndicatorConfig;
+      }
+    }
+  }
+  return customTypingIndicatorConfig;
+};
+export const useCurrentCustomTypingIndicatorConfig = function useCurrentCustomTypingIndicatorConfig(isTryItOut) {
+  const _require = isTryItOut;
+  items = [closure_5, closure_8];
+  items1 = [isTryItOut];
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+    if (isTryItOut) {
+      let EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG2 = obj.getTryItOutChanges().tryItOutCustomTypingIndicatorStyle;
+      if (EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG2 == null) {
+        EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG2 = isTryItOut(closure_1_3[11]).EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG;
+      }
+      return EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG2;
+    } else {
+      let EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG = obj.getPendingChanges().pendingCustomTypingIndicatorStyle;
+      if (undefined !== EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG) {
+        if (EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG == null) {
+          EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG = isTryItOut(closure_1_3[11]).EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG;
+        }
+        let typingIndicatorStyle = EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG;
+      } else {
+        const currentUser = closure_1_8.getCurrentUser();
+        typingIndicatorStyle = undefined;
+        if (currentUser != null) {
+          typingIndicatorStyle = currentUser.typingIndicatorStyle;
+        }
+        if (typingIndicatorStyle == null) {
+          typingIndicatorStyle = isTryItOut(closure_1_3[11]).EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG;
+        }
+      }
+      return typingIndicatorStyle;
+    }
+  }, items1);
 };

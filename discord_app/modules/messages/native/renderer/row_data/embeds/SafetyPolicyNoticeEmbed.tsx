@@ -3,9 +3,9 @@ import set from "../../../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../../../../Constants.tsx";
 import getSystemLocale from "../../../../../../intl/index.native.tsx";
-import tDefault from "../../../../../../../_runtime/03978_t.js";
+import hooksDefault from "../../../../../../../_runtime/03979_hooks.js";
 import SafetyHubView from "../../../../../safety_hub/SafetyHubConstants.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/08118_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/08114_registerAsset.js";
 import frozen from "../../EmbedUtils.tsx";
 
 const Image = get_ActivityIndicator.Image;
@@ -57,8 +57,8 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
             const intl2 = getSystemLocale.intl;
             obj = { daysAgo: null };
             const obj2 = frozen;
-            const obj4 = tDefault();
-            obj[0] = obj4.diff(tDefault.unix(parsed), "days");
+            const obj4 = hooksDefault();
+            obj[0] = obj4.diff(hooksDefault.unix(parsed), "days");
             obj[2] = intl2.formatToPlainString(getSystemLocale.t.eevFb6, obj);
             const intl3 = getSystemLocale.intl;
             obj[3] = intl3.string(getSystemLocale.t["5CLb0A"]);

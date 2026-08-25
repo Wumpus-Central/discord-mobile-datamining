@@ -1,6 +1,6 @@
 // discord_app/modules/calls/useCanRing.tsx
-import experimentDefault from "../voice_calls/GuildVoiceRingingExperiment.tsx";
 import getChannelRoleSubscriptionStatusDefault from "../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
+import experimentDefault from "../voice_calls/GuildVoiceRingingExperiment.tsx";
 import closure_3 from "../../stores/AuthenticationStore.tsx";
 import closure_4 from "../../stores/CallStore.tsx";
 import closure_5 from "../../stores/ChannelStore.tsx";

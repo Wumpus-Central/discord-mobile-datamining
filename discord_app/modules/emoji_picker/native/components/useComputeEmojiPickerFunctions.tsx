@@ -252,9 +252,9 @@ const result = require("set").fileFinishedImporting("modules/emoji_picker/native
 
 export default function useComputeEmojiPickerFunctions() {
   return callback(React.useState(() => {
-    const obj = { computeCategories: callback(1990).cachedFunction(closure_8), computeSearchResults: null };
-    const obj2 = callback(1990);
-    obj[1] = callback(1990).cachedFunction(closure_9);
+    const obj = { computeCategories: callback(1991).cachedFunction(closure_8), computeSearchResults: null };
+    const obj2 = callback(1991);
+    obj[1] = callback(1991).cachedFunction(closure_9);
     return obj;
   }), 1)[0];
 };

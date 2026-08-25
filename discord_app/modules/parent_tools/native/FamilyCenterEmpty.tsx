@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/native/FamilyCenterEmpty.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../_runtime/14342_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/14372_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";

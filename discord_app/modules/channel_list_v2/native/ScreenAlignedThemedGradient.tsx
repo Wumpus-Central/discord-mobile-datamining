@@ -1,8 +1,8 @@
 // discord_app/modules/channel_list_v2/native/ScreenAlignedThemedGradient.tsx
 import set from "../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import useActiveThemeType from "../../client_themes/native/useActiveTheme.tsx";
 import getMixedGradientColorDefault from "../../client_themes/native/ThemedGradient.tsx";
+import useActiveThemeType from "../../client_themes/native/useActiveTheme.tsx";
 import tDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";

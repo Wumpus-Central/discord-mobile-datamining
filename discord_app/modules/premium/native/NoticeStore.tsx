@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import tDefault from "../../../../_runtime/03978_t.js";
+import hooksDefault from "../../../../_runtime/03979_hooks.js";
 import closure_3 from "../../../stores/billing/UserOfferStore.tsx";
 import { PremiumSubscriptionSKUs } from "../PremiumConstants.tsx";
 import { NoticeTypes } from "../../../Constants.tsx";
@@ -21,10 +21,10 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
       const value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
       let tmp4 = null;
       if (null != value) {
-        tmp4 = tDefault(value);
+        tmp4 = hooksDefault(value);
       }
       if (null != tmp4) {
-        return tmp4.isAfter(tDefault());
+        return tmp4.isAfter(hooksDefault());
       }
     }
     let tmp6 = null != tmp11;

@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
 import FolderIcon from "../../../../design/components/Icon/native/redesign/generated/FolderIcon.tsx";
+import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
 import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import ChatSmileIcon from "../../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
 import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
@@ -62,8 +62,8 @@ const memoResult = importAllResult.memo(function PremiumTrialOfferActionSheetCon
     if (subscriptionTrial != null) {
       skuId1 = subscriptionTrial.skuId;
     }
-    displayNameFromSku = tmp3(4042).getDisplayNameFromSku(skuId1);
-    const tmp3Result = tmp3(4042);
+    displayNameFromSku = tmp3(4043).getDisplayNameFromSku(skuId1);
+    const tmp3Result = tmp3(4043);
   }
   obj3[3] = intl7.formatToPlainString(getSystemLocale.t.q8eMc0, { displayName: displayNameFromSku, duration: intervalDuration });
   items1[1] = callback(Text.Text, obj3);

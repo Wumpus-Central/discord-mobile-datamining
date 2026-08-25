@@ -1,6 +1,6 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeDiamond.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import inlineStyles from "../../../../../_runtime/06607_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07985_inlineStyles.js";
 import getTransformedBadgeColors from "GuildBadgeUtils.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 

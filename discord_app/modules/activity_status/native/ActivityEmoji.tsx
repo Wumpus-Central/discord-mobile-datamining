@@ -22,7 +22,7 @@ export default function ActivityEmoji(emoji) {
   const tmp = callback();
   let ReactionIcon = emoji;
   let obj = dependencyMap;
-  const AnimateEmoji = emoji(4069).AnimateEmoji;
+  const AnimateEmoji = emoji(4070).AnimateEmoji;
   let animated;
   const setting = AnimateEmoji.useSetting();
   if (emoji != null) {
@@ -60,7 +60,7 @@ export default function ActivityEmoji(emoji) {
     }
   }
   if (null == emoji) {
-    ReactionIcon = ReactionIcon(7978).ReactionIcon;
+    ReactionIcon = ReactionIcon(7800).ReactionIcon;
     obj = { style: null, size: "sm" };
     obj[0] = style;
     <ReactionIcon style={null} size="sm" />;

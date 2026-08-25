@@ -1,9 +1,9 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorEmojiSlots.tsx
 import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef4119 from "../../reanimated/ReanimatedRexport.tsx";
+import CUSTOM_TYPING_INDICATOR_EMOJI_COUNT from "../CustomTypingIndicatorTypes.tsx";
+import _modDef4120 from "../../reanimated/ReanimatedRexport.tsx";
 import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
-import CUSTOM_TYPING_INDICATOR_EMOJI_COUNT from "../CustomTypingIndicatorTypes.tsx";
 import items3 from "../CustomTypingIndicatorUtils.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
@@ -33,7 +33,7 @@ function EmojiGlyph(emoji) {
 }
 function PlaceholderEmojiGlyph(emoji) {
   const pressed = emoji.pressed;
-  let obj = pressed(4119);
+  let obj = pressed(4120);
   const fn = function o() {
     const value = pressed.get();
     let obj = { opacity: null, transform: null };
@@ -49,13 +49,13 @@ function PlaceholderEmojiGlyph(emoji) {
     obj[1] = items;
     return obj;
   };
-  obj = { pressed, withSpring: pressed(4749).withSpring, interpolate: pressed(4119).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(4753).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
+  obj = { pressed, withSpring: pressed(4814).withSpring, interpolate: pressed(4120).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(4818).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
   fn.__closure = obj;
   fn.__workletHash = 16574219123934;
   fn.__initData = closure_9;
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: animatedStyle, children: <EmojiGlyph emoji={arg0.emoji} /> };
-  return jsx(_modDef4119.View, { style: animatedStyle, children: <EmojiGlyph emoji={arg0.emoji} /> });
+  return jsx(_modDef4120.View, { style: animatedStyle, children: <EmojiGlyph emoji={arg0.emoji} /> });
 }
 function CustomTypingIndicatorEmojiSlot(index) {
   index = index.index;
@@ -86,7 +86,8 @@ function CustomTypingIndicatorEmojiSlot(index) {
           str2 = "";
         }
       },
-      pickerIntention: closure_1_5.TYPING_INDICATOR
+      pickerIntention: closure_1_5.TYPING_INDICATOR,
+      bypassPremiumEmojiEntitlement: true
     };
     const result = obj.openEmojiPickerActionSheet(obj);
   }, items);

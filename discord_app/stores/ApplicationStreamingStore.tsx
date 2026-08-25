@@ -3,9 +3,9 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
-import getTitleFromPickedStreamContentDefault from "../modules/go_live/utils/getTitleFromPickedStreamContent.tsx";
 import canStreamInChannel from "../modules/go_live/utils/StreamPermissionUtils.tsx";
 import canSpectateDefault from "../modules/go_live/utils/canSpectate.tsx";
+import getTitleFromPickedStreamContentDefault from "../modules/go_live/utils/getTitleFromPickedStreamContent.tsx";
 import closure_8 from "../modules/game_console/GameConsoleStore.tsx";
 import closure_9 from "../modules/game_detection/RunningGameStore.native.tsx";
 import closure_10 from "AuthenticationStore.tsx";
@@ -711,7 +711,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    let obj = sourceId(4536);
+    let obj = sourceId(4446);
     obj = { streamType, guildId, channelId, ownerId: store2.getId() };
     const encodeStreamKeyResult = obj.encodeStreamKey(obj);
     let startsWithResult;
@@ -803,13 +803,13 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       } else if (reason === tmp3.UNAUTHORIZED) {
         FAILED = tmp22.FAILED;
       } else if (reason === tmp3.SAFETY_GUILD_RATE_LIMITED) {
-        let obj = guildId(4536);
+        let obj = guildId(4446);
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        guildId(2008)(4661, dependencyMap.paths).then((arg0) => {
+        guildId(2009)(13383, dependencyMap.paths).then((arg0) => {
           arg0.default(guildId);
         });
         FAILED = tmp22.ENDED;
-        const promise = guildId(2008)(4661, dependencyMap.paths);
+        const promise = guildId(2009)(13383, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = tmp22.FAILED;

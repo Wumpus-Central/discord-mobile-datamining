@@ -2,7 +2,7 @@
 import getSystemLocale from "../../intl/index.native.tsx";
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import isNullOrEmpty from "../../utils/StringUtils.tsx";
-import tDefault from "../../../_runtime/04095_t.js";
+import tDefault from "../../../_runtime/04096_t.js";
 import ME2 from "../links/LinkUtils.tsx";
 import textRegexpDefault from "MarkupTextRule.tsx";
 import closure_3 from "../channel/GatedChannelStore.tsx";
@@ -46,18 +46,18 @@ function getChannel(id, arr) {
   if (null != channel) {
     obj = { type: null, id: null, guildId: null, name: null, isDm: null, isForumPost: null, isMentionable: null, canViewChannel: null, roleSubscriptionGated: null, iconType: null, parentId: null };
     ({ type: obj4[0], id: obj4[1], guild_id: obj4[2] } = channel);
-    let tmpResult = tmp(4989);
+    let tmpResult = tmp(4574);
     obj[3] = tmpResult.computeChannelName(channel, closure_8, closure_7);
     obj[4] = channel.isPrivate();
     obj[5] = channel.isForumPost();
-    tmpResult = tmp(6855);
+    tmpResult = tmp(4847);
     obj[6] = tmpResult.isChannelTypeMentionable(channel.type);
-    obj[7] = tmp(4492).canViewChannel(channel);
+    obj[7] = tmp(4575).canViewChannel(channel);
     obj[8] = isSubscriptionGated;
     obj[9] = str;
     obj[10] = channel.parent_id;
     tmp4 = obj;
-    const tmpResult1 = tmp(4492);
+    const tmpResult1 = tmp(4575);
   }
   return tmp4;
 }
@@ -169,9 +169,9 @@ function parseChannel(canViewChannel) {
             if (canViewChannel.isForumPost) {
               const channel = store.getChannel(canViewChannel.parentId);
               if (null != channel) {
-                let tmp35Result = tmp35(4989);
+                let tmp35Result = tmp35(4574);
                 const channelName = tmp35Result.computeChannelName(channel, closure_8, closure_7);
-                tmp35Result = tmp35(4984);
+                tmp35Result = tmp35(4566);
                 let str3 = tmp35Result.getMentionIconType(channel);
                 if (str3 == null) {
                   str3 = "forum";

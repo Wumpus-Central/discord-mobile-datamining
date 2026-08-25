@@ -1,8 +1,8 @@
 // discord_app/components_native/premium/OutboundPromotionCard.tsx
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import Text from "../../design/components/Text/native/Text.tsx";
 import get_defaultRulesDefault from "../../modules/markup/MarkupUtils.tsx";
+import Text from "../../design/components/Text/native/Text.tsx";
 import RedesignBottomSheetTitleHeaderBase from "../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Background from "../../design/components/Sheet/native/BottomSheet.native.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";

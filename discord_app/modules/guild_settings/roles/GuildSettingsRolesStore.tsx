@@ -596,7 +596,7 @@ obj = {
     if (null == found) {
       return false;
     } else {
-      const result = id(1987).extractColorStringsFromServerColors(colors);
+      const result = id(1988).extractColorStringsFromServerColors(colors);
       const value = map2.get(id);
       let tmp21 = null != value;
       if (tmp21) {
@@ -967,7 +967,7 @@ obj = {
         obj[0] = currentStyle;
         obj[1] = value.styleColors;
         const result = obj3.set(id, obj);
-        const result1 = id(1987).extractColorStringsFromServerColors(tmp19);
+        const result1 = id(1988).extractColorStringsFromServerColors(tmp19);
         const primary_color = tmp19.primary_color;
         obj = { color: null, colors: null, colorString: null, colorStrings: null };
         obj[0] = primary_color;

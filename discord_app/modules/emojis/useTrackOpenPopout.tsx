@@ -1,6 +1,6 @@
 // discord_app/modules/emojis/useTrackOpenPopout.tsx
-import useMountLayoutEffectDefault from "../../hooks/useMountEffect.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import useMountLayoutEffectDefault from "../../hooks/useMountEffect.tsx";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../../stores/ChannelStore.tsx";
 import closure_5 from "../../stores/SelectedChannelStore.tsx";

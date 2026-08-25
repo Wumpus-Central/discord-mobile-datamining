@@ -353,7 +353,7 @@ class ConnectedApplicationUserRoleAccount {
             obj = { style: obj.connectedAccountPoweredByText, children: null };
             let tmp5 = null;
             if (null != applicationRoleConnection.application.bot) {
-              obj = { style: null, user: null, size: null, guildId: "ct" };
+              obj = { style: null, user: null, size: null, guildId: "a" };
               obj[0] = tmp3.connectedAccountPoweredByAvatar;
               const tmp12 = new closure_1_7(tmp4.application.bot);
               obj[1] = tmp12;

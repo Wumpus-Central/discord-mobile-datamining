@@ -1,7 +1,7 @@
 // discord_app/lib/Frecency.tsx
 import set from "../../_runtime/00002_set.js";
 import applyDefault from "../../_runtime/00012_apply.js";
-import tDefault from "../../_runtime/03978_t.js";
+import hooksDefault from "../../_runtime/03979_hooks.js";
 
 function DEFAULT_FRECENCY(arg0, arg1, numOfRecentUses) {
   return Math.ceil(arg0 * (arg1 / numOfRecentUses.numOfRecentUses));
@@ -187,7 +187,7 @@ prototype["getFrecency"] = function getFrecency(id) {
 prototype["compute"] = function compute() {
   let self = this;
   self = this;
-  dependencyMap = tDefault();
+  dependencyMap = hooksDefault();
   let maxByResult = null;
   if (this.calculateMaxTotalUse) {
     let tmpResult = tmp(12);

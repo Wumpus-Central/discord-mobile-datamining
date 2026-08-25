@@ -2393,21 +2393,8 @@ export const _private = {
         }
       },
       CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 1;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh-floating" === iter.next()) {
-                let tmp4 = iter;
-                iter.return();
-                return 0;
-              }
-            }
-            return 1;
-          }
+        resolve() {
+          return 1;
         }
       },
       CHAT_INPUT_FLOATING_BORDER_RADIUS: {

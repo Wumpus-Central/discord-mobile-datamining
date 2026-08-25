@@ -14,21 +14,22 @@ import { MediaEngineContextTypes } from "../../discord_common/js/packages/media-
 import promise from "../utils/AnalyticsUtils.tsx";
 
 require = arg1;
-function createRTCConnection(arg0, arg1) {
+function createRTCConnection(arg0, arg1, arg2) {
   if (null == closure_4) {
     const _Error = Error;
     error = new Error("Creating RTCConnection without session.");
     throw error;
   } else {
     const id = store.getId();
-    let obj = { userId: null, sessionId: null, guildId: null, channelId: null, joinVoiceId: null };
+    let obj = { userId: null, sessionId: null, guildId: null, channelId: null, joinVoiceId: null, createdTime: null };
     obj[0] = id;
     obj[1] = closure_4;
     obj[2] = arg0;
     obj[3] = arg1;
     obj[4] = c23;
-    _default = new _default(4551).default(obj);
-    _default.on(_default(4573).RTCConnectionEvent.State, (arg0, arg1, arg2) => {
+    obj[5] = arg2;
+    _default = new _default(4456).default(obj);
+    _default.on(_default(4478).RTCConnectionEvent.State, (arg0, arg1, arg2) => {
       closure_0 = arg0;
       const callback = arg1;
       dependencyMap = arg2;
@@ -40,7 +41,7 @@ function createRTCConnection(arg0, arg1) {
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4573).RTCConnectionEvent.Video, (arg0, arg1, arg2, arg3, arg4) => {
+    _default.on(_default(4478).RTCConnectionEvent.Video, (arg0, arg1, arg2, arg3, arg4) => {
       closure_0 = arg0;
       closure_1 = arg1;
       closure_2 = arg2;
@@ -52,7 +53,7 @@ function createRTCConnection(arg0, arg1) {
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4573).RTCConnectionEvent.Ping, (arg0, arg1) => {
+    _default.on(_default(4478).RTCConnectionEvent.Ping, (arg0, arg1) => {
       closure_0 = arg0;
       const callback = arg1;
       callback(709).wait(() => {
@@ -61,7 +62,7 @@ function createRTCConnection(arg0, arg1) {
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4573).RTCConnectionEvent.OutboundLossRate, (arg0) => {
+    _default.on(_default(4478).RTCConnectionEvent.OutboundLossRate, (arg0) => {
       closure_0 = arg0;
       callback(709).wait(() => {
         let obj = closure_1_1(closure_1_2[8]);
@@ -69,12 +70,12 @@ function createRTCConnection(arg0, arg1) {
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4573).RTCConnectionEvent.Speaking, (userId, speaking) => {
+    _default.on(_default(4478).RTCConnectionEvent.Speaking, (userId, speaking) => {
       if (closure_17 != null) {
         closure_17.setSpeaking(userId, speaking);
       }
     });
-    _default.on(_default(4573).RTCConnectionEvent.Flags, (arg0, arg1) => {
+    _default.on(_default(4478).RTCConnectionEvent.Flags, (arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
       closure_1_1(closure_1_2[8]).wait(() => {
@@ -83,12 +84,12 @@ function createRTCConnection(arg0, arg1) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4573).RTCConnectionEvent.UsersMerged, (userIds, context) => {
+    _default.on(_default(4478).RTCConnectionEvent.UsersMerged, (userIds, context) => {
       let obj = callback(709);
       obj = { type: "RTC_CONNECTION_USERS_MERGED", userIds, context };
       obj.dispatch(obj);
     });
-    _default.on(_default(4573).RTCConnectionEvent.ClientConnect, (arg0) => {
+    _default.on(_default(4478).RTCConnectionEvent.ClientConnect, (arg0) => {
       closure_0 = arg0;
       closure_1_1(closure_1_2[8]).wait(() => {
         let obj = closure_2_1(closure_2_2[8]);
@@ -96,7 +97,7 @@ function createRTCConnection(arg0, arg1) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4573).RTCConnectionEvent.ClientDisconnect, (arg0) => {
+    _default.on(_default(4478).RTCConnectionEvent.ClientDisconnect, (arg0) => {
       closure_0 = arg0;
       closure_1_1(closure_1_2[8]).wait(() => {
         let obj = closure_2_1(closure_2_2[8]);
@@ -104,7 +105,7 @@ function createRTCConnection(arg0, arg1) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4573).RTCConnectionEvent.Platform, (arg0, arg1, arg2) => {
+    _default.on(_default(4478).RTCConnectionEvent.Platform, (arg0, arg1, arg2) => {
       closure_0 = arg0;
       const callback = arg1;
       dependencyMap = arg2;
@@ -114,12 +115,12 @@ function createRTCConnection(arg0, arg1) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4573).RTCConnectionEvent.SecureFramesUpdate, () => {
+    _default.on(_default(4478).RTCConnectionEvent.SecureFramesUpdate, () => {
       callback(709).wait(() => {
         callback(table[8]).dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
       });
     });
-    _default.on(_default(4573).RTCConnectionEvent.RosterMapUpdate, (arg0) => {
+    _default.on(_default(4478).RTCConnectionEvent.RosterMapUpdate, (arg0) => {
       closure_0 = arg0;
       callback(709).wait(() => {
         let obj = closure_1_1(closure_1_2[8]);
@@ -127,9 +128,9 @@ function createRTCConnection(arg0, arg1) {
         obj.dispatch(obj);
       });
     });
-    let tmp31 = updateVoiceStatesDefault;
-    tmp31 = new tmp31(store.getId(), arg1);
-    closure_17 = tmp31;
+    let tmp32 = updateVoiceStatesDefault;
+    tmp32 = new tmp32(store.getId(), arg1);
+    closure_17 = tmp32;
     c15 = null;
     c18 = false;
     c19 = false;
@@ -472,63 +473,63 @@ const rTCConnectionStore = new RTCConnectionStore(dispatcherDefault, {
       closure_3.setVideoSize(tmp, tmp2, tmp3);
     }
   },
-  VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
-    voiceStates = voiceStates.voiceStates;
+  VOICE_STATE_UPDATES: function handleVoiceStateUpdates(arg0) {
+    ({ voiceStates, receivedAt: require } = arg0);
     return voiceStates.reduce((arg0, userId) => {
-      if (closure_17 != null) {
+      if (closure_1_17 != null) {
         obj.updateVoiceStates(userId.userId, userId.channelId);
       }
       let tmp2 = closure_18;
       if (!closure_18) {
         let num;
-        if (closure_17 != null) {
+        if (closure_1_17 != null) {
           num = obj2.getStats().max_voice_state_count;
         }
         if (num == null) {
           num = 0;
         }
         tmp2 = num > 1;
-        obj2 = closure_17;
+        obj2 = closure_1_17;
       }
       closure_18 = tmp2;
-      if (id.getId() !== userId.userId) {
+      if (closure_1_6.getId() !== userId.userId) {
         return arg0;
       } else {
-        let tmp4 = null != config;
+        let tmp4 = null != _null;
         if (tmp4) {
-          tmp4 = userId.channelId === config.channelId;
+          tmp4 = userId.channelId === _null.channelId;
         }
         if (tmp4) {
-          if (null != config) {
-            const timeout = config.timeout;
+          if (null != _null) {
+            const timeout = _null.timeout;
             timeout.stop();
-            config = null;
+            _null = null;
           }
         }
         if (null != closure_3) {
-          if (userId.sessionId === closure_4) {
+          if (userId.sessionId === closure_1_4) {
             if (null == userId.guildId) {
-              if (!tmp25) {
-                callback4();
+              if (!tmp26) {
+                closure_1_26();
               }
               if (null != userId.channelId) {
                 let channelId = null;
                 c16 = null;
-                closure_3 = callback3(userId.guildId, userId.channelId);
+                closure_3 = closure_1_25(userId.guildId, userId.channelId, closure_0);
                 let num9;
-                if (closure_17 != null) {
+                if (closure_1_17 != null) {
                   num9 = obj7.getStats().max_voice_state_count;
                 }
                 if (num9 == null) {
                   num9 = 0;
                 }
                 closure_18 = num9 > 1;
-                obj7 = closure_17;
+                obj7 = closure_1_17;
               }
-              tmp25 = userId.guildId !== closure_3.guildId && null == userId.channelId;
+              tmp26 = userId.guildId !== closure_3.guildId && null == userId.channelId;
             }
             if (null == userId.channelId) {
-              callback4();
+              closure_1_26();
             } else {
               closure_3.setNextChannelId(userId.channelId);
               c22 = true;
@@ -536,45 +537,45 @@ const rTCConnectionStore = new RTCConnectionStore(dispatcherDefault, {
               closure_3.clearJoinVoiceId();
             }
           } else if (userId.guildId === closure_3.guildId) {
-            if (!tmp18) {
+            if (!tmp19) {
               channelId = closure_3.channelId;
             }
-            callback4();
-            const obj6 = awaitingRemoteSessionInfo;
-            tmp18 = null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo() && null != awaitingRemoteSessionInfo.getRemoteSessionId();
+            closure_1_26();
+            const obj6 = closure_1_5;
+            tmp19 = null != closure_1_5.getAwaitingRemoteSessionInfo() && null != closure_1_5.getRemoteSessionId();
           }
         } else {
-          if (userId.sessionId === closure_4) {
+          if (userId.sessionId === closure_1_4) {
             if (null != userId.channelId) {
               if (!tmp4) {
-                if (null != closure_20) {
-                  if (obj3.now() - closure_20 >= 300000) {
-                    callback2(tmp11[8]).wait(() => callback(table[12]).default.disconnect());
+                if (null != closure_1_20) {
+                  if (obj3.now() - closure_1_20 >= 300000) {
+                    closure_1_1(tmp11[8]).wait(() => callback(table[12]).default.disconnect());
                     return arg0;
                   }
-                  obj3 = callback(table[11]);
-                  tmp11 = table;
+                  obj3 = closure_1_0(closure_1_2[11]);
+                  tmp11 = closure_1_2;
                 }
               }
               channelId = null;
               c16 = null;
-              closure_3 = callback3(userId.guildId, userId.channelId);
+              closure_3 = closure_1_25(userId.guildId, userId.channelId, closure_0);
               let num5;
-              if (closure_17 != null) {
+              if (closure_1_17 != null) {
                 num5 = obj5.getStats().max_voice_state_count;
               }
               if (num5 == null) {
                 num5 = 0;
               }
               closure_18 = num5 > 1;
-              obj5 = closure_17;
+              obj5 = closure_1_17;
             }
           }
           return arg0;
         }
         return true;
       }
-      obj = closure_17;
+      obj = closure_1_17;
     }, false);
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
@@ -768,63 +769,63 @@ let obj = {
       closure_3.setVideoSize(tmp, tmp2, tmp3);
     }
   },
-  VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
-    voiceStates = voiceStates.voiceStates;
+  VOICE_STATE_UPDATES: function handleVoiceStateUpdates(arg0) {
+    ({ voiceStates, receivedAt: require } = arg0);
     return voiceStates.reduce((arg0, userId) => {
-      if (closure_17 != null) {
+      if (closure_1_17 != null) {
         obj.updateVoiceStates(userId.userId, userId.channelId);
       }
       let tmp2 = closure_18;
       if (!closure_18) {
         let num;
-        if (closure_17 != null) {
+        if (closure_1_17 != null) {
           num = obj2.getStats().max_voice_state_count;
         }
         if (num == null) {
           num = 0;
         }
         tmp2 = num > 1;
-        obj2 = closure_17;
+        obj2 = closure_1_17;
       }
       closure_18 = tmp2;
-      if (id.getId() !== userId.userId) {
+      if (closure_1_6.getId() !== userId.userId) {
         return arg0;
       } else {
-        let tmp4 = null != config;
+        let tmp4 = null != _null;
         if (tmp4) {
-          tmp4 = userId.channelId === config.channelId;
+          tmp4 = userId.channelId === _null.channelId;
         }
         if (tmp4) {
-          if (null != config) {
-            const timeout = config.timeout;
+          if (null != _null) {
+            const timeout = _null.timeout;
             timeout.stop();
-            config = null;
+            _null = null;
           }
         }
         if (null != closure_3) {
-          if (userId.sessionId === closure_4) {
+          if (userId.sessionId === closure_1_4) {
             if (null == userId.guildId) {
-              if (!tmp25) {
-                callback4();
+              if (!tmp26) {
+                closure_1_26();
               }
               if (null != userId.channelId) {
                 let channelId = null;
                 c16 = null;
-                closure_3 = callback3(userId.guildId, userId.channelId);
+                closure_3 = closure_1_25(userId.guildId, userId.channelId, closure_0);
                 let num9;
-                if (closure_17 != null) {
+                if (closure_1_17 != null) {
                   num9 = obj7.getStats().max_voice_state_count;
                 }
                 if (num9 == null) {
                   num9 = 0;
                 }
                 closure_18 = num9 > 1;
-                obj7 = closure_17;
+                obj7 = closure_1_17;
               }
-              tmp25 = userId.guildId !== closure_3.guildId && null == userId.channelId;
+              tmp26 = userId.guildId !== closure_3.guildId && null == userId.channelId;
             }
             if (null == userId.channelId) {
-              callback4();
+              closure_1_26();
             } else {
               closure_3.setNextChannelId(userId.channelId);
               c22 = true;
@@ -832,45 +833,45 @@ let obj = {
               closure_3.clearJoinVoiceId();
             }
           } else if (userId.guildId === closure_3.guildId) {
-            if (!tmp18) {
+            if (!tmp19) {
               channelId = closure_3.channelId;
             }
-            callback4();
-            const obj6 = awaitingRemoteSessionInfo;
-            tmp18 = null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo() && null != awaitingRemoteSessionInfo.getRemoteSessionId();
+            closure_1_26();
+            const obj6 = closure_1_5;
+            tmp19 = null != closure_1_5.getAwaitingRemoteSessionInfo() && null != closure_1_5.getRemoteSessionId();
           }
         } else {
-          if (userId.sessionId === closure_4) {
+          if (userId.sessionId === closure_1_4) {
             if (null != userId.channelId) {
               if (!tmp4) {
-                if (null != closure_20) {
-                  if (obj3.now() - closure_20 >= 300000) {
-                    callback2(tmp11[8]).wait(() => callback(table[12]).default.disconnect());
+                if (null != closure_1_20) {
+                  if (obj3.now() - closure_1_20 >= 300000) {
+                    closure_1_1(tmp11[8]).wait(() => callback(table[12]).default.disconnect());
                     return arg0;
                   }
-                  obj3 = callback(table[11]);
-                  tmp11 = table;
+                  obj3 = closure_1_0(closure_1_2[11]);
+                  tmp11 = closure_1_2;
                 }
               }
               channelId = null;
               c16 = null;
-              closure_3 = callback3(userId.guildId, userId.channelId);
+              closure_3 = closure_1_25(userId.guildId, userId.channelId, closure_0);
               let num5;
-              if (closure_17 != null) {
+              if (closure_1_17 != null) {
                 num5 = obj5.getStats().max_voice_state_count;
               }
               if (num5 == null) {
                 num5 = 0;
               }
               closure_18 = num5 > 1;
-              obj5 = closure_17;
+              obj5 = closure_1_17;
             }
           }
           return arg0;
         }
         return true;
       }
-      obj = closure_17;
+      obj = closure_1_17;
     }, false);
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {

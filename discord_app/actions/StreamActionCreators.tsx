@@ -2,12 +2,12 @@
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import _modDef4393 from "ChannelActionCreators.tsx";
 import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
-import _modDef4775 from "ChannelActionCreators.tsx";
-import _modDef4980 from "SelectedChannelActionCreators.tsx";
 import allowChannelAccess from "../utils/ChannelUtils.tsx";
-import isPremiumResolution from "../utils/StreamQualityUtils.tsx";
 import transitionToStreamDefault from "../modules/go_live/utils/transitionToStream.native.tsx";
+import _modDef5236 from "SelectedChannelActionCreators.tsx";
+import isPremiumResolution from "../utils/StreamQualityUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../modules/game_console/GameConsoleStore.tsx";
 import closure_5 from "../modules/popout-window/PopoutWindowStore.native.tsx";
@@ -44,8 +44,8 @@ function watchStream(stream, forceMultiple) {
       obj[2] = forceMultiple;
       dispatcherDefault.dispatch(obj);
       if (null != guildId) {
-        const result = tmp12(9901).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
-        const tmp12Result = tmp12(9901);
+        const result = tmp12(4577).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
+        const tmp12Result = tmp12(4577);
       }
       let forceFocus;
       if (forceMultiple != null) {
@@ -63,8 +63,8 @@ function watchStream(stream, forceMultiple) {
         tmp22 = forceMultiple;
       }
       if (!tmp22) {
-        const participant = tmp18(8703).selectParticipant(stream.channelId, encodeStreamKeyResult);
-        const tmp18Result = tmp18(8703);
+        const participant = tmp18(4609).selectParticipant(stream.channelId, encodeStreamKeyResult);
+        const tmp18Result = tmp18(4609);
       }
       const obj3 = dispatcherDefault;
     } else {
@@ -101,7 +101,7 @@ function _fetchStreamPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -124,7 +124,7 @@ function _fetchStreamPreview() {
               dependencyMap = undefined;
               if (c6.shouldFetchPreview(c0, lib, dependencyMap)) {
                 let obj5 = callback;
-                let result = callback(4536);
+                let result = callback(4446);
                 let HTTP = result.encodeStreamKey;
                 if (null != tmp55) {
                   let CALL = closure_1_16.GUILD;
@@ -224,7 +224,7 @@ function _notifyStreamStart() {
       const obj2 = { event: null };
       obj2[0] = callback(503).NetworkActionNames.STREAM_NOTIFY;
       obj1[2] = obj2;
-      yield v0(5232).post(obj1);
+      yield v0(4601).post(obj1);
       if (1 === tmp6) {
         c4 = 0;
         v0 = 3;
@@ -400,12 +400,12 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
   importDefault = require("../modules/go_live/utils/StreamKeyUtils.tsx").decodeStreamKey(streamKey);
   const voiceChannelId = store2.getVoiceChannelId();
   if (tmp4) {
-    _modDef4980.disconnect();
-    const obj2 = _modDef4980;
+    _modDef5236.disconnect();
+    const obj2 = _modDef5236;
   }
   let obj = isStreamKey;
   tmp4 = null != voiceChannelId && voiceChannelId !== arg0;
-  _modDef4775.addRecipient(arg0, id, undefined, () => {
+  _modDef4393.addRecipient(arg0, id, undefined, () => {
     const tmp = callback(closure_1_2[26]);
     const call = tmp.call;
     const fn = () => {

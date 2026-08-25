@@ -24,7 +24,7 @@ export const useIntersectionObserver = function useIntersectionObserver(arg0, ar
   if (arg1 == null) {
     tmp4 = closure_7;
   }
-  const tmp3Result = flag(7487)(tmp4);
+  const tmp3Result = flag(7301)(tmp4);
   callback = tmp3Result;
   closure_4 = callback3(null);
   const items = [flag, arg0, tmp3Result];
@@ -82,7 +82,7 @@ export const useIsVisible = function useIsVisible(arg0, arg1) {
     }
     return value;
   }, items);
-  current = flag(7487)((isIntersecting) => {
+  current = flag(7301)((isIntersecting) => {
     current(isIntersecting.isIntersecting);
   }).current;
   flag = undefined;
@@ -96,14 +96,14 @@ export const useIsVisible = function useIsVisible(arg0, arg1) {
   dependencyMap = tmp6;
   let tmp8 = tmp4;
   const tmp = flag;
-  const tmp3 = flag(7487)((isIntersecting) => {
+  const tmp3 = flag(7301)((isIntersecting) => {
     current(isIntersecting.isIntersecting);
   });
   const tmp5 = callback3;
   if (tmp4 == null) {
     tmp8 = closure_7;
   }
-  const tmpResultResult = flag(7487)(tmp8);
+  const tmpResultResult = flag(7301)(tmp8);
   callback = tmpResultResult;
   callback2 = tmp5(null);
   const items1 = [flag, current, tmpResultResult];

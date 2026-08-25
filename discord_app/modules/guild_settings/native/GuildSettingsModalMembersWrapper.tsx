@@ -6,7 +6,7 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 require = arg1;
 const memoResult = importAllResult.memo((guildId) => {
   guildId = guildId.guildId;
-  return jsx(importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 15894 : 15896), { guildId });
+  return jsx(importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 15926 : 15928), { guildId });
 });
 const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWrapper.tsx");
 

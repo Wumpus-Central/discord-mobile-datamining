@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
 import setDefault from "../../../../actions/AlertActionCreators.tsx";
+import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
 import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import handleRequestSuccess from "../../../../actions/ConsentActionCreators.tsx";
 import closure_3 from "../../../../stores/ConsentStore.tsx";
@@ -24,7 +24,7 @@ createToggle = {
     if (arg0) {
       let items = [Consents.PERSONALIZATION];
       const obj3 = handleRequestSuccess;
-      handleRequestSuccess.setConsents(items, []).catch((message) => callback(14281).showDataPrivacyRateLimitAlert(message.message));
+      handleRequestSuccess.setConsents(items, []).catch((message) => callback(14311).showDataPrivacyRateLimitAlert(message.message));
       const setConsentsResult = handleRequestSuccess.setConsents(items, []);
     } else {
       let obj = setDefault;
@@ -40,7 +40,7 @@ createToggle = {
       obj[4] = componentDidMountDefault.Colors.RED;
       obj[5] = function onConfirm() {
         const items = [constants.PERSONALIZATION];
-        return callback(14280).setConsents([], items);
+        return callback(14310).setConsents([], items);
       };
       obj.show(obj);
     }

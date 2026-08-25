@@ -72,7 +72,7 @@ function _fetchMemberCounts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -115,7 +115,7 @@ function _fetchMemberCounts() {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp7) {
           c1 = tmp;
           throw tmp7;

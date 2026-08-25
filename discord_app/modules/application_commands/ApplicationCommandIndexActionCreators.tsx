@@ -23,7 +23,7 @@ function _fetchApplicationCommandIndex() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -54,7 +54,7 @@ function _fetchApplicationCommandIndex() {
                   closure_0 = arg0;
                   c2 = 0;
                   c3 = 0;
-                  return (/* F121685 */ function*() { ... })();
+                  return (/* F121928 */ function*() { ... })();
                 });
                 closure_7 = tmp;
                 const apply = tmp.apply;
@@ -167,7 +167,7 @@ function _fetchApplicationCommandIndex() {
             return obj;
           } else {
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp10) {
           c2 = tmp;

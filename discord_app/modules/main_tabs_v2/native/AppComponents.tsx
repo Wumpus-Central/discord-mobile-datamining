@@ -8,10 +8,10 @@ import transitionGroupGetItemKey from "../../keyboard/native/PortalKeyboardRende
 import BurstReactionAnimationContainer from "../../../components_native/MainShared.tsx";
 import trackActionSheetImpressionDefault from "../../upsell_tooltip/native/MainViewTooltipActionSheetsV2.tsx";
 import FreezeAfterLayoutPipViewDefault from "../../external_pip/ExternalPipView.android.tsx";
-import _modDef16322 from "../../activities/panel/native/ActivityPanelContainer.tsx";
-import _modDef16355 from "../../frames/panel/native/FramePanelContainer.tsx";
+import _modDef16354 from "../../activities/panel/native/ActivityPanelContainer.tsx";
+import _modDef16387 from "../../frames/panel/native/FramePanelContainer.tsx";
 import VoicePanelDefault from "../../voice_panel/native/VoicePanelContainer.tsx";
-import _modDef16529 from "../../media_panel/native/MediaPlaybackPanelContainer.tsx";
+import _modDef16561 from "../../media_panel/native/MediaPlaybackPanelContainer.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import set from "../../../utils/PlatformUtils.tsx";
 import importDefaultResult from "../../panels/morphable/native/AppFreezer.tsx";
@@ -35,7 +35,7 @@ if (set.isAndroid()) {
 const jsxsResult = jsxs(importDefaultResult, { lockKeys: ["external-pip"], children: null });
 obj = { lockKeys: ["external-pip"], children: null };
 const jsxResult1 = jsx(FreezeAfterLayoutPipViewDefault, {});
-const items1 = [jsx(_modDef16322, {}), jsx(_modDef16355, {}), jsx(VoicePanelDefault, {}), jsx(_modDef16529, {})];
+const items1 = [jsx(_modDef16354, {}), jsx(_modDef16387, {}), jsx(VoicePanelDefault, {}), jsx(_modDef16561, {})];
 obj[1] = items1;
 const importDefaultResult1 = importDefaultResult;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/AppComponents.tsx");

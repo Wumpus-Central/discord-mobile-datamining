@@ -1,7 +1,7 @@
 // discord_app/utils/SecondsSliderUtils.tsx
 import set from "../../_runtime/00002_set.js";
 import getSystemLocale from "../intl/index.native.tsx";
-import tDefault from "../../_runtime/03978_t.js";
+import hooksDefault from "../../_runtime/03979_hooks.js";
 
 const result = set.fileFinishedImporting("utils/SecondsSliderUtils.tsx");
 
@@ -15,7 +15,7 @@ export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPer
     intl = getSystemLocale.intl;
     stringResult = intl.string(getSystemLocale.t.Yl1D84);
   }
-  const durationResult = tDefault.duration(rateLimitPerUser, "seconds");
+  const durationResult = hooksDefault.duration(rateLimitPerUser, "seconds");
   if (durationResult.days() > 0) {
     const intl6 = getSystemLocale.intl;
     let t = getSystemLocale.t;

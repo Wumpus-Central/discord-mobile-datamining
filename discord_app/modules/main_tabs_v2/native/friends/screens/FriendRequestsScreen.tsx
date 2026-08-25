@@ -42,7 +42,7 @@ let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/f
 export default function FriendRequestsScreen() {
   let tmp = callback();
   let WumpusCouchSpotIllustration = dependencyMap;
-  const analyticsLocations = first(7177)(first(7197).FRIEND_REQUESTS).analyticsLocations;
+  const analyticsLocations = first(5834)(first(5854).FRIEND_REQUESTS).analyticsLocations;
   let stateFromStoresArray;
   first = undefined;
   let obj = stateFromStoresArray(647);
@@ -57,7 +57,7 @@ export default function FriendRequestsScreen() {
       return tmp3;
     });
   });
-  const NotificationCenterAckedBeforeId = stateFromStoresArray(4069).NotificationCenterAckedBeforeId;
+  const NotificationCenterAckedBeforeId = stateFromStoresArray(4070).NotificationCenterAckedBeforeId;
   const setting = NotificationCenterAckedBeforeId.useSetting();
   first = setting;
   let items1 = [stateFromStoresArray, setting];
@@ -66,10 +66,10 @@ export default function FriendRequestsScreen() {
       const mapped = arr.map((local_id) => local_id.local_id);
       const _Boolean = Boolean;
       const found = mapped.filter(Boolean);
-      const result = stateFromStoresArray(15739).markNotificationCenterLocalItemsAcked(found);
-      const obj = stateFromStoresArray(15739);
-      const result1 = stateFromStoresArray(15739).bulkMarkNotificationCenterItemsAcked(arr.filter((addResult) => !closure_1_0(closure_1_2[19]).isRemoteAcked(addResult, closure_1)));
-      const obj2 = stateFromStoresArray(15739);
+      const result = stateFromStoresArray(15771).markNotificationCenterLocalItemsAcked(found);
+      const obj = stateFromStoresArray(15771);
+      const result1 = stateFromStoresArray(15771).bulkMarkNotificationCenterItemsAcked(arr.filter((addResult) => !closure_1_0(closure_1_2[19]).isRemoteAcked(addResult, closure_1)));
+      const obj2 = stateFromStoresArray(15771);
     }
   }, items1);
   const effect1 = gameRelationshipsByType1.useEffect(() => {
@@ -85,9 +85,9 @@ export default function FriendRequestsScreen() {
   }), 2);
   first = tmp9[0];
   dependencyMap = tmp11;
-  let obj2 = stateFromStoresArray(12224);
+  let obj2 = stateFromStoresArray(12545);
   gameRelationshipsByType = obj2.useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-  let obj3 = stateFromStoresArray(12224);
+  let obj3 = stateFromStoresArray(12545);
   gameRelationshipsByType1 = obj3.useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
   const items3 = [gameRelationshipsByType, gameRelationshipsByType1];
   const memo = gameRelationshipsByType1.useMemo(() => {
@@ -100,9 +100,9 @@ export default function FriendRequestsScreen() {
     });
     return Array.from(set);
   }, items3);
-  first(7183)(memo);
+  first(5840)(memo);
   const items4 = [first, tmp9[1]];
-  const memo1 = gameRelationshipsByType1.useMemo(() => stateFromStoresArray(16096).getPendingRelationshipIds(first, dependencyMap), items4);
+  const memo1 = gameRelationshipsByType1.useMemo(() => stateFromStoresArray(16128).getPendingRelationshipIds(first, dependencyMap), items4);
   const pendingIncomingIds = memo1.pendingIncomingIds;
   pendingOutgoingIds = memo1.pendingOutgoingIds;
   spamIds = memo1.spamIds;
@@ -165,7 +165,7 @@ export default function FriendRequestsScreen() {
   let Outgoing = tmp19[1];
   const items8 = [analyticsLocations];
   callback = gameRelationshipsByType1.useCallback((id) => {
-    first(8966)({ userId: id.id, localUser: id, sourceAnalyticsLocations: stateFromStoresArray });
+    first(8930)({ userId: id.id, localUser: id, sourceAnalyticsLocations: stateFromStoresArray });
   }, items8);
   const callback1 = gameRelationshipsByType1.useCallback((arg0) => {
     if (1 === arg0) {
@@ -253,7 +253,7 @@ export default function FriendRequestsScreen() {
   if (tmp28) {
     tmp28 = incoming.length >= incomingData;
   }
-  let tmp3 = first(7177);
+  let tmp3 = first(5834);
   obj = {
     pageWidth: 0,
     defaultIndex: first1,
@@ -276,11 +276,11 @@ export default function FriendRequestsScreen() {
   obj1[1] = intl2.string(stateFromStoresArray(1236).t.tWqcIF);
   items10[1] = obj1;
   obj[3] = items10;
-  const segmentedControlState = stateFromStoresArray(8836).useSegmentedControlState(obj);
+  const segmentedControlState = stateFromStoresArray(9103).useSegmentedControlState(obj);
   obj2 = { value: analyticsLocations, children: null };
-  const items11 = [outgoingData(first(9128), { absolute: true }), ];
+  const items11 = [outgoingData(first(4951), { absolute: true }), ];
   obj3 = { style: tmp.container, children: null };
-  obj4 = { style: tmp.tabs, children: outgoingData(tmp4(10135).SegmentedControl, { state: segmentedControlState }) };
+  obj4 = { style: tmp.tabs, children: outgoingData(tmp4(9289).SegmentedControl, { state: segmentedControlState }) };
   const items12 = [outgoingData(pendingIncomingIds, obj4), , ];
   let tmp32Result = null;
   if (tmp28) {
@@ -290,13 +290,13 @@ export default function FriendRequestsScreen() {
     obj6[0] = tmp.clearAll;
     obj6[1] = function onPress() {
       const lazyResult = gameRelationshipsByType1.lazy(() => callback(paths[13])(paths[12], paths.paths));
-      stateFromStoresArray(4663).openAlert("clear-all-incoming-requests", outgoingData(lazyResult, { incomingRequestCount: incoming.length }));
+      stateFromStoresArray(4746).openAlert("clear-all-incoming-requests", outgoingData(lazyResult, { incomingRequestCount: incoming.length }));
     };
     const obj7 = { variant: "text-sm/semibold", color: "text-brand", children: null };
     const intl3 = tmp4(1236).intl;
     obj7[2] = intl3.string(tmp4(1236).t.O8k7O4);
-    obj6[2] = tmp32(tmp4(4739).Text, obj7);
-    obj5[1] = tmp32(tmp4(5438).PressableOpacity, obj6);
+    obj6[2] = tmp32(tmp4(4376).Text, obj7);
+    obj5[1] = tmp32(tmp4(4949).PressableOpacity, obj6);
     tmp32Result = tmp32(tmp33, obj5);
   }
   items12[1] = tmp32Result;
@@ -312,11 +312,11 @@ export default function FriendRequestsScreen() {
     }
     const obj9 = { title: null, illustration: null, disableBackgroundOverlay: true };
     obj9[0] = stringResult;
-    WumpusCouchSpotIllustration = tmp4(5452).WumpusCouchSpotIllustration;
+    WumpusCouchSpotIllustration = tmp4(6136).WumpusCouchSpotIllustration;
     obj9[1] = WumpusCouchSpotIllustration;
-    obj8[1] = tmp32(tmp2(11589), obj9);
+    obj8[1] = tmp32(tmp2(11250), obj9);
     tmp32Result = tmp32(tmp33, obj8);
-    const tmp2Result = tmp2(11589);
+    const tmp2Result = tmp2(11250);
   } else {
     if (first1 === tmp25.Incoming) {
       outgoingSection = incomingSection;
@@ -325,10 +325,10 @@ export default function FriendRequestsScreen() {
     obj10[0] = outgoingSection;
     obj10[1] = callback2;
     obj10[2] = callback1;
-    items12[2] = tmp32(tmp4(9680).UsersFastList, obj10);
+    items12[2] = tmp32(tmp4(9776).UsersFastList, obj10);
     obj3[1] = items12;
     items11[1] = tmp31(tmp33, obj3);
     obj2[1] = items11;
-    return tmp31(tmp4(7177).AnalyticsLocationProvider, obj2);
+    return tmp31(tmp4(5834).AnalyticsLocationProvider, obj2);
   }
 };

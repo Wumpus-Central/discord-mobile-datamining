@@ -24,7 +24,7 @@ function _queryAudioEffects() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -69,7 +69,7 @@ function _queryAudioEffects() {
             obj2 = lib(698);
             obj2.track(constants.AUDIO_EFFECTS_PROBE_COMPLETED, { succeeded: false });
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else if (arg0 === 1) {
             c8 = 3;
             throw arg1;

@@ -2,9 +2,10 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/04761_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04826_LinearGradient.js";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import GifTagDefault from "GifTag.tsx";
+import PersonalWidgetExpandCollapseProvider from "PersonalWidgetExpandCollapseContext.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -14,21 +15,48 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
-function PersonalWidgetText(lineClamp) {
-  const variant = lineClamp.variant;
-  const color = lineClamp.color;
-  let children = lineClamp.children;
+function PersonalWidgetText(variant) {
+  variant = variant.variant;
+  const color = variant.color;
+  let children = variant.children;
+  const personalWidgetFieldClamp = variant(children[8]).usePersonalWidgetFieldClamp(variant.maxLines, children);
   const items = [children, variant, color];
+  ({ lineClamp, onTextLayout } = personalWidgetFieldClamp);
   children = React.useMemo(() => {
-    let obj = variant(children[8]);
+    let obj = variant(children[9]);
     obj = { textVariant: variant, linkVariant: variant, textColor: color };
     return obj.parsePersonalWidgetReact(children, undefined, obj);
   }, items);
-  return callback2(variant(children[9]).Text, { variant, color, lineClamp: lineClamp.lineClamp, children });
+  return callback2(variant(children[10]).Text, { variant, color, lineClamp, onTextLayout, children });
+}
+function PersonalWidgetShowMoreButton() {
+  let obj = PersonalWidgetExpandCollapseProvider;
+  const personalWidgetExpandCollapse = obj.usePersonalWidgetExpandCollapse();
+  ({ isExpanded, setIsExpanded: require } = personalWidgetExpandCollapse);
+  if (!personalWidgetExpandCollapse.isAnyFieldClipped) {
+    if (!isExpanded) {
+      return null;
+    }
+  }
+  obj = {
+    hitSlop: closure_13,
+    onPress() {
+      return callback((arg0) => !arg0);
+    },
+    accessibilityRole: "button",
+    accessibilityState: { expanded: isExpanded },
+    children: null
+  };
+  const intl = tmp(1236).intl;
+  let t = tmp(1236).t;
+  obj = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(isExpanded ? t["6MwJo/"] : t.lBeKY2) };
+  t = tmp5(tmp(4376).Text, obj);
+  obj[4] = t;
+  closure_10(closure_5, obj);
 }
 function useWidgetImage(userId, image, disableInteraction) {
   const _require = userId;
-  const GifAutoPlay = _require(first[10]).GifAutoPlay;
+  const GifAutoPlay = _require(first[12]).GifAutoPlay;
   const setting = GifAutoPlay.useSetting();
   let obj = React;
   let tmp2 = callback(React.useState(false), 2);
@@ -49,7 +77,7 @@ function useWidgetImage(userId, image, disableInteraction) {
   const memo = obj.useMemo(() => {
     let tmp2 = null;
     if (null != closure_3) {
-      let obj = userId(first[11]);
+      let obj = userId(first[13]);
       let isAnimated = tmp.isAnimated;
       if (isAnimated) {
         isAnimated = first;
@@ -104,14 +132,14 @@ function CoverSection(section) {
   const items1 = [tmp6, , ];
   let tmp12 = null;
   if ("" !== section.title) {
-    obj = { variant: "heading-xl/semibold", color: "text-strong", lineClamp: 1, children: null };
+    obj = { variant: "heading-xl/semibold", color: "text-strong", maxLines: 2, children: null };
     obj[3] = section.title;
     tmp12 = callback2(PersonalWidgetText, obj);
   }
   items1[1] = tmp12;
   let tmp15 = null;
   if ("" !== section.subtitle) {
-    obj1 = { variant: "text-sm/medium", color: "text-default", lineClamp: 3, children: null };
+    obj1 = { variant: "text-sm/medium", color: "text-default", maxLines: 3, children: null };
     obj1[3] = section.subtitle;
     tmp15 = callback2(PersonalWidgetText, obj1);
   }
@@ -148,7 +176,7 @@ function CoverSection(section) {
     if (showGifTag) {
       const obj7 = { style: null };
       obj7[0] = tmp.gifTag;
-      tmp27Result = tmp27(tmp20(9026), obj7);
+      tmp27Result = tmp27(tmp20(8988), obj7);
     }
     items2[2] = tmp27Result;
     obj3[1] = items2;
@@ -197,14 +225,14 @@ function FieldRow(field) {
   const obj2 = { style: tmp.fieldContent, children: null };
   let tmp16 = null;
   if ("" !== field.title) {
-    const obj3 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
+    const obj3 = { variant: "text-sm/medium", color: "text-default", maxLines: 2, children: null };
     obj3[3] = field.title;
     tmp16 = callback2(PersonalWidgetText, obj3);
   }
   const items2 = [tmp16, ];
   let tmp19 = null;
   if ("" !== field.description) {
-    const obj4 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
+    const obj4 = { variant: "text-xs/medium", color: "text-subtle", maxLines: 4, children: null };
     obj4[3] = field.description;
     tmp19 = callback2(PersonalWidgetText, obj4);
   }
@@ -221,38 +249,12 @@ function FieldsSection(arg0) {
     const obj = { style: null, children: null };
     obj[0] = tmp.fieldsContainer;
     const fields = section.fields;
-    obj[1] = fields.map((field) => closure_1_10(closure_1_17, { userId: closure_0, field, disableInteraction: closure_1 }, field.key));
+    obj[1] = fields.map((field) => closure_1_10(closure_1_19, { userId: closure_0, field, disableInteraction: closure_1 }, field.key));
     tmp2 = callback2(closure_7, obj);
   }
   return tmp2;
 }
-({ Pressable: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = ["rgba(7, 7, 9, 0)", "rgba(7, 7, 9, 0.8)"];
-createCacheKey = { coverContainer: null, coverContent: null, coverContentWithImage: null, sectionsContainer: null, fieldsContainer: null, fieldRow: null, fieldImage: null, fieldContent: null, gifTag: null, gifTagSmall: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { gap: ThemesDefault.space.PX_4 };
-let obj1 = { gap: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { padding: ThemesDefault.space.PX_16, marginTop: 56 };
-let obj2 = { padding: ThemesDefault.space.PX_16, marginTop: 56 };
-createCacheKey[3] = { gap: ThemesDefault.space.PX_12 };
-let obj3 = { gap: ThemesDefault.space.PX_12 };
-createCacheKey[4] = { gap: ThemesDefault.space.PX_12 };
-let obj4 = { gap: ThemesDefault.space.PX_12 };
-createCacheKey[5] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-let obj5 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-createCacheKey[6] = { width: ThemesDefault.space.PX_48, height: ThemesDefault.space.PX_48, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[7] = { flex: 1 };
-let obj6 = { width: ThemesDefault.space.PX_48, height: ThemesDefault.space.PX_48, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[8] = { position: "absolute", top: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8 };
-let obj7 = { position: "absolute", top: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8 };
-createCacheKey[9] = { position: "absolute", top: ThemesDefault.space.PX_4, left: ThemesDefault.space.PX_4 };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-const obj8 = { position: "absolute", top: ThemesDefault.space.PX_4, left: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfilePersonalWidgetCard.tsx");
-
-export default function UserProfilePersonalWidgetCard(style) {
+function UserProfilePersonalWidgetCardContent(style) {
   const userId = style.userId;
   ({ widget, disableInteraction } = style);
   if (disableInteraction === undefined) {
@@ -264,7 +266,7 @@ export default function UserProfilePersonalWidgetCard(style) {
   obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = callback3();
   const tmp5 = disableInteraction;
-  obj[1] = callback2(userId(8027).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj[1] = callback2(userId(7849).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj[2] = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -274,31 +276,72 @@ export default function UserProfilePersonalWidgetCard(style) {
     obj = { userId: null, widget: null };
     obj[0] = userId;
     obj[1] = widget;
-    tmp4Result = tmp4(tmp5(12238), obj);
+    tmp4Result = tmp4(tmp5(12555), obj);
   }
   obj[3] = tmp4Result;
-  const tmp6 = disableInteraction(7223);
+  obj1 = { style: tmp.sectionsContainer, children: null };
   const sections = widget.sections;
-  obj[4] = callback2(closure_7, {
-    style: tmp.sectionsContainer,
-    children: sections.map((type) => {
+  const items1 = [
+    sections.map((type) => {
       type = type.type;
       if ("cover" === type) {
         let obj = { userId: null, section: null, disableInteraction: null };
         obj[0] = userId;
         obj[1] = type;
         obj[2] = disableInteraction;
-        return closure_1_10(closure_1_16, obj, arg1);
+        return closure_1_10(closure_1_18, obj, arg1);
       } else if ("fields" === type) {
         obj = { userId: null, section: null, disableInteraction: null };
         obj[0] = userId;
         obj[1] = type;
         obj[2] = disableInteraction;
-        return closure_1_10(closure_1_18, obj, arg1);
+        return closure_1_10(closure_1_20, obj, arg1);
       } else {
         return null;
       }
-    })
-  });
-  return callback2(tmp6, obj);
+    }),
+
+  ];
+  tmp4Result = null;
+  if (!disableInteraction) {
+    tmp4Result = tmp4(PersonalWidgetShowMoreButton, {});
+  }
+  items1[1] = tmp4Result;
+  obj1[1] = items1;
+  obj[4] = closure_11(closure_7, obj1);
+  return callback2(disableInteraction(5881), obj);
+}
+({ Pressable: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
+({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
+let closure_12 = ["rgba(7, 7, 9, 0)", "rgba(7, 7, 9, 0.8)"];
+let closure_13 = { top: 8, bottom: 8, left: 8, right: 8 };
+createCacheKey = { coverContainer: null, coverContent: null, coverContentWithImage: null, sectionsContainer: null, fieldsContainer: null, fieldRow: null, fieldImage: null, fieldContent: null, gifTag: null, gifTagSmall: null };
+createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" };
+createCacheKey[0] = createCacheKey;
+createCacheKey[1] = { gap: ThemesDefault.space.PX_4 };
+let obj1 = { gap: ThemesDefault.space.PX_4 };
+createCacheKey[2] = { padding: ThemesDefault.space.PX_16, marginTop: 56 };
+let obj2 = { padding: ThemesDefault.space.PX_16, marginTop: 56 };
+createCacheKey[3] = { gap: ThemesDefault.space.PX_12 };
+let obj3 = { gap: ThemesDefault.space.PX_12 };
+createCacheKey[4] = { gap: ThemesDefault.space.PX_12 };
+let obj4 = { gap: ThemesDefault.space.PX_12 };
+createCacheKey[5] = { flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_12 };
+let obj5 = { flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_12 };
+createCacheKey[6] = { width: ThemesDefault.space.PX_48, height: ThemesDefault.space.PX_48, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[7] = { flex: 1 };
+let obj6 = { width: ThemesDefault.space.PX_48, height: ThemesDefault.space.PX_48, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[8] = { position: "absolute", top: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8 };
+let obj7 = { position: "absolute", top: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8 };
+createCacheKey[9] = { position: "absolute", top: ThemesDefault.space.PX_4, left: ThemesDefault.space.PX_4 };
+let closure_14 = createCacheKey.createStyles(createCacheKey);
+const obj8 = { position: "absolute", top: ThemesDefault.space.PX_4, left: ThemesDefault.space.PX_4 };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfilePersonalWidgetCard.tsx");
+
+export default function UserProfilePersonalWidgetCard(arg0) {
+  let obj = { children: null };
+  obj = {};
+  const merged = Object.assign(arg0);
+  obj[0] = callback2(UserProfilePersonalWidgetCardContent, obj);
+  return callback2(PersonalWidgetExpandCollapseProvider.PersonalWidgetExpandCollapseProvider, obj);
 };

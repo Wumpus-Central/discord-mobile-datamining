@@ -1,7 +1,7 @@
 // discord_app/actions/CallActionCreators.tsx
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef4980 from "SelectedChannelActionCreators.tsx";
+import _modDef5236 from "SelectedChannelActionCreators.tsx";
 import useCanRingToGuildVoiceChannel from "../modules/calls/useCanRing.tsx";
 import closure_3 from "../stores/ChannelStore.tsx";
 import closure_4 from "../stores/RelationshipStore.tsx";
@@ -33,7 +33,7 @@ export default {
           if (closure_3) {
             ringable = body.body.ringable;
           }
-          const voiceChannel = id(4980).selectVoiceChannel(id, dependencyMap);
+          const voiceChannel = id(5236).selectVoiceChannel(id, dependencyMap);
           if (ringable) {
             self.ring(tmp2);
           }
@@ -61,11 +61,11 @@ export default {
             obj = { userId: closure_4, context: { location: "Call" } };
             obj.addRelationship(obj);
           };
-          id(4832).show(obj);
+          id(4744).show(obj);
         });
       }
     } else {
-      obj = _modDef4980;
+      obj = _modDef5236;
       let voiceChannel = obj.selectVoiceChannel(id, c1);
       if (arg2) {
         self.ring(id);

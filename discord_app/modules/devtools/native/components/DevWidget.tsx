@@ -1,6 +1,6 @@
 // discord_app/modules/devtools/native/components/DevWidget.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod4119 from "../../../reanimated/ReanimatedRexport.tsx";
+import _mod4120 from "../../../reanimated/ReanimatedRexport.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import StaffBadgeIcon from "../../../../design/components/Icon/native/redesign/generated/StaffBadgeIcon.tsx";
 import VisualEffectViewOverrideOverlay_Default from "../../../visual_effect_view/native/overrides/VEVOO.tsx";
@@ -151,9 +151,9 @@ let closure_16 = importAllResult.memo(() => {
 let result = require("set").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default function DevWidget() {
-  let obj = _mod4119;
+  let obj = _mod4120;
   const sharedValue = obj.useSharedValue(closure_4.devWidgetPosition.x);
-  const sharedValue1 = _mod4119.useSharedValue(closure_4.devWidgetPosition.y);
+  const sharedValue1 = _mod4120.useSharedValue(closure_4.devWidgetPosition.y);
   obj = { children: null };
   const items = [callback(VisualEffectViewOverrideOverlay_Default, { x: sharedValue, y: sharedValue1 }), ];
   obj = {

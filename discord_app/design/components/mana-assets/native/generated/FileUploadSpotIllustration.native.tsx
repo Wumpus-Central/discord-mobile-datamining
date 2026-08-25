@@ -15,7 +15,7 @@ export const FileUploadSpotIllustration = function FileUploadSpotIllustration(wi
   }
   let num2 = width.height;
   if (num2 === undefined) {
-    num2 = 162;
+    num2 = 192;
   }
   let num3 = width.scale;
   if (num3 === undefined) {

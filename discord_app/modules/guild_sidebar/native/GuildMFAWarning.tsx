@@ -6,7 +6,7 @@ import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import map from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import registerAssetDefault from "../../../../_runtime/15526_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/15558_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
@@ -38,7 +38,7 @@ function _handlePress() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ function _handlePress() {
           obj = callback(paths[10]);
           obj.openURL(articleURL.getArticleURL(constants.SETTING_UP_TWO_FACTOR));
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp17) {
         c3 = tmp;

@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
-import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
 import setDefault from "../../../../actions/AlertActionCreators.tsx";
+import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
 import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import useDefaultGuildsRestricted from "../../privacy_and_safety/DefultGuildsRestrictedSetting.tsx";
 import useAllowFriendsFromMutualGuildsOnly from "../../content_and_social/useAllowFriendsFromMutualGuildsOnly.tsx";

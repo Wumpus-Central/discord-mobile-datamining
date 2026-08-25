@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
 import FolderIcon from "../../../../design/components/Icon/native/redesign/generated/FolderIcon.tsx";
+import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
 import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import ChatSmileIcon from "../../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
 import UserIcon from "../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";

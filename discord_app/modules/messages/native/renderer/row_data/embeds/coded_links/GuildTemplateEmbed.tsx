@@ -2,8 +2,8 @@
 import set from "../../../../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import getSystemLocale from "../../../../../../../intl/index.native.tsx";
-import InviteSendStates from "../../../../../../instant_invite/Constants.tsx";
 import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "../../../../../../guild_templates/GuildTemplatesConstants.tsx";
+import InviteSendStates from "../../../../../../instant_invite/Constants.tsx";
 import processColorOrThrow from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import closure_4 from "../../../../../../guild_templates/GuildTemplateStore.tsx";
@@ -37,9 +37,9 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj.titleText = intl2.string(getSystemLocale.t.A6MwXE);
     const str = intl.string(getSystemLocale.t.C7ZRNw);
     if (obj3.isThemeDark(closure_2)) {
-      let tmpResult = tmp(11026);
+      let tmpResult = tmp(11368);
     } else {
-      tmpResult = tmp(11027);
+      tmpResult = tmp(11369);
     }
     obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -60,7 +60,7 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj1.titleColor = colors.titleColor;
     obj1.subtitle = formatToPlainStringResult;
     obj1.subtitleColor = colors.subtitleColor;
-    obj1.thumbnailUrl = Image.resolveAssetSource(tmp(12825)).uri;
+    obj1.thumbnailUrl = Image.resolveAssetSource(tmp(12812)).uri;
     ({ acceptLabelGreenColor: obj6.acceptLabelColor, acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor } = colors);
     const intl6 = getSystemLocale.intl;
     obj1.acceptLabelText = intl6.string(getSystemLocale.t["a3Gl+e"]);

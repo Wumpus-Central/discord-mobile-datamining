@@ -13,13 +13,13 @@ import registerAssetDefault10 from "../../../../_runtime/01461_registerAsset.js"
 import registerAssetDefault11 from "../../../../_runtime/01462_registerAsset.js";
 import registerAssetDefault12 from "../../../../_runtime/01463_registerAsset.js";
 import registerAssetDefault13 from "../../../../_runtime/01464_registerAsset.js";
-import registerAssetDefault14 from "../../../../_runtime/17226_registerAsset.js";
-import registerAssetDefault15 from "../../../../_runtime/17227_registerAsset.js";
-import registerAssetDefault16 from "../../../../_runtime/17228_registerAsset.js";
-import registerAssetDefault17 from "../../../../_runtime/17229_registerAsset.js";
-import registerAssetDefault18 from "../../../../_runtime/17230_registerAsset.js";
-import registerAssetDefault19 from "../../../../_runtime/17231_registerAsset.js";
-import registerAssetDefault20 from "../../../../_runtime/17232_registerAsset.js";
+import registerAssetDefault14 from "../../../../_runtime/17258_registerAsset.js";
+import registerAssetDefault15 from "../../../../_runtime/17259_registerAsset.js";
+import registerAssetDefault16 from "../../../../_runtime/17260_registerAsset.js";
+import registerAssetDefault17 from "../../../../_runtime/17261_registerAsset.js";
+import registerAssetDefault18 from "../../../../_runtime/17262_registerAsset.js";
+import registerAssetDefault19 from "../../../../_runtime/17263_registerAsset.js";
+import registerAssetDefault20 from "../../../../_runtime/17264_registerAsset.js";
 
 const obj = { DefaultAvatar0: registerAssetDefault, DefaultAvatar1: registerAssetDefault2, DefaultAvatar2: registerAssetDefault3, DefaultAvatar3: registerAssetDefault4, DefaultAvatar4: registerAssetDefault5, DefaultGroup0: registerAssetDefault6, DefaultGroup1: registerAssetDefault7, DefaultGroup2: registerAssetDefault8, DefaultGroup3: registerAssetDefault9, DefaultGroup4: registerAssetDefault10, DefaultGroup5: registerAssetDefault11, DefaultGroup6: registerAssetDefault12, DefaultGroup7: registerAssetDefault13, PoopDark: registerAssetDefault14, PoopLight: registerAssetDefault15, RoleSubscriptionBadge: registerAssetDefault16, RoleSubscriptionLanyard: registerAssetDefault17, RoleSubscriptionPurchaseCard: registerAssetDefault18, SummaryIndicatorEnd: registerAssetDefault19, SummaryIndicatorStart: registerAssetDefault20 };
 const result = set.fileFinishedImporting("modules/react_asset/native/native_required_assets_misc.tsx");

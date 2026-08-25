@@ -1,6 +1,6 @@
 // discord_app/utils/SubscriptionUtils.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import tDefault from "../../_runtime/03978_t.js";
+import hooksDefault from "../../_runtime/03979_hooks.js";
 import getPremiumPlanItem from "PremiumUtils.tsx";
 import prototype from "../modules/checkout/CheckoutError.tsx";
 import PauseDuration from "../../discord_common/js/shared/shared-constants/PauseDuration.tsx";
@@ -96,8 +96,8 @@ export const getOrFetchSubscriptionPlan = function getOrFetchSubscriptionPlan(su
     const tmp9 = null != table[subscriptionPlanId];
     const result = getPremiumPlanItem.castPremiumSubscriptionAsSkuId(tmp5.skuId);
     if (!closure_5.isFetchingForSKU(result)) {
-      const subscriptionPlansForSKU = tmp12(7261).fetchSubscriptionPlansForSKU(result, closure_1);
-      const tmp12Result = tmp12(7261);
+      const subscriptionPlansForSKU = tmp12(5984).fetchSubscriptionPlansForSKU(result, closure_1);
+      const tmp12Result = tmp12(5984);
     }
     const obj3 = getPremiumPlanItem;
   }
@@ -148,9 +148,9 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
     obj[0] = found;
     return obj;
   } else if (null != status.pauseEndsAt) {
-    const tmp6 = tDefault(status.currentPeriodStart);
+    const tmp6 = hooksDefault(status.currentPeriodStart);
     const _Math = Math;
-    const rounded = Math.round(tDefault(status.pauseEndsAt).diff(tmp6, "days", true));
+    const rounded = Math.round(hooksDefault(status.pauseEndsAt).diff(tmp6, "days", true));
     const items = [];
     for (const item10042 of found) {
       let tmp11 = require;
@@ -177,11 +177,11 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
 export const didBeginPurchaseFlowOnFractionalPremium = function didBeginPurchaseFlowOnFractionalPremium(isSameOrAfter) {
   let isMomentResult = null != isSameOrAfter;
   if (isMomentResult) {
-    isMomentResult = tDefault.isMoment(isSameOrAfter);
-    const obj = tDefault;
+    isMomentResult = hooksDefault.isMoment(isSameOrAfter);
+    const obj = hooksDefault;
   }
   if (isMomentResult) {
-    isMomentResult = isSameOrAfter.isSameOrAfter(tDefault());
+    isMomentResult = isSameOrAfter.isSameOrAfter(hooksDefault());
   }
   return isMomentResult;
 };

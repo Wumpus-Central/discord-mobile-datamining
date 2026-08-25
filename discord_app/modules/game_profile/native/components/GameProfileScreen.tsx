@@ -266,7 +266,6 @@ export default function GameProfileScreen(gameId) {
     let obj = closure_1_0(closure_1_2[12]);
     const guildIdAndVerifiedFromInvite = obj.getGuildIdAndVerifiedFromInvite(ref2.current);
     ({ guildId, isVerified } = guildIdAndVerifiedFromInvite);
-    const GameProfileSimilarGamesMobileExperiment = closure_1_0(closure_1_2[22]).GameProfileSimilarGamesMobileExperiment;
     obj = { viewId: closure_5, gameId: closure_0, gameName: null, playedFriendIds: null, playedFriendsData: null, similarGames: null, guildId: null, isVerified: null };
     let str = ref.current;
     if (str == null) {
@@ -275,16 +274,11 @@ export default function GameProfileScreen(gameId) {
     obj[2] = str;
     obj[3] = [];
     obj[4] = [];
-    if (GameProfileSimilarGamesMobileExperiment.getConfig({ location: "GameProfileScreenClose" }).enabled) {
-      let similarGames = closure_1_7.getSimilarGames(closure_0);
-      if (similarGames == null) {
-        similarGames = [];
-      }
-      let items = similarGames;
-    } else {
-      items = [];
+    let similarGames = closure_1_7.getSimilarGames(closure_0);
+    if (similarGames == null) {
+      similarGames = [];
     }
-    obj[5] = items;
+    obj[5] = similarGames;
     obj[6] = guildId;
     obj[7] = isVerified;
     const result = closure_1_0(closure_1_2[12]).trackGameProfileClose(obj);
@@ -317,7 +311,7 @@ export default function GameProfileScreen(gameId) {
       obj3[2] = callback;
       const obj4 = { obscured: null, children: null };
       obj4[0] = tmp13;
-      tmp5Result = tmp5(tmp3[25]);
+      tmp5Result = tmp5(tmp3[24]);
       const obj5 = { game: null, invite: null, viewId: null, source: null, trackAction: null, onGuildInviteResolved: null, closeModal: null, scrollY: null, websiteButtons: null, onStoreLinksMeasured: null, onHeaderHeightMeasured: null, scrollOffsetRef: null };
       obj5[0] = data;
       obj5[1] = first1;
@@ -333,9 +327,9 @@ export default function GameProfileScreen(gameId) {
       obj5[9] = callback5;
       obj5[10] = callback4;
       obj5[11] = ref1;
-      obj4[1] = first1(tmp5(tmp3[26]), obj5);
+      obj4[1] = first1(tmp5(tmp3[25]), obj5);
       obj3[3] = first1(tmp5Result, obj4);
-      let tmp45 = first1(tmp2(tmp3[24]).BottomSheetScrollView, obj3);
+      let tmp45 = first1(tmp2(tmp3[23]).BottomSheetScrollView, obj3);
     }
     const items12 = [tmp45, , ];
     const obj6 = { style: null, pointerEvents: "box-none", children: null };
@@ -344,11 +338,11 @@ export default function GameProfileScreen(gameId) {
     const obj7 = { game: null, headerRight: null };
     obj7[0] = data;
     obj7[1] = memo1;
-    obj6[2] = tmp46(tmp5(tmp3[27]), obj7);
+    obj6[2] = tmp46(tmp5(tmp3[26]), obj7);
     items12[1] = tmp46(tmp5(tmp3[15]).View, obj6);
     const obj8 = { variant: "overlay", onPress: null };
     obj8[1] = bottomSheetClose;
-    items12[2] = tmp46(tmp2(tmp3[28]).ActionSheetHeaderBar, obj8);
+    items12[2] = tmp46(tmp2(tmp3[27]).ActionSheetHeaderBar, obj8);
     obj2[5] = items12;
     return tmp43(tmp44, obj2);
   }

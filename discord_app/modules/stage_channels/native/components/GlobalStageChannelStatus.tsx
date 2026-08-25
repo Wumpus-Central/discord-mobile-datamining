@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/native/components/GlobalStageChannelStatus.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
+import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import useIsInvitedToSpeakDefault from "../../useIsInvitedToSpeak.tsx";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -34,7 +34,7 @@ class StageChannelRaiseHandAck {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -54,19 +54,19 @@ class StageChannelRaiseHandAck {
                 if (null != lib) {
                   if (obj9.shouldAgeVerifyToSpeakForCurrentUser(lib.id)) {
                     obj1 = { entryPoint: null };
-                    obj1[0] = tmp42(5259).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
-                    const result = closure_1_1(5433).showAgeVerificationGetStartedModal(obj1);
-                    const obj4 = closure_1_1(5433);
+                    obj1[0] = tmp42(7944).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
+                    const result = closure_1_1(7942).showAgeVerificationGetStartedModal(obj1);
+                    const obj4 = closure_1_1(7942);
                   } else {
                     dependencyMap(true);
                     dependencyMap = 1;
                     c4 = 2;
                     c5 = 1;
                     const obj2 = { value: null, done: false };
-                    obj2[0] = tmp42(8101).audienceAckRequestToSpeak(lib, false);
+                    obj2[0] = tmp42(7923).audienceAckRequestToSpeak(lib, false);
                     return obj2;
                   }
-                  obj9 = lib(4996);
+                  obj9 = lib(5247);
                 }
                 c5 = 3;
               }
@@ -82,8 +82,8 @@ class StageChannelRaiseHandAck {
               dependencyMap = 0;
               dependencyMap(false);
               if (null == closure_1_8.getKey()) {
-                closure_1_2(8097).openStageChannel(lib);
-                const obj8 = closure_1_2(8097);
+                closure_1_2(7919).openStageChannel(lib);
+                const obj8 = closure_1_2(7919);
               }
             }
             dependencyMap = 0;
@@ -296,7 +296,7 @@ export default function GlobalStageChannelStatus(arg0) {
     stringResult = intl.string(id(1236).t["/YzI63"]);
   }
   const tmp7 = useIsInvitedToSpeakDefault();
-  let invitedHeaderText = tmp3(10565)(id);
+  let invitedHeaderText = tmp3(10362)(id);
   let obj = id(589);
   const items = [closure_9];
   const items1 = [id];
@@ -332,11 +332,11 @@ export default function GlobalStageChannelStatus(arg0) {
           obj[0] = tmp.noticeContainer;
           obj1 = { animated: true, barStyle: null };
           obj1[1] = str;
-          const items2 = [callback2(tmp3(8071), obj1), , ];
+          const items2 = [callback2(tmp3(7893), obj1), , ];
           const obj2 = { style: null, size: null, source: null };
           obj2[0] = activeSpeakerIcon;
           obj2[1] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-          tmp8Result = tmp8(6870);
+          tmp8Result = tmp8(4866);
           obj2[2] = tmp8Result.getChannelIconWithGuild(channel, guild);
           items2[1] = callback2(tmp8(1297).Icon, obj2);
           tmp13Result = "" !== str2;

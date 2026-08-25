@@ -3,9 +3,9 @@ import timestampDefault from "../debug/Logger.tsx";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import experimentDefault from "../voice_calls/GuildVoiceRingingExperiment.tsx";
 import sortKey from "ChannelRTCParticipants.tsx";
 import sortKeyDefault from "ChannelRTCParticipants.tsx";
-import experimentDefault from "../voice_calls/GuildVoiceRingingExperiment.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../activities/EmbeddedActivitiesStore.tsx";
 import closure_5 from "../game_console/GameConsoleStore.tsx";
@@ -34,7 +34,7 @@ function getParticipants(arg0) {
   return tmp2;
 }
 function updateParticipant(arg0, arr) {
-  const f76635 = (updateParticipant) => updateParticipant.updateParticipant(f76635);
+  const f75789 = (updateParticipant) => updateParticipant.updateParticipant(f75789);
   return arr.reduce((arg0, arg1) => {
     let tmp4 = closure_1_27[arg1];
     if (null == tmp4) {
@@ -57,7 +57,7 @@ function updateParticipant(arg0, arr) {
           isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
         }
         if (!Boolean(isGuildVocalOrThreadResult)) {
-          let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+          let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
           if (!hasEmbeddedActivityResult) {
             hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
           }
@@ -74,7 +74,7 @@ function updateParticipant(arg0, arr) {
           } else {
             closure_1_30[arg1] = VIDEO;
           }
-          tmp21 = f76635;
+          tmp21 = f75789;
           tmp22 = closure_1_2;
         }
         VIDEO = closure_1_20.VIDEO;
@@ -89,8 +89,8 @@ function updateParticipant(arg0, arr) {
       }
       if (0 !== obj2.size()) {
         if (closure_1_11.getVoiceChannelId() === arg1) {
-          const NONE2 = closure_1_17.NONE;
-          const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+          const NONE = closure_1_17.NONE;
+          const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
             let tmp = type.type === constants.STREAM;
             if (tmp) {
               tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -98,11 +98,11 @@ function updateParticipant(arg0, arr) {
             return tmp;
           });
           if (null != found) {
-            closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+            closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
             id = found.id;
           } else if (1 !== obj2.size()) {
-            if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-              id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+            if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+              id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
             } else {
               const found1 = obj2.toArray().find((type) => {
                 let tmp = type.type === closure_1_16.USER;
@@ -131,14 +131,14 @@ function updateParticipant(arg0, arr) {
           }
           let tmp49 = closure_1_28[arg1];
           if (tmp49 == null) {
-            const items = [tmp47, tmp64.NONE];
+            const items = [tmp47, tmp66.NONE];
             tmp49 = items;
           }
           const first = closure_1_3(tmp49, 1)[0];
-          let NONE = first;
+          let id2 = first;
           if (first !== closure_1_17.AUTO) {
-            NONE = first;
-            if (first !== tmp64.NONE) {
+            id2 = first;
+            if (first !== tmp66.NONE) {
               const participant = obj2.getParticipant(first);
               let tmp53 = null == participant;
               if (!tmp53) {
@@ -148,19 +148,26 @@ function updateParticipant(arg0, arr) {
                 }
                 tmp53 = tmp55;
               }
-              NONE = first;
+              id2 = first;
               if (tmp53) {
-                NONE = tmp64.NONE;
+                id2 = tmp66.NONE;
               }
             }
           }
-          const items1 = [NONE, id];
-          closure_1_39(arg1, items1);
+          let tmp57 = id2 === tmp66.NONE && null != found;
+          if (tmp57) {
+            tmp57 = true === closure_1_35[arg1];
+          }
+          if (tmp57) {
+            id2 = found.id;
+          }
+          const items1 = [id2, id];
+          closure_1_40(arg1, items1);
           flag = true;
-          const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+          const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
         }
       }
-      closure_1_39(arg1, null);
+      closure_1_40(arg1, null);
       flag = true;
     }
     return flag;
@@ -227,6 +234,7 @@ function clearChannel(arg0) {
   delete tmp3[tmp2];
   delete tmp3[tmp2];
   delete tmp3[tmp2];
+  delete tmp3[tmp2];
   delete tmp[tmp2];
 }
 function handleRebuildActiveChannels() {
@@ -284,7 +292,7 @@ function handleRebuildActiveChannels() {
           isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
         }
         if (!Boolean(isGuildVocalOrThreadResult)) {
-          let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+          let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
           if (!hasEmbeddedActivityResult) {
             hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
           }
@@ -301,7 +309,7 @@ function handleRebuildActiveChannels() {
           } else {
             closure_1_30[arg1] = VIDEO;
           }
-          tmp21 = f76635;
+          tmp21 = f75789;
           tmp22 = closure_1_2;
         }
         VIDEO = closure_1_20.VIDEO;
@@ -316,8 +324,8 @@ function handleRebuildActiveChannels() {
       }
       if (0 !== obj2.size()) {
         if (closure_1_11.getVoiceChannelId() === arg1) {
-          const NONE2 = closure_1_17.NONE;
-          const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+          const NONE = closure_1_17.NONE;
+          const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
             let tmp = type.type === constants.STREAM;
             if (tmp) {
               tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -325,11 +333,11 @@ function handleRebuildActiveChannels() {
             return tmp;
           });
           if (null != found) {
-            closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+            closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
             id = found.id;
           } else if (1 !== obj2.size()) {
-            if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-              id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+            if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+              id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
             } else {
               const found1 = obj2.toArray().find((type) => {
                 let tmp = type.type === closure_1_16.USER;
@@ -358,14 +366,14 @@ function handleRebuildActiveChannels() {
           }
           let tmp49 = closure_1_28[arg1];
           if (tmp49 == null) {
-            const items = [tmp47, tmp64.NONE];
+            const items = [tmp47, tmp66.NONE];
             tmp49 = items;
           }
           const first = closure_1_3(tmp49, 1)[0];
-          let NONE = first;
+          let id2 = first;
           if (first !== closure_1_17.AUTO) {
-            NONE = first;
-            if (first !== tmp64.NONE) {
+            id2 = first;
+            if (first !== tmp66.NONE) {
               const participant = obj2.getParticipant(first);
               let tmp53 = null == participant;
               if (!tmp53) {
@@ -375,26 +383,33 @@ function handleRebuildActiveChannels() {
                 }
                 tmp53 = tmp55;
               }
-              NONE = first;
+              id2 = first;
               if (tmp53) {
-                NONE = tmp64.NONE;
+                id2 = tmp66.NONE;
               }
             }
           }
-          const items1 = [NONE, id];
-          closure_1_39(arg1, items1);
+          let tmp57 = id2 === tmp66.NONE && null != found;
+          if (tmp57) {
+            tmp57 = true === closure_1_35[arg1];
+          }
+          if (tmp57) {
+            id2 = found.id;
+          }
+          const items1 = [id2, id];
+          closure_1_40(arg1, items1);
           flag = true;
-          const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+          const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
         }
       }
-      closure_1_39(arg1, null);
+      closure_1_40(arg1, null);
       flag = true;
     }
     return flag;
   }, false);
 }
 function handleEmbeddedActivityChange() {
-  const f76637 = (updateEmbeddedActivities) => updateEmbeddedActivities.updateEmbeddedActivities();
+  const f75791 = (updateEmbeddedActivities) => updateEmbeddedActivities.updateEmbeddedActivities();
   return closure_25.reduce((arg0, arg1) => {
     let tmp4 = closure_1_27[arg1];
     if (null == tmp4) {
@@ -417,7 +432,7 @@ function handleEmbeddedActivityChange() {
           isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
         }
         if (!Boolean(isGuildVocalOrThreadResult)) {
-          let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+          let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
           if (!hasEmbeddedActivityResult) {
             hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
           }
@@ -434,7 +449,7 @@ function handleEmbeddedActivityChange() {
           } else {
             closure_1_30[arg1] = VIDEO;
           }
-          tmp21 = f76635;
+          tmp21 = f75789;
           tmp22 = closure_1_2;
         }
         VIDEO = closure_1_20.VIDEO;
@@ -449,8 +464,8 @@ function handleEmbeddedActivityChange() {
       }
       if (0 !== obj2.size()) {
         if (closure_1_11.getVoiceChannelId() === arg1) {
-          const NONE2 = closure_1_17.NONE;
-          const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+          const NONE = closure_1_17.NONE;
+          const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
             let tmp = type.type === constants.STREAM;
             if (tmp) {
               tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -458,11 +473,11 @@ function handleEmbeddedActivityChange() {
             return tmp;
           });
           if (null != found) {
-            closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+            closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
             id = found.id;
           } else if (1 !== obj2.size()) {
-            if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-              id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+            if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+              id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
             } else {
               const found1 = obj2.toArray().find((type) => {
                 let tmp = type.type === closure_1_16.USER;
@@ -491,14 +506,14 @@ function handleEmbeddedActivityChange() {
           }
           let tmp49 = closure_1_28[arg1];
           if (tmp49 == null) {
-            const items = [tmp47, tmp64.NONE];
+            const items = [tmp47, tmp66.NONE];
             tmp49 = items;
           }
           const first = closure_1_3(tmp49, 1)[0];
-          let NONE = first;
+          let id2 = first;
           if (first !== closure_1_17.AUTO) {
-            NONE = first;
-            if (first !== tmp64.NONE) {
+            id2 = first;
+            if (first !== tmp66.NONE) {
               const participant = obj2.getParticipant(first);
               let tmp53 = null == participant;
               if (!tmp53) {
@@ -508,26 +523,33 @@ function handleEmbeddedActivityChange() {
                 }
                 tmp53 = tmp55;
               }
-              NONE = first;
+              id2 = first;
               if (tmp53) {
-                NONE = tmp64.NONE;
+                id2 = tmp66.NONE;
               }
             }
           }
-          const items1 = [NONE, id];
-          closure_1_39(arg1, items1);
+          let tmp57 = id2 === tmp66.NONE && null != found;
+          if (tmp57) {
+            tmp57 = true === closure_1_35[arg1];
+          }
+          if (tmp57) {
+            id2 = found.id;
+          }
+          const items1 = [id2, id];
+          closure_1_40(arg1, items1);
           flag = true;
-          const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+          const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
         }
       }
-      closure_1_39(arg1, null);
+      closure_1_40(arg1, null);
       flag = true;
     }
     return flag;
   }, false);
 }
 function handleSpeaking(arg0) {
-  const f76638 = (updateParticipantSpeaking) => updateParticipantSpeaking.updateParticipantSpeaking(f76638);
+  const f75792 = (updateParticipantSpeaking) => updateParticipantSpeaking.updateParticipantSpeaking(f75792);
   return closure_25.reduce((arg0, arg1) => {
     let tmp4 = closure_1_27[arg1];
     if (null == tmp4) {
@@ -550,7 +572,7 @@ function handleSpeaking(arg0) {
           isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
         }
         if (!Boolean(isGuildVocalOrThreadResult)) {
-          let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+          let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
           if (!hasEmbeddedActivityResult) {
             hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
           }
@@ -567,7 +589,7 @@ function handleSpeaking(arg0) {
           } else {
             closure_1_30[arg1] = VIDEO;
           }
-          tmp21 = f76635;
+          tmp21 = f75789;
           tmp22 = closure_1_2;
         }
         VIDEO = closure_1_20.VIDEO;
@@ -582,8 +604,8 @@ function handleSpeaking(arg0) {
       }
       if (0 !== obj2.size()) {
         if (closure_1_11.getVoiceChannelId() === arg1) {
-          const NONE2 = closure_1_17.NONE;
-          const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+          const NONE = closure_1_17.NONE;
+          const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
             let tmp = type.type === constants.STREAM;
             if (tmp) {
               tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -591,11 +613,11 @@ function handleSpeaking(arg0) {
             return tmp;
           });
           if (null != found) {
-            closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+            closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
             id = found.id;
           } else if (1 !== obj2.size()) {
-            if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-              id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+            if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+              id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
             } else {
               const found1 = obj2.toArray().find((type) => {
                 let tmp = type.type === closure_1_16.USER;
@@ -624,14 +646,14 @@ function handleSpeaking(arg0) {
           }
           let tmp49 = closure_1_28[arg1];
           if (tmp49 == null) {
-            const items = [tmp47, tmp64.NONE];
+            const items = [tmp47, tmp66.NONE];
             tmp49 = items;
           }
           const first = closure_1_3(tmp49, 1)[0];
-          let NONE = first;
+          let id2 = first;
           if (first !== closure_1_17.AUTO) {
-            NONE = first;
-            if (first !== tmp64.NONE) {
+            id2 = first;
+            if (first !== tmp66.NONE) {
               const participant = obj2.getParticipant(first);
               let tmp53 = null == participant;
               if (!tmp53) {
@@ -641,27 +663,34 @@ function handleSpeaking(arg0) {
                 }
                 tmp53 = tmp55;
               }
-              NONE = first;
+              id2 = first;
               if (tmp53) {
-                NONE = tmp64.NONE;
+                id2 = tmp66.NONE;
               }
             }
           }
-          const items1 = [NONE, id];
-          closure_1_39(arg1, items1);
+          let tmp57 = id2 === tmp66.NONE && null != found;
+          if (tmp57) {
+            tmp57 = true === closure_1_35[arg1];
+          }
+          if (tmp57) {
+            id2 = found.id;
+          }
+          const items1 = [id2, id];
+          closure_1_40(arg1, items1);
           flag = true;
-          const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+          const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
         }
       }
-      closure_1_39(arg1, null);
+      closure_1_40(arg1, null);
       flag = true;
     }
     return flag;
   }, false);
 }
 function handleUserUpdate(user) {
-  let f76635 = user.user.id;
-  f76635 = (updateParticipant) => updateParticipant.updateParticipant(f76635);
+  let f75789 = user.user.id;
+  f75789 = (updateParticipant) => updateParticipant.updateParticipant(f75789);
   if (closure_25 !== undefined) {
     return closure_25.reduce((arg0, arg1) => {
       let tmp4 = closure_1_27[arg1];
@@ -685,7 +714,7 @@ function handleUserUpdate(user) {
             isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
           }
           if (!Boolean(isGuildVocalOrThreadResult)) {
-            let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+            let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
             if (!hasEmbeddedActivityResult) {
               hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
             }
@@ -702,7 +731,7 @@ function handleUserUpdate(user) {
             } else {
               closure_1_30[arg1] = VIDEO;
             }
-            tmp21 = f76635;
+            tmp21 = f75789;
             tmp22 = closure_1_2;
           }
           VIDEO = closure_1_20.VIDEO;
@@ -717,8 +746,8 @@ function handleUserUpdate(user) {
         }
         if (0 !== obj2.size()) {
           if (closure_1_11.getVoiceChannelId() === arg1) {
-            const NONE2 = closure_1_17.NONE;
-            const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+            const NONE = closure_1_17.NONE;
+            const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
               let tmp = type.type === constants.STREAM;
               if (tmp) {
                 tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -726,11 +755,11 @@ function handleUserUpdate(user) {
               return tmp;
             });
             if (null != found) {
-              closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+              closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
               id = found.id;
             } else if (1 !== obj2.size()) {
-              if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+              if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
               } else {
                 const found1 = obj2.toArray().find((type) => {
                   let tmp = type.type === closure_1_16.USER;
@@ -759,14 +788,14 @@ function handleUserUpdate(user) {
             }
             let tmp49 = closure_1_28[arg1];
             if (tmp49 == null) {
-              const items = [tmp47, tmp64.NONE];
+              const items = [tmp47, tmp66.NONE];
               tmp49 = items;
             }
             const first = closure_1_3(tmp49, 1)[0];
-            let NONE = first;
+            let id2 = first;
             if (first !== closure_1_17.AUTO) {
-              NONE = first;
-              if (first !== tmp64.NONE) {
+              id2 = first;
+              if (first !== tmp66.NONE) {
                 const participant = obj2.getParticipant(first);
                 let tmp53 = null == participant;
                 if (!tmp53) {
@@ -776,19 +805,26 @@ function handleUserUpdate(user) {
                   }
                   tmp53 = tmp55;
                 }
-                NONE = first;
+                id2 = first;
                 if (tmp53) {
-                  NONE = tmp64.NONE;
+                  id2 = tmp66.NONE;
                 }
               }
             }
-            const items1 = [NONE, id];
-            closure_1_39(arg1, items1);
+            let tmp57 = id2 === tmp66.NONE && null != found;
+            if (tmp57) {
+              tmp57 = true === closure_1_35[arg1];
+            }
+            if (tmp57) {
+              id2 = found.id;
+            }
+            const items1 = [id2, id];
+            closure_1_40(arg1, items1);
             flag = true;
-            const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+            const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
           }
         }
-        closure_1_39(arg1, null);
+        closure_1_40(arg1, null);
         flag = true;
       }
       return flag;
@@ -797,7 +833,7 @@ function handleUserUpdate(user) {
 }
 function handleCallUpdate(channelId) {
   const items = [channelId.channelId];
-  const f76639 = (rebuild) => rebuild.rebuild();
+  const f75793 = (rebuild) => rebuild.rebuild();
   return items.reduce((arg0, arg1) => {
     let tmp4 = closure_1_27[arg1];
     if (null == tmp4) {
@@ -820,7 +856,7 @@ function handleCallUpdate(channelId) {
           isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
         }
         if (!Boolean(isGuildVocalOrThreadResult)) {
-          let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+          let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
           if (!hasEmbeddedActivityResult) {
             hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
           }
@@ -837,7 +873,7 @@ function handleCallUpdate(channelId) {
           } else {
             closure_1_30[arg1] = VIDEO;
           }
-          tmp21 = f76635;
+          tmp21 = f75789;
           tmp22 = closure_1_2;
         }
         VIDEO = closure_1_20.VIDEO;
@@ -852,8 +888,8 @@ function handleCallUpdate(channelId) {
       }
       if (0 !== obj2.size()) {
         if (closure_1_11.getVoiceChannelId() === arg1) {
-          const NONE2 = closure_1_17.NONE;
-          const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+          const NONE = closure_1_17.NONE;
+          const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
             let tmp = type.type === constants.STREAM;
             if (tmp) {
               tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -861,11 +897,11 @@ function handleCallUpdate(channelId) {
             return tmp;
           });
           if (null != found) {
-            closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+            closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
             id = found.id;
           } else if (1 !== obj2.size()) {
-            if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-              id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+            if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+              id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
             } else {
               const found1 = obj2.toArray().find((type) => {
                 let tmp = type.type === closure_1_16.USER;
@@ -894,14 +930,14 @@ function handleCallUpdate(channelId) {
           }
           let tmp49 = closure_1_28[arg1];
           if (tmp49 == null) {
-            const items = [tmp47, tmp64.NONE];
+            const items = [tmp47, tmp66.NONE];
             tmp49 = items;
           }
           const first = closure_1_3(tmp49, 1)[0];
-          let NONE = first;
+          let id2 = first;
           if (first !== closure_1_17.AUTO) {
-            NONE = first;
-            if (first !== tmp64.NONE) {
+            id2 = first;
+            if (first !== tmp66.NONE) {
               const participant = obj2.getParticipant(first);
               let tmp53 = null == participant;
               if (!tmp53) {
@@ -911,19 +947,26 @@ function handleCallUpdate(channelId) {
                 }
                 tmp53 = tmp55;
               }
-              NONE = first;
+              id2 = first;
               if (tmp53) {
-                NONE = tmp64.NONE;
+                id2 = tmp66.NONE;
               }
             }
           }
-          const items1 = [NONE, id];
-          closure_1_39(arg1, items1);
+          let tmp57 = id2 === tmp66.NONE && null != found;
+          if (tmp57) {
+            tmp57 = true === closure_1_35[arg1];
+          }
+          if (tmp57) {
+            id2 = found.id;
+          }
+          const items1 = [id2, id];
+          closure_1_40(arg1, items1);
           flag = true;
-          const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+          const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
         }
       }
-      closure_1_39(arg1, null);
+      closure_1_40(arg1, null);
       flag = true;
     }
     return flag;
@@ -935,13 +978,14 @@ function handleChannelDelete(channel) {
   delete tmp3[tmp2];
   delete tmp3[tmp2];
   delete tmp3[tmp2];
+  delete tmp3[tmp2];
   delete tmp[tmp2];
 }
 function handleStreamClose(streamKey) {
-  obj = f76635(4536);
+  obj = f75789(4446);
   const items = [];
-  ({ channelId: arr[0], ownerId: f76635 } = f76635(4536).decodeStreamKey(streamKey.streamKey));
-  f76635 = (updateParticipant) => updateParticipant.updateParticipant(f76635);
+  ({ channelId: arr[0], ownerId: f75789 } = f75789(4446).decodeStreamKey(streamKey.streamKey));
+  f75789 = (updateParticipant) => updateParticipant.updateParticipant(f75789);
   return items.reduce((arg0, arg1) => {
     let tmp4 = closure_1_27[arg1];
     if (null == tmp4) {
@@ -964,7 +1008,7 @@ function handleStreamClose(streamKey) {
           isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
         }
         if (!Boolean(isGuildVocalOrThreadResult)) {
-          let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+          let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
           if (!hasEmbeddedActivityResult) {
             hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
           }
@@ -981,7 +1025,7 @@ function handleStreamClose(streamKey) {
           } else {
             closure_1_30[arg1] = VIDEO;
           }
-          tmp21 = f76635;
+          tmp21 = f75789;
           tmp22 = closure_1_2;
         }
         VIDEO = closure_1_20.VIDEO;
@@ -996,8 +1040,8 @@ function handleStreamClose(streamKey) {
       }
       if (0 !== obj2.size()) {
         if (closure_1_11.getVoiceChannelId() === arg1) {
-          const NONE2 = closure_1_17.NONE;
-          const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+          const NONE = closure_1_17.NONE;
+          const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
             let tmp = type.type === constants.STREAM;
             if (tmp) {
               tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -1005,11 +1049,11 @@ function handleStreamClose(streamKey) {
             return tmp;
           });
           if (null != found) {
-            closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+            closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
             id = found.id;
           } else if (1 !== obj2.size()) {
-            if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-              id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+            if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+              id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
             } else {
               const found1 = obj2.toArray().find((type) => {
                 let tmp = type.type === closure_1_16.USER;
@@ -1038,14 +1082,14 @@ function handleStreamClose(streamKey) {
           }
           let tmp49 = closure_1_28[arg1];
           if (tmp49 == null) {
-            const items = [tmp47, tmp64.NONE];
+            const items = [tmp47, tmp66.NONE];
             tmp49 = items;
           }
           const first = closure_1_3(tmp49, 1)[0];
-          let NONE = first;
+          let id2 = first;
           if (first !== closure_1_17.AUTO) {
-            NONE = first;
-            if (first !== tmp64.NONE) {
+            id2 = first;
+            if (first !== tmp66.NONE) {
               const participant = obj2.getParticipant(first);
               let tmp53 = null == participant;
               if (!tmp53) {
@@ -1055,19 +1099,26 @@ function handleStreamClose(streamKey) {
                 }
                 tmp53 = tmp55;
               }
-              NONE = first;
+              id2 = first;
               if (tmp53) {
-                NONE = tmp64.NONE;
+                id2 = tmp66.NONE;
               }
             }
           }
-          const items1 = [NONE, id];
-          closure_1_39(arg1, items1);
+          let tmp57 = id2 === tmp66.NONE && null != found;
+          if (tmp57) {
+            tmp57 = true === closure_1_35[arg1];
+          }
+          if (tmp57) {
+            id2 = found.id;
+          }
+          const items1 = [id2, id];
+          closure_1_40(arg1, items1);
           flag = true;
-          const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+          const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
         }
       }
-      closure_1_39(arg1, null);
+      closure_1_40(arg1, null);
       flag = true;
     }
     return flag;
@@ -1089,6 +1140,7 @@ let closure_32 = {};
 let closure_33 = {};
 let closure_34 = {};
 let closure_35 = {};
+let closure_36 = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class ChannelRTCStore extends PersistedStore {
 }
@@ -1362,7 +1414,7 @@ obj = {
   OVERLAY_INITIALIZE: handleRebuildActiveChannels,
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(arg0) {
     ({ channelId, currentVoiceChannelId } = arg0);
-    let f76642;
+    let f75796;
     if (null != channelId) {
       delete tmp[tmp3];
     } else if (null != currentVoiceChannelId) {
@@ -1397,11 +1449,11 @@ obj = {
           tmp13[currentVoiceChannelId] = tmp20;
           tmp14 = tmp20;
         }
-        f76642 = tmp14;
+        f75796 = tmp14;
         const guildRingingUsers = tmp14.guildRingingUsers;
-        const item = guildRingingUsers.forEach((userId) => f76642.updateGuildRingingUsers(userId, false));
+        const item = guildRingingUsers.forEach((userId) => f75796.updateGuildRingingUsers(userId, false));
         const items = [currentVoiceChannelId];
-        f76642 = (rebuild) => rebuild.rebuild();
+        f75796 = (rebuild) => rebuild.rebuild();
         flag = items.reduce((arg0, arg1) => {
           let tmp4 = closure_1_27[arg1];
           if (null == tmp4) {
@@ -1424,7 +1476,7 @@ obj = {
                 isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
               }
               if (!Boolean(isGuildVocalOrThreadResult)) {
-                let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+                let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
                 if (!hasEmbeddedActivityResult) {
                   hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
                 }
@@ -1441,7 +1493,7 @@ obj = {
                 } else {
                   closure_1_30[arg1] = VIDEO;
                 }
-                tmp21 = f76635;
+                tmp21 = f75789;
                 tmp22 = closure_1_2;
               }
               VIDEO = closure_1_20.VIDEO;
@@ -1456,8 +1508,8 @@ obj = {
             }
             if (0 !== obj2.size()) {
               if (closure_1_11.getVoiceChannelId() === arg1) {
-                const NONE2 = closure_1_17.NONE;
-                const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+                const NONE = closure_1_17.NONE;
+                const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
                   let tmp = type.type === constants.STREAM;
                   if (tmp) {
                     tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -1465,11 +1517,11 @@ obj = {
                   return tmp;
                 });
                 if (null != found) {
-                  closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+                  closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
                   id = found.id;
                 } else if (1 !== obj2.size()) {
-                  if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                    id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+                  if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                    id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
                   } else {
                     const found1 = obj2.toArray().find((type) => {
                       let tmp = type.type === closure_1_16.USER;
@@ -1498,14 +1550,14 @@ obj = {
                 }
                 let tmp49 = closure_1_28[arg1];
                 if (tmp49 == null) {
-                  const items = [tmp47, tmp64.NONE];
+                  const items = [tmp47, tmp66.NONE];
                   tmp49 = items;
                 }
                 const first = closure_1_3(tmp49, 1)[0];
-                let NONE = first;
+                let id2 = first;
                 if (first !== closure_1_17.AUTO) {
-                  NONE = first;
-                  if (first !== tmp64.NONE) {
+                  id2 = first;
+                  if (first !== tmp66.NONE) {
                     const participant = obj2.getParticipant(first);
                     let tmp53 = null == participant;
                     if (!tmp53) {
@@ -1515,19 +1567,26 @@ obj = {
                       }
                       tmp53 = tmp55;
                     }
-                    NONE = first;
+                    id2 = first;
                     if (tmp53) {
-                      NONE = tmp64.NONE;
+                      id2 = tmp66.NONE;
                     }
                   }
                 }
-                const items1 = [NONE, id];
-                closure_1_39(arg1, items1);
+                let tmp57 = id2 === tmp66.NONE && null != found;
+                if (tmp57) {
+                  tmp57 = true === closure_1_35[arg1];
+                }
+                if (tmp57) {
+                  id2 = found.id;
+                }
+                const items1 = [id2, id];
+                closure_1_40(arg1, items1);
                 flag = true;
-                const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+                const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
               }
             }
-            closure_1_39(arg1, null);
+            closure_1_40(arg1, null);
             flag = true;
           }
           return flag;
@@ -1586,15 +1645,15 @@ obj = {
         tmp2 = closure_1_1;
         tmp3 = closure_1_2;
       }
-      if (f76635) {
+      if (f75789) {
         if (null != channelId) {
           let tmp12 = arg0;
         }
         return tmp12;
       }
-      f76635 = userId;
+      f75789 = userId;
       let arr = closure_1_25;
-      f76635 = (updateParticipant) => updateParticipant.updateParticipant(f76635);
+      f75789 = (updateParticipant) => updateParticipant.updateParticipant(f75789);
       if (closure_1_25 === undefined) {
         arr = closure_1_25;
       }
@@ -1620,7 +1679,7 @@ obj = {
               isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
             }
             if (!Boolean(isGuildVocalOrThreadResult)) {
-              let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+              let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
               if (!hasEmbeddedActivityResult) {
                 hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
               }
@@ -1637,7 +1696,7 @@ obj = {
               } else {
                 closure_1_30[arg1] = VIDEO;
               }
-              tmp21 = f76635;
+              tmp21 = f75789;
               tmp22 = closure_1_2;
             }
             VIDEO = closure_1_20.VIDEO;
@@ -1652,8 +1711,8 @@ obj = {
           }
           if (0 !== obj2.size()) {
             if (closure_1_11.getVoiceChannelId() === arg1) {
-              const NONE2 = closure_1_17.NONE;
-              const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+              const NONE = closure_1_17.NONE;
+              const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
                 let tmp = type.type === constants.STREAM;
                 if (tmp) {
                   tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -1661,11 +1720,11 @@ obj = {
                 return tmp;
               });
               if (null != found) {
-                closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+                closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
                 id = found.id;
               } else if (1 !== obj2.size()) {
-                if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                  id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+                if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                  id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
                 } else {
                   const found1 = obj2.toArray().find((type) => {
                     let tmp = type.type === closure_1_16.USER;
@@ -1694,14 +1753,14 @@ obj = {
               }
               let tmp49 = closure_1_28[arg1];
               if (tmp49 == null) {
-                const items = [tmp47, tmp64.NONE];
+                const items = [tmp47, tmp66.NONE];
                 tmp49 = items;
               }
               const first = closure_1_3(tmp49, 1)[0];
-              let NONE = first;
+              let id2 = first;
               if (first !== closure_1_17.AUTO) {
-                NONE = first;
-                if (first !== tmp64.NONE) {
+                id2 = first;
+                if (first !== tmp66.NONE) {
                   const participant = obj2.getParticipant(first);
                   let tmp53 = null == participant;
                   if (!tmp53) {
@@ -1711,19 +1770,26 @@ obj = {
                     }
                     tmp53 = tmp55;
                   }
-                  NONE = first;
+                  id2 = first;
                   if (tmp53) {
-                    NONE = tmp64.NONE;
+                    id2 = tmp66.NONE;
                   }
                 }
               }
-              const items1 = [NONE, id];
-              closure_1_39(arg1, items1);
+              let tmp57 = id2 === tmp66.NONE && null != found;
+              if (tmp57) {
+                tmp57 = true === closure_1_35[arg1];
+              }
+              if (tmp57) {
+                id2 = found.id;
+              }
+              const items1 = [id2, id];
+              closure_1_40(arg1, items1);
               flag = true;
-              const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+              const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
             }
           }
-          closure_1_39(arg1, null);
+          closure_1_40(arg1, null);
           flag = true;
         }
         return flag;
@@ -1758,6 +1824,7 @@ obj = {
     delete tmp3[tmp2];
     delete tmp3[tmp2];
     delete tmp3[tmp2];
+    delete tmp3[tmp2];
     delete tmp[tmp2];
   },
   CHANNEL_RTC_SELECT_PARTICIPANT: function handleSelectParticipant(arg0) {
@@ -1765,12 +1832,12 @@ obj = {
     obj = undefined;
     obj = getParticipants(channelId);
     if (null == id) {
-      const item = obj.toArray(obj(4782).ChannelRTCParticipantsIndexes.STREAM).forEach((user) => {
+      const item = obj.toArray(obj(10726).ChannelRTCParticipantsIndexes.STREAM).forEach((user) => {
         if (closure_1_18(user)) {
           obj.updateParticipant(user.user.id);
         }
       });
-      const toArrayResult = obj.toArray(obj(4782).ChannelRTCParticipantsIndexes.STREAM);
+      const toArrayResult = obj.toArray(obj(10726).ChannelRTCParticipantsIndexes.STREAM);
     }
     let NONE = id;
     if (id == null) {
@@ -1780,7 +1847,7 @@ obj = {
     setSelectedParticipantId(channelId, items);
     if (obj2.isStreamKey(id)) {
       try {
-        const ownerId = obj(4536).decodeStreamKey(id).ownerId;
+        const ownerId = obj(4446).decodeStreamKey(id).ownerId;
         if (ownerId === store.getId()) {
           const items1 = [channelId];
           updateParticipant(tmp10, items1);
@@ -1789,7 +1856,7 @@ obj = {
           closure_32[channelId] = false;
         }
         tmp10 = ownerId;
-        const tmp8Result = obj(4536);
+        const tmp8Result = obj(4446);
       } catch (tmp15) {
         const _HermesInternal = HermesInternal;
         obj.warn("INVALID STREAM KEY FORMAT " + tmp, tmp15);
@@ -1824,8 +1891,8 @@ obj = {
     if (tmp16) {
       const result = obj2.updateParticipantPoppedOut(participantId, true);
       const items1 = [channelId];
-      let f76635 = participant.user.id;
-      f76635 = (updateParticipant) => updateParticipant.updateParticipant(f76635);
+      let f75789 = participant.user.id;
+      f75789 = (updateParticipant) => updateParticipant.updateParticipant(f75789);
       const reduced = items1.reduce((arg0, arg1) => {
         let tmp4 = closure_1_27[arg1];
         if (null == tmp4) {
@@ -1848,7 +1915,7 @@ obj = {
               isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
             }
             if (!Boolean(isGuildVocalOrThreadResult)) {
-              let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+              let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
               if (!hasEmbeddedActivityResult) {
                 hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
               }
@@ -1865,7 +1932,7 @@ obj = {
               } else {
                 closure_1_30[arg1] = VIDEO;
               }
-              tmp21 = f76635;
+              tmp21 = f75789;
               tmp22 = closure_1_2;
             }
             VIDEO = closure_1_20.VIDEO;
@@ -1880,8 +1947,8 @@ obj = {
           }
           if (0 !== obj2.size()) {
             if (closure_1_11.getVoiceChannelId() === arg1) {
-              const NONE2 = closure_1_17.NONE;
-              const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+              const NONE = closure_1_17.NONE;
+              const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
                 let tmp = type.type === constants.STREAM;
                 if (tmp) {
                   tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -1889,11 +1956,11 @@ obj = {
                 return tmp;
               });
               if (null != found) {
-                closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+                closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
                 id = found.id;
               } else if (1 !== obj2.size()) {
-                if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                  id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+                if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                  id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
                 } else {
                   const found1 = obj2.toArray().find((type) => {
                     let tmp = type.type === closure_1_16.USER;
@@ -1922,14 +1989,14 @@ obj = {
               }
               let tmp49 = closure_1_28[arg1];
               if (tmp49 == null) {
-                const items = [tmp47, tmp64.NONE];
+                const items = [tmp47, tmp66.NONE];
                 tmp49 = items;
               }
               const first = closure_1_3(tmp49, 1)[0];
-              let NONE = first;
+              let id2 = first;
               if (first !== closure_1_17.AUTO) {
-                NONE = first;
-                if (first !== tmp64.NONE) {
+                id2 = first;
+                if (first !== tmp66.NONE) {
                   const participant = obj2.getParticipant(first);
                   let tmp53 = null == participant;
                   if (!tmp53) {
@@ -1939,19 +2006,26 @@ obj = {
                     }
                     tmp53 = tmp55;
                   }
-                  NONE = first;
+                  id2 = first;
                   if (tmp53) {
-                    NONE = tmp64.NONE;
+                    id2 = tmp66.NONE;
                   }
                 }
               }
-              const items1 = [NONE, id];
-              closure_1_39(arg1, items1);
+              let tmp57 = id2 === tmp66.NONE && null != found;
+              if (tmp57) {
+                tmp57 = true === closure_1_35[arg1];
+              }
+              if (tmp57) {
+                id2 = found.id;
+              }
+              const items1 = [id2, id];
+              closure_1_40(arg1, items1);
               flag = true;
-              const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+              const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
             }
           }
-          closure_1_39(arg1, null);
+          closure_1_40(arg1, null);
           flag = true;
         }
         return flag;
@@ -1974,8 +2048,8 @@ obj = {
     }
     if (tmp11) {
       const items = [channelId];
-      let f76635 = participant.user.id;
-      f76635 = (updateParticipant) => updateParticipant.updateParticipant(f76635);
+      let f75789 = participant.user.id;
+      f75789 = (updateParticipant) => updateParticipant.updateParticipant(f75789);
       const reduced = items.reduce((arg0, arg1) => {
         let tmp4 = closure_1_27[arg1];
         if (null == tmp4) {
@@ -1998,7 +2072,7 @@ obj = {
               isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
             }
             if (!Boolean(isGuildVocalOrThreadResult)) {
-              let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+              let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
               if (!hasEmbeddedActivityResult) {
                 hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
               }
@@ -2015,7 +2089,7 @@ obj = {
               } else {
                 closure_1_30[arg1] = VIDEO;
               }
-              tmp21 = f76635;
+              tmp21 = f75789;
               tmp22 = closure_1_2;
             }
             VIDEO = closure_1_20.VIDEO;
@@ -2030,8 +2104,8 @@ obj = {
           }
           if (0 !== obj2.size()) {
             if (closure_1_11.getVoiceChannelId() === arg1) {
-              const NONE2 = closure_1_17.NONE;
-              const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+              const NONE = closure_1_17.NONE;
+              const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
                 let tmp = type.type === constants.STREAM;
                 if (tmp) {
                   tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -2039,11 +2113,11 @@ obj = {
                 return tmp;
               });
               if (null != found) {
-                closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+                closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
                 id = found.id;
               } else if (1 !== obj2.size()) {
-                if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                  id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+                if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                  id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
                 } else {
                   const found1 = obj2.toArray().find((type) => {
                     let tmp = type.type === closure_1_16.USER;
@@ -2072,14 +2146,14 @@ obj = {
               }
               let tmp49 = closure_1_28[arg1];
               if (tmp49 == null) {
-                const items = [tmp47, tmp64.NONE];
+                const items = [tmp47, tmp66.NONE];
                 tmp49 = items;
               }
               const first = closure_1_3(tmp49, 1)[0];
-              let NONE = first;
+              let id2 = first;
               if (first !== closure_1_17.AUTO) {
-                NONE = first;
-                if (first !== tmp64.NONE) {
+                id2 = first;
+                if (first !== tmp66.NONE) {
                   const participant = obj2.getParticipant(first);
                   let tmp53 = null == participant;
                   if (!tmp53) {
@@ -2089,19 +2163,26 @@ obj = {
                     }
                     tmp53 = tmp55;
                   }
-                  NONE = first;
+                  id2 = first;
                   if (tmp53) {
-                    NONE = tmp64.NONE;
+                    id2 = tmp66.NONE;
                   }
                 }
               }
-              const items1 = [NONE, id];
-              closure_1_39(arg1, items1);
+              let tmp57 = id2 === tmp66.NONE && null != found;
+              if (tmp57) {
+                tmp57 = true === closure_1_35[arg1];
+              }
+              if (tmp57) {
+                id2 = found.id;
+              }
+              const items1 = [id2, id];
+              closure_1_40(arg1, items1);
               flag = true;
-              const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+              const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
             }
           }
-          closure_1_39(arg1, null);
+          closure_1_40(arg1, null);
           flag = true;
         }
         return flag;
@@ -2126,7 +2207,7 @@ obj = {
     closure_34[channelId.channelId] = channelId.large;
   },
   CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED: function handleUpdateStageVideoLimitBoostUpsellDismissed(channelId) {
-    closure_35[channelId.channelId] = channelId.dismissed;
+    closure_36[channelId.channelId] = channelId.dismissed;
   },
   STREAM_UPDATE_SELF_HIDDEN: function handleUpdateSelfStreamHidden(channelId) {
     channelId = channelId.channelId;
@@ -2142,14 +2223,14 @@ obj = {
         tmp8 = items;
       }
       const first = callback(tmp8, 1)[0];
-      const obj3 = f76635(4536);
+      const obj3 = f75789(4446);
       if (tmp12) {
         setSelectedParticipantId(channelId, null);
       }
-      tmp12 = f76635(4536).isStreamKey(first) && first.includes(id);
+      tmp12 = f75789(4446).isStreamKey(first) && first.includes(id);
     }
     const items1 = [channelId];
-    f76635 = (updateParticipant) => updateParticipant.updateParticipant(f76635);
+    f75789 = (updateParticipant) => updateParticipant.updateParticipant(f75789);
     const reduced = items1.reduce((arg0, arg1) => {
       let tmp4 = closure_1_27[arg1];
       if (null == tmp4) {
@@ -2172,7 +2253,7 @@ obj = {
             isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
           }
           if (!Boolean(isGuildVocalOrThreadResult)) {
-            let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+            let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
             if (!hasEmbeddedActivityResult) {
               hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
             }
@@ -2189,7 +2270,7 @@ obj = {
             } else {
               closure_1_30[arg1] = VIDEO;
             }
-            tmp21 = f76635;
+            tmp21 = f75789;
             tmp22 = closure_1_2;
           }
           VIDEO = closure_1_20.VIDEO;
@@ -2204,8 +2285,8 @@ obj = {
         }
         if (0 !== obj2.size()) {
           if (closure_1_11.getVoiceChannelId() === arg1) {
-            const NONE2 = closure_1_17.NONE;
-            const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+            const NONE = closure_1_17.NONE;
+            const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
               let tmp = type.type === constants.STREAM;
               if (tmp) {
                 tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -2213,11 +2294,11 @@ obj = {
               return tmp;
             });
             if (null != found) {
-              closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+              closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
               id = found.id;
             } else if (1 !== obj2.size()) {
-              if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+              if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
               } else {
                 const found1 = obj2.toArray().find((type) => {
                   let tmp = type.type === closure_1_16.USER;
@@ -2246,14 +2327,14 @@ obj = {
             }
             let tmp49 = closure_1_28[arg1];
             if (tmp49 == null) {
-              const items = [tmp47, tmp64.NONE];
+              const items = [tmp47, tmp66.NONE];
               tmp49 = items;
             }
             const first = closure_1_3(tmp49, 1)[0];
-            let NONE = first;
+            let id2 = first;
             if (first !== closure_1_17.AUTO) {
-              NONE = first;
-              if (first !== tmp64.NONE) {
+              id2 = first;
+              if (first !== tmp66.NONE) {
                 const participant = obj2.getParticipant(first);
                 let tmp53 = null == participant;
                 if (!tmp53) {
@@ -2263,19 +2344,26 @@ obj = {
                   }
                   tmp53 = tmp55;
                 }
-                NONE = first;
+                id2 = first;
                 if (tmp53) {
-                  NONE = tmp64.NONE;
+                  id2 = tmp66.NONE;
                 }
               }
             }
-            const items1 = [NONE, id];
-            closure_1_39(arg1, items1);
+            let tmp57 = id2 === tmp66.NONE && null != found;
+            if (tmp57) {
+              tmp57 = true === closure_1_35[arg1];
+            }
+            if (tmp57) {
+              id2 = found.id;
+            }
+            const items1 = [id2, id];
+            closure_1_40(arg1, items1);
             flag = true;
-            const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+            const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
           }
         }
-        closure_1_39(arg1, null);
+        closure_1_40(arg1, null);
         flag = true;
       }
       return flag;
@@ -2291,8 +2379,8 @@ obj = {
   },
   RTC_CONNECTION_VIDEO: function handleRTCConnectionVideo(arg0) {
     const items = [];
-    ({ channelId: arr[0], userId: f76635 } = arg0);
-    f76635 = (updateParticipant) => updateParticipant.updateParticipant(f76635);
+    ({ channelId: arr[0], userId: f75789 } = arg0);
+    f75789 = (updateParticipant) => updateParticipant.updateParticipant(f75789);
     return items.reduce((arg0, arg1) => {
       let tmp4 = closure_1_27[arg1];
       if (null == tmp4) {
@@ -2315,7 +2403,7 @@ obj = {
             isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
           }
           if (!Boolean(isGuildVocalOrThreadResult)) {
-            let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+            let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
             if (!hasEmbeddedActivityResult) {
               hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
             }
@@ -2332,7 +2420,7 @@ obj = {
             } else {
               closure_1_30[arg1] = VIDEO;
             }
-            tmp21 = f76635;
+            tmp21 = f75789;
             tmp22 = closure_1_2;
           }
           VIDEO = closure_1_20.VIDEO;
@@ -2347,8 +2435,8 @@ obj = {
         }
         if (0 !== obj2.size()) {
           if (closure_1_11.getVoiceChannelId() === arg1) {
-            const NONE2 = closure_1_17.NONE;
-            const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+            const NONE = closure_1_17.NONE;
+            const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
               let tmp = type.type === constants.STREAM;
               if (tmp) {
                 tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -2356,11 +2444,11 @@ obj = {
               return tmp;
             });
             if (null != found) {
-              closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+              closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
               id = found.id;
             } else if (1 !== obj2.size()) {
-              if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+              if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
               } else {
                 const found1 = obj2.toArray().find((type) => {
                   let tmp = type.type === closure_1_16.USER;
@@ -2389,14 +2477,14 @@ obj = {
             }
             let tmp49 = closure_1_28[arg1];
             if (tmp49 == null) {
-              const items = [tmp47, tmp64.NONE];
+              const items = [tmp47, tmp66.NONE];
               tmp49 = items;
             }
             const first = closure_1_3(tmp49, 1)[0];
-            let NONE = first;
+            let id2 = first;
             if (first !== closure_1_17.AUTO) {
-              NONE = first;
-              if (first !== tmp64.NONE) {
+              id2 = first;
+              if (first !== tmp66.NONE) {
                 const participant = obj2.getParticipant(first);
                 let tmp53 = null == participant;
                 if (!tmp53) {
@@ -2406,19 +2494,26 @@ obj = {
                   }
                   tmp53 = tmp55;
                 }
-                NONE = first;
+                id2 = first;
                 if (tmp53) {
-                  NONE = tmp64.NONE;
+                  id2 = tmp66.NONE;
                 }
               }
             }
-            const items1 = [NONE, id];
-            closure_1_39(arg1, items1);
+            let tmp57 = id2 === tmp66.NONE && null != found;
+            if (tmp57) {
+              tmp57 = true === closure_1_35[arg1];
+            }
+            if (tmp57) {
+              id2 = found.id;
+            }
+            const items1 = [id2, id];
+            closure_1_40(arg1, items1);
             flag = true;
-            const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+            const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
           }
         }
-        closure_1_39(arg1, null);
+        closure_1_40(arg1, null);
         flag = true;
       }
       return flag;
@@ -2426,8 +2521,8 @@ obj = {
   },
   RTC_CONNECTION_PLATFORM: function handleRTCConnectionPlatform(arg0) {
     const items = [];
-    ({ channelId: arr[0], userId: f76635 } = arg0);
-    f76635 = (updateParticipant) => updateParticipant.updateParticipant(f76635);
+    ({ channelId: arr[0], userId: f75789 } = arg0);
+    f75789 = (updateParticipant) => updateParticipant.updateParticipant(f75789);
     return items.reduce((arg0, arg1) => {
       let tmp4 = closure_1_27[arg1];
       if (null == tmp4) {
@@ -2450,7 +2545,7 @@ obj = {
             isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
           }
           if (!Boolean(isGuildVocalOrThreadResult)) {
-            let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+            let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
             if (!hasEmbeddedActivityResult) {
               hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
             }
@@ -2467,7 +2562,7 @@ obj = {
             } else {
               closure_1_30[arg1] = VIDEO;
             }
-            tmp21 = f76635;
+            tmp21 = f75789;
             tmp22 = closure_1_2;
           }
           VIDEO = closure_1_20.VIDEO;
@@ -2482,8 +2577,8 @@ obj = {
         }
         if (0 !== obj2.size()) {
           if (closure_1_11.getVoiceChannelId() === arg1) {
-            const NONE2 = closure_1_17.NONE;
-            const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+            const NONE = closure_1_17.NONE;
+            const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
               let tmp = type.type === constants.STREAM;
               if (tmp) {
                 tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -2491,11 +2586,11 @@ obj = {
               return tmp;
             });
             if (null != found) {
-              closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+              closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
               id = found.id;
             } else if (1 !== obj2.size()) {
-              if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+              if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
               } else {
                 const found1 = obj2.toArray().find((type) => {
                   let tmp = type.type === closure_1_16.USER;
@@ -2524,14 +2619,14 @@ obj = {
             }
             let tmp49 = closure_1_28[arg1];
             if (tmp49 == null) {
-              const items = [tmp47, tmp64.NONE];
+              const items = [tmp47, tmp66.NONE];
               tmp49 = items;
             }
             const first = closure_1_3(tmp49, 1)[0];
-            let NONE = first;
+            let id2 = first;
             if (first !== closure_1_17.AUTO) {
-              NONE = first;
-              if (first !== tmp64.NONE) {
+              id2 = first;
+              if (first !== tmp66.NONE) {
                 const participant = obj2.getParticipant(first);
                 let tmp53 = null == participant;
                 if (!tmp53) {
@@ -2541,27 +2636,34 @@ obj = {
                   }
                   tmp53 = tmp55;
                 }
-                NONE = first;
+                id2 = first;
                 if (tmp53) {
-                  NONE = tmp64.NONE;
+                  id2 = tmp66.NONE;
                 }
               }
             }
-            const items1 = [NONE, id];
-            closure_1_39(arg1, items1);
+            let tmp57 = id2 === tmp66.NONE && null != found;
+            if (tmp57) {
+              tmp57 = true === closure_1_35[arg1];
+            }
+            if (tmp57) {
+              id2 = found.id;
+            }
+            const items1 = [id2, id];
+            closure_1_40(arg1, items1);
             flag = true;
-            const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+            const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
           }
         }
-        closure_1_39(arg1, null);
+        closure_1_40(arg1, null);
         flag = true;
       }
       return flag;
     }, false);
   },
   AUDIO_SET_LOCAL_VIDEO_DISABLED: function handleMediaEngineSetLocalVideoDisabled(userId) {
-    let f76635 = userId.userId;
-    f76635 = (updateParticipant) => updateParticipant.updateParticipant(f76635);
+    let f75789 = userId.userId;
+    f75789 = (updateParticipant) => updateParticipant.updateParticipant(f75789);
     if (closure_25 !== undefined) {
       return closure_25.reduce((arg0, arg1) => {
         let tmp4 = closure_1_27[arg1];
@@ -2585,7 +2687,7 @@ obj = {
               isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
             }
             if (!Boolean(isGuildVocalOrThreadResult)) {
-              let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+              let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
               if (!hasEmbeddedActivityResult) {
                 hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
               }
@@ -2602,7 +2704,7 @@ obj = {
               } else {
                 closure_1_30[arg1] = VIDEO;
               }
-              tmp21 = f76635;
+              tmp21 = f75789;
               tmp22 = closure_1_2;
             }
             VIDEO = closure_1_20.VIDEO;
@@ -2617,8 +2719,8 @@ obj = {
           }
           if (0 !== obj2.size()) {
             if (closure_1_11.getVoiceChannelId() === arg1) {
-              const NONE2 = closure_1_17.NONE;
-              const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+              const NONE = closure_1_17.NONE;
+              const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
                 let tmp = type.type === constants.STREAM;
                 if (tmp) {
                   tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -2626,11 +2728,11 @@ obj = {
                 return tmp;
               });
               if (null != found) {
-                closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+                closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
                 id = found.id;
               } else if (1 !== obj2.size()) {
-                if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                  id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+                if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                  id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
                 } else {
                   const found1 = obj2.toArray().find((type) => {
                     let tmp = type.type === closure_1_16.USER;
@@ -2659,14 +2761,14 @@ obj = {
               }
               let tmp49 = closure_1_28[arg1];
               if (tmp49 == null) {
-                const items = [tmp47, tmp64.NONE];
+                const items = [tmp47, tmp66.NONE];
                 tmp49 = items;
               }
               const first = closure_1_3(tmp49, 1)[0];
-              let NONE = first;
+              let id2 = first;
               if (first !== closure_1_17.AUTO) {
-                NONE = first;
-                if (first !== tmp64.NONE) {
+                id2 = first;
+                if (first !== tmp66.NONE) {
                   const participant = obj2.getParticipant(first);
                   let tmp53 = null == participant;
                   if (!tmp53) {
@@ -2676,19 +2778,26 @@ obj = {
                     }
                     tmp53 = tmp55;
                   }
-                  NONE = first;
+                  id2 = first;
                   if (tmp53) {
-                    NONE = tmp64.NONE;
+                    id2 = tmp66.NONE;
                   }
                 }
               }
-              const items1 = [NONE, id];
-              closure_1_39(arg1, items1);
+              let tmp57 = id2 === tmp66.NONE && null != found;
+              if (tmp57) {
+                tmp57 = true === closure_1_35[arg1];
+              }
+              if (tmp57) {
+                id2 = found.id;
+              }
+              const items1 = [id2, id];
+              closure_1_40(arg1, items1);
               flag = true;
-              const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+              const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
             }
           }
-          closure_1_39(arg1, null);
+          closure_1_40(arg1, null);
           flag = true;
         }
         return flag;
@@ -2696,9 +2805,9 @@ obj = {
     }
   },
   MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED: function handleVideoSourceQuality(channelId) {
-    ({ senderUserId: f76645, maxResolution: importDefault, maxFrameRate: dependencyMap } = channelId);
+    ({ senderUserId: f75799, maxResolution: importDefault, maxFrameRate: dependencyMap } = channelId);
     const items = [channelId.channelId];
-    f76645 = (updateParticipantQuality) => updateParticipantQuality.updateParticipantQuality(f76645, closure_1, closure_2);
+    f75799 = (updateParticipantQuality) => updateParticipantQuality.updateParticipantQuality(f75799, closure_1, closure_2);
     return items.reduce((arg0, arg1) => {
       let tmp4 = closure_1_27[arg1];
       if (null == tmp4) {
@@ -2721,7 +2830,7 @@ obj = {
             isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
           }
           if (!Boolean(isGuildVocalOrThreadResult)) {
-            let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+            let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
             if (!hasEmbeddedActivityResult) {
               hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
             }
@@ -2738,7 +2847,7 @@ obj = {
             } else {
               closure_1_30[arg1] = VIDEO;
             }
-            tmp21 = f76635;
+            tmp21 = f75789;
             tmp22 = closure_1_2;
           }
           VIDEO = closure_1_20.VIDEO;
@@ -2753,8 +2862,8 @@ obj = {
         }
         if (0 !== obj2.size()) {
           if (closure_1_11.getVoiceChannelId() === arg1) {
-            const NONE2 = closure_1_17.NONE;
-            const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+            const NONE = closure_1_17.NONE;
+            const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
               let tmp = type.type === constants.STREAM;
               if (tmp) {
                 tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -2762,11 +2871,11 @@ obj = {
               return tmp;
             });
             if (null != found) {
-              closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+              closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
               id = found.id;
             } else if (1 !== obj2.size()) {
-              if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+              if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
               } else {
                 const found1 = obj2.toArray().find((type) => {
                   let tmp = type.type === closure_1_16.USER;
@@ -2795,14 +2904,14 @@ obj = {
             }
             let tmp49 = closure_1_28[arg1];
             if (tmp49 == null) {
-              const items = [tmp47, tmp64.NONE];
+              const items = [tmp47, tmp66.NONE];
               tmp49 = items;
             }
             const first = closure_1_3(tmp49, 1)[0];
-            let NONE = first;
+            let id2 = first;
             if (first !== closure_1_17.AUTO) {
-              NONE = first;
-              if (first !== tmp64.NONE) {
+              id2 = first;
+              if (first !== tmp66.NONE) {
                 const participant = obj2.getParticipant(first);
                 let tmp53 = null == participant;
                 if (!tmp53) {
@@ -2812,19 +2921,26 @@ obj = {
                   }
                   tmp53 = tmp55;
                 }
-                NONE = first;
+                id2 = first;
                 if (tmp53) {
-                  NONE = tmp64.NONE;
+                  id2 = tmp66.NONE;
                 }
               }
             }
-            const items1 = [NONE, id];
-            closure_1_39(arg1, items1);
+            let tmp57 = id2 === tmp66.NONE && null != found;
+            if (tmp57) {
+              tmp57 = true === closure_1_35[arg1];
+            }
+            if (tmp57) {
+              id2 = found.id;
+            }
+            const items1 = [id2, id];
+            closure_1_40(arg1, items1);
             flag = true;
-            const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+            const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
           }
         }
-        closure_1_39(arg1, null);
+        closure_1_40(arg1, null);
         flag = true;
       }
       return flag;
@@ -2833,10 +2949,10 @@ obj = {
   STREAM_CLOSE: handleStreamClose,
   STREAM_DELETE: handleStreamClose,
   STREAM_WATCH: function handleStreamWatch(streamKey) {
-    obj = f76635(4536);
+    obj = f75789(4446);
     const items = [];
-    ({ channelId: arr[0], ownerId: f76635 } = f76635(4536).decodeStreamKey(streamKey.streamKey));
-    f76635 = (updateParticipant) => updateParticipant.updateParticipant(f76635);
+    ({ channelId: arr[0], ownerId: f75789 } = f75789(4446).decodeStreamKey(streamKey.streamKey));
+    f75789 = (updateParticipant) => updateParticipant.updateParticipant(f75789);
     return items.reduce((arg0, arg1) => {
       let tmp4 = closure_1_27[arg1];
       if (null == tmp4) {
@@ -2859,7 +2975,7 @@ obj = {
             isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
           }
           if (!Boolean(isGuildVocalOrThreadResult)) {
-            let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+            let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
             if (!hasEmbeddedActivityResult) {
               hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
             }
@@ -2876,7 +2992,7 @@ obj = {
             } else {
               closure_1_30[arg1] = VIDEO;
             }
-            tmp21 = f76635;
+            tmp21 = f75789;
             tmp22 = closure_1_2;
           }
           VIDEO = closure_1_20.VIDEO;
@@ -2891,8 +3007,8 @@ obj = {
         }
         if (0 !== obj2.size()) {
           if (closure_1_11.getVoiceChannelId() === arg1) {
-            const NONE2 = closure_1_17.NONE;
-            const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+            const NONE = closure_1_17.NONE;
+            const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
               let tmp = type.type === constants.STREAM;
               if (tmp) {
                 tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -2900,11 +3016,11 @@ obj = {
               return tmp;
             });
             if (null != found) {
-              closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+              closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
               id = found.id;
             } else if (1 !== obj2.size()) {
-              if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+              if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
               } else {
                 const found1 = obj2.toArray().find((type) => {
                   let tmp = type.type === closure_1_16.USER;
@@ -2933,14 +3049,14 @@ obj = {
             }
             let tmp49 = closure_1_28[arg1];
             if (tmp49 == null) {
-              const items = [tmp47, tmp64.NONE];
+              const items = [tmp47, tmp66.NONE];
               tmp49 = items;
             }
             const first = closure_1_3(tmp49, 1)[0];
-            let NONE = first;
+            let id2 = first;
             if (first !== closure_1_17.AUTO) {
-              NONE = first;
-              if (first !== tmp64.NONE) {
+              id2 = first;
+              if (first !== tmp66.NONE) {
                 const participant = obj2.getParticipant(first);
                 let tmp53 = null == participant;
                 if (!tmp53) {
@@ -2950,19 +3066,26 @@ obj = {
                   }
                   tmp53 = tmp55;
                 }
-                NONE = first;
+                id2 = first;
                 if (tmp53) {
-                  NONE = tmp64.NONE;
+                  id2 = tmp66.NONE;
                 }
               }
             }
-            const items1 = [NONE, id];
-            closure_1_39(arg1, items1);
+            let tmp57 = id2 === tmp66.NONE && null != found;
+            if (tmp57) {
+              tmp57 = true === closure_1_35[arg1];
+            }
+            if (tmp57) {
+              id2 = found.id;
+            }
+            const items1 = [id2, id];
+            closure_1_40(arg1, items1);
             flag = true;
-            const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+            const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
           }
         }
-        closure_1_39(arg1, null);
+        closure_1_40(arg1, null);
         flag = true;
       }
       return flag;
@@ -2972,7 +3095,7 @@ obj = {
   GUILD_SOUNDBOARD_SOUND_PLAY_START: handleSpeaking,
   GUILD_SOUNDBOARD_SOUND_PLAY_END: handleSpeaking,
   PUSH_TO_TALK_STATE_CHANGE: function handlePushToTalkStateChange() {
-    const f76646 = (updateParticipantSpeaking) => updateParticipantSpeaking.updateParticipantSpeaking(id.getId());
+    const f75800 = (updateParticipantSpeaking) => updateParticipantSpeaking.updateParticipantSpeaking(id.getId());
     return closure_25.reduce((arg0, arg1) => {
       let tmp4 = closure_1_27[arg1];
       if (null == tmp4) {
@@ -2995,7 +3118,7 @@ obj = {
             isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
           }
           if (!Boolean(isGuildVocalOrThreadResult)) {
-            let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+            let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
             if (!hasEmbeddedActivityResult) {
               hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
             }
@@ -3012,7 +3135,7 @@ obj = {
             } else {
               closure_1_30[arg1] = VIDEO;
             }
-            tmp21 = f76635;
+            tmp21 = f75789;
             tmp22 = closure_1_2;
           }
           VIDEO = closure_1_20.VIDEO;
@@ -3027,8 +3150,8 @@ obj = {
         }
         if (0 !== obj2.size()) {
           if (closure_1_11.getVoiceChannelId() === arg1) {
-            const NONE2 = closure_1_17.NONE;
-            const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+            const NONE = closure_1_17.NONE;
+            const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
               let tmp = type.type === constants.STREAM;
               if (tmp) {
                 tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -3036,11 +3159,11 @@ obj = {
               return tmp;
             });
             if (null != found) {
-              closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+              closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
               id = found.id;
             } else if (1 !== obj2.size()) {
-              if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+              if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
               } else {
                 const found1 = obj2.toArray().find((type) => {
                   let tmp = type.type === closure_1_16.USER;
@@ -3069,14 +3192,14 @@ obj = {
             }
             let tmp49 = closure_1_28[arg1];
             if (tmp49 == null) {
-              const items = [tmp47, tmp64.NONE];
+              const items = [tmp47, tmp66.NONE];
               tmp49 = items;
             }
             const first = closure_1_3(tmp49, 1)[0];
-            let NONE = first;
+            let id2 = first;
             if (first !== closure_1_17.AUTO) {
-              NONE = first;
-              if (first !== tmp64.NONE) {
+              id2 = first;
+              if (first !== tmp66.NONE) {
                 const participant = obj2.getParticipant(first);
                 let tmp53 = null == participant;
                 if (!tmp53) {
@@ -3086,19 +3209,26 @@ obj = {
                   }
                   tmp53 = tmp55;
                 }
-                NONE = first;
+                id2 = first;
                 if (tmp53) {
-                  NONE = tmp64.NONE;
+                  id2 = tmp66.NONE;
                 }
               }
             }
-            const items1 = [NONE, id];
-            closure_1_39(arg1, items1);
+            let tmp57 = id2 === tmp66.NONE && null != found;
+            if (tmp57) {
+              tmp57 = true === closure_1_35[arg1];
+            }
+            if (tmp57) {
+              id2 = found.id;
+            }
+            const items1 = [id2, id];
+            closure_1_40(arg1, items1);
             flag = true;
-            const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+            const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
           }
         }
-        closure_1_39(arg1, null);
+        closure_1_40(arg1, null);
         flag = true;
       }
       return flag;
@@ -3106,7 +3236,7 @@ obj = {
   },
   GUILD_RING_START: function handleGuildRingStart(channelId) {
     channelId = channelId.channelId;
-    let f76648;
+    let f75802;
     ({ guildId, ongoingRings } = channelId);
     if (obj.getCurrentConfig({ guildId, location: "guild_ring_start" }).enabled) {
       let tmp4 = dependencyMap[channelId];
@@ -3115,12 +3245,12 @@ obj = {
         tmp3[channelId] = tmp9;
         tmp4 = tmp9;
       }
-      f76648 = tmp4;
+      f75802 = tmp4;
       const _Object = Object;
       const keys = Object.keys(ongoingRings);
-      const item = keys.forEach((userId) => f76648.updateGuildRingingUsers(userId, true));
+      const item = keys.forEach((userId) => f75802.updateGuildRingingUsers(userId, true));
       const items = [channelId];
-      f76648 = (rebuild) => rebuild.rebuild();
+      f75802 = (rebuild) => rebuild.rebuild();
       return items.reduce((arg0, arg1) => {
         let tmp4 = closure_1_27[arg1];
         if (null == tmp4) {
@@ -3143,7 +3273,7 @@ obj = {
               isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
             }
             if (!Boolean(isGuildVocalOrThreadResult)) {
-              let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+              let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
               if (!hasEmbeddedActivityResult) {
                 hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
               }
@@ -3160,7 +3290,7 @@ obj = {
               } else {
                 closure_1_30[arg1] = VIDEO;
               }
-              tmp21 = f76635;
+              tmp21 = f75789;
               tmp22 = closure_1_2;
             }
             VIDEO = closure_1_20.VIDEO;
@@ -3175,8 +3305,8 @@ obj = {
           }
           if (0 !== obj2.size()) {
             if (closure_1_11.getVoiceChannelId() === arg1) {
-              const NONE2 = closure_1_17.NONE;
-              const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+              const NONE = closure_1_17.NONE;
+              const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
                 let tmp = type.type === constants.STREAM;
                 if (tmp) {
                   tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -3184,11 +3314,11 @@ obj = {
                 return tmp;
               });
               if (null != found) {
-                closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+                closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
                 id = found.id;
               } else if (1 !== obj2.size()) {
-                if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                  id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+                if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                  id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
                 } else {
                   const found1 = obj2.toArray().find((type) => {
                     let tmp = type.type === closure_1_16.USER;
@@ -3217,14 +3347,14 @@ obj = {
               }
               let tmp49 = closure_1_28[arg1];
               if (tmp49 == null) {
-                const items = [tmp47, tmp64.NONE];
+                const items = [tmp47, tmp66.NONE];
                 tmp49 = items;
               }
               const first = closure_1_3(tmp49, 1)[0];
-              let NONE = first;
+              let id2 = first;
               if (first !== closure_1_17.AUTO) {
-                NONE = first;
-                if (first !== tmp64.NONE) {
+                id2 = first;
+                if (first !== tmp66.NONE) {
                   const participant = obj2.getParticipant(first);
                   let tmp53 = null == participant;
                   if (!tmp53) {
@@ -3234,19 +3364,26 @@ obj = {
                     }
                     tmp53 = tmp55;
                   }
-                  NONE = first;
+                  id2 = first;
                   if (tmp53) {
-                    NONE = tmp64.NONE;
+                    id2 = tmp66.NONE;
                   }
                 }
               }
-              const items1 = [NONE, id];
-              closure_1_39(arg1, items1);
+              let tmp57 = id2 === tmp66.NONE && null != found;
+              if (tmp57) {
+                tmp57 = true === closure_1_35[arg1];
+              }
+              if (tmp57) {
+                id2 = found.id;
+              }
+              const items1 = [id2, id];
+              closure_1_40(arg1, items1);
               flag = true;
-              const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+              const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
             }
           }
-          closure_1_39(arg1, null);
+          closure_1_40(arg1, null);
           flag = true;
         }
         return flag;
@@ -3259,7 +3396,7 @@ obj = {
   },
   GUILD_RING_STOP: function handleGuildRingStop(guildId) {
     ({ channelId, ringing } = guildId);
-    let f76650;
+    let f75804;
     if (obj.getCurrentConfig({ guildId: guildId.guildId, location: "guild_ring_start" }).enabled) {
       let tmp4 = dependencyMap[channelId];
       if (null == tmp4) {
@@ -3267,10 +3404,10 @@ obj = {
         tmp3[channelId] = tmp9;
         tmp4 = tmp9;
       }
-      f76650 = tmp4;
-      const item = ringing.forEach((userId) => f76650.updateGuildRingingUsers(userId, false));
+      f75804 = tmp4;
+      const item = ringing.forEach((userId) => f75804.updateGuildRingingUsers(userId, false));
       const items = [channelId];
-      f76650 = (rebuild) => rebuild.rebuild();
+      f75804 = (rebuild) => rebuild.rebuild();
       return items.reduce((arg0, arg1) => {
         let tmp4 = closure_1_27[arg1];
         if (null == tmp4) {
@@ -3293,7 +3430,7 @@ obj = {
               isGuildVocalOrThreadResult = channel.isGuildVocalOrThread();
             }
             if (!Boolean(isGuildVocalOrThreadResult)) {
-              let hasEmbeddedActivityResult = obj.size(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
+              let hasEmbeddedActivityResult = obj.size(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM) > 0;
               if (!hasEmbeddedActivityResult) {
                 hasEmbeddedActivityResult = obj.size(tmp21(tmp22[16]).ChannelRTCParticipantsIndexes.VIDEO) > 0;
               }
@@ -3310,7 +3447,7 @@ obj = {
               } else {
                 closure_1_30[arg1] = VIDEO;
               }
-              tmp21 = f76635;
+              tmp21 = f75789;
               tmp22 = closure_1_2;
             }
             VIDEO = closure_1_20.VIDEO;
@@ -3325,8 +3462,8 @@ obj = {
           }
           if (0 !== obj2.size()) {
             if (closure_1_11.getVoiceChannelId() === arg1) {
-              const NONE2 = closure_1_17.NONE;
-              const found = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
+              const NONE = closure_1_17.NONE;
+              const found = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM).find((type) => {
                 let tmp = type.type === constants.STREAM;
                 if (tmp) {
                   tmp = null != activeStreamForStreamKey.getActiveStreamForStreamKey(type.id);
@@ -3334,11 +3471,11 @@ obj = {
                 return tmp;
               });
               if (null != found) {
-                closure_1_1(tmp66[18])(found.type === closure_1_16.STREAM, "Impossible condition");
+                closure_1_1(tmp68[18])(found.type === closure_1_16.STREAM, "Impossible condition");
                 id = found.id;
               } else if (1 !== obj2.size()) {
-                if (1 === obj2.size(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
-                  id = closure_1_3(obj2.toArray(tmp65(tmp66[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
+                if (1 === obj2.size(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO)) {
+                  id = closure_1_3(obj2.toArray(tmp67(tmp68[16]).ChannelRTCParticipantsIndexes.VIDEO), 1)[0].id;
                 } else {
                   const found1 = obj2.toArray().find((type) => {
                     let tmp = type.type === closure_1_16.USER;
@@ -3367,14 +3504,14 @@ obj = {
               }
               let tmp49 = closure_1_28[arg1];
               if (tmp49 == null) {
-                const items = [tmp47, tmp64.NONE];
+                const items = [tmp47, tmp66.NONE];
                 tmp49 = items;
               }
               const first = closure_1_3(tmp49, 1)[0];
-              let NONE = first;
+              let id2 = first;
               if (first !== closure_1_17.AUTO) {
-                NONE = first;
-                if (first !== tmp64.NONE) {
+                id2 = first;
+                if (first !== tmp66.NONE) {
                   const participant = obj2.getParticipant(first);
                   let tmp53 = null == participant;
                   if (!tmp53) {
@@ -3384,19 +3521,26 @@ obj = {
                     }
                     tmp53 = tmp55;
                   }
-                  NONE = first;
+                  id2 = first;
                   if (tmp53) {
-                    NONE = tmp64.NONE;
+                    id2 = tmp66.NONE;
                   }
                 }
               }
-              const items1 = [NONE, id];
-              closure_1_39(arg1, items1);
+              let tmp57 = id2 === tmp66.NONE && null != found;
+              if (tmp57) {
+                tmp57 = true === closure_1_35[arg1];
+              }
+              if (tmp57) {
+                id2 = found.id;
+              }
+              const items1 = [id2, id];
+              closure_1_40(arg1, items1);
               flag = true;
-              const toArrayResult = obj2.toArray(f76635(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
+              const toArrayResult = obj2.toArray(f75789(closure_1_2[16]).ChannelRTCParticipantsIndexes.STREAM);
             }
           }
-          closure_1_39(arg1, null);
+          closure_1_40(arg1, null);
           flag = true;
         }
         return flag;
@@ -3426,6 +3570,7 @@ obj = {
       return false;
     } else {
       const item1 = tmp(12).forEach(items, (arg0) => {
+        delete tmp3[tmp2];
         delete tmp3[tmp2];
         delete tmp3[tmp2];
         delete tmp3[tmp2];

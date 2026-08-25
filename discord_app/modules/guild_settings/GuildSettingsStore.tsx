@@ -9,7 +9,7 @@ import createChannelRecord from "../../records/ChannelRecord.tsx";
 import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtils.tsx";
 import isValueEqual from "../../lib/PlainRecord.tsx";
 import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import DEFAULT_DISCOVERY_CATEGORY_ID2 from "../global_discovery_servers/GlobalDiscoveryServersConstants.tsx";
 import canUseMobileServerTagSettings from "GuildSettingsServerTagUtils.tsx";
 import fetchVanityUrl from "server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx";
@@ -101,7 +101,7 @@ function _createInvite(code) {
   obj[5] = fromInviteGuildResult;
   ({ uses: obj[6], max_uses: obj[7], max_age: obj[8] } = code);
   const created_at = code.created_at;
-  obj[9] = tDefault(created_at);
+  obj[9] = hooksDefault(created_at);
   ({ flags: obj[10], roles: obj[11] } = code);
   tmp = new tmp(obj);
   return tmp;

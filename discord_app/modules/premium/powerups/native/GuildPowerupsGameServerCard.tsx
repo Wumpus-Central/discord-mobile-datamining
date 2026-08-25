@@ -41,7 +41,7 @@ export default function GuildPowerupsGameServerCard(guildId) {
       const obj2 = { reducedMotion: null };
       obj2[0] = stateFromStores1;
       obj1[1] = obj2;
-      obj[1] = jsx(tmp2(4107).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
+      obj[1] = jsx(tmp2(4108).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
       obj[4] = <View style={null}>{null}</View>;
       obj[6] = tmp6;
       obj[7] = tmp9;

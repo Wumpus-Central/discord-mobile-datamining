@@ -13,9 +13,9 @@ let c3 = importAllResult;
 let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   let MEDIUM_BUTTON_PADDING = MINIMUM_HIT_AREA.LARGE_BUTTON_PADDING;
   if ("sm" === arg0) {
-    MEDIUM_BUTTON_PADDING = tmp(4754).SMALL_BUTTON_PADDING;
+    MEDIUM_BUTTON_PADDING = tmp(4819).SMALL_BUTTON_PADDING;
   } else if ("md" === arg0) {
-    MEDIUM_BUTTON_PADDING = tmp(4754).MEDIUM_BUTTON_PADDING;
+    MEDIUM_BUTTON_PADDING = tmp(4819).MEDIUM_BUTTON_PADDING;
   }
   const sum = arg1 + 2 * MEDIUM_BUTTON_PADDING;
   const buttonBorderRadius = MINIMUM_HIT_AREA.getButtonBorderRadius(arg0);

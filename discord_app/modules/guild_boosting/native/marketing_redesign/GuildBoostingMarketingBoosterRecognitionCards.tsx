@@ -4,13 +4,13 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
-import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import HeartIcon from "../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
+import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import BoostTier3Icon from "../../../../design/components/Icon/native/redesign/generated/BoostTier3Icon.tsx";
-import registerAssetDefault from "../../../../../_runtime/13084_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/13085_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/13086_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/13087_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13072_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/13073_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/13074_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/13075_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";

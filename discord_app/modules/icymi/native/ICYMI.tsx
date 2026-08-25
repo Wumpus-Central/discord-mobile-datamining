@@ -6,12 +6,12 @@ import getGradientColorByPercentage from "../../client_themes/native/ClientTheme
 import getGuildThemeNameDefault from "../../client_themes/native/useColorThemeBackground.tsx";
 import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import getMixedGradientColorDefault from "../../client_themes/native/ThemedGradient.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
 import useIsWindowLargeDefault from "../../screen/native/useIsWindowLarge.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import generateHydrationId from "../ICYMIUtils.tsx";
-import getMixedGradientColorDefault from "../../client_themes/native/ThemedGradient.tsx";
 import FiltersHorizontalIcon from "../../../design/components/Icon/native/redesign/generated/FiltersHorizontalIcon.tsx";
 import goBack from "../../main_tabs_v2/native/tabs/notifications/Notifications.tsx";
 import IconWithBadge from "../../main_tabs_v2/native/shared_components/BackIconWithBadge.tsx";
@@ -54,11 +54,11 @@ function InfoButton() {
     size: "sm",
     icon: callback(CircleInformationIcon.CircleInformationIcon, { size: "sm" }),
     onPress() {
-      callback2(9094).itemInteracted("info_button", "info_button", "press_info_button");
-      const obj = callback2(9094);
-      callback2(9094).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
-      const obj2 = callback2(9094);
-      callback(15790).pushICYMIInfoModal({ extendedOnboarding: true });
+      callback2(9060).itemInteracted("info_button", "info_button", "press_info_button");
+      const obj = callback2(9060);
+      callback2(9060).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
+      const obj2 = callback2(9060);
+      callback(15822).pushICYMIInfoModal({ extendedOnboarding: true });
     }
   });
 }
@@ -71,11 +71,11 @@ function ICYMIHeaderTextWrapper() {
       obj = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
       const intl = callback(1236).intl;
       obj[4] = intl.string(callback(1236).t.SY4sdZ);
-      const items = [callback2(callback(4739).Text, obj), ];
+      const items = [callback2(callback(4376).Text, obj), ];
       obj = { color: "text-brand", variant: "text-xs/bold", style: { marginTop: 4 }, children: null };
       const intl2 = callback(1236).intl;
       obj[3] = intl2.string(callback(1236).t.Ac2OZA);
-      items[1] = callback2(callback(4739).Text, obj);
+      items[1] = callback2(callback(4376).Text, obj);
       obj[0] = items;
       return callback3(closure_15, obj);
     }, [])
@@ -185,7 +185,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       obj = { scrollToTop: null };
       obj[0] = function scrollToTop() {
-        callback(8527).showForLaterModal(callback(8528).SavedMessageSortTypes.BOOKMARK);
+        callback(8535).showForLaterModal(callback(8536).SavedMessageSortTypes.BOOKMARK);
       };
       ref1.current = obj;
     }

@@ -18,7 +18,7 @@ export default function FloatingApplyButton(visible) {
   let items = [closure_4];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj1 = visible(stateFromStores[6]);
-  class E {
+  class I {
     constructor() {
       pointerEvents = "none";
       if (visible) {
@@ -27,12 +27,12 @@ export default function FloatingApplyButton(visible) {
       return { pointerEvents };
     }
   }
-  E.__closure = { visible };
-  E.__workletHash = 8866673550486;
-  E.__initData = closure_7;
-  const animatedProps = obj1.useAnimatedProps(E);
+  I.__closure = { visible };
+  I.__workletHash = 8866673550486;
+  I.__initData = closure_7;
+  const animatedProps = obj1.useAnimatedProps(I);
   let obj2 = visible(stateFromStores[6]);
-  class I {
+  class P {
     constructor() {
       tmp = visible;
       num = 0;
@@ -80,11 +80,11 @@ export default function FloatingApplyButton(visible) {
     }
   }
   obj = { visible, tokens: onPress(stateFromStores[7]), reducedMotion: stateFromStores, withSpring: visible(stateFromStores[8]).withSpring, MEDIA_PICKER_SEND_BUTTON_SPRING: closure_5 };
-  I.__closure = obj;
-  I.__workletHash = 17409059357308;
-  I.__initData = closure_8;
+  P.__closure = obj;
+  P.__workletHash = 17409059357308;
+  P.__initData = closure_8;
   const items1 = [onPress];
-  const animatedStyle = obj2.useAnimatedStyle(I);
+  const animatedStyle = obj2.useAnimatedStyle(P);
   const callback = React.useCallback(() => {
     const result = visible(stateFromStores[9]).triggerHapticFeedback(visible(stateFromStores[9]).HapticFeedbackTypes.IMPACT_MEDIUM);
     onPress();
@@ -100,10 +100,11 @@ export default function FloatingApplyButton(visible) {
     renderButtonResult = renderButton(obj2);
   }
   if (renderButtonResult == null) {
-    let obj3 = { variant: "primary", size: "lg", disabled: null, onPress: null, text: null };
+    let obj3 = { variant: "primary", size: "lg", disabled: null, onPress: null, text: null, loading: null };
     obj3[2] = disabled;
     obj3[3] = callback;
     obj3[4] = text;
+    obj3[5] = visible.loading;
     renderButtonResult = tmp7(visible(stateFromStores[10]).Button, obj3);
   }
   obj1[2] = renderButtonResult;

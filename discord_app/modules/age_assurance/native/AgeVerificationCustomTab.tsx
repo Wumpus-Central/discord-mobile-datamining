@@ -54,7 +54,7 @@ function _openAgeVerificationCustomTab() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -158,7 +158,7 @@ function _resumeAgeVerificationCustomTab() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -208,7 +208,7 @@ function _resumeAgeVerificationCustomTab() {
             } else {
               c3 = 0;
               v0 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           }
           c3 = 0;

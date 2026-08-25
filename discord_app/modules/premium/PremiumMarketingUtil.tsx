@@ -1,8 +1,8 @@
 // discord_app/modules/premium/PremiumMarketingUtil.tsx
 import set from "../../../_runtime/00002_set.js";
 import transitionTo from "../routing/router_utils.tsx";
-import pushLayer from "../../actions/LayerActionCreators.tsx";
 import openUserSettings from "../user_settings/core/native/openUserSettings.tsx";
+import pushLayer from "../../actions/LayerActionCreators.tsx";
 import ME from "../../Constants.tsx";
 
 ({ Routes: obj1, UserSettingsSections: c3 } = ME);

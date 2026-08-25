@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx
-import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
+import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import context from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableCheckboxRow from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";

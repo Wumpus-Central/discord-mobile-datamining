@@ -1,7 +1,7 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputSendButton.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
-import _modDef4119 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4120 from "../../../reanimated/ReanimatedRexport.tsx";
 import useChatInputFloatingWidthDefault from "../action_buttons/useChatInputFloatingWidth.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -26,7 +26,7 @@ function FloatingSlot(arg0) {
   ({ buttonHeight, buttonMargin } = arg0);
   ({ buttonWidth, sendVoiceMessageEnabled, children } = arg0);
   const style = [{ height: buttonHeight }, useChatInputFloatingWidthDefault({ expanded: !sendVoiceMessageEnabled, collapsedWidth: buttonHeight + 2 * buttonMargin, expandedWidth: buttonWidth + 2 * buttonMargin }).animatedStyle];
-  return jsx(_modDef4119.View, { style, children });
+  return jsx(_modDef4120.View, { style, children });
 }
 let c4 = importAllResult;
 let closure_10 = { BUTTON_SEND: "send-button", BUTTON_SEND_DISABLED: "send-button-disabled", BUTTON_SEND_VOICE_MESSAGE: "voice-message-button", BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled" };
@@ -49,17 +49,17 @@ let closure_12 = importAllResult.memo((type) => {
     num = closure_8;
   }
   obj = { cleanup, state, withBounce, bounceEnterDelayMs: num, children: null };
-  let tmp3Result = tmp3(11460);
+  let tmp3Result = tmp3(11814);
   if (type === constants.BUTTON_SEND_VOICE_MESSAGE || type === constants.BUTTON_SEND_VOICE_MESSAGE_DISABLED) {
     obj = { disabled: null, channelId: null };
     obj[0] = isOnCooldown;
     obj[1] = channelId;
-    let tmp7Result = tmp7(tmp3(11469), obj);
+    let tmp7Result = tmp7(tmp3(11823), obj);
   } else {
     obj1 = { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
     ({ button: obj4[1], buttonActive: obj4[2], iconActive: obj4[3] } = tmp5);
-    tmp3Result = tmp3(11453);
-    obj1[4] = tmp(4324).SendMessageIcon;
+    tmp3Result = tmp3(11807);
+    obj1[4] = tmp(4325).SendMessageIcon;
     const intl = tmp(1236).intl;
     obj1[5] = intl.string(tmp(1236).t.TXNS7S);
     obj1[6] = onSendMessage;

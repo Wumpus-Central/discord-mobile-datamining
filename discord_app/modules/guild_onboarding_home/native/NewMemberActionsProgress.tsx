@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/04761_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04826_LinearGradient.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../stores/GuildMemberStore.tsx";

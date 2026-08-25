@@ -1,10 +1,10 @@
 // discord_app/modules/messages/MessageRecordUtils.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
-import trimTrailingPunctuationDefault from "../coded_links/findCodedLinks.tsx";
-import _resolveGiftCode from "../../utils/GiftCodeUtils.tsx";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
+import getPathsFromURLDefault from "../coded_links/findCodedLinks.tsx";
 import useNullableMessageAuthor from "useMessageAuthor.tsx";
 import isMentionedDefault from "isMessageMentioned.tsx";
+import _resolveGiftCode from "../../utils/GiftCodeUtils.tsx";
 import transformMessagePollDefault from "../polls/transformMessagPoll.tsx";
 import getStickerExtensionFromFormatType from "../stickers/StickersUtils.tsx";
 import closure_3 from "../../records/InteractionRecord.tsx";
@@ -55,7 +55,7 @@ function createMinimalMessageRecord(timestamp) {
   if (NON_PARSED.has(timestamp.type)) {
     let items1 = [];
   } else {
-    items1 = trimTrailingPunctuationDefault(timestamp.content);
+    items1 = getPathsFromURLDefault(timestamp.content);
   }
   obj.codedLinks = items1;
   tmp = new tmp(obj);
@@ -159,7 +159,7 @@ function createMessageRecord(message, message) {
   obj.mentionRoles = mention_roles;
   obj.mentionChannels = mention_channels;
   obj.messageReference = message.message_reference;
-  let tmp9Result = tmp9(4824);
+  let tmp9Result = tmp9(4639);
   obj1 = { userId: store.getId(), channelId: message.channel_id, mentionEveryone: null, mentionUsers: null, mentionRoles: null };
   let flag = message.mention_everyone;
   if (flag == null) {
@@ -169,7 +169,7 @@ function createMessageRecord(message, message) {
   obj1[3] = mapped;
   obj1[4] = mention_roles;
   obj.mentioned = tmp9Result.isMentioned(obj1);
-  tmp9Result = tmp9(4385);
+  tmp9Result = tmp9(4640);
   const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
   const findGiftCodes = _resolveGiftCode.findGiftCodes;
   if (isGiftCodeEmbedResult) {
@@ -192,13 +192,13 @@ function createMessageRecord(message, message) {
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp39Result = tDefault(date);
-      const tmp39 = tDefault;
+      tmp39Result = hooksDefault(date);
+      const tmp39 = hooksDefault;
     }
     let durationResult = null;
     if (null != tmp39Result) {
-      durationResult = tDefault.duration(tmp39Result.diff(tmp35));
-      const obj12 = tDefault;
+      durationResult = hooksDefault.duration(tmp39Result.diff(tmp35));
+      const obj12 = hooksDefault;
     }
     obj2 = { participants: null, endedTimestamp: null, duration: null };
     obj2[0] = call.participants;
@@ -333,12 +333,12 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = tDefault(date);
-          const tmp4 = tDefault;
+          tmp = hooksDefault(date);
+          const tmp4 = hooksDefault;
         }
         let durationResult = null;
         if (null != tmp) {
-          obj = tDefault;
+          obj = hooksDefault;
           durationResult = obj.duration(tmp.diff(tmp46));
         }
         obj = { participants: null, endedTimestamp: null, duration: null };

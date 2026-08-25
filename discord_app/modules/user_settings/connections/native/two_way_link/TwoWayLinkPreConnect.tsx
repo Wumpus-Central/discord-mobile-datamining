@@ -27,7 +27,7 @@ function _authorizeLink() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -63,7 +63,7 @@ function _authorizeLink() {
             return obj;
           } else {
             url = body.body.url;
-            const obj5 = callback2(4093);
+            const obj5 = callback2(4094);
             const tmp19 = url;
             let tmp6 = closure_8;
             if (obj6.isAndroid()) {
@@ -127,7 +127,7 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -187,7 +187,7 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
           closure_1_1(closure_1_2[14])(null != state, "Authorize URL state query parameter must be present");
           c4.current = state;
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp15) {
         closure_2 = tmp15;

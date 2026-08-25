@@ -34,8 +34,8 @@ export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveCo
   let obj = {
     label: getSystemLocale.t.OX4ybh,
     labelHook() {
-      let obj = callback2(5433);
-      obj = { entryPoint: callback(5259).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
+      let obj = callback2(7942);
+      obj = { entryPoint: callback(7944).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
       const result = obj.showAgeVerificationGetStartedModal(obj);
     },
     noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE
@@ -43,8 +43,8 @@ export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveCo
   return jsx(SafetySettingsNoticeDefault, {
     label: getSystemLocale.t.OX4ybh,
     labelHook() {
-      let obj = callback2(5433);
-      obj = { entryPoint: callback(5259).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
+      let obj = callback2(7942);
+      obj = { entryPoint: callback(7944).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
       const result = obj.showAgeVerificationGetStartedModal(obj);
     },
     noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE

@@ -1,11 +1,11 @@
 // discord_app/utils/native/PremiumUpsellUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
-import registerAssetDefault from "../../../_runtime/08511_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/08512_registerAsset.js";
-import registerAssetDefault3 from "../../../_runtime/08513_registerAsset.js";
-import registerAssetDefault4 from "../../../_runtime/08514_registerAsset.js";
-import registerAssetDefault5 from "../../../_runtime/08515_registerAsset.js";
-import registerAssetDefault6 from "../../../_runtime/08516_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/08519_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/08520_registerAsset.js";
+import registerAssetDefault3 from "../../../_runtime/08521_registerAsset.js";
+import registerAssetDefault4 from "../../../_runtime/08522_registerAsset.js";
+import registerAssetDefault5 from "../../../_runtime/08523_registerAsset.js";
+import registerAssetDefault6 from "../../../_runtime/08524_registerAsset.js";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";

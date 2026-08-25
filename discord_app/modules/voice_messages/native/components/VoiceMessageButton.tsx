@@ -97,7 +97,7 @@ const memoResult = importAllResult.memo((disabled) => {
   currentState = importAllResult.useRef(true);
   closure_8 = importAllResult.useRef(currentState.currentState);
   closure_9 = importAllResult.useRef(null);
-  const tmp11 = sharedValue1(10757)();
+  const tmp11 = sharedValue1(11083)();
   _require = undefined;
   _require = sharedValue((arg0) => {
     closure_0 = arg0;
@@ -115,7 +115,7 @@ const memoResult = importAllResult.memo((disabled) => {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -230,7 +230,7 @@ const memoResult = importAllResult.memo((disabled) => {
                 const obj17 = callback(closure_2[29]);
               }
               startTimeMillis = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           }
         } catch (tmp32) {
@@ -348,7 +348,7 @@ const memoResult = importAllResult.memo((disabled) => {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -455,7 +455,7 @@ const memoResult = importAllResult.memo((disabled) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -626,7 +626,7 @@ const memoResult = importAllResult.memo((disabled) => {
     }
   }, items9);
   let obj5 = coerceMainRoute;
-  const tmp23 = sharedValue1(8903);
+  const tmp23 = sharedValue1(9160);
   let intl = require("../../../../intl/index.native.tsx").intl;
   const tmp24 = sharedValue(function*() {
     if (c2 === 2) {
@@ -640,7 +640,7 @@ const memoResult = importAllResult.memo((disabled) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -676,7 +676,7 @@ const memoResult = importAllResult.memo((disabled) => {
           ({ LOCKED: arr[0], LOCKED: arr[1] } = closure_1_18);
           const result = c2.set(items);
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -699,7 +699,7 @@ const memoResult = importAllResult.memo((disabled) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -735,7 +735,7 @@ const memoResult = importAllResult.memo((disabled) => {
           ({ LOCKED: arr[0], LOCKED: arr[1] } = closure_1_18);
           const result = c2.set(items);
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -796,7 +796,7 @@ const memoResult = importAllResult.memo((disabled) => {
     return onUpdateResult.onFinalize(fn3);
   }, items10);
   obj = { gesture: memo, children: null };
-  obj1 = { ref: sharedValue1(11472)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null };
+  obj1 = { ref: sharedValue1(11826)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null };
   const tmp23Result = tmp23(sharedValue(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -809,7 +809,7 @@ const memoResult = importAllResult.memo((disabled) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -845,7 +845,7 @@ const memoResult = importAllResult.memo((disabled) => {
           ({ LOCKED: arr[0], LOCKED: arr[1] } = closure_1_18);
           const result = c2.set(items);
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -864,8 +864,8 @@ const memoResult = importAllResult.memo((disabled) => {
     tmp30 = clientThemesOverride;
   }
   obj1[7] = tmp30;
-  obj[1] = jsx(sharedValue1(11453), { ref: sharedValue1(11472)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null });
-  return jsx(require("../../../../../_runtime/06408_LegacyBaseButton.js").GestureDetector, { gesture: memo, children: null });
+  obj[1] = jsx(sharedValue1(11807), { ref: sharedValue1(11826)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null });
+  return jsx(require("../../../../../_runtime/05533_LegacyBaseButton.js").GestureDetector, { gesture: memo, children: null });
 });
 let result = require("set").fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageButton.tsx");
 

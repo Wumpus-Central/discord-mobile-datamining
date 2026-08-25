@@ -2,8 +2,8 @@
 import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import getHermesInstrumentedStatsSummaryDefault from "../../../../utils/ProcessUtils.native.tsx";
-import noop from "../../../../lib/RTCControlSocket.tsx";
 import Opcode from "../../../gateway/GatewaySocketOpcode.tsx";
+import noop from "../../../../lib/RTCControlSocket.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_3 = { Gateway: "gateway", RtcControl: "rtc_control", RemoteAuth: "remote_auth", Spotify: "spotify", Rpc: "rpc", GameServerPing: "game_server_ping" };
@@ -532,7 +532,7 @@ let closure_5 = {
   [AnalyticEvents.WEBSOCKET_MESSAGE_RECEIVED]: (data) => {
     data = data.data;
     if (null == data) {
-      let obj = { message_identity: "unknown", socket_kind: "accessible" };
+      let obj = { message_identity: "unknown", socket_kind: "accessibilityRole" };
     } else {
       const url = data.url;
       let tmp61 = null;

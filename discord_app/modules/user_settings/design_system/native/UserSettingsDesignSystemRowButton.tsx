@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemRowButton.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../_runtime/07394_registerAsset.js";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import registerAssetDefault from "../../../../../_runtime/06121_registerAsset.js";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import RowButtonWrapper from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";

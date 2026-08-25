@@ -1,8 +1,8 @@
 // discord_app/modules/app_analytics/AppAnalyticsManager.tsx
 import setDefault from "../../utils/Durations.tsx";
 import _openRobloxURLWithRootPlaceId from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import collectGuildAnalyticsMetadata from "AppAnalyticsUtils.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import getGamePlatformDefault from "../activities/utils/getGamePlatform.tsx";
 import closure_3 from "../game_detection/RunningGameStore.native.tsx";
 import closure_4 from "../../stores/MediaEngineStore.tsx";

@@ -39,13 +39,13 @@ let closure_14 = { code: "function QuestDockDragHandleTsx5(){const{withSpring,is
 const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   ({ isExpanded, variant } = arg0);
   const tmp = callback();
-  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(14516).QuestDockGestureContext);
+  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(14546).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const windowDimensions = context.windowDimensions;
   dependencyMap = tmp5;
-  let obj = activeQuestDockMode(14517);
+  let obj = activeQuestDockMode(14547);
   youBarHorizontalMargin = obj.useYouBarHorizontalMargin();
-  obj1 = activeQuestDockMode(4119);
+  obj1 = activeQuestDockMode(4120);
   const fn = function n() {
     return { width: Math.min(windowDimensions.get().width, closure_1_6) };
   };
@@ -56,7 +56,7 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   const animatedStyle = obj1.useAnimatedStyle(fn);
   let obj3 = activeQuestDockMode(1367);
   const enabled = obj3.useMobileVisualRefreshConfig({ location: "QuestDockDragHandle" }).enabled;
-  let obj4 = activeQuestDockMode(4119);
+  let obj4 = activeQuestDockMode(4120);
   const fn2 = function u() {
     let obj = activeQuestDockMode;
     const value = activeQuestDockMode.get();
@@ -87,7 +87,7 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   fn2.__workletHash = 2091098328770;
   fn2.__initData = closure_12;
   const animatedStyle1 = obj4.useAnimatedStyle(fn2);
-  let obj6 = activeQuestDockMode(4119);
+  let obj6 = activeQuestDockMode(4120);
   class M {
     constructor() {
       tmp = activeQuestDockMode(closure_2[10]);
@@ -105,7 +105,7 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
       return;
     }
   }
-  obj1 = { withSpring: activeQuestDockMode(4749).withSpring, isDefaultVariant: tmp5, activeQuestDockMode, QuestDockMode: enabled, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
+  obj1 = { withSpring: activeQuestDockMode(4814).withSpring, isDefaultVariant: tmp5, activeQuestDockMode, QuestDockMode: enabled, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
   M.__closure = obj1;
   M.__workletHash = 7055026667171;
   M.__initData = closure_13;
@@ -127,23 +127,23 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
       return;
     }
   }
-  const obj9 = activeQuestDockMode(4119);
+  const obj9 = activeQuestDockMode(4120);
   const tmp2 = activeQuestDockMode;
-  O.__closure = { withSpring: activeQuestDockMode(4749).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode: enabled, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
+  O.__closure = { withSpring: activeQuestDockMode(4814).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode: enabled, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
   O.__workletHash = 14421154962041;
   O.__initData = closure_14;
   const animatedStyle3 = obj9.useAnimatedStyle(O);
   obj3 = { style: items, children: null };
   items = [tmp.dragHandleWrapper, animatedStyle];
-  const obj2 = { withSpring: activeQuestDockMode(4749).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode: enabled, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
+  const obj2 = { withSpring: activeQuestDockMode(4814).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode: enabled, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
   const tmp12 = windowDimensions;
   obj4 = { style: animatedStyle1, layout: null, children: null };
-  const tmp13 = windowDimensions(8164);
+  const tmp13 = windowDimensions(8160);
   const tmp14 = closure_8;
-  obj4[1] = activeQuestDockMode(14514).dimensionsLayoutTransition;
+  obj4[1] = activeQuestDockMode(14544).dimensionsLayoutTransition;
   const obj5 = { style: items1, children: null };
   items1 = [tmp.dragHandleOverlay, animatedStyle3];
-  const tmp15 = windowDimensions(8164);
+  const tmp15 = windowDimensions(8160);
   const intl = activeQuestDockMode(1236).intl;
   const string = intl.string;
   const t = activeQuestDockMode(1236).t;
@@ -152,13 +152,13 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   } else {
     stringResult = string(t.Yplnt6);
   }
-  obj5[1] = closure_7(activeQuestDockMode(7162).ActionSheetHeaderBar, { variant: "overlay", accessibilityLabel: stringResult });
-  const items2 = [closure_7(windowDimensions(8164), obj5), ];
+  obj5[1] = closure_7(activeQuestDockMode(5818).ActionSheetHeaderBar, { variant: "overlay", accessibilityLabel: stringResult });
+  const items2 = [closure_7(windowDimensions(8160), obj5), ];
   obj6 = { style: items3, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   items3 = [tmp.dragHandleOverlay, animatedStyle2];
-  const tmp16 = windowDimensions(8164);
-  obj6[4] = closure_7(tmp2(7162).ActionSheetHeaderBar, { variant: "default" });
-  items2[1] = closure_7(tmp12(8164), obj6);
+  const tmp16 = windowDimensions(8160);
+  obj6[4] = closure_7(tmp2(5818).ActionSheetHeaderBar, { variant: "default" });
+  items2[1] = closure_7(tmp12(8160), obj6);
   obj4[2] = items2;
   obj3[1] = tmp14(tmp15, obj4);
   return closure_7(tmp13, obj3);

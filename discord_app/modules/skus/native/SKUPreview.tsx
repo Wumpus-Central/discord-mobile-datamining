@@ -132,7 +132,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(9219).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(9502).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = React.useMemo(() => closure_1_5(sku), items);

@@ -32,7 +32,7 @@ let prototype = function SubscriptionManager() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -66,7 +66,7 @@ let prototype = function SubscriptionManager() {
               }
             }
             currentUser = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -151,7 +151,7 @@ let prototype = function SubscriptionManager() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -190,7 +190,7 @@ let prototype = function SubscriptionManager() {
           return obj;
         }
         v0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp8) {
         v0 = tmp;
         throw tmp8;
@@ -209,7 +209,7 @@ let prototype = function SubscriptionManager() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -228,7 +228,7 @@ let prototype = function SubscriptionManager() {
             dependencyMap = 1;
             c2 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(4470).fetchIpCountryCode();
+            obj1[0] = closure_1_0(4725).fetchIpCountryCode();
             return obj1;
           }
         } else {
@@ -242,7 +242,7 @@ let prototype = function SubscriptionManager() {
               obj2[0] = arg1;
               return obj2;
             } else if (null != closure_1_4.ipCountryCode) {
-              obj1 = closure_1_0(4470);
+              obj1 = closure_1_0(4725);
               dependencyMap = 2;
               c2 = 1;
               const obj3 = { value: null, done: false };
@@ -259,7 +259,7 @@ let prototype = function SubscriptionManager() {
             return obj;
           }
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp13) {
         c2 = tmp;

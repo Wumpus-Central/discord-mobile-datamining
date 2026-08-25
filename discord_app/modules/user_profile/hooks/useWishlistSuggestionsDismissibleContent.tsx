@@ -4,12 +4,10 @@ import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../UserProfileStore.tsx";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
-import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const require = arg1;
 let closure_6 = 90 * setDefault.Millis.DAY;
 let closure_7 = 90 * setDefault.Millis.DAY;
-let closure_8 = ApexExperiment.createApexExperiment({ name: "2026-07-smag-wishlist-recommendations-dismiss-threshold", kind: "user", defaultConfig: { minItemsToDismiss: 1 }, variations: { 0: { minItemsToDismiss: 1 }, 1: { minItemsToDismiss: 3 }, 2: { minItemsToDismiss: 10 } } });
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useWishlistSuggestionsDismissibleContent.tsx");
 
 export default function useWishlistSuggestionsDismissibleContent(userId) {
@@ -25,7 +23,6 @@ export default function useWishlistSuggestionsDismissibleContent(userId) {
   if (num == null) {
     num = 0;
   }
-  const tmp = num >= closure_8.useConfig({ location: "user_profile_wishlist_suggestions_grid" }).minItemsToDismiss;
   let obj = React;
   [tmp4, tmp5] = callback(React.useState(false), 2);
   callback = tmp5;
@@ -43,7 +40,7 @@ export default function useWishlistSuggestionsDismissibleContent(userId) {
   const tmp3 = callback(React.useState(false), 2);
   const items = [closure_4];
   const items1 = [wishlist, userId];
-  const stateFromStores = userId(wishlist[6]).useStateFromStores(items, () => {
+  const stateFromStores = userId(wishlist[5]).useStateFromStores(items, () => {
     let num = 0;
     if (null != wishlist) {
       const wishlistSettings = closure_1_4.getWishlistSettings(userId, tmp.id);
@@ -59,13 +56,13 @@ export default function useWishlistSuggestionsDismissibleContent(userId) {
     }
     return num;
   }, items1);
-  const obj2 = userId(wishlist[6]);
+  const obj2 = userId(wishlist[5]);
   obj = { showAfterTimestamp: stateFromStores + closure_7, cooldownDurationMs: closure_6 };
-  const tmp2Result = tmp2(userId(wishlist[7]).useSelectedTimeRecurringDismissibleContent(userId(wishlist[8]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS, obj, undefined, true), 2);
+  const tmp2Result = tmp2(userId(wishlist[6]).useSelectedTimeRecurringDismissibleContent(userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS, obj, undefined, true), 2);
   React = tmp10;
   if (hasFetchedWishlist) {
-    hasFetchedWishlist = tmp2Result[0] === userId(wishlist[8]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS || tmp4 || !tmp;
-    const tmp11 = tmp2Result[0] === userId(wishlist[8]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS || tmp4 || !tmp;
+    hasFetchedWishlist = tmp2Result[0] === userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS || tmp4 || !tmp;
+    const tmp11 = tmp2Result[0] === userId(wishlist[7]).DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS || tmp4 || !tmp;
   }
   obj = {
     isVisible: hasFetchedWishlist,

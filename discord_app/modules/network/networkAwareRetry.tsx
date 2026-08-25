@@ -23,7 +23,7 @@ function _networkAwareRetry() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -74,7 +74,7 @@ function _networkAwareRetry() {
               if (closure_3 + 1 >= num14) {
                 throw store;
               } else {
-                let obj6 = callback(4263);
+                let obj6 = callback(4264);
                 c6 = 4;
                 c7 = 1;
                 const obj2 = { value: null, done: false };

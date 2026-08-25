@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import isActionedApplicationStatus from "GuildJoinRequestUtils.tsx";
 import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
 import closure_3 from "../../stores/UserStore.tsx";
@@ -14,12 +14,12 @@ function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatu
     if (null != DELETED) {
       if (DELETED === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.SUBMITTED) {
         dependencyMap[guildId] = dependencyMap[guildId] + 1;
-        const result = map.set(guildId, tDefault());
+        const result = map.set(guildId, hooksDefault());
       }
-      if (applicationStatus === tmp12(4204).GuildJoinRequestApplicationStatuses.SUBMITTED) {
+      if (applicationStatus === tmp12(4205).GuildJoinRequestApplicationStatuses.SUBMITTED) {
         const _Math = Math;
         dependencyMap[guildId] = Math.max(0, dependencyMap[guildId] - 1);
-        const result1 = map.set(guildId, tDefault());
+        const result1 = map.set(guildId, hooksDefault());
       }
       tmp12 = require;
     }
@@ -137,8 +137,8 @@ prototype["hasFetched"] = function hasFetched(arg0) {
     const value = obj.get(arg0);
     let tmp3 = null != value;
     if (tmp3) {
-      tmp3 = tDefault().diff(value, "seconds") < closure_20;
-      const obj2 = tDefault();
+      tmp3 = hooksDefault().diff(value, "seconds") < closure_20;
+      const obj2 = hooksDefault();
     }
     return tmp3;
   } else {
@@ -206,7 +206,7 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(dispatcherDefault, {
     ({ status, total } = arg0);
     if (status === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.SUBMITTED) {
       closure_6[guildId] = total;
-      let result = map.set(guildId, tDefault());
+      let result = map.set(guildId, hooksDefault());
     }
     const item = requests.forEach((joinRequestId) => {
       closure_19[joinRequestId.joinRequestId] = joinRequestId;

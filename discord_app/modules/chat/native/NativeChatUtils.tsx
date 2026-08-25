@@ -28,7 +28,7 @@ obj = {
           DCDChatManager.scrollTo(tmp15, arg1, tmp, tmp2, TOP);
         }
       } else {
-        const Commands = tmp5(10513).Commands;
+        const Commands = tmp5(11096).Commands;
         Commands.scrollTo(arg0, arg1, tmp, tmp2, TOP);
       }
       obj2 = set2;
@@ -44,7 +44,7 @@ obj = {
           DCDChatManager.scrollToBottom(tmp6, arg1);
         }
       } else {
-        const Commands = tmp2(10513).Commands;
+        const Commands = tmp2(11096).Commands;
         Commands.scrollToBottom(arg0, arg1);
       }
       obj = set2;
@@ -90,7 +90,7 @@ obj = {
           DCDChatManager.scrollIntoView(tmp13, arg1, tmp, tmp2);
         }
       } else {
-        const Commands = tmp4(10513).Commands;
+        const Commands = tmp4(11096).Commands;
         Commands.scrollIntoView(arg0, arg1, tmp, tmp2);
       }
       obj2 = set2;
@@ -100,7 +100,7 @@ obj = {
   updateRows(arg0, rows) {
     if (null != arg0) {
       if (obj6.isIOS()) {
-        let tmp31Result = tmp31(10514);
+        let tmp31Result = tmp31(11097);
         const andIncrementChangesetIdForChat = tmp31Result.getAndIncrementChangesetIdForChat(arg0);
         ({ rows, forceReload } = rows);
         if (forceReload == null) {
@@ -116,7 +116,7 @@ obj = {
         obj[3] = forceReload;
         obj[2] = obj;
         _modDef1208.addBreadcrumb(obj);
-        const Commands = tmp31(10513).Commands;
+        const Commands = tmp31(11096).Commands;
         const _JSON2 = JSON;
         const json = JSON.stringify(rows.rows);
         const isLoadingAtTop = rows.isLoadingAtTop;
@@ -151,7 +151,7 @@ obj = {
             const _JSON = JSON;
             json2 = JSON.stringify(rows.scrollData);
           }
-          tmp31Result = tmp31(10514);
+          tmp31Result = tmp31(11097);
           const andIncrementChangesetIdForChat1 = tmp31Result.getAndIncrementChangesetIdForChat(arg0);
           let flag = rows.HACK_iOSForceAnimations;
           if (flag == null) {
@@ -174,13 +174,13 @@ obj = {
   clearRows(arg0) {
     if (null != arg0) {
       if (obj4.isIOS()) {
-        const Commands = tmp6(10513).Commands;
-        let tmp6Result = tmp6(10514);
+        const Commands = tmp6(11096).Commands;
+        let tmp6Result = tmp6(11097);
         Commands.clearRows(arg0, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
       } else {
         const tmp2 = callback(arg0);
         if (null != tmp2) {
-          tmp6Result = tmp6(10514);
+          tmp6Result = tmp6(11097);
           enforcingDefault.clearRows(tmp2, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
           obj = enforcingDefault;
         }

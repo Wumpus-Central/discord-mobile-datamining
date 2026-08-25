@@ -4,6 +4,40 @@ import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 import getHostWithoutPort from "../core/UrlHostUtils.tsx";
 import set from "../../../_runtime/00002_set.js";
 
+function getSizedImageProxyURL(value, size) {
+  const str = isDiscordProxiedAssetUrlDefault.toURLSafe(value);
+  if (null != str) {
+    let startsWithResult = set.has(str.hostname);
+    if (startsWithResult) {
+      const pathname = str.pathname;
+      startsWithResult = pathname.startsWith("/external/");
+    }
+    if (startsWithResult) {
+      if (null != size.size) {
+        const _String = String;
+        const obj2 = handleImageLoad;
+        const StringResult = String(obj2.getBestMediaProxySize(size.size * handleImageLoad.getDevicePixelRatio()));
+        const searchParams = str.searchParams;
+        const result = searchParams.set("width", StringResult);
+        const searchParams2 = str.searchParams;
+        const result1 = searchParams2.set("height", StringResult);
+        const obj3 = handleImageLoad;
+      }
+      ({ keepAspectRatio, format } = size);
+      if (null != keepAspectRatio) {
+        const searchParams3 = str.searchParams;
+        const _String2 = String;
+        const result2 = searchParams3.set("keep_aspect_ratio", String(keepAspectRatio));
+      }
+      if (null != format) {
+        const searchParams4 = str.searchParams;
+        const result3 = searchParams4.set("format", format);
+      }
+      return str.toString();
+    }
+  }
+  return value;
+}
 let parts;
 if (window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS != null) {
   parts = str.split(",");
@@ -25,33 +59,32 @@ let set = new Set(mapped1.filter(Boolean));
 let result = set.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx");
 
 export { isImageProxyURL };
-export const getSizedImageProxyURL = function getSizedImageProxyURL(value, arg1) {
-  ({ size, keepAspectRatio } = arg1);
-  const str = isDiscordProxiedAssetUrlDefault.toURLSafe(value);
-  if (null != str) {
+export { getSizedImageProxyURL };
+export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size) {
+  let str = isDiscordProxiedAssetUrlDefault.toURLSafe(value);
+  if (null == str) {
+    return value;
+  } else {
     let startsWithResult = set.has(str.hostname);
     if (startsWithResult) {
       const pathname = str.pathname;
       startsWithResult = pathname.startsWith("/external/");
     }
     if (startsWithResult) {
-      if (null != size) {
-        const _String = String;
-        const obj2 = handleImageLoad;
-        const StringResult = String(obj2.getBestMediaProxySize(size * handleImageLoad.getDevicePixelRatio()));
-        const searchParams = str.searchParams;
-        const result = searchParams.set("width", StringResult);
-        const searchParams2 = str.searchParams;
-        const result1 = searchParams2.set("height", StringResult);
-        const obj3 = handleImageLoad;
+      str = getSizedImageProxyURL(value, size);
+    } else {
+      str = value;
+      if (tmpResult.isDiscordCdnUrl(value)) {
+        if (null != size.size) {
+          const searchParams = str.searchParams;
+          const _String = String;
+          const obj3 = handleImageLoad;
+          const result = searchParams.set("size", String(obj3.getBestMediaProxySize(size.size * handleImageLoad.getDevicePixelRatio())));
+          const obj4 = handleImageLoad;
+        }
+        str = str.toString();
       }
-      if (null != keepAspectRatio) {
-        const searchParams3 = str.searchParams;
-        const _String2 = String;
-        const result2 = searchParams3.set("keep_aspect_ratio", String(keepAspectRatio));
-      }
-      return str.toString();
+      tmpResult = isDiscordProxiedAssetUrlDefault;
     }
   }
-  return value;
 };

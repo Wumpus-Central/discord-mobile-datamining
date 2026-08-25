@@ -18,9 +18,9 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(16109).trackYouTabAvatarPress();
-    const obj = callback(16109);
-    const result1 = callback(15697).showYouAccountActionSheet();
+    const result = callback(16141).trackYouTabAvatarPress();
+    const obj = callback(16141);
+    const result1 = callback(15729).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();
@@ -56,7 +56,7 @@ function YouScreenWidgetsBoardContainer(containerBackground) {
 }
 function EditSection(navigateToProfileCustomization) {
   navigateToProfileCustomization = navigateToProfileCustomization.navigateToProfileCustomization;
-  let enabled = navigateToProfileCustomization.isProfileLoaded;
+  let canSet = navigateToProfileCustomization.isProfileLoaded;
   let trackUserProfileAction;
   let first;
   let callback;
@@ -70,8 +70,8 @@ function EditSection(navigateToProfileCustomization) {
   const isBadgeManagementEnabled = obj3.useIsBadgeManagementEnabled({ location: "YouScreenUserProfileContent" });
   let obj4 = navigateToProfileCustomization(first[20]);
   const tmp8 = useIsContentShown(navigateToProfileCustomization(first[21]).DismissibleContent.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS);
-  let tmp9 = enabled;
-  if (enabled) {
+  let tmp9 = canSet;
+  if (canSet) {
     tmp9 = isDisplayNameStylesFlywheelSettersEnabled;
   }
   if (tmp9) {
@@ -81,8 +81,8 @@ function EditSection(navigateToProfileCustomization) {
   if (tmp9) {
     items.push(tmp4(tmp2[21]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK);
   }
-  let hasBadges = enabled;
-  if (enabled) {
+  let hasBadges = canSet;
+  if (canSet) {
     hasBadges = isBadgeManagementEnabled;
   }
   if (hasBadges) {
@@ -91,13 +91,13 @@ function EditSection(navigateToProfileCustomization) {
   if (hasBadges) {
     items.push(tmp4(tmp2[21]).DismissibleContent.BADGE_CUSTOMIZATION_COACHMARK);
   }
-  if (enabled) {
-    enabled = obj4.useCustomTypingIndicatorConfig("YouScreenUserProfileContent").enabled;
+  if (canSet) {
+    canSet = obj4.useCustomTypingIndicatorConfig("YouScreenUserProfileContent").canSet;
   }
-  if (enabled) {
-    enabled = !tmp8;
+  if (canSet) {
+    canSet = !tmp8;
   }
-  if (enabled) {
+  if (canSet) {
     items.push(tmp4(tmp2[21]).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_PROFILE_COACHMARK);
   }
   const tmp3 = trackUserProfileAction(first[14])();

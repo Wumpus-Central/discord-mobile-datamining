@@ -1,7 +1,7 @@
 // discord_app/modules/calls/mediaEngineContextFromParticipantType.tsx
 import set from "../../../_runtime/00002_set.js";
-import DesktopSources from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 import ParticipantTypes2 from "CallConstants.tsx";
+import DesktopSources from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
 const ParticipantTypes = ParticipantTypes2.ParticipantTypes;
 const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;

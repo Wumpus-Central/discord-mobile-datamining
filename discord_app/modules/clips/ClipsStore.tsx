@@ -31,7 +31,7 @@ function _migrateDefaultStorage() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -68,7 +68,7 @@ function _migrateDefaultStorage() {
         } else if (1 === tmp7) {
           c3 = 0;
           logger.error("Failed to resolve videos path for default storage migration", dependencyMap);
-          const app = callback2(4007).app;
+          const app = callback2(4008).app;
           c4 = 2;
           c5 = 1;
           const obj2 = { value: null, done: false };
@@ -93,7 +93,7 @@ function _migrateDefaultStorage() {
             return obj3;
           } else {
             callback2 = arg1;
-            obj = callback(4530);
+            obj = callback(4440);
             callback = obj.pathJoin(callback2, closure_15);
             c3 = 0;
           }
@@ -529,6 +529,16 @@ let items = [
     obj.clipsQuality = obj;
     obj.clipsSettings = obj;
     return obj;
+  },
+  (clipsSettings) => {
+    obj = {};
+    const merged = Object.assign(clipsSettings);
+    obj = {};
+    const merged1 = Object.assign(clipsSettings.clipsSettings);
+    obj.clipsEnabled = clipsSettings.clipsSettings.clipsEnabled && clipsSettings.clipsSettings.decoupledClipsEnabled;
+    obj.decoupledClipsEnabled = clipsSettings.clipsSettings.clipsEnabled && clipsSettings.clipsSettings.decoupledClipsEnabled;
+    obj.clipsSettings = obj;
+    return obj;
   }
 ];
 ClipsStoreClass.migrations = items;
@@ -797,17 +807,10 @@ obj = {
     classification = classification.classification;
     closure_31.hardwareClassificationVersion = closure_6;
     closure_31.hardwareClassification = classification;
-    if (tmp3) {
+    if (tmp2) {
       closure_31.clipsSettings.clipsEnabled = true;
     }
     closure_31.hardwareClassificationForDecoupled = classification;
-    let clipsEnabled = closure_31.hardwareClassificationForDecoupled === tmp2.MEETS_AUTO_ENABLE && tmp5 !== tmp2.MEETS_AUTO_ENABLE;
-    if (clipsEnabled) {
-      clipsEnabled = closure_31.clipsSettings.clipsEnabled;
-    }
-    if (clipsEnabled) {
-      closure_31.clipsSettings.decoupledClipsEnabled = true;
-    }
   },
   CLIPS_INIT: function handleClipsInit(applicationName) {
     c26 = null;

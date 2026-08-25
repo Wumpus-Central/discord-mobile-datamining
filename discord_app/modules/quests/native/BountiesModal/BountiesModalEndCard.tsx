@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalEndCard.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import _modDef4119 from "../../../reanimated/ReanimatedRexport.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04761_LinearGradient.js";
+import _modDef4120 from "../../../reanimated/ReanimatedRexport.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04826_LinearGradient.js";
 import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -27,7 +27,7 @@ export default function BountiesModalEndCard(visible) {
   visible = visible.visible;
   ({ bounty, sourceQuestContent } = visible);
   const tmp = callback3();
-  visible(4119);
+  visible(4120);
   const fn = function y() {
     let obj = visible(closure_1_2[4]);
     let num = 0;
@@ -37,7 +37,7 @@ export default function BountiesModalEndCard(visible) {
     obj = { opacity: obj.withTiming(num, visible(closure_1_2[5]).timingStandard) };
     return obj;
   };
-  let obj = { withTiming: visible(4671).withTiming, visible, timingStandard: visible(4674).timingStandard };
+  let obj = { withTiming: visible(4381).withTiming, visible, timingStandard: visible(4384).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 15062259404736;
   fn.__initData = closure_8;
@@ -58,7 +58,7 @@ export default function BountiesModalEndCard(visible) {
     obj2[1] = sourceQuestContent;
     items1[2] = callback(BountiesEndCardPressableCtaDefault, obj2);
     obj[2] = items1;
-    visible = callback2(_modDef4119.View, obj);
+    visible = callback2(_modDef4120.View, obj);
   }
   return visible;
 };

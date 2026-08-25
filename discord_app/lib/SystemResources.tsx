@@ -93,7 +93,7 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -162,7 +162,7 @@ prototype["setLastBattery"] = function setLastBattery() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -195,7 +195,7 @@ prototype["setLastBattery"] = function setLastBattery() {
         } else {
           closure_0.lastBattery = arg1;
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp7) {
         c2 = tmp;
@@ -218,7 +218,7 @@ prototype["getBatteryLevelStats"] = function getBatteryLevelStats() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

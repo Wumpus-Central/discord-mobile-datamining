@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/server/events/subscriptionHelpers.tsx
+import getIsScreenLandscape from "../../../screen/useIsScreenLandscape.native.tsx";
 import getApplicationIdsByTaskTypes from "../../../quests/utils/QuestTaskUtils.tsx";
 import useThermalState from "../../../device/useThermalState.tsx";
-import getIsScreenLandscape from "../../../screen/useIsScreenLandscape.native.tsx";
 import activityInstanceConnectedParticipants from "../../helpers/activityInstanceConnectedParticipants.tsx";
 import closure_2 from "../../../activities/EmbeddedActivitiesStore.tsx";
 import closure_3 from "../../../frames/FramesStore.tsx";

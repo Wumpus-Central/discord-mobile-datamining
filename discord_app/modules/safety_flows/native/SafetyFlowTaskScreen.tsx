@@ -1,7 +1,7 @@
 // discord_app/modules/safety_flows/native/SafetyFlowTaskScreen.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../design/components/Modal/native/ModalContent.native.tsx";
 import LogOutDisclaimerDefault from "LogOutDisclaimer.tsx";
@@ -41,7 +41,7 @@ export default function SafetyFlowTaskScreen(action) {
     obj[1] = subtitleColor;
     obj[2] = tmp2.header;
     obj[3] = subtitle;
-    tmp7Result = tmp7(tmp4(4739).Text, obj);
+    tmp7Result = tmp7(tmp4(4376).Text, obj);
   }
   obj = { children: null };
   items[2] = tmp7Result;
@@ -59,12 +59,12 @@ export default function SafetyFlowTaskScreen(action) {
       obj1[1] = action;
       obj1[2] = onAction;
       obj1[3] = submitting;
-      tmp7Result = tmp7(tmp4(12013).ModalActionButton, obj1);
+      tmp7Result = tmp7(tmp4(11263).ModalActionButton, obj1);
     }
     const obj2 = { children: null };
     items3[1] = tmp7Result;
     obj2[0] = items3;
-    footer = tmp3(tmp4(11153).ModalFooter, obj2);
+    footer = tmp3(tmp4(11495).ModalFooter, obj2);
   }
   children[1] = footer;
   return closure_4(ModalScreen.ModalScreen, { children });

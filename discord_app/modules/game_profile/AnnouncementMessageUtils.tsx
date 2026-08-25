@@ -248,7 +248,7 @@ export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   }
   return result;
 };
-export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c12) {
+export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c13) {
   let str = isDiscordProxiedAssetUrlDefault.toURLSafe(proxyUrl);
   str = null;
   if (null != str) {
@@ -258,9 +258,9 @@ export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c12) {
       const searchParams2 = str.searchParams;
       searchParams2.append("width", arg1.toString());
     }
-    if (null != c12) {
+    if (null != c13) {
       const searchParams3 = str.searchParams;
-      searchParams3.append("height", c12.toString());
+      searchParams3.append("height", c13.toString());
     }
     str = str.toString();
   }

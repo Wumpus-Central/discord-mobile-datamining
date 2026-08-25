@@ -2,7 +2,7 @@
 import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
 import _modDef1208 from "../utils/SentryUtils.native.tsx";
 import toJSDefault from "../lib/Record.tsx";
-import tDefault from "../../_runtime/03978_t.js";
+import hooksDefault from "../../_runtime/03979_hooks.js";
 import ME from "../Constants.tsx";
 
 function getTargetType(action) {
@@ -267,7 +267,7 @@ const prototype = function AuditLogRecord(timestampEnd) {
   tmp5.actionType = getActionType(tmp5.action);
   ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
   if (timestampStart == null) {
-    const tmp8 = tDefault;
+    const tmp8 = hooksDefault;
     timestampStart = tmp8(DISCORD_EPOCHDefault.extractTimestamp(tmp5.id));
     const obj = DISCORD_EPOCHDefault;
   }

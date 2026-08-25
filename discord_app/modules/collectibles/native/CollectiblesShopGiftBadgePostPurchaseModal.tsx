@@ -4,8 +4,8 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import messagesProxyDefault from "../../premium/gifting/GiftingBadge.messages.js";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 import PostPurchaseFooterDefault from "../../premium/native/gifting/GiftBadgePostPurchase.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -28,15 +28,15 @@ let result = require("set").fileFinishedImporting("modules/collectibles/native/C
 export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgress) {
   const tmp = callback3(useSafeAreaInsetsDefault().top);
   const callback = React.useCallback(() => {
-    let arr = callback2(5265);
+    let arr = callback2(4611);
     arr = arr.pop();
   }, []);
   const callback1 = React.useCallback(() => {
-    let obj = callback(5305);
+    let obj = callback(7147);
     obj = { analyticsLocations: null, analyticsSource: null };
-    const items = [callback2(7197).GIFTING_BADGE_POST_PURCHASE];
+    const items = [callback2(5854).GIFTING_BADGE_POST_PURCHASE];
     obj[0] = items;
-    obj[1] = callback2(7197).GIFTING_BADGE_POST_PURCHASE;
+    obj[1] = callback2(5854).GIFTING_BADGE_POST_PURCHASE;
     const result = obj.openCollectiblesShopMobile(obj);
   }, []);
   let obj = { children: null };

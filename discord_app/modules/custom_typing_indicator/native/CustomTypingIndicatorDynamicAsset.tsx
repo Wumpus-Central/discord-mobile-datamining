@@ -10,12 +10,12 @@ noopAll;
 let closure_6 = createCacheKey.createStyles((width, gap) => {
   const emojiRow = { flexDirection: "row", gap };
   const emoji = { width, height: width };
-  return { emojiRow, emoji };
+  return { emojiRow, emoji, text: { flexShrink: 1 } };
 });
 const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorDynamicAsset.tsx");
 
 export default function CustomTypingIndicatorDynamicAsset(arg0) {
-  ({ spacing, emojiGap } = arg0);
+  ({ spacing, emojiGap, emojiSource } = arg0);
   let _require;
   ({ name, suggestion, emojiSize, textVariant, textColor, textStyle, lineClamp, style } = arg0);
   if (emojiGap == null) {
@@ -23,21 +23,21 @@ export default function CustomTypingIndicatorDynamicAsset(arg0) {
   }
   const tmpResult = closure_6(emojiSize, emojiGap);
   _require = tmpResult;
-  let obj = { direction: "horizontal", spacing, align: "center", justify: "center", style, children: null };
-  obj = { style: tmpResult.emojiRow, children: null };
-  obj = { length: require("../CustomTypingIndicatorTypes.tsx").CUSTOM_TYPING_INDICATOR_EMOJI_COUNT };
-  obj[1] = Array.from(obj, (arg0, arg1) => {
-    let obj = { fadeDuration: 0, source: null, style: null };
-    obj = { uri: closure_1_1(closure_1_2[7]) };
-    obj[1] = obj;
-    obj[2] = emoji.emoji;
-    return closure_1_4(closure_1_1(closure_1_2[6]), obj, arg1);
-  });
+  let obj = { direction: "horizontal", spacing, align: "center", justify: "flex-start", style, children: null };
+  obj = {
+    style: tmpResult.emojiRow,
+    children: emojiSource.map((uri) => {
+      obj = { fadeDuration: 0, source: obj, style: emoji.emoji };
+      obj = { uri };
+      return closure_1_4(closure_1_1(closure_1_2[5]), obj, arg1);
+    })
+  };
   const items = [callback(View, obj), ];
-  obj1 = { variant: textVariant, color: textColor, lineClamp, style: textStyle, children: null };
+  obj = { variant: textVariant, color: textColor, lineClamp, style: items1, children: null };
+  items1 = [tmpResult.text, textStyle];
   const intl = require("../../../intl/index.native.tsx").intl;
-  obj1[4] = intl.format(require("../CustomTypingIndicatorUtils.tsx").getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), { name });
-  items[1] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj1);
+  obj[4] = intl.format(require("../CustomTypingIndicatorUtils.tsx").getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), { name });
+  items[1] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj);
   obj[5] = items;
   return callback2(require("../../../design/components/Stack/native/Stack.native.tsx").Stack, obj);
 };

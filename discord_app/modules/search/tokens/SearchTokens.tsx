@@ -1,7 +1,7 @@
 // discord_app/modules/search/tokens/SearchTokens.tsx
 import applyDefault from "../../../../_runtime/00012_apply.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import tDefault from "../../../../_runtime/03978_t.js";
+import hooksDefault from "../../../../_runtime/03979_hooks.js";
 import NOOPDefault from "../../../utils/AutocompleteUtils.tsx";
 import ANSWER_IN_REGEX from "SearchTokensUtils.tsx";
 import getMatch2 from "../../../lib/QueryTokenizer.tsx";
@@ -23,46 +23,46 @@ function getShortcuts() {
   obj = {};
   const intl = getSystemLocale.intl;
   obj[intl.string(getSystemLocale.t.HYiVEQ)] = () => {
-    obj = callback(3978)();
-    const addResult = callback(3978)().startOf("day").add(0, "day");
+    obj = callback(3979)();
+    const addResult = callback(3979)().startOf("day").add(0, "day");
     const items = [addResult, ];
-    const startOfResult = callback(3978)().startOf("day");
+    const startOfResult = callback(3979)().startOf("day");
     items[1] = addResult.clone().add(1, "day");
     return items;
   };
   const intl2 = getSystemLocale.intl;
   obj[intl2.string(getSystemLocale.t.cu86KC)] = () => {
-    obj = callback(3978)();
-    const addResult = callback(3978)().startOf("day").add(-1, "day");
+    obj = callback(3979)();
+    const addResult = callback(3979)().startOf("day").add(-1, "day");
     const items = [addResult, ];
-    const startOfResult = callback(3978)().startOf("day");
+    const startOfResult = callback(3979)().startOf("day");
     items[1] = addResult.clone().add(1, "day");
     return items;
   };
   const intl3 = getSystemLocale.intl;
   obj[intl3.string(getSystemLocale.t["FvBj/6"])] = () => {
-    obj = callback(3978)();
-    const addResult = callback(3978)().startOf("week").add(0, "week");
+    obj = callback(3979)();
+    const addResult = callback(3979)().startOf("week").add(0, "week");
     const items = [addResult, ];
-    const startOfResult = callback(3978)().startOf("week");
+    const startOfResult = callback(3979)().startOf("week");
     items[1] = addResult.clone().add(1, "week");
     return items;
   };
   const intl4 = getSystemLocale.intl;
   obj[intl4.string(getSystemLocale.t["20uWCw"])] = () => {
-    obj = callback(3978)();
-    const addResult = callback(3978)().startOf("month").add(0, "month");
+    obj = callback(3979)();
+    const addResult = callback(3979)().startOf("month").add(0, "month");
     const items = [addResult, ];
-    const startOfResult = callback(3978)().startOf("month");
+    const startOfResult = callback(3979)().startOf("month");
     items[1] = addResult.clone().add(1, "month");
     return items;
   };
   const intl5 = getSystemLocale.intl;
   obj[intl5.string(getSystemLocale.t["dXC/hn"])] = () => {
-    obj = callback(3978)();
-    const addResult = callback(3978)().startOf("year").add(0, "year");
+    obj = callback(3979)();
+    const addResult = callback(3979)().startOf("year").add(0, "year");
     const items = [addResult, ];
-    const startOfResult = callback(3978)().startOf("year");
+    const startOfResult = callback(3979)().startOf("year");
     items[1] = addResult.clone().add(1, "year");
     return items;
   };
@@ -121,24 +121,24 @@ function dateValidator(getFullMatch) {
     const tmp23 = callback(tmp2(), 2);
   } else {
     const _Set3 = Set;
-    const obj20 = tDefault;
-    const set = new Set(tDefault.months().map((str) => str.toLowerCase()));
+    const obj20 = hooksDefault;
+    const set = new Set(hooksDefault.months().map((str) => str.toLowerCase()));
     if (set.has(formatted)) {
-      const localResult = tmp32(3978)(formatted, "MMMM").local();
+      const localResult = tmp32(3979)(formatted, "MMMM").local();
       const items = [localResult, ];
-      const obj17 = tmp32(3978)(formatted, "MMMM");
+      const obj17 = tmp32(3979)(formatted, "MMMM");
       items[1] = localResult.clone().add(1, "month");
       const cloneResult = localResult.clone();
       [obj9, obj10] = callback(items, 2);
       const tmp21 = callback(items, 2);
     } else {
       const _Set = Set;
-      let tmp32Result = tmp32(3978);
+      let tmp32Result = tmp32(3979);
       const set1 = new Set(tmp32Result.weekdays().map((str) => str.toLowerCase()));
       if (set1.has(formatted)) {
-        const localResult1 = tmp32(3978)(formatted, "dddd").local();
+        const localResult1 = tmp32(3979)(formatted, "dddd").local();
         const items1 = [localResult1, ];
-        const obj14 = tmp32(3978)(formatted, "dddd");
+        const obj14 = tmp32(3979)(formatted, "dddd");
         items1[1] = localResult1.clone().add(1, "day");
         const cloneResult1 = localResult1.clone();
         [obj9, obj10] = callback(items1, 2);
@@ -151,17 +151,17 @@ function dateValidator(getFullMatch) {
         tmp32Result = tmp32(12);
         const set2 = new Set(tmp32Result.range(2015, fullYear + 1).map((arg0) => arg0.toString()));
         if (set2.has(formatted)) {
-          const localResult2 = tmp32(3978)(formatted, "YYYY").local();
+          const localResult2 = tmp32(3979)(formatted, "YYYY").local();
           const items2 = [localResult2, ];
-          const obj11 = tmp32(3978)(formatted, "YYYY");
+          const obj11 = tmp32(3979)(formatted, "YYYY");
           items2[1] = localResult2.clone().add(1, "year");
           const cloneResult2 = localResult2.clone();
           [obj9, obj10] = callback(items2, 2);
           const tmp17 = callback(items2, 2);
         } else {
-          const localResult3 = tmp32(3978)(formatted, closure_16).local();
+          const localResult3 = tmp32(3979)(formatted, closure_16).local();
           const items3 = [localResult3, ];
-          const obj6 = tmp32(3978)(formatted, closure_16);
+          const obj6 = tmp32(3979)(formatted, closure_16);
           items3[1] = localResult3.clone().add(1, "day");
           const cloneResult3 = localResult3.clone();
           [obj9, obj10] = callback(items3, 2);
@@ -171,7 +171,7 @@ function dateValidator(getFullMatch) {
       }
       const weekdaysResult = tmp32Result.weekdays();
     }
-    const monthsResult = tDefault.months();
+    const monthsResult = hooksDefault.months();
   }
   const isValidResult = obj9.isValid();
   let tmp25 = !isValidResult;
@@ -294,7 +294,7 @@ function isValidChannelAutocomplete(token, guildId) {
         flag = flag2;
       }
     }
-    obj2 = replaced(11560);
+    obj2 = replaced(11907);
   }
   return flag;
 }
@@ -349,14 +349,14 @@ function isValidPinnedAutocomplete(getMatch) {
   return flag;
 }
 function generateDateAutocompletions() {
-  obj = tDefault;
-  const monthsResult = tDefault.months();
-  const items = [...Array.from(new Set(tDefault.months().map((str) => str.toLowerCase())))];
-  const set = new Set(tDefault.months().map((str) => str.toLowerCase()));
-  const obj2 = tDefault;
-  const weekdaysResult = tDefault.weekdays();
-  let arraySpreadResult = HermesBuiltin.arraySpread(Array.from(new Set(tDefault.weekdays().map((str) => str.toLowerCase()))), tmp2);
-  const set1 = new Set(tDefault.weekdays().map((str) => str.toLowerCase()));
+  obj = hooksDefault;
+  const monthsResult = hooksDefault.months();
+  const items = [...Array.from(new Set(hooksDefault.months().map((str) => str.toLowerCase())))];
+  const set = new Set(hooksDefault.months().map((str) => str.toLowerCase()));
+  const obj2 = hooksDefault;
+  const weekdaysResult = hooksDefault.weekdays();
+  let arraySpreadResult = HermesBuiltin.arraySpread(Array.from(new Set(hooksDefault.weekdays().map((str) => str.toLowerCase()))), tmp2);
+  const set1 = new Set(hooksDefault.weekdays().map((str) => str.toLowerCase()));
   const fullYear = new Date().getFullYear();
   const date = new Date();
   const obj4 = applyDefault;
@@ -578,8 +578,8 @@ function getChannelAutocompletions(arg0) {
       obj[0] = substr1;
       obj[1] = closure_5;
       obj[2] = guildId;
-      let tmpResult = tmp(6751);
-      obj[7] = tmpResult.getBoosterMap(tmp(7631).AutocompleterResultTypes.TEXT_CHANNEL);
+      let tmpResult = tmp(5266);
+      obj[7] = tmpResult.getBoosterMap(tmp(7452).AutocompleterResultTypes.TEXT_CHANNEL);
       const obj12 = NOOPDefault;
       const tmp7 = importDefault;
       const queryChannelsResult = NOOPDefault.queryChannels(obj);
@@ -587,8 +587,8 @@ function getChannelAutocompletions(arg0) {
       obj[0] = substr1;
       obj[1] = closure_6;
       obj[2] = guildId;
-      tmpResult = tmp(6751);
-      obj[6] = tmpResult.getBoosterMap(tmp(7631).AutocompleterResultTypes.VOICE_CHANNEL);
+      tmpResult = tmp(5266);
+      obj[6] = tmpResult.getBoosterMap(tmp(7452).AutocompleterResultTypes.VOICE_CHANNEL);
       const combined = queryChannelsResult.concat(NOOPDefault.queryChannels(obj));
       const mapped = combined.map((record) => record.record);
       if (0 === substr1.length) {
@@ -634,18 +634,18 @@ function getChannelAutocompletions(arg0) {
           obj1[0] = substr1;
           obj1[1] = maxResults;
           const obj4 = NOOPDefault;
-          obj1[3] = tmp(6751).getBoosterMap(tmp(7631).AutocompleterResultTypes.GROUP_DM);
-          const tmpResult1 = tmp(6751);
+          obj1[3] = tmp(5266).getBoosterMap(tmp(7452).AutocompleterResultTypes.GROUP_DM);
+          const tmpResult1 = tmp(5266);
           const queryGroupDMsResult = obj4.queryGroupDMs(obj1);
           obj2 = { query: null, limit: null, boosters: null };
           obj2[0] = substr1;
           obj2[1] = maxResults;
           const obj8 = NOOPDefault;
-          obj2[2] = tmp(6751).getBoosterMap(tmp(7631).AutocompleterResultTypes.USER);
-          const tmpResult2 = tmp(6751);
+          obj2[2] = tmp(5266).getBoosterMap(tmp(7452).AutocompleterResultTypes.USER);
+          const tmpResult2 = tmp(5266);
           const queryDMChannelsResult = obj8.queryDMChannels(obj2);
           const tmp6 = applyDefault;
-          const sorted = applyDefault(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(7631).sortByMatchScore);
+          const sorted = applyDefault(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(7452).sortByMatchScore);
           const mapped1 = sorted.map((record) => {
             record = record.record;
             obj = { text: record.comparator, channel: record, key: null };
@@ -1158,10 +1158,10 @@ export const isValidFilterAnswerForSubmit = function isValidFilterAnswerForSubmi
     const items = ["filter:" + trimmed, trimmed];
     const token = new getMatch2.Token(items, tmp);
     if (SearchTokenTypes.ANSWER_HAS === tmp) {
-      let tmp7Result = tmp7(11564);
+      let tmp7Result = tmp7(11911);
       return tmp7Result.validateForMapWithNegation("has", getHasMap(), token);
     } else if (tmp15.ANSWER_AUTHOR_TYPE === tmp) {
-      tmp7Result = tmp7(11564);
+      tmp7Result = tmp7(11911);
       obj = {};
       const intl = tmp7(1236).intl;
       obj[intl.string(tmp7(1236).t.tPZo4p)] = "user";

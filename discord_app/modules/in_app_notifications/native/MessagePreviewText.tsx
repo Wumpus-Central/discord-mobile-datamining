@@ -1,8 +1,8 @@
 // discord_app/modules/in_app_notifications/native/MessagePreviewText.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
 import isReactionMilestoneNotification from "InAppNotificationUtils.tsx";
 import useTruncatedGradientColorsDefault from "hooks/useTruncatedGradientColors.tsx";
 import PreviewIcon from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
@@ -150,7 +150,7 @@ PlatformTypes = { width: 4, marginTop: -ThemesDefault.space.PX_8, marginBottom: 
 createCacheKey[1] = PlatformTypes;
 createCacheKey = { flex: 1, gap: ThemesDefault.space.PX_4, paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", height: 60, width: "accessibilityLabel" };
+createCacheKey[3] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", height: 60, width: "accessibilityRole" };
 createCacheKey[4] = { width: "100%", height: "100%" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let result = set.fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
@@ -161,18 +161,18 @@ export default function MessagePreviewText(message) {
   if (showMessageAuthor === undefined) {
     showMessageAuthor = false;
   }
-  let obj = message(10109);
+  let obj = message(9961);
   const previewableMedia = obj.usePreviewableMedia(message);
-  obj1 = message(4819);
+  obj1 = message(4634);
   let tmp3 = null;
   if (showMessageAuthor) {
     tmp3 = message;
   }
   const nullableMessageAuthor = obj1.useNullableMessageAuthor(tmp3);
-  let tmpResult = tmp(10117);
+  let tmpResult = tmp(9969);
   const previewableMediaText = tmpResult.usePreviewableMediaText({ previewableMedia, author: nullableMessageAuthor });
   ({ text, secondaryText } = previewableMediaText);
-  tmpResult = tmp(10118);
+  tmpResult = tmp(9970);
   const getInitialMessagePreview = tmpResult.useGetInitialMessagePreview({ message });
   const items = [message.embeds];
   const memo = React.useMemo(() => {
@@ -203,7 +203,7 @@ export default function MessagePreviewText(message) {
   } else if (isForwardMessageDefault(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
-      tmp29 = previewableMedia[0].type === tmp(10109).PreviewableMediaTypes.GIF;
+      tmp29 = previewableMedia[0].type === tmp(9961).PreviewableMediaTypes.GIF;
     }
     if (previewableMedia.length > 0) {
       if (null != nullableMessageAuthor) {
@@ -227,15 +227,15 @@ export default function MessagePreviewText(message) {
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
       channel = channel.getChannel(message.channel_id);
-      tmp(10068);
+      tmp(9924);
       if (null != channel) {
         const obj6 = { channel: null, message: null, color: "text-default", layout: null, variant: null, muted: false, lineClamp: null };
         obj6[0] = channel;
         obj6[1] = message;
-        obj6[3] = tmp(4074).ChannelListLayoutTypes.COZY;
+        obj6[3] = tmp(4075).ChannelListLayoutTypes.COZY;
         obj6[4] = tmp24;
         obj6[6] = lineClamp;
-        return callback(tmp(10089).ChannelRowPreview, obj6);
+        return callback(tmp(9945).ChannelRowPreview, obj6);
       }
     }
     const obj7 = { message: null, lineClamp: null, maxHeight: null };
@@ -254,7 +254,7 @@ export default function MessagePreviewText(message) {
           const obj9 = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp: null, children: null };
           obj9[2] = closure_7;
           obj9[3] = secondaryText;
-          tmp17Result = callback(tmp(4739).Text, obj9);
+          tmp17Result = callback(tmp(4376).Text, obj9);
         }
         const obj10 = { children: null };
         items2[1] = tmp17Result;
@@ -279,7 +279,7 @@ export default function MessagePreviewText(message) {
       const obj14 = { variant: "redesign/message-preview/medium", color: "text-default", lineClamp: null, children: null };
       obj14[2] = closure_7;
       obj14[3] = message.poll.question.text;
-      items3[1] = callback(tmp(4739).Text, obj14);
+      items3[1] = callback(tmp(4376).Text, obj14);
       obj12[0] = items3;
       return callback2(View, obj12);
     } else {

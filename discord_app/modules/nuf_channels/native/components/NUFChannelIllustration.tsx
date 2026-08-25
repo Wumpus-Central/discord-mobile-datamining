@@ -46,7 +46,7 @@ export default function NUFChannelIllustration() {
       const obj = { name: null, avatar: null, message: null };
       const intl2 = callback(1236).intl;
       obj[0] = intl2.string(callback(1236).t["9m/HsX"]);
-      obj[1] = callback2(12704);
+      obj[1] = callback2(13239);
       obj[2] = intl.string(callback(1236).t["5alrl0"]);
       items[tmp] = obj;
       return items;
@@ -57,7 +57,7 @@ export default function NUFChannelIllustration() {
       const obj = { name: null, avatar: null, message: null };
       const intl2 = callback(1236).intl;
       obj[0] = intl2.string(callback(1236).t["AW1kM+"]);
-      obj[1] = callback2(12705);
+      obj[1] = callback2(13240);
       obj[2] = intl.string(callback(1236).t["5Oo+vS"]);
       items[tmp] = obj;
       return items;
@@ -70,19 +70,19 @@ export default function NUFChannelIllustration() {
   let items = [sharedValue1, first];
   const effect1 = sharedValue1.useEffect(() => {
     if (first.length >= 2) {
-      const result = sharedValue1.set(lib(4671).withTiming(1, { duration: 250 }));
-      const obj = lib(4671);
+      const result = sharedValue1.set(lib(4381).withTiming(1, { duration: 250 }));
+      const obj = lib(4381);
     }
   }, items);
   let items1 = [sharedValue, first];
   const effect2 = sharedValue1.useEffect(() => {
     const result = sharedValue.set(0);
-    const result1 = sharedValue.set(lib(4671).withTiming(1, { duration: 200 }));
+    const result1 = sharedValue.set(lib(4381).withTiming(1, { duration: 200 }));
   }, items1);
   let obj2 = ReanimatedRexport;
   const fn = function b() {
     let obj = { transform: null };
-    obj = { translateY: lib(4119).interpolate(sharedValue.get(), [0, 1], [50, 0]) };
+    obj = { translateY: lib(4120).interpolate(sharedValue.get(), [0, 1], [50, 0]) };
     const items = [obj];
     obj[0] = items;
     return obj;
@@ -94,22 +94,22 @@ export default function NUFChannelIllustration() {
   obj = { style: tmp.container, children: null };
   obj1 = { source: null, style: null };
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  obj1[0] = first(12706);
+  obj1[0] = first(13241);
   const items2 = [, ];
   ({ starSmall: arr4[0], starBlue: arr4[1] } = tmp);
   obj1[1] = items2;
   const items3 = [callback(closure_6, obj1), , , , , ];
-  obj2 = { source: first(12707), style: items4 };
+  obj2 = { source: first(13242), style: items4 };
   items4 = [, ];
   ({ starMedium: arr6[0], starPink: arr6[1] } = tmp);
   items3[1] = callback(closure_6, obj2);
   const items5 = [, ];
   ({ starMedium: arr7[0], starGreen: arr7[1] } = tmp);
-  items3[2] = callback(closure_6, { source: first(12708), style: items5 });
-  const obj3 = { source: first(12708), style: items5 };
+  items3[2] = callback(closure_6, { source: first(13243), style: items5 });
+  const obj3 = { source: first(13243), style: items5 };
   const items6 = [, ];
   ({ starSmall: arr8[0], starPurple: arr8[1] } = tmp);
-  items3[3] = callback(closure_6, { source: first(12709), style: items6 });
+  items3[3] = callback(closure_6, { source: first(13244), style: items6 });
   items3[4] = callback(closure_5, { style: tmp.cardBackground });
   const obj6 = { style: tmp.card, shadow: "low", border: "subtle", children: null };
   const obj7 = { style: tmp.header, children: null };
@@ -122,16 +122,16 @@ export default function NUFChannelIllustration() {
   obj7[1] = items7;
   const items9 = [callback2(closure_5, obj7), ];
   const obj9 = { style: tmp.content, children: null };
-  const obj4 = { source: first(12709), style: items6 };
+  const obj4 = { source: first(13244), style: items6 };
   const obj5 = { style: tmp.cardBackground };
-  obj9[1] = callback(first(4119).View, {
+  obj9[1] = callback(first(4120).View, {
     style: animatedStyle,
     children: first.map((children) => {
       let obj = { style: lib.message, children: null };
       obj = { source: children.avatar, style: lib.messageAvatar };
       const items = [closure_1_7(closure_1_6, obj), ];
       obj = { style: lib.messageContent, children: null };
-      const items1 = [closure_1_7(lib(4739).Text, { variant: "text-md/semibold", allowFontScaling: false, children: children.name }), closure_1_7(lib(4739).Text, { variant: "text-md/medium", allowFontScaling: false, children: children.message })];
+      const items1 = [closure_1_7(lib(4376).Text, { variant: "text-md/semibold", allowFontScaling: false, children: children.name }), closure_1_7(lib(4376).Text, { variant: "text-md/medium", allowFontScaling: false, children: children.message })];
       obj[1] = items1;
       items[1] = closure_1_8(closure_1_5, obj);
       obj[1] = items;

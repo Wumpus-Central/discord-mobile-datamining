@@ -1,9 +1,9 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellActionCreators.tsx
 import set from "../../../../_runtime/00002_set.js";
 import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef5265 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4611 from "../../../actions/ModalActionCreators.tsx";
 
 const PASSKEY_UPSELL_KEY = "PASSKEY_UPSELL_KEY";
 let result = set.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellActionCreators.tsx");
@@ -18,18 +18,18 @@ export default {
     }
   },
   openPasskeyUpsellModal() {
-    _modDef5265.pushLazy(asyncRequireImpl(14153, dependencyMap.paths), undefined, PASSKEY_UPSELL_KEY);
+    _modDef4611.pushLazy(asyncRequireImpl(14183, dependencyMap.paths), undefined, PASSKEY_UPSELL_KEY);
   },
   closePasskeyUpsellModal() {
-    _modDef5265.popWithKey(PASSKEY_UPSELL_KEY);
+    _modDef4611.popWithKey(PASSKEY_UPSELL_KEY);
   },
   openPasskeyUpsellPromoSheet() {
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14154, dependencyMap.paths), PASSKEY_UPSELL_KEY);
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14184, dependencyMap.paths), PASSKEY_UPSELL_KEY);
   },
   closePasskeyUpsellPromoSheet() {
     ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(PASSKEY_UPSELL_KEY);
   },
   openPasskeyUpsellPromoModal(closure_0) {
-    _modDef5265.pushLazy(asyncRequireImpl(14156, dependencyMap.paths), closure_0, PASSKEY_UPSELL_KEY);
+    _modDef4611.pushLazy(asyncRequireImpl(14186, dependencyMap.paths), closure_0, PASSKEY_UPSELL_KEY);
   }
 };

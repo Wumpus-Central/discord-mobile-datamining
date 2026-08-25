@@ -25,7 +25,7 @@ function _uploadDebugLogFiles() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -54,7 +54,7 @@ function _uploadDebugLogFiles() {
           } else if (1 === tmp7) {
             c5 = 0;
             closure_2 = closure_4;
-            if (closure_2 instanceof callback(4277).UploadVoiceDebugLogsError) {
+            if (closure_2 instanceof callback(4278).UploadVoiceDebugLogsError) {
               closure_1 = (function uploadErrorToAVUnderlyingError(closure_2) {
                 const code = closure_2.code;
                 if (callback(tmp3[5]).UploadErrorCodes.GENERAL === code) {
@@ -70,9 +70,9 @@ function _uploadDebugLogFiles() {
                 }
               })(closure_2);
             }
-            let obj4 = callback(9707);
+            let obj4 = callback(9317);
             const obj2 = { type: null, underlyingError: null, errorMessage: null };
-            obj2[0] = callback(9707).AVError.DEBUG_LOG_UPLOAD_FAILED;
+            obj2[0] = callback(9317).AVError.DEBUG_LOG_UPLOAD_FAILED;
             obj2[1] = closure_1;
             obj2[2] = closure_1_2.message;
             obj4.reportAVError(obj2);
@@ -88,7 +88,7 @@ function _uploadDebugLogFiles() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(10171);
+              obj1 = callback(10021);
               c6 = 3;
               c7 = 1;
               obj4 = { value: null, done: false };
@@ -107,7 +107,7 @@ function _uploadDebugLogFiles() {
           } else {
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp35) {
           closure_4 = tmp35;
@@ -164,7 +164,7 @@ function _uploadAppLogFiles() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

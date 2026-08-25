@@ -6,7 +6,7 @@ import { computeMaxX } from "HomeDrawerStore.tsx";
 import closure_7 from "HomeDrawerSubtitleStore.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { LaunchPadTypes } from "../../launchpad/native/LaunchPadConstants.tsx";
-import { Gesture } from "../../../../_runtime/06408_LegacyBaseButton.js";
+import { Gesture } from "../../../../_runtime/05533_LegacyBaseButton.js";
 import createFakeSharedValue from "../../reanimated/ReanimatedHelperTypes.tsx";
 
 const require = arg1;

@@ -3,13 +3,13 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import getGuildThemeNameDefault from "../../../../client_themes/native/useColorThemeBackground.tsx";
 import getRootNavigationRef from "../../../RootNavigationRef.native.tsx";
+import getMixedGradientColorDefault from "../../../../client_themes/native/ThemedGradient.tsx";
 import useNavigatorBackPressHandler from "../../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 import Layer from "../../../../../design/components/Layers/native/LayerScope.native.tsx";
 import context from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import contextDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import QUICK_SWITCHERDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import useIsWindowLargeDefault from "../../../../screen/native/useIsWindowLarge.tsx";
-import getMixedGradientColorDefault from "../../../../client_themes/native/ThemedGradient.tsx";
 import TTIFirstContentfulPaint from "../../../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
 import CoachmarkImgDefault from "../../../../saved_messages/native/useForLaterCoachmark.tsx";
 import NotificationCenterBannerImplDefault from "../../../../notification_center/native/NotificationCenterPermissionNudge.tsx";
@@ -45,9 +45,9 @@ class Notifications {
     }
     tmp = closure_10();
     tmp2 = require("context");
-    layoutEffect = closure_3.useLayoutEffect(() => callback(5071).trackAppUIViewed(), []);
+    layoutEffect = closure_3.useLayoutEffect(() => callback(7081).trackAppUIViewed(), []);
     callback = closure_3.useCallback(() => {
-      const navigation = callback(4234).getRootNavigationRef();
+      const navigation = callback(4235).getRootNavigationRef();
       if (null != navigation) {
         if (navigation.canGoBack()) {
           navigation.goBack();
@@ -166,13 +166,13 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp5(1236).intl;
     obj1[1] = intl.string(tmp5(1236).t["13/7kX"]);
     obj1[2] = goBack;
-    obj1[3] = tmp12(tmp5(15728).LeftBackIconWithBadge, {});
-    const items1 = [tmp12(tmp5(5438).PressableOpacity, obj1), , ];
+    obj1[3] = tmp12(tmp5(15760).LeftBackIconWithBadge, {});
+    const items1 = [tmp12(tmp5(4949).PressableOpacity, obj1), , ];
     const obj2 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: null, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     obj2[2] = tmp.headerText;
     const intl2 = tmp5(1236).intl;
     obj2[5] = intl2.string(tmp5(1236).t.HcoRu0);
-    items1[1] = tmp12(tmp5(4739).Text, obj2);
+    items1[1] = tmp12(tmp5(4376).Text, obj2);
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.actionButtons;
     tmp10Result = null;
@@ -180,19 +180,19 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
       const obj4 = { children: null };
       const obj5 = { ref: null, type: null, onOpen: null };
       obj5[0] = ref;
-      let tmp2Result = tmp2(15729);
-      obj5[1] = tmp5(8528).SavedMessageSortTypes.BOOKMARK;
+      let tmp2Result = tmp2(15761);
+      obj5[1] = tmp5(8536).SavedMessageSortTypes.BOOKMARK;
       obj5[2] = callback;
       const items2 = [tmp12(tmp2Result, obj5), ];
       const obj6 = { type: null, onOpen: null };
-      tmp2Result = tmp2(15729);
-      obj6[0] = tmp5(8528).SavedMessageSortTypes.REMINDER;
+      tmp2Result = tmp2(15761);
+      obj6[0] = tmp5(8536).SavedMessageSortTypes.REMINDER;
       obj6[1] = callback;
       items2[1] = tmp12(tmp2Result, obj6);
       obj4[0] = items2;
       tmp10Result = tmp10(closure_8, obj4);
     }
-    const items3 = [tmp10Result, tmp12(tmp2(15731), {})];
+    const items3 = [tmp10Result, tmp12(tmp2(15763), {})];
     obj3[1] = items3;
     items1[2] = tmp10(tmp11, obj3);
     obj[1] = items1;

@@ -8,7 +8,7 @@ import createChannelRecord from "../records/ChannelRecord.tsx";
 import set2 from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 import set3 from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
 import fromGuildPropertiesWithAdditionalFields from "../utils/GuildRecordUtils.tsx";
-import tDefault from "../../_runtime/03978_t.js";
+import hooksDefault from "../../_runtime/03979_hooks.js";
 import MAX_REACTIONS from "../modules/reactions/ReactionUtils.tsx";
 import parseRawEmojiObjectDefault from "../modules/emojis/UnicodeEmojis.tsx";
 import closure_10 from "../records/InviteRecord.tsx";
@@ -102,7 +102,7 @@ function _createInvite(code) {
   }
   obj[5] = fromInviteGuildResult;
   ({ uses: obj[6], max_uses: obj[7], max_age: obj[8] } = code);
-  obj[9] = tDefault(code.created_at);
+  obj[9] = hooksDefault(code.created_at);
   ({ type: obj[10], roles: obj[11] } = code);
   tmp = new tmp(obj);
   return tmp;

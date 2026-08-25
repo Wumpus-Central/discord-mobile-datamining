@@ -1,7 +1,7 @@
 // discord_app/utils/StripeUtils.tsx
 import timestampDefault from "../modules/debug/Logger.tsx";
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
-import _typeof from "../../_runtime/metro/04477__typeof.js";
+import _typeof from "../../_runtime/metro/04732__typeof.js";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../modules/user_settings/LocaleStore.tsx";
@@ -40,7 +40,7 @@ function _authenticatePaymentIntentForPaymentId() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

@@ -18,9 +18,9 @@ import { Permissions } from "../../Constants.tsx";
 import { EmojiIntention } from "../emojis/EmojiConstants.tsx";
 
 require = arg1;
-function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
-  let obj = intention;
-  if (intention == null) {
+function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceIncludeExternalGuilds) {
+  let obj = forceIncludeExternalGuilds;
+  if (forceIncludeExternalGuilds == null) {
     obj = {};
   }
   const allowUsers = obj.allowUsers;
@@ -163,8 +163,8 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
             num[Symbol.iterator]();
             const obj2 = callback2(11);
           }
-          callback(4989).unescapeChannelName(arr.slice(2, arr.length - num));
-          const obj = callback(4989);
+          callback(4574).unescapeChannelName(arr.slice(2, arr.length - num));
+          const obj = callback(4574);
         }
         const substr = arr.slice(1);
       }
@@ -200,8 +200,8 @@ function matchesUser(arg0, arg1, username, requireExact) {
 const result = require("set").fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
 
 export { resolvePlaintextInlineVoid };
-export const resolveApplicationCommandOption = function resolveApplicationCommandOption(text, throwTypeErrorResult, id, intention) {
-  const tmp = resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention);
+export const resolveApplicationCommandOption = function resolveApplicationCommandOption(text, throwTypeErrorResult, id, forceIncludeExternalGuilds) {
+  const tmp = resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceIncludeExternalGuilds);
   let voidToOptionValueResult = null;
   if (null != tmp) {
     voidToOptionValueResult = createEmptyState.voidToOptionValue(tmp);

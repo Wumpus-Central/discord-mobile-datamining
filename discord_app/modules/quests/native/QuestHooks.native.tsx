@@ -93,8 +93,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7489);
-    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(6756).QuestContent.QUEST_BAR_MOBILE);
+    let tmpResult = tmp(7303);
+    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5271).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -103,14 +103,14 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(10723);
+  tmpResult = tmp(10531);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = initialize;
   const type = mobileQuestDock.type;
   const isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (AdCreativeType.AdCreativeType.NO_FILL !== type) {
-    if (tmp(7507).AdCreativeType.BOUNTY !== type) {
-      if (tmp(7507).AdCreativeType.QUEST === type) {
+    if (tmp(7321).AdCreativeType.BOUNTY !== type) {
+      if (tmp(7321).AdCreativeType.QUEST === type) {
         if (stateFromStores) {
           if (!tmp9) {
             let tmp12 = null != deliveredQuest && !tmp4;
@@ -292,7 +292,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -359,7 +359,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
             return obj;
           }
           v0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp15) {
           v0 = tmp;
           throw tmp15;

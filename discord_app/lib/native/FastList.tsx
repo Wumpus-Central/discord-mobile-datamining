@@ -1,8 +1,8 @@
 // discord_app/lib/native/FastList.tsx
 import set2 from "../../utils/PlatformUtils.tsx";
 import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import _mod4119 from "../../modules/reanimated/ReanimatedRexport.tsx";
-import BottomSheetModal from "../../../_runtime/06990_BottomSheetModal.js";
+import _mod4120 from "../../modules/reanimated/ReanimatedRexport.tsx";
+import BottomSheetModal from "../../../_runtime/05505_BottomSheetModal.js";
 import setDefault from "../../modules/core/native/NativeView.tsx";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -2136,8 +2136,8 @@ prototype4["getInitialState"] = function getInitialState(result, setInfo, isFirs
     const result2 = scrollPosValue.set(tmp10);
     self.scrollPosValue = scrollPosValue;
   } else {
-    self.scrollPosValue = _mod4119.makeMutable(tmp10);
-    const obj3 = _mod4119;
+    self.scrollPosValue = _mod4120.makeMutable(tmp10);
+    const obj3 = _mod4120;
   }
   if (result > 0) {
     let computeResult = setInfo.compute(tmp3, sum, items, true);

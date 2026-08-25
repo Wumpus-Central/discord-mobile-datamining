@@ -27,7 +27,7 @@ function dismissTopAlert() {
     tmp4 = false === first.dismissable;
   }
   if (!tmp4) {
-    let tmpResult = tmp(4663);
+    let tmpResult = tmp(4746);
     let key;
     if (first != null) {
       key = first.key;
@@ -45,7 +45,7 @@ function AlertModalBackdrop() {
   const tmp2 = callback2(useSharedAnimationState(), 2);
   let first = tmp2[0];
   dependencyMap = tmp4;
-  let obj = context(4663);
+  let obj = context(4746);
   const alertStore = obj.useAlertStore((arg0) => {
     first = arg0.alerts[0];
     let dismissable;
@@ -76,11 +76,11 @@ function AlertModalBackdrop() {
     };
     return obj;
   };
-  obj = { withAlertModalSpring, sharedVisible: tmp4, sharedTransitionState: first, TransitionStates: context(4107).TransitionStates, runOnJS: context(4119).runOnJS, cleanUp: context };
+  obj = { withAlertModalSpring, sharedVisible: tmp4, sharedTransitionState: first, TransitionStates: context(4108).TransitionStates, runOnJS: context(4120).runOnJS, cleanUp: context };
   fn.__closure = obj;
   fn.__workletHash = 4470729133936;
   fn.__initData = closure_22;
-  const animatedStyle = context(4119).useAnimatedStyle(fn);
+  const animatedStyle = context(4120).useAnimatedStyle(fn);
   obj = { blur: "strong", style: animatedStyle, onDismiss: null, accessibilityLabel: null };
   let tmp10 = null;
   if (alertStore) {
@@ -89,7 +89,7 @@ function AlertModalBackdrop() {
   obj[2] = tmp10;
   const intl = tmp5(1236).intl;
   obj[3] = intl.string(context(1236).t.Xkfav5);
-  return closure_10(context(4728).Backdrop, obj);
+  return closure_10(context(4803).Backdrop, obj);
 }
 class AlertModal {
   constructor(arg0) {
@@ -408,7 +408,7 @@ class AlertActionButton {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

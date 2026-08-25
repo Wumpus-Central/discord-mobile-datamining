@@ -4,8 +4,8 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import tDefault from "../../../../../_runtime/03978_t.js";
-import isIterable from "../../../../../_runtime/04009_isIterable.js";
+import hooksDefault from "../../../../../_runtime/03979_hooks.js";
+import isIterable from "../../../../../_runtime/04010_isIterable.js";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import saveProfileAndAccountRequest from "../../../../actions/UserSettingsAccountActionCreators.tsx";
 import harvestDisabled from "../../../harvester/HarvesterUtils.tsx";
@@ -58,9 +58,9 @@ obj = {
     } else if (null == tmp3) {
       return null;
     } else {
-      const addResult = tDefault(tmp3.created_at).add(closure_5, "days");
+      const addResult = hooksDefault(tmp3.created_at).add(closure_5, "days");
       let formatToPlainStringResult = null;
-      if (!addResult.isBefore(tDefault())) {
+      if (!addResult.isBefore(hooksDefault())) {
         const intl = tmp(1236).intl;
         const obj = { date: null };
         obj[0] = addResult.format("MMMM Do YYYY");

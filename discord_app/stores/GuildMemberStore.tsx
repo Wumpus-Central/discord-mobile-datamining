@@ -8,7 +8,7 @@ import dispatcherDefault from "../Dispatcher.tsx";
 import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import parseAvatarDecorationData from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 import parseSkuIdFromServerData from "../modules/collectibles/utils/mappers.tsx";
-import items2 from "../modules/display_name_styles/DisplayNameStylesUtils.tsx";
+import set2 from "../modules/display_name_styles/DisplayNameStylesUtils.tsx";
 import isActivityParticipantValidGuildMemberDefault from "../modules/activities/isActivityParticipantValidGuildMember.tsx";
 import compareGuildRoles from "../utils/GuildRoleUtils.tsx";
 import DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY from "../modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx";
@@ -30,8 +30,8 @@ function trackCommunicationDisabled(guildId, tmp10Result) {
       const joined = items.join("-");
       let result = dependencyMap4[joined] !== tmp10Result.communicationDisabledUntil;
       if (result) {
-        result = tmp10(4013).isMemberCommunicationDisabled(tmp10Result);
-        tmp10Result = tmp10(4013);
+        result = tmp10(4014).isMemberCommunicationDisabled(tmp10Result);
+        tmp10Result = tmp10(4014);
       }
       if (result) {
         dependencyMap4[joined] = tmp10Result.communicationDisabledUntil;
@@ -94,7 +94,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
   let tmp3;
   let tmp4;
   if (0 === roles.length) {
-    return { colorString: null, colorStrings: null, colorRoleId: "id", hoistRoleId: "np", iconRoleId: "key", highestRoleId: "includes" };
+    return { colorString: null, colorStrings: null, colorRoleId: "id", hoistRoleId: "height", iconRoleId: "add", highestRoleId: "flags" };
   } else {
     const iter = roles[Symbol.iterator]();
     while (iter !== undefined) {
@@ -340,7 +340,7 @@ function handleGuildMemberUpdate(arg0) {
       obj[15] = tmp12;
       tmp13[user.id] = createMember(obj);
       if (null != tmp13[user.id].communicationDisabledUntil) {
-        let tmp32Result = tmp32(4013);
+        let tmp32Result = tmp32(4014);
         if (tmp32Result.isMemberCommunicationDisabled(tmp15)) {
           const items = [];
           items[constants.GUILD] = guildId;
@@ -348,7 +348,7 @@ function handleGuildMemberUpdate(arg0) {
           const joined = items.join("-");
           let result = dependencyMap4[joined] !== tmp15.communicationDisabledUntil;
           if (result) {
-            tmp32Result = tmp32(4013);
+            tmp32Result = tmp32(4014);
             result = tmp32Result.isMemberCommunicationDisabled(tmp15);
           }
           if (result) {
@@ -478,7 +478,7 @@ function buildMembers(guild) {
       let obj2 = parseSkuIdFromServerData;
       let tmp19 = nextResult;
       obj[14] = obj2.parseServerUserCollectibles(tmp6.collectibles);
-      let obj3 = items2;
+      let obj3 = set2;
       obj[15] = obj3.parseServerDisplayNameStyles(tmp6.display_name_styles);
       let tmp10Result = tmp10(obj);
       let tmp21 = id2;
@@ -1535,10 +1535,10 @@ const guildMemberStore = new GuildMemberStore(dispatcherDefault, {
         const obj3 = parseAvatarDecorationData;
         obj[14] = parseSkuIdFromServerData.parseServerUserCollectibles(guildMember.collectibles);
         const obj4 = parseSkuIdFromServerData;
-        obj[15] = items2.parseServerDisplayNameStyles(guildMember.display_name_styles);
+        obj[15] = set2.parseServerDisplayNameStyles(guildMember.display_name_styles);
         tmp[guildMember.user.id] = createMember(obj);
         if (null != tmp[guildMember.user.id].communicationDisabledUntil) {
-          let tmp18Result = tmp18(4013);
+          let tmp18Result = tmp18(4014);
           if (tmp18Result.isMemberCommunicationDisabled(tmp22)) {
             const items = [];
             items[constants.GUILD] = guildId;
@@ -1546,7 +1546,7 @@ const guildMemberStore = new GuildMemberStore(dispatcherDefault, {
             const joined = items.join("-");
             let result = dependencyMap4[joined] !== tmp22.communicationDisabledUntil;
             if (result) {
-              tmp18Result = tmp18(4013);
+              tmp18Result = tmp18(4014);
               result = tmp18Result.isMemberCommunicationDisabled(tmp22);
             }
             if (result) {
@@ -1558,7 +1558,7 @@ const guildMemberStore = new GuildMemberStore(dispatcherDefault, {
           }
         }
         removeCommunicationDisabled(guildId, tmp[guildMember.user.id].userId);
-        const obj5 = items2;
+        const obj5 = set2;
       }
     }
   },
@@ -2320,10 +2320,10 @@ let obj = {
         const obj3 = parseAvatarDecorationData;
         obj[14] = parseSkuIdFromServerData.parseServerUserCollectibles(guildMember.collectibles);
         const obj4 = parseSkuIdFromServerData;
-        obj[15] = items2.parseServerDisplayNameStyles(guildMember.display_name_styles);
+        obj[15] = set2.parseServerDisplayNameStyles(guildMember.display_name_styles);
         tmp[guildMember.user.id] = createMember(obj);
         if (null != tmp[guildMember.user.id].communicationDisabledUntil) {
-          let tmp18Result = tmp18(4013);
+          let tmp18Result = tmp18(4014);
           if (tmp18Result.isMemberCommunicationDisabled(tmp22)) {
             const items = [];
             items[constants.GUILD] = guildId;
@@ -2331,7 +2331,7 @@ let obj = {
             const joined = items.join("-");
             let result = dependencyMap4[joined] !== tmp22.communicationDisabledUntil;
             if (result) {
-              tmp18Result = tmp18(4013);
+              tmp18Result = tmp18(4014);
               result = tmp18Result.isMemberCommunicationDisabled(tmp22);
             }
             if (result) {
@@ -2343,7 +2343,7 @@ let obj = {
           }
         }
         removeCommunicationDisabled(guildId, tmp[guildMember.user.id].userId);
-        const obj5 = items2;
+        const obj5 = set2;
       }
     }
   },

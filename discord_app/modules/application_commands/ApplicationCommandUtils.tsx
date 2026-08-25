@@ -5,8 +5,8 @@ import IntegerDefault from "../../../_runtime/00014_Integer.js";
 import sum2 from "../../../discord_common/js/shared/Constants.tsx";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
 import PermissionOverwriteType from "../../flow/Server.tsx";
-import handleChanged from "../../stores/DraftStore.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
+import handleChanged from "../../stores/DraftStore.tsx";
 import commandPermissions from "../guild_settings/integrations/permission/IntegrationPermissionUtils.tsx";
 import ApplicationCommandSectionType from "ApplicationCommandTypes.tsx";
 import TRUE_OPTION_NAME from "ApplicationCommandConstants.tsx";
@@ -45,10 +45,10 @@ function buildCommand(arg0) {
     obj[5] = applicationId;
     let CHAT = rootCommand.type;
     if (CHAT == null) {
-      CHAT = obj(1954).ApplicationCommandType.CHAT;
+      CHAT = obj(1955).ApplicationCommandType.CHAT;
     }
     obj[6] = CHAT;
-    obj[7] = obj(5253).ApplicationCommandInputType.BOT;
+    obj[7] = obj(7129).ApplicationCommandInputType.BOT;
     ({ description: obj3[8], options } = command);
     let mapped2;
     if (options != null) {
@@ -323,10 +323,10 @@ function buildCommand(arg0) {
     ({ nsfw: obj3[17], contexts: obj3[18], integration_types: obj3[19], global_popularity_rank: obj3[20], handler: obj3[21] } = rootCommand);
     return obj;
   } else if (useKeyedPermissions) {
-    const keyPermissionsResult = obj(5252).keyPermissions(rootCommand.permissions);
+    const keyPermissionsResult = obj(7128).keyPermissions(rootCommand.permissions);
     obj = keyPermissionsResult;
     obj = keyPermissionsResult;
-    const obj2 = obj(5252);
+    const obj2 = obj(7128);
   } else {
     obj = {};
     const permissions = rootCommand.permissions;
@@ -348,7 +348,7 @@ function buildSubCommands(arg0) {
     return items;
   } else {
     if (command.type !== PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND) {
-      if (command.type !== tmp(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+      if (command.type !== tmp(1955).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
         obj = { rootCommand: null, command: null, applicationId: null, subCommandPath: null, useKeyedPermissions: null };
         obj[0] = rootCommand;
         obj[1] = command;
@@ -366,7 +366,7 @@ function buildSubCommands(arg0) {
     return items2;
   } else {
     const options = command.options;
-    const found = options.filter((type) => type.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP);
+    const found = options.filter((type) => type.type === callback(1955).ApplicationCommandOptionType.SUB_COMMAND_GROUP);
     for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
       let push = items2.push;
       obj = { rootCommand: null, command: null, applicationId: null, subCommandPath: null, useKeyedPermissions: null };
@@ -402,7 +402,7 @@ function buildSubCommands(arg0) {
       let applyResult = HermesBuiltin.apply(items5, items2);
     }
     const options1 = command.options;
-    const found1 = options1.filter((type) => type.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND);
+    const found1 = options1.filter((type) => type.type === callback(1955).ApplicationCommandOptionType.SUB_COMMAND);
     for (let num4 = 0; num4 < found1.length; num4 = num4 + 1) {
       let obj2 = { rootCommand: null, command: null, applicationId: null, subCommandPath: null, useKeyedPermissions: null };
       obj2[0] = rootCommand;
@@ -491,7 +491,7 @@ export const buildApplicationCommands = function buildApplicationCommands(applic
   closure_0 = arg1;
   return applyDefault.flatMap(application_commands, (id) => {
     closure_1_1(closure_1_3[10])(null != id.id, "Missing command id");
-    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: 0 };
+    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: true };
     obj[4] = closure_0;
     return closure_1_12(obj);
   });
@@ -535,11 +535,11 @@ export const getMatchingGroupCommands = function getMatchingGroupCommands(contex
 export const getApplicationCommandOptionQueryOptions = function getApplicationCommandOptionQueryOptions(option) {
   let tmp3 = option.type === PermissionOverwriteType.ApplicationCommandOptionType.USER;
   if (!tmp3) {
-    tmp3 = option.type === tmp(1954).ApplicationCommandOptionType.MENTIONABLE;
+    tmp3 = option.type === tmp(1955).ApplicationCommandOptionType.MENTIONABLE;
   }
-  let tmp4 = option.type === tmp(1954).ApplicationCommandOptionType.ROLE;
+  let tmp4 = option.type === tmp(1955).ApplicationCommandOptionType.ROLE;
   if (!tmp4) {
-    tmp4 = option.type === tmp(1954).ApplicationCommandOptionType.MENTIONABLE;
+    tmp4 = option.type === tmp(1955).ApplicationCommandOptionType.MENTIONABLE;
   }
   const tmp5 = option.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING;
   let tmp6 = tmp5;
@@ -677,7 +677,7 @@ export const extractInteractionDataProps = function extractInteractionDataProps(
   ({ id, options } = parsed);
   let found;
   if (interactionOptions != null) {
-    found = interactionOptions.find((type) => type.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP);
+    found = interactionOptions.find((type) => type.type === callback(1955).ApplicationCommandOptionType.SUB_COMMAND_GROUP);
   }
   let sum = id;
   if (null != found) {
@@ -687,7 +687,7 @@ export const extractInteractionDataProps = function extractInteractionDataProps(
   }
   let found1;
   if (interactionOptions != null) {
-    found1 = interactionOptions.find((type) => type.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND);
+    found1 = interactionOptions.find((type) => type.type === callback(1955).ApplicationCommandOptionType.SUB_COMMAND);
   }
   let commandKey = sum;
   if (null != found1) {

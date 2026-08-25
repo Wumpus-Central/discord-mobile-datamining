@@ -1,8 +1,8 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsComponentsTestingScreen.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import PermissionOverwriteType from "../../../../../flow/Server.tsx";
-import Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
+import Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import isInteractionComponent from "../../../../interaction_components/ComponentStateContext.tsx";
 import StringSelectActionComponentDefault from "../../../../interaction_components/native/actions/StringSelectActionComponent.tsx";
@@ -62,9 +62,9 @@ function Select(children) {
     state = { variant: "text-md/normal", children: null };
     const items1 = ["Selected values: ", mapped.join(", ")];
     state[1] = items1;
-    tmp6(tmp4(4739).Text, state);
+    tmp6(tmp4(4376).Text, state);
   } else {
-    items[2] = tmp7(tmp4(4739).Text, { variant: "text-md/normal", children: "Nothing selected" });
+    items[2] = tmp7(tmp4(4376).Text, { variant: "text-md/normal", children: "Nothing selected" });
     let str3 = "off";
     if (tmp2) {
       str3 = "on";
@@ -75,7 +75,7 @@ function Select(children) {
     obj2[1] = function onPress() {
       return _undefined((arg0) => !arg0);
     };
-    items[3] = tmp7(tmp4(4750).Button, obj2);
+    items[3] = tmp7(tmp4(4815).Button, obj2);
     obj[1] = items;
     return tmp6(require("../../../../../design/components/Card/native/Card.native.tsx").Card, obj);
   }

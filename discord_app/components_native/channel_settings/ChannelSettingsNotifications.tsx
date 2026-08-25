@@ -1,12 +1,12 @@
 // discord_app/components_native/channel_settings/ChannelSettingsNotifications.tsx
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import Stack from "../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../design/components/Text/native/Text.tsx";
 import computeChannelName from "../../modules/channel/useChannelName.tsx";
 import collectGuildAnalyticsMetadataDefault from "../../modules/app_analytics/AppAnalyticsUtils.tsx";
-import TableRowGroupTitle from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import Stack from "../../design/components/Stack/native/Stack.native.tsx";
 import TableRowInner from "../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroupTitle from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableSwitchRow from "../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import Form from "../../design/void/Form/native/index.tsx";
 import MutedUntilTextDefault from "../../modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx";
@@ -211,10 +211,10 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     const obj4 = { muteConfig: null, type: null };
     obj4[0] = props.muteConfig;
     if (channel.type === constants3.GUILD_CATEGORY) {
-      MuteSettingType = tmp(10126).MuteSettingType;
+      MuteSettingType = tmp(9978).MuteSettingType;
       let CHANNEL = MuteSettingType.CATEGORY;
     } else {
-      CHANNEL = tmp(10126).MuteSettingType.CHANNEL;
+      CHANNEL = tmp(9978).MuteSettingType.CHANNEL;
     }
     obj4[1] = CHANNEL;
     tmp5(MutedUntilTextDefault, obj4);
@@ -254,11 +254,11 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     tmp5 = require;
     tmp7 = require;
   }
-  const TableRadioGroup = tmp7(8140).TableRadioGroup;
+  const TableRadioGroup = tmp7(8136).TableRadioGroup;
   let obj = { value: state.messageNotifications, onChange: self.handleTypeChange, groupRef: self.radioGroupRef, title: null, hasIcons: false, children: null };
   const intl3 = tmp7(1236).intl;
   obj[3] = intl3.string(tmp7(1236).t.h850Ss);
-  const TableRadioRow = tmp7(8139).TableRadioRow;
+  const TableRadioRow = tmp7(8135).TableRadioRow;
   if (isGuildStageVoiceResult) {
     let tmp22 = muted;
     if (!muted) {
@@ -289,7 +289,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     obj[1] = constants2.ONLY_MENTIONS;
     const intl12 = tmp7(1236).intl;
     obj[2] = intl12.string(tmp7(1236).t["BENn/6"]);
-    items[1] = tmp12(tmp7(8139).TableRadioRow, obj);
+    items[1] = tmp12(tmp7(8135).TableRadioRow, obj);
     if (!muted) {
       muted = guildMuted;
     }
@@ -298,7 +298,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     obj1[1] = constants2.NO_MESSAGES;
     const intl13 = tmp7(1236).intl;
     obj1[2] = intl13.string(tmp7(1236).t.CtVGyQ);
-    items[2] = tmp12(tmp7(8139).TableRadioRow, obj1);
+    items[2] = tmp12(tmp7(8135).TableRadioRow, obj1);
     obj[5] = items;
     let tmp11Result = tmp11(TableRadioGroup, obj);
   } else {
@@ -340,7 +340,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj3[2] = stringResult3;
     obj3[3] = constants2.ALL_MESSAGES;
-    items1[1] = tmp12(tmp7(8139).TableRadioRow, obj3);
+    items1[1] = tmp12(tmp7(8135).TableRadioRow, obj3);
     const obj4 = { label: null, disabled: null, value: null };
     const intl8 = tmp7(1236).intl;
     obj4[0] = intl8.format(tmp7(1236).t.L2hmYy, {});
@@ -350,7 +350,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj4[1] = tmp19;
     obj4[2] = constants2.ONLY_MENTIONS;
-    items1[2] = tmp12(tmp7(8139).TableRadioRow, obj4);
+    items1[2] = tmp12(tmp7(8135).TableRadioRow, obj4);
     const obj5 = { label: null, disabled: null, value: null };
     const intl9 = tmp7(1236).intl;
     obj5[0] = intl9.string(tmp7(1236).t.CtVGyQ);
@@ -360,7 +360,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj5[1] = tmp20;
     obj5[2] = constants2.NO_MESSAGES;
-    items1[3] = tmp12(tmp7(8139).TableRadioRow, obj5);
+    items1[3] = tmp12(tmp7(8135).TableRadioRow, obj5);
     obj[5] = items1;
     tmp11Result = tmp11(TableRadioGroup, obj);
   }
@@ -379,7 +379,7 @@ prototype["render"] = function render() {
       const intl = getSystemLocale.intl;
       obj = { mutedHook: null };
       obj[0] = function mutedHook(children) {
-        return callback2(callback(4739).Text, { variant: "text-sm/medium", color: "text-feedback-critical", children }, arg1);
+        return callback2(callback(4376).Text, { variant: "text-sm/medium", color: "text-feedback-critical", children }, arg1);
       };
       obj[2] = intl.format(getSystemLocale.t.O34r15, obj);
       let tmp5 = callback2(Text.Text, obj);
@@ -388,7 +388,7 @@ prototype["render"] = function render() {
       const intl3 = getSystemLocale.intl;
       obj1 = { notificationHook: null };
       obj1[0] = function notificationHook(children) {
-        return callback2(callback(4739).Text, { variant: "text-sm/medium", color: "text-feedback-warning", children }, arg1);
+        return callback2(callback(4376).Text, { variant: "text-sm/medium", color: "text-feedback-warning", children }, arg1);
       };
       obj[2] = intl3.format(getSystemLocale.t.nRwUIL, obj1);
       tmp5 = callback2(Text.Text, obj);
@@ -409,7 +409,7 @@ prototype["render"] = function render() {
       const intl2 = tmp10(1236).intl;
       obj4[0] = intl2.string(tmp10(1236).t.bK11jO);
       obj4[2] = self.renderForumSettings();
-      tmp9Result = tmp9(tmp10(6317).TableRowGroup, obj4);
+      tmp9Result = tmp9(tmp10(5873).TableRowGroup, obj4);
     }
     items[2] = tmp9Result;
     items[3] = tmp5;

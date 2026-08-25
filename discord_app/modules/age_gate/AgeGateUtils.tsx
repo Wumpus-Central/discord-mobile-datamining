@@ -26,12 +26,12 @@ function shouldShowAgeGateForVoiceChannel(channelId) {
     const currentUser = authStore.getCurrentUser();
     let flag = false;
     if (null != currentUser) {
-      let tmpResult = tmp(4997);
+      let tmpResult = tmp(4621);
       const result1 = tmpResult.shouldShowTiggerPawtect();
-      tmpResult = tmp(4075);
-      const tmp9 = tmpResult.isFeatureAgeGated(tmp(5044).AgeGatedFeature.AGE_GATED_SPACES) && result1;
-      flag = true !== currentUser.nsfwAllowed || tmpResult.isFeatureAgeGated(tmp(5044).AgeGatedFeature.AGE_GATED_SPACES) && result1;
-      const tmp10 = true !== currentUser.nsfwAllowed || tmpResult.isFeatureAgeGated(tmp(5044).AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      tmpResult = tmp(4076);
+      const tmp9 = tmpResult.isFeatureAgeGated(tmp(5248).AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      flag = true !== currentUser.nsfwAllowed || tmpResult.isFeatureAgeGated(tmp(5248).AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      const tmp10 = true !== currentUser.nsfwAllowed || tmpResult.isFeatureAgeGated(tmp(5248).AgeGatedFeature.AGE_GATED_SPACES) && result1;
     }
     let tmp12 = !flag;
     if (flag) {
@@ -229,7 +229,7 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
       obj[1] = stringResult1;
       const intl7 = tmp(1236).intl;
       obj[2] = intl7.string(tmp(1236).t.FDSSia);
-      obj[3] = tmp(5259).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
+      obj[3] = tmp(7944).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
     }
     const format = intl6.format;
     let string2 = tmp(1236).t;
@@ -242,7 +242,7 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
     const intl8 = tmp(1236).intl;
     string2 = intl8.string;
     obj[2] = string2(tmp(1236).t.Zt4Mf4);
-    NSFW_CHANNEL_AGE_VERIFY = tmp(5259).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
+    NSFW_CHANNEL_AGE_VERIFY = tmp(7944).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
     obj[3] = NSFW_CHANNEL_AGE_VERIFY;
   } else if (stateFromStores) {
     const intl4 = tmp(1236).intl;
@@ -253,7 +253,7 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
     obj = { helpURL: null };
     obj[0] = combinedDefault.getArticleURL(constants.NSFW_AGE_GATING);
     obj[1] = intl5.format(tmp3 ? NSFW_CHANNEL_UNDERAGE["6++3cX"] : NSFW_CHANNEL_UNDERAGE["2kHZes"], obj);
-    NSFW_CHANNEL_UNDERAGE = tmp(5259).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE;
+    NSFW_CHANNEL_UNDERAGE = tmp(7944).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE;
     obj[3] = NSFW_CHANNEL_UNDERAGE;
     const obj7 = combinedDefault;
     const tmp9 = tmp3 ? NSFW_CHANNEL_UNDERAGE["6++3cX"] : NSFW_CHANNEL_UNDERAGE["2kHZes"];
@@ -264,7 +264,7 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
     obj[1] = intl2.string(tmp3 ? t2.ZtuRts : t2.E4Cd5I);
     const intl3 = tmp(1236).intl;
     obj[2] = intl3.string(tmp(1236).t.wVq7uo);
-    obj[3] = tmp(5259).NsfwSpaceWarningModalType.NSFW_CHANNEL_VERIFIED;
+    obj[3] = tmp(7944).NsfwSpaceWarningModalType.NSFW_CHANNEL_VERIFIED;
     return obj;
   }
 };

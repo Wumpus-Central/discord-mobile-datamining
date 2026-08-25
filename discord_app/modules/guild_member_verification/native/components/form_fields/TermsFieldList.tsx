@@ -1,7 +1,7 @@
 // discord_app/modules/guild_member_verification/native/components/form_fields/TermsFieldList.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
 import get_defaultRulesDefault from "../../../../markup/MarkupUtils.tsx";
+import Text from "../../../../../design/components/Text/native/Text.tsx";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
@@ -45,7 +45,7 @@ export default function TermsFieldList(rules) {
   const intl = rules(1236).intl;
   obj[4] = intl.string(rules(1236).t.prJqwT);
   let items = [
-    callback(rules(4739).Text, obj),
+    callback(rules(4376).Text, obj),
     rules.map((rule) => {
       const items = [termsContainer.termsContainer, , ];
       let firstItem = null;

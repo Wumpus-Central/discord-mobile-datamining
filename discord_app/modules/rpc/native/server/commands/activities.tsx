@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/native/server/commands/activities.tsx
-import prototypeDefault from "../../../RPCError.tsx";
 import showInstantInviteActionSheet from "../../../../instant_invite/native/InstantInviteUtils.tsx";
+import prototypeDefault from "../../../RPCError.tsx";
 import validateOpenInviteDialog from "../../../helpers/validateOpenInviteDialog.tsx";
 import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import RPC_SCOPE_CONFIG from "../../../Constants.tsx";
@@ -54,7 +54,7 @@ obj1[1] = function handler(socket) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

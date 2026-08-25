@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/native/components/SpeakerTileStatuses.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../design/void/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/08643_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/12664_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08651_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/11020_registerAsset.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../../stores/MediaEngineStore.tsx";
@@ -46,15 +46,15 @@ const memoResult = importAllResult.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(12623);
+    let tmp5 = channelId(10961);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(12513);
+    tmp5 = channelId(10797);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(12514);
+      tmp5 = channelId(10798);
       flag3 = false;
     }
   }
@@ -81,7 +81,7 @@ const memoResult1 = importAllResult.memo((userId) => {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => closure_1_6.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(12663);
+    tmp4 = channelId(11019);
   }
   let tmp6 = null;
   if (null != tmp4) {

@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Button from "../../../../../design/void/native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../../_runtime/11450_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/11806_registerAsset.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
@@ -39,7 +39,7 @@ const memoResult = importAllResult.memo((onCreateThreadPress) => {
     obj3[0] = onCreateThreadPress;
     const intl3 = tmp5(1236).intl;
     obj3[1] = intl3.string(tmp5(1236).t.rBIGBL);
-    tmp4Result = callback(tmp5(4750).Button, obj3);
+    tmp4Result = callback(tmp5(4815).Button, obj3);
   }
   items[3] = tmp4Result;
   obj[1] = items;

@@ -2,8 +2,8 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../design/void/native.tsx";
-import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -61,20 +61,20 @@ function ComparisonRow(entry) {
   if (null != redesignVariant) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.comparisonSide;
-    const items5 = [tmp9(tmp4(4739).Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }), ];
+    const items5 = [tmp9(tmp4(4376).Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }), ];
     const obj5 = { variant: null, size: "md", text: null, onPress: null };
     obj5[0] = redesignVariant;
     obj5[2] = redesignVariant;
     obj5[3] = function onPress() {
 
     };
-    items5[1] = tmp9(tmp4(4750).Button, obj5);
+    items5[1] = tmp9(tmp4(4815).Button, obj5);
     obj4[1] = items5;
     let tmp9Result = tmp7(tmp8, obj4);
   } else {
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.comparisonSide;
-    obj6[1] = tmp9(tmp4(4739).Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" });
+    obj6[1] = tmp9(tmp4(4376).Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" });
     tmp9Result = tmp9(tmp8, obj6);
   }
   items4[1] = tmp9Result;
@@ -292,7 +292,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   const entries = Object.entries(obj);
   items1[1] = entries.map((arg0) => {
     [tmp, arr] = arg0;
-    return callback2(callback(8122).FormSection, { title: tmp, children: arr.map((entry) => callback(closure_8, { entry }, arg1)) }, "cmp-" + tmp);
+    return callback2(callback(8118).FormSection, { title: tmp, children: arr.map((entry) => callback(closure_8, { entry }, arg1)) }, "cmp-" + tmp);
   });
   obj1 = { spacing: 4, style: tmp.header, children: null };
   const items2 = [callback2(Text.Text, { variant: "heading-xl/bold", children: "Legacy Button Audit" }), callback2(Text.Text, { variant: "text-sm/normal", color: "text-muted", children: "41 combinations across 185 importers" })];
@@ -301,7 +301,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   const entries1 = Object.entries(tmp2);
   items1[3] = entries1.map((arg0) => {
     [tmp, arr] = arg0;
-    return callback2(callback(8122).FormSection, { title: "" + tmp + " (" + arr.reduce((arg0, count) => arg0 + count.count, 0) + " usages)", children: arr.map((combo) => callback(closure_9, { combo }, arg1)) }, tmp);
+    return callback2(callback(8118).FormSection, { title: "" + tmp + " (" + arr.reduce((arg0, count) => arg0 + count.count, 0) + " usages)", children: arr.map((combo) => callback(closure_9, { combo }, arg1)) }, tmp);
   });
   obj[1] = items1;
   return callback(closure_2, obj);

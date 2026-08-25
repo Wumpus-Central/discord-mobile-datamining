@@ -2,9 +2,9 @@
 import int2hslRaw from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import nDefault from "../../../_runtime/00689_n.js";
 import hexToRgba from "../../utils/ColorUtils.tsx";
-import isSystemMessageDefault from "isSystemMessage.tsx";
 import experimentDefault from "GuildOfficialMessagesExperiment.tsx";
 import useCanUnarchiveThread from "../threads/ThreadHooks.tsx";
+import isSystemMessageDefault from "isSystemMessage.tsx";
 import closure_3 from "../../stores/GuildStore.tsx";
 import closure_4 from "../../stores/PermissionStore.tsx";
 import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MessageConstants.tsx";

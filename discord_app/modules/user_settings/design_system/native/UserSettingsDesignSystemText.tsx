@@ -2,8 +2,8 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
-import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import TEXT_VARIANT2 from "../../../../../discord_common/js/packages/tokens/typography/generated/TextVariants.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -26,8 +26,8 @@ export default function UserSettingsDesignSystemText() {
       obj = { variant: null, children: null };
       obj[0] = arg0;
       obj[1] = arg0;
-      obj[0] = callback2(callback(4739).Text, obj, arg0);
-      tmp = callback2(callback(6322).TableRow, obj, arg0);
+      obj[0] = callback2(callback(4376).Text, obj, arg0);
+      tmp = callback2(callback(5480).TableRow, obj, arg0);
     }
     return tmp;
   });

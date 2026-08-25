@@ -3,12 +3,12 @@ import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import isFeatureAgeGated2 from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import useAgeVerificationRunner from "../age_assurance/AgeVerificationUtils.tsx";
+import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import isCurrentUserTeen from "../self_mod/SelfModUtils.tsx";
+import ObscureReason from "ObscureMediaModels.tsx";
 import setDefault from "../monitoring/MonitoringAgent.tsx";
 import set from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import resetManager from "ExplicitMediaManager.tsx";
-import ObscureReason from "ObscureMediaModels.tsx";
-import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import closure_3 from "../devtools/dev_settings/DevSettingsStore.tsx";
 import closure_4 from "../../stores/ChannelStore.tsx";
 import closure_5 from "ExplicitMediaStore.tsx";
@@ -116,12 +116,12 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         obj[5] = resetManager.MESSAGE_SCAN_TIMEOUT;
         obj[6] = attachmentIds;
         obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj);
-        let tmp3Result = tmp3(5011);
+        let tmp3Result = tmp3(7208);
         obj = { name: null, tags: null };
         obj[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT;
         obj[1] = ["metricVersion:1"];
         tmp3Result.increment(obj);
-        tmp3Result = tmp3(5011);
+        tmp3Result = tmp3(7208);
         obj1 = { name: null };
         obj1[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION;
         let num4;
@@ -172,8 +172,8 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
     if (sum > 0) {
       obj = { name: null };
       obj[0] = set.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2;
-      tmp10(5011).distribution(obj, sum);
-      const tmp10Result = tmp10(5011);
+      tmp10(7208).distribution(obj, sum);
+      const tmp10Result = tmp10(7208);
     }
     const obj3 = expandEventPropertiesDefault;
     tmp10 = importDefault;

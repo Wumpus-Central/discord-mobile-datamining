@@ -1,12 +1,12 @@
 // discord_app/modules/polls/chat/native/PollStyles.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import NativeShadowType from "../PollMessageChatDataTypes.tsx";
-import { t } from "../../../../../_runtime/04490_t.js";
+import { t } from "../../../../../_runtime/04593_t.js";
 
 function normal(border) {
   const _require = border;
   const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-  const match = require("../../../../../_runtime/04490_t.js").match(arg1);
+  const match = require("../../../../../_runtime/04593_t.js").match(arg1);
   const str = t;
   obj[3] = match.with(require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
   obj[5] = border.colors.BACKGROUND_MOD_MUTED;
@@ -23,7 +23,7 @@ function normalVote(border, arg1) {
   let obj = {};
   const _require = border;
   obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-  const match = require("../../../../../_runtime/04490_t.js").match(arg1);
+  const match = require("../../../../../_runtime/04593_t.js").match(arg1);
   const str = t;
   obj[3] = match.with(require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
   obj[5] = border.colors.BACKGROUND_MOD_MUTED;

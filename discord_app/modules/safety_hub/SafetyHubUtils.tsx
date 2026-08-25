@@ -1,7 +1,7 @@
 // discord_app/modules/safety_hub/SafetyHubUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import urlMatchesFileExtension from "../messages/MediaFormatTesters.tsx";
 import ContentIdType from "SafetyHubModels.tsx";
 import closure_3 from "../../stores/AuthenticationStore.tsx";
@@ -50,7 +50,7 @@ function parseMessageEmbedForProps(fields) {
 const result = require("set").fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return tDefault().to(tDefault(timestamp));
+  return hooksDefault().to(hooksDefault(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {

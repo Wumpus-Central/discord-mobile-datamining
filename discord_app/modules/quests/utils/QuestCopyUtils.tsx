@@ -153,16 +153,16 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
   ctaContent = ctaContent.ctaContent;
   let obj = apexExperiment;
   if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "copy_share_link")) {
-    let tmpResult = tmp(9540);
+    let tmpResult = tmp(9665);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
-    obj[0] = tmp(9544).AdUserActionType.CLICK_INTERNAL;
-    obj[1] = tmp(7507).AdCreativeType.QUEST;
+    obj[0] = tmp(9669).AdUserActionType.CLICK_INTERNAL;
+    obj[1] = tmp(7321).AdCreativeType.QUEST;
     obj[2] = id;
     obj[3] = ctaContent;
     ({ content: obj5[4], sourceQuestContent: obj5[5], position: obj5[6], impressionId: obj5[7] } = ctaContent);
     tmpResult.captureAdUserAction(obj);
   } else {
-    tmpResult = tmp(7508);
+    tmpResult = tmp(7322);
     obj = { questId: null, questContent: null, questContentCTA: null, questContentPosition: null, impressionId: null, sourceQuestContent: null };
     obj[0] = id;
     obj[1] = ctaContent.content;

@@ -1,7 +1,7 @@
 // discord_app/modules/messages/AttachmentUrlUtils.tsx
 import setDefault from "../../utils/Durations.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
-import isImageProxyURL from "../image_proxy/ImageProxyUtils.tsx";
+import getSizedImageProxyURL from "../image_proxy/ImageProxyUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { ATTACHMENT_PATH_PREFIXES } from "AttachmentUrlConstants.tsx";
 import { Endpoints } from "../../Constants.tsx";
@@ -175,7 +175,7 @@ function _maybeRefreshAttachmentUrl() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -294,7 +294,7 @@ let result = set.fileFinishedImporting("modules/messages/AttachmentUrlUtils.tsx"
 export { isAttachmentPathUrl };
 export { isRefreshableAttachmentUrl };
 export const isExternalProxiedAttachmentUrl = function isExternalProxiedAttachmentUrl(toURLSafeResult) {
-  return isImageProxyURL.isImageProxyURL(toURLSafeResult);
+  return getSizedImageProxyURL.isImageProxyURL(toURLSafeResult);
 };
 export const removeSignedUrlParameters = function removeSignedUrlParameters(toURLSafeResult) {
   toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(toURLSafeResult);

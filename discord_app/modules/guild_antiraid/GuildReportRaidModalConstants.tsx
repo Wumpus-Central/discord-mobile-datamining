@@ -1,13 +1,18 @@
 // discord_app/modules/guild_antiraid/GuildReportRaidModalConstants.tsx
 import set from "../../../_runtime/00002_set.js";
+import ME from "../../Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
+import combinedDefault from "../../utils/HelpdeskUtils.tsx";
 
+const HelpdeskArticles = ME.HelpdeskArticles;
 const obj = { DM_SPAM: "DM_SPAM", MESSAGE_SPAM: "MESSAGE_SPAM", MENTION_SPAM: "MENTION_SPAM", SUSPICIOUS_USERS: "SUSPICIOUS_USERS", SETTINGS_SPAM: "SETTINGS_SPAM" };
 const items = [, , , , ];
 ({ MESSAGE_SPAM: arr[0], DM_SPAM: arr[1], MENTION_SPAM: arr[2], SUSPICIOUS_USERS: arr[3], SETTINGS_SPAM: arr[4] } = obj);
 const result = set.fileFinishedImporting("modules/guild_antiraid/GuildReportRaidModalConstants.tsx");
 
-export const COMMUNITY_PORTAL_SERVER_SAFETY_PAGE = "https://discord.com/community/securing-your-server";
+export const getReportRaidHelpArticleURL = function getReportRaidHelpArticleURL() {
+  return combinedDefault.getArticleURL(HelpdeskArticles.GUILD_RAID);
+};
 export const ReportRaidTypes = obj;
 export const REPORT_RAID_OPTIONS = items;
 export const getReportRaidTypeLabel = function getReportRaidTypeLabel(arg0) {

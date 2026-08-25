@@ -1,9 +1,9 @@
 // discord_app/modules/launchpad/native/shared/renderChannelItem.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getRelativeTimestamp from "../../../notification_center/NotificationCenterUtils.tsx";
 import computeChannelName from "../../../channel/useChannelName.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
+import getRelativeTimestamp from "../../../notification_center/NotificationCenterUtils.tsx";
 import getChannelA11yLabelDefault from "../../../channel/getChannelA11yLabel.tsx";
 import getLayoutStyleDefault from "getLayoutStyles.tsx";
 import renderChannelWrapperDefault from "renderChannelWrapper.tsx";
@@ -27,7 +27,7 @@ function LaunchpadChannelIcon(channel) {
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
   const tmp2 = getLayoutStyleDefault();
   obj[1] = callback(GuildIconSizesDefault, { guild: stateFromStores, size: getLayoutStyleDefault().icon.guildBadgeIconSize });
-  const items1 = [callback(View, obj), callback(channel(11417).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
+  const items1 = [callback(View, obj), callback(channel(11773).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
   obj[0] = items1;
   return callback2(closure_9, obj);
 }
@@ -89,7 +89,7 @@ export default function renderChannelItem(unread) {
     obj1 = { channel: null, size: null };
     obj1[0] = channel;
     obj1[1] = tmp7.icon.avatarSize;
-    let tmp11Result = tmp11(tmp5(9955), obj1);
+    let tmp11Result = tmp11(tmp5(9813), obj1);
   } else {
     const obj2 = { channel: null };
     obj2[0] = channel;

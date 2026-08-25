@@ -82,17 +82,17 @@ export const getProductNameAndTypeLabel = function getProductNameAndTypeLabel(cl
       let obj = { product: null };
       obj[0] = "";
       return intl5.formatToPlainString(tmp3(1236).t.lvBzLi, obj);
-    } else if (tmp3(1949).CollectiblesItemType.PROFILE_EFFECT === productType) {
+    } else if (tmp3(1950).CollectiblesItemType.PROFILE_EFFECT === productType) {
       const intl4 = tmp3(1236).intl;
       obj = { product: null };
       obj[0] = "";
       return intl4.formatToPlainString(tmp3(1236).t.eR7moP, obj);
-    } else if (tmp3(1949).CollectiblesItemType.NAMEPLATE === productType) {
+    } else if (tmp3(1950).CollectiblesItemType.NAMEPLATE === productType) {
       const intl3 = tmp3(1236).intl;
       obj1 = { product: null };
       obj1[0] = "";
       return intl3.formatToPlainString(tmp3(1236).t.YFOwHj, obj1);
-    } else if (tmp3(1949).CollectiblesItemType.PROFILE_FRAME === productType) {
+    } else if (tmp3(1950).CollectiblesItemType.PROFILE_FRAME === productType) {
       const intl2 = tmp3(1236).intl;
       const obj2 = { product: null };
       obj2[0] = "";

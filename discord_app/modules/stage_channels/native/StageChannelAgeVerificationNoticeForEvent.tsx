@@ -4,8 +4,8 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import Button from "../../../design/void/native.tsx";
 import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Text2 from "../../../design/components/Text/native/Text.tsx";
-import useIsStageSpeakingDisabledForCurrentUser from "../useStageSpeakingForCurrentUser.tsx";
 import useAgeVerificationRunner from "../../age_assurance/AgeVerificationUtils.tsx";
+import useIsStageSpeakingDisabledForCurrentUser from "../useStageSpeakingForCurrentUser.tsx";
 import WarningIcon2 from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { HelpdeskArticles } from "../../../Constants.tsx";
@@ -17,7 +17,7 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
   closure_1 = undefined;
   closure_1 = callback2();
-  let obj = onConfirmPress(4997);
+  let obj = onConfirmPress(4621);
   const isVerifiedTeen = obj.useIsVerifiedTeen();
   const intl = onConfirmPress(1236).intl;
   const format = intl.format;

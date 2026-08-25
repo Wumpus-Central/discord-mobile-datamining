@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/hooks/useMessageRequestTimestampText.tsx
 import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
-import tDefault from "../../../../_runtime/03978_t.js";
+import hooksDefault from "../../../../_runtime/03979_hooks.js";
 import closure_3 from "../../../stores/ReadStateStore.tsx";
 import { getAccessibilityLabelFormatter } from "../../threads/ThreadUtils.tsx";
 import { loadMessageRequestData } from "useMessageRequestPreview.tsx";
@@ -23,8 +23,8 @@ export const useMessageRequestTimestampText = function useMessageRequestTimestam
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = tDefault(extractTimestampResult).calendar();
-      const obj6 = tDefault(extractTimestampResult);
+      str = hooksDefault(extractTimestampResult).calendar();
+      const obj6 = hooksDefault(extractTimestampResult);
     }
     return str;
   }

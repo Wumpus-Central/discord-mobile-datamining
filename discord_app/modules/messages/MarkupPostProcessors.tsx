@@ -1,5 +1,5 @@
 // discord_app/modules/messages/MarkupPostProcessors.tsx
-import trimTrailingPunctuation from "../coded_links/findCodedLinks.tsx";
+import getPathsFromURL from "../coded_links/findCodedLinks.tsx";
 import getEffectiveVideoProvider from "../../utils/EmbedUtils.tsx";
 import useIsUserProfileEmbedRenderingEnabled from "../user_profile/experiments/UserProfileEmbedRenderingExperiment.tsx";
 import ME from "../../Constants.tsx";
@@ -39946,8 +39946,8 @@ function isUserProfileEmbedLink(type) {
     tmp = null != type.target;
   }
   if (tmp) {
-    tmp = null != trimTrailingPunctuation.parseUserProfileEmbedCode(type.target);
-    const obj = trimTrailingPunctuation;
+    tmp = null != getPathsFromURL.parseUserProfileEmbedCode(type.target);
+    const obj = getPathsFromURL;
   }
   return tmp;
 }
@@ -40012,8 +40012,8 @@ export const removeBuildOverrideLinks = function removeBuildOverrideLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(4294).isBuildOverrideLink(type.target);
-      const obj = callback(4294);
+      tmp = !callback(4295).isBuildOverrideLink(type.target);
+      const obj = callback(4295);
     }
     return tmp;
   });
@@ -40022,8 +40022,8 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(4368).isExperimentEmbedURL(type.target);
-      const obj = callback(4368);
+      tmp = !callback(8358).isExperimentEmbedURL(type.target);
+      const obj = callback(8358);
     }
     return tmp;
   });
@@ -40309,16 +40309,16 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     const found = arr4.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(4294).isBuildOverrideLink(type.target);
-        const obj = callback(4294);
+        tmp = !callback(4295).isBuildOverrideLink(type.target);
+        const obj = callback(4295);
       }
       return tmp;
     });
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(4368).isExperimentEmbedURL(type.target);
-        const obj = callback(4368);
+        tmp = !callback(8358).isExperimentEmbedURL(type.target);
+        const obj = callback(8358);
       }
       return tmp;
     });

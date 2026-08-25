@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/showUserProfileActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
 import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -24,10 +24,10 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
       }
       obj.speedBumpType = str2;
       obj.openedAt = timestamp;
-      obj.openLazy(tmp2(2008)(8967, tmp3.paths), combined, obj);
+      obj.openLazy(tmp2(2009)(8931, tmp3.paths), combined, obj);
     }
   }
-  const tmp15 = asyncRequireImpl(8980, dependencyMap.paths);
+  const tmp15 = asyncRequireImpl(8943, dependencyMap.paths);
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
   obj = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);
@@ -61,7 +61,7 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -96,7 +96,7 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
             closure_1_6(userId);
           }
           paths = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp14) {
         paths = tmp;

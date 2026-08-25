@@ -23,9 +23,9 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   let first;
   closure_5 = undefined;
   let tmp = callback4();
-  const tmp4 = callback(first.useState(event(8826).ResponseOptions.SERIES), 2);
+  const tmp4 = callback(first.useState(event(9093).ResponseOptions.SERIES), 2);
   first = tmp4[0];
-  let obj = event(8826);
+  let obj = event(9093);
   const existingRsvp = obj.getExistingRsvp(event.id, null);
   let response;
   if (existingRsvp != null) {
@@ -40,12 +40,12 @@ export default function GuildEventRsvpPickerActionSheet(event) {
     const intl = tmp2(1236).intl;
     stringResult = intl.string(tmp2(1236).t["8MPCVr"]);
   }
-  obj = { header: callback2(tmp2(6987).BottomSheetTitleHeader, { title: stringResult }), children: null };
+  obj = { header: callback2(tmp2(5502).BottomSheetTitleHeader, { title: stringResult }), children: null };
   obj = { bottom: true, style: tmp.container, children: null };
   obj1 = { defaultValue: first, onChange: tmp4[1], hasIcons: false, children: null };
-  const responseOptions = event(8826).getResponseOptions();
+  const responseOptions = event(9093).getResponseOptions();
   obj1[3] = responseOptions.map((value) => callback2(event(table[13]).TableRadioRow, { value: value.value, label: value.name }, value.value));
-  const items = [callback2(event(8140).TableRadioGroup, obj1), ];
+  const items = [callback2(event(8136).TableRadioGroup, obj1), ];
   const obj2 = { style: tmp.buttonWrapper, children: null };
   const obj3 = {
     onPress() {
@@ -65,9 +65,9 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   };
   const intl3 = tmp2(1236).intl;
   obj3[1] = intl3.string(event(1236).t.TyCVIq);
-  obj2[1] = callback2(event(4750).Button, obj3);
+  obj2[1] = callback2(event(4815).Button, obj3);
   items[1] = callback2(closure_5, obj2);
   obj[2] = items;
-  obj[1] = callback3(event(6840).SafeAreaPaddingView, obj);
-  return callback2(event(6988).BottomSheet, obj);
+  obj[1] = callback3(event(5434).SafeAreaPaddingView, obj);
+  return callback2(event(5503).BottomSheet, obj);
 };

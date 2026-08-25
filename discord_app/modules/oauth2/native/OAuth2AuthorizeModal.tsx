@@ -24,7 +24,7 @@ let result = require("set").fileFinishedImporting("modules/oauth2/native/OAuth2A
 
 export default function OAuth2AuthorizeModal(arg0) {
   const tmp = callback();
-  const tmp4 = sharedValue(9804)(arg0);
+  const tmp4 = sharedValue(10581)(arg0);
   const _require = tmp4;
   let obj = ReanimatedRexport;
   sharedValue = obj.useSharedValue(0);
@@ -76,11 +76,11 @@ export default function OAuth2AuthorizeModal(arg0) {
   if (null != tmp4.backStep) {
     const obj3 = { color: null };
     obj3[0] = tmp2(712).colors.INTERACTIVE_TEXT_DEFAULT;
-    let tmp11Result = tmp11(tmp5(10806).ArrowSmallLeftIcon, obj3);
+    let tmp11Result = tmp11(tmp5(10711).ArrowSmallLeftIcon, obj3);
   } else {
     const obj4 = { color: null };
     obj4[0] = tmp2(712).colors.INTERACTIVE_TEXT_DEFAULT;
-    tmp11Result = tmp11(tmp5(6399).XSmallIcon, obj4);
+    tmp11Result = tmp11(tmp5(5432).XSmallIcon, obj4);
   }
   obj2[3] = tmp11Result;
   const items2 = [closure_5(require("../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, obj2), , ];
@@ -91,7 +91,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   obj5[1] = closure_5(require("../../../design/components/Text/native/Text.tsx").Text, obj6);
   items2[1] = closure_5(View, obj5);
   const items3 = [tmp.titleContainerBorder, animatedStyle];
-  items2[2] = closure_5(sharedValue(4119).View, { style: items3 });
+  items2[2] = closure_5(sharedValue(4120).View, { style: items3 });
   obj[1] = items2;
   const items4 = [closure_6(View, obj), ];
   const obj7 = { bottom: true, style: tmp.contentContainer, children: null };
@@ -99,7 +99,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const merged = Object.assign(tmp4);
   obj8.onScroll = callback;
   obj8.centerContent = true;
-  obj7[2] = closure_5(sharedValue(10808), obj8);
+  obj7[2] = closure_5(sharedValue(10713), obj8);
   items4[1] = closure_5(require("../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, obj7);
   obj[1] = items4;
   return closure_6(View, obj);

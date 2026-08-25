@@ -54,9 +54,9 @@ function SafetyHubViolationsHeader(count) {
   obj1[1] = items4;
   items2[1] = closure_12(closure_6, obj1);
   if (opened) {
-    let ChevronSmallDownIcon = tmp7(13061).ChevronSmallUpIcon;
+    let ChevronSmallDownIcon = tmp7(13049).ChevronSmallUpIcon;
   } else {
-    ChevronSmallDownIcon = tmp7(9501).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp7(9625).ChevronSmallDownIcon;
   }
   const items5 = [tmp.chevron];
   items2[2] = closure_11(ChevronSmallDownIcon, { size: "md", style: items5 });

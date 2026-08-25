@@ -4,9 +4,9 @@ import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import dedupeEmojisByNameOrIdDefault from "utils/dedupeEmojisByNameOrId.tsx";
-import _modDef6771 from "../emoji_terms/EmojiTerms.tsx";
+import _modDef5290 from "../emoji_terms/EmojiTerms.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../experiments/ExperimentStore.tsx";
@@ -74,7 +74,7 @@ function _loadSavedEmojis() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -94,12 +94,12 @@ function _loadSavedEmojis() {
             c0 = undefined;
             callback = undefined;
             if (Loading === closure_1_29.Unloaded) {
-              obj1 = closure_1_1(1955);
+              obj1 = closure_1_1(1956);
               const databaseResult = obj1.database();
               c0 = databaseResult;
               if (null != databaseResult) {
                 Loading = closure_1_29.Loading;
-                let obj2 = closure_1_0(1975);
+                let obj2 = closure_1_0(1976);
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -165,7 +165,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      obj = callback(6803);
+      obj = callback(5322);
       let flag = obj.canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis !== "function") {
         HermesBuiltin.throwTypeError();
@@ -310,7 +310,7 @@ function handleRoleUpdate(guildId) {
   guildId = guildId.guildId;
   role = role.getRole(guildId, guildId.role.id);
   if (null != role) {
-    obj = callback(4015);
+    obj = callback(4016);
     if (obj.isSubscriptionRole(role)) {
       updateGuildEmoji(guildId);
       c33 = null;
@@ -373,7 +373,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(arg0);
       });
       if (!someResult) {
-        let result = callback(6769).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = callback(5287).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -382,7 +382,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        obj = callback(6769);
+        obj = callback(5287);
       }
       tmp6 = someResult;
     }
@@ -1138,7 +1138,7 @@ prototype3["getDisambiguatedEmojiContext"] = function getDisambiguatedEmojiConte
 prototype3["getSearchResultsOrder"] = function getSearchResultsOrder(locked, query, count, intention) {
   closure_0 = intention;
   let formatted = query.toLowerCase();
-  const escapeResult = formatted(4366).escape(formatted);
+  const escapeResult = formatted(4367).escape(formatted);
   let orderByResult = locked;
   if (locked.length > 0) {
     const _RegExp = RegExp;
@@ -1225,7 +1225,7 @@ prototype3["searchWithoutFetchingLatest"] = function searchWithoutFetchingLatest
   if (flag === undefined) {
     flag = true;
   }
-  ({ matchComparator, showOnlyUnicode: closure_3 } = channel);
+  ({ matchComparator, showOnlyUnicode: closure_3, bypassPremiumEmojiEntitlement: closure_4 } = channel);
   let regExp;
   loadSavedEmojis();
   const formatted = query.toLowerCase();
@@ -1235,7 +1235,7 @@ prototype3["searchWithoutFetchingLatest"] = function searchWithoutFetchingLatest
     const _RegExp = RegExp;
     const _HermesInternal = HermesInternal;
     regExp = new RegExp("" + tmp4, "i");
-    matchComparator = function l(str) {
+    matchComparator = function c(str) {
       return regExp.test(str.replaceAll("_", ""));
     };
   }
@@ -1246,7 +1246,7 @@ prototype3["searchWithoutFetchingLatest"] = function searchWithoutFetchingLatest
   const value = EmojiDisambiguations.get(guildId);
   const reduced = value.nameMatchesChain(matchComparator).reduce((locked, emoji) => {
     obj = intention(flag[38]);
-    obj = { emoji, channel, intention, forceIncludeExternalGuilds: flag };
+    obj = { emoji, channel, intention, forceIncludeExternalGuilds: flag, bypassPremiumEmojiEntitlement: closure_4 };
     const emojiUnavailableReason = obj.getEmojiUnavailableReason(obj);
     if (emojiUnavailableReason === closure_1_17.PREMIUM_LOCKED) {
       if (!closure_3) {
@@ -1524,7 +1524,7 @@ const emojiStore = new EmojiStore(dispatcherDefault, {
     trackUsage(emojiUsed.emojiUsed);
   },
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
-    obj = _modDef6771;
+    obj = _modDef5290;
     obj.setEmojiLocale(locale.locale);
     if (settings.settings.type === UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
       if (settings.wasSaved) {
@@ -1539,9 +1539,9 @@ const emojiStore = new EmojiStore(dispatcherDefault, {
   TOP_EMOJIS_FETCH_SUCCESS: function handleTopEmojisLoaded(topEmojisMetadata) {
     topEmojisMetadata = topEmojisMetadata.topEmojisMetadata;
     obj = { emojiIds: topEmojisMetadata.map((emojiId) => emojiId.emojiId), topEmojisTTL: null };
-    const tmp = tDefault;
-    const tmpResult = tDefault(tDefault());
-    obj[1] = tDefault(tDefault()).add(1, "days").valueOf();
+    const tmp = hooksDefault;
+    const tmpResult = hooksDefault(hooksDefault());
+    obj[1] = hooksDefault(hooksDefault()).add(1, "days").valueOf();
     const result = map.set(topEmojisMetadata.guildId, obj);
   },
   TOGGLE_GUILD_EXPANDED_STATE: function toggleGuildExpandedState(guildId) {

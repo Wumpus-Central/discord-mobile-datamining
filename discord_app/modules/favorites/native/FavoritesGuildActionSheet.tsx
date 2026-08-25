@@ -2,6 +2,7 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import useFavoritesGuildHideActionDefault from "../hooks/useFavoritesGuildHideAction.tsx";
 import useFavoritesGuildResetActionDefault from "../hooks/useFavoritesGuildResetAction.tsx";
+import useFavoritesGuildAutoAddedThreadsActionDefault from "../hooks/useFavoritesGuildAutoAddedThreadsAction.tsx";
 import closure_3 from "../FavoriteStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
@@ -18,7 +19,8 @@ export default function FavoritesGuildActionSheet(onClose) {
   importDefault = tmp2;
   const tmp3 = useFavoritesGuildResetActionDefault();
   dependencyMap = tmp3;
-  let obj = onClose(10018);
+  const tmp4 = useFavoritesGuildAutoAddedThreadsActionDefault();
+  let obj = onClose(9860);
   obj1 = onClose(589);
   const items = [closure_3];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_3.hasStoredFavorites());
@@ -26,59 +28,72 @@ export default function FavoritesGuildActionSheet(onClose) {
   obj = { title: null };
   const intl = onClose(1236).intl;
   obj[0] = intl.string(onClose(1236).t.wMWyci);
-  obj[0] = callback(onClose(6987).BottomSheetTitleHeader, obj);
-  let tmp7Result = null;
+  obj[0] = callback(onClose(5502).BottomSheetTitleHeader, obj);
+  let tmp8Result = null;
+  if (tmp4.isAvailable) {
+    obj1 = { hasIcons: true, children: null };
+    const obj2 = { label: null, subLabel: null, icon: null, value: null, onValueChange: null };
+    ({ label: obj6[0], subLabel: obj6[1] } = tmp4);
+    const obj3 = { IconComponent: null };
+    obj3[0] = tmp5(4904).ThreadIcon;
+    obj2[2] = tmp8(tmp5(5872).ActionSheetRow.Icon, obj3);
+    ({ isEnabled: obj6[3], toggle: obj6[4] } = tmp4);
+    obj1[1] = tmp8(tmp5(5872).ActionSheetSwitchRow, obj2);
+    tmp8Result = tmp8(tmp5(5872).ActionSheetRow.Group, obj1);
+  }
+  const items1 = [tmp8Result, , ];
+  tmp8Result = null;
   if (obj.useFavoritesAccess("FavoritesGuildActionSheet").hasAccess) {
-    tmp7Result = null;
+    tmp8Result = null;
     if (stateFromStores) {
-      obj1 = { hasIcons: true, children: null };
-      const obj2 = { label: null, icon: null, onPress: null };
-      const intl2 = tmp4(1236).intl;
-      obj2[0] = intl2.string(tmp4(1236).t["0dOFq+"]);
-      const obj3 = { IconComponent: null };
-      obj3[0] = tmp4(11380).ArrowsUpDownIcon;
-      obj2[1] = tmp7(tmp4(7215).ActionSheetRow.Icon, obj3);
-      obj2[2] = function onPress() {
+      const obj4 = { hasIcons: true, children: null };
+      const obj5 = { label: null, icon: null, onPress: null };
+      const intl2 = tmp5(1236).intl;
+      obj5[0] = intl2.string(tmp5(1236).t["0dOFq+"]);
+      const obj6 = { IconComponent: null };
+      obj6[0] = tmp5(11736).ArrowsUpDownIcon;
+      obj5[1] = tmp8(tmp5(5872).ActionSheetRow.Icon, obj6);
+      obj5[2] = function onPress() {
         onClose();
-        lib(closure_2[12])();
+        lib(closure_2[14])();
       };
-      obj1[1] = tmp7(tmp4(7215).ActionSheetRow, obj2);
-      tmp7Result = tmp7(tmp4(7215).ActionSheetRow.Group, obj1);
+      obj4[1] = tmp8(tmp5(5872).ActionSheetRow, obj5);
+      tmp8Result = tmp8(tmp5(5872).ActionSheetRow.Group, obj4);
     }
   }
-  const items1 = [tmp7Result, ];
-  const obj4 = { label: tmp2.label, subLabel: tmp2.subLabel, icon: null, variant: null, onPress: null };
+  items1[1] = tmp8Result;
+  const obj7 = { label: tmp2.label, subLabel: tmp2.subLabel, icon: null, variant: null, onPress: null };
   if (tmp2.isPreview) {
-    let EyeSlashIcon = tmp4(6399).XSmallIcon;
+    let EyeSlashIcon = tmp5(5432).XSmallIcon;
   } else {
-    EyeSlashIcon = tmp4(8642).EyeSlashIcon;
+    EyeSlashIcon = tmp5(8650).EyeSlashIcon;
   }
-  obj4[2] = callback(onClose(7215).ActionSheetRow.Icon, { IconComponent: EyeSlashIcon });
+  obj7[2] = callback(onClose(5872).ActionSheetRow.Icon, { IconComponent: EyeSlashIcon });
   let str = "danger";
   if (tmp2.isPreview) {
     str = "default";
   }
-  obj4[3] = str;
-  obj4[4] = function onPress() {
+  obj7[3] = str;
+  obj7[4] = function onPress() {
     onClose();
     lib.perform();
   };
-  const items2 = [callback(onClose(7215).ActionSheetRow, obj4), ];
-  tmp7Result = null;
+  const items2 = [callback(onClose(5872).ActionSheetRow, obj7), ];
+  let tmp8Result1 = null;
   if (tmp3.isAvailable) {
-    const obj5 = { label: null, subLabel: null, icon: null, variant: "danger", onPress: null };
-    ({ label: obj9[0], subLabel: obj9[1] } = tmp3);
-    const obj6 = { IconComponent: null };
-    obj6[0] = tmp4(4337).TrashIcon;
-    obj5[2] = tmp7(tmp4(7215).ActionSheetRow.Icon, obj6);
-    obj5[4] = function onPress() {
+    const obj8 = { label: null, subLabel: null, icon: null, variant: "danger", onPress: null };
+    ({ label: obj12[0], subLabel: obj12[1] } = tmp3);
+    const obj9 = { IconComponent: null };
+    obj9[0] = tmp5(4338).TrashIcon;
+    obj8[2] = tmp8(tmp5(5872).ActionSheetRow.Icon, obj9);
+    obj8[4] = function onPress() {
       onClose();
       closure_2.perform();
     };
-    tmp7Result = tmp7(tmp4(7215).ActionSheetRow, obj5);
+    tmp8Result1 = tmp8(tmp5(5872).ActionSheetRow, obj8);
   }
-  items2[1] = tmp7Result;
-  items1[1] = closure_5(onClose(7215).ActionSheetRow.Group, { hasIcons: true, children: items2 });
+  items2[1] = tmp8Result1;
+  items1[2] = closure_5(onClose(5872).ActionSheetRow.Group, { hasIcons: true, children: items2 });
   obj[1] = items1;
-  return closure_5(onClose(7213).ActionSheet, obj);
+  return closure_5(onClose(5870).ActionSheet, obj);
 };

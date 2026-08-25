@@ -1,7 +1,7 @@
 // discord_app/modules/autocompleter/Autocompleter.tsx
 import isNullOrEmpty from "../../utils/StringUtils.tsx";
-import tDefault from "../../../_runtime/04095_t.js";
-import trimTrailingPunctuation from "../coded_links/findCodedLinks.tsx";
+import tDefault from "../../../_runtime/04096_t.js";
+import getPathsFromURL from "../coded_links/findCodedLinks.tsx";
 import CodedLinkType from "../coded_links/CodedLink.tsx";
 import NOOP from "../../utils/AutocompleteUtils.tsx";
 import NOOPDefault from "../../utils/AutocompleteUtils.tsx";
@@ -368,8 +368,8 @@ prototype["queryTextChannels"] = function queryTextChannels(closure_1, _limit) {
   const self = this;
   if (this._include(AutocompleterResultTypes.TEXT_CHANNEL)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(6751).getBoosterMap(tmp);
-      const obj2 = blacklist(6751);
+      let boosterMap = blacklist(5266).getBoosterMap(tmp);
+      const obj2 = blacklist(5266);
     } else {
       boosterMap = {};
     }
@@ -416,8 +416,8 @@ prototype["queryGuilds"] = function queryGuilds(arg0, arg1) {
   const self = this;
   if (this._include(AutocompleterResultTypes.GUILD)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(6751).getBoosterMap(tmp);
-      const obj2 = blacklist(6751);
+      let boosterMap = blacklist(5266).getBoosterMap(tmp);
+      const obj2 = blacklist(5266);
     } else {
       boosterMap = {};
     }
@@ -524,8 +524,8 @@ prototype["queryGroupDMs"] = function queryGroupDMs(arg0, arg1) {
   if (this._include(AutocompleterResultTypes.GROUP_DM)) {
     const blacklist = self.options.blacklist;
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(6751).getBoosterMap(tmp);
-      const obj2 = blacklist(6751);
+      let boosterMap = blacklist(5266).getBoosterMap(tmp);
+      const obj2 = blacklist(5266);
     } else {
       boosterMap = {};
     }
@@ -589,7 +589,7 @@ prototype["refreshGameProfiles"] = function refreshGameProfiles() {
 };
 prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimit) {
   if (this._include(AutocompleterResultTypes.LINK)) {
-    let obj = trimTrailingPunctuation;
+    let obj = getPathsFromURL;
     const findCodedLinkResult = obj.findCodedLink(query);
     let type;
     if (findCodedLinkResult != null) {
@@ -599,7 +599,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
       obj = { type: null, record: null, score: null };
       obj[0] = tmp.LINK;
       obj[1] = closure_4.fromInviteCode(findCodedLinkResult.code);
-      let tmp3Result = tmp3(6751);
+      let tmp3Result = tmp3(5266);
       obj[2] = tmp3Result.calculateScore(11);
       const items = [obj];
       return items;
@@ -626,7 +626,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
               obj = { type: null, record: null, score: null };
               obj[0] = tmp.LINK;
               obj[1] = closure_4.fromPath(pathname);
-              tmp3Result = tmp3(6751);
+              tmp3Result = tmp3(5266);
               obj[2] = tmp3Result.calculateScore(11);
               const items1 = [obj];
               let items2 = items1;

@@ -1,6 +1,6 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearch.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/11522_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/11873_registerAsset.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -36,7 +36,7 @@ function EmptyState(channel) {
   let obj = channel(589);
   const items = [closure_9];
   importDefault = obj.useStateFromStores(items, () => closure_1_9.getGuild(channel.getGuildId()));
-  obj1 = channel(11523);
+  obj1 = channel(11874);
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
   const intl = channel(1236).intl;
   if (canCreateOrAddGuildInDirectory) {
@@ -56,8 +56,8 @@ function EmptyState(channel) {
   const obj2 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1236).intl;
   obj2[3] = intl2.string(channel(1236).t["6HXiuE"]);
-  items1[1] = callback(channel(4739).Text, obj2);
-  items1[2] = callback(channel(4739).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
+  items1[1] = callback(channel(4376).Text, obj2);
+  items1[2] = callback(channel(4376).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
   obj[1] = items1;
   return callback2(closure_6, obj);
 }

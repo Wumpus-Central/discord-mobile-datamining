@@ -7,8 +7,8 @@ import { SubscriptionPlans } from "../ProductIds.android.tsx";
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
 
-export default function usePremiumProductPricingString(closure_0, c3) {
-  const planIdForPremiumType = require("../../../../utils/PremiumUtils.tsx").getPlanIdForPremiumType(closure_0, c3);
+export default function usePremiumProductPricingString(closure_0, YEAR) {
+  const planIdForPremiumType = require("../../../../utils/PremiumUtils.tsx").getPlanIdForPremiumType(closure_0, YEAR);
   const obj = getPremiumPlanItem;
   _require = require("../ProductIds.android.tsx").getProductIdForGift(planIdForPremiumType);
   const obj2 = SubscriptionPlans;

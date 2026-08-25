@@ -16,9 +16,9 @@ export default function useTrialIntervalOptions(arg0) {
         if (7 === interval.interval_count) {
           const intl = lib(1236).intl;
           obj = { defaultLimit: null };
-          obj[0] = lib(14645).formatPlanIntervalDuration(interval);
+          obj[0] = lib(14675).formatPlanIntervalDuration(interval);
           let formatToPlainStringResult = intl.formatToPlainString(lib(1236).t.XfSsr1, obj);
-          const obj4 = lib(14645);
+          const obj4 = lib(14675);
         }
         obj[1] = formatToPlainStringResult;
         let tmp5 = interval.interval === tmp.DAY;
@@ -28,7 +28,7 @@ export default function useTrialIntervalOptions(arg0) {
         obj[2] = tmp5;
         return obj;
       }
-      formatToPlainStringResult = lib(14645).formatPlanIntervalDuration(interval);
+      formatToPlainStringResult = lib(14675).formatPlanIntervalDuration(interval);
     });
     let selectedOption = closure_0;
     if (null != closure_0) {

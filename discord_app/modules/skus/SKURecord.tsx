@@ -1,6 +1,6 @@
 // discord_app/modules/skus/SKURecord.tsx
 import toJSDefault from "../../lib/Record.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import getPricesFromServerDefault from "utils/getPricesFromServer.tsx";
 import transformProfileEffectKeyFrameFromServerDefault from "utils/transformSKUTenantMetadata.tsx";
 import closure_3 from "../../records/ApplicationRecord.tsx";
@@ -48,12 +48,12 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   obj[7] = name;
   let tmp6 = null;
   if (null != id.release_date) {
-    tmp6 = tDefault(id.release_date);
+    tmp6 = hooksDefault(id.release_date);
   }
   obj[8] = tmp6;
   let tmp9 = null;
   if (null != id.preorder_release_at) {
-    tmp9 = tDefault(id.preorder_release_at);
+    tmp9 = hooksDefault(id.preorder_release_at);
   }
   obj[9] = tmp9;
   ({ preorder_approximate_release_date: obj[10], summary: obj[11] } = id);

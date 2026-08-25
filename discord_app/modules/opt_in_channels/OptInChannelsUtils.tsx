@@ -2,9 +2,9 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import transitionTo from "../routing/router_utils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
-import computeSubtitle from "../guild_sidebar/ChannelListState.tsx";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import ack from "../../actions/ReadStateActionCreators.tsx";
+import computeSubtitle from "../guild_sidebar/ChannelListState.tsx";
 import _bulkClearRecents from "../recent_channels/RecentChannelsActionCreators.tsx";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../../stores/ChannelStore.tsx";
@@ -222,7 +222,7 @@ export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
     lastMessageIdResult = id;
   }
   obj = { timeAgo: null };
-  const tmp = tDefault;
-  obj[0] = tDefault(obj.extractTimestamp(lastMessageIdResult)).fromNow();
+  const tmp = hooksDefault;
+  obj[0] = hooksDefault(obj.extractTimestamp(lastMessageIdResult)).fromNow();
   return intl.formatToPlainString(getSystemLocale.t["8N0BHR"], obj);
 };

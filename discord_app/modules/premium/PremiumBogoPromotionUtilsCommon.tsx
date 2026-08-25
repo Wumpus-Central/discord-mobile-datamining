@@ -1,7 +1,7 @@
 // discord_app/modules/premium/PremiumBogoPromotionUtilsCommon.tsx
 import set from "../../utils/PlatformUtils.tsx";
 import defaultAreStatesEqual from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
 import isTablet from "../../../discord_common/js/shared/lib/PlatformUtils.tsx";
 import useBlockedPaymentsConfig from "../billing/experiments/BlockedPaymentsCountryExperiment.tsx";
@@ -28,11 +28,11 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
         const endedAt = mostRecentSubscription.endedAt;
         if (null != endedAt) {
           if (mostRecentSubscription.hasPremiumAtLeast(closure_10.TIER_2)) {
-            const obj = tDefault();
+            const obj = hooksDefault();
             if (subtractResult.isBefore(endedAt)) {
               return false;
             }
-            subtractResult = tDefault().subtract(10, "days");
+            subtractResult = hooksDefault().subtract(10, "days");
           }
         }
       }
@@ -42,11 +42,11 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
         const endedAt2 = previousPremiumSubscription.endedAt;
         if (null != endedAt2) {
           if (previousPremiumSubscription.hasPremiumAtLeast(closure_10.TIER_2)) {
-            const obj3 = tDefault();
+            const obj3 = hooksDefault();
             if (subtractResult1.isBefore(endedAt2)) {
               return false;
             }
-            subtractResult1 = tDefault().subtract(10, "days");
+            subtractResult1 = hooksDefault().subtract(10, "days");
           }
         }
       }
@@ -108,7 +108,7 @@ function _isEligibleForBOGOPromotion() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -157,13 +157,13 @@ function _isEligibleForBOGOPromotion() {
                   isClaimedResult = currentUser2.isClaimed();
                 }
                 dependencyMap = !isClaimedResult;
-                let obj2 = flag(7426);
+                let obj2 = flag(7024);
                 isPaymentsBlocked = obj2.getIsPaymentsBlocked();
-                let obj3 = flag(12955);
+                let obj3 = flag(12943);
                 authStore = obj3.getBogoPromotionGateEnabled("bogo eligibility async check");
-                let obj4 = flag(12957);
+                let obj4 = flag(12945);
                 store = obj4.getBogoMarketingMaterialsEnabled("bogo marketing eligibility async check");
-                const isMobile = flag(4387).isMobile;
+                const isMobile = flag(4642).isMobile;
                 let isAndroidResult = !isMobile;
                 if (isMobile) {
                   let obj5 = flag(500);
@@ -193,7 +193,7 @@ function _isEligibleForBOGOPromotion() {
                             isPaymentsBlocked = 2;
                             authStore = 1;
                             obj2 = { value: null, done: false };
-                            obj2[0] = flag(4470).fetchMostRecentSubscription();
+                            obj2[0] = flag(4725).fetchMostRecentSubscription();
                             return obj2;
                           }
                         }
@@ -239,7 +239,7 @@ function _isEligibleForBOGOPromotion() {
               isPaymentsBlocked = 3;
               authStore = 1;
               const obj6 = { value: null, done: false };
-              obj6[0] = flag(4470).fetchSubscriptions();
+              obj6[0] = flag(4725).fetchSubscriptions();
               return obj6;
             }
           }
@@ -275,7 +275,7 @@ function _maybeFetchActiveBogoPromotion() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -317,7 +317,7 @@ function _maybeFetchActiveBogoPromotion() {
                 const _Date2 = Date;
                 if (valueOfResult >= Date.now()) {
                   c3 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
                 valueOfResult = date.valueOf();
               }
@@ -338,7 +338,7 @@ function _maybeFetchActiveBogoPromotion() {
             return obj;
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp22) {
         c3 = tmp;
@@ -394,14 +394,14 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
     num2 = valueOfResult - timestamp;
   }
   useScheduledForcedUpdateDefault({ delay: num2 });
-  const isMobile = tmp(4387).isMobile;
+  const isMobile = tmp(4642).isMobile;
   let isAndroidResult = !isMobile;
   if (isMobile) {
     let tmpResult = tmp(500);
     isAndroidResult = tmpResult.isAndroid();
   }
   const tmp11 = useScheduledForcedUpdateDefault;
-  tmpResult = tmp(12957);
+  tmpResult = tmp(12945);
   let bogoMarketingMaterialsEnabled = tmpResult.useBogoMarketingMaterialsEnabled("bogo marketing eligibility hook");
   let tmp16 = !tmp10;
   if (timestamp <= valueOfResult) {

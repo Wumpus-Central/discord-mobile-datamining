@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet.tsx";
-import _modDef14506 from "BountiesBannerBackground.tsx";
+import _modDef14536 from "BountiesBannerBackground.tsx";
 import metadataDefault from "../../../../discord_assets/assets/quests/bounties/bounty_banner.mp4.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -27,7 +27,7 @@ function BountiesCtaDescription(isEmptyOrCompleted) {
   let obj = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl = tmp5(1236).intl;
   obj[2] = intl.string(AZGGo1);
-  const tmp7 = callback(tmp5(4739).Text, obj);
+  const tmp7 = callback(tmp5(4376).Text, obj);
   const intl2 = tmp5(1236).intl;
   obj = { onClick: openBountiesNuxPromoSheetDefault };
   const formatResult = intl2.format(tmp5(1236).t.fjSvsC, obj);
@@ -35,14 +35,14 @@ function BountiesCtaDescription(isEmptyOrCompleted) {
     obj = { variant: "text-sm/medium", children: null };
     const items = [tmp7, " ", formatResult];
     obj[1] = items;
-    let tmp9Result = tmp9(tmp5(4739).Text, obj);
+    let tmp9Result = tmp9(tmp5(4376).Text, obj);
   } else {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.description;
     const items1 = [tmp7, ];
     const obj2 = { variant: "text-sm/medium", children: null };
     obj2[1] = formatResult;
-    items1[1] = callback(tmp5(4739).Text, obj2);
+    items1[1] = callback(tmp5(4376).Text, obj2);
     obj1[1] = items1;
     tmp9Result = tmp9(closure_4, obj1);
   }
@@ -63,8 +63,8 @@ function BountiesCtaHeaderInner(bounties) {
   const items1 = [closure_6];
   const items2 = [bounties];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => bounties.some((id) => !closure_6.hasSeen(callback(table[12]).AdCreativeType.BOUNTY, id.id)), items2);
-  let obj2 = bounties(10750);
-  const QuestContent = bounties(6756).QuestContent;
+  let obj2 = bounties(11068);
+  const QuestContent = bounties(5271).QuestContent;
   const tmp6 = obj2.useBountiesExperience(constants2.QUEST_HOME_MOBILE).verticalScrollEnabled ? QuestContent.VIDEO_MODAL_MOBILE : QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
   importDefault = tmp6;
   const items3 = [bounties, tmp6];
@@ -90,20 +90,20 @@ function BountiesCtaHeaderInner(bounties) {
   const obj3 = { variant: "text-lg/semibold", color: "text-strong", children: null };
   const intl = tmp2(1236).intl;
   obj3[2] = intl.string(bounties(1236).t.qetVDw);
-  const items6 = [callback(bounties(4739).Text, obj3), callback(BountiesCtaDescription, { isEmptyOrCompleted: flag }), ];
+  const items6 = [callback(bounties(4376).Text, obj3), callback(BountiesCtaDescription, { isEmptyOrCompleted: flag }), ];
   let tmp13Result = !flag;
   if (!flag) {
     const obj4 = { grow: true, size: "md", variant: "primary-overlay", text: null, onPress: null };
     const intl2 = tmp2(1236).intl;
     obj4[3] = intl2.string(tmp2(1236).t["1kkbKw"]);
     obj4[4] = callback;
-    tmp13Result = callback(tmp2(4750).Button, obj4);
+    tmp13Result = callback(tmp2(4815).Button, obj4);
   }
   items6[2] = tmp13Result;
   obj2[1] = items6;
   items5[1] = closure_11(closure_4, obj2);
   obj[2] = items5;
-  const items7 = [closure_11(_modDef14506, obj), false];
+  const items7 = [closure_11(_modDef14536, obj), false];
   obj[2] = items7;
   return closure_11(closure_4, obj);
 }
@@ -135,7 +135,7 @@ let closure_12 = createCacheKey.createStyles(() => {
 });
 const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
   const _require = isEmptyOrCompleted;
-  const tmp2 = containerRef(14500)();
+  const tmp2 = containerRef(14530)();
   containerRef = tmp2.containerRef;
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
   let tmp3 = undefined !== isEmptyOrCompleted;
@@ -155,17 +155,17 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
     } else {
       obj1 = { adContentId: null, adCreativeType: null, questContent: null, questContentPosition: 0, overrideVisibility: null, sourceQuestContent: null, children: null };
       obj1[0] = closure_8;
-      obj1[1] = tmp7(7507).AdCreativeType.BOUNTY;
-      obj1[2] = tmp7(6756).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
+      obj1[1] = tmp7(7321).AdCreativeType.BOUNTY;
+      obj1[2] = tmp7(5271).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[4] = tmp2.isInView;
-      obj1[5] = tmp7(6756).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
+      obj1[5] = tmp7(5271).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[6] = function children() {
         const obj = {};
         const merged = Object.assign(closure_0);
         obj.containerRef = containerRef;
         return closure_1_10(closure_1_14, obj);
       };
-      tmp9Result = tmp9(tmp7(10996).QuestContentImpressionTrackerNative, obj1);
+      tmp9Result = tmp9(tmp7(11336).QuestContentImpressionTrackerNative, obj1);
     }
     obj[1] = tmp9Result;
     return closure_10(require("../../../../discord_common/js/packages/design/native.tsx").ThemeContextProvider, obj);

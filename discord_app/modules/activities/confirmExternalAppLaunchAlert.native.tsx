@@ -2,9 +2,9 @@
 import noopAll from "../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import Text from "../../design/components/Text/native/Text.tsx";
-import Button from "../../design/components/Button/native/Button.native.tsx";
 import setDefault from "../../actions/AlertActionCreators.tsx";
-import registerAssetDefault from "../../../_runtime/08780_registerAsset.js";
+import Button from "../../design/components/Button/native/Button.native.tsx";
+import registerAssetDefault from "../../../_runtime/10721_registerAsset.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { PRIVATE_APPS_HELP_ARTICLE } from "Constants.tsx";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";

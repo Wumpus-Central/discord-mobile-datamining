@@ -18,10 +18,10 @@ function DevToolsPersistedStoresActionSheet(store) {
   const close = store.close;
   let obj = { header: null, children: null };
   obj = { title: store.getName() };
-  obj[0] = jsx(store(6987).BottomSheetTitleHeader, { title: store.getName() });
-  obj = { hasIcons: false, children: jsx(store(7215).ActionSheetRow, obj1) };
-  obj[1] = jsx(store(7215).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(7215).ActionSheetRow, obj1) });
-  return jsx(store(7213).ActionSheet, { hasIcons: false, children: jsx(store(7215).ActionSheetRow, obj1) });
+  obj[0] = jsx(store(5502).BottomSheetTitleHeader, { title: store.getName() });
+  obj = { hasIcons: false, children: jsx(store(5872).ActionSheetRow, obj1) };
+  obj[1] = jsx(store(5872).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(5872).ActionSheetRow, obj1) });
+  return jsx(store(5870).ActionSheet, { hasIcons: false, children: jsx(store(5872).ActionSheetRow, obj1) });
 }
 let c4 = importAllResult;
 let obj = { container: null, sectionHeader: null };
@@ -62,9 +62,9 @@ let closure_11 = importAllResult.memo(() => {
 let closure_12 = importAllResult.memo(() => jsx(TableRowInner.TableRow, {
   label: "Disable + Remove Database",
   onPress() {
-    const result = callback(1972).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
-    const obj = callback(1972);
-    callback(4097).open({ key: "disable_database_and_remove", content: "Database has been removed." });
+    const result = callback(1973).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
+    const obj = callback(1973);
+    callback(4098).open({ key: "disable_database_and_remove", content: "Database has been removed." });
   }
 }));
 let closure_13 = importAllResult.memo(() => {

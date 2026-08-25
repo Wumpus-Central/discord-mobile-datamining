@@ -36,8 +36,9 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
   }
   const searchQueryRef = analyticsObject.searchQueryRef;
   const messageId = analyticsObject.messageId;
+  const bypassPremiumEmojiEntitlement = analyticsObject.bypassPremiumEmojiEntitlement;
   let analyticsLocations;
-  closure_9 = undefined;
+  closure_10 = undefined;
   let rounded;
   let id;
   let useTier0UpsellContent;
@@ -46,8 +47,8 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
   let setting;
   analyticsLocations = channel(guildId[7])(channel(guildId[8]).EMOJI).analyticsLocations;
   const tmp4 = channel(guildId[9])(flag);
-  closure_9 = tmp4;
-  rounded = Math.floor((tmp4 - id) / (onLongPressEmoji + id));
+  closure_10 = tmp4;
+  rounded = Math.floor((tmp4 - rounded) / (onLongPressEmoji + rounded));
   const newlyAddedEmojis = channel(guildId[10])(guildId, emojiPickerIntention).newlyAddedEmojis;
   id = null;
   if (newlyAddedEmojis.length > 0) {
@@ -82,7 +83,7 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
   let tmp9Result = tmp9(tmp2[15]);
   tmp9Result = tmp9(tmp2[16]);
   useTier0UpsellContent = tmp9Result.usePremiumUpsellConfig(tmp9Result.getUpsellType(tmp9(tmp2[17]).EntitlementFeatureNames.EMOJIS_EVERYWHERE)).useTier0UpsellContent;
-  const items1 = [searchQueryRef, channel, emojiPickerIntention, guildId, onPressEmoji, analyticsLocations, messageId];
+  const items1 = [searchQueryRef, channel, emojiPickerIntention, guildId, onPressEmoji, analyticsLocations, messageId, bypassPremiumEmojiEntitlement];
   callback = obj.useCallback((emoji) => {
     let str;
     if (searchQueryRef != null) {
@@ -94,13 +95,13 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
     let obj = emojiPickerListRef(guildId[18]);
     const result = obj.triggerHapticFeedback(channel(guildId[19]).IMPACT_LIGHT);
     obj1 = channel(guildId[20]);
-    obj = { emoji, channel, intention: emojiPickerIntention, guildId };
+    obj = { emoji, channel, intention: emojiPickerIntention, guildId, bypassPremiumEmojiEntitlement };
     const emojiUnavailableReason = obj1.getEmojiUnavailableReason(obj);
     if (null === emojiUnavailableReason) {
       if (onPressEmoji != null) {
         onPressEmoji(emoji);
       }
-    } else if (constants.ROLE_SUBSCRIPTION_LOCKED === emojiUnavailableReason) {
+    } else if (analyticsLocations.ROLE_SUBSCRIPTION_LOCKED === emojiUnavailableReason) {
       let tmp2Result = tmp2(tmp3[21]);
       tmp2Result.dismissKeyboard();
       if (null != emoji.guildId) {
@@ -112,7 +113,7 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
     } else if (tmp40.PREMIUM_LOCKED === emojiUnavailableReason) {
       tmp4Result = tmp4(tmp3[15]);
       obj1 = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null, analyticsProperties: null };
-      obj1[0] = emoji.animated ? analyticsLocations.ANIMATED_EMOJI : analyticsLocations.GLOBAL_EMOJI;
+      obj1[0] = emoji.animated ? bypassPremiumEmojiEntitlement.ANIMATED_EMOJI : bypassPremiumEmojiEntitlement.GLOBAL_EMOJI;
       let guild_id;
       if (tmp6 != null) {
         guild_id = tmp6.guild_id;
@@ -128,10 +129,10 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
       obj2[2] = emojiPickerIntention.EMOJI;
       obj1[1] = obj2;
       obj1[2] = analyticsLocations;
-      if (tmp7 === rounded.REACTION) {
-        let EMOJI_PICKER_EMOJI_CLICKED = useTier0UpsellContent.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
+      if (tmp7 === constants.REACTION) {
+        let EMOJI_PICKER_EMOJI_CLICKED = id.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
       } else {
-        EMOJI_PICKER_EMOJI_CLICKED = useTier0UpsellContent.EMOJI_PICKER_EMOJI_CLICKED;
+        EMOJI_PICKER_EMOJI_CLICKED = id.EMOJI_PICKER_EMOJI_CLICKED;
       }
       const obj3 = { type: null, is_animated: null, is_external: null, has_search_query: null };
       obj3[0] = EMOJI_PICKER_EMOJI_CLICKED;
@@ -228,12 +229,12 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
             obj[0] = item.title;
             obj[1] = item.isSectionNitroLocked;
             obj[2] = useTier0UpsellContent;
-            return callback(tmp(tmp2[28]).Section, obj);
+            return useTier0UpsellContent(tmp(tmp2[28]).Section, obj);
           } else if (tmp(tmp2[26]).EmojiPickerItemType.PREMIUM_INLINE_ROADBLOCK === type) {
             obj = { position: null, useTier0UpsellContent: null };
             obj[0] = item.position;
             obj[1] = useTier0UpsellContent;
-            return callback(channel(tmp2[29]), obj);
+            return useTier0UpsellContent(channel(tmp2[29]), obj);
           } else {
             if (tmp(tmp2[26]).EmojiPickerItemType.EMOJI_ROW === type) {
               ({ emojis, emojisDisabled, footer, row, isSectionNitroLocked } = item);
@@ -242,15 +243,15 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
               obj1[1] = emojisDisabled;
               obj1[2] = footer;
               obj1[3] = rounded;
-              obj1[4] = closure_9;
+              obj1[4] = closure_10;
               obj1[5] = callback;
               obj1[6] = callback1;
               obj1[7] = setting;
               obj1[8] = row;
               obj1[9] = isSectionNitroLocked;
-              let tmp27Result = callback(tmp(tmp2[30]).EmojiPickerListRow, obj1);
+              let tmp27Result = useTier0UpsellContent(tmp(tmp2[30]).EmojiPickerListRow, obj1);
             } else if (tmp(tmp2[26]).EmojiPickerItemType.EMOJI_ROW_NSFW === type) {
-              tmp27Result = callback(tmp(tmp2[28]).NSFWRow, {});
+              tmp27Result = useTier0UpsellContent(tmp(tmp2[28]).NSFWRow, {});
             } else if (tmp(tmp2[26]).EmojiPickerItemType.FOOTER_UPSELL === type) {
               let guild_id;
               if (channel != null) {
@@ -260,19 +261,19 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
               obj[0] = guild_id;
               obj[1] = analyticsLocations;
               obj[2] = useTier0UpsellContent;
-              tmp27Result = callback(tmp(tmp2[31]).PremiumSearchUpsell, obj);
-              const tmp27 = callback;
+              tmp27Result = useTier0UpsellContent(tmp(tmp2[31]).PremiumSearchUpsell, obj);
+              const tmp27 = useTier0UpsellContent;
             }
             let tmp16 = true === item.isSectionNitroLocked;
             if (tmp16) {
               const obj2 = { useTier0UpsellContent: null };
               obj2[0] = useTier0UpsellContent;
-              tmp16 = callback(tmp(tmp2[32]).PremiumUpsellGradientBackground, obj2);
+              tmp16 = useTier0UpsellContent(tmp(tmp2[32]).PremiumUpsellGradientBackground, obj2);
             }
             const obj3 = { children: null };
             const items = [tmp16, tmp27Result];
             obj3[0] = items;
-            return setting(callback1, obj3);
+            return callback1(callback, obj3);
           }
         }
       }
@@ -284,7 +285,7 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
     obj1 = { inActionSheet: true, insetTop: null, insetBottom: null };
     obj1[1] = num2;
     obj1[2] = num;
-    return callback(tmp(tmp2[34]), obj1);
+    return useTier0UpsellContent(tmp(tmp2[34]), obj1);
   } else {
     let obj2 = { analyticsLocations: null, animateEmoji: null, bottomSheetIndex: null, categoryIndexActive: null, data: null, guildId: null, inPortalKeyboard: null, onPressEmoji: null, onLongPressEmoji: null, onShowNitroUpsell: null, paddingBottom: null, paddingTop: null, ref: null, renderItem: null, useTier0UpsellContent: null };
     obj2[0] = analyticsLocations;
@@ -311,14 +312,14 @@ export default importAllResult.memo(function EmojiPickerList(analyticsObject) {
     obj2[12] = emojiPickerListRef;
     obj2[13] = callback2;
     obj2[14] = useTier0UpsellContent;
-    const items4 = [callback(tmp(tmp8 ? tmp2[35] : tmp2[36]), obj2), ];
+    const items4 = [useTier0UpsellContent(tmp(tmp8 ? tmp2[35] : tmp2[36]), obj2), ];
     let obj4 = { bottomSheetIndex: null, inPortalKeyboard: null, shouldShow: null };
     obj4[0] = bottomSheetIndex;
     obj4[1] = flag;
     obj4[2] = tmp20;
-    items4[1] = callback(tmp(tmp2[37]), obj4);
+    items4[1] = useTier0UpsellContent(tmp(tmp2[37]), obj4);
     obj3[0] = items4;
-    return setting(callback1, obj3);
+    return callback1(callback, obj3);
   }
   tmp16 = channel(guildId[26])({ emojiSections: tmp12Result, rowSize: rounded, isNativeEmojiPickerEnabled: tmp8 });
 });

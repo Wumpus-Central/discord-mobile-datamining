@@ -1,6 +1,6 @@
 // discord_app/modules/badges/PendingBadgeSettings.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import set2 from "BadgeCustomization.tsx";
+import getProfileBadgeIconUrl from "BadgeUtils.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../stores/UserStore.tsx";
 import closure_5 from "BadgeDirectoryStore.tsx";
@@ -22,7 +22,7 @@ function getSavedBadgeSettings() {
         let tmp10 = item10020;
         let tmp11 = require;
         let tmp12 = dependencyMap;
-        let NON_CUSTOMIZABLE_BADGE_IDS = set2.NON_CUSTOMIZABLE_BADGE_IDS;
+        let NON_CUSTOMIZABLE_BADGE_IDS = getProfileBadgeIconUrl.NON_CUSTOMIZABLE_BADGE_IDS;
         if (!NON_CUSTOMIZABLE_BADGE_IDS.has(item10020.badge_id)) {
           let tmp13 = item10020;
           if (tmp10.owned) {
@@ -100,7 +100,7 @@ export const setPendingBadgeHiddenBadges = function setPendingBadgeHiddenBadges(
   dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp4 });
 };
 export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "accessible", pendingBadgeHiddenBadges: "Object" });
+  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "accessible", pendingBadgeHiddenBadges: "user" });
 };
 export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stateFromStoresArray, arg1) {
   ({ pendingBadgeDisplayOrder, pendingBadgeHiddenBadges } = arg1);
@@ -137,7 +137,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
       let tmp11 = item10026;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let NON_CUSTOMIZABLE_BADGE_IDS = set(14090).NON_CUSTOMIZABLE_BADGE_IDS;
+      let NON_CUSTOMIZABLE_BADGE_IDS = set(9671).NON_CUSTOMIZABLE_BADGE_IDS;
       if (NON_CUSTOMIZABLE_BADGE_IDS.has(item10026.badge_id)) {
         let tmp16 = item10026;
         let arr = items1.push(tmp11);
@@ -208,11 +208,11 @@ export const applyPendingBadgeSettingsToProfileBadges = function applyPendingBad
       let tmp11 = item10027;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let obj = set(8974);
+      let obj = set(8938);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let NON_CUSTOMIZABLE_BADGE_IDS = tmp12(14090).NON_CUSTOMIZABLE_BADGE_IDS;
+        let NON_CUSTOMIZABLE_BADGE_IDS = tmp12(9671).NON_CUSTOMIZABLE_BADGE_IDS;
         let tmp16 = profileBadgeId;
         if (!NON_CUSTOMIZABLE_BADGE_IDS.has(tmp15)) {
           let tmp17 = profileBadgeId;

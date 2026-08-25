@@ -1,11 +1,11 @@
 // discord_app/modules/report_to_mod/ReportToModUtils.tsx
 import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
-import isCurrentUserTeen from "../self_mod/SelfModUtils.tsx";
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId.tsx";
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled.tsx";
 import getContextForPermission from "../guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx";
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled.tsx";
 import canReportUser from "../../utils/ReportUtils.tsx";
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId.tsx";
+import isCurrentUserTeen from "../self_mod/SelfModUtils.tsx";
 import closure_4 from "../forums/ForumPostMessagesStore.tsx";
 import closure_5 from "../../stores/ChannelStore.tsx";
 import closure_6 from "../../stores/GuildStore.tsx";
@@ -179,8 +179,8 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(5024).messageHasObscurableMediaForBitmask(firstMessage, tmp10(5025).ContentHarmTypeBitMask.EXPLICIT);
-          const tmp10Result = tmp10(5024);
+          tmp9 = !tmp10(6016).messageHasObscurableMediaForBitmask(firstMessage, tmp10(6019).ContentHarmTypeBitMask.EXPLICIT);
+          const tmp10Result = tmp10(6016);
         }
         return tmp9;
       } else {

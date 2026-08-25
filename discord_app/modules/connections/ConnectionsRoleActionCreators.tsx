@@ -23,7 +23,7 @@ function _putRoleConnectionsConfigurations() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -104,7 +104,7 @@ function _putRoleConnectionsConfigurations() {
             obj7[2] = closure_2;
             obj2.dispatch(obj7);
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp28) {
           c6 = tmp;

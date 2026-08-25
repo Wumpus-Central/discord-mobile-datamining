@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import tDefault from "../../../../../_runtime/03978_t.js";
+import hooksDefault from "../../../../../_runtime/03979_hooks.js";
 import _checkForNewerBuildAll from "../../../mobile_native_updater/MobileNativeUpdateUtils.tsx";
 import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
 import closure_4 from "../../../mobile_native_updater/MobileNativeUpdateStore.tsx";
@@ -16,9 +16,9 @@ createToggle = {
   IconComponent: function InstallNativeUpdateIcon() {
     const items = [closure_4];
     if (obj.useStateFromStores(items, () => null !== closure_4.latestFetchedBuild().newBuild)) {
-      let RefreshIcon = tmp(4328).DownloadIcon;
+      let RefreshIcon = tmp(4329).DownloadIcon;
     } else {
-      RefreshIcon = tmp(14020).RefreshIcon;
+      RefreshIcon = tmp(14055).RefreshIcon;
     }
     return <RefreshIcon />;
   },
@@ -42,8 +42,8 @@ createToggle = {
       str = "Never refreshed";
       if (null != stateFromStores1) {
         const _HermesInternal = HermesInternal;
-        str = "Last refreshed " + tDefault(stateFromStores1).fromNow();
-        const obj3 = tDefault(stateFromStores1);
+        str = "Last refreshed " + hooksDefault(stateFromStores1).fromNow();
+        const obj3 = hooksDefault(stateFromStores1);
       }
     }
     return str;

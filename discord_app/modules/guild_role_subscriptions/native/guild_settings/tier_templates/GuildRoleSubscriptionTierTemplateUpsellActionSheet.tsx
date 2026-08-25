@@ -4,8 +4,8 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../../design/components/Button/native/Button.native.tsx";
-import Background from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import getIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
+import Background from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -61,7 +61,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   obj1 = { accessibilityRole: "image", accessibilityLabel: null, children: null };
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.gCgirr);
-  obj1[2] = callback2(markAsDismissed(9055), { style: tmp.videoContainer, src: closure_12, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true });
+  obj1[2] = callback2(markAsDismissed(9017), { style: tmp.videoContainer, src: closure_12, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true });
   const items2 = [callback2(View, obj1), , ];
   const obj3 = { style: tmp.info, children: null };
   const obj4 = { variant: "heading-lg/semibold", style: tmp.title, color: "mobile-text-heading-primary", children: null };

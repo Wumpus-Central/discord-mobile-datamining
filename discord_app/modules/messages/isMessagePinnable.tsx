@@ -1,6 +1,6 @@
 // discord_app/modules/messages/isMessagePinnable.tsx
-import isSystemMessageDefault from "isSystemMessage.tsx";
 import useCanUnarchiveThread from "../threads/ThreadHooks.tsx";
+import isSystemMessageDefault from "isSystemMessage.tsx";
 import closure_3 from "../../stores/PermissionStore.tsx";
 import ME from "../../Constants.tsx";
 

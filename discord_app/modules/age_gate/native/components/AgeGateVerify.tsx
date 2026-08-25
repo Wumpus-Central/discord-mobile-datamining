@@ -2,11 +2,11 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
 import shouldShowAgeGateForVoiceChannel from "../../AgeGateUtils.tsx";
-import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
+import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
+import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -44,8 +44,8 @@ export default function AgeGateVerify(source) {
     const obj3 = { text: null, onPress: null, grow: true };
     obj3[0] = verifyAgreementButtonText;
     obj3[1] = function onPress() {
-      let obj = callback2(5433);
-      obj = { entryPoint: callback(5259).AgeVerificationModalEntryPoint.NSFW_AGE_GATE };
+      let obj = callback2(7942);
+      obj = { entryPoint: callback(7944).AgeVerificationModalEntryPoint.NSFW_AGE_GATE };
       const result = obj.showAgeVerificationGetStartedModal(obj);
     };
     obj2[1] = tmp7(Button.Button, obj3);

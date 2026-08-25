@@ -4,11 +4,11 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../FamilyCenter.messages.js";
 import UserPlusIcon from "../../../design/components/Icon/native/redesign/generated/UserPlusIcon.tsx";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
-import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import ForumIcon from "../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
+import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import SettingsIcon from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import GiftIcon from "../../../design/components/Icon/native/redesign/generated/GiftIcon.tsx";
@@ -34,8 +34,8 @@ function RowGroup(children) {
       if (true === negative) {
         str = "text-status-dnd";
       }
-      obj[2] = closure_3(callback(6322).TableRow.Icon, { variant: str, IconComponent });
-      return closure_3(callback(6322).TableRow, obj, header);
+      obj[2] = closure_3(callback(5480).TableRow.Icon, { variant: str, IconComponent });
+      return closure_3(callback(5480).TableRow, obj, header);
     })
   };
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);

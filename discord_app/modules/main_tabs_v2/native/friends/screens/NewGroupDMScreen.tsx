@@ -72,7 +72,7 @@ function _handleInviteUsers() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -122,7 +122,7 @@ function _handleInviteUsers() {
                         return obj2;
                       }
                     }
-                    const obj13 = arr(4775);
+                    const obj13 = arr(4393);
                     c5 = 2;
                     c6 = 1;
                     let obj3 = { value: null, done: false };
@@ -133,7 +133,7 @@ function _handleInviteUsers() {
                 if (null != lib) {
                   if (store.getChannelId() === lib.id) {
                     if (lib.isDM()) {
-                      let obj10 = lib(8700);
+                      let obj10 = lib(4615);
                       obj10.showGuardCallAlert(callback(function*() {
                         if (dependencyMap === 2) {
                           dependencyMap = 3;
@@ -146,7 +146,7 @@ function _handleInviteUsers() {
                             obj[0] = arg1;
                             return obj;
                           } else {
-                            return { value: "HermesInternal", done: null };
+                            return { value: "HermesInternal", done: "HermesInternal" };
                           }
                         } else {
                           try {
@@ -169,7 +169,7 @@ function _handleInviteUsers() {
                                   obj1[0] = closure_1_20(tmp33, dependencyMap);
                                   return obj1;
                                 } else {
-                                  let obj5 = v0(4775);
+                                  let obj5 = v0(4393);
                                   v0 = 1;
                                   dependencyMap = 1;
                                   let obj2 = { value: null, done: false };
@@ -207,19 +207,19 @@ function _handleInviteUsers() {
                                 obj[0] = arg1;
                                 return obj;
                               } else {
-                                const tmp8 = v0(9774);
+                                const tmp8 = v0(9390);
                                 const call = tmp8.call;
                                 if (typeof call === "unknown") {
                                   tmp8(false, true);
                                 } else {
                                   call(tmp9, false, true);
                                 }
-                                v0(8771)(closure_3);
+                                v0(11059)(closure_3);
                                 dependencyMap = 3;
                                 tmp9 = closure_3;
                               }
                               closure_3 = arg1;
-                              obj2 = closure_1_0(8700);
+                              obj2 = closure_1_0(4615);
                               v0 = 3;
                               dependencyMap = 1;
                               obj5 = { value: null, done: false };
@@ -233,7 +233,7 @@ function _handleInviteUsers() {
                         }
                       }));
                     } else if (lib.isGroupDM()) {
-                      let obj8 = arr(4775);
+                      let obj8 = arr(4393);
                       c5 = 5;
                       c6 = 1;
                       let obj4 = { value: null, done: false };
@@ -242,7 +242,7 @@ function _handleInviteUsers() {
                     }
                   }
                 }
-                let obj5 = arr(4775);
+                let obj5 = arr(4393);
                 obj5 = { recipientIds: null, location: "New Group DM", onBeforeTransition: null };
                 obj5[0] = arr;
                 obj5[2] = dependencyMap;
@@ -291,7 +291,7 @@ function _handleInviteUsers() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   closure_3 = arg1;
-                  obj = arr(9774);
+                  obj = arr(9390);
                   obj.ring(closure_3, arr, "gdm_invite");
                 }
                 c6 = 3;
@@ -301,9 +301,9 @@ function _handleInviteUsers() {
               }
               closure_3 = arg1;
             }
-            arr(4346).hideActionSheet(closure_16);
+            arr(4347).hideActionSheet(closure_16);
             c6 = 3;
-            const obj12 = arr(4346);
+            const obj12 = arr(4347);
           }
         } catch (tmp77) {
           c6 = tmp;
@@ -418,7 +418,7 @@ export default function NewGroupDMScreen(navigation) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -510,7 +510,7 @@ export default function NewGroupDMScreen(navigation) {
             return obj;
           }
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp37) {
         closure_2 = tmp37;
@@ -668,7 +668,7 @@ export default function NewGroupDMScreen(navigation) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -759,7 +759,7 @@ export default function NewGroupDMScreen(navigation) {
   items6[1] = tmp26;
   const tmp20 = importDefault(locationPage[24])();
   const tmp21 = closure_18;
-  items6[2] = callback3(importDefault(locationPage[29]), { rowMode: UserRowModes.TOGGLE, onSelectUser: callback1, disabledUserIds: memo, selectedUserIds: first, withAffinitySuggestions: true, withAlphabeticalSections: false, disableGradient: true, disableStickySections: importDefault(locationPage[24])() });
+  items6[2] = callback3(importDefault(locationPage[29]), { rowMode: UserRowModes.TOGGLE, onSelectUser: callback1, disabledUserIds: memo, selectedUserIds: first, withAffinitySuggestions: true, withAlphabeticalSections: false, disableGradient: true, disableStickySections: importDefault(locationPage[24])(), focusOnAdd: false });
   obj[1] = items6;
   return tmp21(closure_7, obj);
 };

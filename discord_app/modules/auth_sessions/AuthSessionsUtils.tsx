@@ -1,6 +1,6 @@
 // discord_app/modules/auth_sessions/AuthSessionsUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../../stores/AuthenticationStore.tsx";
 import closure_5 from "AuthSessionsStore.tsx";
@@ -37,8 +37,8 @@ export const formatDate = function formatDate(arg0) {
     const intl = getSystemLocale.intl;
     let stringResult = intl.string(getSystemLocale.t.TXCmfL);
   } else {
-    stringResult = tDefault(arg0).fromNow();
-    const obj = tDefault(arg0);
+    stringResult = hooksDefault(arg0).fromNow();
+    const obj = hooksDefault(arg0);
   }
   return stringResult;
 };

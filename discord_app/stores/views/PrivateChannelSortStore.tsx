@@ -2,7 +2,7 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "../../modules/channel/FakePlaceholderPrivateChannel.tsx";
 import closure_3 from "../../modules/message_request/MessageRequestStore.tsx";
 import closure_4 from "../../modules/message_request/SpamMessageRequestStore.tsx";
@@ -27,7 +27,7 @@ function makeSortedChannel(channel, id) {
     const isMessageRequestTimestamp = channel.isMessageRequestTimestamp;
     let tmp2 = id;
     if (null != isMessageRequestTimestamp) {
-      let obj = tDefault(isMessageRequestTimestamp);
+      let obj = hooksDefault(isMessageRequestTimestamp);
       const valueOfResult = obj.valueOf();
       let fromTimestampResult = DISCORD_EPOCHDefault.fromTimestamp(valueOfResult);
       const obj2 = DISCORD_EPOCHDefault;
@@ -78,7 +78,7 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap(function inde
 let closure_15 = [];
 let closure_16 = [];
 let closure_17 = [];
-const f36671 = () => {
+const f36857 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -91,7 +91,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f36671 !== "function") {
+  if (typeof f36857 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let values = secondaryIndexMap.values(constants.FAVORITE);

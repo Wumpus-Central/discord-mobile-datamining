@@ -44,6 +44,7 @@ import AvatarSpellcastExample from "../components/mana-assets/native/generated/A
 import AvatarWumpusExample from "../components/mana-assets/native/generated/AvatarWumpusExample.native.tsx";
 import BadgeCustomizeAbstractUI from "../components/mana-assets/native/generated/BadgeCustomizeAbstractUI.native.tsx";
 import BadgePacksAbstractUI from "../components/mana-assets/native/generated/BadgePacksAbstractUI.native.tsx";
+import BagOfCoinsSpotIllustration from "../components/mana-assets/native/generated/BagOfCoinsSpotIllustration.native.tsx";
 import BananaSpotIllustration from "../components/mana-assets/native/generated/BananaSpotIllustration.native.tsx";
 import BeakerIllocon from "../components/mana-assets/native/generated/BeakerIllocon.native.tsx";
 import BeeIllocon from "../components/mana-assets/native/generated/BeeIllocon.native.tsx";
@@ -87,6 +88,7 @@ import ControllerSpotIllustration from "../components/mana-assets/native/generat
 import CouchSpotIllustration from "../components/mana-assets/native/generated/CouchSpotIllustration.native.tsx";
 import CrosshairIllocon from "../components/mana-assets/native/generated/CrosshairIllocon.native.tsx";
 import CrownIllocon from "../components/mana-assets/native/generated/CrownIllocon.native.tsx";
+import CustomTypingAbstractUI from "../components/mana-assets/native/generated/CustomTypingAbstractUI.native.tsx";
 import D20SpotIllustration from "../components/mana-assets/native/generated/D20SpotIllustration.native.tsx";
 import DevCommerceTallAbstractUI from "../components/mana-assets/native/generated/DevCommerceTallAbstractUI.native.tsx";
 import DevCommerceWideAbstractUI from "../components/mana-assets/native/generated/DevCommerceWideAbstractUI.native.tsx";
@@ -103,7 +105,7 @@ import DiscordQuestsLockupLogo from "../components/mana-assets/native/generated/
 import DiscordShopLockupLogo from "../components/mana-assets/native/generated/DiscordShopLockupLogo.native.tsx";
 import DiscordSupergraphicLogo from "../components/mana-assets/native/generated/DiscordSupergraphicLogo.native.tsx";
 import DiscordWordmarkLogo from "../components/mana-assets/native/generated/DiscordWordmarkLogo.native.tsx";
-import DiscountsMicrophoneSpotIllustration from "../components/mana-assets/native/generated/DiscountsMicrophoneSpotIllustration.native.tsx";
+import DiscountsMegaphoneSpotIllustration from "../components/mana-assets/native/generated/DiscountsMegaphoneSpotIllustration.native.tsx";
 import DisguiseSpotIllustration from "../components/mana-assets/native/generated/DisguiseSpotIllustration.native.tsx";
 import DisplayNameAbstractUI from "../components/mana-assets/native/generated/DisplayNameAbstractUI.native.tsx";
 import DisplayNameLockeAbstractUI from "../components/mana-assets/native/generated/DisplayNameLockeAbstractUI.native.tsx";
@@ -130,6 +132,7 @@ import EnvelopeOpenSpotIllustration from "../components/mana-assets/native/gener
 import EnvelopeSpotIllustration from "../components/mana-assets/native/generated/EnvelopeSpotIllustration.native.tsx";
 import ExperimentalCustomUrlAbstractUI from "../components/mana-assets/native/generated/ExperimentalCustomUrlAbstractUI.native.tsx";
 import ExperimentalDiscordShopLockupExperiementLogo from "../components/mana-assets/native/generated/ExperimentalDiscordShopLockupExperiementLogo.native.tsx";
+import ExperimentalDuckTypingBubbleAbstractUI from "../components/mana-assets/native/generated/ExperimentalDuckTypingBubbleAbstractUI.native.tsx";
 import ExperimentalGameWidgetsAbstractUI from "../components/mana-assets/native/generated/ExperimentalGameWidgetsAbstractUI.native.tsx";
 import ExperimentalGiftEnvelopeIllocon from "../components/mana-assets/native/generated/ExperimentalGiftEnvelopeIllocon.native.tsx";
 import ExperimentalMarvelRivalsWidgetAbstractUI from "../components/mana-assets/native/generated/ExperimentalMarvelRivalsWidgetAbstractUI.native.tsx";
@@ -137,6 +140,7 @@ import FamilyKeysSpotIllustration from "../components/mana-assets/native/generat
 import FamilyShieldSpotIllustration from "../components/mana-assets/native/generated/FamilyShieldSpotIllustration.native.tsx";
 import FamilySpotIllustration from "../components/mana-assets/native/generated/FamilySpotIllustration.native.tsx";
 import FavoritesSpotIllustration from "../components/mana-assets/native/generated/FavoritesSpotIllustration.native.tsx";
+import FileFolderSpotIllustration from "../components/mana-assets/native/generated/FileFolderSpotIllustration.native.tsx";
 import FileUploadSpotIllustration from "../components/mana-assets/native/generated/FileUploadSpotIllustration.native.tsx";
 import FireIllocon from "../components/mana-assets/native/generated/FireIllocon.native.tsx";
 import FistBumpSpotIllustration from "../components/mana-assets/native/generated/FistBumpSpotIllustration.native.tsx";
@@ -144,7 +148,6 @@ import FlowerIllocon from "../components/mana-assets/native/generated/FlowerIllo
 import ForceIllocon from "../components/mana-assets/native/generated/ForceIllocon.native.tsx";
 import FrogIllocon from "../components/mana-assets/native/generated/FrogIllocon.native.tsx";
 import GameCartridgeSpotIllustration from "../components/mana-assets/native/generated/GameCartridgeSpotIllustration.native.tsx";
-import GameDataSpotIllustration from "../components/mana-assets/native/generated/GameDataSpotIllustration.native.tsx";
 import GameDepthTier10LargeBadge from "../components/mana-assets/native/generated/GameDepthTier10LargeBadge.native.tsx";
 import GameDepthTier10SmallBadge from "../components/mana-assets/native/generated/GameDepthTier10SmallBadge.native.tsx";
 import GameDepthTier1LargeBadge from "../components/mana-assets/native/generated/GameDepthTier1LargeBadge.native.tsx";
@@ -187,6 +190,7 @@ import GameDiversityTier9LargeBadge from "../components/mana-assets/native/gener
 import GameDiversityTier9SmallBadge from "../components/mana-assets/native/generated/GameDiversityTier9SmallBadge.native.tsx";
 import GamePresenceIllocon from "../components/mana-assets/native/generated/GamePresenceIllocon.native.tsx";
 import GameServerAbstractUI from "../components/mana-assets/native/generated/GameServerAbstractUI.native.tsx";
+import GameTrophySpotIllustration from "../components/mana-assets/native/generated/GameTrophySpotIllustration.native.tsx";
 import GameplayAbstractUI from "../components/mana-assets/native/generated/GameplayAbstractUI.native.tsx";
 import GemHero3dIllustration from "../components/mana-assets/native/generated/GemHero3dIllustration.native.tsx";
 import GemIllocon from "../components/mana-assets/native/generated/GemIllocon.native.tsx";
@@ -232,9 +236,9 @@ import GoatIllocon from "../components/mana-assets/native/generated/GoatIllocon.
 import GroupGamingSpotIllustration from "../components/mana-assets/native/generated/GroupGamingSpotIllustration.native.tsx";
 import GuidelinesIllocon from "../components/mana-assets/native/generated/GuidelinesIllocon.native.tsx";
 import HandheldSpotIllustration from "../components/mana-assets/native/generated/HandheldSpotIllustration.native.tsx";
-import HdAudioSpotIllustration from "../components/mana-assets/native/generated/HdAudioSpotIllustration.native.tsx";
 import HdStreamAbstractUI from "../components/mana-assets/native/generated/HdStreamAbstractUI.native.tsx";
 import HeadphonesAndControllerSpotIllustration from "../components/mana-assets/native/generated/HeadphonesAndControllerSpotIllustration.native.tsx";
+import HeadphonesPairSpotIllustration from "../components/mana-assets/native/generated/HeadphonesPairSpotIllustration.native.tsx";
 import HeadsetSpotIllustration from "../components/mana-assets/native/generated/HeadsetSpotIllustration.native.tsx";
 import HeartHandsSpotIllustration from "../components/mana-assets/native/generated/HeartHandsSpotIllustration.native.tsx";
 import HeartIllocon from "../components/mana-assets/native/generated/HeartIllocon.native.tsx";
@@ -245,6 +249,7 @@ import HighFiveSpotIllustration from "../components/mana-assets/native/generated
 import HoldingGemSpotIllustration from "../components/mana-assets/native/generated/HoldingGemSpotIllustration.native.tsx";
 import IceCreamIllocon from "../components/mana-assets/native/generated/IceCreamIllocon.native.tsx";
 import InkQuill3dIllustration from "../components/mana-assets/native/generated/InkQuill3dIllustration.native.tsx";
+import InkQuillSpotIllustration from "../components/mana-assets/native/generated/InkQuillSpotIllustration.native.tsx";
 import KeyRingSpotIllustration from "../components/mana-assets/native/generated/KeyRingSpotIllustration.native.tsx";
 import LanternSpotIllustration from "../components/mana-assets/native/generated/LanternSpotIllustration.native.tsx";
 import LaptopSpotIllustration from "../components/mana-assets/native/generated/LaptopSpotIllustration.native.tsx";
@@ -272,7 +277,6 @@ import NitroDiamondBadgeLargeBadge from "../components/mana-assets/native/genera
 import NitroDiamondBadgeSmallBadge from "../components/mana-assets/native/generated/NitroDiamondBadgeSmallBadge.native.tsx";
 import NitroEmeraldBadgeLargeBadge from "../components/mana-assets/native/generated/NitroEmeraldBadgeLargeBadge.native.tsx";
 import NitroEmeraldBadgeSmallBadge from "../components/mana-assets/native/generated/NitroEmeraldBadgeSmallBadge.native.tsx";
-import NitroFileUploadSpotIllustration from "../components/mana-assets/native/generated/NitroFileUploadSpotIllustration.native.tsx";
 import NitroGoldBadgeLargeBadge from "../components/mana-assets/native/generated/NitroGoldBadgeLargeBadge.native.tsx";
 import NitroGoldBadgeSmallBadge from "../components/mana-assets/native/generated/NitroGoldBadgeSmallBadge.native.tsx";
 import NitroGradientBackgroundAbstractUI from "../components/mana-assets/native/generated/NitroGradientBackgroundAbstractUI.native.tsx";
@@ -281,8 +285,6 @@ import NitroOpalBadgeLargeBadge from "../components/mana-assets/native/generated
 import NitroOpalBadgeSmallBadge from "../components/mana-assets/native/generated/NitroOpalBadgeSmallBadge.native.tsx";
 import NitroPlatinumBadgeLargeBadge from "../components/mana-assets/native/generated/NitroPlatinumBadgeLargeBadge.native.tsx";
 import NitroPlatinumBadgeSmallBadge from "../components/mana-assets/native/generated/NitroPlatinumBadgeSmallBadge.native.tsx";
-import NitroRewardsLaptopSpotIllustration from "../components/mana-assets/native/generated/NitroRewardsLaptopSpotIllustration.native.tsx";
-import NitroRewardsMouseSpotIllustration from "../components/mana-assets/native/generated/NitroRewardsMouseSpotIllustration.native.tsx";
 import NitroRocketNameplateAbstractUI from "../components/mana-assets/native/generated/NitroRocketNameplateAbstractUI.native.tsx";
 import NitroRubyBadgeLargeBadge from "../components/mana-assets/native/generated/NitroRubyBadgeLargeBadge.native.tsx";
 import NitroRubyBadgeSmallBadge from "../components/mana-assets/native/generated/NitroRubyBadgeSmallBadge.native.tsx";
@@ -304,10 +306,9 @@ import NitroWumpusOfferingLeft3dIllustration from "../components/mana-assets/nat
 import NitroWumpusOfferingRight3dIllustration from "../components/mana-assets/native/generated/NitroWumpusOfferingRight3dIllustration.native.tsx";
 import NitroWumpusPinkSpotIllustration from "../components/mana-assets/native/generated/NitroWumpusPinkSpotIllustration.native.tsx";
 import NitroWumpusThumbsUp3dIllustration from "../components/mana-assets/native/generated/NitroWumpusThumbsUp3dIllustration.native.tsx";
-import NitroWumpusWishlistingSpotIllustration from "../components/mana-assets/native/generated/NitroWumpusWishlistingSpotIllustration.native.tsx";
 import Orb3dIllustration from "../components/mana-assets/native/generated/Orb3dIllustration.native.tsx";
+import OrbMultiplierSpotIllustration from "../components/mana-assets/native/generated/OrbMultiplierSpotIllustration.native.tsx";
 import OrbNitroCardSpotIllustration from "../components/mana-assets/native/generated/OrbNitroCardSpotIllustration.native.tsx";
-import OrbNitroMultiplierSpotIllustration from "../components/mana-assets/native/generated/OrbNitroMultiplierSpotIllustration.native.tsx";
 import OrbNitroSpotIllustration from "../components/mana-assets/native/generated/OrbNitroSpotIllustration.native.tsx";
 import PaintIllocon from "../components/mana-assets/native/generated/PaintIllocon.native.tsx";
 import PaintPaletteSpotIllustration from "../components/mana-assets/native/generated/PaintPaletteSpotIllustration.native.tsx";
@@ -321,17 +322,19 @@ import PotionSpotIllustration from "../components/mana-assets/native/generated/P
 import PottedPlantIllocon from "../components/mana-assets/native/generated/PottedPlantIllocon.native.tsx";
 import PowerupSpotIllustration from "../components/mana-assets/native/generated/PowerupSpotIllustration.native.tsx";
 import PrivacyShieldBannerSpotIllustration from "../components/mana-assets/native/generated/PrivacyShieldBannerSpotIllustration.native.tsx";
-import PrivacyShieldWithLaptopBannerSpotIllustration from "../components/mana-assets/native/generated/PrivacyShieldWithLaptopBannerSpotIllustration.native.tsx";
-import PrivacyShieldWithLaptopSpotIllustration from "../components/mana-assets/native/generated/PrivacyShieldWithLaptopSpotIllustration.native.tsx";
+import PrivacyShieldLaptopBannerSpotIllustration from "../components/mana-assets/native/generated/PrivacyShieldLaptopBannerSpotIllustration.native.tsx";
+import PrivacyShieldLaptopSpotIllustration from "../components/mana-assets/native/generated/PrivacyShieldLaptopSpotIllustration.native.tsx";
 import PrivateProfileAbstractUI from "../components/mana-assets/native/generated/PrivateProfileAbstractUI.native.tsx";
 import ProfileEffectsAbstractUI from "../components/mana-assets/native/generated/ProfileEffectsAbstractUI.native.tsx";
 import PsychicIllocon from "../components/mana-assets/native/generated/PsychicIllocon.native.tsx";
 import PurchaseDiscountSpotIllustration from "../components/mana-assets/native/generated/PurchaseDiscountSpotIllustration.native.tsx";
 import PuzzleCubeSpotIllustration from "../components/mana-assets/native/generated/PuzzleCubeSpotIllustration.native.tsx";
-import QrCodeLoginSpotIllustration from "../components/mana-assets/native/generated/QrCodeLoginSpotIllustration.native.tsx";
-import QrCodeSuccessSpotIllustration from "../components/mana-assets/native/generated/QrCodeSuccessSpotIllustration.native.tsx";
+import QrLoginSpotIllustration from "../components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx";
+import QrSuccessSpotIllustration from "../components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx";
 import QuestsIllocon from "../components/mana-assets/native/generated/QuestsIllocon.native.tsx";
 import ReactionsSpotIllustration from "../components/mana-assets/native/generated/ReactionsSpotIllustration.native.tsx";
+import RewardsLaptopSpotIllustration from "../components/mana-assets/native/generated/RewardsLaptopSpotIllustration.native.tsx";
+import RewardsMouseSpotIllustration from "../components/mana-assets/native/generated/RewardsMouseSpotIllustration.native.tsx";
 import RocketshipSpotIllustration from "../components/mana-assets/native/generated/RocketshipSpotIllustration.native.tsx";
 import RubberDuckSpotIllustration from "../components/mana-assets/native/generated/RubberDuckSpotIllustration.native.tsx";
 import RulebookSpotIllustration from "../components/mana-assets/native/generated/RulebookSpotIllustration.native.tsx";
@@ -401,7 +404,6 @@ import StreamingTier8LargeBadge from "../components/mana-assets/native/generated
 import StreamingTier8SmallBadge from "../components/mana-assets/native/generated/StreamingTier8SmallBadge.native.tsx";
 import StreamingTier9LargeBadge from "../components/mana-assets/native/generated/StreamingTier9LargeBadge.native.tsx";
 import StreamingTier9SmallBadge from "../components/mana-assets/native/generated/StreamingTier9SmallBadge.native.tsx";
-import StudyGroupsSpotIllustration from "../components/mana-assets/native/generated/StudyGroupsSpotIllustration.native.tsx";
 import SunIllocon from "../components/mana-assets/native/generated/SunIllocon.native.tsx";
 import SwordAndChestSpotIllustration from "../components/mana-assets/native/generated/SwordAndChestSpotIllustration.native.tsx";
 import SwordAndStoneSpotIllustration from "../components/mana-assets/native/generated/SwordAndStoneSpotIllustration.native.tsx";
@@ -414,9 +416,8 @@ import TrafficConeSpotIllustration from "../components/mana-assets/native/genera
 import TreasureChestBannerSpotIllustration from "../components/mana-assets/native/generated/TreasureChestBannerSpotIllustration.native.tsx";
 import TreasureChestSpotIllustration from "../components/mana-assets/native/generated/TreasureChestSpotIllustration.native.tsx";
 import TrophyIllocon from "../components/mana-assets/native/generated/TrophyIllocon.native.tsx";
-import TypingIndicatorAbstractUI from "../components/mana-assets/native/generated/TypingIndicatorAbstractUI.native.tsx";
 import VendingMachineSpotIllustration from "../components/mana-assets/native/generated/VendingMachineSpotIllustration.native.tsx";
-import VibeWithWumpusSpotIllustration from "../components/mana-assets/native/generated/VibeWithWumpusSpotIllustration.native.tsx";
+import VibingWumpusSpotIllustration from "../components/mana-assets/native/generated/VibingWumpusSpotIllustration.native.tsx";
 import VideoCameraSpotIllustration from "../components/mana-assets/native/generated/VideoCameraSpotIllustration.native.tsx";
 import VoiceFiltersSpotIllustration from "../components/mana-assets/native/generated/VoiceFiltersSpotIllustration.native.tsx";
 import WasdSpotIllustration from "../components/mana-assets/native/generated/WasdSpotIllustration.native.tsx";
@@ -431,6 +432,7 @@ import WorldIllocon from "../components/mana-assets/native/generated/WorldIlloco
 import WumpusCouchSpotIllustration from "../components/mana-assets/native/generated/WumpusCouchSpotIllustration.native.tsx";
 import WumpusGearSpotIllustration from "../components/mana-assets/native/generated/WumpusGearSpotIllustration.native.tsx";
 import WumpusMahjongSpotIllustration from "../components/mana-assets/native/generated/WumpusMahjongSpotIllustration.native.tsx";
+import WumpusWishlistingSpotIllustration from "../components/mana-assets/native/generated/WumpusWishlistingSpotIllustration.native.tsx";
 
 const result = set.fileFinishedImporting("design/assets/native.tsx");
 
@@ -478,6 +480,7 @@ export const AvatarSpellcastExample = AvatarSpellcastExample.AvatarSpellcastExam
 export const AvatarWumpusExample = AvatarWumpusExample.AvatarWumpusExample;
 export const BadgeCustomizeAbstractUI = BadgeCustomizeAbstractUI.BadgeCustomizeAbstractUI;
 export const BadgePacksAbstractUI = BadgePacksAbstractUI.BadgePacksAbstractUI;
+export const BagOfCoinsSpotIllustration = BagOfCoinsSpotIllustration.BagOfCoinsSpotIllustration;
 export const BananaSpotIllustration = BananaSpotIllustration.BananaSpotIllustration;
 export const BeakerIllocon = BeakerIllocon.BeakerIllocon;
 export const BeeIllocon = BeeIllocon.BeeIllocon;
@@ -521,6 +524,7 @@ export const ControllerSpotIllustration = ControllerSpotIllustration.ControllerS
 export const CouchSpotIllustration = CouchSpotIllustration.CouchSpotIllustration;
 export const CrosshairIllocon = CrosshairIllocon.CrosshairIllocon;
 export const CrownIllocon = CrownIllocon.CrownIllocon;
+export const CustomTypingAbstractUI = CustomTypingAbstractUI.CustomTypingAbstractUI;
 export const D20SpotIllustration = D20SpotIllustration.D20SpotIllustration;
 export const DevCommerceTallAbstractUI = DevCommerceTallAbstractUI.DevCommerceTallAbstractUI;
 export const DevCommerceWideAbstractUI = DevCommerceWideAbstractUI.DevCommerceWideAbstractUI;
@@ -537,7 +541,7 @@ export const DiscordQuestsLockupLogo = DiscordQuestsLockupLogo.DiscordQuestsLock
 export const DiscordShopLockupLogo = DiscordShopLockupLogo.DiscordShopLockupLogo;
 export const DiscordSupergraphicLogo = DiscordSupergraphicLogo.DiscordSupergraphicLogo;
 export const DiscordWordmarkLogo = DiscordWordmarkLogo.DiscordWordmarkLogo;
-export const DiscountsMicrophoneSpotIllustration = DiscountsMicrophoneSpotIllustration.DiscountsMicrophoneSpotIllustration;
+export const DiscountsMegaphoneSpotIllustration = DiscountsMegaphoneSpotIllustration.DiscountsMegaphoneSpotIllustration;
 export const DisguiseSpotIllustration = DisguiseSpotIllustration.DisguiseSpotIllustration;
 export const DisplayNameAbstractUI = DisplayNameAbstractUI.DisplayNameAbstractUI;
 export const DisplayNameLockeAbstractUI = DisplayNameLockeAbstractUI.DisplayNameLockeAbstractUI;
@@ -564,6 +568,7 @@ export const EnvelopeOpenSpotIllustration = EnvelopeOpenSpotIllustration.Envelop
 export const EnvelopeSpotIllustration = EnvelopeSpotIllustration.EnvelopeSpotIllustration;
 export const ExperimentalCustomUrlAbstractUI = ExperimentalCustomUrlAbstractUI.ExperimentalCustomUrlAbstractUI;
 export const ExperimentalDiscordShopLockupExperiementLogo = ExperimentalDiscordShopLockupExperiementLogo.ExperimentalDiscordShopLockupExperiementLogo;
+export const ExperimentalDuckTypingBubbleAbstractUI = ExperimentalDuckTypingBubbleAbstractUI.ExperimentalDuckTypingBubbleAbstractUI;
 export const ExperimentalGameWidgetsAbstractUI = ExperimentalGameWidgetsAbstractUI.ExperimentalGameWidgetsAbstractUI;
 export const ExperimentalGiftEnvelopeIllocon = ExperimentalGiftEnvelopeIllocon.ExperimentalGiftEnvelopeIllocon;
 export const ExperimentalMarvelRivalsWidgetAbstractUI = ExperimentalMarvelRivalsWidgetAbstractUI.ExperimentalMarvelRivalsWidgetAbstractUI;
@@ -571,6 +576,7 @@ export const FamilyKeysSpotIllustration = FamilyKeysSpotIllustration.FamilyKeysS
 export const FamilyShieldSpotIllustration = FamilyShieldSpotIllustration.FamilyShieldSpotIllustration;
 export const FamilySpotIllustration = FamilySpotIllustration.FamilySpotIllustration;
 export const FavoritesSpotIllustration = FavoritesSpotIllustration.FavoritesSpotIllustration;
+export const FileFolderSpotIllustration = FileFolderSpotIllustration.FileFolderSpotIllustration;
 export const FileUploadSpotIllustration = FileUploadSpotIllustration.FileUploadSpotIllustration;
 export const FireIllocon = FireIllocon.FireIllocon;
 export const FistBumpSpotIllustration = FistBumpSpotIllustration.FistBumpSpotIllustration;
@@ -578,7 +584,6 @@ export const FlowerIllocon = FlowerIllocon.FlowerIllocon;
 export const ForceIllocon = ForceIllocon.ForceIllocon;
 export const FrogIllocon = FrogIllocon.FrogIllocon;
 export const GameCartridgeSpotIllustration = GameCartridgeSpotIllustration.GameCartridgeSpotIllustration;
-export const GameDataSpotIllustration = GameDataSpotIllustration.GameDataSpotIllustration;
 export const GameDepthTier10LargeBadge = GameDepthTier10LargeBadge.GameDepthTier10LargeBadge;
 export const GameDepthTier10SmallBadge = GameDepthTier10SmallBadge.GameDepthTier10SmallBadge;
 export const GameDepthTier1LargeBadge = GameDepthTier1LargeBadge.GameDepthTier1LargeBadge;
@@ -621,6 +626,7 @@ export const GameDiversityTier9LargeBadge = GameDiversityTier9LargeBadge.GameDiv
 export const GameDiversityTier9SmallBadge = GameDiversityTier9SmallBadge.GameDiversityTier9SmallBadge;
 export const GamePresenceIllocon = GamePresenceIllocon.GamePresenceIllocon;
 export const GameServerAbstractUI = GameServerAbstractUI.GameServerAbstractUI;
+export const GameTrophySpotIllustration = GameTrophySpotIllustration.GameTrophySpotIllustration;
 export const GameplayAbstractUI = GameplayAbstractUI.GameplayAbstractUI;
 export const GemHero3dIllustration = GemHero3dIllustration.GemHero3dIllustration;
 export const GemIllocon = GemIllocon.GemIllocon;
@@ -666,9 +672,9 @@ export const GoatIllocon = GoatIllocon.GoatIllocon;
 export const GroupGamingSpotIllustration = GroupGamingSpotIllustration.GroupGamingSpotIllustration;
 export const GuidelinesIllocon = GuidelinesIllocon.GuidelinesIllocon;
 export const HandheldSpotIllustration = HandheldSpotIllustration.HandheldSpotIllustration;
-export const HdAudioSpotIllustration = HdAudioSpotIllustration.HdAudioSpotIllustration;
 export const HdStreamAbstractUI = HdStreamAbstractUI.HdStreamAbstractUI;
 export const HeadphonesAndControllerSpotIllustration = HeadphonesAndControllerSpotIllustration.HeadphonesAndControllerSpotIllustration;
+export const HeadphonesPairSpotIllustration = HeadphonesPairSpotIllustration.HeadphonesPairSpotIllustration;
 export const HeadsetSpotIllustration = HeadsetSpotIllustration.HeadsetSpotIllustration;
 export const HeartHandsSpotIllustration = HeartHandsSpotIllustration.HeartHandsSpotIllustration;
 export const HeartIllocon = HeartIllocon.HeartIllocon;
@@ -679,6 +685,7 @@ export const HighFiveSpotIllustration = HighFiveSpotIllustration.HighFiveSpotIll
 export const HoldingGemSpotIllustration = HoldingGemSpotIllustration.HoldingGemSpotIllustration;
 export const IceCreamIllocon = IceCreamIllocon.IceCreamIllocon;
 export const InkQuill3dIllustration = InkQuill3dIllustration.InkQuill3dIllustration;
+export const InkQuillSpotIllustration = InkQuillSpotIllustration.InkQuillSpotIllustration;
 export const KeyRingSpotIllustration = KeyRingSpotIllustration.KeyRingSpotIllustration;
 export const LanternSpotIllustration = LanternSpotIllustration.LanternSpotIllustration;
 export const LaptopSpotIllustration = LaptopSpotIllustration.LaptopSpotIllustration;
@@ -706,7 +713,6 @@ export const NitroDiamondBadgeLargeBadge = NitroDiamondBadgeLargeBadge.NitroDiam
 export const NitroDiamondBadgeSmallBadge = NitroDiamondBadgeSmallBadge.NitroDiamondBadgeSmallBadge;
 export const NitroEmeraldBadgeLargeBadge = NitroEmeraldBadgeLargeBadge.NitroEmeraldBadgeLargeBadge;
 export const NitroEmeraldBadgeSmallBadge = NitroEmeraldBadgeSmallBadge.NitroEmeraldBadgeSmallBadge;
-export const NitroFileUploadSpotIllustration = NitroFileUploadSpotIllustration.NitroFileUploadSpotIllustration;
 export const NitroGoldBadgeLargeBadge = NitroGoldBadgeLargeBadge.NitroGoldBadgeLargeBadge;
 export const NitroGoldBadgeSmallBadge = NitroGoldBadgeSmallBadge.NitroGoldBadgeSmallBadge;
 export const NitroGradientBackgroundAbstractUI = NitroGradientBackgroundAbstractUI.NitroGradientBackgroundAbstractUI;
@@ -715,8 +721,6 @@ export const NitroOpalBadgeLargeBadge = NitroOpalBadgeLargeBadge.NitroOpalBadgeL
 export const NitroOpalBadgeSmallBadge = NitroOpalBadgeSmallBadge.NitroOpalBadgeSmallBadge;
 export const NitroPlatinumBadgeLargeBadge = NitroPlatinumBadgeLargeBadge.NitroPlatinumBadgeLargeBadge;
 export const NitroPlatinumBadgeSmallBadge = NitroPlatinumBadgeSmallBadge.NitroPlatinumBadgeSmallBadge;
-export const NitroRewardsLaptopSpotIllustration = NitroRewardsLaptopSpotIllustration.NitroRewardsLaptopSpotIllustration;
-export const NitroRewardsMouseSpotIllustration = NitroRewardsMouseSpotIllustration.NitroRewardsMouseSpotIllustration;
 export const NitroRocketNameplateAbstractUI = NitroRocketNameplateAbstractUI.NitroRocketNameplateAbstractUI;
 export const NitroRubyBadgeLargeBadge = NitroRubyBadgeLargeBadge.NitroRubyBadgeLargeBadge;
 export const NitroRubyBadgeSmallBadge = NitroRubyBadgeSmallBadge.NitroRubyBadgeSmallBadge;
@@ -738,10 +742,9 @@ export const NitroWumpusOfferingLeft3dIllustration = NitroWumpusOfferingLeft3dIl
 export const NitroWumpusOfferingRight3dIllustration = NitroWumpusOfferingRight3dIllustration.NitroWumpusOfferingRight3dIllustration;
 export const NitroWumpusPinkSpotIllustration = NitroWumpusPinkSpotIllustration.NitroWumpusPinkSpotIllustration;
 export const NitroWumpusThumbsUp3dIllustration = NitroWumpusThumbsUp3dIllustration.NitroWumpusThumbsUp3dIllustration;
-export const NitroWumpusWishlistingSpotIllustration = NitroWumpusWishlistingSpotIllustration.NitroWumpusWishlistingSpotIllustration;
 export const Orb3dIllustration = Orb3dIllustration.Orb3dIllustration;
+export const OrbMultiplierSpotIllustration = OrbMultiplierSpotIllustration.OrbMultiplierSpotIllustration;
 export const OrbNitroCardSpotIllustration = OrbNitroCardSpotIllustration.OrbNitroCardSpotIllustration;
-export const OrbNitroMultiplierSpotIllustration = OrbNitroMultiplierSpotIllustration.OrbNitroMultiplierSpotIllustration;
 export const OrbNitroSpotIllustration = OrbNitroSpotIllustration.OrbNitroSpotIllustration;
 export const PaintIllocon = PaintIllocon.PaintIllocon;
 export const PaintPaletteSpotIllustration = PaintPaletteSpotIllustration.PaintPaletteSpotIllustration;
@@ -755,17 +758,19 @@ export const PotionSpotIllustration = PotionSpotIllustration.PotionSpotIllustrat
 export const PottedPlantIllocon = PottedPlantIllocon.PottedPlantIllocon;
 export const PowerupSpotIllustration = PowerupSpotIllustration.PowerupSpotIllustration;
 export const PrivacyShieldBannerSpotIllustration = PrivacyShieldBannerSpotIllustration.PrivacyShieldBannerSpotIllustration;
-export const PrivacyShieldWithLaptopBannerSpotIllustration = PrivacyShieldWithLaptopBannerSpotIllustration.PrivacyShieldWithLaptopBannerSpotIllustration;
-export const PrivacyShieldWithLaptopSpotIllustration = PrivacyShieldWithLaptopSpotIllustration.PrivacyShieldWithLaptopSpotIllustration;
+export const PrivacyShieldLaptopBannerSpotIllustration = PrivacyShieldLaptopBannerSpotIllustration.PrivacyShieldLaptopBannerSpotIllustration;
+export const PrivacyShieldLaptopSpotIllustration = PrivacyShieldLaptopSpotIllustration.PrivacyShieldLaptopSpotIllustration;
 export const PrivateProfileAbstractUI = PrivateProfileAbstractUI.PrivateProfileAbstractUI;
 export const ProfileEffectsAbstractUI = ProfileEffectsAbstractUI.ProfileEffectsAbstractUI;
 export const PsychicIllocon = PsychicIllocon.PsychicIllocon;
 export const PurchaseDiscountSpotIllustration = PurchaseDiscountSpotIllustration.PurchaseDiscountSpotIllustration;
 export const PuzzleCubeSpotIllustration = PuzzleCubeSpotIllustration.PuzzleCubeSpotIllustration;
-export const QrCodeLoginSpotIllustration = QrCodeLoginSpotIllustration.QrCodeLoginSpotIllustration;
-export const QrCodeSuccessSpotIllustration = QrCodeSuccessSpotIllustration.QrCodeSuccessSpotIllustration;
+export const QrLoginSpotIllustration = QrLoginSpotIllustration.QrLoginSpotIllustration;
+export const QrSuccessSpotIllustration = QrSuccessSpotIllustration.QrSuccessSpotIllustration;
 export const QuestsIllocon = QuestsIllocon.QuestsIllocon;
 export const ReactionsSpotIllustration = ReactionsSpotIllustration.ReactionsSpotIllustration;
+export const RewardsLaptopSpotIllustration = RewardsLaptopSpotIllustration.RewardsLaptopSpotIllustration;
+export const RewardsMouseSpotIllustration = RewardsMouseSpotIllustration.RewardsMouseSpotIllustration;
 export const RocketshipSpotIllustration = RocketshipSpotIllustration.RocketshipSpotIllustration;
 export const RubberDuckSpotIllustration = RubberDuckSpotIllustration.RubberDuckSpotIllustration;
 export const RulebookSpotIllustration = RulebookSpotIllustration.RulebookSpotIllustration;
@@ -835,7 +840,6 @@ export const StreamingTier8LargeBadge = StreamingTier8LargeBadge.StreamingTier8L
 export const StreamingTier8SmallBadge = StreamingTier8SmallBadge.StreamingTier8SmallBadge;
 export const StreamingTier9LargeBadge = StreamingTier9LargeBadge.StreamingTier9LargeBadge;
 export const StreamingTier9SmallBadge = StreamingTier9SmallBadge.StreamingTier9SmallBadge;
-export const StudyGroupsSpotIllustration = StudyGroupsSpotIllustration.StudyGroupsSpotIllustration;
 export const SunIllocon = SunIllocon.SunIllocon;
 export const SwordAndChestSpotIllustration = SwordAndChestSpotIllustration.SwordAndChestSpotIllustration;
 export const SwordAndStoneSpotIllustration = SwordAndStoneSpotIllustration.SwordAndStoneSpotIllustration;
@@ -848,9 +852,8 @@ export const TrafficConeSpotIllustration = TrafficConeSpotIllustration.TrafficCo
 export const TreasureChestBannerSpotIllustration = TreasureChestBannerSpotIllustration.TreasureChestBannerSpotIllustration;
 export const TreasureChestSpotIllustration = TreasureChestSpotIllustration.TreasureChestSpotIllustration;
 export const TrophyIllocon = TrophyIllocon.TrophyIllocon;
-export const TypingIndicatorAbstractUI = TypingIndicatorAbstractUI.TypingIndicatorAbstractUI;
 export const VendingMachineSpotIllustration = VendingMachineSpotIllustration.VendingMachineSpotIllustration;
-export const VibeWithWumpusSpotIllustration = VibeWithWumpusSpotIllustration.VibeWithWumpusSpotIllustration;
+export const VibingWumpusSpotIllustration = VibingWumpusSpotIllustration.VibingWumpusSpotIllustration;
 export const VideoCameraSpotIllustration = VideoCameraSpotIllustration.VideoCameraSpotIllustration;
 export const VoiceFiltersSpotIllustration = VoiceFiltersSpotIllustration.VoiceFiltersSpotIllustration;
 export const WasdSpotIllustration = WasdSpotIllustration.WasdSpotIllustration;
@@ -865,3 +868,4 @@ export const WorldIllocon = WorldIllocon.WorldIllocon;
 export const WumpusCouchSpotIllustration = WumpusCouchSpotIllustration.WumpusCouchSpotIllustration;
 export const WumpusGearSpotIllustration = WumpusGearSpotIllustration.WumpusGearSpotIllustration;
 export const WumpusMahjongSpotIllustration = WumpusMahjongSpotIllustration.WumpusMahjongSpotIllustration;
+export const WumpusWishlistingSpotIllustration = WumpusWishlistingSpotIllustration.WumpusWishlistingSpotIllustration;

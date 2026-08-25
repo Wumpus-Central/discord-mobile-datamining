@@ -4,7 +4,7 @@ import getSystemLocale from "../intl/index.native.tsx";
 import isDiscordFrontendDevelopment from "GlobalUtils.tsx";
 import combinedDefault from "HelpdeskUtils.tsx";
 import messagesProxyDefault from "../modules/premium/premium_group/PremiumGroup.messages.js";
-import tDefault from "../../_runtime/03978_t.js";
+import hooksDefault from "../../_runtime/03979_hooks.js";
 import getPremiumPlanItemAll from "PremiumUtils.tsx";
 import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
 import formatSize from "FileSizeUtils.tsx";
@@ -421,7 +421,7 @@ export const getNextGuildTierFromGuild = function getNextGuildTierFromGuild(id) 
   return BoostedGuildTiers.TIER_1;
 };
 export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(arg0) {
-  let num = tDefault().diff(tDefault(arg0), "months");
+  let num = hooksDefault().diff(hooksDefault(arg0), "months");
   if (num == null) {
     num = 1;
   }
@@ -429,7 +429,7 @@ export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(ar
 };
 export const getUserLevel = function getUserLevel(arg0) {
   let num = 1;
-  obj = tDefault();
+  obj = hooksDefault();
   const keys = Object.keys(table);
   for (const item10021 of keys) {
     let tmp4 = table;
@@ -766,7 +766,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj1;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4304).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4305).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= closure_1_9[arg0]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

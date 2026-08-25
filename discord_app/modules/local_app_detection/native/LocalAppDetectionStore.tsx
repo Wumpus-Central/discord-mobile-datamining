@@ -6,7 +6,7 @@ import closure_4 from "../../../stores/ConsentStore.tsx";
 import { Consents } from "../../../Constants.tsx";
 
 let object = arg1;
-let closure_6 = { detected: false, lastScannedAt: "r" };
+let closure_6 = { detected: false, lastScannedAt: "a" };
 let closure_7 = { apps: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class LocalAppDetectionStore extends DeviceSettingsStore {
@@ -56,7 +56,7 @@ prototype["isAppInstalled"] = function isAppInstalled(nextResult) {
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   const self = this;
   const items = [];
-  const iter = object(13317).ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
+  const iter = object(13179).ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
@@ -74,8 +74,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
     continue;
   }
   if (items.length > 0) {
-    object(13318).detectLocalApps(items);
-    const obj = object(13318);
+    object(13180).detectLocalApps(items);
+    const obj = object(13180);
   }
 };
 prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionComplete(result) {

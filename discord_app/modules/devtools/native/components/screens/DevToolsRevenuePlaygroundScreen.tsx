@@ -2,9 +2,9 @@
 import defaultAreStatesEqual from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../../design/void/native.tsx";
-import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
+import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import serializePurchaseResponse from "../../../../../utils/native/IAPUtils.tsx";
 import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -198,7 +198,7 @@ function FriendAnniversary() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -304,7 +304,7 @@ function FriendAnniversary() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -628,7 +628,7 @@ function FriendAnniversary() {
   return callback3(closure_19, obj9);
 }
 function TrialOfferSheetExample() {
-  let obj = premiumTrialOffer(7456);
+  let obj = premiumTrialOffer(7054);
   premiumTrialOffer = obj.usePremiumTrialOffer();
   obj = {
     label: "Trial Offer Nitro Basic",
@@ -647,9 +647,9 @@ function TrialOfferSheetExample() {
       }
     }
   };
-  items = [closure_17(premiumTrialOffer(6322).TableRow, obj), ];
+  items = [closure_17(premiumTrialOffer(5480).TableRow, obj), ];
   obj = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(6322).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(5480).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -667,7 +667,7 @@ function TrialOfferSheetExample() {
     }
   });
   obj[2] = items;
-  return closure_18(premiumTrialOffer(6317).TableRowGroup, obj);
+  return closure_18(premiumTrialOffer(5873).TableRowGroup, obj);
 }
 function PremiumToggles() {
   let obj = defaultAreStatesEqual;
@@ -711,10 +711,10 @@ function ForceMockIAP() {
   obj[2] = tmp4;
   obj[3] = result;
   obj[4] = function onValueChange(arg0) {
-    callback(15208).toggle("force_mock_iap", arg0);
+    callback(15238).toggle("force_mock_iap", arg0);
     closure_13.persist();
-    const obj = callback(15208);
-    const result = callback2(11009).checkForUpdateAndReload();
+    const obj = callback(15238);
+    const result = callback2(11349).checkForUpdateAndReload();
   };
   return closure_17(TableRowGroupTitle.TableRowGroup, obj);
 }

@@ -2,11 +2,11 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import SCREEN_READER_ENABLED_GETTER from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
-import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import SCREEN_READER_ENABLED_GETTER from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
+import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import NUXGuildTemplatesAnalytics from "../CreateGuildConstants.tsx";
@@ -121,7 +121,7 @@ export default function CreationIntent(arg0) {
   const items3 = [callback2(ref, obj1), , ];
   const obj4 = { style: tmp.sections, children: null };
   const obj5 = { hasIcons: true, children: null };
-  const tmp13 = trigger(11540);
+  const tmp13 = trigger(11891);
   const obj6 = { Icon: null, message: null, onPress: null };
   const tmp14 = AccountAgeTier10LargeBadge;
   if (closure_14) {
@@ -133,8 +133,8 @@ export default function CreationIntent(arg0) {
     };
     const items4 = [tmp8(tmp13, obj6), ];
     const obj7 = { Icon: null, message: null, onPress: null };
-    let tmp12Result = tmp12(11540);
-    obj7[0] = tmp2(5452).WorldIllocon;
+    let tmp12Result = tmp12(11891);
+    obj7[0] = tmp2(6136).WorldIllocon;
     const intl6 = tmp2(1236).intl;
     obj7[1] = intl6.string(tmp2(1236).t.h9Q1lG);
     obj7[2] = function onPress() {
@@ -152,8 +152,8 @@ export default function CreationIntent(arg0) {
     };
     const items5 = [tmp8(tmp13, obj6), ];
     const obj8 = { Icon: null, message: null, onPress: null };
-    tmp12Result = tmp12(11540);
-    obj8[0] = tmp2(5452).ChairIllocon;
+    tmp12Result = tmp12(11891);
+    obj8[0] = tmp2(6136).ChairIllocon;
     const intl4 = tmp2(1236).intl;
     obj8[1] = intl4.string(tmp2(1236).t.uE7zcu);
     obj8[2] = function onPress() {

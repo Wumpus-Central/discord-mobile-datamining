@@ -62,7 +62,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -113,7 +113,7 @@ export default {
                   if (gradientPreset != null) {
                     id = gradientPreset.id;
                   }
-                  const ClientThemeSettings = tmp4(4069).ClientThemeSettings;
+                  const ClientThemeSettings = tmp4(4070).ClientThemeSettings;
                   const setting = ClientThemeSettings.getSetting();
                   let prop;
                   if (setting != null) {
@@ -142,7 +142,7 @@ export default {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
@@ -170,10 +170,10 @@ export default {
             }
             const obj4 = { backgroundGradientPresetId: null, customUserThemeSettings: null };
             obj4[0] = id;
-            let ClientThemeSettings = closure_1_0(4069).ClientThemeSettings;
+            let ClientThemeSettings = closure_1_0(4070).ClientThemeSettings;
             obj4[1] = ClientThemeSettings.getSetting().customUserThemeSettings;
             obj3[1] = obj4;
-            const DeveloperMode = closure_1_0(4069).DeveloperMode;
+            const DeveloperMode = closure_1_0(4070).DeveloperMode;
             obj3[2] = DeveloperMode.getSetting();
           }
           const obj5 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };

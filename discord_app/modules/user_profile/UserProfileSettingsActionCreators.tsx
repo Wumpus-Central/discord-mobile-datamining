@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileSettingsActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import isEqualDefault from "../../../_runtime/04638_isEqual.js";
+import isEqualDefault from "../../../_runtime/04543_isEqual.js";
 import guildHasTag from "../guild_tag/GuildTagUtils.tsx";
 import closure_3 from "../../stores/GuildMemberStore.tsx";
 import closure_4 from "../../stores/UserStore.tsx";
@@ -67,6 +67,19 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       }
       obj.pendingDisplayNameStyles = isEqualDefault(tmp13, displayNameStyles1) ? undefined : displayNameStyles;
       const tmp12 = isEqualDefault;
+    }
+    if ("customTypingIndicatorStyle" in merged) {
+      const customTypingIndicatorStyle = merged.customTypingIndicatorStyle;
+      let tmp17 = customTypingIndicatorStyle;
+      if (customTypingIndicatorStyle == null) {
+        tmp17 = null;
+      }
+      let typingIndicatorStyle = currentUser.typingIndicatorStyle;
+      if (typingIndicatorStyle == null) {
+        typingIndicatorStyle = null;
+      }
+      obj.pendingCustomTypingIndicatorStyle = isEqualDefault(tmp17, typingIndicatorStyle) ? undefined : customTypingIndicatorStyle;
+      const tmp16 = isEqualDefault;
     }
     if ("pronouns" in merged) {
       let pronouns;
@@ -250,17 +263,17 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (accentColor1 == null) {
         accentColor1 = null;
       }
-      let tmp36;
+      let tmp41;
       if (accentColor !== accentColor1) {
-        tmp36 = accentColor;
+        tmp41 = accentColor;
       }
-      obj.pendingAccentColor = tmp36;
+      obj.pendingAccentColor = tmp41;
     }
     if ("themeColors" in merged) {
       if (null != guildId) {
         if (null != merged.themeColors) {
           if (null == merged.themeColors[0]) {
-            let tmp37 = null;
+            let tmp42 = null;
           }
           let themeColors;
           if (userProfile != null) {
@@ -269,7 +282,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
           if (themeColors == null) {
             themeColors = null;
           }
-          if (isEqualDefault(tmp37, themeColors)) {
+          if (isEqualDefault(tmp42, themeColors)) {
             obj.pendingThemeColors = undefined;
           } else {
             obj.pendingThemeColors = merged.themeColors;
@@ -280,7 +293,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (themeColors1 == null) {
         themeColors1 = null;
       }
-      tmp37 = themeColors1;
+      tmp42 = themeColors1;
     }
     if ("bio" in merged) {
       let bio;

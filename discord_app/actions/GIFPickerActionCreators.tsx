@@ -38,7 +38,7 @@ function doSearchRequest(q, arg1, limit) {
     const startTime = obj.startTime;
     const merged = Object.assign(obj, Object.create(null));
     obj = { offset: 0, limit: null, totalResults: body.length };
-    let obj2 = q(10236);
+    let obj2 = q(10087);
     obj = {};
     const analyticsID = closure_1_5.getAnalyticsID();
     const merged1 = Object.assign(obj);
@@ -55,9 +55,9 @@ function doSearchRequest(q, arg1, limit) {
     obj2 = {};
     const merged3 = Object.assign(result);
     const merged4 = Object.assign(obj1);
-    obj2.gif_provider = q(10235).GIF_PROVIDER;
-    callback(5047).trackWithMetadata(closure_1_6.SEARCH_RESULT_VIEWED, obj2);
-    const obj6 = callback(5047);
+    obj2.gif_provider = q(10086).GIF_PROVIDER;
+    callback(4588).trackWithMetadata(closure_1_6.SEARCH_RESULT_VIEWED, obj2);
+    const obj6 = callback(4588);
     const tmp2 = q;
     callback(709).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: q, items: body });
   }, () => {
@@ -261,9 +261,9 @@ export const gifUrlKey = function gifUrlKey(uri) {
   let tmp4 = uri;
   if (null != toURLSafeResult) {
     if (obj2.isAttachmentPathUrl(toURLSafeResult)) {
-      str = tmp5(9122).removeSignedUrlParameters(toURLSafeResult);
+      str = tmp5(9902).removeSignedUrlParameters(toURLSafeResult);
       str = str.toString();
-      const tmp5Result = tmp5(9122);
+      const tmp5Result = tmp5(9902);
     }
     tmp4 = str;
     obj2 = isRefreshableAttachmentUrlAll;

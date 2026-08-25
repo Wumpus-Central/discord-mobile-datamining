@@ -23,18 +23,18 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
       if (null == mediaEngineConnectionId) {
         return null;
       } else {
-        let tmp8Result = tmp8(17151);
+        let tmp8Result = tmp8(17183);
         const accumulatedStatsWithMinDatapoints = tmp8Result.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, currentUserActiveStream.ownerId);
         let tmp6 = null;
         if (null != accumulatedStatsWithMinDatapoints) {
           if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
             obj = { type: null };
-            obj[0] = tmp8(9707).AVError.STREAM_SEND_HIGH_PACKET_LOSS;
-            tmp8Result = tmp8(17148);
-            const merged = Object.assign(tmp8Result.getStreamErrorContext(tmp8(4536).encodeStreamKey(currentUserActiveStream)));
+            obj[0] = tmp8(9317).AVError.STREAM_SEND_HIGH_PACKET_LOSS;
+            tmp8Result = tmp8(17180);
+            const merged = Object.assign(tmp8Result.getStreamErrorContext(tmp8(4446).encodeStreamKey(currentUserActiveStream)));
             const items = [obj];
             const tmp3 = items;
-            const tmp8Result1 = tmp8(4536);
+            const tmp8Result1 = tmp8(4446);
           }
           tmp6 = tmp3;
         }

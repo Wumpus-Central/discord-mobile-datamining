@@ -2,12 +2,12 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
-import useSegmentedControlState from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import generateHydrationId from "../../ICYMIUtils.tsx";
+import useSegmentedControlState from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import SegmentedControl from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/15785_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/15786_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/15787_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/15817_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/15818_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/15819_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -80,7 +80,7 @@ function ContentSettingsControl(initialValue) {
   let num = 0;
   if (generateHydrationId.ICYMICustomScore.LESS !== tmp3) {
     num = 1;
-    if (tmp4(9093).ICYMICustomScore.MORE === tmp3) {
+    if (tmp4(9059).ICYMICustomScore.MORE === tmp3) {
       num = 2;
     }
   }
@@ -122,10 +122,10 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   let obj = id(589);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getCustomGuildScore(id));
-  obj1 = id(9093);
+  obj1 = id(9059);
   const numberToCustomScoreResult = obj1.numberToCustomScore(stateFromStores);
   c1 = numberToCustomScoreResult;
-  const tmp5 = numberToCustomScoreResult === id(9093).ICYMICustomScore.MUTED;
+  const tmp5 = numberToCustomScoreResult === id(9059).ICYMICustomScore.MUTED;
   const items1 = [id];
   const items2 = [numberToCustomScoreResult, id];
   const callback = React.useCallback((arg0) => {
@@ -155,12 +155,12 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   obj = { variant: "text-sm/semibold", color: "text-default", children: null };
   const intl = id(1236).intl;
   obj[2] = intl.string(id(1236).t.Clq6km);
-  const items3 = [callback2(id(4739).Text, obj), , , , ];
+  const items3 = [callback2(id(4376).Text, obj), , , , ];
   obj = { variant: "text-xs/normal", color: "text-default", children: null };
   const intl2 = id(1236).intl;
   obj1 = { guildName: guild.name };
   obj[2] = intl2.format(id(1236).t["0DhU2P"], obj1);
-  items3[1] = callback2(id(4739).Text, obj);
+  items3[1] = callback2(id(4376).Text, obj);
   let tmp11Result = null;
   if (!tmp5) {
     const obj2 = { style: null, children: null };
@@ -181,12 +181,12 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   const obj6 = { value: !tmp5, onValueChange: callback, label: null, start: true, end: true };
   const intl3 = tmp(1236).intl;
   obj6[2] = intl3.string(id(1236).t.oujX73);
-  obj5[1] = callback2(id(7216).TableSwitchRow, obj6);
+  obj5[1] = callback2(id(5874).TableSwitchRow, obj6);
   items3[3] = callback2(View, obj5);
   const obj7 = { variant: "text-xs/normal", color: "text-muted", style: tmp8.warningText, children: null };
   const intl4 = tmp(1236).intl;
   obj7[3] = intl4.string(id(1236).t.vRVs07);
-  items3[4] = callback2(id(4739).Text, obj7);
+  items3[4] = callback2(id(4376).Text, obj7);
   obj4[0] = items3;
   return closure_9(View, obj4);
 };

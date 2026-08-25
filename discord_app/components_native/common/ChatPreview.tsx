@@ -6,8 +6,8 @@ import Text from "../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../design/void/Pressables/native/Pressables.tsx";
 import setOptionsDefault from "../../modules/messages/native/renderer/RowGenerator.tsx";
 import getPreviousMessagesDefault from "../../modules/messages/native/renderer/ChatManager.tsx";
-import DCDChatListDefault from "../../modules/chat/native/Chat.android.tsx";
 import GuildNSFWDefault from "../warnings/GuildNSFW.tsx";
+import DCDChatListDefault from "../../modules/chat/native/Chat.android.tsx";
 import ChannelSpoilerDefault from "../../modules/spoiler_channels/native/ChannelSpoiler.tsx";
 import importAllResult from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
@@ -91,7 +91,7 @@ class ChatPreviewBase extends PureComponent {
           let arr = items;
           const first = items[0];
           if (null != first) {
-            if (messages(11178)(c0, first[first.length - 1], props)) {
+            if (messages(11520)(c0, first[first.length - 1], props)) {
               items = [props];
               arr = arr.unshift(items);
             } else {
@@ -115,7 +115,7 @@ class ChatPreviewBase extends PureComponent {
             isSameDayResult = null == timestamp;
           }
           if (!isSameDayResult) {
-            let obj = _undefined(4066);
+            let obj = _undefined(4067);
             isSameDayResult = obj.isSameDay(tmp.timestamp, timestamp);
           }
           let flag = false;
@@ -195,9 +195,9 @@ class ChatPreviewBase extends PureComponent {
             obj4[0] = roleStyle;
             obj4[1] = closure_1_12.DAY;
             obj4[2] = dependencyMap;
-            obj4[3] = _undefined(4066).dateFormat(tmp.timestamp, "LL");
+            obj4[3] = _undefined(4067).dateFormat(tmp.timestamp, "LL");
             arr.push(obj4);
-            const obj8 = _undefined(4066);
+            const obj8 = _undefined(4067);
           }
         });
         for (const item10042 of items1) {
@@ -214,7 +214,7 @@ class ChatPreviewBase extends PureComponent {
         const jumpTargetId = tmp3.jumpTargetId;
         let tmp23;
         if (!tmp7) {
-          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "PX_16", shouldInitialScroll: "Array", animated: "+1 809", scrollPosition: "+1 829", focusTargetId: "+1 849" };
+          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "PX_16", shouldInitialScroll: "Array", animated: "4.8.0", scrollPosition: null, focusTargetId: 60 };
           obj[0] = tmp22;
           obj[1] = jumpTargetId;
           obj[2] = jumpTargetId;
@@ -267,7 +267,7 @@ class ChatPreviewBase extends PureComponent {
         }
       }
       let obj = applyArgumentsResult(closure_1_3[21]);
-      obj = { allowWithinModal: true, chatInputRef: "a", handleTransitionToThread: "Array", message: 0, messageChannel: "asc", selectedChannelId: "asc", tapLinkData: "CHANNEL_ACK" };
+      obj = { allowWithinModal: true, chatInputRef: "a", handleTransitionToThread: "Array", message: 0, messageChannel: "asc", selectedChannelId: "asc", tapLinkData: "isInRestrictedHours" };
       obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
         const jumpToChatProps = props.props.jumpToChatProps;
         const onBeforeJumpToMessage = jumpToChatProps.onBeforeJumpToMessage;
@@ -502,7 +502,7 @@ prototype["render"] = function render() {
   const obj2 = { bottom: true, style: tmp.jumpToChatButtonContainer, children: null };
   tmp9Result = set;
   obj2[2] = callback(PressableBase.PressableOpacity, { accessibilityRole: "button", style: tmp.jumpToChatButton, onPress: self.handleJumpToChat, children: callback(Text.Text, obj4) });
-  tmp6Result = tmp6(tmp9(6840).SafeAreaPaddingView, obj2);
+  tmp6Result = tmp6(tmp9(5434).SafeAreaPaddingView, obj2);
   tmp14 = tmp6Result;
 };
 ChatPreviewBase.contextType = require("ManaContext").ThemeContext;
@@ -512,11 +512,11 @@ let result = require("set").fileFinishedImporting("components_native/common/Chat
 
 export const ChatPreview = function ChatPreview(channelId) {
   channelId = channelId.channelId;
-  const InlineAttachmentMedia = channelId(4069).InlineAttachmentMedia;
+  const InlineAttachmentMedia = channelId(4070).InlineAttachmentMedia;
   const setting = InlineAttachmentMedia.useSetting();
-  const InlineEmbedMedia = channelId(4069).InlineEmbedMedia;
+  const InlineEmbedMedia = channelId(4070).InlineEmbedMedia;
   const setting1 = InlineEmbedMedia.useSetting();
-  const RenderEmbeds = channelId(4069).RenderEmbeds;
+  const RenderEmbeds = channelId(4070).RenderEmbeds;
   const setting2 = RenderEmbeds.useSetting();
   let obj = channelId(589);
   const items = [closure_6];
@@ -524,10 +524,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [closure_8];
   const stateFromStores1 = channelId(589).useStateFromStores(items1, () => closure_1_8.getChannel(channelId));
   const obj2 = channelId(589);
-  const isChannelSpoilerGated = channelId(5272).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(5272);
-  const isChannelContentGated = channelId(5257).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(5257);
+  const isChannelSpoilerGated = channelId(6053).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6053);
+  const isChannelContentGated = channelId(4619).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4619);
   const items2 = [closure_7];
   obj = {};
   const stateFromStores2 = channelId(589).useStateFromStores(items2, () => null != content.getContent());

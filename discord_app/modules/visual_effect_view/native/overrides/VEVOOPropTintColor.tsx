@@ -44,7 +44,7 @@ const memoResult = importAllResult.memo(function VEVOOPropTintColor() {
     let hexToRgbaStringResult;
     if (null != tintColorOverrideHex) {
       if (null != tintColorOverrideOpacity) {
-        let obj = closure_1_0(4227);
+        let obj = closure_1_0(4228);
         hexToRgbaStringResult = obj.hexToRgbaString(tintColorOverrideHex, tintColorOverrideOpacity);
       }
     }
@@ -66,7 +66,7 @@ const memoResult = importAllResult.memo(function VEVOOPropTintColor() {
       closure_1_7(obj);
     }
   }, []);
-  obj = { style: items, labelStyle: visualEffectViewOverrideSharedStyles.zeroHeight, leadingStyle: visualEffectViewOverrideSharedStyles.enabledSwitchStyle, leading: callback2(tmp2(7217).FormSwitch, obj), subLabel: null, disabled: null, onPress: null };
+  obj = { style: items, labelStyle: visualEffectViewOverrideSharedStyles.zeroHeight, leadingStyle: visualEffectViewOverrideSharedStyles.enabledSwitchStyle, leading: callback2(tmp2(5875).FormSwitch, obj), subLabel: null, disabled: null, onPress: null };
   items = [visualEffectViewOverrideSharedStyles.zeroPaddingVertical];
   obj = {
     value: tmp7,
@@ -95,7 +95,7 @@ const memoResult = importAllResult.memo(function VEVOOPropTintColor() {
   const ref = obj1.useRef(first1);
   const tmp14 = closure_10;
   const tmp15 = closure_9;
-  obj2[3] = callback2(first(15259), {
+  obj2[3] = callback2(first(15289), {
     disabled: !tmp7,
     initialValue: obj1.useRef(first1),
     onValueChange(arg0) {
@@ -108,7 +108,7 @@ const memoResult = importAllResult.memo(function VEVOOPropTintColor() {
   obj[5] = !tmp7;
   obj[6] = function onPress() {
     const obj = { color: null, onSelect: null };
-    const tmp = first(14077);
+    const tmp = first(14112);
     obj[0] = closure_1_0(688).hex2int(first);
     obj[1] = function onSelect(color) {
       callback(closure_1_0(closure_1_2[13]).int2hex(color), closure_3);

@@ -1,6 +1,6 @@
 // discord_app/modules/games/hooks/useGetGameForAppId.tsx
-import importDefaultResult1 from "useGame.tsx";
 import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
+import importDefaultResult1 from "useGame.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../GameStore.tsx";
 import { importDefaultResult1 } from "useGame.tsx";
@@ -29,7 +29,7 @@ export default function useGetGameForAppId(applicationId) {
   return obj;
 };
 export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStoresArray) {
-  const tmp = memo(7183)(stateFromStoresArray);
+  const tmp = memo(5840)(stateFromStoresArray);
   const _require = tmp;
   const items = [tmp];
   memo = React.useMemo(() => {

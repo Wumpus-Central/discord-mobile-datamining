@@ -156,8 +156,8 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
     const channels = closure_1_6.getChannels(guild.id);
     const result = guild(closure_1_2[30]).handleOpenInviteActionsheet(guild, channelId, channels, closure_1_11.GUILD_HEADER);
   });
-  const shouldShowInvitesDisabledNotif = guild(11594).useShouldShowInvitesDisabledNotif(guild);
-  const obj2 = guild(11594);
+  const shouldShowInvitesDisabledNotif = guild(11940).useShouldShowInvitesDisabledNotif(guild);
+  const obj2 = guild(11940);
   const tmp5 = useEventsButtonPropsDefault(guild);
   obj = { guildId: guild.id, canInvite: stateFromStores, invitesDisabled: shouldShowInvitesDisabledNotif, onInvitePress: tmp2, onEventsPress: tmp5.handlePress, onEventsLongPress: tmp5.handleLongPress, hasUnreadEvents: tmp5.hasUnread, useEventsButton: null, useButtonComponent: null };
   if (flag2) {

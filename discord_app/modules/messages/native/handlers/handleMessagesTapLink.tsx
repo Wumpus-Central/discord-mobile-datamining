@@ -7,7 +7,7 @@ import parseQueryDefault from "../../../../utils/native/parseURL.tsx";
 import str2 from "../../../push_notifications/PushNotificationConstants.tsx";
 import getIndexKey from "../../../application_commands/ApplicationCommandIndexStore.tsx";
 import isLinkTrusted from "../../../../utils/MaskedLinkUtils.tsx";
-import _mod9133 from "../../../game_profile/GameProfileActionCreators.native.tsx";
+import _mod9425 from "../../../game_profile/GameProfileActionCreators.native.tsx";
 import GameProfileEmbedAction from "../../../game_profile/GameProfileAnalyticUtils.tsx";
 import isAlertOrActionSheetOpen from "../../../../components_native/chat/isAlertOrActionSheetOpen.tsx";
 import isLinkTrusted2 from "../../../markup/MarkupReactLinkUtils.tsx";
@@ -41,11 +41,11 @@ function handleMessagesTapURLLink(data, channelId) {
             invite = invite.getInvite(payload.inviteCode);
             let num = null == invite;
             if (!num) {
-              num = !tmp2(4373).isGuildScheduledEventInviteEmbed(invite);
-              const tmp2Result = tmp2(4373);
+              num = !tmp2(7339).isGuildScheduledEventInviteEmbed(invite);
+              const tmp2Result = tmp2(7339);
             }
             if (!num) {
-              tmp4(10840)(invite);
+              tmp4(11164)(invite);
               num = 0;
             }
             flag2 = !num;
@@ -78,9 +78,9 @@ function handleMessagesTapURLLink(data, channelId) {
         obj = { shouldOpenGameProfile: true, gameId: null };
         obj[1] = gameId;
         obj[3] = obj;
-        _mod9133.default.openGameProfileModal(obj);
+        _mod9425.default.openGameProfileModal(obj);
         flag3 = true;
-        const _default = _mod9133.default;
+        const _default = _mod9425.default;
       }
       flag2 = flag3;
     }
@@ -90,8 +90,8 @@ function handleMessagesTapURLLink(data, channelId) {
       obj1[0] = data.url;
       let isLinkTrustedResult = null != data.node;
       if (isLinkTrustedResult) {
-        isLinkTrustedResult = tmp19(10839).isLinkTrusted(data.node);
-        const tmp19Result = tmp19(10839);
+        isLinkTrustedResult = tmp19(11163).isLinkTrusted(data.node);
+        const tmp19Result = tmp19(11163);
       }
       obj1[1] = isLinkTrustedResult;
       obj1[2] = data.messageId;

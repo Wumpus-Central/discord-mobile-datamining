@@ -1,7 +1,7 @@
 // discord_app/modules/group_dm/native/ChatGDMCustomizeActionSheet.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import useNavigatorConfirmChangesOnBackDefault from "../../main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx";
-import _modDef9969 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
+import _modDef9827 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
@@ -20,5 +20,5 @@ export default function ChatGDMCustomizeActionSheet(channelId) {
   obj[2] = function render() {
     return closure_1_3(_undefined(_undefined2[5]), { ref: _undefined2, onFinish: _undefined, channelId });
   };
-  return jsx(_modDef9969, { screenKey: "kick", title: null, render: null });
+  return jsx(_modDef9827, { screenKey: "kick", title: null, render: null });
 };

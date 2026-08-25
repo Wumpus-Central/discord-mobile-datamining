@@ -40,7 +40,7 @@ function _withErrorHandling() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -198,7 +198,7 @@ export default {
     closure_1 = arg1;
     return callback(function*() {
       closure_0 = tmp4;
-      const obj2 = v0(7550);
+      const obj2 = v0(7368);
       yield obj2.unarchiveThreadIfNecessary(closure_1_0);
       const HTTP = closure_1_0(530).HTTP;
       const obj3 = { url: null, body: null, rejectWithError: null };
@@ -242,7 +242,7 @@ export default {
       obj1[1] = closure_1_1;
       closure_1_1(709).dispatch(obj1);
       dependencyMap = 1;
-      const obj13 = closure_1_1(7550);
+      const obj13 = closure_1_1(7368);
       yield obj13.searchThreads(closure_1_0, closure_1_1, dependencyMap, c3, c4);
       if (1 === tmp7) {
         dependencyMap = 0;
@@ -260,8 +260,8 @@ export default {
         obj4[0] = length;
         obj4[1] = closure_1;
         obj4[2] = length.length;
-        closure_1_0(7552).trackForumSearched(obj4);
-        const obj7 = closure_1_0(7552);
+        closure_1_0(7370).trackForumSearched(obj4);
+        const obj7 = closure_1_0(7370);
         const obj5 = { type: "FORUM_SEARCH_SUCCESS", channelId: null, threadIds: null };
         obj5[1] = closure_1;
         obj5[2] = length;

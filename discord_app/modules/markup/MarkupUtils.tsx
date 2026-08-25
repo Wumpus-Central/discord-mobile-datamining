@@ -181,11 +181,11 @@ obj.parse = function parse() {
 };
 obj.parseTopic = function parseTopic(topic, arg1, arg2) {
   const merged = Object.assign(arg2);
-  return callback15()(topic, arg1, { allowLinks: true }, arg3);
+  return callback15()(topic, arg1, { allowLinks: true, allowGameMentions: true, shouldFetchGameMentionData: true }, arg3);
 };
 obj.parseTruncatedTopic = function parseTruncatedTopic(arg0, arg1, arg2, arg3) {
   const merged = Object.assign(arg2);
-  return callback16()(arg0, arg1, { allowLinks: true }, arg3);
+  return callback16()(arg0, arg1, { allowLinks: true, allowGameMentions: true, shouldFetchGameMentionData: true }, arg3);
 };
 obj.parseVoiceChannelStatus = function parseVoiceChannelStatus(gameMentionsAsPlainText, arg1, arg2) {
   const items = [...arguments];

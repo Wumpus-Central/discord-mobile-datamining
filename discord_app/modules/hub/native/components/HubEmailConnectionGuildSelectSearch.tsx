@@ -4,8 +4,8 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import HeaderBackImage from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _modDef7374 from "../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx";
-import registerAssetDefault from "../../../../../_runtime/11970_registerAsset.js";
+import _modDef6100 from "../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx";
+import registerAssetDefault from "../../../../../_runtime/12298_registerAsset.js";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
@@ -78,7 +78,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   obj1[2] = function onClose() {
 
   };
-  obj[1] = callback2(_modDef7374, obj1);
+  obj[1] = callback2(_modDef6100, obj1);
   const items = [callback2(HeaderBackImage.FauxHeader, obj), ];
   obj2 = {
     keyboardShouldPersistTaps: "always",
@@ -113,7 +113,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -200,7 +200,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
     style: tmp.scrollContainer,
     contentContainerStyle: obj3
   };
-  const tmp8Result = _modDef7374;
+  const tmp8Result = _modDef6100;
   items[1] = callback2(anyErrorMessage, obj2);
   obj[0] = items;
   return callback3(closure_12, obj);

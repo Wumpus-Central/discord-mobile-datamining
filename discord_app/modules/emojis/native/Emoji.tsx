@@ -31,9 +31,9 @@ export default function Emoji(arg0) {
         obj[1] = fastImageStyle;
         const tmp10 = preloadDefault;
         if (tmpResult.isThemeDark(theme.theme)) {
-          let tmp9Result = tmp9(6969);
+          let tmp9Result = tmp9(5467);
         } else {
-          tmp9Result = tmp9(6970);
+          tmp9Result = tmp9(5468);
         }
         obj[2] = tmp9Result;
         obj1 = { uri: null };

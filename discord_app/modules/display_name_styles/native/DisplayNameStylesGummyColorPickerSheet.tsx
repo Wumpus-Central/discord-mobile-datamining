@@ -6,35 +6,34 @@ import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndica
 import { DISPLAY_NAME_STYLES_GUMMY_PRESETS as closure_7 } from "../DisplayNameStylesConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import items from "../DisplayNameStylesUtils.tsx";
+import set from "../DisplayNameStylesUtils.tsx";
 import closure_11 from "../../../index.native.tsx";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
 ({ View: c5, Pressable: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-items = { body: null, colorRowInset: null, optionContainer: null, swatchWrapper: null, swatch: null, swatchSelected: null, customSwatchEmpty: null, customIconOverlay: null, customIconScrim: null };
-items = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16, alignItems: "center" };
-items[0] = items;
+set = { body: null, colorRowInset: null, optionContainer: null, swatchWrapper: null, swatch: null, swatchSelected: null, customSwatchEmpty: null, customIconOverlay: null, customIconScrim: null };
+set = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16, alignItems: "center" };
+set[0] = set;
 createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_4, alignSelf: "stretch" };
-items[1] = createCacheKey;
-items[2] = { flexDirection: "row", flexWrap: "wrap" };
-items[3] = { width: "25%", padding: 2 };
-items[4] = { height: 40, flexDirection: "row", borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 2, borderColor: "transparent" };
+set[1] = createCacheKey;
+set[2] = { flexDirection: "row", flexWrap: "wrap" };
+set[3] = { width: "25%", padding: 2 };
+set[4] = { height: 40, flexDirection: "row", borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 2, borderColor: "transparent" };
 let obj2 = { height: 40, flexDirection: "row", borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 2, borderColor: "transparent" };
-items[5] = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
+set[5] = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
 let obj3 = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
-items[6] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_NORMAL };
+set[6] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_NORMAL };
 let obj5 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj5.alignItems = "center";
 obj5.justifyContent = "center";
-items[7] = obj5;
+set[7] = obj5;
 let obj4 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_NORMAL };
-items[8] = { width: 28, height: 28, borderRadius: ThemesDefault.radii.round, backgroundColor: "transparent", alignItems: "center", justifyContent: "center" };
-let closure_12 = createCacheKey.createStyles(items);
-let obj6 = { width: 28, height: 28, borderRadius: ThemesDefault.radii.round, backgroundColor: "transparent", alignItems: "center", justifyContent: "center" };
-let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesGummyColorPickerSheet.tsx");
+set[8] = { width: 28, height: 28, borderRadius: ThemesDefault.radii.round, backgroundColor: "transparent", alignItems: "center", justifyContent: "center" };
+let closure_12 = createCacheKey.createStyles(set);
+let result = set.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesGummyColorPickerSheet.tsx");
 
 export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   selectedColors = selectedColors.selectedColors;
@@ -49,7 +48,7 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   let callback2;
   const tmp = callback3();
   dependencyMap = tmp;
-  let obj = selectedColors(9494);
+  let obj = selectedColors(9620);
   let tmp5 = selectedColors.length > 0;
   const displayNameStylesEffectConfig = obj.useDisplayNameStylesEffectConfig(selectedColors(1935).DisplayNameEffect.GUMMY);
   if (tmp5) {
@@ -77,7 +76,7 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   }), 2);
   first1 = tmp9[0];
   closure_7 = tmp9[1];
-  const tmp12Result = onSelectColors(14760)(selectedColors(1935).DisplayNameEffect.GUMMY);
+  const tmp12Result = onSelectColors(14790)(selectedColors(1935).DisplayNameEffect.GUMMY);
   const findIndexResult = tmp12Result.findIndex((colors) => selectedColors(closure_2[11]).areArraysShallowEqual(colors.colors, first1));
   c8 = findIndexResult;
   let items = [first];
@@ -118,8 +117,8 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   const intl = tmp2(1236).intl;
   obj1[2] = intl.string(selectedColors(1236).t.XqMe3N);
   obj1[3] = callback2;
-  obj[1] = callback2(selectedColors(4750).Button, obj1);
-  obj[0] = callback2(selectedColors(6987).BottomSheetTitleHeader, obj);
+  obj[1] = callback2(selectedColors(4815).Button, obj1);
+  obj[0] = callback2(selectedColors(5502).BottomSheetTitleHeader, obj);
   let obj2 = { style: tmp.body, children: null };
   const obj3 = { style: items2, children: null };
   items2 = [, ];
@@ -141,14 +140,14 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   } else {
     const obj7 = { colors: null };
     obj7[0] = first1;
-    tmp18Result = tmp18(tmp11(14103), obj7);
+    tmp18Result = tmp18(tmp11(14135), obj7);
   }
   const items4 = [tmp18Result, ];
   const obj8 = { style: tmp.customIconOverlay, pointerEvents: "none", children: null };
   tmp11 = onSelectColors;
-  const tmp12 = onSelectColors(14760);
+  const tmp12 = onSelectColors(14790);
   const tmp21 = first1;
-  obj8[2] = callback2(closure_5, { style: tmp.customIconScrim, children: callback2(selectedColors(9964).PencilIcon, { color: "white", size: "sm" }) });
+  obj8[2] = callback2(closure_5, { style: tmp.customIconScrim, children: callback2(selectedColors(9822).PencilIcon, { color: "white", size: "sm" }) });
   items4[1] = callback2(closure_5, obj8);
   obj5[5] = items4;
   obj4[1] = closure_10(tmp21, obj5);
@@ -183,8 +182,8 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   const intl3 = tmp2(1236).intl;
   obj10[0] = intl3.string(selectedColors(1236).t.yBZMsQ);
   obj10[1] = callback1;
-  items6[1] = callback2(selectedColors(4750).Button, obj10);
+  items6[1] = callback2(selectedColors(4815).Button, obj10);
   obj2[1] = items6;
   obj[1] = closure_10(closure_5, obj2);
-  return callback2(selectedColors(6988).BottomSheet, obj);
+  return callback2(selectedColors(5503).BottomSheet, obj);
 };

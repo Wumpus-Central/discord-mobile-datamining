@@ -81,11 +81,11 @@ export default function GuildSettingsRoleEditPermission(guild) {
       obj.openLazy(guild(closure_1_3[16])(closure_1_3[15], closure_1_3.paths), "role-permission-templates-" + guild.id + "-" + role.id, obj);
     };
     obj[2] = intl.format(guild(1236).t.ZhSOBy, obj1);
-    tmp18Result = tmp18(guild(4739).Text, obj);
+    tmp18Result = tmp18(guild(4376).Text, obj);
   }
   tmp18Result = tmp18(tmp19, { children: tmp18Result });
   canResult = applyOverwritesAll.can(obj);
-  const guildPermissionSpec = role(16144).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(16176).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -98,12 +98,12 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(16944), { role }), , , ];
-  const tmp14Result = role(16144);
+  const children = [closure_14(role(16976), { role }), , , ];
+  const tmp14Result = role(16176);
   const tmp24 = mapped1.length > 0;
   const tmp25 = closure_16;
   const tmp26 = closure_15;
-  children[1] = closure_14(closure_6, { children: closure_14(guild(7375).SearchField, obj3) });
+  children[1] = closure_14(closure_6, { children: closure_14(guild(6101).SearchField, obj3) });
   children[2] = tmp18Result;
   if (tmp24) {
     const obj4 = { sections: null, stickySectionHeadersEnabled: false, renderItem: null, renderSectionHeader: null, SectionSeparatorComponent: null, ItemSeparatorComponent: null, keyExtractor: null, keyboardDismissMode: "on-drag", contentContainerStyle: null };
@@ -176,7 +176,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
     let tmp18Result1 = tmp18(closure_8, obj4);
   } else {
     let obj5 = { Illustration: null, style: null, bodyStyle: null, body: null };
-    obj5[0] = tmp27(8904).NoResultsAlt;
+    obj5[0] = tmp27(9161).NoResultsAlt;
     ({ emptyState: obj10[1], emptyStateText: obj10[2] } = tmp);
     const intl2 = tmp27(1236).intl;
     const obj6 = { query: null };

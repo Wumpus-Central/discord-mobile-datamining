@@ -31,7 +31,7 @@ export default function useFetchShareEmbed(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -56,7 +56,7 @@ export default function useFetchShareEmbed(arg0) {
                   c4 = 3;
                   c5 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = closure_2_0(11094).unfurlEmbedUrl(items);
+                  obj1[0] = closure_2_0(11436).unfurlEmbedUrl(items);
                   return obj1;
                 } else {
                   c5 = 3;

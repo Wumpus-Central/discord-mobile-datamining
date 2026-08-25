@@ -1,7 +1,7 @@
 // discord_app/modules/storefront/StorefrontUtils.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
-import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
 import StorefrontPromotionRewardType from "StorefrontTypes.tsx";
+import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import closure_4 from "../user_settings/LocaleStore.tsx";
 import closure_5 from "../../stores/UserStore.tsx";
@@ -79,7 +79,7 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "isArray", purchaseType: "exhalar", storeHasPrice: "inhalar" };
+    obj = { userPrice: "r", pricesForPurchaseType: "disabled", purchaseType: "", storeHasPrice: "" };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;
@@ -375,7 +375,7 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "isArray", purchaseType: "exhalar", storeHasPrice: "inhalar" };
+    obj = { userPrice: "r", pricesForPurchaseType: "disabled", purchaseType: "", storeHasPrice: "" };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;

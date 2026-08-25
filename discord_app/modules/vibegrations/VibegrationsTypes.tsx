@@ -20,6 +20,13 @@ export const isProjectPublic = function isProjectPublic(project) {
   }
   return num & frozen.PUBLIC;
 };
+export const isProjectShared = function isProjectShared(flags) {
+  let num = flags.flags;
+  if (num == null) {
+    num = 0;
+  }
+  return num & frozen.SHAREABLE;
+};
 export const projectSupportsVisibility = function projectSupportsVisibility(project) {
   return null != project.flags;
 };

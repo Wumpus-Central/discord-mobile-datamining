@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelVideoRenderer.tsx
-import _modDef12506 from "../../../video_calls/native/components/DCDVideoRenderer.tsx";
+import _modDef10789 from "../../../video_calls/native/components/DCDVideoRenderer.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { PixelRatio } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -19,7 +19,7 @@ const MODE_CHANGE_PHYSICS = VoicePanelModes.MODE_CHANGE_PHYSICS;
 let c13 = 25;
 let c14 = 0.05;
 let c15 = 0.0075;
-let closure_16 = importDefaultResult.createAnimatedComponent(_modDef12506);
+let closure_16 = importDefaultResult.createAnimatedComponent(_modDef10789);
 function getScaleChangeWithOverscroll(arg0, arg1, arg2) {
   if (arg0 >= arg2) {
     return arg1;

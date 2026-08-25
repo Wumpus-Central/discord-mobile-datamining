@@ -1,6 +1,6 @@
 // discord_app/design/void/CloseIcon/native/CloseIcon.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import inlineStyles from "../../../../../_runtime/06607_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07985_inlineStyles.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;

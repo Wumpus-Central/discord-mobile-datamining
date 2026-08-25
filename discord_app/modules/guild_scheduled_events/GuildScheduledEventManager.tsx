@@ -1,6 +1,6 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import _modDef8820 from "GuildScheduledEventsActionCreators.tsx";
+import _modDef9087 from "GuildScheduledEventsActionCreators.tsx";
 import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_3 from "../../stores/SelectedGuildStore.tsx";
 import closure_4 from "GuildScheduledEventStore.tsx";
@@ -35,7 +35,7 @@ function _getGuildEventsForCurrentUser() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -180,7 +180,7 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
   })();
 };
 prototype["getGuildEventUsers"] = function getGuildEventUsers(id, arg1, guild_id) {
-  return _modDef8820.fetchUsersForGuildEvent(id, arg1, guild_id);
+  return _modDef9087.fetchUsersForGuildEvent(id, arg1, guild_id);
 };
 prototype["getGuildEventsForCurrentUser"] = function getGuildEventsForCurrentUser(arg0) {
   return getGuildEventsForCurrentUser(arg0);
@@ -199,7 +199,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {
@@ -238,7 +238,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
             }
             let num8 = 3;
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else if (1 === tmp4) {
           let tmp11 = closure_4;
@@ -349,7 +349,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {
@@ -381,7 +381,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
             }
             let num14 = 3;
             c9 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else if (1 === tmp4) {
           let tmp25 = closure_7;

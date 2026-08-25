@@ -4,7 +4,7 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import apexExperiment from "../../../parent_tools/FamilyCenterV3Experiment.tsx";
 import useUserIdsForLinkStatus from "../../../parent_tools/hooks/useUserLinks.tsx";
 import useUserIsTeenAgeGroupDefault from "../../../parent_tools/hooks/useUserIsTeenAgeGroup.tsx";
-import _modDef14889 from "../../../../actions/NotificationActionCreators.tsx";
+import _modDef14919 from "../../../../actions/NotificationActionCreators.tsx";
 import closure_3 from "../../../../stores/NotificationSettingsStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
@@ -24,7 +24,7 @@ createToggle = {
     return initialize.useStateFromStores(items, () => obj.screenDowntimeReminder);
   },
   onValueChange(screenDowntimeReminder) {
-    return _modDef14889.setScreenDowntimeReminder(screenDowntimeReminder);
+    return _modDef14919.setScreenDowntimeReminder(screenDowntimeReminder);
   },
   usePredicate() {
     let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });

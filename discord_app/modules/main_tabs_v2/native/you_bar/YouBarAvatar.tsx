@@ -182,7 +182,7 @@ function YouBarAvatarLarge(transitionState) {
     obj4[0] = obj5;
     obj2[2] = closure_22(sharedValue1, obj4);
     const items6 = [closure_22(tmp23Result, obj2), , , ];
-    const obj6 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "xxs" };
+    const obj6 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "M19.3146 0L0 19.4029V46.6865L19.3146 65.9999L38.6293 46.5969V19.388L19.3146 0ZM28.972 42.6566L19.3146 52.3432L9.65732 42.6566V23.388L19.3146 13.6865L28.972 23.388V42.6566Z" };
     obj6[0] = stateFromStores;
     obj6[2] = closure_11;
     if (OFFLINE === StatusTypes.UNKNOWN) {
@@ -392,7 +392,7 @@ const memoResult = importAllResult.memo(function YouBarAvatarAnimated(isLargeAva
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -428,7 +428,7 @@ const memoResult = importAllResult.memo(function YouBarAvatarAnimated(isLargeAva
           arg1.openUserSettings();
           callback(false);
           paths = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp12) {
         paths = tmp;

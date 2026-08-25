@@ -3,9 +3,9 @@ import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
 import isPremiumGiftingSupported from "../../device/BillingPlatformUtils.tsx";
+import updateProductDefault from "../../../stores/native/IAPStore.android.tsx";
 import getProductOrbPrice from "../utils/CollectiblesProductUtils.tsx";
 import getItemRecordsFromPurchases from "../CollectiblesUtils.tsx";
-import updateProductDefault from "../../../stores/native/IAPStore.android.tsx";
 import BalanceWidgetMode from "../../virtual_currency/types.tsx";
 import metadataDefault from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon.png.js";
 
@@ -142,7 +142,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
         result = null;
       }
     } else {
-      let tmp7Result = tmp7(5318);
+      let tmp7Result = tmp7(7160);
       result = tmp7Result.extractPriceByPurchaseTypes(googleSkuIds, DEFAULT);
     }
     if (null == result) {
@@ -150,7 +150,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
     } else if (null != result.priceString) {
       let priceString = result.priceString;
     } else {
-      tmp7Result = tmp7(5321);
+      tmp7Result = tmp7(5962);
       priceString = tmp7Result.formatPrice(result.amount, result.currency);
     }
   }

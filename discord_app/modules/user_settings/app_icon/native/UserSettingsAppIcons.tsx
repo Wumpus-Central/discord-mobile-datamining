@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx
 import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
-import _modDef9535 from "../../../premium/components/native/NitroUpsellButton.tsx";
+import _modDef9658 from "../../../premium/components/native/NitroUpsellButton.tsx";
 import BackwardsCompatibleAppIconRowsDefault from "../../../app_icons/native/AppIconRows.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -34,7 +34,7 @@ const memoResult = importAllResult.memo(() => {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -56,7 +56,7 @@ const memoResult = importAllResult.memo(() => {
                     if (v0 !== id) {
                       if (tmp27) {
                         if (!dependencyMap) {
-                          let obj4 = v0(8510);
+                          let obj4 = v0(8518);
                           obj1 = { initialUpsellKey: null, imageSource: null };
                           obj1[0] = closure_1_6.APP_ICONS;
                           obj1[1] = tmp28;
@@ -70,11 +70,11 @@ const memoResult = importAllResult.memo(() => {
                       dependencyMap = 1;
                       v0 = 1;
                       let obj2 = { value: null, done: false };
-                      obj2[0] = lib(7984).setAppIcon(id, premiumType);
+                      obj2[0] = lib(7806).setAppIcon(id, premiumType);
                       return obj2;
                     }
                   } else {
-                    obj2 = lib(7984);
+                    obj2 = lib(7806);
                     let premiumType1;
                     if (lib != null) {
                       premiumType1 = lib.premiumType;
@@ -82,7 +82,7 @@ const memoResult = importAllResult.memo(() => {
                     dependencyMap = 2;
                     v0 = 1;
                     const obj3 = { value: null, done: false };
-                    obj3[0] = obj2.setAppIcon(lib(7986).FreemiumAppIconIds.DEFAULT, premiumType1);
+                    obj3[0] = obj2.setAppIcon(lib(7808).FreemiumAppIconIds.DEFAULT, premiumType1);
                     return obj3;
                   }
                 }
@@ -108,7 +108,7 @@ const memoResult = importAllResult.memo(() => {
               return obj;
             }
             v0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } catch (tmp17) {
             v0 = tmp;
             throw tmp17;
@@ -128,9 +128,9 @@ const memoResult = importAllResult.memo(() => {
   let obj = stateFromStores(589);
   const items = [_onSelect];
   stateFromStores = obj.useStateFromStores(items, () => _onSelect.getCurrentUser());
-  obj1 = stateFromStores(7984);
+  obj1 = stateFromStores(7806);
   importDefault = obj1.useCurrentAppIcon();
-  let obj2 = stateFromStores(1945);
+  let obj2 = stateFromStores(1946);
   const isPremiumResult = obj2.isPremium(stateFromStores);
   dependencyMap = isPremiumResult;
   const analyticsLocations = contextDefault().analyticsLocations;
@@ -150,7 +150,7 @@ const memoResult = importAllResult.memo(() => {
     }
   };
   obj[0] = callback(obj, obj1);
-  const children = [callback(stateFromStores(8122).Form, obj), ];
+  const children = [callback(stateFromStores(8118).Form, obj), ];
   let tmp9Result = !isPremiumResult;
   if (!isPremiumResult) {
     let obj3 = { style: null, children: null };
@@ -162,9 +162,9 @@ const memoResult = importAllResult.memo(() => {
     };
     const intl = tmp2(1236).intl;
     obj4[1] = intl.string(tmp2(1236).t.M0rDSO);
-    obj3[1] = tmp9(_modDef9535, obj4);
+    obj3[1] = tmp9(_modDef9658, obj4);
     tmp9Result = tmp9(obj, obj3);
-    const tmp6Result = _modDef9535;
+    const tmp6Result = _modDef9658;
   }
   children[1] = tmp9Result;
   return closure_11(closure_10, { children });

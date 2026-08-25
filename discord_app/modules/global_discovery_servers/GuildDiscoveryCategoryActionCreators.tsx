@@ -21,7 +21,7 @@ function _maybeFetchGuildDiscoveryCategories() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -200,7 +200,7 @@ function _saveGuildMetadata() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -323,7 +323,7 @@ function _saveGuildMetadata() {
             obj7.dispatch(obj6);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp18) {
           c3 = tmp18;

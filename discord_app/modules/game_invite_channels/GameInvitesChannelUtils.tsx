@@ -1,7 +1,7 @@
 // discord_app/modules/game_invite_channels/GameInvitesChannelUtils.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import hasFlagDefault from "../activities/utils/hasFlag.tsx";
 import loadForumPostData from "../forums/ForumPostDataLoader.tsx";
+import hasFlagDefault from "../activities/utils/hasFlag.tsx";
 import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { useMemo } from "../../../_runtime/00019_noop.js";
 import closure_6 from "../../stores/ChannelStore.tsx";
@@ -90,7 +90,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
     isGameInvitesChannelResult = stateFromStores.isGameInvitesChannel();
   }
   _modDef38(isGameInvitesChannelResult, "requires a game invites channel");
-  let tmpResult = tmp(5383);
+  let tmpResult = tmp(6033);
   let gameId;
   if (stateFromStores != null) {
     gameId = stateFromStores.gameId;
@@ -100,7 +100,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
   if (data != null) {
     officialApplicationId = data.getOfficialApplicationId();
   }
-  tmpResult = tmp(7178);
+  tmpResult = tmp(5835);
   application = tmpResult.useApplication(officialApplicationId);
   const items1 = [application];
   return useMemo(() => {

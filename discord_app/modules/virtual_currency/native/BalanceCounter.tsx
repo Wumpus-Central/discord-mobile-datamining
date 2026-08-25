@@ -1,6 +1,6 @@
 // discord_app/modules/virtual_currency/native/BalanceCounter.tsx
 import context from "../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import _mod4119 from "../../reanimated/ReanimatedRexport.tsx";
+import _mod4120 from "../../reanimated/ReanimatedRexport.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../_runtime/00019_noop.js";

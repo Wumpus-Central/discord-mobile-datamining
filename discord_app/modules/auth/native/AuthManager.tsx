@@ -40,7 +40,7 @@ class AuthManager extends tmp3 {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -112,16 +112,16 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        let tmpResult = tmp(11974);
+        let tmpResult = tmp(12302);
         tmpResult.setNewUser(constants.ORGANIC_REGISTERED);
       }
-      tmpResult = tmp(11926);
+      tmpResult = tmp(12260);
       tmpResult.startOnboarding();
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = lib.handlePushNotificationOptIn(() => {
-        callback(7340).transitionToGuild(closure_7);
-        const obj = callback(7340);
+        callback(6066).transitionToGuild(closure_7);
+        const obj = callback(6066);
         callback2(709).dispatch({ type: "DEFERRED_INVITE_SHOW" });
       });
     };
@@ -145,7 +145,7 @@ class AuthManager extends tmp3 {
       c11 = null;
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
-      const result = callback(7545).deleteAllInteractions();
+      const result = callback(7363).deleteAllInteractions();
       DCDShortcutManager = DCDShortcutManager.DCDShortcutManager;
       if (DCDShortcutManager != null) {
         DCDShortcutManager.handleLogout();

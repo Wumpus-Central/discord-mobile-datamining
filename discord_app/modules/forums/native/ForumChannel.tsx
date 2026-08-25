@@ -4,7 +4,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../_runtime/07958_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07779_registerAsset.js";
 import useGradientBottom from "../../client_themes/native/ClientThemesOverrides.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -112,10 +112,10 @@ function SortAndViewOptions(channel) {
     t = { variant: "secondary", text: null, onPress: null, size: "sm", icon: null };
     t[1] = string3Result;
     t[2] = callback;
-    ArrowsUpDownIcon = ArrowsUpDownIcon(11380).ArrowsUpDownIcon;
+    ArrowsUpDownIcon = ArrowsUpDownIcon(11736).ArrowsUpDownIcon;
     tmp5Result = tmp5(ArrowsUpDownIcon, { size: "xxs" });
     t[4] = tmp5Result;
-    tmp5Result = tmp5(ArrowsUpDownIcon(4750).Button, t);
+    tmp5Result = tmp5(ArrowsUpDownIcon(4815).Button, t);
   } else {
     const intl = ArrowsUpDownIcon(1236).intl;
     const string = intl.string;
@@ -134,7 +134,7 @@ function SortAndViewOptions(channel) {
     obj[0] = tmp.optionsPill;
     obj = { size: "xs", style: null };
     obj[1] = tmp.sortOptionsIcon;
-    const items1 = [tmp5(ArrowsUpDownIcon(11380).ArrowsUpDownIcon, obj), , ];
+    const items1 = [tmp5(ArrowsUpDownIcon(11736).ArrowsUpDownIcon, obj), , ];
     obj1 = { variant: "text-sm/medium", color: "interactive-text-default", style: null, children: null };
     obj1[2] = tmp.sortOptionsText;
     const intl2 = ArrowsUpDownIcon(1236).intl;
@@ -146,11 +146,11 @@ function SortAndViewOptions(channel) {
       string2Result = string2(t2.xyYt8A);
     }
     obj1[3] = string2Result;
-    items1[1] = tmp5(ArrowsUpDownIcon(4739).Text, obj1);
-    items1[2] = tmp5(ArrowsUpDownIcon(9501).ChevronSmallDownIcon, { size: "xs" });
+    items1[1] = tmp5(ArrowsUpDownIcon(4376).Text, obj1);
+    items1[2] = tmp5(ArrowsUpDownIcon(9625).ChevronSmallDownIcon, { size: "xs" });
     obj[1] = items1;
     obj[6] = closure_16(View, obj);
-    return tmp5(ArrowsUpDownIcon(5438).PressableOpacity, obj);
+    return tmp5(ArrowsUpDownIcon(4949).PressableOpacity, obj);
   }
 }
 function TagFilter(channel) {
@@ -167,8 +167,8 @@ function TagFilter(channel) {
     const intl3 = tmp4(1236).intl;
     obj[1] = intl3.string(tmp4(1236).t["112vVE"]);
     obj[2] = handlePress;
-    obj[4] = tmp3(tmp4(8053).TagIcon, { size: "xxs" });
-    let tmp3Result = tmp3(tmp4(4750).Button, obj);
+    obj[4] = tmp3(tmp4(7875).TagIcon, { size: "xxs" });
+    let tmp3Result = tmp3(tmp4(4815).Button, obj);
   } else {
     obj = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.8, style: null, onPress: null, children: null };
     const intl = tmp4(1236).intl;
@@ -184,7 +184,7 @@ function TagFilter(channel) {
       const obj2 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
       obj2[2] = tmp.countText;
       obj2[3] = tagFilter.size;
-      obj1[1] = tmp3(tmp4(4739).Text, obj2);
+      obj1[1] = tmp3(tmp4(4376).Text, obj2);
       tmp3Result = tmp3(tmp6, obj1);
     }
     const items = [tmp3Result, , ];
@@ -192,11 +192,11 @@ function TagFilter(channel) {
     obj3[2] = tmp.sortOptionsText;
     const intl2 = tmp4(1236).intl;
     obj3[3] = intl2.string(tmp4(1236).t["112vVE"]);
-    items[1] = tmp3(tmp4(4739).Text, obj3);
-    items[2] = tmp3(tmp4(9501).ChevronSmallDownIcon, { size: "xs" });
+    items[1] = tmp3(tmp4(4376).Text, obj3);
+    items[2] = tmp3(tmp4(9625).ChevronSmallDownIcon, { size: "xs" });
     obj[1] = items;
     obj[5] = closure_16(View, obj);
-    tmp3Result = tmp3(tmp4(5438).PressableOpacity, obj);
+    tmp3Result = tmp3(tmp4(4949).PressableOpacity, obj);
     const tmp5 = closure_16;
   }
   return tmp3Result;

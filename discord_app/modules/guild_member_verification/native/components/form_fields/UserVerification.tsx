@@ -21,8 +21,8 @@ export default function UserVerification(arg0) {
     let tmp5 = platform === MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.PHONE;
     if (tmp5) {
       let obj = { passesVerification: null, platform: null };
-      obj[0] = verification[tmp12(undefined, 4204).UserVerificationFieldPlatforms.PHONE];
-      obj[1] = tmp12(4204).UserVerificationFieldPlatforms.PHONE;
+      obj[0] = verification[tmp12(undefined, 4205).UserVerificationFieldPlatforms.PHONE];
+      obj[1] = tmp12(4205).UserVerificationFieldPlatforms.PHONE;
       tmp5 = callback(BaseIdentityVerificationFieldDefault, obj);
       const tmp4 = BaseIdentityVerificationFieldDefault;
     }

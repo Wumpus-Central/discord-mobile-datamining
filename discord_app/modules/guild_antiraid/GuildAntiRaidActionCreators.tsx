@@ -26,7 +26,7 @@ function _setGuildRaidAlerts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -74,7 +74,7 @@ function _setGuildRaidAlerts() {
             return obj;
           } else {
             table = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp12) {
           table = tmp;
@@ -112,7 +112,7 @@ function _setGuildIncidentActions() {
       }
       let toISOStringResult = null;
       if (tmp5) {
-        let obj2 = callback2(3978)();
+        let obj2 = callback2(3979)();
         toISOStringResult = obj2.add(tmp8, "hours").toISOString();
         const addResult = obj2.add(tmp8, "hours");
       }
@@ -170,7 +170,7 @@ function _handleResolveRaid() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -188,7 +188,7 @@ function _handleResolveRaid() {
               guild = guild.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = callback2(10076)(guild);
+                tmp8 = callback2(9932)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {
@@ -261,7 +261,7 @@ function _handleReportRaid() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -279,7 +279,7 @@ function _handleReportRaid() {
               const guild = closure_1_4.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = v0(10076)(guild);
+                tmp8 = v0(9932)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {

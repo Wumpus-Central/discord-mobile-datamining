@@ -6,9 +6,9 @@ import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
 import hasFlag from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
 import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
-import _modDef4093 from "../../../lib/native/Linking.tsx";
-import _modDef5232 from "../../../utils/TrackedHTTPUtils.tsx";
-import _modDef5265 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4094 from "../../../lib/native/Linking.tsx";
+import _modDef4601 from "../../../utils/TrackedHTTPUtils.tsx";
+import _modDef4611 from "../../../actions/ModalActionCreators.tsx";
 import _requestAndSyncContacts from "ContactSyncManager.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -37,7 +37,7 @@ function _uploadContacts() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -76,7 +76,7 @@ function _uploadContacts() {
             } else {
               const _JSON = JSON;
               dependencyMap = JSON.parse(callback);
-              let obj7 = flag(5232);
+              let obj7 = flag(4601);
               const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
               obj2[0] = constants2.CONNECTION_SYNC_CONTACTS;
               const obj3 = { friend_list_entries: null, background: null, allowed_in_suggestions: null, include_mutual_friends_count: false };
@@ -190,7 +190,7 @@ export const uploadContacts = function uploadContacts(c3, arg1) {
   return applyArgumentsResult;
 };
 export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
-  let obj = _modDef5232;
+  let obj = _modDef4601;
   obj = { url: closure_12.USER_BULK_RELATIONSHIPS, body: obj, trackedActionData: null, rejectWithError: false };
   obj = { user_ids, token: bulkAddToken };
   obj[2] = { event: encodeProperties.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
@@ -207,7 +207,7 @@ export const adminDeleteContactSync = function adminDeleteContactSync() {
   obj = { url: closure_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
   obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE };
   obj[2] = obj;
-  return _modDef5232.delete(obj);
+  return _modDef4601.delete(obj);
 };
 export const getImageForContactId = function getImageForContactId(closure_0, arg1) {
   let DCDContactSyncManager = NativeModules.DCDContactSyncManager;
@@ -305,9 +305,9 @@ export const getOpenLearnMoreUrl = function getOpenLearnMoreUrl() {
   return combinedDefault.getArticleURL(constants4.CONTACT_SYNC);
 };
 export const handleOpenLearnMoreLink = function handleOpenLearnMoreLink() {
-  const obj = _modDef4093;
+  const obj = _modDef4094;
   obj.openURL(combinedDefault.getArticleURL(constants4.CONTACT_SYNC));
 };
 export const transitionToAddFriendsLandingPage = function transitionToAddFriendsLandingPage() {
-  _modDef5265.popWithKey(closure_9);
+  _modDef4611.popWithKey(closure_9);
 };

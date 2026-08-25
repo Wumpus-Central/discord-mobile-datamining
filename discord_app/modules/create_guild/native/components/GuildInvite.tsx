@@ -1,8 +1,8 @@
 // discord_app/modules/create_guild/native/components/GuildInvite.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import GroupIcon from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
+import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";

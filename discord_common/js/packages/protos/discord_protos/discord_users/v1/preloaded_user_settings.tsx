@@ -268,9 +268,9 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    obj.appVersionSettings = closure_77.internalBinaryRead(pos, pos.uint32(), arg2, obj.appVersionSettings);
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = callback(pos.tag(), 2);
+    const tmp3 = callback(pos.tag(), 2);
   }
   return obj;
 };
@@ -6360,7 +6360,7 @@ class Favorites$Type extends MessageType32 {
     }
     obj[1] = T;
     obj[4] = obj;
-    items = [, , ];
+    items = [, , , ];
     items[0] = obj;
     items[1] = { no: 2, name: "muted", kind: "scalar", T: 8 };
     items[2] = {
@@ -6371,6 +6371,7 @@ class Favorites$Type extends MessageType32 {
             return callback(table[4]).BoolValue;
           }
     };
+    items[3] = { no: 4, name: "auto_add_joined_threads", kind: "scalar", T: 8 };
     tmp = new tmp("discord_protos.discord_users.v1.Favorites", items, T);
     // ThrowIfThisInitialized (0x7c)
     return tmp;
@@ -6378,7 +6379,7 @@ class Favorites$Type extends MessageType32 {
 }
 const prototype32 = Favorites$Type.prototype;
 prototype32["create"] = function create(arr) {
-  obj = { favoriteChannels: {}, muted: false };
+  obj = { favoriteChannels: {}, muted: false, autoAddJoinedThreads: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -6412,6 +6413,8 @@ prototype32["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
         let tmp25 = pos;
         let tmp26 = readUnknownField;
         obj.guildVisible = BoolValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.guildVisible);
+      } else if (4 === tmp5) {
+        obj.autoAddJoinedThreads = pos.bool();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -6514,6 +6517,10 @@ prototype32["internalBinaryWrite"] = function internalBinaryWrite(favoriteChanne
     const joined2 = BoolValue.internalBinaryWrite(favoriteChannels.guildVisible, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = BoolValue.internalBinaryWrite(favoriteChannels.guildVisible, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
+  if (false !== favoriteChannels.autoAddJoinedThreads) {
+    tag.tag(4, _mod1307.WireType.Varint).bool(favoriteChannels.autoAddJoinedThreads);
+    const tagResult5 = tag.tag(4, _mod1307.WireType.Varint);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -6545,7 +6552,8 @@ const items25 = [
     T() {
       return callback(table[4]).BoolValue;
     }
-  }
+  },
+  { no: 4, name: "auto_add_joined_threads", kind: "scalar", T: 8 }
 ];
 let tmp39 = new "binaryReadMap12"("discord_protos.discord_users.v1.Favorites", items25, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)

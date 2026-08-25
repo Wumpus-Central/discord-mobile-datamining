@@ -1,6 +1,6 @@
 // discord_app/modules/icons/native/Share.tsx
-import registerAssetDefault from "../../../../_runtime/10883_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/10884_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/09239_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/09240_registerAsset.js";
 import set from "../../../utils/PlatformUtils.tsx";
 
 if (set.isIOS()) {

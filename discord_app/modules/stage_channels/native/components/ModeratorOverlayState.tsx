@@ -19,7 +19,7 @@ const result = set.fileFinishedImporting("modules/stage_channels/native/componen
 
 export const useModeratorOverlayChannelState = function useModeratorOverlayChannelState(id) {
   const _require = id;
-  dependencyMap = callback((dismissOverlay) => dismissOverlay.dismissOverlay, require("../../../../../_runtime/04009_isIterable.js").shallow);
-  const items = [!callback((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, require("../../../../../_runtime/04009_isIterable.js").shallow).has(id), () => callback(closure_0)];
+  dependencyMap = callback((dismissOverlay) => dismissOverlay.dismissOverlay, require("../../../../../_runtime/04010_isIterable.js").shallow);
+  const items = [!callback((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, require("../../../../../_runtime/04010_isIterable.js").shallow).has(id), () => callback(closure_0)];
   return items;
 };

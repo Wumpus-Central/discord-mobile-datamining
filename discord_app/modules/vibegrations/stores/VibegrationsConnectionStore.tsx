@@ -5,7 +5,7 @@ import dispatcherDefault from "../../../Dispatcher.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../intl/VibegrationsUntranslated.messages.js";
 import snowflakeSequence from "../../messages/createNonce.tsx";
-import _modDef15913 from "../lib/VibegrationsPlatformUtils.native.tsx";
+import _modDef15945 from "../lib/VibegrationsPlatformUtils.native.tsx";
 import vibegrationLocation from "../lib/VibegrationsAnalytics.tsx";
 import map9 from "../lib/vibegrationsPreviewClaims.tsx";
 import frozen from "../VibegrationsTypes.tsx";
@@ -779,10 +779,10 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            obj8 = _modDef15913;
+            obj8 = _modDef15945;
             const result3 = obj8.beginPreviewOperation(projectId);
           } else {
-            obj7 = _modDef15913;
+            obj7 = _modDef15945;
             obj7.endPreviewOperation(projectId);
           }
         } else if ("model_settings" === type.type) {
@@ -830,9 +830,9 @@ function handleEvent(projectId, pendingEvents, type) {
                   value.add(combined);
                   ({ location: obj3[0], code: obj3[1] } = tmp2);
                   ({ message: obj3[2], source: obj3[3] } = level);
-                  const result1 = callback(15915).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
+                  const result1 = callback(15947).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
                   obj = { location: null, code: null, message: null, details: null };
-                  const obj2 = callback(15915);
+                  const obj2 = callback(15947);
                 }
                 obj4 = closure_28;
                 const str = level.message;
@@ -870,7 +870,7 @@ function _openWithFreshTicket() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -905,7 +905,7 @@ function _openWithFreshTicket() {
               c5 = baseUrl;
               if (closure_1.disposed) {
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 callback3(callback, "failed");
                 let _Error = Error;
@@ -1016,7 +1016,7 @@ function _openWithFreshTicket() {
             }
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp47) {
           baseUrl = tmp47;
@@ -1060,8 +1060,8 @@ function teardown(closure_0) {
     ws.close();
     obj.delete(closure_0);
     map6.delete(closure_0);
-    const result = _modDef15913.releasePreviewControl(closure_0);
-    const obj2 = _modDef15913;
+    const result = _modDef15945.releasePreviewControl(closure_0);
+    const obj2 = _modDef15945;
     const result1 = map9.clearVibegrationsPreviewClaims(closure_0);
     const obj3 = map9;
     obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: null, connState: "closed" };
@@ -1204,7 +1204,7 @@ function _fetchSourceHistory() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1335,7 +1335,7 @@ function _restoreSourceHistoryEntry() {
           obj[0] = str;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1480,6 +1480,50 @@ function _restoreSourceHistoryEntry() {
   }
   return applyArgumentsResult;
 }
+function fetchRemixTicket() {
+  const self = this;
+  const apply = _fetchRemixTicket.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+function _fetchRemixTicket() {
+  const self = this;
+  const tmp = callback((arg0) => {
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
+    return (function*(arg0, body) {
+      closure_3 = tmp2;
+      const table = tmp5;
+      const HTTP = callback(closure_1_2[17]).HTTP;
+      obj1 = { url: null, rejectWithError: true };
+      obj1[0] = closure_1_9.VIBEGRATIONS_PROJECT_REMIX_TICKET(body);
+      yield HTTP.post(obj1);
+      body = body.body;
+      obj4 = { ticket: null, baseUrl: null };
+      obj4[0] = body.ticket;
+      const vibegrationsTunnelWorkerOrigin = body(table[18]).getVibegrationsTunnelWorkerOrigin();
+      let url = vibegrationsTunnelWorkerOrigin;
+      if (vibegrationsTunnelWorkerOrigin == null) {
+        url = body.url;
+      }
+      obj4[1] = url;
+      return obj4;
+    })();
+  });
+  closure_44 = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
 function attachmentEndpoint(arg0, arg1) {
   if (null == arg1) {
     const _HermesInternal2 = HermesInternal;
@@ -1545,7 +1589,7 @@ function _uploadAttachmentBytes() {
       return arg1;
     })();
   });
-  closure_45 = tmp;
+  closure_47 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1576,13 +1620,13 @@ function _exportProjectArchive() {
       const _HermesInternal = HermesInternal;
       c5 = yield fetch("" + baseUrl + "/agent/export?" + c4);
       if (!c5.ok) {
-        throw new closure_46(c5.status);
+        throw new closure_48(c5.status);
       }
       yield c5.blob();
       return arg1;
     })();
   });
-  closure_47 = tmp;
+  closure_49 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1591,7 +1635,7 @@ function _exportProjectArchive() {
   }
   return applyArgumentsResult;
 }
-function _forkProjectWorkspace() {
+function _remixProjectWorkspace() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
     closure_0 = arg0;
@@ -1602,7 +1646,7 @@ function _forkProjectWorkspace() {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
@@ -1610,7 +1654,7 @@ function _forkProjectWorkspace() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1625,22 +1669,22 @@ function _forkProjectWorkspace() {
               obj[0] = arg1;
               return obj;
             } else {
-              let lib = tmp3;
-              closure_2 = tmp2;
+              let lib = tmp2;
+              closure_2 = tmp5;
               closure_0 = undefined;
               dependencyMap = undefined;
               closure_2 = undefined;
               lib = undefined;
               c4 = undefined;
               c5 = undefined;
-              const items = [closure_1_36(closure_0), closure_1_36(dependencyMap)];
+              const items = [closure_1_43(closure_0), closure_1_36(dependencyMap)];
               c4 = 1;
               c5 = 1;
               obj1 = { value: null, done: false };
               obj1[0] = Promise.all(items);
               return obj1;
             }
-          } else if (1 === tmp6) {
+          } else if (1 === tmp5) {
             if (arg0 === 1) {
               c5 = 3;
               throw arg1;
@@ -1686,19 +1730,19 @@ function _forkProjectWorkspace() {
             c5 = arg1;
             if (c5.ok) {
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
-              throw new closure_48(c5.status);
+              throw new closure_50(c5.status);
             }
           }
-        } catch (tmp14) {
+        } catch (tmp13) {
           c5 = tmp;
-          throw tmp14;
+          throw tmp13;
         }
       }
     })();
   });
-  closure_49 = tmp;
+  closure_51 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1726,7 +1770,7 @@ function _submitProjectSecrets() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1797,7 +1841,7 @@ function _submitProjectSecrets() {
             closure_5 = arg1;
             if (closure_5.ok) {
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
@@ -1812,7 +1856,7 @@ function _submitProjectSecrets() {
       }
     })();
   });
-  closure_50 = tmp;
+  closure_52 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1860,7 +1904,7 @@ function _submitProjectSettings() {
       return obj;
     })();
   });
-  closure_51 = tmp;
+  closure_53 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1888,7 +1932,7 @@ function _fetchProjectMcpConnection() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2021,7 +2065,7 @@ function _fetchProjectMcpConnection() {
     iter.next();
     return iter;
   });
-  closure_52 = tmp;
+  closure_54 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2049,7 +2093,7 @@ function _deleteStagedAttachment() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2116,7 +2160,7 @@ function _deleteStagedAttachment() {
             c5 = arg1;
             if (c5.ok) {
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
@@ -2131,7 +2175,7 @@ function _deleteStagedAttachment() {
       }
     })();
   });
-  closure_53 = tmp;
+  closure_55 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2161,7 +2205,7 @@ function _getPreviewScreenshotUrl() {
       return "" + baseUrl + "/agent/screenshots/" + encodeURIComponent(closure_0) + "?" + c4;
     })();
   });
-  closure_54 = tmp;
+  closure_56 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2200,7 +2244,7 @@ function _getAttachmentUrl() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2285,7 +2329,7 @@ function _getAttachmentUrl() {
     iter.next();
     return iter;
   });
-  closure_56 = tmp;
+  closure_58 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2313,7 +2357,7 @@ function _isAttachmentAvailable() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2345,7 +2389,7 @@ function _isAttachmentAvailable() {
                 const self = this;
                 const tmp = callback(function*() {
                   const _fetch = fetch;
-                  yield closure_1_55(closure_1_0, c1);
+                  yield closure_1_57(closure_1_0, c1);
                   return fetch(arg1, { method: "HEAD" });
                 });
                 closure_3 = tmp;
@@ -2415,7 +2459,7 @@ function _isAttachmentAvailable() {
       }
     })();
   });
-  closure_57 = tmp;
+  closure_59 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2465,7 +2509,7 @@ const prototype = function VibegrationsExportError(status) {
 }.prototype;
 class prototype extends Error {
 }
-const prototype2 = function VibegrationsForkError(status) {
+const prototype2 = function VibegrationsRemixError(status) {
   tmp = new tmp(concat(status, ")"), tmp2, concat);
   // ThrowIfThisInitialized (0x7c)
   tmp.status = status;
@@ -2827,10 +2871,10 @@ export const exportProjectArchive = function exportProjectArchive() {
   }
   return applyArgumentsResult;
 };
-export const VibegrationsForkError = prototype2;
-export const forkProjectWorkspace = function forkProjectWorkspace() {
+export const VibegrationsRemixError = prototype2;
+export const remixProjectWorkspace = function remixProjectWorkspace() {
   const self = this;
-  const apply = _forkProjectWorkspace.apply;
+  const apply = _remixProjectWorkspace.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2874,7 +2918,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2936,7 +2980,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
           } else {
             const ok = arg1.ok;
             baseUrl = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp8) {
           baseUrl = tmp;

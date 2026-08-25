@@ -5,7 +5,7 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
 import useAppLauncherFlashListProps from "AppLauncherFlashList.tsx";
 import useAppLauncherFlashListPropsDefault from "AppLauncherFlashList.tsx";
-import registerAssetDefault from "../../../../../_runtime/11397_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/11753_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";

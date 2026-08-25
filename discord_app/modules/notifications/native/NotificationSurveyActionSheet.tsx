@@ -17,7 +17,7 @@ const result = require("set").fileFinishedImporting("modules/notifications/nativ
 export default function NotificationSurveyActionSheet(arg0) {
   ({ notificationType: require, location: importDefault, messageId: dependencyMap } = arg0);
   let obj = { value: constants.TOO_MANY, label: null };
-  let intl = getSystemLocale.intl;
+  const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.pLeQp0);
   const items = [obj, , ];
   obj = { value: constants.IRRELEVANT, label: null };
@@ -44,23 +44,18 @@ export default function NotificationSurveyActionSheet(arg0) {
       if (null != reason) {
         value = reason.value;
       }
-      let obj = { reason: null, rating: null, notification_type: null, location: null, message_id: null };
+      const obj = { reason: null, rating: null, notification_type: null, location: null, message_id: null };
       obj[0] = value;
       obj[1] = rating;
       obj[2] = closure_0;
       obj[3] = closure_1;
       obj[4] = closure_2;
       closure_1_1(closure_1_2[5]).track(closure_1_4.NOTIFICATION_REPORT_SUBMITTED, obj);
-      const obj5 = closure_1_1(closure_1_2[5]);
-      const tmp10 = closure_1_1;
+      const obj4 = closure_1_1(closure_1_2[5]);
       closure_1_0(closure_1_2[7]).handleSurveyCleanup();
       const obj2 = closure_1_0(closure_1_2[7]);
-      obj = { header: null };
-      const tmp10Result = tmp10(closure_1_2[8]);
-      const intl = closure_1_0(tmp11[4]).intl;
-      obj[0] = intl.string(closure_1_0(closure_1_2[4]).t.wGioO1);
-      tmp10Result.openLazy(closure_1_0(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), "UserFeedbackSurvey", obj);
-      const tmp8 = closure_1_0(closure_1_2[10])(closure_1_2[9], closure_1_2.paths);
+      closure_1_0(closure_1_2[8]).presentFeedbackSent();
+      const obj3 = closure_1_0(closure_1_2[8]);
     }
   };
   return jsx(closeActionSheetDefault, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, trackOpen: null, trackReport: null });

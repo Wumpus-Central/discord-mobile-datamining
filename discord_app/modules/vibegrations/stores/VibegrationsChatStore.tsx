@@ -5,7 +5,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../intl/VibegrationsUntranslated.messages.js";
 import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
 import createSoundForPack from "../../sound_playback/SoundUtils.tsx";
-import _modDef15913 from "../lib/VibegrationsPlatformUtils.native.tsx";
+import _modDef15945 from "../lib/VibegrationsPlatformUtils.native.tsx";
 import closure_6 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_7 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import closure_8 from "../../parent_tools/FamilyCenterStore.tsx";
@@ -296,7 +296,7 @@ function recordThinkingTransition(projectId) {
       }
       const project = store.getProject(projectId);
       if (null != project) {
-        result = _modDef15913.areTurnNotificationsDisabled();
+        result = _modDef15945.areTurnNotificationsDisabled();
         if (!result) {
           result = status.getStatus() === constants.DND;
         }
@@ -322,8 +322,8 @@ function recordThinkingTransition(projectId) {
             isWindowFocusedResult = channelId.getChannelId() === StaticChannelRoute.VIBEGRATIONS;
           }
           if (isWindowFocusedResult) {
-            isWindowFocusedResult = tmp68(15913).isWindowFocused();
-            const tmp68Result = tmp68(15913);
+            isWindowFocusedResult = tmp68(15945).isWindowFocused();
+            const tmp68Result = tmp68(15945);
           }
           if (guild_id == null) {
             guild_id = project.guild_id;
@@ -413,12 +413,12 @@ function recordThinkingTransition(projectId) {
                 tmp58 = bit_message1;
               }
               obj[5] = tmp58;
-              const result3 = _modDef15913.presentTurnNotification(obj);
-              const obj8 = _modDef15913;
+              const result3 = _modDef15945.presentTurnNotification(obj);
+              const obj8 = _modDef15945;
             }
           }
         }
-        const obj11 = _modDef15913;
+        const obj11 = _modDef15945;
         tmp68 = importDefault;
       }
       obj6 = store;
@@ -1106,7 +1106,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(dispatcherDefault, {
                 const items = [];
                 obj = { type: "step", kind: "terminal_error", message: null };
                 const intl = callback(1236).intl;
-                obj[2] = intl.string(callback2(3404)["wjWm+/"]);
+                obj[2] = intl.string(callback2(3405)["wjWm+/"]);
                 items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj;
                 obj.steps = items;
                 tmp2 = obj;

@@ -4,7 +4,7 @@ import setDefault from "../../utils/Durations.tsx";
 import memoizeDefault from "../../../_runtime/00731_memoize.js";
 import AbortCodes from "ThreadConstants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 
 function getAutoArchiveOptions() {
   let obj = { id: "1hour", label: null, value: null };
@@ -45,9 +45,9 @@ export const getAutoArchiveDurationText = function getAutoArchiveDurationText(ar
     label = found.label;
   }
   if (label == null) {
-    const obj = tDefault;
-    label = tDefault.duration(arg0, "minutes").humanize();
-    const durationResult = tDefault.duration(arg0, "minutes");
+    const obj = hooksDefault;
+    label = hooksDefault.duration(arg0, "minutes").humanize();
+    const durationResult = hooksDefault.duration(arg0, "minutes");
   }
   return label;
 };

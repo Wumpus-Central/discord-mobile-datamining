@@ -1,9 +1,9 @@
 // discord_app/modules/connectivity/native/components/GlobalStatusContent.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useVoiceStateForRemoteSessionDefault from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
 import useCanCurrentUserSpeakInChannelDefault from "../../../stage_channels/useCanSpeakInChannel.tsx";
 import useIsInvitedToSpeakDefault from "../../../stage_channels/useIsInvitedToSpeak.tsx";
+import useVoiceStateForRemoteSessionDefault from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../../stores/ChannelStore.tsx";
 import closure_5 from "../../../../stores/GuildStore.tsx";
@@ -96,11 +96,11 @@ export default function ConnectivityGlobalStatusContent() {
     }
     tmp14 = tmp2ResultResult;
   }
-  tmp5Result = tmp5(8981);
+  tmp5Result = tmp5(4952);
   let isScreenLandscape = tmp5Result.useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4233).isModalOpen(tmp2(8705));
-    const tmp5Result1 = tmp5(4233);
+    isScreenLandscape = tmp5(4234).isModalOpen(tmp2(10737));
+    const tmp5Result1 = tmp5(4234);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(500).isAndroid();
@@ -115,7 +115,7 @@ export default function ConnectivityGlobalStatusContent() {
   obj = { minHeight: RTC_PANEL_HEIGHT + num, paddingTop: num };
   items2[2] = obj;
   if (isScreenLandscape) {
-    isScreenLandscape = callback(tmp2(8071), { hidden: true });
+    isScreenLandscape = callback(tmp2(7893), { hidden: true });
   }
   const items3 = [isScreenLandscape, ];
   let tmp19 = null;
@@ -127,7 +127,7 @@ export default function ConnectivityGlobalStatusContent() {
     obj1[3] = isThemeDarkResult;
     obj1[4] = rtcConnectionState;
     obj1[5] = remotePlatform;
-    tmp19 = callback(tmp2(12554), obj1);
+    tmp19 = callback(tmp2(10860), obj1);
   }
   items3[1] = tmp19;
   obj[1] = items3;

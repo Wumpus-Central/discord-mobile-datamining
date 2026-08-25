@@ -2,8 +2,8 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
-import inlineStyles from "../../../../../_runtime/06607_inlineStyles.js";
-import inlineStylesDefault from "../../../../../_runtime/06607_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07985_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/07985_inlineStyles.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;

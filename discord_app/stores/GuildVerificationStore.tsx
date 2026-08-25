@@ -249,8 +249,8 @@ prototype["getCheck"] = function getCheck(guild_id) {
   }
   return tmp5;
 };
-prototype["canChatInGuild"] = function canChatInGuild(guildId) {
-  return this.getCheck(guildId).canChat;
+prototype["canChatInGuild"] = function canChatInGuild(guild_id) {
+  return this.getCheck(guild_id).canChat;
 };
 GuildVerificationStore.displayName = "GuildVerificationStore";
 const guildVerificationStore = new GuildVerificationStore(dispatcherDefault, {

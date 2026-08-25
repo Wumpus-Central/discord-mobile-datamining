@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/native/ForLaterMessageCard.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../_runtime/04338_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/04339_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -52,21 +52,19 @@ class ForLaterDeletedMessageCard {
 let c4 = importAllResult;
 ({ AnalyticEvents: error, ChannelTypes: closure_8, Permissions: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: null, messagePreview: null, deletedCard: null, deletedText: null, deletedActionButton: null };
+let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: null, deletedCard: null, deletedText: null, deletedActionButton: null };
 obj = { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 obj[1] = obj;
-createCacheKey = { marginHorizontal: -16, marginTop: -9, marginBottom: -16, borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, overflow: "hidden" };
-obj[2] = createCacheKey;
-obj[3] = { flexDirection: "row", alignItems: "center", gap: 8 };
-obj[4] = { flex: 1 };
-obj[5] = { marginLeft: "auto" };
+obj[2] = { flexDirection: "row", alignItems: "center", gap: 8 };
+obj[3] = { flex: 1 };
+obj[4] = { marginLeft: "auto" };
 let closure_12 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessage) {
   savedMessage = savedMessage.savedMessage;
   const throttledNow = savedMessage.throttledNow;
   let savedMessageChannel;
   let tmp = callback3();
-  let obj = savedMessage(10919);
+  let obj = savedMessage(11276);
   savedMessageChannel = obj.useSavedMessageChannel(savedMessage);
   const items = [savedMessage, savedMessageChannel];
   callback = importAllResult.useCallback(callback(function*() {
@@ -81,7 +79,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -120,7 +118,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {
@@ -177,7 +175,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
                       obj3[4] = diffResult;
                       closure_2_1(closure_2_2[17]).track(closure_2_7.FOR_LATER_SAVED_MESSAGE_JUMP, obj3);
                       c2 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } catch (tmp26) {
                     c2 = tmp;
@@ -212,7 +210,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
           return obj;
         }
         message = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp8) {
         message = tmp;
         throw tmp8;
@@ -246,7 +244,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
         obj[0] = savedMessage;
         obj[1] = callback;
         obj[2] = throttledNow;
-        const tmp8 = callback2(savedMessageChannel(12780), obj);
+        const tmp8 = callback2(savedMessageChannel(12769), obj);
         obj = { variant: "primary", border: "subtle", shadow: "none", style: null, onPress: null, children: null };
         obj[3] = tmp.card;
         obj[4] = callback;
@@ -256,7 +254,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
           obj1[0] = savedMessage;
           obj1[1] = throttledNow;
           obj1[2] = tmp8;
-          tmp6Result = tmp6(tmp2(12783).ForLaterCardReminderHeader, obj1);
+          tmp6Result = tmp6(tmp2(12772).ForLaterCardReminderHeader, obj1);
         }
         const items2 = [tmp6Result, , , ];
         let obj2 = { channel: null, actions: null };
@@ -266,18 +264,15 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
           tmp12 = tmp8;
         }
         obj2[1] = tmp12;
-        items2[1] = callback2(tmp2(12784).ForLaterCardHeader, obj2);
+        items2[1] = callback2(tmp2(11577).ForLaterCardHeader, obj2);
         let obj3 = { style: null };
         obj3[0] = tmp.cardDivider;
         items2[2] = callback2(View, obj3);
-        const obj4 = { style: null, children: null };
-        obj4[0] = tmp.messagePreview;
-        const obj5 = { message: null, lineClamp: 2, maxHeight: 250 };
-        obj5[0] = savedMessage.message;
-        obj4[1] = callback2(tmp2(12785).ForLaterMessageRow, obj5);
-        items2[3] = callback2(View, obj4);
+        const obj4 = { message: null, lineClamp: 2, maxHeight: 250 };
+        obj4[0] = savedMessage.message;
+        items2[3] = callback2(tmp2(11578).ForLaterMessageRow, obj4);
         obj[5] = items2;
-        return closure_11(tmp2(6323).Card, obj);
+        return closure_11(tmp2(5482).Card, obj);
       }
     }
   }

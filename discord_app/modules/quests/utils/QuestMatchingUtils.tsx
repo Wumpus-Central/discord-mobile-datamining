@@ -31,8 +31,8 @@ function questMatchesActivity(arg0, id) {
           let tmp13 = tmp2 != formatted.application_id;
           if (tmp13) {
             const application_id = formatted.application_id;
-            const allApplicationIds = application_id(7514).getAllApplicationIds(id);
-            const obj = application_id(7514);
+            const allApplicationIds = application_id(7328).getAllApplicationIds(id);
+            const obj = application_id(7328);
             tmp13 = tmp2 != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
             const tmp16 = tmp2 != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
           }
@@ -42,7 +42,7 @@ function questMatchesActivity(arg0, id) {
       tmp9 = formatted.platform === ActivityGamePlatforms.PS4 || formatted.platform === tmp8.PS5;
     }
     formatted = formatted.name.toLowerCase();
-    const consoleApplicationId = application_id(7514).getConsoleApplicationId(id);
+    const consoleApplicationId = application_id(7328).getConsoleApplicationId(id);
     let flag = false;
     if (tmp2 != consoleApplicationId) {
       application = application.getApplication(consoleApplicationId);
@@ -54,7 +54,7 @@ function questMatchesActivity(arg0, id) {
       flag = tmp2;
     }
     tmp10 = flag;
-    const obj3 = application_id(7514);
+    const obj3 = application_id(7328);
     const str = formatted.name;
   }
 }

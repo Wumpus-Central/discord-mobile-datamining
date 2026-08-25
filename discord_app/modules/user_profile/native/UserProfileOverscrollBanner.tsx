@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileOverscrollBanner.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import set from "../../../utils/PlatformUtils.tsx";
-import _modDef9023 from "../../visual_effect_view/native/VisualEffectViewThemed.tsx";
+import _modDef8921 from "../../visual_effect_view/native/VisualEffectViewThemed.tsx";
 import UserProfileBannerDefault from "UserProfileBanner.tsx";
 import { StyleSheet } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -10,7 +10,7 @@ import importDefaultResult from "../../reanimated/ReanimatedRexport.tsx";
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = importDefaultResult.createAnimatedComponent(_modDef9023);
+let closure_6 = importDefaultResult.createAnimatedComponent(_modDef8921);
 const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileOverscrollBanner.tsx");
 
 export default function UserProfileOverscrollBanner(arg0) {

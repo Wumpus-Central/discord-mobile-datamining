@@ -8,11 +8,12 @@ import zipWithNextDefault from "zipWithNext.tsx";
 const RTCConnectionStates = ME.RTCConnectionStates;
 const result = set.fileFinishedImporting("lib/RTCConnectionStats.tsx");
 class StateHistory {
-  constructor(arg0) {
+  constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     obj[1] = [];
     if (null != global) {
-      updateResult = obj.update(global);
+      tmp = require;
+      updateResult = obj.update(global, require);
     }
     return obj;
   }
@@ -27,20 +28,24 @@ prototype["reset"] = function reset(arg0) {
   }
 };
 prototype["update"] = function update(current) {
+  let nowResult = arg1;
+  if (arg1 === undefined) {
+    let obj = sleep;
+    nowResult = obj.now();
+  }
   const self = this;
   if (this.current !== current) {
     self.current = current;
     const history = self.history;
-    const obj = { state: null, startTime: null };
+    obj = { state: null, startTime: null };
     obj[0] = current;
-    obj[1] = sleep.now();
+    obj[1] = nowResult;
     history.push(obj);
-    const obj2 = sleep;
   }
 };
 prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccessStats(nowResult) {
   if (nowResult === undefined) {
-    let obj = RTC_DISCONNECTED(4553);
+    let obj = RTC_DISCONNECTED(4458);
     nowResult = obj.now();
   }
   const stateDurations = this.getStateDurations(nowResult);

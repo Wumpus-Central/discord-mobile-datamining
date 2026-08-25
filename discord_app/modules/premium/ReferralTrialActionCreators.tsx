@@ -28,7 +28,7 @@ function _fetchReferralEligibleUsers() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -138,7 +138,7 @@ function _createReferralTrials() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         while (true) {
@@ -311,7 +311,7 @@ function _createReferralTrial() {
       if (closure_3.body.code === constants.INVALID_MESSAGE_SEND_USER) {
         dependencyMap = currentlySelectedChannelId.getCurrentlySelectedChannelId();
         if (null != dependencyMap) {
-          const obj6 = fromServer(7465);
+          const obj6 = fromServer(7063);
           obj6.sendClydeError(dependencyMap, closure_3.body.code);
         }
       }

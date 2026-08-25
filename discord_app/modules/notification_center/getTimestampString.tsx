@@ -1,7 +1,7 @@
 // discord_app/modules/notification_center/getTimestampString.tsx
 import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 
 function getDurationString(seconds) {
   seconds = seconds.seconds;
@@ -47,7 +47,7 @@ let c4 = 31104000;
 const result = set.fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
 
 export default function getTimestampString(arg0) {
-  const obj = { seconds: tDefault().diff(tDefault(since), "s"), getFormatter };
+  const obj = { seconds: hooksDefault().diff(hooksDefault(since), "s"), getFormatter };
   ({ since, getFormatter } = arg0);
   return getDurationString(obj);
 };

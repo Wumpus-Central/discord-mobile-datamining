@@ -1,6 +1,6 @@
 // discord_app/modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx
 import noopAll from "../../../_runtime/00019_noop.js";
-import _modDef4662 from "../../actions/native/AlertActionCreators.tsx";
+import _modDef4745 from "../../actions/native/AlertActionCreators.tsx";
 import { Keyboard } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 import { getBestActiveInput } from "../../utils/native/ChatInputUtils.tsx";
@@ -30,5 +30,5 @@ export default function openGuildLimitedAccessInfoModal(arg0) {
       });
     }
   };
-  _modDef4662.openLazy(obj);
+  _modDef4745.openLazy(obj);
 };

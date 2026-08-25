@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/FamilyCenterUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
 import messagesProxyDefault from "FamilyCenter.messages.js";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import maybeFetchCollectiblesForInvoicesDefault from "FamilyCenterActionCreators.tsx";
 import closure_3 from "FamilyCenterStore.tsx";
 import items from "FamilyCenterConstants.tsx";
@@ -29,23 +29,23 @@ export const getActivityWindowTimestampFormatter = function getActivityWindowTim
   if (arg0) {
     obj[0] = string(tmp4["2AtcIs"]);
     const intl3 = tmp(1236).intl;
-    obj[1] = intl3.string(tmp3(2336).stOECr);
-    obj[2] = tmp3(2336).n8n5Ba;
+    obj[1] = intl3.string(tmp3(2337).stOECr);
+    obj[2] = tmp3(2337).n8n5Ba;
     let tmp5 = obj;
   } else {
     obj[0] = string(tmp4.g1ZX6m);
     const intl2 = tmp(1236).intl;
-    obj[1] = intl2.string(tmp3(2336).s3qSVt);
-    obj[2] = tmp3(2336).f1UJiC;
+    obj[1] = intl2.string(tmp3(2337).s3qSVt);
+    obj[2] = tmp3(2337).f1UJiC;
     tmp5 = obj;
   }
   return tmp5;
 };
 export const formatUserActivityTimestamp = function formatUserActivityTimestamp(time, timestampFormatter, arg2) {
-  let obj = tDefault();
-  const diffResult = obj.diff(tDefault(time), "s");
+  let obj = hooksDefault();
+  const diffResult = obj.diff(hooksDefault(time), "s");
   const tmp3 = timestampFormatter();
-  tDefault(time).format("LL");
+  hooksDefault(time).format("LL");
   if (diffResult < c10) {
     let yesterday = tmp3.today;
   } else if (diffResult < c11) {
@@ -65,10 +65,10 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
   return yesterday;
 };
 export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
-  let obj = tDefault();
-  const diffResult = obj.diff(tDefault(arg0), "s");
+  let obj = hooksDefault();
+  const diffResult = obj.diff(hooksDefault(arg0), "s");
   const tmp3 = SENT_TIMESTAMP_FORMATTER();
-  tDefault(arg0);
+  hooksDefault(arg0);
   if (diffResult < 60) {
     let yesterday = tmp3.seconds;
   } else if (diffResult < 3600) {

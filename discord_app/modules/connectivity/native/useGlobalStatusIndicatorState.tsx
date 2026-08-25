@@ -1,6 +1,6 @@
 // discord_app/modules/connectivity/native/useGlobalStatusIndicatorState.tsx
-import useVoiceStateForRemoteSessionDefault from "../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
 import useIsInvitedToSpeakDefault from "../../stage_channels/useIsInvitedToSpeak.tsx";
+import useVoiceStateForRemoteSessionDefault from "../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
 import useMyCurrentStageChannelDefault from "../../stage_channels/useMyCurrentStageChannel.tsx";
 import closure_3 from "../../../stores/ChannelStore.tsx";
 import closure_4 from "../../../stores/RTCConnectionStore.tsx";
@@ -16,7 +16,7 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   }
   let stateFromStores;
   importDefault = undefined;
-  let obj = stateFromStores(8724);
+  let obj = stateFromStores(10747);
   let hasPipParticipant = obj.useHasPipParticipant({ isActivityViewFocused: false });
   const tmp5 = useVoiceStateForRemoteSessionDefault();
   const items = [closure_4];
@@ -39,18 +39,18 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
     return isGuildStageVoiceResult;
   }, items2);
   const obj3 = stateFromStores(589);
-  let num = stateFromStores(12546).useGetStageRTCPanelHeight(stateFromStores);
-  stateFromStores(4233);
+  let num = stateFromStores(10850).useGetStageRTCPanelHeight(stateFromStores);
+  stateFromStores(4234);
   let tmp12 = null != tmp5;
   if (tmp12) {
-    let tmpResult = tmp(8700);
+    let tmpResult = tmp(4615);
     let channelId = tmp5.channelId;
     if (channelId == null) {
       channelId = EMPTY_STRING_SNOWFLAKE_ID;
     }
     tmp12 = tmpResult.getVoiceChannelKey(channelId) !== tmp11;
   }
-  tmpResult = tmp(8704);
+  tmpResult = tmp(10856);
   let isVoicePanelShowing = tmpResult.useIsVoicePanelShowing();
   const tmp14 = null != useMyCurrentStageChannelDefault();
   if (!isVoicePanelShowing) {

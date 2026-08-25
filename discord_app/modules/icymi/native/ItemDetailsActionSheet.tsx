@@ -44,7 +44,7 @@ export default function ItemDetailsActionSheet(arg0) {
   if (null != stateFromStores1) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores1;
-    obj[1] = tmp(7226).GuildIconSizes.LARGE;
+    obj[1] = tmp(5885).GuildIconSizes.LARGE;
     let tmp9 = callback(GuildIconSizesDefault, obj);
     const tmp5Result = GuildIconSizesDefault;
   } else if (null != stateFromStores) {
@@ -59,8 +59,8 @@ export default function ItemDetailsActionSheet(arg0) {
     result = null != stateFromStores1;
   }
   if (result) {
-    result = tmp(9093).isChannelCustomScoreEligible(stateFromStores);
-    const tmpResult = tmp(9093);
+    result = tmp(9059).isChannelCustomScoreEligible(stateFromStores);
+    const tmpResult = tmp(9059);
   }
   obj1 = { icon: tmp9, title: tmp6, subtitle: null };
   let str;
@@ -70,14 +70,14 @@ export default function ItemDetailsActionSheet(arg0) {
   if (str == null) {
     str = "";
   }
-  obj2 = { showGradient: true, startExpanded: true, header: tmp16(tmp(10555).ActionSheetIconHeader, obj1), children: null };
+  obj2 = { showGradient: true, startExpanded: true, header: tmp16(tmp(10351).ActionSheetIconHeader, obj1), children: null };
   obj1[2] = str;
   let tmp16Result = result;
   if (result) {
     const obj3 = { channel: null, guild: null };
     obj3[0] = stateFromStores;
     obj3[1] = stateFromStores1;
-    tmp16Result = tmp16(tmp(15784).ChannelScoreSettings, obj3);
+    tmp16Result = tmp16(tmp(15816).ChannelScoreSettings, obj3);
   }
   const items3 = [tmp16Result, , ];
   let tmp15Result = null != stateFromStores2 && null != stateFromStores1;
@@ -91,7 +91,7 @@ export default function ItemDetailsActionSheet(arg0) {
     const items4 = [result, ];
     const obj6 = { guild: null };
     obj6[0] = stateFromStores1;
-    items4[1] = tmp16(tmp(15784).GuildScoreSettings, obj6);
+    items4[1] = tmp16(tmp(15816).GuildScoreSettings, obj6);
     obj5[0] = items4;
     tmp15Result = tmp15(closure_8, obj5);
     const tmp19 = closure_8;
@@ -106,8 +106,8 @@ export default function ItemDetailsActionSheet(arg0) {
       obj8[0] = `Total Score: ${tmp7.score}`;
       const _JSON = JSON;
       obj8[1] = JSON.stringify(stateFromStores2.score_components);
-      obj7[2] = tmp16(tmp(6322).TableRow, obj8);
-      tmp16Result = tmp16(tmp(6317).TableRowGroup, obj7);
+      obj7[2] = tmp16(tmp(5480).TableRow, obj8);
+      tmp16Result = tmp16(tmp(5873).TableRowGroup, obj7);
     }
   }
   items3[2] = tmp16Result;

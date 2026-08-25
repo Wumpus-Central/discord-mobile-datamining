@@ -7,7 +7,7 @@ const require = arg1;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7177)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5834)().analyticsLocations;
   let obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
   obj = { source: userRecord.getAvatarSource(undefined), size: userRecord(1297).AvatarSizes.REFRESH_MEDIUM_32 };
   obj[0] = jsx(userRecord(1297).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1297).AvatarSizes.REFRESH_MEDIUM_32 });
@@ -52,8 +52,8 @@ function IgnoredUserRow(userRecord) {
   obj1[3] = function onPress() {
     analyticsLocations(closure_1_2[3]).unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj[9] = jsx(userRecord(4750).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(6322).TableRow, { name: "unignore", label: null });
+  obj[9] = jsx(userRecord(4815).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
+  return jsx(userRecord(5480).TableRow, { name: "unignore", label: null });
 }
 noopAll;
 const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUserRow.tsx");

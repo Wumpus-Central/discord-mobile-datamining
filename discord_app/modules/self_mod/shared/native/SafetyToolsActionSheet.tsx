@@ -284,7 +284,7 @@ export default function SafetyToolsActionSheet(channelId) {
         hasIcons: true,
         children: buttons.map((arg0, arg1) => {
           ({ label, subLabel, IconComponent, icon, trailing, onPress, disabled } = arg0);
-          return callback2(callback(6322).TableRow, { label, subLabel, onPress, trailing, disabled, icon: callback2(callback(6327).TableRowIcon, { source: icon, IconComponent }) }, arg1);
+          return callback2(callback(5480).TableRow, { label, subLabel, onPress, trailing, disabled, icon: callback2(callback(5486).TableRowIcon, { source: icon, IconComponent }) }, arg1);
         })
       };
       buttons = buttons.buttons;

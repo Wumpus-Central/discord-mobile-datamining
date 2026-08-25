@@ -1,8 +1,8 @@
 // discord_app/modules/conversations/components/native/ConversationPreviewBlockedMessage.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
@@ -13,9 +13,9 @@ const result = require("set").fileFinishedImporting("modules/conversations/compo
 export default function ConversationPreviewBlockedMessage(reason) {
   let obj = { direction: "horizontal", spacing: ThemesDefault.space.PX_8, align: "center", children: null };
   if ("blocked" === reason.reason) {
-    let EyeSlashIcon = tmp2(10637).DenyIcon;
+    let EyeSlashIcon = tmp2(8733).DenyIcon;
   } else {
-    EyeSlashIcon = tmp2(8642).EyeSlashIcon;
+    EyeSlashIcon = tmp2(8650).EyeSlashIcon;
   }
   obj = { size: "sm", color: ThemesDefault.colors.TEXT_MUTED };
   const items = [closure_3(EyeSlashIcon, obj), ];

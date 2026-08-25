@@ -81,7 +81,7 @@ function recencyEligibilityCheck(cooldown, storageKey) {
     isNaNResult = Number.isNaN(tmp7);
   }
   if (!isNaNResult) {
-    const InAppFeedbackStates2 = tmp(4069).InAppFeedbackStates;
+    const InAppFeedbackStates2 = tmp(4070).InAppFeedbackStates;
     InAppFeedbackStates2.updateSetting((arg0) => {
       obj = {};
       const merged = Object.assign(arg0);

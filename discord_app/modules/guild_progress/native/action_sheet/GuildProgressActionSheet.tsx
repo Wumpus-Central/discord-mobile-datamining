@@ -59,7 +59,7 @@ export default function GuildProgressActionSheet(guild) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -77,16 +77,16 @@ export default function GuildProgressActionSheet(guild) {
               closure_1 = tmp5;
               let base64 = tmp2;
               base64 = undefined;
-              closure_1_1(8911).init(closure_1_5);
-              const obj6 = closure_1_1(8911);
-              closure_1_0(11692).hideActionSheet(closure_1_0.id);
-              const obj7 = closure_1_0(11692);
+              closure_1_1(9168).init(closure_1_5);
+              const obj6 = closure_1_1(9168);
+              closure_1_0(12034).hideActionSheet(closure_1_0.id);
+              const obj7 = closure_1_0(12034);
               obj1 = { size: null };
               obj1[0] = closure_1_10;
               dependencyMap = 1;
               c3 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = closure_1_1(4843).openImagePicker(obj1);
+              obj2[0] = closure_1_1(4963).openImagePicker(obj1);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -100,11 +100,11 @@ export default function GuildProgressActionSheet(guild) {
           } else {
             base64 = arg1.base64;
             if (null != base64) {
-              obj = closure_1_1(8911);
+              obj = closure_1_1(9168);
               obj.updateIcon(closure_5, base64);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp16) {
           c3 = tmp;

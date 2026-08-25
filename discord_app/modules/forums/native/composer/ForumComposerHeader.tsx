@@ -4,9 +4,9 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
+import ForumIcon from "../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import ForumIcon from "../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -68,8 +68,8 @@ export default function ForumComposerHeader(height) {
     obj2[1] = intl3.string(tmp7(1236).t.yR6HwZ);
     obj2[2] = tmp.button;
     obj2[3] = onGuidelinesPress;
-    obj2[4] = tmp6(tmp7(6909).BookCheckIcon, {});
-    tmp6Result = tmp6(tmp7(5438).PressableOpacity, obj2);
+    obj2[4] = tmp6(tmp7(4906).BookCheckIcon, {});
+    tmp6Result = tmp6(tmp7(4949).PressableOpacity, obj2);
   }
   items[2] = tmp6Result;
   items[3] = callback(closure_4, { style: tmp.headerBarSeparator });

@@ -2,8 +2,8 @@
 import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import mapDefault from "../../stores/web/WindowStore.tsx";
 import apexExperiment from "ContentInventoryExperiments.tsx";
+import mapDefault from "../../stores/web/WindowStore.tsx";
 import ContentInventoryFeature from "../../../discord_common/js/shared/shared-constants/ContentInventoryFeature.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../gateway/GatewayConnectionStore.tsx";
@@ -191,7 +191,7 @@ function _fetchInventory() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

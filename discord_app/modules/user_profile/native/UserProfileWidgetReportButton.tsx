@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/native/UserProfileWidgetReportButton.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
+import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import { Pressable } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
@@ -31,7 +31,7 @@ export default function UserProfileWidgetReportButton(arg0) {
       const intl = callback(1236).intl;
       obj.accessibilityLabel = intl.string(callback(1236).t.xpSHSk);
       obj = { size: "sm", color: callback2(712).colors.TEXT_MUTED };
-      obj.children = callback3(callback(9452).MoreHorizontalIcon, obj);
+      obj.children = callback3(callback(8751).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
     }
   };
@@ -45,7 +45,7 @@ export default function UserProfileWidgetReportButton(arg0) {
       const intl = callback(1236).intl;
       obj.accessibilityLabel = intl.string(callback(1236).t.xpSHSk);
       obj = { size: "sm", color: callback2(712).colors.TEXT_MUTED };
-      obj.children = callback3(callback(9452).MoreHorizontalIcon, obj);
+      obj.children = callback3(callback(8751).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
     }
   });

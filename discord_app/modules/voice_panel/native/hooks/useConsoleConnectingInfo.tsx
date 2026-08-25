@@ -59,7 +59,7 @@ export default function useConsoleConnectingInfo(arg0) {
   obj[1] = channelId2 === arg0 || channelId === arg0;
   obj[2] = getConsoleIconDefault(str);
   const tmp9 = useShouldDisplayCancelConsoleTransferDefault(stateFromStores);
-  obj[3] = tmp5(16486).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
+  obj[3] = tmp5(16518).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
   obj[4] = getConsoleColorDefault(str);
   obj[5] = tmp9;
   return obj;

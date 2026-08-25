@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarName.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import memoResult1Default from "../../../guild_tag/native/GuildTag.tsx";
 import AVERAGE_FONT_WIDTH_RATIODefault from "../../../display_name_styles/native/UsernameWithEffects.tsx";
 import ChevronSmallDownIcon from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
-import memoResult1Default from "../../../guild_tag/native/GuildTag.tsx";
 import apexExperiment from "YouBarGuildTagExperiment.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../../stores/ApplicationStreamingStore.tsx";

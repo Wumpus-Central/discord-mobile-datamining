@@ -39,9 +39,9 @@ function ContentTimestamp(entry) {
   } else {
     obj = { variant: "text-sm/medium", style: null, children: null };
     obj[1] = tmp.text;
-    obj[2] = tmp2(8387).formatEndedTimestamp(entry, tmp6);
-    tmp7Result = tmp7(tmp2(4739).Text, obj);
-    const tmp2Result = tmp2(8387);
+    obj[2] = tmp2(8393).formatEndedTimestamp(entry, tmp6);
+    tmp7Result = tmp7(tmp2(4376).Text, obj);
+    const tmp2Result = tmp2(8393);
   }
   return tmp7Result;
 }
@@ -84,16 +84,16 @@ export const MarathonBadge = function MarathonBadge(entry) {
   entry = entry.entry;
   let obj = calculateTimestampDurations;
   if (obj.isEntryMarathon(entry)) {
-    let tmpResult = tmp(8387);
+    let tmpResult = tmp(8393);
     const colors = ThemesDefault.colors;
     const isEntryActiveResult = tmpResult.isEntryActive(entry);
-    tmpResult = tmp(8387);
+    tmpResult = tmp(8393);
     const marathonDescription = tmpResult.getMarathonDescription(entry);
     const text = marathonDescription.text;
     let tmp9 = null;
     if (null != text) {
       obj = { Icon: null, iconColor: null, text: null, accessibilityLabel: null };
-      obj[0] = tmp(10832).TimerIcon;
+      obj[0] = tmp(11156).TimerIcon;
       obj[1] = tmp6;
       obj[2] = text;
       obj[3] = tmp8;
@@ -109,7 +109,7 @@ export const NewGameBadge = function NewGameBadge(entry) {
   let tmp3 = null;
   if (obj.isEntryNew(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(12158).NewUserIcon;
+    obj[0] = tmp(12491).NewUserIcon;
     const intl = tmp(1236).intl;
     obj[1] = intl.string(tmp(1236).t.keY6mW);
     obj[2] = ThemesDefault.colors.STATUS_POSITIVE;
@@ -125,7 +125,7 @@ export const StreakBadge = function StreakBadge(entry) {
     tmp4 = null;
     if (streakCount >= 2) {
       obj = { Icon: null, text: null, iconColor: null, accessibilityLabel: null };
-      obj[0] = tmp(12160).FlashIcon;
+      obj[0] = tmp(12493).FlashIcon;
       const intl = tmp(1236).intl;
       obj = { days: null };
       obj[0] = streakCount;
@@ -146,9 +146,9 @@ export const TrendingBadge = function TrendingBadge(entry) {
   let tmp4 = null;
   if (null != trendingType) {
     tmp4 = null;
-    if (trendingType !== tmp(12162).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
+    if (trendingType !== tmp(12495).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
       obj = { Icon: null, text: null, iconColor: null };
-      obj[0] = tmp(9563).FireIcon;
+      obj[0] = tmp(12410).FireIcon;
       const intl = tmp(1236).intl;
       obj[1] = intl.string(tmp(1236).t.TsWCdW);
       obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
@@ -162,7 +162,7 @@ export const ResurrectedBadge = function ResurrectedBadge(entry) {
   let tmp3 = null;
   if (null != obj.getResurrectedEntryLastPlayTime(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(10162).RetryIcon;
+    obj[0] = tmp(10012).RetryIcon;
     const intl = tmp(1236).intl;
     obj[1] = intl.string(tmp(1236).t.adnLsB);
     obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
@@ -177,7 +177,7 @@ export const TopGameBadge = function TopGameBadge(entry) {
     return null;
   } else {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(8049).TrophyIcon;
+    obj[0] = tmp(7871).TrophyIcon;
     obj = { children: null };
     const intl = tmp(1236).intl;
     const items = [intl.string(tmp(1236).t["/50eHi"]), ": ", ];

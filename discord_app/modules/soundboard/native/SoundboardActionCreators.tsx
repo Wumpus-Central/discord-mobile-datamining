@@ -3,7 +3,7 @@ import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import ComponentDispatcher from "../../../utils/ComponentDispatchUtils.tsx";
 import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import asyncRequireImpl from "../../../../_runtime/02008_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
 import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
@@ -16,5 +16,5 @@ export const showSoundboardSoundPickerActionSheet = function showSoundboardSound
   ComponentDispatch.dispatch(ComponentActions.TOGGLE_CALL_CONTROL_DRAWER);
   const result = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
   const obj = UNSAFE_isDismissibleContentDismissed;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16376, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16408, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource });
 };

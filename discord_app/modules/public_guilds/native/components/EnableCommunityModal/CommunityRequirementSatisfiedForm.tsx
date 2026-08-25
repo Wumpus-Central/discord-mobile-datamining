@@ -10,7 +10,7 @@ let result = require("set").fileFinishedImporting("modules/public_guilds/native/
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
-  let obj = formSwitchDisabled(16979);
+  let obj = formSwitchDisabled(17011);
   const enableCommunitySharedStyles = obj.useEnableCommunitySharedStyles();
   obj = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
   const items = [formSwitchDisabled.children, ];
@@ -24,7 +24,7 @@ export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
         const obj = formSwitchDisabled(closure_1_1[3]);
       }
     };
-    tmp6 = callback(formSwitchDisabled(5438).PressableOpacity, obj);
+    tmp6 = callback(formSwitchDisabled(4949).PressableOpacity, obj);
   }
   items[1] = tmp6;
   obj[1] = items;

@@ -33,7 +33,7 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage = funct
         obj[0] = messageAuthorWithProcessedColor.nick;
         obj[1] = tmp16;
         obj[2] = guild.name;
-        let tmp14Result = tmp14(4270);
+        let tmp14Result = tmp14(4271);
         obj[3] = tmp14Result.getTierName(TIER_1);
         obj[4] = tmp13;
         let formatToPartsResult = intl2.formatToParts(tmp14(1236).t.GjNvr7, obj);
@@ -43,7 +43,7 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage = funct
         obj1[0] = messageAuthorWithProcessedColor.nick;
         obj1[1] = tmp16;
         obj1[2] = guild.name;
-        tmp14Result = tmp14(4270);
+        tmp14Result = tmp14(4271);
         obj1[3] = tmp14Result.getTierName(TIER_1);
         formatToPartsResult = intl.formatToParts(tmp14(1236).t.oAYAP7, obj1);
       }

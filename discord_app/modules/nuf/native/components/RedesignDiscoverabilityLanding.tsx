@@ -5,9 +5,9 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import NAV_BAR_HEIGHT from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/11978_registerAsset.js";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
+import registerAssetDefault from "../../../../../_runtime/12306_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -55,7 +55,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   const intl4 = getSystemLocale.intl;
   items1[2] = intl4.format(getSystemLocale.t.VcSQ4n, {
     learnMoreHook(children) {
-      return callback2(callback(4739).Text, { onPress: callback(11902).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
+      return callback2(callback(4376).Text, { onPress: callback(12236).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
     }
   });
   obj4[3] = items1;

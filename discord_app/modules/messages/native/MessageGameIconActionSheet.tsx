@@ -55,7 +55,7 @@ export default function MessageGameIconActionSheet(applicationId) {
     const obj5 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
     obj5[0] = tmp.timestamp;
     obj5[3] = applicationId.messageTimestamp;
-    const items2 = [closure_6(tmp2(4739).Text, obj5), ];
+    const items2 = [closure_6(tmp2(4376).Text, obj5), ];
     const obj6 = { variant: "text-sm/medium", children: null };
     const intl = tmp2(1236).intl;
     const obj7 = { applicationName: null };
@@ -66,13 +66,13 @@ export default function MessageGameIconActionSheet(applicationId) {
     obj8[0] = combinedDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
     items3[2] = intl2.format(tmp2(1236).t.BPDKoA, obj8);
     obj6[1] = items3;
-    items2[1] = closure_7(tmp2(4739).Text, obj6);
+    items2[1] = closure_7(tmp2(4376).Text, obj6);
     obj4[1] = items2;
     items1[1] = closure_7(View, obj4);
     obj[1] = items1;
     obj[1] = closure_7(View, obj);
     obj2[1] = closure_6(View, obj);
-    tmp5Result = tmp5(tmp2(6988).BottomSheet, obj2);
+    tmp5Result = tmp5(tmp2(5503).BottomSheet, obj2);
     const obj13 = combinedDefault;
   }
   return tmp5Result;

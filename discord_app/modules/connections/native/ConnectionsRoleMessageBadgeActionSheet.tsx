@@ -143,7 +143,7 @@ class PopoutChecks {
               const items1 = [null, , , ];
               let tmp26 = null;
               if (null != tmp7) {
-                const obj3 = { style: null, user: null, size: null, guildId: "ct" };
+                const obj3 = { style: null, user: null, size: null, guildId: "a" };
                 obj3[0] = tmp21.popoutCheckGroupPlatformIcon;
                 obj3[1] = tmp7;
                 obj3[2] = tmp11(tmp3[24]).AvatarSizes.XSMALL;

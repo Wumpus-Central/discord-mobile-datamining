@@ -6,7 +6,7 @@ import closure_6 from "../../../../stores/SelectedChannelStore.tsx";
 import closure_7 from "../../../../stores/SelectedGuildStore.tsx";
 import { YouBarNavigatorScreens } from "../MainTabsConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/09970_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/08717_createNativeStackNavigator.js";
 import { ICYMINavigator } from "../../../icymi/native/navigator/ICYMINavigator.tsx";
 
 require = arg1;

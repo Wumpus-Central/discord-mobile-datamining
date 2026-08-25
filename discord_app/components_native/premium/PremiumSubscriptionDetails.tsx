@@ -5,38 +5,38 @@ import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
 import contextDefault from "../../modules/app_analytics/useAnalyticsLocations.tsx";
 import QUICK_SWITCHERDefault from "../../modules/app_analytics/AnalyticsLocation.tsx";
 import launchPremiumPlanSelect from "../../modules/premium/native/launchPremiumPlanSelect.tsx";
-import registerAssetDefault from "../../../_runtime/07651_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/07702_registerAsset.js";
-import registerAssetDefault3 from "../../../_runtime/07703_registerAsset.js";
-import registerAssetDefault4 from "../../../_runtime/07704_registerAsset.js";
-import registerAssetDefault5 from "../../../_runtime/07705_registerAsset.js";
-import registerAssetDefault6 from "../../../_runtime/07706_registerAsset.js";
-import registerAssetDefault7 from "../../../_runtime/07707_registerAsset.js";
-import registerAssetDefault8 from "../../../_runtime/07710_registerAsset.js";
-import registerAssetDefault9 from "../../../_runtime/07712_registerAsset.js";
-import registerAssetDefault10 from "../../../_runtime/07920_registerAsset.js";
-import registerAssetDefault11 from "../../../_runtime/07921_registerAsset.js";
-import registerAssetDefault12 from "../../../_runtime/07922_registerAsset.js";
-import registerAssetDefault13 from "../../../_runtime/07923_registerAsset.js";
-import registerAssetDefault14 from "../../../_runtime/07924_registerAsset.js";
-import registerAssetDefault15 from "../../../_runtime/07925_registerAsset.js";
-import registerAssetDefault16 from "../../../_runtime/07926_registerAsset.js";
-import registerAssetDefault17 from "../../../_runtime/07927_registerAsset.js";
-import registerAssetDefault18 from "../../../_runtime/07928_registerAsset.js";
-import registerAssetDefault19 from "../../../_runtime/07929_registerAsset.js";
-import registerAssetDefault20 from "../../../_runtime/07930_registerAsset.js";
-import registerAssetDefault21 from "../../../_runtime/07931_registerAsset.js";
-import registerAssetDefault22 from "../../../_runtime/07932_registerAsset.js";
-import registerAssetDefault23 from "../../../_runtime/07933_registerAsset.js";
-import registerAssetDefault24 from "../../../_runtime/07934_registerAsset.js";
-import registerAssetDefault25 from "../../../_runtime/07935_registerAsset.js";
-import registerAssetDefault26 from "../../../_runtime/07936_registerAsset.js";
-import registerAssetDefault27 from "../../../_runtime/07937_registerAsset.js";
-import registerAssetDefault28 from "../../../_runtime/07938_registerAsset.js";
-import registerAssetDefault29 from "../../../_runtime/07939_registerAsset.js";
-import registerAssetDefault30 from "../../../_runtime/07940_registerAsset.js";
-import registerAssetDefault31 from "../../../_runtime/07941_registerAsset.js";
-import registerAssetDefault32 from "../../../_runtime/07942_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/07472_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/07523_registerAsset.js";
+import registerAssetDefault3 from "../../../_runtime/07524_registerAsset.js";
+import registerAssetDefault4 from "../../../_runtime/07525_registerAsset.js";
+import registerAssetDefault5 from "../../../_runtime/07526_registerAsset.js";
+import registerAssetDefault6 from "../../../_runtime/07527_registerAsset.js";
+import registerAssetDefault7 from "../../../_runtime/07528_registerAsset.js";
+import registerAssetDefault8 from "../../../_runtime/07531_registerAsset.js";
+import registerAssetDefault9 from "../../../_runtime/07533_registerAsset.js";
+import registerAssetDefault10 from "../../../_runtime/07741_registerAsset.js";
+import registerAssetDefault11 from "../../../_runtime/07742_registerAsset.js";
+import registerAssetDefault12 from "../../../_runtime/07743_registerAsset.js";
+import registerAssetDefault13 from "../../../_runtime/07744_registerAsset.js";
+import registerAssetDefault14 from "../../../_runtime/07745_registerAsset.js";
+import registerAssetDefault15 from "../../../_runtime/07746_registerAsset.js";
+import registerAssetDefault16 from "../../../_runtime/07747_registerAsset.js";
+import registerAssetDefault17 from "../../../_runtime/07748_registerAsset.js";
+import registerAssetDefault18 from "../../../_runtime/07749_registerAsset.js";
+import registerAssetDefault19 from "../../../_runtime/07750_registerAsset.js";
+import registerAssetDefault20 from "../../../_runtime/07751_registerAsset.js";
+import registerAssetDefault21 from "../../../_runtime/07752_registerAsset.js";
+import registerAssetDefault22 from "../../../_runtime/07753_registerAsset.js";
+import registerAssetDefault23 from "../../../_runtime/07754_registerAsset.js";
+import registerAssetDefault24 from "../../../_runtime/07755_registerAsset.js";
+import registerAssetDefault25 from "../../../_runtime/07756_registerAsset.js";
+import registerAssetDefault26 from "../../../_runtime/07757_registerAsset.js";
+import registerAssetDefault27 from "../../../_runtime/07758_registerAsset.js";
+import registerAssetDefault28 from "../../../_runtime/07759_registerAsset.js";
+import registerAssetDefault29 from "../../../_runtime/07760_registerAsset.js";
+import registerAssetDefault30 from "../../../_runtime/07761_registerAsset.js";
+import registerAssetDefault31 from "../../../_runtime/07762_registerAsset.js";
+import registerAssetDefault32 from "../../../_runtime/07763_registerAsset.js";
 import openPremiumPlanWhatYouLoseActionSheetDefault from "../../modules/premium/native/openPremiumPlanWhatYouLoseActionSheet.tsx";
 import createSubscriptionInvoicePreview from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -82,7 +82,7 @@ function _handleCancelSubscription() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -101,14 +101,14 @@ function _handleCancelSubscription() {
               obj1[0] = callback;
               obj1[1] = closure_1;
               obj1[2] = dependencyMap;
-              obj1[3] = callback(7696).STEP_ANALYTICS_NAMES[callback(undefined, 7696).CancellationFlowSteps.MOBILE_SUBSCRIPTION_MANAGE];
-              const result = callback(7696).trackPremiumSubscriptionCancellationFlowStep(obj1);
+              obj1[3] = callback(7517).STEP_ANALYTICS_NAMES[callback(undefined, 7517).CancellationFlowSteps.MOBILE_SUBSCRIPTION_MANAGE];
+              const result = callback(7517).trackPremiumSubscriptionCancellationFlowStep(obj1);
               let isPurchasedViaApple;
               if (callback != null) {
                 isPurchasedViaApple = tmp15.isPurchasedViaApple;
               }
               if (isPurchasedViaApple) {
-                let tmp18Result = tmp18(7743);
+                let tmp18Result = tmp18(7564);
                 c4 = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
@@ -120,11 +120,11 @@ function _handleCancelSubscription() {
                   isPurchasedViaGoogle = tmp15.isPurchasedViaGoogle;
                 }
                 if (isPurchasedViaGoogle) {
-                  tmp18Result = tmp18(4042);
+                  tmp18Result = tmp18(4043);
                   closure_1_8.openURL(tmp18Result.getExternalSubscriptionMethodUrl(tmp15.paymentGateway, "SUBSCRIPTION_MANAGEMENT"));
                 }
               }
-              const obj7 = callback(7696);
+              const obj7 = callback(7517);
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -136,7 +136,7 @@ function _handleCancelSubscription() {
             return obj;
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp9) {
           c3 = tmp;
           throw tmp9;
@@ -181,7 +181,7 @@ function _onResubscribeClick() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -199,7 +199,7 @@ function _onResubscribeClick() {
               closure_1 = tmp2;
               if (lib.isACOM) {
                 obj1 = { requestIdentifier: null, subscriptionId: null };
-                const obj9 = lib(7428);
+                const obj9 = lib(7026);
                 obj1[0] = lib(514).v4();
                 obj1[1] = tmp25.id;
                 dependencyMap = 1;
@@ -208,14 +208,14 @@ function _onResubscribeClick() {
                 obj2[0] = obj9.resubscribeGenericSubscription(obj1, true);
                 return obj2;
               } else if (tmp25.isPurchasedViaApple) {
-                obj6 = lib(7743);
+                obj6 = lib(7564);
                 dependencyMap = 3;
                 c3 = 1;
                 const obj3 = { value: null, done: false };
                 obj3[0] = obj6.manageSubscription();
                 return obj3;
               } else if (tmp25.isPurchasedViaGoogle) {
-                let obj5 = lib(4042);
+                let obj5 = lib(4043);
                 closure_1_8.openURL(obj5.getExternalSubscriptionMethodUrl(tmp25.paymentGateway, "SUBSCRIPTION_MANAGEMENT"));
               }
             }
@@ -229,7 +229,7 @@ function _onResubscribeClick() {
               obj4[0] = arg1;
               return obj4;
             } else {
-              obj2 = lib(4470);
+              obj2 = lib(4725);
               dependencyMap = 2;
               c3 = 1;
               obj5 = { value: null, done: false };
@@ -256,7 +256,7 @@ function _onResubscribeClick() {
             return obj;
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp19) {
           c3 = tmp;
           throw tmp19;
@@ -434,7 +434,7 @@ class PremiumSubscriptionHeader {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -476,7 +476,7 @@ class PremiumSubscriptionHeader {
                 c3 = 0;
                 callback(false);
                 c4 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } catch (tmp23) {
               callback = tmp23;
@@ -661,7 +661,7 @@ obj17[createCacheKey.ACTIVE] = registerAssetDefault22;
 obj17[createCacheKey.ERROR] = registerAssetDefault23;
 obj17[createCacheKey.RESUB] = registerAssetDefault24;
 obj12[require("getPremiumPlanItem").Branding.PREMIUM_GUILD] = obj17;
-let closure_22 = { [arg1(4042).Branding.BUNDLE]: { [createCacheKey.ACTIVE]: obj, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [arg1(4042).Branding.TIER_0]: { [createCacheKey.ACTIVE]: { height: 35, width: 29 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [arg1(4042).Branding.TIER_1]: { [createCacheKey.ACTIVE]: { height: 35, width: 49 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [arg1(4042).Branding.TIER_2]: { [createCacheKey.ACTIVE]: { height: 37, width: 49 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [arg1(4042).Branding.PREMIUM_GUILD]: { [createCacheKey.ACTIVE]: { width: 51, height: 36 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj } };
+let closure_22 = { [arg1(4043).Branding.BUNDLE]: { [createCacheKey.ACTIVE]: obj, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [arg1(4043).Branding.TIER_0]: { [createCacheKey.ACTIVE]: { height: 35, width: 29 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [arg1(4043).Branding.TIER_1]: { [createCacheKey.ACTIVE]: { height: 35, width: 49 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [arg1(4043).Branding.TIER_2]: { [createCacheKey.ACTIVE]: { height: 37, width: 49 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj }, [arg1(4043).Branding.PREMIUM_GUILD]: { [createCacheKey.ACTIVE]: { width: 51, height: 36 }, [createCacheKey.ERROR]: obj, [createCacheKey.RESUB]: obj } };
 const obj18 = {};
 const obj19 = {};
 obj19[createCacheKey.ACTIVE] = registerAssetDefault25;
@@ -688,7 +688,7 @@ obj23[createCacheKey.ACTIVE] = registerAssetDefault31;
 obj23[createCacheKey.ERROR] = registerAssetDefault31;
 obj23[createCacheKey.RESUB] = registerAssetDefault32;
 obj18[require("getPremiumPlanItem").Branding.PREMIUM_GUILD] = obj23;
-let closure_24 = { [arg1(4042).Branding.BUNDLE]: { height: 33, width: 205 }, [arg1(4042).Branding.TIER_0]: { height: 32, width: 59 }, [arg1(4042).Branding.TIER_1]: { height: 16, width: 156 }, [arg1(4042).Branding.TIER_2]: { height: 32, width: 78 }, [arg1(4042).Branding.PREMIUM_GUILD]: { height: 17, width: 184 } };
+let closure_24 = { [arg1(4043).Branding.BUNDLE]: { height: 33, width: 205 }, [arg1(4043).Branding.TIER_0]: { height: 32, width: 59 }, [arg1(4043).Branding.TIER_1]: { height: 16, width: 156 }, [arg1(4043).Branding.TIER_2]: { height: 32, width: 78 }, [arg1(4043).Branding.PREMIUM_GUILD]: { height: 17, width: 184 } };
 let closure_25 = { [createCacheKey.ACTIVE]: obj1, [createCacheKey.ERROR]: obj1, [createCacheKey.RESUB]: obj2 };
 let obj4 = { marginTop: 8, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 let result = require("set").fileFinishedImporting("components_native/premium/PremiumSubscriptionDetails.tsx");
@@ -708,7 +708,7 @@ export default function PremiumSubscriptionDetails(subscription) {
     obj1[0] = tmp.title;
     const intl = tmp4(1236).intl;
     obj1[4] = intl.string(tmp4(1236).t.ITurwY);
-    const items = [callback3(tmp4(4739).Text, obj1), , , , ];
+    const items = [callback3(tmp4(4376).Text, obj1), , , , ];
     let tmp9Result = null != subscription.renewalMutations;
     if (tmp9Result) {
       tmp9Result = subscription.status !== constants3.CANCELED;
@@ -717,14 +717,14 @@ export default function PremiumSubscriptionDetails(subscription) {
       const obj2 = { subscription: null, renewalMutations: null };
       obj2[0] = subscription;
       obj2[1] = subscription.renewalMutations;
-      tmp9Result = tmp9(tmp2(7956), obj2);
+      tmp9Result = tmp9(tmp2(7777), obj2);
     }
     items[1] = tmp9Result;
     tmp9Result = subscription.status === constants3.ACCOUNT_HOLD;
     if (tmp9Result) {
       const obj3 = { subscription: null };
       obj3[0] = subscription;
-      tmp9Result = tmp9(tmp2(7957), obj3);
+      tmp9Result = tmp9(tmp2(7778), obj3);
     }
     items[2] = tmp9Result;
     const obj4 = { subscription: null, renewalInvoicePreview: null, onClickManagePremiumGuild: null };
@@ -736,7 +736,7 @@ export default function PremiumSubscriptionDetails(subscription) {
     obj5[0] = tmp.desktopSubtext;
     const intl2 = tmp4(1236).intl;
     obj5[2] = intl2.string(tmp4(1236).t["MTG+3O"]);
-    items[4] = callback3(tmp4(4739).Text, obj5);
+    items[4] = callback3(tmp4(4376).Text, obj5);
     obj[1] = items;
     tmp7Result = closure_17(closure_9, obj);
     const tmp7 = closure_17;
@@ -779,7 +779,7 @@ export const handleManageSubscription = function handleManageSubscription(subscr
     obj[3] = !hasActiveTrial;
     let prop;
     if (hasActiveTrial) {
-      prop = tmp9(7416).excludeNitroOnlyPlansForActiveTrial;
+      prop = tmp9(7014).excludeNitroOnlyPlansForActiveTrial;
     }
     obj[4] = prop;
     const result = launchPremiumPlanSelect.launchPremiumPlanSelect(obj);

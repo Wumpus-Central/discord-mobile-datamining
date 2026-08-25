@@ -42,13 +42,13 @@ export default function useBatchUpdateChannelSettings(arg0) {
         isCollapsedResult = null != id;
       }
       if (isCollapsedResult) {
-        let obj = callback(10789);
+        let obj = callback(11118);
         obj.categoryExpand(id);
       }
-      obj1 = callback(10786);
+      obj1 = callback(11115);
       if (obj1.hasNotSetUpChannelOptIn(closure_0)) {
         if (id === id) {
-          let tmp8Result = tmp8(10786);
+          let tmp8Result = tmp8(11115);
           obj = { include: null };
           const _Set2 = Set;
           const items = [id];
@@ -56,7 +56,7 @@ export default function useBatchUpdateChannelSettings(arg0) {
           obj[0] = set;
           const result = tmp8Result.optIntoAllChannelsForExistingMember(closure_0, obj);
         } else {
-          tmp8Result = tmp8(10786);
+          tmp8Result = tmp8(11115);
           obj = { exclude: null };
           const _Set = Set;
           const items1 = [id];
@@ -65,7 +65,7 @@ export default function useBatchUpdateChannelSettings(arg0) {
           const result1 = tmp8Result.optIntoAllChannelsForExistingMember(closure_0, obj);
         }
       } else {
-        const tmp8Result1 = tmp8(6831);
+        const tmp8Result1 = tmp8(5362);
         obj1 = { section: null };
         obj1[0] = constants.CHANNEL_BROWSER;
         const result2 = tmp8Result1.updateOptInChannelsImmediate(closure_0, id, !isChannelOptedInResult, obj1);

@@ -8,7 +8,7 @@ import TableRowGroupTitle from "../../../design/components/TableRow/native/Table
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import COMMUNITY_PORTAL_SERVER_SAFETY_PAGE from "../GuildReportRaidModalConstants.tsx";
+import getReportRaidHelpArticleURL from "../GuildReportRaidModalConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
@@ -23,7 +23,7 @@ function ReportModal(onSubmit) {
   closure_3 = React.useCallback((arg0) => closure_1_9(closure_1_0(formRow[8]).Text, { style: formRow.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: closure_1_7(arg0) }), items);
   let obj = { style: tmp.container, children: null };
   const callback = React.useCallback(() => {
-    callback(formRow[9]).openURL(closure_6);
+    callback(formRow[9]).openURL(callback3());
   }, []);
   obj = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
@@ -75,7 +75,7 @@ function ReportModal(onSubmit) {
   obj[1] = items1;
   return callback3(View, obj);
 }
-({ COMMUNITY_PORTAL_SERVER_SAFETY_PAGE: closure_6, getReportRaidTypeLabel: error, REPORT_RAID_OPTIONS: closure_8 } = COMMUNITY_PORTAL_SERVER_SAFETY_PAGE);
+({ getReportRaidHelpArticleURL: closure_6, getReportRaidTypeLabel: error, REPORT_RAID_OPTIONS: closure_8 } = getReportRaidHelpArticleURL);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
 createCacheKey = { container: null, headerSubtitle: null, formBody: null, formRow: null, submitButtonContainer: null };

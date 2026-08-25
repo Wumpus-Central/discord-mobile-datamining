@@ -2,8 +2,8 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
-import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
 import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
 import useFavoritesAccess from "../FavoritesHooks.tsx";
@@ -47,14 +47,14 @@ export default function FavoritesEmptyState() {
   if (obj.useFavoritesAccess("favorites_empty_state").hasAccess) {
     const obj3 = { variant: "primary", text: null, icon: null, onPress: null };
     const intl4 = tmp2(1236).intl;
-    obj3[1] = intl4.string(tmp9(3082)["6kk0gM"]);
-    obj3[2] = tmp8(tmp2(11981).PlusMediumIcon, {});
+    obj3[1] = intl4.string(tmp9(3083)["6kk0gM"]);
+    obj3[2] = tmp8(tmp2(12309).PlusMediumIcon, {});
     obj3[3] = callback;
     let obj4 = obj3;
   } else {
     obj4 = { variant: "primary", text: null, onPress: null };
     const intl3 = tmp2(1236).intl;
-    obj4[1] = intl3.string(tmp9(3082).yYVbdv);
+    obj4[1] = intl3.string(tmp9(3083).yYVbdv);
     obj4[2] = callback1;
   }
   items[2] = callback(Button.Button, obj4);

@@ -1,7 +1,7 @@
 // discord_app/utils/SKUUtils.tsx
 import set from "PlatformUtils.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
-import tDefault from "../../_runtime/03978_t.js";
+import hooksDefault from "../../_runtime/03979_hooks.js";
 import matchPath from "../modules/routing/matchPathCompat.tsx";
 import _httpGetWithCountryCodeQuery from "StoreUtils.tsx";
 import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
@@ -318,7 +318,7 @@ export const getReadablePreorderReleaseDate = function getReadablePreorderReleas
     let num = 0;
     if (0 < items.length) {
       [tmp3, tmp4] = callback(items[num], 2);
-      const obj = tDefault(preorderApproximateReleaseDate, tmp3, true);
+      const obj = hooksDefault(preorderApproximateReleaseDate, tmp3, true);
       while (!obj.isValid()) {
         num = num + 1;
       }

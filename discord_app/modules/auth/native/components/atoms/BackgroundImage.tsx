@@ -14,7 +14,7 @@ export default function BackgroundImage(backgroundImageSource) {
     flag = false;
   }
   dependencyMap = undefined;
-  const tmp = flag(4314)();
+  const tmp = flag(4315)();
   dependencyMap = tmp;
   let items = [backgroundImageSource, flag, tmp];
   let obj = { style: absoluteFill.absoluteFill, children: null };

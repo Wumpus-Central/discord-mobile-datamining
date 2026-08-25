@@ -152,9 +152,9 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   const obj2 = threadId(589);
   const tmp = threadId;
   const tmp4 = stateFromStores;
-  const firstForumPostMessage = threadId(7307).useFirstForumPostMessage(stateFromStores);
+  const firstForumPostMessage = threadId(6027).useFirstForumPostMessage(stateFromStores);
   ({ firstMessage, loaded } = firstForumPostMessage);
-  threadId(8552);
+  threadId(8560);
   if (loaded) {
     obj = { style: null, children: null };
     obj[0] = style;
@@ -165,8 +165,8 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
     obj[3] = tmp10;
     obj[4] = localDeviceMedia;
     obj[7] = loaded;
-    obj[1] = callback(tmp4(11249), obj);
-    tmp5 = callback(tmp(11248).ForumPostDisabledContainer, obj);
+    obj[1] = callback(tmp4(11609), obj);
+    tmp5 = callback(tmp(11608).ForumPostDisabledContainer, obj);
   }
   return tmp5;
 };

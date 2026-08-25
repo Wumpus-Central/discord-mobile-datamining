@@ -1,8 +1,8 @@
 // discord_app/components_native/MainShared.tsx
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import coerceMainRoute from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import isVoicePanelEnabled from "../modules/voice_panel/VoicePanelUtils.native.tsx";
 import usePipVideoOrStream from "../modules/video_calls/native/usePipVideoOrStream.tsx";
+import isVoicePanelEnabled from "../modules/voice_panel/VoicePanelUtils.native.tsx";
 import KeyCommandsView from "../modules/keyboard/native/KeyCommandsView.tsx";
 import PictureInPictureGlobalDefault from "../modules/video_calls/native/components/PictureInPictureGlobal.tsx";
 import BurstReactionAnimationContainerInnerDefault from "../modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx";

@@ -37,9 +37,9 @@ function UserRowSubLabel(arg0) {
   }
   if (!isGameRelationship) {
     obj = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: null };
-    obj[3] = tmp(4223).getUserTag(user);
-    callback(tmp(4739).Text, obj);
-    const tmpResult = tmp(4223);
+    obj[3] = tmp(4224).getUserTag(user);
+    callback(tmp(4376).Text, obj);
+    const tmpResult = tmp(4224);
   }
   if (null == stateFromStores) {
     obj1 = { style: null };
@@ -61,7 +61,7 @@ function UserRowSubLabel(arg0) {
     const items1 = [callback(tmp(1297).Icon, obj3, stateFromStores.id), ];
     const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: null };
     obj5[3] = stateFromStores.name;
-    items1[1] = callback(tmp(4739).Text, obj5);
+    items1[1] = callback(tmp(4376).Text, obj5);
     obj2[1] = items1;
     closure_15(View, obj2);
     const tmp11 = closure_15;
@@ -186,7 +186,7 @@ const memoResult = importAllResult.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== guildId.ACTIONS) {
-      let obj = { accessibilityActions: null, actions: "r" };
+      let obj = { accessibilityActions: null, actions: "a" };
       obj[0] = items;
       return obj;
     } else {

@@ -22,7 +22,7 @@ const obj9 = { USER_LINK_TYPE_UNSPECIFIED: 0, [0]: "USER_LINK_TYPE_UNSPECIFIED",
 const obj10 = { USER_LINK_STATUS_UNSPECIFIED: 0, [0]: "USER_LINK_STATUS_UNSPECIFIED", PENDING: 1, [1]: "PENDING", ACTIVE: 2, [2]: "ACTIVE", INACTIVE: 3, [3]: "INACTIVE", DECLINED: 4, [4]: "DECLINED" };
 const obj11 = { RATE_LIMIT_TIER_UNSPECIFIED: 0, [0]: "RATE_LIMIT_TIER_UNSPECIFIED", UNLIMITED: 1, [1]: "UNLIMITED", TIER_2: 2, [2]: "TIER_2", TIER_3: 3, [3]: "TIER_3", TIER_4: 4, [4]: "TIER_4", DISABLED: 5, [5]: "DISABLED" };
 const obj12 = { FEATURE_LIMIT_NAME_UNSPECIFIED: 0, [0]: "FEATURE_LIMIT_NAME_UNSPECIFIED", GUILD_MESSAGE_SEND: 1, [1]: "GUILD_MESSAGE_SEND", DM_SEND: 2, [2]: "DM_SEND", FRIEND_REQUEST: 3, [3]: "FRIEND_REQUEST", GUILD_CREATE: 4, [4]: "GUILD_CREATE", GUILD_JOIN: 5, [5]: "GUILD_JOIN", GUILD_TEXT_CHANNEL_CREATE: 6, [6]: "GUILD_TEXT_CHANNEL_CREATE", GUILD_UPLOAD_ATTACHMENT: 7, [7]: "GUILD_UPLOAD_ATTACHMENT", DM_UPLOAD_ATTACHMENT: 8, [8]: "DM_UPLOAD_ATTACHMENT", GDM_UPLOAD_ATTACHMENT: 9, [9]: "GDM_UPLOAD_ATTACHMENT", GDM_SEND: 10, [10]: "GDM_SEND", GUILD_VOICE_CHANNEL_CREATE: 11, [11]: "GUILD_VOICE_CHANNEL_CREATE", USER_PROFILE_EDIT: 12, [12]: "USER_PROFILE_EDIT", QUEST_PARTICIPATION: 14, [14]: "QUEST_PARTICIPATION" };
-const obj13 = { SAFETY_FLAG_TYPE_UNSPECIFIED: 0, [0]: "SAFETY_FLAG_TYPE_UNSPECIFIED", STRANGER_DANGER: 1, [1]: "STRANGER_DANGER", LIKELY_ATO: 2, [2]: "LIKELY_ATO", PARENTAL_CONSENT_REVOKED_IOS: 3, [3]: "PARENTAL_CONSENT_REVOKED_IOS", PARENTAL_CONSENT_REVOKED_ANDROID: 4, [4]: "PARENTAL_CONSENT_REVOKED_ANDROID", REACTIVE_CHECK_APPLIED: 5, [5]: "REACTIVE_CHECK_APPLIED", PARENTAL_CONSENT_GRACE: 6, [6]: "PARENTAL_CONSENT_GRACE" };
+const obj13 = { SAFETY_FLAG_TYPE_UNSPECIFIED: 0, [0]: "SAFETY_FLAG_TYPE_UNSPECIFIED", STRANGER_DANGER: 1, [1]: "STRANGER_DANGER", LIKELY_ATO: 2, [2]: "LIKELY_ATO", PARENTAL_CONSENT_REVOKED_IOS: 3, [3]: "PARENTAL_CONSENT_REVOKED_IOS", PARENTAL_CONSENT_REVOKED_ANDROID: 4, [4]: "PARENTAL_CONSENT_REVOKED_ANDROID", REACTIVE_CHECK_APPLIED: 5, [5]: "REACTIVE_CHECK_APPLIED", PARENTAL_CONSENT_GRACE: 6, [6]: "PARENTAL_CONSENT_GRACE", ML_INFERRED_ADULT: 7, [7]: "ML_INFERRED_ADULT", ML_INFERRED_TEEN: 8, [8]: "ML_INFERRED_TEEN" };
 const obj14 = { NONE_UNSPECIFIED: 0, [0]: "NONE_UNSPECIFIED", SUBSCRIPTION: 1, [1]: "SUBSCRIPTION", FRACTIONAL_NITRO: 2, [2]: "FRACTIONAL_NITRO", REVERSE_TRIAL: 3, [3]: "REVERSE_TRIAL", SUBSCRIPTION_GROUP: 4, [4]: "SUBSCRIPTION_GROUP" };
 const obj15 = { NONE_UNSPECIFIED: 0, [0]: "NONE_UNSPECIFIED", BOOST_ONLY: 1, [1]: "BOOST_ONLY", TIER_0: 2, [2]: "TIER_0", TIER_1: 3, [3]: "TIER_1", TIER_2: 4, [4]: "TIER_2" };
 const obj16 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", PRIMARY: 1, [1]: "PRIMARY", MEMBER: 2, [2]: "MEMBER" };
@@ -352,7 +352,7 @@ let items1 = [
     name: "safety_state",
     kind: "message",
     T() {
-      return callback(1941).SafetyState;
+      return callback(1939).SafetyState;
     }
   },
   {
@@ -1267,9 +1267,10 @@ const mediumUserType3 = new MediumUser$Type("discord_protos.users.v1.UserTypingI
 // ThrowIfThisInitialized (0x7c)
 class TypingIndicatorEmoji$Type extends MessageType8 {
   constructor() {
-    items = [, ];
+    items = [, , ];
     items[0] = { no: 1, name: "custom_emoji_id", kind: "scalar", oneof: "emoji", T: 6 };
     items[1] = { no: 2, name: "unicode_emoji", kind: "scalar", oneof: "emoji", T: 9 };
+    items[2] = { no: 3, name: "animated", kind: "scalar", T: 8 };
     tmp = new tmp("discord_protos.users.v1.TypingIndicatorEmoji", items, new.target);
     // ThrowIfThisInitialized (0x7c)
     return tmp;
@@ -1277,7 +1278,7 @@ class TypingIndicatorEmoji$Type extends MessageType8 {
 }
 const prototype8 = TypingIndicatorEmoji$Type.prototype;
 prototype8["create"] = function create(arr) {
-  obj = { emoji: { oneofKind: "r" } };
+  obj = { emoji: { oneofKind: "r" }, animated: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -1308,6 +1309,8 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
         obj = { oneofKind: "unicodeEmoji", unicodeEmoji: null };
         obj[1] = pos.string();
         obj.emoji = obj;
+      } else if (3 === tmp5) {
+        obj.animated = pos.bool();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -1353,6 +1356,10 @@ prototype8["internalBinaryWrite"] = function internalBinaryWrite(emoji, tag, wri
     tag.tag(2, _mod1307.WireType.LengthDelimited).string(emoji.emoji.unicodeEmoji);
     const tagResult1 = tag.tag(2, _mod1307.WireType.LengthDelimited);
   }
+  if (false !== emoji.animated) {
+    tag.tag(3, _mod1307.WireType.Varint).bool(emoji.animated);
+    const tagResult2 = tag.tag(3, _mod1307.WireType.Varint);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -1363,7 +1370,7 @@ prototype8["internalBinaryWrite"] = function internalBinaryWrite(emoji, tag, wri
   }
   return tag;
 };
-const items7 = [{ no: 1, name: "custom_emoji_id", kind: "scalar", oneof: "emoji", T: 6 }, { no: 2, name: "unicode_emoji", kind: "scalar", oneof: "emoji", T: 9 }];
+const items7 = [{ no: 1, name: "custom_emoji_id", kind: "scalar", oneof: "emoji", T: 6 }, { no: 2, name: "unicode_emoji", kind: "scalar", oneof: "emoji", T: 9 }, { no: 3, name: "animated", kind: "scalar", T: 8 }];
 const mediumUserType4 = new MediumUser$Type("discord_protos.users.v1.TypingIndicatorEmoji", items7, tmp7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6);
 // ThrowIfThisInitialized (0x7c)
 class UserCollectibles$Type extends MessageType9 {
@@ -2920,9 +2927,9 @@ prototype19["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    obj.typingIndicatorStyle = mediumUserType3.internalBinaryRead(pos, pos.uint32(), arg2, obj.typingIndicatorStyle);
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = callback(pos.tag(), 2);
+    const tmp3 = callback(pos.tag(), 2);
   }
   return obj;
 };

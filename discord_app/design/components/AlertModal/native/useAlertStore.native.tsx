@@ -35,7 +35,7 @@ export const dismissAlerts = function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(4664)();
+    arr4(4747)();
   }
 };
 export const dismissAlert = function dismissAlert(c6) {
@@ -63,7 +63,7 @@ export const dismissAlert = function dismissAlert(c6) {
       }
     });
     if (tmp2) {
-      found(4664)();
+      found(4747)();
     }
     const obj = batchUpdates;
   }

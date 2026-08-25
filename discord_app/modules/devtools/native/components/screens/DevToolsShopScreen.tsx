@@ -5,8 +5,8 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import DismissibleContent from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import FormSwitch from "../../../../../design/components/Forms/native/FormSwitch.native.tsx";
 import useToggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
@@ -50,7 +50,7 @@ export default function DevToolsShopScreen() {
   obj4 = {
     value: stateFromStores,
     onValueChange(arg0) {
-      return callback(15208).toggle("shop_disable_cache", arg0);
+      return callback(15238).toggle("shop_disable_cache", arg0);
     }
   };
   const tmp6Result = useToggleDismissibleContentDismissStateDefault(DismissibleContent.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING);

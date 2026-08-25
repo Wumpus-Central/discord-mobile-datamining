@@ -2,8 +2,8 @@
 import set2 from "../../_runtime/00002_set.js";
 import timestampDefault from "../modules/debug/Logger.tsx";
 import ME from "../Constants.tsx";
-import isTablet from "../../discord_common/js/shared/lib/PlatformUtils.tsx";
 import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import isTablet from "../../discord_common/js/shared/lib/PlatformUtils.tsx";
 import dispatchAutoDisableVideoDefault from "../modules/media_engine/dispatchAutoDisableVideo.tsx";
 import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 

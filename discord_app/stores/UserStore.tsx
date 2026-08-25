@@ -117,15 +117,21 @@ function transformUser(mfa_enabled) {
     delete tmp[tmp3];
     const tmp4Result2 = tmp4(1933);
   }
-  const premium_state = mfa_enabled.premium_state;
-  if (undefined !== premium_state) {
-    mfa_enabled.premiumState = tmp4(1937).parseServerPremiumState(premium_state);
+  const typing_indicator_style = mfa_enabled.typing_indicator_style;
+  if (undefined !== typing_indicator_style) {
+    mfa_enabled.typingIndicatorStyle = tmp4(1937).parseServerTypingIndicatorStyle(typing_indicator_style);
     delete tmp[tmp3];
     const tmp4Result3 = tmp4(1937);
   }
+  const premium_state = mfa_enabled.premium_state;
+  if (undefined !== premium_state) {
+    mfa_enabled.premiumState = tmp4(1941).parseServerPremiumState(premium_state);
+    delete tmp[tmp3];
+    const tmp4Result4 = tmp4(1941);
+  }
   const restricted_schedule = mfa_enabled.restricted_schedule;
   if (undefined !== restricted_schedule) {
-    const RestrictedScheduleRecord = tmp4(1943).RestrictedScheduleRecord;
+    const RestrictedScheduleRecord = tmp4(1944).RestrictedScheduleRecord;
     let fromServerResult = RestrictedScheduleRecord.fromServer(restricted_schedule);
     if (fromServerResult == null) {
       fromServerResult = null;
@@ -714,14 +720,14 @@ function handlePresenceUpdates(updates) {
         const user = lib.user;
         let tmp2 = arg0;
         if (user.hasOwnProperty(key10009)) {
-          const result = closure_1.set(lib(closure_1_3[14]).camelCase(key10009), lib.user[key10009]);
+          const result = closure_1.set(lib(closure_1_3[15]).camelCase(key10009), lib.user[key10009]);
           let tmp7 = arg0;
           if (!arg0) {
             tmp7 = result !== closure_1;
           }
           closure_1 = result;
           tmp2 = tmp7;
-          obj = lib(closure_1_3[14]);
+          obj = lib(closure_1_3[15]);
         }
         return tmp2;
       }, false);
@@ -1061,7 +1067,7 @@ function handleLoadICYMIHydratedItems(messageItems) {
 function handleEmbeddedActivityUpdateV2(instance) {
   const participants = instance.instance.participants;
   return participants.reduce((arg0, member) => {
-    let tmp = callback(table[15])(member);
+    let tmp = callback(table[16])(member);
     if (tmp) {
       tmp = callback2(member.member.user);
     }

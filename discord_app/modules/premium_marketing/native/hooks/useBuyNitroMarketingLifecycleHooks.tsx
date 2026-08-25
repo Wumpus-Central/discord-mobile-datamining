@@ -44,11 +44,13 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
   const effect1 = React.useEffect(() => {
     let BuyNitroPurchaseLock = initialLoadCompleted(_navigator[10]).BuyNitroPurchaseLock;
     BuyNitroPurchaseLock.end();
+    let result = initialLoadCompleted(_navigator[11]).resetBuyNitroTrialAndPriceOverrides();
     return () => {
-      const BuyNitroPurchaseLock = callback(7971).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock = callback(7792).BuyNitroPurchaseLock;
       BuyNitroPurchaseLock.end();
-      const BuyNitroPurchaseLock2 = callback(7971).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock2 = callback(7792).BuyNitroPurchaseLock;
       const result = BuyNitroPurchaseLock2.setInitialLoadComplete(false);
+      const result1 = callback(7793).resetBuyNitroTrialAndPriceOverrides();
     };
   }, []);
   const items1 = [initialLoadCompleted];

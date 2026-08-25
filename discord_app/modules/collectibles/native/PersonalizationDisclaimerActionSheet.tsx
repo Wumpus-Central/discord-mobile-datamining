@@ -4,8 +4,8 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
 import ButtonGroup from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
 import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { HelpdeskArticles } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -24,8 +24,8 @@ const result = require("set").fileFinishedImporting("modules/collectibles/native
 export default function PersonalizationDisclaimerActionSheet() {
   const tmp = callback3();
   const callback = React.useCallback(() => {
-    const obj = callback(4093);
-    obj.openURL(callback(1994).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
+    const obj = callback(4094);
+    obj.openURL(callback(1995).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
   }, []);
   let obj = { contentStyles: tmp.container, children: null };
   obj = { variant: "heading-md/medium", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.header, children: null };
@@ -43,7 +43,7 @@ export default function PersonalizationDisclaimerActionSheet() {
   const intl3 = getSystemLocale.intl;
   obj3[2] = intl3.string(getSystemLocale.t.WAI6xu);
   obj3[3] = function onPress() {
-    return callback(4346).hideActionSheet();
+    return callback(4347).hideActionSheet();
   };
   items1[1] = callback(Button.Button, obj3);
   obj[0] = items1;

@@ -2,9 +2,9 @@
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
+import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import KeyIcon from "../../../../../design/components/Icon/native/redesign/generated/KeyIcon.tsx";
 import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { ScrollView } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -31,7 +31,7 @@ function _showAgeVerificationTestModal() {
     yield obj2.requestAgeVerification({});
     if (1 === tmp7) {
       c3 = 0;
-      obj1 = callback(4097);
+      obj1 = callback(4098);
       obj1.open({ content: "Failed to show age verification test modal", key: "age-verification-test-failure" });
       c5 = 3;
     } else if (arg0 === 1) {
@@ -47,10 +47,10 @@ function _showAgeVerificationTestModal() {
       obj2[4] = function onComplete() {
         tmp3(tmp15[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
       };
-      obj2[5] = lib(5259).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
-      callback(5433).showAgeVerification(obj2);
+      obj2[5] = lib(7944).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
+      callback(7942).showAgeVerification(obj2);
       c3 = 0;
-      const obj7 = callback(5433);
+      const obj7 = callback(7942);
     }
     c3 = 0;
     return arg1;
@@ -87,8 +87,8 @@ export default function DevToolsAgeVerificationScreen() {
   items1[1] = callback2(TableRowInner.TableRow, {
     label: "Launch Age Verification Modal",
     onPress() {
-      let obj = callback2(5433);
-      obj = { entryPoint: callback(5259).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
+      let obj = callback2(7942);
+      obj = { entryPoint: callback(7944).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
       return obj.showAgeVerificationGetStartedModal(obj);
     },
     icon: callback2(KeyIcon.KeyIcon, {}),

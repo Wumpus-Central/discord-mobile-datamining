@@ -3,6 +3,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import createRulesAll from "../../../markup/CustomMarkup.native.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import { MAX_VISIBLE_ANNOUNCEMENTS } from "../../GameProfileConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
@@ -30,8 +31,8 @@ function EmbedAnnouncementCard(message) {
   }
   let posterUrl = null;
   if (null != proxyUrl) {
-    obj1 = message(9200);
-    posterUrl = obj1.getPosterUrl(proxyUrl, 160, c12);
+    obj1 = message(9483);
+    posterUrl = obj1.getPosterUrl(proxyUrl, 160, c13);
   }
   if (posterUrl == null) {
     posterUrl = proxyUrl;
@@ -58,7 +59,7 @@ function EmbedAnnouncementCard(message) {
     if (tmp12Result) {
       const obj2 = { variant: "text-xs/medium", color: "text-link", lineClamp: 1, children: null };
       obj2[3] = embedSource.url;
-      tmp12Result = tmp12(message(4739).Text, obj2);
+      tmp12Result = tmp12(message(4376).Text, obj2);
     }
     const items = [tmp12Result, ];
     const obj3 = { style: null, children: null };
@@ -80,7 +81,7 @@ function EmbedAnnouncementCard(message) {
       const items2 = [tmp12Result, ];
       const obj7 = { variant: "text-xs/semibold", color: "text-strong", lineClamp: 1, children: null };
       obj7[3] = embedSource.authorName;
-      items2[1] = tmp12(message(4739).Text, obj7);
+      items2[1] = tmp12(message(4376).Text, obj7);
       obj4[1] = items2;
       tmp14Result = tmp14(tmp15, obj4);
     }
@@ -94,7 +95,7 @@ function EmbedAnnouncementCard(message) {
       obj9[1] = message.media.placeholder;
       obj9[2] = message.media.placeholderVersion;
       obj9[3] = tmp.mediaImage;
-      obj8[1] = tmp12(message(9202).ImageWithPlaceholder, obj9);
+      obj8[1] = tmp12(message(9485).ImageWithPlaceholder, obj9);
       tmp12Result1 = tmp12(tmp15, obj8);
     }
     items3[1] = tmp12Result1;
@@ -105,7 +106,7 @@ function EmbedAnnouncementCard(message) {
       obj11[0] = guildId;
       obj11[1] = channelId;
       obj10[3] = tmp4(message.title, true, obj11);
-      tmp12Result2 = tmp12(message(4739).Text, obj10);
+      tmp12Result2 = tmp12(message(4376).Text, obj10);
     }
     items3[2] = tmp12Result2;
     let tmp12Result3 = message.body.length > 0;
@@ -115,7 +116,7 @@ function EmbedAnnouncementCard(message) {
       obj13[0] = guildId;
       obj13[1] = channelId;
       obj12[3] = tmp4(message.body, true, obj13);
-      tmp12Result3 = tmp12(message(4739).Text, obj12);
+      tmp12Result3 = tmp12(message(4376).Text, obj12);
     }
     items3[3] = tmp12Result3;
     const obj14 = { style: null, children: null };
@@ -139,16 +140,16 @@ function EmbedAnnouncementCard(message) {
     const items5 = [str2, ];
     const _Date = Date;
     const date = new Date(message.timestamp);
-    items5[1] = message(4066).dateFormat(date, "LL");
+    items5[1] = message(4067).dateFormat(date, "LL");
     obj17[2] = items5;
-    items4[1] = closure_11(message(4739).Text, obj17);
+    items4[1] = closure_12(message(4376).Text, obj17);
     tmp14Result = message.reactionCount > 0;
     if (tmp14Result) {
       const obj18 = { style: null, children: null };
       obj18[0] = tmp.reactionInfo;
       const obj19 = { size: "xs", color: null };
       obj19[1] = ThemesDefault.colors.TEXT_MUTED;
-      const items6 = [tmp12(tmp35(7978).ReactionIcon, obj19), ];
+      const items6 = [tmp12(tmp35(7800).ReactionIcon, obj19), ];
       let tmp46 = null != obj20;
       if (tmp46) {
         tmp46 = obj20.locale === tmp35(1236).intl.currentLocale;
@@ -163,18 +164,18 @@ function EmbedAnnouncementCard(message) {
       const obj21 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const format = obj20.format;
       obj21[2] = format.format(message.reactionCount);
-      items6[1] = tmp12(tmp35(4739).Text, obj21);
+      items6[1] = tmp12(tmp35(4376).Text, obj21);
       obj18[1] = items6;
       tmp14Result = tmp14(tmp15, obj18);
     }
     items4[2] = tmp14Result;
     obj14[1] = items4;
-    items3[4] = closure_11(closure_7, obj14);
+    items3[4] = closure_12(closure_7, obj14);
     obj3[1] = items3;
-    items[1] = closure_11(closure_7, obj3);
+    items[1] = closure_12(closure_7, obj3);
     obj1[1] = items;
-    obj[4] = closure_11(closure_7, obj1);
-    return closure_10(closure_8, obj);
+    obj[4] = closure_12(closure_7, obj1);
+    return closure_11(closure_8, obj);
   }
 }
 function MessageAnnouncementCard(message) {
@@ -200,8 +201,8 @@ function MessageAnnouncementCard(message) {
   }
   let posterUrl = null;
   if (null != proxyUrl) {
-    obj1 = message(9200);
-    posterUrl = obj1.getPosterUrl(proxyUrl, 160, c12);
+    obj1 = message(9483);
+    posterUrl = obj1.getPosterUrl(proxyUrl, 160, c13);
   }
   if (posterUrl == null) {
     posterUrl = proxyUrl;
@@ -227,7 +228,7 @@ function MessageAnnouncementCard(message) {
     obj1[1] = message.media.placeholder;
     obj1[2] = message.media.placeholderVersion;
     obj1[3] = tmp.mediaImage;
-    obj[1] = callback(message(9202).ImageWithPlaceholder, obj1);
+    obj[1] = callback(message(9485).ImageWithPlaceholder, obj1);
     tmp13 = callback(closure_7, obj);
   }
   const items = [tmp13, ];
@@ -239,7 +240,7 @@ function MessageAnnouncementCard(message) {
     obj4[0] = guildId;
     obj4[1] = channelId;
     obj3[3] = tmp4(message.title, true, obj4);
-    tmp19 = callback(message(4739).Text, obj3);
+    tmp19 = callback(message(4376).Text, obj3);
   }
   const items1 = [tmp19, , ];
   let tmp23 = message.body.length > 0;
@@ -249,21 +250,21 @@ function MessageAnnouncementCard(message) {
     obj6[0] = guildId;
     obj6[1] = channelId;
     obj5[3] = tmp4(message.body, true, obj6);
-    tmp23 = callback(message(4739).Text, obj5);
+    tmp23 = callback(message(4376).Text, obj5);
   }
   items1[1] = tmp23;
   const obj7 = { style: tmp.metadataRow, children: null };
   const obj8 = { variant: "text-xs/medium", color: "text-muted", children: null };
-  let obj12 = message(4066);
+  let obj12 = message(4067);
   obj8[2] = obj12.dateFormat(new Date(message.timestamp), "LL");
-  const items2 = [callback(message(4739).Text, obj8), ];
+  const items2 = [callback(message(4376).Text, obj8), ];
   let tmp11Result = message.reactionCount > 0;
   if (tmp11Result) {
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.reactionInfo;
     const obj10 = { size: "xs", color: null };
     obj10[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items3 = [tmp27(tmp28(7978).ReactionIcon, obj10), ];
+    const items3 = [tmp27(tmp28(7800).ReactionIcon, obj10), ];
     let tmp34 = null != obj11;
     if (tmp34) {
       tmp34 = obj11.locale === tmp28(1236).intl.currentLocale;
@@ -278,17 +279,17 @@ function MessageAnnouncementCard(message) {
     obj12 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const format = obj11.format;
     obj12[2] = format.format(message.reactionCount);
-    items3[1] = tmp27(tmp28(4739).Text, obj12);
+    items3[1] = tmp27(tmp28(4376).Text, obj12);
     obj9[1] = items3;
     tmp11Result = tmp11(tmp18, obj9);
   }
   items2[1] = tmp11Result;
   obj7[1] = items2;
-  items1[2] = closure_11(closure_7, obj7);
+  items1[2] = closure_12(closure_7, obj7);
   obj2[1] = items1;
-  items[1] = closure_11(closure_7, obj2);
+  items[1] = closure_12(closure_7, obj2);
   obj[4] = items;
-  return closure_11(closure_8, obj);
+  return closure_12(closure_8, obj);
 }
 function PollAnnouncementCard(message) {
   message = message.message;
@@ -313,7 +314,7 @@ function PollAnnouncementCard(message) {
     obj[0] = tmp.cardBody;
     obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj1[2] = poll.question.text;
-    const items = [callback(message(4739).Text, obj1), , ];
+    const items = [callback(message(4376).Text, obj1), , ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.pollAnswers;
     const items1 = [
@@ -323,8 +324,8 @@ function PollAnnouncementCard(message) {
           if (str == null) {
             str = "";
           }
-          obj[1] = closure_1_10(message(closure_1_3[8]).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: str });
-          return closure_1_10(closure_1_7, obj, poll_media.answer_id);
+          obj[1] = closure_1_11(message(closure_1_3[9]).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: str });
+          return closure_1_11(closure_1_7, obj, poll_media.answer_id);
         }),
 
     ];
@@ -336,11 +337,11 @@ function PollAnnouncementCard(message) {
       const obj3 = { count: null };
       obj3[0] = diff;
       obj[3] = intl.format(tmp13(1236).t["mv/nIa"], obj3);
-      tmp9Result = tmp9(tmp13(4739).Text, obj);
+      tmp9Result = tmp9(tmp13(4376).Text, obj);
     }
     items1[1] = tmp9Result;
     obj2[1] = items1;
-    items[1] = closure_11(closure_7, obj2);
+    items[1] = closure_12(closure_7, obj2);
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.metadataRow;
     const obj5 = { variant: "text-xs/medium", color: "text-muted", children: null };
@@ -349,21 +350,21 @@ function PollAnnouncementCard(message) {
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj6[0] = date;
-    obj6[1] = message(9200).getPollExpiryLabel(poll);
+    obj6[1] = message(9483).getPollExpiryLabel(poll);
     obj5[2] = intl2.format(message(1236).t.t0FTsH, obj6);
-    obj4[1] = callback(message(4739).Text, obj5);
+    obj4[1] = callback(message(4376).Text, obj5);
     items[2] = callback(closure_7, obj4);
     obj[1] = items;
-    obj[4] = closure_11(closure_7, obj);
+    obj[4] = closure_12(closure_7, obj);
     return callback(closure_8, obj);
   }
 }
 let c4 = importAllResult;
 ({ Image: c5, ScrollView: closure_6, View: error, Pressable: closure_8, ActivityIndicator: c9 } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let c12 = 120;
-let c13 = null;
+({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
+let c13 = 120;
 let c14 = null;
+let c15 = null;
 let obj = { container: null, smallCardsScroller: null, smallCardsContainer: null, sectionHeader: null, loadingContainer: null, card: null, cardBody: null, smallCardMedia: null, mediaImage: null, metadataRow: null, reactionInfo: null, embedContentArea: null, embedAuthorRow: null, embedAuthorIcon: null, embedProviderIcon: null, embedMedia: null, pollAnswers: null, pollAnswerOption: null, pollMoreOptions: null };
 obj = { gap: ThemesDefault.space.PX_8 };
 obj[0] = obj;
@@ -398,8 +399,8 @@ let obj12 = { flexDirection: "column", gap: ThemesDefault.space.PX_4, flex: 1 };
 obj[17] = { paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 let obj13 = { paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 obj[18] = { paddingHorizontal: ThemesDefault.space.PX_12 };
-let closure_15 = createCacheKey.createStyles(obj);
-let closure_19 = importAllResult.memo((message) => {
+let closure_16 = createCacheKey.createStyles(obj);
+let closure_20 = importAllResult.memo((message) => {
   if (null != message.message.poll) {
     let obj = {};
     const merged = Object.assign(message);
@@ -429,8 +430,8 @@ export default function GameProfileAnnouncements(gameId) {
   let guildId;
   closure_8 = undefined;
   const tmp = callback3();
-  analyticsLocations = invite(trackAction[12])().analyticsLocations;
-  let tmp3 = invite(trackAction[13])(gameId, 10);
+  analyticsLocations = invite(trackAction[13])().analyticsLocations;
+  let tmp3 = invite(trackAction[14])(gameId, MAX_VISIBLE_ANNOUNCEMENTS);
   ({ messages, channelId } = tmp3);
   guildId = tmp3.guildId;
   const items = [trackAction, closeModal, invite, guildId, channelId, analyticsLocations, gameId, scrollOffsetRef];
@@ -451,8 +452,8 @@ export default function GameProfileAnnouncements(gameId) {
       tmp3 = null != channelId;
     }
     if (tmp3) {
-      trackAction(gameId(trackAction[14]).GameProfileTrackActionActions.Announcements);
-      let obj = invite(trackAction[15]);
+      trackAction(gameId(trackAction[15]).GameProfileTrackActionActions.Announcements);
+      let obj = invite(trackAction[16]);
       obj = { gameId: null, channelId: null, initialScrollOffset: null };
       obj[0] = gameId;
       obj[1] = channelId;
@@ -464,7 +465,7 @@ export default function GameProfileAnnouncements(gameId) {
       obj[1] = id;
       obj[2] = channelId;
       obj[3] = analyticsLocations;
-      invite(trackAction[16])(obj);
+      invite(trackAction[17])(obj);
     }
   }, items);
   closure_8 = scrollOffsetRef.useCallback((arg0) => {
@@ -483,8 +484,8 @@ export default function GameProfileAnnouncements(gameId) {
       tmp3 = null != channelId;
     }
     if (tmp3) {
-      trackAction(gameId(trackAction[14]).GameProfileTrackActionActions.AnnouncementsItem);
-      let obj = invite(trackAction[15]);
+      trackAction(gameId(trackAction[15]).GameProfileTrackActionActions.AnnouncementsItem);
+      let obj = invite(trackAction[16]);
       obj = { gameId: null, channelId: null, initialScrollOffset: null };
       obj[0] = gameId;
       obj[1] = channelId;
@@ -497,7 +498,7 @@ export default function GameProfileAnnouncements(gameId) {
       obj[2] = channelId;
       obj[3] = arg0;
       obj[4] = analyticsLocations;
-      invite(trackAction[16])(obj);
+      invite(trackAction[17])(obj);
     }
   }, items1);
   if (tmp3.loading) {
@@ -506,9 +507,9 @@ export default function GameProfileAnnouncements(gameId) {
     obj = { style: null, children: null };
     obj[0] = tmp.sectionHeader;
     obj = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = gameId(tmp2[4]).intl;
-    obj[2] = intl.string(gameId(tmp2[4]).t.B0BV3Y);
-    obj[1] = callback(gameId(tmp2[8]).Text, obj);
+    const intl = gameId(tmp2[5]).intl;
+    obj[2] = intl.string(gameId(tmp2[5]).t.B0BV3Y);
+    obj[1] = callback(gameId(tmp2[9]).Text, obj);
     const items2 = [callback(guildId, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.loadingContainer;
@@ -526,20 +527,20 @@ export default function GameProfileAnnouncements(gameId) {
         const obj3 = { style: null, children: null };
         obj3[0] = tmp.sectionHeader;
         const obj4 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
-        const intl2 = gameId(tmp2[4]).intl;
-        obj4[2] = intl2.string(gameId(tmp2[4]).t.B0BV3Y);
-        const items3 = [callback(gameId(tmp2[8]).Text, obj4), ];
+        const intl2 = gameId(tmp2[5]).intl;
+        obj4[2] = intl2.string(gameId(tmp2[5]).t.B0BV3Y);
+        const items3 = [callback(gameId(tmp2[9]).Text, obj4), ];
         const obj5 = { text: null, variant: "tertiary", size: "sm", icon: null, iconPosition: "end", onPress: null };
-        const intl3 = gameId(tmp2[4]).intl;
-        obj5[0] = intl3.string(gameId(tmp2[4]).t.budhsM);
-        obj5[3] = callback(gameId(tmp2[18]).ChevronSmallRightIcon, { size: "sm" });
+        const intl3 = gameId(tmp2[5]).intl;
+        obj5[0] = intl3.string(gameId(tmp2[5]).t.budhsM);
+        obj5[3] = callback(gameId(tmp2[19]).ChevronSmallRightIcon, { size: "sm" });
         obj5[5] = callback;
-        items3[1] = callback(gameId(tmp2[17]).Button, obj5);
+        items3[1] = callback(gameId(tmp2[18]).Button, obj5);
         obj3[1] = items3;
         const items4 = [callback2(guildId, obj3), ];
         const obj6 = { horizontal: true, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, decelerationRate: "fast", snapToInterval: 172, snapToStart: false, snapToEnd: false, children: null };
         ({ smallCardsScroller: obj9[2], smallCardsContainer: obj9[3] } = tmp);
-        obj6[8] = messages.map((id) => closure_1_10(closure_1_19, { message: id, onPress: closure_8, guildId, channelId }, id.id));
+        obj6[8] = messages.map((id) => closure_1_11(closure_1_20, { message: id, onPress: closure_8, guildId, channelId }, id.id));
         items4[1] = callback(channelId, obj6);
         obj2[1] = items4;
         tmp6 = callback2(guildId, obj2);

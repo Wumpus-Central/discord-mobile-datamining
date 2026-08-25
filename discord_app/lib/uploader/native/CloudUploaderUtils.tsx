@@ -6,8 +6,8 @@ import closure_4 from "../../../stores/AuthenticationStore.tsx";
 import closure_5 from "../../../stores/DeveloperOptionsStore.tsx";
 
 const require = arg1;
-function getUploadPayload(closure_0) {
-  const obj = { filename: closure_0.filename, file_size: closure_0.currentSize, id: applyDefault.uniqueId(), original_content_type: "ct" };
+function getUploadPayload(c0) {
+  const obj = { filename: c0.filename, file_size: c0.currentSize, id: applyDefault.uniqueId(), original_content_type: "a" };
   return obj;
 }
 let result = require("set").fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.tsx");

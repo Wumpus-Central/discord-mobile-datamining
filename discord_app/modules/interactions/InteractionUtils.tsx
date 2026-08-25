@@ -29,7 +29,7 @@ function _executeMessageComponentInteraction() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -77,7 +77,7 @@ function _executeMessageComponentInteraction() {
                 closure_9 = callback2(11).fromTimestamp(Date.now());
                 if (c5.canQueueInteraction(callback2, closure_9)) {
                   c3 = 1;
-                  let obj8 = callback2(7550);
+                  let obj8 = callback2(7368);
                   sessionId = 3;
                   c5 = 1;
                   const obj2 = { value: null, done: false };
@@ -89,7 +89,7 @@ function _executeMessageComponentInteraction() {
             } else if (2 === tmp7) {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else if (3 === tmp7) {
               if (arg0 === 1) {
                 c5 = 3;
@@ -105,7 +105,7 @@ function _executeMessageComponentInteraction() {
                 const obj4 = { messageId: null, data: null, onFailure: null };
                 obj4[0] = callback2;
                 let obj5 = { interactionType: null, applicationId: null, customId: null, componentId: null };
-                obj5[0] = callback(1954).InteractionTypes.MESSAGE_COMPONENT;
+                obj5[0] = callback(1955).InteractionTypes.MESSAGE_COMPONENT;
                 obj5[1] = c5;
                 obj5[2] = c3;
                 obj5[3] = sessionId;
@@ -120,13 +120,13 @@ function _executeMessageComponentInteraction() {
                     obj = _undefined(_undefined2[9]);
                   }
                 };
-                callback(8370).addQueued(closure_9, obj4);
+                callback(8376).addQueued(closure_9, obj4);
                 if (null != c8) {
-                  obj1 = callback(8370);
+                  obj1 = callback(8376);
                   const result = obj1.queueInteractionComponentState(callback2, closure_9, c8, sessionId);
                 }
                 obj6 = { type: null, nonce: null, guild_id: null, channel_id: null, message_flags: null, message_id: null, application_id: null, session_id: null, data: null };
-                obj6[0] = callback(1954).InteractionTypes.MESSAGE_COMPONENT;
+                obj6[0] = callback(1955).InteractionTypes.MESSAGE_COMPONENT;
                 obj6[1] = closure_9;
                 obj6[2] = c7;
                 obj6[3] = constants;
@@ -163,7 +163,7 @@ function _executeMessageComponentInteraction() {
               return obj;
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp46) {
           if (tmp4 === c3) {
@@ -193,17 +193,17 @@ function mapMessageComponentLocalStateForAPI(type) {
   } else {
     type = type.type;
     if (PermissionOverwriteType.ComponentType.TEXT_INPUT !== type) {
-      if (tmp(1954).ComponentType.FILE_UPLOAD !== type) {
-        if (tmp(1954).ComponentType.RADIO_GROUP !== type) {
-          if (tmp(1954).ComponentType.CHECKBOX_GROUP !== type) {
-            if (tmp(1954).ComponentType.CHECKBOX !== type) {
-              if (tmp(1954).ComponentType.STRING_SELECT === type) {
+      if (tmp(1955).ComponentType.FILE_UPLOAD !== type) {
+        if (tmp(1955).ComponentType.RADIO_GROUP !== type) {
+          if (tmp(1955).ComponentType.CHECKBOX_GROUP !== type) {
+            if (tmp(1955).ComponentType.CHECKBOX !== type) {
+              if (tmp(1955).ComponentType.STRING_SELECT === type) {
                 return type;
               } else {
-                if (tmp(1954).ComponentType.USER_SELECT !== type) {
-                  if (tmp(1954).ComponentType.ROLE_SELECT !== type) {
-                    if (tmp(1954).ComponentType.MENTIONABLE_SELECT !== type) {
-                      if (tmp(1954).ComponentType.CHANNEL_SELECT !== type) {
+                if (tmp(1955).ComponentType.USER_SELECT !== type) {
+                  if (tmp(1955).ComponentType.ROLE_SELECT !== type) {
+                    if (tmp(1955).ComponentType.MENTIONABLE_SELECT !== type) {
+                      if (tmp(1955).ComponentType.CHANNEL_SELECT !== type) {
                         return null;
                       }
                     }
@@ -438,7 +438,7 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
             let tmp11 = tmp8;
             tmp4 = options1;
             items = options1;
-            if (options1[0].type !== tmp7(1954).ApplicationCommandOptionType.SUB_COMMAND) {
+            if (options1[0].type !== tmp7(1955).ApplicationCommandOptionType.SUB_COMMAND) {
               break;
             }
           }

@@ -1,6 +1,6 @@
 // discord_app/polyfills.android.tsx
 import set from "../_runtime/00002_set.js";
-import addLikelySubtags from "../_runtime/13631_addLikelySubtags.js";
+import addLikelySubtags from "../_runtime/13666_addLikelySubtags.js";
 import polyfillsNative from "polyfillsNative.tsx";
 
 String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {

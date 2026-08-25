@@ -1,6 +1,6 @@
 // discord_app/records/GiftCodeRecord.tsx
 import toJSDefault from "../lib/Record.tsx";
-import tDefault from "../../_runtime/03978_t.js";
+import hooksDefault from "../../_runtime/03979_hooks.js";
 import closure_3 from "../modules/billing/records/SubscriptionTrialRecord.tsx";
 import closure_4 from "PromotionRecord.tsx";
 import closure_5 from "SubscriptionPlanRecord.tsx";
@@ -32,7 +32,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let tmp4 = null;
   if (null != user.expires_at) {
-    tmp4 = tDefault(user.expires_at);
+    tmp4 = hooksDefault(user.expires_at);
   }
   const redeemed = user.redeemed;
   if (null != user.subscription_plan) {
@@ -91,8 +91,8 @@ prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;
   let isAfterResult = null != expiresAt;
   if (isAfterResult) {
-    isAfterResult = tDefault().isAfter(expiresAt);
-    const obj = tDefault();
+    isAfterResult = hooksDefault().isAfter(expiresAt);
+    const obj = hooksDefault();
   }
   return isAfterResult;
 };

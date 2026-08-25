@@ -15,15 +15,15 @@ class prototype extends tmp2 {
 prototype["fromServer"] = function fromServer(arg0) {
   ({ background_colors, button_colors, confetti_colors } = arg0);
   const mapped = background_colors.map((color) => {
-    const tmp = callback2(5316);
+    const tmp = callback2(7158);
     return tmp(callback(688).int2hex(color));
   });
   const mapped1 = button_colors.map((color) => {
-    const tmp = callback2(5316);
+    const tmp = callback2(7158);
     return tmp(callback(688).int2hex(color));
   });
   const mapped2 = confetti_colors.map((color) => {
-    const tmp = callback2(5316);
+    const tmp = callback2(7158);
     return tmp(callback(688).int2hex(color));
   });
   if (typeof prototype !== "function") {

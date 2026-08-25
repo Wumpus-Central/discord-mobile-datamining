@@ -1,7 +1,7 @@
 // discord_app/utils/native/ChangeLogUtils.tsx
 import noopAll from "../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import tDefault from "../../../_runtime/04095_t.js";
+import tDefault from "../../../_runtime/04096_t.js";
 import Text from "../../design/components/Text/native/Text.tsx";
 import apexExperiment from "../../modules/design/ManaTypeConsolidationExperiment.tsx";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
@@ -92,10 +92,10 @@ function ChangeLogStrong(arg0) {
     }
     obj = { variant: "experimental/body-sm/semibold", color: null, children: null };
     obj[1] = str;
-    obj[2] = tmp(8348).smartOutput(node, output, state);
-    let reactResult = jsx(tmp(4739).Text, { variant: "experimental/body-sm/semibold", color: null, children: null });
+    obj[2] = tmp(8349).smartOutput(node, output, state);
+    let reactResult = jsx(tmp(4376).Text, { variant: "experimental/body-sm/semibold", color: null, children: null });
     const tmp5 = jsx;
-    const tmpResult = tmp(8348);
+    const tmpResult = tmp(8349);
   } else {
     const strong = rules.strong;
     reactResult = strong.react(node, output, state);

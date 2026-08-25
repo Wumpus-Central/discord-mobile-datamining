@@ -1,6 +1,6 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetySearch.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import isEqualDefault from "../../../_runtime/04638_isEqual.js";
+import isEqualDefault from "../../../_runtime/04543_isEqual.js";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import set from "../../../_runtime/00002_set.js";
 import { GuildMemberFlags } from "../guild_automod/AutomodPermissionUtils.tsx";
@@ -15,7 +15,7 @@ function hasStringMatch(str, str2) {
   }
   return hasItem;
 }
-let obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "dispatch", selectedSourceInviteCode: "limit", selectedSort: "isArray" };
+let obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "accessibilityRole", selectedSourceInviteCode: "loadJsonAsset", selectedSort: "kind" };
 let set = new Set();
 obj[5] = set;
 obj[6] = { optionId: 0, afterDate: null, beforeDate: null };
@@ -26,7 +26,7 @@ class GuildMemberSafetySearch {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     obj.guildId = global;
-    obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "dispatch", selectedSourceInviteCode: "limit", selectedSort: "isArray" };
+    obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "accessibilityRole", selectedSourceInviteCode: "loadJsonAsset", selectedSort: "kind" };
     set = new Set();
     obj[5] = set;
     obj[6] = { optionId: 0, afterDate: null, beforeDate: null };
@@ -44,7 +44,7 @@ Object.defineProperty(prototype, "requiresUsernameMatch", {
   set: undefined
 });
 prototype["reset"] = function reset() {
-  const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: new Set(), selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedJoinSourceType: "dispatch", selectedSourceInviteCode: "limit", selectedSort: "isArray" };
+  const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: new Set(), selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedJoinSourceType: "accessibilityRole", selectedSourceInviteCode: "loadJsonAsset", selectedSort: "kind" };
   this._searchState = obj;
   this.hasDefaultQuery = true;
 };
@@ -60,7 +60,7 @@ prototype["resetSearchState"] = function resetSearchState() {
   const hasDefaultQuery = this.hasDefaultQuery;
   let flag = !hasDefaultQuery;
   if (!hasDefaultQuery) {
-    const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "dispatch", selectedSourceInviteCode: "limit", selectedSort: "isArray" };
+    const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "accessibilityRole", selectedSourceInviteCode: "loadJsonAsset", selectedSort: "kind" };
     const _Set = Set;
     const set = new Set();
     obj[5] = set;
@@ -231,7 +231,7 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
 };
 
 export const getDefaultSearchState = function getDefaultSearchState() {
-  const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: new Set(), selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedJoinSourceType: "dispatch", selectedSourceInviteCode: "limit", selectedSort: "isArray" };
+  const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: new Set(), selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedJoinSourceType: "accessibilityRole", selectedSourceInviteCode: "loadJsonAsset", selectedSort: "kind" };
   return obj;
 };
 export { GuildMemberSafetySearch };

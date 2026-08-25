@@ -35,7 +35,7 @@ function _getAttachments() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         while (true) {
@@ -182,7 +182,7 @@ function _getAttachments() {
             let obj6 = arr(514);
             dependencyMap = obj6.v4();
             let tmp55 = dependencyMap;
-            let obj8 = arr(4843);
+            let obj8 = arr(4963);
             let tmp56 = lib;
             c7 = 3;
             let num5 = 1;

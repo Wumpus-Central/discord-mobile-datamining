@@ -1,11 +1,11 @@
 // discord_app/modules/captcha/native/CaptchaModal.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
 import createStandardNavigationFactories from "../../../../_runtime/01501_createStandardNavigationFactories.js";
-import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
-import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
 import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { doesRegistrationHaveIdentityType as closure_6 } from "../../auth/native/RegistrationUIStore.tsx";
@@ -31,7 +31,7 @@ export default function CaptchaModal(arg0) {
   ({ close: dependencyMap, sitekey: closure_3, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
   let navigation;
   let callback;
-  const tmp2 = callback2(onReject(8621)());
+  const tmp2 = callback2(onReject(8629)());
   let obj = createStandardNavigationFactories;
   navigation = obj.useNavigation();
   const items = [navigation];
@@ -53,7 +53,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  callback = onReject(16596)({ onReject, analyticsType: memo });
+  callback = onReject(16628)({ onReject, analyticsType: memo });
   const effect = React.useEffect(() => {
     closure_4.dismiss();
   }, []);

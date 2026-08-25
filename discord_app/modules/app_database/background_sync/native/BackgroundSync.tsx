@@ -40,7 +40,7 @@ function _backgroundSync() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -382,7 +382,7 @@ function _backgroundSyncPrivateChannels() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -402,7 +402,7 @@ function _backgroundSyncPrivateChannels() {
               c3 = undefined;
               body = undefined;
               c5 = undefined;
-              const messagesResult = callback2(1955).messages();
+              const messagesResult = callback2(1956).messages();
               c3 = messagesResult;
               if (null != messagesResult) {
                 const HTTP = callback(530).HTTP;
@@ -422,7 +422,7 @@ function _backgroundSyncPrivateChannels() {
                 closure_1_14.log("Aborting BG sync because there is no database");
                 c6 = 3;
               }
-              const obj15 = callback2(1955);
+              const obj15 = callback2(1956);
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -533,7 +533,7 @@ function _backgroundSyncGuildData() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -559,11 +559,11 @@ function _backgroundSyncGuildData() {
               let guilds;
               let api_code_version;
               closure_11 = undefined;
-              const items = [callback2(5406).getCommittedVersions(), , ];
-              const obj18 = callback2(5406);
-              items[1] = callback2(5409).getCommittedVersions();
-              const obj19 = callback2(5409);
-              items[2] = callback2(5407).canUseGuildVersions();
+              const items = [callback2(7259).getCommittedVersions(), , ];
+              const obj18 = callback2(7259);
+              items[1] = callback2(7262).getCommittedVersions();
+              const obj19 = callback2(7262);
+              items[2] = callback2(7260).canUseGuildVersions();
               c5 = 1;
               c6 = 1;
               obj1 = { value: null, done: false };
@@ -593,12 +593,12 @@ function _backgroundSyncGuildData() {
                 obj4[0] = c5;
                 obj4[1] = c6.highest_last_message_id;
                 obj4[2] = c6.api_code_version;
-                let obj11 = callback(13280);
+                let obj11 = callback(13142);
                 obj4[3] = obj11.isChannelMetadataObfuscationEnabled("background-sync");
                 let obj5 = obj4;
               } else {
                 obj5 = { channel_privacy: null };
-                let obj9 = callback(13280);
+                let obj9 = callback(13142);
                 obj5[0] = obj9.isChannelMetadataObfuscationEnabled("background-sync");
               }
               obj3[1] = obj5;
@@ -725,7 +725,7 @@ function _backgroundSyncGuildData() {
               c6 = 3;
               throw body;
             } else if (arg0 !== 2) {
-              obj = callback(14942);
+              obj = callback(14972);
               obj.writeCaches(true);
               const _Date = Date;
               callback.time_save_guild_data = Date.now() - callback2;
@@ -789,7 +789,7 @@ function _backgroundSyncGuildChannels() {
             obj[0] = body;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           while (true) {
@@ -833,7 +833,7 @@ function _backgroundSyncGuildChannels() {
                 let changes;
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = dependencyMap;
-                let obj20 = callback2(1955);
+                let obj20 = callback2(1956);
                 throwTypeErrorResult = obj20.messages();
                 c4 = throwTypeErrorResult;
                 if (null != throwTypeErrorResult) {
@@ -1269,7 +1269,7 @@ function _processChannelChanges() {
           obj[0] = arr;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         while (true) {
@@ -1321,7 +1321,7 @@ function _processChannelChanges() {
                 let tmp23 = callback;
                 let tmp24 = dependencyMap;
                 let tmp25 = callback3;
-                let tmp26 = callback3(obj2.partition(modified_messages, callback(5073).isLikelyNotDelta), 2);
+                let tmp26 = callback3(obj2.partition(modified_messages, callback(7083).isLikelyNotDelta), 2);
                 let arr4 = tmp26[1];
                 dependencyMap2 = arr4;
                 let push = new_messages.push;
@@ -1345,7 +1345,7 @@ function _processChannelChanges() {
               }
               let num5 = 3;
               c12 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else if (1 === tmp4) {
             if (arg0 === 1) {

@@ -1,6 +1,6 @@
 // discord_app/modules/guilds_bar/native/GuildsBarItemUnavailableGuilds.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../_runtime/15669_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/15701_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../stores/GuildAvailabilityStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";

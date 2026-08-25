@@ -6,20 +6,20 @@ import getSystemLocale from "../../../../../intl/index.native.tsx";
 import AccessibilityAnnouncer from "../../../../../design/shared.tsx";
 import getAvatarURL from "../../../../../utils/AvatarUtils.tsx";
 import ensureAvatarSource from "../../../../../utils/native/AvatarUtils.tsx";
-import tDefault from "../../../../../../_runtime/03978_t.js";
+import hooksDefault from "../../../../../../_runtime/03979_hooks.js";
 import isCommunicationDisabled from "../../../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import resetCache from "../../../../../utils/DateUtils.tsx";
-import useNullableMessageAuthor from "../../../useMessageAuthor.tsx";
 import computeChannelName from "../../../../channel/useChannelName.tsx";
-import getDecisionOutcomeFromMessage from "../../../../guild_automod/AutomodMessageUtils.tsx";
+import useNullableMessageAuthor from "../../../useMessageAuthor.tsx";
 import useRoleIcon from "../../../../guild_boosting/native/RoleIconUtils.tsx";
-import registerAssetDefault from "../../../../../../_runtime/08115_registerAsset.js";
+import getDecisionOutcomeFromMessage from "../../../../guild_automod/AutomodMessageUtils.tsx";
+import registerAssetDefault from "../../../../../../_runtime/07940_registerAsset.js";
 import processColorOrThrow from "../RowGeneratorStyleSheet.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import AutomodNotificationEmbedTypeKeys from "../../../../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedTypeKeys.tsx";
 import AutomodRaidAlertTypes from "../../../../../../discord_common/js/shared/shared-constants/AutomodRaidAlertTypes.tsx";
 import DATE_CONFIG from "../../../../guild_antiraid/GuildAntiRaidUtils.tsx";
-import registerAssetDefault2 from "../../../../../../_runtime/08278_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/08279_registerAsset.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../../stores/ChannelStore.tsx";
 import closure_6 from "../../../../../stores/GuildMemberStore.tsx";
@@ -77,8 +77,8 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
           if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.MENTION_RAID === notificationType) {
             let fromNowResult;
             if (null != resolvedReason.raidDatetime) {
-              fromNowResult = tDefault(resolvedReason.raidDatetime).fromNow();
-              const obj17 = tDefault(resolvedReason.raidDatetime);
+              fromNowResult = hooksDefault(resolvedReason.raidDatetime).fromNow();
+              const obj17 = hooksDefault(resolvedReason.raidDatetime);
             }
             obj = { subtitleLeft: null, header: null, headerColor: null, headerIconURL: null, headerIconColor: null, body: null, shouldShowActions: false };
             obj[0] = fromNowResult;
@@ -150,7 +150,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
               const intl3 = getSystemLocale.intl;
               obj1[4] = intl3.string(getSystemLocale.t["QV/8u5"]);
               const tmpResult12 = processColorOrThrow;
-              obj1[6] = tDefault(message.timestamp).fromNow();
+              obj1[6] = hooksDefault(message.timestamp).fromNow();
               const intl4 = getSystemLocale.intl;
               obj1[7] = intl4.string(getSystemLocale.t.qlFrXW);
               obj1[8] = ensureAvatarSourceResult.uri;
@@ -167,7 +167,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
               str = "";
               tmp14 = obj1;
               tmp15 = stringResult;
-              const obj16 = tDefault(message.timestamp);
+              const obj16 = hooksDefault(message.timestamp);
             }
             guildMemberAvatarSource = author.getAvatarSource(undefined, false, 16);
             tmpResult8 = ensureAvatarSource;
@@ -193,8 +193,8 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       let fromNowResult1;
       if (null != resolvedReason.raidDatetime) {
-        fromNowResult1 = tDefault(resolvedReason.raidDatetime).fromNow();
-        const obj22 = tDefault(resolvedReason.raidDatetime);
+        fromNowResult1 = hooksDefault(resolvedReason.raidDatetime).fromNow();
+        const obj22 = hooksDefault(resolvedReason.raidDatetime);
       }
       let str2 = "";
       if (null != resolvedReason.raidDatetime) {
@@ -236,7 +236,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       let getRaidAlertResolveCTAText = closure_4.resolveAssetSource;
       let internal6 = getAvatarURL;
       let intl9 = internal6.makeSource;
-      obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 8277 : 8115))).uri;
+      obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 8278 : 7940))).uri;
       const tmpResult16 = processColorOrThrow;
       internal6 = tmp45(712).internal;
       obj5[7] = processColorOrThrow.processColorOrThrow(internal6.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL));
@@ -360,7 +360,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       obj9[6] = formatToPlainStringResult1;
       const tmpResult25 = resetCache;
-      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 8279 : 8280))).uri;
+      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 8280 : 8281))).uri;
       const intl16 = getSystemLocale.intl;
       const string2 = intl16.string;
       const t3 = getSystemLocale.t;

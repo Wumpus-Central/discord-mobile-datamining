@@ -2,7 +2,7 @@
 import set from "../../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4119 from "../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4120 from "../../../../reanimated/ReanimatedRexport.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const jsx = jsxProd.jsx;
@@ -15,7 +15,7 @@ const result = set.fileFinishedImporting("modules/app_launcher/native/screens/ho
 
 export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   submitting = submitting.submitting;
-  let obj = submitting(4119);
+  let obj = submitting(4120);
   class S {
     constructor() {
       tmp = submitting;
@@ -29,7 +29,7 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
       return obj;
     }
   }
-  obj = { withSpring: submitting(4749).withSpring, submitting, SUBTLE_SPRING: submitting(4753).SUBTLE_SPRING };
+  obj = { withSpring: submitting(4814).withSpring, submitting, SUBTLE_SPRING: submitting(4818).SUBTLE_SPRING };
   S.__closure = obj;
   S.__workletHash = 492443733468;
   S.__initData = closure_5;
@@ -37,8 +37,8 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   obj = { style: items, children: null };
   items = [submitting.style, callback().ellipsis, animatedStyle];
   if (submitting) {
-    submitting = tmp5(submitting(4765).Ellipsis, { variant: "active", size: "md" });
+    submitting = tmp5(submitting(4830).Ellipsis, { variant: "active", size: "md" });
   }
   obj[1] = submitting;
-  return jsx(_modDef4119.View, { style: items, children: null });
+  return jsx(_modDef4120.View, { style: items, children: null });
 };

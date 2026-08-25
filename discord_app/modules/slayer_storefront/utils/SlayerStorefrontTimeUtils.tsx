@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../intl/SlayerStorefront.messages.js";
-import tDefault from "../../../../_runtime/03978_t.js";
+import hooksDefault from "../../../../_runtime/03979_hooks.js";
 import useIntervalDefault from "../../../hooks/useInterval.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
@@ -11,7 +11,7 @@ function getLimitedOfferTimeLeft(arg0) {
   if (null == arg0) {
     return null;
   } else {
-    const diffResult = tDefault(arg0).diff(tDefault(), "seconds");
+    const diffResult = hooksDefault(arg0).diff(hooksDefault(), "seconds");
     let tmp4 = null;
     if (diffResult > 0) {
       const obj = { days: null, hours: null, minutes: null, seconds: null };

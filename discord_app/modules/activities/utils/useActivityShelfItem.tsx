@@ -2,10 +2,10 @@
 import getApplicationFlags from "../../applications/utils/ApplicationFlagUtils.tsx";
 import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
 import getPlatformDefault from "getPlatform.tsx";
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication.tsx";
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity.tsx";
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground.tsx";
 import useEmbeddedAppsDefault from "../useEmbeddedAppsForChannel.tsx";
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity.tsx";
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../EmbeddedActivitiesStore.tsx";
 import { STAFF_RELEASE_PHASES } from "../Constants.tsx";
@@ -26,13 +26,13 @@ function useActivityAction(applicationId) {
   }
   const tmp4 = useCurrentEmbeddedActivityDefault();
   const tmp5 = useCurrentEmbeddedApplicationDefault({ fetchesApplication });
-  obj = getOrFetchApplication(7183);
+  obj = getOrFetchApplication(5840);
   getOrFetchApplication = obj.useGetOrFetchApplication(applicationId.applicationId, fetchesApplication);
   useEmbeddedAppsDefault(channel);
   if (null == getOrFetchApplication) {
     return START;
   } else {
-    const getEmbeddedActivityLocationChannelId = getOrFetchApplication(4014).getEmbeddedActivityLocationChannelId;
+    const getEmbeddedActivityLocationChannelId = getOrFetchApplication(4015).getEmbeddedActivityLocationChannelId;
     if (tmp4 != null) {
       const _location = tmp4.location;
     }
@@ -52,7 +52,7 @@ function useActivityAction(applicationId) {
     if (null != tmp9) {
       JOIN = tmp.JOIN;
     }
-    const tmp6Result = getOrFetchApplication(4014);
+    const tmp6Result = getOrFetchApplication(4015);
   }
 }
 function useOnActivityItemSelected(arg0) {
@@ -74,8 +74,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = useActivityAction({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(7177)().analyticsLocations;
-  closure_14 = context(11285)();
+  analyticsLocations = context(5834)().analyticsLocations;
+  closure_14 = context(10804)();
   obj = canLaunchFrame;
   closure_15 = obj.canLaunchFrame(application);
   if (null == application) {
@@ -97,7 +97,7 @@ function useOnActivityItemSelected(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -177,7 +177,7 @@ function useOnActivityItemSelected(arg0) {
           } else if (1 === tmp8) {
             c3 = 0;
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             if (2 === tmp8) {
               if (arg0 === 1) {
@@ -200,7 +200,7 @@ function useOnActivityItemSelected(arg0) {
             } else if (3 === tmp8) {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else if (4 === tmp8) {
               if (arg0 === 1) {
                 c5 = 3;
@@ -219,7 +219,7 @@ function useOnActivityItemSelected(arg0) {
               c3 = 0;
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
           c3 = 0;
           c5 = 3;
@@ -252,7 +252,7 @@ function useOnActivityItemSelected(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -310,7 +310,7 @@ function useOnActivityItemSelected(arg0) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp17) {
           c0 = tmp;
           throw tmp17;
@@ -371,10 +371,10 @@ export default function useActivityShelfItem(backgroundResolution) {
   let tmp9 = null;
   const tmp3 = getPlatformDefault;
   if (null != activity.activity_preview_video_asset_id) {
-    tmp9 = tmp(11283)(application.id, activity.activity_preview_video_asset_id);
+    tmp9 = tmp(11641)(application.id, activity.activity_preview_video_asset_id);
   }
   let channel;
-  let tmpResult = tmp(11284);
+  let tmpResult = tmp(11642);
   if ("channel" === context.type) {
     channel = context.channel;
   }
@@ -384,9 +384,9 @@ export default function useActivityShelfItem(backgroundResolution) {
   obj1 = { application: activityItem.application, context, locationObject, embeddedActivitiesManager, onActivityItemSelectedProp: onActivityItemSelected, launchingComponentId, commandOrigin, source };
   const tmpResultResult = tmpResult(channel);
   const tmp13 = useActivityAction(obj);
-  let tmp4Result = tmp4(7912);
+  let tmp4Result = tmp4(7733);
   if (tmp4Result.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-    tmpResult = tmp(8755);
+    tmpResult = tmp(10691);
     tmp4Result = tmp4(500);
     const str = activityItem.activity.client_platform_config[tmpResult(undefined, tmp4Result.getOS(tmp4Result))].release_phase;
     let replaced;
@@ -396,13 +396,13 @@ export default function useActivityShelfItem(backgroundResolution) {
     }
     const tmp16 = replaced;
   } else {
-    const tmp4Result1 = tmp4(7912);
+    const tmp4Result1 = tmp4(7733);
   }
   const obj2 = { imageBackground: tmp8, videoUrl: tmp9, joinableEmbeddedApp: found, activityAction: tmp13, onActivityItemSelected: useOnActivityItemSelected(obj1), labelType: null, staffReleasePhase: null };
   if (tmp7) {
     let NONE = tmp5.label_type;
   } else {
-    NONE = tmp4(1954).EmbeddedActivityLabelTypes.NONE;
+    NONE = tmp4(1955).EmbeddedActivityLabelTypes.NONE;
   }
   obj2[5] = NONE;
   obj2[6] = tmp16;
@@ -411,7 +411,7 @@ export default function useActivityShelfItem(backgroundResolution) {
 export const ActivityAction = obj;
 export const getStaffReleasePhase = function getStaffReleasePhase(application) {
   if (!obj.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-    let tmpResult = tmp(7912);
+    let tmpResult = tmp(7733);
   }
   obj = getApplicationFlags;
   const tmp3 = ApplicationFlags;

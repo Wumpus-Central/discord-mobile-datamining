@@ -1,5 +1,5 @@
 // discord_app/modules/coded_links/MessageCodedLinkManager.tsx
-import trimTrailingPunctuationDefault from "findCodedLinks.tsx";
+import getPathsFromURLDefault from "findCodedLinks.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import setupLoadFromMessageManagerHandlersDefault from "../messages/setupLoadFromMessageManagerHandlers.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -8,7 +8,7 @@ import closure_5 from "../../stores/InviteStore.tsx";
 
 const require = arg1;
 function resolveMessageCodedLinks(content) {
-  const arr = trimTrailingPunctuationDefault(content.content);
+  const arr = getPathsFromURLDefault(content.content);
   let tmp = null != arr;
   if (tmp) {
     tmp = 0 !== arr.length;
@@ -30,7 +30,7 @@ function resolveMessageCodedLinks(content) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -65,7 +65,7 @@ function resolveMessageCodedLinks(content) {
                 return obj;
               }
               c0 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } catch (tmp10) {
               c0 = tmp;
               throw tmp10;
@@ -86,7 +86,7 @@ function resolveMessageCodedLinks(content) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -121,7 +121,7 @@ function resolveMessageCodedLinks(content) {
                 return obj;
               }
               c0 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } catch (tmp10) {
               c0 = tmp;
               throw tmp10;

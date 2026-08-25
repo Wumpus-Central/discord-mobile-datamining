@@ -1,11 +1,11 @@
 // discord_app/modules/video_calls/native/useScreenshareUtils.tsx
 import inject from "../../../../discord_common/js/packages/media-engine/native/inject.tsx";
 import isStreamKey from "../../go_live/utils/StreamKeyUtils.tsx";
+import watchStream from "../../../actions/StreamActionCreators.tsx";
 import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import initializeDefault from "../../foreground_service/mobile/ForegroundServiceManager.android.tsx";
 import _handleToggleVideo from "../../voice_calls/native/CallsUtils.tsx";
 import trackDeviceChangedDefault from "../../../actions/AudioActionCreators.tsx";
-import watchStream from "../../../actions/StreamActionCreators.tsx";
 import useHasVideoPermission from "../useHasVideoPermission.tsx";
 import useHasVideoPermissionDefault from "../useHasVideoPermission.tsx";
 import apexExperimentDefault from "../../go_live/native/MobileGoLiveUpsellExperiment.tsx";
@@ -23,8 +23,8 @@ function stopScreenshare() {
   voiceEngine.stopBroadcast();
   const currentUserActiveStream = authStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    let tmpResult = tmp(9899);
-    tmpResult = tmp(4536);
+    let tmpResult = tmp(4563);
+    tmpResult = tmp(4446);
     tmpResult.stopStream(tmpResult.encodeStreamKey(currentUserActiveStream));
   }
   const obj = inject;
@@ -102,7 +102,7 @@ export default function useScreenshareUtils(arg0) {
             }
           }
         } else {
-          fn = callback(9686).showScreenshareDisabledAlert;
+          fn = callback(9296).showScreenshareDisabledAlert;
         }
       } else {
         fn = function l() {
@@ -114,12 +114,12 @@ export default function useScreenshareUtils(arg0) {
       }
       obj[3] = fn;
       if (obj2.isMetaQuest()) {
-        tmp19(tmp ? 10982 : 10983);
+        tmp19(tmp ? 10924 : 10925);
       } else {
         if (tmp4) {
-          let tmp20 = 10984;
+          let tmp20 = 10926;
         } else {
-          tmp20 = tmp ? 10985 : 10984;
+          tmp20 = tmp ? 10927 : 10926;
         }
         obj[4] = tmp19(tmp20);
         return obj;

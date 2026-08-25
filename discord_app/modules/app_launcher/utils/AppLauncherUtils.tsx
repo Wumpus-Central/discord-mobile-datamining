@@ -5,9 +5,9 @@ import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import PermissionOverwriteType from "../../../flow/Server.tsx";
 import buildCommand from "../../application_commands/ApplicationCommandUtils.tsx";
 import getApplicationFlags from "../../applications/utils/ApplicationFlagUtils.tsx";
+import AppLauncherEntrypoint from "../AppLauncherTypes.tsx";
 import getPlatformDefault from "../../activities/utils/getPlatform.tsx";
 import canInstallApplication from "../../applications/utils/ApplicationInstallUtils.tsx";
-import AppLauncherEntrypoint from "../AppLauncherTypes.tsx";
 import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import closure_5 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_6 from "../../application_commands/ApplicationCommandIndexStore.tsx";
@@ -159,7 +159,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -242,7 +242,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
           }
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp39) {
         closure_3 = tmp39;

@@ -1,7 +1,7 @@
 // discord_app/modules/guild/native/InvitesDisabledBadge.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../design/void/native.tsx";
-import registerAssetDefault from "../../../../_runtime/11952_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12281_registerAsset.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";

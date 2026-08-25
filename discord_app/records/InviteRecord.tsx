@@ -1,6 +1,6 @@
 // discord_app/records/InviteRecord.tsx
 import toJSDefault from "../lib/Record.tsx";
-import tDefault from "../../_runtime/03978_t.js";
+import hooksDefault from "../../_runtime/03979_hooks.js";
 
 toJSDefault;
 let InviteRecord;
@@ -41,19 +41,19 @@ InviteRecord["createFromServer"] = function createFromServer(created_at) {
   const merged = Object.assign(created_at);
   ({ max_uses: obj.maxUses, max_age: obj.maxAge } = created_at);
   created_at = created_at.created_at;
-  obj.createdAt = tDefault(created_at);
+  obj.createdAt = hooksDefault(created_at);
   ({ target_type: obj.targetType, target_user: obj.targetUser, target_application: obj.targetApplication } = created_at);
   return new InviteRecord(obj);
 };
 prototype["isExpired"] = function isExpired() {
   const maxAge = this.maxAge;
   if (maxAge > 0) {
-    const obj = tDefault(tmp.createdAt);
+    const obj = hooksDefault(tmp.createdAt);
     const _Date = Date;
     if (addResult.isBefore(Date.now())) {
       return true;
     }
-    addResult = tDefault(tmp.createdAt).add(maxAge, "seconds");
+    addResult = hooksDefault(tmp.createdAt).add(maxAge, "seconds");
   }
   return false;
 };
@@ -61,9 +61,9 @@ prototype["getExpiresAt"] = function getExpiresAt() {
   const self = this;
   let num = Infinity;
   if (this.maxAge > 0) {
-    const obj = tDefault(self.createdAt);
-    num = tDefault(self.createdAt).add(self.maxAge, "seconds").toDate();
-    const addResult = tDefault(self.createdAt).add(self.maxAge, "seconds");
+    const obj = hooksDefault(self.createdAt);
+    num = hooksDefault(self.createdAt).add(self.maxAge, "seconds").toDate();
+    const addResult = hooksDefault(self.createdAt).add(self.maxAge, "seconds");
   }
   return num;
 };

@@ -3,10 +3,10 @@ import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import sleep from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import shouldShowAgeGateForVoiceChannel from "../age_gate/AgeGateUtils.tsx";
 import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
 import isMentioned from "../messages/isMessageMentioned.tsx";
 import isMentionedDefault from "../messages/isMessageMentioned.tsx";
-import shouldShowAgeGateForVoiceChannel from "../age_gate/AgeGateUtils.tsx";
 import isSystemMessageDefault from "../messages/isSystemMessage.tsx";
 import closure_3 from "../../records/MessageRecord.tsx";
 import closure_4 from "../../stores/AuthenticationStore.tsx";
@@ -98,7 +98,7 @@ function parseMessage(message, channelId) {
       }
       id = id.getId();
       if (!blockedOrIgnoredForMessage.isBlockedOrIgnoredForMessage(message)) {
-        if (!tmp2(5391)(message, id)) {
+        if (!tmp2(7244)(message, id)) {
           let tmp12 = message;
           if (!(message instanceof closure_3)) {
             message = store2.getMessage(message.channel_id, message.id);
@@ -114,7 +114,7 @@ function parseMessage(message, channelId) {
           obj[2] = !closure_23.everyoneFilter;
           obj[3] = !closure_23.roleFilter;
           let tmp20 = null;
-          if (tmp2(4824)(obj)) {
+          if (tmp2(4639)(obj)) {
             let tmp2ResultResult = c26;
             if (c26) {
               tmp2ResultResult = closure_7.ackMessageId(channel.id) !== tmp12.id;
@@ -125,8 +125,8 @@ function parseMessage(message, channelId) {
               obj[1] = id;
               obj[2] = closure_10.isSuppressEveryoneEnabled(channel.getGuildId());
               obj[3] = closure_10.isSuppressRolesEnabled(channel.getGuildId());
-              tmp2ResultResult = tmp2(4824)(obj);
-              const tmp2Result = tmp2(4824);
+              tmp2ResultResult = tmp2(4639)(obj);
+              const tmp2Result = tmp2(4639);
             }
             tmp20 = tmp12;
             if (tmp2ResultResult) {
@@ -612,8 +612,8 @@ obj = {
         const findIndexResult = applyDefault.findIndex(substr, (id) => id.id === id);
         substr = substr.slice();
         if (null != substr[findIndexResult]) {
-          substr[findIndexResult] = id(4808).updateMessageRecord(tmp7, message.message);
-          const obj2 = id(4808);
+          substr[findIndexResult] = id(4625).updateMessageRecord(tmp7, message.message);
+          const obj2 = id(4625);
         }
       }
     }

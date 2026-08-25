@@ -7,11 +7,11 @@ import Button from "../../../../design/void/native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import _handleToggleVideo from "../../../voice_calls/native/CallsUtils.tsx";
 import stopScreenshareDefault from "../useScreenshareUtils.tsx";
-import useMuteAwareLocalVolumeDefault from "../../../media_engine/useMuteAwareLocalVolume.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
 import NOOP from "../VoiceActionUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/12630_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/12631_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10985_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/10986_registerAsset.js";
+import useMuteAwareLocalVolumeDefault from "../../../media_engine/useMuteAwareLocalVolume.tsx";
 import useDeafStatesDefault from "../../useDeafStates.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -126,7 +126,7 @@ export const StreamVolumeItem = function StreamVolumeItem() {
   if (null != stateFromStores) {
     obj1 = { label: null };
     obj1[0] = tmp11;
-    tmp9Result = tmp9(tmp2(8122).FormRow, obj1);
+    tmp9Result = tmp9(tmp2(8118).FormRow, obj1);
   }
   return tmp9Result;
 };
@@ -159,7 +159,7 @@ export const DeafenButton = function DeafenButton(disabled) {
   }
   let obj = NOOP;
   const deafHandler = obj.createDeafHandler(useDeafStatesDefault(disabled.channel));
-  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 12633 : 12634), label: null };
+  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10989 : 10990), label: null };
   const intl = tmp4(1236).intl;
   obj[3] = intl.string(getSystemLocale.t.wjcRFX);
   return callback(ExpandedControlItem, obj);

@@ -40,7 +40,7 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
               obj3.log("load returned null; early returning (guild: " + guild_id + ", database: " + databaseResult + ")");
             } else {
               [arr, tmp41] = callback(result, 2);
-              tmp4(1977)(arr);
+              tmp4(1978)(arr);
               if (Basic !== tmp2.Basic) {
                 closure_34 = closure_34 + 1;
               }
@@ -583,7 +583,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((arg0) => !set.has(arg0))) {
       dependencyMap = c31;
-      return tmp(1975).tryLoadOrResetCacheGatewayAsync("loadChannels", callback2(function*() {
+      return tmp(1976).tryLoadOrResetCacheGatewayAsync("loadChannels", callback2(function*() {
         if (c7 === 2) {
           c7 = 3;
           HermesBuiltin.throwTypeError();
@@ -595,7 +595,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           while (true) {

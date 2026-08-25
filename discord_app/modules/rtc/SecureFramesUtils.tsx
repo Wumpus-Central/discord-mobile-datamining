@@ -3,13 +3,13 @@ import byteLengthDefault from "../../../_runtime/00206_byteLength.js";
 import setDefault from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import combinedDefault from "../../utils/HelpdeskUtils.tsx";
-import tDefault from "../../../_runtime/03978_t.js";
+import hooksDefault from "../../../_runtime/03979_hooks.js";
 import nameFromUserDefault from "../../utils/UserUtils.tsx";
 import getNicknameDefault from "../../utils/NicknameUtils.tsx";
 import setDefault2 from "../../actions/AlertActionCreators.tsx";
 import set from "../../../discord_common/js/packages/libdave/index.tsx";
 import savePersistentCodesEnabledDefault from "SecureFramesActionCreators.tsx";
-import _modDef9751 from "SecureFramesPlatformUtils.native.tsx";
+import _modDef9361 from "SecureFramesPlatformUtils.native.tsx";
 import trackRTCPanelViewed from "SecureFramesTracking.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -90,7 +90,7 @@ function _isPublicKeyMatch() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -193,7 +193,7 @@ function _uploadCurrentUserPublicKey() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -267,7 +267,7 @@ function _uploadCurrentUserPublicKey() {
             const result = obj.addUploadedKeyVersion(callback);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp25) {
           signature = tmp25;
@@ -312,7 +312,7 @@ function _ensureCurrentUserPublicKey() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -346,7 +346,7 @@ function _ensureCurrentUserPublicKey() {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp8) {
           c1 = tmp;
           throw tmp8;
@@ -381,7 +381,7 @@ function _isCurrentUserPublicKeyMatch() {
           obj[0] = key;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -575,7 +575,7 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
 export const deletePersistentVerification = function deletePersistentVerification(userId, verifiedKey) {
   const _require = userId;
   importDefault = verifiedKey;
-  let obj = _modDef9751;
+  let obj = _modDef9361;
   obj = { title: null, subtitle: null, onConfirm: null };
   const intl = require("../../intl/index.native.tsx").intl;
   obj[0] = intl.string(require("../../intl/index.native.tsx").t.hdL152);
@@ -603,11 +603,11 @@ export const deleteUserPersistentVerifications = function deleteUserPersistentVe
     const obj = closure_1_1(closure_1_2[11]);
     const result1 = userId(closure_1_2[12]).trackE2EESettingsUserDelete();
   };
-  let result = _modDef9751.openSecureFramesUpdateConfirmation(obj);
+  let result = _modDef9361.openSecureFramesUpdateConfirmation(obj);
 };
 export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
-  let obj = tDefault();
-  const diffResult = obj.diff(tDefault(timestamp), "s");
+  let obj = hooksDefault();
+  const diffResult = obj.diff(hooksDefault(timestamp), "s");
   if (diffResult > 12 * setDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
     const rounded = Math.round(diffResult / (12 * tmp(687).Seconds.DAYS_30));
@@ -656,7 +656,7 @@ export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUser
     obj5[0] = diffResult;
     return intl.formatToPlainString(getSystemLocale.t["/w0Qpw"], obj5);
   }
-  const tmp3 = tDefault(timestamp);
+  const tmp3 = hooksDefault(timestamp);
 };
 export const getUserVerificationDeeplink = function getUserVerificationDeeplink(arg0, arg1) {
   return "" + location.protocol + "//" + location.host + closure_14.FEATURE(constants2.DAVE_PROTOCOL_VERIFICATION) + "?userId=" + arg0 + "&fingerprint=" + encodeURIComponent(arg1);

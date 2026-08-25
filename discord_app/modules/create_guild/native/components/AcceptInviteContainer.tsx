@@ -103,7 +103,7 @@ export default function AcceptInviteContainer(code) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -171,7 +171,7 @@ export default function AcceptInviteContainer(code) {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp14) {
         c3 = tmp;
         throw tmp14;
@@ -191,7 +191,7 @@ export default function AcceptInviteContainer(code) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -237,7 +237,7 @@ export default function AcceptInviteContainer(code) {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } else {
                     try {
@@ -263,7 +263,7 @@ export default function AcceptInviteContainer(code) {
                               }
                               if (null == prop) {
                                 c6 = 3;
-                                return { value: "HermesInternal", done: null };
+                                return { value: "HermesInternal", done: "HermesInternal" };
                               } else {
                                 closure_1_1();
                                 let tmp11Result = tmp11(tmp12[16]);

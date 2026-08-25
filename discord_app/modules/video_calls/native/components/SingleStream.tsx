@@ -13,7 +13,7 @@ export default function SingleStream(channel) {
   channel = channel.channel;
   const obj = {
     gestureEnabled: true,
-    resizeMode: channel(12497).ResizeMode.CONTAIN,
+    resizeMode: channel(10778).ResizeMode.CONTAIN,
     onSingleTap() {
       callback();
     },
@@ -26,7 +26,7 @@ export default function SingleStream(channel) {
   };
   return jsx(StreamTextOverlayDefault, {
     gestureEnabled: true,
-    resizeMode: channel(12497).ResizeMode.CONTAIN,
+    resizeMode: channel(10778).ResizeMode.CONTAIN,
     onSingleTap() {
       callback();
     },

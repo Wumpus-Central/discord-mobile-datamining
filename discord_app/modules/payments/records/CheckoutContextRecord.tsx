@@ -1,7 +1,7 @@
 // discord_app/modules/payments/records/CheckoutContextRecord.tsx
 import toJSDefault from "../../../lib/Record.tsx";
 import formatSingleCurrencyPrice from "../../../utils/PriceUtils.tsx";
-import addDefault from "../../../../_runtime/05323_add.js";
+import addDefault from "../../../../_runtime/05964_add.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_onboarding/doGuildOnboarding.native.tsx
-import _mod6823 from "../../../_runtime/metro/06823__.js";
+import _mod5346 from "../../../_runtime/metro/05346__.js";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../stores/SelectedGuildStore.tsx";
@@ -10,7 +10,7 @@ import { waitForOnboardingCompletion } from "doGuildOnboardingHelpers.tsx";
 
 require = arg1;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod6823));
+  return JSON.parse(JSON.stringify(_mod5346));
 }
 function _doGuildOnboarding() {
   let self = this;
@@ -30,7 +30,7 @@ function _doGuildOnboarding() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -64,14 +64,14 @@ function _doGuildOnboarding() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj8 = lib(4346);
+              let obj8 = lib(4347);
               obj8.hideActionSheet();
-              lib(5265).popAll();
-              const obj10 = lib(5265);
+              lib(4611).popAll();
+              const obj10 = lib(4611);
               c5 = 2;
               c6 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = guildId(6815).waitForGuild(closure_0);
+              obj2[0] = guildId(5338).waitForGuild(closure_0);
               return obj2;
             }
           } else {
@@ -93,7 +93,7 @@ function _doGuildOnboarding() {
                   hasItem = features.has(constants.COMMUNITY);
                 }
                 if (hasItem) {
-                  let obj5 = guildId(6824);
+                  let obj5 = guildId(5347);
                   c5 = 3;
                   c6 = 1;
                   const obj4 = { value: null, done: false };
@@ -155,7 +155,7 @@ function _doGuildOnboarding() {
               return obj;
             }
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp42) {
           c6 = tmp;
@@ -194,7 +194,7 @@ function _fetchLandingAsset() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -263,7 +263,7 @@ function _fetchLandingAsset() {
           } else {
             dependencyMap = arg1;
             const _HermesInternal = HermesInternal;
-            const tmp12 = callback(6826);
+            const tmp12 = callback(5351);
             c3 = 0;
             c5 = 3;
             obj = { value: null, done: true };

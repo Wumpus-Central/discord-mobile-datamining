@@ -34,7 +34,7 @@ function _fetchCustomActivityLink() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -153,7 +153,7 @@ function _getCustomActivityLinkParams() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -273,7 +273,7 @@ function _loadCustomActivityLink() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -327,7 +327,7 @@ function _loadCustomActivityLink() {
               obj5[2] = callback;
               obj.dispatch(obj5);
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           }
         } catch (tmp16) {

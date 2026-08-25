@@ -1,14 +1,14 @@
 // discord_app/modules/voice_messages/native/VoiceMessagesUIStore.tsx
 import set from "../../../../_runtime/00002_set.js";
 import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod4119 from "../../reanimated/ReanimatedRexport.tsx";
+import _mod4120 from "../../reanimated/ReanimatedRexport.tsx";
 import CONFIG_NEVER_ANIMATE from "../../../design/animation/reanimated/spring/spring.tsx";
 import VoiceMessageAnimationState from "../VoiceMessageConstants.tsx";
 import keys from "../../../../_runtime/00644_keys.js";
 
 ({ VoiceMessageAnimationState: obj1, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageAnimationState);
 let obj = keys.create(() => {
-  obj = { voiceMessageAnimationState: _mod4119.makeMutable(items), recordingStatus: null, recordingId: null, currWaveHeight: "ct", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "PX_16", showVoiceMessagesTooltip: 2352, savedVoiceMessageUploadData: 2353, isVoiceMessageButtonMounted: 2354, isUsingHoldGesture: 2355 };
+  obj = { voiceMessageAnimationState: _mod4120.makeMutable(items), recordingStatus: null, recordingId: null, currWaveHeight: "ct", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "PX_16", showVoiceMessagesTooltip: "TypingIndicatorInner", savedVoiceMessageUploadData: "M7 1v1H6v1H5v8H3v-1H1v4h1v1h6V1H7Z", isVoiceMessageButtonMounted: null, isUsingHoldGesture: 0.75 };
   items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = closure_2);
   obj[6] = [];
@@ -54,7 +54,7 @@ export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
   const waveformVersion = obj.getState().waveformVersion;
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    obj = waveformVersion(4749);
+    obj = waveformVersion(4814);
     const result = currWaveHeight.set(obj.withSpring(arg0 / closure_3));
   }
   const items = [arg0, waveformVersion];
@@ -76,7 +76,7 @@ export const hideVoiceMessagesTooltip = function hideVoiceMessagesTooltip() {
 export const resetVoiceMessageState = function resetVoiceMessageState() {
   obj = batchUpdates;
   obj.batchUpdates(() => {
-    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "accessibilityLabel" });
+    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "channel" });
   });
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {

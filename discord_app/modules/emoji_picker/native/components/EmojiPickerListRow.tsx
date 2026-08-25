@@ -3,8 +3,8 @@ import set2 from "../../../../utils/PlatformUtils.tsx";
 import nDefault from "../../../../../_runtime/00689_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
-import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
+import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import ViewDefault from "EmojiPickerListRowView.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -66,10 +66,10 @@ function EmojiItem(emoji) {
     obj1[1] = tmp.image;
     const tmp15 = preloadDefault;
     if (tmp7Result.isThemeDark(theme.theme)) {
-      tmp8 = 6969;
+      tmp8 = 5467;
       let tmp14Result = tmp14(tmp8);
     } else {
-      tmp14Result = tmp14(6970);
+      tmp14Result = tmp14(5468);
     }
     obj1[2] = tmp14Result;
     const obj2 = { uri: null };
@@ -88,7 +88,7 @@ function EmojiItem(emoji) {
     }
     items1[1] = disabled;
     obj[5] = items1;
-    return closure_8(emoji(5438).PressableOpacity, obj);
+    return closure_8(emoji(4949).PressableOpacity, obj);
   }
 }
 ({ View: c3, StyleSheet } = get_ActivityIndicator);

@@ -19,10 +19,10 @@ function showReviewRequestModal() {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   let tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
   if (tmp3) {
-    let tmpResult = tmp(4233);
+    let tmpResult = tmp(4234);
     tmp3 = null != tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
   }
-  tmpResult = tmp(7387);
+  tmpResult = tmp(6113);
   const keyboardIsOpen = tmpResult.getKeyboardIsOpen();
   const tmp5 = null != voiceChannelId.getVoiceChannelId();
   if (tmp3) {
@@ -45,7 +45,7 @@ function showReviewRequestModal() {
     clearTimeout(timeout);
     timeout = -1;
   }
-  const RequestReviewNoTTIExperiment = tmp(13301).RequestReviewNoTTIExperiment;
+  const RequestReviewNoTTIExperiment = tmp(13163).RequestReviewNoTTIExperiment;
   let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
   let tmp18 = c10;
   if (c10) {
@@ -60,7 +60,7 @@ function showReviewRequestModal() {
   }
   if (tmp18) {
     const _setTimeout = setTimeout;
-    timeout = setTimeout(showReviewRequestModal, tmp(4553).MS_PER_MINUTE);
+    timeout = setTimeout(showReviewRequestModal, tmp(4458).MS_PER_MINUTE);
   }
 }
 function handleConnectionClosedOrInterrupted() {
@@ -116,7 +116,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = tmp(13301).RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = tmp(13163).RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp13 = closure_10;
     if (closure_10) {
@@ -131,7 +131,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
     }
     if (tmp13) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, tmp(4553).MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, tmp(4458).MS_PER_MINUTE);
     }
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
@@ -192,7 +192,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
         clearTimeout(timeout);
         timeout = -1;
       }
-      const RequestReviewNoTTIExperiment = tmp(13301).RequestReviewNoTTIExperiment;
+      const RequestReviewNoTTIExperiment = tmp(13163).RequestReviewNoTTIExperiment;
       let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
       let tmp8 = c10;
       if (c10) {
@@ -207,7 +207,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
       }
       if (tmp8) {
         const _setTimeout = setTimeout;
-        timeout = setTimeout(showReviewRequestModal, tmp(4553).MS_PER_MINUTE);
+        timeout = setTimeout(showReviewRequestModal, tmp(4458).MS_PER_MINUTE);
       }
     } else if (-1 !== timeout) {
       const _clearTimeout2 = clearTimeout;

@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
-import Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
+import Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import SafeAreaPaddingView from "../../../../../components_native/common/SafeAreaView.tsx";
 import styles from "TwoWayLinkStyles.tsx";
-import registerAssetDefault from "../../../../../../_runtime/09834_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/10629_registerAsset.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";

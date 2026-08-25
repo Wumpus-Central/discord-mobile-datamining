@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemTextInput.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
+import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
-import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
 import TextIcon from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import AtIcon from "../../../../design/components/Icon/native/redesign/generated/AtIcon.tsx";
+import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
 import RedesignBottomSheetTitleHeaderBase from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";

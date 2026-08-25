@@ -1,8 +1,8 @@
 // discord_app/modules/now_playing/getApplicationIdForActivity.tsx
 import set from "../../../_runtime/00002_set.js";
 import items3 from "../activities/Constants.tsx";
-import isListeningOnSpotifyDefault from "../activities/utils/isListeningOnSpotify.tsx";
 import _isStreamingDefault from "../activities/utils/isStreaming.tsx";
+import isListeningOnSpotifyDefault from "../activities/utils/isListeningOnSpotify.tsx";
 import isOnXboxDefault from "../activities/utils/isOnXbox.tsx";
 import getIconURL from "../../records/SpotifyApplicationRecord.tsx";
 import getIconURL2 from "../../records/TwitchApplicationRecord.tsx";

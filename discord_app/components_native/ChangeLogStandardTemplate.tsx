@@ -60,7 +60,7 @@ function LinkInner(target) {
   obj = target(647);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  changelog = target(8343).useChangelog(changelogId, stateFromStores).changelog;
+  changelog = target(8344).useChangelog(changelogId, stateFromStores).changelog;
   obj = {
     accessibilityRole: "link",
     style: className,
@@ -167,29 +167,29 @@ const memoResult1 = importAllResult.memo((video) => {
   obj[4] = items1;
   const items2 = [closure_11(closure_5, obj), ];
   obj2 = { bottom: true, style: tmp.footer, children: null };
-  obj3 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: callback(id(8349).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  obj3 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: callback(id(8350).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl = id(1236).intl;
   obj3[4] = intl.string(id(1236).t["/lXfom"]);
   obj3[5] = function onPress() {
-    callback(4093).openURL(callback(4008)(constants.TWITTER));
+    callback(4094).openURL(callback(4009)(constants.TWITTER));
   };
-  const items3 = [callback(id(8074).IconButton, obj3), , ];
-  const obj4 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: callback(id(8351).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const items3 = [callback(id(7896).IconButton, obj3), , ];
+  const obj4 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: callback(id(8352).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl2 = id(1236).intl;
   obj4[4] = intl2.string(id(1236).t["h0or/l"]);
   obj4[5] = function onPress() {
-    callback(4093).openURL(constants2.FACEBOOK_URL);
+    callback(4094).openURL(constants2.FACEBOOK_URL);
   };
-  items3[1] = callback(id(8074).IconButton, obj4);
-  const obj5 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: callback(id(8353).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  items3[1] = callback(id(7896).IconButton, obj4);
+  const obj5 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: callback(id(8354).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl3 = id(1236).intl;
   obj5[4] = intl3.string(id(1236).t["5uVPyf"]);
   obj5[5] = function onPress() {
-    callback(4093).openURL(constants2.INSTAGRAM_URL);
+    callback(4094).openURL(constants2.INSTAGRAM_URL);
   };
-  items3[2] = callback(id(8074).IconButton, obj5);
+  items3[2] = callback(id(7896).IconButton, obj5);
   obj2[2] = items3;
-  items2[1] = closure_11(id(6840).SafeAreaPaddingView, obj2);
+  items2[1] = closure_11(id(5434).SafeAreaPaddingView, obj2);
   obj[1] = items2;
   return closure_11(closure_4, obj);
 });

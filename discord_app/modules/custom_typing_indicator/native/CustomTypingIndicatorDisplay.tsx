@@ -2,8 +2,8 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../intl/CustomTypingIndicator.messages.js";
-import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
+import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import items2 from "../CustomTypingIndicatorUtils.tsx";
 import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph.tsx";
@@ -29,7 +29,7 @@ export default function CustomTypingIndicatorDisplay(showName) {
   if (num === undefined) {
     num = 16;
   }
-  ({ justifyCenter, textEmojiLineHeight, bypassReducedMotionCheck } = showName);
+  ({ justifyCenter, bypassReducedMotionCheck } = showName);
   if (justifyCenter === undefined) {
     justifyCenter = false;
   }
@@ -43,11 +43,10 @@ export default function CustomTypingIndicatorDisplay(showName) {
       let formatResult = intl2.format(obj1.getCustomTypingIndicatorSuggestionWithNameMessage(config.typingSuggestion), obj);
       let tmp5 = require;
     }
-    obj = { config: null, size: null, textEmojiLineHeight: null, bypassReducedMotionCheck: null };
+    obj = { config: null, size: null, bypassReducedMotionCheck: null };
     obj[0] = config;
     obj[1] = num;
-    obj[2] = textEmojiLineHeight;
-    obj[3] = bypassReducedMotionCheck;
+    obj[2] = bypassReducedMotionCheck;
     const tmp10 = callback(CustomTypingIndicatorGlyphDefault, obj);
     let str = "flex-start";
     if (justifyCenter) {

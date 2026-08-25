@@ -9,7 +9,7 @@ import RegistrationTransitionActionTypes from "../../RegistrationConstants.tsx";
 import { AuthStates } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import importDefaultResult from "../../../../../_runtime/03978_t.js";
+import importDefaultResult from "../../../../../_runtime/03979_hooks.js";
 import subtractResult from "../../../../../_runtime/00100_getConstants.js";
 
 const require = arg1;

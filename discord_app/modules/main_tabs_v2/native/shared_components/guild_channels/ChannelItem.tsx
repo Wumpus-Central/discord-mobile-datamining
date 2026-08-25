@@ -2,8 +2,8 @@
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
-import getRelativeTimestamp from "../../../../notification_center/NotificationCenterUtils.tsx";
 import GuildIconSizesDefault from "../../../../guild/native/GuildIcon.tsx";
+import getRelativeTimestamp from "../../../../notification_center/NotificationCenterUtils.tsx";
 import getChannelA11yLabelDefault from "../../../../channel/getChannelA11yLabel.tsx";
 import FacepileGroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
 import getLayoutStyles from "layouts/ChannelListLayout.tsx";
@@ -20,7 +20,7 @@ require = arg1;
 function LaunchpadChannelIcon(channel) {
   channel = channel.channel;
   const layout = channel.layout;
-  let obj = channel(10095);
+  let obj = channel(9951);
   const layoutStyles = obj.getLayoutStyles(layout);
   obj1 = channel(589);
   const items = [closure_4];
@@ -40,14 +40,14 @@ function LaunchpadChannelIcon(channel) {
     str = "md";
   }
   obj1[1] = str;
-  obj6 = channel(10095);
+  obj6 = channel(9951);
   let num = 32;
   if (tmp2Result.isLayoutCozy(layout)) {
     num = 48;
   }
   const obj2 = { children: null };
   obj1[2] = num;
-  items1[1] = tmp8(channel(11417).ChannelIcon, obj1);
+  items1[1] = tmp8(channel(11773).ChannelIcon, obj1);
   obj2[0] = items1;
   return tmp6(tmp7, obj2);
 }
@@ -141,10 +141,10 @@ export const renderChannelItem = function renderChannelItem(unread) {
   }
   obj[1] = tmp10Result;
   children[1] = closure_8(View, obj);
-  let tmp5Result = tmp5(15981);
+  let tmp5Result = tmp5(16013);
   const obj3 = { layout, name: null, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, channel: null, locked: null, connected: null, live: null, mentionCount: null, mentionBadge: null, isSubscriptionGated: null, needSubscriptionToAccess: null };
   if (channelName == null) {
-    tmp5Result = tmp5(4989);
+    tmp5Result = tmp5(4574);
     channelName = tmp5Result.computeChannelName(channel, closure_6, closure_5);
   }
   obj3[1] = channelName;

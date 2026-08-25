@@ -5,7 +5,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import registerAssetDefault from "../../../../_runtime/08182_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08178_registerAsset.js";
 import AutomatedUnderageAppealStatusDefault from "SafetyHubPage.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { SafetyHubLinks } from "../SafetyHubConstants.tsx";
@@ -35,14 +35,14 @@ export default function SuspendedUserSafetyHubPage() {
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.cpT0Cq);
   obj1[2] = function onPress() {
-    callback(5261).closeSuspendedUser();
+    callback(5933).closeSuspendedUser();
   };
   obj1[3] = registerAssetDefault;
   const items = [callback(IconButton.IconButton, obj1), ];
   const obj2 = {
     style: tmp.text,
     onPress() {
-      callback(4093).openURL(constants.WARNING_SYSTEM_HELPCENTER_LINK);
+      callback(4094).openURL(constants.WARNING_SYSTEM_HELPCENTER_LINK);
     },
     variant: "text-xs/medium",
     color: "control-critical-primary-text-default",

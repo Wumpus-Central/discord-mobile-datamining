@@ -21,7 +21,7 @@ function _handleContentLinking() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -133,7 +133,7 @@ function _handleContentLinking() {
                 obj4.setSelectedSummary(callback2, c4);
               }
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
             if (safe) {
               obj4 = { navigationReplace: null, openChannel: true, skipMessageFetch: null };

@@ -1,8 +1,8 @@
 // discord_app/modules/conversations/ConversationsActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
 import fetchSurveyDetailsDefault from "../qualtrics/QualtricsActionCreators.tsx";
 import SurveyActionTypes from "../../../discord_common/js/shared/shared-constants/SurveyActionTypes.tsx";
+import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
 import ConversationsAnalytics2 from "ConversationsAnalytics.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "ConversationsStore.tsx";
@@ -30,7 +30,7 @@ function _fetchChannelConversations() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -131,7 +131,7 @@ function _fetchChannelConversations() {
                     return obj5;
                   }
                 }
-                obj15 = callback(12736);
+                obj15 = callback(8709);
               }
             } else if (2 === tmp7) {
               c6 = 0;
@@ -180,7 +180,7 @@ function _fetchChannelConversations() {
               return obj;
             }
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp70) {
           if (tmp4 === c6) {
@@ -236,7 +236,7 @@ function _fetchConversationMessages() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -304,7 +304,7 @@ function _fetchConversationMessages() {
                   }
                 }
               }
-              obj14 = callback(12736);
+              obj14 = callback(8709);
               tmp52 = callback;
             }
           } else {

@@ -1,5 +1,6 @@
 // discord_app/modules/gateway/GatewaySocketDispatcher.tsx
 import timestampDefault from "../debug/Logger.tsx";
+import sleep from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import prettyPrintTrace_ from "GatewaySocketAnalytics.tsx";
 import CLOSEDDefault from "ConnectionState.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -59,7 +60,7 @@ class GatewaySocketDispatcher {
           const dispatchMultipleResult = obj.dispatchMultiple(spliceResult, arg0);
           if (dispatchMultipleResult) {
             const telemetry = obj.scheduler.telemetry;
-            telemetry.timeEnd(obj(closure_1_2[5]).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
+            telemetry.timeEnd(obj(closure_1_2[6]).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
           }
           const _performance2 = performance;
           const diff = performance.now() - nowResult;
@@ -122,11 +123,12 @@ prototype["receiveDispatch"] = function receiveDispatch(d, type, arg2) {
     const _Error = Error;
     throw Error("getDispatchHandler needs to be passed in first!");
   } else {
-    const obj = { data: null, type: null, compressionAnalytics: null, status: null, preloadPromise: null, preloadedData: null };
+    const obj = { data: null, type: null, compressionAnalytics: null, status: null, preloadPromise: null, preloadedData: null, receivedAt: null };
     obj[0] = d;
     obj[1] = type;
     obj[2] = arg2;
     obj[3] = closure_10.NotStarted;
+    obj[6] = sleep.now();
     const queue = self.queue;
     queue.push(obj);
     if (!self.maybePreload(obj)) {
@@ -284,11 +286,11 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
           closure_5 = arr.slice(sum);
           if (tmp18) {
             const telemetry = tmp6.scheduler.telemetry;
-            telemetry.timeTrack(v0(13255).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
+            telemetry.timeTrack(v0(13117).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
           }
           tmp18 = null != obj && obj.timeRemaining() <= 0;
         }
-        items(13258).flush();
+        items(13120).flush();
       });
       if (c4) {
         const Emitter3 = tmp2(589).Emitter;
@@ -296,7 +298,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       }
       if (closure_5.length > 0) {
         let telemetry = self.scheduler.telemetry;
-        telemetry.measure(tmp21(13255).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
+        telemetry.measure(tmp21(13117).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
         const queue = self.queue;
         const unshift = queue.unshift;
         items = [];
@@ -320,24 +322,24 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
 };
 prototype["dispatchOne"] = function dispatchOne(arg0) {
   const self = this;
-  ({ data, type, compressionAnalytics, preloadedData } = arg0);
+  ({ data, type, compressionAnalytics, preloadedData, receivedAt } = arg0);
   const nowResult = performance.now();
   if (this.socket.connectionState !== CLOSEDDefault.RESUMING) {
-    tmp2(13258).flush(type, data);
+    tmp2(13120).flush(type, data);
     if ("READY" === type) {
       const readyPayloadByteSizeAnalytics = prettyPrintTrace_.getReadyPayloadByteSizeAnalytics(data);
       const dispatchHandler = self.getDispatchHandler(type);
       if (dispatchHandler != null) {
-        dispatchHandler.dispatch(data, type, preloadedData);
+        dispatchHandler.dispatch(data, type, preloadedData, receivedAt);
       }
-      const tmp11Result = prettyPrintTrace_;
-      const result = tmp11Result.logReadyPayloadReceived(self.socket, data, nowResult, compressionAnalytics, readyPayloadByteSizeAnalytics);
+      const tmp16Result = prettyPrintTrace_;
+      const result = tmp16Result.logReadyPayloadReceived(self.socket, data, nowResult, compressionAnalytics, readyPayloadByteSizeAnalytics);
       const obj6 = prettyPrintTrace_;
-      const tmp11 = require;
+      const tmp16 = require;
     } else if ("RESUMED" === type) {
       const dispatchHandler1 = self.getDispatchHandler(type);
       if (dispatchHandler1 != null) {
-        dispatchHandler1.dispatch(data, type, preloadedData);
+        dispatchHandler1.dispatch(data, type, preloadedData, receivedAt);
       }
       prettyPrintTrace_.logResumeAnalytics(self.resumeAnalytics);
       const socket = self.socket;
@@ -348,10 +350,10 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
     } else {
       const dispatchHandler2 = self.getDispatchHandler(type);
       if (dispatchHandler2 != null) {
-        dispatchHandler2.dispatch(data, type, preloadedData);
+        dispatchHandler2.dispatch(data, type, preloadedData, receivedAt);
       }
     }
-    if (self.socket.connectionState === tmp2(13257).RESUMING) {
+    if (self.socket.connectionState === tmp2(13119).RESUMING) {
       const resumeAnalytics3 = self.resumeAnalytics;
       const _performance = performance;
       resumeAnalytics3.dispatchTime = resumeAnalytics3.dispatchTime + (performance.now() - nowResult);

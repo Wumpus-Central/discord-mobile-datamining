@@ -2,9 +2,9 @@
 import _slicedToArrayDefault from "../../../../_runtime/metro/00032__slicedToArray.js";
 import setDefault from "../../../utils/Durations.tsx";
 import _openRobloxURLWithRootPlaceId from "../../roblox_subgame_detection/RobloxSubgameUtils.tsx";
-import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import QuestVariants from "../../../../discord_common/js/shared/shared-constants/QuestVariants.tsx";
 import set2 from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
+import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import getQuestDeliveryDataForPlacement from "../utils/QuestDataUtils.tsx";
 import isSponsoredPlayQuest from "../utils/QuestUtils.tsx";
 import getApplicationIdsByTaskTypes from "../utils/QuestTaskUtils.tsx";
@@ -51,11 +51,11 @@ function handleEmbeddedActivityLaunchSuccess(applicationId) {
       if (features.includes(QuestVariants.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
         let tmp9 = tmp5;
         let tmp10 = tmp7;
-        let tmp6Result = tmp6(10516);
+        let tmp6Result = tmp6(10533);
         obj = { questContent: null, questContentCTA: null, sourceQuestContent: null };
-        obj[0] = tmp6(6756).QuestContent.RUNNING_ACTIVITY;
-        obj[1] = tmp6(7518).QuestContentCTA.START_QUEST;
-        obj[2] = tmp6(6756).QuestContent.RUNNING_ACTIVITY;
+        obj[0] = tmp6(5271).QuestContent.RUNNING_ACTIVITY;
+        obj[1] = tmp6(7332).QuestContentCTA.START_QUEST;
+        obj[2] = tmp6(5271).QuestContent.RUNNING_ACTIVITY;
         let tmp12 = obj2;
         let enrollInQuestResult = tmp6Result.enrollInQuest(item10020.id, obj);
         obj2.return();
@@ -102,7 +102,7 @@ class QuestProgressManager extends tmp4 {
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = lib(7514).getQuestTaskDetails(value, lib(6760).FirstPartyQuestTaskTypesSets.DESKTOP);
+            const questTaskDetails = lib(7328).getQuestTaskDetails(value, lib(5275).FirstPartyQuestTaskTypesSets.DESKTOP);
             const _Math = Math;
             const diff = questTaskDetails.targetSeconds - questTaskDetails.progressSeconds;
             const bound = Math.max(0, diff * applyArgumentsResult(687).Millis.SECOND);
@@ -337,7 +337,7 @@ class QuestProgressManager extends tmp4 {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -395,7 +395,7 @@ class QuestProgressManager extends tmp4 {
                 return !hasItem;
               });
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp17) {
             c4 = tmp;
@@ -462,9 +462,9 @@ prototype["getActivelyProgressingQuests"] = function getActivelyProgressingQuest
   const self = this;
   if (set2.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingPlayOnDesktopQuests();
-  } else if (tmp(6760).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
+  } else if (tmp(5275).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingStreamOnDesktopQuests();
-  } else if (tmp(6760).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
+  } else if (tmp(5275).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
     return self.getActivelyProgressingActivityQuests();
   } else {
     tmp(1370).assertNever(closure_1);

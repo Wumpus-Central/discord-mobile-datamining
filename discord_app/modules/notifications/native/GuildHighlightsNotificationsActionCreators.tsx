@@ -3,7 +3,7 @@ import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NotificationUserFeedbackReasons from "Constants.tsx";
-import { asyncRequireImpl } from "../../../../_runtime/02008_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02009_asyncRequireImpl.js";
 
 let closure_3 = NotificationUserFeedbackReasons.NotificationUserFeedbackReasons;
 const AnalyticEvents = ME.AnalyticEvents;
@@ -59,5 +59,5 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
     obj.track(constants.FEEDBACK_FORM_SUBMITTED, obj);
   };
   obj[1] = obj;
-  obj.openLazy(asyncRequireImpl(10849, dependencyMap.paths), "GuildHighlightsNotifications", obj);
+  obj.openLazy(asyncRequireImpl(11173, dependencyMap.paths), "GuildHighlightsNotifications", obj);
 };

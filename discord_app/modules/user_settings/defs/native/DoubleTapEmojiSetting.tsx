@@ -87,7 +87,7 @@ const pressable = createToggle.createPressable({
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -130,7 +130,7 @@ const pressable = createToggle.createPressable({
               obj5[0] = callback;
               const result = obj.showDoubleTapEmojiUpdatedToast(obj5);
               constants = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp12) {
             constants = tmp;
@@ -226,7 +226,7 @@ let obj1 = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -269,7 +269,7 @@ let obj1 = {
               obj5[0] = callback;
               const result = obj.showDoubleTapEmojiUpdatedToast(obj5);
               constants = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp12) {
             constants = tmp;

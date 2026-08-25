@@ -43,7 +43,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   if (tmp10Result) {
     obj1 = { icon: null, size: 24 };
     obj1[0] = nextTierIcon;
-    tmp10Result = tmp10(tmp2(10341), obj1);
+    tmp10Result = tmp10(tmp2(10192), obj1);
   }
   obj[1] = tmp10Result;
   const items2 = [closure_4(View, obj), ];

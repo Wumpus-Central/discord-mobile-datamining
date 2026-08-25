@@ -2,9 +2,9 @@
 import DISCORD_EPOCHDefault from "SnowflakeUtils.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
 import getNicknameDefault from "NicknameUtils.tsx";
+import computeChannelName from "../modules/channel/useChannelName.tsx";
 import createMinimalMessageRecord from "../modules/messages/MessageRecordUtils.tsx";
 import useNullableMessageAuthor from "../modules/messages/useMessageAuthor.tsx";
-import computeChannelName from "../modules/channel/useChannelName.tsx";
 import reactParserFor from "../../discord_common/js/packages/markup/MarkupParser.tsx";
 import AutomodNotificationEmbedTypeKeys from "../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedTypeKeys.tsx";
 import identityHook from "../modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx";
@@ -48,7 +48,7 @@ export default {
           obj = { username: null, usernameOnClick: null, otherUsername: null, otherUsernameOnClick: null };
           obj[0] = name;
           obj[1] = closure_12;
-          let tmp6Result = tmp6(4801);
+          let tmp6Result = tmp6(4573);
           obj[2] = tmp6Result.getName(null, channel_id, null);
           obj[3] = closure_12;
           return reactParserFor.astToString(intl18.formatToParts(getSystemLocale.t["7/Xl0S"], obj));
@@ -62,7 +62,7 @@ export default {
               obj = { username: null, usernameOnClick: null, otherUsername: null, otherUsernameOnClick: null };
               obj[0] = name;
               obj[1] = closure_12;
-              tmp6Result = tmp6(4801);
+              tmp6Result = tmp6(4573);
               obj[2] = tmp6Result.getName(null, channel_id, null);
               obj[3] = closure_12;
               let astToStringResult = reactParserFor.astToString(intl17.formatToParts(getSystemLocale.t.QtZ0RD, obj));
@@ -245,13 +245,13 @@ export default {
                     astToStringResult6 = null;
                     if (null != guild) {
                       if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED === value) {
-                        let tmp34Result = tmp34(6940);
+                        let tmp34Result = tmp34(8247);
                         const intl5 = tmp34(1236).intl;
                         const obj14 = { guildName: null };
                         obj14[0] = guild.name;
                         astToStringResult6 = tmp34Result.astToString(intl5.formatToParts(tmp34(1236).t.wt3ZUM, obj14));
-                      } else if (tmp34(8250).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
-                        tmp34Result = tmp34(6940);
+                      } else if (tmp34(8251).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
+                        tmp34Result = tmp34(8247);
                         const intl4 = tmp34(1236).intl;
                         obj15 = { guildName: null };
                         obj15[0] = guild.name;
@@ -260,8 +260,8 @@ export default {
                         const intl3 = tmp34(1236).intl;
                         obj16 = { guildName: null };
                         obj16[0] = guild.name;
-                        astToStringResult6 = tmp34(6940).astToString(intl3.formatToParts(tmp34(1236).t["a+lJKl"], obj16));
-                        const tmp34Result1 = tmp34(6940);
+                        astToStringResult6 = tmp34(8247).astToString(intl3.formatToParts(tmp34(1236).t["a+lJKl"], obj16));
+                        const tmp34Result1 = tmp34(8247);
                       }
                     }
                   }

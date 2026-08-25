@@ -1,10 +1,10 @@
 // discord_app/modules/wishlists/WishlistUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
 import useSKUPrice from "../storefront/StorefrontUtils.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../skus/SKURecord.tsx";
-import { isCollectiblesWishlistItemRecord as closure_5 } from "records/CollectiblesWishlistItemRecord.tsx";
-import { isPremiumWishlistItemRecord as closure_6, isSKUWishlistItemRecord } from "records/PremiumWishlistItemRecord.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../skus/SKURecord.tsx";
+import { isCollectiblesWishlistItemRecord as closure_4 } from "records/CollectiblesWishlistItemRecord.tsx";
+import { isPremiumWishlistItemRecord as closure_5, isSKUWishlistItemRecord } from "records/PremiumWishlistItemRecord.tsx";
 import { SKUProductLines } from "../../Constants.tsx";
 import { PremiumSubscriptionSKUs } from "../premium/PremiumConstants.tsx";
 
@@ -26,7 +26,7 @@ export const createNitroSuggestedSku = function createNitroSuggestedSku() {
   obj[10] = [];
   obj[11] = {};
   const set1 = new Set();
-  return new closure_4(obj);
+  return new closure_3(obj);
 };
 export const isEligibleWishlistItemOnMobile = function isEligibleWishlistItemOnMobile(sku, isWishlistOwner) {
   isWishlistOwner = isWishlistOwner.isWishlistOwner;
@@ -82,18 +82,6 @@ export const buildReorderedWishlistData = function buildReorderedWishlistData(se
   const items = [...arg1];
   items.splice(arg3, 0, callback(items.splice(arg2, 1), 1)[0]);
   return { newWishlistData: set.set("items", items), previousSkuId: skuId2, nextSkuId: skuId3 };
-};
-export const buildReorderedNitroFirstWishlistItems = function buildReorderedNitroFirstWishlistItems(arr) {
-  const findIndexResult = arr.findIndex((skuId) => callback(table[9]).isPremiumSku(skuId.skuId));
-  if (findIndexResult <= 0) {
-    return arr;
-  } else {
-    const items = [];
-    HermesBuiltin.arraySpread(arr, 0);
-    const items1 = [callback(items.splice(findIndexResult, 1), 1)[0]];
-    HermesBuiltin.arraySpread(items, 1);
-    return items1;
-  }
 };
 export const buildReorderedOwnedItemsLastWishlistItems = function buildReorderedOwnedItemsLastWishlistItems(items) {
   let tmp = items;

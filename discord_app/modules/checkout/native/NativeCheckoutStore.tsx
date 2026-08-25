@@ -1,6 +1,6 @@
 // discord_app/modules/checkout/native/NativeCheckoutStore.tsx
 import identity from "../../../../_runtime/00700_identity.js";
-import isIterable from "../../../../_runtime/04009_isIterable.js";
+import isIterable from "../../../../_runtime/04010_isIterable.js";
 import createDefinedContextDefault from "../../../utils/ContextUtils.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
@@ -68,7 +68,7 @@ export const createNativeStore = function createNativeStore(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -168,7 +168,7 @@ export const createNativeStore = function createNativeStore(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -309,7 +309,7 @@ export const createNativeStore = function createNativeStore(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -437,7 +437,7 @@ export const createNativeStore = function createNativeStore(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -516,7 +516,7 @@ export const createNativeStore = function createNativeStore(arg0) {
               v0 = 0;
               callback({ isCreateOrderLoading: false });
               c6 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp42) {
             closure_3 = tmp42;

@@ -1,8 +1,8 @@
 // discord_app/modules/go_live/utils/StreamPermissionUtils.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
 import allowChannelAccess from "../../../utils/ChannelUtils.tsx";
-import canJoinVoiceChannelDefault from "../../channel/canJoinVoiceChannel.tsx";
 import shouldShowAgeGateForVoiceChannel from "../../age_gate/AgeGateUtils.tsx";
+import canJoinVoiceChannelDefault from "../../channel/canJoinVoiceChannel.tsx";
 import closure_3 from "../../game_console/GameConsoleStore.tsx";
 import { ChannelRecordBase } from "../../../records/ChannelRecord.tsx";
 import { GUILD_VOCAL_CHANNELS_KEY } from "../../../stores/GuildChannelStore.tsx";

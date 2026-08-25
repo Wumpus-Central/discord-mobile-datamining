@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/server/commands/setActivity.tsx
-import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import StatusDisplayTypes from "../../../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
+import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import closure_3 from "../../../applications/ApplicationStore.tsx";
 import RPC_SCOPE_CONFIG from "../../Constants.tsx";
 import ME from "../../../../Constants.tsx";

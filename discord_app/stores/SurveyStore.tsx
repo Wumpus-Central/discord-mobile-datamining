@@ -3,7 +3,7 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import tDefault from "../../_runtime/03978_t.js";
+import hooksDefault from "../../_runtime/03979_hooks.js";
 import overrideSurvey from "../actions/SurveyActionCreators.tsx";
 import closure_4 from "GuildMemberCountStore.tsx";
 import closure_5 from "GuildStore.tsx";
@@ -223,7 +223,7 @@ function setSurvey(survey) {
   const value = Storage.get(closure_11);
   let tmp9 = null == value;
   if (!tmp9) {
-    obj = tDefault();
+    obj = hooksDefault();
     tmp9 = obj.diff(value, "day") < 7;
   }
   let tmp11 = null;

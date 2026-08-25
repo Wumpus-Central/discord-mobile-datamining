@@ -4,7 +4,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/12715_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13250_registerAsset.js";
 import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { Fonts } from "../../../../Constants.tsx";

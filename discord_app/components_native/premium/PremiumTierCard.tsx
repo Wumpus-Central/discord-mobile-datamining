@@ -4,7 +4,7 @@ import keys from "../../ConstantsIOS.tsx";
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 import getPremiumPlanItem from "../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../_runtime/04761_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/04826_LinearGradient.js";
 import PressableCard from "../../design/components/Card/native/Card.native.tsx";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { getPremiumGradientColor } from "../../modules/colors/native/ColorConstants.tsx";
@@ -41,11 +41,11 @@ export default function _default(children) {
   }
   obj[3] = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp2Result = tmp2(13053);
+    let tmp2Result = tmp2(13041);
   } else if (tmp11.TIER_1 === premiumType) {
-    tmp2Result = tmp2(13054);
+    tmp2Result = tmp2(13042);
   } else if (tmp11.TIER_2 === premiumType) {
-    tmp2Result = tmp2(7712);
+    tmp2Result = tmp2(7533);
   }
   obj[4] = tmp2Result;
   obj[4] = closure_7(closure_4, obj);
@@ -61,11 +61,11 @@ export default function _default(children) {
   obj = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    tmp2Result = tmp2(7651);
+    tmp2Result = tmp2(7472);
   } else if (tmp11.TIER_1 === premiumType) {
-    tmp2Result = tmp2(7652);
+    tmp2Result = tmp2(7473);
   } else if (tmp11.TIER_2 === premiumType) {
-    tmp2Result = tmp2(7707);
+    tmp2Result = tmp2(7528);
   }
   obj[3] = tmp2Result;
   items[1] = closure_7(closure_4, obj);

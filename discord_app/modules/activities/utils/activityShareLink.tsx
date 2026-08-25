@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/activityShareLink.tsx
 import set from "../../../../_runtime/00002_set.js";
 import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
-import trimTrailingPunctuation from "../../coded_links/findCodedLinks.tsx";
+import getPathsFromURL from "../../coded_links/findCodedLinks.tsx";
 
-const items = [trimTrailingPunctuation.parseQuestsEmbedCode];
+const items = [getPathsFromURL.parseQuestsEmbedCode];
 const result = set.fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
 
 export const resolveActivityShareMessageContent = function resolveActivityShareMessageContent(c3, closure_14, closure_12) {

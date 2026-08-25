@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import tDefault from "../../../../_runtime/03978_t.js";
+import hooksDefault from "../../../../_runtime/03979_hooks.js";
 import NativeModulesDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import closure_3 from "../../../stores/GuildStore.tsx";
 import closure_4 from "../../../stores/GuildVerificationStore.tsx";
@@ -42,9 +42,9 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
             set.add(userInfo);
           }
         }
-        const result = callback(11628).cancelLocalNotifications(userInfo);
-        const obj = callback(11628);
-        const result1 = callback(11628).cancelLocalNotifications(userInfo);
+        const result = callback(10861).cancelLocalNotifications(userInfo);
+        const obj = callback(10861);
+        const result1 = callback(10861).cancelLocalNotifications(userInfo);
         set.delete(userInfo);
       });
     });
@@ -60,12 +60,12 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
         if (guild.verificationLevel === VerificationLevels.MEDIUM) {
           const verificationLevel = guild.verificationLevel;
           if (tmp2.MEDIUM === verificationLevel) {
-            let obj = tDefault(check.accountDeadline);
+            let obj = hooksDefault(check.accountDeadline);
           } else if (tmp2.HIGH === verificationLevel) {
-            obj = tDefault(check.memberDeadline);
+            obj = hooksDefault(check.memberDeadline);
           }
           if (null != obj) {
-            if (!obj.isSameOrBefore(tDefault(), "minute")) {
+            if (!obj.isSameOrBefore(hooksDefault(), "minute")) {
               obj = { type: null, guildId: null };
               obj[0] = constants.GUILD_VERIFICATION;
               obj[1] = guild.id;
@@ -76,8 +76,8 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
               obj[2] = guild.name;
               const intl = getSystemLocale.intl;
               obj[3] = intl.string(getSystemLocale.t["hrDBa+"]);
-              const result = tmp15(11628).scheduleLocalNotification(obj);
-              const tmp15Result = tmp15(11628);
+              const result = tmp15(10861).scheduleLocalNotification(obj);
+              const tmp15Result = tmp15(10861);
             }
             tmp15 = importDefault;
           }

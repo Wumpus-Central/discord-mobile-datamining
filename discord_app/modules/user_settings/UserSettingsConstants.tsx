@@ -17,7 +17,7 @@ export const UserSettingsTypes = { PRELOADED_USER_SETTINGS: 1, [1]: "PRELOADED_U
 export const PrivacySettingSurfaces = { USER_SETTINGS_PRIVACY_SAFETY: "user_settings_privacy_safety", USER_SETTINGS_ACTIVITY_PRIVACY: "user_settings_activity_privacy", SERVER_PRIVACY_MODAL: "server_privacy_modal" };
 export const UserSettingsDelay = { INFREQUENT_USER_ACTION: 0, [0]: "INFREQUENT_USER_ACTION", FREQUENT_USER_ACTION: 10, [10]: "FREQUENT_USER_ACTION", SLOW_USER_ACTION: 20, [20]: "SLOW_USER_ACTION", AUTOMATED: 30, [30]: "AUTOMATED", DAILY: 86400, [86400]: "DAILY" };
 export const createEmptyEditInfo = function createEmptyEditInfo() {
-  const obj = { protoToSave: "Array", timeout: "ct", timeoutDelay: Number.MIN_SAFE_INTEGER, rateLimited: null, cleanupFuncs: false, errorCallbacks: false, loaded: false, loading: "channel", triggeredMigrations: -3701552028492769000000000000000000000000000000000000, offlineEditDataVersion: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016031425788842465 };
+  const obj = { protoToSave: "Array", timeout: "ct", timeoutDelay: Number.MIN_SAFE_INTEGER, rateLimited: null, cleanupFuncs: false, errorCallbacks: false, loaded: false, loading: "accessibilityRole", triggeredMigrations: "bol", offlineEditDataVersion: "kiss_woman_man_tone4" };
   obj[4] = [];
   obj[5] = [];
   return obj;

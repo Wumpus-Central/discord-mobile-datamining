@@ -38,7 +38,7 @@ function _pickImage() {
           obj[0] = base64;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -81,7 +81,7 @@ function _pickImage() {
               callback(obj);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp17) {
           c4 = tmp;
@@ -233,8 +233,8 @@ export default function FormImagePicker(children) {
   obj = { style: tmp2.buttonColumn, children: null };
   obj = { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description };
   const items = [
-    callback2(tmp6(4739).Text, obj),
-    callback2(tmp6(4750).Button, {
+    callback2(tmp6(4376).Text, obj),
+    callback2(tmp6(4815).Button, {
       text: stringResult,
       variant: "secondary",
       onPress() {

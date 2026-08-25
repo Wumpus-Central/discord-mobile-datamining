@@ -1,7 +1,7 @@
 // discord_app/modules/guild_rooms/GuildRoomManager.tsx
-import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import _guildRoomConnect from "GuildRoomActionCreators.native.tsx";
 import experimentDefault from "GuildRoomsExperiment.tsx";
+import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import closure_3 from "../../stores/AuthenticationStore.tsx";
 import closure_4 from "GuildRoomStore.tsx";
 

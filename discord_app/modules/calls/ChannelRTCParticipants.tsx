@@ -2,11 +2,11 @@
 import apply from "../../../_runtime/00012_apply.js";
 import version from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
 import isStreamKey from "../go_live/utils/StreamKeyUtils.tsx";
+import getNicknameDefault from "../../utils/NicknameUtils.tsx";
 import getParticipantUserKeyDefault from "getParticipantUserKey.tsx";
+import useAvatarDecoration from "../collectibles/avatar_decorations/useAvatarDecoration.tsx";
 import useIsSpeaking from "../../hooks/useIsSpeaking.tsx";
 import apexExperiment from "../activities/ContentClassificationEmbeddedActivityFilterExperiment.tsx";
-import getNicknameDefault from "../../utils/NicknameUtils.tsx";
-import useAvatarDecoration from "../collectibles/avatar_decorations/useAvatarDecoration.tsx";
 import closure_3 from "../activities/EmbeddedActivitiesStore.tsx";
 import closure_4 from "../../stores/ApplicationStreamingStore.tsx";
 import closure_5 from "../../stores/AuthenticationStore.tsx";
@@ -219,11 +219,11 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
   }
   return flag;
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f76638) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f75792) {
   const self = this;
-  closure_0 = f76638;
+  closure_0 = f75792;
   let flag;
-  if (this.participants[f76638] != null) {
+  if (this.participants[f75792] != null) {
     flag = arr.reduce((arg0, type) => {
       let flag = arg0;
       if (type.type === closure_1_14.USER) {
@@ -263,11 +263,11 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f766
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f76645, closure_1, closure_2) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f75799, closure_1, closure_2) {
   const self = this;
   closure_0 = closure_2;
   let flag;
-  if (this.participants[f76645] != null) {
+  if (this.participants[f75799] != null) {
     flag = arr.reduce((arg0, type) => {
       let flag = arg0;
       if (type.type === closure_1_14.STREAM) {

@@ -32,19 +32,19 @@ export default function useStableParticipant(arg0, arg1, arg2) {
       if (null == participant) {
         const user = closure_1_6.getUser(tmp);
         if (null != user) {
-          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_16", ringing: null, hasVideo: 41.774, isSelf: 42.358 };
+          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_16", ringing: null, hasVideo: 0.778, isSelf: 0.275 };
           obj[0] = closure_1_7.USER;
           obj[1] = tmp;
           obj[2] = user;
           const id = closure_1_4.getId();
-          obj[5] = callback(4801).getName(dependencyMap, tmp3, user);
-          const obj5 = callback(4801);
-          obj[6] = callback(4802).getAvatarDecoration(user, dependencyMap);
+          obj[5] = callback(4573).getName(dependencyMap, tmp3, user);
+          const obj5 = callback(4573);
+          obj[6] = callback(8960).getAvatarDecoration(user, dependencyMap);
           obj[10] = user.id === id;
           return obj;
         }
       } else {
-        const tmp15 = callback2(11493)(participant);
+        const tmp15 = callback2(10794)(participant);
         const type = participant.type;
         if (closure_1_7.ACTIVITY === type) {
           obj = { type: null, id: null, applicationId: null };

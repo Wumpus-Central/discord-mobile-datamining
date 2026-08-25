@@ -61,7 +61,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   }, items1);
   let FadeOut;
   if (!stateFromStores) {
-    FadeOut = tmp(4119).FadeOut;
+    FadeOut = tmp(4120).FadeOut;
   }
   obj = { exiting: FadeOut, children: null };
   const items2 = [enabled ? tmp7.containerRefresh : tmp7.container, style, ];
@@ -83,7 +83,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   obj[3] = obj1;
   const merged1 = Object.assign(arg0);
   obj2 = { ref: tmp9, style: enabled ? tmp7.animationRefresh : tmp7.animation, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished };
-  obj.children = jsx(tmp3(7168), { ref: tmp9, style: enabled ? tmp7.animationRefresh : tmp7.animation, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
+  obj.children = jsx(tmp3(5825), { ref: tmp9, style: enabled ? tmp7.animationRefresh : tmp7.animation, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
   obj[1] = jsx(require("../../../../design/void/Pressables/native/Pressables.tsx").PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
-  return jsx(stateFromStores(4119).View, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
+  return jsx(stateFromStores(4120).View, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
 };
