@@ -15,14 +15,14 @@ import StarIcon from "../../design/components/Icon/native/redesign/generated/Sta
 import ShieldUserIcon from "../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import HeadphonesIcon from "../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
 import getSubscriptionPlansLoaded from "../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx";
-import registerAssetDefault from "../../../_runtime/12976_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/12998_registerAsset.js";
-import registerAssetDefault3 from "../../../_runtime/13001_registerAsset.js";
-import registerAssetDefault4 from "../../../_runtime/13002_registerAsset.js";
-import registerAssetDefault5 from "../../../_runtime/13003_registerAsset.js";
-import registerAssetDefault6 from "../../../_runtime/13004_registerAsset.js";
-import registerAssetDefault7 from "../../../_runtime/13005_registerAsset.js";
-import registerAssetDefault8 from "../../../_runtime/13006_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/13050_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/13072_registerAsset.js";
+import registerAssetDefault3 from "../../../_runtime/13075_registerAsset.js";
+import registerAssetDefault4 from "../../../_runtime/13076_registerAsset.js";
+import registerAssetDefault5 from "../../../_runtime/13077_registerAsset.js";
+import registerAssetDefault6 from "../../../_runtime/13078_registerAsset.js";
+import registerAssetDefault7 from "../../../_runtime/13079_registerAsset.js";
+import registerAssetDefault8 from "../../../_runtime/13080_registerAsset.js";
 import getGuildSubscriptionNoGuildsSource from "../../design/components/Illustration/native/redesign/generated/GuildSubscriptionNoGuilds.tsx";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../stores/SortedGuildStore.tsx";
@@ -55,7 +55,7 @@ class FEATURES_PREMIUM_GUILD_USER {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.color = callback2(712).unsafe_rawColors.GUILD_BOOSTING_PINK;
-      return callback3(callback(12999).BoostTier3Icon, obj);
+      return callback3(callback(13073).BoostTier3Icon, obj);
     };
     items[1] = obj;
     obj1 = { icon: require("registerAsset"), label: null, color: null, IconComponent: null };
@@ -88,15 +88,15 @@ export default function GuildBoostingUpsell(arg0) {
   }
   obj = { style: tmp.root, children: null };
   obj = { style: tmp.header, children: null };
-  obj1 = { style: tmp.imgPremiumGuild, source: tmp7(7753) };
+  obj1 = { style: tmp.imgPremiumGuild, source: tmp7(7820) };
   const items1 = [callback(closure_4, obj1), , , ];
   obj2 = { style: tmp.logoPremiumGuild, source: null };
   const tmp8 = useThemeDefault();
   const tmp9 = FractionalPremiumStates;
   if (tmp2Result.isThemeDark(tmp8)) {
-    let tmp7Result = tmp7(7762);
+    let tmp7Result = tmp7(7829);
   } else {
-    tmp7Result = tmp7(7763);
+    tmp7Result = tmp7(7830);
   }
   obj2[1] = tmp7Result;
   items1[1] = callback(closure_4, obj2);
@@ -115,7 +115,7 @@ export default function GuildBoostingUpsell(arg0) {
   obj5[4] = intl3.string(getSystemLocale.t.RvfRTB);
   items2[1] = callback(Text.Text, obj5);
   const obj6 = { style: tmp.features, features: null };
-  tmp7Result = tmp7(8781);
+  tmp7Result = tmp7(8849);
   obj6[1] = FEATURES_PREMIUM_GUILD_USER();
   items2[2] = callback(tmp7Result, obj6);
   const obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
@@ -161,7 +161,7 @@ export default function GuildBoostingUpsell(arg0) {
   if (subscriptionPlansLoaded) {
     tmp13Result = null;
     if (fractionalState === tmp9.NONE) {
-      tmp13Result = tmp13(tmp7(13011), {});
+      tmp13Result = tmp13(tmp7(13085), {});
     }
   }
   const items4 = [tmp13Result, , ];
@@ -172,7 +172,7 @@ export default function GuildBoostingUpsell(arg0) {
       const obj15 = { onLearnMorePremium: null, style: null };
       obj15[0] = onLearnMorePremium;
       obj15[1] = tmp.subscriptionUpsell;
-      tmp13Result = tmp13(tmp7(13013), obj15);
+      tmp13Result = tmp13(tmp7(13087), obj15);
     }
     items4[2] = tmp13Result;
     obj14[1] = items4;
@@ -186,16 +186,16 @@ export default function GuildBoostingUpsell(arg0) {
       obj17[0] = tmp.cardText;
       const intl12 = tmp2(1236).intl;
       obj17[2] = intl12.string(tmp2(1236).t.WRzob8);
-      const items5 = [tmp13(tmp2(4376).Text, obj17), , ];
+      const items5 = [tmp13(tmp2(4440).Text, obj17), , ];
       const obj18 = { style: null, variant: "text-md/bold", children: null };
       const items6 = [tmp.cardText];
       obj18[0] = items6;
       const intl13 = tmp2(1236).intl;
       obj18[2] = intl13.string(tmp2(1236).t.j4bXcm);
-      items5[1] = tmp13(tmp2(4376).Text, obj18);
+      items5[1] = tmp13(tmp2(4440).Text, obj18);
       const obj19 = { style: null };
       obj19[0] = tmp.guildList;
-      items5[2] = tmp13(tmp7(13012), obj19);
+      items5[2] = tmp13(tmp7(13086), obj19);
       obj16[0] = items5;
       let tmp19 = obj16;
     } else {
@@ -208,12 +208,12 @@ export default function GuildBoostingUpsell(arg0) {
       obj21[0] = items8;
       const intl10 = tmp2(1236).intl;
       obj21[2] = intl10.string(tmp2(1236).t.FHm4bZ);
-      items7[1] = tmp13(tmp2(4376).Text, obj21);
+      items7[1] = tmp13(tmp2(4440).Text, obj21);
       const obj22 = { style: null, variant: "text-md/medium", children: null };
       obj22[0] = tmp.cardText;
       const intl11 = tmp2(1236).intl;
       obj22[2] = intl11.string(tmp2(1236).t.PSLiiu);
-      items7[2] = tmp13(tmp2(4376).Text, obj22);
+      items7[2] = tmp13(tmp2(4440).Text, obj22);
       obj16[0] = items7;
       tmp19 = obj16;
     }

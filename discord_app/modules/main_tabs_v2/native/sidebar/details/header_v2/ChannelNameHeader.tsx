@@ -42,7 +42,7 @@ function DirectMessageIcon(channel) {
   }, items2);
   let tmp9Result = null;
   if (null != stateFromStores) {
-    obj = { avatarDecoration: null, user: null, guildId: "Boolean", size: true, status: false, isMobileOnline: "done", isVROnline: "flowing", statusStyle: "hourglass" };
+    obj = { avatarDecoration: null, user: null, guildId: "Boolean", size: true, status: "done", isMobileOnline: true, isVROnline: null, statusStyle: null };
     obj[0] = stateFromStores.avatarDecoration;
     obj[1] = stateFromStores;
     obj[3] = tmp2(1297).AvatarSizes.NORMAL;
@@ -102,8 +102,8 @@ function ChannelSubtitle(channel) {
     return privateChannelUserTagsString;
   }, items1);
   if (!channel.isPrivate()) {
-    stateFromStores = tmp(4566).channelTypeString(channel);
-    const tmpResult = tmp(4566);
+    stateFromStores = tmp(4630).channelTypeString(channel);
+    const tmpResult = tmp(4630);
   }
   let tmp4 = null;
   if (null != stateFromStores) {
@@ -111,7 +111,7 @@ function ChannelSubtitle(channel) {
     if ("" !== stateFromStores) {
       obj = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: null };
       obj[3] = stateFromStores;
-      tmp4 = callback(tmp(4376).Text, obj);
+      tmp4 = callback(tmp(4440).Text, obj);
     }
   }
   return tmp4;
@@ -231,7 +231,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5834)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5900)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = importAllResult.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -245,7 +245,7 @@ function DMChannelNameHeader(channel) {
   }, items);
   const tmp = callback2();
   const items1 = [tmp.container, channel.containerStyle];
-  return callback(channel(4949).PressableOpacity, { style: items1, onPress: callback, children: callback(ChannelNameHeaderContent, { channel }) });
+  return callback(channel(5015).PressableOpacity, { style: items1, onPress: callback, children: callback(ChannelNameHeaderContent, { channel }) });
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);

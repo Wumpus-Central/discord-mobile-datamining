@@ -42,9 +42,9 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
     tmp8 = obj;
   }
   items[2] = tmp8;
-  let tmp3Result = tmp3(4101);
+  let tmp3Result = tmp3(4165);
   const token2 = tmp3Result.useToken(tmp5(712).colors.LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT, blurTheme);
-  tmp3Result = tmp3(4101);
+  tmp3Result = tmp3(4165);
   let token3 = tmp3Result.useToken(tmp5(712).colors.LEGACY_ANDROID_BLUR_OVERLAY_ULTRA_THIN, blurTheme);
   if ("default" === blurStyle) {
     token3 = token2;
@@ -54,7 +54,7 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
     let tmp13 = null == android_blurTargetViewNativeId;
     if (!tmp13) {
       if (android_softwareBlurDisabled) {
-        android_softwareBlurDisabled = !tmp3(4810).MODERN_ANDROID_BLURRING_AVAILABLE;
+        android_softwareBlurDisabled = !tmp3(4874).MODERN_ANDROID_BLURRING_AVAILABLE;
       }
       tmp13 = true === android_softwareBlurDisabled;
     }
@@ -87,8 +87,8 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
     obj1[3] = tintColorOverride;
     obj1[4] = android_blurTargetViewNativeId;
     const merged2 = Object.assign(merged);
-    tmp14Result = tmp14(tmp5(4810), obj1);
-    const tmp5Result = tmp5(4810);
+    tmp14Result = tmp14(tmp5(4874), obj1);
+    const tmp5Result = tmp5(4874);
   } else {
     const obj2 = { ref: null, blurEffectName: null, blurAmount: null, tintColor: null };
     obj2[0] = arg1;
@@ -107,7 +107,7 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
       const merged3 = Object.assign(merged);
       tmp14Result = tmp14(tmp15, obj2);
     } else {
-      if (!tmp3(4807).MODERN_IOS_BLURS_EFFECTS_AVAILABLE) {
+      if (!tmp3(4871).MODERN_IOS_BLURS_EFFECTS_AVAILABLE) {
         let str2 = "UIBlurEffectStyleDark";
         if ("light" === blurTheme) {
           str2 = "UIBlurEffectStyleLight";

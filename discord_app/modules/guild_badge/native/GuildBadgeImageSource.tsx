@@ -1,15 +1,15 @@
 // discord_app/modules/guild_badge/native/GuildBadgeImageSource.tsx
 import AccessibilityAnnouncer from "../../../design/shared.tsx";
-import registerAssetDefault from "../../../../_runtime/08596_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/08597_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08664_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/08665_registerAsset.js";
 import GuildVisibility from "../GuildTraits.tsx";
 import BadgeCategory from "../BadgeCategory.tsx";
-import registerAssetDefault3 from "../../../../_runtime/09413_registerAsset.js";
-import registerAssetDefault4 from "../../../../_runtime/09414_registerAsset.js";
-import registerAssetDefault5 from "../../../../_runtime/09415_registerAsset.js";
-import registerAssetDefault6 from "../../../../_runtime/09416_registerAsset.js";
-import registerAssetDefault7 from "../../../../_runtime/09417_registerAsset.js";
-import registerAssetDefault8 from "../../../../_runtime/09418_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/09481_registerAsset.js";
+import registerAssetDefault4 from "../../../../_runtime/09482_registerAsset.js";
+import registerAssetDefault5 from "../../../../_runtime/09483_registerAsset.js";
+import registerAssetDefault6 from "../../../../_runtime/09484_registerAsset.js";
+import registerAssetDefault7 from "../../../../_runtime/09485_registerAsset.js";
+import registerAssetDefault8 from "../../../../_runtime/09486_registerAsset.js";
 
 require = arg1;
 let obj = {};

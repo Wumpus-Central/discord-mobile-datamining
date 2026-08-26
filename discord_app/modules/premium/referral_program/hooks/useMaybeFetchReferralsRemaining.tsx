@@ -17,10 +17,10 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
   const stateFromStores = flag(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(589);
   let tmp = flag;
-  const hasDiscountApplied = flag(8317).useHasDiscountApplied();
-  const obj2 = flag(8317);
-  const hasActiveTrial = flag(8318).useHasActiveTrial();
-  const tmp6 = fetched(7003)();
+  const hasDiscountApplied = flag(8384).useHasDiscountApplied();
+  const obj2 = flag(8384);
+  const hasActiveTrial = flag(8385).useHasActiveTrial();
+  const tmp6 = fetched(7069)();
   let verified;
   if (stateFromStores != null) {
     verified = stateFromStores.verified;

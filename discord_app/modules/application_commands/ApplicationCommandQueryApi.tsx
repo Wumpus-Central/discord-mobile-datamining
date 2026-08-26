@@ -183,7 +183,7 @@ export const getChangeKeys = function getChangeKeys(type) {
   return items;
 };
 export const useCachedResults = function useCachedResults(arg0, CHAT, text) {
-  closure_0 = CHAT;
+  const _require = CHAT;
   items = [CHAT];
   obj = {
     commandTypes: React.useMemo(() => {
@@ -192,7 +192,8 @@ export const useCachedResults = function useCachedResults(arg0, CHAT, text) {
     }, items),
     text
   };
-  const tmp = callback2(arg0, obj, { allowFetch: false });
+  obj = { scoreMethod: require("ApplicationCommandQueryTypes.tsx").ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
+  const tmp = callback2(arg0, obj, obj);
   obj = { commands: tmp.commands, sections: tmp.descriptors };
   return obj;
 };

@@ -1,7 +1,7 @@
 // discord_app/components_native/warnings/Suppressed.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
-import registerAssetDefault from "../../../_runtime/16265_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/16266_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/16346_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/16347_registerAsset.js";
 import closure_3 from "../../stores/PermissionSpeakStore.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../_runtime/00019_noop.js";
@@ -34,7 +34,7 @@ Suppressed.prototype["render"] = function render() {
     tmp6 = importDefault;
     tmp7 = registerAssetDefault2;
   }
-  return jsx(tmp6(4833), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
+  return jsx(tmp6(4898), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };
 const result = require("set").fileFinishedImporting("components_native/warnings/Suppressed.tsx");
 

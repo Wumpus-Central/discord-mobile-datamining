@@ -611,7 +611,7 @@ export default function UserProfileOverflowMenu(user) {
           tmp7 = null != selectedVoiceChannel;
         }
         if (tmp7) {
-          displayProfile(channel[32]).hideActionSheet();
+          displayProfile(channel[32]).hideAllActionSheets();
           const obj3 = displayProfile(channel[32]);
           user(channel[45]).openChannelCallModal(selectedVoiceChannel);
           const obj4 = user(channel[45]);

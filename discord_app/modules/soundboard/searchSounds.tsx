@@ -43,13 +43,13 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
     }
     let result = null;
     if (null != name.emojiName) {
-      result = stateFromStores(4038).convertSurrogateToName(name.emojiName, false);
-      const obj2 = stateFromStores(4038);
+      result = stateFromStores(4102).convertSurrogateToName(name.emojiName, false);
+      const obj2 = stateFromStores(4102);
     }
     let byName = null;
     if (null != result) {
-      byName = stateFromStores(4038).getByName(result);
-      const obj3 = stateFromStores(4038);
+      byName = stateFromStores(4102).getByName(result);
+      const obj3 = stateFromStores(4102);
     }
     if (null != customEmojiById) {
       const items = [customEmojiById.name];
@@ -98,8 +98,8 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
     }
     let result1 = sum6 > 0;
     if (0 < sum6) {
-      result1 = lib(6068).canUseSoundboardSound(stateFromStores, name, tmp3);
-      const obj4 = lib(6068);
+      result1 = lib(6134).canUseSoundboardSound(stateFromStores, name, tmp3);
+      const obj4 = lib(6134);
     }
     let sum7 = sum6;
     if (result1) {

@@ -28,7 +28,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   let str3 = "";
   if (null != inviter.inviter) {
-    let tmpResult = tmp(4224);
+    let tmpResult = tmp(4288);
     str3 = tmpResult.getUserTag(inviter.inviter);
   }
   let isFriendResult = null != inviter.inviter;

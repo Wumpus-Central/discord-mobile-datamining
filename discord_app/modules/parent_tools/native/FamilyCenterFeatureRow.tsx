@@ -7,11 +7,11 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import EyeIcon from "../../../design/components/Icon/native/redesign/generated/EyeIcon.tsx";
-import registerAssetDefault from "../../../../_runtime/09243_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/09311_registerAsset.js";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
-import registerAssetDefault2 from "../../../../_runtime/11945_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/12018_registerAsset.js";
 import QrCodeIcon from "../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
-import registerAssetDefault3 from "../../../../_runtime/14341_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/14414_registerAsset.js";
 import ChatCheckIcon from "../../../design/components/Icon/native/redesign/generated/ChatCheckIcon.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -71,7 +71,7 @@ export default function FamilyCenterFeatureRows() {
     children: items.map((header) => {
       header = header.header;
       ({ description, icon, IconComponent } = header);
-      return callback2(callback(5480).TableRow, { label: header, subLabel: description, icon: callback2(callback(5480).TableRow.Icon, { source: icon, IconComponent }) }, header);
+      return callback2(callback(5546).TableRow, { label: header, subLabel: description, icon: callback2(callback(5546).TableRow.Icon, { source: icon, IconComponent }) }, header);
     })
   });
   obj3[1] = items1;

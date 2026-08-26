@@ -4,7 +4,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import AccessibilityAnnouncer from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04826_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04891_LinearGradient.js";
 import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import GuildPowerupCardFooterActive from "GuildPowerupsCardFooter.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -47,9 +47,9 @@ export default function GuildPowerupsPerkCard(arg0) {
   obj = { containerStyle: items, style: tmp2.card, status, onPress, children: null };
   items = [tmp2.container, style];
   obj = { style: tmp2.imageContainer, children: null };
-  let tmp3Result = tmp3(12126);
+  let tmp3Result = tmp3(12199);
   if (riveComponent == null) {
-    tmp3Result = tmp3(12083);
+    tmp3Result = tmp3(12156);
     if (imageUrl == null) {
       imageUrl = "";
     }

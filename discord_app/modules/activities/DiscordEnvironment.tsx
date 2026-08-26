@@ -133,9 +133,9 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
       }
       let tmp3 = str5;
     }
-    const UIDensitySetting = documentElement(4070).UIDensitySetting;
+    const UIDensitySetting = documentElement(4134).UIDensitySetting;
     obj[2] = callback(UIDensitySetting.getSetting(), tmp3);
-    const MessageDisplayCompact = documentElement(4070).MessageDisplayCompact;
+    const MessageDisplayCompact = documentElement(4134).MessageDisplayCompact;
     obj[3] = MessageDisplayCompact.getSetting();
     const fontScale = closure_2.fontScale;
     const _Number = Number;

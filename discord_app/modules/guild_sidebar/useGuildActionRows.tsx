@@ -51,7 +51,7 @@ export default function useGuildActionRows(id) {
   const canAccessMemberSafetyPage = require("../guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx").useCanAccessMemberSafetyPage(id.id);
   const obj9 = getContextForPermission;
   const features = id.features;
-  const canUseGuildSpace = require("../guild_space/canUseGuildSpace.tsx").useCanUseGuildSpace(id, "useGuildActionRows");
+  const canUseGuildSpace = require("../guild_space/canUseGuildSpace.tsx").useCanUseGuildSpace(id.id, "useGuildActionRows");
   const hasItem = features.has(GuildFeatures.HUB);
   ({ features: features2, features: features3 } = id);
   const hasItem1 = features2.has(GuildFeatures.COMMUNITY);

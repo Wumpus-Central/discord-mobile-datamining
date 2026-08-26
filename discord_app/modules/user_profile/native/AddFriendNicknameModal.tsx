@@ -43,7 +43,7 @@ export default function AddFriendNicknameModal(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -151,7 +151,7 @@ export default function AddFriendNicknameModal(arg0) {
   obj = { children: null };
   const tmp3Result = initialize;
   obj1 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  const tmp11 = showUserProfile(5930);
+  const tmp11 = showUserProfile(5996);
   const intl3 = tmp3(1236).intl;
   obj1[0] = intl3.string(getSystemLocale.t["R3BPH+"]);
   obj1[1] = function handleSubmit() {
@@ -172,11 +172,13 @@ export default function AddFriendNicknameModal(arg0) {
   const intl5 = tmp3(1236).intl;
   obj3[3] = intl5.string(getSystemLocale.t["NdQ+lP"]);
   items3[1] = callback2(Text.Text, obj3);
-  const obj4 = { onChange: callback, autoFocus: true, placeholder: null, defaultValue: null, maxLength: 32, isClearable: true };
+  const obj4 = { onChange: callback, autoFocus: true, accessibilityLabel: null, placeholder: null, defaultValue: null, maxLength: 32, isClearable: true };
+  const intl6 = tmp3(1236).intl;
+  obj4[2] = intl6.string(getSystemLocale.t.pqG6GS);
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
-  const tmp12 = showUserProfile(4833);
-  obj4[2] = showUserProfile(4224).getName(stateFromStores1);
-  obj4[3] = stateFromStores;
+  const tmp12 = showUserProfile(4898);
+  obj4[3] = showUserProfile(4288).getName(stateFromStores1);
+  obj4[4] = stateFromStores;
   items3[2] = callback2(TextField.TextField, obj4);
   obj1[4] = items3;
   obj[0] = callback3(tmp12, obj1);

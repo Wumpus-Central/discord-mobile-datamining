@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
-import isIterable from "../../../../_runtime/04010_isIterable.js";
+import isIterable from "../../../../_runtime/04074_isIterable.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { GuildsNodeType } from "../../../stores/SortedGuildStore.tsx";
 import closure_5 from "GuildsBarDnDStore.tsx";
@@ -132,7 +132,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "accessibilityRole", expanded: 1895956482, children: 80 };
+        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "call", expanded: 32195649, children: 762380800 };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
         obj[6] = items;
@@ -336,7 +336,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "GUILD_MEMBER_UPDATE", scrollPosition: "lg", dragRegion: "icon-strong", windowSize: null, dropComplete: "o", listInsets: "heading-lg/medium" };
+          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "GUILD_MEMBER_UPDATE", scrollPosition: "lg", dragRegion: "icon-strong", windowSize: null, dropComplete: 12, listInsets: 54 };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
           obj[2] = state;
           let node;

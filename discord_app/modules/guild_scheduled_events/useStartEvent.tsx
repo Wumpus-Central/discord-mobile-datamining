@@ -34,7 +34,7 @@ export default function useStartEvent() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -85,13 +85,13 @@ export default function useStartEvent() {
                 c7 = 3;
                 c8 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = callback2(9201).preStartEventActions(callback, permissionOverwrites);
+                obj2[0] = callback2(9269).preStartEventActions(callback, permissionOverwrites);
                 return obj2;
               }
             } else {
               if (2 === tmp7) {
                 c6 = 0;
-                aPIError = new callback(4278).APIError(closure_5);
+                aPIError = new callback(4342).APIError(closure_5);
                 callback2(aPIError);
                 callback(false);
                 callback(false);
@@ -107,7 +107,7 @@ export default function useStartEvent() {
                   obj3[0] = arg1;
                   return obj3;
                 } else {
-                  let obj7 = callback2(9201);
+                  let obj7 = callback2(9269);
                   c7 = 4;
                   c8 = 1;
                   let obj4 = { value: null, done: false };
@@ -125,7 +125,7 @@ export default function useStartEvent() {
                   obj5[0] = arg1;
                   return obj5;
                 } else {
-                  obj4 = callback(9202);
+                  obj4 = callback(9270);
                   c7 = 5;
                   c8 = 1;
                   const obj6 = { value: null, done: false };
@@ -143,7 +143,7 @@ export default function useStartEvent() {
                   obj7[0] = arg1;
                   return obj7;
                 } else {
-                  obj1 = callback(9202);
+                  obj1 = callback(9270);
                   c7 = 6;
                   c8 = 1;
                   const obj8 = { value: null, done: false };

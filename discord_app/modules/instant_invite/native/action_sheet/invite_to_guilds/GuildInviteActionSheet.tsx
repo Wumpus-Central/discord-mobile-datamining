@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Button from "../../../../../design/void/native.tsx";
 import isGuildMemberDefault from "../../../../../utils/InstantInviteUtils.tsx";
-import registerAssetDefault from "../../../../../../_runtime/12704_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../_runtime/12705_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/12777_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../_runtime/12778_registerAsset.js";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -28,7 +28,7 @@ function GuildList(recipientId) {
   dependencyMap = undefined;
   let callback;
   dependencyMap = callback4();
-  let obj = recipientId(12701);
+  let obj = recipientId(12774);
   [arr, arr2] = callback(obj.useServerInviteRows(recipientId, recipientId.query), 2);
   if (0 === arr.length) {
     if (0 === arr2.length) {
@@ -50,7 +50,7 @@ function GuildList(recipientId) {
     }
     obj = { paddingTop: null, paddingBottom: null };
     obj[0] = num;
-    obj[1] = source(5475)().insets.bottom + source(712).space.PX_16;
+    obj[1] = source(5541)().insets.bottom + source(712).space.PX_16;
     obj[1] = obj;
     obj[2] = items;
     obj[3] = function renderSectionHeader(section) {
@@ -72,7 +72,7 @@ function GuildList(recipientId) {
       return guild.guild.id;
     };
     obj[6] = EmptyGuildList;
-    return closure_6(tmp(9614).UserProfileStackedActionSheetSectionList, obj);
+    return closure_6(tmp(9682).UserProfileStackedActionSheetSectionList, obj);
   }
   obj1 = { title: null, data: null };
   const intl = tmp(1236).intl;

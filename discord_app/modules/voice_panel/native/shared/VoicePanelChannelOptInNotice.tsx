@@ -19,11 +19,11 @@ const memoResult = importAllResult.memo(function VoicePanelChannelOptInNotice(ch
   obj[0] = intl.string(channel(1236).t["9mysCh"]);
   const intl2 = channel(1236).intl;
   obj[1] = intl2.string(channel(1236).t.PDUCIN);
-  obj = { IconComponent: channel(13396).ChannelListMagnifyingGlassIcon };
-  obj[2] = jsx(channel(5486).TableRowIcon, { IconComponent: channel(13396).ChannelListMagnifyingGlassIcon });
+  obj = { IconComponent: channel(13469).ChannelListMagnifyingGlassIcon };
+  obj[2] = jsx(channel(5552).TableRowIcon, { IconComponent: channel(13469).ChannelListMagnifyingGlassIcon });
   obj[3] = callback;
-  obj[1] = jsx(channel(5480).TableRow, { IconComponent: channel(13396).ChannelListMagnifyingGlassIcon });
-  return jsx(analyticsSection(5887), { IconComponent: channel(13396).ChannelListMagnifyingGlassIcon });
+  obj[1] = jsx(channel(5546).TableRow, { IconComponent: channel(13469).ChannelListMagnifyingGlassIcon });
+  return jsx(analyticsSection(5953), { IconComponent: channel(13469).ChannelListMagnifyingGlassIcon });
 });
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelChannelOptInNotice.tsx");
 

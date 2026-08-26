@@ -161,7 +161,7 @@ export default function getActivityHeader(session_id) {
       obj11[2] = str;
       return obj11;
     }
-    tmp35 = tmp(12501)(tmp3, session_id);
+    tmp35 = tmp(12572)(tmp3, session_id);
   }
   if (session_id.type === constants.PLAYING) {
     const obj13 = { text: null, platformIcon: null, platformLabel: null };
@@ -246,7 +246,7 @@ export default function getActivityHeader(session_id) {
             obj25[2] = str;
             obj = obj25;
           } else {
-            obj = { text: "r", platformIcon: "r", platformLabel: false };
+            obj = { text: "r", platformIcon: "flex", platformLabel: null };
             obj[1] = icon;
             obj[2] = str;
           }

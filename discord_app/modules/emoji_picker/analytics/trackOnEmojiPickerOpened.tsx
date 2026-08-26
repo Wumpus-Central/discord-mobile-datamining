@@ -78,7 +78,7 @@ function trackOnEmojiPickerOpened(arg0) {
       }
       return animated;
     }).length,
-    num_custom_expressions_favorites: prop.filter(tmp11(4042).isCustomEmoji).length,
+    num_custom_expressions_favorites: prop.filter(tmp11(4106).isCustomEmoji).length,
     num_standard_expressions_favorites: prop.filter((id) => null == id.id).length,
     num_expressions_frecent: substr1.length,
     num_animated_expressions_frecent: substr1.filter((animated) => {
@@ -88,7 +88,7 @@ function trackOnEmojiPickerOpened(arg0) {
       }
       return animated;
     }).length,
-    num_custom_expressions_frecent: substr1.filter(tmp11(4042).isCustomEmoji).length,
+    num_custom_expressions_frecent: substr1.filter(tmp11(4106).isCustomEmoji).length,
     num_standard_expressions_frecent: substr1.filter((id) => null == id.id).length,
     num_current_guild_expressions: guildEmoji.length,
     num_custom_expressions_total: customEmoji.size,

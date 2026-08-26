@@ -1,6 +1,6 @@
 // discord_app/modules/calls/native/VideoBackground.tsx
 import Button from "../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/04826_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04891_LinearGradient.js";
 import useProfileTileGradientDefault from "useProfileTileGradient.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
@@ -20,11 +20,11 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  let tmp5 = first(8459)();
+  let tmp5 = first(8526)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8460).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8527).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = require("../../../utils/ColorUtils.tsx").hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);

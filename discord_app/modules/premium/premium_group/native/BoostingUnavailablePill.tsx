@@ -17,7 +17,7 @@ function handlePress() {
   const intl = getSystemLocale.intl;
   obj = { premiumGroupProductName: callback() };
   obj[0] = intl.formatToPlainString(messagesProxyDefault["5xN/C1"], obj);
-  obj.openLazy(asyncRequireImpl(12990, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(13064, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 let closure_5 = SubscriptionStatusTypes.getPremiumGroupProductName;

@@ -6,7 +6,7 @@ const result = set.fileFinishedImporting("modules/rpc/native/server/transports/W
 export default function _default(logger) {
   logger = logger.logger;
   ({ source, postMessageToRPCClient, version, encoding, postClose } = logger);
-  return new logger(10833)({
+  return new logger(10905)({
     source,
     postMessageToRPCClient,
     version,

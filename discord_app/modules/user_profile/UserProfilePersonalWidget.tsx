@@ -245,7 +245,7 @@ prototype["isEqual"] = function isEqual(header) {
             sum = sum + 1;
             num2 = sum;
             flag = true;
-          } else if (tmp16(7237).PersonalWidgetSectionType.FIELDS !== type) {
+          } else if (tmp16(7303).PersonalWidgetSectionType.FIELDS !== type) {
             flag = false;
           }
           tmp16 = require;
@@ -335,7 +335,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
   } else {
     const mapped = sections.map((type) => {
       type = type.type;
-      if (callback(7237).PersonalWidgetSectionType.COVER === type) {
+      if (callback(7303).PersonalWidgetSectionType.COVER === type) {
         let obj = { type: null, title: null, subtitle: null, image: null };
         ({ type: obj2[0], title } = type);
         if (title == null) {
@@ -362,7 +362,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
         }
         obj[3] = tmp5;
         return obj;
-      } else if (tmp(7237).PersonalWidgetSectionType.FIELDS === type) {
+      } else if (tmp(7303).PersonalWidgetSectionType.FIELDS === type) {
         obj = { type: null, fields: null };
         ({ type: obj[0], fields } = type);
         obj[1] = fields.map(closure_9);
@@ -372,7 +372,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
     });
     items = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
   }
-  if (!items.some((type) => type.type === callback(7237).PersonalWidgetSectionType.FIELDS)) {
+  if (!items.some((type) => type.type === callback(7303).PersonalWidgetSectionType.FIELDS)) {
     let obj = { type: null, fields: null };
     obj[0] = PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS;
     obj[1] = [];

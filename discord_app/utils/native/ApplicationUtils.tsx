@@ -4,7 +4,7 @@ import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
-import _modDef4611 from "../../actions/ModalActionCreators.tsx";
+import _modDef4675 from "../../actions/ModalActionCreators.tsx";
 import set2 from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import OAUTH2_AUTHORIZE_MODAL_KEY from "../../modules/oauth2/native/Constants.tsx";
 import { asyncRequireImpl } from "../../../_runtime/02009_asyncRequireImpl.js";
@@ -28,7 +28,7 @@ export const installApplication = function installApplication(arg0) {
     obj[1] = function onConfirm() {
       closure_1_1(closure_1_3[4]).openURL(obj5);
     };
-    return obj5(9079).handleClick(obj);
+    return obj5(9147).handleClick(obj);
   } else {
     if (null != integrationTypesConfig) {
       const _Object = Object;
@@ -65,10 +65,10 @@ export const installApplication = function installApplication(arg0) {
           }
         };
         obj5 = obj2;
-        _modDef4611.popWithKey(closure_5);
-        const obj9 = _modDef4611;
+        _modDef4675.popWithKey(closure_5);
+        const obj9 = _modDef4675;
         const obj3 = {};
-        const obj10 = _modDef4611;
+        const obj10 = _modDef4675;
         const merged = Object.assign(obj2);
         obj3.dismissOAuthModal = function dismissOAuthModal() {
           const dismissOAuthModal = obj5.dismissOAuthModal;
@@ -77,7 +77,7 @@ export const installApplication = function installApplication(arg0) {
           }
           closure_1_1(closure_1_3[7]).popWithKey(closure_1_5);
         };
-        obj10.pushLazy(obj5(2009)(10710, dependencyMap.paths), obj3, closure_5);
+        obj10.pushLazy(obj5(2009)(10782, dependencyMap.paths), obj3, closure_5);
       }
     }
     if (null != installParams) {
@@ -115,9 +115,9 @@ export const installApplication = function installApplication(arg0) {
           callback(arg0);
         }
       };
-      let tmp32Result = tmp32(4611);
+      let tmp32Result = tmp32(4675);
       tmp32Result.popWithKey(closure_5);
-      tmp32Result = tmp32(4611);
+      tmp32Result = tmp32(4675);
       const obj6 = {};
       const obj16 = expandEventPropertiesDefault;
       const tmp33 = dependencyMap;
@@ -129,17 +129,17 @@ export const installApplication = function installApplication(arg0) {
         }
         closure_1_1(closure_1_3[7]).popWithKey(closure_1_5);
       };
-      tmp32Result.pushLazy(obj5(2009)(10710, dependencyMap.paths), obj6, closure_5);
-      const tmp10 = obj5(2009)(10710, dependencyMap.paths);
+      tmp32Result.pushLazy(obj5(2009)(10782, dependencyMap.paths), obj6, closure_5);
+      const tmp10 = obj5(2009)(10782, dependencyMap.paths);
     }
   }
 };
 export const openOAuth2Modal = function openOAuth2Modal(arg0) {
   const _require = arg0;
-  let obj = _modDef4611;
+  let obj = _modDef4675;
   obj.popWithKey(closure_5);
   obj = {};
-  const obj2 = _modDef4611;
+  const obj2 = _modDef4675;
   const merged = Object.assign(arg0);
   obj.dismissOAuthModal = function dismissOAuthModal() {
     const dismissOAuthModal = obj5.dismissOAuthModal;
@@ -148,11 +148,11 @@ export const openOAuth2Modal = function openOAuth2Modal(arg0) {
     }
     closure_1_1(closure_1_3[7]).popWithKey(closure_1_5);
   };
-  obj2.pushLazy(asyncRequireImpl(10710, dependencyMap.paths), obj, closure_5);
+  obj2.pushLazy(asyncRequireImpl(10782, dependencyMap.paths), obj, closure_5);
 };
 export const installPrivateChannelIntegration = function installPrivateChannelIntegration(arg0) {
   ({ applicationId, channelId, callback } = arg0);
-  let obj = _modDef4611;
+  let obj = _modDef4675;
   obj = { clientId: applicationId, scopes: null, channelId: null, dismissOAuthModal: null, disableGuildSelect: true, callback: null };
   const items = [set2.OAuth2Scopes.APPLICATIONS_COMMANDS];
   obj[1] = items;
@@ -161,5 +161,5 @@ export const installPrivateChannelIntegration = function installPrivateChannelIn
     return callback(table[7]).popWithKey(closure_5);
   };
   obj[5] = callback;
-  obj.pushLazy(asyncRequireImpl(10710, dependencyMap.paths), obj, closure_5);
+  obj.pushLazy(asyncRequireImpl(10782, dependencyMap.paths), obj, closure_5);
 };

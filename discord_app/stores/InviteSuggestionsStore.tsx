@@ -28,7 +28,7 @@ function _computeRows(query) {
   if (!tmp) {
     id = id.id;
   }
-  const mostRecentDMedUser = set1(9214).getMostRecentDMedUser(set, id);
+  const mostRecentDMedUser = set1(9282).getMostRecentDMedUser(set, id);
   let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
   if (!isBlockedOrIgnoredResult) {
     isBlockedOrIgnoredResult = closure_12.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -51,8 +51,8 @@ function _computeRows(query) {
     const substr = found2.slice(0, 3);
     const item = substr.forEach((id) => set1.add(id.id));
   }
-  const obj2 = set1(9214);
-  return set1(9214).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_7 });
+  const obj2 = set1(9282);
+  return set1(9282).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_7 });
 }
 ({ ChannelTypes: map1, Permissions: closure_14 } = ME);
 let set = new Set();

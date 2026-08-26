@@ -194,7 +194,7 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
       obj13[6] = function onPress() {
         trackUserProfileAction({ action: "SEND_MESSAGE" });
         let obj = channel(trackUserProfileAction[26]);
-        obj.hideActionSheet();
+        obj.hideAllActionSheets();
         channel(trackUserProfileAction[38]).popAll();
         const obj2 = channel(trackUserProfileAction[38]);
         obj = { recipientIds: user.id };

@@ -1,6 +1,6 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOSlider.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _getRequireWildcardCacheDefault from "../../../../../_runtime/08140__getRequireWildcardCache.js";
+import _getRequireWildcardCacheDefault from "../../../../../_runtime/08207__getRequireWildcardCache.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import set from "../../../../utils/PlatformUtils.tsx";

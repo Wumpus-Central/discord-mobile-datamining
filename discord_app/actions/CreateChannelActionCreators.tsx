@@ -1,7 +1,7 @@
 // discord_app/actions/CreateChannelActionCreators.tsx
 import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef4601 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef4665 from "../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../stores/UserGuildSettingsStore.tsx";
 import ME from "../Constants.tsx";
 import { ChannelNotificationSettingsFlags as closure_7 } from "../modules/user_settings/UserSettingsConstants.tsx";
@@ -63,7 +63,7 @@ export default {
     }
     obj = { url: closure_6.GUILD_CHANNELS(guildId), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const tmp = permissionOverwrites;
-    const tmpResult = permissionOverwrites(4601);
+    const tmpResult = permissionOverwrites(4665);
     obj[3] = {
       event: guildId(503).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
@@ -131,7 +131,7 @@ export default {
     });
   },
   createRoleSubscriptionTemplateChannel(closure_0, name, type, topic) {
-    let obj = _modDef4601;
+    let obj = _modDef4665;
     obj = { url: closure_6.GUILD_CHANNELS(closure_0), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, type, topic };
     obj[3] = {

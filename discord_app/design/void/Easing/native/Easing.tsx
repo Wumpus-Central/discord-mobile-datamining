@@ -1,10 +1,10 @@
 // discord_app/design/void/Easing/native/Easing.tsx
 import set from "../../../../../_runtime/00002_set.js";
-import _mod4120 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod4184 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import bezierResult1 from "../../../../index.native.tsx";
 
-const Easing = _mod4120.Easing;
-const Easing2 = _mod4120.Easing;
+const Easing = _mod4184.Easing;
+const Easing2 = _mod4184.Easing;
 const bezierResult = Easing.bezier(0.4, 0, 0.2, 1);
 const result = set.fileFinishedImporting("design/void/Easing/native/Easing.tsx");
 

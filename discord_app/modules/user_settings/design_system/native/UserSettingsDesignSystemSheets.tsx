@@ -41,14 +41,14 @@ function DemoActionSheet() {
     obj = { onPress: null, label: null };
     obj[0] = NOOP;
     obj[1] = tmp12;
-    tmp14Result = tmp14(tmp15(9123).ActionSheetHeaderPressableText, obj);
+    tmp14Result = tmp14(tmp15(9191).ActionSheetHeaderPressableText, obj);
   }
   obj[2] = tmp14Result;
   tmp14Result = tmp2;
   if (tmp2) {
     obj = { onPress: null };
     obj[0] = NOOP;
-    tmp14Result = tmp14(tmp15(5871).ActionSheetCloseButton, obj);
+    tmp14Result = tmp14(tmp15(5937).ActionSheetCloseButton, obj);
   }
   obj1 = { header: closure_7(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), children: null };
   obj[3] = tmp14Result;
@@ -105,14 +105,14 @@ function DemoPromoSheet() {
     obj = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
     obj = { type: "image", src: null, aspectRatio: "16/9" };
     obj1 = { uri: null };
-    obj1[0] = tmp(6252);
+    obj1[0] = tmp(6318);
     obj[1] = obj1;
     obj[0] = obj;
     obj[4] = tmp5;
     let obj2 = obj;
   } else {
     obj2 = { illustration: null, title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
-    obj2[0] = tmp4(tmp(13238), {});
+    obj2[0] = tmp4(tmp(13311), {});
     obj2[3] = tmp5;
   }
   return callback2(PromoSheet.PromoSheet, obj2);

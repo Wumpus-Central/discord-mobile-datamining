@@ -3,7 +3,7 @@ import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import ContentIdType from "SafetyHubModels.tsx";
-import createAggregatorDefault from "../../../_runtime/11443_createAggregator.js";
+import createAggregatorDefault from "../../../_runtime/11515_createAggregator.js";
 import SafetyHubView from "SafetyHubConstants.tsx";
 
 function handleSafetyHubRequestAgeVerificationResetModalAction(arg0) {

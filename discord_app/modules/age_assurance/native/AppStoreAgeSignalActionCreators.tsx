@@ -39,23 +39,65 @@ function _submitAgeSignal() {
     closure_1 = arg1;
     closure_2 = arg2;
     c4 = 0;
-    c5 = 0;
+    c3 = 0;
     return (function*(arg0, arg1, arg2) {
-      closure_3 = tmp4;
-      const HTTP = lib(table[2]).HTTP;
-      obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-      obj1[0] = closure_1_3.AGE_SIGNAL;
-      const obj2 = { platform: null, age_lower: null, age_upper: null, google_user_status: null, apple_verified_method: null, is_cold_launch: null, integrity_token: null };
-      ({ platform: obj7[0], ageLower: obj7[1], ageUpper: obj7[2], googleUserStatus: obj7[3], appleVerifiedMethod: obj7[4] } = lib);
-      obj2[5] = closure_2;
-      obj2[6] = table;
-      obj1[1] = obj2;
-      lib = yield HTTP.post(obj1);
-      const body = lib.body;
-      if (body != null) {
-        const should_block = body.should_block;
+      if (constants === 2) {
+        constants = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          constants = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              constants = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              constants = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const HTTP = callback(table[2]).HTTP;
+              obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
+              obj1[0] = constants.AGE_SIGNAL;
+              const obj2 = { platform: null, age_lower: null, age_upper: null, google_user_status: null, apple_verified_method: null, is_cold_launch: null, integrity_token: null };
+              ({ platform: obj6[0], ageLower: obj6[1], ageUpper: obj6[2], googleUserStatus: obj6[3], appleVerifiedMethod: obj6[4] } = callback);
+              obj2[5] = closure_2;
+              obj2[6] = table;
+              obj1[1] = obj2;
+              c4 = 1;
+              constants = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.post(obj1);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            constants = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            constants = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            constants = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp5) {
+          constants = tmp;
+          throw tmp5;
+        }
       }
-      return true === should_block;
     })();
   });
   closure_5 = tmp;

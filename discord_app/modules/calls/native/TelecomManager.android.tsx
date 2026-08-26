@@ -373,9 +373,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       obj[0] = guildId;
       tmp19 = obj;
     }
-    const obj4 = self(16839);
-    const reportIncomingCallResult = self(16839).reportIncomingCall(channelId, channelName, tmp19);
-    self(16839).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const obj4 = self(16924);
+    const reportIncomingCallResult = self(16924).reportIncomingCall(channelId, channelName, tmp19);
+    self(16924).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         closure_1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -384,7 +384,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       closure_1_25.warn("Failed to report incoming call:", arg0);
       self.clearCall(closure_0);
     });
-    const nextPromise = self(16839).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const nextPromise = self(16924).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         closure_1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -398,7 +398,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(16839);
+  obj = self(16924);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj.cancelIncomingCall(channelId).then(() => {
     self.clearCall(closure_0);
@@ -453,7 +453,7 @@ prototype["doReconcile"] = function doReconcile() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -669,7 +669,7 @@ prototype["doReconcile"] = function doReconcile() {
             throwTypeErrorResult = channel;
             if (null == channel) {
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               throwTypeErrorResult = channel;
               throwTypeErrorResult = c2;
@@ -795,7 +795,7 @@ prototype["startCall"] = function startCall(channelId, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -886,7 +886,7 @@ prototype["endCall"] = function endCall(currentCall) {
   const self = this;
   closure_0 = currentCall;
   obj.info("Ending call:", currentCall.channelId);
-  obj = self(16839);
+  obj = self(16924);
   const endCallResult = obj.endCall(currentCall.channelId);
   return obj.endCall(currentCall.channelId).then((arg0) => {
     self.clearCall(currentCall.channelId);
@@ -1042,7 +1042,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(16839);
+            obj = self(16924);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

@@ -45,7 +45,7 @@ export default function ChooseAccount() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -85,10 +85,10 @@ export default function ChooseAccount() {
                 intl2 = tmp31(1236).intl;
                 string = intl2.string;
                 obj1[4] = string(lib(1236).t["ETE/oC"]);
-                obj1 = closure_1_1(4745).confirm(obj1);
+                obj1 = closure_1_1(4809).confirm(obj1);
                 dependencyMap = 1;
                 c4 = 1;
-                const obj8 = closure_1_1(4745);
+                const obj8 = closure_1_1(4809);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -100,13 +100,13 @@ export default function ChooseAccount() {
               return obj3;
             } else {
               if (arg1) {
-                obj = closure_1_1(4347);
+                obj = closure_1_1(4411);
                 obj.hideActionSheet();
-                obj1 = closure_1_2(11981);
+                obj1 = closure_1_2(12054);
                 obj1.removeAccount(lib.id);
               }
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp23) {
             c4 = tmp;
@@ -136,7 +136,7 @@ export default function ChooseAccount() {
   let intl2 = require("../../../intl/index.native.tsx").intl;
   obj[2] = intl2.string(require("../../../intl/index.native.tsx").t["0M5fN7"]);
   obj[1] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj);
-  obj[2] = multiAccountUsers(13417);
+  obj[2] = multiAccountUsers(13490);
   obj[4] = tmp.container;
   obj1 = { style: tmp.mainCard, children: null };
   let items = [
@@ -207,8 +207,8 @@ export default function ChooseAccount() {
 
   ];
   let obj2 = { leading: null, label: null, labelStyle: null, onPress: null };
-  const tmp2 = multiAccountUsers(8654);
-  obj2[0] = callback(require("../../../design/void/Form/native/index.tsx").FormRow.Icon, { themedColor: multiAccountUsers(712).colors.TEXT_LINK, size: require("../../../design/void/native.tsx").Icon.Sizes.SMALL_20, source: multiAccountUsers(15313) });
+  const tmp2 = multiAccountUsers(8722);
+  obj2[0] = callback(require("../../../design/void/Form/native/index.tsx").FormRow.Icon, { themedColor: multiAccountUsers(712).colors.TEXT_LINK, size: require("../../../design/void/native.tsx").Icon.Sizes.SMALL_20, source: multiAccountUsers(15392) });
   let intl3 = require("../../../intl/index.native.tsx").intl;
   obj2[1] = intl3.string(require("../../../intl/index.native.tsx").t.bPP34Q);
   obj2[2] = tmp.addAccountLabel;

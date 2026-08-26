@@ -141,10 +141,10 @@ prototype["requestWorkTimeout"] = function requestWorkTimeout(flush, arg1) {
   self._workCallbackFn = flush;
   if (!self.hasWorkScheduled) {
     let telemetry = self.telemetry;
-    telemetry.time(self(13117).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
+    telemetry.time(self(13190).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
     if (self._nextDispatchTimeout === closure_6) {
       const telemetry2 = self.telemetry;
-      telemetry2.track(tmp(13117).WorkSchedulerTelemetryEvent.LONGER_DISPATCH);
+      telemetry2.track(tmp(13190).WorkSchedulerTelemetryEvent.LONGER_DISPATCH);
     }
     if (flag) {
       self._queueIdleCallback();

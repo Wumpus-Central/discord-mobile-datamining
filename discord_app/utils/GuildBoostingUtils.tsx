@@ -4,7 +4,7 @@ import getSystemLocale from "../intl/index.native.tsx";
 import isDiscordFrontendDevelopment from "GlobalUtils.tsx";
 import combinedDefault from "HelpdeskUtils.tsx";
 import messagesProxyDefault from "../modules/premium/premium_group/PremiumGroup.messages.js";
-import hooksDefault from "../../_runtime/03979_hooks.js";
+import hooksDefault from "../../_runtime/04043_hooks.js";
 import getPremiumPlanItemAll from "PremiumUtils.tsx";
 import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
 import formatSize from "FileSizeUtils.tsx";
@@ -766,7 +766,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj1;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4305).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4369).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= closure_1_9[arg0]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

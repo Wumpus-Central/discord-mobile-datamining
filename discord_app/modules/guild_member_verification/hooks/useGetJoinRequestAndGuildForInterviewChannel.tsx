@@ -47,19 +47,19 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
   const effect = joinRequest.useEffect(() => {
     if (!tmp) {
       dependencyMap(true);
-      const requestToJoinGuilds = first(8584).fetchRequestToJoinGuilds();
-      const obj = first(8584);
+      const requestToJoinGuilds = first(8652).fetchRequestToJoinGuilds();
+      const obj = first(8652);
     }
   }, items1);
   const items2 = [joinRequest, castResult];
   const effect1 = joinRequest.useEffect(() => {
     if (null == joinRequest) {
       callback(true);
-      const joinRequestForInterview = first(8584).fetchJoinRequestForInterview(closure_3);
+      const joinRequestForInterview = first(8652).fetchJoinRequestForInterview(closure_3);
       joinRequestForInterview.finally(() => {
         callback(false);
       });
-      const obj = first(8584);
+      const obj = first(8652);
     }
   }, items2);
   return { loading, joinRequest, joinRequestGuild };

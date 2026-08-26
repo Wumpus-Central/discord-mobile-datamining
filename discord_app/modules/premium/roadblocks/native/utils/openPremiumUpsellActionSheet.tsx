@@ -9,6 +9,6 @@ const result = set.fileFinishedImporting("modules/premium/roadblocks/native/util
 export default function openPremiumUpsellActionSheet(featureName, subfeatureName, analyticsLocations) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { featureName, subfeatureName, analyticsLocations };
-  obj.openLazy(asyncRequireImpl(8527, dependencyMap.paths), PremiumUpsellActionSheetKey, obj);
+  obj.openLazy(asyncRequireImpl(8594, dependencyMap.paths), PremiumUpsellActionSheetKey, obj);
 };
 export const PREMIUM_UPSELL_ACTION_SHEET_KEY = "PremiumUpsellActionSheetKey";

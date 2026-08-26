@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx
 import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
 import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05505_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05571_BottomSheetModal.js";
 import VoicePanelSettingsOverviewHeaderDefault from "VoicePanelSettingsOverview.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";

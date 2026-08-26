@@ -53,7 +53,7 @@ export const TableSwitchRow = function TableSwitchRow(value) {
       obj1 = { variant: "text-md/semibold", color: null, includeFontPadding: true, children: null };
       obj1[1] = str;
       obj1[3] = label;
-      tmp10Result = tmp10(tmp3(4376).Text, obj1);
+      tmp10Result = tmp10(tmp3(4440).Text, obj1);
     }
     const items1 = [tmp10Result, trailing];
     obj[1] = items1;

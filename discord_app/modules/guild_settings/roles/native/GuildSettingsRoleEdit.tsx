@@ -244,7 +244,7 @@ class GuildSettingsRoleEdit extends PureComponent {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -286,7 +286,7 @@ class GuildSettingsRoleEdit extends PureComponent {
             obj1.deleteRole(v0.id, user.id);
             arr = arr.pop();
             user = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } catch (tmp18) {
             user = tmp;
             throw tmp18;
@@ -380,7 +380,7 @@ prototype["updateNavigation"] = function updateNavigation(role, submitting) {
   submitting = this.state.submitting;
   let setOptionsResult = { headerLeft: null, headerRight: null, headerTitle: null };
   const sectionChanges = self.getSectionChanges();
-  setOptionsResult[0] = role(5376).getHeaderConditionalBackButton(self.handleBack);
+  setOptionsResult[0] = role(5442).getHeaderConditionalBackButton(self.handleBack);
   if (submitting) {
     let fn = () => callback(role(table[18]).HeaderSubmittingIndicator, {});
   } else if (sectionChanges) {
@@ -409,23 +409,23 @@ prototype["renderSubScreenButtons"] = function renderSubScreenButtons() {
   obj[1] = function onPress() {
     return self.onSubScreenValueChange(closure_1_17.PERMISSIONS);
   };
-  const items = [callback2(self(5480).TableRow, obj), , ];
+  const items = [callback2(self(5546).TableRow, obj), , ];
   obj = { label: null, onPress: null, arrow: true };
   const intl2 = self(1236).intl;
   obj[0] = intl2.string(self(1236).t["5//Muu"]);
   obj[1] = function onPress() {
     return self.onSubScreenValueChange(closure_1_17.VERIFICATIONS);
   };
-  items[1] = callback2(self(5480).TableRow, obj);
+  items[1] = callback2(self(5546).TableRow, obj);
   obj1 = { label: null, onPress: null, arrow: true };
   const intl3 = self(1236).intl;
   obj1[0] = intl3.string(self(1236).t.J4ZtH1);
   obj1[1] = function onPress() {
     return self.onSubScreenValueChange(closure_1_17.MEMBERS);
   };
-  items[2] = callback2(self(5480).TableRow, obj1);
+  items[2] = callback2(self(5546).TableRow, obj1);
   obj[1] = items;
-  return callback3(self(5873).TableRowGroup, obj);
+  return callback3(self(5939).TableRowGroup, obj);
 };
 prototype["renderDeleteButton"] = function renderDeleteButton() {
   let obj = { hasIcons: false, children: null };
@@ -520,7 +520,7 @@ prototype["render"] = function render() {
     obj4[1] = ThemesDefault.space.PX_16;
     obj3[1] = obj4;
     obj3[2] = tmp11Result;
-    let tmp22Result = tmp22(tmp24(4813).Stack, obj3);
+    let tmp22Result = tmp22(tmp24(4877).Stack, obj3);
   } else {
     const obj5 = { contentContainerStyle: null, children: null };
     obj5[0] = tmp.form;
@@ -548,8 +548,8 @@ prototype["render"] = function render() {
     }
     items[3] = renderDeleteButtonResult;
     obj6[1] = items;
-    obj5[1] = closure_23(tmp24(4813).Stack, obj6);
-    tmp22Result = tmp22(tmp24(8118).Form, obj5);
+    obj5[1] = closure_23(tmp24(4877).Stack, obj6);
+    tmp22Result = tmp22(tmp24(8185).Form, obj5);
     const tmp26 = closure_23;
   }
   obj2[1] = tmp22Result;

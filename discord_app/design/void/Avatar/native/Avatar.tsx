@@ -12,21 +12,21 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 require = arg1;
 function getStatusSize(arg0) {
   if (StaticNativeCutoutAvatarImage.AvatarSizes.XXSMALL !== arg0) {
-    if (tmp(12510).AvatarSizes.XSMALL !== arg0) {
-      if (tmp(12510).AvatarSizes.XSMALL_20 !== arg0) {
-        if (tmp(12510).AvatarSizes.SMALL !== arg0) {
-          if (tmp(12510).AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
+    if (tmp(12581).AvatarSizes.XSMALL !== arg0) {
+      if (tmp(12581).AvatarSizes.XSMALL_20 !== arg0) {
+        if (tmp(12581).AvatarSizes.SMALL !== arg0) {
+          if (tmp(12581).AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
             return closure_7.REFRESH_MEDIUM_10;
           } else {
-            if (tmp(12510).AvatarSizes.NORMAL !== arg0) {
-              if (tmp(12510).AvatarSizes.TABS_22 !== arg0) {
-                if (tmp(12510).AvatarSizes.LARGE !== arg0) {
-                  if (tmp(12510).AvatarSizes.LARGE_48 !== arg0) {
-                    if (tmp(12510).AvatarSizes.XLARGE !== arg0) {
-                      if (tmp(12510).AvatarSizes.XLARGE_72 !== arg0) {
-                        if (tmp(12510).AvatarSizes.XXLARGE !== arg0) {
-                          if (tmp(12510).AvatarSizes.PROFILE !== arg0) {
-                            if (tmp(12510).AvatarSizes.YOUBAR_60 !== arg0) {
+            if (tmp(12581).AvatarSizes.NORMAL !== arg0) {
+              if (tmp(12581).AvatarSizes.TABS_22 !== arg0) {
+                if (tmp(12581).AvatarSizes.LARGE !== arg0) {
+                  if (tmp(12581).AvatarSizes.LARGE_48 !== arg0) {
+                    if (tmp(12581).AvatarSizes.XLARGE !== arg0) {
+                      if (tmp(12581).AvatarSizes.XLARGE_72 !== arg0) {
+                        if (tmp(12581).AvatarSizes.XXLARGE !== arg0) {
+                          if (tmp(12581).AvatarSizes.PROFILE !== arg0) {
+                            if (tmp(12581).AvatarSizes.YOUBAR_60 !== arg0) {
                               return null;
                             }
                           }

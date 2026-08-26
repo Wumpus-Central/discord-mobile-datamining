@@ -8,7 +8,7 @@ import { SearchNavigatorScreens } from "SearchNavigatorConstants.tsx";
 import { SearchTypes } from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import createNativeStackNavigator from "../../../../../../_runtime/08717_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../../_runtime/08785_createNativeStackNavigator.js";
 
 const require = arg1;
 let c3 = importAllResult;
@@ -20,7 +20,7 @@ let closure_10 = createCacheKey.createStyles(obj);
 let closure_11 = createNativeStackNavigator.createNativeStackNavigator();
 const memoResult = importAllResult.memo((route) => {
   const searchContext = route.route.params.searchContext;
-  let obj = searchContext(5889);
+  let obj = searchContext(5955);
   const accessibilityNativeStackOptions = obj.useAccessibilityNativeStackOptions();
   const items = [searchContext];
   const effect = importAllResult.useEffect(() => {
@@ -48,7 +48,7 @@ const memoResult = importAllResult.memo((route) => {
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(16211).default;
+        return searchContext(16292).default;
       }
     }),
     callback(closure_11.Screen, {
@@ -57,8 +57,8 @@ const memoResult = importAllResult.memo((route) => {
         route = route.route;
         const obj = {
           headerShown: true,
-          header: route(8539).renderHeader,
-          headerLeft: route(8539).getRenderBackImage(route.navigation),
+          header: route(8607).renderHeader,
+          headerLeft: route(8607).getRenderBackImage(route.navigation),
           headerTitle() {
             return closure_1_8(closure_1_1(closure_1_2[14]), { channelId: route.params.channelId });
           },
@@ -67,7 +67,7 @@ const memoResult = importAllResult.memo((route) => {
         return obj;
       },
       getComponent() {
-        return searchContext(16207).default;
+        return searchContext(16288).default;
       }
     })
   ];

@@ -99,7 +99,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
       onAction({ action: "OPEN_VOICE_CHANNEL" });
       guild(onAction[21]).openGuildVoiceModal(channel, newestAnalyticsLocation);
       const obj = guild(onAction[21]);
-      channel(onAction[22]).hideActionSheet();
+      channel(onAction[22]).hideAllActionSheets();
     };
     const items3 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" }), ];
     const obj7 = { style: null, variant: "text-xs/normal", lineClamp: 1, children: null };

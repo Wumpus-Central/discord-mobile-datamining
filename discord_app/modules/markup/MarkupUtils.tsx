@@ -1,19 +1,21 @@
 // discord_app/modules/markup/MarkupUtils.tsx
+import MarkupText from "MarkupReactRules.native.tsx";
 import MarkupTextDefault from "MarkupReactRules.native.tsx";
 import combineMarkupRulesDefault from "combineMarkupRules.tsx";
 import parseLinkDefault from "MarkupRules.tsx";
 import reactParserForAll from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
 import importDefaultResult from "../../../_runtime/00012_apply.js";
 
-let closure_3 = ["url", "autolink", "link", "mailto", "tel"];
+require = arg1;
+let closure_4 = ["url", "autolink", "link", "mailto", "tel"];
 let obj = { enableBuildOverrides: false, enableEmojiClick: true };
-let closure_5 = importDefaultResult.once(() => {
+let closure_6 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault({ enableBuildOverrides: true })];
   const items1 = [parseLinkDefault.RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
-let closure_6 = importDefaultResult.once(() => {
+let closure_7 = importDefaultResult.once(() => {
   obj = importDefaultResult;
   const items = [MarkupTextDefault(obj)];
   const items1 = [parseLinkDefault.RULES, ];
@@ -21,43 +23,47 @@ let closure_6 = importDefaultResult.once(() => {
   return obj.omit(combineMarkupRulesDefault(items1), "paragraph", "newline");
 });
 const importDefaultResult1 = importDefaultResult;
-let closure_7 = importDefaultResult.once(() => {
-  obj = {};
-  const merged = Object.assign(obj);
-  obj.emojiTooltipPosition = "bottom";
-  obj.shouldCloseDefaultModals = true;
-  obj.shouldStopPropagation = true;
-  const merged1 = Object.assign({});
-  const items = [MarkupTextDefault(obj), ];
-  obj = { codeBlock: null };
-  obj = { react: parseLinkDefault.RULES.text.react };
-  obj[0] = obj;
-  items[1] = obj;
-  const items1 = [parseLinkDefault.CHANNEL_TOPIC_RULES, ];
-  const tmp = MarkupTextDefault;
-  items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return combineMarkupRulesDefault(items1);
-});
-const importDefaultResult2 = importDefaultResult;
 let closure_8 = importDefaultResult.once(() => {
   obj = {};
   const merged = Object.assign(obj);
   obj.emojiTooltipPosition = "bottom";
   obj.shouldCloseDefaultModals = true;
   obj.shouldStopPropagation = true;
-  const merged1 = Object.assign({ emojiFocusable: false });
-  const items = [MarkupTextDefault(obj), ];
+  const merged1 = Object.assign({});
+  const items = [MarkupTextDefault(obj), , ];
+  const tmp = MarkupTextDefault;
+  items[1] = MarkupText.createFetchingGameMentionRule();
   obj = { codeBlock: null };
   obj = { react: parseLinkDefault.RULES.text.react };
   obj[0] = obj;
-  items[1] = obj;
+  items[2] = obj;
   const items1 = [parseLinkDefault.CHANNEL_TOPIC_RULES, ];
+  const obj2 = MarkupText;
+  items1[HermesBuiltin.arraySpread(items, 1)] = {};
+  return combineMarkupRulesDefault(items1);
+});
+const importDefaultResult2 = importDefaultResult;
+let closure_9 = importDefaultResult.once(() => {
+  obj = {};
+  const merged = Object.assign(obj);
+  obj.emojiTooltipPosition = "bottom";
+  obj.shouldCloseDefaultModals = true;
+  obj.shouldStopPropagation = true;
+  const merged1 = Object.assign({ emojiFocusable: false });
+  const items = [MarkupTextDefault(obj), , ];
   const tmp = MarkupTextDefault;
+  items[1] = MarkupText.createFetchingGameMentionRule();
+  obj = { codeBlock: null };
+  obj = { react: parseLinkDefault.RULES.text.react };
+  obj[0] = obj;
+  items[2] = obj;
+  const items1 = [parseLinkDefault.CHANNEL_TOPIC_RULES, ];
+  const obj2 = MarkupText;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 const importDefaultResult3 = importDefaultResult;
-let closure_9 = importDefaultResult.once(() => {
+let closure_10 = importDefaultResult.once(() => {
   obj = {};
   const merged = Object.assign(obj);
   obj.enableEmojiClick = false;
@@ -68,36 +74,36 @@ let closure_9 = importDefaultResult.once(() => {
   return combineMarkupRulesDefault(items1);
 });
 const importDefaultResult4 = importDefaultResult;
-let closure_10 = importDefaultResult.once(() => {
+let closure_11 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault(obj)];
   const items1 = [parseLinkDefault.EMBED_TITLE_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 const importDefaultResult5 = importDefaultResult;
-let closure_11 = importDefaultResult.once(() => {
+let closure_12 = importDefaultResult.once(() => {
   obj = importDefaultResult;
   const items = [MarkupTextDefault(obj)];
   const items1 = [parseLinkDefault.EMBED_TITLE_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return obj.omit(combineMarkupRulesDefault(items1), closure_3);
+  return obj.omit(combineMarkupRulesDefault(items1), closure_4);
 });
 const importDefaultResult6 = importDefaultResult;
-let closure_12 = importDefaultResult.once(() => {
+let closure_13 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault(obj)];
   const items1 = [parseLinkDefault.INLINE_REPLY_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 const importDefaultResult7 = importDefaultResult;
-let closure_13 = importDefaultResult.once(() => {
+let closure_14 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault(obj)];
   const items1 = [parseLinkDefault.GUILD_VERIFICATION_FORM_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 const importDefaultResult8 = importDefaultResult;
-let closure_14 = importDefaultResult.once(() => {
+let closure_15 = importDefaultResult.once(() => {
   obj = {};
   const merged = Object.assign(obj);
   obj.shouldStopPropagation = true;
@@ -107,58 +113,58 @@ let closure_14 = importDefaultResult.once(() => {
   return combineMarkupRulesDefault(items1);
 });
 const importDefaultResult9 = importDefaultResult;
-let closure_15 = importDefaultResult.once(() => importDefaultResult.omit(callback10(), "subtext"));
+let closure_16 = importDefaultResult.once(() => importDefaultResult.omit(callback10(), "subtext"));
 const importDefaultResult10 = importDefaultResult;
-let closure_16 = importDefaultResult.once(() => {
+let closure_17 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault(obj)];
   const items1 = [parseLinkDefault.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 const importDefaultResult11 = importDefaultResult;
-let closure_17 = importDefaultResult.once(() => {
+let closure_18 = importDefaultResult.once(() => {
   const items = [MarkupTextDefault(obj)];
   const items1 = [parseLinkDefault.RULES, ];
   const tmp = importDefaultResult;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  const items2 = [combineMarkupRulesDefault(items1), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "list", "heading", "subtext", ...closure_3];
+  const items2 = [combineMarkupRulesDefault(items1), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "list", "heading", "subtext", ...closure_4];
   return tmp.omit.apply(items2);
 });
 obj = { text: parseLinkDefault.RULES.text };
 const importDefaultResult12 = importDefaultResult;
-let closure_18 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback()));
+let closure_19 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback()));
 const importDefaultResult13 = importDefaultResult;
-let closure_19 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback3()));
+let closure_20 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback3()));
 const importDefaultResult14 = importDefaultResult;
-let closure_20 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback4()));
+let closure_21 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback4()));
 const importDefaultResult15 = importDefaultResult;
-let closure_21 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback5()));
+let closure_22 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback5()));
 const importDefaultResult16 = importDefaultResult;
-let closure_22 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback6()));
+let closure_23 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback6()));
 const importDefaultResult17 = importDefaultResult;
-let closure_23 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback7()));
+let closure_24 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback7()));
 const importDefaultResult18 = importDefaultResult;
-let closure_24 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback8()));
+let closure_25 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback8()));
 const importDefaultResult19 = importDefaultResult;
-let closure_25 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback9()));
+let closure_26 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback9()));
 const importDefaultResult20 = importDefaultResult;
-let closure_26 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback10()));
+let closure_27 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback10()));
 const importDefaultResult21 = importDefaultResult;
-let closure_27 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback12()));
+let closure_28 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback12()));
 const importDefaultResult22 = importDefaultResult;
-let closure_28 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback2()));
+let closure_29 = importDefaultResult.once(() => reactParserForAll.reactParserFor(callback2()));
 const importDefaultResult23 = importDefaultResult;
-let closure_29 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback()));
+let closure_30 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback()));
 const importDefaultResult24 = importDefaultResult;
-let closure_30 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback3()));
+let closure_31 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback3()));
 const importDefaultResult25 = importDefaultResult;
-let closure_31 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback6()));
+let closure_32 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback6()));
 const importDefaultResult26 = importDefaultResult;
-let closure_32 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback7()));
+let closure_33 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback7()));
 const importDefaultResult27 = importDefaultResult;
-let closure_33 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback8()));
+let closure_34 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback8()));
 const importDefaultResult28 = importDefaultResult;
-let closure_34 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback12()));
+let closure_35 = importDefaultResult.once(() => reactParserForAll.astParserFor(callback12()));
 obj = {
   combineAndInjectMentionRule(arg0, arg1) {
     const items = [arg0, ];
@@ -181,11 +187,11 @@ obj.parse = function parse() {
 };
 obj.parseTopic = function parseTopic(topic, arg1, arg2) {
   const merged = Object.assign(arg2);
-  return callback15()(topic, arg1, { allowLinks: true, allowGameMentions: true, shouldFetchGameMentionData: true }, arg3);
+  return callback15()(topic, arg1, { allowLinks: true, allowGameMentions: true }, arg3);
 };
 obj.parseTruncatedTopic = function parseTruncatedTopic(arg0, arg1, arg2, arg3) {
   const merged = Object.assign(arg2);
-  return callback16()(arg0, arg1, { allowLinks: true, allowGameMentions: true, shouldFetchGameMentionData: true }, arg3);
+  return callback16()(arg0, arg1, { allowLinks: true, allowGameMentions: true }, arg3);
 };
 obj.parseVoiceChannelStatus = function parseVoiceChannelStatus(gameMentionsAsPlainText, arg1, arg2) {
   const items = [...arguments];

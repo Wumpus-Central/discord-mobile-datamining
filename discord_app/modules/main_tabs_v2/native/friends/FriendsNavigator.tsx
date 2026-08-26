@@ -6,11 +6,11 @@ import ManaContext from "../../../../../discord_common/js/packages/design/native
 import getGuildThemeNameDefault from "../../../client_themes/native/useColorThemeBackground.tsx";
 import GenericHeaderTitle from "../shared_components/HeaderShared.tsx";
 import PressableNavigatorButtonWrapperDefault from "../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
-import registerAssetDefault from "../../../../../_runtime/12154_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/12227_registerAsset.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/08717_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/08785_createNativeStackNavigator.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
@@ -25,7 +25,7 @@ function RequestsSettingsModalButton(onPress) {
 }
 function FriendsNavigator() {
   const _require = callback3();
-  const layoutEffect = React.useLayoutEffect(() => lib(7081).trackAppUIViewed(), []);
+  const layoutEffect = React.useLayoutEffect(() => lib(7147).trackAppUIViewed(), []);
   let obj = NavigationStack;
   closure_1 = obj.useAccessibilityNativeStackOptions();
   obj = {
@@ -91,7 +91,7 @@ function FriendsNavigator() {
       return obj;
     },
     getComponent() {
-      return lib(16095).default;
+      return lib(16176).default;
     }
   };
   const items = [callback(closure_7.Screen, obj), , , , , , , , , , ];
@@ -101,7 +101,7 @@ function FriendsNavigator() {
   obj2[0] = intl.string(require("../../../../intl/index.native.tsx").t.jD1qzM);
   obj1[1] = obj2;
   obj1[2] = function getComponent() {
-    return lib(16101).default;
+    return lib(16182).default;
   };
   items[1] = callback(closure_7.Screen, obj1);
   let obj3 = { name: "gdm", options: null, getComponent: null };
@@ -110,7 +110,7 @@ function FriendsNavigator() {
   obj4[0] = intl2.string(require("../../../../intl/index.native.tsx").t["3hF1W4"]);
   obj3[1] = obj4;
   obj3[2] = function getComponent() {
-    return lib(16114).default;
+    return lib(16195).default;
   };
   items[2] = callback(closure_7.Screen, obj3);
   const obj5 = { name: "add-friend", options: null, getComponent: null };
@@ -119,7 +119,7 @@ function FriendsNavigator() {
   obj6[0] = intl3.string(require("../../../../intl/index.native.tsx").t.w5uwoI);
   obj5[1] = obj6;
   obj5[2] = function getComponent() {
-    return lib(16115).default;
+    return lib(16196).default;
   };
   items[3] = callback(closure_7.Screen, obj5);
   const obj7 = { name: "add-friends", options: null, getComponent: null };
@@ -128,7 +128,7 @@ function FriendsNavigator() {
   obj8[0] = intl4.string(require("../../../../intl/index.native.tsx").t.zIJnA6);
   obj7[1] = obj8;
   obj7[2] = function getComponent() {
-    return lib(16116).default;
+    return lib(16197).default;
   };
   items[4] = callback(closure_7.Screen, obj7);
   const obj9 = { name: "username-search", options: null, getComponent: null };
@@ -137,7 +137,7 @@ function FriendsNavigator() {
   obj10[0] = intl5.string(require("../../../../intl/index.native.tsx").t.QzVsOs);
   obj9[1] = obj10;
   obj9[2] = function getComponent() {
-    return lib(16122).default;
+    return lib(16203).default;
   };
   items[5] = callback(closure_7.Screen, obj9);
   const obj11 = { name: "suggested-friends", options: null, getComponent: null };
@@ -146,7 +146,7 @@ function FriendsNavigator() {
   obj12[0] = intl6.string(require("../../../../intl/index.native.tsx").t["1uAmCw"]);
   obj11[1] = obj12;
   obj11[2] = function getComponent() {
-    return lib(16123).default;
+    return lib(16204).default;
   };
   items[6] = callback(closure_7.Screen, obj11);
   const obj13 = { name: "requests-settings", options: null, getComponent: null };
@@ -155,7 +155,7 @@ function FriendsNavigator() {
   obj14[0] = intl7.string(require("../../../../intl/index.native.tsx").t.XT4hVl);
   obj13[1] = obj14;
   obj13[2] = function getComponent() {
-    return lib(16124).default;
+    return lib(16205).default;
   };
   items[7] = callback(closure_7.Screen, obj13);
   items[8] = callback(closure_7.Screen, {
@@ -175,7 +175,7 @@ function FriendsNavigator() {
       return obj;
     },
     getComponent() {
-      return lib(16126).default;
+      return lib(16207).default;
     }
   });
   const obj16 = { name: "spam-requests", options: null, getComponent: null };
@@ -184,7 +184,7 @@ function FriendsNavigator() {
   obj17[0] = intl8.string(require("../../../../intl/index.native.tsx").t.oHVeHc);
   obj16[1] = obj17;
   obj16[2] = function getComponent() {
-    return lib(16129).default;
+    return lib(16210).default;
   };
   items[9] = callback(closure_7.Screen, obj16);
   const obj18 = { name: "ignored-user-requests", options: null, getComponent: null };
@@ -193,7 +193,7 @@ function FriendsNavigator() {
   obj19[0] = intl9.string(require("../../../../intl/index.native.tsx").t.tFY5Zb);
   obj18[1] = obj19;
   obj18[2] = function getComponent() {
-    return lib(16130).default;
+    return lib(16211).default;
   };
   items[10] = callback(closure_7.Screen, obj18);
   obj[1] = items;

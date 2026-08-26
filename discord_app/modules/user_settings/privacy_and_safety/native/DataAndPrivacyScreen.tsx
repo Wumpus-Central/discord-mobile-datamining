@@ -67,10 +67,10 @@ export default function DataAndPrivacySettings() {
   items1.push({ settings: items7 });
   const effect = React.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(14310).fetchConsents();
-      const obj = stackNavigation(14310);
+      const consents = stackNavigation(14383).fetchConsents();
+      const obj = stackNavigation(14383);
     }
-    const harvestStatus = stackNavigation(14313).fetchHarvestStatus();
+    const harvestStatus = stackNavigation(14386).fetchHarvestStatus();
   }, []);
   const items8 = [stackNavigation, items1];
   const obj11 = { children: null };
@@ -112,8 +112,8 @@ export default function DataAndPrivacySettings() {
     }
   };
   const obj16 = items1(1995);
-  obj12[0] = stackNavigation(14270).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [callback(items1(14270), obj12), callback(items1(14094), { node: memo })];
+  obj12[0] = stackNavigation(14343).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [callback(items1(14343), obj12), callback(items1(14167), { node: memo })];
   obj11[0] = items9;
   return callback2(closure_9, obj11);
 };

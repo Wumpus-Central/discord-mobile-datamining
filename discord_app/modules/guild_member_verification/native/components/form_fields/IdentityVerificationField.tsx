@@ -25,7 +25,7 @@ function BaseIdentityVerificationField(icon) {
   obj = { style: null, children: null };
   if (passesVerification) {
     obj[0] = tmp.verifiedContainer;
-    obj[1] = tmp6(tmp7(4331).CheckmarkLargeIcon, { color: "status-positive" });
+    obj[1] = tmp6(tmp7(4395).CheckmarkLargeIcon, { color: "status-positive" });
     let tmp9 = obj;
   } else {
     obj[0] = tmp.ctaButton;
@@ -33,7 +33,7 @@ function BaseIdentityVerificationField(icon) {
     const intl = tmp7(1236).intl;
     obj1[3] = intl.string(tmp7(1236).t["13ofGu"]);
     obj1[4] = onPress;
-    obj[1] = tmp6(tmp7(4815).Button, obj1);
+    obj[1] = tmp6(tmp7(4879).Button, obj1);
     tmp9 = obj;
   }
   items[2] = callback(View, tmp9);
@@ -65,7 +65,7 @@ export default function IdentityVerificationField(arg0) {
       string2Result = string2(INsLgA.c6EUJI);
     }
   } else {
-    if (tmp(4205).UserVerificationFieldPlatforms.PHONE === platform) {
+    if (tmp(4269).UserVerificationFieldPlatforms.PHONE === platform) {
       const intl2 = tmp(1236).intl;
       const string = intl2.string;
       const t = tmp(1236).t;
@@ -79,19 +79,19 @@ export default function IdentityVerificationField(arg0) {
       const intl = tmp(1236).intl;
       stringResult1 = intl.string(tmp(1236).t.mhv8BM);
     }
-    if (tmp(4205).UserVerificationFieldPlatforms.EMAIL === platform) {
-      let EnvelopeIcon = tmp(8703).EnvelopeIcon;
-    } else if (tmp(4205).UserVerificationFieldPlatforms.PHONE === platform) {
-      EnvelopeIcon = tmp(7982).MobilePhoneIcon;
+    if (tmp(4269).UserVerificationFieldPlatforms.EMAIL === platform) {
+      let EnvelopeIcon = tmp(8771).EnvelopeIcon;
+    } else if (tmp(4269).UserVerificationFieldPlatforms.PHONE === platform) {
+      EnvelopeIcon = tmp(8049).MobilePhoneIcon;
     } else {
-      EnvelopeIcon = tmp(8703).EnvelopeIcon;
+      EnvelopeIcon = tmp(8771).EnvelopeIcon;
     }
-    if (tmp(4205).UserVerificationFieldPlatforms.EMAIL === platform) {
+    if (tmp(4269).UserVerificationFieldPlatforms.EMAIL === platform) {
       let fn = () => {
         callback2(paths[10]).open();
       };
     } else {
-      fn = tmp(4205).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
+      fn = tmp(4269).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
         let obj = callback2(paths[11]);
         obj = { reason: callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED };
         obj.pushLazy(callback(paths[13])(paths[12], paths.paths), obj);

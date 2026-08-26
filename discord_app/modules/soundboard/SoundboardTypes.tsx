@@ -34,6 +34,6 @@ export const soundboardSoundToAPI = function soundboardSoundToAPI(arg0) {
   obj.user_id = userId;
   return obj;
 };
-export const SoundboardSoundGridSectionType = { FAVORITES: 0, [0]: "FAVORITES", GUILD: 1, [1]: "GUILD", DEFAULTS: 2, [2]: "DEFAULTS", SEARCH: 3, [3]: "SEARCH", FREQUENTLY_USED: 4, [4]: "FREQUENTLY_USED" };
+export const SoundboardSoundGridSectionType = { FAVORITES: 0, [0]: "FAVORITES", GUILD: 1, [1]: "GUILD", DEFAULTS: 2, [2]: "DEFAULTS", SEARCH: 3, [3]: "SEARCH", FREQUENTLY_USED: 4, [4]: "FREQUENTLY_USED", TOP_SOUNDS: 5, [5]: "TOP_SOUNDS" };
 export const SoundboardSoundItemType = { SOUND: 0, [0]: "SOUND", ADD_SOUND: 1, [1]: "ADD_SOUND" };
 export const LocalSoundTrigger = { GIFT_CODE: 0, [0]: "GIFT_CODE", SOUNDBOARD: 1, [1]: "SOUNDBOARD", JOINED_VOICE_CHANNEL: 2, [2]: "JOINED_VOICE_CHANNEL", SOUNDMOJI: 3, [3]: "SOUNDMOJI" };

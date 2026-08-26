@@ -23,19 +23,19 @@ export default function useGuildsBarCreatePendingFolderNode() {
   }, items2);
   if (arr2.length > 0) {
     obj = { folderId: null, folderName: null, expanded: null, guildIds: null };
-    obj[0] = tmp2(15719).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER;
+    obj[0] = tmp2(15798).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER;
     const intl = tmp2(1236).intl;
     obj[1] = intl.string(tmp2(1236).t["scsU+l"]);
     obj[2] = stateFromStores1;
     obj[3] = arr2;
-    const folderNode = tmp2(5264).createFolderNode(obj);
+    const folderNode = tmp2(5330).createFolderNode(obj);
     for (const item10054 of arr2) {
       let children = folderNode.children;
       let tmp13 = stateFromStores;
       let tmp14 = stateFromStores;
       let tmp15 = dependencyMap;
       let tmp16 = dependencyMap;
-      let obj5 = stateFromStores(5264);
+      let obj5 = stateFromStores(5330);
       let arr = children.push(obj5.createGuildNode(item10054, folderNode.id));
       continue;
     }

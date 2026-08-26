@@ -49,7 +49,7 @@ function handleUpdateActivity() {
               if (id === result) {
                 tmp15 = obj;
               }
-              const mutableParticipants = store.getMutableParticipants(channel.id, tmp12(5249).StageChannelParticipantNamedIndex.SPEAKER);
+              const mutableParticipants = store.getMutableParticipants(channel.id, tmp12(5315).StageChannelParticipantNamedIndex.SPEAKER);
               const length = mutableParticipants.filter((type) => type.type === callback(table[12]).StageChannelParticipantTypes.STREAM).length;
               const diff = mutableParticipants.length - length;
               let size;
@@ -71,11 +71,11 @@ function handleUpdateActivity() {
                 topic = channel.topic;
               }
               if (topic == null) {
-                let tmp12Result = tmp12(4574);
+                let tmp12Result = tmp12(4638);
                 topic = tmp12Result.computeChannelName(channel, closure_9, closure_7);
               }
               obj[1] = topic;
-              tmp12Result = tmp12(5242);
+              tmp12Result = tmp12(5308);
               obj[2] = tmp12Result.getStageHasMedia(channel.id) ? closure_13.WATCHING : closure_13.LISTENING;
               let start;
               if (tmp15 != null) {

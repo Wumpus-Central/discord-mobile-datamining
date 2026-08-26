@@ -10,10 +10,10 @@ const require = arg1;
 let result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/AgeConfirmationNotice.tsx");
 
 export default function AgeConfirmationNotice() {
-  let obj = sensitiveContentFilterHelpArticle(6024);
+  let obj = sensitiveContentFilterHelpArticle(6090);
   sensitiveContentFilterHelpArticle = obj.useSensitiveContentFilterHelpArticle();
   const effect = React.useEffect(() => {
-    const result = sensitiveContentFilterHelpArticle(14203).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.VIEWED);
+    const result = sensitiveContentFilterHelpArticle(14276).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.VIEWED);
   }, []);
   const items = [sensitiveContentFilterHelpArticle];
   importDefault = React.useCallback(() => {
@@ -25,10 +25,10 @@ export default function AgeConfirmationNotice() {
   obj = { style: null, children: null };
   obj = { marginBottom: null };
   const callback = React.useCallback(() => {
-    let obj = callback(7942);
-    obj = { entryPoint: sensitiveContentFilterHelpArticle(7944).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
+    let obj = callback(8009);
+    obj = { entryPoint: sensitiveContentFilterHelpArticle(8011).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
     const result = obj.showAgeVerificationGetStartedModal(obj);
-    const result1 = sensitiveContentFilterHelpArticle(14203).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.CONFIRM_AGE);
+    const result1 = sensitiveContentFilterHelpArticle(14276).trackSafetySettingsNoticeAnalytics(constants2.AGE_CONFIRMATION_NOTICE, constants.CONFIRM_AGE);
   }, []);
   obj[0] = ThemesDefault.space.PX_8;
   obj[0] = obj;
@@ -37,7 +37,7 @@ export default function AgeConfirmationNotice() {
   const intl = sensitiveContentFilterHelpArticle(1236).intl;
   obj2[2] = intl.string(sensitiveContentFilterHelpArticle(1236).t.FDSSia);
   obj2[3] = callback;
-  obj1[2] = jsx(sensitiveContentFilterHelpArticle(4815).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
+  obj1[2] = jsx(sensitiveContentFilterHelpArticle(4879).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
   const intl2 = sensitiveContentFilterHelpArticle(1236).intl;
   obj1[3] = intl2.format(sensitiveContentFilterHelpArticle(1236).t.mFgsfg, {
     hook(children) {

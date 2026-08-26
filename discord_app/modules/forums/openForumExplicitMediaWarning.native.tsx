@@ -1,7 +1,7 @@
 // discord_app/modules/forums/openForumExplicitMediaWarning.native.tsx
 import set from "../../../_runtime/00002_set.js";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import _modDef4745 from "../../actions/native/AlertActionCreators.tsx";
+import _modDef4809 from "../../actions/native/AlertActionCreators.tsx";
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/forums/openForumExplicitMediaWarning.native.tsx");
@@ -9,7 +9,7 @@ const result = set.fileFinishedImporting("modules/forums/openForumExplicitMediaW
 export default function openForumExplicitMediaWarning(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
-  let obj = _modDef4745;
+  let obj = _modDef4809;
   obj = {
     importer() {
       return callback(closure_1_2[3])(closure_1_2[2], closure_1_2.paths).then((arg0) => {

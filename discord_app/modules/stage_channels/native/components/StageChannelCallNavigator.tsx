@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/components/StageChannelCallNavigator.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4120 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4184 from "../../../reanimated/ReanimatedRexport.tsx";
 import AgeVerificationSpeakerActionSheet from "StageActionBarButtons.tsx";
 import JoinStageViewDefault from "JoinStageView.tsx";
 import RootThemeContextProvider from "../../../../design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx";
@@ -75,7 +75,7 @@ function JoinStageOverlay(channel) {
   const tmp = callback(React.useState(false), 2);
   first = tmp[0];
   importDefault = tmp[1];
-  let obj = first(4120);
+  let obj = first(4184);
   const fn = function s() {
     let obj = first(closure_1_2[7]);
     let num = 0;
@@ -85,7 +85,7 @@ function JoinStageOverlay(channel) {
     obj = { opacity: obj.withSpring(num, closure_1_11) };
     return obj;
   };
-  obj = { withSpring: first(4814).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
+  obj = { withSpring: first(4878).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
   fn.__closure = obj;
   fn.__workletHash = 1929951426580;
   fn.__initData = closure_15;
@@ -102,7 +102,7 @@ function JoinStageOverlay(channel) {
   const items = [closure_5.absoluteFill, { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800 }, animatedStyle];
   obj[0] = items;
   obj[1] = callback2(JoinStageViewDefault, { channel: channel.channel });
-  return callback2(_modDef4120.View, obj);
+  return callback2(_modDef4184.View, obj);
 }
 function StagePromptWrapper(channel) {
   return callback2(RootThemeContextProvider.DisableCustomTheme, { children: callback2(StagePromptInner, { channel: channel.channel }) });

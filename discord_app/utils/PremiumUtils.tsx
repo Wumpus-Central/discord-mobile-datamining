@@ -6,7 +6,7 @@ import setDefault from "Durations.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
 import isPremiumAtLeast from "PremiumTypeUtils.tsx";
 import messagesProxyDefault from "../modules/premium/premium_group/PremiumGroup.messages.js";
-import hooksDefault from "../../_runtime/03979_hooks.js";
+import hooksDefault from "../../_runtime/04043_hooks.js";
 import getNonePlanIdForIntervalType from "../modules/premium/PremiumSubscription.tsx";
 import _createGatewayCheckoutContext from "BillingUtils.tsx";
 import resetCache from "DateUtils.tsx";
@@ -134,8 +134,8 @@ function getPrice(id) {
         }
         obj5[2] = currency;
         obj3[1] = obj5;
-        const result = currency2(4058).captureBillingException(error, obj3);
-        const obj10 = currency2(4058);
+        const result = currency2(4122).captureBillingException(error, obj3);
+        const obj10 = currency2(4122);
       }
       throw error;
     } else {
@@ -146,7 +146,7 @@ function getPrice(id) {
     const _Error2 = Error;
     const error1 = new Error("Plan not found");
     if (flag3) {
-      obj2 = currency2(4058);
+      obj2 = currency2(4122);
       const obj6 = { planId: null, currency: null };
       obj6[0] = id;
       let str = currency;
@@ -609,7 +609,7 @@ function getPlanDescription(arg0) {
   const tmp4 = getPrice(dependencyMap3[planId].id, false, false, obj, true);
   const interval = tmp.interval;
   const tmp5 = planIdsForSkus;
-  obj1 = planIdsForSkus(5962);
+  obj1 = planIdsForSkus(6028);
   if (constants7.MONTH === interval) {
     const intl2 = tmp5(1236).intl;
     let stringResult = intl2.string(tmp5(1236).t.FPybU7);
@@ -847,10 +847,10 @@ function getPlanDescription(arg0) {
                 } else if (tmp17.PAST_DUE === CANCELED) {
                   const intl7 = tmp5(1236).intl;
                   const obj12 = { endDate: null, onClick: null };
-                  let tmp5Result = tmp5(4067);
+                  let tmp5Result = tmp5(4131);
                   obj12[0] = tmp5Result.dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
                   obj12[1] = function onClick() {
-                    callback(4088)("https://support.discord.com/hc/articles/23082866222871");
+                    callback(4152)("https://support.discord.com/hc/articles/23082866222871");
                   };
                   return intl7.format(tmp5(1236).t["d+0vwo"], obj12);
                 } else if (!hasDiscountApplied) {
@@ -985,10 +985,10 @@ function getPlanDescription(arg0) {
             } else if (tmp17.PAST_DUE === CANCELED) {
               const intl15 = tmp5(1236).intl;
               const obj20 = { endDate: null, onClick: null };
-              tmp5Result = tmp5(4067);
+              tmp5Result = tmp5(4131);
               obj20[0] = tmp5Result.dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
               obj20[1] = function onClick() {
-                callback(4088)("https://support.discord.com/hc/articles/23082866222871");
+                callback(4152)("https://support.discord.com/hc/articles/23082866222871");
               };
               return intl15.format(tmp5(1236).t["d+0vwo"], obj20);
             } else {
@@ -1063,9 +1063,9 @@ function getPlanDescription(arg0) {
         } else if (tmp17.PAST_DUE === CANCELED) {
           const intl22 = tmp5(1236).intl;
           const obj26 = { endDate: null, onClick: null };
-          obj26[0] = tmp5(4067).dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
+          obj26[0] = tmp5(4131).dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
           obj26[1] = function onClick() {
-            callback(4088)("https://support.discord.com/hc/articles/23082866222871");
+            callback(4152)("https://support.discord.com/hc/articles/23082866222871");
           };
           return intl22.format(tmp5(1236).t["d+0vwo"], obj26);
         } else {
@@ -1184,7 +1184,7 @@ function getBillingGracePeriodDaysAndExpiresDate(subscription) {
       const tmp11 = importDefault;
       const tmp13 = hooksDefault;
       obj2[0] = hooksDefault(prop4).diff(subscription.currentPeriodStart, "days");
-      obj2[1] = tmp11(3979)(subscription.metadata.grace_period_expires_date);
+      obj2[1] = tmp11(4043)(subscription.metadata.grace_period_expires_date);
       return obj2;
     } else {
       const tmp8 = null == subscription.paymentSourceId ? closure_19 : closure_30;
@@ -2543,8 +2543,8 @@ obj = {
       isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1938).Perk.SHOP_DISCOUNTS);
     }
     if (!isCrepeEnabled) {
-      tmpResult = tmp(13533);
-      isCrepeEnabled = tmpResult.canUserUse(tmp(13533).COLLECTIBLES, currentUser);
+      tmpResult = tmp(13606);
+      isCrepeEnabled = tmpResult.canUserUse(tmp(13606).COLLECTIBLES, currentUser);
     }
     return isCrepeEnabled;
   },
@@ -2559,8 +2559,8 @@ obj = {
       isCrepeEnabled = tmpResult.hasPerk(perks, tmp(1938).Perk.MORE_QUEST_ORBS);
     }
     if (!isCrepeEnabled) {
-      tmpResult = tmp(13533);
-      isCrepeEnabled = tmpResult.canUserUse(tmp(13533).QUEST_ORB_MULTIPLIER, perks);
+      tmpResult = tmp(13606);
+      isCrepeEnabled = tmpResult.canUserUse(tmp(13606).QUEST_ORB_MULTIPLIER, perks);
     }
     return isCrepeEnabled;
   },

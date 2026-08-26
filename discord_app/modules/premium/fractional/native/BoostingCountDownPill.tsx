@@ -14,7 +14,7 @@ function handlePress() {
   obj = { aboutText: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["07lzz7"]);
-  obj.openLazy(asyncRequireImpl(12992, dependencyMap.paths), "NitroCreditEducationActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(13066, dependencyMap.paths), "NitroCreditEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

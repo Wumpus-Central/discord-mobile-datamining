@@ -42,7 +42,7 @@ function _handleThumbnailUpload() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -177,11 +177,11 @@ prototype["_initialize"] = function _initialize() {
     currentAppIntent = currentAppIntent.getCurrentAppIntent();
     if (null != channel) {
       const guildId = channel.getGuildId();
-      currentUserActiveStream(4563).startStream(guildId, channel.id, { sourceId: "screen:0" });
+      currentUserActiveStream(4627).startStream(guildId, channel.id, { sourceId: "screen:0" });
       currentUserActiveStream = currentAppIntent.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
-        const tmp2Result = callback2(4609);
-        const participant = tmp2Result.selectParticipant(channel.id, tmp9(4446).encodeStreamKey(currentUserActiveStream));
+        const tmp2Result = callback2(4673);
+        const participant = tmp2Result.selectParticipant(channel.id, tmp9(4510).encodeStreamKey(currentUserActiveStream));
         if ("android" === voiceEngine.platform) {
           closure_15.start(15000, () => {
             closure_1_1(closure_1_2[14])(null != closure_1_19, "Voice Engine should be initialized in callback");
@@ -196,9 +196,9 @@ prototype["_initialize"] = function _initialize() {
         if (null != currentAppIntent) {
           closure_4.openURL(callback3(currentAppIntent));
         }
-        const tmp9Result = tmp9(4446);
+        const tmp9Result = tmp9(4510);
       }
-      const obj3 = currentUserActiveStream(4563);
+      const obj3 = currentUserActiveStream(4627);
       tmp9 = currentUserActiveStream;
     } else {
       let result = voiceEngine.stopBroadcastWithError(-1, "Not currently in a voice channel");
@@ -208,7 +208,7 @@ prototype["_initialize"] = function _initialize() {
     logger.log("Broadcast Finished");
     closure_14.stop();
     closure_15.stop();
-    const result = callback(10912).handleCloseScreenshare();
+    const result = callback(10984).handleCloseScreenshare();
   });
   const result2 = voiceEngine.setBroadcastAnnotatedCallback((arg0) => {
     logger.log("Broadcast Annotated:", arg0);
@@ -222,7 +222,7 @@ prototype["_initialize"] = function _initialize() {
   });
   const result3 = voiceEngine.setBroadcastBlockedCallback(() => {
     logger.log("Broadcast Blocked");
-    let obj = callback2(10861);
+    let obj = callback2(10933);
     obj = { alertBody: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.iYQlwv);

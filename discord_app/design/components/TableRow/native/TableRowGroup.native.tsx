@@ -91,7 +91,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     obj1 = { variant: "text-sm/normal", color: "text-subtle", style: null, children: null };
     obj1[2] = tmp.description;
     obj1[3] = description;
-    tmp6Result = tmp6(tmp2(4376).Text, obj1);
+    tmp6Result = tmp6(tmp2(4440).Text, obj1);
   }
   items[1] = tmp6Result;
   const items1 = [tmp.content, ];
@@ -107,7 +107,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     obj2[0] = token;
     obj2[2] = tmp.helperText;
     obj2[3] = helperText;
-    tmp6Result1 = tmp6(tmp2(4376).Text, obj2);
+    tmp6Result1 = tmp6(tmp2(4440).Text, obj2);
   }
   items[3] = tmp6Result1;
   obj[1] = items;

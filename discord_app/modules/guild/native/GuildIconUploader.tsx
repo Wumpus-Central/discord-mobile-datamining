@@ -4,8 +4,8 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../_runtime/11361_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/11362_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/11433_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/11434_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../user_settings/ThemeStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -50,9 +50,9 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1[0] = items1;
     if (obj6.isThemeDark(theme.theme)) {
-      let tmp13Result = tmp13(11359);
+      let tmp13Result = tmp13(11431);
     } else {
-      tmp13Result = tmp13(11360);
+      tmp13Result = tmp13(11432);
     }
     obj = { source: null };
     obj[0] = tmp13Result;

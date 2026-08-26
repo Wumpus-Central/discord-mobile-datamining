@@ -7,39 +7,44 @@ import closure_5 from "../../../stores/RelationshipStore.tsx";
 
 require = arg1;
 function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
+  let str = arg1;
   const timestamp = Date.now();
   const IgnoreProfileSpeedbumpDisabled = explicitContentFromProto.IgnoreProfileSpeedbumpDisabled;
   if (!ignoreBlockedSpeedBump.ignoreBlockedSpeedBump) {
     const isBlockedResult = closure_5.isBlocked(ignoreBlockedSpeedBump.userId);
     const isIgnoredResult = closure_5.isIgnored(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
+      const tmp8 = tmp2(2009)(8999, tmp3.paths);
       let obj = ACTION_SHEET_HEIGHT_HALFDefault;
       const _HermesInternal = HermesInternal;
-      obj = {};
       const combined = "UserProfileIgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
+      obj = {};
       const merged = Object.assign(ignoreBlockedSpeedBump);
-      let str2 = "ignore";
+      let str3 = "ignore";
       if (isBlockedResult) {
-        str2 = "block";
+        str3 = "block";
       }
-      obj.speedBumpType = str2;
+      obj.speedBumpType = str3;
       obj.openedAt = timestamp;
-      obj.openLazy(tmp2(2009)(8931, tmp3.paths), combined, obj);
+      obj.openLazy(tmp8, combined, obj, str);
     }
   }
-  const tmp15 = asyncRequireImpl(8943, dependencyMap.paths);
+  const tmp20 = asyncRequireImpl(9011, dependencyMap.paths);
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
   obj = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);
   obj.openedAt = timestamp;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp15, combined1, obj, "replaceAll");
+  if (str == null) {
+    str = "replaceAll";
+  }
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp20, combined1, obj, str);
 }
 require("processCallbacks").addPostConnectionCallback;
 const result = require("set").fileFinishedImporting("modules/user_profile/native/showUserProfileActionSheet.tsx");
 
 export default showUserProfileActionSheet;
-export const getUserProfileActionSheetKey = function getUserProfileActionSheetKey(id) {
-  return "UserProfile" + id;
+export const getUserProfileActionSheetKey = function getUserProfileActionSheetKey(userId) {
+  return "UserProfile" + userId;
 };
 export const getUserProfileBlockedSpeedBumpActionSheetKey = function getUserProfileBlockedSpeedBumpActionSheetKey(arg0) {
   return "UserProfileBlockedSpeedBump" + arg0;
@@ -61,7 +66,7 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -96,7 +101,7 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
             closure_1_6(userId);
           }
           paths = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp14) {
         paths = tmp;

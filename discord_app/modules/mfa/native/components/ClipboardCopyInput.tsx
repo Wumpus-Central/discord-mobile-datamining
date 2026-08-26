@@ -45,7 +45,7 @@ export default function ClipboardCopyInput(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -124,7 +124,7 @@ export default function ClipboardCopyInput(arg0) {
                 }
               }
               v0 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp31) {
             v0 = tmp;

@@ -2,7 +2,7 @@
 import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
 import set from "../../../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
 import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
-import _fetchUserOffer from "../../UserOfferActionCreators.tsx";
+import getPaymentGateway from "../../UserOfferActionCreators.tsx";
 import setupLoadFromMessageManagerHandlersDefault from "../../../messages/setupLoadFromMessageManagerHandlers.tsx";
 import closure_3 from "../../../../stores/billing/SubscriptionStore.tsx";
 import closure_4 from "../../../../stores/billing/UserOfferStore.tsx";
@@ -15,8 +15,8 @@ function handleReferralMessages(type) {
         premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
         const tmp9Result = tmp9(11);
         if (tmp6) {
-          const userOffer = _fetchUserOffer.fetchUserOffer("ReferralMessageManager");
-          const tmpResult = _fetchUserOffer;
+          const userOffer = getPaymentGateway.fetchUserOffer("ReferralMessageManager");
+          const tmpResult = getPaymentGateway;
         }
         tmp6 = null == premiumTypeSubscription && closure_4.shouldFetchReferralOffer(tmp9(11).extractTimestamp(type.content));
       }

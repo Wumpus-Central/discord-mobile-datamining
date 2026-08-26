@@ -82,6 +82,6 @@ export const reset = function reset() {
         str = "dismissed";
       }
     }
-    closure_1_6.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "accessibilityRole", onPaymentDismiss: "mode" });
+    closure_1_6.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "r", onPaymentDismiss: "call" });
   });
 };

@@ -48,7 +48,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   const obj2 = initialize;
   gameRelationshipsByType = require("../../game_relationships/GameRelationshipStoreHooks.tsx").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = lib(9229).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = lib(9297).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {

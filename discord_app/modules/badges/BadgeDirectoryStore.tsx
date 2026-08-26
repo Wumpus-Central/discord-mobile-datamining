@@ -65,9 +65,9 @@ prototype["isCatalogStaleFor"] = function isCatalogStaleFor(id) {
   }
   return tmp3;
 };
-prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(stateFromStores) {
-  let tmp = stateFromStores;
-  if (stateFromStores == null) {
+prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(arg0) {
+  let tmp = arg0;
+  if (arg0 == null) {
     const currentUser = authStore.getCurrentUser();
     let id;
     if (currentUser != null) {

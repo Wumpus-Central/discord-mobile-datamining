@@ -8,7 +8,7 @@ import _copy from "../../../utils/ClipboardUtils.native.tsx";
 import _findPlayingActivity from "../../go_live/utils/StreamerApplicationSelectors.tsx";
 import getInviteURLDefault from "../getInviteURL.tsx";
 import get_label from "../../../utils/native/InstantInviteUtils.tsx";
-import _modDef9219 from "../../../actions/CreateInviteModalActionCreators.tsx";
+import _modDef9287 from "../../../actions/CreateInviteModalActionCreators.tsx";
 import openInstantInviteActionSheetDefault from "components/openInstantInviteActionSheet.tsx";
 import closure_3 from "../../guild_templates/GuildTemplateStore.tsx";
 import { ChannelRecordBase } from "../../../records/ChannelRecord.tsx";
@@ -85,7 +85,7 @@ function showInstantInviteActionSheet(channel, source) {
     tmp17 = null == code;
   }
   if (tmp17) {
-    tmpResult = tmp(9219);
+    tmpResult = tmp(9287);
     tmpResult.init(channel.getGuildId(), channel.id, obj);
   }
   obj1 = { channel, source: null, guildScheduledEventId: null, targetApplicationId: null, code: null, vanityURLCode: null, stackingBehavior: null };
@@ -177,10 +177,10 @@ export const showVanityUrlInviteActionSheet = function showVanityUrlInviteAction
   let obj = expandEventPropertiesDefault;
   obj = { type: "Vanity URL Invite", source: GUILD_SCHEDULED_EVENT };
   obj.track(constants.OPEN_POPOUT, obj);
-  _modDef9219.init(guild.id, channel.id, { skipCreateInvite: true });
+  _modDef9287.init(guild.id, channel.id, { skipCreateInvite: true });
   obj = { vanityURLCode: guild.vanityURLCode, channel, source: GUILD_SCHEDULED_EVENT, guildScheduledEventId: null, stackingBehavior: null };
   let prop;
-  const obj3 = _modDef9219;
+  const obj3 = _modDef9287;
   if (guildScheduledEventId != null) {
     prop = guildScheduledEventId.guildScheduledEventId;
   }
@@ -253,8 +253,8 @@ export const handleOpenShareSheet = function handleOpenShareSheet(code, channel,
       trackOptionClicked(code, channel, constants2.SHARE, ADD_FRIENDS_WIDGET);
     }
     const obj7 = expandEventPropertiesDefault;
-    tmp26(4347).hideAllActionSheets();
-    const tmp26Result = tmp26(4347);
+    tmp26(4411).hideAllActionSheets();
+    const tmp26Result = tmp26(4411);
     obj = { message: null, iOSOnlyShareCallback: null };
     obj[0] = intl;
     obj[1] = function iOSOnlyShareCallback(arg0, arr) {
@@ -270,8 +270,8 @@ export const handleOpenShareSheet = function handleOpenShareSheet(code, channel,
         const obj = callback(table[19]);
       }
     };
-    tmp21(9070).showShareActionSheet(obj, ADD_FRIENDS_WIDGET);
-    const tmp21Result = tmp21(9070);
+    tmp21(9138).showShareActionSheet(obj, ADD_FRIENDS_WIDGET);
+    const tmp21Result = tmp21(9138);
   }
 };
 export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
@@ -326,8 +326,8 @@ export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
       trackOptionClicked(code, channel, constants2.COPY);
     }
     const obj6 = expandEventPropertiesDefault;
-    tmp13(4097).presentLinkCopied();
-    const tmp13Result = tmp13(4097);
+    tmp13(4161).presentLinkCopied();
+    const tmp13Result = tmp13(4161);
   }
 };
 export const handlePressSettings = function handlePressSettings(channel, closure_1, closure_3) {
@@ -341,7 +341,7 @@ export const handlePressSettings = function handlePressSettings(channel, closure
   if (closure_3 == null) {
     str = "Instant Invite Action Sheet";
   }
-  _modDef9219.openSettings(guild_id, id, str, () => {
+  _modDef9287.openSettings(guild_id, id, str, () => {
     if (null != closure_1) {
       tmp();
     } else {
@@ -373,7 +373,7 @@ export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(
       obj = { type: "Vanity URL Invite", source: null };
       obj[1] = GUILD_HEADER;
       tmp4Result.track(constants.OPEN_POPOUT, obj);
-      tmp4Result = tmp4(9219);
+      tmp4Result = tmp4(9287);
       tmp4Result.init(guild.id, channel.id, { skipCreateInvite: true });
       obj = { vanityURLCode: null, channel: null, source: null, guildScheduledEventId: null, stackingBehavior: null };
       obj[0] = guild.vanityURLCode;
@@ -381,7 +381,7 @@ export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(
       obj[2] = GUILD_HEADER;
       obj[3] = undefined;
       obj[4] = undefined;
-      tmp4(9220)(obj);
+      tmp4(9288)(obj);
     }
   }
   obj1 = get_label;

@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../FamilyCenter.messages.js";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef4611 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4675 from "../../../actions/ModalActionCreators.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import Modal from "../../../design/components/Modal/native/Modal.native.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
@@ -55,7 +55,7 @@ function FamilyCenterModalDataTooltipScreen() {
   const obj4 = { variant: "primary", text: null, onPress: null };
   const intl3 = require("../../../intl/index.native.tsx").intl;
   obj4[1] = intl3.string(require("../../../intl/index.native.tsx").t["NX+WJN"]);
-  obj4[2] = _modDef4611.pop;
+  obj4[2] = _modDef4675.pop;
   obj3[0] = callback(require("../../../design/components/Button/native/Button.native.tsx").Button, obj4);
   items1[1] = callback(require("../../../design/components/Modal/native/ModalFooter.native.tsx").ModalFooter, obj3);
   obj[0] = items1;
@@ -88,7 +88,7 @@ export default function FamilyCenterModalDataTooltip() {
     obj = { DATA_TOOLTIP: null };
     obj = {
       headerShown: true,
-      headerLeft: callback(5376).getHeaderCloseButton(callback2(4611).pop),
+      headerLeft: callback(5442).getHeaderCloseButton(callback2(4675).pop),
       headerTitle() {
         return null;
       },

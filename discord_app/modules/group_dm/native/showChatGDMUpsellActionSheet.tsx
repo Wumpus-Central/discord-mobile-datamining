@@ -6,5 +6,5 @@ import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionShe
 const result = set.fileFinishedImporting("modules/group_dm/native/showChatGDMUpsellActionSheet.tsx");
 
 export default function showChatGDMUpsellActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11154, dependencyMap.paths), "ChatGDMUpsellActionSheet", arg0);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11226, dependencyMap.paths), "ChatGDMUpsellActionSheet", arg0);
 };

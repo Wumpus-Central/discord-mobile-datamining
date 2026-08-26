@@ -1,6 +1,6 @@
 // discord_app/modules/game_console/native/GameConsoleAlertUtils.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import _modDef4745 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef4809 from "../../../actions/native/AlertActionCreators.tsx";
 import closure_3 from "../../../stores/MediaEngineStore.tsx";
 import { GAME_CONSOLE_ALERT_MODAL_LOCATION as closure_4 } from "../GameConsoleConstants.tsx";
 import ME from "../../../Constants.tsx";
@@ -49,10 +49,10 @@ export default {
   showSelfDismissableAlert(reconnectPlatformType) {
     reconnectPlatformType = reconnectPlatformType.reconnectPlatformType;
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
-    let obj = _modDef4745;
+    let obj = _modDef4809;
     obj = { title, body: null, onConfirm: null };
-    obj = { body, errorCodeMessage, dismissCallback: _modDef4745.close };
-    obj[1] = jsx(reconnectPlatformType(10971).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: _modDef4745.close });
+    obj = { body, errorCodeMessage, dismissCallback: _modDef4809.close };
+    obj[1] = jsx(reconnectPlatformType(11043).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: _modDef4809.close });
     obj[2] = function onConfirm() {
       if (null != reconnectPlatformType) {
         const obj = { platformType: null, location: null };

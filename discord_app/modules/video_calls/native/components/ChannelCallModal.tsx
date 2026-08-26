@@ -62,10 +62,10 @@ let closure_18 = importAllResult.memo((arg0) => {
     if (null != first) {
       closure_1_1(closure_1_2[13]).initialize(tmp);
       return () => {
-        callback2(10841).terminate();
-        const obj = callback2(10841);
-        callback2(7893).setHidden(false);
-        const obj2 = callback2(7893);
+        callback2(10913).terminate();
+        const obj = callback2(10913);
+        callback2(7960).setHidden(false);
+        const obj2 = callback2(7960);
         if (!obj3.isModalOpen(closure_31)) {
           callback3();
         }

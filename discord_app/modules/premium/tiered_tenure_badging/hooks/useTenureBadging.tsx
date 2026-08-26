@@ -1,6 +1,6 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTenureBadging.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import hooksDefault from "../../../../../_runtime/03979_hooks.js";
+import hooksDefault from "../../../../../_runtime/04043_hooks.js";
 import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser.tsx";
 import closure_3 from "../../../user_profile/UserProfileStore.tsx";
 import closure_4 from "../../../../stores/UserStore.tsx";
@@ -134,7 +134,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
     if (null != stateFromStores1) {
       earnedOnDate = null;
       if (null != stateFromStores1.premiumSince) {
-        tmpResult = tmp(7240);
+        tmpResult = tmp(7306);
         earnedOnDate = tmpResult.getEarnedOnDate(tieredTenureBadgeForUser, stateFromStores1.premiumSince);
       }
     }
@@ -149,7 +149,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(9657);
+  let tmpResult = tmp(9725);
   const tieredTenureBadgeForUser = tmpResult.useTieredTenureBadgeForUser(id);
   let tmp7 = null;
   if (null != tieredTenureBadgeForUser) {
@@ -176,8 +176,8 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
     if (null != stateFromStores2) {
       earnedOnDate = null;
       if (null != stateFromStores2.premiumSince) {
-        earnedOnDate = tmp(7240).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
-        const tmpResult3 = tmp(7240);
+        earnedOnDate = tmp(7306).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
+        const tmpResult3 = tmp(7306);
       }
     }
   }

@@ -13,5 +13,5 @@ export const EMOJI_PICKER_ACTION_SHEET_KEY = "EmojiPickerActionSheet";
 export const openEmojiPickerActionSheet = function openEmojiPickerActionSheet(arg0, stack) {
   const result = toggleGuildExpandedState.initiateEmojiInteraction(EmojiInteractionPoint.EmojiPickerActionSheetOpened);
   const obj = toggleGuildExpandedState;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8786, dependencyMap.paths), EmojiPickerActionSheet, arg0, stack);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8854, dependencyMap.paths), EmojiPickerActionSheet, arg0, stack);
 };

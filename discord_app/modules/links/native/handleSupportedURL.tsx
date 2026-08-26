@@ -200,7 +200,7 @@ export default function handleSupportedURL(payload) {
       result = inviteCode;
       result = payload(inviteCode[29]).startDiceRoll(channelId2, diceCount, diceSides);
       result = rootNavigationRef1;
-      let obj3 = { guildId: null, channelId: null, messageId: "Array", navigationSettings: null };
+      let obj3 = { guildId: null, channelId: null, messageId: "Array", navigationSettings: true };
       obj3[0] = guildId2;
       obj3[1] = channelId2;
       let obj4 = { safe: null, navigationReplace: null, waitForConnection: null, skipMessageFetch: null };
@@ -359,7 +359,7 @@ export default function handleSupportedURL(payload) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -434,7 +434,7 @@ export default function handleSupportedURL(payload) {
                     const result = obj2.openGuildEventDetails(obj4);
                   }
                   c4 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp35) {
                 c4 = tmp;
@@ -466,7 +466,7 @@ export default function handleSupportedURL(payload) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -528,7 +528,7 @@ export default function handleSupportedURL(payload) {
                   obj3.disconnectRemote();
                 }
                 c2 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } catch (tmp37) {
                 c2 = tmp;
                 throw tmp37;
@@ -588,7 +588,7 @@ export default function handleSupportedURL(payload) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -774,7 +774,7 @@ export default function handleSupportedURL(payload) {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {

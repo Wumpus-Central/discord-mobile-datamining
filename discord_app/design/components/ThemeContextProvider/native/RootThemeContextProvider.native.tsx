@@ -57,7 +57,7 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   return num(DARK(primaryColor[3]).ThemeContext.Provider, { value, children: children.children });
 };
 export const DisableCustomTheme = function DisableCustomTheme(children) {
-  let obj = themeContext(4108);
+  let obj = themeContext(4172);
   themeContext = obj.useThemeContext();
   const items = [themeContext];
   const memo = React.useMemo(() => {
@@ -70,5 +70,5 @@ export const DisableCustomTheme = function DisableCustomTheme(children) {
     return obj.createThemedContext(obj);
   }, items);
   obj = { value: memo, children: children.children };
-  return jsx(themeContext(4108).ThemeContext.Provider, { value: memo, children: children.children });
+  return jsx(themeContext(4172).ThemeContext.Provider, { value: memo, children: children.children });
 };

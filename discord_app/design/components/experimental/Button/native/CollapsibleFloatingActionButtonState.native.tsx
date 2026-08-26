@@ -1,5 +1,5 @@
 // discord_app/design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx
-import _mod4120 from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod4184 from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
 import closure_2 from "../../../../../../_runtime/00019_noop.js";
 
 require = arg1;
@@ -7,7 +7,7 @@ let closure_3 = { code: "function CollapsibleFloatingActionButtonStateNativeTsx1
 let result = require("set").fileFinishedImporting("design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx");
 
 export const useCollapsibleFloatingActionButtonState = function useCollapsibleFloatingActionButtonState() {
-  const obj = { collapseText: _mod4120.useSharedValue(0) };
+  const obj = { collapseText: _mod4184.useSharedValue(0) };
   return obj;
 };
 export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActionButtonState, UNDETERMINED) {

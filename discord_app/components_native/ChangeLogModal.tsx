@@ -1,11 +1,11 @@
 // discord_app/components_native/ChangeLogModal.tsx
 import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4611 from "../actions/ModalActionCreators.tsx";
+import _modDef4675 from "../actions/ModalActionCreators.tsx";
 import NavigationStack from "../design/components/Navigator/native/Navigator.native.tsx";
 import LHeadingDefault from "ChangeLogStandardTemplate.tsx";
 import VideoComponentDefault from "common/Video.tsx";
-import _modDef14945 from "../../_runtime/metro/14945__.js";
+import _modDef15024 from "../../_runtime/metro/15024__.js";
 import importAllResult from "../../_runtime/00019_noop.js";
 import { View } from "../../_runtime/00017_get_ActivityIndicator.js";
 import { AnalyticEvents } from "../Constants.tsx";
@@ -127,7 +127,7 @@ class ChangeLogScreen {
   }
 }
 function hideChangeLog() {
-  _modDef4611.popWithKey(CHANGELOG_MODAL_KEY);
+  _modDef4675.popWithKey(CHANGELOG_MODAL_KEY);
 }
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -275,7 +275,7 @@ prototype["renderVideo"] = function renderVideo() {
       obj1[3] = function onReady() {
         return self.setState({ ytVideoReady: true });
       };
-      const items = [callback(_modDef14945, obj1), ];
+      const items = [callback(_modDef15024, obj1), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj2 = { style: null, source: null };
@@ -284,8 +284,8 @@ prototype["renderVideo"] = function renderVideo() {
         const _HermesInternal = HermesInternal;
         obj3[0] = "https://i.ytimg.com/vi/" + youtube_video_id + "/hqdefault.jpg";
         obj2[1] = obj3;
-        tmp6Result = tmp6(tmp7(5374), obj2);
-        const tmp7Result = tmp7(5374);
+        tmp6Result = tmp6(tmp7(5440), obj2);
+        const tmp7Result = tmp7(5440);
       }
       items[1] = tmp6Result;
       obj[2] = items;
@@ -315,14 +315,14 @@ prototype["renderVideo"] = function renderVideo() {
     obj7[2] = tmp.videoOverlay;
     obj7[3] = self.playVideo;
     const obj8 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: null, onPress: null, style: null, iconSize: null, iconStyle: null };
-    obj8[2] = tmp15(10117);
+    obj8[2] = tmp15(10184);
     obj8[3] = self.playVideo;
     obj8[4] = tmp.playButton;
     obj8[5] = tmp18(1297).IconSizes.CUSTOM;
     obj8[6] = tmp.playIcon;
-    obj7[4] = tmp12(tmp15(9204), obj8);
-    tmp12Result = tmp12(tmp18(4949).PressableOpacity, obj7);
-    const tmp15Result = tmp15(9204);
+    obj7[4] = tmp12(tmp15(9272), obj8);
+    tmp12Result = tmp12(tmp18(5015).PressableOpacity, obj7);
+    const tmp15Result = tmp15(9272);
   }
   items1[1] = tmp12Result;
   obj5[2] = items1;

@@ -48,7 +48,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           obj[0] = obj;
           obj[1] = analyticsLocations;
           obj[2] = callback ? closure_1_8.TIER_0 : closure_1_8.TIER_2;
-          callback2(7029)(obj, dependencyMap);
+          callback2(7095)(obj, dependencyMap);
         }
       }
     }
@@ -58,15 +58,15 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
         if (result) {
           let resolved = Promise.resolve();
         } else {
-          resolved = callback(4725).fetchSubscriptions();
-          const obj2 = callback(4725);
+          resolved = callback(4789).fetchSubscriptions();
+          const obj2 = callback(4789);
         }
         const items = [resolved, ];
         if (isFetchingOfferResult) {
           let resolved1 = Promise.resolve();
         } else {
-          resolved1 = callback(7736).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
-          const obj3 = callback(7736);
+          resolved1 = callback(7802).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
+          const obj3 = callback(7802);
         }
         items[1] = resolved1;
         const allPromises = Promise.all(items);
@@ -79,20 +79,20 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           callback4();
         }).catch(() => {
           const intl = callback(1236).intl;
-          callback2(4097).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
+          callback2(4161).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
         }).finally(() => callback3(false));
         const catchPromise = Promise.all(items).then(() => {
           ref.current = ref.current + 1;
           callback4();
         }).catch(() => {
           const intl = callback(1236).intl;
-          callback2(4097).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
+          callback2(4161).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
         });
       }
     }
     callback2();
     tmp5 = onPress.hasFetchedOffer() && !obj.hasAnyUnexpiredOffer();
-    const bestActiveInput = callback(4242).getBestActiveInput();
+    const bestActiveInput = callback(4306).getBestActiveInput();
     if (bestActiveInput != null) {
       bestActiveInput.closeCustomKeyboard();
     }

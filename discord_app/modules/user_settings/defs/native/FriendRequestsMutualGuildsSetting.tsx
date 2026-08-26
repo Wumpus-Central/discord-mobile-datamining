@@ -15,7 +15,7 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsMutualGuildsSettingValue() {
-    const FriendSourceFlagsSetting = setting(4070).FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = setting(4134).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
     return React.useMemo(() => setting(closure_1_2[5]).computeFlags(setting), items).mutualGuilds;

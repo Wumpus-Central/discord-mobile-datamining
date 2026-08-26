@@ -35,7 +35,7 @@ export default function SelectScreen(mfaChallenge) {
   obj1 = { variant: "heading-xl/extrabold", children: null };
   const intl = require("../../../../intl/index.native.tsx").intl;
   obj1[1] = intl.string(require("../../../../intl/index.native.tsx").t.S9b9bX);
-  const items = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj1), ];
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx").Heading, obj1), ];
   const obj2 = { variant: "text-sm/medium", children: null };
   const intl2 = require("../../../../intl/index.native.tsx").intl;
   obj2[1] = intl2.string(require("../../../../intl/index.native.tsx").t.Jz1lXO);

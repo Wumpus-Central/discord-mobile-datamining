@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/VoicePanelContainer.tsx
-import isIterable from "../../../../_runtime/04010_isIterable.js";
+import isIterable from "../../../../_runtime/04074_isIterable.js";
 import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
 import VoicePanelControllerDefault from "VoicePanelController.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";

@@ -38,20 +38,20 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
   const _require = emoji;
   let obj = UNSAFE_isDismissibleContentDismissed;
   if (!obj.UNSAFE_isDismissibleContentDismissed(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER)) {
-    const DoubleTapReactionEmoji = tmp(4070).DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = tmp(4134).DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
     let flag = setting.disableDoubleTap;
     if (flag == null) {
       flag = false;
     }
-    let tmpResult = tmp(8228);
+    let tmpResult = tmp(8295);
     const result = tmpResult.disambiguatedEmojiFromSettingsValue(setting);
     let areEmojisEqualResult = !flag;
     if (!flag) {
       areEmojisEqualResult = null != result;
     }
     if (areEmojisEqualResult) {
-      tmpResult = tmp(8228);
+      tmpResult = tmp(8295);
       areEmojisEqualResult = tmpResult.areEmojisEqual(result, emoji);
     }
     if (areEmojisEqualResult) {
@@ -66,8 +66,8 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       const obj4 = dispatcherDefault;
       obj = { dismissAction: null, forceTrack: true };
       obj[0] = ContentDismissActionType.AUTO_DISMISS;
-      const result1 = tmp(4201).UNSAFE_markDismissibleContentAsDismissed(tmp(1377).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj);
-      const tmpResult1 = tmp(4201);
+      const result1 = tmp(4265).UNSAFE_markDismissibleContentAsDismissed(tmp(1377).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj);
+      const tmpResult1 = tmp(4265);
     }
   }
 };

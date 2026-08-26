@@ -13,7 +13,7 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 function AdTopicRow(adTopic) {
   adTopic = adTopic.adTopic;
-  let AdTopicOptOuts = adTopic(4070).AdTopicOptOuts;
+  let AdTopicOptOuts = adTopic(4134).AdTopicOptOuts;
   const setting = AdTopicOptOuts.useSetting();
   const hasItem = setting.includes(adTopic);
   obj = { label: null, subLabel: null, value: null, onValueChange: null };
@@ -35,7 +35,7 @@ function AdTopicRow(adTopic) {
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(5874).TableSwitchRow, obj);
+  return closure_5(adTopic(5940).TableSwitchRow, obj);
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

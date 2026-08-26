@@ -13,8 +13,8 @@ let result = require("set").fileFinishedImporting("modules/user_profile/native/U
 export default function UserProfileUpsellButton(analyticsObject) {
   analyticsObject = analyticsObject.analyticsObject;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5834)().analyticsLocations;
-  let obj = analyticsObject(7053);
+  analyticsLocations = analyticsLocations(5900)().analyticsLocations;
+  let obj = analyticsObject(7119);
   let label = obj.useNitroTrialCtaOverride("user_profile_upsell_button");
   const items = [analyticsLocations, analyticsObject];
   const effect = React.useEffect(() => {
@@ -43,6 +43,6 @@ export default function UserProfileUpsellButton(analyticsObject) {
   }
   obj[2] = label;
   obj = { color: "white", size: "sm", style: callback().nitroWheel };
-  obj[3] = jsx(analyticsObject(7849).NitroWheelIcon, { color: "white", size: "sm", style: callback().nitroWheel });
-  return jsx(analyticsObject(4815).Button, { color: "white", size: "sm", style: callback().nitroWheel });
+  obj[3] = jsx(analyticsObject(7916).NitroWheelIcon, { color: "white", size: "sm", style: callback().nitroWheel });
+  return jsx(analyticsObject(4879).Button, { color: "white", size: "sm", style: callback().nitroWheel });
 };

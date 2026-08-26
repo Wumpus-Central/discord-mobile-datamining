@@ -7,7 +7,7 @@ import { IMAGE_SIZE } from "EmojiPickerListConstants.tsx";
 import { PADDING_VERTICAL } from "../../../expression_picker/ExpressionPickerConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import BottomSheetModal from "../../../../../_runtime/05505_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05571_BottomSheetModal.js";
 import isMetaQuest from "../../../device/MetaQuestUtils.android.tsx";
 import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 

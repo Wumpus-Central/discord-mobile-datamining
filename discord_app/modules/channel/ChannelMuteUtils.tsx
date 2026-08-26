@@ -1,6 +1,6 @@
 // discord_app/modules/channel/ChannelMuteUtils.tsx
 import set from "../../../_runtime/00002_set.js";
-import hooksDefault from "../../../_runtime/03979_hooks.js";
+import hooksDefault from "../../../_runtime/04043_hooks.js";
 
 const result = set.fileFinishedImporting("modules/channel/ChannelMuteUtils.tsx");
 

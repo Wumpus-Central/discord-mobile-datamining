@@ -2,7 +2,7 @@
 import getSystemLocale from "../../../../../../intl/index.native.tsx";
 import computeChannelName from "../../../../../channel/useChannelName.tsx";
 import UserNotificationSettings from "../../../../../../utils/NotificationSettingsUtils.tsx";
-import _modDef5368 from "../../../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import _modDef5434 from "../../../../../../actions/NotificationSettingsModalActionCreators.tsx";
 import getMuteSettingsAll from "../../../../../channel/ChannelMuteUtils.tsx";
 import closure_4 from "../../../../../threads/JoinedThreadsStore.tsx";
 import closure_5 from "../../../../../../stores/ChannelStore.tsx";
@@ -61,10 +61,10 @@ export const handleUnmutePress = function handleUnmutePress(channelId, guildId) 
   const channel = store.getChannel(channelId);
   if (null != channel) {
     if (channel.isThread()) {
-      let tmp7Result = tmp7(7368);
+      let tmp7Result = tmp7(7434);
       const result = tmp7Result.setNotificationSettings(channel, { muted: false });
     } else {
-      tmp7Result = tmp7(5368);
+      tmp7Result = tmp7(5434);
       const result1 = tmp7Result.updateChannelOverrideSettings(guildId, channel.id, { muted: false, mute_config: null }, UserNotificationSettings.NotificationLabels.Unmuted);
     }
   }
@@ -79,15 +79,15 @@ export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
     onOptionPress(muteSettings);
   } else if (null != channel) {
     if (channel.isThread()) {
-      let tmp4Result = tmp4(7368);
+      let tmp4Result = tmp4(7434);
       const result = tmp4Result.setNotificationSettings(channel, muteSettings);
     } else {
-      tmp4Result = tmp4(5368);
+      tmp4Result = tmp4(5434);
       const result1 = tmp4Result.updateChannelOverrideSettings(guildId, channel.id, muteSettings, UserNotificationSettings.NotificationLabels.Muted);
     }
   } else if (null != guild) {
-    const result2 = _modDef5368.updateGuildNotificationSettings(guild.id, muteSettings, UserNotificationSettings.NotificationLabels.Muted);
-    const obj5 = _modDef5368;
+    const result2 = _modDef5434.updateGuildNotificationSettings(guild.id, muteSettings, UserNotificationSettings.NotificationLabels.Muted);
+    const obj5 = _modDef5434;
   }
 };
 export const getMuteSettings = function getMuteSettings(arg0) {

@@ -1,8 +1,8 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceMemberList.tsx
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
-import registerAssetDefault from "../../../../../_runtime/09873_registerAsset.js";
-import _modDef13248 from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
+import registerAssetDefault from "../../../../../_runtime/09940_registerAsset.js";
+import _modDef13321 from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -84,7 +84,7 @@ function VoiceSectionRow(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -184,7 +184,7 @@ function VoiceSectionRow(arg0) {
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = ME);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
 let closure_24 = createCacheKey.createStyles({ container: { flex: 1, flexShrink: 1 }, sectionContainer: { paddingTop: 16, paddingHorizontal: 16 }, sectionTitle: { lineHeight: 16 }, voiceChannelContainer: { overflow: "hidden", flexGrow: 1, flexShrink: 1, minHeight: 1 }, headerFormDivider: { marginLeft: 0 }, rowFormDivider: { marginHorizontal: 16 } });
-let closure_25 = importAllResult.memo((channel) => callback2(_modDef13248, { channel: channel.channel }));
+let closure_25 = importAllResult.memo((channel) => callback2(_modDef13321, { channel: channel.channel }));
 let closure_26 = importAllResult.memo((channel) => {
   channel = channel.channel;
   channel(589);
@@ -200,8 +200,8 @@ let closure_26 = importAllResult.memo((channel) => {
       const intl = tmp4(1236).intl;
       obj[0] = intl.string(tmp4(1236).t["6Qgrev"]);
       obj[2] = registerAssetDefault;
-      obj[3] = tmp4(12940).CircularIconButton.Sizes.MEDIUM_32;
-      obj[0] = callback2(tmp4(12940).CircularIconButton, obj);
+      obj[3] = tmp4(13014).CircularIconButton.Sizes.MEDIUM_32;
+      obj[0] = callback2(tmp4(13014).CircularIconButton, obj);
       const intl2 = tmp4(1236).intl;
       obj[1] = intl2.string(tmp4(1236).t["6Qgrev"]);
       obj[2] = function onPress() {
@@ -215,7 +215,7 @@ let closure_26 = importAllResult.memo((channel) => {
           const result = tmp2Result.showInstantInviteActionSheet(tmp, obj);
         }
       };
-      items[1] = callback2(tmp4(8118).FormRow, obj);
+      items[1] = callback2(tmp4(8185).FormRow, obj);
       obj[0] = items;
       tmp7 = callback3(importAllResult.Fragment, obj);
     }

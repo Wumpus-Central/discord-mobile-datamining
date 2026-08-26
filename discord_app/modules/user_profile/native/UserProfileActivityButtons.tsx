@@ -82,7 +82,7 @@ export const JoinActivityButton = function JoinActivityButton(user) {
         obj[4] = function onPress() {
           onAction({ action: "PRESS_JOIN_BUTTON" });
           closure_1_1(activity[27])({ applicationId: application.id, activityChannelId: closure_7, locationObject: {}, analyticsLocations });
-          closure_1_1(activity[28]).hideActionSheet();
+          closure_1_1(activity[28]).hideAllActionSheets();
         };
         jsx(tmp5(JOINED[24]).Button, { text: null, icon: null, variant: "active", disabled: null, onPress: null });
       }
@@ -104,8 +104,8 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
-    if (stateFromStores !== tmp(12516).ActivityJoinability.CANNOT_JOIN) {
-      if (stateFromStores === tmp(12516).ActivityJoinability.JOINED) {
+    if (stateFromStores !== tmp(12587).ActivityJoinability.CANNOT_JOIN) {
+      if (stateFromStores === tmp(12587).ActivityJoinability.JOINED) {
         const intl2 = tmp(1236).intl;
         let stringResult = intl2.string(tmp(1236).t.DPfdsq);
       } else {
@@ -114,16 +114,16 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
       }
       obj = { text: null, variant: "active", disabled: null, onPress: null };
       obj[0] = stringResult;
-      JOINED = tmp(12516).ActivityJoinability.JOINED;
+      JOINED = tmp(12587).ActivityJoinability.JOINED;
       obj[2] = stateFromStores === JOINED;
       obj[3] = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
         let obj = closure_1_1(closure_1_2[29]);
         obj = { userId: id.id, sessionId: session_id.session_id, application: closure_6, channelId: null, messageId: null, applicationActivity: session_id, source: "UserProfile", analyticsLocations };
         const joined = obj.join(obj);
-        closure_1_1(closure_1_2[28]).hideActionSheet();
+        closure_1_1(closure_1_2[28]).hideAllActionSheets();
       };
-      jsx(tmp(4815).Button, { text: null, variant: "active", disabled: null, onPress: null });
+      jsx(tmp(4879).Button, { text: null, variant: "active", disabled: null, onPress: null });
       const tmp6 = jsx;
     }
   }
@@ -134,7 +134,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
   let sync_id;
   sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(9804)(activity)) {
+  if (sync_id(9871)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
@@ -144,7 +144,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
       obj[0] = intl.formatToPlainString(getSystemLocale.t.LEgD7t, obj);
       obj = { size: null, source: null, disableColor: true, style: null };
       obj[0] = Button.Icon.Sizes.SMALL;
-      obj[1] = sync_id(8399);
+      obj[1] = sync_id(8466);
       obj[3] = tmp.icon;
       obj[1] = jsx(Button.Icon, { size: null, source: null, disableColor: true, style: null });
       obj[3] = callback(function*() {
@@ -159,7 +159,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -189,7 +189,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
             } else if (1 === tmp7) {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else if (arg0 === 1) {
               c5 = 3;
               throw arg1;
@@ -294,7 +294,7 @@ export const VoiceChannelButtons = function VoiceChannelButtons(channel) {
       obj[1] = str;
       obj[3] = function onPress() {
         callback({ action: "PRESS_JOIN_CALL_BUTTON" });
-        closure_1_1(newestAnalyticsLocation[28]).hideActionSheet();
+        closure_1_1(newestAnalyticsLocation[28]).hideAllActionSheets();
         const obj = closure_1_1(newestAnalyticsLocation[28]);
         closure_1_1(newestAnalyticsLocation[37]).popAll();
         const obj2 = closure_1_1(newestAnalyticsLocation[37]);
@@ -403,7 +403,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -450,13 +450,13 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                 if (closure_0.button_urls.length <= closure_2) {
                   v0 = 0;
                   c5 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   closure_1 = closure_0.button_urls[closure_2];
                   if (typeof closure_1 !== "string") {
                     v0 = 0;
                     c5 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   } else {
                     closure_2 = closure_1_1(closure_1_2[47]).safeParseWithQuery(closure_1);
                     let protocol;
@@ -487,7 +487,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
               }
               v0 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp20) {
             closure_2 = tmp20;

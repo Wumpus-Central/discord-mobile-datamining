@@ -11,6 +11,7 @@ import closure_6 from "../UserStore.tsx";
 import closure_7 from "../game_store/EntitlementStore.tsx";
 import closure_8 from "SubscriptionStore.tsx";
 import GuildFeatures from "../../modules/premium/PremiumConstants.tsx";
+import { OfferTriggerTypes } from "../../../discord_common/js/shared/Constants.tsx";
 import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 
 require = arg1;
@@ -83,9 +84,11 @@ function handleReferralTrialStoreUpdate() {
   return false;
 }
 ({ ANNUAL_DISCOUNT_IDS: c9, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: c10, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: unpackModuleId, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = GuildFeatures);
-let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "PX_16", userDiscountOffers: "minForce", userDiscounts: "maxForce", isFetching: "feedbackOnActivation", lastFetchSuccessful: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}" };
+let closure_17 = performance.now();
+let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "flex", userDiscountOffers: null, userDiscounts: "\u{1F443}\u{1F3FC}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: "TRANSPARENT" };
 obj[1] = {};
 obj[2] = {};
+obj[7] = { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 };
 const PersistedStore = initializeDefault.PersistedStore;
 class UserOfferStore extends PersistedStore {
 }
@@ -140,7 +143,7 @@ prototype["initialize"] = function initialize(userTrialOffers) {
   } else {
     tmp = obj;
   }
-  closure_17 = tmp;
+  closure_19 = tmp;
   this.waitFor(closure_7, closure_3, closure_8, closure_6);
   let items = [closure_6];
   this.syncWith(items, emitChanges);
@@ -248,8 +251,8 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
       const _Date = Date;
       const time = expiresAt.getTime();
       const timestamp = Date.now();
-      hasItem = time < timestamp + lib(items[10]).getOfferNoticeThreshold(trialId);
-      obj = lib(items[10]);
+      hasItem = time < timestamp + lib(items[11]).getOfferNoticeThreshold(trialId);
+      obj = lib(items[11]);
     }
     if (hasItem) {
       hasItem = self.shouldShowTrialOfferReminder(trialId);
@@ -271,7 +274,7 @@ prototype["getAlmostExpiringDiscountOffersForReminder"] = function getAlmostExpi
   self = this;
   const _require = arg0;
   const currentUser = authStore.getCurrentUser();
-  obj = _require(self[10]);
+  obj = _require(self[11]);
   if (obj.isPremium(currentUser)) {
     if (!self.canFractionalPremiumUserUseOffer()) {
       let items = [];
@@ -290,8 +293,8 @@ prototype["getAlmostExpiringDiscountOffersForReminder"] = function getAlmostExpi
       const _Date = Date;
       const time = expiresAt.getTime();
       const timestamp = Date.now();
-      someResult = time < timestamp + callback(self[10]).getOfferNoticeThreshold(expiresAt);
-      obj = callback(self[10]);
+      someResult = time < timestamp + callback(self[11]).getOfferNoticeThreshold(expiresAt);
+      obj = callback(self[11]);
     }
     if (someResult) {
       someResult = self.shouldShowDiscountOfferReminder(expiresAt);
@@ -397,9 +400,17 @@ prototype["forceReset"] = function forceReset() {
   obj.userDiscountOffers = {};
   obj.userOffersLastFetchedAtDate = undefined;
   obj.isFetching = false;
+  obj.shouldTriggerOffer = false;
+  obj.cooldownExpirationTimestamps = { [closure_16.CHANNEL_OPENED]: 0, [closure_16.JOIN_VOICE_CHANNEL]: 0, [closure_16.PREMIUM_UPSELL_VIEWED]: 0, [closure_16.USER_PROFILE_ACTION]: 0, [closure_16.VIDEO_STREAM_ENDED]: 0 };
 };
 prototype["lastFetchSuccessful"] = function lastFetchSuccessful() {
   return obj.lastFetchSuccessful;
+};
+prototype["canTriggerUserOffer"] = function canTriggerUserOffer(arg0) {
+  return false;
+};
+prototype["getUptimeForTrigger"] = function getUptimeForTrigger() {
+  return Math.floor((performance.now() - closure_17) / 1000);
 };
 UserOfferStore.displayName = "UserOfferStore";
 UserOfferStore.persistKey = "UserOfferStore";
@@ -459,6 +470,31 @@ let items = [
       }));
       return obj;
     }
+  },
+  (shouldTriggerOffer) => {
+    if (null != shouldTriggerOffer) {
+      shouldTriggerOffer = undefined;
+      if (shouldTriggerOffer != null) {
+        shouldTriggerOffer = shouldTriggerOffer.shouldTriggerOffer;
+      }
+      if (null != shouldTriggerOffer) {
+        let prop;
+        if (shouldTriggerOffer != null) {
+          prop = shouldTriggerOffer.cooldownExpirationTimestamps;
+        }
+      }
+      obj = {};
+      const merged = Object.assign(shouldTriggerOffer);
+      obj.shouldTriggerOffer = false;
+      obj = {};
+      obj[OfferTriggerTypes.CHANNEL_OPENED] = 0;
+      obj[OfferTriggerTypes.JOIN_VOICE_CHANNEL] = 0;
+      obj[OfferTriggerTypes.PREMIUM_UPSELL_VIEWED] = 0;
+      obj[OfferTriggerTypes.USER_PROFILE_ACTION] = 0;
+      obj[OfferTriggerTypes.VIDEO_STREAM_ENDED] = 0;
+      obj.cooldownExpirationTimestamps = obj;
+      return obj;
+    }
   }
 ];
 UserOfferStore.migrations = items;
@@ -476,12 +512,22 @@ obj = {
     obj.userOffersLastFetchedAtDate = Date.now();
   },
   BILLING_USER_OFFER_FETCH_SUCCESS: function handleUserOfferFetchSuccess(arg0) {
-    ({ userTrialOffer, userDiscountOffer } = arg0);
+    ({ userTrialOffer, userDiscountOffer, shouldTriggerOffer } = arg0);
     if (tmp) {
       obj.userTrialOffers = {};
       obj.userDiscountOffers = {};
       obj.userOffersLastFetchedAtDate = undefined;
       obj.isFetching = false;
+      if (!shouldTriggerOffer) {
+        obj.shouldTriggerOffer = false;
+        obj = {};
+        obj[OfferTriggerTypes.CHANNEL_OPENED] = 0;
+        obj[OfferTriggerTypes.JOIN_VOICE_CHANNEL] = 0;
+        obj[OfferTriggerTypes.PREMIUM_UPSELL_VIEWED] = 0;
+        obj[OfferTriggerTypes.USER_PROFILE_ACTION] = 0;
+        obj[OfferTriggerTypes.VIDEO_STREAM_ENDED] = 0;
+        obj.cooldownExpirationTimestamps = obj;
+      }
     }
     if (null != userTrialOffer) {
       obj.userTrialOffers[userTrialOffer.trialId] = userTrialOffer;
@@ -493,6 +539,10 @@ obj = {
     obj.userOffersLastFetchedAtDate = Date.now();
     obj.isFetching = false;
     obj.lastFetchSuccessful = true;
+    if (shouldTriggerOffer == null) {
+      shouldTriggerOffer = false;
+    }
+    obj.shouldTriggerOffer = shouldTriggerOffer;
   },
   BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: function handleUserOfferAcknowledgedSuccess(arg0) {
     ({ userTrialOffer, userDiscount, userDiscountOffer } = arg0);
@@ -515,6 +565,8 @@ obj = {
     obj.userDiscountOffers = {};
     obj.userOffersLastFetchedAtDate = undefined;
     obj.isFetching = false;
+    obj.shouldTriggerOffer = false;
+    obj.cooldownExpirationTimestamps = { [closure_16.CHANNEL_OPENED]: 0, [closure_16.JOIN_VOICE_CHANNEL]: 0, [closure_16.PREMIUM_UPSELL_VIEWED]: 0, [closure_16.USER_PROFILE_ACTION]: 0, [closure_16.VIDEO_STREAM_ENDED]: 0 };
     obj.userOffersLastFetchedAtDate = Date.now();
     obj.isFetching = false;
     obj.lastFetchSuccessful = false;
@@ -522,12 +574,12 @@ obj = {
   BILLING_USER_OFFER_REDEEMED: function handleUserOfferRedeemed(offerId) {
     offerId = offerId.offerId;
     const keys = Object.keys(obj.userDiscountOffers);
-    if (null != keys.find((arg0) => closure_1_17.userDiscountOffers[arg0].id === offerId)) {
+    if (null != keys.find((arg0) => closure_1_19.userDiscountOffers[arg0].id === offerId)) {
       const userDiscountOffers = obj.userDiscountOffers;
       delete tmp3[tmp4];
     }
     const keys1 = Object.keys(obj.userTrialOffers);
-    if (null != keys1.find((arg0) => closure_1_17.userTrialOffers[arg0].id === offerId)) {
+    if (null != keys1.find((arg0) => closure_1_19.userTrialOffers[arg0].id === offerId)) {
       const userTrialOffers = obj.userTrialOffers;
       delete tmp[tmp2];
     }
@@ -536,11 +588,43 @@ obj = {
   BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: handlePaymentSourceChange,
   BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: handlePaymentSourceChange,
   BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: handlePaymentSourceChange,
-  LOGOUT: function handleReset() {
+  BILLING_USER_OFFER_TRIGGER_ATTEMPT: function handleUserOfferTriggerAttempt(triggerType) {
+    const result = 3600 * (1 + Math.random());
+    obj.cooldownExpirationTimestamps[triggerType.triggerType] = Date.now() + 1000 * result;
+  },
+  BILLING_USER_OFFER_TRIGGER_SUCCESS: function handleUserOfferTriggerSuccess(arg0) {
+    ({ retryAfter, userTrialOffer, userDiscountOffer } = arg0);
+    ({ triggerType, triggerSuccess } = arg0);
+    if (retryAfter === undefined) {
+      retryAfter = null;
+    }
+    if (null == retryAfter) {
+      const _Math = Math;
+      retryAfter = 3600 * (1 + Math.random());
+    }
+    obj.cooldownExpirationTimestamps[triggerType] = Date.now() + 1000 * retryAfter;
+    if (null != userTrialOffer) {
+      obj.userTrialOffers[userTrialOffer.trialId] = userTrialOffer;
+      obj.userDiscountOffers = {};
+      obj.shouldTriggerOffer = false;
+    } else if (null != userDiscountOffer) {
+      obj.userDiscountOffers[userDiscountOffer.discountId] = userDiscountOffer;
+      obj.userTrialOffers = {};
+      obj.shouldTriggerOffer = false;
+    } else if (true === triggerSuccess) {
+      obj.shouldTriggerOffer = false;
+    }
+    obj.userOffersLastFetchedAtDate = Date.now();
+    obj.isFetching = false;
+    obj.lastFetchSuccessful = true;
+  },
+  LOGOUT: function handleLogout() {
     obj.userTrialOffers = {};
     obj.userDiscountOffers = {};
     obj.userOffersLastFetchedAtDate = undefined;
     obj.isFetching = false;
+    obj.shouldTriggerOffer = false;
+    obj.cooldownExpirationTimestamps = { [closure_16.CHANNEL_OPENED]: 0, [closure_16.JOIN_VOICE_CHANNEL]: 0, [closure_16.PREMIUM_UPSELL_VIEWED]: 0, [closure_16.USER_PROFILE_ACTION]: 0, [closure_16.VIDEO_STREAM_ENDED]: 0 };
   }
 };
 const userOfferStore = new UserOfferStore(dispatcherDefault, obj);

@@ -24,8 +24,8 @@ const memoResult = importAllResult.memo((height) => {
   let obj = getNicknameDefault;
   let nickname = obj.getNickname(guildId, undefined, user);
   if (nickname == null) {
-    nickname = tmp2(4224).getGlobalName(user);
-    const tmp2Result = tmp2(4224);
+    nickname = tmp2(4288).getGlobalName(user);
+    const tmp2Result = tmp2(4288);
   }
   const hasAvatarForGuildResult = user.hasAvatarForGuild(guildId);
   obj = { style: { height: height.contentHeight }, children: null };
@@ -45,7 +45,7 @@ const memoResult = importAllResult.memo((height) => {
     const obj2 = { user: null, usernameStyle: null, hideBotTag: true };
     obj2[0] = user;
     obj2[1] = tmp.mainTag;
-    items1[1] = tmp8(tmp2(9278), obj2);
+    items1[1] = tmp8(tmp2(9346), obj2);
     obj[1] = items1;
     let tmp6Result = tmp6(tmp7, obj);
   } else {
@@ -91,7 +91,7 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
     obj[6] = trailing;
     obj[7] = accessibilityRole;
     obj[8] = accessibilityState;
-    let tmp2Result = tmp2(tmp(8118).FormRow, obj);
+    let tmp2Result = tmp2(tmp(8185).FormRow, obj);
   } else {
     obj1 = { accessibilityLabel: null, arrow: null, disabled: null, end: null, icon: null, label: null, onPress: null, start: null, subLabel: null, trailing: null, accessibilityRole: null, accessibilityState: null };
     obj1[0] = accessibilityLabel;
@@ -117,7 +117,7 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
     obj1[9] = trailing;
     obj1[10] = accessibilityRole;
     obj1[11] = accessibilityState;
-    tmp2Result = tmp2(tmp(5480).TableRow, obj1);
+    tmp2Result = tmp2(tmp(5546).TableRow, obj1);
   }
 });
 const result = require("set").fileFinishedImporting("modules/guild_settings/native/DetailedGuildIdentityUserRow.tsx");

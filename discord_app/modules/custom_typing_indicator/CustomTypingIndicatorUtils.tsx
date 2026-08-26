@@ -48,12 +48,12 @@ export const getSurpriseMeEmojiPool = function getSurpriseMeEmojiPool() {
       return mapped;
     })
   ];
-  const flattenedGuildIds = store.getFlattenedGuildIds();
+  flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
   HermesBuiltin.arraySpread(flattenedGuildIds.flatMap((arg0) => {
     usableGuildEmoji = usableGuildEmoji.getUsableGuildEmoji(arg0);
     const found = usableGuildEmoji.filter((emoji) => {
       obj = callback(table[10]);
-      obj = { emoji, channel: null, guildId: "Array", intention: true, bypassPremiumEmojiEntitlement: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==" };
+      obj = { emoji, channel: null, guildId: "Array", intention: true, bypassPremiumEmojiEntitlement: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl" };
       obj[3] = constants.TYPING_INDICATOR;
       return null == obj.getEmojiUnavailableReason(obj);
     });
@@ -75,47 +75,7 @@ export const pickRandomCustomTypingIndicatorEmojis = function pickRandomCustomTy
     } while (size < bound);
   }
   items = [...set];
-  return items.map((arg0) => items[arg0]);
-};
-export const getRandomCustomTypingIndicatorEmojis = function getRandomCustomTypingIndicatorEmojis() {
-  let size;
-  const categories = parseRawEmojiObjectDefault.getCategories();
-  items = [
-    ...categories.flatMap((name) => {
-      const byCategory = callback(table[9]).getByCategory(name);
-      let mapped;
-      if (byCategory != null) {
-        mapped = byCategory.map((name) => ({ name: name.surrogates }));
-      }
-      if (mapped == null) {
-        mapped = [];
-      }
-      return mapped;
-    })
-  ];
-  const flattenedGuildIds = store.getFlattenedGuildIds();
-  HermesBuiltin.arraySpread(flattenedGuildIds.flatMap((arg0) => {
-    usableGuildEmoji = usableGuildEmoji.getUsableGuildEmoji(arg0);
-    const found = usableGuildEmoji.filter((emoji) => {
-      obj = callback(table[10]);
-      obj = { emoji, channel: null, guildId: "Array", intention: true, bypassPremiumEmojiEntitlement: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==" };
-      obj[3] = constants.TYPING_INDICATOR;
-      return null == obj.getEmojiUnavailableReason(obj);
-    });
-    return found.map((id) => ({ id: id.id, name: id.name, animated: id.animated }));
-  }), tmp);
-  const bound = Math.min(items(1937).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT, items.length);
-  const set = new Set();
-  if (set.size < bound) {
-    do {
-      let _Math = Math;
-      let _Math2 = Math;
-      let addResult = set.add(Math.floor(Math.random() * items.length));
-      size = set.size;
-    } while (size < bound);
-  }
-  items1 = [...set];
-  return items1.map((arg0) => items[arg0]);
+  return items.map((arg0) => table[arg0]);
 };
 export const getRandomCustomTypingIndicatorAnimation = function getRandomCustomTypingIndicatorAnimation() {
   return items1[Math.floor(Math, Math.random(Math) * items1.length)];

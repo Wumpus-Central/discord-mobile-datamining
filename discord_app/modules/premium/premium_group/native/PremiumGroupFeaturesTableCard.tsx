@@ -58,7 +58,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     obj[1] = { x: 1, y: 0 };
     let obj2 = hexToRgba;
     const items = [obj2.hexWithOpacity("#8547C6", 0.15), , ];
-    const tmp2Result = tmp2(4826);
+    const tmp2Result = tmp2(4891);
     items[1] = hexToRgba.hexWithOpacity("#B845C1", 0.15);
     const obj4 = hexToRgba;
     items[2] = hexToRgba.hexWithOpacity("#AB5D8A", 0.15);
@@ -67,7 +67,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     obj[4] = tmp.premiumGroupCard;
     obj = { style: null, children: null };
     obj[0] = tmp.headerContainer;
-    const items1 = [callback(tmp2(8773), { width: 181, height: 16 }), callback(BetaPill, {})];
+    const items1 = [callback(tmp2(8841), { width: 181, height: 16 }), callback(BetaPill, {})];
     obj[1] = items1;
     const items2 = [callback2(View, obj), , ];
     obj1 = { variant: "text-sm/normal", style: null, children: null };

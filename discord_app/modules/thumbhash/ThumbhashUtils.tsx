@@ -1,6 +1,6 @@
 // discord_app/modules/thumbhash/ThumbhashUtils.tsx
 import set from "../../../_runtime/00002_set.js";
-import thumbHashToRGBA2 from "../../../_runtime/14642_thumbHashToRGBA.js";
+import thumbHashToRGBA2 from "../../../_runtime/14715_thumbHashToRGBA.js";
 
 function thumbHashToRGBA(arg0) {
   let obj = arg1;

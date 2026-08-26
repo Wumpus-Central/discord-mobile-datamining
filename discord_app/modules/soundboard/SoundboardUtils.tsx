@@ -116,7 +116,7 @@ function _maybePlayCustomJoinSound() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -200,7 +200,7 @@ function _maybePlayCustomJoinSound() {
             }
           }
           sound2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp33) {
           sound2 = tmp;
           throw tmp33;
@@ -286,8 +286,8 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
     const _Object = Object;
     const values = Object.values(guilds);
     if (!values.some((joinSound) => null != joinSound.joinSound)) {
-      const result = tmp(4224).ageEligibleForPremiumUpsell(stateFromStores);
-      const tmpResult = tmp(4224);
+      const result = tmp(4288).ageEligibleForPremiumUpsell(stateFromStores);
+      const tmpResult = tmp(4288);
       const obj5 = getPremiumPlanItemDefault;
       if (tmp9) {
         items1.push(tmp(1377).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);

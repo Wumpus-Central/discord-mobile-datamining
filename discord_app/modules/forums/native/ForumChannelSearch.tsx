@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo((channelId) => {
 const memoResult1 = importAllResult.memo((channelId) => {
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
-  let obj = channelId(12746);
+  let obj = channelId(12819);
   const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
   const tmp = callback();
   const items = [closure_5];
@@ -95,7 +95,7 @@ const memoResult1 = importAllResult.memo((channelId) => {
           const obj3 = closure_1_1(closure_1_2[10]);
         }
       };
-      obj[1] = jsx(tmp2(6101).SearchField, { size: "sm", defaultValue: null, onChange: null, placeholder: null, autoFocus: null, onClear: null, grow: false });
+      obj[1] = jsx(tmp2(6167).SearchField, { size: "sm", defaultValue: null, onChange: null, placeholder: null, autoFocus: null, onClear: null, grow: false });
       tmp6Result = tmp6(View, obj);
       const tmp7 = View;
     }

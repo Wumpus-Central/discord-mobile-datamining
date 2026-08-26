@@ -168,7 +168,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
   callback = obj1.useCallback(() => {
     ({ tagName, emoji, moderated } = ref.current);
     if ("" !== tagName) {
-      const obj3 = tag(8563);
+      const obj3 = tag(8631);
       if (closure_3) {
         let obj = { name: null, emojiId: null, emojiName: null, moderated: null };
         obj[0] = tagName;
@@ -231,7 +231,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
     style: tmp.emojiIconWrapper,
     accessibilityRole: "button",
     onPress() {
-      let obj = channelId(8784);
+      let obj = channelId(8852);
       obj = { onPressEmoji: handlePressEmoji, pickerIntention: flag.COMMUNITY_CONTENT, channel: closure_11 };
       const result = obj.openEmojiPickerActionSheet(obj);
     },
@@ -257,22 +257,22 @@ export default function ChannelSettingsEditForumTag(channelId) {
           usableCustomEmojiById(null);
           callback("");
         };
-        obj5[2] = tmp27(tmp3(6105).CircleXIcon, { size: "xs" });
-        let tmp27Result = tmp27(tmp3(4949).PressableOpacity, obj5);
+        obj5[2] = tmp27(tmp3(6171).CircleXIcon, { size: "xs" });
+        let tmp27Result = tmp27(tmp3(5015).PressableOpacity, obj5);
       } else {
         tmp27Result = null;
       }
       const obj6 = { children: null };
       const obj7 = { hasIcons: true, children: null };
       obj3[2] = tmp27Result;
-      obj7[1] = tmp27(tmp3(5480).TableRow, obj3);
-      const items6 = [tmp27(tmp3(5873).TableRowGroup, obj7), ];
+      obj7[1] = tmp27(tmp3(5546).TableRow, obj3);
+      const items6 = [tmp27(tmp3(5939).TableRowGroup, obj7), ];
       const obj8 = { style: null, children: null };
       obj8[0] = tmp.hint;
       const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
       let intl2 = tmp3(1236).intl;
       obj9[2] = intl2.string(tmp3(1236).t["3v8kZH"]);
-      obj8[1] = tmp27(tmp3(4376).Text, obj9);
+      obj8[1] = tmp27(tmp3(4440).Text, obj9);
       items6[1] = tmp27(tmp28, obj8);
       obj6[0] = items6;
       const items7 = [tmp29(tmp28, obj6), , ];
@@ -296,8 +296,8 @@ export default function ChannelSettingsEditForumTag(channelId) {
         }
         closure_10(tmp2);
       };
-      obj11[1] = tmp27(tmp3(5874).TableSwitchRow, obj10);
-      items7[1] = tmp27(tmp3(5873).TableRowGroup, obj11);
+      obj11[1] = tmp27(tmp3(5940).TableSwitchRow, obj10);
+      items7[1] = tmp27(tmp3(5939).TableRowGroup, obj11);
       tmp27Result = null;
       if (!tmp2) {
         const obj12 = { hasIcons: false, children: null };
@@ -305,7 +305,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
         let intl4 = tmp3(1236).intl;
         obj13[1] = intl4.string(tmp3(1236).t.huYSMr);
         obj13[2] = function onPress() {
-          let obj = tag(4745);
+          let obj = tag(4809);
           obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
           const intl = channelId(1236).intl;
           obj[0] = intl.string(channelId(1236).t.huYSMr);
@@ -324,12 +324,12 @@ export default function ChannelSettingsEditForumTag(channelId) {
           };
           obj.show(obj);
         };
-        obj12[1] = tmp27(tmp3(5480).TableRow, obj13);
-        tmp27Result = tmp27(tmp3(5873).TableRowGroup, obj12);
+        obj12[1] = tmp27(tmp3(5546).TableRow, obj13);
+        tmp27Result = tmp27(tmp3(5939).TableRowGroup, obj12);
       }
       items7[2] = tmp27Result;
       obj1[2] = items7;
-      obj[1] = tmp29(tmp3(4813).Stack, obj1);
+      obj[1] = tmp29(tmp3(4877).Stack, obj1);
       return tmp27(tmp28, obj);
     }
     const obj14 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
@@ -351,9 +351,9 @@ export default function ChannelSettingsEditForumTag(channelId) {
       str2 = "";
     }
     obj14[3] = str2;
-    tmp27Result1 = tmp27(tag(5466), obj14);
+    tmp27Result1 = tmp27(tag(5532), obj14);
     tmp31 = tag;
-    const tmp32 = tag(5466);
+    const tmp32 = tag(5532);
   }
-  tmp27Result1 = tmp27(tmp3(7800).ReactionIcon, {});
+  tmp27Result1 = tmp27(tmp3(7867).ReactionIcon, {});
 };

@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx
 import useStageParticipants from "../../../../../stage_channels/StageChannelParticipantStoreHooks.tsx";
-import _modDef16010 from "../../../../../main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx";
+import _modDef16091 from "../../../../../main_tabs_v2/native/shared_components/guild_channels/VoiceOrStageSummaryRow.tsx";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../../stage_channels/StageInstanceStore.tsx";
@@ -287,7 +287,7 @@ function GuildVoiceChannelExtras(arg0) {
     obj[2] = channel.guild_id;
     obj[3] = closure_6;
     obj[4] = tmp4;
-    obj[1] = tmp5(_modDef16010, obj);
+    obj[1] = tmp5(_modDef16091, obj);
     tmp5Result = tmp5(tmp6, obj);
   }
   obj[1] = tmp5Result;
@@ -315,12 +315,12 @@ const memoResult = importAllResult.memo(function GuildVoiceChannelRow(channel) {
     obj = { channel: null, voiceStates: null };
     obj[0] = channel;
     obj[1] = voiceStates;
-    obj[1] = tmp4(channel(11858).VocalChannelJoinButton, obj);
+    obj[1] = tmp4(channel(11931).VocalChannelJoinButton, obj);
     trailing = tmp4(View, obj);
   }
   obj[4] = trailing;
   obj[5] = <GuildVoiceChannelExtras channel={channel} voiceStates={voiceStates} users={mapped} />;
-  return jsx(onPress(16012), { onPress: callback, voiceStates, channel, subtitle: null, trailing: null, extras: null });
+  return jsx(onPress(16093), { onPress: callback, voiceStates, channel, subtitle: null, trailing: null, extras: null });
 });
 const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx");
 

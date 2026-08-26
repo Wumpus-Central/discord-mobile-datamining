@@ -100,7 +100,7 @@ const result = set.fileFinishedImporting("modules/user_settings/profiles/native/
 
 export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   availableGuilds = availableGuilds.availableGuilds;
-  ({ userPrimaryGuild: importDefault, onSelectGuild: dependencyMap } = availableGuilds);
+  ({ selectedGuildId: importDefault, onSelectGuild: dependencyMap } = availableGuilds);
   importAllResult = undefined;
   let memo;
   const tmp = callback2();
@@ -116,9 +116,9 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   const intl = availableGuilds(1236).intl;
   obj[3] = intl.string(availableGuilds(1236).t.Fo0g9x);
-  obj[1] = callback(availableGuilds(4376).Text, obj);
+  obj[1] = callback(availableGuilds(4440).Text, obj);
   obj[2] = callback(memo, obj);
-  obj[3] = callback(availableGuilds(7890).BottomSheetFlashList, {
+  obj[3] = callback(availableGuilds(7957).BottomSheetFlashList, {
     ItemSeparatorComponent() {
       return closure_1_6(availableGuilds(closure_1_2[18]).FormDivider, { iconPush: true, style: divider.divider });
     },
@@ -134,18 +134,21 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
     renderItem(arg0) {
       ({ item, index } = arg0);
       const obj = { start: 0 === index, end: index === memo.length - 1, item, selected: null, onSelectGuild: null };
+      let tmp3 = closure_1;
+      if (closure_1 == null) {
+        tmp3 = null;
+      }
       let id;
-      if (id != null) {
-        id = id.id;
-      }
-      let id1;
       if (item != null) {
-        id1 = item.id;
+        id = item.id;
       }
-      obj[3] = id === id1;
+      if (id == null) {
+        id = null;
+      }
+      obj[3] = tmp3 === id;
       obj[4] = closure_2;
       return closure_1_6(closure_1_9, obj);
     }
   });
-  return callback(availableGuilds(5503).BottomSheet, obj);
+  return callback(availableGuilds(5569).BottomSheet, obj);
 };

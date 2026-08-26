@@ -31,7 +31,7 @@ export const useHasXboxMonthlyOrbsPerk = function useHasXboxMonthlyOrbsPerk() {
   const obj = initialize;
   let flag = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {
-    let tmpResult = tmp(4043);
+    let tmpResult = tmp(4107);
     flag = false;
     if (!tmpResult.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2)) {
       tmpResult = tmp(1942);

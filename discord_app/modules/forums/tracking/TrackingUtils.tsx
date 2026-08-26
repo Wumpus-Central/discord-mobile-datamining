@@ -59,11 +59,11 @@ function collectForumAnalyticsMetadata(sessionId) {
       const obj3 = setFilterTagIdsDefault;
       obj[7] = setFilterTagIdsDefault.getSortOrderAnalytics(channel.id);
       if (sessionId == null) {
-        let tmp8Result = tmp8(7374);
+        let tmp8Result = tmp8(7440);
         sessionId = tmp8Result.getForumChannelSessionId(channel.id);
       }
       obj[8] = sessionId;
-      tmp8Result = tmp8(7375);
+      tmp8Result = tmp8(7441);
       obj[9] = tmp8Result.getLayoutAnalytics(channel.id);
       obj[10] = channel.defaultSortOrder;
       const obj4 = setFilterTagIdsDefault;
@@ -245,14 +245,14 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
           }
           obj.forum_post_applied_tag_ids = items;
           obj.forum_post_is_pinned = channel.hasFlag(ChannelFlags.PINNED);
-          let tmp8Result = tmp8(7376);
+          let tmp8Result = tmp8(7442);
           const readStateSnapshotAnalytics = tmp8Result.getReadStateSnapshotAnalytics(channel.id);
           let isNew;
           if (readStateSnapshotAnalytics != null) {
             isNew = readStateSnapshotAnalytics.isNew;
           }
           obj.forum_post_is_new = isNew;
-          tmp8Result = tmp8(7376);
+          tmp8Result = tmp8(7442);
           const readStateSnapshotAnalytics1 = tmp8Result.getReadStateSnapshotAnalytics(channel.id);
           let hasUnreads;
           if (readStateSnapshotAnalytics1 != null) {

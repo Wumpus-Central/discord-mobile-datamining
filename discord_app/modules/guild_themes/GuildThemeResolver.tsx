@@ -278,7 +278,7 @@ export const getActiveGuildThemeForGuildId = function getActiveGuildThemeForGuil
         const features = guild.features;
         if (features.has(GuildFeatures.GUILD_THEME)) {
           const guildThemeSourcePreference = closure_3.resolveGuildThemeSourcePreference(guildId);
-          if (guildThemeSourcePreference === tmp8(4311).GuildThemeSourcePreference.PERSONAL) {
+          if (guildThemeSourcePreference === tmp8(4375).GuildThemeSourcePreference.PERSONAL) {
             return null;
           } else {
             let guildTheme = store2.getGuildThemeSnapshot(guildId);
@@ -310,7 +310,7 @@ export const getActiveGuildTheme = function getActiveGuildTheme() {
         if (features.has(GuildFeatures.GUILD_THEME)) {
           const guildThemeSourcePreference = closure_3.resolveGuildThemeSourcePreference(guildId);
           tmp11Result = null;
-          if (guildThemeSourcePreference !== tmp3(4311).GuildThemeSourcePreference.PERSONAL) {
+          if (guildThemeSourcePreference !== tmp3(4375).GuildThemeSourcePreference.PERSONAL) {
             let guildTheme = store2.getGuildThemeSnapshot(guildId);
             if (undefined === guildTheme) {
               guildTheme = guild.guildTheme;

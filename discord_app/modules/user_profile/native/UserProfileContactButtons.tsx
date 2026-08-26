@@ -34,18 +34,18 @@ function FriendRequestButton(user) {
   let stateFromStores;
   closure_4 = undefined;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  let obj = user(8935);
+  let obj = user(9003);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(5834)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(5900)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(12545);
+  let tmp3Result = tmp3(12616);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(589);
   const items = [closure_4];
   stateFromStores = tmp3Result.useStateFromStores(items, () => relationshipType.getRelationshipType(user.id));
-  closure_4 = trackUserProfileAction(4224).useName(user);
+  closure_4 = trackUserProfileAction(4288).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== tmp5.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -54,9 +54,9 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(12723).UserClockIcon;
+          let UserPlusIcon = tmp3(12796).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4317).UserPlusIcon;
+          UserPlusIcon = tmp3(4381).UserPlusIcon;
         }
         const intl = tmp3(1236).intl;
         const string = intl.string;
@@ -86,11 +86,11 @@ function FriendRequestButton(user) {
               callback({ action: "CANCEL_FRIEND_REQUEST" });
               closure_1_1(closure_1_2[17]).cancelFriendRequest(id.id, closure_2);
             };
-            const result = user(12178).confirmCancelFriendRequest(obj);
-            const obj3 = user(12178);
+            const result = user(12251).confirmCancelFriendRequest(obj);
+            const obj3 = user(12251);
           } else {
             trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
-            obj = trackUserProfileAction(9391);
+            obj = trackUserProfileAction(9459);
             obj = { userId: null, context: null };
             obj[0] = user.id;
             obj[1] = dependencyMap;
@@ -132,7 +132,7 @@ export default function UserProfileContactButtons(user) {
   const tmp6 = trackUserProfileAction(fn[22])(user.id, false, () => {
     trackUserProfileAction({ action: "VOICE_CALL" });
     trackUserProfileAction(fn[18])();
-    trackUserProfileAction(fn[19]).hideActionSheet();
+    trackUserProfileAction(fn[19]).hideAllActionSheets();
   });
   fn = tmp6.handlePress;
   ({ text, inCall, accessibilityHint } = tmp6);
@@ -146,7 +146,7 @@ export default function UserProfileContactButtons(user) {
     trackUserProfileAction({ action: "SEND_MESSAGE" });
     trackUserProfileAction(fn[18])();
     let obj = trackUserProfileAction(fn[19]);
-    obj.hideActionSheet();
+    obj.hideAllActionSheets();
     trackUserProfileAction(fn[20]).popAll();
     const obj2 = trackUserProfileAction(fn[20]);
     obj = { recipientIds: user.id };

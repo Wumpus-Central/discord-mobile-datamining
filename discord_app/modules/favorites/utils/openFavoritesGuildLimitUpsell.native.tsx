@@ -9,6 +9,6 @@ const result = set.fileFinishedImporting("modules/favorites/utils/openFavoritesG
 export default function openFavoritesGuildLimitUpsell(limit) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { limit, variant: "limit_reached", source: "limit_reached" };
-  obj.openLazy(asyncRequireImpl(9864, dependencyMap.paths), FavoritesGuildUpsellSheet, obj);
+  obj.openLazy(asyncRequireImpl(9931, dependencyMap.paths), FavoritesGuildUpsellSheet, obj);
 };
 export const FAVORITES_UPSELL_SHEET_KEY = "FavoritesGuildUpsellSheet";

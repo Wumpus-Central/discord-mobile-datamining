@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/shared/CircleWithCutout.tsx
-import inlineStyles from "../../../../../_runtime/07985_inlineStyles.js";
-import inlineStylesDefault from "../../../../../_runtime/07985_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08052_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/08052_inlineStyles.js";
 import CircleWithCutout from "CircleWithCutoutUtils.tsx";
 import { PixelRatio } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";

@@ -1,7 +1,7 @@
 // discord_app/utils/web/KeyboardLayoutMapUtils.tsx
 import timestampDefault from "../../modules/debug/Logger.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import keyCodeDefault from "../../../_runtime/13368_keyCode.js";
+import keyCodeDefault from "../../../_runtime/13441_keyCode.js";
 import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../stores/DeveloperOptionsStore.tsx";
@@ -40,7 +40,7 @@ function _syncKeyboardLayoutMap() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -183,7 +183,7 @@ function getKeyboardMapper() {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -232,7 +232,7 @@ function getKeyboardMapper() {
                 });
                 callback();
                 c4 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp17) {
               c4 = tmp;
@@ -272,7 +272,7 @@ function _resetKeyboardMapper() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -308,7 +308,7 @@ function _resetKeyboardMapper() {
             obj.reset();
           }
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp10) {
         c2 = tmp;
@@ -355,7 +355,7 @@ function reverseLookupCodeFromKey(toLocaleLowerCase) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -404,7 +404,7 @@ function reverseLookupCodeFromKey(toLocaleLowerCase) {
                   });
                   callback();
                   c4 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp17) {
                 c4 = tmp;
@@ -466,7 +466,7 @@ function getExactKeyboardEventMatchFromAny(key) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -515,7 +515,7 @@ function getExactKeyboardEventMatchFromAny(key) {
                   });
                   callback();
                   c4 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp17) {
                 c4 = tmp;
@@ -582,7 +582,7 @@ function initializeKeyboardMapper() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -631,7 +631,7 @@ function initializeKeyboardMapper() {
               });
               callback();
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp17) {
             c4 = tmp;
@@ -1309,7 +1309,7 @@ export const getLayoutMap = function getLayoutMap() {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -1358,7 +1358,7 @@ export const getLayoutMap = function getLayoutMap() {
                   });
                   callback();
                   c4 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp17) {
                 c4 = tmp;
@@ -1419,7 +1419,7 @@ export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAn
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -1468,7 +1468,7 @@ export const getKeyboardEventShapeFromAny = function getKeyboardEventShapeFromAn
                   });
                   callback();
                   c4 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp17) {
                 c4 = tmp;

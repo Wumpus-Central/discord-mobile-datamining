@@ -22,11 +22,11 @@ export default function useEntryActivityAndApplication(extra) {
     application_id1 = extra.extra.application_id;
   }
   items1[1] = application_id1;
-  const tmp7 = callback(first(5840)(items1), 2);
+  const tmp7 = callback(first(5906)(items1), 2);
   first = tmp7[0];
   obj = { activity: stateFromStores, embeddedActivity: null, anyMatchingApplication: null, activityApplication: null, fallbackApplication: null };
   const tmp = _require;
-  const tmp4 = first(5840);
+  const tmp4 = first(5906);
   const items2 = [closure_4];
   obj[1] = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let id;

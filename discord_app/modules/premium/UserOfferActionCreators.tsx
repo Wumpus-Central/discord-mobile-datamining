@@ -1,12 +1,28 @@
 // discord_app/modules/premium/UserOfferActionCreators.tsx
+import set from "../../utils/PlatformUtils.tsx";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import dispatcherDefault from "../../Dispatcher.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../user_offers/records/UserDiscountOfferRecord.tsx";
 import closure_5 from "../user_offers/records/UserTrialOfferRecord.tsx";
-import { PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID as closure_6 } from "PremiumConstants.tsx";
+import closure_6 from "../../stores/billing/UserOfferStore.tsx";
+import { PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID as closure_7 } from "PremiumConstants.tsx";
 import ME from "../../Constants.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
 
 require = arg1;
+function getPaymentGateway() {
+  if (obj.isAndroid()) {
+    let GOOGLE = constants2.GOOGLE;
+  } else {
+    GOOGLE = null;
+    if (tmpResult.isIOS()) {
+      GOOGLE = constants2.APPLE;
+    }
+    tmpResult = set;
+  }
+  return GOOGLE;
+}
 function _fetchUserOffer() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -15,12 +31,12 @@ function _fetchUserOffer() {
     closure_2 = arg2;
     closure_3 = arg3;
     closure_4 = arg4;
-    c11 = 0;
     c12 = 0;
-    c10 = 0;
+    c13 = 0;
+    c11 = 0;
     const iter = (function*(arg0) {
-      if (c12 === 2) {
-        c12 = 3;
+      if (c13 === 2) {
+        c13 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       } else {
         throwTypeErrorResult = arg1;
@@ -36,23 +52,23 @@ function _fetchUserOffer() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
-            c12 = 2;
-            if (0 === discount_id) {
+            c13 = 2;
+            if (0 === c12) {
               if (arg0 === 1) {
-                c12 = 3;
+                c13 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
-                c12 = 3;
+                c13 = 3;
                 obj = { value: null, done: true };
                 obj[0] = arg1;
                 return obj;
               } else {
-                let obj4 = tmp3;
-                let constants = tmp7;
+                closure_9 = tmp3;
+                let obj4 = tmp7;
                 let flag;
                 obj1 = undefined;
                 let retries;
@@ -68,120 +84,112 @@ function _fetchUserOffer() {
                 throwTypeErrorResult = closure_4;
                 let offerId;
                 c6 = undefined;
-                constants = undefined;
+                c7 = undefined;
                 obj4 = undefined;
                 closure_9 = undefined;
                 let trial_id;
-                discount_id = undefined;
+                let v0;
                 c12 = undefined;
-                error = undefined;
-                discount_id = 1;
+                c13 = undefined;
                 c12 = 1;
+                c13 = 1;
                 return { value: "ct", done: true };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {
-                c12 = 3;
+                c13 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
-                c12 = 3;
+                c13 = 3;
                 let obj2 = { value: null, done: true };
                 obj2[0] = arg1;
                 return obj2;
               } else {
-                throwTypeErrorResult = constants;
+                throwTypeErrorResult = obj4;
                 throwTypeErrorResult = flag;
                 if (flag) {
-                  let obj10 = flag(obj1[6]);
+                  let obj10 = flag(obj1[7]);
                   obj10.dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
-                  trial_id = 1;
+                  v0 = 1;
                   if (null != callback) {
-                    let obj11 = flag(obj1[7]);
+                    let obj11 = flag(obj1[8]);
                     let obj3 = { call_location: null };
                     obj3[0] = callback;
-                    obj11.track(constants.FETCH_USER_OFFER_STARTED, obj3);
+                    obj11.track(obj4.FETCH_USER_OFFER_STARTED, obj3);
                   }
                   offerId = obj1.offerId;
                   c6 = obj1.paymentGatewayOverride;
+                  throwTypeErrorResult = c6;
                   if (undefined !== c6) {
-                    throwTypeErrorResult = constants;
-                    let tmp99 = closure_1_6;
-                  } else {
-                    tmp99 = (function getPaymentGateway() {
-                      if (obj.isAndroid()) {
-                        let GOOGLE = constants.GOOGLE;
-                      } else {
-                        GOOGLE = null;
-                        if (tmpResult.isIOS()) {
-                          GOOGLE = constants.APPLE;
-                        }
-                        tmpResult = callback(obj1[5]);
-                      }
-                      return GOOGLE;
-                    })();
-                  }
-                  throwTypeErrorResult = constants;
-                  closure_7 = tmp99;
-                  throwTypeErrorResult = closure_7;
-                  if (null == closure_7) {
-                    throwTypeErrorResult = constants;
-                    throwTypeErrorResult = closure_1_5;
-                    if (null == closure_1_5) {
-                      obj4 = {};
-                    }
-                    throwTypeErrorResult = constants;
                     throwTypeErrorResult = obj4;
+                    throwTypeErrorResult = c6;
+                  } else {
+                    throwTypeErrorResult = closure_9;
+                    throwTypeErrorResult = v0;
+                    throwTypeErrorResult = v0();
+                  }
+                  throwTypeErrorResult = obj4;
+                  c7 = throwTypeErrorResult;
+                  throwTypeErrorResult = c7;
+                  if (null == c7) {
+                    throwTypeErrorResult = obj4;
+                    throwTypeErrorResult = offerId;
+                    if (null == offerId) {
+                      obj4 = { allow_triggers: false };
+                    }
+                    throwTypeErrorResult = obj4;
+                    throwTypeErrorResult = closure_9;
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = obj1;
-                    const HTTP = callback(obj1[8]).HTTP;
+                    const HTTP = callback(obj1[9]).HTTP;
                     let obj5 = { url: null, body: null, rejectWithError: true, retries: null };
-                    throwTypeErrorResult = obj4;
-                    obj5[0] = obj4.USER_OFFER;
+                    throwTypeErrorResult = closure_9;
+                    obj5[0] = closure_9.USER_OFFER;
                     throwTypeErrorResult = obj4;
                     obj5[1] = obj4;
                     throwTypeErrorResult = retries;
                     throwTypeErrorResult = undefined;
                     if (null != retries) {
-                      throwTypeErrorResult = constants;
+                      throwTypeErrorResult = obj4;
                       throwTypeErrorResult = retries;
                       throwTypeErrorResult = retries.retries;
                     }
                     obj5[3] = throwTypeErrorResult;
-                    discount_id = 3;
-                    c12 = 1;
+                    c12 = 3;
+                    c13 = 1;
                     const obj6 = { value: null, done: false };
                     obj6[0] = HTTP.post(obj5);
                     return obj6;
                   }
-                  throwTypeErrorResult = constants;
-                  const obj7 = { payment_gateway: null, offer_id: null };
-                  throwTypeErrorResult = constants;
-                  obj7[0] = constants;
+                  throwTypeErrorResult = obj4;
+                  const obj7 = { payment_gateway: null, offer_id: null, allow_triggers: false };
+                  throwTypeErrorResult = c7;
+                  obj7[0] = c7;
                   throwTypeErrorResult = offerId;
                   obj7[1] = offerId;
                   obj4 = obj7;
                 } else {
-                  c12 = 3;
+                  c13 = 3;
                   return { value: false, done: true };
                 }
               }
             } else if (2 === tmp7) {
-              trial_id = 0;
-              let obj9 = flag(obj1[6]);
+              v0 = 0;
+              let obj9 = flag(obj1[7]);
               obj9.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
-              c12 = 3;
+              c13 = 3;
               return { value: false, done: true };
             } else if (arg0 === 1) {
-              c12 = 3;
+              c13 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              trial_id = 0;
-              c12 = 3;
+              v0 = 0;
+              c13 = 3;
               const obj8 = { value: null, done: true };
               obj8[0] = arg1;
               return obj8;
             } else {
-              throwTypeErrorResult = constants;
+              throwTypeErrorResult = obj4;
               closure_9 = arg1;
               throwTypeErrorResult = closure_9;
               const user_trial_offer = closure_9.body.user_trial_offer;
@@ -195,44 +203,45 @@ function _fetchUserOffer() {
               if (user_discount_offer == null) {
                 c6 = null;
               }
-              discount_id = c6;
+              v0 = c6;
               trial_id = undefined;
               if (trial_id != null) {
                 trial_id = trial_id.trial_id;
               }
-              let tmp16 = trial_id === c6;
+              let tmp16 = trial_id === c7;
               if (tmp16) {
-                obj = callback(obj1[9]);
-                tmp16 = !obj.isAndroidTwoWeekTrialsExperimentEnabled({ location: "user_offer_action_creators" });
+                obj = callback(obj1[10]);
+                tmp16 = !obj.isTwoWeekTrialOfferIngestAllowed({ location: "user_offer_action_creators" });
               }
               c12 = tmp16;
               if (null != offerId) {
-                if (null != discount_id) {
-                  if (discount_id.discount_id !== offerId) {
+                if (null != v0) {
+                  if (v0.discount_id !== offerId) {
                     const _Error = Error;
                     error = new Error("Returned user discount offer does not match offer ID request parameter");
-                    obj5 = flag(obj1[10]);
+                    c13 = error;
+                    obj5 = flag(obj1[11]);
                     obj9 = { extra: null };
                     obj10 = { offer_id: null, user_discount_offer: null };
                     obj10[0] = offerId;
-                    obj10[1] = discount_id;
+                    obj10[1] = v0;
                     obj9[0] = obj10;
                     const merged = Object.assign(closure_4);
-                    obj5.captureException(error, obj9);
-                    throw error;
+                    obj5.captureException(c13, obj9);
+                    throw c13;
                   }
                 }
               }
               let result = null == trial_id;
               if (result) {
-                obj1 = callback(obj1[11]);
-                result = obj1.UNSAFE_isDismissibleContentDismissed(callback(obj1[12]).DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING);
+                obj1 = callback(obj1[12]);
+                result = obj1.UNSAFE_isDismissibleContentDismissed(callback(obj1[13]).DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING);
               }
               if (result) {
-                obj2 = callback(obj1[13]);
-                const result1 = obj2.removeDismissedContent(callback(obj1[12]).DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING);
+                obj2 = callback(obj1[14]);
+                const result1 = obj2.removeDismissedContent(callback(obj1[13]).DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING);
               }
-              obj3 = flag(obj1[6]);
+              obj3 = flag(obj1[7]);
               let fromServer = null;
               if (!c12) {
                 fromServer = null;
@@ -240,27 +249,33 @@ function _fetchUserOffer() {
                   fromServer = offerId.createFromServer(trial_id);
                 }
               }
-              obj11 = { type: "BILLING_USER_OFFER_FETCH_SUCCESS", userTrialOffer: null, userDiscountOffer: null };
+              obj11 = { type: "BILLING_USER_OFFER_FETCH_SUCCESS", userTrialOffer: null, userDiscountOffer: null, shouldTriggerOffer: null };
               obj11[1] = fromServer;
               let fromServer1 = null;
-              if (null != discount_id) {
-                fromServer1 = closure_4.createFromServer(discount_id);
+              if (null != v0) {
+                fromServer1 = closure_4.createFromServer(v0);
               }
               obj11[2] = fromServer1;
+              const should_trigger_offer = closure_9.body.should_trigger_offer;
+              c7 = should_trigger_offer;
+              if (should_trigger_offer == null) {
+                c7 = null;
+              }
+              obj11[3] = c7;
               obj3.dispatch(obj11);
-              trial_id = 0;
-              c12 = 3;
+              v0 = 0;
+              c13 = 3;
               return { value: true, done: true };
             }
           } catch (throwTypeErrorResult) {
-            closure_9 = throwTypeErrorResult;
-            throwTypeErrorResult = trial_id;
-            if (tmp4 === trial_id) {
+            trial_id = throwTypeErrorResult;
+            throwTypeErrorResult = v0;
+            if (tmp4 === v0) {
               throwTypeErrorResult = tmp2;
-              c12 = tmp2;
+              c13 = tmp2;
               throw throwTypeErrorResult;
             } else {
-              discount_id = throwTypeErrorResult;
+              c12 = throwTypeErrorResult;
             }
           }
         }
@@ -269,7 +284,7 @@ function _fetchUserOffer() {
     iter.next();
     return iter;
   });
-  closure_10 = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -282,11 +297,11 @@ function _fetchExistingChurnDiscountOffer() {
   const self = this;
   const tmp = callback(function*() {
     dependencyMap = tmp3;
-    closure_1_1(closure_1_2[6]).dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
+    closure_1_1(closure_1_2[7]).dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
     c4 = 1;
-    const HTTP = closure_1_0(closure_1_2[8]).HTTP;
+    const HTTP = closure_1_0(closure_1_2[9]).HTTP;
     obj1 = { url: null, rejectWithError: true };
-    obj1[0] = closure_1_8.CHURN_USER_OFFER;
+    obj1[0] = closure_1_9.CHURN_USER_OFFER;
     yield HTTP.get(obj1);
     c4 = 0;
     let obj5 = fromServer(709);
@@ -310,7 +325,7 @@ function _fetchExistingChurnDiscountOffer() {
     c4 = 0;
     return obj5;
   });
-  closure_11 = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -325,9 +340,9 @@ function _fetchChurnDiscountOffer() {
     const table = tmp3;
     closure_0 = null;
     c4 = 1;
-    const HTTP = closure_1_0(closure_1_2[8]).HTTP;
+    const HTTP = closure_1_0(closure_1_2[9]).HTTP;
     obj1 = { url: null, rejectWithError: true };
-    obj1[0] = closure_1_8.CHURN_USER_OFFER;
+    obj1[0] = closure_1_9.CHURN_USER_OFFER;
     yield HTTP.post(obj1);
     if (1 === tmp7) {
       c4 = 0;
@@ -344,7 +359,7 @@ function _fetchChurnDiscountOffer() {
       const callback = closure_0;
       if (null != callback) {
         closure_0 = c4.createFromServer(callback);
-        const obj = callback(table[6]);
+        const obj = callback(table[7]);
         const obj3 = { type: "BILLING_USER_OFFER_FETCH_SUCCESS", userDiscountOffer: null };
         obj3[1] = closure_0;
         obj.dispatch(obj3);
@@ -354,7 +369,7 @@ function _fetchChurnDiscountOffer() {
     c4 = 0;
     return arg1;
   });
-  closure_12 = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -363,7 +378,7 @@ function _fetchChurnDiscountOffer() {
   }
   return applyArgumentsResult;
 }
-({ AnalyticEvents: error, Endpoints: closure_8, PaymentGateways: c9 } = ME);
+({ AnalyticEvents: closure_8, Endpoints: c9, PaymentGateways: c10 } = ME);
 let result = require("set").fileFinishedImporting("modules/premium/UserOfferActionCreators.tsx");
 
 export const fetchUserOffer = function fetchUserOffer(MobilePremiumOfferManager, arg1, arg2) {
@@ -448,4 +463,70 @@ export const acknowledgeUserOffer = function acknowledgeUserOffer(expiresAt, has
       const obj = callback(709);
     }
   });
+};
+export const triggerUserOffer = function triggerUserOffer(arg0, arg1, arg2) {
+  let _JSON = arg0;
+  const _require = arg0;
+  let obj = closure_6;
+  if (closure_6.canTriggerUserOffer(arg0)) {
+    let then = dependencyMap;
+    obj1 = dispatcherDefault;
+    obj = { type: "BILLING_USER_OFFER_TRIGGER_ATTEMPT", triggerType: null };
+    obj[1] = _JSON;
+    obj1.dispatch(obj);
+    let tmp5;
+    if (arg2 != null) {
+      tmp5 = arg2();
+    }
+    let postResult = _require;
+    if (obj4.isAndroid()) {
+      let GOOGLE = constants2.GOOGLE;
+    } else {
+      GOOGLE = null;
+      if (postResultResult.isIOS()) {
+        GOOGLE = constants2.APPLE;
+      }
+      postResultResult = postResult(500);
+    }
+    obj = { payment_gateway: null, trigger_type: null, trigger_location_stack: null, trigger_metadata: null, trigger_uptime_app: null };
+    obj[0] = GOOGLE;
+    obj[1] = _JSON;
+    obj[2] = arg1;
+    _JSON = JSON;
+    obj[3] = JSON.stringify(tmp5);
+    obj[4] = obj.getUptimeForTrigger();
+    const HTTP = postResult(530).HTTP;
+    obj1 = { url: null, body: null, rejectWithError: true };
+    obj1[0] = constants.USER_OFFER_TRIGGER;
+    obj1[1] = obj;
+    postResult = HTTP.post(obj1);
+    then = postResult.then;
+    then((body) => {
+      body = body.body;
+      const offer = body.offer;
+      let user_trial_offer;
+      if (offer != null) {
+        user_trial_offer = offer.user_trial_offer;
+      }
+      const offer2 = body.offer;
+      let user_discount_offer;
+      if (offer2 != null) {
+        user_discount_offer = offer2.user_discount_offer;
+      }
+      let obj = closure_1_1(closure_1_2[7]);
+      obj = { type: "BILLING_USER_OFFER_TRIGGER_SUCCESS", triggerType: closure_0, retryAfter: body.retry_after, triggerSuccess: body.trigger_success, userTrialOffer: null, userDiscountOffer: null };
+      let fromServer = null;
+      if (null != user_trial_offer) {
+        fromServer = closure_1_5.createFromServer(user_trial_offer);
+      }
+      obj[4] = fromServer;
+      let fromServer1 = null;
+      if (null != user_discount_offer) {
+        fromServer1 = closure_1_4.createFromServer(user_discount_offer);
+      }
+      obj[5] = fromServer1;
+      obj.dispatch(obj);
+    });
+    obj4 = set;
+  }
 };

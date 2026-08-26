@@ -63,7 +63,7 @@ export default function ThrottledButton(throttleMs) {
       }, closure_0);
     }
   };
-  return jsx(onPressOut(4815).Button, {});
+  return jsx(onPressOut(4879).Button, {});
 };
 export const useThrottledActionHandler = function useThrottledActionHandler() {
   let num = arg0;

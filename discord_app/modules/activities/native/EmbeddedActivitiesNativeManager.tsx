@@ -5,8 +5,8 @@ import ComponentDispatcher from "../../../utils/ComponentDispatchUtils.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
 import dispatcherDefault2 from "../../toast/native/ToastActionCreators.tsx";
-import _modDef4745 from "../../../actions/native/AlertActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/10028_registerAsset.js";
+import _modDef4809 from "../../../actions/native/AlertActionCreators.tsx";
+import registerAssetDefault from "../../../../_runtime/10095_registerAsset.js";
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import getShelfItemTrackingPropertiesDefault from "../EmbeddedActivitiesManager.tsx";
 import NativeModulesDefault from "../../device/ThermalUtils.native.tsx";
@@ -18,7 +18,7 @@ import closure_6 from "../EmbeddedActivitiesStore.tsx";
 import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "../Constants.tsx";
 import ME from "../../../Constants.tsx";
 import { TransportTypes } from "../../rpc/Constants.tsx";
-import WebView from "../../../../_runtime/07955_WebView.js";
+import WebView from "../../../../_runtime/08022_WebView.js";
 import set from "../../../utils/PlatformUtils.tsx";
 
 require = arg1;
@@ -257,7 +257,7 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
 const prototype = EmbeddedActivitiesNativeManager.prototype;
 prototype["showErrorModal"] = function showErrorModal(reason, id) {
   ({ code, message } = reason);
-  let obj = _modDef4745;
+  let obj = _modDef4809;
   obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.formatToPlainString(getSystemLocale.t.hbiAO6, { code });
@@ -265,7 +265,7 @@ prototype["showErrorModal"] = function showErrorModal(reason, id) {
   obj.show(obj);
 };
 prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
-  let obj = _modDef4745;
+  let obj = _modDef4809;
   obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.PtobXW);

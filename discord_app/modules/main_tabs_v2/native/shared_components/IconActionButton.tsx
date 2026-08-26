@@ -119,7 +119,7 @@ export default function IconActionButton(variant) {
     obj = { variant: "text-sm/bold", style: null, children: null };
     obj[1] = tmp3.actionText;
     obj[2] = buttonText;
-    tmp11Result = tmp11(tmp4(4376).Text, obj);
+    tmp11Result = tmp11(tmp4(4440).Text, obj);
   }
   items1[1] = tmp11Result;
   tmp11Result = null;

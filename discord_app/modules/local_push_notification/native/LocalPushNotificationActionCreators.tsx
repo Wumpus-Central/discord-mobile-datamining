@@ -12,7 +12,7 @@ let result = set.fileFinishedImporting("modules/local_push_notification/native/L
 
 export const receiveLocalNotification = function receiveLocalNotification(getData) {
   if (null != getData.getData) {
-    data(7081).trackAppOpened("notification");
+    data(7147).trackAppOpened("notification");
     data = getData.getData();
     let type = data.type;
     function dispatch() {
@@ -50,7 +50,7 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         }
       }
     }
-    let obj2 = data(7081);
+    let obj2 = data(7147);
     if (obj.isDispatching()) {
       const _setImmediate = setImmediate;
       setImmediate(dispatch);

@@ -31,7 +31,7 @@ function _handleJoinEmbeddedActivityInternal() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -87,7 +87,7 @@ function _handleJoinEmbeddedActivityInternal() {
                 throwTypeErrorResult = dependencyMap;
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = dependencyMap;
-                closure_10 = callback2(10685)();
+                closure_10 = callback2(10757)();
                 throwTypeErrorResult = channel;
                 throwTypeErrorResult = callback2;
                 _private = channel.getChannel(callback2);
@@ -126,7 +126,7 @@ function _handleJoinEmbeddedActivityInternal() {
                       if (store.getVoiceChannelId() === callback2) {
                         if (null != currentEmbeddedActivity2) {
                           if (currentEmbeddedActivity2.applicationId === callback) {
-                            let obj13 = callback(4015);
+                            let obj13 = callback(4079);
                             const embeddedActivityLocationChannelId = obj13.getEmbeddedActivityLocationChannelId(currentEmbeddedActivity2.location);
                             if (embeddedActivityLocationChannelId === store.getVoiceChannelId()) {
                               throwTypeErrorResult = callback2;
@@ -135,7 +135,7 @@ function _handleJoinEmbeddedActivityInternal() {
                               throwTypeErrorResult = dependencyMap;
                               throwTypeErrorResult = guildId;
                               throwTypeErrorResult = currentEmbeddedActivity2;
-                              throwTypeErrorResult = callback2(10736)(guildId, currentEmbeddedActivity2.location);
+                              throwTypeErrorResult = callback2(10808)(guildId, currentEmbeddedActivity2.location);
                               throwTypeErrorResult = globalThis;
                               application = 3;
                               const obj2 = { value: null, done: true };
@@ -149,7 +149,7 @@ function _handleJoinEmbeddedActivityInternal() {
                       c3 = 2;
                       application = 1;
                       let obj3 = { value: null, done: false };
-                      obj3[0] = callback2(10715)(callback, callback2);
+                      obj3[0] = callback2(10787)(callback, callback2);
                       return obj3;
                     }
                   }
@@ -192,7 +192,7 @@ function _handleJoinEmbeddedActivityInternal() {
                 c3 = 3;
                 application = 1;
                 const obj7 = { value: null, done: false };
-                obj7[0] = callback(10714).confirmActivityLaunchChecks(obj6);
+                obj7[0] = callback(10786).confirmActivityLaunchChecks(obj6);
                 return obj7;
               }
             } else {
@@ -207,7 +207,7 @@ function _handleJoinEmbeddedActivityInternal() {
                   return obj8;
                 } else if (arg1) {
                   if (null != _private) {
-                    closure_17 = callback2(10475)(_private.id);
+                    closure_17 = callback2(10543)(_private.id);
                     closure_18 = c9.includes(_private.type);
                     if (closure_17) {
                       const obj9 = { channelId: null, bypassChangeModal: null };
@@ -216,10 +216,10 @@ function _handleJoinEmbeddedActivityInternal() {
                       c3 = 4;
                       application = 1;
                       const obj10 = { value: null, done: false };
-                      obj10[0] = callback2(10725)(obj9);
+                      obj10[0] = callback2(10797)(obj9);
                       return obj10;
                     } else {
-                      obj3 = callback(8492);
+                      obj3 = callback(8559);
                       application = 3;
                       return { value: false, done: true };
                     }
@@ -259,13 +259,13 @@ function _handleJoinEmbeddedActivityInternal() {
                 return obj;
               }
               if (null != callback2) {
-                callback2(11060)(callback2);
+                callback2(11132)(callback2);
               }
               if (null != currentEmbeddedActivity2) {
-                obj4 = callback(10699);
+                obj4 = callback(10771);
                 const result = obj4.maybeDisconnectFromCurrentActivity(currentEmbeddedActivity2.location);
               }
-              obj5 = callback(10699);
+              obj5 = callback(10771);
               obj13 = { channelId: null, applicationId: null, isStart: false, embeddedActivitiesManager: null, analyticsLocations: null, locationObject: null, componentId: null, sectionName: null, source: null, inviterUserId: null, customId: null, referrerId: null };
               obj13[0] = callback2;
               obj13[1] = callback;

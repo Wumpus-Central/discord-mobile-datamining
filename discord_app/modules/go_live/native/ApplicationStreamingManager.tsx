@@ -1,7 +1,7 @@
 // discord_app/modules/go_live/native/ApplicationStreamingManager.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import noopAll from "../../../../_runtime/00019_noop.js";
-import _modDef4745 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef4809 from "../../../actions/native/AlertActionCreators.tsx";
 import apexExperimentDefault from "MobileGoLiveUpsellExperiment.tsx";
 import updateRegionDefault from "../ApplicationStreamingManager.tsx";
 import closure_3 from "../../../stores/ApplicationStreamingSettingsStore.tsx";
@@ -18,7 +18,7 @@ class ApplicationStreamingManager extends tmp4 {
 }
 const prototype = ApplicationStreamingManager.prototype;
 prototype["platformShowStreamFull"] = function platformShowStreamFull() {
-  obj = _modDef4745;
+  obj = _modDef4809;
   obj = {
     importer() {
       return callback(paths[9])(paths[8], paths.paths).then((arg0) => {
@@ -44,7 +44,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
       state[0] = ApplicationStreamPresets.PRESET_CUSTOM;
     }
     ({ preset, resolution, fps, soundshareEnabled } = state);
-    setGoLiveSource = setGoLiveSource(9303).setGoLiveSource;
+    setGoLiveSource = setGoLiveSource(9371).setGoLiveSource;
     obj = { desktopSettings: null, qualityOptions: null, context: null };
     obj = { sourceId: null, sound: null };
     obj[0] = sourceId;
@@ -57,7 +57,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     obj[1] = obj1;
     obj[2] = MediaEngineContextTypes.STREAM;
     setGoLiveSource(obj);
-    const setGoLiveSourceResult = setGoLiveSource(9303);
+    const setGoLiveSourceResult = setGoLiveSource(9371);
   } else {
     const _HermesInternal = HermesInternal;
     obj.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");

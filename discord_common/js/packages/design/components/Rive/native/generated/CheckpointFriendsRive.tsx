@@ -794,7 +794,7 @@ let closure_9 = {
       ShadowVisibility1 = onDataBindingChange.ShadowVisibility;
     }
     const numberBinding = BaseRive.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
-    let tmpResult = tmp(4114);
+    let tmpResult = tmp(4178);
     let StrokeVisibility;
     if (dataBinding != null) {
       StrokeVisibility = dataBinding.StrokeVisibility;
@@ -804,7 +804,7 @@ let closure_9 = {
       StrokeVisibility1 = onDataBindingChange.StrokeVisibility;
     }
     const numberBinding1 = tmpResult.useNumberBinding("StrokeVisibility", instance, StrokeVisibility, StrokeVisibility1, playIfNeeded);
-    tmpResult = tmp(4114);
+    tmpResult = tmp(4178);
     let UsernameVisibility;
     if (dataBinding != null) {
       UsernameVisibility = dataBinding.UsernameVisibility;
@@ -867,7 +867,7 @@ let closure_9 = {
       ShadowVisibility1 = onDataBindingChange.ShadowVisibility;
     }
     const numberBinding = BaseRive.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
-    let tmpResult = tmp(4114);
+    let tmpResult = tmp(4178);
     let StrokeVisibility;
     if (dataBinding != null) {
       StrokeVisibility = dataBinding.StrokeVisibility;
@@ -877,7 +877,7 @@ let closure_9 = {
       StrokeVisibility1 = onDataBindingChange.StrokeVisibility;
     }
     const numberBinding1 = tmpResult.useNumberBinding("StrokeVisibility", instance, StrokeVisibility, StrokeVisibility1, playIfNeeded);
-    tmpResult = tmp(4114);
+    tmpResult = tmp(4178);
     let UsernameVisibility;
     if (dataBinding != null) {
       UsernameVisibility = dataBinding.UsernameVisibility;

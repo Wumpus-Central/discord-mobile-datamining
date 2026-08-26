@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestContextMenu.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import registerAssetDefault from "../../../../_runtime/08752_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08820_registerAsset.js";
 import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import closure_6 from "../QuestStore.tsx";

@@ -23,17 +23,17 @@ export default function SuspiciousDownloadActionSheet(href) {
   obj = { spacing: 16, justify: "center", align: "center", style: items, children: null };
   items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj = { spacing: 8, justify: "center", align: "center", children: null };
-  const items1 = [callback(href(6136).TrafficConeSpotIllustration, {}), , ];
+  const items1 = [callback(href(6202).TrafficConeSpotIllustration, {}), , ];
   obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = href(1236).intl;
   obj1[4] = intl.string(href(1236).t.XtDo9Z);
-  items1[1] = callback(href(4376).Text, obj1);
+  items1[1] = callback(href(4440).Text, obj1);
   const obj2 = { style: tmp.body, variant: "text-md/medium", children: null };
   const intl2 = href(1236).intl;
   obj2[2] = intl2.string(href(1236).t.L9yFko);
-  items1[2] = callback(href(4376).Text, obj2);
+  items1[2] = callback(href(4440).Text, obj2);
   obj[3] = items1;
-  const items2 = [callback2(href(4813).Stack, obj), ];
+  const items2 = [callback2(href(4877).Stack, obj), ];
   const obj3 = { spacing: 8, children: null };
   const obj4 = { text: null, onPress: null };
   const intl3 = href(1236).intl;
@@ -41,7 +41,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   obj4[1] = function onPress() {
     return callback(table[11]).hideActionSheet();
   };
-  const items3 = [callback(href(4815).Button, obj4), ];
+  const items3 = [callback(href(4879).Button, obj4), ];
   const obj5 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = href(1236).intl;
   obj5[0] = intl4.string(href(1236).t["/bHu89"]);
@@ -49,10 +49,10 @@ export default function SuspiciousDownloadActionSheet(href) {
     closure_1_1(closure_1_2[11]).hideActionSheet();
     closure_1_1(closure_1_2[12])(href, true);
   };
-  items3[1] = callback(href(4815).Button, obj5);
+  items3[1] = callback(href(4879).Button, obj5);
   obj3[1] = items3;
-  items2[1] = callback2(href(4813).Stack, obj3);
+  items2[1] = callback2(href(4877).Stack, obj3);
   obj[4] = items2;
-  obj[1] = callback2(href(4813).Stack, obj);
-  return callback(href(5503).BottomSheet, obj);
+  obj[1] = callback2(href(4877).Stack, obj);
+  return callback(href(5569).BottomSheet, obj);
 };

@@ -19,7 +19,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "avatar_asset",
       kind: "message",
       T() {
-            return callback(7502).ThemeAwareAsset;
+            return callback(7568).ThemeAwareAsset;
           }
     };
     items[4] = { no: 5, name: "banner_asset_url", kind: "scalar", T: 9 };
@@ -30,7 +30,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "gradient",
       kind: "message",
       T() {
-            return callback(7500).Gradient;
+            return callback(7566).Gradient;
           }
     };
     items[8] = {
@@ -38,7 +38,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "banner_asset",
       kind: "message",
       T() {
-            return callback(7502).ThemeAwareAsset;
+            return callback(7568).ThemeAwareAsset;
           }
     };
     items[9] = {
@@ -46,7 +46,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "background_asset",
       kind: "message",
       T() {
-            return callback(7502).ThemeAwareAsset;
+            return callback(7568).ThemeAwareAsset;
           }
     };
     items[10] = {
@@ -54,7 +54,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "card_asset",
       kind: "message",
       T() {
-            return callback(7502).ThemeAwareAsset;
+            return callback(7568).ThemeAwareAsset;
           }
     };
     items[11] = {
@@ -62,7 +62,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "mobile_banner_asset",
       kind: "message",
       T() {
-            return callback(7502).ThemeAwareAsset;
+            return callback(7568).ThemeAwareAsset;
           }
     };
     items[12] = {
@@ -70,7 +70,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(7492).LocalizedString;
+            return callback(7558).LocalizedString;
           }
     };
     items[13] = {
@@ -78,7 +78,7 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
       name: "desktop_body_localized",
       kind: "message",
       T() {
-            return callback(7492).LocalizedString;
+            return callback(7558).LocalizedString;
           }
     };
     obj = { no: 15, name: "mobile_body_localized", kind: "message", T: null };

@@ -37,10 +37,10 @@ export default function QuestHomeOrbShopRewardCard(product) {
     obj[3] = tmp6;
     obj = { product: null, isPurchased: false, solidBackground: true };
     obj[0] = product;
-    const items2 = [callback(stateFromStores(9561), obj), ];
+    const items2 = [callback(stateFromStores(9629), obj), ];
     obj1 = { product: null, collectibleProductState: null, hidePrice: true };
     obj1[0] = product;
-    items2[1] = callback(stateFromStores(9564), obj1);
+    items2[1] = callback(stateFromStores(9632), obj1);
     obj[4] = items2;
     tmp7 = callback2(View, obj);
   }

@@ -123,7 +123,7 @@ export default function ShareScreen(sharedContent) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -233,7 +233,7 @@ export default function ShareScreen(sharedContent) {
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -256,7 +256,7 @@ export default function ShareScreen(sharedContent) {
                               c4 = 3;
                               return { value: false, done: true };
                             } else {
-                              obj1 = callback(13455);
+                              obj1 = callback(13528);
                               obj1 = { attachments: null, channel: null, comment: null };
                               obj1[0] = closure_1_1;
                               obj1[1] = channel;
@@ -285,7 +285,7 @@ export default function ShareScreen(sharedContent) {
                           obj3[4] = closure_1_2;
                           callback2(698).track(closure_3_11.SHARE_MESSAGE_SENT, obj3);
                           c4 = 3;
-                          return { value: "HermesInternal", done: "HermesInternal" };
+                          return { value: "HermesInternal", done: null };
                         }
                       } catch (tmp11) {
                         c4 = tmp;

@@ -27,7 +27,7 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
       const obj = _null(closure_1_2[1]);
     }
   }, items);
-  const items1 = [stateFromStores(5965)];
+  const items1 = [stateFromStores(6031)];
   const items2 = [tmp2];
   stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let product = null;

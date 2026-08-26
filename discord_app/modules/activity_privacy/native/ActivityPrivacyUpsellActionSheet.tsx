@@ -8,11 +8,11 @@ let result = require("set").fileFinishedImporting("modules/activity_privacy/nati
 export default function ActivityPrivacyUpsellActionSheet(direction) {
   direction = direction.direction;
   const affectedGuildIds = direction.affectedGuildIds;
-  const upsellStrings = direction(14306).getUpsellStrings(direction === direction(14306).ChangeDirection.RESTRICTING, direction.settingName);
+  const upsellStrings = direction(14379).getUpsellStrings(direction === direction(14379).ChangeDirection.RESTRICTING, direction.settingName);
   const items = [direction, affectedGuildIds];
   ({ title, subtitle, confirmText, toastContent } = upsellStrings);
   const onConfirm = React.useCallback(() => {
     const result = direction(closure_1_2[2]).applyBulkGuildRestrictionChange(direction, affectedGuildIds);
   }, items);
-  return jsx(affectedGuildIds(14308), { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm });
+  return jsx(affectedGuildIds(14381), { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm });
 };

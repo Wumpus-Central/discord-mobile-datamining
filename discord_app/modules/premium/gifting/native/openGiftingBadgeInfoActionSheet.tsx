@@ -6,5 +6,5 @@ import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/Action
 const result = set.fileFinishedImporting("modules/premium/gifting/native/openGiftingBadgeInfoActionSheet.tsx");
 
 export default function openGiftingBadgeInfoActionSheet() {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10191, dependencyMap.paths), "GiftingBadgeInfoActionSheet");
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10258, dependencyMap.paths), "GiftingBadgeInfoActionSheet");
 };

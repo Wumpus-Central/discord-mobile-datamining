@@ -32,7 +32,7 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   const merged = Object.assign(onPressOut, Object.create(null));
   dependencyMap = undefined;
   let obj = React;
-  const context = React.useContext(onPressIn(5481).TableRowGroupContext);
+  const context = React.useContext(onPressIn(5547).TableRowGroupContext);
   let tmp6 = !context;
   if (!context) {
     tmp6 = true === end;
@@ -54,7 +54,7 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
     }
   }, items1);
   const tmp2 = callback3();
-  const token = onPressIn(4101).useToken(onPressOut(712).modules.mobile.TABLE_ROW_BORDER_RADIUS);
+  const token = onPressIn(4165).useToken(onPressOut(712).modules.mobile.TABLE_ROW_BORDER_RADIUS);
   obj = { shadow: "none", border: "none", radius: token, start: null, end: null, onPress: null, onPressIn: null, onPressOut: null, disabled: null, style: null };
   let tmp13 = !context;
   if (!context) {
@@ -68,16 +68,16 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   obj[8] = flag;
   obj[9] = tmp2.card;
   const merged1 = Object.assign(merged);
-  const items2 = [callback2(onPressOut(9537), { nameplate, isPressed: tmp7[0], invertPressOpacity: true, fullOpacity: isPreviewRow, animate: isPreviewRow }), callback2(onPressIn(5480).TableRowInner, { height: "100%", label, subLabel, icon, trailing, arrow, disabled: flag, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps })];
+  const items2 = [callback2(onPressOut(9605), { nameplate, isPressed: tmp7[0], invertPressOpacity: true, fullOpacity: isPreviewRow, animate: isPreviewRow }), callback2(onPressIn(5546).TableRowInner, { height: "100%", label, subLabel, icon, trailing, arrow, disabled: flag, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps })];
   obj.children = items2;
-  let tmp12Result = tmp12(tmp3(5482).Card, obj);
+  let tmp12Result = tmp12(tmp3(5548).Card, obj);
   if (!context) {
     if (!tmp6) {
       obj = { children: null };
       const items3 = [tmp12Result, ];
       obj1 = { adjustSpacingForIcon: null };
       obj1[0] = null != icon;
-      items3[1] = tmp15(tmp3(5438).TableRowDivider, obj1);
+      items3[1] = tmp15(tmp3(5504).TableRowDivider, obj1);
       obj[0] = items3;
       tmp12Result = tmp12(closure_7, obj);
     }

@@ -2,7 +2,7 @@
 import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import _modDef4094 from "../../../../lib/native/Linking.tsx";
+import _modDef4158 from "../../../../lib/native/Linking.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
@@ -14,7 +14,7 @@ const pressable = createToggle.createPressable({
   },
   parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {
-    _modDef4094.openURL(MarketingURLs.PRIVACY);
+    _modDef4158.openURL(MarketingURLs.PRIVACY);
   },
   withArrow: true
 });
@@ -25,7 +25,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {
-    _modDef4094.openURL(MarketingURLs.PRIVACY);
+    _modDef4158.openURL(MarketingURLs.PRIVACY);
   },
   withArrow: true
 };

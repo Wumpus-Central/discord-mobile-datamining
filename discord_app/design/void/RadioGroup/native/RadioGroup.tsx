@@ -1,7 +1,7 @@
 // discord_app/design/void/RadioGroup/native/RadioGroup.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useCheckboxA11yNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import _modDef5473 from "../../Form/native/FormRow.tsx";
+import _modDef5539 from "../../Form/native/FormRow.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { NOOP } from "../../../../../discord_common/js/shared/Constants.tsx";
@@ -108,7 +108,7 @@ function RadioBar(arg0) {
     leading = option.leading;
   }
   obj[8] = leading;
-  return callback(_modDef5473, obj);
+  return callback(_modDef5539, obj);
 }
 class RadioItem {
   constructor(arg0) {

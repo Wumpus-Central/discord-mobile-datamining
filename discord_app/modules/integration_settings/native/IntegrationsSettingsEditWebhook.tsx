@@ -118,7 +118,7 @@ class EditWebhook extends PureComponent {
       closure_1_1(closure_1_2[15]).delete(guildId, webhookId).then(() => {
         navigation.pop();
       }).catch(() => {
-        let obj = callback(4745);
+        let obj = callback(4809);
         obj = { title: null, body: null };
         const intl = navigation(1236).intl;
         obj[0] = intl.string(navigation(1236).t.N5riYn);
@@ -220,7 +220,7 @@ prototype["render"] = function render() {
   } else {
     stringResult = string(t.OpuAlK);
   }
-  let tmp2Result = tmp2(webhookId(4376).Text, { variant: "text-sm/medium", color: "text-link", children: stringResult });
+  let tmp2Result = tmp2(webhookId(4440).Text, { variant: "text-sm/medium", color: "text-link", children: stringResult });
   let obj = { style: tmp.form, contentContainerStyle: items, children: null };
   items = [{ paddingTop: 16 }, self.props.contentContainerStyle];
   obj = { spacing: ThemesDefault.space.PX_24, style: { paddingHorizontal: tmp.row.padding }, children: null };
@@ -255,21 +255,21 @@ prototype["render"] = function render() {
     }
   }
   obj2[3] = first;
-  items1[1] = closure_11(webhookId(7935).TextInput, obj2);
+  items1[1] = closure_11(webhookId(8002).TextInput, obj2);
   const obj3 = { title: null, hasIcons: true, children: null };
   const intl4 = tmp3(1236).intl;
   obj3[0] = intl4.string(webhookId(1236).t.GK18KJ);
   const obj4 = { label: null, arrow: true, onPress: null, icon: null };
-  let tmp3Result = tmp3(4574);
+  let tmp3Result = tmp3(4638);
   obj4[0] = tmp3Result.computeChannelName(channel, closure_6, closure_5);
   obj4[2] = self.handleChannelChange;
   const obj5 = { size: webhookId(1297).Icon.Sizes.CUSTOM, source: null, style: null };
-  tmp3Result = tmp3(4866);
+  tmp3Result = tmp3(4932);
   obj5[1] = tmp3Result.getChannelIcon(channel);
   obj5[2] = tmp.channelIcon;
   obj4[3] = closure_11(webhookId(1297).Icon, obj5);
-  obj3[2] = closure_11(webhookId(5480).TableRow, obj4);
-  items1[2] = closure_11(webhookId(5873).TableRowGroup, obj3);
+  obj3[2] = closure_11(webhookId(5546).TableRow, obj4);
+  items1[2] = closure_11(webhookId(5939).TableRowGroup, obj3);
   let tmp2Result1 = null;
   if (null != token) {
     const obj6 = { title: null, hasIcons: false, children: null };
@@ -281,8 +281,8 @@ prototype["render"] = function render() {
     obj7[0] = "" + aPIBaseURL + closure_7.WEBHOOK_INTEGRATION(webhookId, token);
     obj7[1] = self.handleCopyUrl;
     obj7[2] = tmp2Result;
-    obj6[2] = tmp2(tmp3(5480).TableRow, obj7);
-    tmp2Result1 = tmp2(tmp3(5873).TableRowGroup, obj6);
+    obj6[2] = tmp2(tmp3(5546).TableRow, obj7);
+    tmp2Result1 = tmp2(tmp3(5939).TableRowGroup, obj6);
     const tmp3Result1 = tmp3(530);
   }
   items1[3] = tmp2Result1;
@@ -290,11 +290,11 @@ prototype["render"] = function render() {
   const obj9 = { variant: "danger", onPress: self.handleDeleteWebhook, label: null };
   const intl6 = tmp3(1236).intl;
   obj9[2] = intl6.string(webhookId(1236).t.oyYWHE);
-  obj8[1] = closure_11(webhookId(5480).TableRow, obj9);
-  items1[4] = closure_11(webhookId(5873).TableRowGroup, obj8);
+  obj8[1] = closure_11(webhookId(5546).TableRow, obj9);
+  items1[4] = closure_11(webhookId(5939).TableRowGroup, obj8);
   obj[2] = items1;
-  obj[2] = closure_12(webhookId(4813).Stack, obj);
-  return closure_11(webhookId(8118).Form, obj);
+  obj[2] = closure_12(webhookId(4877).Stack, obj);
+  return closure_11(webhookId(8185).Form, obj);
 };
 EditWebhook.contextType = require("ManaContext").ThemeContext;
 let obj1 = { padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };

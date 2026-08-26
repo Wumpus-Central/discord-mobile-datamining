@@ -1,10 +1,9 @@
 // discord_app/modules/scheduled_messages/ScheduledMessageUtils.tsx
 import timestampDefault from "../debug/Logger.tsx";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import isPremiumAtLeast from "../../utils/PremiumTypeUtils.tsx";
-import hooksDefault from "../../../_runtime/03979_hooks.js";
+import hooksDefault from "../../../_runtime/04043_hooks.js";
 import regExp from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
 import regExpDefault from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
 import ScheduledMessageSendState from "ScheduledMessageTypes.tsx";
@@ -116,20 +115,37 @@ export const getDefaultScheduledTime = function getDefaultScheduledTime() {
   }
   return addResult2;
 };
-export const getScheduledMessagesLimit = function getScheduledMessagesLimit(location) {
+export const getScheduledMessagesLimit = function getScheduledMessagesLimit(closure_8) {
   let obj = isPremiumAtLeast;
-  obj = { location };
+  obj = { location: closure_8 };
   const config = store.getConfig(obj);
-  if (!config.enabled) {
-    return 0;
+  if (config.enabled) {
+    if (isPremiumResult) {
+      obj = { limit: null, isUpgradable: false };
+      obj[0] = closure_8;
+      obj1 = obj;
+    } else {
+      obj1 = { limit: null, isUpgradable: true };
+      obj1[0] = config.limit;
+    }
+  } else {
+    return { limit: 0, isUpgradable: false };
   }
 };
-export const useScheduledMessagesLimit = function useScheduledMessagesLimit(location) {
-  const config = store.useConfig({ location });
-  initialize;
-  [][0] = closure_5;
-  if (!config.enabled) {
-    return 0;
+export const useScheduledMessagesLimit = function useScheduledMessagesLimit(ScheduledMessagesMobileModal) {
+  let obj = { location: ScheduledMessagesMobileModal };
+  const config = store.useConfig(obj);
+  const items = [closure_5];
+  if (config.enabled) {
+    if (obj2.useStateFromStores(items, () => callback(table[12]).isPremium(currentUser.getCurrentUser(), TIER_2.TIER_2))) {
+      obj = { limit: null, isUpgradable: false };
+      obj[0] = closure_8;
+    } else {
+      obj = { limit: null, isUpgradable: true };
+      obj[0] = config.limit;
+    }
+  } else {
+    return { limit: 0, isUpgradable: false };
   }
 };
 export const convertServerScheduledMessageSend = function convertServerScheduledMessageSend(body) {
@@ -152,27 +168,27 @@ export const getMessageForState = function getMessageForState(state) {
     const intl6 = tmp(1236).intl;
     obj[1] = intl6.string(tmp(1236).t.Fn6Odn);
     return obj;
-  } else if (tmp(11573).ScheduledMessageSendState.ERROR_CHANNEL_NOT_FOUND === state) {
+  } else if (tmp(11644).ScheduledMessageSendState.ERROR_CHANNEL_NOT_FOUND === state) {
     obj = { isError: true, stateMessage: null };
     const intl5 = tmp(1236).intl;
     obj[1] = intl5.string(tmp(1236).t.v5O2dK);
     return obj;
-  } else if (tmp(11573).ScheduledMessageSendState.ERROR_USER_NOT_FOUND === state) {
+  } else if (tmp(11644).ScheduledMessageSendState.ERROR_USER_NOT_FOUND === state) {
     obj1 = { isError: true, stateMessage: null };
     const intl4 = tmp(1236).intl;
     obj1[1] = intl4.string(tmp(1236).t.j8uIfG);
     return obj1;
-  } else if (tmp(11573).ScheduledMessageSendState.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES === state) {
+  } else if (tmp(11644).ScheduledMessageSendState.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES === state) {
     const obj2 = { isError: true, stateMessage: null };
     const intl3 = tmp(1236).intl;
     obj2[1] = intl3.string(tmp(1236).t["w6zHX/"]);
     return obj2;
-  } else if (tmp(11573).ScheduledMessageSendState.ERROR_SEND_FAILED === state) {
+  } else if (tmp(11644).ScheduledMessageSendState.ERROR_SEND_FAILED === state) {
     const obj3 = { isError: true, stateMessage: null };
     const intl2 = tmp(1236).intl;
     obj3[1] = intl2.string(tmp(1236).t.pflV7z);
     return obj3;
-  } else if (tmp(11573).ScheduledMessageSendState.ERROR_SCHEDULED_MESSAGES_DISABLED === state) {
+  } else if (tmp(11644).ScheduledMessageSendState.ERROR_SCHEDULED_MESSAGES_DISABLED === state) {
     const obj4 = { isError: true, stateMessage: null };
     const intl = tmp(1236).intl;
     obj4[1] = intl.string(tmp(1236).t.j8uIfG);

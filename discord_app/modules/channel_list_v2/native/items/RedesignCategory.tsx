@@ -50,7 +50,7 @@ function renderCategoryItem(longPressAction) {
     obj[2] = str;
     obj[4] = styles.categoryText;
     obj[5] = name;
-    tmp35Result = callback(trailingAction(4376).Text, obj);
+    tmp35Result = callback(trailingAction(4440).Text, obj);
     const tmp35 = callback;
   }
   let tmp3 = null;
@@ -65,7 +65,7 @@ function renderCategoryItem(longPressAction) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(12309).PlusMediumIcon;
+    Icon = trailingAction(12381).PlusMediumIcon;
   }
   if (null == trailingAction) {
     obj1 = { children: null };
@@ -136,7 +136,7 @@ function renderCategoryItem(longPressAction) {
       obj5[5] = onLongPress;
       obj5[6] = items;
       obj5[7] = tmp18Result;
-      let tmp29Result = tmp29(trailingAction(4949).PressableHighlight, obj5);
+      let tmp29Result = tmp29(trailingAction(5015).PressableHighlight, obj5);
     } else {
       const obj6 = { accessibilityRole: "header", style: null, children: null };
       obj6[1] = items;
@@ -163,7 +163,7 @@ function renderCategoryItem(longPressAction) {
     obj9[1] = muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
     colors = tmp9(Icon, obj9);
     obj8[6] = colors;
-    obj8 = tmp9(trailingAction(4949).PressableOpacity, obj8);
+    obj8 = tmp9(trailingAction(5015).PressableOpacity, obj8);
     obj7[1] = obj8;
     callback(View, obj7);
     const tmp10 = View;
@@ -248,11 +248,11 @@ export const CategoryChannel = function CategoryChannel(channel) {
     }
   }, items1);
   const callback1 = React.useCallback(() => id(closure_1_2[15]).openChannelLongPressActionSheet(id), items2);
-  const tmp9 = collapsed(4574)(channel);
+  const tmp9 = collapsed(4638)(channel);
   const tmp = collapsed;
   const tmp4 = styles(tmp3);
-  const tmp11 = collapsed(15464)(channel, tmp9);
-  const tmp12 = collapsed(15465)(channel);
+  const tmp11 = collapsed(15543)(channel, tmp9);
+  const tmp12 = collapsed(15544)(channel);
   obj = { name: tmp9, muted: stateFromStoresObject.muted, collapsed, onPress: callback, onLongPress: null, withMarginTop: null, styles: null, isRefreshEnabled: null, note: null, trailingAction: null, longPressAction: null };
   let perform;
   if (tmp12 != null) {
@@ -269,17 +269,17 @@ export const CategoryChannel = function CategoryChannel(channel) {
   if (null != tmp11) {
     obj = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
     ({ tooltip: obj3[2], label: obj3[3] } = tmp11);
-    tmp14 = callback(tmp5(4376).Text, obj);
+    tmp14 = callback(tmp5(4440).Text, obj);
   }
   obj[8] = tmp14;
-  obj[9] = collapsed(12335)(channel);
+  obj[9] = collapsed(12407)(channel);
   obj[10] = tmp12;
   ({ collapsed: collapsed2, isRefreshEnabled } = obj);
   const merged = Object.assign(obj, Object.create(null));
   const colors = tmp(712).colors;
   obj1 = {};
   const merged1 = Object.assign(merged);
-  obj1.icon = callback(id(9625).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createCacheKey : obj1 });
+  obj1.icon = callback(id(9693).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createCacheKey : obj1 });
   obj1.accessibilityState = { expanded: !collapsed2 };
   obj1.isRefreshEnabled = isRefreshEnabled;
   return renderCategoryItem(obj1);
@@ -306,7 +306,7 @@ export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   const colors = stateFromStores(712).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = callback(guildId(9625).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createCacheKey : obj1 });
+  obj.icon = callback(guildId(9693).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createCacheKey : obj1 });
   obj.accessibilityState = { expanded: !collapsed };
   obj.isRefreshEnabled = obj.isRefreshEnabled;
   return renderCategoryItem(obj);

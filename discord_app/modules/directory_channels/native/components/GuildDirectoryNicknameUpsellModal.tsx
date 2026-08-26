@@ -9,7 +9,7 @@ import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAre
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
-import _modDef8622 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import _modDef8690 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
@@ -126,7 +126,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
       }
     }, 100);
   };
-  items2[2] = callback(_modDef8622, obj5);
+  items2[2] = callback(_modDef8690, obj5);
   items2[3] = callback(closure_6, { style: tmp.redesignGrowSpacing });
   const obj7 = { style: tmp.redesignButtonContainer, children: null };
   const obj8 = { size: "lg", text: null, onPress: null };

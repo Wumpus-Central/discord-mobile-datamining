@@ -9,7 +9,7 @@ let result = require("set").fileFinishedImporting("modules/video_calls/native/co
 export default function usePipPosition() {
   const tmp = callback(React.useState(() => {
     const Storage = callback(595).Storage;
-    return Storage.get(closure_4, callback(10745).DEFAULT_PIP_POSITION);
+    return Storage.get(closure_4, callback(10817).DEFAULT_PIP_POSITION);
   }), 2);
   closure_0 = tmp[1];
   const items = [

@@ -48,7 +48,7 @@ function buildCommand(arg0) {
       CHAT = obj(1955).ApplicationCommandType.CHAT;
     }
     obj[6] = CHAT;
-    obj[7] = obj(7129).ApplicationCommandInputType.BOT;
+    obj[7] = obj(7195).ApplicationCommandInputType.BOT;
     ({ description: obj3[8], options } = command);
     let mapped2;
     if (options != null) {
@@ -323,10 +323,10 @@ function buildCommand(arg0) {
     ({ nsfw: obj3[17], contexts: obj3[18], integration_types: obj3[19], global_popularity_rank: obj3[20], handler: obj3[21] } = rootCommand);
     return obj;
   } else if (useKeyedPermissions) {
-    const keyPermissionsResult = obj(7128).keyPermissions(rootCommand.permissions);
+    const keyPermissionsResult = obj(7194).keyPermissions(rootCommand.permissions);
     obj = keyPermissionsResult;
     obj = keyPermissionsResult;
-    const obj2 = obj(7128);
+    const obj2 = obj(7194);
   } else {
     obj = {};
     const permissions = rootCommand.permissions;
@@ -491,7 +491,7 @@ export const buildApplicationCommands = function buildApplicationCommands(applic
   closure_0 = arg1;
   return applyDefault.flatMap(application_commands, (id) => {
     closure_1_1(closure_1_3[10])(null != id.id, "Missing command id");
-    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: true };
+    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: "headers" };
     obj[4] = closure_0;
     return closure_1_12(obj);
   });

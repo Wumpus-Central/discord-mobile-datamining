@@ -12,7 +12,7 @@ import closure_11 from "../../../stores/UserStore.tsx";
 import importDefaultResult2 from "../../../stores/VoiceStateStore.tsx";
 import closure_13 from "../../../stores/native/MobileVoiceOverlayStore.tsx";
 import ME from "../../../Constants.tsx";
-import registerAsset from "../../../../_runtime/13997_registerAsset.js";
+import registerAsset from "../../../../_runtime/14070_registerAsset.js";
 import { intl, intl as intl2, intl as intl3, intl as intl4, intl as intl5, intl as intl6, intl as intl7, intl as intl8, intl as intl9, intl as intl10, intl as intl11 } from "../../../intl/index.native.tsx";
 
 const require = arg1;

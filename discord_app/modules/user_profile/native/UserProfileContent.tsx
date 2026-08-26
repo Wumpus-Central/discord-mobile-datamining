@@ -208,19 +208,19 @@ function EditSection(guildId) {
   let trackUserProfileAction;
   dependencyMap = undefined;
   closure_3 = undefined;
-  let obj = guildId(8935);
+  let obj = guildId(9003);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   obj1 = guildId(589);
   const items = [closure_8];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_1_8.getGuild(guildId));
-  dependencyMap = trackUserProfileAction(10289)();
-  closure_3 = trackUserProfileAction(10289)({ guild: stateFromStores });
-  obj = { style: trackUserProfileAction(8982)().primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: null, secondaryButton: null };
+  dependencyMap = trackUserProfileAction(10357)();
+  closure_3 = trackUserProfileAction(10357)({ guild: stateFromStores });
+  obj = { style: trackUserProfileAction(9050)().primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: null, secondaryButton: null };
   const tmp = trackUserProfileAction;
-  const tmp3 = trackUserProfileAction(8982)();
+  const tmp3 = trackUserProfileAction(9050)();
   obj = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
   obj1 = { size: "sm", color: trackUserProfileAction(712).colors.WHITE };
-  obj[1] = callback(guildId(9822).PencilIcon, obj1);
+  obj[1] = callback(guildId(9889).PencilIcon, obj1);
   if (null != stateFromStores) {
     const intl2 = tmp4(1236).intl;
     let stringResult = intl2.string(tmp4(1236).t.HmFaFB);
@@ -231,29 +231,29 @@ function EditSection(guildId) {
   obj[2] = stringResult;
   obj[3] = function onPress() {
     trackUserProfileAction({ action: "EDIT_PROFILE" });
-    trackUserProfileAction(4347).hideActionSheet();
-    trackUserProfileAction(10682)();
+    trackUserProfileAction(4411).hideAllActionSheets();
+    trackUserProfileAction(10754)();
     dependencyMap();
   };
-  obj[2] = callback(guildId(4815).Button, obj);
+  obj[2] = callback(guildId(4879).Button, obj);
   let tmp6Result;
   if (null != stateFromStores) {
     const obj2 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj3 = { size: "sm", color: null };
     obj3[1] = tmp(712).colors.WHITE;
-    obj2[1] = tmp6(tmp4(9822).PencilIcon, obj3);
+    obj2[1] = tmp6(tmp4(9889).PencilIcon, obj3);
     const intl3 = tmp4(1236).intl;
     obj2[2] = intl3.string(tmp4(1236).t["PKQB/H"]);
     obj2[3] = function onPress() {
       trackUserProfileAction({ action: "EDIT_GUILD_PROFILE" });
-      trackUserProfileAction(4347).hideActionSheet();
-      trackUserProfileAction(10682)();
+      trackUserProfileAction(4411).hideAllActionSheets();
+      trackUserProfileAction(10754)();
       callback();
     };
-    tmp6Result = tmp6(tmp4(4815).Button, obj2);
+    tmp6Result = tmp6(tmp4(4879).Button, obj2);
   }
   obj[3] = tmp6Result;
-  return callback(trackUserProfileAction(12478), obj);
+  return callback(trackUserProfileAction(12549), obj);
 }
 function UserProfileWidgetsBoardContainer(isCurrentUser) {
   isCurrentUser = isCurrentUser.isCurrentUser;
@@ -262,7 +262,7 @@ function UserProfileWidgetsBoardContainer(isCurrentUser) {
   const items = [tmp3.card, { backgroundColor: containerBackground }];
   const obj = { style: tmp3.profileContent, children: null };
   if (isCurrentUser) {
-    isCurrentUser = callback(tmp(12546), {});
+    isCurrentUser = callback(tmp(12617), {});
   }
   const items1 = [isCurrentUser, callback(WidgetRendererDefault, { userId, isVisible, cardStyle: items })];
   obj[1] = items1;
@@ -453,14 +453,14 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
   const items9 = [navigateToPremium];
   ({ handleTabChange, activeProfileTabSectionIndex } = profileSectionTabs);
   callback2 = obj8.useCallback(() => {
-    channel(displayProfile[17]).hideActionSheet();
+    channel(displayProfile[17]).hideAllActionSheets();
     if (navigateToPremium != null) {
       navigateToPremium();
     }
   }, items9);
   const items10 = [navigateToShop];
   callback3 = obj8.useCallback(() => {
-    channel(displayProfile[17]).hideActionSheet();
+    channel(displayProfile[17]).hideAllActionSheets();
     if (navigateToShop != null) {
       navigateToShop();
     }

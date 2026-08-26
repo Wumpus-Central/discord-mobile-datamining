@@ -16,16 +16,16 @@ export default function AgeUpdateFooter() {
   const intl = getSystemLocale.intl;
   obj = {
     handleAgeVerifyHook() {
-      let obj = callback2(7942);
-      obj = { entryPoint: callback(7944).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
+      let obj = callback2(8009);
+      obj = { entryPoint: callback(8011).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
       return obj.showAgeVerificationGetStartedModal(obj);
     }
   };
   obj[3] = intl.format(messagesProxyDefault.ifObbX, obj);
   return jsx(Text.Text, {
     handleAgeVerifyHook() {
-      let obj = callback2(7942);
-      obj = { entryPoint: callback(7944).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
+      let obj = callback2(8009);
+      obj = { entryPoint: callback(8011).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
       return obj.showAgeVerificationGetStartedModal(obj);
     }
   });

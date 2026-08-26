@@ -33,7 +33,7 @@ export default function HeroMedia(width) {
   let tmp2Result = tmp2(589);
   const items = [closure_3];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
-  tmp2Result = tmp2(5840);
+  tmp2Result = tmp2(5906);
   const getOrFetchApplication = tmp2Result.useGetOrFetchApplication(applicationId);
   let prop;
   if (getOrFetchApplication != null) {

@@ -28,26 +28,34 @@ export const getUnhideableBadgeIds = function getUnhideableBadgeIds(tenureBadgeH
   }
   return set;
 };
-export const getHideableBadges = function getHideableBadges(memo, unhideableBadgeIds) {
-  closure_0 = unhideableBadgeIds;
-  const found = memo.filter((owned) => {
-    owned = owned.owned;
-    if (owned) {
-      owned = !unhideableBadgeIds.has(owned.badge_id);
+export const groupCustomizableBadges = function groupCustomizableBadges(memo) {
+  const fixedBadges = [];
+  const reorderableBadges = [];
+  const hiddenBadges = [];
+  const iter = memo[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    if (nextResult.owned) {
+      let tmp3 = set;
+      let tmp4 = nextResult;
+      if (set.has(tmp2.badge_id)) {
+        let tmp10 = nextResult;
+        let arr = fixedBadges.push(tmp2);
+      } else {
+        let tmp5 = nextResult;
+        if (tmp2.hidden) {
+          let tmp8 = nextResult;
+          arr = hiddenBadges.push(tmp2);
+        } else {
+          let tmp6 = nextResult;
+          let arr1 = reorderableBadges.push(tmp2);
+        }
+      }
     }
-    return owned;
-  });
-  return found.sort((hidden, hidden2) => {
-    let flag = hidden.hidden;
-    if (flag == null) {
-      flag = false;
-    }
-    let flag2 = hidden2.hidden;
-    if (flag2 == null) {
-      flag2 = false;
-    }
-    return Number(flag) - Number(flag2);
-  });
+    continue;
+  }
+  return { fixedBadges, reorderableBadges, hiddenBadges };
 };
 export { getProfileBadgeIconUrl };
 export const getLegacyIconUrlByBadgeId = function getLegacyIconUrlByBadgeId(badges) {

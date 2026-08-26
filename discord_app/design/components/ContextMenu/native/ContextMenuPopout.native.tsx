@@ -12,14 +12,14 @@ function ContextMenuDivider() {
 }
 function ContextMenuBackdrop(onDismiss) {
   const visible = onDismiss.visible;
-  let obj = visible(4120);
+  let obj = visible(4184);
   const fn = function n() {
     const obj = { opacity: null };
     const value = visible.get();
     obj[0] = visible(closure_1_2[12]).withSpring(value, visible(closure_1_2[6]).CONTEXT_MENU_SPRING);
     return obj;
   };
-  obj = { withSpring: visible(4814).withSpring, visible, CONTEXT_MENU_SPRING: visible(8747).CONTEXT_MENU_SPRING };
+  obj = { withSpring: visible(4878).withSpring, visible, CONTEXT_MENU_SPRING: visible(8815).CONTEXT_MENU_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 6862317967896;
   fn.__initData = closure_16;
@@ -37,7 +37,7 @@ function ContextMenuBackdrop(onDismiss) {
     stringResult = string(t.xs0juG);
   }
   obj[4] = stringResult;
-  return tmp3(visible(4803).Backdrop, obj);
+  return tmp3(visible(4867).Backdrop, obj);
 }
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);

@@ -79,7 +79,7 @@ export const getRoleIcon = function getRoleIcon(roleId) {
       if (null != role) {
         let obj = getRoleIconData;
         if (obj.canGuildUseRoleIcons(guild, role)) {
-          let roleIconData = tmp4(5859).getRoleIconData(role);
+          let roleIconData = tmp4(5925).getRoleIconData(role);
           if (roleIconData == null) {
             roleIconData = {};
           }

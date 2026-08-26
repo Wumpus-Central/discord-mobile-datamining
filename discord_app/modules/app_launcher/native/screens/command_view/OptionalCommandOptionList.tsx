@@ -1,67 +1,41 @@
 // discord_app/modules/app_launcher/native/screens/command_view/OptionalCommandOptionList.tsx
 import noopAll from "../../../../../../_runtime/00019_noop.js";
-import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
-function OptionList(options) {
-  options = options.options;
-  const onSelectOption = options.onSelectOption;
-  closure_2 = undefined;
-  const tmp = callback();
-  closure_2 = tmp;
-  const items = [tmp.container, options.style];
-  return <closure_2 style={items} collapsable={false}>{options.map((displayName) => {
-    options = displayName;
-    let obj = {
-      onPress() {
-        return closure_1_1(closure_0);
-      },
-      start: false,
-      end: arg1 === options.length - 1,
-      label: displayName.displayName,
-      subLabel: displayName.displayDescription,
-      trailing: null
-    };
-    obj = {
-      accessibilityRole: "button",
-      style: closure_2.addButton,
-      onPress() {
-        return closure_1_1(closure_0);
-      },
-      children: null
-    };
-    obj = { variant: "text-sm/semibold", style: closure_2.addButtonText, children: null };
-    const intl = options(onSelectOption[8]).intl;
-    obj[2] = intl.string(options(onSelectOption[8]).t.OYkgVk);
-    obj[3] = closure_1_3(options(onSelectOption[7]).Text, obj);
-    obj[5] = closure_1_3(options(onSelectOption[6]).PressableOpacity, obj);
-    return closure_1_3(options(onSelectOption[5]).TableRow, obj, displayName.name);
-  })}</closure_2>;
-}
+require = arg1;
 noopAll;
-createCacheKey = { container: null, addButton: null, addButtonText: null };
-createCacheKey = { overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg };
-const merged = Object.assign(ThemesDefault.shadows.SHADOW_BORDER);
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderRadius: ThemesDefault.radii.round, minWidth: 48, height: 32, justifyContent: "center", alignItems: "center", paddingHorizontal: 12, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
-const obj1 = { borderRadius: ThemesDefault.radii.round, minWidth: 48, height: 32, justifyContent: "center", alignItems: "center", paddingHorizontal: 12, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
-createCacheKey[2] = { color: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { color: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/command_view/OptionalCommandOptionList.tsx");
 
-export default function OptionalCommandOptionList(options) {
-  options = options.options;
-  let tmp3 = null;
-  if (options.length > 0) {
-    const obj = { style: null, options: null, onSelectOption: null };
-    obj[0] = tmp2;
-    obj[1] = options;
-    obj[2] = tmp;
-    tmp3 = <OptionList style={null} options={null} onSelectOption={null} />;
+export default function OptionalCommandOptionList(arg0) {
+  ({ options, onSelectOption: require } = arg0);
+  let tmp2 = null;
+  if (0 !== options.length) {
+    let obj = { style: null, collapsable: false, children: null };
+    obj[0] = tmp;
+    obj = { hasIcons: false, children: null };
+    obj[1] = options.map((displayName) => {
+      closure_0 = displayName;
+      let obj = {
+        onPress() {
+          return displayName(displayName);
+        },
+        label: displayName.displayName,
+        subLabel: displayName.displayDescription,
+        trailing: null
+      };
+      obj = { accessibilityRole: "none", variant: "tertiary", size: "sm", shrink: true, text: null, onPress: null };
+      const intl = closure_1_0(closure_1_1[6]).intl;
+      obj[4] = intl.string(closure_1_0(closure_1_1[6]).t.OYkgVk);
+      obj[5] = function onPress() {
+        return displayName(displayName);
+      };
+      obj[3] = closure_1_3(closure_1_0(closure_1_1[5]).Button, obj);
+      return closure_1_3(closure_1_0(closure_1_1[4]).TableRow, obj, displayName.name);
+    });
+    obj[2] = jsx(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: null });
+    tmp2 = <View hasIcons={false}>{null}</View>;
   }
-  return tmp3;
+  return tmp2;
 };

@@ -3,12 +3,12 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import dismissGlobalKeyboardAll from "../../../utils/native/KeyboardManagerUtils.tsx";
 import openChannelCallModal from "../../../utils/native/PrivateChannelCallUtils.tsx";
-import _modDef4745 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef4809 from "../../../actions/native/AlertActionCreators.tsx";
 import trackDeviceChangedDefault from "../../../actions/AudioActionCreators.tsx";
 import mapped from "../../errors/av_errors/AVError.tsx";
-import registerAssetDefault from "../../../../_runtime/09318_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/09319_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/09320_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/09386_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/09387_registerAsset.js";
+import registerAssetDefault3 from "../../../../_runtime/09388_registerAsset.js";
 import useIsVideoModeDefault from "../../video_calls/native/useIsVideoMode.tsx";
 import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -46,7 +46,7 @@ function _handleToggleVideo() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -179,7 +179,7 @@ export const handleToggleSelfMute = function handleToggleSelfMute() {
   trackDeviceChangedDefault.toggleSelfMute();
 };
 export const showSuppressedAlert = function showSuppressedAlert() {
-  obj = _modDef4745;
+  obj = _modDef4809;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.FJSZVM);
@@ -188,7 +188,7 @@ export const showSuppressedAlert = function showSuppressedAlert() {
   obj.show(obj);
 };
 export const showServerMuteAlert = function showServerMuteAlert() {
-  obj = _modDef4745;
+  obj = _modDef4809;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["+JQCa/"]);
@@ -197,7 +197,7 @@ export const showServerMuteAlert = function showServerMuteAlert() {
   obj.show(obj);
 };
 export const showServerDeafenAlert = function showServerDeafenAlert() {
-  obj = _modDef4745;
+  obj = _modDef4809;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.QZ7WSS);
@@ -206,7 +206,7 @@ export const showServerDeafenAlert = function showServerDeafenAlert() {
   obj.show(obj);
 };
 export const showCameraDisabledAlert = function showCameraDisabledAlert() {
-  obj = _modDef4745;
+  obj = _modDef4809;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.OYzPcW);
@@ -215,7 +215,7 @@ export const showCameraDisabledAlert = function showCameraDisabledAlert() {
   obj.show(obj);
 };
 export const showScreenshareDisabledAlert = function showScreenshareDisabledAlert() {
-  obj = _modDef4745;
+  obj = _modDef4809;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["/x4knx"]);
@@ -237,10 +237,10 @@ export const showMinOSScreenshareRequirementAlert = function showMinOSScreenshar
   obj[0] = intl2.string(getSystemLocale.t.oblMYa);
   const intl3 = tmp(1236).intl;
   obj[1] = "" + intl3.string(getSystemLocale.t.Wnhd3q) + "\n\n" + formatToPlainStringResult;
-  _modDef4745.show(obj);
+  _modDef4809.show(obj);
 };
 export const showTabletRequirementAlert = function showTabletRequirementAlert() {
-  obj = _modDef4745;
+  obj = _modDef4809;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["1N0dxa"]);
@@ -295,10 +295,10 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
   obj = isEnabled(589);
   const items = [closure_9, closure_11, closure_8, closure_12, closure_10, closure_13];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    isVideoMode = isEnabled(10931).isVideoMode(closure_9, closure_11, closure_8, closure_12, closure_10);
+    isVideoMode = isEnabled(11003).isVideoMode(closure_9, closure_11, closure_8, closure_12, closure_10);
     currentRouteType = currentRouteType.getCurrentRouteType();
-    isEnabled = currentRouteType === isEnabled(9298).RouteTypes.SPEAKER;
-    const isBluetoothRoute = currentRouteType === isEnabled(9298).RouteTypes.BLUETOOTH;
+    isEnabled = currentRouteType === isEnabled(9366).RouteTypes.SPEAKER;
+    const isBluetoothRoute = currentRouteType === isEnabled(9366).RouteTypes.BLUETOOTH;
     if (!isEnabled) {
       isEnabled = isBluetoothRoute;
     }
@@ -331,7 +331,7 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
     }
     dependencyMap(isEnabled);
   }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9319 : 9320) };
+  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9387 : 9388) };
   return obj;
 });
 export const useImmediateMaskedSpeakerStates = () => {
@@ -366,6 +366,6 @@ export const useImmediateMaskedSpeakerStates = () => {
   const effect = React.useEffect(() => {
     callback(closure_1);
   }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9319 : 9320) };
+  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9387 : 9388) };
   return obj;
 };

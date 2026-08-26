@@ -4,8 +4,8 @@ import getSystemLocale from "../../../../../../intl/index.native.tsx";
 import Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Stack from "../../../../../../design/components/Stack/native/Stack.native.tsx";
 import Button from "../../../../../../design/components/Button/native/Button.native.tsx";
-import _modDef12264 from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/15630_registerAsset.js";
+import _modDef12336 from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
+import registerAssetDefault from "../../../../../../../_runtime/15709_registerAsset.js";
 import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -18,10 +18,10 @@ import createCacheKey from "../../../../../../design/components/Styles/native/cr
 
 require = arg1;
 function handleJoinGuild() {
-  const result = _modDef12264.openGuildJoinServerScreen();
+  const result = _modDef12336.openGuildJoinServerScreen();
 }
 function handleCreateGuild() {
-  _modDef12264.openCreateGuildModal();
+  _modDef12336.openCreateGuildModal();
 }
 class GuildsEmptyContent {
   constructor(arg0) {
@@ -118,7 +118,7 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
   }
   selectedGuildId = tmp6;
   obj = { type: navigation(503).ImpressionTypes.VIEW, name: navigation(503).ImpressionNames.GUILDS_EMPTY_NUX };
-  selectedGuildId(9497)(obj);
+  selectedGuildId(9565)(obj);
   const items1 = [tmp6, navigation];
   const effect = importAllResult.useEffect(() => {
     if (null != selectedGuildId) {
@@ -155,9 +155,9 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
       obj2 = closure_0;
     }
   }, items1);
-  let tmp2Result = tmp2(4952);
+  let tmp2Result = tmp2(5018);
   const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  tmp2Result = tmp2(14550);
+  tmp2Result = tmp2(14623);
   let tmp14Result = null;
   if (stateFromStores) {
     obj = { style: null, children: null };
@@ -170,7 +170,7 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
     let obj3 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl = tmp2(1236).intl;
     obj3[4] = intl.string(tmp2(1236).t["7hB4kg"]);
-    obj2[1] = callback(tmp2(4376).Text, obj3);
+    obj2[1] = callback(tmp2(4440).Text, obj3);
     obj1[1] = callback(closure_6, obj2);
     const items3 = [callback(closure_6, obj1), ];
     let tmp18;

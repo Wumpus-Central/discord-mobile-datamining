@@ -1,23 +1,24 @@
 // discord_app/modules/mfa/native/screens/MfaOptionScreen.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import noopAll from "../../../../../_runtime/00019_noop.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
 import useWideAuthViewDefault from "../../../auth/native/useWideAuthView.tsx";
 import BackgroundImageDefault from "../../../auth/native/components/atoms/BackgroundImage.tsx";
-import _modDef15219 from "../MfaScreenUtils.tsx";
+import _modDef15298 from "../MfaScreenUtils.tsx";
+import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const ScrollView = get_ActivityIndicator.ScrollView;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);
-const result = set.fileFinishedImporting("modules/mfa/native/screens/MfaOptionScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/mfa/native/screens/MfaOptionScreen.tsx");
 
 export default function MFAOptionScreen(arg0) {
   ({ headerImage, subtitle, screenProps, error } = arg0);
   ({ headerText, input, submit, mfaMethod, content } = arg0);
   const tmp3 = useWideAuthViewDefault();
-  let obj = _modDef15219;
+  let obj = _modDef15298;
   const screenStyles = obj.useScreenStyles(tmp3);
   const first = screenProps.mfaChallenge.methods[0];
   let type;
@@ -30,19 +31,19 @@ export default function MFAOptionScreen(arg0) {
   if (tmp9) {
     tmp9 = headerImage;
   }
-  const items = [tmp9, callback(Text.Text, { variant: "heading-xl/extrabold", style: screenStyles.mfaContainerHeaderText, children: headerText }), , ];
+  const items = [tmp9, callback(Text.Heading, { variant: "heading-xl/extrabold", style: screenStyles.mfaContainerHeaderText, children: headerText }), , ];
   let tmp10Result = null != subtitle;
   if (tmp10Result) {
     const obj2 = { variant: "heading-sm/normal", color: "text-default", children: null };
     obj2[2] = subtitle;
-    tmp10Result = tmp10(tmp8(4376).Text, obj2);
+    tmp10Result = tmp10(tmp8(4440).Text, obj2);
   }
   items[2] = tmp10Result;
   tmp10Result = null != error;
   if (tmp10Result) {
     const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     obj3[2] = error;
-    tmp10Result = tmp10(tmp8(4376).Text, obj3);
+    tmp10Result = tmp10(tmp8(4440).Text, obj3);
   }
   let tmp10Result1 = type === mfaMethod;
   const obj4 = { children: null };
@@ -56,7 +57,7 @@ export default function MFAOptionScreen(arg0) {
   if (tmp10Result1) {
     const obj6 = { props: null };
     obj6[0] = screenProps;
-    tmp10Result1 = tmp10(tmp(15220), obj6);
+    tmp10Result1 = tmp10(tmp(15299), obj6);
   }
   items3[1] = tmp10Result1;
   obj5[1] = items3;

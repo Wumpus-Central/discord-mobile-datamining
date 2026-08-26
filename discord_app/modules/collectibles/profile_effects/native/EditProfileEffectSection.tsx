@@ -80,7 +80,7 @@ const memoResult1 = importAllResult.memo((isSelected) => {
   }
   dependencyMap = undefined;
   const tmp = callback3();
-  const tmp4 = setSelectedProfileEffect(8969)(item.skuId);
+  const tmp4 = setSelectedProfileEffect(9037)(item.skuId);
   dependencyMap = tmp4;
   const items = [setSelectedProfileEffect, item];
   let thumbnailPreviewSrc;
@@ -117,13 +117,13 @@ const memoResult1 = importAllResult.memo((isSelected) => {
   obj = { style: items2, accessible: false, importantForAccessibility: "no", children: null };
   items2 = [tmp.profileEffect, { borderRadius: 6 }];
   obj = { source: null, style: null, resizeMode: "cover" };
-  obj1 = { uri: setSelectedProfileEffect(9542) };
+  obj1 = { uri: setSelectedProfileEffect(9610) };
   obj[0] = obj1;
   obj[1] = tmp.sampleProfile;
-  const items3 = [closure_6(setSelectedProfileEffect(5374), obj), closure_6(setSelectedProfileEffect(9526), { skuId: item.skuId, bannerAdjustment: 0, useThumbnail: true, thumbnailUrlOverride: memo })];
+  const items3 = [closure_6(setSelectedProfileEffect(5440), obj), closure_6(setSelectedProfileEffect(9594), { skuId: item.skuId, bannerAdjustment: 0, useThumbnail: true, thumbnailUrlOverride: memo })];
   obj[3] = items3;
   obj[6] = callback2(View, obj);
-  return closure_6(item(8441).EditCollectiblesListItemProduct, obj);
+  return closure_6(item(8508).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditProfileEffectItem";
 const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/EditProfileEffectSection.tsx");

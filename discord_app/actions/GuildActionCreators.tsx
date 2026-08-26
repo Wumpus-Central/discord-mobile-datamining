@@ -5,7 +5,7 @@ import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import transitionTo from "../modules/routing/router_utils.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
-import _modDef4601 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef4665 from "../utils/TrackedHTTPUtils.tsx";
 import shouldShowAgeGateForVoiceChannel from "../modules/age_gate/AgeGateUtils.tsx";
 import setDefault from "AlertActionCreators.tsx";
 import stopLurkingAll from "../modules/lurker_mode/LurkerActionCreators.tsx";
@@ -66,7 +66,7 @@ function _joinGuild() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -487,7 +487,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -565,7 +565,7 @@ export default {
             return obj;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp36) {
           c5 = tmp;
@@ -625,7 +625,7 @@ export default {
   },
   setCommunicationDisabledUntil(moderator_report_id) {
     ({ guildId, userId, communicationDisabledUntilTimestamp, duration, reason, location: _location } = moderator_report_id);
-    let obj = _modDef4601;
+    let obj = _modDef4665;
     obj = { url: closure_16.GUILD_MEMBER(guildId, userId), reason, body: { communication_disabled_until: communicationDisabledUntilTimestamp, moderator_report_id: moderator_report_id.moderatorReportId }, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: encodeProperties.NetworkActionNames.USER_COMMUNICATION_DISABLED_UPDATE, properties: null };
     obj1 = { guild_id: guildId, target_user_id: userId, duration: null, reason: null, communication_disabled_until: null, location: null };
@@ -701,7 +701,7 @@ export default {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -794,7 +794,7 @@ export default {
               }
               c4 = 0;
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp45) {
             c3 = tmp45;
@@ -834,7 +834,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -962,7 +962,7 @@ export default {
       const obj5 = closure_1_0(530);
       obj1[3] = obj5.rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6047);
+      const obj = closure_1_1(6113);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -994,7 +994,7 @@ export default {
       obj1[1] = closure_1_1;
       obj1[3] = closure_1_0(530).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6047);
+      const obj = closure_1_1(6113);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1011,7 +1011,7 @@ export default {
       obj1[1] = closure_1_1;
       obj1[3] = closure_1_0(530).rejectWithMigratedError();
       closure_0 = yield HTTP.patch(obj1);
-      const obj = closure_1_1(6047);
+      const obj = closure_1_1(6113);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
@@ -1143,7 +1143,7 @@ export default {
         const defaultChannel = store.getDefaultChannel(guildId);
         if (null != defaultChannel) {
           if (!obj3.isChannelContentGated(defaultChannel)) {
-            let tmp11Result = tmp11(6053);
+            let tmp11Result = tmp11(6119);
             if (!tmp11Result.isChannelSpoilerGated(defaultChannel)) {
               tmp11Result = tmp11(1222);
               tmp11Result.transitionTo(closure_21.CHANNEL(guildId, defaultChannel.id));
@@ -1197,7 +1197,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1246,7 +1246,7 @@ export default {
             obj5[2] = body;
             obj.dispatch(obj5);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp14) {
           dependencyMap = tmp;
@@ -1278,7 +1278,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1325,7 +1325,7 @@ export default {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           v0 = tmp;
@@ -1354,7 +1354,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1412,7 +1412,7 @@ export default {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           v0 = tmp;
@@ -1435,7 +1435,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1475,7 +1475,7 @@ export default {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           v0 = tmp;
@@ -1512,7 +1512,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1547,7 +1547,7 @@ export default {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           v0 = tmp;
@@ -1571,7 +1571,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1606,7 +1606,7 @@ export default {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           v0 = tmp;

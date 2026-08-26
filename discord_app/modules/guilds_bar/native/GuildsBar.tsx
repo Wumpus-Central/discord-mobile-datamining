@@ -13,12 +13,12 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
     flag = false;
   }
   listProps = undefined;
-  let tmp4 = fastListRef(15643)();
+  let tmp4 = fastListRef(15722)();
   fastListRef = tmp4.fastListRef;
   listProps = fastListRef;
   ({ scrollPosition, gesture, scrollerRef, persistantKeys, onFastListScroll, onFastListScrollWorklet } = tmp4);
   let tmp = callback();
-  ({ listProps, listDataProps } = fastListRef(15653)(fastListRef));
+  ({ listProps, listDataProps } = fastListRef(15732)(fastListRef));
   const items = [fastListRef];
   const effect = importAllResult.useEffect(() => {
     const result = listProps(ref[7]).registerGuildVisibilityMethod(listProps);
@@ -71,14 +71,14 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
     }
   }, items1);
   let obj = { profile: null, children: null };
-  const tmp5 = fastListRef(15653)(fastListRef);
-  obj[0] = listProps(11090).Profiles.Guilds;
+  const tmp5 = fastListRef(15732)(fastListRef);
+  obj[0] = listProps(11162).Profiles.Guilds;
   obj = { gesture, children: null };
   obj = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
-  const tmp10 = fastListRef(11090);
+  const tmp10 = fastListRef(11162);
   const tmp11 = closure_5;
   obj1 = {};
-  const tmp12 = fastListRef(5887);
+  const tmp12 = fastListRef(5953);
   const merged = Object.assign(listProps);
   const merged1 = Object.assign(listDataProps);
   obj1.ref = fastListRef;
@@ -97,10 +97,10 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
   }
   obj1.style = obj2;
   obj1.nativeID = "guilds-bar-fast-list";
-  const items2 = [closure_4(fastListRef(8159), obj1), closure_4(fastListRef(15721), {}), closure_4(fastListRef(9869), {})];
+  const items2 = [closure_4(fastListRef(8226), obj1), closure_4(fastListRef(15800), {}), closure_4(fastListRef(9936), {})];
   obj[3] = items2;
   obj[1] = tmp11(tmp12, obj);
-  obj[1] = closure_4(listProps(5533).GestureDetector, obj);
+  obj[1] = closure_4(listProps(5599).GestureDetector, obj);
   return closure_4(tmp10, obj);
 });
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBar.tsx");

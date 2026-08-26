@@ -57,7 +57,7 @@ function _redirectWithHandoffToken() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -194,7 +194,7 @@ function _redirectDeveloperPortalWithHandoffToken() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -264,7 +264,7 @@ function _redirectDeveloperPortalWithHandoffToken() {
             uRL = new URL("" + location.protocol + c6.DEVELOPER_PORTAL_LOGIN_HANDOFF(obj3.nonce, closure_3, callback));
             obj1(obj3[10]).performURLNavigation(uRL.href);
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c6 = tmp;

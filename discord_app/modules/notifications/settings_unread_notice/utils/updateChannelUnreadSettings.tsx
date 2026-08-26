@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings_unread_notice/utils/updateChannelUnreadSettings.tsx
 import UserNotificationSettings from "../../../../utils/NotificationSettingsUtils.tsx";
-import _modDef5368 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import _modDef5434 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
 import resetGuildUnreadFlags from "../../settings/utils/notificationSettingsFlagUtils.tsx";
 import closure_3 from "../../../../stores/UserGuildSettingsStore.tsx";
 import { AnalyticsObjects } from "../../../../Constants.tsx";
@@ -11,7 +11,7 @@ require = arg1;
 let result = require("set").fileFinishedImporting("modules/notifications/settings_unread_notice/utils/updateChannelUnreadSettings.tsx");
 
 export default function updateChannelUnreadSettings(closure_0, id, UNREADS_ONLY_MENTIONS) {
-  let obj = _modDef5368;
+  let obj = _modDef5434;
   obj = { flags: resetGuildUnreadFlags.withChannelUnreadFlags(channelIdFlags.getChannelIdFlags(closure_0, id), UNREADS_ONLY_MENTIONS) };
   const NotificationLabel = UserNotificationSettings.NotificationLabel;
   if (UNREADS_ONLY_MENTIONS === constants.UNREADS_ALL_MESSAGES) {

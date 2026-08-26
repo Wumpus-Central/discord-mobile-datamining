@@ -4,6 +4,7 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import ImageSkeleton from "UserProfileApplicationWidgetSkeletons.tsx";
+import items2 from "../../application_widget/ApplicationWidgetMarkupUtils.native.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -71,20 +72,23 @@ export const FieldText = function FieldText(arg0) {
     obj1 = { variant: null, color: null, lineClamp: 2, children: null };
     obj1[0] = variant;
     obj1[1] = color;
-    obj1[3] = field.text;
+    const obj2 = { linkVariant: null };
+    obj2[0] = variant;
+    obj1[3] = items2.parseApplicationWidgetText(field.text, obj2);
     const items = [callback(Text.Text, obj1), ];
     let tmp11Result = null != field.icon;
     if (tmp11Result) {
       obj = { source: null, style: null, resizeMode: "contain" };
-      const obj2 = { uri: null };
-      obj2[0] = field.icon.url;
-      obj[0] = obj2;
+      const obj3 = { uri: null };
+      obj3[0] = field.icon.url;
+      obj[0] = obj3;
       obj[1] = tmp.fieldIcon;
       tmp11Result = tmp11(closure_2, obj);
     }
     items[1] = tmp11Result;
     obj[1] = items;
     tmp9Result = closure_5(closure_3, obj);
+    const obj6 = items2;
     const tmp10 = closure_3;
     tmp11 = callback;
     const tmp9 = closure_5;

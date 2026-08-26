@@ -14,13 +14,13 @@ export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id
     id = id.id;
   }
   const guildEligibleForGuildProducts = useGuildEligibleForGuildProducts.useGuildEligibleForGuildProducts(id);
-  let tmpResult = tmp(5977);
+  let tmpResult = tmp(6043);
   let id1;
   if (id != null) {
     id1 = id.id;
   }
   const roleSubscriptionsVisibleInGuild = tmpResult.useRoleSubscriptionsVisibleInGuild(id1);
-  tmpResult = tmp(5990);
+  tmpResult = tmp(6056);
   const guildShopPreviewVisible = tmpResult.useGuildShopPreviewVisible(id);
   const obj = useGuildEligibleForGuildProducts;
   let id2;

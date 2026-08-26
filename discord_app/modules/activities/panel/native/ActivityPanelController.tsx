@@ -81,7 +81,7 @@ class BaseActivityPanelController {
     effect = obj3.useEffect(() => {
       if (null != isActivityPanelFullscreen) {
         if (null == ref2.current) {
-          if (!isActivityPanelFullscreen(10807)(closure_10.isWindowLandscape, defaultOrientationLockState)) {
+          if (!isActivityPanelFullscreen(10879)(closure_10.isWindowLandscape, defaultOrientationLockState)) {
             if (!closure_8) {
               first(closure_1_14.LAUNCHING_WITH_ORIENTATION_CHANGE);
             }
@@ -97,7 +97,7 @@ class BaseActivityPanelController {
       }
       let tmp4 = sharedValue1 === closure_1_14.LAUNCHING_WITH_ORIENTATION_CHANGE;
       if (tmp4) {
-        tmp4 = isActivityPanelFullscreen(10807)(closure_10.isWindowLandscape, defaultOrientationLockState);
+        tmp4 = isActivityPanelFullscreen(10879)(closure_10.isWindowLandscape, defaultOrientationLockState);
       }
       if (tmp4) {
         first(closure_1_14.PANEL);
@@ -112,9 +112,9 @@ class BaseActivityPanelController {
         tmp3 = ref.current !== tmp2.PANEL;
       }
       if (tmp3) {
-        sharedValue1(4242).dismissKeyboard();
+        sharedValue1(4306).dismissKeyboard();
         const result = sharedValue1.set(closure_1_16);
-        const obj = sharedValue1(4242);
+        const obj = sharedValue1(4306);
       }
       ref.current = sharedValue1;
     }, items1);
@@ -137,11 +137,11 @@ class BaseActivityPanelController {
       if (!first) {
         if (isActivityPanelFullscreen === closure_1_14.PANEL) {
           if (sharedValue1) {
-            isActivityPanelFullscreen(16357)(dependencyMap);
+            isActivityPanelFullscreen(16438)(dependencyMap);
           }
         }
-        const result = sharedValue1(9042).restoreDefaultOrientation();
-        const obj = sharedValue1(9042);
+        const result = sharedValue1(9110).restoreDefaultOrientation();
+        const obj = sharedValue1(9110);
       }
     }, items2);
     layoutEffect1 = obj3.useLayoutEffect(() => () => callback(table[13]).restoreDefaultOrientation(), []);
@@ -201,8 +201,8 @@ class BaseActivityPanelController {
     fn.__initData = closure_18;
     fn2 = function s(arg0, arg1) {
       if (arg0 !== arg1) {
-        sharedValue1(4120).runOnJS(dependencyMap)(arg0);
-        const obj = sharedValue1(4120);
+        sharedValue1(4184).runOnJS(dependencyMap)(arg0);
+        const obj = sharedValue1(4184);
       }
     };
     obj = { runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, setWrapperGestureInProgress: tmp28 };
@@ -345,7 +345,7 @@ export default function ActivityPanelController(children) {
       }
     }
   }, items1);
-  obj = { context: connectedActivityInTextChannelId(16363), orientationLockStateForApp, mode, hasConnectedActivity, connectedActivityAppId, currentApp, updateActivityPanelMode: _runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode, children: children.children };
-  return <BaseActivityPanelController context={connectedActivityInTextChannelId(16363)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={_runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode}>{arg0.children}</BaseActivityPanelController>;
+  obj = { context: connectedActivityInTextChannelId(16444), orientationLockStateForApp, mode, hasConnectedActivity, connectedActivityAppId, currentApp, updateActivityPanelMode: _runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode, children: children.children };
+  return <BaseActivityPanelController context={connectedActivityInTextChannelId(16444)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={_runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode}>{arg0.children}</BaseActivityPanelController>;
 };
 export { BaseActivityPanelController };

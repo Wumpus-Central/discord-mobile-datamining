@@ -1,5 +1,5 @@
 // discord_app/actions/GiftCodeActionCreators.tsx
-import _modDef10483 from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
+import _modDef10551 from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../modules/applications/ApplicationStore.tsx";
 import closure_5 from "../modules/collectibles/CollectiblesCategoryStore.tsx";
@@ -39,7 +39,7 @@ function _resolveGiftCode() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -339,7 +339,7 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    _modDef10483.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    _modDef10551.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   }
 };
 export { resolveGiftCode };

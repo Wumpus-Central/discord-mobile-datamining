@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import SoundButtonOverlay from "../SoundboardTypes.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
-import registerAssetDefault from "../../../../_runtime/10111_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/16422_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/10178_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/16505_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { setSearchQuery } from "../../expression_picker/ExpressionPickerStore.tsx";
@@ -27,43 +27,53 @@ function SoundCategoryItem(style) {
     let obj = { guild: null, style: null };
     obj[0] = guild;
     obj[1] = tmp.guildItem;
-    let tmp13Result = callback(GuildIconSizesDefault, obj);
-    let tmp4 = null;
-    let tmp5 = null;
-  } else if (tmp2(4858).SoundboardSoundGridSectionType.FAVORITES === type) {
+    let tmp14Result = callback(GuildIconSizesDefault, obj);
+    let tmp6 = null;
+    let tmp7 = null;
+  } else if (tmp2(4924).SoundboardSoundGridSectionType.FAVORITES === type) {
+    const intl4 = tmp2(1236).intl;
+    name = intl4.string(tmp2(1236).t.y3LQCG);
+    tmp6 = registerAssetDefault;
+    tmp7 = null;
+    tmp14Result = null;
+  } else if (tmp2(4924).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
     const intl3 = tmp2(1236).intl;
-    name = intl3.string(tmp2(1236).t.y3LQCG);
-    tmp4 = registerAssetDefault;
-    tmp5 = null;
-    tmp13Result = null;
-  } else if (tmp2(4858).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
-    const intl2 = tmp2(1236).intl;
-    name = intl2.string(tmp2(1236).t["+cGVV6"]);
+    name = intl3.string(tmp2(1236).t["+cGVV6"]);
     obj = { style: null };
     obj[0] = tmp.keyboardItem;
-    tmp5 = callback(tmp2(4343).ClockIcon, obj);
-    tmp4 = null;
-    tmp13Result = null;
-  } else if (tmp2(4858).SoundboardSoundGridSectionType.DEFAULTS === type) {
+    tmp7 = callback(tmp2(4407).ClockIcon, obj);
+    tmp6 = null;
+    tmp14Result = null;
+  } else if (tmp2(4924).SoundboardSoundGridSectionType.DEFAULTS === type) {
+    const intl2 = tmp2(1236).intl;
+    name = intl2.string(tmp2(1236).t.Rtvk9X);
+    tmp6 = registerAssetDefault2;
+    tmp7 = null;
+    tmp14Result = null;
+  } else if (tmp2(4924).SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = tmp2(1236).intl;
-    name = intl.string(tmp2(1236).t.Rtvk9X);
-    tmp4 = registerAssetDefault2;
-    tmp5 = null;
-    tmp13Result = null;
+    name = intl.string(tmp2(1236).t.sKt3xS);
+    tmp6 = registerAssetDefault2;
+    tmp7 = null;
+    tmp14Result = null;
   } else {
-    tmp4 = null;
-    tmp5 = null;
-    tmp13Result = null;
+    tmp6 = null;
+    tmp7 = null;
+    tmp14Result = null;
     name = null;
-    if (tmp2(4858).SoundboardSoundGridSectionType.SEARCH === type) {
-      const intl4 = tmp2(1236).intl;
-      name = intl4.string(tmp2(1236).t.sKt3xS);
-      tmp4 = registerAssetDefault2;
-      tmp5 = null;
-      tmp13Result = null;
+    if (tmp2(4924).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+      const intl5 = tmp2(1236).intl;
+      obj = { guildName: null };
+      obj[0] = category.categoryInfo.guild.name;
+      name = intl5.formatToPlainString(tmp2(1236).t.GXs41w, obj);
+      obj1 = { style: null };
+      obj1[0] = tmp.keyboardItem;
+      tmp7 = callback(tmp2(7938).TrophyIcon, obj1);
+      tmp6 = null;
+      tmp14Result = null;
     }
   }
-  obj = {
+  const obj2 = {
     onPress() {
       return callback(closure_1);
     },
@@ -71,30 +81,30 @@ function SoundCategoryItem(style) {
     accessibilityLabel: name,
     children: null
   };
-  obj1 = { style: items, children: null };
+  const obj3 = { style: items, children: null };
   items = [tmp.item, style.style];
-  if (tmp13Result == null) {
-    tmp13Result = tmp5;
+  if (tmp14Result == null) {
+    tmp14Result = tmp7;
   }
-  if (tmp13Result == null) {
-    const obj2 = { style: null, source: null };
-    obj2[0] = tmp.keyboardItem;
-    obj2[1] = tmp4;
-    tmp13Result = tmp13(tmp2(1297).Icon, obj2);
+  if (tmp14Result == null) {
+    const obj4 = { style: null, source: null };
+    obj4[0] = tmp.keyboardItem;
+    obj4[1] = tmp6;
+    tmp14Result = tmp14(tmp2(1297).Icon, obj4);
   }
-  const items1 = [tmp13Result, ];
+  const items1 = [tmp14Result, ];
   if (locked) {
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.lockContainer;
-    const obj4 = { style: null };
-    obj4[0] = tmp.lock;
-    obj3[1] = tmp13(tmp2(4925).LockIcon, obj4);
-    locked = tmp13(tmp15, obj3);
+    const obj5 = { style: null, children: null };
+    obj5[0] = tmp.lockContainer;
+    const obj6 = { style: null };
+    obj6[0] = tmp.lock;
+    obj5[1] = tmp14(tmp2(4991).LockIcon, obj6);
+    locked = tmp14(tmp16, obj5);
   }
   items1[1] = locked;
-  obj1[1] = items1;
-  obj[3] = closure_11(closure_5, obj1);
-  return callback(PressableBase.PressableOpacity, obj, name);
+  obj3[1] = items1;
+  obj2[3] = closure_11(closure_5, obj3);
+  return callback(PressableBase.PressableOpacity, obj2, name);
 }
 function getItemLayout(arg0, index) {
   return { length: closure_9, offset: closure_9 * index, index };
@@ -182,21 +192,21 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerCategories
         const obj = { section: null, item: 0 };
         obj[0] = closure_0;
         current.scrollToLocation(obj);
-        const result = guildId(listRef[17]).triggerHapticFeedback(categoryIndex(listRef[18]).IMPACT_LIGHT);
-        const obj2 = guildId(listRef[17]);
+        const result = guildId(listRef[18]).triggerHapticFeedback(categoryIndex(listRef[19]).IMPACT_LIGHT);
+        const obj2 = guildId(listRef[18]);
       }
     });
   }, items1);
-  let obj = guildId(listRef[19]);
+  let obj = guildId(listRef[20]);
   const items2 = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items2, () => categoryIndex(listRef[20]).canUseSoundboardEverywhere(stateFromStores.getCurrentUser()));
+  stateFromStores = obj.useStateFromStores(items2, () => categoryIndex(listRef[21]).canUseSoundboardEverywhere(stateFromStores.getCurrentUser()));
   const items3 = [stateFromStores, guildId, callback2, categoryIndex, , ];
   ({ activeItem: arr4[4], fadedItem: arr4[5] } = tmp);
   callback3 = importAllResult.useCallback((arg0) => {
     ({ item, index } = arg0);
     let result = !stateFromStores;
     if (!stateFromStores) {
-      let obj = guildId(listRef[21]);
+      let obj = guildId(listRef[22]);
       result = obj.isSoundboardSectionNitroLocked(guildId, item.categoryInfo);
     }
     obj = { category: item, index, style: null, handlePressCategory: null, locked: null };
@@ -213,9 +223,9 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerCategories
   }, items3);
   obj = { hostName: "soundboard-footer", children: null };
   obj = { style: items4, children: null };
-  items4 = [tmp.container, { paddingBottom: categoryIndex(listRef[22])().bottom }, style];
+  items4 = [tmp.container, { paddingBottom: categoryIndex(listRef[23])().bottom }, style];
   const items5 = [
-    callback(categoryIndex(listRef[24]), { style: ref.absoluteFill }),
+    callback(categoryIndex(listRef[25]), { style: ref.absoluteFill }),
     callback(closure_14, {
       ref,
       getItemLayout,
@@ -233,7 +243,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerCategories
   ];
   obj[1] = items5;
   obj[1] = callback2(closure_5, obj);
-  return callback(guildId(listRef[23]).Portal, obj);
+  return callback(guildId(listRef[24]).Portal, obj);
 });
 let result = require("set").fileFinishedImporting("modules/soundboard/native/SoundboardSoundPickerCategories.tsx");
 

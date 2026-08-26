@@ -1,10 +1,10 @@
 // discord_app/modules/premium/PremiumSubscriptionOfferUtil.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import hooksDefault from "../../../_runtime/03979_hooks.js";
+import hooksDefault from "../../../_runtime/04043_hooks.js";
 import usePremiumTrialOffer from "hooks/usePremiumTrialOffer.android.tsx";
 import usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer.android.tsx";
 import useDiscountOfferDefault from "hooks/useDiscountOffer.tsx";
-import _fetchUserOffer from "UserOfferActionCreators.tsx";
+import getPaymentGateway from "UserOfferActionCreators.tsx";
 import useHasActiveTrial from "PremiumSubscriptionTrialUtil.tsx";
 import useIsInReverseTrial from "ReverseTrialUtils.native.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -153,7 +153,7 @@ export const useFetchChurnUserDiscountOffer = function useFetchChurnUserDiscount
     }
     if (!tmp11) {
       tmp8(true);
-      obj = _fetchUserOffer;
+      obj = getPaymentGateway;
       const churnDiscountOffer = obj.fetchChurnDiscountOffer();
       churnDiscountOffer.then((arg0) => {
         callback2(arg0);

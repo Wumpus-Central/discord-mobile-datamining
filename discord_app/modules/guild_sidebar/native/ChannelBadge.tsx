@@ -50,7 +50,7 @@ export default function ChannelBadge(arg0) {
             obj2[0] = tmp.channelInfoContainer;
             const obj3 = { variant: "text-xs/semibold", color: "text-muted", children: null };
             obj3[2] = tmp2(1898).humanizeValue(postsWithUnreadsCount, stateFromStores);
-            obj2[1] = jsx(tmp2(4376).Text, { variant: "text-xs/semibold", color: "text-muted", children: null });
+            obj2[1] = jsx(tmp2(4440).Text, { variant: "text-xs/semibold", color: "text-muted", children: null });
             tmp5 = <View style={null}>{null}</View>;
             const tmp2Result = tmp2(1898);
           }

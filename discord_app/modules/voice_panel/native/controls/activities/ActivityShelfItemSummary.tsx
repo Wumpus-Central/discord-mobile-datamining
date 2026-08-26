@@ -2,7 +2,7 @@
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../../design/void/native.tsx";
-import _modDef4120 from "../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4184 from "../../../../reanimated/ReanimatedRexport.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import PillWrapper from "../../../../../design/components/Button/native/ButtonPill.native.tsx";
 import EllipsisCircle from "../../../../../design/components/Button/native/ButtonEllipsis.native.tsx";
@@ -55,7 +55,7 @@ export default function ActivityShelfItemSummary(submitting) {
     tmp7Result = tmp7(EllipsisCircle.Ellipsis, { variant: "active", size: "md" });
   }
   obj2[1] = tmp7Result;
-  items[1] = closure_5(_modDef4120.View, obj2);
+  items[1] = closure_5(_modDef4184.View, obj2);
   obj[1] = items;
   const items2 = [closure_6(View, obj), closure_5(ParticipantsSummary, { channelId, applicationId })];
   obj[1] = items2;

@@ -20,12 +20,12 @@ export const MaxForumPostReactions = function MaxForumPostReactions(thread) {
   ({ parentChannel, firstMessage, containerWidth, containerStyle } = thread);
   const tmp = callback2();
   dependencyMap = tmp;
-  const disableReactionCreates = reactionContainerStyle(10352)(thread).disableReactionCreates;
+  const disableReactionCreates = reactionContainerStyle(10420)(thread).disableReactionCreates;
   let num = 28;
   if (disableReactionCreates) {
     num = 0;
   }
-  let obj = thread(8560);
+  let obj = thread(8628);
   obj = { containerWidth: containerWidth - num, reactionEmojiWidth: 46, digitWidth: 7.5, message: firstMessage, parentChannel };
   const maxPossibleForumPostReactions = obj.useMaxPossibleForumPostReactions(obj);
   ({ reactions, additionalReactionCount } = maxPossibleForumPostReactions);
@@ -52,7 +52,7 @@ export const MaxForumPostReactions = function MaxForumPostReactions(thread) {
       obj1[0] = additionalReactionCount;
       obj1[1] = reactionContainerStyle;
       obj1[2] = thread.id;
-      tmp8 = callback(tmp3(10049).AdditionalReactionCount, obj1);
+      tmp8 = callback(tmp3(10116).AdditionalReactionCount, obj1);
     }
     items1[1] = tmp8;
     let tmp10 = !disableReactionCreates;
@@ -60,7 +60,7 @@ export const MaxForumPostReactions = function MaxForumPostReactions(thread) {
       const obj2 = { containerStyle: null, threadId: null };
       obj2[0] = reactionContainerStyle;
       obj2[1] = thread.id;
-      tmp10 = callback(tmp3(10049).AddReactionButton, obj2);
+      tmp10 = callback(tmp3(10116).AddReactionButton, obj2);
     }
     items1[2] = tmp10;
     obj[1] = items1;
@@ -79,8 +79,8 @@ export const ForumPostActionBarReactions = function ForumPostActionBarReactions(
   ({ parentChannel, firstMessage, containerStyle } = thread);
   const tmp = callback2();
   dependencyMap = tmp;
-  const disableReactionCreates = reactionContainerStyle(10352)(thread).disableReactionCreates;
-  let obj = thread(8560);
+  const disableReactionCreates = reactionContainerStyle(10420)(thread).disableReactionCreates;
+  let obj = thread(8628);
   obj = { message: firstMessage, parentChannel, sorted: false, count: null };
   let num = 2;
   if (disableReactionCreates) {
@@ -112,7 +112,7 @@ export const ForumPostActionBarReactions = function ForumPostActionBarReactions(
       const items2 = [tmp.actionBarReaction, reactionContainerStyle];
       obj1[1] = items2;
       obj1[2] = thread.id;
-      tmp8 = callback(tmp3(10049).AdditionalReactionCount, obj1);
+      tmp8 = callback(tmp3(10116).AdditionalReactionCount, obj1);
     }
     items1[1] = tmp8;
     let tmp10 = !disableReactionCreates;
@@ -121,7 +121,7 @@ export const ForumPostActionBarReactions = function ForumPostActionBarReactions(
       const items3 = [tmp.actionBarReaction, reactionContainerStyle];
       obj2[0] = items3;
       obj2[1] = thread.id;
-      tmp10 = callback(tmp3(10049).AddReactionButton, obj2);
+      tmp10 = callback(tmp3(10116).AddReactionButton, obj2);
     }
     items1[2] = tmp10;
     obj[1] = items1;

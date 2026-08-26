@@ -3,9 +3,9 @@ import set from "../../../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../../../../Constants.tsx";
 import getSystemLocale from "../../../../../../intl/index.native.tsx";
-import hooksDefault from "../../../../../../../_runtime/03979_hooks.js";
+import hooksDefault from "../../../../../../../_runtime/04043_hooks.js";
 import SafetyHubView from "../../../../../safety_hub/SafetyHubConstants.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/08114_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/08181_registerAsset.js";
 import frozen from "../../EmbedUtils.tsx";
 
 const Image = get_ActivityIndicator.Image;

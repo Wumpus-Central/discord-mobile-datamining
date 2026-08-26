@@ -39,7 +39,7 @@ function _markUnreadBySnowflakeID() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ function _markUnreadBySnowflakeID() {
                   channel = 1;
                   c6 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = callback2(7368).unarchiveThread(channel, false);
+                  obj1[0] = callback2(7434).unarchiveThread(channel, false);
                   return obj1;
                 }
               }
@@ -79,7 +79,7 @@ function _markUnreadBySnowflakeID() {
               obj2[1] = obj3;
               HTTP.post(obj2);
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -101,7 +101,7 @@ function _markUnreadBySnowflakeID() {
             return obj;
           }
           if (!closure_4.hasJoined(callback)) {
-            obj2 = callback2(7368);
+            obj2 = callback2(7434);
             channel = 2;
             c6 = 1;
             const obj5 = { value: null, done: false };

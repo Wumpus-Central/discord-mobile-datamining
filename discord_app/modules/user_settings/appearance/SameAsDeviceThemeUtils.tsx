@@ -31,25 +31,25 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(arg0) {
           id = gradientPreset.id;
         }
       }
-      let tmp6Result = tmp6(4227);
+      let tmp6Result = tmp6(4291);
       obj = {};
       obj[tmp8] = customThemeBaseTheme;
       const result1 = tmp6Result.updateThemePreferences(obj);
       if (null != arg0) {
-        tmp6Result = tmp6(4227);
+        tmp6Result = tmp6(4291);
         obj = { customUserThemeSettings: null };
         obj[0] = arg0;
         const result2 = tmp6Result.updateSyncedClientTheme(tmp8, obj);
       } else if (null != tmp9) {
         obj1 = { backgroundGradientPresetId: null };
         obj1[0] = tmp9;
-        const result3 = tmp6(4227).updateSyncedClientTheme(tmp8, obj1);
-        const tmp6Result1 = tmp6(4227);
+        const result3 = tmp6(4291).updateSyncedClientTheme(tmp8, obj1);
+        const tmp6Result1 = tmp6(4291);
       } else {
         obj2 = { theme: null };
         obj2[0] = customThemeBaseTheme;
-        const result4 = tmp6(4227).updateSyncedClientTheme(tmp8, obj2);
-        const tmp6Result2 = tmp6(4227);
+        const result4 = tmp6(4291).updateSyncedClientTheme(tmp8, obj2);
+        const tmp6Result2 = tmp6(4291);
       }
       const obj4 = AccessibilityAnnouncer;
     }

@@ -44,7 +44,7 @@ const forwardRefResult = importAllResult.forwardRef((onLoad, ref) => {
     }
   }));
   const merged1 = Object.assign(merged);
-  return jsx(ref(8451), { ref, onLoad: callback });
+  return jsx(ref(8518), { ref, onLoad: callback });
 });
 const result = require("set").fileFinishedImporting("modules/image/native/APNGPlayer.android.tsx");
 

@@ -35,7 +35,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj[6] = new Set();
   obj[7] = function openChannel(arg0) {
     const callback = arg0;
-    let result = callback(4617).isStageVoicePanelEnabled("voice_panel_store");
+    let result = callback(4681).isStageVoicePanelEnabled("voice_panel_store");
     if (!result) {
       const channel = closure_1_2.getChannel(arg0);
       let isGuildStageVoiceResult;

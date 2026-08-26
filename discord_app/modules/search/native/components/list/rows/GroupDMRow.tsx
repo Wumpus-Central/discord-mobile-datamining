@@ -9,20 +9,20 @@ export default function GroupDMRow(channel) {
   channel = channel.channel;
   const onPress = channel.onPress;
   ({ trailing, onAccessibilityAction, accessibilityActions } = channel);
-  let str = onPress(4574)(channel);
+  let str = onPress(4638)(channel);
   const items = [channel.id, onPress];
   const callback = React.useCallback(() => {
     onPress(channel.id);
   }, items);
   let obj = { size: channel(1297).AvatarSizes.LARGE_48, channel };
-  const tmp4 = onPress(9813);
-  const tmp6 = jsx(onPress(9813), { size: channel(1297).AvatarSizes.LARGE_48, channel });
-  const recipientsLabel = channel(9814).useRecipientsLabel(channel);
+  const tmp4 = onPress(9880);
+  const tmp6 = jsx(onPress(9880), { size: channel(1297).AvatarSizes.LARGE_48, channel });
+  const recipientsLabel = channel(9881).useRecipientsLabel(channel);
   let tmp3Result;
   if (null != recipientsLabel) {
     obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
     obj[3] = recipientsLabel;
-    tmp3Result = tmp3(tmp5(4376).Text, obj);
+    tmp3Result = tmp3(tmp5(4440).Text, obj);
   }
   let str2 = str;
   if (str == null) {
@@ -37,5 +37,5 @@ export default function GroupDMRow(channel) {
   obj[5] = trailing;
   obj[6] = accessibilityActions;
   obj[7] = onAccessibilityAction;
-  return jsx(channel(16005).SearchListRow, { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null });
+  return jsx(channel(16086).SearchListRow, { label: str2, icon: tmp6, onPress: callback, accessibilityLabel: null, subLabel: null, trailing: null, accessibilityActions: null, onAccessibilityAction: null });
 };

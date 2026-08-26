@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../../_runtime/07850_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/07917_registerAsset.js";
 import frozen from "../EmbedUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import createPremiumGroupInviteEmbed from "../row_data/embeds/PremiumGroupInviteEmbed.tsx";

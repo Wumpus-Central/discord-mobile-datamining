@@ -33,10 +33,10 @@ export default function CustomTypingIndicatorDynamicAsset(arg0) {
     })
   };
   const items = [callback(View, obj), ];
-  obj = { variant: textVariant, color: textColor, lineClamp, style: items1, children: null };
+  obj = { variant: textVariant, color: textColor, lineClamp, includeFontPadding: true, style: items1, children: null };
   items1 = [tmpResult.text, textStyle];
   const intl = require("../../../intl/index.native.tsx").intl;
-  obj[4] = intl.format(require("../CustomTypingIndicatorUtils.tsx").getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), { name });
+  obj[5] = intl.format(require("../CustomTypingIndicatorUtils.tsx").getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), { name });
   items[1] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj);
   obj[5] = items;
   return callback2(require("../../../design/components/Stack/native/Stack.native.tsx").Stack, obj);

@@ -9,9 +9,9 @@ const result = set.fileFinishedImporting("modules/frames/utils/canLaunchFrame.ts
 export const canLaunchFrame = function canLaunchFrame(application) {
   if (null != application) {
     if (obj.isRealApplication(application)) {
-      let tmpResult = tmp(7733);
+      let tmpResult = tmp(7799);
       let hasApplicationFlagResult = tmpResult.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
-      tmpResult = tmp(7733);
+      tmpResult = tmp(7799);
       if (hasApplicationFlagResult) {
         hasApplicationFlagResult = tmpResult.hasApplicationFlag(application, ApplicationFlags.CONTEXTLESS_ACTIVITY);
       }

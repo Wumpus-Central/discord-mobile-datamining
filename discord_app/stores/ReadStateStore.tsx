@@ -15,7 +15,7 @@ import useOptInEnabledForGuild from "../modules/opt_in_channels/isOptInEnabled.t
 import updateGuildUnreadSentinel from "GuildReadStateStore.tsx";
 import isChangelogChannelDefault from "../modules/changelog/utils/isChangelogChannel.tsx";
 import getFocusedChannelId from "../modules/panels/isChannelFocused.native.tsx";
-import _modDef10557 from "../modules/app_state/DiscordAppState.native.tsx";
+import _modDef10625 from "../modules/app_state/DiscordAppState.native.tsx";
 import _networkAwareRetryDefault from "../modules/network/networkAwareRetry.tsx";
 import filterOutMessageRequestsAndSpam from "../modules/message_request/MessageRequestUtils.tsx";
 import map2 from "../modules/panels/visibleInlineChannels.tsx";
@@ -139,7 +139,7 @@ function _processBulkAckQueue() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -187,7 +187,7 @@ function _processBulkAckQueue() {
             closure_65.length = 0;
             c66 = false;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else if (2 === tmp7) {
             if (arg0 === 1) {
               c6 = 3;
@@ -200,7 +200,7 @@ function _processBulkAckQueue() {
             } else {
               callback2(callback);
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c6 = 3;
@@ -305,7 +305,7 @@ function shouldAutomaticallyAck(value, arg1) {
           }
           return false;
         }
-        obj5 = _modDef10557;
+        obj5 = _modDef10625;
       }
       if (tmp4) {
         if (!value._persisted) {
@@ -1713,7 +1713,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
       const result = filterOutMessageRequestsAndSpam.isMessageRequestOrSpamRequest(self.channelId, items);
       let tmp9 = !result;
       if (!result) {
-        let result1 = tmp4(7141).isOptInEnabledForGuild(self._guildId);
+        let result1 = tmp4(7207).isOptInEnabledForGuild(self._guildId);
         if (result1) {
           result1 = self._lastMessageTimestamp < c71;
         }
@@ -1722,7 +1722,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
           canTrackUnreadsResult = self.canTrackUnreads();
         }
         tmp9 = canTrackUnreadsResult;
-        const tmp4Result = tmp4(7141);
+        const tmp4Result = tmp4(7207);
       }
       tmp3 = tmp9;
       obj = filterOutMessageRequestsAndSpam;
@@ -2040,14 +2040,14 @@ prototype2["_ack"] = function _ack(closure_1, c0) {
         }
         callback(709).dispatch({ type: "MESSAGE_ACKED" });
         if (dependencyMap) {
-          recalculateFlagsResult(2009)(13391, tmp5.paths).then((arg0) => {
+          recalculateFlagsResult(2009)(13464, tmp5.paths).then((arg0) => {
             obj = closure_1;
             if (closure_1 == null) {
               obj = {};
             }
             arg0.default(channelId.channelId, obj);
           });
-          const promise = recalculateFlagsResult(2009)(13391, tmp5.paths);
+          const promise = recalculateFlagsResult(2009)(13464, tmp5.paths);
         }
         obj = callback(709);
         tmp5 = dependencyMap;
@@ -3185,7 +3185,7 @@ obj = {
     }
     let result = channelId2 === channelId || currentSidebarChannelId === channelId;
     if (!result) {
-      let tmp8Result = tmp8(13392);
+      let tmp8Result = tmp8(13465);
       result = tmp8Result.isChannelVisibleInline(channelId, (arg0) => focused.isFocused(arg0));
     }
     if (result) {
@@ -3224,7 +3224,7 @@ obj = {
       if (null != value.oldestUnreadMessageId) {
         if (!value.oldestUnreadMessageIdStale) {
           if (!hasUnreadResult) {
-            tmp8Result = tmp8(9918);
+            tmp8Result = tmp8(9985);
             hasUnreadResult = tmp8Result.getFocusedChannelId() === channelId;
           }
           if (!hasUnreadResult) {
@@ -3274,7 +3274,7 @@ obj = {
                   tmp46 = ReadStateTypes;
                 }
               }
-              tmp8Result1 = tmp8(4639);
+              tmp8Result1 = tmp8(4703);
             }
             const channel = obj2.getChannel(message.channel_id);
             let tmp34 = null != channel && channel.isPrivate();
@@ -3290,7 +3290,7 @@ obj = {
                     if (tmp8Result2.computeThreadNotificationSetting(channel) === ThreadMemberFlags.ALL_MESSAGES) {
                       obj6 = { shouldMention: true, isMentionLowImportance: true };
                     }
-                    tmp8Result2 = tmp8(9917);
+                    tmp8Result2 = tmp8(9984);
                   } else if (!channel.isVocal()) {
                     if (!obj16.isChannelMuted(channel.guild_id, channel.id)) {
                       if (obj16.resolvedMessageNotifications(channel) === constants10.ALL_MESSAGES) {

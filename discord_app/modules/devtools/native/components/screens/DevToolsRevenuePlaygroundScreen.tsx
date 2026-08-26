@@ -198,7 +198,7 @@ function FriendAnniversary() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -304,7 +304,7 @@ function FriendAnniversary() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -628,7 +628,7 @@ function FriendAnniversary() {
   return callback3(closure_19, obj9);
 }
 function TrialOfferSheetExample() {
-  let obj = premiumTrialOffer(7054);
+  let obj = premiumTrialOffer(7120);
   premiumTrialOffer = obj.usePremiumTrialOffer();
   obj = {
     label: "Trial Offer Nitro Basic",
@@ -647,9 +647,9 @@ function TrialOfferSheetExample() {
       }
     }
   };
-  items = [closure_17(premiumTrialOffer(5480).TableRow, obj), ];
+  items = [closure_17(premiumTrialOffer(5546).TableRow, obj), ];
   obj = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(5480).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(5546).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -667,7 +667,7 @@ function TrialOfferSheetExample() {
     }
   });
   obj[2] = items;
-  return closure_18(premiumTrialOffer(5873).TableRowGroup, obj);
+  return closure_18(premiumTrialOffer(5939).TableRowGroup, obj);
 }
 function PremiumToggles() {
   let obj = defaultAreStatesEqual;
@@ -711,10 +711,10 @@ function ForceMockIAP() {
   obj[2] = tmp4;
   obj[3] = result;
   obj[4] = function onValueChange(arg0) {
-    callback(15238).toggle("force_mock_iap", arg0);
+    callback(15317).toggle("force_mock_iap", arg0);
     closure_13.persist();
-    const obj = callback(15238);
-    const result = callback2(11349).checkForUpdateAndReload();
+    const obj = callback(15317);
+    const result = callback2(11421).checkForUpdateAndReload();
   };
   return closure_17(TableRowGroupTitle.TableRowGroup, obj);
 }

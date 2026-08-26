@@ -47,7 +47,7 @@ let closure_5 = importDefaultResult((arg0) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -84,7 +84,7 @@ let closure_5 = importDefaultResult((arg0) => {
             } else {
               if (null != attachmentUrl) {
                 if ("" !== attachmentUrl) {
-                  let obj3 = callback2(9902);
+                  let obj3 = callback2(9969);
                   dependencyMap = 2;
                   c4 = 1;
                   const obj2 = { value: null, done: false };
@@ -99,9 +99,9 @@ let closure_5 = importDefaultResult((arg0) => {
             throw arg1;
           } else if (arg0 !== 2) {
             callback = arg1;
-            obj = callback(9084);
+            obj = callback(9152);
             obj.trackLinkClicked(callback);
-            obj1 = callback(4094);
+            obj1 = callback(4158);
             obj1.openURL(callback);
           }
           c4 = 3;
@@ -144,7 +144,7 @@ let closure_4 = importDefaultResult((arg0) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -181,7 +181,7 @@ let closure_4 = importDefaultResult((arg0) => {
             } else {
               if (null != attachmentUrl) {
                 if ("" !== attachmentUrl) {
-                  let obj2 = callback2(9902);
+                  let obj2 = callback2(9969);
                   dependencyMap = 2;
                   c4 = 1;
                   obj2 = { value: null, done: false };
@@ -198,7 +198,7 @@ let closure_4 = importDefaultResult((arg0) => {
             callback = arg1;
             obj = { urlString: null };
             obj[0] = callback;
-            callback(11144)(obj);
+            callback(11216)(obj);
           }
           c4 = 3;
           const obj3 = { value: null, done: true };
@@ -225,7 +225,7 @@ obj[2] = function() {
   return applyArgumentsResult;
 };
 obj[3] = function onTapMention(closure_0) {
-  let obj = parsedUserId(11107);
+  let obj = parsedUserId(11179);
   const nativeSyntheticEventData = obj.getNativeSyntheticEventData(closure_0);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
@@ -244,7 +244,7 @@ obj[3] = function onTapMention(closure_0) {
         obj[0] = guildId;
         obj[1] = roleId;
         obj[2] = channelId;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(2009)(11147, tmp2.paths), "RoleMembersActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(2009)(11219, tmp2.paths), "RoleMembersActionSheet", obj);
         const obj9 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }
@@ -253,7 +253,7 @@ obj[3] = function onTapMention(closure_0) {
         obj1 = { guildId: null, roleId: null, channelId: null };
         obj1[0] = guildId;
         const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
-        const tmp10 = tmp(2009)(11147, tmp2.paths);
+        const tmp10 = tmp(2009)(11219, tmp2.paths);
         obj1[1] = DISCORD_EPOCHDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj1[2] = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);
@@ -261,7 +261,7 @@ obj[3] = function onTapMention(closure_0) {
       }
     }
     if (null == roleName) {
-      const DeveloperMode = tmp(4070).DeveloperMode;
+      const DeveloperMode = tmp(4134).DeveloperMode;
       if (DeveloperMode.getSetting()) {
         if (null != parsedUserId) {
           const obj2 = { secondaryConfirmText: null, onConfirmSecondary: null };
@@ -302,7 +302,7 @@ obj[5] = function onTapInlineCode(nativeEvent) {
   }
 };
 obj[6] = function onTapEmoji(emojiNode) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8881, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8949, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
 };
 let result = require("set").fileFinishedImporting("components_native/chat/contentHandlers.tsx");
 

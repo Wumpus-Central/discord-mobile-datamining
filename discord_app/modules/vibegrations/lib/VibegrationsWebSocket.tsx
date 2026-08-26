@@ -149,6 +149,23 @@ prototype["sendControlAck"] = function sendControlAck(id, failed, response, mess
     }
   }
 };
+prototype["sendAppIconAck"] = function sendAppIconAck(arg0, failed) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      try {
+        const socket = self.socket;
+        const _JSON = JSON;
+        const obj = { type: "app_icon_ack", id: null, status: null };
+        obj[1] = arg0;
+        obj[2] = failed;
+        socket.send(JSON.stringify(obj));
+      } catch (err) {
+      }
+    }
+  }
+};
 prototype["close"] = function close() {
   const socket = this.socket;
   if (socket != null) {

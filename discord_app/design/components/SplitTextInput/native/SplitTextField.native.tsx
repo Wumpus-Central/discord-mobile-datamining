@@ -24,7 +24,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
     ({ content: obj5[0], pressableProps: obj5[1] } = inputClearButtonConfig);
     tmp6 = obj;
   }
-  let tmpResult = tmp(6108);
+  let tmpResult = tmp(6174);
   const inputAttachments = tmpResult.useInputAttachments(size, tmp6);
   let tmp8 = null;
   ({ trailing, inputStyle } = inputAttachments);
@@ -43,7 +43,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
         return items;
       };
       const merged = Object.assign(size.leadingPressableProps);
-      tmpResult = tmp(6108);
+      tmpResult = tmp(6174);
       obj2.children = tmpResult.renderInputAttachment(undefined, size.leadingText, inputStyles.text);
       obj1[1] = <closure_2 style={null} />;
       tmp8 = <closure_3 style={null}>{null}</closure_3>;

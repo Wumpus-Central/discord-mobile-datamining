@@ -11,7 +11,7 @@ import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowTrailingText from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
-import registerAssetDefault from "../../../../_runtime/08383_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08450_registerAsset.js";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import useStickerPackCategories from "../../stickers/StickersHooks.tsx";
 import ChannelAutocompleteEmojiUpsellDefault from "../../channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx";
@@ -75,16 +75,16 @@ const obj9 = {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(4224).getName(user);
-      const obj3 = guildId(4224);
+      nick = guildId(4288).getName(user);
+      const obj3 = guildId(4288);
     }
     obj[3] = closure_9(AutocompleteLabel, { text: nick });
     obj = { status, user, size: tmp2(1297).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
     obj[4] = closure_9(user(1297).Avatar, obj);
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
-    obj[5] = closure_9(guildId(9278), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
-    return closure_9(user(8118).FormRow, obj);
+    obj[5] = closure_9(guildId(9346), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
+    return closure_9(user(8185).FormRow, obj);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -215,7 +215,7 @@ const obj9 = {
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
-      let tmp6Result = tmp6(tmp5(8097).UnknownGameIcon, obj);
+      let tmp6Result = tmp6(tmp5(8164).UnknownGameIcon, obj);
       let tmp8 = tmp6;
     } else {
       obj = { style: null, source: null };

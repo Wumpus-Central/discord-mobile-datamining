@@ -12,7 +12,7 @@ function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
   const tmp = callback();
-  let obj = num(15061);
+  let obj = num(15140);
   const cardLayout = obj.useCardLayout();
   ({ columns, cardWidth: num } = cardLayout);
   const items = [];
@@ -43,7 +43,7 @@ function SkeletonGrid(accessibilityLabel) {
 }
 noopAll;
 createCacheKey = { skeletonGrid: { flex: 1, alignItems: "center" }, skeletonRow: null };
-createCacheKey = { flexDirection: "row", gap: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP, paddingHorizontal: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP };
+createCacheKey = { flexDirection: "row", gap: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP };
 createCacheKey[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/collectibles/native/FeedProductList.tsx");

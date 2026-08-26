@@ -10,7 +10,7 @@ import { initialize } from "../../../../discord_common/js/packages/flux/index.ts
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: error, RTCConnectionStates: closure_8 } = ME);
 let obj = {};
-const merged = Object.assign({ initialized: false, callId: "a" });
+const merged = Object.assign({ initialized: false, callId: "r" });
 obj = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
 const result = require("set").fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
 
@@ -58,7 +58,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(10855)();
+  const tmp3 = id(10927)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
   stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);

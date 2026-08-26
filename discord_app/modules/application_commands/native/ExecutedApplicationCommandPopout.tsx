@@ -80,11 +80,11 @@ function getCommandOptionComponents(option) {
           if (null != channel) {
             let obj = { style: null, children: null };
             obj[0] = styles.commandOptionMentionText;
-            const items1 = [closure_18, tmp6(4574).computeChannelName(channel, authStore, closure_11)];
+            const items1 = [closure_18, tmp6(4638).computeChannelName(channel, authStore, closure_11)];
             obj[1] = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = callback2(tmp6(1297).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(4574);
+            const tmp6Result = tmp6(4638);
           }
           const str3 = iter.value;
         } else {
@@ -236,8 +236,8 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
           const channel = store.getChannel(item10118.value.toString());
           sum = null;
           if (null != channel) {
-            sum = closure_18 + tmp5(4574).computeChannelName(channel, authStore, closure_11);
-            const tmp5Result = tmp5(4574);
+            sum = closure_18 + tmp5(4638).computeChannelName(channel, authStore, closure_11);
+            const tmp5Result = tmp5(4638);
           }
           const str4 = item10118.value;
         } else if (tmp5(1955).ApplicationCommandOptionType.ROLE === type) {
@@ -665,7 +665,7 @@ export default function ExecutedCommandPopout(channelId) {
       const obj = stateFromStores(closure_1_3[38]);
     }
   }, items1);
-  obj = { value: messageId(5834)(messageId(5854).EXECUTED_COMMAND).analyticsLocations, children: null };
+  obj = { value: messageId(5900)(messageId(5920).EXECUTED_COMMAND).analyticsLocations, children: null };
   obj = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -708,6 +708,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = tmp9(closure_5, obj4);
   }
   obj[2] = tmp9Result;
-  obj[1] = closure_21(channelId(5503).BottomSheet, obj);
-  return closure_21(channelId(5834).AnalyticsLocationProvider, obj);
+  obj[1] = closure_21(channelId(5569).BottomSheet, obj);
+  return closure_21(channelId(5900).AnalyticsLocationProvider, obj);
 };

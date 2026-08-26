@@ -4,7 +4,7 @@ import setDefault from "../../utils/Durations.tsx";
 import memoizeDefault from "../../../_runtime/00731_memoize.js";
 import AbortCodes from "ThreadConstants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import hooksDefault from "../../../_runtime/03979_hooks.js";
+import hooksDefault from "../../../_runtime/04043_hooks.js";
 
 function getAutoArchiveOptions() {
   let obj = { id: "1hour", label: null, value: null };

@@ -35,7 +35,7 @@ function _maybeFetchCollectiblesForInvoices() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -79,7 +79,7 @@ function _maybeFetchCollectiblesForInvoices() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c1 = tmp;
@@ -125,7 +125,7 @@ function _maybeFetchCollectiblesForGifts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -164,7 +164,7 @@ function _maybeFetchCollectiblesForGifts() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c1 = tmp;
@@ -201,7 +201,7 @@ function _updateLinkForUserId() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -245,7 +245,7 @@ function _updateLinkForUserId() {
             return obj;
           } else {
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           dependencyMap = tmp;
@@ -281,7 +281,7 @@ function _removeLinkForUserId() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -326,7 +326,7 @@ function _removeLinkForUserId() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c1 = tmp;
@@ -358,7 +358,7 @@ function _getLinkCodeForCurrentUser() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -399,7 +399,7 @@ function _getLinkCodeForCurrentUser() {
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         v0 = tmp;
@@ -430,7 +430,7 @@ function _shareIarWithParents() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -464,7 +464,7 @@ function _shareIarWithParents() {
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
         v0 = tmp;
@@ -498,7 +498,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -826,7 +826,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1128,7 +1128,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

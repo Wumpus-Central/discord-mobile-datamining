@@ -15,14 +15,13 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
-function WidgetRenderer(isFirstWidget) {
-  ({ userId, widget, cardStyle } = isFirstWidget);
+function WidgetRenderer(arg0) {
+  ({ userId, widget, cardStyle } = arg0);
   if (widget instanceof toSubmission.ApplicationWidget) {
-    let obj = { userId: null, widget: null, cardStyle: null, isFirstWidget: null };
+    let obj = { userId: null, widget: null, cardStyle: null };
     obj[0] = userId;
     obj[1] = widget;
     obj[2] = cardStyle;
-    obj[3] = isFirstWidget.isFirstWidget;
     let tmp3Result = callback2(UserProfileApplicationWidgetCardDefault, obj);
   } else if (widget instanceof createDefaultFieldsSection.UserProfilePersonalWidget) {
     obj = { userId: null, widget: null, cardStyle: null };
@@ -206,11 +205,11 @@ let closure_17 = importAllResult.memo((game) => {
     obj3[0] = tmp.comment;
     const obj4 = { size: "xxs", color: null };
     obj4[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items3 = [tmp10(tmp6(12553).QuoteIcon, obj4), ];
+    const items3 = [tmp10(tmp6(12624).QuoteIcon, obj4), ];
     const obj5 = { variant: "text-sm/normal", color: "text-muted", lineClamp: 3, style: null, children: null };
     obj5[3] = tmp.commentText;
     obj5[4] = game.comment;
-    items3[1] = tmp10(tmp6(4376).Text, obj5);
+    items3[1] = tmp10(tmp6(4440).Text, obj5);
     obj3[1] = items3;
     tmp8Result = tmp8(tmp9, obj3);
   }
@@ -502,7 +501,7 @@ export default function UserProfileWidgetsBoard(userId) {
   if (0 !== displayableBoardWidgets.length) {
     obj = { style: null, children: null };
     obj[0] = tmp.board;
-    obj[1] = displayableBoardWidgets.map((getUniqueKey) => closure_1_10(closure_1_21, { userId: flag, widget: getUniqueKey, cardStyle: closure_1, isFirstWidget: 0 === arg1 }, getUniqueKey.getUniqueKey()));
+    obj[1] = displayableBoardWidgets.map((getUniqueKey) => closure_1_10(closure_1_21, { userId: flag, widget: getUniqueKey, cardStyle: closure_1 }, getUniqueKey.getUniqueKey()));
     tmp4 = callback2(closure_7, obj);
   }
   return tmp4;

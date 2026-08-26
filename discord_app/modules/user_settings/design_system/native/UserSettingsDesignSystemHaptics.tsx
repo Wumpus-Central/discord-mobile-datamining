@@ -11,7 +11,7 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 require = arg1;
 function HapticButton(text) {
   const type = text.type;
-  return callback(type(4815).Button, {
+  return callback(type(4879).Button, {
     variant: "secondary",
     onPress() {
       return type(closure_1_1[5]).triggerHapticFeedback(type);

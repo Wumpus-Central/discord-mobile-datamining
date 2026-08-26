@@ -61,17 +61,17 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
     if (tmp11Result) {
       obj1 = { flaggedContent: null };
       obj1[0] = flagged_content;
-      tmp11Result = tmp11(tmp13(11465), obj1);
+      tmp11Result = tmp11(tmp13(11537), obj1);
     }
     const obj2 = { children: null };
     items5[2] = tmp11Result;
     const obj3 = { classification: null };
     obj3[0] = safetyHubClassification.classification;
-    items5[3] = tmp11(tmp13(11466), obj3);
+    items5[3] = tmp11(tmp13(11538), obj3);
     obj[1] = items5;
     items3[1] = tmp10(tmp12, obj);
     obj2[0] = items3;
-    return tmp10(tmp2(11462).AppealIngestionModalScreen, obj2);
+    return tmp10(tmp2(11534).AppealIngestionModalScreen, obj2);
   } else {
     const obj4 = { variant: "heading-md/normal", color: "text-link", style: null, onPress: null, children: null };
     obj4[2] = tmp.detailsAction;
@@ -82,10 +82,10 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
           let obj = callback(709);
           obj = { type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput };
           obj.dispatch(obj);
-          callback(4347).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+          callback(4411).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
         },
         onClose() {
-          return callback(4347).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
+          return callback(4411).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
         }
       };
       return obj.openLazy(callback(paths[15])(paths[14], paths.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj);
@@ -98,6 +98,6 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
       stringResult2 = intl3.string(tmp2(1236).t.uoQFIp);
     }
     obj4[4] = stringResult2;
-    tmp11Result = tmp11(tmp2(4376).Text, obj4);
+    tmp11Result = tmp11(tmp2(4440).Text, obj4);
   }
 };

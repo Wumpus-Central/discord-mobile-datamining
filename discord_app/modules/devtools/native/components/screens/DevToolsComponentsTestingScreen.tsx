@@ -62,9 +62,9 @@ function Select(children) {
     state = { variant: "text-md/normal", children: null };
     const items1 = ["Selected values: ", mapped.join(", ")];
     state[1] = items1;
-    tmp6(tmp4(4376).Text, state);
+    tmp6(tmp4(4440).Text, state);
   } else {
-    items[2] = tmp7(tmp4(4376).Text, { variant: "text-md/normal", children: "Nothing selected" });
+    items[2] = tmp7(tmp4(4440).Text, { variant: "text-md/normal", children: "Nothing selected" });
     let str3 = "off";
     if (tmp2) {
       str3 = "on";
@@ -75,7 +75,7 @@ function Select(children) {
     obj2[1] = function onPress() {
       return _undefined((arg0) => !arg0);
     };
-    items[3] = tmp7(tmp4(4815).Button, obj2);
+    items[3] = tmp7(tmp4(4879).Button, obj2);
     obj[1] = items;
     return tmp6(require("../../../../../design/components/Card/native/Card.native.tsx").Card, obj);
   }

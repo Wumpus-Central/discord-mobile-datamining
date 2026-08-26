@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx
-import _modDef14094 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14167 from "../../../settings/native/renderer/SettingLayout.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
 import { MarketingURLs } from "../../../../Constants.tsx";
@@ -9,7 +9,7 @@ const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(() => {
   const node = importAllResult.useMemo(() => {
-    let obj = callback(10516);
+    let obj = callback(10584);
     obj = { sections: null };
     obj = { label: null, settings: null, subLabel: null };
     const intl = callback(1236).intl;
@@ -35,7 +35,7 @@ const memoResult = importAllResult.memo(() => {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return jsx(_modDef14094, { node });
+  return jsx(_modDef14167, { node });
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
 

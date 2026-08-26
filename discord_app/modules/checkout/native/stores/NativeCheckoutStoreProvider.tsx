@@ -15,7 +15,7 @@ function NativeCheckoutStoreProvider(children) {
   closure_6 = undefined;
   let first;
   closure_8 = undefined;
-  closure_6 = order(5822)(() => {
+  closure_6 = order(5888)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -121,7 +121,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -189,7 +189,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
             }
             closure_1_10(false);
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp23) {
           c4 = tmp;

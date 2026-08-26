@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceChannelList.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4120 from "../../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4184 from "../../../../reanimated/ReanimatedRexport.tsx";
 import SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault from "SettingsAppearanceChannelListPreviewNitroUpsell.tsx";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -68,9 +68,9 @@ export default function ChannelListPreview(useGradientBackground) {
     obj[0] = themes;
     obj[1] = themeIndex;
     obj[3] = tmp4(712).colors.BACKGROUND_BASE_LOW;
-    obj[1] = callback(tmp4(14742), obj);
+    obj[1] = callback(tmp4(14815), obj);
     tmp7 = callback(closure_4, obj);
-    const tmp4Result = tmp4(14742);
+    const tmp4Result = tmp4(14815);
   }
   const items2 = [tmp7, , ];
   obj1 = {
@@ -83,8 +83,8 @@ export default function ChannelListPreview(useGradientBackground) {
     showsVerticalScrollIndicator: false,
     importantForAccessibility: "no-hide-descendants"
   };
-  items2[1] = callback(animatedStyles(7890).FlashList, obj1);
+  items2[1] = callback(animatedStyles(7957).FlashList, obj1);
   items2[2] = callback(SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault, { visible: isNitroLocked, theme: themes[themeIndex] });
   obj[4] = items2;
-  return closure_6(_modDef4120.View, obj);
+  return closure_6(_modDef4184.View, obj);
 };

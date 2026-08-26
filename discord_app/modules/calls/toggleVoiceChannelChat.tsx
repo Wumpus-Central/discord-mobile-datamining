@@ -1,5 +1,5 @@
 // discord_app/modules/calls/toggleVoiceChannelChat.tsx
-import _modDef4609 from "../../actions/ChannelRTCActionCreators.tsx";
+import _modDef4673 from "../../actions/ChannelRTCActionCreators.tsx";
 import closure_2 from "../../stores/ChannelStore.tsx";
 import closure_3 from "../../stores/RTCConnectionStore.tsx";
 import closure_4 from "ChannelRTCStore.tsx";
@@ -20,7 +20,7 @@ export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
           if (open == null) {
             tmp3 = !chatOpen.getChatOpen(channelId);
           }
-          _modDef4609.updateChatOpen(channelId, tmp3);
+          _modDef4673.updateChatOpen(channelId, tmp3);
           obj = { channelId: null, chatOpen: null };
           obj[0] = channelId;
           obj[1] = tmp3;

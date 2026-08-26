@@ -43,7 +43,7 @@ export default function FormSection(arg0) {
     const found = toArrayResult.filter((type) => {
       let isValidElementResult = closure_3.isValidElement(type);
       if (isValidElementResult) {
-        isValidElementResult = type.type !== callback(7552);
+        isValidElementResult = type.type !== callback(7618);
       }
       return isValidElementResult;
     });
@@ -72,7 +72,7 @@ export default function FormSection(arg0) {
     }
     obj1[2] = flag;
     obj1[3] = found;
-    obj[1] = callback(tmp3(5873).TableRowGroup, obj1);
+    obj[1] = callback(tmp3(5939).TableRowGroup, obj1);
     const items = [callback(closure_4, obj), ];
     let tmp20Result = null;
     if (null != hint) {

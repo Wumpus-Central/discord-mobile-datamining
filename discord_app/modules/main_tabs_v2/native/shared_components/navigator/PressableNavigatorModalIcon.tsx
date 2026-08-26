@@ -16,7 +16,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   if (str === undefined) {
     str = "back";
   }
-  let obj = { source: importDefault(tmp6 ? 8543 : 8547), onPress: goBack, accessibilityLabel: null };
+  let obj = { source: importDefault(tmp6 ? 8611 : 8615), onPress: goBack, accessibilityLabel: null };
   const intl = tmp5(1236).intl;
   const string = intl.string;
   const t = tmp5(1236).t;

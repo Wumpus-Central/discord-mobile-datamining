@@ -6,7 +6,7 @@ import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import setDefault2 from "../lib/DiscordNative.tsx";
 import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
-import _modDef5236 from "../actions/SelectedChannelActionCreators.tsx";
+import _modDef5302 from "../actions/SelectedChannelActionCreators.tsx";
 import closure_4 from "AuthenticationStore.tsx";
 import ME from "../Constants.tsx";
 import { SpeakingFlags } from "../../discord_common/js/packages/media-engine/Constants.tsx";
@@ -93,7 +93,7 @@ if (require("set").isPlatformEmbedded) {
         }
       }
       if (null != getSystemIdleTimeMs) {
-        const powerMonitor2 = tmp(4008).powerMonitor;
+        const powerMonitor2 = tmp(4072).powerMonitor;
         const systemIdleTimeMs = powerMonitor2.getSystemIdleTimeMs();
         if (systemIdleTimeMs instanceof Promise) {
           systemIdleTimeMs.then(function handleIdleTime(arg0) {
@@ -139,7 +139,7 @@ if (require("set").isPlatformEmbedded) {
       c11 = true;
       closure_3 = Date.now();
       checkIdleAFK();
-      _modDef5236.disconnect();
+      _modDef5302.disconnect();
     });
     const powerMonitor3 = setDefault2.powerMonitor;
     class IdleStore extends r10079 {

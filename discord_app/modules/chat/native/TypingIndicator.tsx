@@ -171,7 +171,7 @@ function TypingIndicatorInner(channel) {
   const obj4 = { style: tmp13.wrapperHoriz, children: null };
   const obj5 = { style: tmp13.horiz, children: null };
   if (null != stateFromStoresObject.config) {
-    const obj6 = { config: null, username: null, emojiSize: 16, onPressGlyph: null };
+    const obj6 = { config: null, username: null, emojiSize: 16, onPress: null };
     ({ config: obj20[0], name: obj20[1] } = stateFromStoresObject);
     let tmp27;
     if (customTypingIndicatorConfig.canSet) {
@@ -187,9 +187,9 @@ function TypingIndicatorInner(channel) {
     }
     const obj7 = { children: null };
     const items7 = [tmp19Result, ];
-    const obj8 = { style: null, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/medium", color: "interactive-text-default", ellipsizeMode: "tail", children: null };
+    const obj8 = { style: null, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/medium", color: "interactive-text-default", includeFontPadding: true, ellipsizeMode: "tail", children: null };
     obj8[0] = tmp13.text;
-    obj8[6] = tmp7Result;
+    obj8[7] = tmp7Result;
     items7[1] = tmp19(tmp(tmp2[26]).Text, obj8);
     obj7[0] = items7;
     tmp21Result = tmp21(closure_12, obj7);

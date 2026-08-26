@@ -48,7 +48,7 @@ function _openInviteModal() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -64,7 +64,7 @@ function _openInviteModal() {
               return obj;
             } else {
               obj1 = callback(table[16]);
-              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "isArray", invite_instance_id: "<string:2581266434>" };
+              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "paddingHorizontal", invite_instance_id: -452984278 };
               obj1[1] = closure_0;
               obj1[4] = callback;
               c3 = 1;
@@ -83,7 +83,7 @@ function _openInviteModal() {
             return obj;
           } else {
             table = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           table = tmp;
@@ -120,7 +120,7 @@ function _handleInviteCodedLink() {
           obj[0] = invite;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -259,7 +259,7 @@ function _handleInviteCodedLink() {
             return obj;
           }
           member = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp66) {
           member = tmp;
           throw tmp66;
@@ -348,7 +348,7 @@ export default function getOnClick(url) {
     };
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4368).CodedLinkType.ACTIVITY_BOOKMARK) {
+    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.ACTIVITY_BOOKMARK) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -392,7 +392,7 @@ export default function getOnClick(url) {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -449,7 +449,7 @@ export default function getOnClick(url) {
                       return obj;
                     } else {
                       c4 = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp7) {
                     c4 = tmp;
@@ -516,7 +516,7 @@ export default function getOnClick(url) {
                     obj[0] = customId;
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -561,7 +561,7 @@ export default function getOnClick(url) {
                       obj2[4] = closure_1_2;
                       closure_3_1(closure_3_2[34])(obj2);
                       c4 = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp6) {
                     c4 = tmp;
@@ -603,7 +603,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4368).CodedLinkType.GUILD_PRODUCT) {
+    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.GUILD_PRODUCT) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -619,7 +619,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4368).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
+    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -632,7 +632,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4368).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -645,8 +645,8 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4368).CodedLinkType.QUESTS_EMBED) {
-      let tmp2Result = tmp2(10532);
+    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.QUESTS_EMBED) {
+      let tmp2Result = tmp2(10600);
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {
@@ -685,7 +685,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4368).CodedLinkType.COLLECTIBLES_SHOP) {
+    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.COLLECTIBLES_SHOP) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -772,7 +772,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4368).CodedLinkType.APP_OAUTH2_LINK) {
+    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.APP_OAUTH2_LINK) {
       let fn = (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -786,7 +786,7 @@ export default function getOnClick(url) {
     }
     return fn;
   }
-  tmp2Result = tmp2(4575);
+  tmp2Result = tmp2(4639);
   let result = tmp2Result.tryParseEventDetailsPath(pathname);
   if (!tmp.skipExtensionCheck) {
     if (null != tmp2Result1.isSuspiciousDownload(url)) {
@@ -798,6 +798,6 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result1 = tmp2(8386);
+    tmp2Result1 = tmp2(8453);
   }
 };

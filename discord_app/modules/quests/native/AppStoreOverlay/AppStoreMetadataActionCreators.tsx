@@ -60,7 +60,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(closure_0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

@@ -54,7 +54,7 @@ function _authorize() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -193,7 +193,7 @@ function _fetchAuthorization() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -313,7 +313,7 @@ function _startSamsungAuthorization() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -355,7 +355,7 @@ function _startSamsungAuthorization() {
             return obj;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c5 = tmp;

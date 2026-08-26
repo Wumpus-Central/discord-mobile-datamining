@@ -152,7 +152,7 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
             NITRO = obj.THIRDPARTY;
           }
         }
-        tmp4Result = tmp4(7162);
+        tmp4Result = tmp4(7228);
       }
       return NITRO;
     }

@@ -4,7 +4,7 @@ import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/ex
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
 import dismissPanelDefault from "../VoicePanelStateContext.tsx";
 import useVoicePanelCardUserStateIcons from "../hooks/useVoicePanelCardUserStateIcons.tsx";
-import registerAssetDefault from "../../../../../_runtime/16453_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/16536_registerAsset.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../a11y/AccessibilityStore.tsx";
@@ -25,7 +25,7 @@ function StreamIcon(voicePlatform) {
   voicePlatform = voicePlatform.voicePlatform;
   let controlsSpecs;
   controlsSpecs = importAllResult.useContext(dismissPanelDefault).controlsSpecs;
-  let obj = controlsSpecs(4120);
+  let obj = controlsSpecs(4184);
   const fn = function o() {
     const tmp = controlsSpecs.get().mode === closure_1_11.HIDDEN;
     let num = 4;
@@ -47,11 +47,11 @@ function StreamIcon(voicePlatform) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   let source = registerAssetDefault;
   if (voicePlatform === constants2.XBOX) {
-    source = tmp(16498);
+    source = tmp(16581);
   } else if (voicePlatform === tmp6.MOBILE) {
-    source = tmp(11032);
+    source = tmp(11104);
   } else if (voicePlatform === tmp6.QUEST) {
-    source = tmp(16499);
+    source = tmp(16582);
   }
   const style = [callback2(useIsMobileVisualRefreshExperimentEnabledDefault("VoicePanelCardFloatingControls")).iconWithoutBackground, animatedStyle];
   return callback(closure_19, { source, style });
@@ -64,24 +64,24 @@ function AnimatedLabelIcon(icon) {
     let obj = { voicePlatform: null };
     obj[0] = icon.voicePlatform;
     return callback(StreamIcon, obj);
-  } else if (tmp4(16451).VoicePanelCardUserStateIconType.SPEAKER_MUTE_ICON === type) {
+  } else if (tmp4(16534).VoicePanelCardUserStateIconType.SPEAKER_MUTE_ICON === type) {
     obj = { style: null, hitSlop: 12, onPress: null, children: null };
     obj[0] = tmp3.speakerMuteIcon;
     obj[2] = icon.onPress;
     obj1 = { style: null };
     obj1[0] = tmp3.iconWithoutBackground;
-    obj[3] = callback(tmp4(10941).VoiceXIcon, obj1);
+    obj[3] = callback(tmp4(11013).VoiceXIcon, obj1);
     return callback(Pressable, obj);
-  } else if (tmp4(16451).VoicePanelCardUserStateIconType.USER_VIDEO_ICON === type) {
+  } else if (tmp4(16534).VoicePanelCardUserStateIconType.USER_VIDEO_ICON === type) {
     const obj2 = { style: null, onPress: null, children: null };
     obj2[0] = tmp3.iconContainer;
     obj2[1] = icon.onPress;
     const obj3 = { style: null, state: null };
     obj3[0] = tmp3.icon;
     obj3[1] = icon.videoIconState;
-    obj2[2] = callback(tmp4(9326).VideoIcon, obj3);
+    obj2[2] = callback(tmp4(9394).VideoIcon, obj3);
     return callback(Pressable, obj2);
-  } else if (tmp4(16451).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON === type) {
+  } else if (tmp4(16534).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON === type) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp3.iconContainer;
     const obj5 = { onPress: null, hitSlop: 12, children: null };
@@ -89,16 +89,16 @@ function AnimatedLabelIcon(icon) {
     const obj6 = { style: null, state: null, alwaysWhite: true };
     obj6[0] = tmp3.icon;
     obj6[1] = icon.muteDeafenIconState;
-    obj5[2] = callback(tmp4(9326).MuteDeafenIcon, obj6);
+    obj5[2] = callback(tmp4(9394).MuteDeafenIcon, obj6);
     obj4[1] = callback(Pressable, obj5);
-    return callback(tmp(5887), obj4);
-  } else if (tmp4(16451).VoicePanelCardUserStateIconType.USER_DISCONNECTED_ICON === type) {
+    return callback(tmp(5953), obj4);
+  } else if (tmp4(16534).VoicePanelCardUserStateIconType.USER_DISCONNECTED_ICON === type) {
     obj = { style: null, onPress: null, children: null };
     obj[0] = tmp3.iconContainer;
     obj[1] = icon.onPress;
     const obj7 = { size: "xs", color: null };
     obj7[1] = tmp(712).colors.TEXT_FEEDBACK_WARNING;
-    obj[2] = callback(tmp4(7938).CircleErrorIcon, obj7);
+    obj[2] = callback(tmp4(8005).CircleErrorIcon, obj7);
     return callback(Pressable, obj);
   }
 }
@@ -146,8 +146,8 @@ let closure_27 = importAllResult.memo((participant) => {
   controlsHidden = participant.controlsHidden;
   let guildId;
   ({ isSelf, layout } = participant);
-  guildId = importAllResult.useContext(guildId(11840)).guildId;
-  let obj = controlsHidden(4120);
+  guildId = importAllResult.useContext(guildId(11913)).guildId;
+  let obj = controlsHidden(4184);
   const fn = function n() {
     const value = controlsHidden.get();
     if (value) {
@@ -163,7 +163,7 @@ let closure_27 = importAllResult.memo((participant) => {
     obj[3] = controlsHidden(closure_1_2[29]).withSpring(num2, closure_1_9);
     return obj;
   };
-  obj = { controlsHidden, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: closure_12, withSpring: controlsHidden(4814).withSpring, MODE_CHANGE_PHYSICS: closure_9 };
+  obj = { controlsHidden, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: closure_12, withSpring: controlsHidden(4878).withSpring, MODE_CHANGE_PHYSICS: closure_9 };
   fn.__closure = obj;
   fn.__workletHash = 4080439075039;
   fn.__initData = closure_26;
@@ -192,10 +192,10 @@ let closure_27 = importAllResult.memo((participant) => {
       const obj3 = guildId(tmp2[33]);
     }
   }, items);
-  obj = { icon: guildId(16500), onPress: callback, style: animatedStyle, layout, accessibilityLabel: null };
+  obj = { icon: guildId(16583), onPress: callback, style: animatedStyle, layout, accessibilityLabel: null };
   const tmp3 = closure_16;
-  const tmp4 = guildId(16383);
-  const result = controlsHidden(16449).isStableActivityParticipant(participant);
+  const tmp4 = guildId(16464);
+  const result = controlsHidden(16532).isStableActivityParticipant(participant);
   const intl = controlsHidden(1236).intl;
   const string = intl.string;
   const t = controlsHidden(1236).t;
@@ -225,7 +225,7 @@ let closure_29 = importAllResult.memo((participantId) => {
     setFocused(participantId);
   }, items);
   let obj = participantId(setFocused[12]);
-  const fn = function _() {
+  const fn = function u() {
     let value = controlsHidden.get();
     if (!value) {
       value = mode.get() === closure_1_10.PIP;
@@ -324,34 +324,36 @@ let closure_37 = importAllResult.memo((controlsHidden) => {
   fn2.__workletHash = 15646860695268;
   fn2.__initData = closure_32;
   const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
-  const fn3 = function p() {
-    let top = 0;
-    if (controlsHidden.get()) {
-      top = -closure_1_21 + 2 * closure_1_12;
-    }
-    return { top };
-  };
-  obj = { controlsHidden, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: closure_12 };
-  fn3.__closure = obj;
-  fn3.__workletHash = 726627995932;
-  fn3.__initData = closure_35;
-  const animatedStyle = controlsHidden(sharedValue1[12]).useAnimatedStyle(fn3);
-  const obj6 = controlsHidden(sharedValue1[12]);
-  const tmp = sharedValue;
   class C {
     constructor() {
-      obj = { transform: null };
-      obj = { rotate: "" + closure_2.get() + "deg" };
-      items = [];
-      items[0] = obj;
-      obj[0] = items;
-      return obj;
+      top = 0;
+      if (controlsHidden.get()) {
+        tmp = closure_1_21;
+        tmp2 = closure_1_12;
+        num2 = 2;
+        top = -closure_1_21 + 2 * closure_1_12;
+      }
+      return { top };
     }
   }
-  C.__closure = { angle: sharedValue1 };
-  C.__workletHash = 791392364030;
-  C.__initData = closure_36;
-  const animatedStyle1 = controlsHidden(sharedValue1[12]).useAnimatedStyle(C);
+  obj = { controlsHidden, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: closure_12 };
+  C.__closure = obj;
+  C.__workletHash = 726627995932;
+  C.__initData = closure_35;
+  const animatedStyle = controlsHidden(sharedValue1[12]).useAnimatedStyle(C);
+  const obj6 = controlsHidden(sharedValue1[12]);
+  const tmp = sharedValue;
+  const fn3 = function p() {
+    let obj = { transform: null };
+    obj = { rotate: "" + sharedValue1.get() + "deg" };
+    const items = [obj];
+    obj[0] = items;
+    return obj;
+  };
+  fn3.__closure = { angle: sharedValue1 };
+  fn3.__workletHash = 791392364030;
+  fn3.__initData = closure_36;
+  const animatedStyle1 = controlsHidden(sharedValue1[12]).useAnimatedStyle(fn3);
   obj1 = { style: items1, children: null };
   items1 = [animatedStyle, tmp3.ringingIconContainer];
   const obj8 = controlsHidden(sharedValue1[12]);
@@ -367,12 +369,66 @@ let closure_37 = importAllResult.memo((controlsHidden) => {
   return closure_16(tmp12, obj1);
 });
 let closure_38 = importAllResult.memo((controlsHidden) => callback(ManaContext.ThemeContextProvider, { theme: ThemeTypes.LIGHT, children: callback(closure_37, { controlsHidden: controlsHidden.controlsHidden }) }));
-let closure_39 = { code: "function VoicePanelCardFloatingControlsTsx10(){const{hasHiddenVisibleIcon,focused,connected,mode,VoicePanelModes,controlsHidden}=this.__closure;const showIcon=hasHiddenVisibleIcon&&focused.get()==null;return!connected.get()||mode.get()===VoicePanelModes.PIP||!showIcon&&controlsHidden.get();}" };
-let closure_40 = { code: "function VoicePanelCardFloatingControlsTsx11(){const{isPillHidden}=this.__closure;return isPillHidden.get();}" };
-let closure_41 = { code: "function VoicePanelCardFloatingControlsTsx12(hidden){const{pillOpacity,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;pillOpacity.set(withSpring(hidden?0:1,MODE_CHANGE_PHYSICS));}" };
-let closure_42 = { code: "function VoicePanelCardFloatingControlsTsx13(){const{pillOpacity,isPillHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING}=this.__closure;return{opacity:pillOpacity.get(),top:isPillHidden.get()?FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING:0,height:FLOATING_BAR_HEIGHT,pointerEvents:isPillHidden.get()?'none':'auto'};}" };
-let closure_43 = { code: "function VoicePanelCardFloatingControlsTsx14(){const{connected,isScreenReaderEnabled,controlsSpecs,VoicePanelControlsModes,hasIcon,GAP}=this.__closure;const hidden=!connected.get()||!isScreenReaderEnabled&&controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN&&hasIcon;const shouldCollapseWidth=hidden&&hasIcon;return{width:shouldCollapseWidth?0:'auto',marginRight:hidden?-GAP:0};}" };
-let closure_44 = importAllResult.memo((controlsHidden) => {
+let closure_39 = importAllResult.memo((arg0) => {
+  ({ userId, textColor } = arg0);
+  let showGameTag;
+  let gameRecord;
+  dependencyMap = undefined;
+  importAllResult = undefined;
+  let obj = gameRecord(16586);
+  showGameTag = obj.useConfig({ location: "VoicePanelCardFloatingControls" }).showGameTag;
+  const first = gameRecord(9455)(userId, arg0.guildId, showGameTag)[0];
+  let tmp5;
+  if (showGameTag) {
+    let application_id;
+    if (first != null) {
+      application_id = first.application_id;
+    }
+    tmp5 = application_id;
+  }
+  gameRecord = gameRecord(9491)({ applicationId: tmp5 }).gameRecord;
+  const tmp8 = gameRecord(5004)(gameRecord);
+  dependencyMap = tmp8;
+  importAllResult = importAllResult.useRef(false);
+  let items = [showGameTag, gameRecord, tmp8];
+  const effect = importAllResult.useEffect(() => {
+    let tmp = showGameTag;
+    if (showGameTag) {
+      tmp = !ref.current;
+    }
+    if (tmp) {
+      tmp = null != gameRecord;
+    }
+    if (tmp) {
+      tmp = dependencyMap;
+    }
+    if (tmp) {
+      const obj = showGameTag(9489);
+      const items = [showGameTag(9489).RejectionReason.Obscured];
+      obj.trackEntryPoint(false, gameRecord.id, items, showGameTag(9499).GameProfileSources.CallTile);
+      ref.current = true;
+    }
+  }, items);
+  if (showGameTag) {
+    if (null != gameRecord) {
+      if (!tmp8) {
+        obj = { game: null, userId: null, textColor: null };
+        obj[0] = gameRecord;
+        obj[1] = userId;
+        obj[2] = textColor;
+        let tmp12 = callback(tmp(16587), obj);
+      }
+      return tmp12;
+    }
+  }
+  tmp12 = callback(tmp(9468), { userId, textColor });
+});
+let closure_40 = { code: "function VoicePanelCardFloatingControlsTsx10(){const{hasHiddenVisibleIcon,focused,connected,mode,VoicePanelModes,controlsHidden}=this.__closure;const showIcon=hasHiddenVisibleIcon&&focused.get()==null;return!connected.get()||mode.get()===VoicePanelModes.PIP||!showIcon&&controlsHidden.get();}" };
+let closure_41 = { code: "function VoicePanelCardFloatingControlsTsx11(){const{isPillHidden}=this.__closure;return isPillHidden.get();}" };
+let closure_42 = { code: "function VoicePanelCardFloatingControlsTsx12(hidden){const{pillOpacity,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;pillOpacity.set(withSpring(hidden?0:1,MODE_CHANGE_PHYSICS));}" };
+let closure_43 = { code: "function VoicePanelCardFloatingControlsTsx13(){const{pillOpacity,isPillHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING}=this.__closure;return{opacity:pillOpacity.get(),top:isPillHidden.get()?FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING:0,height:FLOATING_BAR_HEIGHT,pointerEvents:isPillHidden.get()?'none':'auto'};}" };
+let closure_44 = { code: "function VoicePanelCardFloatingControlsTsx14(){const{connected,isScreenReaderEnabled,controlsSpecs,VoicePanelControlsModes,hasIcon,GAP}=this.__closure;const hidden=!connected.get()||!isScreenReaderEnabled&&controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN&&hasIcon;const shouldCollapseWidth=hidden&&hasIcon;return{width:shouldCollapseWidth?0:'auto',marginRight:hidden?-GAP:0};}" };
+let closure_45 = importAllResult.memo((controlsHidden) => {
   controlsHidden = controlsHidden.controlsHidden;
   ({ label, layout, participant } = controlsHidden);
   channelId = undefined;
@@ -394,7 +450,7 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   focused = context.focused;
   connected = context.connected;
   mode = context.mode;
-  obj1 = controlsHidden(controlsSpecs[42]);
+  obj1 = controlsHidden(controlsSpecs[50]);
   isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   const tmp6 = callback2(channelId(controlsSpecs[16])("VoicePanelCardFloatingControls"));
   let obj2 = controlsHidden(controlsSpecs[30]);
@@ -402,7 +458,7 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   if (obj2.isStableParticipantWithUser(participant)) {
     id = participant.user.id;
   }
-  analyticsLocations = tmp(tmp2[43])().analyticsLocations;
+  analyticsLocations = tmp(tmp2[51])().analyticsLocations;
   const items = [id, channelId, analyticsLocations];
   const callback = obj.useCallback(() => {
     if (null != id) {
@@ -410,10 +466,10 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
       obj[0] = tmp;
       obj[1] = channelId;
       obj[3] = analyticsLocations;
-      channelId(controlsSpecs[44])(obj);
+      channelId(controlsSpecs[52])(obj);
     }
   }, items);
-  let tmp4Result = tmp4(tmp2[45]);
+  let tmp4Result = tmp4(tmp2[53]);
   let isUserSecureFramesVerified = tmp4Result.useIsUserSecureFramesVerified({ userId: id, channelId });
   let tmpResult = tmp(tmp2[22]);
   tmp4Result = tmp4(tmp2[30]);
@@ -422,13 +478,13 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
     id1 = participant.user.id;
   }
   const tmpResultResult = tmpResult(participant.type, id1, guildId, channelId);
-  const tmp12 = channelId(controlsSpecs[46])({ userId: id, guildId });
-  const displayNameStylesFont = controlsHidden(controlsSpecs[47]).useDisplayNameStylesFont({ displayNameStyles: tmp12 });
+  const tmp12 = channelId(controlsSpecs[54])({ userId: id, guildId });
+  const displayNameStylesFont = controlsHidden(controlsSpecs[55]).useDisplayNameStylesFont({ displayNameStyles: tmp12 });
   let num = 1;
   closure_9 = tmp14;
   const tmp15 = tmpResultResult.filter((type) => type.type !== controlsHidden(controlsSpecs[22]).VoicePanelCardUserStateIconType.STREAM_ICON).length >= 1;
   closure_10 = tmp15;
-  const tmp4Result1 = controlsHidden(controlsSpecs[47]);
+  const tmp4Result1 = controlsHidden(controlsSpecs[55]);
   const fn = function c() {
     let tmp = constants;
     if (constants) {
@@ -451,7 +507,7 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   obj = { hasHiddenVisibleIcon: tmp15, focused, connected, mode, VoicePanelModes: closure_10, controlsHidden };
   fn.__closure = obj;
   fn.__workletHash = 14354852732719;
-  fn.__initData = closure_39;
+  fn.__initData = closure_40;
   derivedValue = controlsHidden(controlsSpecs[12]).useDerivedValue(fn);
   const tmp4Result2 = controlsHidden(controlsSpecs[12]);
   if (derivedValue.get()) {
@@ -459,13 +515,13 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   }
   sharedValue = controlsHidden(controlsSpecs[12]).useSharedValue(num);
   const tmp4Result3 = controlsHidden(controlsSpecs[12]);
-  const fn2 = function u() {
+  const fn2 = function _() {
     return derivedValue.get();
   };
   fn2.__closure = { isPillHidden: derivedValue };
   fn2.__workletHash = 653298163833;
-  fn2.__initData = closure_40;
-  const fn3 = function _(arg0) {
+  fn2.__initData = closure_41;
+  const fn3 = function u(arg0) {
     let num = 1;
     if (arg0) {
       num = 0;
@@ -475,69 +531,70 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   obj = { pillOpacity: sharedValue, withSpring: tmp4(tmp2[29]).withSpring, MODE_CHANGE_PHYSICS: closure_9 };
   fn3.__closure = obj;
   fn3.__workletHash = 158794425133;
-  fn3.__initData = closure_41;
+  fn3.__initData = closure_42;
   const animatedReaction = controlsHidden(controlsSpecs[12]).useAnimatedReaction(fn2, fn3);
   const tmp4Result4 = controlsHidden(controlsSpecs[12]);
-  class Q {
+  const fn4 = function $() {
+    const obj = { opacity: sharedValue.get(), top: null, height: null, pointerEvents: null };
+    let num = 0;
+    if (derivedValue.get()) {
+      num = closure_1_21 + sharedValue;
+    }
+    obj[1] = num;
+    obj[2] = closure_1_21;
+    let str = "auto";
+    if (derivedValue.get()) {
+      str = "none";
+    }
+    obj[3] = str;
+    return obj;
+  };
+  obj1 = { pillOpacity: sharedValue, isPillHidden: derivedValue, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: sharedValue };
+  fn4.__closure = obj1;
+  fn4.__workletHash = 12355778282621;
+  fn4.__initData = closure_43;
+  const animatedStyle = controlsHidden(controlsSpecs[12]).useAnimatedStyle(fn4);
+  const tmp4Result5 = controlsHidden(controlsSpecs[12]);
+  class Z {
     constructor() {
-      obj = { opacity: closure_12.get(), top: null, height: null, pointerEvents: null };
-      obj2 = closure_11;
-      num = 0;
-      if (closure_11.get()) {
-        tmp = closure_1_21;
-        tmp2 = closure_12;
-        num = closure_1_21 + closure_12;
+      value = connected.get();
+      tmp2 = !value;
+      if (value) {
+        tmp3 = closure_6;
+        tmp4 = !closure_6;
+        if (!closure_6) {
+          tmp5 = controlsSpecs;
+          tmp6 = closure_11;
+          tmp4 = controlsSpecs.get().mode === closure_11.HIDDEN;
+        }
+        if (tmp4) {
+          tmp4 = closure_9;
+        }
+        tmp2 = tmp4;
       }
-      obj[1] = num;
-      obj[2] = closure_1_21;
-      str = "auto";
-      if (obj2.get()) {
-        str = "none";
+      num = "auto";
+      if (tmp2) {
+        tmp7 = closure_9;
+        num = "auto";
+        if (closure_9) {
+          num = 0;
+        }
       }
-      obj[3] = str;
+      obj = { width: num, marginRight: null };
+      num2 = 0;
+      if (tmp2) {
+        num2 = -4;
+      }
+      obj[1] = num2;
       return obj;
     }
   }
-  obj1 = { pillOpacity: sharedValue, isPillHidden: derivedValue, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: sharedValue };
-  Q.__closure = obj1;
-  Q.__workletHash = 12355778282621;
-  Q.__initData = closure_42;
-  const animatedStyle = controlsHidden(controlsSpecs[12]).useAnimatedStyle(Q);
-  const tmp4Result5 = controlsHidden(controlsSpecs[12]);
-  const fn4 = function $() {
-    const value = connected.get();
-    let tmp2 = !value;
-    if (value) {
-      let tmp4 = !isScreenReaderEnabled;
-      if (!isScreenReaderEnabled) {
-        tmp4 = controlsSpecs.get().mode === derivedValue.HIDDEN;
-      }
-      if (tmp4) {
-        tmp4 = closure_9;
-      }
-      tmp2 = tmp4;
-    }
-    let num = "auto";
-    if (tmp2) {
-      num = "auto";
-      if (closure_9) {
-        num = 0;
-      }
-    }
-    const obj = { width: num, marginRight: null };
-    let num2 = 0;
-    if (tmp2) {
-      num2 = -4;
-    }
-    obj[1] = num2;
-    return obj;
-  };
   obj2 = { connected, isScreenReaderEnabled, controlsSpecs, VoicePanelControlsModes: derivedValue, hasIcon: tmp14, GAP: 4 };
-  fn4.__closure = obj2;
-  fn4.__workletHash = 10013340978870;
-  fn4.__initData = closure_43;
+  Z.__closure = obj2;
+  Z.__workletHash = 10013340978870;
+  Z.__initData = closure_44;
   const items1 = [tmp6.labelPositionContainer];
-  const animatedStyle1 = controlsHidden(controlsSpecs[12]).useAnimatedStyle(fn4);
+  const animatedStyle1 = controlsHidden(controlsSpecs[12]).useAnimatedStyle(Z);
   const obj3 = { style: items1, layout, pointerEvents: "box-none", children: null };
   let tmp24;
   tmpResult = tmp(tmp2[39]);
@@ -594,12 +651,13 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   }
   obj8[5] = formatToPlainStringResult;
   obj8[6] = label;
-  const items6 = [closure_16(controlsHidden(controlsSpecs[48]).Text, obj8), , ];
+  const items6 = [closure_16(controlsHidden(controlsSpecs[56]).Text, obj8), , ];
   tmp20Result = participant.type === constants.USER;
   if (tmp20Result) {
-    const obj12 = { userId: null, textColor: "text-overlay-light" };
+    const obj12 = { userId: null, guildId: null, textColor: "text-overlay-light" };
     obj12[0] = participant.user.id;
-    tmp20Result = tmp20(tmp(tmp2[49]), obj12);
+    obj12[1] = guildId;
+    tmp20Result = tmp20(closure_39, obj12);
   }
   items6[1] = tmp20Result;
   if (isUserSecureFramesVerified) {
@@ -607,7 +665,7 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
     obj13[0] = tmp6.secureFramesIcon;
     const intl4 = tmp4(tmp2[27]).intl;
     obj13[2] = intl4.string(tmp4(tmp2[27]).t.mR9cf3);
-    isUserSecureFramesVerified = tmp20(tmp4(tmp2[50]).ShieldLockIcon, obj13);
+    isUserSecureFramesVerified = tmp20(tmp4(tmp2[57]).ShieldLockIcon, obj13);
   }
   items6[2] = isUserSecureFramesVerified;
   obj6[2] = items6;
@@ -616,7 +674,7 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   obj3[3] = closure_17(tmp23, obj4);
   return closure_16(tmpResult, obj3);
 });
-let closure_45 = { code: "function VoicePanelCardFloatingControlsTsx15(){const{controlsSpecs,VoicePanelControlsModes,focused,mode,VoicePanelModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN||focused.get()!=null||mode.get()===VoicePanelModes.PIP;}" };
+let closure_46 = { code: "function VoicePanelCardFloatingControlsTsx15(){const{controlsSpecs,VoicePanelControlsModes,focused,mode,VoicePanelModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN||focused.get()!=null||mode.get()===VoicePanelModes.PIP;}" };
 const importDefaultResult1 = importDefaultResult;
 const memoResult = importAllResult.memo(function FloatingControls(arg0) {
   ({ label, participant } = arg0);
@@ -677,7 +735,7 @@ const memoResult = importAllResult.memo(function FloatingControls(arg0) {
   obj = { controlsSpecs, VoicePanelControlsModes, focused, mode, VoicePanelModes: closure_10 };
   I.__closure = obj;
   I.__workletHash = 8765031976276;
-  I.__initData = closure_45;
+  I.__initData = closure_46;
   const derivedValue = tmp4Result.useDerivedValue(I);
   let tmp10 = null != label;
   if (tmp10) {
@@ -686,7 +744,7 @@ const memoResult = importAllResult.memo(function FloatingControls(arg0) {
     obj[1] = label;
     obj[2] = layout;
     obj[3] = participant;
-    tmp10 = callback(closure_44, obj);
+    tmp10 = callback(closure_45, obj);
   }
   if (isRinging) {
     obj1 = { controlsHidden: null };

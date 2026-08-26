@@ -23,7 +23,7 @@ const memoResult = importAllResult.memo((channel) => {
   importDefault = undefined;
   const tmp = callback();
   const tmp2 = importDefault;
-  let obj = channel(9899);
+  let obj = channel(9966);
   const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   obj1 = channel(589);
   const items = [closure_6];
@@ -44,9 +44,9 @@ const memoResult = importAllResult.memo((channel) => {
     num = 0;
   }
   const obj4 = channel(589);
-  const stageHasMedia = channel(5242).useStageHasMedia(channel.id);
+  const stageHasMedia = channel(5308).useStageHasMedia(channel.id);
   const items5 = [];
-  items5.push(jsx(channel(10984).StreamVolumeItem, {}));
+  items5.push(jsx(channel(11056).StreamVolumeItem, {}));
   if (tmp11) {
     obj = { channel: null, disabled: null };
     obj[0] = channel;
@@ -62,11 +62,11 @@ const memoResult = importAllResult.memo((channel) => {
       tmp12 = reachedLimit;
     }
     obj[1] = tmp12;
-    items5.push(tmp9(tmp5(10984).ScreenshareButton, obj));
+    items5.push(tmp9(tmp5(11056).ScreenshareButton, obj));
   }
   obj = { channelId: channel.id, isConnectedToVoiceChannel };
-  items5.push(jsx(channel(10984).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
-  items5.push(jsx(channel(10984).DeafenButton, { channel }));
+  items5.push(jsx(channel(11056).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
+  items5.push(jsx(channel(11056).DeafenButton, { channel }));
   obj1 = { style: tmp.container, children: items5.map((children) => callback(closure_3, { children }, arg1)) };
   return <View style={tmp.container}>{items5.map((children) => callback(closure_3, { children }, arg1))}</View>;
 });

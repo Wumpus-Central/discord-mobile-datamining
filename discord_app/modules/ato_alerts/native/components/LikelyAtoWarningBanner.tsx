@@ -77,9 +77,9 @@ class LikelyAtoWarningBanner {
       obj[6] = callback().map((children) => {
         let obj = { children: null };
         obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title };
-        const items = [callback3(callback(4376).Text, obj, arg1), ];
+        const items = [callback3(callback(4440).Text, obj, arg1), ];
         obj = { variant: "text-xs/medium", color: "text-subtle", children: children.description };
-        items[1] = callback3(callback(4376).Text, obj, arg1);
+        items[1] = callback3(callback(4440).Text, obj, arg1);
         obj[0] = items;
         return callback4(closure_11, obj);
       });

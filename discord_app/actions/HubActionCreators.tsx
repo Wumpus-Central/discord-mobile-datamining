@@ -1,7 +1,7 @@
 // discord_app/actions/HubActionCreators.tsx
 import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef4601 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef4665 from "../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../Constants.tsx";
 
@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("actions/HubActionCreators.t
 
 export default {
   signup(email, school) {
-    let obj = _modDef4601;
+    let obj = _modDef4665;
     obj = { url: Endpoints.HUB_WAITLIST_SIGNUP, body: obj, trackedActionData: null, rejectWithError: null };
     obj = { email, school };
     obj[2] = {
@@ -97,7 +97,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -192,7 +192,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -232,7 +232,7 @@ export default {
                 return obj4;
               } else {
                 c5 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else if (1 === tmp7) {

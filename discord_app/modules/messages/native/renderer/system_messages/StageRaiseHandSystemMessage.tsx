@@ -36,14 +36,14 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     if (participant != null) {
       rtsState = participant.rtsState;
     }
-    canResult = rtsState === tmp(4568).RequestToSpeakStates.REQUESTED_TO_SPEAK;
+    canResult = rtsState === tmp(4632).RequestToSpeakStates.REQUESTED_TO_SPEAK;
   }
   if (canResult) {
     canResult = toISOStringResult === toISOStringResult1;
   }
   obj = { content: null, showInviteToSpeakButton: null, buttonLabel: null, ephemeralIndication: null };
   const intl = tmp(1236).intl;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6(8223)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6(8290)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   obj[0] = intl.formatToParts(getSystemLocale.t.M87x7Y, obj);
   obj[1] = canResult;
   const intl2 = tmp(1236).intl;
@@ -66,6 +66,6 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     }
   }
   obj[3] = tmp10;
-  const merged = Object.assign(tmp6(8224)(roleStyle));
+  const merged = Object.assign(tmp6(8291)(roleStyle));
   return obj;
 };

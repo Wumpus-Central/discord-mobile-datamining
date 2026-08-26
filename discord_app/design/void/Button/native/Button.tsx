@@ -1,7 +1,7 @@
 // discord_app/design/void/Button/native/Button.tsx
 import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef8150 from "../../LegacyText/native/LegacyText.tsx";
+import _modDef8217 from "../../LegacyText/native/LegacyText.tsx";
 import getClass from "../../../../utils/StylesheetUtils.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";

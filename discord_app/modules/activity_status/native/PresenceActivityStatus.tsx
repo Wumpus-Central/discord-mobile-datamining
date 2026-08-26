@@ -54,7 +54,7 @@ export default function PresenceActivityStatus(hideText) {
     let obj = { icon: null, style: null };
     obj[0] = AppsIcon;
     obj[1] = iconStyle;
-    tmp12 = callback(tmp(9793), obj);
+    tmp12 = callback(tmp(9860), obj);
   }
   const children = [tmp12, ];
   let tmp15 = !flag;
@@ -63,7 +63,7 @@ export default function PresenceActivityStatus(hideText) {
     obj[0] = textStyle;
     obj[1] = maxFontSizeMultiplier;
     obj[2] = getActivityStatusTextDefault(activity, true).text;
-    tmp15 = callback(tmp(9796), obj);
+    tmp15 = callback(tmp(9863), obj);
   }
   children[1] = tmp15;
   return closure_6(closure_5, { children });

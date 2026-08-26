@@ -13,7 +13,7 @@ export default function useCreateThread(arg0) {
   let analyticsLocations;
   ({ parentChannel, parentMessageId, threadSettings, privateThreadMode, location: _location, onThreadCreated, useDefaultThreadName } = arg0);
   analyticsLocations = contextDefault().analyticsLocations;
-  let obj = analyticsLocations(8509);
+  let obj = analyticsLocations(8576);
   obj = {
     parentChannel,
     parentMessageId,
@@ -53,7 +53,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
   const threadSettings = parentChannel.threadSettings;
   let analyticsLocations;
   ({ appliedTags, onThreadCreated } = parentChannel);
-  analyticsLocations = analyticsLocations(5834)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5900)().analyticsLocations;
   _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
@@ -69,7 +69,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
       obj7.on("progress", (currentSize) => {
         if (currentSize.currentSize > c3) {
           obj7.cancel();
-          let obj = closure_2_1(8512);
+          let obj = closure_2_1(8579);
           obj = { channelId: null, uploads: null, draftType: null, resetState: true };
           obj[0] = guildId.id;
           obj[1] = guildId;
@@ -81,8 +81,8 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
           obj[2] = dependencyMap;
           obj[3] = guildId.getGuildId();
           obj[4] = obj7;
-          closure_2_1(8515)(obj);
-          const tmp10 = closure_2_1(8515);
+          closure_2_1(8582)(obj);
+          const tmp10 = closure_2_1(8582);
         }
       });
       closure_4 = yield obj7.uploadFiles(guildId);

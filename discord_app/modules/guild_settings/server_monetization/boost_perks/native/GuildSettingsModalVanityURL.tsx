@@ -5,8 +5,8 @@ import Text from "../../../../../design/components/Text/native/Text.tsx";
 import getInviteURLDefault from "../../../../instant_invite/getInviteURL.tsx";
 import TextInput from "../../../../../design/components/TextInput/native/TextInput.native.tsx";
 import getErrorMessageFromErrorCode from "../GuildSettingsVanityURLUtils.tsx";
-import _modDef16990 from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
-import registerAssetDefault from "../../../../../../_runtime/16991_registerAsset.js";
+import _modDef17075 from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
+import registerAssetDefault from "../../../../../../_runtime/17076_registerAsset.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../../stores/ChangeVanityURLModalStore.tsx";
 import closure_6 from "../../../../../stores/GuildStore.tsx";
@@ -91,7 +91,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     if (submitting) {
       let fn = () => null;
     } else if (isEditing) {
-      let setOptionsResult = self(5376);
+      let setOptionsResult = self(5442);
       fn = setOptionsResult.getHeaderConditionalBackButton(this.handleCancel);
     }
     setOptionsResult = { headerLeft: null, headerRight: null };
@@ -116,7 +116,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
   }
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  _modDef16990.closeModal();
+  _modDef17075.closeModal();
 };
 prototype["render"] = function render() {
   const self = this;
@@ -183,7 +183,7 @@ prototype["render"] = function render() {
       const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl5 = tmp18(1236).intl;
       obj8[2] = intl5.string(tmp18(1236).t.o3kmm3);
-      tmp17Result = tmp17(tmp18(4376).Text, obj8);
+      tmp17Result = tmp17(tmp18(4440).Text, obj8);
     }
     items2[3] = tmp17Result;
     items2[4] = tmp;
@@ -239,7 +239,7 @@ export default function ConnectedGuildSettingsModalVanityURL(guildId) {
     obj[4] = navigation;
     obj[5] = tmp;
     obj[6] = guildId.contentContainerStyle;
-    const items3 = [callback(GuildSettingsModalVanityURL, obj), callback(tmp2(5820).NavScrim, {})];
+    const items3 = [callback(GuildSettingsModalVanityURL, obj), callback(tmp2(5886).NavScrim, {})];
     obj[0] = items3;
     tmp10 = callback2(closure_11, obj);
   }

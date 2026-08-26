@@ -141,7 +141,7 @@ function findFirstOrLastMentionedItem(scrollPosValue) {
               }
               let tmp8 = nextResult;
               let type = tmp4.type;
-              if (tmp41(8159).FastListItemTypes.SECTION === type) {
+              if (tmp41(8226).FastListItemTypes.SECTION === type) {
                 let tmp18 = nextResult;
                 let node = guildsTree.getNode(tmp4.recyclerKey);
                 let element = node;
@@ -176,7 +176,7 @@ function findFirstOrLastMentionedItem(scrollPosValue) {
                 }
                 continue;
               } else {
-                if (tmp41(8159).FastListItemTypes.ITEM === type) {
+                if (tmp41(8226).FastListItemTypes.ITEM === type) {
                   let tmp10 = nextResult;
                   let node1 = guildsTree.getNode(tmp4.recyclerKey);
                   let tmp12 = node1;

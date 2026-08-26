@@ -118,7 +118,7 @@ prototype["_checkTwitch"] = function _checkTwitch(accessToken, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -323,7 +323,7 @@ prototype["_checkYouTube"] = function _checkYouTube(c0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

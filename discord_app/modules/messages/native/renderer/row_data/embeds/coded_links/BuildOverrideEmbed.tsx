@@ -49,7 +49,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
       }
       tmp10 = id === id1;
     }
-    let tmpResult = tmp(12814);
+    let tmpResult = tmp(12888);
     obj = getConstantsAll;
     const tmpResultResult = tmpResult(buildOverride.override, ["discord_ios", "discord_android"], obj.getConstants().Version);
     if (currentBuildOverride.state !== tmp6.Invalid) {
@@ -68,7 +68,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               if (override != null) {
                 const targetBuildOverride2 = override.targetBuildOverride;
                 if (targetBuildOverride2 != null) {
-                  const tmp30 = targetBuildOverride2[tmp28(undefined, 11347).DEVICE_FIELD];
+                  const tmp30 = targetBuildOverride2[tmp28(undefined, 11419).DEVICE_FIELD];
                   if (tmp30 != null) {
                     type = tmp30.type;
                   }
@@ -83,7 +83,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               obj.titleColor = colors.titleColor;
               obj.subtitle = id;
               obj.subtitleColor = colors.subtitleColor;
-              obj.thumbnailUrl = Image.resolveAssetSource(tmp(12812)).uri;
+              obj.thumbnailUrl = Image.resolveAssetSource(tmp(12886)).uri;
               let str2 = "primary";
               if (tmp10) {
                 str2 = "destructive";
@@ -129,9 +129,9 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
     obj1.subtitleColor = subtitleColor;
     const obj4 = processColorOrThrow;
     if (tmp20Result.isThemeDark(closure_2)) {
-      tmpResult = tmp(11368);
+      tmpResult = tmp(11440);
     } else {
-      tmpResult = tmp(11369);
+      tmpResult = tmp(11441);
     }
     obj1.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj1.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

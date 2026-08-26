@@ -3,7 +3,7 @@ import DismissibleContent from "../../../../discord_common/js/packages/protos/di
 import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import _crypto from "../../../utils/MFAUtils.tsx";
-import _modDef14182 from "PasskeyUpsellActionCreators.tsx";
+import _modDef14254 from "PasskeyUpsellActionCreators.tsx";
 import closure_3 from "../../../stores/AuthenticationStore.tsx";
 import closure_4 from "../../../stores/UserStore.tsx";
 import closure_5 from "../WebAuthnStore.tsx";
@@ -30,20 +30,20 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
     if (_crypto.hasWebAuthn) {
       if (loginStatus.getLoginStatus() === LoginStates.NONE) {
         if (obj.attemptedPasswordLogin()) {
-          let tmpResult = tmp(4201);
+          let tmpResult = tmp(4265);
           if (!tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1377).DismissibleContent.PASSWORDLESS_UPSELL)) {
             if (!closure_5.hasFetchedCredentials()) {
-              tmpResult = tmp(4234);
+              tmpResult = tmp(4298);
               if (!tmpResult.isModalOpen()) {
                 currentUser = currentUser.getCurrentUser();
                 if (tmp6) {
                   if (obj3.hasFetchedCredentials()) {
-                    _modDef14182.openPasskeyUpsell();
-                    const obj6 = _modDef14182;
+                    _modDef14254.openPasskeyUpsell();
+                    const obj6 = _modDef14254;
                   } else if (!c7) {
                     c7 = true;
-                    const webAuthnCredentials = tmp(5937).fetchWebAuthnCredentials();
-                    const tmpResult1 = tmp(5937);
+                    const webAuthnCredentials = tmp(6003).fetchWebAuthnCredentials();
+                    const tmpResult1 = tmp(6003);
                   }
                 }
                 tmp6 = undefined !== currentUser && currentUser.verified;

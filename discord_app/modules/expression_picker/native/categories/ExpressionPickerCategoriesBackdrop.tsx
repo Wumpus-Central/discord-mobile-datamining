@@ -1,7 +1,7 @@
 // discord_app/modules/expression_picker/native/categories/ExpressionPickerCategoriesBackdrop.tsx
 import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef8921 from "../../../visual_effect_view/native/VisualEffectViewThemed.tsx";
+import _modDef8989 from "../../../visual_effect_view/native/VisualEffectViewThemed.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -15,7 +15,7 @@ const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.borderTopWidth = StyleSheet.hairlineWidth;
 obj.borderTopColor = ThemesDefault.colors.BACKGROUND_BASE_LOWEST;
 obj[0] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.colors.PROFILE_GRADIENT_NOTE_BACKGROUND, height: require("ME").EXPRESSION_FOOTER_HEIGHT, bottom: "r" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.PROFILE_GRADIENT_NOTE_BACKGROUND, height: require("ME").EXPRESSION_FOOTER_HEIGHT, bottom: "Array" };
 obj[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function EmojiPickerCategoriesBackdrop() {
@@ -32,7 +32,7 @@ const memoResult = importAllResult.memo(function EmojiPickerCategoriesBackdrop()
     obj[0] = tmp.backdrop;
     obj1 = { style: null };
     obj1[0] = tmp.backdrop;
-    obj[1] = tmp3(_modDef8921, obj1);
+    obj[1] = tmp3(_modDef8989, obj1);
     tmp3Result = tmp3(tmp4, obj);
   }
   return tmp3Result;

@@ -74,7 +74,7 @@ const result = require("set").fileFinishedImporting("modules/premium/referral_pr
 
 export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
   const tmp = callback2();
-  let obj = analyticsLocations(12922);
+  let obj = analyticsLocations(12996);
   obj1 = analyticsLocations(589);
   const items = [closure_5];
   const stateFromStores = obj1.useStateFromStores(items, () => store.getRecipientStatus());
@@ -83,7 +83,7 @@ export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
   const stateFromStores1 = obj3.useStateFromStores(items1, () => store.getHasEligibleFriends());
   let obj4 = importDefault;
   analyticsLocations = contextDefault(QUICK_SWITCHERDefault.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR).analyticsLocations;
-  let everyResult = stateFromStores.size === analyticsLocations(12922).MAX_REFERRALS_SENT;
+  let everyResult = stateFromStores.size === analyticsLocations(12996).MAX_REFERRALS_SENT;
   if (everyResult) {
     const items2 = [];
     HermesBuiltin.arraySpread(stateFromStores.values(), 0);
@@ -103,10 +103,10 @@ export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
   const obj2 = { variant: "heading-lg/semibold", color: "text-strong", style: tmp.heading, children: null };
   const intl = tmp2(1236).intl;
   obj2[3] = intl.string(analyticsLocations(1236).t.USo4s7);
-  const items5 = [callback(analyticsLocations(4376).Text, obj2), ];
+  const items5 = [callback(analyticsLocations(4440).Text, obj2), ];
   obj3 = { variant: "text-md/medium", color: "text-subtle", style: tmp.bodyText, children: null };
   if (false !== stateFromStores1) {
-    if (tmp14 !== tmp2(12922).MAX_REFERRALS_SENT) {
+    if (tmp14 !== tmp2(12996).MAX_REFERRALS_SENT) {
       const intl3 = tmp2(1236).intl;
       obj4 = { helpdeskArticle: null };
       let obj5Result = combinedDefault;
@@ -139,14 +139,14 @@ export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
     obj7[0] = tmp.buttonContainer;
     let tmp22 = false === stateFromStores1;
     if (!tmp22) {
-      tmp22 = stateFromStores.size === tmp2(12922).MAX_REFERRALS_SENT;
+      tmp22 = stateFromStores.size === tmp2(12996).MAX_REFERRALS_SENT;
     }
     const obj8 = { variant: "primary", size: "sm", disabled: null, text: null, onPress: null };
     obj8[2] = tmp22;
     const intl5 = tmp2(1236).intl;
     obj8[3] = intl5.string(tmp2(1236).t.Lm2nFc);
     obj8[4] = callback;
-    obj7[1] = tmp12(tmp2(4815).Button, obj8);
+    obj7[1] = tmp12(tmp2(4879).Button, obj8);
     items4[3] = tmp12(tmp11, obj7);
     obj[1] = items4;
     return tmp10(tmp11, obj);

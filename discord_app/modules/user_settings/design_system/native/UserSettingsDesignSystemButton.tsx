@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemButton.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04826_LinearGradient.js";
-import registerAssetDefault from "../../../../../_runtime/06121_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/08209_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/09262_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/09266_registerAsset.js";
-import registerAssetDefault5 from "../../../../../_runtime/09267_registerAsset.js";
-import registerAssetDefault6 from "../../../../../_runtime/09268_registerAsset.js";
-import registerAssetDefault7 from "../../../../../_runtime/09269_registerAsset.js";
-import registerAssetDefault8 from "../../../../../_runtime/09270_registerAsset.js";
-import registerAssetDefault9 from "../../../../../_runtime/09335_registerAsset.js";
-import registerAssetDefault10 from "../../../../../_runtime/09888_registerAsset.js";
-import registerAssetDefault11 from "../../../../../_runtime/10176_registerAsset.js";
+import LinearGradientDefault from "../../../../../_runtime/04891_LinearGradient.js";
+import registerAssetDefault from "../../../../../_runtime/06187_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/08276_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/09330_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/09334_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/09335_registerAsset.js";
+import registerAssetDefault6 from "../../../../../_runtime/09336_registerAsset.js";
+import registerAssetDefault7 from "../../../../../_runtime/09337_registerAsset.js";
+import registerAssetDefault8 from "../../../../../_runtime/09338_registerAsset.js";
+import registerAssetDefault9 from "../../../../../_runtime/09403_registerAsset.js";
+import registerAssetDefault10 from "../../../../../_runtime/09955_registerAsset.js";
+import registerAssetDefault11 from "../../../../../_runtime/10243_registerAsset.js";
 import keysDefault from "useDesignSystemSettingsState.tsx";
-import registerAssetDefault12 from "../../../../../_runtime/14994_registerAsset.js";
+import registerAssetDefault12 from "../../../../../_runtime/15073_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -76,7 +76,7 @@ function ExampleButton(arg0) {
   obj[8] = tmpResult;
   obj[9] = iconPosition;
   obj[10] = buttonScale;
-  return closure_9(enableLoadingState(4815).Button, obj);
+  return closure_9(enableLoadingState(4879).Button, obj);
 }
 function ExampleIconButton(arg0) {
   ({ variant, showLabel } = arg0);
@@ -119,7 +119,7 @@ function ExampleIconButton(arg0) {
     obj[2] = str2;
     obj[4] = tmp5;
     obj[5] = variant;
-    obj[6] = tmp(6121);
+    obj[6] = tmp(6187);
   } else {
     obj = { disabled: null, onPress: null, accessibilityLabel: null, loading: null, variant: null, size: null, icon: null };
     obj[0] = showDisabled;
@@ -134,9 +134,9 @@ function ExampleIconButton(arg0) {
     obj[3] = tmp5;
     obj[4] = variant;
     obj[5] = tmp3.buttonSize;
-    obj[6] = tmp(6121);
+    obj[6] = tmp(6187);
   }
-  return closure_9(enableLoadingState(7896).IconButton, obj);
+  return closure_9(enableLoadingState(7963).IconButton, obj);
 }
 function ExampleImageButton(arg0) {
   ({ image, label, showLabel } = arg0);
@@ -186,13 +186,13 @@ function ExampleImageButton(arg0) {
     obj[4] = tmp.buttonSize;
     obj[5] = image;
   }
-  return closure_9(enableLoadingState(9272).ImageButton, obj);
+  return closure_9(enableLoadingState(9340).ImageButton, obj);
 }
 function ExampleToggleButton() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
   importDefault = tmp[1];
-  let obj = first(13622);
+  let obj = first(13695);
   obj = { on: null, off: null };
   obj = { text: "Unfollow", icon: registerAssetDefault10 };
   obj[0] = obj;
@@ -205,13 +205,13 @@ function ExampleToggleButton() {
   };
   obj2.variant = "secondary";
   obj2.size = "md";
-  return callback2(first(4815).Button, obj2);
+  return callback2(first(4879).Button, obj2);
 }
 function ExampleIconToggleButton() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
   importDefault = tmp[1];
-  let obj = first(13622);
+  let obj = first(13695);
   obj = { on: null, off: null };
   obj = { variant: "destructive", accessibilityLabel: "Mute", icon: registerAssetDefault9 };
   obj[0] = obj;
@@ -223,7 +223,7 @@ function ExampleIconToggleButton() {
     callback(!first);
   };
   obj2.size = "md";
-  return callback2(first(7896).IconButton, obj2);
+  return callback2(first(7963).IconButton, obj2);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ LIGHT_BACKGROUND_GRADIENT_PRESETS: error, DARK_BACKGROUND_GRADIENT_PRESETS: closure_8 } = ThemeTypes);

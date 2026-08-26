@@ -246,7 +246,7 @@ if (importDefaultResult.isSupported()) {
     appContext = appContext.appContext;
     ({ pid, nativePickerStyleUsed: importDefault, goLiveModalDurationMs } = appContext);
     ({ streamType, guildId, channelId, sourceId, sourcePid, analyticsLocations } = appContext);
-    let obj = appContext(4446);
+    let obj = appContext(4510);
     obj = { streamType, guildId, channelId, ownerId: id.getId() };
     const encodeStreamKeyResult = obj.encodeStreamKey(obj);
     closure_11[encodeStreamKeyResult] = { appContext, analyticsLocations };
@@ -317,8 +317,8 @@ if (importDefaultResult.isSupported()) {
         tmp11 = null == dependencyMap2[streamKey];
       }
       if (tmp11) {
-        tmp10[streamKey] = tmp4(7342).getStreamerApplication(decodeStreamKeyResult, closure_7);
-        const tmp4Result = tmp4(7342);
+        tmp10[streamKey] = tmp4(7408).getStreamerApplication(decodeStreamKeyResult, closure_7);
+        const tmp4Result = tmp4(7408);
       }
       obj = { streamRegion: null, streamApplication: null, streamSourceType: null, actionContext: null, numViewers: null, goLiveModalDurationMs: null, analyticsLocations: null };
       obj[0] = region;
@@ -381,7 +381,7 @@ if (importDefaultResult.isSupported()) {
         analyticsLocations = tmp23.analyticsLocations;
       }
       obj[6] = analyticsLocations;
-      const streamRTCAnalyticsContext = new tmp4(4471).StreamRTCAnalyticsContext(obj);
+      const streamRTCAnalyticsContext = new tmp4(4535).StreamRTCAnalyticsContext(obj);
       _modDef38(null != closure_3, "Creating RTCConnection without session.");
       obj = { sessionId: null, streamKey: null, serverId: null, channelId: null, initialLayout: null, analyticsContext: null, parentMediaSessionId: null };
       obj[0] = closure_3;

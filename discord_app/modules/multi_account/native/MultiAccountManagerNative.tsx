@@ -3,10 +3,10 @@ import set from "../../../../_runtime/00002_set.js";
 import timestampDefault from "../../debug/Logger.tsx";
 import setDefault from "../../../utils/Durations.tsx";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef4611 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4675 from "../../../actions/ModalActionCreators.tsx";
 import MAX_ACCOUNTS from "../Constants.tsx";
 import _initializeDefault from "../MultiAccountManager.tsx";
-import registerAssetDefault from "../../../../_runtime/16769_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/16854_registerAsset.js";
 import ME from "../../../Constants.tsx";
 
 let obj = require;
@@ -89,7 +89,7 @@ class MultiAccountManagerNative extends tmp5 {
 }
 const prototype = MultiAccountManagerNative.prototype;
 prototype["onSwitchStart"] = function onSwitchStart() {
-  obj = _modDef4611;
+  obj = _modDef4675;
   obj.popWithKey(SWITCH_ACCOUNTS_MODAL_KEY);
   logger.info("Closing fast-connect socket because of account switch logout");
   let result = obj(15).closeFastConnectSocket();
@@ -108,10 +108,10 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
   if (navigateHome) {
     obj = obj(1222);
     obj.transitionTo(constants.ME, { navigationReplace: true });
-    const MobileHomeDrawerExperiment = obj(4240).MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = obj(4304).MobileHomeDrawerExperiment;
     if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
-      tmp(4234).setHomeDrawerState(false);
-      const tmpResult = tmp(4234);
+      tmp(4298).setHomeDrawerState(false);
+      const tmpResult = tmp(4298);
     }
     tmp = obj;
   }
@@ -134,7 +134,7 @@ prototype["onSwitchError"] = function onSwitchError(currentUser) {
   obj.open(obj);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {
-  obj = _modDef4611;
+  obj = _modDef4675;
   obj.popWithKey(SWITCH_ACCOUNTS_MODAL_KEY);
   obj.pop();
   if (null !== c9) {

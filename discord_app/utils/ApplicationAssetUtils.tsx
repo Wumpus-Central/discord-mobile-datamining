@@ -115,7 +115,7 @@ function _resolveExternalAssets() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         while (true) {
@@ -215,7 +215,7 @@ function _resolveExternalAssets() {
           }
           let num4 = 3;
           c9 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       }
     })();
@@ -344,7 +344,7 @@ function _fetchAssetIds() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

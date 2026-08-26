@@ -64,7 +64,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4264).Interval();
+    const interval = new obj(4328).Interval();
     obj.pingInterval = interval;
     const tmp15 = new failsDefault(undefined, MINUTE);
     obj.backoff = tmp15;
@@ -631,7 +631,7 @@ prototype["connect"] = function connect() {
     self._requestedDisconnect = false;
     self._requestedConnect = true;
     ({ accountId, accessToken } = self);
-    const SpotifyAPI = accountId(11310).SpotifyAPI;
+    const SpotifyAPI = accountId(11382).SpotifyAPI;
     let obj = { url: null, query: null, onlyRetryOnAuthorizationErrors: true };
     obj[0] = constants.PLAYER;
     obj = { additional_types: null };
@@ -763,9 +763,9 @@ prototype["handleOpen"] = function handleOpen() {
   backoff.succeed();
   const pingInterval = this.pingInterval;
   pingInterval.start(closure_23, () => self.ping());
-  const profile = self(11310).getProfile(this.accountId, this.accessToken);
-  const obj = self(11310);
-  const devices = self(11310).getDevices(this.accountId, this.accessToken);
+  const profile = self(11382).getProfile(this.accountId, this.accessToken);
+  const obj = self(11382);
+  const devices = self(11382).getDevices(this.accountId, this.accessToken);
 };
 prototype["handleMessage"] = function handleMessage(data) {
   data = data.data;
@@ -1284,7 +1284,7 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_35.stop(), false);
-        obj9 = device(10728);
+        obj9 = device(10800);
       }
       if (null != tmp10) {
         if (!tmp22) {

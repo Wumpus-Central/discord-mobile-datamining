@@ -10,6 +10,6 @@ export const GuildSpaceExperiment = experiment;
 export const getGuildSpaceExperimentEnabled = function getGuildSpaceExperimentEnabled(guildId, location) {
   return experiment.getCurrentConfig({ guildId, location }, { autoTrackExposure: false }).enabled;
 };
-export const useGuildSpaceExperimentEnabled = function useGuildSpaceExperimentEnabled(id, location) {
-  return experiment.useExperiment({ guildId: id, location }, { autoTrackExposure: false }).enabled;
+export const useGuildSpaceExperimentEnabled = function useGuildSpaceExperimentEnabled(guildId, location) {
+  return experiment.useExperiment({ guildId, location }, { autoTrackExposure: false }).enabled;
 };

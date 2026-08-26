@@ -34,5 +34,5 @@ export default function openChannelPicker(onClose) {
   obj[2] = found.map((channel) => channel.channel);
   obj[3] = selectedChannel;
   const merged1 = Object.assign(merged);
-  obj.openLazy(asyncRequireImpl(10370, dependencyMap.paths), "ChannelPicker", obj);
+  obj.openLazy(asyncRequireImpl(10438, dependencyMap.paths), "ChannelPicker", obj);
 };

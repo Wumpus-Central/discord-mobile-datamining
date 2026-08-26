@@ -49,7 +49,7 @@ const memoResult = importAllResult.memo(function UserProfileAboutMeCardCommand(c
         const obj3 = closure_2_0(channel[9]);
         const tmp5 = closure_1_1;
         const tmp6 = closure_1_2;
-        command(channel[10]).hideActionSheet();
+        command(channel[10]).hideAllActionSheets();
         command(channel[11])();
         if (bestActiveInput != null) {
           obj5.openSystemKeyboard();

@@ -11,7 +11,7 @@ import hslToRgbDefault from "../../../../../utils/Color.tsx";
 import PressableBase from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import getMixedGradientColor from "../../../../client_themes/native/ThemedGradient.tsx";
 import getMixedGradientColorDefault from "../../../../client_themes/native/ThemedGradient.tsx";
-import registerAssetDefault from "../../../../../../_runtime/14718_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/14791_registerAsset.js";
 import SynchronizeIconDefault from "../../../../client_themes/images/native/SynchronizeIconNative.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../ThemeStore.tsx";
@@ -59,9 +59,9 @@ function DefaultThemeBackground(item) {
   } else {
     theme = item.theme;
   }
-  let tmpResult = tmp(4101);
+  let tmpResult = tmp(4165);
   const token = tmpResult.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWER, theme);
-  tmpResult = tmp(4101);
+  tmpResult = tmp(4165);
   const token1 = tmpResult.useToken(ThemesDefault.colors.BORDER_STRONG, theme);
   obj = { style: null, children: null };
   obj = { width: "100%", height: "100%", backgroundColor: token, borderColor: token1, borderWidth: 1, borderRadius: null };

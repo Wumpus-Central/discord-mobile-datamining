@@ -1,5 +1,5 @@
 // discord_app/modules/age_assurance/AgeVerificationActionCreators.native.tsx
-import _modDef4094 from "../../lib/native/Linking.tsx";
+import _modDef4158 from "../../lib/native/Linking.tsx";
 import useAlertStore from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import ManualReviewPendingAlertModalDefault from "native/ManualReviewPendingAlertModal.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -43,13 +43,13 @@ function openIncodeAgeVerificationModal(arg0) {
       closure_1 = tmp3;
       closure_0 = tmp3;
       dependencyMap = 1;
-      yield closure_1_1(4964).requestPermission(closure_1_11.CAMERA, { showAuthorizationError: true });
+      yield closure_1_1(5030).requestPermission(closure_1_11.CAMERA, { showAuthorizationError: true });
       if (1 === tmp7) {
         dependencyMap = 0;
-        closure_1_1(7929).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
+        closure_1_1(7996).showFailedToast(closure_1_12.TIGGER_PAWTECT_ERROR);
         closure_1_0();
         c4 = 3;
-        const obj5 = closure_1_1(7929);
+        const obj5 = closure_1_1(7996);
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c4 = 3;
@@ -61,7 +61,7 @@ function openIncodeAgeVerificationModal(arg0) {
           obj2[0] = arg1;
           return obj2;
         } else {
-          obj1 = closure_1_1(4611);
+          obj1 = closure_1_1(4675);
           const v0 = 3;
           c4 = 1;
           const obj3 = { value: null, done: false };
@@ -181,14 +181,14 @@ export default {
     let currentUser;
     let obj = entryPoint(1625);
     if (obj.isMetaQuest()) {
-      let tmpResult = tmp(4746);
-      tmpResult.openAlert(closure_7, jsx(onClose(7965), {}), onClose);
+      let tmpResult = tmp(4810);
+      tmpResult.openAlert(closure_7, jsx(onClose(8032), {}), onClose);
     } else {
-      tmpResult = tmp(4621);
+      tmpResult = tmp(4685);
       let isAgeVerifiedResult = tmpResult.isAgeVerified();
       if (isAgeVerifiedResult) {
-        isAgeVerifiedResult = tmp(4076).hasAgeGatedFeatures();
-        const tmpResult1 = tmp(4076);
+        isAgeVerifiedResult = tmp(4140).hasAgeGatedFeatures();
+        const tmpResult1 = tmp(4140);
       }
       dependencyMap = isAgeVerifiedResult;
       if (tmpResult2.isAgeVerificationIncodeEnabled(entryPoint)) {
@@ -222,7 +222,7 @@ export default {
         }
       } else {
         if (tmpResult3.isExpressiveModalV2Enabled(entryPoint)) {
-          onClose(4611).pushLazy(prop(function*() {
+          onClose(4675).pushLazy(prop(function*() {
             closure_0 = tmp2;
             yield closure_1_0(paths[10])(paths[25], paths.paths);
             closure_0 = arg1.default;
@@ -237,27 +237,27 @@ export default {
               }
             });
           }), {}, closure_6);
-          const obj8 = onClose(4611);
+          const obj8 = onClose(4675);
         } else {
-          currentUser = tmp(8100).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
-          const tmpResult4 = tmp(8100);
-          onClose(4611).pushLazy(prop(function*() {
+          currentUser = tmp(8167).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
+          const tmpResult4 = tmp(8167);
+          onClose(4675).pushLazy(prop(function*() {
             closure_0 = tmp2;
             yield closure_1_0(paths[10])(paths[27], paths.paths);
             closure_0 = arg1.default;
             return () => closure_2_13(closure_0, { entryPoint: closure_0, isRetry: c2, useEmbeddedMethods: closure_1_4 });
           }), {}, closure_6);
-          const obj7 = onClose(4611);
+          const obj7 = onClose(4675);
         }
-        tmpResult3 = tmp(7968);
+        tmpResult3 = tmp(8035);
       }
-      tmpResult2 = tmp(7966);
+      tmpResult2 = tmp(8033);
     }
   },
   showManualReviewPendingModal() {
     useAlertStore.openAlert(closure_8, jsx(ManualReviewPendingAlertModalDefault, {}));
   },
   openUrl(arg0) {
-    _modDef4094.openURL(arg0);
+    _modDef4158.openURL(arg0);
   }
 };

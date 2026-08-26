@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native
 export default function useNavigatorConfirmChangesOnBack() {
   const ref = React.useRef(null);
   dependencyMap = React.useRef(false);
-  obj = { onGoBack: ref(9826)(obj).onGoBack, ref };
+  obj = { onGoBack: ref(9893)(obj).onGoBack, ref };
   obj = {
     onBeforeGoBack(preventable) {
       if (preventable.preventable) {

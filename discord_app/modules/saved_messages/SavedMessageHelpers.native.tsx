@@ -22,7 +22,7 @@ function _addOrUpdateSavedMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -62,14 +62,14 @@ function _addOrUpdateSavedMessage() {
               } else {
                 if (null == savedMessage.getSavedMessage(lib.channelId, lib.messageId)) {
                   if (!obj10.hasForLaterAccess("addOrUpdateSavedMessage")) {
-                    let items = [lib(5854).FOR_LATER_ROADBLOCK];
-                    lib(8526)(displayToast(8529).EntitlementFeatureNames.SAVED_MESSAGES, undefined, items);
+                    let items = [lib(5920).FOR_LATER_ROADBLOCK];
+                    lib(8593)(displayToast(8597).EntitlementFeatureNames.SAVED_MESSAGES, undefined, items);
                     savedMessage = 3;
-                    const tmp36 = lib(8526);
+                    const tmp36 = lib(8593);
                   }
-                  obj10 = displayToast(8531);
+                  obj10 = displayToast(8599);
                 }
-                let obj3 = displayToast(11270);
+                let obj3 = displayToast(11342);
                 BookmarkIcon = 2;
                 savedMessage = 1;
                 obj3 = { value: null, done: false };
@@ -147,11 +147,11 @@ function _addOrUpdateSavedMessage() {
                   }
                   dependencyMap = stringResult;
                   if (null != lib.dueAt) {
-                    BookmarkIcon = displayToast(4343).ClockIcon;
+                    BookmarkIcon = displayToast(4407).ClockIcon;
                   } else {
-                    BookmarkIcon = displayToast(11272).BookmarkIcon;
+                    BookmarkIcon = displayToast(11344).BookmarkIcon;
                   }
-                  obj = lib(4098);
+                  obj = lib(4162);
                   const obj4 = { key: "SAVED_MESSAGE_CREATE_SUCCESS", IconComponent: null, content: null };
                   obj4[1] = BookmarkIcon;
                   obj4[2] = dependencyMap;
@@ -200,7 +200,7 @@ function _removeSavedMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -243,8 +243,8 @@ function _removeSavedMessage() {
               c4 = 1;
               obj3 = { value: null, done: false };
               obj3[0] = obj3.deleteSavedMessage(closure_2).catch((body) => {
-                let obj = _undefined2(4098);
-                obj = { key: "SAVED_MESSAGE_REMOVE_ERROR", IconComponent: _undefined(7938).CircleErrorIcon, content: null };
+                let obj = _undefined2(4162);
+                obj = { key: "SAVED_MESSAGE_REMOVE_ERROR", IconComponent: _undefined(8005).CircleErrorIcon, content: null };
                 let message;
                 if (body != null) {
                   body = body.body;
@@ -297,7 +297,7 @@ function _removeSavedMessage() {
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp45) {
           c4 = tmp;

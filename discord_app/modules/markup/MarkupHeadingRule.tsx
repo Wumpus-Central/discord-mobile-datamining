@@ -1,6 +1,6 @@
 // discord_app/modules/markup/MarkupHeadingRule.tsx
-import t from "../../../_runtime/04096_t.js";
-import tDefault from "../../../_runtime/04096_t.js";
+import t from "../../../_runtime/04160_t.js";
+import tDefault from "../../../_runtime/04160_t.js";
 
 require = arg1;
 const re2 = /\n$/;

@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx
-import _modDef15991 from "../ErrorScreen.tsx";
+import _modDef16072 from "../ErrorScreen.tsx";
 import closure_3 from "../../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
@@ -14,6 +14,6 @@ export default function SearchIndexingScreen(searchContext) {
     obj = { searchContext };
     obj.trackSearchIndexing(obj);
   }, items);
-  const text = searchContext(11907).getIndexingErrorText(searchContext);
-  return jsx(_modDef15991, { text });
+  const text = searchContext(11980).getIndexingErrorText(searchContext);
+  return jsx(_modDef16072, { text });
 };

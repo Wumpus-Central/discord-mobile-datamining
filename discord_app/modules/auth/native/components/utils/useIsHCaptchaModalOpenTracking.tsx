@@ -8,7 +8,7 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx");
 
 export const useIsHCaptchaModalOpenTracking = function useIsHCaptchaModalOpenTracking() {
-  context = React.useContext(context(15304).TrackRegistrationContext);
+  context = React.useContext(context(15383).TrackRegistrationContext);
   const items = [context];
   const layoutEffect = React.useLayoutEffect(() => {
     const rootNavigationRef = context(closure_1_1[4]).getRootNavigationRef();

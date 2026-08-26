@@ -18,7 +18,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -34,7 +34,7 @@ export default {
               return obj;
             } else {
               closure_0 = tmp4;
-              let obj2 = closure_1_0(4557);
+              let obj2 = closure_1_0(4621);
               dependencyMap = 1;
               c2 = 1;
               obj1 = { value: null, done: false };
@@ -50,7 +50,7 @@ export default {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = closure_1_0(4555);
+            obj = closure_1_0(4619);
             if (arg1) {
               obj.ROBLOX_PROTOCOL_URL(closure_0);
             } else {

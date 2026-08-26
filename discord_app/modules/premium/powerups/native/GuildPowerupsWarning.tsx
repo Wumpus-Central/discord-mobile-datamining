@@ -37,11 +37,11 @@ export default function GuildPowerupsWarning(warnings) {
     obj[0] = tmp.contentContainer;
     obj1 = { color: null, size: "md" };
     obj1[0] = manaTypeConsolidationExperiment(712).colors.TEXT_FEEDBACK_WARNING;
-    let items = [callback(tmp2(7938).CircleErrorIcon, obj1), , , ];
+    let items = [callback(tmp2(8005).CircleErrorIcon, obj1), , , ];
     const obj2 = { variant: "text-md/semibold", color: "text-feedback-warning", style: null, children: null };
     obj2[2] = tmp.text;
     obj2[3] = tmp7;
-    items[1] = callback(tmp2(4376).Text, obj2);
+    items[1] = callback(tmp2(4440).Text, obj2);
     let str = "text-sm/medium";
     if (manaTypeConsolidationExperiment) {
       str = "experimental/body-sm/normal";
@@ -50,7 +50,7 @@ export default function GuildPowerupsWarning(warnings) {
     obj3[0] = str;
     obj3[1] = tmp.text;
     obj3[2] = tmp8;
-    items[2] = callback(tmp2(4376).Text, obj3);
+    items[2] = callback(tmp2(4440).Text, obj3);
     let mapped;
     if (warnings != null) {
       mapped = warnings.map((children) => {

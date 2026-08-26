@@ -29,3 +29,7 @@ const result = set.fileFinishedImporting("modules/user_profile/native/UserProfil
 export default function useSharedStyles() {
   return callback(useIsMobileVisualRefreshExperimentEnabledDefault("UserProfileSharedStyles"));
 };
+export const useUserProfileCardRadius = function useUserProfileCardRadius() {
+  const radii = ThemesDefault.radii;
+  return useIsMobileVisualRefreshExperimentEnabledDefault("UserProfileSharedStyles") ? radii.md : radii.lg;
+};

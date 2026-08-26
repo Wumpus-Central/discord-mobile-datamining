@@ -1,6 +1,6 @@
 // discord_app/modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../../_runtime/16798_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/16883_registerAsset.js";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { EventActionType } from "NotificationPermissionConstants.tsx";
@@ -36,7 +36,7 @@ export default function NotificationReactivationActionSheet(location) {
   }, items);
   const callback1 = React.useCallback(() => {
     let obj = closure_1_1(closure_1_2[7]);
-    obj = { action_type: closure_1_6.SKIP_STEP, action_location: _location, permission_granted: "r" };
+    obj = { action_type: closure_1_6.SKIP_STEP, action_location: _location, permission_granted: "Array" };
     obj.track(closure_1_7.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
     closure_1_1(closure_1_2[9]).hideActionSheet();
   }, items1);
@@ -47,25 +47,25 @@ export default function NotificationReactivationActionSheet(location) {
   obj1 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1236).intl;
   obj1[3] = intl.string(_location(1236).t.a4bgO0);
-  items2[1] = callback(_location(4376).Text, obj1);
+  items2[1] = callback(_location(4440).Text, obj1);
   const obj2 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = _location(1236).intl;
   obj2[3] = intl2.string(_location(1236).t["rW5gw/"]);
-  items2[2] = callback(_location(4376).Text, obj2);
+  items2[2] = callback(_location(4440).Text, obj2);
   const obj3 = { style: tmp.buttons, children: null };
   const obj4 = { text: null, onPress: null };
   const intl3 = _location(1236).intl;
   obj4[0] = intl3.string(_location(1236).t.a4bgO0);
   obj4[1] = callback;
-  const items3 = [callback(_location(4815).Button, obj4), ];
+  const items3 = [callback(_location(4879).Button, obj4), ];
   const obj5 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = _location(1236).intl;
   obj5[0] = intl4.string(_location(1236).t["/L3kom"]);
   obj5[1] = callback1;
-  items3[1] = callback(_location(4815).Button, obj5);
+  items3[1] = callback(_location(4879).Button, obj5);
   obj3[1] = items3;
-  items2[3] = callback2(_location(5257).ButtonGroup, obj3);
+  items2[3] = callback2(_location(5323).ButtonGroup, obj3);
   obj[1] = items2;
   obj[0] = callback2(closure_4, obj);
-  return callback(_location(5503).BottomSheet, obj);
+  return callback(_location(5569).BottomSheet, obj);
 };

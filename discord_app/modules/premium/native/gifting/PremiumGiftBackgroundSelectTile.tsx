@@ -4,10 +4,10 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../gifting/PremiumGifting.messages.js";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../../_runtime/12349_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/12350_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/12351_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/12352_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/12421_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/12422_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/12423_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/12424_registerAsset.js";
 import metadataDefault from "../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
 import metadataDefault2 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_cake.png.js";
 import metadataDefault3 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_chest.png.js";

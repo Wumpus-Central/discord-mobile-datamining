@@ -10,9 +10,9 @@ export default function usePIPAvoidanceSpecs(safeArea) {
   const _require = safeArea;
   let obj = ReanimatedRexport;
   const sharedValue = obj.useSharedValue({ top: 0, bottom: 0 });
-  const tmp2 = sharedValue(16313)();
+  const tmp2 = sharedValue(16394)();
   dependencyMap = tmp2;
-  const tmp3 = sharedValue(16359)();
+  const tmp3 = sharedValue(16440)();
   closure_3 = tmp3;
   const fn = function n() {
     return { keyboardHeight: closure_2.get(), safeAreaBottom: safeArea.bottom, screenName: closure_3.get() };
@@ -34,7 +34,7 @@ export default function usePIPAvoidanceSpecs(safeArea) {
       const tmp4 = sharedValue(tmp2[4])(screenName);
     }
   };
-  obj = { cheapWorkletShallowEqual: require("../../../../reanimated/native/cheapWorkletShallowEqual.tsx").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(16256), getAdjustedBottomOffsets: sharedValue(16360), updateSharedValueIfChanged: sharedValue(10397), pipAvoidanceSpecs: sharedValue };
+  obj = { cheapWorkletShallowEqual: require("../../../../reanimated/native/cheapWorkletShallowEqual.tsx").cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(16337), getAdjustedBottomOffsets: sharedValue(16441), updateSharedValueIfChanged: sharedValue(10465), pipAvoidanceSpecs: sharedValue };
   fn2.__closure = obj;
   fn2.__workletHash = 643938425459;
   fn2.__initData = closure_4;

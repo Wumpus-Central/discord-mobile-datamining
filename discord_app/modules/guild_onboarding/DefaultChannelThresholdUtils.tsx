@@ -25,7 +25,7 @@ function _isDefaultChannelThresholdMetAfterDelete() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -111,7 +111,7 @@ function _isChattableChannelThresholdMetAfterChannelChange() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -271,7 +271,7 @@ function _checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -364,7 +364,7 @@ function _checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
             obj4[0] = tmp54;
             return obj4;
           } else {
-            obj = callback(4744);
+            obj = callback(4808);
             obj5 = { title: null, body: null };
             const intl = guildId(1236).intl;
             obj5[0] = intl.string(guildId(1236).t.ut7sq0);

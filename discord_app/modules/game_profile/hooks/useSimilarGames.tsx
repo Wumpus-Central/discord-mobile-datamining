@@ -10,7 +10,7 @@ const result = require("set").fileFinishedImporting("modules/game_profile/hooks/
 
 export default function useSimilarGames(arg0) {
   const hasItem = set.has(arg0);
-  let obj = data(9488);
+  let obj = data(9556);
   const similarGameIds = obj.useSimilarGameIds(arg0, !hasItem);
   ({ data, isLoading, error } = similarGameIds);
   if (hasItem) {
@@ -19,7 +19,7 @@ export default function useSimilarGames(arg0) {
     tmp7 = data;
   }
   data = tmp7;
-  let tmp3Result = tmp3(6033);
+  let tmp3Result = tmp3(6099);
   const games = tmp3Result.useGames(tmp7);
   tmp3Result = tmp3(589);
   const items = [closure_2];

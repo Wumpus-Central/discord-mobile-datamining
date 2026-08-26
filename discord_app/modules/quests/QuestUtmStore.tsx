@@ -4,7 +4,7 @@ import keys from "../../../_runtime/00644_keys.js";
 
 let obj = keys.create((arg0) => {
   closure_0 = arg0;
-  obj = { utmSourceCurrent: "r", utmMediumCurrent: "View", utmCampaignCurrent: "tag", utmContentCurrent: "size", setUtmCurrentContext: false, getUtmCurrentContext: false };
+  obj = { utmSourceCurrent: "r", utmMediumCurrent: "View", utmCampaignCurrent: "st", utmContentCurrent: "__d", setUtmCurrentContext: "wasAtEdge", getUtmCurrentContext: "isImageFile" };
   obj[4] = function setUtmCurrentContext(utmSourceCurrent) {
     return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });
   };

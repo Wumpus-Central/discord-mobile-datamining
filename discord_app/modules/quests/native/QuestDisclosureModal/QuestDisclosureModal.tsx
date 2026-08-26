@@ -4,7 +4,7 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/08178_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08245_registerAsset.js";
 
 function CloseButton() {
   const obj = {
@@ -31,7 +31,7 @@ const result = set.fileFinishedImporting("modules/quests/native/QuestDisclosureM
 export default function QuestDisclosureModal(arg0) {
   ({ isTargetedDisclosure: require, gamePublisher: importDefault, gameTitle: dependencyMap, cosponsorName: jsx, isVideoQuest: closure_4 } = arg0);
   function onClose() {
-    return callback2(14555).hideModal();
+    return callback2(14628).hideModal();
   }
   let obj = {
     headerLeft: onClose,
@@ -42,7 +42,7 @@ export default function QuestDisclosureModal(arg0) {
       const obj = { title: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.GcsZKJ);
-      return callback3(callback(5376).NavigatorHeader, obj);
+      return callback3(callback(5442).NavigatorHeader, obj);
     },
     render() {
       return closure_1_3(closure_1_1(closure_1_2[6]), { isTargetedDisclosure: closure_0, gamePublisher: closure_1, gameTitle: closure_2, onClose, cosponsorName: closure_3, isVideoQuest: closure_4 });

@@ -25,7 +25,7 @@ function PreviewBody(event) {
   let items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channel_id), items1);
-  const tmp6 = channel_id(4574)(stateFromStores);
+  const tmp6 = channel_id(4638)(stateFromStores);
   dependencyMap = tmp6;
   obj1 = getChannelFromEvent;
   locationFromEvent = obj1.getLocationFromEvent(event);
@@ -47,7 +47,7 @@ function PreviewBody(event) {
     const obj2 = { channelName: null };
     const obj3 = { channel: null };
     obj3[0] = stateFromStores;
-    obj2[0] = channel_id(9180)(obj3);
+    obj2[0] = channel_id(9248)(obj3);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t.sxcQPE, obj2);
   }
   obj1[1] = formatToPlainStringResult;
@@ -71,13 +71,13 @@ function PreviewBody(event) {
       if (dependencyMap == null) {
         let result = null;
         if (null != locationFromEvent) {
-          result = lib(9181).guildEventLocationParser(tmp12, true);
-          const tmp9Result = lib(9181);
+          result = lib(9249).guildEventLocationParser(tmp12, true);
+          const tmp9Result = lib(9249);
         }
         tmp11 = result;
       }
       obj = { children: null };
-      items[1] = closure_1_6(lib(4376).Text, { accessibilityElementsHidden: true, importantForAccessibility: "no", variant: "text-sm/medium", color: "text-default", children: tmp11 });
+      items[1] = closure_1_6(lib(4440).Text, { accessibilityElementsHidden: true, importantForAccessibility: "no", variant: "text-sm/medium", color: "text-default", children: tmp11 });
       obj[0] = items;
       let str = locationFromEvent;
       if (locationFromEvent == null) {

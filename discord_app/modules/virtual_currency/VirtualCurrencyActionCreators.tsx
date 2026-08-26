@@ -30,7 +30,7 @@ function _fetchVirtualCurrencyBalance() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -143,7 +143,7 @@ function _redeemVirtualCurrencyForSKU() {
             obj[0] = body;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -214,7 +214,7 @@ function _redeemVirtualCurrencyForSKU() {
                 }
                 let result = null != applicationId;
                 if (result) {
-                  let obj8 = callback(7731);
+                  let obj8 = callback(7797);
                   result = obj8.isTestModeForApplication(applicationId);
                 }
                 c8 = result;
@@ -236,10 +236,10 @@ function _redeemVirtualCurrencyForSKU() {
             } else if (2 === tmp7) {
               c4 = 0;
               closure_14 = c3;
-              if (closure_14 instanceof callback(4278).BillingError) {
+              if (closure_14 instanceof callback(4342).BillingError) {
                 billingError = closure_14;
               } else {
-                billingError = new callback(4278).BillingError(closure_14);
+                billingError = new callback(4342).BillingError(closure_14);
               }
               let obj6 = callback2(709);
               const obj5 = { type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: null, error: null };
@@ -253,7 +253,7 @@ function _redeemVirtualCurrencyForSKU() {
                 tmp69(billingError);
               }
               logger = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else if (arg0 === 1) {
               logger = 3;
               throw body;

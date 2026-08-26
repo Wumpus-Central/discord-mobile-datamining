@@ -1,11 +1,11 @@
 // discord_app/modules/markup/MarkupLinkRule.tsx
 import privDefault from "../../../_runtime/01405_priv.js";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
-import tDefault from "../../../_runtime/04096_t.js";
+import tDefault from "../../../_runtime/04160_t.js";
 import getPathsFromURL from "../coded_links/findCodedLinks.tsx";
 import AST_KEY from "MarkupTypes.tsx";
 import safelyPartiallyDecodeURIComponent from "UnicodeSanitizationUtils.tsx";
-import errorDefault from "../../../_runtime/04842_error.js";
+import errorDefault from "../../../_runtime/04907_error.js";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 
 require = arg1;
@@ -75,34 +75,34 @@ function getRawText(content) {
     let tmp3 = require;
     let tmp4 = dependencyMap;
     if (AST_KEY.AST_KEY.TEXT !== type) {
-      if (tmp3(4835).AST_KEY.INLINE_CODE !== type) {
-        if (tmp3(4835).AST_KEY.CUSTOM_EMOJI === type) {
+      if (tmp3(4900).AST_KEY.INLINE_CODE !== type) {
+        if (tmp3(4900).AST_KEY.CUSTOM_EMOJI === type) {
           let tmp16 = str;
           let tmp17 = nextResult;
           str = `${tmp2.name}`;
-        } else if (tmp3(4835).AST_KEY.EMOJI === type) {
+        } else if (tmp3(4900).AST_KEY.EMOJI === type) {
           let tmp14 = str;
           let tmp15 = nextResult;
           str = `${tmp2.name}${tmp2.surrogate}`;
-        } else if (tmp3(4835).AST_KEY.LINE_BREAK === type) {
+        } else if (tmp3(4900).AST_KEY.LINE_BREAK === type) {
           let tmp13 = str;
           str = `${tmp2.name}${tmp2.surrogate}
   `;
         } else {
-          if (tmp3(4835).AST_KEY.STRONG !== type) {
-            if (tmp3(4835).AST_KEY.ITALICS !== type) {
-              if (tmp3(4835).AST_KEY.UNDERLINE !== type) {
-                if (tmp3(4835).AST_KEY.STRIKETHROUGH !== type) {
-                  if (tmp3(4835).AST_KEY.SPOILER !== type) {
-                    if (tmp3(4835).AST_KEY.TIMESTAMP === type) {
+          if (tmp3(4900).AST_KEY.STRONG !== type) {
+            if (tmp3(4900).AST_KEY.ITALICS !== type) {
+              if (tmp3(4900).AST_KEY.UNDERLINE !== type) {
+                if (tmp3(4900).AST_KEY.STRIKETHROUGH !== type) {
+                  if (tmp3(4900).AST_KEY.SPOILER !== type) {
+                    if (tmp3(4900).AST_KEY.TIMESTAMP === type) {
                       let tmp9 = str;
                       str = `${tmp2.name}${tmp2.surrogate}
   <timestamp>`;
                     } else {
-                      if (tmp3(4835).AST_KEY.BLOCK_QUOTE !== type) {
-                        if (tmp3(4835).AST_KEY.LIST !== type) {
-                          if (tmp3(4835).AST_KEY.HEADING !== type) {
-                            if (tmp3(4835).AST_KEY.SUBTEXT !== type) {
+                      if (tmp3(4900).AST_KEY.BLOCK_QUOTE !== type) {
+                        if (tmp3(4900).AST_KEY.LIST !== type) {
+                          if (tmp3(4900).AST_KEY.HEADING !== type) {
+                            if (tmp3(4900).AST_KEY.SUBTEXT !== type) {
                               let tmp3Result = tmp3(1370);
                               let tmp5 = nextResult;
                               let assertNeverResult = tmp3Result.assertNever(tmp2.type);
@@ -140,11 +140,11 @@ function isSuspiciousUrl(url) {
   } else {
     let value = store.get(url);
     if (null == value) {
-      let tmpResult = tmp(4841);
+      let tmpResult = tmp(4906);
       const sanitizeWhitespaceResult = tmpResult.sanitizeWhitespace(url);
       obj = { whitespaceSanitized: null, fullySanitized: null };
       obj[0] = sanitizeWhitespaceResult;
-      tmpResult = tmp(4841);
+      tmpResult = tmp(4906);
       obj[1] = tmpResult.sanitizeUnicodeConfusables(sanitizeWhitespaceResult);
       const result = obj2.set(url, obj);
       value = obj;
@@ -223,7 +223,7 @@ let closure_4 = new privDefault({ max: 50 });
 let items = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"];
 let items1 = [require("AST_KEY").AST_KEY.TEXT, require("AST_KEY").AST_KEY.UNDERLINE, require("AST_KEY").AST_KEY.STRONG, require("AST_KEY").AST_KEY.ITALICS, require("AST_KEY").AST_KEY.STRIKETHROUGH, require("AST_KEY").AST_KEY.INLINE_CODE, require("AST_KEY").AST_KEY.SPOILER, require("AST_KEY").AST_KEY.LINE_BREAK, require("AST_KEY").AST_KEY.TIMESTAMP];
 let items2 = [...items1, require("AST_KEY").AST_KEY.EMOJI, require("AST_KEY").AST_KEY.CUSTOM_EMOJI];
-const items3 = [require("AST_KEY").AST_KEY.LIST, require("AST_KEY").AST_KEY.HEADING, require("AST_KEY").AST_KEY.BLOCK_QUOTE, require("AST_KEY").AST_KEY.SUBTEXT];
+let items3 = [require("AST_KEY").AST_KEY.LIST, require("AST_KEY").AST_KEY.HEADING, require("AST_KEY").AST_KEY.BLOCK_QUOTE, require("AST_KEY").AST_KEY.SUBTEXT];
 const items4 = [require("AST_KEY").AST_KEY.TEXT];
 const items5 = [require("AST_KEY").AST_KEY.UNDERLINE, require("AST_KEY").AST_KEY.STRONG, require("AST_KEY").AST_KEY.ITALICS, require("AST_KEY").AST_KEY.STRIKETHROUGH, require("AST_KEY").AST_KEY.INLINE_CODE, require("AST_KEY").AST_KEY.SPOILER, require("AST_KEY").AST_KEY.LINE_BREAK, require("AST_KEY").AST_KEY.TIMESTAMP, require("AST_KEY").AST_KEY.EMOJI, require("AST_KEY").AST_KEY.CUSTOM_EMOJI, require("AST_KEY").AST_KEY.LIST, require("AST_KEY").AST_KEY.HEADING, require("AST_KEY").AST_KEY.BLOCK_QUOTE, require("AST_KEY").AST_KEY.SUBTEXT];
 let obj = {};
@@ -331,64 +331,87 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
       const sanitizeWhitespaceResult2 = obj7.sanitizeWhitespace(str);
       const obj2 = { whitespaceSanitized: null, fullySanitized: null };
       obj2[0] = sanitizeWhitespaceResult2;
-      obj2[1] = safelyPartiallyDecodeURIComponent.sanitizeUnicodeConfusables(sanitizeWhitespaceResult2);
+      let obj9 = safelyPartiallyDecodeURIComponent;
+      obj2[1] = obj9.sanitizeUnicodeConfusables(sanitizeWhitespaceResult2);
       const result2 = obj.set(str, obj2);
       value1 = obj2;
-      const obj10 = safelyPartiallyDecodeURIComponent;
     }
     const trimmed = str3.trim();
     if (0 !== str2.trim().length) {
       if (0 !== trimmed.length) {
-        const tmp53 = punycodeLink(tDefault.unescapeUrl(tmp4));
-        const obj20 = tDefault;
-        if (null != tmp53) {
-          if (!tmp23) {
+        const tmp48 = punycodeLink(tDefault.unescapeUrl(tmp4));
+        if (null != tmp48) {
+          if (tmp46(4427)(tmp5).length <= 0) {
             obj3 = {};
             const merged = Object.assign(allowEmojiLinks);
             obj3.allowEscape = false;
             obj3.parseInlineCodeChildContent = true;
-            const tmp28 = allowEmojiLinks.allowEmojiLinks ? items2 : items1;
+            const tmp23 = allowEmojiLinks.allowEmojiLinks ? items2 : items1;
             items = [];
-            HermesBuiltin.arraySpread(items3, HermesBuiltin.arraySpread(tmp28, 0));
+            HermesBuiltin.arraySpread(items3, HermesBuiltin.arraySpread(tmp23, 0));
             items1 = [];
             HermesBuiltin.arraySpread(items5, HermesBuiltin.arraySpread(items4, 0));
             items2 = [AST_KEY.AST_KEY.EMOJI];
-            const tmp43 = validateContentTypes(rules(str3, obj3), items, items2);
-            if (null != tmp43) {
+            const tmp38 = validateContentTypes(rules(str3, obj3), items, items2);
+            if (null != tmp38) {
               if (null != validateContentTypes(rules(value1.fullySanitized, obj3), items1)) {
+                const str4 = getRawText(tmp38);
                 if (0 === str4.trim().length) {
                   obj4 = { type: null, content: null };
-                  obj4[0] = tmp42(4835).AST_KEY.TEXT;
+                  obj4[0] = tmp37(4900).AST_KEY.TEXT;
                   obj4[1] = tmp2;
                   return obj4;
-                } else {
-                  let tmp51Result = tmp51(12);
-                  tmp51Result = tmp51(4096);
-                  const obj5 = { content: null, target: null, title: null };
-                  obj5[0] = tmp51Result.parserFor(tmp51Result.pick(rules.rules, tmp28))(value.whitespaceSanitized, obj3);
-                  obj5[1] = tmp53.target;
-                  obj5[2] = value1.whitespaceSanitized;
+                } else if (tmp46(4427)(str4).length > 0) {
+                  const obj5 = { type: null, content: null };
+                  obj5[0] = tmp37(4900).AST_KEY.TEXT;
+                  obj5[1] = tmp2;
                   return obj5;
+                } else {
+                  if (str4 !== str3) {
+                    if (tmp46(4427)(str3).length > 0) {
+                      obj6 = { type: null, content: null };
+                      obj6[0] = tmp37(4900).AST_KEY.TEXT;
+                      obj6[1] = tmp2;
+                      return obj6;
+                    } else {
+                      items3 = [];
+                      const tmp54 = rules(str4, obj3);
+                      items3[HermesBuiltin.arraySpread(items, 0)] = tmp37(4900).AST_KEY.EMOJI;
+                      if (null == validateContentTypes(tmp54, items3)) {
+                        obj7 = { type: null, content: null };
+                        obj7[0] = tmp37(4900).AST_KEY.TEXT;
+                        obj7[1] = tmp2;
+                        return obj7;
+                      }
+                      const arraySpreadResult1 = HermesBuiltin.arraySpread(items, 0);
+                    }
+                  }
+                  let tmp46Result = tmp46(12);
+                  tmp46Result = tmp46(4160);
+                  const obj8 = { content: null, target: null, title: null };
+                  obj8[0] = tmp46Result.parserFor(tmp46Result.pick(rules.rules, tmp23))(value.whitespaceSanitized, obj3);
+                  obj8[1] = tmp48.target;
+                  obj8[2] = value1.whitespaceSanitized;
+                  return obj8;
                 }
-                str4 = getRawText(tmp43);
               }
             }
-            obj6 = { type: null, content: null };
-            obj6[0] = AST_KEY.AST_KEY.TEXT;
-            obj6[1] = tmp2;
-            return obj6;
+            obj9 = { type: null, content: null };
+            obj9[0] = AST_KEY.AST_KEY.TEXT;
+            obj9[1] = tmp2;
+            return obj9;
           }
         }
-        obj7 = { type: null, content: null };
-        obj7[0] = AST_KEY.AST_KEY.TEXT;
-        obj7[1] = tmp2;
-        return obj7;
+        const obj10 = { type: null, content: null };
+        obj10[0] = AST_KEY.AST_KEY.TEXT;
+        obj10[1] = tmp2;
+        return obj10;
       }
     }
-    const obj8 = { type: null, content: null };
-    obj8[0] = AST_KEY.AST_KEY.TEXT;
-    obj8[1] = tmp2;
-    return obj8;
+    const obj11 = { type: null, content: null };
+    obj11[0] = AST_KEY.AST_KEY.TEXT;
+    obj11[1] = tmp2;
+    return obj11;
   }
   const tmp = callback(arg0, 4);
 };

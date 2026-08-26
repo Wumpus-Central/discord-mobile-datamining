@@ -36,7 +36,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -114,7 +114,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
           return obj;
         }
         v0 = 3;
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp9) {
         v0 = tmp;
         throw tmp9;
@@ -131,10 +131,9 @@ prototype["performAgeCheck"] = function performAgeCheck(arg0) {
     yield closure_1_1.collectAgeSignal();
     if (1 === tmp7) {
       c3 = 0;
-      c3 = closure_2;
       let obj2 = { tags: null };
       obj2[0] = { source: "parental_consent_manager", step: "perform_age_check" };
-      closure_1_1(closure_1_2[11]).captureException(c3, obj2);
+      closure_1_1(closure_1_2[11]).captureException(closure_2, obj2);
       let constants = 3;
       const obj11 = closure_1_1(closure_1_2[11]);
     } else if (2 === tmp7) {
@@ -179,12 +178,10 @@ prototype["performAgeCheck"] = function performAgeCheck(arg0) {
       constants = 3;
       throw arg1;
     } else if (arg0 !== 2) {
-      closure_2 = arg1;
       const obj = closure_1_1(closure_1_2[10]);
-      obj7 = { should_block: null, platform: null };
-      obj7[0] = closure_2;
+      obj7 = { platform: null };
       obj2 = closure_1_0(closure_1_2[5]);
-      obj7[1] = obj2.getNativePlatform();
+      obj7[0] = obj2.getNativePlatform();
       obj.track(constants.PARENTAL_CONSENT_CHECKED, obj7);
       c3 = 0;
     }
@@ -205,7 +202,7 @@ prototype["collectAgeSignal"] = function collectAgeSignal() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
