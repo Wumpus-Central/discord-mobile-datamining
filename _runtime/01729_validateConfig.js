@@ -78,7 +78,7 @@ let fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "sa",
       lastTimestamp: null,
-      startTimestamp: "DELETE_PENDING_REPLY",
+      startTimestamp: "UPDATE_CHANNEL_DIMENSIONS",
       reduceMotion: null
     };
     let num = obj.velocity;

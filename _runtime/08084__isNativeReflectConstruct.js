@@ -3,18 +3,13 @@
 // Module 8084 (_isNativeReflectConstruct)
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import extractPropsDefault from "extractProps" /* 8000 */;
-import extractFontDefault from "extractFont" /* 8007 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8009 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8085 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
-import extractFont from "extractFont" /* 8007 */;
 
-const TSpan = arg1;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -35,68 +30,36 @@ function _isNativeReflectConstruct() {
   }
 }
 noopAll;
-class TSpan {
+class Defs {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, closure_0);
-    items1 = [...items];
-    tmp2 = closure_5;
-    obj = closure_5(closure_0);
-    tmp3 = closure_4;
+    tmp = closure_2(this, Defs);
+    tmp2 = closure_4;
+    obj = closure_4(Defs);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = closure_1_1(closure_1_2[7])(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = lib(closure_1_2[8]).propsAndStyles(matrix);
-      const obj = lib(closure_1_2[8]);
-      const merged = Object.assign(propsAndStylesResult, lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(propsAndStylesResult, false)));
-      if (lib.root) {
-        const root = lib.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(TSpan, _isNativeReflectConstructDefault);
-let items = [
+_inheritsDefault(Defs, require("noop").Component);
+const items = [
   {
     key: "render",
     value: function render() {
-      let obj = TSpan(8000);
-      const propsAndStylesResult = obj.propsAndStyles(this.props);
-      obj = {};
-      const merged = Object.assign(propsAndStylesResult);
-      obj.x = null;
-      obj.y = null;
-      const tmp2Result = extractPropsDefault(obj, this);
-      const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
-      tmp2Result.ref = this.refMethod;
-      obj = {};
-      const tmp2 = extractPropsDefault;
-      const merged2 = Object.assign(tmp2Result);
-      return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
+      return jsx(Defs(8085), { children: this.props.children });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(TSpan, items);
-importDefaultResultResult.displayName = "TSpan";
-extractFont.setTSpan(importDefaultResultResult);
+const importDefaultResultResult = importDefaultResult(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

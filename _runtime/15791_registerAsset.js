@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/main_tabs", width: 48, height: 48, scales: [1], hash: "af7e0b726a672f5506a1ba72e26e2adc", name: "NitroWheelIconWithGradient", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guilds_bar/native/images", width: 59, height: 55, scales: [3], hash: "31b62f25cfc0f3a2d3cb5b6aaaef4788", name: "wumpus_wave", type: "png" });

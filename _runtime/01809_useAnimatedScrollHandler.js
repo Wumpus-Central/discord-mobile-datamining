@@ -4,11 +4,11 @@
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useAnimatedScrollHandlerTs1(event){const{scrollHandlers,context}=this.__closure;const{onScroll:onScroll,onBeginDrag:onBeginDrag,onEndDrag:onEndDrag,onMomentumBegin:onMomentumBegin,onMomentumEnd:onMomentumEnd}=scrollHandlers;if(onScroll&&event.eventName.endsWith('onScroll')){onScroll(event,context);}else if(onBeginDrag&&event.eventName.endsWith('onScrollBeginDrag')){onBeginDrag(event,context);}else if(onEndDrag&&event.eventName.endsWith('onScrollEndDrag')){onEndDrag(event,context);}else if(onMomentumBegin&&event.eventName.endsWith('onMomentumScrollBegin')){onMomentumBegin(event,context);}else if(onMomentumEnd&&event.eventName.endsWith('onMomentumScrollEnd')){onMomentumEnd(event,context);}}" };
-arg5.useAnimatedScrollHandler = function useAnimatedScrollHandler(A, items) {
-  let tmp = A;
-  if (typeof A === "function") {
+arg5.useAnimatedScrollHandler = function useAnimatedScrollHandler(fn, items) {
+  let tmp = fn;
+  if (typeof fn === "function") {
     let obj = { onScroll: null };
-    obj[0] = A;
+    obj[0] = fn;
     tmp = obj;
   }
   obj = tmp;
@@ -28,7 +28,7 @@ arg5.useAnimatedScrollHandler = function useAnimatedScrollHandler(A, items) {
   if (undefined !== tmp.onMomentumEnd) {
     items.push("onMomentumScrollEnd");
   }
-  const fn = function l(eventName) {
+  fn = function l(eventName) {
     ({ onScroll, onBeginDrag, onEndDrag, onMomentumBegin, onMomentumEnd } = obj);
     if (onScroll) {
       eventName = eventName.eventName;

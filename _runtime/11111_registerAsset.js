@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/community", width: 120, height: 80, scales: [2, 3], hash: "038b9efde4d99e1d058963891646a79a", name: "customize_empty", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_profile/native/images", width: 24, height: 24, scales: [2, 3], hash: "0e02f6accc59d44ac3827104886762f1", name: "boost", type: "png" });

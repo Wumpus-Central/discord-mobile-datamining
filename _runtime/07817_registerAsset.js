@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/MatteLightIcon", width: 60, height: 60, scales: [2, 3], hash: "766fd7e004517bb3fbea8bf5121a6049", name: "MatteLightIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 36, scales: [2, 3], hash: "24a795d24a7018dbf13e204b38f24588", name: "img_classic_resubscribe_mobile", type: "png" });
