@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/CherryBlossomIcon", width: 60, height: 60, scales: [2, 3], hash: "0958a3140b1354fdc2a2c5ce3e4f3233", name: "CherryBlossomIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 179, height: 32, scales: [2, 3], hash: "ed5b973480dda2a9e5ec5c3384729f7b", name: "img_logo_bundle_horizontal_black", type: "png" });

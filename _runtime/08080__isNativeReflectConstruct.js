@@ -1,10 +1,15 @@
 // _runtime/08080__isNativeReflectConstruct.js
+import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import Stop from "metro/00041__classCallCheck.js";
-import closure_1 from "metro/00093__possibleConstructorReturn.js";
-import closure_2 from "00095__getPrototypeOf.js";
+import _isNativeReflectConstructDefault from "08076__isNativeReflectConstruct.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/08081___INTERNAL_VIEW_CONFIG.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
+import { jsx } from "react/00021_jsxProd.js";
 
+const Circle = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,44 +29,57 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Stop {
+noopAll;
+class Circle {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = Stop(this, closure_0);
-    items1 = [...items];
-    tmp2 = closure_2;
-    obj = closure_2(closure_0);
-    tmp3 = closure_1;
+    tmp = closure_3(this, Circle);
+    tmp2 = closure_5;
+    obj = closure_5(Circle);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = () => {
-      const parent = props.props.parent;
-      if (parent) {
-        parent.forceUpdate();
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Stop, require("noop").Component);
-let items = [
+_inheritsDefault(Circle, _isNativeReflectConstructDefault);
+const items = [
   {
     key: "render",
     value: function render() {
-      return null;
+      const self = this;
+      const props = this.props;
+      let obj = {};
+      ({ cx, cy, r } = props);
+      const merged = Object.assign(self(8067).extract(this, props));
+      obj.cx = cx;
+      obj.cy = cy;
+      obj.r = r;
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const obj2 = self(8067);
+      const merged1 = Object.assign(obj);
+      return jsx(__INTERNAL_VIEW_CONFIGDefault, {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Stop, items);
-importDefaultResultResult.displayName = "Stop";
+const importDefaultResultResult = importDefaultResult(Circle, items);
+importDefaultResultResult.displayName = "Circle";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
 
 export default importDefaultResultResult;

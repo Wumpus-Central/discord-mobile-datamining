@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "dc61f45d0cc4d873f94fb631a2db066a", name: "CircleCheckIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 80, height: 64, scales: [2, 3], hash: "c274903a313d0e918f497d328c38b8dd", name: "img_search_empty_light", type: "png" });

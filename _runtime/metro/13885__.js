@@ -1,41 +1,103 @@
 // _runtime/metro/13885__.js
-arg5.default = (createSocket) => {
-  ({ host, port } = createSocket);
-  if (null != createSocket.createSocket) {
-    let tmp7 = typeof host === "string";
-    if (typeof host === "string") {
-      tmp7 = host;
-    }
-    if (tmp7) {
-      tmp7 = "" !== host;
-    }
-    if (tmp7) {
-      let tmp13 = typeof port === "number";
-      if (typeof port === "number") {
-        tmp13 = port >= 1;
+let c0 = require;
+c0 = true;
+c0 = false;
+
+export default {
+  includes: (arg0, arg1, arg2) => {
+    const tmp3 = callback(13844)(arg0);
+    const tmp4 = callback(13886)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !callback;
+      if (!callback) {
+        num3 = -1;
       }
-      if (tmp13) {
-        tmp13 = port <= 65535;
-      }
-      if (tmp13) {
-        if (typeof tmp !== "function") {
-          const _Error4 = Error;
-          error = new Error("invalid onCommand handler");
-          throw error;
-        }
-      } else {
-        const _Error3 = Error;
-        const error1 = new Error("invalid port");
-        throw error1;
-      }
+      return num3;
     } else {
-      const _Error2 = Error;
-      const error2 = new Error("invalid host");
-      throw error2;
+      let sum = callback(13890)(arg2, tmp4);
+      if (callback) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
+        }
+        let num2 = !callback;
+        if (!callback) {
+          num2 = -1;
+        }
+        return num2;
+      }
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = callback;
+          let tmp6 = sum1;
+          if (callback) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
+      }
     }
-  } else {
-    const _Error = Error;
-    const error3 = new Error("invalid createSocket function");
-    throw error3;
+  },
+  indexOf: (arg0, arg1, arg2) => {
+    const tmp3 = callback(13844)(arg0);
+    const tmp4 = callback(13886)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !callback;
+      if (!callback) {
+        num3 = -1;
+      }
+      return num3;
+    } else {
+      let sum = callback(13890)(arg2, tmp4);
+      if (callback) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
+        }
+        let num2 = !callback;
+        if (!callback) {
+          num2 = -1;
+        }
+        return num2;
+      }
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = callback;
+          let tmp6 = sum1;
+          if (callback) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
+      }
+    }
   }
 };

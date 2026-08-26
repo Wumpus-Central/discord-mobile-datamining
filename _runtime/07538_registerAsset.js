@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 279, height: 48, scales: [2, 3], hash: "1fff7418e65eeae25a3f248ccb7dea3b", name: "img_nitro_tier_1_activated_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 88, height: 106, scales: [2, 3], hash: "acbb98adccf298ebfe7faeca9c938eda", name: "img_tier_0_mobile", type: "png" });

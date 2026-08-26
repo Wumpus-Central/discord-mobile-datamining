@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/BrandInvertedIcon", width: 60, height: 60, scales: [2, 3], hash: "d3530007d60b5d4f6a3d08cddf26f42c", name: "BrandInvertedIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 33, scales: [2, 3], hash: "fffb876f7b3f447f47b0591850317fff", name: "img_tier_0_resubscribe_mobile", type: "png" });

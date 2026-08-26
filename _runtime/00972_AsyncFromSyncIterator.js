@@ -250,7 +250,7 @@ function _instrumentAsyncIterableStream() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -364,7 +364,7 @@ function _instrumentAsyncIterableStream() {
                   throwTypeErrorResult = store.end();
                   let num3 = 3;
                   c12 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               }
             } else {
@@ -476,7 +476,7 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
 export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
   closure_0 = arg1;
   closure_1 = flag;
-  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "View", cacheCreationInputTokens: "tag", cacheReadInputTokens: "size", toolCalls: false, activeToolBlocks: false };
+  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "View", cacheCreationInputTokens: "st", cacheReadInputTokens: "__d", toolCalls: "wasAtEdge", activeToolBlocks: "isImageFile" };
   obj[8] = [];
   obj[9] = {};
   applyResult.on("streamEvent", (arg0) => {

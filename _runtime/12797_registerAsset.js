@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting", width: 80, height: 80, scales: [1, 2, 3], hash: "de169599558848e028f8e876d5e14f7e", name: "img_premium_classic_icon_80px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3d5f9f8f212b24a0f18f5afb706f5f80", name: "UserClockIcon", type: "png" });

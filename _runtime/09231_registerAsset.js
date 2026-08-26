@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 251, height: 147, scales: [2, 3], hash: "7e87039ca280115f9b6a52cb6bc7dc5e", name: "img_app_crash_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 160, height: 160, scales: [2, 3], hash: "85840ade8b69557ffa30f1445cbffe12", name: "img_no_results_alt_darker", type: "png" });

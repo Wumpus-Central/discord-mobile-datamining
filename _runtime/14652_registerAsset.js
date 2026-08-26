@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e42f1b42dc7bf4b285d5f4924a46e5c4", name: "TicketIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/native/images", width: 345, height: 82, scales: [1, 2, 3], hash: "91248bc802fa2159ae23ab96ddaf91db", name: "clouds_light_background", type: "png" });

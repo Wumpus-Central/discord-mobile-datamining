@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/app_icons/images", width: 259, height: 93, scales: [2, 3], hash: "b6b1b6176f7b7fe50aec94892b5609a1", name: "app_icon_marketing", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b83c9486cfaf14d2dd0ad9edbe75c34d", name: "WebhookPlusIcon", type: "png" });

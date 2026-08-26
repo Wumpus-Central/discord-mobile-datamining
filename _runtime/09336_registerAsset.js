@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/voice_panel/native/images", width: 13, height: 12, scales: [1, 2, 3, 4], hash: "815e22c11ceae8ad126964a943379a27", name: "badconnection", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 60, height: 60, scales: [2, 3], hash: "19a79c674ca352a1b9c59552160bbdc6", name: "telegram", type: "png" });

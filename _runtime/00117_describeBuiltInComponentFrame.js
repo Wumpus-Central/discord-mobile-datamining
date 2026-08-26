@@ -13095,7 +13095,7 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) 
         tmp5 = tmp6;
       }
       c124 = tmp5;
-      obj = { status: "pending", value: "Array", then: "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FC}" };
+      obj = { status: "pending", value: "Array", then: "\u{1F469}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FE}" };
       obj[2] = function then(arg0) {
         items.push(arg0);
       };
@@ -14029,7 +14029,7 @@ let closure_355 = globalThis.nativeFabricUIManager.unstable_DiscreteEventPriorit
 let closure_356 = globalThis.nativeFabricUIManager.unstable_ContinuousEventPriority;
 let closure_357 = globalThis.nativeFabricUIManager.unstable_IdleEventPriority;
 let closure_358 = globalThis.nativeFabricUIManager.unstable_getCurrentEventPriority;
-let obj11 = { getInspectorDataForInstance: "r", getInspectorDataForViewTag: "r", getInspectorDataForViewAtPoint: false };
+let obj11 = { getInspectorDataForInstance: "r", getInspectorDataForViewTag: "flex", getInspectorDataForViewAtPoint: null };
 obj11[1] = function getInspectorDataForViewTag() {
   throw Error("getInspectorDataForViewTag() is not available in production");
 };

@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/directory_channels/native/images", width: 120, height: 80, scales: [2, 3], hash: "8a1b4cbcf69c94f39bb256787c4e1df8", name: "search_empty_state", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "d69e45ebad9f40b8957190ed86104514", name: "ic_application_command_24px", type: "png" });

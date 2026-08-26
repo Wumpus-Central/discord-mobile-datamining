@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_rooms", scales: [1], hash: "521d088fd1cf103b4b80617094d18c02", name: "GuildRooms.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/clips", scales: [1], hash: "00796364ffd3102b65698c30b83cf592", name: "Clips.compiled.messages", type: "jsona" });

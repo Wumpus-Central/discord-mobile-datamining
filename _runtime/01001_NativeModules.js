@@ -174,7 +174,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -254,7 +254,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           while (true) {
@@ -411,7 +411,7 @@ isHermesEnabled = {
             }
             let num4 = 3;
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         }
       })();
@@ -525,7 +525,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -578,7 +578,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -631,7 +631,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -684,7 +684,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -737,7 +737,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -789,7 +789,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -978,7 +978,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -1005,7 +1005,7 @@ isHermesEnabled = {
                 }
               }
               c1 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -1108,7 +1108,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -1270,7 +1270,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -1295,7 +1295,7 @@ isHermesEnabled = {
                 }
               }
               c1 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -1323,7 +1323,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -1417,7 +1417,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -1508,7 +1508,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -1629,7 +1629,7 @@ isHermesEnabled = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -1809,7 +1809,7 @@ export const getDataFromUri = function getDataFromUri(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

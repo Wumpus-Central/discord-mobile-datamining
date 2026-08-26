@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_boosting/native/images", width: 424, height: 254, scales: [1], hash: "16c887e8a2a3597bff0b1e42c0c69934", name: "top_perk_vanity_url", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 24, height: 24, scales: [2, 3], hash: "eb1c3c11742bff2f0226498ea684aa95", name: "upload", type: "png" });

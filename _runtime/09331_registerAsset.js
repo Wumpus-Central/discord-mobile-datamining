@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "841d46455ae53fb7e7901a2d793c8d1a", name: "HeadphonesSlashIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 32, height: 32, scales: [2, 3], hash: "1d1181e321dc8059ed1b1ce7cbbde121", name: "ic_chat_bubble_32px", type: "png" });

@@ -1,8 +1,6 @@
 // _runtime/metro/03797__typeof.js
-import Parser2 from "../03782_Parser.js";
+import requiredArgs from "../03541_requiredArgs.js";
 
-let _createSuperInternal = require;
-let closure_1 = dependencyMap;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -28,262 +26,59 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(DateParser, Parser) {
-  _setPrototypeOf = Object.setPrototypeOf;
-  if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(DateParser, Parser) {
-      DateParser.__proto__ = Parser;
-      return DateParser;
-    };
-  }
-  return _setPrototypeOf(DateParser, Parser);
+if (!requiredArgs) {
+  const obj = { default: null };
+  obj[0] = requiredArgs;
+  let tmp3 = obj;
+} else {
+  tmp3 = requiredArgs;
 }
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    _getPrototypeOf = Object.getPrototypeOf;
-  } else {
-    _getPrototypeOf = function _getPrototypeOf(arg0) {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  return _getPrototypeOf(arg0);
-}
-let closure_5 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-let closure_6 = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-const Parser = Parser2.Parser;
-_createSuperInternal = undefined;
-class DateParser {
-  constructor() {
-    if (this instanceof closure_1) {
-      length = arguments.length;
-      _Array = Array;
-      tmp6 = new.target;
-      tmp7 = new.target;
-      tmp8 = length;
-      array = new Array(length);
-      tmp10 = array;
-      num = 0;
-      num2 = 1;
-      if (0 < length) {
-        do {
-          array[num] = arguments[num];
-          num = num + 1;
-        } while (num < length);
-      }
-      tmp11 = _createSuperInternal;
-      call = _createSuperInternal.call;
-      items = [];
-      items[0] = tmp;
-      applyResult = call.apply(_createSuperInternal, items.concat(array));
-      tmp13 = undefined === applyResult;
-      if (tmp13) {
-        _ReferenceError3 = ReferenceError;
-        tmp25 = new.target;
-        str7 = "this hasn't been initialised - super() hasn't been called";
-        tmp26 = new.target;
-        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp28 = referenceError;
-        throw referenceError;
-      } else {
-        str2 = "priority";
-        if ("priority" in applyResult) {
-          _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
-        } else {
-          num3 = 90;
-          applyResult.priority = 90;
-        }
-        if (tmp13) {
-          _ReferenceError2 = ReferenceError;
-          tmp21 = new.target;
-          str6 = "this hasn't been initialised - super() hasn't been called";
-          tmp22 = new.target;
-          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp24 = referenceError1;
-          throw referenceError1;
-        } else {
-          str3 = "subPriority";
-          if ("subPriority" in applyResult) {
-            _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "subPriority", { value: 1, enumerable: true, configurable: true, writable: true });
-          } else {
-            applyResult.subPriority = 1;
-          }
-          if (tmp13) {
-            _ReferenceError = ReferenceError;
-            tmp17 = new.target;
-            str5 = "this hasn't been initialised - super() hasn't been called";
-            tmp18 = new.target;
-            referenceError2 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            tmp20 = referenceError2;
-            throw referenceError2;
-          } else {
-            items1 = ["Y", "R", "q", "Q", "w", "I", "D", "i", "e", "c", "t", "T"];
-            str4 = "incompatibleTokens";
-            if ("incompatibleTokens" in applyResult) {
-              _Object3 = Object;
-              obj = { value: null, enumerable: true, configurable: true, writable: true };
-              obj[0] = items1;
-              definePropertyResult2 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
-            } else {
-              applyResult.incompatibleTokens = items1;
-            }
-            return applyResult;
-          }
-        }
-      }
-    } else {
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-closure_1 = DateParser;
-if (typeof Parser !== "function") {
-  if (null !== Parser) {
-    let _TypeError = TypeError;
-    let typeError = new TypeError("Super expression must either be null or a function");
-    throw typeError;
-  }
-}
-let prototype = Parser;
-if (Parser) {
-  prototype = Parser.prototype;
-}
-let obj = { value: DateParser, writable: true, configurable: true };
-DateParser.prototype = Object.create(prototype, { constructor: obj });
-if (Parser) {
-  _setPrototypeOf(DateParser, Parser);
-}
-_createSuperInternal = DateParser;
-let num = 0;
-closure_1 = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
-            }
-            return true;
-          } catch (err) {
-            return false;
-          }
-        }
-      }
-    }
-  }
-  return false;
-})();
-_createSuperInternal = function _createSuperInternal() {
-  const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
-  if (closure_1) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
-    }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
-      tmp8 = constructResult;
-    }
-  }
-  return tmp8;
-};
-obj = {
-  key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    if ("d" === arg1) {
-      return _createSuperInternal(3784).parseNumericPattern(_createSuperInternal(3785).numericPatterns.date, arg0);
-    } else if ("do" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "date" });
-    } else {
-      return _createSuperInternal(3784).parseNDigits(arg1.length, arg0);
-    }
-  }
-};
-let items = [
-  obj,
-  {
-    key: "validate",
-    value: function validate(getUTCFullYear) {
-      const uTCFullYear = getUTCFullYear.getUTCFullYear();
-      const uTCMonth = getUTCFullYear.getUTCMonth();
-      let tmp4 = arg1 >= 1;
-      if (isLeapYearIndexResult) {
-        if (tmp4) {
-          tmp4 = arg1 <= table2[uTCMonth];
-        }
-        let tmp5 = tmp4;
-      } else {
-        tmp5 = tmp4;
-        if (tmp4) {
-          tmp5 = arg1 <= table[uTCMonth];
-        }
-      }
-      return tmp5;
-    }
-  },
-  {
-    key: "set",
-    value: function set(setUTCDate) {
-      setUTCDate.setUTCDate(arg2);
-      setUTCDate.setUTCHours(0, 0, 0, 0);
-      return setUTCDate;
-    }
-  }
-];
-if (0 < items.length) {
-  do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
-    let tmp6 = num;
-    if (!flag) {
-      flag = false;
-    }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
-    }
-    let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
-    num = num + 1;
-  } while (num < items.length);
-}
+requiredArgs = tmp3;
 
-export { DateParser };
+export default function formatISODuration(years) {
+  requiredArgs.default(1, arguments);
+  if ("object" !== _typeof(years)) {
+    const _Error = Error;
+    error = new Error("Duration must be an object");
+    throw error;
+  } else {
+    years = years.years;
+    let num = 0;
+    if (undefined !== years) {
+      num = years;
+    }
+    const months = years.months;
+    let num2 = 0;
+    if (undefined !== months) {
+      num2 = months;
+    }
+    const days = years.days;
+    let num3 = 0;
+    if (undefined !== days) {
+      num3 = days;
+    }
+    const hours = years.hours;
+    let num4 = 0;
+    if (undefined !== hours) {
+      num4 = hours;
+    }
+    const minutes = years.minutes;
+    let num5 = 0;
+    if (undefined !== minutes) {
+      num5 = minutes;
+    }
+    const seconds = years.seconds;
+    let num6 = 0;
+    if (undefined !== seconds) {
+      num6 = seconds;
+    }
+    const concat = "P".concat;
+    const combined = "P".concat(num, "Y");
+    const combined1 = combined.concat(num2, "M");
+    const combined2 = combined1.concat(num3, "DT");
+    const combined3 = combined2.concat(num4, "H");
+    const combined4 = combined3.concat(num5, "M");
+    return combined4.concat(num6, "S");
+  }
+};
+export default exports.default;

@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/MatteDarkIcon", width: 60, height: 60, scales: [2, 3], hash: "5e2f785032385a803c0dd3d91ffe95da", name: "MatteDarkIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 36, scales: [2, 3], hash: "f2d705f9d582bb6c65065afe8639e152", name: "img_classic_error_mobile", type: "png" });

@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/gifting", scales: [1], hash: "f8ecd93dae35aa0b00715df1380bf365", name: "PremiumGifting.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/powerups", scales: [1], hash: "b24e9223725c6bf5ddf729ce5a676b3b", name: "GuildPowerups.compiled.messages", type: "jsona" });

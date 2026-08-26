@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "26998a89da8a094ca27d79afeba3b61f", name: "FoodIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 77.5, height: 72, scales: [2, 3], hash: "215c6cf6cc2b74cad508b12b0e602266", name: "empty", type: "png" });

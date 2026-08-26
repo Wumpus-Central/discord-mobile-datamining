@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b04e363869889767a126da0fcdcaf9c8", name: "AppleNeutralIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/forums/native/images", width: 120, height: 80, scales: [2, 3], hash: "78be237a71ac693684ba99bcd912e5ac", name: "img_forum_empty_state_dark", type: "png" });

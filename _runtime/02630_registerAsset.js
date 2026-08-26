@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/safety_flows", scales: [1], hash: "f614c08c76b02de5adb2fd79d588a060", name: "SafetyFlows.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/feedback/intl", scales: [1], hash: "c2bbdd44fcd1b92d5c0c15e94c32a12e", name: "Feedback.compiled.messages", type: "jsona" });
