@@ -1,13 +1,13 @@
-// === Module 11075: getVoiceInviteEmbedRenderInfo ===
+// === Module 11147: getVoiceInviteEmbedRenderInfo ===
 
-// Module 11075 (getVoiceInviteEmbedRenderInfo)
-import InviteTypes2 from "InviteTypes" /* 7339 */;
+// Module 11147 (getVoiceInviteEmbedRenderInfo)
+import InviteTypes2 from "InviteTypes" /* 7405 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateInvite" /* 4364 */;
-import closure_5 from "getVoiceStatesForGuild" /* 4455 */;
+import closure_4 from "updateInvite" /* 4428 */;
+import closure_5 from "getVoiceStatesForGuild" /* 4519 */;
 import ME from "ME" /* 676 */;
-import { LinkType } from "LinkType" /* 7293 */;
-import { InviteTypes } from "InviteSendStates" /* 7340 */;
+import { LinkType } from "LinkType" /* 7359 */;
+import { InviteTypes } from "InviteSendStates" /* 7406 */;
 
 require = arg1;
 function getVoiceInviteEmbedRenderInfo(state) {
@@ -18,9 +18,9 @@ function getVoiceInviteEmbedRenderInfo(state) {
           if (obj5.getInviteType(state) !== InviteTypes.GUILD) {
             return null;
           } else {
-            let tmp7Result = tmp7(7339);
+            let tmp7Result = tmp7(7405);
             const guildInviteExtendedType = tmp7Result.getGuildInviteExtendedType(state);
-            if (guildInviteExtendedType !== tmp7(7339).GuildInviteExtendedType.VOICE_CHANNEL) {
+            if (guildInviteExtendedType !== tmp7(7405).GuildInviteExtendedType.VOICE_CHANNEL) {
               return null;
             } else {
               const guild = state.guild;
@@ -30,13 +30,13 @@ function getVoiceInviteEmbedRenderInfo(state) {
               }
               let tmp4 = null;
               if (null != id) {
-                tmp7Result = tmp7(11077);
+                tmp7Result = tmp7(11149);
                 let obj = { guildId: null, location: "mobile_invite_embed_impression" };
                 obj[0] = id;
                 let enabled = tmp7Result.getVoiceChannelListInviteExperiment(obj).enabled;
                 if (enabled) {
-                  enabled = tmp7(11078).canShowVoiceChannelListInviteEmbed(state);
-                  const tmp7Result1 = tmp7(11078);
+                  enabled = tmp7(11150).canShowVoiceChannelListInviteEmbed(state);
+                  const tmp7Result1 = tmp7(11150);
                 }
                 obj = { treatmentRendered: null };
                 obj[0] = enabled;

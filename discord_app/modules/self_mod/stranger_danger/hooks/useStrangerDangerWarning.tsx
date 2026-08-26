@@ -1,13 +1,13 @@
-// === Module 10407: useStrangerDangerWarning ===
+// === Module 10475: useStrangerDangerWarning ===
 
-// Module 10407 (useStrangerDangerWarning)
+// Module 10475 (useStrangerDangerWarning)
 import initialize from "initialize" /* 589 */;
-import useUserIsTeen from "useUserIsTeen" /* 8187 */;
-import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 10408 */;
-import useIsMessageRequest from "useIsMessageRequest" /* 10409 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10410 */;
+import useUserIsTeen from "useUserIsTeen" /* 8254 */;
+import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 10476 */;
+import useIsMessageRequest from "useIsMessageRequest" /* 10477 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10478 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9818 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 9885 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");

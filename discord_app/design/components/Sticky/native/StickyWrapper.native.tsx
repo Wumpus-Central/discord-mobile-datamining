@@ -1,6 +1,6 @@
-// === Module 10403: StickyWrapper ===
+// === Module 10471: StickyWrapper ===
 
-// Module 10403 (StickyWrapper)
+// Module 10471 (StickyWrapper)
 import noopAll from "noop" /* 19 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

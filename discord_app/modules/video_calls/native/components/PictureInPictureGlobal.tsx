@@ -1,20 +1,20 @@
-// === Module 16255: PictureInPictureGlobal ===
+// === Module 16336: PictureInPictureGlobal ===
 
-// Module 16255 (PictureInPictureGlobal)
+// Module 16336 (PictureInPictureGlobal)
 import ThemesDefault from "Themes" /* 712 */;
-import PictureInPicturePositionsDefault from "PictureInPicturePositions" /* 10745 */;
+import PictureInPicturePositionsDefault from "PictureInPicturePositions" /* 10817 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "participantFromServer" /* 1390 */;
-import closure_9 from "getParticipants" /* 4396 */;
-import { useBestActiveChatInputContainerHeight as closure_10 } from "updateChatInputContainerHeight" /* 8758 */;
+import closure_9 from "getParticipants" /* 4460 */;
+import { useBestActiveChatInputContainerHeight as closure_10 } from "updateChatInputContainerHeight" /* 8826 */;
 import closure_11 from "fetchFingerprint" /* 1218 */;
-import closure_12 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_12 from "_detectH265HardwareDecode" /* 4495 */;
 import { PictureInPicturePositions } from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4401 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4465 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 import Button from "Button" /* 1297 */;
 
 const require = arg1;

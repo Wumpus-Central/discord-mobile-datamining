@@ -1,8 +1,8 @@
-// === Module 15591: FavoritesGuildCoachmarkMenuItemContent ===
+// === Module 15670: FavoritesGuildCoachmarkMenuItemContent ===
 
-// Module 15591 (FavoritesGuildCoachmarkMenuItemContent)
-import Layer from "Layer" /* 5821 */;
-import items12 from "items1" /* 9871 */;
+// Module 15670 (FavoritesGuildCoachmarkMenuItemContent)
+import Layer from "Layer" /* 5887 */;
+import items12 from "items1" /* 9938 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "initializeFromUserSettings" /* 1394 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
@@ -33,7 +33,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, callback, callback1];
   const memo = callback.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "mandateText property is required.", onButtonPress: "M3 15v-1h2v-2H4v-1H2v2H1v2h2Z" };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "description", onButtonPress: null };
     const intl = stateFromStores(markPopoverAsDismissed[8]).intl;
     const tmp4 = shouldShowPopover(markPopoverAsDismissed[9]);
     if (stateFromStores) {

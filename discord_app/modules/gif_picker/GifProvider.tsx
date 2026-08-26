@@ -1,6 +1,6 @@
-// === Module 10086: GIF_PROVIDER ===
+// === Module 10153: GIF_PROVIDER ===
 
-// Module 10086 (GIF_PROVIDER)
+// Module 10153 (GIF_PROVIDER)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

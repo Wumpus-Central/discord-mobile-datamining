@@ -1,9 +1,9 @@
-// === Module 5337: getGuildNameSuggestion ===
+// === Module 5403: getGuildNameSuggestion ===
 
-// Module 5337 (getGuildNameSuggestion)
+// Module 5403 (getGuildNameSuggestion)
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import nameFromUserAll from "nameFromUser" /* 4224 */;
+import nameFromUserAll from "nameFromUser" /* 4288 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import importDefaultResult from "priv" /* 1405 */;

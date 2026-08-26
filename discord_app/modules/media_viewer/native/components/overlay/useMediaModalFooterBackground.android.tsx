@@ -1,9 +1,9 @@
-// === Module 12455: useMediaModalFooterBackground ===
+// === Module 12526: useMediaModalFooterBackground ===
 
-// Module 12455 (useMediaModalFooterBackground)
+// Module 12526 (useMediaModalFooterBackground)
 import nDefault from "n" /* 689 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4101 */;
+import map from "map" /* 4165 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 
 require = arg1;

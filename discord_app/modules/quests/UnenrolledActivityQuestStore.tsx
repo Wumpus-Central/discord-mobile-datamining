@@ -1,6 +1,6 @@
-// === Module 16380: set ===
+// === Module 16461: set ===
 
-// Module 16380 (set)
+// Module 16461 (set)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

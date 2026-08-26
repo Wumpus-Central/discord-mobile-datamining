@@ -1,9 +1,9 @@
-// === Module 12656: useApplicationWidgetConfigs ===
+// === Module 12729: useApplicationWidgetConfigs ===
 
-// Module 12656 (useApplicationWidgetConfigs)
+// Module 12729 (useApplicationWidgetConfigs)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateApplicationConfigs" /* 12657 */;
-import { FetchState } from "updateApplicationConfigs" /* 12657 */;
+import closure_3 from "updateApplicationConfigs" /* 12730 */;
+import { FetchState } from "updateApplicationConfigs" /* 12730 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");

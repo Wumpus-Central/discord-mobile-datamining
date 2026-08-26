@@ -1,7 +1,7 @@
-// === Module 16541: useSoundboardConfig ===
+// === Module 16626: useSoundboardConfig ===
 
-// Module 16541 (useSoundboardConfig)
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16385 */;
+// Module 16626 (useSoundboardConfig)
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16466 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 
@@ -13,7 +13,7 @@ export default function useSoundboardConfig(arg0, arg1) {
   const _require = arg0;
   importDefault = arg1;
   const tmp = useIsConnectedToVoiceChannelDefault(arg0);
-  obj = _require(4201);
+  obj = _require(4265);
   let tmp3 = tmp;
   if (tmp) {
     if (obj.VOICE_CONTROLS === arg1) {

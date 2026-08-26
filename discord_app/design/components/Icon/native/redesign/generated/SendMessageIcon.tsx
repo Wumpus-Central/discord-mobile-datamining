@@ -1,10 +1,10 @@
-// === Module 4325: SendMessageIcon ===
+// === Module 4389: SendMessageIcon ===
 
-// Module 4325 (SendMessageIcon)
+// Module 4389 (SendMessageIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 4326 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 4390 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

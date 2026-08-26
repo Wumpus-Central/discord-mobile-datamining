@@ -1,10 +1,10 @@
-// === Module 6987: WindIllocon ===
+// === Module 7053: WindIllocon ===
 
-// Module 6987 (WindIllocon)
+// Module 7053 (WindIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6988 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 7054 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WindIllocon.native.tsx");

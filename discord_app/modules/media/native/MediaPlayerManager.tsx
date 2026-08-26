@@ -1,23 +1,23 @@
-// === Module 14004: _initialize ===
+// === Module 14077: _initialize ===
 
-// Module 14004 (_initialize)
+// Module 14077 (_initialize)
 import set2 from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import sum from "sum" /* 505 */;
 import ME from "ME" /* 676 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4235 */;
-import initializeDefault from "initialize" /* 4562 */;
-import ActivityPanelModes2 from "ActivityPanelModes" /* 9915 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4299 */;
+import initializeDefault from "initialize" /* 4626 */;
+import ActivityPanelModes2 from "ActivityPanelModes" /* 9982 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "participantFromServer" /* 1390 */;
-import closure_6 from "withEqualityFn" /* 4616 */;
+import closure_6 from "withEqualityFn" /* 4680 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "reinjectEphemerals" /* 4623 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4025 */;
-import closure_10 from "getState" /* 7019 */;
-import MediaPlaybackPanelModes from "MediaPlaybackPanelModes" /* 14005 */;
+import closure_8 from "reinjectEphemerals" /* 4687 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_10 from "getState" /* 7085 */;
+import MediaPlaybackPanelModes from "MediaPlaybackPanelModes" /* 14078 */;
 import keys from "keys" /* 644 */;
 
 ({ NativeEventEmitter: c3, NativeModules: c4 } = get_ActivityIndicator);
@@ -28,9 +28,20 @@ const Permissions = sum.Permissions;
 let closure_16 = new timestampDefault("MediaPlayerManager");
 let obj = keys.create((arg0) => {
   closure_0 = arg0;
-  obj = { activeMediaPlayerSource: "HermesInternal", mediaSourceMessage: "PX_16", canAccessMedia: "disabled", isPlaying: false, wasPipClosedByUser: null, progress: null, rate: "ct", showPip: "camera", closePip: "cinema", displayedMediaItemIdsPerChannel: "film", currentlyDisplayedChannelId: "movie" };
-  obj[8] = function closePip() {
-    callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
+  obj = {
+    activeMediaPlayerSource: "HermesInternal",
+    mediaSourceMessage: "PX_16",
+    canAccessMedia: "disabled",
+    isPlaying: false,
+    wasPipClosedByUser: null,
+    progress: null,
+    rate: "ct",
+    showPip: "_updatePlayheadTime",
+    closePip() {
+      callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
+    },
+    displayedMediaItemIdsPerChannel: "\u{1F3C3}\u{1F3FC}\u200D\u27A1\uFE0F",
+    currentlyDisplayedChannelId: true
   };
   obj[9] = {};
   return obj;
@@ -330,13 +341,13 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
         obj = { channelId: null, messageId: null };
         obj[0] = channelId;
         obj[1] = messageId;
-        const message1 = self(7063).fetchMessage(obj);
+        const message1 = self(7129).fetchMessage(obj);
         message1.then((arg0) => {
           if (null != arg0) {
             const result = self.handleMediaSourceMessageUpdated(arg0);
           }
         });
-        const obj2 = self(7063);
+        const obj2 = self(7129);
       }
       obj4 = message;
     }

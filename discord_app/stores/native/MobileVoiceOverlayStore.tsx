@@ -1,6 +1,6 @@
-// === Module 10934: getUserAgnosticState ===
+// === Module 11006: getUserAgnosticState ===
 
-// Module 10934 (getUserAgnosticState)
+// Module 11006 (getUserAgnosticState)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 import initializeDefault from "initialize" /* 589 */;

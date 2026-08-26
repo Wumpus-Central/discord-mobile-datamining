@@ -1,10 +1,10 @@
-// === Module 6795: QrLoginSpotIllustration ===
+// === Module 6861: QrLoginSpotIllustration ===
 
-// Module 6795 (QrLoginSpotIllustration)
+// Module 6861 (QrLoginSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6796 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 6862 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx");

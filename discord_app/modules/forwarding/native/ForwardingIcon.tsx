@@ -1,9 +1,9 @@
-// === Module 11237: ForwardingIcon ===
+// === Module 11309: ForwardingIcon ===
 
-// Module 11237 (ForwardingIcon)
+// Module 11309 (ForwardingIcon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ArrowAngleRightUpIcon from "ArrowAngleRightUpIcon" /* 11238 */;
+import ArrowAngleRightUpIcon from "ArrowAngleRightUpIcon" /* 11310 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/forwarding/native/ForwardingIcon.tsx");

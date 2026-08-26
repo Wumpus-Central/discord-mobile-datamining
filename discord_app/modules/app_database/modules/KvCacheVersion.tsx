@@ -1,6 +1,6 @@
-// === Module 7260: okAsync ===
+// === Module 7326: okAsync ===
 
-// Module 7260 (okAsync)
+// Module 7326 (okAsync)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import HELLO_KEY from "HELLO_KEY" /* 499 */;

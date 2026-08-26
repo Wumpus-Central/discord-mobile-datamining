@@ -1,10 +1,10 @@
-// === Module 11580: HourglassIcon ===
+// === Module 11652: HourglassIcon ===
 
-// Module 11580 (HourglassIcon)
+// Module 11652 (HourglassIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 11581 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 11653 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

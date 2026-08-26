@@ -1,12 +1,12 @@
-// === Module 13542: ShinyButton ===
+// === Module 13615: ShinyButton ===
 
-// Module 13542 (ShinyButton)
+// Module 13615 (ShinyButton)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { AppState } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 let items = [{ rotate: "30deg" }];

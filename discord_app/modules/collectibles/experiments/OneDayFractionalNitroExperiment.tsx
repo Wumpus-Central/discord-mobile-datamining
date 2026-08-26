@@ -1,8 +1,8 @@
-// === Module 12380: apexExperiment ===
+// === Module 12452: apexExperiment ===
 
-// Module 12380 (apexExperiment)
+// Module 12452 (apexExperiment)
 import set from "set" /* 2 */;
-import usePremiumGroupExperimentDefault from "usePremiumGroupExperiment" /* 12381 */;
+import usePremiumGroupExperimentDefault from "usePremiumGroupExperiment" /* 12453 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-one-day-fractional-nitro", kind: "user", defaultConfig: false, variations: { 1: true } });

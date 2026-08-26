@@ -1,9 +1,9 @@
-// === Module 16675: experiment ===
+// === Module 16760: experiment ===
 
-// Module 16675 (experiment)
+// Module 16760 (experiment)
 import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4294 */;
-import createExperiment from "createExperiment" /* 4291 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4358 */;
+import createExperiment from "createExperiment" /* 4355 */;
 
 const items = [{ id: 1, label: "Both waveform and highlight", config: { enableWaveformIcon: true, enableHighlight: true } }, { id: 2, label: "Waveform icon only", config: { enableWaveformIcon: true, enableHighlight: false } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2025-12_voice_channel_hoisting", label: "Voice Channel Hoisting", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enableWaveformIcon: false, enableHighlight: false }, treatments: items });

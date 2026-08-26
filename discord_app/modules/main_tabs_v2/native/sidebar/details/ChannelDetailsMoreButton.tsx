@@ -1,8 +1,8 @@
-// === Module 16079: MoreButton ===
+// === Module 16160: MoreButton ===
 
-// Module 16079 (MoreButton)
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 8542 */;
-import registerAssetDefault from "registerAsset" /* 9198 */;
+// Module 16160 (MoreButton)
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 8610 */;
+import registerAssetDefault from "registerAsset" /* 9266 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -21,7 +21,7 @@ export default function MoreButton(channel) {
       obj[0] = intl.string(channel(1236).t["UKOtz+"]);
       obj[1] = registerAssetDefault;
       obj[2] = tmp;
-      obj[0] = jsx(channel(8539).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+      obj[0] = jsx(channel(8607).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
       tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { accessibilityLabel: null, source: null, onPress: null });
       const tmp6 = PressableNavigatorButtonWrapperDefault;
     } else {

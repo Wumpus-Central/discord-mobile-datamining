@@ -1,11 +1,11 @@
-// === Module 10783: isIncomingVideoEnabled ===
+// === Module 10855: isIncomingVideoEnabled ===
 
-// Module 10783 (isIncomingVideoEnabled)
+// Module 10855 (isIncomingVideoEnabled)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import onDefault from "on" /* 4482 */;
-import NativeEventEmitterDefault from "NativeEventEmitter" /* 9922 */;
+import onDefault from "on" /* 4546 */;
+import NativeEventEmitterDefault from "NativeEventEmitter" /* 9989 */;
 
 const require = arg1;
 let obj = { WindowVisibilityChanged: "window-visibility-changed", IncomingVideoEnabledChanged: "incoming-video-enabled-changed" };

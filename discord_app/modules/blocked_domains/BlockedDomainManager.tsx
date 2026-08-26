@@ -1,8 +1,8 @@
-// === Module 16662: _initialize ===
+// === Module 16747: _initialize ===
 
-// Module 16662 (_initialize)
+// Module 16747 (_initialize)
 import isBlockedDomain from "isBlockedDomain" /* 1917 */;
-import initializeDefault from "initialize" /* 5367 */;
+import initializeDefault from "initialize" /* 5433 */;
 
 require = arg1;
 initializeDefault;

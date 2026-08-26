@@ -1,10 +1,10 @@
-// === Module 9946: AttachmentIcon ===
+// === Module 10013: AttachmentIcon ===
 
-// Module 9946 (AttachmentIcon)
+// Module 10013 (AttachmentIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 9947 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 10014 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

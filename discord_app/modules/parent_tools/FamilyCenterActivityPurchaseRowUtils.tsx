@@ -1,12 +1,12 @@
-// === Module 14357: getCollectibleTypeName ===
+// === Module 14430: getCollectibleTypeName ===
 
-// Module 14357 (getCollectibleTypeName)
+// Module 14430 (getCollectibleTypeName)
 import set from "set" /* 2 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import messagesProxyDefault from "messagesProxy" /* 2337 */;
-import fromServer from "fromServer" /* 7153 */;
-import fromServer2 from "fromServer" /* 7154 */;
+import messagesProxyDefault from "messagesProxy" /* 2369 */;
+import fromServer from "fromServer" /* 7219 */;
+import fromServer2 from "fromServer" /* 7220 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 function getCollectibleTypeName(type) {

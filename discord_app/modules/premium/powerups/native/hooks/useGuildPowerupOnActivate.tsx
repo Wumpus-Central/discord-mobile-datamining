@@ -1,10 +1,10 @@
-// === Module 12093: useGuildPowerupOnActivate ===
+// === Module 12166: useGuildPowerupOnActivate ===
 
-// Module 12093 (useGuildPowerupOnActivate)
+// Module 12166 (useGuildPowerupOnActivate)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleGuildBoostsUpdate" /* 4272 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4267 */;
+import closure_5 from "handleGuildBoostsUpdate" /* 4336 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4331 */;
 
 const require = arg1;
 ({ BoostPurchaseIntent: closure_6, GuildPowerupType: error } = BoostedGuildTiers);
@@ -63,7 +63,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
               obj[1] = analyticsLocations;
               obj[2] = tmp.id;
               obj[3] = function onBack() {
-                return PERK(4611).popWithKey(diff(7017).PREMIUM_KEY);
+                return PERK(4675).popWithKey(diff(7083).PREMIUM_KEY);
               };
               obj[4] = function onPaymentSuccess() {
                 let obj = diff(onToggle[9]);
@@ -83,7 +83,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
                 }
               };
               obj[5] = function onPaymentDismiss() {
-                return PERK(4611).popWithKey(diff(7017).PREMIUM_KEY);
+                return PERK(4675).popWithKey(diff(7083).PREMIUM_KEY);
               };
               const result = tmp17Result.launchGuildBoostFlowOrAlert(obj);
             }

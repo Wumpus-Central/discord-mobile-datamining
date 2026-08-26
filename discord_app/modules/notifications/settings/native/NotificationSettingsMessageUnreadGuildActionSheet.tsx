@@ -1,11 +1,11 @@
-// === Module 9998: NotificationSettingsMessageUnreadGuildActionSheet ===
+// === Module 10065: NotificationSettingsMessageUnreadGuildActionSheet ===
 
-// Module 9998 (NotificationSettingsMessageUnreadGuildActionSheet)
+// Module 10065 (NotificationSettingsMessageUnreadGuildActionSheet)
 import noopAll from "noop" /* 19 */;
-import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 9999 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4589 */;
+import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 10066 */;
+import closure_3 from "updateUserGuildSettingsInternal" /* 4653 */;
 import { UserNotificationSettings } from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4590 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4654 */;
 import { GuildNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 685 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,7 +15,7 @@ let result = require("set").fileFinishedImporting("modules/notifications/setting
 
 export default function NotificationSettingsMessageUnreadGuildActionSheet(guildId) {
   const _require = guildId;
-  let obj = _require(9987);
+  let obj = _require(10054);
   const guildPresetSettings = obj.useGuildPresetSettings(guildId.guildId);
   ({ unread, notification } = guildPresetSettings);
   let stringResult;

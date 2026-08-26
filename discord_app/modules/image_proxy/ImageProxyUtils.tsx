@@ -1,9 +1,9 @@
-// === Module 4414: getSizedImageProxyURL ===
+// === Module 4478: getSizedImageProxyURL ===
 
-// Module 4414 (getSizedImageProxyURL)
+// Module 4478 (getSizedImageProxyURL)
 import handleImageLoad from "handleImageLoad" /* 1469 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import getHostWithoutPort from "getHostWithoutPort" /* 4415 */;
+import getHostWithoutPort from "getHostWithoutPort" /* 4479 */;
 import set from "set" /* 2 */;
 
 function getSizedImageProxyURL(value, size) {

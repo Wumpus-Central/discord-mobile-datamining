@@ -1,25 +1,25 @@
-// === Module 9501: CollectiblesPreview ===
+// === Module 9569: CollectiblesPreview ===
 
-// Module 9501 (CollectiblesPreview)
+// Module 9569 (CollectiblesPreview)
 import ThemesDefault from "Themes" /* 712 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import map from "map" /* 4101 */;
-import ManaContext from "ManaContext" /* 4108 */;
-import SourceIcon from "SourceIcon" /* 9502 */;
-import firstAvatarDecoration from "firstAvatarDecoration" /* 9521 */;
-import BundleStaticPreviewContentDefault from "BundleStaticPreviewContent" /* 9522 */;
-import ProfileEffectSampleDefault from "ProfileEffectSample" /* 9524 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9534 */;
-import filterLayerDefault from "filterLayer" /* 9541 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9543 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9544 */;
+import map from "map" /* 4165 */;
+import ManaContext from "ManaContext" /* 4172 */;
+import SourceIcon from "SourceIcon" /* 9570 */;
+import firstAvatarDecoration from "firstAvatarDecoration" /* 9589 */;
+import BundleStaticPreviewContentDefault from "BundleStaticPreviewContent" /* 9590 */;
+import ProfileEffectSampleDefault from "ProfileEffectSample" /* 9592 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9602 */;
+import filterLayerDefault from "filterLayer" /* 9609 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9611 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9612 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { transformSKUToCollectiblesItem as closure_5 } from "createCollectiblesItemsFromServerResponse" /* 7152 */;
+import { transformSKUToCollectiblesItem as closure_5 } from "createCollectiblesItemsFromServerResponse" /* 7218 */;
 import { SKUProductLines } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 class CollectiblesPreview {
@@ -134,7 +134,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(9502).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(9570).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = React.useMemo(() => closure_1_5(sku), items);

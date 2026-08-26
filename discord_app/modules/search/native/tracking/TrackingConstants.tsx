@@ -1,8 +1,8 @@
-// === Module 8553: SearchEntrypointAnalyticsLocations ===
+// === Module 8621: SearchEntrypointAnalyticsLocations ===
 
-// Module 8553 (SearchEntrypointAnalyticsLocations)
+// Module 8621 (SearchEntrypointAnalyticsLocations)
 import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8554 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8622 */;
 
 ({ SearchHistoryItemTypes, SearchTabs } = MessageEmbedTypes);
 let obj = { RECENT: "recent", CHANNELS: "channels", MEDIA: "media", PINS: "pins", LINKS: "links", FILES: "files", MESSAGES: "messages", PEOPLE: "people", MEMBERS: "members", THREADS: "threads" };

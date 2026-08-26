@@ -1,6 +1,6 @@
-// === Module 7272: waitSafelyForPostTTI ===
+// === Module 7338: waitSafelyForPostTTI ===
 
-// Module 7272 (waitSafelyForPostTTI)
+// Module 7338 (waitSafelyForPostTTI)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/app_startup/PostTTIScheduler/SafePostTTIScheduler.tsx");

@@ -1,8 +1,8 @@
-// === Module 16724: HolidayEmojiAnimationType ===
+// === Module 16809: HolidayEmojiAnimationType ===
 
-// Module 16724 (HolidayEmojiAnimationType)
+// Module 16809 (HolidayEmojiAnimationType)
 import set from "set" /* 2 */;
-import HolidayEmojiAnimationTypeDefault from "HolidayEmojiAnimationType" /* 16721 */;
+import HolidayEmojiAnimationTypeDefault from "HolidayEmojiAnimationType" /* 16806 */;
 
 const result = set.fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");
 
@@ -21,12 +21,12 @@ export default {
     let tmp6 = null;
     if (tmp5) {
       tmp6 = null;
-      if (null != tmp(16721).soundpack) {
+      if (null != tmp(16806).soundpack) {
         tmp6 = null;
-        if (null != tmp(16721).soundpackLabel) {
+        if (null != tmp(16806).soundpackLabel) {
           obj = { soundpack: null, soundpackLabel: null };
-          obj[0] = tmp(16721).soundpack;
-          obj[1] = tmp(16721).soundpackLabel;
+          obj[0] = tmp(16806).soundpack;
+          obj[1] = tmp(16806).soundpackLabel;
           tmp6 = obj;
         }
       }
@@ -44,7 +44,7 @@ export default {
     const timestamp = Date.now();
     let appSpinnerSources = null;
     if (tmp4) {
-      appSpinnerSources = tmp2(16721).appSpinnerSources;
+      appSpinnerSources = tmp2(16806).appSpinnerSources;
     }
     return appSpinnerSources;
   },
@@ -52,13 +52,13 @@ export default {
     const timestamp = Date.now();
     let tmp5 = null;
     if (tmp4) {
-      const getLoadingTips = tmp2(16721).getLoadingTips;
+      const getLoadingTips = tmp2(16806).getLoadingTips;
       let loadingTips;
       if (getLoadingTips != null) {
         loadingTips = getLoadingTips();
       }
       tmp5 = loadingTips;
-      const tmp2Result = tmp2(16721);
+      const tmp2Result = tmp2(16806);
     }
     return tmp5;
   },
@@ -69,8 +69,8 @@ export default {
     let soundpack = null;
     if (tmp5) {
       soundpack = null;
-      if (null != tmp(16721).soundpack) {
-        soundpack = tmp(16721).soundpack;
+      if (null != tmp(16806).soundpack) {
+        soundpack = tmp(16806).soundpack;
       }
     }
     return soundpack;

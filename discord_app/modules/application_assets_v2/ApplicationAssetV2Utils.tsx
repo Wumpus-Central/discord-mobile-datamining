@@ -1,6 +1,6 @@
-// === Module 12659: getApplicationAssetUrl ===
+// === Module 12732: getApplicationAssetUrl ===
 
-// Module 12659 (getApplicationAssetUrl)
+// Module 12732 (getApplicationAssetUrl)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import handleImageLoad from "handleImageLoad" /* 1469 */;

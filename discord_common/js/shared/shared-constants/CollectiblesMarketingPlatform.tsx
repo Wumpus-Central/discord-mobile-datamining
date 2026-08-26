@@ -1,6 +1,6 @@
-// === Module 7198: CollectiblesMarketingPlatform ===
+// === Module 7264: CollectiblesMarketingPlatform ===
 
-// Module 7198 (CollectiblesMarketingPlatform)
+// Module 7264 (CollectiblesMarketingPlatform)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesMarketingPlatform.tsx");

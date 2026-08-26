@@ -1,13 +1,13 @@
-// === Module 7904: map ===
+// === Module 7971: map ===
 
-// Module 7904 (map)
+// Module 7971 (map)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import headDefault from "head" /* 7906 */;
-import reverseDefault from "reverse" /* 7908 */;
-import _modDef7909 from "module_7909" /* 7909 */;
-import closure_3 from "createFromServer" /* 7905 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 7340 */;
+import headDefault from "head" /* 7973 */;
+import reverseDefault from "reverse" /* 7975 */;
+import _modDef7976 from "module_7976" /* 7976 */;
+import closure_3 from "createFromServer" /* 7972 */;
+import { InviteTargetTypes } from "InviteSendStates" /* 7406 */;
 
 let closure_5 = {};
 let closure_6 = {};
@@ -89,7 +89,7 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
     closure_8[invite.invite.code] = closure_3.createFromServer(invite.invite);
     const tmp = headDefault;
     const tmp2 = reverseDefault;
-    let tmpResult = tmp(tmp2(_modDef7909(Object.values(closure_8), "createdAt")));
+    let tmpResult = tmp(tmp2(_modDef7976(Object.values(closure_8), "createdAt")));
     if (tmpResult == null) {
       tmpResult = null;
     }
@@ -111,7 +111,7 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
     }
     const tmp2 = headDefault;
     const tmp3 = reverseDefault;
-    let tmp2Result = tmp2(tmp3(_modDef7909(Object.values(closure_8), "createdAt")));
+    let tmp2Result = tmp2(tmp3(_modDef7976(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }
@@ -163,7 +163,7 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
     });
     const tmp2 = headDefault;
     const tmp3 = reverseDefault;
-    let tmp2Result = tmp2(tmp3(_modDef7909(Object.values(closure_8), "createdAt")));
+    let tmp2Result = tmp2(tmp3(_modDef7976(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }

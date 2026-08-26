@@ -1,10 +1,10 @@
-// === Module 14772: AccessibilityIcon ===
+// === Module 14845: AccessibilityIcon ===
 
-// Module 14772 (AccessibilityIcon)
+// Module 14845 (AccessibilityIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 14773 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 14846 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

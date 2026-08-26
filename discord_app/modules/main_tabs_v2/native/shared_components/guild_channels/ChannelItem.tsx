@@ -1,28 +1,28 @@
-// === Module 16015: LaunchpadChannelIcon ===
+// === Module 16096: LaunchpadChannelIcon ===
 
-// Module 16015 (LaunchpadChannelIcon)
+// Module 16096 (LaunchpadChannelIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5885 */;
-import getRelativeTimestamp from "getRelativeTimestamp" /* 7247 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9180 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9813 */;
-import getLayoutStyles from "getLayoutStyles" /* 9951 */;
-import renderChannelWrapper from "renderChannelWrapper" /* 15798 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5951 */;
+import getRelativeTimestamp from "getRelativeTimestamp" /* 7313 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9248 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9880 */;
+import getLayoutStyles from "getLayoutStyles" /* 10018 */;
+import renderChannelWrapper from "renderChannelWrapper" /* 15877 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "markAllUserIdListsStale" /* 4034 */;
+import closure_5 from "markAllUserIdListsStale" /* 4098 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4590 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4654 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function LaunchpadChannelIcon(channel) {
   channel = channel.channel;
   const layout = channel.layout;
-  let obj = channel(9951);
+  let obj = channel(10018);
   const layoutStyles = obj.getLayoutStyles(layout);
   obj1 = channel(589);
   const items = [closure_4];
@@ -42,14 +42,14 @@ function LaunchpadChannelIcon(channel) {
     str = "md";
   }
   obj1[1] = str;
-  obj6 = channel(9951);
+  obj6 = channel(10018);
   let num = 32;
   if (tmp2Result.isLayoutCozy(layout)) {
     num = 48;
   }
   const obj2 = { children: null };
   obj1[2] = num;
-  items1[1] = tmp8(channel(11773).ChannelIcon, obj1);
+  items1[1] = tmp8(channel(11846).ChannelIcon, obj1);
   obj2[0] = items1;
   return tmp6(tmp7, obj2);
 }
@@ -143,10 +143,10 @@ export const renderChannelItem = function renderChannelItem(unread) {
   }
   obj[1] = tmp10Result;
   children[1] = closure_8(View, obj);
-  let tmp5Result = tmp5(16013);
+  let tmp5Result = tmp5(16094);
   const obj3 = { layout, name: null, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, channel: null, locked: null, connected: null, live: null, mentionCount: null, mentionBadge: null, isSubscriptionGated: null, needSubscriptionToAccess: null };
   if (channelName == null) {
-    tmp5Result = tmp5(4574);
+    tmp5Result = tmp5(4638);
     channelName = tmp5Result.computeChannelName(channel, closure_6, closure_5);
   }
   obj3[1] = channelName;

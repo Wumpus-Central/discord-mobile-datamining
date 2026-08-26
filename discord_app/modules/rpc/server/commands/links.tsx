@@ -1,18 +1,18 @@
-// === Module 13949: set ===
+// === Module 14022: set ===
 
-// Module 13949 (set)
-import openUserSettings from "openUserSettings" /* 6125 */;
-import getApplicationFlags from "getApplicationFlags" /* 7733 */;
-import prototypeDefault from "prototype" /* 10824 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10827 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 10829 */;
+// Module 14022 (set)
+import openUserSettings from "openUserSettings" /* 6191 */;
+import getApplicationFlags from "getApplicationFlags" /* 7799 */;
+import prototypeDefault from "prototype" /* 10896 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10899 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 10901 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "addApplication" /* 4421 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4282 */;
+import closure_5 from "addApplication" /* 4485 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4346 */;
 import ME from "ME" /* 676 */;
-import items3 from "items3" /* 4408 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 13944 */;
+import items3 from "items3" /* 4472 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14017 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -46,7 +46,7 @@ obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

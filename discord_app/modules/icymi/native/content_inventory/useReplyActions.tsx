@@ -1,13 +1,13 @@
-// === Module 15863: useReplyActions ===
+// === Module 15942: useReplyActions ===
 
-// Module 15863 (useReplyActions)
+// Module 15942 (useReplyActions)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import { DraftType } from "handleChanged" /* 4742 */;
+import { DraftType } from "handleChanged" /* 4806 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { EmojiIntention } from "set" /* 1925 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4373 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4437 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -74,7 +74,7 @@ export const useReplyActions = function useReplyActions(content) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

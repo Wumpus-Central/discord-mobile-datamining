@@ -1,8 +1,8 @@
-// === Module 7181: fromServer ===
+// === Module 7247: fromServer ===
 
-// Module 7181 (fromServer)
+// Module 7247 (fromServer)
 import set from "set" /* 2 */;
-import FeaturedSubblockType from "FeaturedSubblockType" /* 7182 */;
+import FeaturedSubblockType from "FeaturedSubblockType" /* 7248 */;
 
 let prototype;
 prototype = function FeaturedCategorySubblockRecord(unpublished_at) {

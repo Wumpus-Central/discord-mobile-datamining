@@ -1,6 +1,6 @@
-// === Module 4349: IMPACT_LIGHT ===
+// === Module 4413: IMPACT_LIGHT ===
 
-// Module 4349 (IMPACT_LIGHT)
+// Module 4413 (IMPACT_LIGHT)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/haptics/HapticFeedbackTypes.tsx");

@@ -1,8 +1,8 @@
-// === Module 7586: items ===
+// === Module 7652: items ===
 
-// Module 7586 (items)
+// Module 7652 (items)
 import set from "set" /* 2 */;
-import items from "items" /* 7587 */;
+import items from "items" /* 7653 */;
 
 const result = set.fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
 

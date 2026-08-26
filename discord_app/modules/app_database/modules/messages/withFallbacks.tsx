@@ -1,12 +1,12 @@
-// === Module 7092: isSaveableChannel ===
+// === Module 7158: isSaveableChannel ===
 
-// Module 7092 (isSaveableChannel)
-import totalLength from "totalLength" /* 7086 */;
-import isReadableChannel from "isReadableChannel" /* 7090 */;
-import LIMITED_GUILD_MEMBER_THRESHOLD from "LIMITED_GUILD_MEMBER_THRESHOLD" /* 7091 */;
+// Module 7158 (isSaveableChannel)
+import totalLength from "totalLength" /* 7152 */;
+import isReadableChannel from "isReadableChannel" /* 7156 */;
+import LIMITED_GUILD_MEMBER_THRESHOLD from "LIMITED_GUILD_MEMBER_THRESHOLD" /* 7157 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "insertUnsortedGuilds" /* 5262 */;
+import closure_4 from "insertUnsortedGuilds" /* 5328 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
 require = arg1;

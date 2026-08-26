@@ -1,11 +1,11 @@
-// === Module 14924: Row ===
+// === Module 15003: Row ===
 
-// Module 14924 (Row)
-import GuildIconSizesDefault from "GuildIconSizes" /* 5885 */;
+// Module 15003 (Row)
+import GuildIconSizesDefault from "GuildIconSizes" /* 5951 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "insertUnsortedGuilds" /* 5262 */;
-import closure_6 from "updateUserGuildSettingsInternal" /* 4589 */;
+import closure_5 from "insertUnsortedGuilds" /* 5328 */;
+import closure_6 from "updateUserGuildSettingsInternal" /* 4653 */;
 import { HighlightSettings } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -44,7 +44,7 @@ function Row(guildId) {
     obj[3] = callback;
     obj[4] = isStart;
     obj[5] = isEnd;
-    return jsx(tmp2(5874).TableSwitchRow, { label: null, icon: null, value: null, onValueChange: null, start: null, end: null });
+    return jsx(tmp2(5940).TableSwitchRow, { label: null, icon: null, value: null, onValueChange: null, start: null, end: null });
   }
   tmp2 = guildId;
 }
@@ -59,7 +59,7 @@ export default function UserSettingsHighlightNotifications() {
   if (0 !== stateFromStoresArray.length) {
     obj = { children: null };
     obj[0] = tmp3;
-    tmp4 = jsx(stateFromStoresArray(8118).Form, { children: null });
+    tmp4 = jsx(stateFromStoresArray(8185).Form, { children: null });
   }
   return tmp4;
 };

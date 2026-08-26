@@ -1,10 +1,10 @@
-// === Module 16940: getGuildTagPalettePresetColorLabel ===
+// === Module 17025: getGuildTagPalettePresetColorLabel ===
 
-// Module 16940 (getGuildTagPalettePresetColorLabel)
+// Module 17025 (getGuildTagPalettePresetColorLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import items from "items" /* 8203 */;
+import items from "items" /* 8270 */;
 
 function getGuildTagPalettePresetColorLabel(primary) {
   if (constants.HOT_PINK === primary) {

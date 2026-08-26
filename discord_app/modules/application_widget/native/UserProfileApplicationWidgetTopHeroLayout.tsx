@@ -1,21 +1,20 @@
-// === Module 12558: UserProfileApplicationWidgetTopHeroLayout ===
+// === Module 12629: UserProfileApplicationWidgetTopHeroLayout ===
 
-// Module 12558 (UserProfileApplicationWidgetTopHeroLayout)
+// Module 12629 (UserProfileApplicationWidgetTopHeroLayout)
 import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4826 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5416 */;
+import LinearGradientDefault from "LinearGradient" /* 4891 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5482 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { HorizontalGradient } from "ME" /* 676 */;
-import { CARD_PADDING } from "ARBITRARY_LARGE_OFFSET" /* 5882 */;
+import { CARD_PADDING } from "ARBITRARY_LARGE_OFFSET" /* 5948 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const sum = CARD_PADDING + 8;
 let closure_10 = ["transparent", "black"];
 createCacheKey = { root: { position: "relative" }, contentRow: null, heroText: null, heroImageColumn: null, heroImageSkeleton: null, heroImagePositioner: null, heroImageMask: null, heroImageFadeGradient: null, heroImageMaskRemainder: null };
 createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_12, minHeight: 140 };
@@ -24,7 +23,7 @@ createCacheKey[2] = { flex: 1, minWidth: 120, gap: ThemesDefault.space.PX_4, jus
 createCacheKey[3] = { flex: 1, alignItems: "flex-end" };
 let obj1 = { flex: 1, minWidth: 120, gap: ThemesDefault.space.PX_4, justifyContent: "center" };
 createCacheKey[4] = { width: 86, height: 86, marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { position: "absolute", left: "50%", right: -CARD_PADDING, top: -sum, bottom: 0, overflow: "hidden" };
+createCacheKey[5] = { position: "absolute", left: "50%", right: -CARD_PADDING, top: -CARD_PADDING, bottom: 0, overflow: "hidden" };
 createCacheKey[6] = { flex: 1, flexDirection: "row" };
 createCacheKey[7] = { width: 130 };
 createCacheKey[8] = { flex: 1, backgroundColor: "black" };
@@ -37,82 +36,86 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   let _require;
   const tmp = callback4();
   [tmp3, c0] = callback(React.useState(null), 2);
-  let obj = _require(12559);
+  let obj = _require(12630);
   const textComponentValues = obj.resolveTextComponentValues(topConfig.components.title, resolveFieldValue, numberFormat, true);
-  obj1 = _require(12559);
+  obj1 = _require(12630);
   const textComponentValues1 = obj1.resolveTextComponentValues(topConfig.components.subtitle_1, resolveFieldValue, numberFormat);
-  let obj2 = _require(12559);
+  let obj2 = _require(12630);
   const textComponentValues2 = obj2.resolveTextComponentValues(topConfig.components.subtitle_2, resolveFieldValue, numberFormat);
-  let obj3 = _require(12559);
+  let obj3 = _require(12630);
   const hero_image = topConfig.components.hero_image;
   let image;
   const textComponentValues3 = obj3.resolveTextComponentValues(topConfig.components.subtitle_3, resolveFieldValue, numberFormat);
   if (hero_image != null) {
     image = hero_image.fields.image;
   }
-  const items = [_require(12559).ResolvedValueType.MEDIA];
+  const items = [_require(12630).ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
+  const tmp2 = callback(React.useState(null), 2);
   obj = { style: tmp.root, children: null };
   const items1 = [header.header, , ];
   obj = { style: tmp.contentRow, children: null };
   obj1 = { style: tmp.heroText, children: null };
-  const items2 = [callback2(_require(12646).FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback2(_require(12646).FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback2(_require(12646).FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback2(_require(12646).FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
+  const userProfileCardRadius = _require(9050).useUserProfileCardRadius();
+  const items2 = [callback2(_require(12717).FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback2(_require(12717).FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback2(_require(12717).FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback2(_require(12717).FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
   obj1[1] = items2;
   const items3 = [callback3(closure_6, obj1), ];
   obj2 = { style: tmp.heroImageColumn, children: null };
-  let tmp14Result = null == fieldValue || null == tmp3;
-  if (tmp14Result) {
+  let tmp15Result = null == fieldValue || null == tmp3;
+  if (tmp15Result) {
     obj3 = { style: null };
     obj3[0] = tmp.heroImageSkeleton;
-    tmp14Result = tmp14(tmp4(12647).ImageSkeleton, obj3);
+    tmp15Result = tmp15(tmp4(12718).ImageSkeleton, obj3);
   }
-  obj2[1] = tmp14Result;
+  obj2[1] = tmp15Result;
   items3[1] = callback2(closure_6, obj2);
   obj[1] = items3;
   items1[1] = callback3(closure_6, obj);
-  let tmp14Result1 = null != fieldValue;
-  if (tmp14Result1) {
+  let tmp15Result1 = null != fieldValue;
+  if (tmp15Result1) {
     const obj4 = { style: null, pointerEvents: "none", onLayout: null, children: null };
-    obj4[0] = tmp.heroImagePositioner;
+    const items4 = [tmp.heroImagePositioner, ];
+    const obj5 = { borderTopRightRadius: null };
+    obj5[0] = userProfileCardRadius;
+    items4[1] = obj5;
+    obj4[0] = items4;
     obj4[2] = function onLayout(nativeEvent) {
       const layout = nativeEvent.nativeEvent.layout;
       _undefined({ width: layout.width, height: layout.height });
     };
-    tmp14Result = null != tmp3;
-    if (tmp14Result) {
+    tmp15Result = null != tmp3;
+    if (tmp15Result) {
       const result = fieldValue.media.height * (tmp3.width / fieldValue.media.width);
-      const obj5 = { style: null, androidRenderingMode: "software", maskElement: null, children: null };
-      const obj6 = { width: null, height: null };
-      obj6[0] = tmp3.width;
-      obj6[1] = result;
-      obj5[0] = obj6;
-      const obj7 = { style: null, children: null };
-      obj7[0] = tmp.heroImageMask;
-      const obj8 = { start: null, end: null, colors: null, style: null };
-      ({ START: obj14[0], END: obj14[1] } = HorizontalGradient);
-      obj8[2] = closure_10;
-      obj8[3] = tmp.heroImageFadeGradient;
-      const items4 = [tmp14(LinearGradientDefault, obj8), ];
-      const obj9 = { style: null };
-      obj9[0] = tmp.heroImageMaskRemainder;
-      items4[1] = tmp14(tmp13, obj9);
-      obj7[1] = items4;
-      obj5[2] = tmp12(tmp13, obj7);
-      const obj10 = { source: null, style: null };
-      const obj11 = { uri: null };
-      obj11[0] = fieldValue.media.url;
-      obj10[0] = obj11;
-      obj10[1] = { width: "100%", height: "100%" };
-      obj5[3] = tmp14(closure_5, obj10);
-      tmp14Result = tmp14(_isNativeReflectConstructDefault, obj5);
-      const tmp20 = _isNativeReflectConstructDefault;
+      const obj6 = { style: null, androidRenderingMode: "software", maskElement: null, children: null };
+      const obj7 = { width: null, height: null };
+      obj7[0] = tmp3.width;
+      obj7[1] = result;
+      obj6[0] = obj7;
+      const obj8 = { style: null, children: null };
+      obj8[0] = tmp.heroImageMask;
+      const obj9 = { start: null, end: null, colors: null, style: null };
+      ({ START: obj16[0], END: obj16[1] } = HorizontalGradient);
+      obj9[2] = closure_10;
+      obj9[3] = tmp.heroImageFadeGradient;
+      const items5 = [tmp15(LinearGradientDefault, obj9), ];
+      const obj10 = { style: null };
+      obj10[0] = tmp.heroImageMaskRemainder;
+      items5[1] = tmp15(tmp14, obj10);
+      obj8[1] = items5;
+      obj6[2] = tmp13(tmp14, obj8);
+      const obj11 = { source: null, style: null };
+      const obj12 = { uri: null };
+      obj12[0] = fieldValue.media.url;
+      obj11[0] = obj12;
+      obj11[1] = { width: "100%", height: "100%" };
+      obj6[3] = tmp15(closure_5, obj11);
+      tmp15Result = tmp15(_isNativeReflectConstructDefault, obj6);
+      const tmp21 = _isNativeReflectConstructDefault;
     }
-    obj4[3] = tmp14Result;
-    tmp14Result1 = tmp14(tmp13, obj4);
+    obj4[3] = tmp15Result;
+    tmp15Result1 = tmp15(tmp14, obj4);
   }
-  items1[2] = tmp14Result1;
+  items1[2] = tmp15Result1;
   obj[1] = items1;
   return callback3(closure_6, obj);
 };
-export const HERO_IMAGE_UNCLIPPED_TOP_BLEED = 8;
-export const HERO_IMAGE_TOP_BLEED = sum;

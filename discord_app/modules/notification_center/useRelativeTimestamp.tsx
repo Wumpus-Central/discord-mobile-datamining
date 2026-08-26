@@ -1,6 +1,6 @@
-// === Module 15395: useRelativeTimestamp ===
+// === Module 15474: useRelativeTimestamp ===
 
-// Module 15395 (useRelativeTimestamp)
+// Module 15474 (useRelativeTimestamp)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -14,11 +14,11 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
     flag = true;
   }
   closure_2 = undefined;
-  const tmp = callback(React.useState(() => timestamp(7247).getRelativeTimestamp(timestamp, flag)), 2);
+  const tmp = callback(React.useState(() => timestamp(7313).getRelativeTimestamp(timestamp, flag)), 2);
   closure_2 = tmp[1];
   const items = [timestamp, flag];
   const effect = React.useEffect(() => {
-    dependencyMap(timestamp(7247).getRelativeTimestamp(interval, flag));
+    dependencyMap(timestamp(7313).getRelativeTimestamp(interval, flag));
     const diff = Date.now() - interval;
     if (diff <= flag(687).Millis.DAY) {
       if (diff >= tmp4(687).Millis.HOUR) {
@@ -32,7 +32,7 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
       }, MINUTE, MINUTE - diff % MINUTE);
       return () => clearInterval(closure_0);
     }
-    const obj = timestamp(7247);
+    const obj = timestamp(7313);
   }, items);
   return tmp[0];
 };

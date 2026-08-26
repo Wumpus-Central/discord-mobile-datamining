@@ -1,10 +1,10 @@
-// === Module 14151: useProfileFrameSections ===
+// === Module 14223: useProfileFrameSections ===
 
-// Module 14151 (useProfileFrameSections)
+// Module 14223 (useProfileFrameSections)
 import closure_2 from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7148 */;
-import closure_5 from "map" /* 7164 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7214 */;
+import closure_5 from "map" /* 7230 */;
 
 const require = arg1;
 let obj = { PURCHASE: "purchase", PREMIUM_PURCHASE: "premium_purchase", PREVIEW: "preview" };

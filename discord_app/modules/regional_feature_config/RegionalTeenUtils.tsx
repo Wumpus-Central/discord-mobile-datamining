@@ -1,8 +1,8 @@
-// === Module 11983: set ===
+// === Module 12056: set ===
 
-// Module 11983 (set)
+// Module 12056 (set)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "getRegionalFeatureConfig" /* 4077 */;
+import closure_3 from "getRegionalFeatureConfig" /* 4141 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -34,7 +34,7 @@ export const useIsTeenInCountrySet = function useIsTeenInCountrySet(set) {
     }
   }, items1);
   const obj = stateFromStores(589);
-  let userIsTeen = stateFromStores(8187).useUserIsTeen();
+  let userIsTeen = stateFromStores(8254).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }
@@ -55,7 +55,7 @@ export const useIsTeenInStrictCountry = function useIsTeenInStrictCountry() {
   }, items1);
   let obj = set;
   const obj2 = stateFromStores(589);
-  let userIsTeen = stateFromStores(8187).useUserIsTeen();
+  let userIsTeen = stateFromStores(8254).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }

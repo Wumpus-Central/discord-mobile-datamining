@@ -1,9 +1,9 @@
-// === Module 13234: _initialize ===
+// === Module 13307: _initialize ===
 
-// Module 13234 (_initialize)
-import initializeDefault from "initialize" /* 4562 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4431 */;
-import closure_4 from "updateVoiceState" /* 4399 */;
+// Module 13307 (_initialize)
+import initializeDefault from "initialize" /* 4626 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_4 from "updateVoiceState" /* 4463 */;
 
 let require = arg1;
 initializeDefault;

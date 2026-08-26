@@ -1,13 +1,13 @@
-// === Module 15078: DebugLogView ===
+// === Module 15157: DebugLogView ===
 
-// Module 15078 (DebugLogView)
+// Module 15157 (DebugLogView)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getUserAgnosticState" /* 4379 */;
-import useCollectiblesDebugStore from "useCollectiblesDebugStore" /* 7163 */;
+import closure_6 from "getUserAgnosticState" /* 4443 */;
+import useCollectiblesDebugStore from "useCollectiblesDebugStore" /* 7229 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 ({ View: c3, ScrollView: c4, TouchableOpacity: c5 } = get_ActivityIndicator);
@@ -49,7 +49,7 @@ export default function DebugLogView() {
       obj1[1] = obj2;
       const items2 = ["Debug Log (", arr.length, " entries)"];
       obj1[2] = items2;
-      const items3 = [callback2(tmp2(4376).Text, obj1), ];
+      const items3 = [callback2(tmp2(4440).Text, obj1), ];
       const obj3 = { onPress: null, style: null, children: null };
       obj3[0] = function onPress() {
         dependencyMap();
@@ -57,12 +57,12 @@ export default function DebugLogView() {
       obj3[1] = tmp.clearButton;
       const obj4 = { variant: "text-xs/bold", style: null, children: "Clear" };
       obj4[1] = tmp.clearButtonText;
-      obj3[2] = callback3(tmp2(4376).Text, obj4);
+      obj3[2] = callback3(tmp2(4440).Text, obj4);
       items3[1] = callback3(closure_5, obj3);
       obj[1] = items3;
       const items4 = [callback2(stateFromStores, obj), ];
       const obj5 = { children: null };
-      obj5[0] = substr.map((children) => closure_1_10(arr(4376).Text, { variant: "text-xs/normal", style: debugLogText.debugLogText, children }, arg1));
+      obj5[0] = substr.map((children) => closure_1_10(arr(4440).Text, { variant: "text-xs/normal", style: debugLogText.debugLogText, children }, arg1));
       items4[1] = callback3(closure_4, obj5);
       obj[1] = items4;
       return callback2(stateFromStores, obj);

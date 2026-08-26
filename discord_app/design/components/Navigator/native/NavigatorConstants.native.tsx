@@ -1,6 +1,6 @@
-// === Module 5373: NAV_BAR_HEIGHT ===
+// === Module 5439: NAV_BAR_HEIGHT ===
 
-// Module 5373 (NAV_BAR_HEIGHT)
+// Module 5439 (NAV_BAR_HEIGHT)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("design/components/Navigator/native/NavigatorConstants.native.tsx");

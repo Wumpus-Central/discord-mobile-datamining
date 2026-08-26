@@ -1,12 +1,12 @@
-// === Module 12315: TabsGradient ===
+// === Module 12387: TabsGradient ===
 
-// Module 12315 (TabsGradient)
-import LinearGradientDefault from "LinearGradient" /* 4826 */;
+// Module 12387 (TabsGradient)
+import LinearGradientDefault from "LinearGradient" /* 4891 */;
 import closure_2 from "noop" /* 19 */;
 import { HorizontalGradient } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
-import importDefaultResult from "module_4120" /* 4120 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
+import importDefaultResult from "module_4184" /* 4184 */;
 
 const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);

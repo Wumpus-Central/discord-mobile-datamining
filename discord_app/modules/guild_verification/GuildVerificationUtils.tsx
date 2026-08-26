@@ -1,10 +1,10 @@
-// === Module 12874: inviteGuildHasPendingMemberDisabledVerification ===
+// === Module 12948: inviteGuildHasPendingMemberDisabledVerification ===
 
-// Module 12874 (inviteGuildHasPendingMemberDisabledVerification)
+// Module 12948 (inviteGuildHasPendingMemberDisabledVerification)
 import transitionTo from "transitionTo" /* 1222 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4205 */;
-import openMemberVerificationModal from "openMemberVerificationModal" /* 8569 */;
-import closure_2 from "handleGatewayJoinRequestUpdate" /* 4203 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4269 */;
+import openMemberVerificationModal from "openMemberVerificationModal" /* 8637 */;
+import closure_2 from "handleGatewayJoinRequestUpdate" /* 4267 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

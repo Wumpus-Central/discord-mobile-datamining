@@ -1,17 +1,17 @@
-// === Module 16330: ChannelContent ===
+// === Module 16411: ChannelContent ===
 
-// Module 16330 (ChannelContent)
-import Text from "Text" /* 4376 */;
-import LockIcon from "LockIcon" /* 4925 */;
-import WarningIcon from "WarningIcon" /* 8113 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16325 */;
-import _modDef16331 from "module_16331" /* 16331 */;
+// Module 16411 (ChannelContent)
+import Text from "Text" /* 4440 */;
+import LockIcon from "LockIcon" /* 4991 */;
+import WarningIcon from "WarningIcon" /* 8180 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16406 */;
+import _modDef16412 from "module_16412" /* 16412 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth" /* 9950 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4590 */;
+import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth" /* 10017 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4654 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 import set from "set" /* 500 */;
 
 require = arg1;
@@ -22,7 +22,7 @@ function ChannelContent(arg0) {
   let tmp9Result = null != channel;
   if (tmp9Result) {
     if (!locked) {
-      locked = tmp2(4896)(channel);
+      locked = tmp2(4962)(channel);
     }
     tmp9Result = locked;
   }
@@ -56,7 +56,7 @@ function ChannelContent(arg0) {
   }
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
-  const items1 = [closure_7(_modDef16331, obj3), , ];
+  const items1 = [closure_7(_modDef16412, obj3), , ];
   tmp9Result = null;
   if (null != channelCategoryName) {
     const obj4 = { variant: "text-xs/bold", color: "text-muted", style: null, children: null };
@@ -98,7 +98,7 @@ function ChannelContent(arg0) {
     if (isSubscriptionGated) {
       const obj9 = { locked: null, isInMainTabsExperiment: true };
       obj9[0] = needSubscriptionToAccess;
-      isSubscriptionGated = tmp9(tmp2(15475), obj9);
+      isSubscriptionGated = tmp9(tmp2(15554), obj9);
     }
     items3[2] = isSubscriptionGated;
     obj5[1] = items3;

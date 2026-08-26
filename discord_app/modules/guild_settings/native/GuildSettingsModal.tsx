@@ -1,12 +1,12 @@
-// === Module 16863: close ===
+// === Module 16948: close ===
 
-// Module 16863 (close)
-import _modDef9168 from "module_9168" /* 9168 */;
-import dispatcherDefault from "dispatcher" /* 15501 */;
+// Module 16948 (close)
+import _modDef9236 from "module_9236" /* 9236 */;
+import dispatcherDefault from "dispatcher" /* 15580 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleFormInit" /* 9169 */;
+import closure_6 from "handleFormInit" /* 9237 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -14,7 +14,7 @@ const require = arg1;
 function close() {
   dispatcherDefault.terminate();
   const obj = dispatcherDefault;
-  _modDef9168.close();
+  _modDef9236.close();
 }
 ({ GuildSettingsSections: error, WebhookTypes: closure_8 } = ME);
 const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModal.tsx");

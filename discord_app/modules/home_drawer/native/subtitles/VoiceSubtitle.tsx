@@ -1,9 +1,9 @@
-// === Module 15683: VoiceSubtitle ===
+// === Module 15762: VoiceSubtitle ===
 
-// Module 15683 (VoiceSubtitle)
+// Module 15762 (VoiceSubtitle)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4376 */;
+import Text from "Text" /* 4440 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

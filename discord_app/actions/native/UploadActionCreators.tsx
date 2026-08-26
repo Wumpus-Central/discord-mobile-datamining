@@ -1,10 +1,10 @@
-// === Module 11306: ? ===
+// === Module 11378: ? ===
 
-// Module 11306
+// Module 11378
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "handleChanged" /* 4742 */;
-import { DraftType } from "handleChanged" /* 4742 */;
-import closure_4 from "initialize" /* 7441 */;
+import closure_2 from "handleChanged" /* 4806 */;
+import { DraftType } from "handleChanged" /* 4806 */;
+import closure_4 from "initialize" /* 7507 */;
 
 const result = require("set").fileFinishedImporting("actions/native/UploadActionCreators.tsx");
 

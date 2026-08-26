@@ -1,6 +1,6 @@
-// === Module 7374: getForumChannelSessionId ===
+// === Module 7440: getForumChannelSessionId ===
 
-// Module 7374 (getForumChannelSessionId)
+// Module 7440 (getForumChannelSessionId)
 import set from "set" /* 2 */;
 import v1 from "v1" /* 514 */;
 

@@ -1,6 +1,6 @@
-// === Module 8806: AnimatedRenderItem ===
+// === Module 8874: AnimatedRenderItem ===
 
-// Module 8806 (AnimatedRenderItem)
+// Module 8874 (AnimatedRenderItem)
 import closure_2 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import { createElement } from "noop" /* 19 */;

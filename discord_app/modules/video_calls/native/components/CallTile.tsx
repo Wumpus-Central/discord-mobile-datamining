@@ -1,26 +1,26 @@
-// === Module 11025: StreamPreviewTile ===
+// === Module 11097: StreamPreviewTile ===
 
-// Module 11025 (StreamPreviewTile)
+// Module 11097 (StreamPreviewTile)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _modDef4120 from "module_4120" /* 4120 */;
-import registerAssetDefault from "registerAsset" /* 10621 */;
-import StreamPreviewContainerDefault from "StreamPreviewContainer" /* 11026 */;
-import registerAssetDefault2 from "registerAsset" /* 11031 */;
-import registerAssetDefault3 from "registerAsset" /* 11032 */;
-import registerAssetDefault4 from "registerAsset" /* 11033 */;
-import registerAssetDefault5 from "registerAsset" /* 11034 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 11035 */;
+import _modDef4184 from "module_4184" /* 4184 */;
+import registerAssetDefault from "registerAsset" /* 10689 */;
+import StreamPreviewContainerDefault from "StreamPreviewContainer" /* 11098 */;
+import registerAssetDefault2 from "registerAsset" /* 11103 */;
+import registerAssetDefault3 from "registerAsset" /* 11104 */;
+import registerAssetDefault4 from "registerAsset" /* 11105 */;
+import registerAssetDefault5 from "registerAsset" /* 11106 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 11107 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 4402 */;
+import closure_6 from "reset" /* 4466 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9895 */;
-import ParticipantTypes from "ParticipantTypes" /* 4401 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9962 */;
+import ParticipantTypes from "ParticipantTypes" /* 4465 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
-import hexToRgba from "hexToRgba" /* 4228 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
+import hexToRgba from "hexToRgba" /* 4292 */;
 
 require = arg1;
 class StreamPreviewTile {
@@ -83,7 +83,7 @@ class TileOverlay {
     ({ bottom, left, top, right } = tmp4);
     tmp5 = reveal;
     reveal = closure_3.useContext(require("useRevealProviderValue").RevealContext).reveal;
-    obj = require("module_4120");
+    obj = require("module_4184");
     class T {
       constructor() {
         tmp = reveal;
@@ -149,7 +149,7 @@ class TileOverlay {
     obj4[1] = tmp7(View, obj5);
     items1[1] = jsx(View, obj4);
     obj2[2] = items1;
-    return tmp7(require("module_4120").View, obj2);
+    return tmp7(require("module_4184").View, obj2);
   }
 }
 let c3 = importAllResult;

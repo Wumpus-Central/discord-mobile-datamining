@@ -1,15 +1,15 @@
-// === Module 16390: renderActivityOrPIP ===
+// === Module 16471: renderActivityOrPIP ===
 
-// Module 16390 (renderActivityOrPIP)
+// Module 16471 (renderActivityOrPIP)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 16391;
+    let tmp4 = 16472;
   } else {
-    tmp4 = 16392;
+    tmp4 = 16473;
   }
   return jsx(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }

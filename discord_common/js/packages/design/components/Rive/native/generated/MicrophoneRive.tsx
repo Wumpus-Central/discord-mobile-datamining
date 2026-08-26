@@ -1,8 +1,8 @@
-// === Module 4188: MicrophoneRive ===
+// === Module 4252: MicrophoneRive ===
 
-// Module 4188 (MicrophoneRive)
-import BaseRive from "BaseRive" /* 4114 */;
-import getDerivedStateFromError from "getDerivedStateFromError" /* 4169 */;
+// Module 4252 (MicrophoneRive)
+import BaseRive from "BaseRive" /* 4178 */;
+import getDerivedStateFromError from "getDerivedStateFromError" /* 4233 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

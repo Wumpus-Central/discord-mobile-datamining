@@ -1,6 +1,6 @@
-// === Module 4933: INVISIBLE_CHAR_REGEX ===
+// === Module 4999: INVISIBLE_CHAR_REGEX ===
 
-// Module 4933 (INVISIBLE_CHAR_REGEX)
+// Module 4999 (INVISIBLE_CHAR_REGEX)
 import set from "set" /* 2 */;
 
 const re0 = /^[\u200B-\u200D\uFEFF\u180E\u061C]+/;

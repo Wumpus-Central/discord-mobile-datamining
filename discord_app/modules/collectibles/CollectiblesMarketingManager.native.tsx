@@ -1,9 +1,9 @@
-// === Module 14014: _initialize ===
+// === Module 14087: _initialize ===
 
-// Module 14014 (_initialize)
+// Module 14087 (_initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4562 */;
-import closure_3 from "getUserAgnosticState" /* 4379 */;
+import initializeDefault from "initialize" /* 4626 */;
+import closure_3 from "getUserAgnosticState" /* 4443 */;
 
 const require = arg1;
 initializeDefault;
@@ -12,8 +12,8 @@ class CollectiblesMarketingManager extends tmp2 {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
       const value = closure_3.get("shop_include_unpublished");
-      let obj = callback(7147);
-      const CollectiblesMarketingReleaseType = callback(7197).CollectiblesMarketingReleaseType;
+      let obj = callback(7213);
+      const CollectiblesMarketingReleaseType = callback(7263).CollectiblesMarketingReleaseType;
       obj = { release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD };
       const collectiblesMarketings = obj.fetchCollectiblesMarketings(obj);
     };

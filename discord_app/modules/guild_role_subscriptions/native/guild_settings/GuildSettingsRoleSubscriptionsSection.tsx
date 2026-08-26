@@ -1,15 +1,15 @@
-// === Module 16871: HasCreatedListingsSection ===
+// === Module 16956: HasCreatedListingsSection ===
 
-// Module 16871 (HasCreatedListingsSection)
+// Module 16956 (HasCreatedListingsSection)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import TableRowInner from "TableRowInner" /* 5480 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5873 */;
-import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 5987 */;
-import registerAssetDefault from "registerAsset" /* 16872 */;
-import registerAssetDefault2 from "registerAsset" /* 16873 */;
-import registerAssetDefault3 from "registerAsset" /* 16875 */;
+import TableRowInner from "TableRowInner" /* 5546 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5939 */;
+import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 6053 */;
+import registerAssetDefault from "registerAsset" /* 16957 */;
+import registerAssetDefault2 from "registerAsset" /* 16958 */;
+import registerAssetDefault3 from "registerAsset" /* 16960 */;
 import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
@@ -47,12 +47,12 @@ function HasCreatedListingsSection(arg0) {
     const intl4 = tmp(1236).intl;
     obj4[0] = intl4.string(tmp(1236).t.p2Rsdl);
     const obj5 = { source: null };
-    obj5[0] = tmp6(16874);
-    obj4[2] = tmp5(tmp(5480).TableRow.Icon, obj5);
+    obj5[0] = tmp6(16959);
+    obj4[2] = tmp5(tmp(5546).TableRow.Icon, obj5);
     obj4[3] = function onPress() {
       return callback(closure_1_6.ROLE_SUBSCRIPTIONS_PAYMENTS, { guildId: id.id });
     };
-    stateFromStores = tmp5(tmp(5480).TableRow, obj4, "guild-role-subscriptions-payments");
+    stateFromStores = tmp5(tmp(5546).TableRow, obj4, "guild-role-subscriptions-payments");
   }
   items1[2] = stateFromStores;
   const obj6 = { label: null, arrow: true, icon: null, onPress: null };

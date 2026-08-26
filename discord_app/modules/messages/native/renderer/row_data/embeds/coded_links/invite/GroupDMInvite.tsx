@@ -1,13 +1,13 @@
-// === Module 12804: createGroupDMInvite ===
+// === Module 12878: createGroupDMInvite ===
 
-// Module 12804 (createGroupDMInvite)
+// Module 12878 (createGroupDMInvite)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8204 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11080 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8271 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11152 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "markAllUserIdListsStale" /* 4034 */;
+import closure_4 from "markAllUserIdListsStale" /* 4098 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { InviteTypes } from "InviteSendStates" /* 7340 */;
+import { InviteTypes } from "InviteSendStates" /* 7406 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");
@@ -52,7 +52,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   }
   let channelIconSource = null;
   if (null != channel) {
-    let tmp8Result = tmp8(12512);
+    let tmp8Result = tmp8(12583);
     channelIconSource = tmp8Result.getChannelIconSource(channel);
   }
   let uri = null;
@@ -64,8 +64,8 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (flag) {
     channelName = null;
     if (null != channel) {
-      channelName = tmp8(4574).computeChannelName(channel, closure_5, closure_4);
-      const tmp8Result1 = tmp8(4574);
+      channelName = tmp8(4638).computeChannelName(channel, closure_5, closure_4);
+      const tmp8Result1 = tmp8(4638);
     }
   }
   if (!channelName) {
@@ -124,8 +124,8 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (flag) {
     channelName1 = channelName;
     if (null != channel) {
-      channelName1 = tmp8(4574).computeChannelName(channel, closure_5, closure_4);
-      const tmp8Result2 = tmp8(4574);
+      channelName1 = tmp8(4638).computeChannelName(channel, closure_5, closure_4);
+      const tmp8Result2 = tmp8(4638);
     }
   }
   obj.channelName = channelName1;

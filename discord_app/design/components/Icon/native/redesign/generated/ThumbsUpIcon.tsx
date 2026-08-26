@@ -1,10 +1,10 @@
-// === Module 8741: ThumbsUpIcon ===
+// === Module 8809: ThumbsUpIcon ===
 
-// Module 8741 (ThumbsUpIcon)
+// Module 8809 (ThumbsUpIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 8742 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 8810 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

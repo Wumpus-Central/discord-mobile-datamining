@@ -1,11 +1,11 @@
-// === Module 7732: initialize ===
+// === Module 7798: initialize ===
 
-// Module 7732 (initialize)
+// Module 7798 (initialize)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
 
 const ApplicationFlags = ME.ApplicationFlags;
 let closure_3 = { lastUsedObject: {}, useActivityUrlOverride: false, activityUrlOverride: null, filter: "" };

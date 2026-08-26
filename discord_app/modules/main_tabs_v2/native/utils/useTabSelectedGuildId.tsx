@@ -1,9 +1,9 @@
-// === Module 14166: useTabSelectedGuildId ===
+// === Module 14238: useTabSelectedGuildId ===
 
-// Module 14166 (useTabSelectedGuildId)
+// Module 14238 (useTabSelectedGuildId)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import closure_2 from "handleConnectionOpen" /* 4202 */;
-import closure_3 from "insertUnsortedGuilds" /* 5262 */;
+import closure_2 from "handleConnectionOpen" /* 4266 */;
+import closure_3 from "insertUnsortedGuilds" /* 5328 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");

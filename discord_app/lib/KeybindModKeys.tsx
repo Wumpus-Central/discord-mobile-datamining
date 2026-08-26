@@ -1,6 +1,6 @@
-// === Module 13370: modKey ===
+// === Module 13443: modKey ===
 
-// Module 13370 (modKey)
+// Module 13443 (modKey)
 import set from "set" /* 500 */;
 
 if (set.isMac()) {

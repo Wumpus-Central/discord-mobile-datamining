@@ -1,6 +1,6 @@
-// === Module 13406: AddFriendModalScene ===
+// === Module 13479: AddFriendModalScene ===
 
-// Module 13406 (AddFriendModalScene)
+// Module 13479 (AddFriendModalScene)
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -8,10 +8,10 @@ import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12234 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12306 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
-import importDefaultResult from "createTextStyle" /* 5342 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
+import importDefaultResult from "createTextStyle" /* 5408 */;
 
 const require = arg1;
 function AddFriendModalScene(onSkip) {
@@ -142,5 +142,5 @@ export default function AddFriendModal(arg0) {
     obj[0] = obj;
     return obj;
   }, items);
-  return callback2(_require(5889).Navigator, { screens, initialRouteName: "ADD_FRIEND", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
+  return callback2(_require(5955).Navigator, { screens, initialRouteName: "ADD_FRIEND", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
 };

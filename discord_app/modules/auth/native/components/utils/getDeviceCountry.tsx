@@ -1,6 +1,6 @@
-// === Module 15325: getDeviceCountry ===
+// === Module 15404: getDeviceCountry ===
 
-// Module 15325 (getDeviceCountry)
+// Module 15404 (getDeviceCountry)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 500 */;

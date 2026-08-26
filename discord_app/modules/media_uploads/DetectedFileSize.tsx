@@ -1,6 +1,6 @@
-// === Module 5003: _getDetectedFileSize ===
+// === Module 5069: _getDetectedFileSize ===
 
-// Module 5003 (_getDetectedFileSize)
+// Module 5069 (_getDetectedFileSize)
 import closure_0 from "asyncGeneratorStep" /* 5 */;
 
 function _getDetectedFileSize() {
@@ -22,7 +22,7 @@ function _getDetectedFileSize() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

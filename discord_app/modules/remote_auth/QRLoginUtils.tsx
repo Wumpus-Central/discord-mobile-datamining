@@ -1,6 +1,6 @@
-// === Module 13401: findRemoteAuthFingerprint ===
+// === Module 13474: findRemoteAuthFingerprint ===
 
-// Module 13401 (findRemoteAuthFingerprint)
+// Module 13474 (findRemoteAuthFingerprint)
 import set from "set" /* 2 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 

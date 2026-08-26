@@ -1,6 +1,6 @@
-// === Module 10656: validateHandle ===
+// === Module 10724: validateHandle ===
 
-// Module 10656 (validateHandle)
+// Module 10724 (validateHandle)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

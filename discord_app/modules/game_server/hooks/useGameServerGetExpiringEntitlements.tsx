@@ -1,8 +1,8 @@
-// === Module 12117: useGameServerGetExpiringEntitlements ===
+// === Module 12190: useGameServerGetExpiringEntitlements ===
 
-// Module 12117 (useGameServerGetExpiringEntitlements)
+// Module 12190 (useGameServerGetExpiringEntitlements)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleGameServerInstanceCreated" /* 4287 */;
+import closure_3 from "handleGameServerInstanceCreated" /* 4351 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx");

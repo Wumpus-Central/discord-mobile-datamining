@@ -1,6 +1,6 @@
-// === Module 7319: questCtaConfigFromServer ===
+// === Module 7385: questCtaConfigFromServer ===
 
-// Module 7319 (questCtaConfigFromServer)
+// Module 7385 (questCtaConfigFromServer)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/quests/types/v2/CTA.tsx");

@@ -1,6 +1,6 @@
-// === Module 9422: GameFlags ===
+// === Module 9490: GameFlags ===
 
-// Module 9422 (GameFlags)
+// Module 9490 (GameFlags)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameFlags.tsx");

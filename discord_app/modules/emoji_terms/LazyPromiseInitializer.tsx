@@ -1,6 +1,6 @@
-// === Module 5291: setParams ===
+// === Module 5357: setParams ===
 
-// Module 5291 (setParams)
+// Module 5357 (setParams)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/emoji_terms/LazyPromiseInitializer.tsx");

@@ -1,19 +1,19 @@
-// === Module 14331: FamilyCenterTeenQRCodeButtonInner ===
+// === Module 14404: FamilyCenterTeenQRCodeButtonInner ===
 
-// Module 14331 (FamilyCenterTeenQRCodeButtonInner)
+// Module 14404 (FamilyCenterTeenQRCodeButtonInner)
 import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2337 */;
-import Button from "Button" /* 4815 */;
-import QrCodeIcon from "QrCodeIcon" /* 14337 */;
+import messagesProxyDefault from "messagesProxy" /* 2369 */;
+import Button from "Button" /* 4879 */;
+import QrCodeIcon from "QrCodeIcon" /* 14410 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "freshTeenActivityWithMap" /* 7143 */;
-import items from "items" /* 7144 */;
+import closure_6 from "freshTeenActivityWithMap" /* 7209 */;
+import items from "items" /* 7210 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4618 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4682 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function FamilyCenterTeenQRCodeButtonInner() {
@@ -123,7 +123,7 @@ export const FamilyCenterTeenQRCodeButton = function FamilyCenterTeenQRCodeButto
 };
 export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeButton() {
   function handleQrCodeScanSucess(url) {
-    let arr = callback(4611);
+    let arr = callback(4675);
     arr = arr.pop();
     let toURLSafeResult = callback(1487).toURLSafe(url);
     if (toURLSafeResult == null) {
@@ -137,8 +137,8 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
         tmp4 = null;
         if (tmpResult.isDiscordHostname(hostname)) {
           if (null !== pathname.match(closure_8)) {
-            const result = handleQrCodeScanSucess(11482).handleFamilyCenterQRCodeScan(pathname, "FamilyCenterQRCodeScan");
-            const obj4 = handleQrCodeScanSucess(11482);
+            const result = handleQrCodeScanSucess(11554).handleFamilyCenterQRCodeScan(pathname, "FamilyCenterQRCodeScan");
+            const obj4 = handleQrCodeScanSucess(11554);
           }
           tmp4 = tmp6;
         }
@@ -147,7 +147,7 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
     }
     return tmp4;
   }
-  let obj = handleQrCodeScanSucess(7480);
+  let obj = handleQrCodeScanSucess(7546);
   if (obj.useHasMaxConnections()) {
     return null;
   } else {

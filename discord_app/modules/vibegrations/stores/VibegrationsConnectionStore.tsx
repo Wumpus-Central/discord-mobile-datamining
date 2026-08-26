@@ -1,24 +1,20 @@
-// === Module 15946: rejectPendingPublish ===
+// === Module 16025: rejectPendingPublish ===
 
-// Module 15946 (rejectPendingPublish)
+// Module 16025 (rejectPendingPublish)
 import failsDefault from "fails" /* 584 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3405 */;
-import snowflakeSequence from "snowflakeSequence" /* 7357 */;
-import _modDef15945 from "module_15945" /* 15945 */;
-import vibegrationLocation from "vibegrationLocation" /* 15947 */;
-import map9 from "map" /* 15948 */;
-import frozen from "frozen" /* 15949 */;
-import reloadVibegrationsAppFrames from "reloadVibegrationsAppFrames" /* 15950 */;
-import open2 from "open" /* 15951 */;
+import snowflakeSequence from "snowflakeSequence" /* 7423 */;
+import _modDef16024 from "module_16024" /* 16024 */;
+import vibegrationLocation from "vibegrationLocation" /* 16026 */;
+import map10 from "map" /* 16027 */;
+import open2 from "open" /* 16030 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "newMessage" /* 15943 */;
-import { getOlderHistoryCursor } from "newMessage" /* 15943 */;
-import closure_8 from "isProjectOwner" /* 15944 */;
+import closure_6 from "newMessage" /* 16022 */;
+import { getOlderHistoryCursor } from "newMessage" /* 16022 */;
+import closure_8 from "isProjectOwner" /* 16023 */;
 import { Endpoints } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -54,42 +50,58 @@ function sendFailedStep(projectId, intl, arg2) {
   const result = vibegrationLocation.trackVibegrationErrored(projectId, obj1);
 }
 function appendLocalUserMessage(projectId, nextResult) {
-  ({ content, nonce, attachments } = nextResult);
-  obj = dispatcherDefault;
-  obj = { type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND", projectId, content, id: "optimistic:" + nonce, userId: null, timestamp: null, attachments: null };
+  const nonce = nextResult.nonce;
+  obj = authStore;
+  ({ content, attachments } = nextResult);
   const currentUser = authStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  obj[4] = id;
+  const result = map5.set(nonce, id);
+  obj = { type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND", projectId, content, id: "optimistic:" + nonce, userId: null, timestamp: null, attachments: null };
+  const currentUser1 = obj.getCurrentUser();
+  let id1;
+  if (currentUser1 != null) {
+    id1 = currentUser1.id;
+  }
+  obj[4] = id1;
+  const obj2 = dispatcherDefault;
   obj[5] = new Date().toISOString();
   obj[6] = attachments;
-  obj.dispatch(obj);
+  obj2.dispatch(obj);
 }
-function appendFailedUserMessage(projectId, arg1, message) {
-  ({ content, nonce, attachments } = arg1);
-  obj = dispatcherDefault;
-  obj = { type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND", projectId, content, id: "optimistic:" + nonce, userId: null, timestamp: null, attachments: null };
+function appendFailedUserMessage(projectId, nonce, message) {
+  nonce = nonce.nonce;
+  obj = authStore;
+  ({ content, attachments } = nonce);
   const currentUser = authStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  obj[4] = id;
+  const result = map5.set(nonce, id);
+  obj1 = dispatcherDefault;
+  obj = { type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND", projectId, content, id: "optimistic:" + nonce, userId: null, timestamp: null, attachments: null };
+  const currentUser1 = obj.getCurrentUser();
+  let id1;
+  if (currentUser1 != null) {
+    id1 = currentUser1.id;
+  }
+  obj[4] = id1;
   obj[5] = new Date().toISOString();
   obj[6] = attachments;
-  obj.dispatch(obj);
+  obj1.dispatch(obj);
   const date = new Date();
-  const tmp = importDefault;
+  const tmp5 = importDefault;
   obj = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, step: obj1 };
-  dispatcherDefault.dispatch(obj);
   obj1 = { type: "step", kind: "terminal_error", message };
-  const tmpResult = dispatcherDefault;
+  dispatcherDefault.dispatch(obj);
+  const tmp5Result = dispatcherDefault;
   const obj2 = {};
   const merged = Object.assign(obj);
   obj2.message = message;
-  const result = vibegrationLocation.trackVibegrationErrored(projectId, obj2);
+  const result1 = vibegrationLocation.trackVibegrationErrored(projectId, obj2);
 }
 function failPendingSends(projectId, arg1, message) {
   arg1.pendingSends = [];
@@ -171,7 +183,7 @@ function _relayCaptureRequest() {
       return arg1;
     })();
   });
-  closure_29 = tmp;
+  closure_30 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -227,7 +239,7 @@ function _relayControlRequest() {
       return arg1;
     })();
   });
-  closure_30 = tmp;
+  closure_31 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -237,6 +249,7 @@ function _relayControlRequest() {
   return applyArgumentsResult;
 }
 function handleEvent(projectId, pendingEvents, type) {
+  const _require = pendingEvents;
   if ("hello" !== type.type) {
     if ("history" !== type.type) {
       if ("capture_preview" !== type.type) {
@@ -257,11 +270,11 @@ function handleEvent(projectId, pendingEvents, type) {
     }
   }
   if ("history_page" === type.type) {
-    deleteResult = map6.get(projectId);
+    deleteResult = map7.get(projectId);
     deleteResult = null;
-    deleteResult = map6.delete(projectId);
+    deleteResult = map7.delete(projectId);
     if (true !== type.failed) {
-      deleteResult = importDefault;
+      deleteResult = attachment_id;
       deleteResult = dependencyMap;
       obj = { type: "VIBEGRATIONS_CHAT_HISTORY_PREPEND", projectId: null, entries: null, cursor: null };
       obj[1] = projectId;
@@ -278,11 +291,11 @@ function handleEvent(projectId, pendingEvents, type) {
         }
       }
       obj[3] = deleteResult;
-      deleteResult = dispatcherDefault.dispatch(obj);
+      deleteResult = attachment_id(709).dispatch(obj);
       deleteResult = loadOlderHistory;
       deleteResult = loadOlderHistory(projectId);
     }
-    const obj57 = map6;
+    const obj57 = map7;
   } else if ("hello" === type.type) {
     pendingEvents.helloSeen = true;
     const backoff = pendingEvents.backoff;
@@ -293,7 +306,7 @@ function handleEvent(projectId, pendingEvents, type) {
     if (messages1 == null) {
       messages1 = [];
     }
-    deleteResult = importDefault;
+    deleteResult = attachment_id;
     deleteResult = dependencyMap;
     deleteResult = messages1.slice();
     obj = { type: "VIBEGRATIONS_CHAT_HISTORY_SET", projectId: null, entries: null, cursor: null };
@@ -307,13 +320,13 @@ function handleEvent(projectId, pendingEvents, type) {
       }
     }
     obj[3] = deleteResult;
-    deleteResult = dispatcherDefault.dispatch(obj);
-    deleteResult = map6;
-    deleteResult = map6.delete(projectId);
+    deleteResult = attachment_id(709).dispatch(obj);
+    deleteResult = map7;
+    deleteResult = map7.delete(projectId);
     deleteResult = (function beginHistoryDrain(projectId) {
-      const tmp = callback3(projectId);
+      const tmp = callback(projectId);
       if (null != tmp) {
-        if (closure_34.get(projectId) !== tmp) {
+        if (closure_35.get(projectId) !== tmp) {
           const value = closure_11.get(projectId);
           if (null != value) {
             const result = obj.set(projectId, tmp);
@@ -321,7 +334,7 @@ function handleEvent(projectId, pendingEvents, type) {
             ws.sendLoadHistory(tmp);
           }
         }
-        obj = closure_34;
+        obj = closure_35;
       }
     })(projectId);
     pendingEvents = pendingEvents.pendingEvents;
@@ -330,9 +343,9 @@ function handleEvent(projectId, pendingEvents, type) {
     deleteResult = setConnState(projectId, "open");
     deleteResult = pendingEvents;
     deleteResult = pendingEvents;
-    for (const item10456 of pendingEvents) {
+    for (const item10467 of pendingEvents) {
       deleteResult = handleEvent;
-      deleteResult = handleEvent(arg0, arg1, item10456);
+      deleteResult = handleEvent(arg0, arg1, item10467);
       continue;
     }
     const pendingModelSettings = pendingEvents.pendingModelSettings;
@@ -346,14 +359,14 @@ function handleEvent(projectId, pendingEvents, type) {
     }
     deleteResult = flushPendingSends;
     deleteResult = flushPendingSends(projectId, pendingEvents);
-    const obj55 = dispatcherDefault;
+    const obj55 = attachment_id(709);
   } else if ("chat_state" === type.type) {
-    deleteResult = importDefault;
+    deleteResult = attachment_id;
     deleteResult = dependencyMap;
     obj1 = { type: "VIBEGRATIONS_CHAT_STOPPED_SET", projectId: null, stopped: null };
     obj1[1] = projectId;
     obj1[2] = type.stopped;
-    deleteResult = dispatcherDefault.dispatch(obj1);
+    deleteResult = attachment_id(709).dispatch(obj1);
     let stopped = type.stopped;
     if (!stopped) {
       deleteResult = map1;
@@ -363,106 +376,122 @@ function handleEvent(projectId, pendingEvents, type) {
       deleteResult = flushPendingSends;
       deleteResult = flushPendingSends(projectId, pendingEvents);
     }
-    const obj53 = dispatcherDefault;
+    const obj53 = attachment_id(709);
   } else if ("user_message" === type.type) {
     deleteResult = (function appendAcceptedUserMessage(projectId, content) {
-      obj = callback2(709);
-      obj = { type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND", projectId, content: content.content, id: content.id };
-      if (null != content.nonce) {
-        obj = { optimisticId: null };
-        const _HermesInternal = HermesInternal;
-        obj[0] = "optimistic:" + content.nonce;
-        obj1 = obj;
-      } else {
-        obj1 = {};
+      let hasItem = null != content.nonce;
+      if (hasItem) {
+        hasItem = map.has(content.nonce);
       }
-      const merged = Object.assign(obj1);
-      ({ user_id: obj2.userId, ts: obj2.timestamp, attachments: obj2.attachments } = content);
-      obj.dispatch(obj);
+      if (hasItem) {
+        hasItem = map.get(content.nonce) === content.user_id;
+      }
+      let tmp4 = hasItem;
+      if (hasItem) {
+        tmp4 = null != content.nonce;
+      }
+      if (tmp4) {
+        map.delete(content.nonce);
+      }
+      attachment_id(709);
+      obj = { type: "VIBEGRATIONS_CHAT_MESSAGE_APPEND", projectId, content: content.content, id: content.id };
+      if (hasItem) {
+        if (null != content.nonce) {
+          obj = { optimisticId: null };
+          const _HermesInternal = HermesInternal;
+          obj[0] = "optimistic:" + content.nonce;
+        }
+        const merged = Object.assign(obj);
+        ({ user_id: obj.userId, ts: obj.timestamp, attachments: obj.attachments } = content);
+        tmp8(obj);
+      }
+      obj = {};
     })(projectId, type);
   } else if ("message_disposition" === type.type) {
     if ((function isKnownDisposition(disposition) {
       const call = hasOwnProperty.call;
-      return typeof call === "unknown" ? hasOwnProperty(disposition) : call(closure_23, disposition);
+      return typeof call === "unknown" ? hasOwnProperty(disposition) : call(closure_24, disposition);
     })(type.disposition)) {
-      deleteResult = importDefault;
+      deleteResult = attachment_id;
       deleteResult = dependencyMap;
       let obj2 = { type: "VIBEGRATIONS_CHAT_MESSAGE_DISPOSITION", projectId: null, id: null, activeTurnId: null, disposition: null };
       obj2[1] = projectId;
       ({ id: obj52[2], active_turn_id: obj52[3], disposition: obj52[4] } = type);
-      deleteResult = dispatcherDefault.dispatch(obj2);
-      const obj51 = dispatcherDefault;
+      deleteResult = attachment_id(709).dispatch(obj2);
+      const obj51 = attachment_id(709);
     }
   } else if ("side_reply" === type.type) {
-    deleteResult = importDefault;
+    deleteResult = attachment_id;
     deleteResult = dependencyMap;
     const obj3 = { type: "VIBEGRATIONS_CHAT_SIDE_REPLY", projectId: null, id: null, inReplyTo: null, content: null, timestamp: null };
     obj3[1] = projectId;
     ({ id: obj50[2], in_reply_to: obj50[3], content: obj50[4], ts: obj50[5] } = type);
-    deleteResult = dispatcherDefault.dispatch(obj3);
-    const obj49 = dispatcherDefault;
+    deleteResult = attachment_id(709).dispatch(obj3);
+    const obj49 = attachment_id(709);
   } else if ("provisional_todo" === type.type) {
-    deleteResult = importDefault;
+    deleteResult = attachment_id;
     deleteResult = dependencyMap;
     obj4 = { type: "VIBEGRATIONS_CHAT_PROVISIONAL_TODO", projectId: null, turnId: null, text: null };
     obj4[1] = projectId;
     ({ turn_id: obj48[2], text: obj48[3] } = type);
-    deleteResult = dispatcherDefault.dispatch(obj4);
-    const obj47 = dispatcherDefault;
+    deleteResult = attachment_id(709).dispatch(obj4);
+    const obj47 = attachment_id(709);
   } else if ("step" === type.type) {
     if ("reply" === type.kind) {
+      let str23 = type.message;
+      deleteResult = null;
+      if (str23 == null) {
+        str23 = "";
+      }
+      if ("" !== str23) {
+        deleteResult = attachment_id;
+        deleteResult = dependencyMap;
+        let obj5 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
+        obj5[1] = projectId;
+        obj5[2] = type.turn_id;
+        const obj6 = { content: null, kind: "message" };
+        obj6[0] = str23;
+        obj5[3] = obj6;
+        deleteResult = attachment_id(709).dispatch(obj5);
+        const obj44 = attachment_id(709);
+      } else {
+        deleteResult = sendFailedStep;
+        deleteResult = _require;
+        deleteResult = dependencyMap;
+        const intl2 = _require(1236).intl;
+        deleteResult = attachment_id;
+        deleteResult = obj;
+        deleteResult = sendFailedStep(projectId, intl2.string(attachment_id(3469).Z8Eo8I), obj);
+      }
+    } else if ("announcement" === type.kind) {
       let str21 = type.message;
       deleteResult = null;
       if (str21 == null) {
         str21 = "";
       }
       if ("" !== str21) {
-        deleteResult = importDefault;
-        deleteResult = dependencyMap;
-        let obj5 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
-        obj5[1] = projectId;
-        obj5[2] = type.turn_id;
-        const obj6 = { content: null, kind: "message" };
-        obj6[0] = str21;
-        obj5[3] = obj6;
-        deleteResult = dispatcherDefault.dispatch(obj5);
-        const obj44 = dispatcherDefault;
-      } else {
-        deleteResult = sendFailedStep;
-        deleteResult = require;
-        deleteResult = dependencyMap;
-        const intl2 = getSystemLocale.intl;
-        deleteResult = importDefault;
-        deleteResult = obj;
-        deleteResult = sendFailedStep(projectId, intl2.string(messagesProxyDefault.Z8Eo8I), obj);
-      }
-    } else if ("announcement" === type.kind) {
-      let str19 = type.message;
-      deleteResult = null;
-      if (str19 == null) {
-        str19 = "";
-      }
-      if ("" !== str19) {
-        deleteResult = importDefault;
+        deleteResult = attachment_id;
         deleteResult = dependencyMap;
         let obj7 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
         obj7[1] = projectId;
         obj7[2] = type.turn_id;
         let obj8 = { announcement: null };
-        obj8[0] = str19;
+        obj8[0] = str21;
         obj7[3] = obj8;
-        deleteResult = dispatcherDefault.dispatch(obj7);
-        const obj73 = dispatcherDefault;
+        deleteResult = attachment_id(709).dispatch(obj7);
+        const obj74 = attachment_id(709);
         let obj9 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: null, turnId: null, step: null };
         obj9[1] = projectId;
         obj9[2] = type.turn_id;
         obj9[3] = type;
-        deleteResult = dispatcherDefault.dispatch(obj9);
-        const obj76 = dispatcherDefault;
+        deleteResult = attachment_id(709).dispatch(obj9);
+        const obj77 = attachment_id(709);
       }
     } else if ("thinking_lifecycle" === type.kind) {
       ({ phase, session, seq, ticks, elapsed_ms, text } = type);
-      if (tmp96) {
+      if (tmp99) {
+        deleteResult = attachment_id;
+        deleteResult = dependencyMap;
         let obj10 = { type: "VIBEGRATIONS_CHAT_THINKING_SET", projectId: null, activity: null };
         obj10[1] = projectId;
         const obj11 = { phase: null, session: null, seq: null, ticks: null, elapsedMs: null, text: null };
@@ -482,17 +511,17 @@ function handleEvent(projectId, pendingEvents, type) {
         }
         obj11[5] = text;
         obj10[2] = obj11;
-        dispatcherDefault.dispatch(obj10);
-        const obj41 = dispatcherDefault;
+        deleteResult = attachment_id(709).dispatch(obj10);
+        const obj41 = attachment_id(709);
       }
-      tmp96 = null != phase && null != seq && null != session;
+      tmp99 = null != phase && null != seq && null != session;
     } else if ("compaction" === type.kind) {
-      let tmp91 = "start" !== type.phase;
-      if (tmp91) {
-        tmp91 = "end" !== type.phase;
+      let tmp94 = "start" !== type.phase;
+      if (tmp94) {
+        tmp94 = "end" !== type.phase;
       }
-      if (!tmp91) {
-        let obj38 = dispatcherDefault;
+      if (!tmp94) {
+        let obj38 = attachment_id(709);
         let obj12 = { type: "VIBEGRATIONS_CHAT_COMPACTING_SET", projectId: null, compacting: null };
         obj12[1] = projectId;
         obj12[2] = "start" === type.phase;
@@ -504,7 +533,7 @@ function handleEvent(projectId, pendingEvents, type) {
         items = [];
       }
       if (items.length > 0) {
-        deleteResult = importDefault;
+        deleteResult = attachment_id;
         deleteResult = dependencyMap;
         let obj13 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
         obj13[1] = projectId;
@@ -512,18 +541,18 @@ function handleEvent(projectId, pendingEvents, type) {
         const obj14 = { todos: null };
         obj14[0] = items;
         obj13[3] = obj14;
-        deleteResult = dispatcherDefault.dispatch(obj13);
-        const obj68 = dispatcherDefault;
+        deleteResult = attachment_id(709).dispatch(obj13);
+        const obj69 = attachment_id(709);
         let obj15 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: null, turnId: null, step: null };
         obj15[1] = projectId;
         obj15[2] = type.turn_id;
         obj15[3] = type;
-        deleteResult = dispatcherDefault.dispatch(obj15);
-        const obj71 = dispatcherDefault;
+        deleteResult = attachment_id(709).dispatch(obj15);
+        const obj72 = attachment_id(709);
       }
     } else if ("plan_proposed" === type.kind) {
       if (null != type.proposal) {
-        let obj35 = dispatcherDefault;
+        let obj35 = attachment_id(709);
         const obj16 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
         obj16[1] = projectId;
         obj16[2] = type.turn_id;
@@ -532,16 +561,16 @@ function handleEvent(projectId, pendingEvents, type) {
         obj16[3] = obj17;
         obj35.dispatch(obj16);
       } else {
-        const intl = getSystemLocale.intl;
-        sendFailedStep(projectId, intl.string(messagesProxyDefault.IHCafX), obj);
+        const intl = _require(1236).intl;
+        sendFailedStep(projectId, intl.string(attachment_id(3469).IHCafX), obj);
       }
     } else if ("ideas" === type.kind) {
-      let tmp76 = null != type.ideas;
-      if (tmp76) {
-        tmp76 = type.ideas.length > 0;
+      let tmp79 = null != type.ideas;
+      if (tmp79) {
+        tmp79 = type.ideas.length > 0;
       }
-      if (tmp76) {
-        let obj32 = dispatcherDefault;
+      if (tmp79) {
+        let obj32 = attachment_id(709);
         const obj18 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
         obj18[1] = projectId;
         obj18[2] = type.turn_id;
@@ -551,8 +580,8 @@ function handleEvent(projectId, pendingEvents, type) {
         obj32.dispatch(obj18);
       }
     } else if ("clarification" === type.kind) {
-      let tmp71 = null != type.clarification;
-      if (tmp71) {
+      let tmp74 = null != type.clarification;
+      if (tmp74) {
         const questions = type.clarification.questions;
         let num4;
         if (questions != null) {
@@ -561,10 +590,10 @@ function handleEvent(projectId, pendingEvents, type) {
         if (num4 == null) {
           num4 = 0;
         }
-        tmp71 = num4 > 0;
+        tmp74 = num4 > 0;
       }
-      if (tmp71) {
-        let obj29 = dispatcherDefault;
+      if (tmp74) {
+        let obj29 = attachment_id(709);
         let obj20 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
         obj20[1] = projectId;
         obj20[2] = type.turn_id;
@@ -574,12 +603,12 @@ function handleEvent(projectId, pendingEvents, type) {
         obj29.dispatch(obj20);
       }
     } else if ("attachment" === type.kind) {
-      let tmp66 = null != type.attachments;
-      if (tmp66) {
-        tmp66 = type.attachments.length > 0;
+      let tmp69 = null != type.attachments;
+      if (tmp69) {
+        tmp69 = type.attachments.length > 0;
       }
-      if (tmp66) {
-        let obj26 = dispatcherDefault;
+      if (tmp69) {
+        let obj26 = attachment_id(709);
         let obj22 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
         obj22[1] = projectId;
         obj22[2] = type.turn_id;
@@ -594,7 +623,7 @@ function handleEvent(projectId, pendingEvents, type) {
         fields = [];
       }
       if (fields.length > 0) {
-        deleteResult = importDefault;
+        deleteResult = attachment_id;
         deleteResult = dependencyMap;
         const obj24 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
         obj24[1] = projectId;
@@ -602,14 +631,14 @@ function handleEvent(projectId, pendingEvents, type) {
         const obj25 = { secretRequest: null };
         obj26 = { fields: null, note: null, copy_values: null };
         obj26[0] = fields;
-        ({ note: obj67[1], copy_values: obj67[2] } = type);
+        ({ note: obj68[1], copy_values: obj68[2] } = type);
         obj25[0] = obj26;
         obj24[3] = obj25;
-        deleteResult = dispatcherDefault.dispatch(obj24);
-        const obj64 = dispatcherDefault;
+        deleteResult = attachment_id(709).dispatch(obj24);
+        const obj65 = attachment_id(709);
       }
     } else if ("collect_settings" === type.kind) {
-      obj22 = dispatcherDefault;
+      obj22 = attachment_id(709);
       const obj27 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
       obj27[1] = projectId;
       obj27[2] = type.turn_id;
@@ -620,38 +649,38 @@ function handleEvent(projectId, pendingEvents, type) {
       obj27[3] = obj28;
       obj22.dispatch(obj27);
     } else if ("usage" === type.kind) {
-      if (tmp57) {
-        obj20 = dispatcherDefault;
+      if (tmp60) {
+        obj20 = attachment_id(709);
         const obj30 = { type: "VIBEGRATIONS_CHAT_USAGE_SET", projectId: null, turn: null, project: null };
         obj30[1] = projectId;
         ({ turn: obj22[2], project: obj22[3] } = type);
         obj20.dispatch(obj30);
       }
-      tmp57 = null != type.turn && null != type.project;
+      tmp60 = null != type.turn && null != type.project;
     } else if ("project_named" === type.kind) {
       const name = type.name;
       const project = store.getProject(projectId);
       if (project != null) {
         if (project.name != null) {
-          const trimmed = str14.trim();
+          const trimmed = str16.trim();
         }
       }
-      let tmp49 = null == name;
-      if (!tmp49) {
-        tmp49 = "" === name;
+      let tmp52 = null == name;
+      if (!tmp52) {
+        tmp52 = "" === name;
       }
-      if (!tmp49) {
-        let tmp50 = null != trimmed;
-        if (tmp50) {
-          tmp50 = "" !== trimmed;
+      if (!tmp52) {
+        let tmp53 = null != trimmed;
+        if (tmp53) {
+          tmp53 = "" !== trimmed;
         }
-        if (tmp50) {
-          tmp50 = trimmed !== frozen.UNNAMED_PROJECT_NAME;
+        if (tmp53) {
+          tmp53 = trimmed !== _require(16028).UNNAMED_PROJECT_NAME;
         }
-        tmp49 = tmp50;
+        tmp52 = tmp53;
       }
-      if (!tmp49) {
-        obj19 = reloadVibegrationsAppFrames;
+      if (!tmp52) {
+        obj19 = _require(16029);
         obj19.renameProject(projectId, name).catch(() => {
 
         });
@@ -666,27 +695,75 @@ function handleEvent(projectId, pendingEvents, type) {
         pendingPublish.resolve(type);
       }
       if (true !== type.ok) {
-        deleteResult = require;
+        deleteResult = _require;
         deleteResult = dependencyMap;
-        let str13 = type.error;
-        if (str13 == null) {
-          str13 = "publish_result not ok";
+        let str15 = type.error;
+        if (str15 == null) {
+          str15 = "publish_result not ok";
         }
-        reloadVibegrationsAppFrames.trackPublishFailed(projectId, str13, false);
-        const obj63 = reloadVibegrationsAppFrames;
+        _require(16029).trackPublishFailed(projectId, str15, false);
+        const obj64 = _require(16029);
+      }
+    } else if ("app_icon_set" === type.kind) {
+      const icon = type.icon;
+      if (null != icon) {
+        if ("" !== icon) {
+          attachment_id = type.attachment_id;
+          deleteResult = _require;
+          deleteResult = dependencyMap;
+          const obj63 = _require(16029);
+          const setProjectIconResult = _require(16029).setProjectIcon(projectId, icon);
+          deleteResult = _require(16029).setProjectIcon(projectId, icon).then((ok) => {
+            let str = "failed";
+            if (ok.ok) {
+              str = "applied";
+            }
+            let tmp2 = null != attachment_id;
+            if (tmp2) {
+              tmp2 = "" !== tmp;
+            }
+            if (tmp2) {
+              const ws = pendingEvents.ws;
+              ws.sendAppIconAck(tmp, str);
+            }
+          }).catch(() => {
+            let tmp2 = null != attachment_id;
+            if (tmp2) {
+              tmp2 = "" !== tmp;
+            }
+            if (tmp2) {
+              const ws = pendingEvents.ws;
+              ws.sendAppIconAck(tmp, "failed");
+            }
+          });
+          const nextPromise = _require(16029).setProjectIcon(projectId, icon).then((ok) => {
+            let str = "failed";
+            if (ok.ok) {
+              str = "applied";
+            }
+            let tmp2 = null != attachment_id;
+            if (tmp2) {
+              tmp2 = "" !== tmp;
+            }
+            if (tmp2) {
+              const ws = pendingEvents.ws;
+              ws.sendAppIconAck(tmp, str);
+            }
+          });
+        }
       }
     } else if ("turn_result" === type.kind) {
-      obj12 = vibegrationLocation;
+      obj12 = _require(16026);
       let result = obj12.trackVibegrationTurnResulted(projectId, type);
       if ("deployed" === type.result) {
-        obj13 = dispatcherDefault;
+        obj13 = attachment_id(709);
         const obj31 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId: null, turnId: null, patch: null };
         obj31[1] = projectId;
         obj31[2] = type.turn_id;
         obj31[3] = { kind: "plan_implemented" };
         obj13.dispatch(obj31);
       }
-      obj15 = dispatcherDefault;
+      obj15 = attachment_id(709);
       obj32 = { type: "VIBEGRATIONS_CHAT_TURN_FINISHED", projectId: null, turnId: null, summary: null };
       obj32[1] = projectId;
       ({ turn_id: obj17[2], summary: obj17[3] } = type);
@@ -698,42 +775,51 @@ function handleEvent(projectId, pendingEvents, type) {
       if (deleteResult) {
         const obj33 = { type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId: null };
         obj33[1] = projectId;
-        tmp35(709).dispatch(obj33);
-        const tmp35Result = tmp35(709);
+        tmp37(709).dispatch(obj33);
+        const tmp37Result = tmp37(709);
       }
-      tmp35 = importDefault;
+      tmp37 = attachment_id;
     } else {
-      deleteResult = importDefault;
+      deleteResult = attachment_id;
       deleteResult = dependencyMap;
       const obj34 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId: null, turnId: null, step: null };
       obj34[1] = projectId;
       obj34[2] = type.turn_id;
       obj34[3] = type;
-      deleteResult = dispatcherDefault.dispatch(obj34);
-      deleteResult = obj;
-      deleteResult = obj[type.kind];
-      deleteResult = null;
-      if (null != deleteResult) {
-        obj10 = vibegrationLocation;
+      deleteResult = attachment_id(709).dispatch(obj34);
+      let tmp25 = "build_error" !== type.kind;
+      if (tmp25) {
+        tmp25 = "healthcheck_failed" !== type.kind;
+      }
+      if (tmp25) {
+        tmp25 = "error" !== type.kind;
+      }
+      if (!tmp25) {
+        obj10 = _require(16026);
         obj35 = {};
-        let merged = Object.assign(deleteResult);
-        ({ message: obj12.message, stderr_tail: obj12.details } = type);
+        let merged = Object.assign(obj[type.kind]);
+        obj35.message = type.message;
+        let stderr_tail;
+        if ("build_error" === type.kind) {
+          stderr_tail = type.stderr_tail;
+        }
+        obj35.details = stderr_tail;
         let result1 = obj10.trackVibegrationErrored(projectId, obj35);
       }
       if ("preview_ready" === type.kind) {
-        deleteResult = require;
-        const result2 = reloadVibegrationsAppFrames.refreshPublishedProject(projectId, { isPreview: true });
+        deleteResult = _require;
+        const result2 = _require(16029).refreshPublishedProject(projectId, { isPreview: true });
         deleteResult = result2.catch(() => {
 
         });
-        const obj62 = reloadVibegrationsAppFrames;
+        const obj62 = _require(16029);
       }
-      const obj60 = dispatcherDefault;
+      const obj60 = attachment_id(709);
     }
   } else if ("capture_preview" === type.type) {
     (function relayCaptureRequest(projectId, pendingEvents, type) {
       const self = this;
-      const apply = closure_29.apply;
+      const apply = closure_30.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -745,7 +831,7 @@ function handleEvent(projectId, pendingEvents, type) {
     });
     const promise2 = (function relayCaptureRequest(projectId, pendingEvents, type) {
       const self = this;
-      const apply = closure_29.apply;
+      const apply = closure_30.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -756,7 +842,7 @@ function handleEvent(projectId, pendingEvents, type) {
   } else if ("control_preview" === type.type) {
     (function relayControlRequest(projectId, pendingEvents, type) {
       const self = this;
-      const apply = closure_30.apply;
+      const apply = closure_31.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -768,7 +854,7 @@ function handleEvent(projectId, pendingEvents, type) {
     });
     const promise = (function relayControlRequest(projectId, pendingEvents, type) {
       const self = this;
-      const apply = closure_30.apply;
+      const apply = closure_31.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -781,28 +867,28 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            obj8 = _modDef15945;
+            obj8 = attachment_id(16024);
             const result3 = obj8.beginPreviewOperation(projectId);
           } else {
-            obj7 = _modDef15945;
+            obj7 = attachment_id(16024);
             obj7.endPreviewOperation(projectId);
           }
         } else if ("model_settings" === type.type) {
-          obj5 = dispatcherDefault;
+          obj5 = attachment_id(709);
           const obj36 = { type: "VIBEGRATIONS_MODEL_SETTINGS_SET", projectId: null, settings: null, choices: null };
           obj36[1] = projectId;
           ({ settings: obj7[2], choices: obj7[3] } = type);
           obj5.dispatch(obj36);
         } else if ("settings" === type.type) {
-          obj2 = dispatcherDefault;
+          obj2 = attachment_id(709);
           const obj37 = { type: "VIBEGRATIONS_SETTINGS_SET", projectId: null, settings: null };
           obj37[1] = projectId;
-          obj38 = { schema: null, values: null, secrets: null };
-          ({ schema: obj5[0], values: obj5[1], secrets: obj5[2] } = type);
+          obj38 = { schema: null, values: null, secrets: null, connections: null };
+          ({ schema: obj5[0], values: obj5[1], secrets: obj5[2], connections: obj5[3] } = type);
           obj37[2] = obj38;
           obj2.dispatch(obj37);
         } else {
-          obj = dispatcherDefault;
+          obj = attachment_id(709);
           const obj39 = { type: "VIBEGRATIONS_LOG_APPEND", projectId: null, log: null };
           obj39[1] = projectId;
           obj39[2] = type;
@@ -814,7 +900,7 @@ function handleEvent(projectId, pendingEvents, type) {
                 tmp2 = table[level.source];
               }
               if (null != tmp2) {
-                let value = closure_28.get(project_id);
+                let value = closure_29.get(project_id);
                 if (null == value) {
                   const _Set = Set;
                   set = new Set();
@@ -832,11 +918,11 @@ function handleEvent(projectId, pendingEvents, type) {
                   value.add(combined);
                   ({ location: obj3[0], code: obj3[1] } = tmp2);
                   ({ message: obj3[2], source: obj3[3] } = level);
-                  const result1 = callback(15947).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
+                  const result1 = pendingEvents(16026).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
                   obj = { location: null, code: null, message: null, details: null };
-                  const obj2 = callback(15947);
+                  const obj2 = pendingEvents(16026);
                 }
-                obj4 = closure_28;
+                obj4 = closure_29;
                 const str = level.message;
               }
             }
@@ -845,7 +931,7 @@ function handleEvent(projectId, pendingEvents, type) {
       }
     }
     let upload_token;
-    obj9 = map9;
+    obj9 = _require(16027);
     if ("capture_claim" === type.type) {
       upload_token = type.upload_token;
     }
@@ -872,7 +958,7 @@ function _openWithFreshTicket() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -898,7 +984,7 @@ function _openWithFreshTicket() {
               c6 = 2;
               c7 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_36(callback);
+              obj1[0] = closure_1_37(callback);
               return obj1;
             }
           } else {
@@ -907,7 +993,7 @@ function _openWithFreshTicket() {
               c5 = baseUrl;
               if (closure_1.disposed) {
                 c7 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 callback3(callback, "failed");
                 let _Error = Error;
@@ -915,7 +1001,7 @@ function _openWithFreshTicket() {
                 if (c5 instanceof Error) {
                   str = c5.message;
                 }
-                closure_24(callback, closure_1, str);
+                closure_25(callback, closure_1, str);
                 closure_1.pendingModelSettings = null;
                 callback2(closure_1, "Connection failed before the publish result arrived");
                 let obj2 = callback(closure_2[7]);
@@ -929,7 +1015,7 @@ function _openWithFreshTicket() {
                 obj2[2] = str2;
                 let result = obj2.trackVibegrationErrored(callback, obj2);
                 c7 = 3;
-                const tmp23 = closure_24;
+                const tmp23 = closure_25;
                 const tmp24 = callback;
                 const tmp25 = closure_1;
                 const tmp38 = callback;
@@ -953,7 +1039,7 @@ function _openWithFreshTicket() {
                 obj[0] = baseUrl;
                 obj[1] = ticket;
                 obj[2] = function onEvent(arg0) {
-                  return closure_1_31(closure_0, closure_1, arg0);
+                  return closure_1_32(closure_0, closure_1, arg0);
                 };
                 obj[3] = function onClose() {
                   const pendingPublish = lib.pendingPublish;
@@ -1005,7 +1091,7 @@ function _openWithFreshTicket() {
                     obj1 = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: null, connState: "closed" };
                     obj1[1] = tmp10;
                     obj1.dispatch(obj1);
-                    closure_1_24(tmp10, tmp, "Connection closed before the message was sent");
+                    closure_1_25(tmp10, tmp, "Connection closed before the message was sent");
                     tmp.pendingModelSettings = null;
                   }
                 };
@@ -1018,7 +1104,7 @@ function _openWithFreshTicket() {
             }
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp47) {
           baseUrl = tmp47;
@@ -1032,7 +1118,7 @@ function _openWithFreshTicket() {
       }
     })();
   });
-  closure_32 = tmp;
+  closure_33 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1061,11 +1147,11 @@ function teardown(closure_0) {
     const ws = value.ws;
     ws.close();
     obj.delete(closure_0);
-    map6.delete(closure_0);
-    const result = _modDef15945.releasePreviewControl(closure_0);
-    const obj2 = _modDef15945;
-    const result1 = map9.clearVibegrationsPreviewClaims(closure_0);
-    const obj3 = map9;
+    map7.delete(closure_0);
+    const result = _modDef16024.releasePreviewControl(closure_0);
+    const obj2 = _modDef16024;
+    const result1 = map10.clearVibegrationsPreviewClaims(closure_0);
+    const obj3 = map10;
     obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: null, connState: "closed" };
     obj[1] = closure_0;
     dispatcherDefault.dispatch(obj);
@@ -1079,7 +1165,7 @@ function loadOlderHistory(projectId) {
   if (null == tmp) {
     return false;
   } else {
-    if (map6.get(projectId) === tmp) {
+    if (map7.get(projectId) === tmp) {
       return true;
     } else {
       const value = map.get(projectId);
@@ -1092,7 +1178,7 @@ function loadOlderHistory(projectId) {
       }
       return flag;
     }
-    obj = map6;
+    obj = map7;
   }
 }
 function fetchWsTicket(arg0) {
@@ -1130,7 +1216,7 @@ function _fetchWsTicket() {
       return obj4;
     })();
   });
-  closure_37 = tmp;
+  closure_38 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1141,14 +1227,14 @@ function _fetchWsTicket() {
 }
 function getMediaTicket(arg0) {
   closure_0 = arg0;
-  let value = map7.get(arg0);
+  let value = map8.get(arg0);
   if (null != value) {
     const _Date = Date;
     if (value.expiresAt > Date.now()) {
       return Promise.resolve(value.ticket);
     }
   }
-  value = map8.get(arg0);
+  value = map9.get(arg0);
   if (null != value) {
     return value;
   } else {
@@ -1177,16 +1263,16 @@ function getMediaTicket(arg0) {
         obj = { ticket: null, expiresAt: null };
         obj[0] = ticket;
         obj[1] = tmp - 30000;
-        let result = closure_1_38.set(closure_0, obj);
+        let result = closure_1_39.set(closure_0, obj);
       }
       return ticket;
     }).finally(() => {
-      closure_1_39.delete(closure_0);
+      closure_1_40.delete(closure_0);
     });
     let result = obj.set(arg0, cleanupPromise);
     return cleanupPromise;
   }
-  obj = map8;
+  obj = map9;
 }
 function _fetchSourceHistory() {
   const self = this;
@@ -1206,7 +1292,7 @@ function _fetchSourceHistory() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1231,7 +1317,7 @@ function _fetchSourceHistory() {
               baseUrl = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_36(closure_0);
+              obj1[0] = closure_1_37(closure_0);
               return obj1;
             }
           } else if (1 === tmp4) {
@@ -1309,7 +1395,7 @@ function _fetchSourceHistory() {
       }
     })();
   });
-  closure_41 = tmp;
+  closure_42 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1337,7 +1423,7 @@ function _restoreSourceHistoryEntry() {
           obj[0] = str;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1364,7 +1450,7 @@ function _restoreSourceHistoryEntry() {
               baseUrl = 1;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_36(callback);
+              obj1[0] = closure_1_37(callback);
               return obj1;
             }
           } else if (1 === tmp5) {
@@ -1473,7 +1559,7 @@ function _restoreSourceHistoryEntry() {
       }
     })();
   });
-  closure_42 = tmp;
+  closure_43 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1517,7 +1603,7 @@ function _fetchRemixTicket() {
       return obj4;
     })();
   });
-  closure_44 = tmp;
+  closure_45 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1561,7 +1647,7 @@ function _uploadAttachmentBytes() {
       closure_0 = closure_1;
       closure_1 = closure_2;
       closure_2 = closure_3;
-      closure_3 = yield closure_1_36(closure_0);
+      closure_3 = yield closure_1_37(closure_0);
       ticket = closure_3.ticket;
       const baseUrl = closure_3.baseUrl;
       const _URLSearchParams = URLSearchParams;
@@ -1591,7 +1677,7 @@ function _uploadAttachmentBytes() {
       return arg1;
     })();
   });
-  closure_47 = tmp;
+  closure_48 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1610,7 +1696,7 @@ function _exportProjectArchive() {
     return (function*(arg0, arg1) {
       let ticket = tmp2;
       closure_0 = closure_1;
-      closure_1 = yield closure_1_36(closure_0);
+      closure_1 = yield closure_1_37(closure_0);
       ticket = closure_1.ticket;
       const baseUrl = closure_1.baseUrl;
       const _URLSearchParams = URLSearchParams;
@@ -1622,13 +1708,13 @@ function _exportProjectArchive() {
       const _HermesInternal = HermesInternal;
       c5 = yield fetch("" + baseUrl + "/agent/export?" + c4);
       if (!c5.ok) {
-        throw new closure_48(c5.status);
+        throw new closure_49(c5.status);
       }
       yield c5.blob();
       return arg1;
     })();
   });
-  closure_49 = tmp;
+  closure_50 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1656,7 +1742,7 @@ function _remixProjectWorkspace() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1679,7 +1765,7 @@ function _remixProjectWorkspace() {
               lib = undefined;
               c4 = undefined;
               c5 = undefined;
-              const items = [closure_1_43(closure_0), closure_1_36(dependencyMap)];
+              const items = [closure_1_44(closure_0), closure_1_37(dependencyMap)];
               c4 = 1;
               c5 = 1;
               obj1 = { value: null, done: false };
@@ -1732,9 +1818,9 @@ function _remixProjectWorkspace() {
             c5 = arg1;
             if (c5.ok) {
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
-              throw new closure_50(c5.status);
+              throw new closure_51(c5.status);
             }
           }
         } catch (tmp13) {
@@ -1744,7 +1830,7 @@ function _remixProjectWorkspace() {
       }
     })();
   });
-  closure_51 = tmp;
+  closure_52 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1772,7 +1858,7 @@ function _submitProjectSecrets() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1797,7 +1883,7 @@ function _submitProjectSecrets() {
               baseUrl = 1;
               c4 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_36(closure_0);
+              obj1[0] = closure_1_37(closure_0);
               return obj1;
             }
           } else if (1 === tmp4) {
@@ -1843,7 +1929,7 @@ function _submitProjectSecrets() {
             closure_5 = arg1;
             if (closure_5.ok) {
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
@@ -1858,7 +1944,7 @@ function _submitProjectSecrets() {
       }
     })();
   });
-  closure_52 = tmp;
+  closure_53 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1876,7 +1962,7 @@ function _submitProjectSettings() {
     c4 = 0;
     return (function*(arg0, arg1) {
       closure_0 = closure_1;
-      closure_1 = yield closure_1_36(closure_0);
+      closure_1 = yield closure_1_37(closure_0);
       const ticket = closure_1.ticket;
       const _URLSearchParams = URLSearchParams;
       const obj3 = { ticket: null };
@@ -1906,7 +1992,7 @@ function _submitProjectSettings() {
       return obj;
     })();
   });
-  closure_53 = tmp;
+  closure_54 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1934,7 +2020,7 @@ function _fetchProjectMcpConnection() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2067,7 +2153,204 @@ function _fetchProjectMcpConnection() {
     iter.next();
     return iter;
   });
-  closure_54 = tmp;
+  closure_55 = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+function _requestExternalAuthorizeUrl() {
+  const self = this;
+  const tmp = callback((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
+    return (function*(arg0, error) {
+      if (c8 === 2) {
+        c8 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp9 === 3) {
+        if (arg0 === 1) {
+          throw error;
+        } else if (arg0 === 2) {
+          obj = { value: null, done: true };
+          obj[0] = error;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c8 = 2;
+          if (0 === c7) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw error;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              obj = { value: null, done: true };
+              obj[0] = error;
+              return obj;
+            } else {
+              let baseUrl = tmp4;
+              let ticket = tmp10;
+              const callback = closure_1;
+              closure_1 = undefined;
+              let url;
+              closure_3 = undefined;
+              ticket = undefined;
+              baseUrl = undefined;
+              c6 = undefined;
+              c6 = 1;
+              c7 = 2;
+              c8 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_37(callback);
+              return obj1;
+            }
+          } else if (1 === tmp10) {
+            c6 = 0;
+            c8 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = { type: "error", error: "unavailable" };
+            return obj2;
+          } else if (2 === tmp10) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw error;
+            } else if (arg0 === 2) {
+              c6 = 0;
+              c8 = 3;
+              const obj3 = { value: null, done: true };
+              obj3[0] = error;
+              return obj3;
+            } else {
+              closure_3 = error;
+              ticket = closure_3.ticket;
+              baseUrl = closure_3.baseUrl;
+              const _fetch = fetch;
+              obj4 = { method: "POST", headers: null, body: null };
+              obj4[1] = { "content-type": "application/json" };
+              const _JSON = JSON;
+              const obj5 = { connection_type: null };
+              obj5[0] = callback;
+              obj4[2] = JSON.stringify(obj5);
+              c7 = 3;
+              c8 = 1;
+              let obj6 = { value: null, done: false };
+              obj6[0] = fetch((function externalAuthEndpoint(baseUrl, arg1, ticket) {
+                const uRLSearchParams = new URLSearchParams({ ticket });
+                return "" + baseUrl + "/agent/external-auth/" + "authorize-url" + "?" + uRLSearchParams;
+              })(baseUrl, "authorize-url", ticket), obj4);
+              return obj6;
+            }
+          } else if (3 === tmp10) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw error;
+            } else if (arg0 === 2) {
+              c6 = 0;
+              c8 = 3;
+              const obj7 = { value: null, done: true };
+              obj7[0] = error;
+              return obj7;
+            } else {
+              closure_1 = error;
+              c6 = 0;
+              if (closure_1.ok) {
+                c6 = 3;
+                c7 = 7;
+                c8 = 1;
+                const obj8 = { value: null, done: false };
+                obj8[0] = closure_1.json();
+                return obj8;
+              } else {
+                c6 = null;
+                c6 = 2;
+                const tmp30 = callback(url[19]);
+                closure_3 = tmp30;
+                url = tmp30.externalAuthErrorCode;
+                c7 = 6;
+                c8 = 1;
+                const obj9 = { value: null, done: false };
+                obj9[0] = closure_1.json();
+                return obj9;
+              }
+            }
+          } else {
+            if (4 === tmp10) {
+              c6 = 0;
+              obj6 = callback(url[19]);
+              { type: "error", error: null }[1] = obj6.externalAuthErrorFor(closure_1.status, c6);
+              c8 = 3;
+              const obj10 = { type: "error", error: null };
+            } else if (5 === tmp10) {
+              c6 = 0;
+              c8 = 3;
+              const obj11 = { value: null, done: true };
+              obj11[0] = { type: "error", error: "unavailable" };
+              return obj11;
+            } else if (6 === tmp10) {
+              if (arg0 === 1) {
+                c8 = 3;
+                throw error;
+              } else if (arg0 !== 2) {
+                error = undefined;
+                if (error != null) {
+                  error = error.error;
+                }
+                c6 = url(error);
+                c6 = 0;
+              }
+            } else if (arg0 === 1) {
+              c8 = 3;
+              throw error;
+            } else if (arg0 === 2) {
+              c6 = 0;
+              c8 = 3;
+              const obj12 = { value: null, done: true };
+              obj12[0] = error;
+              return obj12;
+            } else {
+              url = undefined;
+              if (error != null) {
+                url = error.url;
+              }
+              c6 = 0;
+              if (typeof url !== "string") {
+                obj = { type: "error", error: "unavailable" };
+                c8 = 3;
+              }
+              const obj13 = { type: "url", url: null };
+              obj13[1] = url;
+            }
+            c6 = 0;
+            c8 = 3;
+            const obj14 = { value: null, done: true };
+            obj14[0] = error;
+            return obj14;
+          }
+        } catch (tmp36) {
+          if (tmp5 === c6) {
+            c8 = tmp3;
+            throw tmp36;
+          } else if (tmp2 === tmp37) {
+            c7 = tmp2;
+          } else if (tmp === tmp37) {
+            c7 = tmp7;
+          } else {
+            c7 = tmp6;
+          }
+        }
+      }
+    })();
+  });
+  closure_56 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2095,7 +2378,7 @@ function _deleteStagedAttachment() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2121,7 +2404,7 @@ function _deleteStagedAttachment() {
               c4 = 1;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_36(closure_0);
+              obj1[0] = closure_1_37(closure_0);
               return obj1;
             }
           } else if (1 === tmp5) {
@@ -2162,7 +2445,7 @@ function _deleteStagedAttachment() {
             c5 = arg1;
             if (c5.ok) {
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
@@ -2177,7 +2460,7 @@ function _deleteStagedAttachment() {
       }
     })();
   });
-  closure_55 = tmp;
+  closure_57 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2196,7 +2479,7 @@ function _getPreviewScreenshotUrl() {
     return (function*(arg0, arg1) {
       let ticket = tmp2;
       closure_0 = closure_1;
-      closure_1 = yield closure_1_40(closure_0);
+      closure_1 = yield closure_1_41(closure_0);
       ticket = closure_1.ticket;
       const _URLSearchParams = URLSearchParams;
       const obj3 = { ticket: null };
@@ -2207,7 +2490,7 @@ function _getPreviewScreenshotUrl() {
       return "" + baseUrl + "/agent/screenshots/" + encodeURIComponent(closure_0) + "?" + c4;
     })();
   });
-  closure_56 = tmp;
+  closure_58 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2246,7 +2529,7 @@ function _getAttachmentUrl() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2331,7 +2614,7 @@ function _getAttachmentUrl() {
     iter.next();
     return iter;
   });
-  closure_58 = tmp;
+  closure_60 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2359,7 +2642,7 @@ function _isAttachmentAvailable() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2391,7 +2674,7 @@ function _isAttachmentAvailable() {
                 const self = this;
                 const tmp = callback(function*() {
                   const _fetch = fetch;
-                  yield closure_1_57(closure_1_0, c1);
+                  yield closure_1_59(closure_1_0, c1);
                   return fetch(arg1, { method: "HEAD" });
                 });
                 closure_3 = tmp;
@@ -2461,7 +2744,7 @@ function _isAttachmentAvailable() {
       }
     })();
   });
-  closure_59 = tmp;
+  closure_61 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2478,7 +2761,7 @@ function closeAllConnections() {
     continue;
   }
   map2.clear();
-  map7.clear();
+  map8.clear();
 }
 const map = new Map();
 const map1 = new Map();
@@ -2488,7 +2771,8 @@ const map3 = new Map();
 const map4 = new Map();
 let obj = { location: "connection", code: require("vibegrationLocation").VibegrationErrorCodes.SEND_FAILED };
 obj = { location: "agent", code: require("vibegrationLocation").VibegrationErrorCodes.AGENT_ERROR };
-let closure_23 = { steered: true, queued: true, restarting: true, answered: true };
+const map5 = new Map();
+let closure_24 = { steered: true, queued: true, restarting: true, answered: true };
 obj = { build_error: { location: "build", code: require("vibegrationLocation").VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
 let obj1 = { location: "build", code: require("vibegrationLocation").VibegrationErrorCodes.BUILD_FAILED };
 obj[1] = { location: "healthcheck", code: require("vibegrationLocation").VibegrationErrorCodes.HEALTHCHECK_FAILED };
@@ -2499,10 +2783,10 @@ let obj3 = { location: "agent", code: require("vibegrationLocation").Vibegration
 obj4[0] = { location: "runtime_frame", code: require("vibegrationLocation").VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
 let obj5 = { location: "runtime_frame", code: require("vibegrationLocation").VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
 obj4[1] = { location: "runtime_worker", code: require("vibegrationLocation").VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
-const map5 = new Map();
 const map6 = new Map();
 const map7 = new Map();
 const map8 = new Map();
+const map9 = new Map();
 const prototype = function VibegrationsExportError(status) {
   tmp = new tmp(concat(status, ")"), tmp2, concat);
   // ThrowIfThisInitialized (0x7c)
@@ -2554,6 +2838,18 @@ prototype3["getSettings"] = function getSettings(arg0) {
   }
   return value;
 };
+prototype3["getDeclaredConnections"] = function getDeclaredConnections(arg0) {
+  const value = map4.get(arg0);
+  let connections;
+  if (value != null) {
+    connections = value.connections;
+  }
+  if (connections == null) {
+    connections = closure_63;
+  }
+  return connections;
+};
+let closure_63 = [];
 const vibegrationsConnectionStore = new VibegrationsConnectionStore(dispatcherDefault, {
   VIBEGRATIONS_CHAT_CONN_STATE: function handleChatConnState(arg0) {
     ({ projectId, connState } = arg0);
@@ -2660,7 +2956,7 @@ export const ensureConnection = function ensureConnection(arg0) {
       dispatcherDefault.dispatch(obj);
       (function openWithFreshTicket(arg0, value) {
         const self = this;
-        const apply = closure_32.apply;
+        const apply = closure_33.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -2693,7 +2989,7 @@ export const ensureConnection = function ensureConnection(arg0) {
     obj1.dispatch(obj2);
     (function openWithFreshTicket(arg0, value) {
       const self = this;
-      const apply = closure_32.apply;
+      const apply = closure_33.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -2836,7 +3132,7 @@ export const sendModelSettings = function sendModelSettings(arg0, arg1) {
 };
 export { loadOlderHistory };
 export const resetHistoryPaging = function resetHistoryPaging(arg0) {
-  map6.delete(arg0);
+  map7.delete(arg0);
 };
 export const fetchSourceHistory = function fetchSourceHistory() {
   const self = this;
@@ -2920,7 +3216,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -2943,7 +3239,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
               ticket = 1;
               baseUrl = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_36(closure_1_0);
+              obj1[0] = closure_1_37(closure_1_0);
               return obj1;
             }
           } else if (1 === tmp5) {
@@ -2982,7 +3278,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
           } else {
             const ok = arg1.ok;
             baseUrl = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp8) {
           baseUrl = tmp;
@@ -3015,6 +3311,16 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
 export const fetchProjectMcpConnection = function fetchProjectMcpConnection(arg0) {
   const self = this;
   const apply = _fetchProjectMcpConnection.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const requestExternalAuthorizeUrl = function requestExternalAuthorizeUrl(arg0, arg1) {
+  const self = this;
+  const apply = _requestExternalAuthorizeUrl.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,12 +1,12 @@
-// === Module 4378: useManaTextMigrationHighlight ===
+// === Module 4442: useManaTextMigrationHighlight ===
 
-// Module 4378 (useManaTextMigrationHighlight)
+// Module 4442 (useManaTextMigrationHighlight)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
-import importDefaultResult from "getUserAgnosticState" /* 4379 */;
+import importDefaultResult from "getUserAgnosticState" /* 4443 */;
 import closure_4 from "handleThemeChange" /* 1302 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 let c3 = importDefaultResult;

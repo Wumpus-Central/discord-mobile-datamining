@@ -1,7 +1,7 @@
-// === Module 12188: useProvisionalAccountApplication ===
+// === Module 12261: useProvisionalAccountApplication ===
 
-// Module 12188 (useProvisionalAccountApplication)
-import closure_2 from "recountRelationshipTypes" /* 7264 */;
+// Module 12261 (useProvisionalAccountApplication)
+import closure_2 from "recountRelationshipTypes" /* 7330 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx");
@@ -14,5 +14,5 @@ export default function useProvisionalAccountApplication(arg0) {
     return 0 !== gameRelationshipsForUser.length ? gameRelationshipsForUser[0].applicationId : undefined;
   });
   const obj = _require(589);
-  return _require(5840).useGetOrFetchApplication(stateFromStores);
+  return _require(5906).useGetOrFetchApplication(stateFromStores);
 };

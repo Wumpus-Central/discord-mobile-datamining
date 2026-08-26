@@ -1,6 +1,6 @@
-// === Module 6990: metadata ===
+// === Module 7056: metadata ===
 
-// Module 6990 (metadata)
+// Module 7056 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WizardHatAndBookSpotIllustration-2x.png.js");

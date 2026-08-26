@@ -1,6 +1,6 @@
-// === Module 4806: useVisualEffectViewOverrides ===
+// === Module 4870: useVisualEffectViewOverrides ===
 
-// Module 4806 (useVisualEffectViewOverrides)
+// Module 4870 (useVisualEffectViewOverrides)
 import set from "set" /* 2 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import keys from "keys" /* 644 */;

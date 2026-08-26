@@ -1,11 +1,11 @@
-// === Module 15525: BoostProgressBarCoachmark ===
+// === Module 15604: BoostProgressBarCoachmark ===
 
-// Module 15525 (BoostProgressBarCoachmark)
+// Module 15604 (BoostProgressBarCoachmark)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
@@ -26,15 +26,15 @@ export default function BoostProgressBarCoachmark(guild) {
   const items1 = [guild.id, markAsDismissed];
   callback1 = callback.useCallback(() => {
     markAsDismissed(closure_1_5.TAKE_ACTION);
-    markAsDismissed(9168).saveGuild(guild.id, { premiumProgressBarEnabled: true });
+    markAsDismissed(9236).saveGuild(guild.id, { premiumProgressBarEnabled: true });
   }, items1);
   const items2 = [callback, callback1, tmp.riveContainer];
   const memo = callback.useMemo(() => {
     const obj = { title: null, description: null, visible: true, position: "bottom", offsetY: 8, onDismiss: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
     const intl = guild(1236).intl;
-    obj[0] = intl.string(markAsDismissed(2369).uwV2dH);
+    obj[0] = intl.string(markAsDismissed(2401).uwV2dH);
     const intl2 = guild(1236).intl;
-    obj[1] = intl2.string(markAsDismissed(2369).MIwlcR);
+    obj[1] = intl2.string(markAsDismissed(2401).MIwlcR);
     obj[5] = callback;
     obj[6] = function renderImgComponent() {
       return closure_1_6(closure_1_4, { style: riveContainer.riveContainer, children: closure_1_6(closure_1_0(closure_1_2[8]).BoostThisServerRive, { stateMachine: "State Machine 1" }) });
@@ -44,6 +44,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj[9] = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(8800).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(8868).useCoachmark(guild.targetRef, memo);
   return null;
 };

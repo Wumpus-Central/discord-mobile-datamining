@@ -1,9 +1,9 @@
-// === Module 12280: getDescriptiveInviteError ===
+// === Module 12352: getDescriptiveInviteError ===
 
-// Module 12280 (getDescriptiveInviteError)
+// Module 12352 (getDescriptiveInviteError)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import combinedDefault from "combined" /* 1995 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4043 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4107 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

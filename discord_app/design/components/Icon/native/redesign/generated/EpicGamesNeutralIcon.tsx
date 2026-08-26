@@ -1,10 +1,10 @@
-// === Module 9441: EpicGamesNeutralIcon ===
+// === Module 9509: EpicGamesNeutralIcon ===
 
-// Module 9441 (EpicGamesNeutralIcon)
+// Module 9509 (EpicGamesNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 9442 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 9510 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 10779: ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT ===
+// === Module 10851: ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT ===
 
-// Module 10779 (ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT)
+// Module 10851 (ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT)
 import closure_2 from "fetchFingerprint" /* 1218 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

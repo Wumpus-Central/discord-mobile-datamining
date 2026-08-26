@@ -1,11 +1,11 @@
-// === Module 10436: StrangerDangerMoreTipsModalActionItems ===
+// === Module 10504: StrangerDangerMoreTipsModalActionItems ===
 
-// Module 10436 (StrangerDangerMoreTipsModalActionItems)
+// Module 10504 (StrangerDangerMoreTipsModalActionItems)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "markAllUserIdListsStale" /* 4034 */;
+import closure_5 from "markAllUserIdListsStale" /* 4098 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9818 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 9885 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

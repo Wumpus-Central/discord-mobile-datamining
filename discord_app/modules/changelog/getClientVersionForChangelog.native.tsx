@@ -1,8 +1,8 @@
-// === Module 16666: getClientVersionForChangelog ===
+// === Module 16751: getClientVersionForChangelog ===
 
-// Module 16666 (getClientVersionForChangelog)
+// Module 16751 (getClientVersionForChangelog)
 import set from "set" /* 2 */;
-import getAppMajorVersion from "getAppMajorVersion" /* 16667 */;
+import getAppMajorVersion from "getAppMajorVersion" /* 16752 */;
 
 const result = set.fileFinishedImporting("modules/changelog/getClientVersionForChangelog.native.tsx");
 

@@ -1,16 +1,16 @@
-// === Module 15597: handlePress ===
+// === Module 15676: handlePress ===
 
-// Module 15597 (handlePress)
+// Module 15676 (handlePress)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4098 */;
-import computeChannelNameDefault from "computeChannelName" /* 4574 */;
-import registerAssetDefault from "registerAsset" /* 8759 */;
-import getChannelModeDefault from "getChannelMode" /* 15473 */;
+import dispatcherDefault from "dispatcher" /* 4162 */;
+import computeChannelNameDefault from "computeChannelName" /* 4638 */;
+import registerAssetDefault from "registerAsset" /* 8827 */;
+import getChannelModeDefault from "getChannelMode" /* 15552 */;
 import importAllResult from "noop" /* 19 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4590 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4654 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function handlePress() {

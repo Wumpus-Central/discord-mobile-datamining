@@ -1,16 +1,16 @@
-// === Module 11454: DCDChatList ===
+// === Module 11526: DCDChatList ===
 
-// Module 11454 (DCDChatList)
+// Module 11526 (DCDChatList)
 import initialize from "initialize" /* 589 */;
 import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5533 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 11096 */;
-import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 11455 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11456 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5599 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 11168 */;
+import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 11527 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11528 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function DCDChatList() {

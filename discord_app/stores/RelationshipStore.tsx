@@ -1,10 +1,10 @@
-// === Module 4034: markAllUserIdListsStale ===
+// === Module 4098: markAllUserIdListsStale ===
 
-// Module 4034 (markAllUserIdListsStale)
+// Module 4098 (markAllUserIdListsStale)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "hasFlag" /* 4035 */;
+import closure_3 from "hasFlag" /* 4099 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 import set from "set" /* 2 */;

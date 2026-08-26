@@ -1,19 +1,20 @@
-// === Module 10664: AppStoreOverlayStatCardItem ===
+// === Module 10732: AppStoreOverlayStatCardItem ===
 
-// Module 10664 (AppStoreOverlayStatCardItem)
+// Module 10732 (AppStoreOverlayStatCardItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4376 */;
-import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 10665 */;
-import FractionalStarDefault from "FractionalStar" /* 10666 */;
+import Text from "Text" /* 4440 */;
+import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 10733 */;
+import FractionalStarDefault from "FractionalStar" /* 10734 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function AppStoreOverlayStatCardItem(stat) {
   stat = stat.stat;
+  const tmp = callback2();
   const type = stat.type;
   if ("rating" === type) {
     let num = stat.maxRating;
@@ -24,10 +25,10 @@ function AppStoreOverlayStatCardItem(stat) {
     const result = obj2.formatAppStoreRatingValue(stat.rating, getSystemLocale.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      let tmp9Result = tmp9(10665);
+      let tmp9Result = tmp9(10733);
       result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1236).intl.currentLocale);
     }
-    tmp9Result = tmp9(10665);
+    tmp9Result = tmp9(10733);
     const appStoreStarFillAmounts = tmp9Result.getAppStoreStarFillAmounts(stat.rating, num);
     const intl = tmp9(1236).intl;
     let obj = { label: null, rating: null, maxRating: null, ratingCount: null };
@@ -48,10 +49,10 @@ function AppStoreOverlayStatCardItem(stat) {
     obj[3] = result1;
     let tmp6 = obj;
   } else if ("age" === type) {
-    obj2 = { accessibilityLabel: null, primaryText: null };
+    obj2 = { accessibilityLabel: null, primaryText: null, secondaryText: null };
     const _HermesInternal3 = HermesInternal;
     obj2[0] = "" + stat.label + ", " + stat.ageRating;
-    obj2[1] = stat.ageRating;
+    ({ ageRating: obj2[1], ageRatingLabel: obj2[2] } = stat);
     tmp6 = obj2;
   } else if ("chart" === type) {
     const result2 = formatAppStoreRatingValue.formatAppStoreChartRank(stat.rank);
@@ -67,10 +68,10 @@ function AppStoreOverlayStatCardItem(stat) {
     obj[1] = result2;
     obj[2] = stat.category;
     tmp6 = obj;
-    const obj11 = formatAppStoreRatingValue;
+    const obj12 = formatAppStoreRatingValue;
   }
   ({ secondaryText, secondaryContent, ratingCount } = tmp6);
-  const obj3 = { style: callback2().statCard, accessible: true, accessibilityRole: "text", accessibilityLabel: tmp6.accessibilityLabel, children: null };
+  const obj3 = { style: tmp.statCard, accessible: true, accessibilityRole: "text", accessibilityLabel: tmp6.accessibilityLabel, children: null };
   const items = [stat.label, " ", ];
   let str9 = "";
   if (null != ratingCount) {
@@ -79,30 +80,35 @@ function AppStoreOverlayStatCardItem(stat) {
   }
   items[2] = str9;
   const items1 = [closure_6(Text.Text, { variant: "text-xs/semibold", color: "text-subtle", children: items }), callback(Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 1, children: tmp6.primaryText }), ];
-  if (null == secondaryContent) {
-    let tmp21Result = null != secondaryText;
-    if (tmp21Result) {
-      const obj4 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
-      obj4[3] = secondaryText;
-      tmp21Result = callback(tmp18(4376).Text, obj4);
+  let tmp21Result = null != secondaryContent || null != secondaryText;
+  if (tmp21Result) {
+    const obj4 = { style: null, children: null };
+    obj4[0] = tmp.secondaryRow;
+    if (null == secondaryContent) {
+      const obj5 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
+      obj5[3] = secondaryText;
+      secondaryContent = tmp21(tmp18(4440).Text, obj5);
     }
-    secondaryContent = tmp21Result;
+    obj4[1] = secondaryContent;
+    tmp21Result = tmp21(tmp17, obj4);
   }
-  items1[2] = secondaryContent;
+  items1[2] = tmp21Result;
   obj3[4] = items1;
   return closure_6(closure_4, obj3);
 }
 noopAll;
 ({ ScrollView: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { carousel: null, carouselContent: null, statCard: null };
+createCacheKey = { carousel: null, carouselContent: null, statCard: null, secondaryRow: null };
 createCacheKey = { marginHorizontal: -ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { gap: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16 };
 let obj1 = { gap: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { width: 130, height: 87, borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
+createCacheKey[2] = { width: 130, height: 92, borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
+let obj2 = { width: 130, height: 92, borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
+createCacheKey[3] = { height: ThemesDefault.space.PX_16, justifyContent: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { width: 130, height: 87, borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
+let obj3 = { height: ThemesDefault.space.PX_16, justifyContent: "center" };
 let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatsCarousel.tsx");
 
 export default function AppStoreOverlayStatsCarousel(stats) {

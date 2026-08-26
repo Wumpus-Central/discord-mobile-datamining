@@ -1,9 +1,9 @@
-// === Module 12135: useGameServerFeaturedGameNames ===
+// === Module 12208: useGameServerFeaturedGameNames ===
 
-// Module 12135 (useGameServerFeaturedGameNames)
+// Module 12208 (useGameServerFeaturedGameNames)
 import set from "set" /* 2 */;
-import importDefaultResult1 from "importDefaultResult1" /* 6033 */;
-import str11 from "str11" /* 4268 */;
+import importDefaultResult1 from "importDefaultResult1" /* 6099 */;
+import str11 from "str11" /* 4332 */;
 
 ({ MINECRAFT_GAME_ID: obj1, HYTALE_GAME_ID: c3 } = str11);
 const result = set.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");

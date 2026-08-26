@@ -1,6 +1,6 @@
-// === Module 5949: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ===
+// === Module 6015: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ===
 
-// Module 5949 (FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID)
+// Module 6015 (FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;

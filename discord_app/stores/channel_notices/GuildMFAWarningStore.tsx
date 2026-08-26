@@ -1,6 +1,6 @@
-// === Module 13225: handleUserStoreUpdates ===
+// === Module 13298: handleUserStoreUpdates ===
 
-// Module 13225 (handleUserStoreUpdates)
+// Module 13298 (handleUserStoreUpdates)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "comparator" /* 1982 */;

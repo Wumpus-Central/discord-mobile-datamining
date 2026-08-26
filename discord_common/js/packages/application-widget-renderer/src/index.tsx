@@ -1,9 +1,9 @@
-// === Module 12559: resolvedValuesFromUserApplicationIdentityProfile ===
+// === Module 12630: resolvedValuesFromUserApplicationIdentityProfile ===
 
-// Module 12559 (resolvedValuesFromUserApplicationIdentityProfile)
+// Module 12630 (resolvedValuesFromUserApplicationIdentityProfile)
 import set from "set" /* 2 */;
-import isVisualUnfurledMedia from "isVisualUnfurledMedia" /* 12644 */;
-import isVisualUnfurledMediaDefault from "isVisualUnfurledMedia" /* 12644 */;
+import isVisualUnfurledMedia from "isVisualUnfurledMedia" /* 12715 */;
+import isVisualUnfurledMediaDefault from "isVisualUnfurledMedia" /* 12715 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/index.tsx");
 for (const key10018 in require("toAsciiDigits")) {

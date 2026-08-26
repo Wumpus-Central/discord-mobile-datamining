@@ -1,16 +1,16 @@
-// === Module 10718: ConfirmActivityGateContent ===
+// === Module 10790: ConfirmActivityGateContent ===
 
-// Module 10718 (ConfirmActivityGateContent)
+// Module 10790 (ConfirmActivityGateContent)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4376 */;
-import setDefault from "set" /* 4744 */;
-import SvgComponentDefault from "SvgComponent" /* 10719 */;
+import Text from "Text" /* 4440 */;
+import setDefault from "set" /* 4808 */;
+import SvgComponentDefault from "SvgComponent" /* 10791 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function ConfirmActivityGateContent(children) {

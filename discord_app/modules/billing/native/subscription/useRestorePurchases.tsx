@@ -1,6 +1,6 @@
-// === Module 14654: useRestorePurchases ===
+// === Module 14727: useRestorePurchases ===
 
-// Module 14654 (useRestorePurchases)
+// Module 14727 (useRestorePurchases)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -35,7 +35,7 @@ export default function useRestorePurchases() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

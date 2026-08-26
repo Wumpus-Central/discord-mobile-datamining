@@ -1,20 +1,20 @@
-// === Module 15060: SkeletonGrid ===
+// === Module 15139: SkeletonGrid ===
 
-// Module 15060 (SkeletonGrid)
+// Module 15139 (SkeletonGrid)
 import noopAll from "noop" /* 19 */;
-import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 9492 */;
-import sharedValueDefault from "sharedValue" /* 14532 */;
-import ShopCardGridItemDefault from "ShopCardGridItem" /* 15062 */;
+import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 9560 */;
+import sharedValueDefault from "sharedValue" /* 14605 */;
+import ShopCardGridItemDefault from "ShopCardGridItem" /* 15141 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
   const tmp = callback();
-  let obj = num(15061);
+  let obj = num(15140);
   const cardLayout = obj.useCardLayout();
   ({ columns, cardWidth: num } = cardLayout);
   const items = [];
@@ -45,7 +45,7 @@ function SkeletonGrid(accessibilityLabel) {
 }
 noopAll;
 createCacheKey = { skeletonGrid: { flex: 1, alignItems: "center" }, skeletonRow: null };
-createCacheKey = { flexDirection: "row", gap: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP, paddingHorizontal: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP };
+createCacheKey = { flexDirection: "row", gap: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP };
 createCacheKey[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/collectibles/native/FeedProductList.tsx");

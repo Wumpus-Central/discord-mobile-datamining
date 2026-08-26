@@ -1,6 +1,6 @@
-// === Module 12718: useFriendRequestActions ===
+// === Module 12791: useFriendRequestActions ===
 
-// Module 12718 (useFriendRequestActions)
+// Module 12791 (useFriendRequestActions)
 import closure_2 from "noop" /* 19 */;
 
 let result = require("set").fileFinishedImporting("modules/people/hooks/useFriendRequestActions.tsx");

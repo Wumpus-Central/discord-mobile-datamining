@@ -1,9 +1,9 @@
-// === Module 4248: PortalKeyboardState ===
+// === Module 4312: PortalKeyboardState ===
 
-// Module 4248 (PortalKeyboardState)
+// Module 4312 (PortalKeyboardState)
 import noopAll from "noop" /* 19 */;
-import coerceMainRoute from "coerceMainRoute" /* 4234 */;
-import Portal from "Portal" /* 4249 */;
+import coerceMainRoute from "coerceMainRoute" /* 4298 */;
+import Portal from "Portal" /* 4313 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -24,7 +24,7 @@ export const PortalKeyboard = function PortalKeyboard(children) {
     obj = { hostName: null, children: null };
     obj[0] = tmp3;
     obj[1] = children.children;
-    return jsx(tmp(4249).Portal, { hostName: null, children: null });
+    return jsx(tmp(4313).Portal, { hostName: null, children: null });
   }
   tmp3 = c3;
 };

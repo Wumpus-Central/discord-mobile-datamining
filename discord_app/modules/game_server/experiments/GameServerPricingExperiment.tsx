@@ -1,9 +1,9 @@
-// === Module 12069: experiment ===
+// === Module 12142: experiment ===
 
-// Module 12069 (experiment)
+// Module 12142 (experiment)
 import set from "set" /* 2 */;
-import experiment2 from "experiment" /* 4290 */;
-import createExperiment from "createExperiment" /* 4291 */;
+import experiment2 from "experiment" /* 4354 */;
+import createExperiment from "createExperiment" /* 4355 */;
 
 const items = [{ id: 1, label: "Enable Game Server Pricing", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-03_game_server_pricing", label: "Game Server Pricing", defaultConfig: { enabled: false }, treatments: items });

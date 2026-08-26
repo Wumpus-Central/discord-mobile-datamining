@@ -1,6 +1,6 @@
-// === Module 7340: InviteSendStates ===
+// === Module 7406: InviteSendStates ===
 
-// Module 7340 (InviteSendStates)
+// Module 7406 (InviteSendStates)
 import set from "set" /* 2 */;
 
 const obj = { GUILD: 0, [0]: "GUILD", GROUP_DM: 1, [1]: "GROUP_DM", FRIEND: 2, [2]: "FRIEND" };

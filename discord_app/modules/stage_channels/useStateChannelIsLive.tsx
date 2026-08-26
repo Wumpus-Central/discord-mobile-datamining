@@ -1,6 +1,6 @@
-// === Module 7921: useStageChannelIsLive ===
+// === Module 7988: useStageChannelIsLive ===
 
-// Module 7921 (useStageChannelIsLive)
+// Module 7988 (useStageChannelIsLive)
 import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 
 const require = arg1;

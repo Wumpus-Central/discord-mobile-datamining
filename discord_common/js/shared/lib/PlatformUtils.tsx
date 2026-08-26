@@ -1,6 +1,6 @@
-// === Module 4642: isTablet ===
+// === Module 4706: isTablet ===
 
-// Module 4642 (isTablet)
+// Module 4706 (isTablet)
 import importDefaultResult1 from "format" /* 669 */;
 import set from "set" /* 2 */;
 

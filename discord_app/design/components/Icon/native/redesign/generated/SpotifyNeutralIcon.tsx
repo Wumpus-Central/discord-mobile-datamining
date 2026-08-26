@@ -1,10 +1,10 @@
-// === Module 15437: SpotifyNeutralIcon ===
+// === Module 15516: SpotifyNeutralIcon ===
 
-// Module 15437 (SpotifyNeutralIcon)
+// Module 15516 (SpotifyNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 15438 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 15517 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

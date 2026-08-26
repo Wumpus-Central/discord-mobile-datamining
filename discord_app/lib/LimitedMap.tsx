@@ -1,6 +1,6 @@
-// === Module 8373: LimitedMap ===
+// === Module 8440: LimitedMap ===
 
-// Module 8373 (LimitedMap)
+// Module 8440 (LimitedMap)
 import set from "set" /* 2 */;
 
 class LimitedMap extends Map {

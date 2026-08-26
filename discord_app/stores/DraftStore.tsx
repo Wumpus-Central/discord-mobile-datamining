@@ -1,6 +1,6 @@
-// === Module 4742: handleChanged ===
+// === Module 4806: handleChanged ===
 
-// Module 4742 (handleChanged)
+// Module 4806 (handleChanged)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
@@ -8,7 +8,7 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 4743 */;
+import closure_6 from "handleConnectionOpen" /* 4807 */;
 
 const require = arg1;
 function handleChanged(type) {

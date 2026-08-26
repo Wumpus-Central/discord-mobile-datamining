@@ -1,12 +1,12 @@
-// === Module 8888: useEmojiAndSource ===
+// === Module 8956: useEmojiAndSource ===
 
-// Module 8888 (useEmojiAndSource)
+// Module 8956 (useEmojiAndSource)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getEmojiToGroupId" /* 5282 */;
-import getEmojiSourceData from "getEmojiSourceData" /* 5886 */;
+import closure_6 from "getEmojiToGroupId" /* 5348 */;
+import getEmojiSourceData from "getEmojiSourceData" /* 5952 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 const require = arg1;
@@ -93,7 +93,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -148,7 +148,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
               current();
             }
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } catch (tmp27) {
             v0 = tmp;
             throw tmp27;

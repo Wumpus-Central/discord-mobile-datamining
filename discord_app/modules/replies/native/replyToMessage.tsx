@@ -1,14 +1,14 @@
-// === Module 11229: longPressMessageHandleReply ===
+// === Module 11301: longPressMessageHandleReply ===
 
-// Module 11229 (longPressMessageHandleReply)
+// Module 11301 (longPressMessageHandleReply)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4588 */;
-import trackInviteDefault from "trackInvite" /* 7063 */;
-import handleEdit from "handleEdit" /* 11215 */;
-import createPendingReply from "createPendingReply" /* 11217 */;
-import closure_3 from "initialize" /* 7286 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4652 */;
+import trackInviteDefault from "trackInvite" /* 7129 */;
+import handleEdit from "handleEdit" /* 11287 */;
+import createPendingReply from "createPendingReply" /* 11289 */;
+import closure_3 from "initialize" /* 7352 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "getState" /* 7285 */;
+import closure_5 from "getState" /* 7351 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;

@@ -1,12 +1,12 @@
-// === Module 10002: NOTIFICATION_MAX_WIDTH ===
+// === Module 10069: NOTIFICATION_MAX_WIDTH ===
 
-// Module 10002 (NOTIFICATION_MAX_WIDTH)
+// Module 10069 (NOTIFICATION_MAX_WIDTH)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
-import set from "set" /* 9925 */;
+import set from "set" /* 9992 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 ({ MIN_SWIPE_VELOCITY: c4, STARTED_SWIPE_THRESHOLD: c5, NOTIFICATION_MAX_WIDTH } = set);

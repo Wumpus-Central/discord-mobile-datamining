@@ -1,9 +1,9 @@
-// === Module 13990: RPC_AUTHENTICATED_SCOPE ===
+// === Module 14063: RPC_AUTHENTICATED_SCOPE ===
 
-// Module 13990 (RPC_AUTHENTICATED_SCOPE)
+// Module 14063 (RPC_AUTHENTICATED_SCOPE)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4282 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4346 */;
 import { RPCEvents } from "ME" /* 676 */;
 
 let c0 = arg1;

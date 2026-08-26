@@ -1,10 +1,10 @@
-// === Module 8201: set ===
+// === Module 8268: set ===
 
-// Module 8201 (set)
+// Module 8268 (set)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 8202 */;
+import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 8269 */;
 import closure_3 from "isSubscriptionGated" /* 1983 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;

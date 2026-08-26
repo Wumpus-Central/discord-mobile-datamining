@@ -1,11 +1,11 @@
-// === Module 15083: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 15162: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 15083 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 15162 (CollectiblesShopViewAllCategoryItemsHeader)
 import noopAll from "noop" /* 19 */;
-import registerAssetDefault from "registerAsset" /* 8543 */;
+import registerAssetDefault from "registerAsset" /* 8611 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 noopAll;
@@ -20,7 +20,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   let obj = _require(1500);
   _require = obj.useStackNavigation();
   const tmp = callback3();
-  obj1 = _require(7784);
+  obj1 = _require(7851);
   obj = { style: null, children: null };
   obj = {};
   const youBarSettingsCustomHeaderPaddingTop = obj1.useYouBarSettingsCustomHeaderPaddingTop();
@@ -34,7 +34,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   obj2[3] = function onPress() {
     navigation.goBack();
   };
-  obj1[1] = callback(_require(8539).HeaderIconButton, obj2);
+  obj1[1] = callback(_require(8607).HeaderIconButton, obj2);
   const items = [callback(closure_4, obj1), , ];
   const obj3 = { resizeMode: "contain", style: tmp.logo, source: { uri: logoUrl }, accessibilityLabel: null, accessibilityRole: "header" };
   const intl2 = _require(1236).intl;

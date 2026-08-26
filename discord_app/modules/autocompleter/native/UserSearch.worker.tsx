@@ -1,6 +1,6 @@
-// === Module 7457: UserSearchWorkerManager ===
+// === Module 7523: UserSearchWorkerManager ===
 
-// Module 7457 (UserSearchWorkerManager)
+// Module 7523 (UserSearchWorkerManager)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set from "set" /* 2 */;
 

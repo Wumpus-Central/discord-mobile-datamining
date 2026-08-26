@@ -1,9 +1,9 @@
-// === Module 10304: BalanceWidgetPillButton ===
+// === Module 10372: BalanceWidgetPillButton ===
 
-// Module 10304 (BalanceWidgetPillButton)
+// Module 10372 (BalanceWidgetPillButton)
 import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 4815 */;
-import registerAssetDefault from "registerAsset" /* 9555 */;
+import Button from "Button" /* 4879 */;
+import registerAssetDefault from "registerAsset" /* 9623 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

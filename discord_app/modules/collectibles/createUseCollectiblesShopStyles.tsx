@@ -1,8 +1,8 @@
-// === Module 10282: createUseCollectiblesShopStyles ===
+// === Module 10350: createUseCollectiblesShopStyles ===
 
-// Module 10282 (createUseCollectiblesShopStyles)
+// Module 10350 (createUseCollectiblesShopStyles)
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/createUseCollectiblesShopStyles.tsx");

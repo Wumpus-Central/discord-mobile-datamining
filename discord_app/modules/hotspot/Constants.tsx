@@ -1,6 +1,6 @@
-// === Module 5943: HotspotLocations ===
+// === Module 6009: HotspotLocations ===
 
-// Module 5943 (HotspotLocations)
+// Module 6009 (HotspotLocations)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/hotspot/Constants.tsx");

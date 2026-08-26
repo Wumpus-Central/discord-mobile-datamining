@@ -1,8 +1,8 @@
-// === Module 12100: useDeactivateWarningText ===
+// === Module 12173: useDeactivateWarningText ===
 
-// Module 12100 (useDeactivateWarningText)
+// Module 12173 (useDeactivateWarningText)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleInviteData" /* 4300 */;
+import closure_4 from "handleInviteData" /* 4364 */;
 import closure_5 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 

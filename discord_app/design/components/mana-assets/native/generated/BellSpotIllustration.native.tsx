@@ -1,10 +1,10 @@
-// === Module 6233: BellSpotIllustration ===
+// === Module 6299: BellSpotIllustration ===
 
-// Module 6233 (BellSpotIllustration)
+// Module 6299 (BellSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6234 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 6300 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BellSpotIllustration.native.tsx");

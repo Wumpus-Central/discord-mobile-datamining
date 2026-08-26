@@ -1,11 +1,11 @@
-// === Module 7084: handleSelectedChannelStoreChanged ===
+// === Module 7150: handleSelectedChannelStoreChanged ===
 
-// Module 7084 (handleSelectedChannelStoreChanged)
+// Module 7150 (handleSelectedChannelStoreChanged)
 import clearAllDefault from "clearAll" /* 1220 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "handleInviteData" /* 4300 */;
+import closure_3 from "handleInviteData" /* 4364 */;
 import closure_4 from "handleConnectionOpen" /* 1981 */;
-import closure_5 from "result" /* 7085 */;
+import closure_5 from "result" /* 7151 */;
 import bound from "module_25" /* 25 */;
 
 let prototype = arg1;
@@ -17,11 +17,11 @@ function handleSelectedChannelStoreChanged() {
 }
 function handleConnectionOpenSupplemental() {
   const result = SaveableChannelsStore.dropUnreachableChannels();
-  SaveableChannelsStore.replaceLru(prototype(7092).withFallbacks(extendedMemoryLru, 1250));
+  SaveableChannelsStore.replaceLru(prototype(7158).withFallbacks(extendedMemoryLru, 1250));
 }
 function handleChannelUpdate(id) {
   id = id.id;
-  const isReadableChannelResult = prototype(7090).isReadableChannel(id);
+  const isReadableChannelResult = prototype(7156).isReadableChannel(id);
   let tmp2 = isReadableChannelResult;
   if (isReadableChannelResult) {
     tmp2 = id === store2.getChannelId();
@@ -46,7 +46,7 @@ function handleChannelDelete(channel) {
 function handleThreadUpdate(channel) {
   channel = channel.channel;
   const id = channel.id;
-  const isReadableChannelResult = prototype(7090).isReadableChannel(channel);
+  const isReadableChannelResult = prototype(7156).isReadableChannel(channel);
   let tmp2 = isReadableChannelResult;
   if (isReadableChannelResult) {
     tmp2 = id === store2.getChannelId();
@@ -140,7 +140,7 @@ prototype["saveLimit"] = function saveLimit(channelId) {
     let num = num3;
   } else {
     num = 25;
-    const obj = prototype(7089);
+    const obj = prototype(7155);
   }
   return num;
 };
@@ -170,8 +170,8 @@ prototype["takeSnapshot"] = function takeSnapshot() {
   return obj;
 };
 SaveableChannelsStore["mergeSnapshot"] = function mergeSnapshot(snapshot) {
-  extendedMemoryLru = new prototype(7086).ExtendedMemoryLru(extendedMemoryLru.primaryCapacity, extendedMemoryLru.extendedCapacity);
-  lru = new prototype(7087).Lru(lru.capacity);
+  extendedMemoryLru = new prototype(7152).ExtendedMemoryLru(extendedMemoryLru.primaryCapacity, extendedMemoryLru.extendedCapacity);
+  lru = new prototype(7153).Lru(lru.capacity);
   if (lastChannel == null) {
     lastChannel = snapshot.lastChannel;
   }
@@ -220,9 +220,9 @@ SaveableChannelsStore["recordChannel"] = function recordChannel(id) {
           extendedMemoryLru.delete(id);
         }
       }
-      tmp8Result = tmp8(7091);
+      tmp8Result = tmp8(7157);
     }
-    obj3 = prototype(7090);
+    obj3 = prototype(7156);
     tmp8 = prototype;
   }
 };
@@ -247,7 +247,7 @@ SaveableChannelsStore["dropUnreachableChannels"] = function dropUnreachableChann
     let tmp5 = prototype;
     let tmp6 = dependencyMap;
     let basicChannel = store.getBasicChannel(item10008);
-    let obj = prototype(7090);
+    let obj = prototype(7156);
     if (!obj.isReadableChannel(basicChannel)) {
       let tmp7 = SaveableChannelsStore;
       let tmp8 = item10008;
@@ -264,7 +264,7 @@ SaveableChannelsStore["deleteUnreadableGuildChannels"] = function deleteUnreadab
     if (!isReadableChannelIdResult) {
       let tmp4 = prototype;
       let tmp5 = dependencyMap;
-      let obj = prototype(7090);
+      let obj = prototype(7156);
       let tmp6 = item10009;
       isReadableChannelIdResult = obj.isReadableChannelId(tmp2.channelId);
     }

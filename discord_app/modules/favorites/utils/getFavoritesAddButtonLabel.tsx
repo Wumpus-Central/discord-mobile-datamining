@@ -1,9 +1,9 @@
-// === Module 12340: getFavoritesAddButtonLabel ===
+// === Module 12412: getFavoritesAddButtonLabel ===
 
-// Module 12340 (getFavoritesAddButtonLabel)
+// Module 12412 (getFavoritesAddButtonLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3083 */;
+import messagesProxyDefault from "messagesProxy" /* 3147 */;
 
 const result = set.fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
 

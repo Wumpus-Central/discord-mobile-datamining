@@ -1,10 +1,10 @@
-// === Module 16637: useIsInRestrictedHours ===
+// === Module 16722: useIsInRestrictedHours ===
 
-// Module 16637 (useIsInRestrictedHours)
+// Module 16722 (useIsInRestrictedHours)
 import initialize from "initialize" /* 589 */;
-import scheduleUpcomingWarning from "scheduleUpcomingWarning" /* 16638 */;
+import scheduleUpcomingWarning from "scheduleUpcomingWarning" /* 16723 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "freshTeenActivityWithMap" /* 7143 */;
+import closure_3 from "freshTeenActivityWithMap" /* 7209 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useIsInRestrictedHours.tsx");

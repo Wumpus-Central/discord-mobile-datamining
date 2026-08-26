@@ -1,17 +1,17 @@
-// === Module 13421: DCDQRScanner ===
+// === Module 13494: DCDQRScanner ===
 
-// Module 13421 (DCDQRScanner)
+// Module 13494 (DCDQRScanner)
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _modDef4611 from "module_4611" /* 4611 */;
-import registerAssetDefault from "registerAsset" /* 8211 */;
-import renderDefault from "render" /* 9204 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 13422 */;
+import _modDef4675 from "module_4675" /* 4675 */;
+import registerAssetDefault from "registerAsset" /* 8278 */;
+import renderDefault from "render" /* 9272 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 13495 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { UserSettingsSections } from "ME" /* 676 */;
-import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_7 } from "items" /* 7144 */;
+import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_7 } from "items" /* 7210 */;
 import jsxProd from "jsxProd" /* 21 */;
 import set from "set" /* 500 */;
 
@@ -132,7 +132,7 @@ export default function QRScannerModal(showHelp) {
   obj1[2] = registerAssetDefault;
   const items2 = [tmp12.closeButton, { marginTop: top }];
   obj1[3] = items2;
-  obj1[4] = _modDef4611.pop;
+  obj1[4] = _modDef4675.pop;
   items1[1] = tmp14(renderDefault, obj1);
   let tmp14Result = null;
   if (tmp) {

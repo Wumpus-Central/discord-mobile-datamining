@@ -1,9 +1,9 @@
-// === Module 14762: useLatestChannelMessage ===
+// === Module 14835: useLatestChannelMessage ===
 
-// Module 14762 (useLatestChannelMessage)
+// Module 14835 (useLatestChannelMessage)
 import closure_3 from "_slicedToArray" /* 32 */;
 import { useEffect } from "noop" /* 19 */;
-import closure_5 from "initialize" /* 13185 */;
+import closure_5 from "initialize" /* 13258 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/message_previews/useLatestChannelMessage.tsx");

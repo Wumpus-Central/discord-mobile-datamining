@@ -1,10 +1,10 @@
-// === Module 6065: _startLurking ===
+// === Module 6131: _startLurking ===
 
-// Module 6065 (_startLurking)
+// Module 6131 (_startLurking)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4026 */;
-import closure_5 from "handleInviteData" /* 4300 */;
+import closure_4 from "initialize" /* 4090 */;
+import closure_5 from "handleInviteData" /* 4364 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 
@@ -34,7 +34,7 @@ function _startLurking() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -220,7 +220,7 @@ function _startLurking() {
                 throwTypeErrorResult = throwTypeErrorResult();
               }
               shouldNavigate = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (throwTypeErrorResult) {
             shouldNavigate = throwTypeErrorResult;
@@ -265,7 +265,7 @@ function _getDiscoverableGuild() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -366,7 +366,7 @@ function _fetchPublicDiscoveryGuild() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

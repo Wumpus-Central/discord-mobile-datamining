@@ -1,13 +1,13 @@
-// === Module 7882: BuyNitroPurchaseButton ===
+// === Module 7949: BuyNitroPurchaseButton ===
 
-// Module 7882 (BuyNitroPurchaseButton)
+// Module 7949 (BuyNitroPurchaseButton)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateProduct" /* 5965 */;
+import closure_6 from "updateProduct" /* 6031 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);

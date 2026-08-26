@@ -1,8 +1,8 @@
-// === Module 12295: _initialize ===
+// === Module 12367: _initialize ===
 
-// Module 12295 (_initialize)
+// Module 12367 (_initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4562 */;
+import initializeDefault from "initialize" /* 4626 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 

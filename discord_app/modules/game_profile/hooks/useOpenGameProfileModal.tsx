@@ -1,6 +1,6 @@
-// === Module 9420: useOpenGameProfileModal ===
+// === Module 9488: useOpenGameProfileModal ===
 
-// Module 9420 (useOpenGameProfileModal)
+// Module 9488 (useOpenGameProfileModal)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");

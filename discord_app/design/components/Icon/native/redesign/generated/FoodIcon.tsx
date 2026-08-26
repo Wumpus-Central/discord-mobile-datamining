@@ -1,10 +1,10 @@
-// === Module 8907: FoodIcon ===
+// === Module 8975: FoodIcon ===
 
-// Module 8907 (FoodIcon)
+// Module 8975 (FoodIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 8908 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 8976 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

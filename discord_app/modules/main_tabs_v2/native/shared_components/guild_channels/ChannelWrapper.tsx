@@ -1,8 +1,8 @@
-// === Module 15798: renderChannelWrapper ===
+// === Module 15877: renderChannelWrapper ===
 
-// Module 15798 (renderChannelWrapper)
+// Module 15877 (renderChannelWrapper)
 import noopAll from "noop" /* 19 */;
-import getLayoutStyles from "getLayoutStyles" /* 9951 */;
+import getLayoutStyles from "getLayoutStyles" /* 10018 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 

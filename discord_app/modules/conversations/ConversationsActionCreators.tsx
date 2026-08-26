@@ -1,15 +1,15 @@
-// === Module 8711: _fetchChannelConversations ===
+// === Module 8779: _fetchChannelConversations ===
 
-// Module 8711 (_fetchChannelConversations)
+// Module 8779 (_fetchChannelConversations)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import fetchSurveyDetailsDefault from "fetchSurveyDetails" /* 4598 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 4606 */;
-import trackInviteDefault from "trackInvite" /* 7063 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8713 */;
+import fetchSurveyDetailsDefault from "fetchSurveyDetails" /* 4662 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 4670 */;
+import trackInviteDefault from "trackInvite" /* 7129 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8781 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "removePendingListFetch" /* 7202 */;
-import closure_5 from "initialize" /* 8712 */;
-import { FETCH_LIMIT } from "CONVERSATION_COLORS" /* 7204 */;
+import closure_4 from "removePendingListFetch" /* 7268 */;
+import closure_5 from "initialize" /* 8780 */;
+import { FETCH_LIMIT } from "CONVERSATION_COLORS" /* 7270 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;
@@ -32,7 +32,7 @@ function _fetchChannelConversations() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -133,7 +133,7 @@ function _fetchChannelConversations() {
                     return obj5;
                   }
                 }
-                obj15 = callback(8709);
+                obj15 = callback(8777);
               }
             } else if (2 === tmp7) {
               c6 = 0;
@@ -182,7 +182,7 @@ function _fetchChannelConversations() {
               return obj;
             }
             c8 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp70) {
           if (tmp4 === c6) {
@@ -238,7 +238,7 @@ function _fetchConversationMessages() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -306,7 +306,7 @@ function _fetchConversationMessages() {
                   }
                 }
               }
-              obj14 = callback(8709);
+              obj14 = callback(8777);
               tmp52 = callback;
             }
           } else {

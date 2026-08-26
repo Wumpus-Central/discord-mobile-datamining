@@ -1,12 +1,12 @@
-// === Module 12669: createNitroSuggestedSku ===
+// === Module 12742: createNitroSuggestedSku ===
 
-// Module 12669 (createNitroSuggestedSku)
+// Module 12742 (createNitroSuggestedSku)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSKUPrice from "useSKUPrice" /* 5959 */;
+import useSKUPrice from "useSKUPrice" /* 6025 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "createFromServer" /* 4423 */;
-import { isCollectiblesWishlistItemRecord as closure_4 } from "createCollectiblesItemFromServerResponse" /* 9507 */;
-import { isPremiumWishlistItemRecord as closure_5, isSKUWishlistItemRecord } from "fromServer" /* 9508 */;
+import closure_3 from "createFromServer" /* 4487 */;
+import { isCollectiblesWishlistItemRecord as closure_4 } from "createCollectiblesItemFromServerResponse" /* 9575 */;
+import { isPremiumWishlistItemRecord as closure_5, isSKUWishlistItemRecord } from "fromServer" /* 9576 */;
 import { SKUProductLines } from "ME" /* 676 */;
 import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 

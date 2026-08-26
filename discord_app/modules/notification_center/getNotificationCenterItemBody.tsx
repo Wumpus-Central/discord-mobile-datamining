@@ -1,16 +1,16 @@
-// === Module 15781: getNotificationCenterItemBody ===
+// === Module 15860: getNotificationCenterItemBody ===
 
-// Module 15781 (getNotificationCenterItemBody)
-import closure_3 from "scheduledEventSort" /* 7132 */;
-import { isGuildEventEnded } from "scheduledEventSort" /* 7132 */;
+// Module 15860 (getNotificationCenterItemBody)
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "scheduledEventSort" /* 7198 */;
+import { isGuildEventEnded } from "scheduledEventSort" /* 7198 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "markAllUserIdListsStale" /* 4034 */;
+import closure_6 from "markAllUserIdListsStale" /* 4098 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: c9 } = ME);
-const re10 = /[\\`*_~|<>[\]:]/g;
 const result = require("set").fileFinishedImporting("modules/notification_center/getNotificationCenterItemBody.tsx");
 
 export default function getNotificationCenterItemBody(arg0) {
@@ -25,22 +25,19 @@ export default function getNotificationCenterItemBody(arg0) {
   if (id == null) {
     id = closure_8;
   }
-  let obj = renderApplication(4224);
+  let obj = renderApplication(4288);
   obj1 = user;
   const other_user2 = item.other_user;
   let id1;
   if (other_user2 != null) {
     id1 = other_user2.id;
   }
-  const str = obj.getName(user.getUser(id1));
-  if (undefined !== str) {
-    const replaced = str.replace(closure_10, "\\$&");
-  }
+  let name = obj.getName(user.getUser(id1));
   applicationId = item.applicationId;
   renderApplication = applicationId;
   const type = item.type;
-  if (applicationId(7246).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED === type) {
-    let tmp2Result = tmp2(4224);
+  if (applicationId(7312).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED === type) {
+    let tmp2Result = tmp2(4288);
     let other_users = item.other_users;
     let id2;
     if (other_users != null) {
@@ -49,26 +46,18 @@ export default function getNotificationCenterItemBody(arg0) {
         id2 = first.id;
       }
     }
-    const str16 = tmp2Result.getName(obj1.getUser(id2));
-    let replaced1;
-    if (undefined !== str16) {
-      replaced1 = str16.replace(closure_10, "\\$&");
-    }
-    tmp2Result = tmp2(4224);
+    const name1 = tmp2Result.getName(obj1.getUser(id2));
+    tmp2Result = tmp2(4288);
     const other_users2 = item.other_users;
     let id3;
     if (other_users2 != null) {
       if (other_users2[1] != null) {
-        id3 = tmp43.id;
+        id3 = tmp37.id;
       }
-    }
-    const str18 = tmp2Result.getName(obj1.getUser(id3));
-    let replaced2;
-    if (undefined !== str18) {
-      replaced2 = str18.replace(closure_10, "\\$&");
     }
     other_users = item.other_users;
     let num;
+    const name2 = tmp2Result.getName(obj1.getUser(id3));
     if (other_users != null) {
       num = other_users.length;
     }
@@ -76,166 +65,165 @@ export default function getNotificationCenterItemBody(arg0) {
       num = 0;
     }
     const bound = Math.max(num - 2, 0);
-    const intl12 = tmp7(1236).intl;
+    const intl12 = tmp6(1236).intl;
     obj = { user: null, user2: null, count: null };
-    obj[0] = replaced1;
-    obj[1] = replaced2;
+    obj[0] = name1;
+    obj[1] = name2;
     obj[2] = bound;
-    return intl12.format(tmp7(1236).t.g5xyIC, obj);
-  } else if (tmp7(7246).NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE === type) {
-    let str12;
+    return intl12.format(tmp6(1236).t.g5xyIC, obj);
+  } else if (tmp6(7312).NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE === type) {
+    let str7;
     if (item.local_id != null) {
-      const parts = str11.split("_");
-      str12 = parts.pop();
+      const parts = str6.split("_");
+      str7 = parts.pop();
     }
-    if (str12 == null) {
-      str12 = "unknown";
+    if (str7 == null) {
+      str7 = "unknown";
     }
     const _HermesInternal3 = HermesInternal;
-    return "Update to build " + str12 + " available!";
-  } else if (tmp7(7246).NotificationCenterItems.FRIEND_SUGGESTION_CREATED === type) {
+    return "Update to build " + str7 + " available!";
+  } else if (tmp6(7312).NotificationCenterItems.FRIEND_SUGGESTION_CREATED === type) {
     if (relationshipType.getRelationshipType(id) === constants.PENDING_OUTGOING) {
-      const intl11 = tmp7(1236).intl;
+      const intl11 = tmp6(1236).intl;
       obj = { user: null };
-      obj[0] = replaced;
-      let str10 = intl11.format(tmp7(1236).t.gZVTy2, obj);
+      obj[0] = name;
+      let str5 = intl11.format(tmp6(1236).t.gZVTy2, obj);
     } else {
-      str10 = item.body;
-      if (str10 == null) {
-        str10 = "";
+      str5 = item.body;
+      if (str5 == null) {
+        str5 = "";
       }
     }
-    return str10;
-  } else if (tmp7(7246).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED === type) {
+    return str5;
+  } else if (tmp6(7312).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED === type) {
     const guild_scheduled_event_id = item.guild_scheduled_event_id;
     let guildScheduledEvent = null;
     if (null != guild_scheduled_event_id) {
       guildScheduledEvent = guildScheduledEvent.getGuildScheduledEvent(guild_scheduled_event_id);
+    }
+    if (guildScheduledEvent != null) {
+      name = guildScheduledEvent.name;
     }
     let guild_id;
     if (guildScheduledEvent != null) {
       guild_id = guildScheduledEvent.guild_id;
     }
     guild = guild.getGuild(guild_id);
-    let name;
+    let name3;
     if (guild != null) {
-      name = guild.name;
+      name3 = guild.name;
     }
-    let tmp7Result = tmp7(1903);
-    if (!tmp7Result.isNullOrEmpty(name)) {
-      tmp7Result = tmp7(1903);
-      if (!tmp7Result.isNullOrEmpty(str6)) {
-        if (tmp28Result) {
-          const intl10 = tmp7(1236).intl;
-          let replaced3;
-          if (undefined !== str6) {
-            replaced3 = str6.replace(closure_10, "\\$&");
-          }
+    let tmp6Result = tmp6(1903);
+    if (!tmp6Result.isNullOrEmpty(name3)) {
+      tmp6Result = tmp6(1903);
+      if (!tmp6Result.isNullOrEmpty(name)) {
+        if (tmp27Result) {
+          const intl10 = tmp6(1236).intl;
           obj1 = { event_name: null, guild_name: null };
-          obj1[0] = replaced3;
-          let replaced4;
-          if (undefined !== name) {
-            replaced4 = name.replace(closure_10, "\\$&");
-          }
-          obj1[1] = replaced4;
-          let formatResult = intl10.format(tmp7(1236).t.AyvfXR, obj1);
+          obj1[0] = name;
+          obj1[1] = name3;
+          let formatResult = intl10.format(tmp6(1236).t.AyvfXR, obj1);
         }
         return formatResult;
       }
     }
-    let str9 = item.body;
-    if (str9 == null) {
-      str9 = "";
+    let str4 = item.body;
+    if (str4 == null) {
+      str4 = "";
     }
-    formatResult = str9;
-    const tmp28 = isGuildEventEnded;
-    tmp28Result = isGuildEventEnded(guildScheduledEvent);
-  } else if (tmp7(7246).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS === type) {
+    formatResult = str4;
+    const tmp27 = isGuildEventEnded;
+    tmp27Result = isGuildEventEnded(guildScheduledEvent);
+  } else if (tmp6(7312).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS === type) {
     if (null != applicationId) {
-      const intl9 = tmp7(1236).intl;
+      const intl9 = tmp6(1236).intl;
       const obj2 = { username: null, applicationName: null };
-      obj2[0] = replaced;
+      obj2[0] = name;
       obj2[1] = function applicationName() {
         return renderApplication(applicationId);
       };
-      let formatResult1 = intl9.format(tmp7(1236).t["9Dgf1L"], obj2);
+      let formatResult1 = intl9.format(tmp6(1236).t["9Dgf1L"], obj2);
     } else {
-      const intl8 = tmp7(1236).intl;
+      const intl8 = tmp6(1236).intl;
       const obj3 = { username: null };
-      obj3[0] = replaced;
-      formatResult1 = intl8.format(tmp20, obj3);
+      obj3[0] = name;
+      formatResult1 = intl8.format(tmp19, obj3);
     }
     return formatResult1;
-  } else if (tmp7(7246).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED === type) {
+  } else if (tmp6(7312).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED === type) {
     if (null != applicationId) {
-      const intl7 = tmp7(1236).intl;
+      const intl7 = tmp6(1236).intl;
       const obj4 = { username: null, applicationName: null };
-      obj4[0] = replaced;
+      obj4[0] = name;
       obj4[1] = function applicationName() {
         return renderApplication(applicationId);
       };
-      let formatResult2 = intl7.format(tmp7(1236).t.nnC1q9, obj4);
+      let formatResult2 = intl7.format(tmp6(1236).t.nnC1q9, obj4);
     } else {
-      const intl6 = tmp7(1236).intl;
+      const intl6 = tmp6(1236).intl;
       const obj5 = { username: null };
-      obj5[0] = replaced;
-      formatResult2 = intl6.format(tmp18, obj5);
+      obj5[0] = name;
+      formatResult2 = intl6.format(tmp17, obj5);
     }
     return formatResult2;
-  } else if (tmp7(7246).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED === type) {
+  } else if (tmp6(7312).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED === type) {
     if (null != applicationId) {
-      const intl5 = tmp7(1236).intl;
+      const intl5 = tmp6(1236).intl;
       const obj6 = { username: null, applicationName: null };
-      obj6[0] = replaced;
+      obj6[0] = name;
       obj6[1] = function applicationName() {
         return renderApplication(applicationId);
       };
-      let formatResult3 = intl5.format(tmp7(1236).t.jXlYiF, obj6);
+      let formatResult3 = intl5.format(tmp6(1236).t.jXlYiF, obj6);
     } else {
-      const intl4 = tmp7(1236).intl;
+      const intl4 = tmp6(1236).intl;
       const obj7 = { username: null };
-      obj7[0] = replaced;
-      formatResult3 = intl4.format(tmp16, obj7);
+      obj7[0] = name;
+      formatResult3 = intl4.format(tmp15, obj7);
     }
     return formatResult3;
-  } else if (tmp7(7246).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED === type) {
+  } else if (tmp6(7312).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED === type) {
     const _HermesInternal2 = HermesInternal;
     tmp2(38)(null != applicationId, "Expected application id for " + item.type);
-    const intl3 = tmp7(1236).intl;
+    const intl3 = tmp6(1236).intl;
     const obj8 = { username: null, applicationName: null };
-    obj8[0] = replaced;
+    obj8[0] = name;
     obj8[1] = function applicationName() {
       return applicationId(renderApplication);
     };
-    return intl3.format(tmp7(1236).t["BB/0vn"], obj8);
-  } else if (tmp7(7246).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS === type) {
+    return intl3.format(tmp6(1236).t["BB/0vn"], obj8);
+  } else if (tmp6(7312).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS === type) {
     const _HermesInternal = HermesInternal;
     tmp2(38)(null != applicationId, "Expected application id for " + item.type);
-    const intl2 = tmp7(1236).intl;
+    const intl2 = tmp6(1236).intl;
     const obj9 = { username: null, applicationName: null };
-    obj9[0] = replaced;
+    obj9[0] = name;
     obj9[1] = function applicationName() {
       return applicationId(renderApplication);
     };
-    return intl2.format(tmp7(1236).t["7cqOLI"], obj9);
-  } else if (tmp7(7246).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED === type) {
+    return intl2.format(tmp6(1236).t["7cqOLI"], obj9);
+  } else if (tmp6(7312).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED === type) {
     if (null == applicationId) {
       let body = item.body;
     } else {
-      const intl = tmp7(1236).intl;
+      const intl = tmp6(1236).intl;
       const obj10 = { username: null, applicationName: null };
-      obj10[0] = replaced;
+      obj10[0] = name;
       obj10[1] = function applicationName() {
         return applicationId(renderApplication);
       };
-      body = intl.format(tmp7(1236).t.Wi64vN, obj10);
+      body = intl.format(tmp6(1236).t.Wi64vN, obj10);
     }
     return body;
   } else {
-    let str3 = item.body;
-    if (str3 == null) {
-      str3 = "";
+    let str = item.body;
+    if (str == null) {
+      str = "";
     }
-    return str3;
+    return str;
   }
+};
+export const getFriendRequestSentBody = function getFriendRequestSentBody(user) {
+  const intl = getSystemLocale.intl;
+  return intl.format(getSystemLocale.t.gZVTy2, { user });
 };

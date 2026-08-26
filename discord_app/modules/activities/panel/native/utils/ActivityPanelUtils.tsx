@@ -1,9 +1,9 @@
-// === Module 16356: useIsActivityPanelFullscreen ===
+// === Module 16437: useIsActivityPanelFullscreen ===
 
-// Module 16356 (useIsActivityPanelFullscreen)
+// Module 16437 (useIsActivityPanelFullscreen)
 import initialize from "initialize" /* 589 */;
 import closure_3 from "participantFromServer" /* 1390 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9915 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9982 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");

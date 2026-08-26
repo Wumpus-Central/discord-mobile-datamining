@@ -1,7 +1,7 @@
-// === Module 7076: shouldLogClientHeartbeatSkipped ===
+// === Module 7142: shouldLogClientHeartbeatSkipped ===
 
-// Module 7076 (shouldLogClientHeartbeatSkipped)
-import sampleWithUserId from "sampleWithUserId" /* 7077 */;
+// Module 7142 (shouldLogClientHeartbeatSkipped)
+import sampleWithUserId from "sampleWithUserId" /* 7143 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

@@ -1,15 +1,15 @@
-// === Module 14686: BenefitRow ===
+// === Module 14759: BenefitRow ===
 
-// Module 14686 (BenefitRow)
+// Module 14759 (BenefitRow)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1297 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4038 */;
-import Text from "Text" /* 4376 */;
-import EmojiIconDefault from "EmojiIcon" /* 14684 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
+import Text from "Text" /* 4440 */;
+import EmojiIconDefault from "EmojiIcon" /* 14757 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function BenefitRow(description) {
@@ -48,21 +48,21 @@ export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = benefit(1236).intl;
   obj[2] = "[" + intl.string(benefit(1236).t.bz1PZX) + "]";
-  let tmp8 = callback(benefit(4376).Text, obj);
+  let tmp8 = callback(benefit(4440).Text, obj);
   if (null != stateFromStores) {
     obj = { style: null, children: null };
     obj[0] = tmp.channelTitle;
     obj1 = { style: null, size: null, source: null };
     obj1[0] = tmp.channelIcon;
     obj1[1] = tmp2(1297).Icon.Sizes.CUSTOM;
-    obj1[2] = tmp2(4866).getChannelIcon(stateFromStores);
+    obj1[2] = tmp2(4932).getChannelIcon(stateFromStores);
     const items2 = [tmp7(tmp2(1297).Icon, obj1), ];
     const obj2 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj2[2] = tmp6;
-    items2[1] = tmp7(tmp2(4376).Text, obj2);
+    items2[1] = tmp7(tmp2(4440).Text, obj2);
     obj[1] = items2;
     tmp8 = callback2(View, obj);
-    const tmp2Result = tmp2(4866);
+    const tmp2Result = tmp2(4932);
   }
   if (null != benefit.emoji_id) {
     let str = benefit.emoji_id;

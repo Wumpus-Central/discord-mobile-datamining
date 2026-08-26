@@ -1,6 +1,6 @@
-// === Module 16404: hideLiveChannelNotice ===
+// === Module 16485: hideLiveChannelNotice ===
 
-// Module 16404 (hideLiveChannelNotice)
+// Module 16485 (hideLiveChannelNotice)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

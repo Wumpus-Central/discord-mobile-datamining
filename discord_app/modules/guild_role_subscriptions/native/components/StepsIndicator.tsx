@@ -1,12 +1,12 @@
-// === Module 17117: StepNode ===
+// === Module 17202: StepNode ===
 
-// Module 17117 (StepNode)
+// Module 17202 (StepNode)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 function StepNode(isCurrent) {

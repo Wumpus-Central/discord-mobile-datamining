@@ -1,8 +1,8 @@
-// === Module 15543: useLiveStageChannels ===
+// === Module 15622: useLiveStageChannels ===
 
-// Module 15543 (useLiveStageChannels)
+// Module 15622 (useLiveStageChannels)
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 
 const require = arg1;

@@ -1,8 +1,8 @@
-// === Module 11488: useAgeSpecificText ===
+// === Module 11560: useAgeSpecificText ===
 
-// Module 11488 (useAgeSpecificText)
+// Module 11560 (useAgeSpecificText)
 import set from "set" /* 2 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7481 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7547 */;
 
 const result = set.fileFinishedImporting("modules/parent_tools/hooks/useAgeSpecificText.tsx");
 

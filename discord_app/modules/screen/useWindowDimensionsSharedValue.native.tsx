@@ -1,18 +1,18 @@
-// === Module 11554: mutable ===
+// === Module 11626: mutable ===
 
-// Module 11554 (mutable)
+// Module 11626 (mutable)
 import set from "set" /* 2 */;
-import uDefault from "u" /* 10397 */;
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 11555 */;
-import module_4120 from "module_4120" /* 4120 */;
+import uDefault from "u" /* 10465 */;
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 11627 */;
+import module_4184 from "module_4184" /* 4184 */;
 import useWindowDimensions from "useWindowDimensions" /* 1494 */;
 
 let obj = {};
 const merged = Object.assign(useWindowDimensions.getWindowDimensions());
-const mutable = module_4120.makeMutable(obj);
+const mutable = module_4184.makeMutable(obj);
 obj = {};
 const merged1 = Object.assign(useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }));
-const mutable1 = module_4120.makeMutable(obj);
+const mutable1 = module_4184.makeMutable(obj);
 subscribeToWindowDimensionsDefault((arg0, arg1) => {
   uDefault(mutable, arg0);
   uDefault(mutable1, arg1);

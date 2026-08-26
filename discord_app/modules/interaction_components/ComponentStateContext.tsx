@@ -1,17 +1,17 @@
-// === Module 8371: isInteractionComponent ===
+// === Module 8438: isInteractionComponent ===
 
-// Module 8371 (isInteractionComponent)
+// Module 8438 (isInteractionComponent)
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import ActionComponentState from "ActionComponentState" /* 4633 */;
+import ActionComponentState from "ActionComponentState" /* 4697 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "deleteNonce" /* 8200 */;
-import closure_6 from "initialize" /* 4026 */;
+import closure_5 from "deleteNonce" /* 8267 */;
+import closure_6 from "initialize" /* 4090 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import closure_8 from "trackCommunicationDisabled" /* 1992 */;
-import closure_9 from "recomputeGuild" /* 5238 */;
+import closure_9 from "recomputeGuild" /* 5304 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "getInteractionComponentStates" /* 8372 */;
+import closure_11 from "getInteractionComponentStates" /* 8439 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -45,7 +45,7 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
   let LOADING = ActionComponentState.ActionComponentState.NORMAL;
   let tmp3 = null != interaction;
   if (tmp3) {
-    tmp3 = interaction.state !== tmp(4631).InteractionState.FAILED;
+    tmp3 = interaction.state !== tmp(4695).InteractionState.FAILED;
   }
   let DISABLED = LOADING;
   if (!tmp3) {
@@ -53,16 +53,16 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
       flag = isInteractionComponent(id);
     }
     if (flag) {
-      DISABLED = tmp(4633).ActionComponentState.DISABLED;
+      DISABLED = tmp(4697).ActionComponentState.DISABLED;
     }
     return DISABLED;
   } else {
     if (interaction.data.interactionType !== tmp(1955).InteractionTypes.MESSAGE_COMPONENT) {
       if (isInteractionComponent(id)) {
-        LOADING = tmp(4633).ActionComponentState.DISABLED;
+        LOADING = tmp(4697).ActionComponentState.DISABLED;
       }
     }
-    LOADING = tmp(4633).ActionComponentState.LOADING;
+    LOADING = tmp(4697).ActionComponentState.LOADING;
   }
 }
 function useShouldDisableInteractiveComponents(channel_id) {
@@ -128,9 +128,9 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  let tmpResult = tmp(5996);
+  let tmpResult = tmp(6062);
   const isThreadModerator = tmpResult.useIsThreadModerator(channel);
-  tmpResult = tmp(5996);
+  tmpResult = tmp(6062);
   let tmp9 = !stateFromStores;
   const canUnarchiveThread = tmpResult.useCanUnarchiveThread(channel);
   if (stateFromStores) {

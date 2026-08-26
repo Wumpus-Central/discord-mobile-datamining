@@ -1,9 +1,9 @@
-// === Module 12825: getAskToJoinText ===
+// === Module 12899: getAskToJoinText ===
 
-// Module 12825 (getAskToJoinText)
+// Module 12899 (getAskToJoinText)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2791 */;
-import getNickname from "getNickname" /* 4573 */;
+import messagesProxyDefault from "messagesProxy" /* 2823 */;
+import getNickname from "getNickname" /* 4637 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { ActivityActionTypes } from "ME" /* 676 */;
 

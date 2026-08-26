@@ -1,15 +1,15 @@
-// === Module 8981: ? ===
+// === Module 9049: ? ===
 
-// Module 8981
-import getNicknameDefault from "getNickname" /* 4573 */;
-import useProfileThemeDefault from "useProfileTheme" /* 8970 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8972 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
-import useBadgesDefault from "useBadges" /* 8983 */;
-import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 8984 */;
+// Module 9049
+import getNicknameDefault from "getNickname" /* 4637 */;
+import useProfileThemeDefault from "useProfileTheme" /* 9038 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 9040 */;
+import useSharedStylesDefault from "useSharedStyles" /* 9050 */;
+import useBadgesDefault from "useBadges" /* 9051 */;
+import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 9052 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 5882 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5504 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 5948 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5570 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -21,7 +21,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
   let trackUserProfileAction;
   importDefault = undefined;
   const tmp3 = useSharedStylesDefault();
-  let obj = trackUserProfileAction(8935);
+  let obj = trackUserProfileAction(9003);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   obj1 = getNicknameDefault;
   let guild_id;
@@ -33,7 +33,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     id = channel.id;
   }
   const name = obj1.useName(guild_id, id, user);
-  let tmpResult = tmp(4224);
+  let tmpResult = tmp(4288);
   importDefault = tmpResult.useUserTag(user);
   const tmp9 = useUserProfileBannerHeightDefault(ACTION_SHEET_MAX_WIDTH);
   const tmp8 = useBadgesDefault(displayProfile);
@@ -41,7 +41,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
   const tmp10 = useUserProfileOverscrollStylesDefault({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
   ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault({ user, displayProfile }));
   const tmp11 = useProfileThemeDefault({ user, displayProfile });
-  const userProfileColors = trackUserProfileAction(8979).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const userProfileColors = trackUserProfileAction(9047).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   if (null == user) {
     return null;
@@ -54,7 +54,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     obj[4] = bannerImageAnimatedStyle;
     obj[5] = blurAnimatedProps;
     obj[6] = showBlur;
-    const items = [callback(tmp(8985), obj), ];
+    const items = [callback(tmp(9053), obj), ];
     obj = { style: null, children: null };
     obj[0] = contentAnimatedStyle;
     obj1 = { user: null, guildId: null, backgroundColor: null, disableStatus: true };
@@ -65,7 +65,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     }
     obj1[1] = guildId;
     obj1[2] = tmp13;
-    const items1 = [callback(tmp4(8989).OpenableUserProfileAvatar, obj1), ];
+    const items1 = [callback(tmp4(9057).OpenableUserProfileAvatar, obj1), ];
     const obj2 = { style: null, children: null };
     const items2 = [, , ];
     ({ profileContentWrapper: arr2[0], profileContent: arr2[1] } = tmp3);
@@ -79,7 +79,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     const obj5 = { user: null, guildId: null, displayName: null, pronouns: null, badges: null, badgeContainerBackground: null, displayNameAccessibilityHint: null, onPressDisplayName: null, onPressUserTag: null, onPressPronouns: null, showBadgeToastOnPress: true };
     obj5[0] = user;
     let guild_id1;
-    tmpResult = tmp(9615);
+    tmpResult = tmp(9683);
     if (channel != null) {
       guild_id1 = channel.guild_id;
     }
@@ -120,16 +120,16 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     obj9[0] = containerBackground;
     items4[1] = obj9;
     obj8[3] = items4;
-    obj7[1] = callback(tmp(9680), obj8);
+    obj7[1] = callback(tmp(9748), obj8);
     items3[1] = callback(View, obj7);
     obj2[1] = items3;
     items1[1] = closure_8(View, obj2);
     obj[1] = items1;
-    items[1] = closure_8(tmp(4120).View, obj);
+    items[1] = closure_8(tmp(4184).View, obj);
     obj6[0] = items;
     return closure_8(closure_9, obj6);
   }
-  const tmp4Result = trackUserProfileAction(8979);
+  const tmp4Result = trackUserProfileAction(9047);
 });
 let result = require("set").fileFinishedImporting("modules/user_profile/native/NonUserBotProfileContent.tsx");
 

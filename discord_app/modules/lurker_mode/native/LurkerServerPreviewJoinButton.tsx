@@ -1,11 +1,11 @@
-// === Module 15512: ? ===
+// === Module 15591: ? ===
 
-// Module 15512
+// Module 15591
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "initialize" /* 4026 */;
+import closure_7 from "initialize" /* 4090 */;
 import { JoinGuildSources } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -32,7 +32,7 @@ const memoResult = importAllResult.memo(function LurkerServerPreviewJoinButton(g
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

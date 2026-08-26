@@ -1,19 +1,19 @@
-// === Module 17127: SelectEmojiRolesActionSheet ===
+// === Module 17212: SelectEmojiRolesActionSheet ===
 
-// Module 17127 (SelectEmojiRolesActionSheet)
+// Module 17212 (SelectEmojiRolesActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import PressableBase from "PressableBase" /* 4949 */;
-import ActionSheet from "ActionSheet" /* 5870 */;
-import useFetchListingsForGuild from "useFetchListingsForGuild" /* 14656 */;
+import PressableBase from "PressableBase" /* 5015 */;
+import ActionSheet from "ActionSheet" /* 5936 */;
+import useFetchListingsForGuild from "useFetchListingsForGuild" /* 14729 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { Fonts } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
-import importDefaultResult from "createTextStyle" /* 5342 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
+import importDefaultResult from "createTextStyle" /* 5408 */;
 
 require = arg1;
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
@@ -95,7 +95,7 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   const intl4 = tmp5(1236).intl;
   obj1[1] = intl4.string(getSystemLocale.t.MZusPv);
   obj1[2] = tmp7Result;
-  tmp7Result = tmp7(tmp5(5502).BottomSheetTitleHeader, obj1);
+  tmp7Result = tmp7(tmp5(5568).BottomSheetTitleHeader, obj1);
   const items1 = [subscriptionListingsForGuild.length];
-  return closure_6(ActionSheet.ActionSheet, { scrollable: true, header: tmp7Result, startExpanded: true, onDismiss: onCancel, children: closure_6(emoji(8159), obj3) });
+  return closure_6(ActionSheet.ActionSheet, { scrollable: true, header: tmp7Result, startExpanded: true, onDismiss: onCancel, children: closure_6(emoji(8226), obj3) });
 };

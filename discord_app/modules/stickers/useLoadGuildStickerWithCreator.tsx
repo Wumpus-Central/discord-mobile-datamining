@@ -1,11 +1,11 @@
-// === Module 16922: useLoadGuildStickersWithCreator ===
+// === Module 17007: useLoadGuildStickersWithCreator ===
 
-// Module 16922 (useLoadGuildStickersWithCreator)
+// Module 17007 (useLoadGuildStickersWithCreator)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "parseServerGuildSticker" /* 5326 */;
+import closure_6 from "parseServerGuildSticker" /* 5392 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");

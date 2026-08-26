@@ -1,6 +1,6 @@
-// === Module 5459: IPCEvents ===
+// === Module 5525: IPCEvents ===
 
-// Module 5459 (IPCEvents)
+// Module 5525 (IPCEvents)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/discord-native-types/IPCEvents.tsx");

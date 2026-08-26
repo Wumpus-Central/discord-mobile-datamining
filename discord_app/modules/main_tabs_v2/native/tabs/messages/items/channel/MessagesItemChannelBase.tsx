@@ -1,18 +1,18 @@
-// === Module 15390: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING ===
+// === Module 15469: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING ===
 
-// Module 15390 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
+// Module 15469 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "sortActivity" /* 4469 */;
-import closure_6 from "generateOldThreadCutoff" /* 4395 */;
-import closure_7 from "markAllUserIdListsStale" /* 4034 */;
+import closure_5 from "sortActivity" /* 4533 */;
+import closure_6 from "generateOldThreadCutoff" /* 4459 */;
+import closure_7 from "markAllUserIdListsStale" /* 4098 */;
 import closure_8 from "handleConnectionOpen" /* 1981 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4589 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4653 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import { ActivityTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 let c3 = importAllResult;

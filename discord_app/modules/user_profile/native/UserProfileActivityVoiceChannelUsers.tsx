@@ -1,12 +1,12 @@
-// === Module 12508: UserRow ===
+// === Module 12579: UserRow ===
 
-// Module 12508 (UserRow)
+// Module 12579 (UserRow)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getNicknameDefault from "getNickname" /* 4573 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 9614 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9614 */;
-import closure_3 from "sortActivity" /* 4469 */;
+import getNicknameDefault from "getNickname" /* 4637 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 9682 */;
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9682 */;
+import closure_3 from "sortActivity" /* 4533 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -14,7 +14,7 @@ function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  let obj = user(8960);
+  let obj = user(9028);
   const avatarDecoration = obj.useAvatarDecoration(user, channel.guild_id);
   const items = [closure_3];
   const stateFromStoresObject = user(589).useStateFromStoresObject(items, () => ({ status: closure_1_3.getStatus(user.id), isMobileOnline: closure_1_3.isMobileOnline(user.id), isVROnline: closure_1_3.isVROnline(user.id) }));
@@ -26,7 +26,7 @@ function UserRow(user) {
   obj[2] = jsx(user(1297).Avatar, { user, avatarDecoration, size: user(1297).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
   obj[3] = start;
   obj[4] = end;
-  return jsx(user(5480).TableRow, { user, avatarDecoration, size: user(1297).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
+  return jsx(user(5546).TableRow, { user, avatarDecoration, size: user(1297).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
 }
 noopAll;
 const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileActivityVoiceChannelUsers.tsx");

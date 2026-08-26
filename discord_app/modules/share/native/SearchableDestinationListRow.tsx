@@ -1,8 +1,8 @@
-// === Module 15561: SearchableDestinationListRow ===
+// === Module 15640: SearchableDestinationListRow ===
 
-// Module 15561 (SearchableDestinationListRow)
+// Module 15640 (SearchableDestinationListRow)
 import noopAll from "noop" /* 19 */;
-import sortByMatchScore from "sortByMatchScore" /* 7452 */;
+import sortByMatchScore from "sortByMatchScore" /* 7518 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -21,23 +21,23 @@ export default function SearchableDestinationListRow(result) {
     if (null != onPressDestination) {
       const fn = () => onPressDestination(result(closure_1_2[3]).getDestinationIdFromResult(closure_0));
     }
-    if (tmp2(7452).AutocompleterResultTypes.USER === type) {
+    if (tmp2(7518).AutocompleterResultTypes.USER === type) {
       let obj = {};
       const merged1 = Object.assign(merged);
       obj.user = record;
-      let tmp2Result = tmp2(7267);
+      let tmp2Result = tmp2(7333);
       obj.type = tmp2Result.getRelationshipType(record.id);
       obj.onPress = fn;
-      return jsx(onPressDestination(9780), {});
-    } else if (tmp2(7452).AutocompleterResultTypes.GROUP_DM === type) {
+      return jsx(onPressDestination(9847), {});
+    } else if (tmp2(7518).AutocompleterResultTypes.GROUP_DM === type) {
       obj = {};
       const merged2 = Object.assign(merged);
       obj.channel = record;
       obj.onPress = fn;
-      return jsx(onPressDestination(9812), {});
+      return jsx(onPressDestination(9879), {});
     } else {
-      if (tmp2(7452).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-        if (tmp2(7452).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+      if (tmp2(7518).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+        if (tmp2(7518).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
           tmp2Result = tmp2(1370);
           return tmp2Result.assertNever(type);
         }
@@ -46,7 +46,7 @@ export default function SearchableDestinationListRow(result) {
       const merged3 = Object.assign(merged);
       obj1.channel = record;
       obj1.onPress = fn;
-      return jsx(onPressDestination(9815), {});
+      return jsx(onPressDestination(9882), {});
     }
   }
 };

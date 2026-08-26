@@ -1,9 +1,9 @@
-// === Module 10123: hideStickerDetailActionSheet ===
+// === Module 10190: hideStickerDetailActionSheet ===
 
-// Module 10123 (hideStickerDetailActionSheet)
+// Module 10190 (hideStickerDetailActionSheet)
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4347 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4411 */;
 
 const sticker_detail_action_sheet = "sticker_detail_action_sheet";
 const result = set.fileFinishedImporting("modules/stickers/native/showStickerDetailActionSheet.tsx");
@@ -12,5 +12,5 @@ export const hideStickerDetailActionSheet = function hideStickerDetailActionShee
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(sticker_detail_action_sheet);
 };
 export const showStickerDetailActionSheet = function showStickerDetailActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10124, dependencyMap.paths), sticker_detail_action_sheet, arg0);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10191, dependencyMap.paths), sticker_detail_action_sheet, arg0);
 };

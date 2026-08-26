@@ -1,9 +1,9 @@
-// === Module 9715: useProductDisableState ===
+// === Module 9783: useProductDisableState ===
 
-// Module 9715 (useProductDisableState)
+// Module 9783 (useProductDisableState)
 import initialize from "initialize" /* 589 */;
 import set from "set" /* 679 */;
-import closure_2 from "reset" /* 4049 */;
+import closure_2 from "reset" /* 4113 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");

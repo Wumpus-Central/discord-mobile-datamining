@@ -1,12 +1,12 @@
-// === Module 15110: pressable ===
+// === Module 15189: pressable ===
 
-// Module 15110 (pressable)
+// Module 15189 (pressable)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef4094 from "module_4094" /* 4094 */;
-import MobileUserSettings from "MobileUserSettings" /* 8235 */;
-import createToggle from "createToggle" /* 10516 */;
+import _modDef4158 from "module_4158" /* 4158 */;
+import MobileUserSettings from "MobileUserSettings" /* 8302 */;
+import createToggle from "createToggle" /* 10584 */;
 
 const MarketingURLs = ME.MarketingURLs;
 const pressable = createToggle.createPressable({
@@ -16,7 +16,7 @@ const pressable = createToggle.createPressable({
   },
   parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {
-    _modDef4094.openURL(MarketingURLs.PRIVACY);
+    _modDef4158.openURL(MarketingURLs.PRIVACY);
   },
   withArrow: true
 });
@@ -27,7 +27,7 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {
-    _modDef4094.openURL(MarketingURLs.PRIVACY);
+    _modDef4158.openURL(MarketingURLs.PRIVACY);
   },
   withArrow: true
 };

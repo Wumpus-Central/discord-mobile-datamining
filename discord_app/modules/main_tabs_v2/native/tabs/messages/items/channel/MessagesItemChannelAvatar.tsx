@@ -1,16 +1,16 @@
-// === Module 15393: ? ===
+// === Module 15472: ? ===
 
-// Module 15393
+// Module 15472
 import ThemesDefault from "Themes" /* 712 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9813 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9880 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "sortActivity" /* 4469 */;
-import closure_6 from "handleTypingStart" /* 11533 */;
+import closure_5 from "sortActivity" /* 4533 */;
+import closure_6 from "handleTypingStart" /* 11605 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 9950 */;
+import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10017 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -110,7 +110,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "md", size: "secondary", animate: null, typing: null, autoStatusCutout: null };
+      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "accessibilityRole", size: "y", animate: "\u{1F9CE}\u{1F3FD}\u200D\u27A1\uFE0F", typing: "MessageTypes", autoStatusCutout: "deaf_person_tone1" };
       obj[0] = stateFromStores2;
       obj[1] = stateFromStores2.avatarDecoration;
       obj[3] = stateFromStores3;
@@ -125,7 +125,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
       obj[8] = REFRESH_MEDIUM_32;
       obj[9] = stateFromStores1;
       obj[10] = stateFromStores;
-      tmp11Result = jsx(tmp3(1297).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "md", size: "secondary", animate: null, typing: null, autoStatusCutout: null });
+      tmp11Result = jsx(tmp3(1297).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "accessibilityRole", size: "y", animate: "\u{1F9CE}\u{1F3FD}\u200D\u27A1\uFE0F", typing: "MessageTypes", autoStatusCutout: "deaf_person_tone1" });
       const tmp11 = jsx;
     }
   }

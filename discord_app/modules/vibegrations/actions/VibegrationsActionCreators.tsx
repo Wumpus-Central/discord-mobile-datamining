@@ -1,14 +1,14 @@
-// === Module 15950: reloadVibegrationsAppFrames ===
+// === Module 16029: reloadVibegrationsAppFrames ===
 
-// Module 15950 (reloadVibegrationsAppFrames)
+// Module 16029 (reloadVibegrationsAppFrames)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 10681 */;
-import vibegrationLocation from "vibegrationLocation" /* 15947 */;
+import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 10753 */;
+import vibegrationLocation from "vibegrationLocation" /* 16026 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 10677 */;
-import closure_5 from "isProjectOwner" /* 15944 */;
+import closure_4 from "map" /* 10749 */;
+import closure_5 from "isProjectOwner" /* 16023 */;
 import { Endpoints } from "ME" /* 676 */;
-import { isLaunched } from "FrameLayoutModes" /* 10678 */;
+import { isLaunched } from "FrameLayoutModes" /* 10750 */;
 
 require = arg1;
 function reloadVibegrationsAppFrames(application_id) {
@@ -66,7 +66,7 @@ function _listProjects() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -221,10 +221,12 @@ function _getProject() {
         const obj4 = { type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: null };
         obj4[1] = closure_2.body.project;
         obj.dispatch(obj4);
-        const obj5 = { bot_permissions_changed: null, integration_installed: null, preview_ready: null };
+        const obj5 = { bot_permissions_changed: null, integration_installed: null, preview_ready: null, has_activity: null, owner_authorization_revoked: null };
         obj5[0] = closure_2.body.bot_permissions_changed;
         obj5[1] = closure_2.body.integration_installed;
         obj5[2] = closure_2.body.preview_ready;
+        obj5[3] = closure_2.body.has_activity;
+        obj5[4] = closure_2.body.owner_authorization_revoked;
         (function updateIntegrationStatus(closure_0, integrationStatus) {
           let obj = callback(table[5]);
           obj = { type: "VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE", projectId: closure_0, integrationStatus };
@@ -320,6 +322,115 @@ function _patchProject() {
   }
   return applyArgumentsResult;
 }
+function _setProjectIcon() {
+  const self = this;
+  const tmp = callback((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
+    return (function*(arg0, arg1) {
+      if (c6 === 2) {
+        c6 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_3 = tmp3;
+              const table = tmp7;
+              let lib;
+              let preview_application_id;
+              obj1 = { icon: null };
+              obj1[0] = preview_application_id;
+              c5 = 1;
+              c6 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = closure_1_16(lib, obj1);
+              return obj2;
+            }
+          } else {
+            if (1 === tmp7) {
+              if (arg0 === 1) {
+                c6 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c6 = 3;
+                const obj3 = { value: null, done: true };
+                obj3[0] = arg1;
+                return obj3;
+              } else {
+                lib = arg1;
+                if (lib.ok) {
+                  preview_application_id = lib.body.preview_application_id;
+                  if (null != preview_application_id) {
+                    c4 = 1;
+                    obj1 = lib(table[10]);
+                    c5 = 3;
+                    c6 = 1;
+                    const obj4 = { value: null, done: false };
+                    obj4[0] = obj1.fetchApplication(preview_application_id);
+                    return obj4;
+                  }
+                }
+              }
+            } else {
+              if (2 === tmp7) {
+                c4 = 0;
+              } else if (arg0 === 1) {
+                c6 = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                c4 = 0;
+              }
+              c4 = 0;
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+            c6 = 3;
+          }
+        } catch (tmp21) {
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp21;
+          } else {
+            c5 = tmp;
+          }
+        }
+      }
+    })();
+  });
+  closure_19 = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
 function _deleteProject() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -340,7 +451,7 @@ function _deleteProject() {
       return callback2;
     })();
   });
-  closure_19 = tmp;
+  closure_20 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -368,7 +479,7 @@ function _refreshPublishedProject() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -419,7 +530,7 @@ function _refreshPublishedProject() {
                 throw body;
               } else if (arg0 === 2) {
                 project = 3;
-                let obj3 = { value: null, done: true };
+                const obj3 = { value: null, done: true };
                 obj3[0] = body;
                 return obj3;
               } else {
@@ -428,24 +539,44 @@ function _refreshPublishedProject() {
                 c4 = body.integration_installed;
                 project = body.project;
                 if (isPreview) {
-                  application_id = tmp50.preview_application_id;
+                  application_id = tmp55.preview_application_id;
                 } else {
-                  application_id = tmp50.application_id;
+                  application_id = tmp55.application_id;
                 }
                 if (null != application_id) {
-                  obj3 = callback(body[10]);
+                  let obj6 = callback(body[10]);
                   c4 = 3;
                   project = 1;
-                  const obj4 = { value: null, done: false };
-                  obj4[0] = obj3.fetchApplication(application_id);
+                  let obj4 = { value: null, done: false };
+                  obj4[0] = obj6.fetchApplication(application_id);
                   return obj4;
                 } else {
-                  obj1 = callback(body[6]);
+                  obj4 = callback(body[6]);
                   const obj5 = { isPreview: null };
                   obj5[0] = isPreview;
-                  const result = obj1.trackVibegrationDeployed(callback, obj5);
+                  const result = obj4.trackVibegrationDeployed(callback, obj5);
                   project = 3;
                 }
+              }
+            } else if (3 === tmp5) {
+              if (arg0 === 1) {
+                project = 3;
+                throw body;
+              } else if (arg0 === 2) {
+                project = 3;
+                obj6 = { value: null, done: true };
+                obj6[0] = body;
+                return obj6;
+              } else {
+                obj1 = callback(body[11]);
+                const widgetConfigs = obj1.fetchWidgetConfigs(application_id, { force: true });
+                c4 = 4;
+                project = 1;
+                const obj7 = { value: null, done: false };
+                obj7[0] = widgetConfigs.catch(() => {
+
+                });
+                return obj7;
               }
             } else if (arg0 === 1) {
               project = 3;
@@ -468,16 +599,16 @@ function _refreshPublishedProject() {
             obj[0] = body;
             return obj;
           }
-        } catch (tmp38) {
+        } catch (tmp43) {
           project = tmp;
-          throw tmp38;
+          throw tmp43;
         }
       }
     })();
     iter.next();
     return iter;
   });
-  closure_20 = tmp;
+  closure_21 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -533,7 +664,7 @@ export const renameProject = function renameProject(projectId, name) {
 };
 export const setProjectVisibility = function setProjectVisibility(projectId, arg1) {
   closure_0 = projectId;
-  const f99248 = (arg0) => {
+  const f99530 = (arg0) => {
     const PUBLIC = projectId(nextPromise1[9]).VibegrationsProjectFlags.PUBLIC;
     if (projectId) {
       let tmp = arg0 | PUBLIC;
@@ -555,7 +686,7 @@ export const setProjectVisibility = function setProjectVisibility(projectId, arg
     if (num == null) {
       num = 0;
     }
-    return closure_1_16(closure_0, { flags: f99249(num) });
+    return closure_1_16(closure_0, { flags: f99531(num) });
   });
   const nextPromise1 = nextPromise.then(() => {
     if (closure_1_18.get(closure_0) === nextPromise1) {
@@ -571,7 +702,7 @@ export const setProjectVisibility = function setProjectVisibility(projectId, arg
 };
 export const setProjectSharing = function setProjectSharing(arg0, arg1) {
   closure_0 = arg0;
-  const f99249 = (arg0) => {
+  const f99531 = (arg0) => {
     const SHAREABLE = callback(nextPromise1[9]).VibegrationsProjectFlags.SHAREABLE;
     if (callback) {
       let tmp = arg0 | SHAREABLE;
@@ -593,7 +724,7 @@ export const setProjectSharing = function setProjectSharing(arg0, arg1) {
     if (num == null) {
       num = 0;
     }
-    return closure_1_16(closure_0, { flags: f99249(num) });
+    return closure_1_16(closure_0, { flags: f99531(num) });
   });
   const nextPromise1 = nextPromise.then(() => {
     if (closure_1_18.get(closure_0) === nextPromise1) {
@@ -606,6 +737,16 @@ export const setProjectSharing = function setProjectSharing(arg0, arg1) {
   });
   const result = map.set(arg0, nextPromise1);
   return nextPromise;
+};
+export const setProjectIcon = function setProjectIcon(projectId, icon) {
+  const self = this;
+  const apply = _setProjectIcon.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };
 export const setGuildHints = function setGuildHints(projectId) {
   return patchProject(projectId, arg1);
@@ -634,6 +775,11 @@ export const refreshPublishedProject = function refreshPublishedProject(closure_
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
+};
+export const setComposerDraft = function setComposerDraft(projectId, draft) {
+  let obj = dispatcherDefault;
+  obj = { type: "VIBEGRATIONS_COMPOSER_DRAFT_SET", projectId, draft };
+  obj.dispatch(obj);
 };
 export const setChatSidebarWidth = function setChatSidebarWidth(width) {
   let obj = dispatcherDefault;

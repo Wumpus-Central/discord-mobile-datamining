@@ -1,6 +1,6 @@
-// === Module 15055: useCollectiblesCoachmarkScrollDismissContext ===
+// === Module 15134: useCollectiblesCoachmarkScrollDismissContext ===
 
-// Module 15055 (useCollectiblesCoachmarkScrollDismissContext)
+// Module 15134 (useCollectiblesCoachmarkScrollDismissContext)
 import importAllResult from "noop" /* 19 */;
 import { NOOP } from "sum" /* 505 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,8 +1,8 @@
-// === Module 11506: showUserProfile ===
+// === Module 11578: showUserProfile ===
 
-// Module 11506 (showUserProfile)
+// Module 11578 (showUserProfile)
 import set from "set" /* 2 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8930 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8998 */;
 
 const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryPlatformActionCreators.native.tsx");
 

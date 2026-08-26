@@ -1,15 +1,15 @@
-// === Module 12504: UserProfileActivityTimebar ===
+// === Module 12575: UserProfileActivityTimebar ===
 
-// Module 12504 (UserProfileActivityTimebar)
+// Module 12575 (UserProfileActivityTimebar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import Text from "Text" /* 4376 */;
-import useActivityTimerDefault from "useActivityTimer" /* 12505 */;
+import Text from "Text" /* 4440 */;
+import useActivityTimerDefault from "useActivityTimer" /* 12576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { Fonts } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 noopAll;
@@ -45,7 +45,7 @@ export default function UserProfileActivityTimebar(arg0) {
     str = "text-subtle";
   }
   obj3[3] = str;
-  let tmp10Result = tmp10(12505);
+  let tmp10Result = tmp10(12576);
   obj3[4] = tmp10Result.formatTime(elapsed);
   const items2 = [callback(Text.Text, obj3), ];
   const obj4 = { variant: "text-xs/normal", style: tmp5, tabularNumbers: tmp2, color: null, children: null };
@@ -54,7 +54,7 @@ export default function UserProfileActivityTimebar(arg0) {
     str2 = "text-subtle";
   }
   obj4[3] = str2;
-  tmp10Result = tmp10(12505);
+  tmp10Result = tmp10(12576);
   obj4[4] = tmp10Result.formatTime(duration);
   items2[1] = callback(Text.Text, obj4);
   obj2[1] = items2;

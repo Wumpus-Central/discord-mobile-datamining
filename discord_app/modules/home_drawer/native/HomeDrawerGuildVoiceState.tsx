@@ -1,22 +1,22 @@
-// === Module 15680: VoiceUsers ===
+// === Module 15759: VoiceUsers ===
 
-// Module 15680 (VoiceUsers)
+// Module 15759 (VoiceUsers)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4376 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11030 */;
-import AvatarPile from "AvatarPile" /* 12509 */;
+import Text from "Text" /* 4440 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11102 */;
+import AvatarPile from "AvatarPile" /* 12580 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "comparator" /* 1982 */;
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;
-import closure_7 from "markAllUserIdListsStale" /* 4034 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 4589 */;
-import closure_9 from "getVoiceStatesForGuild" /* 4455 */;
+import closure_7 from "markAllUserIdListsStale" /* 4098 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 4653 */;
+import closure_9 from "getVoiceStatesForGuild" /* 4519 */;
 import { ChannelTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function VoiceUsers(arg0) {
@@ -104,19 +104,19 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
       const obj4 = { uri: null };
       obj4[0] = previewUrl;
       obj3[1] = obj4;
-      const items1 = [tmp7(tmp3(5374), obj3), , , , ];
+      const items1 = [tmp7(tmp3(5440), obj3), , , , ];
       const obj5 = { colors: null, start: null, end: null, style: null, pointerEvents: "none" };
       obj5[0] = ["rgba(0, 0, 0, 1)", "rgba(0, 0, 0, 0)"];
       obj5[1] = { x: 0, y: 0 };
       obj5[2] = { x: 0, y: 1 };
       obj5[3] = tmp.streamPreviewDarkGradient;
-      items1[1] = tmp7(tmp3(4826), obj5);
+      items1[1] = tmp7(tmp3(4891), obj5);
       const obj6 = { colors: null, start: null, end: null, style: null, pointerEvents: "none" };
       obj6[0] = ["rgba(255, 255, 255, 1)", "rgba(255, 255, 255, 0)"];
       obj6[1] = { x: 0, y: 0 };
       obj6[2] = { x: 1, y: 1 };
       obj6[3] = tmp.streamPreviewGradient;
-      items1[2] = tmp7(tmp3(4826), obj6);
+      items1[2] = tmp7(tmp3(4891), obj6);
       const obj7 = { style: null, pointerEvents: "none" };
       obj7[0] = tmp.streamPreviewBorder;
       items1[3] = tmp7(tmp8, obj7);

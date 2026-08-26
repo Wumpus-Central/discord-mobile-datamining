@@ -1,9 +1,9 @@
-// === Module 4058: _createGatewayCheckoutContext ===
+// === Module 4122: _createGatewayCheckoutContext ===
 
-// Module 4058 (_createGatewayCheckoutContext)
+// Module 4122 (_createGatewayCheckoutContext)
 import sendRequest from "sendRequest" /* 530 */;
 import _modDef1208 from "module_1208" /* 1208 */;
-import setDefault from "set" /* 4065 */;
+import setDefault from "set" /* 4129 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { PaymentGateways } from "sum" /* 505 */;
 
@@ -26,7 +26,7 @@ function _createGatewayCheckoutContext() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

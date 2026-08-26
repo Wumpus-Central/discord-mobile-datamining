@@ -1,18 +1,18 @@
-// === Module 8729: renderItem ===
+// === Module 8797: renderItem ===
 
-// Module 8729 (renderItem)
+// Module 8797 (renderItem)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4376 */;
-import ConversationListItemBaseDefault from "ConversationListItemBase" /* 8730 */;
+import Text from "Text" /* 4440 */;
+import ConversationListItemBaseDefault from "ConversationListItemBase" /* 8798 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "removePendingListFetch" /* 7202 */;
-import CONVERSATION_COLORS from "CONVERSATION_COLORS" /* 7204 */;
+import closure_8 from "removePendingListFetch" /* 7268 */;
+import CONVERSATION_COLORS from "CONVERSATION_COLORS" /* 7270 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function renderItem(item) {
@@ -108,7 +108,7 @@ export default function ConversationListScreen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

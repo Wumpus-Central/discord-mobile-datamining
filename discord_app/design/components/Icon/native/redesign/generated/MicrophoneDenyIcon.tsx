@@ -1,10 +1,10 @@
-// === Module 9332: MicrophoneDenyIcon ===
+// === Module 9400: MicrophoneDenyIcon ===
 
-// Module 9332 (MicrophoneDenyIcon)
+// Module 9400 (MicrophoneDenyIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 9333 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 9401 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

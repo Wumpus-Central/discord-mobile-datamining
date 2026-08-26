@@ -1,11 +1,11 @@
-// === Module 13972: RPC_EMBEDDED_APP_SCOPE ===
+// === Module 14045: RPC_EMBEDDED_APP_SCOPE ===
 
-// Module 13972 (RPC_EMBEDDED_APP_SCOPE)
-import transformUserDefault from "transformUser" /* 10830 */;
+// Module 14045 (RPC_EMBEDDED_APP_SCOPE)
+import transformUserDefault from "transformUser" /* 10902 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4282 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4346 */;
 import { RPCCommands } from "ME" /* 676 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 13944 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14017 */;
 
 ({ RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
 let obj = {};

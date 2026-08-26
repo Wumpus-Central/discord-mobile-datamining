@@ -1,9 +1,9 @@
-// === Module 6024: resolveGoreSettingWithDefaults ===
+// === Module 6090: resolveGoreSettingWithDefaults ===
 
-// Module 6024 (resolveGoreSettingWithDefaults)
+// Module 6090 (resolveGoreSettingWithDefaults)
 import create from "create" /* 1306 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4083 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4147 */;
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { HelpdeskArticles } from "ME" /* 676 */;

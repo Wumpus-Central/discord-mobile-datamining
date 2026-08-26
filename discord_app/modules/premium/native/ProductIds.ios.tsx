@@ -1,8 +1,8 @@
-// === Module 7022: SubscriptionPlans ===
+// === Module 7088: SubscriptionPlans ===
 
-// Module 7022 (SubscriptionPlans)
+// Module 7088 (SubscriptionPlans)
 import set from "set" /* 2 */;
-import AppleProductIds from "AppleProductIds" /* 7023 */;
+import AppleProductIds from "AppleProductIds" /* 7089 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 ({ PremiumTypes, SubscriptionIntervalTypes, SubscriptionPlans } = GuildFeatures);

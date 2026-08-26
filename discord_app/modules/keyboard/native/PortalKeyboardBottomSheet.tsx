@@ -1,17 +1,17 @@
-// === Module 11662: PortalKeyboardBottomSheetHeader ===
+// === Module 11735: PortalKeyboardBottomSheetHeader ===
 
-// Module 11662 (PortalKeyboardBottomSheetHeader)
+// Module 11735 (PortalKeyboardBottomSheetHeader)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4120 from "module_4120" /* 4120 */;
-import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4802 */;
-import TwinButtons from "TwinButtons" /* 8810 */;
+import _modDef4184 from "module_4184" /* 4184 */;
+import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4866 */;
+import TwinButtons from "TwinButtons" /* 8878 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 9941 */;
+import closure_6 from "initialize" /* 10008 */;
 import jsxProd from "jsxProd" /* 21 */;
 import set from "set" /* 500 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function PortalKeyboardBottomSheetHeader(arg0) {
@@ -34,7 +34,7 @@ function PortalKeyboardBackground(arg0) {
   style[0] = style;
   style[1] = callback2().background;
   style[2] = roundingStyle;
-  return callback(_modDef4120.View, { pointerEvents, style });
+  return callback(_modDef4184.View, { pointerEvents, style });
 }
 let c4 = importAllResult;
 ({ Platform, View: c5 } = get_ActivityIndicator);

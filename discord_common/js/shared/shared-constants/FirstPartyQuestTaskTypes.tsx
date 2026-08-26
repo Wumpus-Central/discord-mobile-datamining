@@ -1,6 +1,6 @@
-// === Module 5275: set ===
+// === Module 5341: set ===
 
-// Module 5275 (set)
+// Module 5341 (set)
 import set from "set" /* 2 */;
 
 const obj = { ALL: null, DESKTOP: null, CONSOLE: null, IN_GAME: null, VIDEO: null };

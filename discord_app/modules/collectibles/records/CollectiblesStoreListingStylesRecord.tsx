@@ -1,6 +1,6 @@
-// === Module 7168: fromServer ===
+// === Module 7234: fromServer ===
 
-// Module 7168 (fromServer)
+// Module 7234 (fromServer)
 import toJSDefault from "toJS" /* 1931 */;
 
 const require = arg1;
@@ -17,15 +17,15 @@ class prototype extends tmp2 {
 prototype["fromServer"] = function fromServer(arg0) {
   ({ background_colors, button_colors, confetti_colors } = arg0);
   const mapped = background_colors.map((color) => {
-    const tmp = callback2(7158);
+    const tmp = callback2(7224);
     return tmp(callback(688).int2hex(color));
   });
   const mapped1 = button_colors.map((color) => {
-    const tmp = callback2(7158);
+    const tmp = callback2(7224);
     return tmp(callback(688).int2hex(color));
   });
   const mapped2 = confetti_colors.map((color) => {
-    const tmp = callback2(7158);
+    const tmp = callback2(7224);
     return tmp(callback(688).int2hex(color));
   });
   if (typeof prototype !== "function") {

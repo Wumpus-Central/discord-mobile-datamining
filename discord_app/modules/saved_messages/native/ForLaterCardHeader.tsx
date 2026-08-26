@@ -1,16 +1,16 @@
-// === Module 11577: HeaderIcon ===
+// === Module 11649: HeaderIcon ===
 
-// Module 11577 (HeaderIcon)
+// Module 11649 (HeaderIcon)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
-import computeChannelNameDefault from "computeChannelName" /* 4574 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 5884 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5885 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9813 */;
+import computeChannelNameDefault from "computeChannelName" /* 4638 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 5950 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5951 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9880 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 function HeaderIcon(channel) {
   channel = channel.channel;
@@ -20,7 +20,7 @@ function HeaderIcon(channel) {
   if (null != stateFromStores) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores;
-    obj[1] = tmp2(5885).GuildIconSizes.XSMALL;
+    obj[1] = tmp2(5951).GuildIconSizes.XSMALL;
     let tmp6Result = callback(GuildIconSizesDefault, obj);
     const tmp13 = GuildIconSizesDefault;
   } else {
@@ -37,7 +37,7 @@ function HeaderIcon(channel) {
     } else {
       obj1 = { style: null, children: null };
       obj1[0] = tmp.dmIcon;
-      obj1[1] = tmp6(tmp2(4902).ChatIcon, { size: "xxs" });
+      obj1[1] = tmp6(tmp2(4968).ChatIcon, { size: "xxs" });
       tmp6Result = tmp6(View, obj1);
     }
   }
@@ -50,7 +50,7 @@ function ChannelName(channel) {
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
   const tmp5 = computeChannelNameDefault(channel, false);
-  obj1 = channel(4866);
+  obj1 = channel(4932);
   const channelIconComponentWithGuild = obj1.getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
@@ -70,7 +70,7 @@ function ChannelName(channel) {
     obj1[0] = tmp.channelTypeIcon;
     tmp12 = callback(channelIconComponentWithGuild, obj1);
   }
-  const items1 = [tmp12, callback(channel(4376).Text, { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
+  const items1 = [tmp12, callback(channel(4440).Text, { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult })];
   obj[1] = items1;
   return closure_6(View, obj);
 }

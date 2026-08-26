@@ -1,11 +1,11 @@
-// === Module 10109: useStickerCategories ===
+// === Module 10176: useStickerCategories ===
 
-// Module 10109 (useStickerCategories)
+// Module 10176 (useStickerCategories)
 import closure_3 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { useStickerPickerStore } from "useStickerPickerStore" /* 10110 */;
+import { useStickerPickerStore } from "useStickerPickerStore" /* 10177 */;
 import { GuildNSFWContentLevel } from "ME" /* 676 */;
 import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1338 */;
 
@@ -38,15 +38,15 @@ export const useStickerCategories = function useStickerCategories(channel) {
       return tmp2;
     });
     return found1.map((type) => {
-      if (type.type !== callback(5093).StickerCategoryTypes.FAVORITE) {
-        if (type.type !== tmp(5093).StickerCategoryTypes.RECENT) {
+      if (type.type !== callback(5159).StickerCategoryTypes.FAVORITE) {
+        if (type.type !== tmp(5159).StickerCategoryTypes.RECENT) {
           return type;
         }
       }
-      if (type.type === callback(5093).StickerCategoryTypes.FAVORITE) {
-        let tmp4 = lib(10111);
+      if (type.type === callback(5159).StickerCategoryTypes.FAVORITE) {
+        let tmp4 = lib(10178);
       } else {
-        tmp4 = lib(10112);
+        tmp4 = lib(10179);
       }
       const obj = {};
       const merged = Object.assign(type);

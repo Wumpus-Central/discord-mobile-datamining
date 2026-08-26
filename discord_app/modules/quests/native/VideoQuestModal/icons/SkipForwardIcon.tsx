@@ -1,8 +1,8 @@
-// === Module 14485: SkipForwardIcon ===
+// === Module 14558: SkipForwardIcon ===
 
-// Module 14485 (SkipForwardIcon)
-import inlineStyles from "inlineStyles" /* 7985 */;
-import inlineStylesDefault from "inlineStyles" /* 7985 */;
+// Module 14558 (SkipForwardIcon)
+import inlineStyles from "inlineStyles" /* 8052 */;
+import inlineStylesDefault from "inlineStyles" /* 8052 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 

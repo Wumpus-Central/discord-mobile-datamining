@@ -1,7 +1,7 @@
-// === Module 5858: useRoleIcon ===
+// === Module 5924: useRoleIcon ===
 
-// Module 5858 (useRoleIcon)
-import getRoleIconData from "getRoleIconData" /* 5859 */;
+// Module 5924 (useRoleIcon)
+import getRoleIconData from "getRoleIconData" /* 5925 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
@@ -81,7 +81,7 @@ export const getRoleIcon = function getRoleIcon(roleId) {
       if (null != role) {
         let obj = getRoleIconData;
         if (obj.canGuildUseRoleIcons(guild, role)) {
-          let roleIconData = tmp4(5859).getRoleIconData(role);
+          let roleIconData = tmp4(5925).getRoleIconData(role);
           if (roleIconData == null) {
             roleIconData = {};
           }

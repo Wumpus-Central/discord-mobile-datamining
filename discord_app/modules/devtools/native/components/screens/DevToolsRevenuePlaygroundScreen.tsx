@@ -1,29 +1,29 @@
-// === Module 15234: describeServerError ===
+// === Module 15313: describeServerError ===
 
-// Module 15234 (describeServerError)
+// Module 15313 (describeServerError)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import TableRowInner from "TableRowInner" /* 5480 */;
-import TableRowArrow from "TableRowArrow" /* 5487 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5873 */;
-import TableSwitchRow from "TableSwitchRow" /* 5874 */;
-import serializePurchaseResponse from "serializePurchaseResponse" /* 7564 */;
+import TableRowInner from "TableRowInner" /* 5546 */;
+import TableRowArrow from "TableRowArrow" /* 5553 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5939 */;
+import TableSwitchRow from "TableSwitchRow" /* 5940 */;
+import serializePurchaseResponse from "serializePurchaseResponse" /* 7630 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "getCurrentTime" /* 8331 */;
-import closure_8 from "recomputeAffinities" /* 7265 */;
+import closure_7 from "getCurrentTime" /* 8398 */;
+import closure_8 from "recomputeAffinities" /* 7331 */;
 import closure_9 from "handleConnectionClosedOrResumed" /* 1340 */;
 import closure_10 from "ensureGuildLoaded" /* 1391 */;
 import closure_11 from "handleConnectionOpen" /* 1981 */;
 import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import closure_13 from "getUserAgnosticState" /* 4379 */;
-import { DevSettingsCategory } from "getUserAgnosticState" /* 4379 */;
+import closure_13 from "getUserAgnosticState" /* 4443 */;
+import { DevSettingsCategory } from "getUserAgnosticState" /* 4443 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function describeServerError(status) {
@@ -200,7 +200,7 @@ function FriendAnniversary() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -306,7 +306,7 @@ function FriendAnniversary() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -630,7 +630,7 @@ function FriendAnniversary() {
   return callback3(closure_19, obj9);
 }
 function TrialOfferSheetExample() {
-  let obj = premiumTrialOffer(7054);
+  let obj = premiumTrialOffer(7120);
   premiumTrialOffer = obj.usePremiumTrialOffer();
   obj = {
     label: "Trial Offer Nitro Basic",
@@ -649,9 +649,9 @@ function TrialOfferSheetExample() {
       }
     }
   };
-  items = [closure_17(premiumTrialOffer(5480).TableRow, obj), ];
+  items = [closure_17(premiumTrialOffer(5546).TableRow, obj), ];
   obj = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(5480).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(5546).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -669,7 +669,7 @@ function TrialOfferSheetExample() {
     }
   });
   obj[2] = items;
-  return closure_18(premiumTrialOffer(5873).TableRowGroup, obj);
+  return closure_18(premiumTrialOffer(5939).TableRowGroup, obj);
 }
 function PremiumToggles() {
   let obj = defaultAreStatesEqual;
@@ -713,10 +713,10 @@ function ForceMockIAP() {
   obj[2] = tmp4;
   obj[3] = result;
   obj[4] = function onValueChange(arg0) {
-    callback(15238).toggle("force_mock_iap", arg0);
+    callback(15317).toggle("force_mock_iap", arg0);
     closure_13.persist();
-    const obj = callback(15238);
-    const result = callback2(11349).checkForUpdateAndReload();
+    const obj = callback(15317);
+    const result = callback2(11421).checkForUpdateAndReload();
   };
   return closure_17(TableRowGroupTitle.TableRowGroup, obj);
 }

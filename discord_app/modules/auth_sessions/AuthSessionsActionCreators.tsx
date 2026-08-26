@@ -1,6 +1,6 @@
-// === Module 14404: _fetchAuthSessions ===
+// === Module 14477: _fetchAuthSessions ===
 
-// Module 14404 (_fetchAuthSessions)
+// Module 14477 (_fetchAuthSessions)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
@@ -54,7 +54,7 @@ function _logOutSessions() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -79,7 +79,7 @@ function _logOutSessions() {
                 items = arr2;
                 if (num2 === arr2.length) {
                   constants = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 items = [arr2];

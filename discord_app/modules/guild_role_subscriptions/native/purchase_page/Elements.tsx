@@ -1,20 +1,20 @@
-// === Module 15898: TruncatedText ===
+// === Module 15977: TruncatedText ===
 
-// Module 15898 (TruncatedText)
+// Module 15977 (TruncatedText)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4376 */;
-import PressableBase from "PressableBase" /* 4949 */;
-import notSupportedDefault from "notSupported" /* 7796 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 7797 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14671 */;
-import registerAssetDefault from "registerAsset" /* 15899 */;
+import Text from "Text" /* 4440 */;
+import PressableBase from "PressableBase" /* 5015 */;
+import notSupportedDefault from "notSupported" /* 7863 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 7864 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 14744 */;
+import registerAssetDefault from "registerAsset" /* 15978 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "addSubscriptionPlan" /* 4048 */;
+import closure_8 from "addSubscriptionPlan" /* 4112 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 ({ TouchableOpacity: closure_6, View: error } = get_ActivityIndicator);
@@ -75,7 +75,7 @@ export const TruncatedText = function TruncatedText(lineClamp) {
         callback(nativeEvent.nativeEvent.lines.length > num);
       }
     };
-    const items = [closure_9(num(4376).Text, obj), first];
+    const items = [closure_9(num(4440).Text, obj), first];
     obj[3] = items;
     return closure_10(closure_6, obj);
   } else {
@@ -91,7 +91,7 @@ export const TruncatedText = function TruncatedText(lineClamp) {
     }
     obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
     obj1[2] = stringResult;
-    t = tmp7(num(4376).Text, obj1);
+    t = tmp7(num(4440).Text, obj1);
     obj[1] = t;
     closure_9(closure_7, obj);
     const tmp8 = closure_7;
@@ -119,8 +119,8 @@ export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPla
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp2(5962).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp2Result = tmp2(5962);
+    str = "" + tmp2(6028).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp2Result = tmp2(6028);
   }
   return str;
 };

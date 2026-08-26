@@ -1,15 +1,15 @@
-// === Module 5994: useCanManageGuildOfficialMessages ===
+// === Module 6060: useCanManageGuildOfficialMessages ===
 
-// Module 5994 (useCanManageGuildOfficialMessages)
+// Module 6060 (useCanManageGuildOfficialMessages)
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import nDefault from "n" /* 689 */;
-import hexToRgba from "hexToRgba" /* 4228 */;
-import experimentDefault from "experiment" /* 5995 */;
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 5996 */;
-import isSystemMessageDefault from "isSystemMessage" /* 5997 */;
+import hexToRgba from "hexToRgba" /* 4292 */;
+import experimentDefault from "experiment" /* 6061 */;
+import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6062 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6063 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4025 */;
-import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MESSAGE_GROUP_SPACING" /* 4373 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4089 */;
+import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MESSAGE_GROUP_SPACING" /* 4437 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

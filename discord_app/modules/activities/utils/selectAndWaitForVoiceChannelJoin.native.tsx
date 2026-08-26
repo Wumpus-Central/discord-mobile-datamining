@@ -1,6 +1,6 @@
-// === Module 10725: _selectAndWaitForVoiceChannelJoin ===
+// === Module 10797: _selectAndWaitForVoiceChannelJoin ===
 
-// Module 10725 (_selectAndWaitForVoiceChannelJoin)
+// Module 10797 (_selectAndWaitForVoiceChannelJoin)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "handleConnectionOpen" /* 1981 */;
 
@@ -23,7 +23,7 @@ function _selectAndWaitForVoiceChannelJoin() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

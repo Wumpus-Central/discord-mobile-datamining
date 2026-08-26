@@ -1,15 +1,15 @@
-// === Module 10748: updateSpeaker ===
+// === Module 10820: updateSpeaker ===
 
-// Module 10748 (updateSpeaker)
+// Module 10820 (updateSpeaker)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isStreamKey from "isStreamKey" /* 4446 */;
-import closure_4 from "reset" /* 4402 */;
+import isStreamKey from "isStreamKey" /* 4510 */;
+import closure_4 from "reset" /* 4466 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4431 */;
-import closure_7 from "anyoneHasFlagInContext" /* 5244 */;
-import closure_8 from "getParticipants" /* 4396 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4401 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_7 from "anyoneHasFlagInContext" /* 5310 */;
+import closure_8 from "getParticipants" /* 4460 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4465 */;
 import importDefaultResult from "apply" /* 12 */;
 
 require = arg1;

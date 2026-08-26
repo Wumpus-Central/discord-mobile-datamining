@@ -1,6 +1,6 @@
-// === Module 9140: useGuildEligibleForMediaChannels ===
+// === Module 9208: useGuildEligibleForMediaChannels ===
 
-// Module 9140 (useGuildEligibleForMediaChannels)
+// Module 9208 (useGuildEligibleForMediaChannels)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

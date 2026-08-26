@@ -1,6 +1,6 @@
-// === Module 9667: SidebarVisibilityMethodStore ===
+// === Module 9735: SidebarVisibilityMethodStore ===
 
-// Module 9667 (SidebarVisibilityMethodStore)
+// Module 9735 (SidebarVisibilityMethodStore)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 

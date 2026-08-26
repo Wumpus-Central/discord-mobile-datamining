@@ -1,8 +1,8 @@
-// === Module 9370: useSecureFramesUserVerifiedKeysCount ===
+// === Module 9438: useSecureFramesUserVerifiedKeysCount ===
 
-// Module 9370 (useSecureFramesUserVerifiedKeysCount)
+// Module 9438 (useSecureFramesUserVerifiedKeysCount)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "initialize" /* 9341 */;
+import closure_3 from "initialize" /* 9409 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx");

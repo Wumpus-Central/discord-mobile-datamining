@@ -1,13 +1,13 @@
-// === Module 11981: validateMultiAccountTokens ===
+// === Module 12054: validateMultiAccountTokens ===
 
-// Module 11981 (validateMultiAccountTokens)
+// Module 12054 (validateMultiAccountTokens)
 import timestampDefault from "timestamp" /* 3 */;
 import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import handleLogoutDefault from "handleLogout" /* 5933 */;
+import handleLogoutDefault from "handleLogout" /* 5999 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "initialize" /* 11977 */;
+import closure_6 from "initialize" /* 12050 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -37,7 +37,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -1,10 +1,10 @@
-// === Module 12531: ThreadMinusIcon ===
+// === Module 12602: ThreadMinusIcon ===
 
-// Module 12531 (ThreadMinusIcon)
+// Module 12602 (ThreadMinusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 12532 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 12603 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

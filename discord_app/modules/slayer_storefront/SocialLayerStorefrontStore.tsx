@@ -1,6 +1,6 @@
-// === Module 5956: handleUserSettingsStoreUpdate ===
+// === Module 6022: handleUserSettingsStoreUpdate ===
 
-// Module 5956 (handleUserSettingsStoreUpdate)
+// Module 6022 (handleUserSettingsStoreUpdate)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_1 from "_getSystemLocale" /* 1996 */;

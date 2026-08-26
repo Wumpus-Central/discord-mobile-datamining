@@ -1,6 +1,6 @@
-// === Module 8256: getPrivateChannelIntegrationAddedSystemMessageContent ===
+// === Module 8323: getPrivateChannelIntegrationAddedSystemMessageContent ===
 
-// Module 8256 (getPrivateChannelIntegrationAddedSystemMessageContent)
+// Module 8323 (getPrivateChannelIntegrationAddedSystemMessageContent)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import combinedDefault from "combined" /* 1995 */;

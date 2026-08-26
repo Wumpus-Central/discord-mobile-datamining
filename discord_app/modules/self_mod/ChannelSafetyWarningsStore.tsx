@@ -1,6 +1,6 @@
-// === Module 9818: handleConnectionOpen ===
+// === Module 9885: handleConnectionOpen ===
 
-// Module 9818 (handleConnectionOpen)
+// Module 9885 (handleConnectionOpen)
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

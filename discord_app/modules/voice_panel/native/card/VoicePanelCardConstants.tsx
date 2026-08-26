@@ -1,6 +1,6 @@
-// === Module 11844: CARD_SIZE ===
+// === Module 11917: CARD_SIZE ===
 
-// Module 11844 (CARD_SIZE)
+// Module 11917 (CARD_SIZE)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 

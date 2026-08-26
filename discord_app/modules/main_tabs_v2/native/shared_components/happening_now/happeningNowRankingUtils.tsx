@@ -1,10 +1,10 @@
-// === Module 15424: cardSize ===
+// === Module 15503: cardSize ===
 
-// Module 15424 (cardSize)
+// Module 15503 (cardSize)
 import apply from "apply" /* 12 */;
-import closure_3 from "markAllUserIdListsStale" /* 4034 */;
-import closure_4 from "updateVoiceState" /* 4399 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14738 */;
+import closure_3 from "markAllUserIdListsStale" /* 4098 */;
+import closure_4 from "updateVoiceState" /* 4463 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14811 */;
 
 require = arg1;
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: c5, HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: closure_6, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: error } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);

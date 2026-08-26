@@ -1,7 +1,7 @@
-// === Module 11282: useVoteReactors ===
+// === Module 11354: useVoteReactors ===
 
-// Module 11282 (useVoteReactors)
-import closure_3 from "reactionKey" /* 7365 */;
+// Module 11354 (useVoteReactors)
+import closure_3 from "reactionKey" /* 7431 */;
 import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "ME" /* 676 */;
 
 const require = arg1;

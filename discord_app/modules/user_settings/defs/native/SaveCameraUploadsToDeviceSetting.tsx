@@ -1,11 +1,11 @@
-// === Module 14868: toggle ===
+// === Module 14947: toggle ===
 
-// Module 14868 (toggle)
+// Module 14947 (toggle)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 8845 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 8913 */;
 import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import createToggle from "createToggle" /* 10516 */;
+import createToggle from "createToggle" /* 10584 */;
 
 require = arg1;
 createToggle = {

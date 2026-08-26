@@ -1,20 +1,20 @@
-// === Module 9772: _toPropertyKey ===
+// === Module 9839: _toPropertyKey ===
 
-// Module 9772 (_toPropertyKey)
+// Module 9839 (_toPropertyKey)
 import applyDefault from "apply" /* 12 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5337 */;
-import getAllDefault from "getAll" /* 7263 */;
-import cleanString from "cleanString" /* 7267 */;
-import getTransformedUserDefault from "getTransformedUser" /* 7456 */;
+import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5403 */;
+import getAllDefault from "getAll" /* 7329 */;
+import cleanString from "cleanString" /* 7333 */;
+import getTransformedUserDefault from "getTransformedUser" /* 7522 */;
 import closure_3 from "_objectWithoutProperties" /* 109 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "initialize" /* 7268 */;
-import closure_7 from "recountRelationshipTypes" /* 7264 */;
-import closure_8 from "recomputeAffinities" /* 7265 */;
+import closure_6 from "initialize" /* 7334 */;
+import closure_7 from "recountRelationshipTypes" /* 7330 */;
+import closure_8 from "recomputeAffinities" /* 7331 */;
 import closure_9 from "createdAt" /* 1930 */;
-import closure_10 from "markAllUserIdListsStale" /* 4034 */;
+import closure_10 from "markAllUserIdListsStale" /* 4098 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 import set from "set" /* 2 */;
@@ -546,7 +546,7 @@ prototype["filter"] = function filter(toLocaleLowerCase) {
   let self = this;
   self = this;
   let _require = toLocaleLowerCase;
-  let obj = _require(7267);
+  let obj = _require(7333);
   const cleanStringResult = obj.cleanString(toLocaleLowerCase);
   _require = cleanStringResult;
   if (this.currentQuery === cleanStringResult) {

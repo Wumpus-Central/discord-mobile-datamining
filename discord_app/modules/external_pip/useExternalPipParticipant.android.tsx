@@ -1,13 +1,13 @@
-// === Module 16353: useExternalPipParticipant ===
+// === Module 16434: useExternalPipParticipant ===
 
-// Module 16353 (useExternalPipParticipant)
+// Module 16434 (useExternalPipParticipant)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getParticipants" /* 4396 */;
+import closure_4 from "getParticipants" /* 4460 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4431 */;
-import closure_7 from "createRTCConnection" /* 4454 */;
-import ParticipantTypes from "ParticipantTypes" /* 4401 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_7 from "createRTCConnection" /* 4518 */;
+import ParticipantTypes from "ParticipantTypes" /* 4465 */;
 
 const require = arg1;
 ({ isStreamParticipant: closure_8, ParticipantTypes: c9 } = ParticipantTypes);
@@ -60,7 +60,7 @@ export default function useExternalPipParticipant() {
       id2 = tmp6.id;
     }
     if (stateFromStores1.current !== id2) {
-      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "isArray", focusedParticipantType: true };
+      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "ct", focusedParticipantType: null };
       obj[2] = _undefined.current;
     } else {
       let type1;
@@ -261,7 +261,7 @@ export default function useExternalPipParticipant() {
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "channel" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "call" };
   }, items4);
   const items5 = [selectedParticipantSpeaking.selectedParticipantSpeaking];
   const effect = React.useEffect(() => {

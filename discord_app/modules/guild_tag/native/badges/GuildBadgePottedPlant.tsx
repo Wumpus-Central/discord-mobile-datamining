@@ -1,9 +1,9 @@
-// === Module 13504: items ===
+// === Module 13577: items ===
 
-// Module 13504 (items)
+// Module 13577 (items)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 7985 */;
-import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13470 */;
+import inlineStyles from "inlineStyles" /* 8052 */;
+import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13543 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

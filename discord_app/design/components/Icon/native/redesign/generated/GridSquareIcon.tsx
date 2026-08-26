@@ -1,10 +1,10 @@
-// === Module 16165: GridSquareIcon ===
+// === Module 16246: GridSquareIcon ===
 
-// Module 16165 (GridSquareIcon)
+// Module 16246 (GridSquareIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 15016 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 15095 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

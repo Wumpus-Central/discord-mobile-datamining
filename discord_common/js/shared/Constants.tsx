@@ -287,6 +287,7 @@ export const ExternalSKUStrategyTypes = frozen3;
 export const RevenueSurfaces = { DISCOVERY: 0, [0]: "DISCOVERY", CHECKOUT: 1, [1]: "CHECKOUT" };
 export const PurchaseTypes = obj3;
 export const PurchaseTypeToAnalyticsPaymentType = frozen4;
+export const OfferTriggerTypes = { PREMIUM_UPSELL_VIEWED: "premium_upsell_viewed", VIDEO_STREAM_ENDED: "video_stream_ended", USER_PROFILE_ACTION: "user_profile_action", JOIN_VOICE_CHANNEL: "join_voice_channel", CHANNEL_OPENED: "channel_opened" };
 export const BasicPermissions = { VIEW_CHANNEL: 1024, [1024]: "VIEW_CHANNEL", READ_MESSAGE_HISTORY: 65536, [65536]: "READ_MESSAGE_HISTORY", CONNECT: 1048576, [1048576]: "CONNECT" };
 export const Permissions = frozen5;
 export const NOOP = function NOOP() {

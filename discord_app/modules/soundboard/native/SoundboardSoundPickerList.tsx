@@ -1,32 +1,37 @@
-// === Module 16415: getSectionLabel ===
+// === Module 16498: getSectionLabel ===
 
-// Module 16415 (getSectionLabel)
+// Module 16498 (getSectionLabel)
 import ThemesDefault from "Themes" /* 712 */;
-import SoundButtonOverlay from "SoundButtonOverlay" /* 4858 */;
-import renderDefaultEmptyDefault from "renderDefaultEmpty" /* 8159 */;
+import SoundButtonOverlay from "SoundButtonOverlay" /* 4924 */;
+import renderDefaultEmptyDefault from "renderDefaultEmpty" /* 8226 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import SOUND_BUTTON_HEIGHT from "SOUND_BUTTON_HEIGHT" /* 16410 */;
+import SOUND_BUTTON_HEIGHT from "SOUND_BUTTON_HEIGHT" /* 16491 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function getSectionLabel(category) {
   const type = category.category.categoryInfo.type;
   if (SoundButtonOverlay.SoundboardSoundGridSectionType.GUILD === type) {
     return category.category.categoryInfo.guild.name;
-  } else if (tmp(4858).SoundboardSoundGridSectionType.DEFAULTS === type) {
+  } else if (tmp(4924).SoundboardSoundGridSectionType.DEFAULTS === type) {
+    const intl4 = tmp(1236).intl;
+    return intl4.string(tmp(1236).t.Rtvk9X);
+  } else if (tmp(4924).SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl3 = tmp(1236).intl;
-    return intl3.string(tmp(1236).t.Rtvk9X);
-  } else if (tmp(4858).SoundboardSoundGridSectionType.FAVORITES === type) {
+    return intl3.string(tmp(1236).t.y3LQCG);
+  } else if (tmp(4924).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
     const intl2 = tmp(1236).intl;
-    return intl2.string(tmp(1236).t.y3LQCG);
-  } else if (tmp(4858).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
-    const intl = tmp(1236).intl;
-    return intl.string(tmp(1236).t["+cGVV6"]);
-  } else if (tmp(4858).SoundboardSoundGridSectionType.SEARCH === type) {
+    return intl2.string(tmp(1236).t["+cGVV6"]);
+  } else if (tmp(4924).SoundboardSoundGridSectionType.SEARCH === type) {
     return null;
+  } else if (tmp(4924).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+    const intl = tmp(1236).intl;
+    const obj = { guildName: null };
+    obj[0] = category.category.categoryInfo.guild.name;
+    return intl.formatToPlainString(tmp(1236).t.GXs41w, obj);
   }
 }
 function SoundPickerButtonRow(section) {
@@ -44,15 +49,15 @@ function SoundPickerButtonRow(section) {
   } else {
     let result = !stateFromStores;
     if (!stateFromStores) {
-      result = tmp2(8830).isSoundboardSectionNitroLocked(channel.guild_id, section.category.categoryInfo);
-      const tmp2Result = tmp2(8830);
+      result = tmp2(8898).isSoundboardSectionNitroLocked(channel.guild_id, section.category.categoryInfo);
+      const tmp2Result = tmp2(8898);
     }
     c3 = result;
     obj = { style: null, children: null };
     const items1 = [tmp.row];
     obj[0] = items1;
     if (result) {
-      result = callback(tmp2(8853).PremiumUpsellGradientBackground, {});
+      result = callback(tmp2(8921).PremiumUpsellGradientBackground, {});
     }
     const items2 = [
       result,
@@ -136,7 +141,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     if (!result1) {
       if (result2) {
         if (!result) {
-          let START = channel(closure_1_2[22]).PremiumUpsellSectionDividerPosition.START;
+          let START = channel(closure_1_2[23]).PremiumUpsellSectionDividerPosition.START;
         }
         return START;
       }
@@ -145,13 +150,13 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     if (result1) {
       END = null;
       if (!result2) {
-        END = channel(closure_1_2[22]).PremiumUpsellSectionDividerPosition.END;
+        END = channel(closure_1_2[23]).PremiumUpsellSectionDividerPosition.END;
       }
     }
     START = END;
   }
   closure_5 = callback2();
-  let obj = channel(4821);
+  let obj = channel(4886);
   const fontScale = obj.useFontScale();
   let tmp3 = (function getFastListSectionsFromCategories(categories, closure_6, fontScale) {
     const items = [];
@@ -160,7 +165,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     while (iter !== undefined) {
       let tmp2 = callback;
       let tmp3 = dependencyMap;
-      let arr2 = callback(8899)(nextResult.items, closure_6);
+      let arr2 = callback(8967)(nextResult.items, closure_6);
       let tmp4 = closure_9;
       let obj = { category: null, height: null, soundsByRow: null };
       obj[0] = nextResult;
@@ -253,7 +258,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
   });
   let obj3 = channel(12);
   const items2 = [closure_5];
-  callback2 = channel(589).useStateFromStores(items2, () => callback(4043).canUseSoundboardEverywhere(currentUser.getCurrentUser()));
+  callback2 = channel(589).useStateFromStores(items2, () => callback(4107).canUseSoundboardEverywhere(currentUser.getCurrentUser()));
   obj = {
     onLayout(nativeEvent) {
       return callback4(0, nativeEvent.nativeEvent.layout.height);
@@ -277,7 +282,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     sectionFooterSize(arg0) {
       let num = 0;
       if (null != getSectionPosition(arg0)) {
-        num = channel(closure_1_2[22]).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + channel(closure_1_2[22]).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+        num = channel(closure_1_2[23]).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + channel(closure_1_2[23]).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
       }
       return num;
     },
@@ -304,7 +309,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
         obj[1] = tmp2.category.categoryInfo.guild;
         obj[2] = tmp11.sectionIcon;
         let tmp8Result = tmp8(closure_1_1(closure_1_2[17]), obj);
-        const tmp29 = closure_1_1(closure_1_2[17]);
+        const tmp27 = closure_1_1(closure_1_2[17]);
       } else if (channel(closure_1_2[7]).SoundboardSoundGridSectionType.DEFAULTS === type) {
         obj1 = { source: null, style: null };
         obj1[0] = closure_1_1(closure_1_2[19]);
@@ -319,15 +324,22 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
         const obj3 = { style: null };
         obj3[0] = tmp11.sectionIcon;
         tmp8Result = tmp8(channel(closure_1_2[21]).ClockIcon, obj3);
-      } else if (channel(closure_1_2[7]).SoundboardSoundGridSectionType.SEARCH === type) {
+      } else {
         tmp8Result = null;
+        if (channel(closure_1_2[7]).SoundboardSoundGridSectionType.SEARCH !== type) {
+          if (channel(closure_1_2[7]).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+            const obj4 = { style: null };
+            obj4[0] = tmp11.sectionIcon;
+            tmp8Result = tmp8(channel(closure_1_2[22]).TrophyIcon, obj4);
+          }
+        }
       }
-      const obj4 = { children: null };
+      const obj5 = { children: null };
       items[1] = tmp8Result;
-      items[2] = closure_7(channel(closure_1_2[24]).Text, { accessibilityRole: "header", lineClamp: 1, variant: "heading-sm/semibold", children: getSectionPosition(closure_6[arg0]) });
+      items[2] = closure_7(channel(closure_1_2[25]).Text, { accessibilityRole: "header", lineClamp: 1, variant: "heading-sm/semibold", children: getSectionPosition(closure_6[arg0]) });
       obj[1] = items;
-      obj4[0] = closure_8(closure_1_4, obj);
-      return closure_7(closure_1_4, obj4, closure_6[arg0].category.key);
+      obj5[0] = closure_8(closure_1_4, obj);
+      return closure_7(closure_1_4, obj5, closure_6[arg0].category.key);
     },
     renderSectionFooter(arg0) {
       const tmp = getSectionPosition(arg0);
@@ -335,7 +347,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
       if (null != tmp) {
         const obj = { position: null };
         obj[0] = tmp;
-        tmp2 = lib(closure_1_1(closure_1_2[22]), obj);
+        tmp2 = lib(closure_1_1(closure_1_2[23]), obj);
       }
       return tmp2;
     },

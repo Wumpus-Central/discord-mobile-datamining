@@ -1,10 +1,10 @@
-// === Module 12174: SegmentedControlPage ===
+// === Module 12247: SegmentedControlPage ===
 
-// Module 12174 (SegmentedControlPage)
+// Module 12247 (SegmentedControlPage)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4120" /* 4120 */;
+import importDefaultResult from "module_4184" /* 4184 */;
 
 const require = arg1;
 function SegmentedControlPage(children) {

@@ -1,7 +1,7 @@
-// === Module 12731: useCanRemoveAllReactions ===
+// === Module 12804: useCanRemoveAllReactions ===
 
-// Module 12731 (useCanRemoveAllReactions)
-import closure_2 from "getUncachedChannelPermissions" /* 4025 */;
+// Module 12804 (useCanRemoveAllReactions)
+import closure_2 from "getUncachedChannelPermissions" /* 4089 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;

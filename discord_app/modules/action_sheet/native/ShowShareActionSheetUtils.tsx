@@ -1,13 +1,13 @@
-// === Module 9072: trackAppClickInNativeShareSheet ===
+// === Module 9140: trackAppClickInNativeShareSheet ===
 
-// Module 9072 (trackAppClickInNativeShareSheet)
+// Module 9140 (trackAppClickInNativeShareSheet)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import getExtensionFromContentType from "getExtensionFromContentType" /* 5460 */;
-import SHARE_PREPARING_MODAL_KEY from "SHARE_PREPARING_MODAL_KEY" /* 9073 */;
-import apexExperiment from "apexExperiment" /* 9074 */;
+import getExtensionFromContentType from "getExtensionFromContentType" /* 5526 */;
+import SHARE_PREPARING_MODAL_KEY from "SHARE_PREPARING_MODAL_KEY" /* 9141 */;
+import apexExperiment from "apexExperiment" /* 9142 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = SHARE_PREPARING_MODAL_KEY.SHARE_SHEET_PRESENT_DELAY_MS;
@@ -35,7 +35,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
           }
           ({ videoURI, contentType } = source);
           if (null != videoURI) {
-            tmpResult = tmp(5460);
+            tmpResult = tmp(5526);
             const decideFileExtensionResult = tmpResult.decideFileExtension(videoURI, contentType, true);
             obj = { mediaFallbackUrl: null, mediaStagingOptions: null };
             obj[0] = videoURI;
@@ -50,7 +50,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
             obj[1] = tmp11;
             return obj;
           } else {
-            const decideFileExtensionResult1 = tmp(5460).decideFileExtension(source.uri, contentType, true);
+            const decideFileExtensionResult1 = tmp(5526).decideFileExtension(source.uri, contentType, true);
             const obj2 = { mediaFallbackUrl: null, mediaStagingOptions: null };
             obj2[0] = source.shareURI;
             let tmp6;

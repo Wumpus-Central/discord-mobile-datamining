@@ -1,11 +1,11 @@
-// === Module 8962: _maybeFetchProductsWithSkus ===
+// === Module 9030: _maybeFetchProductsWithSkus ===
 
-// Module 8962 (_maybeFetchProductsWithSkus)
+// Module 9030 (_maybeFetchProductsWithSkus)
 import setDefault from "set" /* 687 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_getSystemLocale" /* 1996 */;
-import closure_5 from "getFetchState" /* 8963 */;
-import closure_6 from "fromServer" /* 7169 */;
+import closure_5 from "getFetchState" /* 9031 */;
+import closure_6 from "fromServer" /* 7235 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -28,7 +28,7 @@ function _maybeFetchProductsWithSkus() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -200,7 +200,7 @@ function _maybeFetchProductsBySkuIds() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

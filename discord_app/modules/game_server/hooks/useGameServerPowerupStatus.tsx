@@ -1,8 +1,8 @@
-// === Module 12133: useGameServerPowerupStatus ===
+// === Module 12206: useGameServerPowerupStatus ===
 
-// Module 12133 (useGameServerPowerupStatus)
+// Module 12206 (useGameServerPowerupStatus)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleGameServerInstanceCreated" /* 4287 */;
+import closure_4 from "handleGameServerInstanceCreated" /* 4351 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerPowerupStatus.tsx");
@@ -19,7 +19,7 @@ export default function useGameServerPowerupStatus(arg0) {
     }
     return entitlements;
   }, items1);
-  const tmp2 = stateFromStores(12117)(arg0);
+  const tmp2 = stateFromStores(12190)(arg0);
   dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return React.useMemo(() => {

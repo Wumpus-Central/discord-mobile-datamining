@@ -1,6 +1,6 @@
-// === Module 5274: AdPlacement ===
+// === Module 5340: AdPlacement ===
 
-// Module 5274 (AdPlacement)
+// Module 5340 (AdPlacement)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AdPlacement.tsx");

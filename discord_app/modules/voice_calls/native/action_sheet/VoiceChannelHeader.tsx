@@ -1,26 +1,26 @@
-// === Module 13262: PrivateChannelSubtitle ===
+// === Module 13335: PrivateChannelSubtitle ===
 
-// Module 13262 (PrivateChannelSubtitle)
+// Module 13335 (PrivateChannelSubtitle)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import computeChannelNameDefault from "computeChannelName" /* 4574 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 4896 */;
-import PressableBase from "PressableBase" /* 4949 */;
-import registerAssetDefault from "registerAsset" /* 9873 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10902 */;
-import id from "id" /* 13263 */;
-import idDefault from "id" /* 13263 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13264 */;
-import OnGoingCallTimerDefault from "OnGoingCallTimer" /* 13265 */;
+import computeChannelNameDefault from "computeChannelName" /* 4638 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 4962 */;
+import PressableBase from "PressableBase" /* 5015 */;
+import registerAssetDefault from "registerAsset" /* 9940 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10974 */;
+import id from "id" /* 13336 */;
+import idDefault from "id" /* 13336 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13337 */;
+import OnGoingCallTimerDefault from "OnGoingCallTimer" /* 13338 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "participantFromServer" /* 1390 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4089 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function PrivateChannelSubtitle(channel) {
@@ -34,10 +34,10 @@ function PrivateChannelSubtitle(channel) {
   if (tmp6Result) {
     obj = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
     obj[0] = tmp.subtitle;
-    tmp6Result = tmp6(tmp7(4376).Text, obj);
+    tmp6Result = tmp6(tmp7(4440).Text, obj);
   }
   items[1] = tmp6Result;
-  tmp6Result = state === tmp7(13263).CallStates.CONNECTED;
+  tmp6Result = state === tmp7(13336).CallStates.CONNECTED;
   if (tmp6Result) {
     obj1 = { channelId: null, style: null };
     obj1[0] = channel.id;

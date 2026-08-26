@@ -1,19 +1,19 @@
-// === Module 10938: VoiceSensitivity ===
+// === Module 11010: VoiceSensitivity ===
 
-// Module 10938 (VoiceSensitivity)
+// Module 11010 (VoiceSensitivity)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4431 */;
-import closure_8 from "anyoneHasFlagInContext" /* 5244 */;
-import closure_9 from "getState" /* 7019 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_8 from "anyoneHasFlagInContext" /* 5310 */;
+import closure_9 from "getState" /* 7085 */;
 import { AppStates } from "ME" /* 676 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4618 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4682 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
-import hexToRgba from "hexToRgba" /* 4228 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
+import hexToRgba from "hexToRgba" /* 4292 */;
 
 const require = arg1;
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -108,7 +108,7 @@ export default function VoiceSensitivity(auto) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -149,7 +149,7 @@ export default function VoiceSensitivity(auto) {
                 mediaEngine.on(closure_2_0(closure_2_2[16]).MediaEngineEvent.VoiceActivity, closure_1_12);
               }
               c2 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp17) {
             c2 = tmp;

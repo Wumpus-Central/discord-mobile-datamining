@@ -1,7 +1,7 @@
-// === Module 11998: useChangelogIdFromChannel ===
+// === Module 12071: useChangelogIdFromChannel ===
 
-// Module 11998 (useChangelogIdFromChannel)
-import closure_2 from "reinjectEphemerals" /* 4623 */;
+// Module 12071 (useChangelogIdFromChannel)
+import closure_2 from "reinjectEphemerals" /* 4687 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/changelog/useChangelogIdFromChannel.tsx");

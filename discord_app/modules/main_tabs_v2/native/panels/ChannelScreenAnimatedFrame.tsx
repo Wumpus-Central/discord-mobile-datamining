@@ -1,13 +1,13 @@
-// === Module 15369: ChannelScreenAnimatedFrame ===
+// === Module 15448: ChannelScreenAnimatedFrame ===
 
-// Module 15369 (ChannelScreenAnimatedFrame)
+// Module 15448 (ChannelScreenAnimatedFrame)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import MIN_HEADER_HEIGHT from "MIN_HEADER_HEIGHT" /* 8540 */;
+import MIN_HEADER_HEIGHT from "MIN_HEADER_HEIGHT" /* 8608 */;
 import { ThemeTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 noopAll;

@@ -1,11 +1,11 @@
-// === Module 16336: ChannelSubtitle ===
+// === Module 16417: ChannelSubtitle ===
 
-// Module 16336 (ChannelSubtitle)
+// Module 16417 (ChannelSubtitle)
 import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4376 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 15583 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16325 */;
-import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth" /* 9950 */;
+import Text from "Text" /* 4440 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 15662 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16406 */;
+import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth" /* 10017 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -34,8 +34,8 @@ function ChannelSubtitle(arg0) {
       str = "text-muted";
     }
     obj[5] = str;
-    obj.children = tmp(9948).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4376).Text, { content: null, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
+    obj.children = tmp(10015).renderMessagePreviewMarkup(obj);
+    return jsx(tmp(4440).Text, { content: null, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
   }
 }
 noopAll;

@@ -1,9 +1,9 @@
-// === Module 11089: isSocialLayerApplication ===
+// === Module 11161: isSocialLayerApplication ===
 
-// Module 11089 (isSocialLayerApplication)
+// Module 11161 (isSocialLayerApplication)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import getApplicationFlags from "getApplicationFlags" /* 7733 */;
+import getApplicationFlags from "getApplicationFlags" /* 7799 */;
 
 const ApplicationFlags = ME.ApplicationFlags;
 const result = set.fileFinishedImporting("modules/applications/isSocialLayerApplication.tsx");

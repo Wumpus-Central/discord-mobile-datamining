@@ -1,6 +1,6 @@
-// === Module 7587: items ===
+// === Module 7653: items ===
 
-// Module 7587 (items)
+// Module 7653 (items)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/billing/native/iapProducts.tsx");

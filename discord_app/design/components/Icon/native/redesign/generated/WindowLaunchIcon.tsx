@@ -1,10 +1,10 @@
-// === Module 12440: WindowLaunchIcon ===
+// === Module 12511: WindowLaunchIcon ===
 
-// Module 12440 (WindowLaunchIcon)
+// Module 12511 (WindowLaunchIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 12441 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 12512 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

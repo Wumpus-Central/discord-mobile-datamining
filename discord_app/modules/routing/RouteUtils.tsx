@@ -1,10 +1,10 @@
-// === Module 4220: RouteParam ===
+// === Module 4284: RouteParam ===
 
-// Module 4220 (RouteParam)
+// Module 4284 (RouteParam)
 import set from "set" /* 2 */;
 import INVITE from "INVITE" /* 677 */;
 import set2 from "set" /* 1398 */;
-import RouteParam from "RouteParam" /* 4221 */;
+import RouteParam from "RouteParam" /* 4285 */;
 
 const PSEUDO_GUILD_IDS = INVITE.PSEUDO_GUILD_IDS;
 const isStaticChannelRoute = set2.isStaticChannelRoute;

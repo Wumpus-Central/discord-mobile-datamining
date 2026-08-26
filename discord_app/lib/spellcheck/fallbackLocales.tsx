@@ -1,6 +1,6 @@
-// === Module 5453: set ===
+// === Module 5519: set ===
 
-// Module 5453 (set)
+// Module 5519 (set)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("lib/spellcheck/fallbackLocales.tsx");

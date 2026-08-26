@@ -1,10 +1,10 @@
-// === Module 12493: FlashIcon ===
+// === Module 12564: FlashIcon ===
 
-// Module 12493 (FlashIcon)
+// Module 12564 (FlashIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 12494 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 12565 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,18 +1,18 @@
-// === Module 12223: ChannelSpoiler ===
+// === Module 12295: ChannelSpoiler ===
 
-// Module 12223 (ChannelSpoiler)
+// Module 12295 (ChannelSpoiler)
 import ThemesDefault from "Themes" /* 712 */;
-import computeChannelNameDefault from "computeChannelName" /* 4574 */;
-import GatedContentDefault from "GatedContent" /* 11046 */;
+import computeChannelNameDefault from "computeChannelName" /* 4638 */;
+import GatedContentDefault from "GatedContent" /* 11118 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getParticipants" /* 4396 */;
+import closure_6 from "getParticipants" /* 4460 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11839 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11912 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
@@ -40,7 +40,7 @@ export default function ChannelSpoiler(channelId) {
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = obj3.useContext(tmp6(11840)).setControlsMode;
+  setControlsMode = obj3.useContext(tmp6(11913)).setControlsMode;
   const items2 = [, , , ];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;
@@ -73,8 +73,8 @@ export default function ChannelSpoiler(channelId) {
     }
   }, items3);
   if (null != stateFromStores1) {
-    channelIconComponent = tmp(4866).getChannelIconComponent(stateFromStores1);
-    const tmpResult = tmp(4866);
+    channelIconComponent = tmp(4932).getChannelIconComponent(stateFromStores1);
+    const tmpResult = tmp(4932);
   }
   if (null != channelIconComponent) {
     obj = { style: null, children: null };
@@ -83,7 +83,7 @@ export default function ChannelSpoiler(channelId) {
     obj = { variant: "heading-xxl/bold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
     obj[3] = { flexShrink: 1 };
     obj[4] = tmp7;
-    items4[1] = callback(tmp(4376).Text, obj);
+    items4[1] = callback(tmp(4440).Text, obj);
     obj[1] = items4;
     let stringResult = callback2(View, obj);
   } else {
@@ -104,19 +104,19 @@ export default function ChannelSpoiler(channelId) {
       obj2[0] = tmp4.subtitleMeasure;
       obj3 = { variant: "text-md/medium", maxFontSizeMultiplier: 2, onTextLayout: null, children: null };
       obj3[2] = callback1;
-      let tmp6Result = tmp6(4370);
+      let tmp6Result = tmp6(4434);
       const obj4 = { channelId: null };
       obj4[0] = stateFromStores1.id;
       obj3[3] = tmp6Result.parseTopic(stateFromStores1.topic, true, obj4);
-      obj2[2] = callback(tmp(4376).Text, obj3);
+      obj2[2] = callback(tmp(4440).Text, obj3);
       const items5 = [callback(View, obj2), , , ];
       const obj5 = { color: "text-muted", variant: "text-md/medium", style: null, maxFontSizeMultiplier: 2, lineClamp: 3, children: null };
       obj5[2] = tmp4.subtitle;
-      tmp6Result = tmp6(4370);
+      tmp6Result = tmp6(4434);
       const obj6 = { channelId: null };
       obj6[0] = stateFromStores1.id;
       obj5[5] = tmp6Result.parseTopic(stateFromStores1.topic, true, obj6);
-      items5[1] = callback(tmp(4376).Text, obj5);
+      items5[1] = callback(tmp(4440).Text, obj5);
       let tmp24Result = null;
       if (tmp5[0]) {
         const obj7 = { onPress: null, accessibilityRole: "button", children: null };
@@ -125,15 +125,15 @@ export default function ChannelSpoiler(channelId) {
         obj8[2] = { textDecorationLine: "underline" };
         const intl2 = tmp(1236).intl;
         obj8[3] = intl2.string(tmp(1236).t["/QvRak"]);
-        obj7[2] = tmp24(tmp(4376).Text, obj8);
-        tmp24Result = tmp24(tmp(4949).PressableHighlight, obj7);
+        obj7[2] = tmp24(tmp(4440).Text, obj8);
+        tmp24Result = tmp24(tmp(5015).PressableHighlight, obj7);
       }
       items5[2] = tmp24Result;
       const obj9 = { style: null };
       obj9[0] = tmp4.divider;
       items5[3] = callback(View, obj9);
       obj1[2] = items5;
-      tmp23Result = callback2(tmp(4813).Stack, obj1);
+      tmp23Result = callback2(tmp(4877).Stack, obj1);
       const tmp23 = callback2;
       const tmp25 = View;
     }
@@ -142,7 +142,7 @@ export default function ChannelSpoiler(channelId) {
   const obj10 = { modalType: null, onAgree: null, onDisagree: null, title: null, subtitle: null, description: null, agreement: null, disagreement: null, guildId: null, channelId: null };
   const tmp20 = callback;
   tmp7 = computeChannelNameDefault(stateFromStores1);
-  obj10[0] = _require(7944).NsfwSpaceWarningModalType.SPOILER_CHANNEL;
+  obj10[0] = _require(8011).NsfwSpaceWarningModalType.SPOILER_CHANNEL;
   obj10[1] = function onAgree() {
     callback(isVocalResult[14]).spoilerAgree(channelId.channelId);
   };

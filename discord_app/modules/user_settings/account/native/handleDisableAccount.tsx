@@ -1,8 +1,8 @@
-// === Module 14266: handleDisableAccount ===
+// === Module 14339: handleDisableAccount ===
 
-// Module 14266 (handleDisableAccount)
-import setDefault from "set" /* 4744 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14251 */;
+// Module 14339 (handleDisableAccount)
+import setDefault from "set" /* 4808 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14324 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
@@ -37,7 +37,7 @@ export default function handleDisableAccount() {
     obj = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
     if (flag) {
       obj[0] = function onSubmit(password) {
-        return currentUser(8665).disableAccount(password, true);
+        return currentUser(8733).disableAccount(password, true);
       };
       const intl3 = tmp4(1236).intl;
       obj[1] = intl3.string(tmp4(1236).t["8lQ2rR"]).toUpperCase();
@@ -46,7 +46,7 @@ export default function handleDisableAccount() {
       const str3 = intl3.string(tmp4(1236).t["8lQ2rR"]);
     } else {
       obj[0] = function onSubmit(password) {
-        return currentUser(8665).disableAccount(password, false);
+        return currentUser(8733).disableAccount(password, false);
       };
       const intl2 = tmp4(1236).intl;
       obj[1] = intl2.string(tmp4(1236).t.jf5GGb).toUpperCase();

@@ -1,9 +1,9 @@
-// === Module 15398: ? ===
+// === Module 15477: ? ===
 
-// Module 15398
+// Module 15477
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4376 */;
-import Button from "Button" /* 4815 */;
+import Text from "Text" /* 4440 */;
+import Button from "Button" /* 4879 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 

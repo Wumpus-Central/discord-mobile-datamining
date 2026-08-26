@@ -1,16 +1,16 @@
-// === Module 11088: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11160: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11088 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11160 (createSocialLayerStorefrontProductDetailsEmbed)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPrice from "getPrice" /* 5954 */;
-import useSKUPrice from "useSKUPrice" /* 5959 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8204 */;
+import getPrice from "getPrice" /* 6020 */;
+import useSKUPrice from "useSKUPrice" /* 6025 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8271 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "addApplication" /* 4421 */;
-import closure_6 from "addSku" /* 4429 */;
+import closure_5 from "addApplication" /* 4485 */;
+import closure_6 from "addSku" /* 4493 */;
 import { PaymentGateways } from "ME" /* 676 */;
-import { InviteTypes } from "InviteSendStates" /* 7340 */;
+import { InviteTypes } from "InviteSendStates" /* 7406 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
@@ -46,7 +46,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
       return null;
     } else {
       if (null != application) {
-        if (tmp(11089)(application)) {
+        if (tmp(11161)(application)) {
           if ("guild" !== guildOrApplication.type) {
             const result1 = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(value);
             const obj4 = useSKUPrice;
@@ -74,7 +74,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(tmp12(1236).t.boqtTA);
             } else {
-              stringResult = string(tmp(3275).BKf0MM);
+              stringResult = string(tmp(3339).BKf0MM);
             }
             obj.acceptLabelText = stringResult;
             let prop;

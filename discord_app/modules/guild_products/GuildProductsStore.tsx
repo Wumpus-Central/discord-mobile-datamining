@@ -1,6 +1,6 @@
-// === Module 13173: secondaryIndexMap ===
+// === Module 13246: secondaryIndexMap ===
 
-// Module 13173 (secondaryIndexMap)
+// Module 13246 (secondaryIndexMap)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;

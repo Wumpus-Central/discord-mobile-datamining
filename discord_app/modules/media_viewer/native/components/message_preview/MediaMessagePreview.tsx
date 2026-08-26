@@ -1,19 +1,19 @@
-// === Module 12456: MeasureMessage ===
+// === Module 12527: MeasureMessage ===
 
-// Module 12456 (MeasureMessage)
+// Module 12527 (MeasureMessage)
 import ThemesDefault from "Themes" /* 712 */;
-import setOptionsDefault from "setOptions" /* 8192 */;
+import setOptionsDefault from "setOptions" /* 8259 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleLoadThreadsSuccess" /* 6002 */;
-import closure_8 from "handleReaction" /* 6006 */;
+import closure_7 from "handleLoadThreadsSuccess" /* 6068 */;
+import closure_8 from "handleReaction" /* 6072 */;
 import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "reinjectEphemerals" /* 4623 */;
-import closure_11 from "messages" /* 9069 */;
+import closure_10 from "reinjectEphemerals" /* 4687 */;
+import closure_11 from "messages" /* 9137 */;
 import { ThemeTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 function MeasureMessage(message) {

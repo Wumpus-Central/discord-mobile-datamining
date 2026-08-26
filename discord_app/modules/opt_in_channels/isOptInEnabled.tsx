@@ -1,9 +1,9 @@
-// === Module 7141: useOptInEnabledForGuild ===
+// === Module 7207: useOptInEnabledForGuild ===
 
-// Module 7141 (useOptInEnabledForGuild)
+// Module 7207 (useOptInEnabledForGuild)
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4025 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 4589 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_4 from "updateUserGuildSettingsInternal" /* 4653 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

@@ -1,16 +1,16 @@
-// === Module 14929: BackwardsCompatibleAppIconRows ===
+// === Module 15008: BackwardsCompatibleAppIconRows ===
 
-// Module 14929 (BackwardsCompatibleAppIconRows)
+// Module 15008 (BackwardsCompatibleAppIconRows)
 import initialize from "initialize" /* 589 */;
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1946 */;
-import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 7806 */;
+import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 7873 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { createElement } from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function BackwardsCompatibleAppIconRows(arg0) {
@@ -45,7 +45,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return closure_1_7(_undefined(_undefined2[9]), obj);
     });
-    obj[1] = callback(merged(5873).TableRowGroup, obj);
+    obj[1] = callback(merged(5939).TableRowGroup, obj);
     return callback(View, obj);
   }
 }

@@ -1,17 +1,17 @@
-// === Module 12700: UserProfileOverflowMenu ===
+// === Module 12773: UserProfileOverflowMenu ===
 
-// Module 12700 (UserProfileOverflowMenu)
+// Module 12773 (UserProfileOverflowMenu)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getParticipants" /* 4396 */;
+import closure_6 from "getParticipants" /* 4460 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "markAllUserIdListsStale" /* 4034 */;
+import closure_8 from "markAllUserIdListsStale" /* 4098 */;
 import closure_9 from "handleConnectionOpen" /* 1981 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 5882 */;
+import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 5948 */;
 import ME from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4401 */;
-import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10433 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4465 */;
+import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10501 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -613,7 +613,7 @@ export default function UserProfileOverflowMenu(user) {
           tmp7 = null != selectedVoiceChannel;
         }
         if (tmp7) {
-          displayProfile(channel[32]).hideActionSheet();
+          displayProfile(channel[32]).hideAllActionSheets();
           const obj3 = displayProfile(channel[32]);
           user(channel[45]).openChannelCallModal(selectedVoiceChannel);
           const obj4 = user(channel[45]);

@@ -1,19 +1,19 @@
-// === Module 11714: PlaceholderCommandRow ===
+// === Module 11787: PlaceholderCommandRow ===
 
-// Module 11714 (PlaceholderCommandRow)
+// Module 11787 (PlaceholderCommandRow)
 import ThemesDefault from "Themes" /* 712 */;
-import TableRowInner from "TableRowInner" /* 5480 */;
-import usePlaceholderWidth from "usePlaceholderWidth" /* 11637 */;
-import CommandRowIconDefault from "CommandRowIcon" /* 11689 */;
+import TableRowInner from "TableRowInner" /* 5546 */;
+import usePlaceholderWidth from "usePlaceholderWidth" /* 11710 */;
+import CommandRowIconDefault from "CommandRowIcon" /* 11762 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import getIndexKey from "getIndexKey" /* 8494 */;
+import getIndexKey from "getIndexKey" /* 8561 */;
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_12 } from "TRUE_OPTION_NAME" /* 4838 */;
+import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_12 } from "TRUE_OPTION_NAME" /* 4903 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function PlaceholderCommandRow(isFirstRow) {
@@ -93,7 +93,7 @@ class CommandRow {
               obj[0] = isAuthorized;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -141,7 +141,7 @@ class CommandRow {
                   lib();
                 }
                 c3 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp13) {
               c3 = tmp;

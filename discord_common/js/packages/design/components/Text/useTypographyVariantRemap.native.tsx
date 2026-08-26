@@ -1,9 +1,9 @@
-// === Module 4386: useTypographyVariantRemap ===
+// === Module 4450: useTypographyVariantRemap ===
 
-// Module 4386 (useTypographyVariantRemap)
+// Module 4450 (useTypographyVariantRemap)
 import set from "set" /* 2 */;
 import json from "json" /* 1359 */;
-import remapTypographyVariant from "remapTypographyVariant" /* 4387 */;
+import remapTypographyVariant from "remapTypographyVariant" /* 4451 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
 

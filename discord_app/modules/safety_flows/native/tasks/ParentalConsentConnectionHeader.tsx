@@ -1,17 +1,17 @@
-// === Module 17223: ParentalConsentConnectionNavbar ===
+// === Module 17308: ParentalConsentConnectionNavbar ===
 
-// Module 17223 (ParentalConsentConnectionNavbar)
+// Module 17308 (ParentalConsentConnectionNavbar)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import messagesProxyDefault from "messagesProxy" /* 2599 */;
-import Text from "Text" /* 4376 */;
+import messagesProxyDefault from "messagesProxy" /* 2631 */;
+import Text from "Text" /* 4440 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 noopAll;

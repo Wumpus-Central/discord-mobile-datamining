@@ -1,6 +1,6 @@
-// === Module 13183: LocalNotificationTypes ===
+// === Module 13256: LocalNotificationTypes ===
 
-// Module 13183 (LocalNotificationTypes)
+// Module 13256 (LocalNotificationTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/local_push_notification/native/Constants.tsx");

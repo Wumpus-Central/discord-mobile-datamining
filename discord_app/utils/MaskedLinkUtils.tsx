@@ -1,12 +1,12 @@
-// === Module 9079: isLinkTrusted ===
+// === Module 9147: isLinkTrusted ===
 
-// Module 9079 (isLinkTrusted)
-import closure_3 from "isBlockedDomain" /* 9080 */;
+// Module 9147 (isLinkTrusted)
+import closure_3 from "isBlockedDomain" /* 9148 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "set" /* 9081 */;
-import closure_7 from "reinjectEphemerals" /* 4623 */;
-import closure_8 from "markAllUserIdListsStale" /* 4034 */;
+import closure_6 from "set" /* 9149 */;
+import closure_7 from "reinjectEphemerals" /* 4687 */;
+import closure_8 from "markAllUserIdListsStale" /* 4098 */;
 import closure_9 from "handleConnectionOpen" /* 1981 */;
 import ME from "ME" /* 676 */;
 
@@ -47,13 +47,13 @@ export const handleClick = function handleClick(href, preventDefault) {
   let channel_id;
   guild_id = undefined;
   ({ trusted, onClick, onConfirm: c0, onCancel, shouldConfirm, messageId, channelId } = href);
-  let obj = channelId(4096);
+  let obj = channelId(4160);
   const sanitizeUrlResult = obj.sanitizeUrl(href.href);
   if (null == sanitizeUrlResult) {
     if (null != preventDefault) {
       preventDefault.preventDefault();
     }
-    let tmp3Result = tmp3(4744);
+    let tmp3Result = tmp3(4808);
     obj = { title: null, body: null, isDismissable: true, contextKey: null };
     const intl = _require(1236).intl;
     obj[0] = intl.string(_require(1236).t.x87gan);
@@ -193,26 +193,26 @@ export const handleClick = function handleClick(href, preventDefault) {
         if (hasItem1) {
           tmp3Result = tmp3(698);
           obj1 = { url_domain: null, guild_id: null, channel_id: null };
-          let obj4 = _require(9082);
+          let obj4 = _require(9150);
           obj1[0] = obj4.getHostname(tmp8);
           obj1[1] = guild1.id;
           obj1[2] = channel.id;
           tmp3Result.track(constants2.URL_CLICKED, obj1);
         }
-        if (tmp3(9083)(channelId)) {
+        if (tmp3(9151)(channelId)) {
           const obj2 = { cta_type: "inline_link", target: null };
           obj2[1] = tmp8;
           tmp3(698).track(constants2.CHANGE_LOG_CTA_CLICKED, obj2);
           const tmp3Result1 = tmp3(698);
         }
       }
-      tmp3(9084).trackLinkClicked(tmp8);
+      tmp3(9152).trackLinkClicked(tmp8);
       if (null == onClick) {
-        const obj3 = { skipExtensionCheck: "a", analyticsLocations: "assetFormat", messageId: "WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD", channelId: "gemHeight" };
+        const obj3 = { skipExtensionCheck: "a", analyticsLocations: "center", messageId: "hidden", channelId: null };
         obj3[1] = items;
         obj3[2] = messageId;
         obj3[3] = channelId;
-        const defaultResult = _require(9086).default(tmp8, obj3);
+        const defaultResult = _require(9154).default(tmp8, obj3);
       }
       if (onCancel == null) {
         onCancel = () => {
@@ -223,17 +223,17 @@ export const handleClick = function handleClick(href, preventDefault) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        tmp3(12431).show(tmp8);
+        tmp3(12502).show(tmp8);
       } else {
         let trustedResult = trusted;
         if (typeof trusted === "function") {
           trustedResult = trusted();
         }
         if (!trustedResult) {
-          const TRUSTED_URLS = _require(12435).TRUSTED_URLS;
+          const TRUSTED_URLS = _require(12506).TRUSTED_URLS;
           trustedResult = TRUSTED_URLS.has(tmp8);
         }
-        const protocol = _require(9082).getProtocol(tmp8);
+        const protocol = _require(9150).getProtocol(tmp8);
         let tmp55 = "http:" === protocol;
         if (!tmp55) {
           tmp55 = "https:" === protocol;
@@ -262,27 +262,27 @@ export const handleClick = function handleClick(href, preventDefault) {
           if (tmp56) {
             obj4 = { url: null, trustUrl: null, onConfirm: null, onCancel: null, isProtocol: true, contextKey: null };
             obj4[0] = tmp8;
-            obj4[1] = tmp53(12438).trustProtocol;
+            obj4[1] = tmp53(12509).trustProtocol;
             obj4[2] = handleConfirm;
             obj4[3] = onCancel;
             obj4[5] = arg3;
-            tmp3(12436).show(obj4);
-            const tmp3Result4 = tmp3(12436);
+            tmp3(12507).show(obj4);
+            const tmp3Result4 = tmp3(12507);
           } else {
-            const punycodeLinkResult = tmp53(4840).punycodeLink(tmp8);
+            const punycodeLinkResult = tmp53(4905).punycodeLink(tmp8);
             let displayTarget = tmp8;
             if (null != punycodeLinkResult) {
               displayTarget = punycodeLinkResult.displayTarget;
             }
-            const tmp53Result = tmp53(4840);
+            const tmp53Result = tmp53(4905);
             const obj5 = { url: null, trustUrl: null, onConfirm: null, onCancel: null, isProtocol: false, contextKey: null };
             obj5[0] = displayTarget;
-            obj5[1] = tmp53(12438).trustDomain;
+            obj5[1] = tmp53(12509).trustDomain;
             obj5[2] = handleConfirm;
             obj5[3] = onCancel;
             obj5[5] = arg3;
-            tmp3(12436).show(obj5);
-            const tmp3Result5 = tmp3(12436);
+            tmp3(12507).show(obj5);
+            const tmp3Result5 = tmp3(12507);
           }
         }
         if (null == preventDefault) {
@@ -294,12 +294,12 @@ export const handleClick = function handleClick(href, preventDefault) {
           obj6[2] = tmp14;
           obj6[3] = tmp12;
           obj6[4] = tmp11;
-          let result = tmp3(9084).trackAnnouncementMessageLinkClicked(obj6);
-          const tmp3Result6 = tmp3(9084);
+          let result = tmp3(9152).trackAnnouncementMessageLinkClicked(obj6);
+          const tmp3Result6 = tmp3(9152);
         }
-        const obj10 = _require(9082);
+        const obj10 = _require(9150);
       }
-      const tmp3Result2 = tmp3(9084);
+      const tmp3Result2 = tmp3(9152);
     } catch (err) {
       const _encodeURI = encodeURI;
       const encodeURIResult = encodeURI(tmp2);

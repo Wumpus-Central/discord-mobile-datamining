@@ -1,6 +1,6 @@
-// === Module 6576: metadata ===
+// === Module 6642: metadata ===
 
-// Module 6576 (metadata)
+// Module 6642 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftTrollIllocon-2x.png.js");

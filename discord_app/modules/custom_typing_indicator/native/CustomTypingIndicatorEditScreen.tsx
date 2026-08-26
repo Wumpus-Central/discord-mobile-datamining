@@ -1,6 +1,6 @@
-// === Module 14804: CustomTypingIndicatorEditScreen ===
+// === Module 14877: CustomTypingIndicatorEditScreen ===
 
-// Module 14804 (CustomTypingIndicatorEditScreen)
+// Module 14877 (CustomTypingIndicatorEditScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -10,7 +10,7 @@ import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 ({ ScrollView: closure_6, View: error } = get_ActivityIndicator);
@@ -143,7 +143,7 @@ export default function CustomTypingIndicatorEditScreen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -268,7 +268,7 @@ export default function CustomTypingIndicatorEditScreen() {
   let obj2 = { style: tmp.previewContainer, children: null };
   let tmp36Result = null != stateFromStores;
   if (tmp36Result) {
-    let obj3 = { username: null, config: null, justifyCenter: true, bypassReducedMotionCheck: true };
+    let obj3 = { username: null, config: null, justifyCenter: true };
     let tmp7Result = tmp7(tmp3[33]);
     tmp7Result = tmp7(tmp3[34]);
     obj3[0] = tmp7Result.getName(null, null, stateFromStores);
@@ -324,12 +324,12 @@ export default function CustomTypingIndicatorEditScreen() {
   obj11[3] = callback1;
   obj10[1] = closure_14(nativeStackNavigation(tmp3[38]).TableRow, obj11);
   items9[1] = closure_14(nativeStackNavigation(tmp3[37]).TableRowGroup, obj10);
-  const obj13 = { style: tmp.description, variant: "text-xs/normal", color: "text-muted", children: null };
+  const obj13 = { style: tmp.description, variant: "text-xs/normal", color: "text-muted", includeFontPadding: true, children: null };
   const intl9 = tmp2(tmp3[11]).intl;
   const obj14 = { helpCenterUrl: null };
   const tmp2Result3 = nativeStackNavigation(tmp3[19]);
   obj14[0] = isTryItOut(tmp3[39]).getArticleURL(memo.CUSTOM_TYPING_INDICATOR);
-  obj13[3] = intl9.format(isTryItOut(tmp3[12]).k6c2yP, obj14);
+  obj13[4] = intl9.format(isTryItOut(tmp3[12]).k6c2yP, obj14);
   items9[2] = closure_14(nativeStackNavigation(tmp3[35]).Text, obj13);
   obj8[1] = items9;
   items7[2] = closure_15(first2, obj8);

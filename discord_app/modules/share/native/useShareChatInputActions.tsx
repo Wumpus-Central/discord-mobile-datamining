@@ -1,6 +1,6 @@
-// === Module 11252: useShareChatInputActions ===
+// === Module 11324: useShareChatInputActions ===
 
-// Module 11252 (useShareChatInputActions)
+// Module 11324 (useShareChatInputActions)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { EmojiIntention } from "set" /* 1925 */;

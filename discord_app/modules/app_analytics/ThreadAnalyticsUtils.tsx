@@ -1,12 +1,12 @@
-// === Module 7377: collectThreadMetadata ===
+// === Module 7443: collectThreadMetadata ===
 
-// Module 7377 (collectThreadMetadata)
+// Module 7443 (collectThreadMetadata)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import transitionTo from "transitionTo" /* 1222 */;
-import closure_3 from "updateFromGuild" /* 7373 */;
-import closure_4 from "updateState" /* 6029 */;
+import closure_3 from "updateFromGuild" /* 7439 */;
+import closure_4 from "updateState" /* 6095 */;
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4089 */;
 import { Permissions } from "ME" /* 676 */;
 
 require = arg1;

@@ -1,11 +1,11 @@
-// === Module 7433: updatePoggermodeSettings ===
+// === Module 7499: updatePoggermodeSettings ===
 
-// Module 7433 (updatePoggermodeSettings)
+// Module 7499 (updatePoggermodeSettings)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getScreenshakeLocationNameDefault from "getScreenshakeLocationName" /* 7436 */;
+import getScreenshakeLocationNameDefault from "getScreenshakeLocationName" /* 7502 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "initialize" /* 7283 */;
-import closure_4 from "updateCombo" /* 7434 */;
+import closure_3 from "initialize" /* 7349 */;
+import closure_4 from "updateCombo" /* 7500 */;
 
 const result = require("set").fileFinishedImporting("modules/poggermode/PoggermodeActionCreators.tsx");
 

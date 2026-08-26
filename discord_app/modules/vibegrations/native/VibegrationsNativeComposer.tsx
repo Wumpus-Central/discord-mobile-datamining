@@ -1,17 +1,17 @@
-// === Module 15964: tooLargeText ===
+// === Module 16045: tooLargeText ===
 
-// Module 15964 (tooLargeText)
+// Module 16045 (tooLargeText)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3405 */;
-import frozen from "frozen" /* 15949 */;
+import messagesProxyDefault from "messagesProxy" /* 3469 */;
+import frozen from "frozen" /* 16028 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import rejectPendingPublish from "rejectPendingPublish" /* 15946 */;
+import rejectPendingPublish from "rejectPendingPublish" /* 16025 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function tooLargeText(contentType) {
@@ -165,7 +165,7 @@ export default function VibegrationsNativeComposer(projectId) {
         const current = closure_1_11.current;
         if (current.has(callback)) {
           c8 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } else {
           const obj2 = { status: "error", errorText: null };
           const intl = callback(str[9]).intl;
@@ -206,7 +206,7 @@ export default function VibegrationsNativeComposer(projectId) {
           if (current3.has(callback)) {
             c6 = 0;
             c8 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             obj3 = callback(str[11]);
             if (obj3.isVibegrationsAttachmentWithinLimit(size.size, closure_2)) {
@@ -349,7 +349,7 @@ export default function VibegrationsNativeComposer(projectId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -367,9 +367,9 @@ export default function VibegrationsNativeComposer(projectId) {
             closure_1 = tmp5;
             closure_0 = tmp2;
             closure_0 = undefined;
-            obj1 = closure_1_1(4975);
+            obj1 = closure_1_1(5041);
             obj1 = { mediaType: "any", selectionLimit: null, skipProcessing: true };
-            obj1[1] = closure_1_0(15949).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
+            obj1[1] = closure_1_0(16028).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
             dependencyMap = 1;
             c3 = 1;
             const obj2 = { value: null, done: false };
@@ -419,7 +419,7 @@ export default function VibegrationsNativeComposer(projectId) {
             }));
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp19) {
         c3 = tmp;
@@ -440,7 +440,7 @@ export default function VibegrationsNativeComposer(projectId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -502,7 +502,7 @@ export default function VibegrationsNativeComposer(projectId) {
             }));
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c3 = tmp;

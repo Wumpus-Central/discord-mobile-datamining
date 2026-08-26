@@ -1,6 +1,6 @@
-// === Module 6616: metadata ===
+// === Module 6682: metadata ===
 
-// Module 6616 (metadata)
+// Module 6682 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HeadsetSpotIllustration-2x.png.js");

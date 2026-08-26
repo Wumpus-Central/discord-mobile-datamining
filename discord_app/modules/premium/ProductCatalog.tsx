@@ -1,15 +1,15 @@
-// === Module 13533: ProductCatalogFeature ===
+// === Module 13606: ProductCatalogFeature ===
 
-// Module 13533 (ProductCatalogFeature)
+// Module 13606 (ProductCatalogFeature)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import create from "create" /* 1938 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8529 */;
-import getUserMaxFileSize from "getUserMaxFileSize" /* 8846 */;
-import setDefault from "set" /* 13535 */;
-import apexExperimentDefault from "apexExperiment" /* 13536 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8597 */;
+import getUserMaxFileSize from "getUserMaxFileSize" /* 8914 */;
+import setDefault from "set" /* 13608 */;
+import apexExperimentDefault from "apexExperiment" /* 13609 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
-import importDefaultResult1 from "set" /* 13534 */;
+import importDefaultResult1 from "set" /* 13607 */;
 
 let closure_0 = require;
 ({ PremiumSubscriptionSKUs, PremiumTypeToActivePremiumSubscriptionSKU: c3 } = GuildFeatures);
@@ -1163,14 +1163,14 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
     }
     if (null != perks) {
       const config = apexExperimentDefault.getConfig({ location: "product_catalog_can_user_use" });
-      if (config !== callback(13536).DenormalizedPerksReadConfig.CONTROL) {
+      if (config !== callback(13609).DenormalizedPerksReadConfig.CONTROL) {
         let featureValue = COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);
         let perks1;
         if (isPremiumWithFractionalPremiumOnly != null) {
           perks1 = isPremiumWithFractionalPremiumOnly.perks;
         }
         const tmp9Result = tmp9(1942);
-        if (config === tmp9(13536).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
+        if (config === tmp9(13609).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
           featureValue = hasPerkResult;
         }
         return featureValue;

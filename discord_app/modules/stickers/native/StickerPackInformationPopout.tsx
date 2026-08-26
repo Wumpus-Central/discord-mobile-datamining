@@ -1,12 +1,12 @@
-// === Module 10120: StickerPackInformationPopout ===
+// === Module 10187: StickerPackInformationPopout ===
 
-// Module 10120 (StickerPackInformationPopout)
+// Module 10187 (StickerPackInformationPopout)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4740 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4804 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 noopAll;
@@ -30,7 +30,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   const tmp = callback3();
   _require = tmp;
   let items = [];
-  let obj = _require(4740);
+  let obj = _require(4804);
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
     const intl = tmp2(1236).intl;
@@ -43,15 +43,15 @@ export default function StickerPackInformationPopout(stickerPack) {
   const obj2 = { style: tmp.informationHeader, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1236).intl;
   obj2[3] = intl2.format(_require(1236).t.XDm6yN, { stickerPackName: stickerPack.name });
-  const items2 = [callback(_require(4376).Text, obj2), ];
+  const items2 = [callback(_require(4440).Text, obj2), ];
   const obj4 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl3 = tmp2(1236).intl;
   obj4[2] = intl3.string(_require(1236).t.cpT0Cq);
   const obj5 = { variant: "text-md/bold", color: "text-brand", children: null };
   const intl4 = tmp2(1236).intl;
   obj5[2] = intl4.string(_require(1236).t.cpT0Cq);
-  obj4[3] = callback(_require(4376).Text, obj5);
-  items2[1] = callback(_require(4949).PressableOpacity, obj4);
+  obj4[3] = callback(_require(4440).Text, obj5);
+  items2[1] = callback(_require(5015).PressableOpacity, obj4);
   obj1[1] = items2;
   const items3 = [
     callback2(closure_2, obj1),

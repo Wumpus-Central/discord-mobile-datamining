@@ -1,11 +1,11 @@
-// === Module 12470: ? ===
+// === Module 12541: ? ===
 
-// Module 12470
+// Module 12541
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 5882 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5504 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 5948 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5570 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -196,7 +196,7 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
       obj13[6] = function onPress() {
         trackUserProfileAction({ action: "SEND_MESSAGE" });
         let obj = channel(trackUserProfileAction[26]);
-        obj.hideActionSheet();
+        obj.hideAllActionSheets();
         channel(trackUserProfileAction[38]).popAll();
         const obj2 = channel(trackUserProfileAction[38]);
         obj = { recipientIds: user.id };

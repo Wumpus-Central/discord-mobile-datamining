@@ -1,6 +1,6 @@
-// === Module 8468: getProfileTheme ===
+// === Module 8535: getProfileTheme ===
 
-// Module 8468 (getProfileTheme)
+// Module 8535 (getProfileTheme)
 import apply2 from "apply" /* 12 */;
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import nDefault from "n" /* 689 */;
@@ -71,7 +71,7 @@ export const calculateOverlayedColor = function calculateOverlayedColor(secondar
   if (null == overlay) {
     return 0;
   } else {
-    const parseStringResult = alpha(4229).parseString(overlay);
+    const parseStringResult = alpha(4293).parseString(overlay);
     if (null == parseStringResult) {
       return 0;
     } else {
@@ -85,7 +85,7 @@ export const calculateOverlayedColor = function calculateOverlayedColor(secondar
       const _HermesInternal = HermesInternal;
       return tmp(688).rgb2int("rgba(" + tmp8 + ", " + tmp9 + ", " + tmp10 + ")");
     }
-    const obj2 = alpha(4229);
+    const obj2 = alpha(4293);
   }
   int2rgbArrayResult = items1(688).int2rgbArray(secondaryColor);
 };

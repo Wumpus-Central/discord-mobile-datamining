@@ -1,6 +1,6 @@
-// === Module 6007: SidebarType ===
+// === Module 6073: SidebarType ===
 
-// Module 6007 (SidebarType)
+// Module 6073 (SidebarType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/sidebar/SidebarActionTypes.tsx");

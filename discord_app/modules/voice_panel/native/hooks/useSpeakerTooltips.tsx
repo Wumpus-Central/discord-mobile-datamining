@@ -1,10 +1,10 @@
-// === Module 16467: useSpeakerTooltips ===
+// === Module 16550: useSpeakerTooltips ===
 
-// Module 16467 (useSpeakerTooltips)
+// Module 16550 (useSpeakerTooltips)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import useConsoleVoiceUpsellStore from "useConsoleVoiceUpsellStore" /* 16464 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11839 */;
+import useConsoleVoiceUpsellStore from "useConsoleVoiceUpsellStore" /* 16547 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11912 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
 

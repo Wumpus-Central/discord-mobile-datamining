@@ -1,6 +1,6 @@
-// === Module 5936: str2 ===
+// === Module 6002: str2 ===
 
-// Module 5936 (str2)
+// Module 6002 (str2)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 import getConstants from "getConstants" /* 1626 */;

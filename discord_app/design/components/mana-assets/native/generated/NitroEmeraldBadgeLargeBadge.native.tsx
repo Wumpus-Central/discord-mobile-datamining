@@ -1,10 +1,10 @@
-// === Module 6687: NitroEmeraldBadgeLargeBadge ===
+// === Module 6753: NitroEmeraldBadgeLargeBadge ===
 
-// Module 6687 (NitroEmeraldBadgeLargeBadge)
+// Module 6753 (NitroEmeraldBadgeLargeBadge)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import vanityUrlDefault from "vanityUrl" /* 6688 */;
+import preloadDefault from "preload" /* 5440 */;
+import vanityUrlDefault from "vanityUrl" /* 6754 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroEmeraldBadgeLargeBadge.native.tsx");

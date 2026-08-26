@@ -1,12 +1,12 @@
-// === Module 8220: createAddRecipientSystemMessage ===
+// === Module 8287: createAddRecipientSystemMessage ===
 
-// Module 8220 (createAddRecipientSystemMessage)
+// Module 8287 (createAddRecipientSystemMessage)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8221 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8223 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8224 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8288 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8290 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8291 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 

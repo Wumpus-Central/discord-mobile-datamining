@@ -1,20 +1,19 @@
-// === Module 12773: IntroDemo ===
+// === Module 12846: IntroDemo ===
 
-// Module 12773 (IntroDemo)
+// Module 12846 (IntroDemo)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ClockIcon from "ClockIcon" /* 4343 */;
-import Text from "Text" /* 4376 */;
-import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5504 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 5884 */;
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8536 */;
-import BookmarkIcon from "BookmarkIcon" /* 11272 */;
-import registerAssetDefault from "registerAsset" /* 12774 */;
-import setDefault from "set" /* 12775 */;
+import ClockIcon from "ClockIcon" /* 4407 */;
+import Text from "Text" /* 4440 */;
+import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5570 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 5950 */;
+import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8604 */;
+import BookmarkIcon from "BookmarkIcon" /* 11344 */;
+import setDefault from "set" /* 12849 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 function IntroDemo(isReminder) {
   isReminder = isReminder.isReminder;
@@ -126,25 +125,25 @@ export default function ForLaterIntro(type) {
   const tmp4 = type.type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER;
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: registerAssetDefault, style: tmp.upsellImage };
-  const items = [callback(closure_3, obj), , ];
+  obj = { source: importDefault(tmp4 ? 12847 : 12848), style: tmp.upsellImage };
+  const items = [closure_6(closure_3, obj), , ];
   obj1 = { style: tmp.textContainer, children: null };
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
-  const intl = getSystemLocale.intl;
-  const t = getSystemLocale.t;
+  const intl = tmp2(1236).intl;
+  const t = tmp2(1236).t;
   obj2[3] = intl.string(tmp4 ? t["5Iw19e"] : t["93WOd1"]);
-  const items1 = [callback(Text.Heading, obj2), ];
+  const items1 = [closure_6(Text.Heading, obj2), ];
   const obj3 = { variant: "text-sm/medium", color: "text-default", style: tmp.text, includeFontPadding: true, children: null };
   const intl2 = tmp2(1236).intl;
   const t2 = tmp2(1236).t;
   const intl3 = tmp2(1236).intl;
   const t3 = tmp2(1236).t;
   obj3[4] = intl2.format(tmp4 ? t2.YI4UjI : t2["5TSj/g"], { itemName: intl3.string(tmp4 ? t3.mJ3P0N : t3.tpxJto) });
-  items1[1] = callback(Text.Text, obj3);
+  items1[1] = closure_6(Text.Text, obj3);
   obj1[1] = items1;
   items[1] = closure_7(closure_5, obj1);
-  items[2] = callback(IntroDemo, { isReminder: tmp4 });
+  items[2] = closure_6(IntroDemo, { isReminder: tmp4 });
   obj[1] = items;
   obj[2] = closure_7(closure_5, obj);
-  return callback(closure_4, obj);
+  return closure_6(closure_4, obj);
 };

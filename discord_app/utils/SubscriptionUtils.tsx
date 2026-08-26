@@ -1,14 +1,14 @@
-// === Module 10488: getSubscriptionPlans ===
+// === Module 10556: getSubscriptionPlans ===
 
-// Module 10488 (getSubscriptionPlans)
+// Module 10556 (getSubscriptionPlans)
 import _modDef38 from "module_38" /* 38 */;
-import hooksDefault from "hooks" /* 3979 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4043 */;
-import prototype from "prototype" /* 10489 */;
-import PauseDuration from "PauseDuration" /* 10491 */;
+import hooksDefault from "hooks" /* 4043 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
+import prototype from "prototype" /* 10557 */;
+import PauseDuration from "PauseDuration" /* 10559 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "addSubscriptionPlan" /* 4048 */;
+import closure_5 from "addSubscriptionPlan" /* 4112 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
@@ -98,8 +98,8 @@ export const getOrFetchSubscriptionPlan = function getOrFetchSubscriptionPlan(su
     const tmp9 = null != table[subscriptionPlanId];
     const result = getPremiumPlanItem.castPremiumSubscriptionAsSkuId(tmp5.skuId);
     if (!closure_5.isFetchingForSKU(result)) {
-      const subscriptionPlansForSKU = tmp12(5984).fetchSubscriptionPlansForSKU(result, closure_1);
-      const tmp12Result = tmp12(5984);
+      const subscriptionPlansForSKU = tmp12(6050).fetchSubscriptionPlansForSKU(result, closure_1);
+      const tmp12Result = tmp12(6050);
     }
     const obj3 = getPremiumPlanItem;
   }

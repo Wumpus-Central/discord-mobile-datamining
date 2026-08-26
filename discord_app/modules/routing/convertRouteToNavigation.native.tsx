@@ -1,9 +1,9 @@
-// === Module 11057: convertRouteToNavigation ===
+// === Module 11129: convertRouteToNavigation ===
 
-// Module 11057 (convertRouteToNavigation)
+// Module 11129 (convertRouteToNavigation)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4235 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4299 */;
 
 const Routes = ME.Routes;
 let result = set.fileFinishedImporting("modules/routing/convertRouteToNavigation.native.tsx");
@@ -15,24 +15,24 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       if (pathname.startsWith("/channels/")) {
-        let tmpResult = tmp(4207);
+        let tmpResult = tmp(4271);
         obj = { path: null };
         let obj4 = Routes;
-        const RouteParam = tmp(4220).RouteParam;
-        const RouteParam2 = tmp(4220).RouteParam;
+        const RouteParam = tmp(4284).RouteParam;
+        const RouteParam2 = tmp(4284).RouteParam;
         const guildIdResult = RouteParam.guildId();
-        const RouteParam3 = tmp(4220).RouteParam;
+        const RouteParam3 = tmp(4284).RouteParam;
         const CHANNELResult = Routes.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }));
-        const RouteParam4 = tmp(4220).RouteParam;
+        const RouteParam4 = tmp(4284).RouteParam;
         const _HermesInternal = HermesInternal;
         obj[0] = "" + CHANNELResult + Routes.VOICE_CHAT_CHANNEL_PARTIAL(RouteParam3.guildId({ name: "voiceGuildId" }), RouteParam4.channelId({ name: "voiceChannelId" }), ":voiceMessageId?");
         if (null != tmpResult.matchPath(pathname, obj)) {
           return true;
         } else {
-          tmpResult = tmp(4207);
+          tmpResult = tmp(4271);
           obj = { path: null };
-          const RouteParam6 = tmp(4220).RouteParam;
-          const RouteParam7 = tmp(4220).RouteParam;
+          const RouteParam6 = tmp(4284).RouteParam;
+          const RouteParam7 = tmp(4284).RouteParam;
           obj[0] = obj4.CHANNEL(RouteParam6.guildId(), RouteParam7.channelId({ optional: true }), ":messageId?");
           const matchPathResult = tmpResult.matchPath(pathname, obj);
           if (null != matchPathResult) {
@@ -41,8 +41,8 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
             if (tmpResult1.getChatLayout().isChatLockedOpen) {
               if (null != channelId) {
                 if (false === navigationReplace) {
-                  const tmpResult2 = tmp(4234);
-                  const rootNavigationRef1 = tmp(4235).getRootNavigationRef();
+                  const tmpResult2 = tmp(4298);
+                  const rootNavigationRef1 = tmp(4299).getRootNavigationRef();
                   let currentRoute;
                   if (rootNavigationRef1 != null) {
                     currentRoute = rootNavigationRef1.getCurrentRoute();
@@ -60,26 +60,26 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
                     obj1[1] = guildId;
                     obj1[2] = channelId;
                     obj1[3] = navigationReplace;
-                    tmp(4234).navigateToRootTab(obj1);
-                    const tmpResult4 = tmp(4234);
+                    tmp(4298).navigateToRootTab(obj1);
+                    const tmpResult4 = tmp(4298);
                   } else {
                     const obj2 = { channelId: null, guildId: null, messageId: null, replaceChannelAndFixRoot: null };
                     obj2[0] = channelId;
                     obj2[1] = guildId;
                     obj2[2] = messageId;
                     obj2[3] = navigationReplace;
-                    tmp(4234).navigateToChannel(obj2);
-                    const tmpResult5 = tmp(4234);
+                    tmp(4298).navigateToChannel(obj2);
+                    const tmpResult5 = tmp(4298);
                   }
-                  const tmpResult3 = tmp(4235);
+                  const tmpResult3 = tmp(4299);
                 }
               }
               const obj3 = { screen: "guilds", guildId: null, channelId: null, resetRoot: null };
               obj3[1] = guildId;
               obj3[2] = channelId;
               obj3[3] = navigationReplace;
-              tmp(4234).navigateToRootTab(obj3);
-              const tmpResult6 = tmp(4234);
+              tmp(4298).navigateToRootTab(obj3);
+              const tmpResult6 = tmp(4298);
             } else if (null != channelId) {
               if (true === navigationReplace) {
                 if (openChannel) {
@@ -88,8 +88,8 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
                   obj4[1] = guildId;
                   obj4[2] = messageId;
                   obj4[3] = navigationReplace;
-                  tmp(4234).navigateToChannel(obj4);
-                  const tmpResult7 = tmp(4234);
+                  tmp(4298).navigateToChannel(obj4);
+                  const tmpResult7 = tmp(4298);
                 }
               }
               if (false !== navigationReplace) {
@@ -97,16 +97,16 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
                 obj5[1] = guildId;
                 obj5[2] = channelId;
                 obj5[3] = navigationReplace;
-                tmp(4234).navigateToRootTab(obj5);
-                const tmpResult8 = tmp(4234);
+                tmp(4298).navigateToRootTab(obj5);
+                const tmpResult8 = tmp(4298);
               }
               if (tmp15) {
                 const obj6 = { channelId: null, guildId: null, messageId: null, replaceChannelAndFixRoot: "a" };
                 obj6[0] = channelId;
                 obj6[1] = guildId;
                 obj6[2] = messageId;
-                tmp(4234).navigateToChannel(obj6);
-                const tmpResult9 = tmp(4234);
+                tmp(4298).navigateToChannel(obj6);
+                const tmpResult9 = tmp(4298);
               }
               tmp15 = null != channelId && true !== navigationReplace;
             } else {
@@ -114,8 +114,8 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
               obj7[1] = guildId;
               obj7[2] = channelId;
               obj7[3] = navigationReplace;
-              tmp(4234).navigateToRootTab(obj7);
-              const tmpResult10 = tmp(4234);
+              tmp(4298).navigateToRootTab(obj7);
+              const tmpResult10 = tmp(4298);
             }
             return true;
           }
@@ -125,12 +125,12 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
       }
       if (pathname.startsWith("/member-verification/")) {
         const obj8 = { path: null };
-        const RouteParam5 = tmp(4220).RouteParam;
+        const RouteParam5 = tmp(4284).RouteParam;
         obj8[0] = Routes.GUILD_MEMBER_VERIFICATION(RouteParam5.guildId());
-        const matchPathResult1 = tmp(4207).matchPath(pathname, obj8);
+        const matchPathResult1 = tmp(4271).matchPath(pathname, obj8);
         if (null != matchPathResult1) {
-          const result = tmp(4234).navigateToMemberVerification(matchPathResult1.params.guildId, matchPathResult1.params.inviteCode);
-          const tmpResult12 = tmp(4234);
+          const result = tmp(4298).navigateToMemberVerification(matchPathResult1.params.guildId, matchPathResult1.params.inviteCode);
+          const tmpResult12 = tmp(4298);
         }
         return true;
       } else {
@@ -144,9 +144,9 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
           }
           return flag;
         }
-        tmp(4234).resetToAuthRoute();
+        tmp(4298).resetToAuthRoute();
         flag = true;
-        const tmpResult13 = tmp(4234);
+        const tmpResult13 = tmp(4298);
       }
     }
   }

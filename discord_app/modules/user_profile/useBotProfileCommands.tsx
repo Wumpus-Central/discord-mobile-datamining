@@ -1,7 +1,7 @@
-// === Module 9686: useBotProfileCommands ===
+// === Module 9754: useBotProfileCommands ===
 
-// Module 9686 (useBotProfileCommands)
-import findCommandInSectionAll from "findCommandInSection" /* 9687 */;
+// Module 9754 (useBotProfileCommands)
+import findCommandInSectionAll from "findCommandInSection" /* 9755 */;
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

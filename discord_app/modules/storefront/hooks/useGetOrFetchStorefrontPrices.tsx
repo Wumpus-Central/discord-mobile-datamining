@@ -1,6 +1,6 @@
-// === Module 9511: useGetOrFetchStorefrontPricesForApplicationId ===
+// === Module 9579: useGetOrFetchStorefrontPricesForApplicationId ===
 
-// Module 9511 (useGetOrFetchStorefrontPricesForApplicationId)
+// Module 9579 (useGetOrFetchStorefrontPricesForApplicationId)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

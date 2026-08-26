@@ -1,22 +1,22 @@
-// === Module 8993: isValidImageAttachment ===
+// === Module 9061: isValidImageAttachment ===
 
-// Module 8993 (isValidImageAttachment)
+// Module 9061 (isValidImageAttachment)
 import keys from "keys" /* 691 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import hasFlag from "hasFlag" /* 1403 */;
 import getSrcWithWidthAndHeightDefault from "getSrcWithWidthAndHeight" /* 1493 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4571 */;
-import flattenComponents from "flattenComponents" /* 4627 */;
-import _modDef4745 from "module_4745" /* 4745 */;
-import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 6016 */;
-import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 6021 */;
-import frozen from "frozen" /* 8206 */;
-import getInitialParserStateDefault from "getInitialParserState" /* 8356 */;
-import transformToRowGeneratedComponent from "transformToRowGeneratedComponent" /* 8369 */;
-import MediaGalleryItemType from "MediaGalleryItemType" /* 8385 */;
-import mapDefault from "map" /* 8879 */;
-import MediaPlayerManager from "MediaPlayerManager" /* 8995 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4635 */;
+import flattenComponents from "flattenComponents" /* 4691 */;
+import _modDef4809 from "module_4809" /* 4809 */;
+import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 6082 */;
+import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 6087 */;
+import frozen from "frozen" /* 8273 */;
+import getInitialParserStateDefault from "getInitialParserState" /* 8423 */;
+import transformToRowGeneratedComponent from "transformToRowGeneratedComponent" /* 8436 */;
+import MediaGalleryItemType from "MediaGalleryItemType" /* 8452 */;
+import mapDefault from "map" /* 8947 */;
+import MediaPlayerManager from "MediaPlayerManager" /* 9063 */;
 import closure_3 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
@@ -84,7 +84,7 @@ function extractMediaFromAttachment(width, closure_0, index, closure_02, arg4) {
               obj[2] = closure_02;
               obj[3] = closure_0.channel_id;
               obj[4] = url;
-              obj[5] = tmp(8474)(width);
+              obj[5] = tmp(8541)(width);
               obj[6] = index;
               ({ width: obj11[7], height: obj11[8] } = width);
               obj[9] = url;
@@ -96,7 +96,7 @@ function extractMediaFromAttachment(width, closure_0, index, closure_02, arg4) {
               }
               let hasFlagResult = tmp43Result.hasFlag(num3, constants.IS_SPOILER);
               if (!hasFlagResult) {
-                tmp43Result = tmp43(6053);
+                tmp43Result = tmp43(6119);
                 hasFlagResult = tmp43Result.isChannelSpoilerGated(store.getChannel(closure_0.channel_id));
               }
               obj[13] = hasFlagResult;
@@ -113,7 +113,7 @@ function extractMediaFromAttachment(width, closure_0, index, closure_02, arg4) {
               obj1[1] = closure_0.id;
               obj1[2] = closure_02;
               obj1[3] = closure_0.channel_id;
-              obj1[4] = tmp(8474)(width);
+              obj1[4] = tmp(8541)(width);
               obj1[5] = index;
               ({ width: obj2[6], height: obj2[7], url: obj2[8], content_type: obj2[9], description: obj2[10] } = width);
               let num = width.flags;
@@ -122,8 +122,8 @@ function extractMediaFromAttachment(width, closure_0, index, closure_02, arg4) {
               }
               let hasFlagResult1 = tmp43(1403).hasFlag(num, constants.IS_SPOILER);
               if (!hasFlagResult1) {
-                hasFlagResult1 = tmp43(6053).isChannelSpoilerGated(store.getChannel(closure_0.channel_id));
-                const tmp43Result2 = tmp43(6053);
+                hasFlagResult1 = tmp43(6119).isChannelSpoilerGated(store.getChannel(closure_0.channel_id));
+                const tmp43Result2 = tmp43(6119);
               }
               obj1[12] = hasFlagResult1;
               obj1[13] = width.flags;
@@ -136,12 +136,12 @@ function extractMediaFromAttachment(width, closure_0, index, closure_02, arg4) {
               obj2.uri = url;
               const tmp11 = constants;
               const tmp43Result1 = tmp43(1403);
-              const formatted = tmp(8474)(width).toLowerCase();
-              const str3 = tmp(8474)(width);
+              const formatted = tmp(8541)(width).toLowerCase();
+              const str3 = tmp(8541)(width);
               const endsWithResult = formatted.endsWith(".webp");
-              const formatted1 = tmp(8474)(width).toLowerCase();
+              const formatted1 = tmp(8541)(width).toLowerCase();
               const endsWithResult1 = formatted1.endsWith(".avif");
-              const str5 = tmp(8474)(width);
+              const str5 = tmp(8541)(width);
               let num2 = width.flags;
               if (num2 == null) {
                 num2 = 0;
@@ -257,12 +257,12 @@ function extractMediaFromEmbed(image, closure_0, contentMessage, arg3, closure_0
       } else if ("rawTitle" in image) {
         rawTitle = image.rawTitle;
       }
-      let tmp16Result = tmp16(4738);
+      let tmp16Result = tmp16(4802);
       obj1 = {};
       const merged = Object.assign(image);
       obj1.rawTitle = rawTitle;
       const isEmbedInlineResult = tmp16Result.isEmbedInline(obj1);
-      tmp16Result = tmp16(4738);
+      tmp16Result = tmp16(4802);
       const provider = image.provider;
       let name;
       if (provider != null) {
@@ -561,7 +561,7 @@ function toMediaSourceFromUnfurledMedia(id, guild_id, media, description, spoile
     if (num == null) {
       num = 0;
     }
-    const tmp4 = unfurledMediaItemType === tmp(8385).MediaGalleryItemType.VIDEO;
+    const tmp4 = unfurledMediaItemType === tmp(8452).MediaGalleryItemType.VIDEO;
     let str;
     if (tmp4) {
       str = "png";
@@ -572,11 +572,11 @@ function toMediaSourceFromUnfurledMedia(id, guild_id, media, description, spoile
     if (contentScanMetadata != null) {
       version = contentScanMetadata.version;
     }
-    let tmpResult = tmp(6016);
+    let tmpResult = tmp(6082);
     const enabledHarmTypesForMessage = tmpResult.getEnabledHarmTypesForMessage(id);
-    tmpResult = tmp(6016);
+    tmpResult = tmp(6082);
     obj = { type: null, media: null };
-    obj[0] = tmp(6021).ObscuredMediaTypes.GenericMedia;
+    obj[0] = tmp(6087).ObscuredMediaTypes.GenericMedia;
     obj[1] = media;
     obj = { messageId: null, guildId: null, channelId: null, uri: null, sourceURI: null, width: null, height: null, contentType: null, description: null, spoiler: null, obscure: null, contentScanVersion: null, accessoryType: "component", mediaIndex: 0, shareURI: null };
     obj[0] = id.id;
@@ -620,7 +620,7 @@ function toMediaSourceFromUnfurledMedia(id, guild_id, media, description, spoile
   }
 }
 function handleDownloadError() {
-  obj = _modDef4745;
+  obj = _modDef4809;
   obj = { title: null, body: null, isDismissable: true };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.cV3alD);
@@ -854,7 +854,7 @@ export const extractMediaSourcesFromEmbed = function extractMediaSourcesFromEmbe
 export const extractMediaSourcesFromComponent = function extractMediaSourcesFromComponent(id, components, guild_id, tmp10Result3, componentMediaIndex) {
   const _require = id;
   closure_1 = guild_id;
-  obj = _require(4627);
+  obj = _require(4691);
   const value = obj.flattenComponents(components).get(tmp10Result3);
   if (null == value) {
     return null;
@@ -1192,7 +1192,7 @@ export const isAnimatedImageSource = function isAnimatedImageSource(source) {
   if (!result) {
     let result1 = null != source.sourceURI && null != source.uri;
     if (result1) {
-      let tmpResult = tmp(4571);
+      let tmpResult = tmp(4635);
       result1 = tmpResult.urlMatchesFileExtension(source.sourceURI, closure_7);
     }
     if (result1) {
@@ -1206,7 +1206,7 @@ export const isAnimatedImageSource = function isAnimatedImageSource(source) {
   if (!result) {
     let result2 = null != source.sourceURI && null != source.uri;
     if (result2) {
-      tmpResult = tmp(4571);
+      tmpResult = tmp(4635);
       result2 = tmpResult.urlMatchesFileExtension(source.sourceURI, closure_8);
     }
     if (result2) {

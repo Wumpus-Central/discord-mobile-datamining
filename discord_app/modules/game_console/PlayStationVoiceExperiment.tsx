@@ -1,6 +1,6 @@
-// === Module 7112: PlayStationVoiceExperiment ===
+// === Module 7178: PlayStationVoiceExperiment ===
 
-// Module 7112 (PlayStationVoiceExperiment)
+// Module 7178 (PlayStationVoiceExperiment)
 import getUnitIdDefault from "getUnitId" /* 1368 */;
 
 const obj = { 1: null };

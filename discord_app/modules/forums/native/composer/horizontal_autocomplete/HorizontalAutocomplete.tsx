@@ -1,33 +1,33 @@
-// === Module 10150: HorizontalAutocompleteOption ===
+// === Module 10217: HorizontalAutocompleteOption ===
 
-// Module 10150 (HorizontalAutocompleteOption)
+// Module 10217 (HorizontalAutocompleteOption)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import _modDef4120 from "module_4120" /* 4120 */;
-import nameFromUserDefault from "nameFromUser" /* 4224 */;
-import Text from "Text" /* 4376 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4831 */;
-import preloadDefault from "preload" /* 5374 */;
-import RoleIconDefault from "RoleIcon" /* 5860 */;
-import registerAssetDefault from "registerAsset" /* 8383 */;
+import _modDef4184 from "module_4184" /* 4184 */;
+import nameFromUserDefault from "nameFromUser" /* 4288 */;
+import Text from "Text" /* 4440 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4896 */;
+import preloadDefault from "preload" /* 5440 */;
+import RoleIconDefault from "RoleIcon" /* 5926 */;
+import registerAssetDefault from "registerAsset" /* 8450 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
 import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "markAllUserIdListsStale" /* 4034 */;
+import closure_8 from "markAllUserIdListsStale" /* 4098 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
-import importDefaultResult from "createTextStyle" /* 5342 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
+import importDefaultResult from "createTextStyle" /* 5408 */;
 
 require = arg1;
 function HorizontalAutocompleteOption(arg0) {
   let sharedValue;
   ({ children, onPress } = arg0);
-  let obj = sharedValue(4120);
+  let obj = sharedValue(4184);
   sharedValue = obj.useSharedValue(0);
   useMountLayoutEffectDefault(() => {
     const result = sharedValue.set(sharedValue(closure_1_2[14]).withTiming(1));
@@ -40,9 +40,9 @@ function HorizontalAutocompleteOption(arg0) {
   fn.__workletHash = 14159604656069;
   fn.__initData = closure_14;
   obj = { onPress, children: null };
-  const animatedStyle = sharedValue(4120).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4184).useAnimatedStyle(fn);
   const items = [tmp.horizontalAutocompleteOption, animatedStyle];
-  obj[1] = callback(_modDef4120.View, { style: items, children });
+  obj[1] = callback(_modDef4184.View, { style: items, children });
   return callback(closure_3, obj);
 }
 noopAll;
@@ -98,8 +98,8 @@ let obj3 = {
     const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = tmp2(5859).getRoleIconData(stateFromStores, 30);
-      const tmp2Result = tmp2(5859);
+      roleIconData = tmp2(5925).getRoleIconData(stateFromStores, 30);
+      const tmp2Result = tmp2(5925);
     }
     obj = { onPress: onPress.onPress, children: null };
     let tmp9Result = null;
@@ -141,16 +141,16 @@ let obj3 = {
     if (channel.type === constants.GUILD_CATEGORY) {
       let channelIconWithGuild = registerAssetDefault;
     } else {
-      let tmp2Result = tmp2(4866);
+      let tmp2Result = tmp2(4932);
       channelIconWithGuild = tmp2Result.getChannelIconWithGuild(channel, tmp5);
     }
     const tmp = callback3();
-    tmp2Result = tmp2(4574);
+    tmp2Result = tmp2(4638);
     let obj = { onPress: channel.onPress, children: null };
     const items = [callback(channel(1297).Icon, { source: channelIconWithGuild }), ];
     const channelName = tmp2Result.computeChannelName(channel, closure_9, closure_8);
     obj = { style: tmp.channelName, variant: "text-sm/semibold", children: channelName };
-    items[1] = callback(channel(4376).Text, obj);
+    items[1] = callback(channel(4440).Text, obj);
     obj[1] = items;
     return callback2(HorizontalAutocompleteOption, obj);
   },

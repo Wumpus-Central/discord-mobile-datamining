@@ -1,10 +1,10 @@
-// === Module 6279: CloverIllocon ===
+// === Module 6345: CloverIllocon ===
 
-// Module 6279 (CloverIllocon)
+// Module 6345 (CloverIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6280 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 6346 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CloverIllocon.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 8407: metadata ===
+// === Module 8474: metadata ===
 
-// Module 8407 (metadata)
+// Module 8474 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/checkpoint/card-duck.png.js");

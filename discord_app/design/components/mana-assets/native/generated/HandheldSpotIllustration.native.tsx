@@ -1,10 +1,10 @@
-// === Module 6607: HandheldSpotIllustration ===
+// === Module 6673: HandheldSpotIllustration ===
 
-// Module 6607 (HandheldSpotIllustration)
+// Module 6673 (HandheldSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6608 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 6674 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/HandheldSpotIllustration.native.tsx");

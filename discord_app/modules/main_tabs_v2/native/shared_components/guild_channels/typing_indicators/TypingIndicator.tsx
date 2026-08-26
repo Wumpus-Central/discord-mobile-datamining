@@ -1,14 +1,14 @@
-// === Module 15440: TypingIndicator ===
+// === Module 15519: TypingIndicator ===
 
-// Module 15440 (TypingIndicator)
+// Module 15519 (TypingIndicator)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import useThemeDefault from "useTheme" /* 4315 */;
+import useThemeDefault from "useTheme" /* 4379 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 noopAll;

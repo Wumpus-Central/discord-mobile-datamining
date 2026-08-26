@@ -1,8 +1,8 @@
-// === Module 7175: fromServer ===
+// === Module 7241: fromServer ===
 
-// Module 7175 (fromServer)
+// Module 7241 (fromServer)
 import set from "set" /* 2 */;
-import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7172 */;
+import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7238 */;
 
 let prototype;
 prototype = function CollectiblesMarketingTabTooltipRecord(arg0) {

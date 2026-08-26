@@ -1,6 +1,6 @@
-// === Module 11041: throttleStateFn ===
+// === Module 11113: throttleStateFn ===
 
-// Module 11041 (throttleStateFn)
+// Module 11113 (throttleStateFn)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

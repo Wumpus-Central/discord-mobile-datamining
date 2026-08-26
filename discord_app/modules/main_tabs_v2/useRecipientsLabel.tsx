@@ -1,6 +1,6 @@
-// === Module 9814: useRecipientsLabel ===
+// === Module 9881: useRecipientsLabel ===
 
-// Module 9814 (useRecipientsLabel)
+// Module 9881 (useRecipientsLabel)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 

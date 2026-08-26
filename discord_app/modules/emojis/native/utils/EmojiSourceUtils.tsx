@@ -1,6 +1,6 @@
-// === Module 15434: _getEmojiSource ===
+// === Module 15513: _getEmojiSource ===
 
-// Module 15434 (_getEmojiSource)
+// Module 15513 (_getEmojiSource)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 
@@ -24,7 +24,7 @@ function _getEmojiSource() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

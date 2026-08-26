@@ -1,9 +1,9 @@
-// === Module 10514: useIsSwipeToMemberListEnabled ===
+// === Module 10582: useIsSwipeToMemberListEnabled ===
 
-// Module 10514 (useIsSwipeToMemberListEnabled)
+// Module 10582 (useIsSwipeToMemberListEnabled)
 import set from "set" /* 2 */;
 import create from "create" /* 1306 */;
-import useSwipeToReplySettingValue from "useSwipeToReplySettingValue" /* 10515 */;
+import useSwipeToReplySettingValue from "useSwipeToReplySettingValue" /* 10583 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");
 

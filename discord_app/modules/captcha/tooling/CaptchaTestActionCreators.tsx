@@ -1,6 +1,6 @@
-// === Module 15233: _testCaptcha ===
+// === Module 15312: _testCaptcha ===
 
-// Module 15233 (_testCaptcha)
+// Module 15312 (_testCaptcha)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -24,7 +24,7 @@ function _testCaptcha() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -62,7 +62,7 @@ function _testCaptcha() {
             return obj;
           } else {
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c2 = tmp;

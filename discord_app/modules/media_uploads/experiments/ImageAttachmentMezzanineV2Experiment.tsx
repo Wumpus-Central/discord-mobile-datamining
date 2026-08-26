@@ -1,6 +1,6 @@
-// === Module 5005: getImageAttachmentMezzanineV2Config ===
+// === Module 5071: getImageAttachmentMezzanineV2Config ===
 
-// Module 5005 (getImageAttachmentMezzanineV2Config)
+// Module 5071 (getImageAttachmentMezzanineV2Config)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

@@ -1,11 +1,11 @@
-// === Module 10551: getDurationStringOfFractionalPremium ===
+// === Module 10619: getDurationStringOfFractionalPremium ===
 
-// Module 10551 (getDurationStringOfFractionalPremium)
+// Module 10619 (getDurationStringOfFractionalPremium)
 import set from "set" /* 2 */;
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4043 */;
-import resetCache from "resetCache" /* 4067 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
+import resetCache from "resetCache" /* 4131 */;
 
 const result = set.fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
 

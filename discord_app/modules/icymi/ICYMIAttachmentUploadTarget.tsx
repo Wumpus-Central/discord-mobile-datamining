@@ -1,8 +1,8 @@
-// === Module 5002: getCreateAttachmentURL ===
+// === Module 5068: getCreateAttachmentURL ===
 
-// Module 5002 (getCreateAttachmentURL)
+// Module 5068 (getCreateAttachmentURL)
 import set from "set" /* 2 */;
-import items from "items" /* 4955 */;
+import items from "items" /* 5021 */;
 import ME from "ME" /* 676 */;
 
 ({ Endpoints: obj1, MAX_ATTACHMENT_SIZE: c3, MAX_UPLOAD_COUNT: c4 } = ME);

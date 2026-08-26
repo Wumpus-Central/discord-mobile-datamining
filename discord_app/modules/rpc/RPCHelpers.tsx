@@ -1,32 +1,32 @@
-// === Module 10829: recurseReplaceContentTree ===
+// === Module 10901: recurseReplaceContentTree ===
 
-// Module 10829 (recurseReplaceContentTree)
+// Module 10901 (recurseReplaceContentTree)
 import applyDefault from "apply" /* 12 */;
 import sendRequest from "sendRequest" /* 530 */;
 import setDefault from "set" /* 687 */;
 import UrlDefault from "Url" /* 1489 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4370 */;
-import getNicknameDefault from "getNickname" /* 4573 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4634 */;
-import set from "set" /* 9049 */;
-import prototypeDefault from "prototype" /* 10824 */;
-import transformUserDefault from "transformUser" /* 10830 */;
+import get_defaultRulesDefault from "get defaultRules" /* 4434 */;
+import getNicknameDefault from "getNickname" /* 4637 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4698 */;
+import set from "set" /* 9117 */;
+import prototypeDefault from "prototype" /* 10896 */;
+import transformUserDefault from "transformUser" /* 10902 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4421 */;
-import closure_5 from "createExecutable" /* 4406 */;
+import closure_4 from "addApplication" /* 4485 */;
+import closure_5 from "createExecutable" /* 4470 */;
 import { GUILD_VOCAL_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
 import closure_7 from "createdAt" /* 1930 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "_detectH265HardwareDecode" /* 4431 */;
-import closure_11 from "reinjectEphemerals" /* 4623 */;
-import closure_12 from "sortActivity" /* 4469 */;
+import closure_10 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_11 from "reinjectEphemerals" /* 4687 */;
+import closure_12 from "sortActivity" /* 4533 */;
 import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import closure_14 from "updateVoiceState" /* 4399 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4282 */;
+import closure_14 from "updateVoiceState" /* 4463 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4346 */;
 import ME from "ME" /* 676 */;
 import importDefaultResult from "isDiscordProxiedAssetUrl" /* 1487 */;
-import importDefaultResult1 from "set" /* 4367 */;
+import importDefaultResult1 from "set" /* 4431 */;
 
 require = arg1;
 function recurseReplaceContentTree(type) {
@@ -131,7 +131,7 @@ function _validateSocketApplication() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -160,13 +160,13 @@ function _validateSocketApplication() {
               callback2 = closure_1_4.getApplication(callback);
               if (typeof dependencyMap === "string") {
                 if (tmp67.transport === closure_1_16.POST_MESSAGE) {
-                  const tmp21 = callback(10679)(tmp68);
+                  const tmp21 = callback(10751)(tmp68);
                   if (null != tmp21) {
                     const items = [tmp21];
                   }
                   obj1 = { closeCode: null };
                   obj1[0] = closure_1_21.INVALID_ORIGIN;
-                  const tmp52 = new callback(10824)(obj1, "Invalid Origin");
+                  const tmp52 = new callback(10896)(obj1, "Invalid Origin");
                   throw tmp52;
                 } else {
                   name = 1;
@@ -220,7 +220,7 @@ function _validateSocketApplication() {
               if (!callback3(dependencyMap, rpc_origins.rpc_origins)) {
                 const obj6 = { closeCode: null };
                 obj6[0] = constants.INVALID_ORIGIN;
-                const tmp16 = new callback(10824)(obj6, "Invalid Origin");
+                const tmp16 = new callback(10896)(obj6, "Invalid Origin");
                 throw tmp16;
               }
             }
@@ -271,7 +271,7 @@ function _processSocketThrottlers() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -293,7 +293,7 @@ function _processSocketThrottlers() {
                 if (tmp36) {
                   num5 = 2;
                 }
-                const tmp24 = new callback(10831)(num5, closure_1_25);
+                const tmp24 = new callback(10903)(num5, closure_1_25);
                 tmp38[tmp35] = tmp24;
                 obj2 = tmp24;
               }
@@ -308,7 +308,7 @@ function _processSocketThrottlers() {
             c6 = 0;
             obj2 = { closeCode: null };
             obj2[0] = constants.CLOSE_ABNORMAL;
-            const tmp16 = new callback(10824)(obj2, "Socket closed during throttle");
+            const tmp16 = new callback(10896)(obj2, "Socket closed during throttle");
             throw tmp16;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -322,7 +322,7 @@ function _processSocketThrottlers() {
           } else {
             c6 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp26) {
           closure_5 = tmp26;

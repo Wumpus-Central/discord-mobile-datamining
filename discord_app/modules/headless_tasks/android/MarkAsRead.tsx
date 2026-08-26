@@ -1,6 +1,6 @@
-// === Module 17275: promise ===
+// === Module 17360: promise ===
 
-// Module 17275 (promise)
+// Module 17360 (promise)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

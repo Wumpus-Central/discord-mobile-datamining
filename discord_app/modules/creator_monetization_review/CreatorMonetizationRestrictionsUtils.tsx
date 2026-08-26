@@ -1,10 +1,10 @@
-// === Module 4018: isRestrictedFromShowingGuildPurchaseEntryPoints ===
+// === Module 4082: isRestrictedFromShowingGuildPurchaseEntryPoints ===
 
-// Module 4018 (isRestrictedFromShowingGuildPurchaseEntryPoints)
-import closure_0 from "makeGroupListingIndexSubscriptionListingTag" /* 4019 */;
-import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4019 */;
+// Module 4082 (isRestrictedFromShowingGuildPurchaseEntryPoints)
+import closure_0 from "makeGroupListingIndexSubscriptionListingTag" /* 4083 */;
+import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4083 */;
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import { CreatorMonetizationRestrictions as closure_3 } from "CreatorMonetizationRestrictions" /* 4020 */;
+import { CreatorMonetizationRestrictions as closure_3 } from "CreatorMonetizationRestrictions" /* 4084 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("modules/creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx");

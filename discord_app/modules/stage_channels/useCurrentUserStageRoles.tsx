@@ -1,8 +1,8 @@
-// === Module 10847: useCurrentUserStageRoles ===
+// === Module 10919: useCurrentUserStageRoles ===
 
-// Module 10847 (useCurrentUserStageRoles)
+// Module 10919 (useCurrentUserStageRoles)
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "buildStageChannelUserRoles" /* 5246 */;
+import closure_3 from "buildStageChannelUserRoles" /* 5312 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useCurrentUserStageRoles.tsx");

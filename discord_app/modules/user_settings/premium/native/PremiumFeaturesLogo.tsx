@@ -1,10 +1,10 @@
-// === Module 8774: PremiumFeaturesLogo ===
+// === Module 8842: PremiumFeaturesLogo ===
 
-// Module 8774 (PremiumFeaturesLogo)
+// Module 8842 (PremiumFeaturesLogo)
 import noopAll from "noop" /* 19 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4043 */;
-import registerAssetDefault from "registerAsset" /* 7044 */;
-import registerAssetDefault2 from "registerAsset" /* 8775 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
+import registerAssetDefault from "registerAsset" /* 7110 */;
+import registerAssetDefault2 from "registerAsset" /* 8843 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -22,7 +22,7 @@ export default function PremiumFeaturesLogo(premiumType) {
     tmp3 = registerAssetDefault;
   }
   const obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, resizeMode: "contain", source: null };
-  const tmpResult = tmp(5374);
+  const tmpResult = tmp(5440);
   obj[1] = getPremiumPlanItem.getPremiumTypeDisplayName(premiumType);
   obj[3] = premiumType.style;
   obj[5] = tmp3;

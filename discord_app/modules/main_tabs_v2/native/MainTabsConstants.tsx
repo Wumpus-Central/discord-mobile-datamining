@@ -1,6 +1,6 @@
-// === Module 9721: MODE_CHANGE_PHYSICS ===
+// === Module 9789: MODE_CHANGE_PHYSICS ===
 
-// Module 9721 (MODE_CHANGE_PHYSICS)
+// Module 9789 (MODE_CHANGE_PHYSICS)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/MainTabsConstants.tsx");

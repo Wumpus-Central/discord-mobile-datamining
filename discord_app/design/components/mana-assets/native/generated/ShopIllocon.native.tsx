@@ -1,10 +1,10 @@
-// === Module 6875: ShopIllocon ===
+// === Module 6941: ShopIllocon ===
 
-// Module 6875 (ShopIllocon)
+// Module 6941 (ShopIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6876 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 6942 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ShopIllocon.native.tsx");

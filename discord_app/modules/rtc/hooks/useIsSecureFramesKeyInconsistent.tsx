@@ -1,9 +1,9 @@
-// === Module 9368: useIsSecureFramesKeyInconsistent ===
+// === Module 9436: useIsSecureFramesKeyInconsistent ===
 
-// Module 9368 (useIsSecureFramesKeyInconsistent)
+// Module 9436 (useIsSecureFramesKeyInconsistent)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "createRTCConnection" /* 4454 */;
-import closure_4 from "initialize" /* 4468 */;
+import closure_3 from "createRTCConnection" /* 4518 */;
+import closure_4 from "initialize" /* 4532 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesKeyInconsistent.tsx");

@@ -1,12 +1,12 @@
-// === Module 9787: AcceptRequestConfirmationModal ===
+// === Module 9854: AcceptRequestConfirmationModal ===
 
-// Module 9787 (AcceptRequestConfirmationModal)
+// Module 9854 (AcceptRequestConfirmationModal)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import componentDidMountDefault from "componentDidMount" /* 4833 */;
+import componentDidMountDefault from "componentDidMount" /* 4898 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 noopAll;
@@ -35,11 +35,11 @@ export default function AcceptRequestConfirmationModal(onConfirm) {
   obj = { variant: "heading-lg/bold", color: "text-strong", style: tmp.text, children: null };
   const intl3 = onConfirm(1236).intl;
   obj[3] = intl3.string(onConfirm(1236).t.eJzSDT);
-  const items = [callback(onConfirm(4376).Text, obj), ];
+  const items = [callback(onConfirm(4440).Text, obj), ];
   obj1 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl4 = onConfirm(1236).intl;
   obj1[3] = intl4.string(onConfirm(1236).t.GB4jUw);
-  items[1] = callback(onConfirm(4376).Text, obj1);
+  items[1] = callback(onConfirm(4440).Text, obj1);
   obj[1] = items;
   obj[4] = callback2(View, obj);
   return callback(componentDidMountDefault, obj);

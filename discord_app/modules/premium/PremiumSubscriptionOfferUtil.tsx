@@ -1,17 +1,17 @@
-// === Module 8317: useHasDiscountApplied ===
+// === Module 8384: useHasDiscountApplied ===
 
-// Module 8317 (useHasDiscountApplied)
+// Module 8384 (useHasDiscountApplied)
 import initialize from "initialize" /* 589 */;
-import hooksDefault from "hooks" /* 3979 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7054 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7484 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 7485 */;
-import _fetchUserOffer from "_fetchUserOffer" /* 7736 */;
-import useHasActiveTrial from "useHasActiveTrial" /* 8318 */;
-import useIsInReverseTrial from "useIsInReverseTrial" /* 8319 */;
+import hooksDefault from "hooks" /* 4043 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7120 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7550 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 7551 */;
+import getPaymentGateway from "getPaymentGateway" /* 7802 */;
+import useHasActiveTrial from "useHasActiveTrial" /* 8385 */;
+import useIsInReverseTrial from "useIsInReverseTrial" /* 8386 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "reset" /* 4049 */;
+import closure_5 from "reset" /* 4113 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 require = arg1;
@@ -155,7 +155,7 @@ export const useFetchChurnUserDiscountOffer = function useFetchChurnUserDiscount
     }
     if (!tmp11) {
       tmp8(true);
-      obj = _fetchUserOffer;
+      obj = getPaymentGateway;
       const churnDiscountOffer = obj.fetchChurnDiscountOffer();
       churnDiscountOffer.then((arg0) => {
         callback2(arg0);

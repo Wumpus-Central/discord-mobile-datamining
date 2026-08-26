@@ -1,8 +1,8 @@
-// === Module 9976: getMuteSettings ===
+// === Module 10043: getMuteSettings ===
 
-// Module 9976 (getMuteSettings)
+// Module 10043 (getMuteSettings)
 import set from "set" /* 2 */;
-import hooksDefault from "hooks" /* 3979 */;
+import hooksDefault from "hooks" /* 4043 */;
 
 const result = set.fileFinishedImporting("modules/channel/ChannelMuteUtils.tsx");
 

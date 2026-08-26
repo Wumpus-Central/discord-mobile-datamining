@@ -1,6 +1,6 @@
-// === Module 11022: UserSummaryItem ===
+// === Module 11094: UserSummaryItem ===
 
-// Module 11022 (UserSummaryItem)
+// Module 11094 (UserSummaryItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
@@ -8,7 +8,7 @@ import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "trackCommunicationDisabled" /* 1992 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 noopAll;

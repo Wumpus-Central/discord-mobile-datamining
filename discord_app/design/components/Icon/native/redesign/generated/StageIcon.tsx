@@ -1,10 +1,10 @@
-// === Module 4927: StageIcon ===
+// === Module 4993: StageIcon ===
 
-// Module 4927 (StageIcon)
+// Module 4993 (StageIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 4874 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 4940 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

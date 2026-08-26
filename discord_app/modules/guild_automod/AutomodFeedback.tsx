@@ -1,6 +1,6 @@
-// === Module 7124: Feedback ===
+// === Module 7190: Feedback ===
 
-// Module 7124 (Feedback)
+// Module 7190 (Feedback)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

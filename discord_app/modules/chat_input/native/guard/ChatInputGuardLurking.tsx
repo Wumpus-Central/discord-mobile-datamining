@@ -1,10 +1,10 @@
-// === Module 12015: ? ===
+// === Module 12088: ? ===
 
-// Module 12015
+// Module 12088
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "initialize" /* 4026 */;
+import closure_5 from "initialize" /* 4090 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import { TextAreaCta } from "TextAreaCta" /* 11530 */;
+import { TextAreaCta } from "TextAreaCta" /* 11602 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -84,8 +84,8 @@ const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) 
     const intl8 = tmp2(1236).intl;
     obj[4] = intl8.string(tmp2(1236).t.RLch70);
     obj[5] = callback2;
-    let tmp15Result = jsx(guildId(12008), { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
-    const tmp14 = guildId(12008);
+    let tmp15Result = jsx(guildId(12081), { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
+    const tmp14 = guildId(12081);
   } else {
     if (channel.isReadonlyAnnouncementsChannel) {
       obj = { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
@@ -114,9 +114,9 @@ const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) 
       obj1[2] = intl2.string(tmp2(1236).t.RLch70);
       obj1[3] = callback2;
     }
-    tmp15Result = jsx(guildId(12008), obj1);
+    tmp15Result = jsx(guildId(12081), obj1);
     const tmp15 = jsx;
-    const tmp17 = guildId(12008);
+    const tmp17 = guildId(12081);
   }
   return tmp15Result;
 });

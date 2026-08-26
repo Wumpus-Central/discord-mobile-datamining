@@ -1,6 +1,6 @@
-// === Module 9218: SHARE_APPS_KEY ===
+// === Module 9286: SHARE_APPS_KEY ===
 
-// Module 9218 (SHARE_APPS_KEY)
+// Module 9286 (SHARE_APPS_KEY)
 import set from "set" /* 2 */;
 
 let obj = { TWITTER: "twitter", WHATSAPP: "whatsapp", GMAIL: "googlegmail", LINE: "line", MESSENGER: "fb-messenger", TELEGRAM: "tg" };

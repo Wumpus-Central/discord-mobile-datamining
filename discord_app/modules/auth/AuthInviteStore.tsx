@@ -1,6 +1,6 @@
-// === Module 4299: getGuild ===
+// === Module 4363: getGuild ===
 
-// Module 4299 (getGuild)
+// Module 4363 (getGuild)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;

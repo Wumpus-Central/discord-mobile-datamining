@@ -1,9 +1,9 @@
-// === Module 9827: ? ===
+// === Module 9894: ? ===
 
-// Module 9827
-import NavigationStack from "NavigationStack" /* 5889 */;
+// Module 9894
+import NavigationStack from "NavigationStack" /* 5955 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 8717 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 8785 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -22,11 +22,11 @@ const memoResult = importAllResult.memo(function ModalStackNavigator(children) {
           const merged1 = Object.assign(merged);
           return closure_1_3(closure_1_0(closure_1_2[4]).GenericHeaderTitle, { title: children.children, icon: closure_1 });
         },
-        headerLeft: closure_1_0(8539).getRenderModalCloseImage(navigation.navigation),
+        headerLeft: closure_1_0(8607).getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
       let merged = Object.assign(dependencyMap);
-      let merged1 = Object.assign(closure_1_1(9828)());
+      let merged1 = Object.assign(closure_1_1(9895)());
       return obj;
     },
     children: <closure_4.Screen {...obj} />

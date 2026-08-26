@@ -1,6 +1,6 @@
-// === Module 11621: useActivityApplications ===
+// === Module 11694: useActivityApplications ===
 
-// Module 11621 (useActivityApplications)
+// Module 11694 (useActivityApplications)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
@@ -10,7 +10,7 @@ export const useActivityApplications = function useActivityApplications(guildId)
   guildId = guildId.guildId;
   const fetchesShelf = guildId.fetchesShelf;
   const items = [fetchesShelf, guildId];
-  const mapped = fetchesShelf(11622)({ guildId }).map((application) => application.application);
+  const mapped = fetchesShelf(11695)({ guildId }).map((application) => application.application);
   const effect = React.useEffect(() => {
     if (fetchesShelf) {
       let obj = guildId(closure_1_2[2]);

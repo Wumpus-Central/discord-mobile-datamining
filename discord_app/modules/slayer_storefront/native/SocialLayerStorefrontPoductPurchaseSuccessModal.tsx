@@ -1,16 +1,16 @@
-// === Module 10256: PurchaseSuccessModalBase ===
+// === Module 10324: PurchaseSuccessModalBase ===
 
-// Module 10256 (PurchaseSuccessModalBase)
+// Module 10324 (PurchaseSuccessModalBase)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_toArray" /* 853 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
-import closure_9 from "addSku" /* 4429 */;
-import { SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM as closure_10 } from "STOREFRONT_MARKETING_GUILD_ID" /* 5957 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_9 from "addSku" /* 4493 */;
+import { SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM as closure_10 } from "STOREFRONT_MARKETING_GUILD_ID" /* 6023 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 function PurchaseSuccessModalBase(sku) {

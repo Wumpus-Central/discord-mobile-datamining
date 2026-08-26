@@ -1,10 +1,10 @@
-// === Module 8755: getPreviousMessages ===
+// === Module 8823: getPreviousMessages ===
 
-// Module 8755 (getPreviousMessages)
+// Module 8823 (getPreviousMessages)
 import set from "set" /* 2 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import getEmbeddedActivityKeyDefault from "getEmbeddedActivityKey" /* 8756 */;
-import Changeset from "Changeset" /* 8193 */;
+import getEmbeddedActivityKeyDefault from "getEmbeddedActivityKey" /* 8824 */;
+import Changeset from "Changeset" /* 8260 */;
 
 ({ Changeset: obj1, RowType: c3 } = Changeset);
 const result = set.fileFinishedImporting("modules/messages/native/renderer/ChatManager.tsx");

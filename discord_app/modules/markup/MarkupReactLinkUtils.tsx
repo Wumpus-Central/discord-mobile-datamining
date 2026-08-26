@@ -1,8 +1,8 @@
-// === Module 11163: isLinkTrusted ===
+// === Module 11235: isLinkTrusted ===
 
-// Module 11163 (isLinkTrusted)
+// Module 11235 (isLinkTrusted)
 import set from "set" /* 2 */;
-import isLinkTrusted from "isLinkTrusted" /* 9079 */;
+import isLinkTrusted from "isLinkTrusted" /* 9147 */;
 
 const result = set.fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
 
@@ -12,9 +12,9 @@ export const isLinkTrusted = function isLinkTrusted(target) {
   } else {
     isLinkTrusted;
     if (null == target.title) {
-      let title = tmp2(8247).astToString(target.content);
+      let title = tmp2(8314).astToString(target.content);
       tmp5(tmp6, title);
-      const tmp2Result = tmp2(8247);
+      const tmp2Result = tmp2(8314);
     }
     title = target.title;
     tmp2 = require;

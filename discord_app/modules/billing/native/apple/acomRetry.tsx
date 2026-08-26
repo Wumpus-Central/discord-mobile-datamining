@@ -1,7 +1,7 @@
-// === Module 7728: parseACOMErrorCode ===
+// === Module 7794: parseACOMErrorCode ===
 
-// Module 7728 (parseACOMErrorCode)
-import getUnderlyingIOSExceptionRecursivelyAll from "getUnderlyingIOSExceptionRecursively" /* 7590 */;
+// Module 7794 (parseACOMErrorCode)
+import getUnderlyingIOSExceptionRecursivelyAll from "getUnderlyingIOSExceptionRecursively" /* 7656 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
 
@@ -52,7 +52,7 @@ function _retryACOMRequest() {
           obj[0] = value;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -145,7 +145,7 @@ function _retryACOMRequest() {
               const obj13 = obj8(1474);
               const _Math = Math;
               const _Date2 = Date;
-              items[1] = callback(4264).timeoutPromise(Math.max(0, dependencyMap - Date.now()));
+              items[1] = callback(4328).timeoutPromise(Math.max(0, dependencyMap - Date.now()));
               constants = 4;
               c7 = 1;
               const obj7 = { value: null, done: false };

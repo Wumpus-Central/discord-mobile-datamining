@@ -1,13 +1,13 @@
-// === Module 9997: ChannelIndicator ===
+// === Module 10064: ChannelIndicator ===
 
-// Module 9997 (ChannelIndicator)
+// Module 10064 (ChannelIndicator)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4101 */;
-import ReadStateTypes from "ReadStateTypes" /* 4590 */;
+import map from "map" /* 4165 */;
+import ReadStateTypes from "ReadStateTypes" /* 4654 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const UnreadSetting = ReadStateTypes.UnreadSetting;

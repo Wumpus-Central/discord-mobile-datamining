@@ -1,10 +1,10 @@
-// === Module 12507: usePersonalizedVoiceChannelUsers ===
+// === Module 12578: usePersonalizedVoiceChannelUsers ===
 
-// Module 12507 (usePersonalizedVoiceChannelUsers)
-import closure_2 from "recomputeAffinities" /* 7265 */;
-import closure_3 from "hasConsented" /* 5935 */;
+// Module 12578 (usePersonalizedVoiceChannelUsers)
+import closure_2 from "recomputeAffinities" /* 7331 */;
+import closure_3 from "hasConsented" /* 6001 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "getVoiceStatesForGuild" /* 4455 */;
+import closure_5 from "getVoiceStatesForGuild" /* 4519 */;
 import { Consents } from "ME" /* 676 */;
 
 const require = arg1;

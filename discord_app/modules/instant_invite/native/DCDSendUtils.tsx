@@ -1,8 +1,8 @@
-// === Module 4557: sendSMS ===
+// === Module 4621: sendSMS ===
 
-// Module 4557 (sendSMS)
+// Module 4621 (sendSMS)
 import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 4558 */;
+import enforcingDefault from "enforcing" /* 4622 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 ({ Linking: c3, NativeModules: c4 } = get_ActivityIndicator);

@@ -1,6 +1,6 @@
-// === Module 8859: EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT ===
+// === Module 8927: EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT ===
 
-// Module 8859 (EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT)
+// Module 8927 (EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -8,7 +8,7 @@ import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 let c3 = importAllResult;

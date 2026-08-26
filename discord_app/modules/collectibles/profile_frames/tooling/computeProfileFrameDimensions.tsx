@@ -1,12 +1,12 @@
-// === Module 8953: computeProfileFrameDimensions ===
+// === Module 9021: computeProfileFrameDimensions ===
 
-// Module 8953 (computeProfileFrameDimensions)
+// Module 9021 (computeProfileFrameDimensions)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/profile_frames/tooling/computeProfileFrameDimensions.tsx");
 
 export const computeProfileFrameDimensions = function computeProfileFrameDimensions(closure_4) {
-  innerWidth = innerWidth(8954).DefaultProfileFrameDimensions.INNER_WIDTH;
+  innerWidth = innerWidth(9022).DefaultProfileFrameDimensions.INNER_WIDTH;
   const mapped = closure_4.map((dims) => Math.round(Math.max(0, (dims.dims.width - innerWidth) / 2)));
   let overflowHorizontal = 0;
   if (mapped.length > 0) {
@@ -18,13 +18,13 @@ export const computeProfileFrameDimensions = function computeProfileFrameDimensi
   }
   const found = closure_4.filter((layer) => {
     layer = layer.layer;
-    let tmp3 = layer.type === innerWidth(8951).ProfileFrameLayerType.STAPLE;
+    let tmp3 = layer.type === innerWidth(9019).ProfileFrameLayerType.STAPLE;
     if (tmp3) {
-      tmp3 = layer.anchor === innerWidth(8952).ProfileFrameLayerAnchor.TOP;
+      tmp3 = layer.anchor === innerWidth(9020).ProfileFrameLayerAnchor.TOP;
     }
     return tmp3;
   });
-  const mapped1 = found.map((dims) => Math.max(0, dims.dims.height - (716 - innerWidth(8954).DefaultProfileFrameDimensions.OVERFLOW_TOP)));
+  const mapped1 = found.map((dims) => Math.max(0, dims.dims.height - (716 - innerWidth(9022).DefaultProfileFrameDimensions.OVERFLOW_TOP)));
   let overflowTop = 0;
   if (mapped1.length > 0) {
     const _Math3 = Math;
@@ -35,13 +35,13 @@ export const computeProfileFrameDimensions = function computeProfileFrameDimensi
   }
   const found1 = closure_4.filter((layer) => {
     layer = layer.layer;
-    let tmp3 = layer.type === innerWidth(8951).ProfileFrameLayerType.STAPLE;
+    let tmp3 = layer.type === innerWidth(9019).ProfileFrameLayerType.STAPLE;
     if (tmp3) {
-      tmp3 = layer.anchor === innerWidth(8952).ProfileFrameLayerAnchor.BOTTOM;
+      tmp3 = layer.anchor === innerWidth(9020).ProfileFrameLayerAnchor.BOTTOM;
     }
     return tmp3;
   });
-  const mapped2 = found1.map((dims) => Math.max(0, dims.dims.height - (424 - innerWidth(8954).DefaultProfileFrameDimensions.OVERFLOW_BOTTOM)));
+  const mapped2 = found1.map((dims) => Math.max(0, dims.dims.height - (424 - innerWidth(9022).DefaultProfileFrameDimensions.OVERFLOW_BOTTOM)));
   let overflowBottom = 0;
   if (mapped2.length > 0) {
     const _Math5 = Math;

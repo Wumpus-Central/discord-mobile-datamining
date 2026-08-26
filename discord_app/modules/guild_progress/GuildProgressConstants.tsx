@@ -1,6 +1,6 @@
-// === Module 12029: Steps ===
+// === Module 12102: Steps ===
 
-// Module 12029 (Steps)
+// Module 12102 (Steps)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_progress/GuildProgressConstants.tsx");

@@ -1,9 +1,9 @@
-// === Module 16570: getMessage ===
+// === Module 16655: getMessage ===
 
-// Module 16570 (getMessage)
+// Module 16655 (getMessage)
 import set from "set" /* 2 */;
-import getMessages from "getMessages" /* 16571 */;
-import format from "format" /* 16614 */;
+import getMessages from "getMessages" /* 16656 */;
+import format from "format" /* 16699 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/i18n/index.tsx");
 

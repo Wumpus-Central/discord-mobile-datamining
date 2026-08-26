@@ -1,6 +1,6 @@
-// === Module 10591: convertOAuth2Authorization ===
+// === Module 10659: convertOAuth2Authorization ===
 
-// Module 10591 (convertOAuth2Authorization)
+// Module 10659 (convertOAuth2Authorization)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/oauth2/convertor.tsx");

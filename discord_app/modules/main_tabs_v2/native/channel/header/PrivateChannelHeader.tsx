@@ -1,15 +1,15 @@
-// === Module 12752: GroupDmMemberCount ===
+// === Module 12825: GroupDmMemberCount ===
 
-// Module 12752 (GroupDmMemberCount)
+// Module 12825 (GroupDmMemberCount)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "sortActivity" /* 4469 */;
-import closure_6 from "markAllUserIdListsStale" /* 4034 */;
+import closure_5 from "sortActivity" /* 4533 */;
+import closure_6 from "markAllUserIdListsStale" /* 4098 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 function GroupDmMemberCount(channel) {
@@ -42,7 +42,7 @@ function GroupDmMemberCount(channel) {
     }, 0);
   });
   const obj = channel(589);
-  return channel(12755).renderMemberCountText(stateFromStores, channel.recipients.length);
+  return channel(12828).renderMemberCountText(stateFromStores, channel.recipients.length);
 }
 let c3 = importAllResult;
 ({ ChannelTypes: closure_8, StatusTypes: c9 } = ME);

@@ -1,10 +1,10 @@
-// === Module 10578: XboxLinkDiscordConsent ===
+// === Module 10646: XboxLinkDiscordConsent ===
 
-// Module 10578 (XboxLinkDiscordConsent)
+// Module 10646 (XboxLinkDiscordConsent)
 import closure_2 from "noop" /* 19 */;
-import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 10568 */;
+import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 10636 */;
 import { PlatformTypes } from "ME" /* 676 */;
-import { XBOX_CLIENT_SCOPES } from "XBOX_URL_BASE" /* 10579 */;
+import { XBOX_CLIENT_SCOPES } from "XBOX_URL_BASE" /* 10647 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -23,6 +23,6 @@ export default function XboxLinkDiscordConsent(arg0) {
   const callback1 = React.useCallback(() => {
     navigation.push(closure_1_3.ERROR);
   }, items1);
-  obj = { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(10618).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 };
-  return jsx(navigation(10580).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(10618).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 });
+  obj = { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(10686).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 };
+  return jsx(navigation(10648).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(10686).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 });
 };

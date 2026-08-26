@@ -1,8 +1,8 @@
-// === Module 10370: ChannelPickerActionSheet ===
+// === Module 10438: ChannelPickerActionSheet ===
 
-// Module 10370 (ChannelPickerActionSheet)
+// Module 10438 (ChannelPickerActionSheet)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "markAllUserIdListsStale" /* 4034 */;
+import closure_3 from "markAllUserIdListsStale" /* 4098 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
 

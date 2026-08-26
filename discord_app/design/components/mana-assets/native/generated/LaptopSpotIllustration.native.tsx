@@ -1,10 +1,10 @@
-// === Module 6641: LaptopSpotIllustration ===
+// === Module 6707: LaptopSpotIllustration ===
 
-// Module 6641 (LaptopSpotIllustration)
+// Module 6707 (LaptopSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6642 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 6708 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/LaptopSpotIllustration.native.tsx");

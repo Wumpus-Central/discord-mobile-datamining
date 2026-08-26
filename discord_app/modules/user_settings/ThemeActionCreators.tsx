@@ -1,6 +1,6 @@
-// === Module 4227: setSystemTheme ===
+// === Module 4291: setSystemTheme ===
 
-// Module 4227 (setSystemTheme)
+// Module 4291 (setSystemTheme)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1339 */;
 import closure_2 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;

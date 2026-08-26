@@ -1,15 +1,15 @@
-// === Module 14517: BountiesNuxPromoSheet ===
+// === Module 14590: BountiesNuxPromoSheet ===
 
-// Module 14517 (BountiesNuxPromoSheet)
+// Module 14590 (BountiesNuxPromoSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 4815 */;
-import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 6245 */;
-import PromoSheet from "PromoSheet" /* 7878 */;
+import Button from "Button" /* 4879 */;
+import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 6311 */;
+import PromoSheet from "PromoSheet" /* 7945 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 createCacheKey = { illustrationContainer: null };
@@ -20,7 +20,7 @@ const result = require("set").fileFinishedImporting("modules/quests/native/Bount
 
 export default function BountiesNuxPromoSheet() {
   const callback = React.useCallback(() => {
-    callback2(4347).hideActionSheet(callback(14516).PROMO_SHEET_KEY);
+    callback2(4411).hideActionSheet(callback(14589).PROMO_SHEET_KEY);
   }, []);
   let obj = { gradientColor: "purple", title: null, description: null, illustration: null, actions: null };
   const intl = getSystemLocale.intl;

@@ -1,18 +1,18 @@
-// === Module 5354: updateImpersonating ===
+// === Module 5420: updateImpersonating ===
 
-// Module 5354 (updateImpersonating)
+// Module 5420 (updateImpersonating)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import transitionTo from "transitionTo" /* 1222 */;
 import ImpersonateType from "ImpersonateType" /* 1990 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4588 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4652 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import closure_4 from "comparator" /* 1982 */;
 import closure_5 from "trackCommunicationDisabled" /* 1992 */;
 import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_8 from "handleConnectionOpen" /* 1981 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4589 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4653 */;
 import closure_10 from "initialize" /* 1984 */;
 import ME from "ME" /* 676 */;
 import { isStaticChannelRoute } from "set" /* 1398 */;

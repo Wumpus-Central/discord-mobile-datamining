@@ -1,6 +1,6 @@
-// === Module 13963: transformSubscriptionListingToSku ===
+// === Module 14036: transformSubscriptionListingToSku ===
 
-// Module 13963 (transformSubscriptionListingToSku)
+// Module 14036 (transformSubscriptionListingToSku)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
@@ -160,7 +160,7 @@ function _fetchSubscriptionListingForPlan() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -282,7 +282,7 @@ function _fetchSubscriptionListingForPlan() {
               return obj;
             }
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp33) {
           closure_5 = tmp33;

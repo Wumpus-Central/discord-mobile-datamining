@@ -1,6 +1,6 @@
-// === Module 13232: _resetAgeVerification ===
+// === Module 13305: _resetAgeVerification ===
 
-// Module 13232 (_resetAgeVerification)
+// Module 13305 (_resetAgeVerification)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -19,7 +19,7 @@ function _fetchReactiveCheckResult() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ function _resetAgeVerification() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -143,7 +143,7 @@ function _resetAgeVerification() {
           obj = v0(709);
           obj.dispatch({ type: "AGE_VERIFICATION_RESET" });
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp13) {
         dependencyMap = tmp;

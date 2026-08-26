@@ -1,16 +1,16 @@
-// === Module 16223: useMessageRequestTimestampText ===
+// === Module 16304: useMessageRequestTimestampText ===
 
-// Module 16223 (useMessageRequestTimestampText)
+// Module 16304 (useMessageRequestTimestampText)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import hooksDefault from "hooks" /* 3979 */;
-import closure_3 from "generateOldThreadCutoff" /* 4395 */;
+import hooksDefault from "hooks" /* 4043 */;
+import closure_3 from "generateOldThreadCutoff" /* 4459 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/message_request/hooks/useMessageRequestTimestampText.tsx");
 
 export const useMessageRequestTimestampText = function useMessageRequestTimestampText(channel) {
   const _require = channel;
-  let obj = _require(12152);
+  let obj = _require(12225);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   obj = { lastMessageId: _require(589).useStateFromStores(items, () => closure_1_3.lastMessageId(id.id)) };
   items = [closure_3];
@@ -36,7 +36,7 @@ export const useMessageRequestTimestampText = function useMessageRequestTimestam
 };
 export const useMessageRequestRelativeTimestampText = function useMessageRequestRelativeTimestampText(channel) {
   const _require = channel;
-  let obj = _require(12152);
+  let obj = _require(12225);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   obj = { lastMessageId: _require(589).useStateFromStores(items, () => closure_1_3.lastMessageId(id.id)) };
   items = [closure_3];
@@ -49,8 +49,8 @@ export const useMessageRequestRelativeTimestampText = function useMessageRequest
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = _require(7384).getTimestampString(extractTimestampResult);
-      const tmpResult = _require(7384);
+      str = _require(7450).getTimestampString(extractTimestampResult);
+      const tmpResult = _require(7450);
     }
     return str;
   }

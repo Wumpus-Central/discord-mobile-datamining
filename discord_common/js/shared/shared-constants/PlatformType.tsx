@@ -1,6 +1,6 @@
-// === Module 9052: PlatformType ===
+// === Module 9120: PlatformType ===
 
-// Module 9052 (PlatformType)
+// Module 9120 (PlatformType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/PlatformType.tsx");

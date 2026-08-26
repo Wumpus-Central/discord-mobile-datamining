@@ -1,8 +1,8 @@
-// === Module 12086: useGuildPowerupLevelPerks ===
+// === Module 12159: useGuildPowerupLevelPerks ===
 
-// Module 12086 (useGuildPowerupLevelPerks)
+// Module 12159 (useGuildPowerupLevelPerks)
 import closure_3 from "noop" /* 19 */;
-import { GUILD_FEATURE_TO_PERK } from "BoostedGuildTiers" /* 4267 */;
+import { GUILD_FEATURE_TO_PERK } from "BoostedGuildTiers" /* 4331 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");

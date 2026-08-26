@@ -1,12 +1,12 @@
-// === Module 8269: createApplicationCommandSourceSystemMessage ===
+// === Module 8336: createApplicationCommandSourceSystemMessage ===
 
-// Module 8269 (createApplicationCommandSourceSystemMessage)
+// Module 8336 (createApplicationCommandSourceSystemMessage)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import regExp from "regExp" /* 4839 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8223 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8224 */;
-import getApplicationCommand from "getApplicationCommand" /* 8270 */;
+import regExp from "regExp" /* 4904 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8290 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8291 */;
+import getApplicationCommand from "getApplicationCommand" /* 8337 */;
 
 const MessageTypes = ME.MessageTypes;
 const COMMAND_SENTINEL = regExp.COMMAND_SENTINEL;
@@ -22,7 +22,7 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
   }
   if (null != applicationCommand) {
     if (null != name) {
-      const messageAuthorWithProcessedColor = tmp(8221).getMessageAuthorWithProcessedColor(message);
+      const messageAuthorWithProcessedColor = tmp(8288).getMessageAuthorWithProcessedColor(message);
       const intl = tmp(1236).intl;
       obj = { username: null, usernameOnClick: null, commandName: null, applicationName: null };
       obj[0] = messageAuthorWithProcessedColor.nick;

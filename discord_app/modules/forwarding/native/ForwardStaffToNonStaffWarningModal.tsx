@@ -1,9 +1,9 @@
-// === Module 11236: ForwardStaffToNonStaffWarningModal ===
+// === Module 11308: ForwardStaffToNonStaffWarningModal ===
 
-// Module 11236 (ForwardStaffToNonStaffWarningModal)
+// Module 11308 (ForwardStaffToNonStaffWarningModal)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4750 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4814 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 ({ jsx: obj1, Fragment: c3, jsxs: c4 } = jsxProd);

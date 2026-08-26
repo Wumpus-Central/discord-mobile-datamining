@@ -1,10 +1,10 @@
-// === Module 12961: usePremiumGroupPrimaryName ===
+// === Module 13035: usePremiumGroupPrimaryName ===
 
-// Module 12961 (usePremiumGroupPrimaryName)
+// Module 13035 (usePremiumGroupPrimaryName)
 import set from "set" /* 2 */;
-import nameFromUser from "nameFromUser" /* 4224 */;
-import usePremiumGroupMembershipDefault from "usePremiumGroupMembership" /* 12962 */;
-import usePremiumGroupMembersDefault from "usePremiumGroupMembers" /* 12966 */;
+import nameFromUser from "nameFromUser" /* 4288 */;
+import usePremiumGroupMembershipDefault from "usePremiumGroupMembership" /* 13036 */;
+import usePremiumGroupMembersDefault from "usePremiumGroupMembers" /* 13040 */;
 
 const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
 

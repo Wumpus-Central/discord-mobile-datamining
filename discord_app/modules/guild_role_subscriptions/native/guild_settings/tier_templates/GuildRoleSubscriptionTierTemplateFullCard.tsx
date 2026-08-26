@@ -1,16 +1,16 @@
-// === Module 17130: SectionSeparator ===
+// === Module 17215: SectionSeparator ===
 
-// Module 17130 (SectionSeparator)
+// Module 17215 (SectionSeparator)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4376 */;
-import SectionTitle from "SectionTitle" /* 14681 */;
-import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 15475 */;
+import Text from "Text" /* 4440 */;
+import SectionTitle from "SectionTitle" /* 14754 */;
+import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 15554 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function SectionSeparator() {
@@ -82,30 +82,30 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   let obj = { scrollable: true, startExpanded: true, children: null };
   obj = { style: tmp.container, children: null };
   obj = { template, handleSelectTemplateInPreview, subscriptionPlanTextStyle: tmp.subscriptionPlanTextStyle, descriptionTextStyle: tmp.descriptionPlanTextStyle, closeActionSheet: true };
-  let items = [callback(_require(17131).GuildRoleSubscriptionTierTemplateBasicInfo, obj), callback(View, { style: tmp.separator }), ];
+  let items = [callback(_require(17216).GuildRoleSubscriptionTierTemplateBasicInfo, obj), callback(View, { style: tmp.separator }), ];
   const obj2 = { scrollsToTop: false, style: tmp.content, contentContainerStyle: obj3, children: null };
   const obj4 = { variant: "text-sm/bold", color: "text-default", style: { textTransform: "uppercase" }, children: null };
   const intl = _require(1236).intl;
   obj4[3] = intl.string(_require(1236).t.CjC5XZ);
-  const items1 = [callback(_require(4376).Text, obj4), callback(_require(1297).Spacer, { size: 4 }), , , , , , , , , ];
+  const items1 = [callback(_require(4440).Text, obj4), callback(_require(1297).Spacer, { size: 4 }), , , , , , , , , ];
   const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
   const intl2 = _require(1236).intl;
   obj5[2] = intl2.string(_require(1236).t.bCb3c8);
-  items1[2] = callback(_require(4376).Text, obj5);
+  items1[2] = callback(_require(4440).Text, obj5);
   items1[3] = callback(_require(1297).Spacer, { size: 24 });
   const obj6 = { variant: "text-xs/bold", color: "text-default", style: { textTransform: "uppercase" }, children: null };
   const intl3 = _require(1236).intl;
   obj6[3] = intl3.string(_require(1236).t.ZKyfEo);
-  items1[4] = callback(_require(4376).Text, obj6);
+  items1[4] = callback(_require(4440).Text, obj6);
   items1[5] = callback(_require(1297).Spacer, { size: 8 });
-  items1[6] = callback(_require(17132).GuildRoleSubscriptionRolePreview, { roleColor: role_color, roleImage: image, roleName: name, guildId });
+  items1[6] = callback(_require(17217).GuildRoleSubscriptionRolePreview, { roleColor: role_color, roleImage: image, roleName: name, guildId });
   items1[7] = callback(SectionSeparator, {});
   const obj7 = { sectionTitle: null, children: null };
   const intl4 = _require(1236).intl;
   obj7[0] = intl4.string(_require(1236).t.Ofvpfs);
   obj1 = { style: tmp.separator };
   obj3 = { paddingBottom: 32 + useSafeAreaInsetsDefault().bottom };
-  obj7[1] = callback(_require(8901).GappedList, {
+  obj7[1] = callback(_require(8969).GappedList, {
     gap: 14,
     children: channels.map((children) => {
       let obj = lib(closure_1_2[16]);
@@ -132,7 +132,7 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
       return closure_1_4(closure_1_9, { title: closure_1_6(closure_1_3, obj), description: children.description }, children.id);
     })
   };
-  obj9[1] = callback(_require(8901).GappedList, {
+  obj9[1] = callback(_require(8969).GappedList, {
     gap: 14,
     children: additional_perks.map((children) => {
       let obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name };
@@ -142,8 +142,8 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   });
   items1[10] = callback(BenefitSection, obj9);
   obj2[3] = items1;
-  items[2] = callback2(_require(5505).BottomSheetScrollView, obj2);
+  items[2] = callback2(_require(5571).BottomSheetScrollView, obj2);
   obj[1] = items;
   obj[2] = callback2(View, obj);
-  return callback(_require(5503).BottomSheet, obj);
+  return callback(_require(5569).BottomSheet, obj);
 };

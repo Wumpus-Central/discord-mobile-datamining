@@ -1,8 +1,8 @@
-// === Module 8247: reactParserFor ===
+// === Module 8314: reactParserFor ===
 
-// Module 8247 (reactParserFor)
+// Module 8314 (reactParserFor)
 import set from "set" /* 2 */;
-import saferParse from "saferParse" /* 8248 */;
+import saferParse from "saferParse" /* 8315 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/markup/MarkupParser.tsx");
 for (const key10026 in require("collectAst")) {

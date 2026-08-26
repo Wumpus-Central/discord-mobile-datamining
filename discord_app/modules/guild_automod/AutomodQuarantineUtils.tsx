@@ -1,15 +1,15 @@
-// === Module 11432: useCurrentUserHasAutomodQuarantinedProfile ===
+// === Module 11504: useCurrentUserHasAutomodQuarantinedProfile ===
 
-// Module 11432 (useCurrentUserHasAutomodQuarantinedProfile)
+// Module 11504 (useCurrentUserHasAutomodQuarantinedProfile)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "zustandStore" /* 10290 */;
+import closure_3 from "zustandStore" /* 10358 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import closure_5 from "trackCommunicationDisabled" /* 1992 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4025 */;
-import closure_8 from "handleConnectionOpen" /* 4202 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_8 from "handleConnectionOpen" /* 4266 */;
 import ME from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4013 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
 import { ProfileCustomizationSubsection as closure_12 } from "MAX_FAVORITES" /* 685 */;
 
 const require = arg1;

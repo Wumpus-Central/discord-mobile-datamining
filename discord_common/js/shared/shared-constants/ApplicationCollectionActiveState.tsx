@@ -1,6 +1,6 @@
-// === Module 11661: ApplicationCollectionActiveState ===
+// === Module 11734: ApplicationCollectionActiveState ===
 
-// Module 11661 (ApplicationCollectionActiveState)
+// Module 11734 (ApplicationCollectionActiveState)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationCollectionActiveState.tsx");

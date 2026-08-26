@@ -1,10 +1,10 @@
-// === Module 6975: VoiceFiltersSpotIllustration ===
+// === Module 7041: VoiceFiltersSpotIllustration ===
 
-// Module 6975 (VoiceFiltersSpotIllustration)
+// Module 7041 (VoiceFiltersSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6976 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 7042 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/VoiceFiltersSpotIllustration.native.tsx");

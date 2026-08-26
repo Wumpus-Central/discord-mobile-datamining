@@ -1,8 +1,8 @@
-// === Module 17231: handleUserApplicationIdentityGatewayEvent ===
+// === Module 17316: handleUserApplicationIdentityGatewayEvent ===
 
-// Module 17231 (handleUserApplicationIdentityGatewayEvent)
-import initializeDefault from "initialize" /* 5367 */;
-import fetchStore from "fetchStore" /* 12655 */;
+// Module 17316 (handleUserApplicationIdentityGatewayEvent)
+import initializeDefault from "initialize" /* 5433 */;
+import fetchStore from "fetchStore" /* 12728 */;
 
 require = arg1;
 function handleUserApplicationIdentityGatewayEvent(user_id) {

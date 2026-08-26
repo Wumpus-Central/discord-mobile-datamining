@@ -1,6 +1,6 @@
-// === Module 4264: start ===
+// === Module 4328: start ===
 
-// Module 4264 (start)
+// Module 4328 (start)
 import closure_0 from "asyncGeneratorStep" /* 5 */;
 
 class Timeout {
@@ -219,7 +219,7 @@ prototype5["_flush"] = function _flush() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

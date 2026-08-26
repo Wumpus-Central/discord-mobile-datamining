@@ -1,18 +1,18 @@
-// === Module 8736: DCDChatItem ===
+// === Module 8804: DCDChatItem ===
 
-// Module 8736 (DCDChatItem)
+// Module 8804 (DCDChatItem)
 import set from "set" /* 686 */;
 import ThemesDefault from "Themes" /* 712 */;
-import isSystemMessageDefault from "isSystemMessage" /* 5997 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 8737 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6063 */;
+import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 8805 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
 import { MessageTypes } from "ME" /* 676 */;
-import Changeset from "Changeset" /* 8193 */;
+import Changeset from "Changeset" /* 8260 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function DCDChatItem(message) {
@@ -27,15 +27,15 @@ function DCDChatItem(message) {
     if (AUTOMOD_INCIDENT_ACTIONS.has(message.type)) {
       obj = {};
       const merged2 = Object.assign(merged);
-      tmp3Result = callback(tmp21(8738).default, obj);
+      tmp3Result = callback(tmp21(8806).default, obj);
     } else if (isSystemMessageDefault(message)) {
       obj1 = {};
       const merged3 = Object.assign(merged);
-      tmp3Result = tmp3(tmp21(8739).default, obj1);
+      tmp3Result = tmp3(tmp21(8807).default, obj1);
     } else {
       obj = {};
       const merged4 = Object.assign(merged);
-      tmp3Result = tmp3(tmp21(8738).default, obj);
+      tmp3Result = tmp3(tmp21(8806).default, obj);
     }
   }
   return tmp3Result;

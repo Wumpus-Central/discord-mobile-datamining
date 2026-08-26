@@ -1,6 +1,6 @@
-// === Module 8694: getFastestListVisibleItemsDefault ===
+// === Module 8762: getFastestListVisibleItemsDefault ===
 
-// Module 8694 (getFastestListVisibleItemsDefault)
+// Module 8762 (getFastestListVisibleItemsDefault)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/fastest_list/getFastestListVisibleItemsDefault.tsx");

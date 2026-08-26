@@ -1,8 +1,8 @@
-// === Module 7905: createFromServer ===
+// === Module 7972: createFromServer ===
 
-// Module 7905 (createFromServer)
+// Module 7972 (createFromServer)
 import toJSDefault from "toJS" /* 1931 */;
-import hooksDefault from "hooks" /* 3979 */;
+import hooksDefault from "hooks" /* 4043 */;
 
 toJSDefault;
 let InviteRecord;

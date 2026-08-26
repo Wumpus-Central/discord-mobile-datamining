@@ -1,6 +1,6 @@
-// === Module 8374: validateComponent ===
+// === Module 8441: validateComponent ===
 
-// Module 8374 (validateComponent)
+// Module 8441 (validateComponent)
 import set from "set" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
@@ -138,7 +138,7 @@ export default function validateComponent(type, arg1, modal) {
           stringResult4 = intl10.string(tmp4(1236).t.eJEUvD);
         }
         const tmp18 = stringResult4;
-        tmp4Result = tmp4(4627);
+        tmp4Result = tmp4(4691);
       }
       return tmp18;
     } else if (values.type === tmp4(1955).ComponentType.STRING_SELECT) {

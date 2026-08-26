@@ -1,6 +1,6 @@
-// === Module 8951: ProfileFrameLayerType ===
+// === Module 9019: ProfileFrameLayerType ===
 
-// Module 8951 (ProfileFrameLayerType)
+// Module 9019 (ProfileFrameLayerType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ProfileFrameLayerType.tsx");

@@ -1,13 +1,13 @@
-// === Module 13550: IconPill ===
+// === Module 13623: IconPill ===
 
-// Module 13550 (IconPill)
+// Module 13623 (IconPill)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import IconSizesDefault from "IconSizes" /* 4817 */;
-import _modDef8150 from "module_8150" /* 8150 */;
+import IconSizesDefault from "IconSizes" /* 4881 */;
+import _modDef8217 from "module_8217" /* 8217 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
@@ -43,7 +43,7 @@ export default function IconPill(IconComponent) {
   }
   const items1 = [tmp9, ];
   const items2 = [tmp.pillText, textStyle];
-  items1[1] = tmp8(_modDef8150, { style: items2, numberOfLines: 1, accessibilityLabel, children: text });
+  items1[1] = tmp8(_modDef8217, { style: items2, numberOfLines: 1, accessibilityLabel, children: text });
   obj[1] = items1;
   return closure_4(View, obj);
 };

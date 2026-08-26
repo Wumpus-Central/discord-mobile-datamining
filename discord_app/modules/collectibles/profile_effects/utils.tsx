@@ -1,6 +1,6 @@
-// === Module 9527: sortEffectLayers ===
+// === Module 9595: sortEffectLayers ===
 
-// Module 9527 (sortEffectLayers)
+// Module 9595 (sortEffectLayers)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 

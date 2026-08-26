@@ -1,9 +1,9 @@
-// === Module 4084: __DiscordCreateDateFormatter ===
+// === Module 4148: __DiscordCreateDateFormatter ===
 
-// Module 4084 (__DiscordCreateDateFormatter)
+// Module 4148 (__DiscordCreateDateFormatter)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
-import enforcingDefault from "enforcing" /* 4085 */;
+import enforcingDefault from "enforcing" /* 4149 */;
 
 if (null != global.__DiscordCreateDateFormatter) {
   let __DiscordCreateDateFormatter = global.__DiscordCreateDateFormatter;

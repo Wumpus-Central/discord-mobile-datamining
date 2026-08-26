@@ -1,27 +1,27 @@
-// === Module 9561: PurchasedAssetOverlay ===
+// === Module 9629: PurchasedAssetOverlay ===
 
-// Module 9561 (PurchasedAssetOverlay)
+// Module 9629 (PurchasedAssetOverlay)
 import ThemesDefault from "Themes" /* 712 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import map from "map" /* 4101 */;
-import hexToRgba from "hexToRgba" /* 4228 */;
-import LockIcon from "LockIcon" /* 4925 */;
-import preloadDefault from "preload" /* 5374 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 7159 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9377 */;
-import useDefaultVariantIndex from "useDefaultVariantIndex" /* 9493 */;
-import BundleStaticPreviewContentDefault from "BundleStaticPreviewContent" /* 9522 */;
-import ProfileEffectSampleDefault from "ProfileEffectSample" /* 9524 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9534 */;
-import filterLayerDefault from "filterLayer" /* 9541 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9543 */;
-import metadataDefault from "metadata" /* 9562 */;
+import map from "map" /* 4165 */;
+import hexToRgba from "hexToRgba" /* 4292 */;
+import LockIcon from "LockIcon" /* 4991 */;
+import preloadDefault from "preload" /* 5440 */;
+import getProductOrbPrice from "getProductOrbPrice" /* 7225 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9445 */;
+import useDefaultVariantIndex from "useDefaultVariantIndex" /* 9561 */;
+import BundleStaticPreviewContentDefault from "BundleStaticPreviewContent" /* 9590 */;
+import ProfileEffectSampleDefault from "ProfileEffectSample" /* 9592 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9602 */;
+import filterLayerDefault from "filterLayer" /* 9609 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9611 */;
+import metadataDefault from "metadata" /* 9630 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items" /* 678 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function PurchasedAssetOverlay() {
@@ -73,7 +73,7 @@ function ProductPreviewInner(arg0) {
   ({ product, cardWidth } = arg0);
   ({ disableBundleStaticBackground, muteBundleStaticBackground } = arg0);
   const tmp = callback3();
-  let obj = cardWidth(9521);
+  let obj = cardWidth(9589);
   const shopProductItems = obj.useShopProductItems(product);
   const items = [cardWidth];
   ({ firstProfileEffect, firstAvatarDecoration, firstNameplate } = shopProductItems);
@@ -106,9 +106,9 @@ function ProductPreviewInner(arg0) {
     if (ALL.has(product.skuId)) {
       const obj2 = { skuId: null, width: null, height: null };
       obj2[0] = product.skuId;
-      obj2[1] = tmp2(9563).FRACTIONAL_NITRO_COIN_SIZE.CARD;
-      obj2[2] = tmp2(9563).FRACTIONAL_NITRO_COIN_SIZE.CARD;
-      return callback2(tmp2(9563).FractionalNitroCoinIllustration, obj2);
+      obj2[1] = tmp2(9631).FRACTIONAL_NITRO_COIN_SIZE.CARD;
+      obj2[2] = tmp2(9631).FRACTIONAL_NITRO_COIN_SIZE.CARD;
+      return callback2(tmp2(9631).FractionalNitroCoinIllustration, obj2);
     } else {
       const first = callback(product.items, 1)[0];
       let type;
@@ -131,7 +131,7 @@ function ProductPreviewInner(arg0) {
         obj6[0] = tmp.profileFrameContainer;
         const obj7 = { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null };
         obj7[0] = first;
-        obj7[1] = tmp2(9492).COLLECTIBLES_SHOP_CARD_WIDTH - ThemesDefault.space.PX_32;
+        obj7[1] = tmp2(9560).COLLECTIBLES_SHOP_CARD_WIDTH - ThemesDefault.space.PX_32;
         obj7[2] = closure_9;
         obj7[3] = ThemesDefault.colors.BACKGROUND_BASE_LOW;
         obj6[1] = callback2(filterLayerDefault, obj7);

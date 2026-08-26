@@ -1,17 +1,17 @@
-// === Module 16524: useControlsButtons ===
+// === Module 16609: useControlsButtons ===
 
-// Module 16524 (useControlsButtons)
-import PTTButton from "PTTButton" /* 16525 */;
-import ConnectButtonDefault from "ConnectButton" /* 16528 */;
-import ChatButtonDefault from "ChatButton" /* 16534 */;
-import DisconnectCancelButtonDefault from "DisconnectCancelButton" /* 16536 */;
-import VideoButtonRiveDefault from "VideoButtonRive" /* 16538 */;
-import SoundboardButtonDefault from "SoundboardButton" /* 16540 */;
-import MobilePhoneShareIconDefault from "MobilePhoneShareIcon" /* 16542 */;
-import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 16545 */;
+// Module 16609 (useControlsButtons)
+import PTTButton from "PTTButton" /* 16610 */;
+import ConnectButtonDefault from "ConnectButton" /* 16613 */;
+import ChatButtonDefault from "ChatButton" /* 16619 */;
+import DisconnectCancelButtonDefault from "DisconnectCancelButton" /* 16621 */;
+import VideoButtonRiveDefault from "VideoButtonRive" /* 16623 */;
+import SoundboardButtonDefault from "SoundboardButton" /* 16625 */;
+import MobilePhoneShareIconDefault from "MobilePhoneShareIcon" /* 16627 */;
+import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 16630 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4431 */;
-import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11839 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4495 */;
+import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11912 */;
 import { InputModes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -63,12 +63,12 @@ let closure_10 = { code: "function useControlsButtonsTsx1(){const{getControlsDef
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/useControlsButtons.tsx");
 
 export default function useControlsButtons() {
-  const context = treatment.useContext(safeArea(11840));
+  const context = treatment.useContext(safeArea(11913));
   const windowDimensions = context.windowDimensions;
   safeArea = context.safeArea;
-  const tmp2 = safeArea(16385)(context.channelId);
+  const tmp2 = safeArea(16466)(context.channelId);
   dependencyMap = tmp2;
-  let obj = safeArea(16446);
+  let obj = safeArea(16529);
   treatment = obj.useConfig({ location: "VoicePanelControlButtons" }).treatment;
   let items = [stateFromStores];
   stateFromStores = windowDimensions(589).useStateFromStores(items, () => stateFromStores.getMode() === constants.PUSH_TO_TALK);
@@ -76,12 +76,12 @@ export default function useControlsButtons() {
   const fn = function o() {
     return windowDimensions(table[19]).getControlsDefaultWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
   };
-  obj = { getControlsDefaultWidth: windowDimensions(11847).getControlsDefaultWidth, windowDimensions, safeArea };
+  obj = { getControlsDefaultWidth: windowDimensions(11920).getControlsDefaultWidth, windowDimensions, safeArea };
   fn.__closure = obj;
   fn.__workletHash = 16456936876254;
   fn.__initData = closure_10;
-  const derivedValue = windowDimensions(4120).useDerivedValue(fn);
-  const tmp5 = safeArea(8879)(derivedValue);
+  const derivedValue = windowDimensions(4184).useDerivedValue(fn);
+  const tmp5 = safeArea(8947)(derivedValue);
   closure_5 = tmp5;
   const items1 = [tmp2, stateFromStores, tmp5, treatment];
   return treatment.useMemo(() => {
@@ -99,7 +99,7 @@ export default function useControlsButtons() {
           obj[2] = tmp6.micConnected;
           items.push(obj);
         }
-        if (treatment === callback(16446).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
+        if (treatment === callback(16529).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           obj1 = { type: "icon-normal", key: "connected-screenshare", render: null };
           obj1[2] = tmp6.screenshare;
           items.push(obj1);
@@ -113,7 +113,7 @@ export default function useControlsButtons() {
           obj3[2] = tmp6.ptt;
           items.push(obj3);
         }
-        if (treatment === tmp10(16446).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (treatment === tmp10(16529).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: null };
           obj4[2] = tmp6.screenshare;
           items.push(obj4);

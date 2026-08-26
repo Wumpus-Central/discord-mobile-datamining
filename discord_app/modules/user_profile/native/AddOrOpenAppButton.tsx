@@ -1,11 +1,11 @@
-// === Module 12479: AddAppButton ===
+// === Module 12550: AddAppButton ===
 
-// Module 12479 (AddAppButton)
-import useIsAppDMDefault from "useIsAppDM" /* 11730 */;
+// Module 12550 (AddAppButton)
+import useIsAppDMDefault from "useIsAppDM" /* 11803 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import { getSection } from "getIndexKey" /* 8494 */;
+import { getSection } from "getIndexKey" /* 8561 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -28,7 +28,7 @@ function AddAppButton(application) {
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(8105).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(8172).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
@@ -58,9 +58,9 @@ function AddAppButton(application) {
     obj = { size: "sm", color: null };
     obj[1] = guildId(712).colors.WHITE;
     obj[5] = <PlusSmallIcon size="sm" color={null} />;
-    return jsx(tmp6(4815).Button, { size: "sm", color: null });
+    return jsx(tmp6(4879).Button, { size: "sm", color: null });
   }
-  PlusSmallIcon = application(9578).PlusSmallIcon;
+  PlusSmallIcon = application(9646).PlusSmallIcon;
   tmp6 = application;
 }
 function OpenAppButton(profileApplication) {
@@ -83,7 +83,7 @@ function OpenAppButton(profileApplication) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -131,7 +131,7 @@ function OpenAppButton(profileApplication) {
               v0(false);
               if (null != closure_0) {
                 let obj4 = closure_1_1(closure_1_2[9]);
-                obj4.hideActionSheet();
+                obj4.hideAllActionSheets();
                 let obj5 = closure_1_1(closure_1_2[20]);
                 const obj3 = { recipientIds: null };
                 obj3[0] = id;

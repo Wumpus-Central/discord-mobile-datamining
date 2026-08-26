@@ -1,8 +1,8 @@
-// === Module 10888: participantMemberInfo ===
+// === Module 10960: participantMemberInfo ===
 
-// Module 10888 (participantMemberInfo)
+// Module 10960 (participantMemberInfo)
 import setDefault from "set" /* 687 */;
-import nameFromUser from "nameFromUser" /* 4224 */;
+import nameFromUser from "nameFromUser" /* 4288 */;
 
 require = arg1;
 const DAY = setDefault.Millis.DAY;

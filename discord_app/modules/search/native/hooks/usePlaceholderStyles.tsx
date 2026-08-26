@@ -1,9 +1,9 @@
-// === Module 15999: useFullscreenPlaceholderCount ===
+// === Module 16080: useFullscreenPlaceholderCount ===
 
-// Module 15999 (useFullscreenPlaceholderCount)
+// Module 16080 (useFullscreenPlaceholderCount)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
-import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "MessageEmbedTypes" /* 8554 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "MessageEmbedTypes" /* 8622 */;
 
 const require = arg1;
 let closure_5 = { code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}" };
@@ -74,9 +74,9 @@ export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(
       return tmp5;
     }
   }
-  obj = { useReducedMotion: stateFromStores, visible, withRepeat: _require(4120).withRepeat, withSequence: _require(4120).withSequence, withTiming: _require(4381).withTiming, STANDARD_EASING: _require(1297).STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: closure_4 };
+  obj = { useReducedMotion: stateFromStores, visible, withRepeat: _require(4184).withRepeat, withSequence: _require(4184).withSequence, withTiming: _require(4445).withTiming, STANDARD_EASING: _require(1297).STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: closure_4 };
   A.__closure = obj;
   A.__workletHash = 9750536800906;
   A.__initData = closure_5;
-  return _require(4120).useAnimatedStyle(A);
+  return _require(4184).useAnimatedStyle(A);
 };

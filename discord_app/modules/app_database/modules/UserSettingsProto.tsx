@@ -1,6 +1,6 @@
-// === Module 7095: getAll ===
+// === Module 7161: getAll ===
 
-// Module 7095 (getAll)
+// Module 7161 (getAll)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
@@ -78,7 +78,7 @@ prototype["getAll"] = function getAll(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {

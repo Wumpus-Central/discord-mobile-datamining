@@ -1,7 +1,7 @@
-// === Module 7075: getClientHeartbeatPiggybackProperties ===
+// === Module 7141: getClientHeartbeatPiggybackProperties ===
 
-// Module 7075 (getClientHeartbeatPiggybackProperties)
-import initializeDefault from "initialize" /* 4403 */;
+// Module 7141 (getClientHeartbeatPiggybackProperties)
+import initializeDefault from "initialize" /* 4467 */;
 
 initializeDefault;
 const result = require("set").fileFinishedImporting("modules/analytics_sessions/ClientHeartbeatPiggyback.tsx");

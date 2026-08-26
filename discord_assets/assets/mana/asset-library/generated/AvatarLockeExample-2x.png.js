@@ -1,6 +1,6 @@
-// === Module 6206: metadata ===
+// === Module 6272: metadata ===
 
-// Module 6206 (metadata)
+// Module 6272 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarLockeExample-2x.png.js");

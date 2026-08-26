@@ -1,7 +1,7 @@
-// === Module 13870: reactNativeCorePlugins ===
+// === Module 13943: reactNativeCorePlugins ===
 
-// Module 13870 (reactNativeCorePlugins)
-import importDefaultResult from "reactNativeCorePlugins" /* 13871 */;
+// Module 13943 (reactNativeCorePlugins)
+import importDefaultResult from "reactNativeCorePlugins" /* 13944 */;
 
 const reactNative = importDefaultResult.configure({}).useReactNative();
 reactNative.connect();

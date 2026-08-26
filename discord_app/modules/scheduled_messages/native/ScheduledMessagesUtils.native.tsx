@@ -1,11 +1,12 @@
-// === Module 11568: _scheduleMessage ===
+// === Module 11640: _scheduleMessage ===
 
-// Module 11568 (_scheduleMessage)
+// Module 11640 (_scheduleMessage)
 import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import hooksDefault from "hooks" /* 3979 */;
-import _modDef4611 from "module_4611" /* 4611 */;
+import hooksDefault from "hooks" /* 4043 */;
+import _modDef4675 from "module_4675" /* 4675 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 11569 */;
+import { AbortCodes } from "ME" /* 676 */;
+import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 8596 */;
 
 require = arg1;
 function _scheduleMessage() {
@@ -27,7 +28,7 @@ function _scheduleMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -47,7 +48,7 @@ function _scheduleMessage() {
               c0 = undefined;
               c1 = undefined;
               c2 = undefined;
-              let message;
+              c3 = undefined;
               c4 = undefined;
               c5 = undefined;
               c6 = undefined;
@@ -67,15 +68,15 @@ function _scheduleMessage() {
               return obj1;
             } else {
               c4 = 1;
-              const obj2 = { channelId: null, scheduledTimestamp: null, messageSendData: null, attachmentsToUpload: null };
+              let obj2 = { channelId: null, scheduledTimestamp: null, messageSendData: null, attachmentsToUpload: null };
               obj2[0] = c0;
               obj2[1] = c1;
               const obj3 = { channelId: null, content: null, nonce: null, tts: null, message_reference: null, allowed_mentions: null };
               obj3[0] = c0;
               obj3[1] = c2;
-              const obj6 = callback(closure_1_2[2]);
-              obj3[2] = callback(closure_1_2[3]).createNonce();
-              obj3[3] = message;
+              const obj6 = callback(closure_1_2[3]);
+              obj3[2] = callback(closure_1_2[4]).createNonce();
+              obj3[3] = c3;
               obj3[4] = c4;
               obj3[5] = c5;
               obj2[2] = obj3;
@@ -88,15 +89,53 @@ function _scheduleMessage() {
             }
           } else if (2 === tmp8) {
             c4 = 0;
-            (function showScheduleMessageFailureToast(message) {
-              let obj = _undefined2(_undefined3[4]);
-              obj = { key: "SCHEDULED_MESSAGE_CREATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
-              const intl = _undefined(_undefined3[5]).intl;
-              obj = { error: message };
-              obj[1] = intl.formatToPlainString(_undefined(_undefined3[5]).t.PsJmUe, obj);
-              obj[2] = _undefined(_undefined3[7]).CircleXIcon;
-              obj.open(obj);
-            })(message.message);
+            (function handleScheduleMessageError(c3) {
+              const body = c3.body;
+              let code;
+              if (body != null) {
+                code = body.code;
+              }
+              if (code !== constants.TOO_MANY_SCHEDULED_MESSAGES) {
+                const body2 = c3.body;
+                let message;
+                if (body2 != null) {
+                  message = body2.message;
+                }
+                if (message == null) {
+                  message = c3.message;
+                }
+                let obj = { key: "SCHEDULED_MESSAGE_CREATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+                const intl5 = _undefined(_undefined3[9]).intl;
+                obj = { error: null };
+                obj[0] = message;
+                obj[1] = intl5.formatToPlainString(_undefined(_undefined3[9]).t.PsJmUe, obj);
+                obj[2] = _undefined(_undefined3[12]).CircleXIcon;
+                _undefined2(_undefined3[10]).open(obj);
+              } else {
+                const scheduledMessagesLimit = _undefined(_undefined3[5]).getScheduledMessagesLimit(closure_8);
+                if (scheduledMessagesLimit.isUpgradable) {
+                  let tmp16Result = tmp16(tmp12[6]);
+                  const items = [tmp16(tmp12[7]).SCHEDULED_MESSAGES_ROADBLOCK];
+                  tmp16Result(items);
+                } else {
+                  tmp16Result = tmp16(tmp12[8]);
+                  obj1 = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null };
+                  const intl = tmp11(tmp12[9]).intl;
+                  obj1[0] = intl.string(tmp11(tmp12[9]).t.RLdUVh);
+                  const intl2 = tmp11(tmp12[9]).intl;
+                  const obj2 = { max: null };
+                  obj2[0] = tmp15;
+                  obj1[1] = intl2.formatToPlainString(tmp11(tmp12[9]).t["3AMt7r"], obj2);
+                  const intl3 = tmp11(tmp12[9]).intl;
+                  obj1[2] = intl3.string(tmp11(tmp12[9]).t.BddRzS);
+                  const intl4 = tmp11(tmp12[9]).intl;
+                  obj1[3] = intl4.string(tmp11(tmp12[9]).t.lv6bDa);
+                  obj1[4] = closure_9;
+                  tmp16Result.show(obj1);
+                }
+                const obj7 = _undefined(_undefined3[5]);
+              }
+            })(c3);
             c6 = 3;
             return { value: false, done: true };
           } else if (arg0 === 1) {
@@ -110,12 +149,12 @@ function _scheduleMessage() {
             return obj;
           } else {
             (function showScheduleMessageSuccessToast(c1) {
-              let obj = _undefined2(_undefined3[4]);
+              let obj = _undefined2(_undefined3[10]);
               obj = { key: "SCHEDULED_MESSAGE_CREATE_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
-              const intl = _undefined(_undefined3[5]).intl;
+              const intl = _undefined(_undefined3[9]).intl;
               obj = { timestamp: new Date(c1).valueOf() };
-              obj[1] = intl.formatToPlainString(_undefined(_undefined3[5]).t["CvHu/j"], obj);
-              obj[2] = _undefined(_undefined3[6]).ClockIcon;
+              obj[1] = intl.formatToPlainString(_undefined(_undefined3[9]).t["CvHu/j"], obj);
+              obj[2] = _undefined(_undefined3[11]).ClockIcon;
               obj.open(obj);
             })(c1);
             c4 = 0;
@@ -123,7 +162,7 @@ function _scheduleMessage() {
             return { value: true, done: true };
           }
         } catch (tmp16) {
-          message = tmp16;
+          c3 = tmp16;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp16;
@@ -136,7 +175,7 @@ function _scheduleMessage() {
     iter.next();
     return iter;
   });
-  closure_6 = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -144,6 +183,9 @@ function _scheduleMessage() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
+}
+function showScheduledMessagesModal() {
+  _modDef4675.pushLazy(asyncRequireImpl(11646, dependencyMap.paths), {}, "scheduled-messages-modal", { presentation: "modal" });
 }
 function editScheduledMessage(scheduledMessageId, arg1) {
   const self = this;
@@ -175,7 +217,7 @@ function _editScheduledMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -193,7 +235,7 @@ function _editScheduledMessage() {
               closure_3 = tmp3;
               dependencyMap = tmp7;
               c5 = 1;
-              let obj4 = lib(closure_1_2[2]);
+              let obj4 = lib(closure_1_2[3]);
               obj1 = { scheduledMessageId: null };
               obj1[0] = lib;
               const merged = Object.assign(callback);
@@ -206,13 +248,13 @@ function _editScheduledMessage() {
           } else if (1 === tmp7) {
             c5 = 0;
             lib = closure_4;
-            obj1 = callback(4098);
+            obj1 = callback(4162);
             const obj3 = { key: "SCHEDULED_MESSAGE_UPDATE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
             const intl = lib(1236).intl;
             obj4 = { error: null };
             obj4[0] = lib.message;
             obj3[1] = intl.formatToPlainString(lib(1236).t.slM6In, obj4);
-            obj3[2] = lib(6105).CircleXIcon;
+            obj3[2] = lib(6171).CircleXIcon;
             obj1.open(obj3);
             c7 = 3;
             return { value: false, done: true };
@@ -229,8 +271,8 @@ function _editScheduledMessage() {
             const obj5 = { key: "SCHEDULED_MESSAGE_UPDATE_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
             const intl2 = lib(1236).intl;
             obj5[1] = intl2.string(lib(1236).t.MXsMRk);
-            obj5[2] = lib(4343).ClockIcon;
-            callback(4098).open(obj5);
+            obj5[2] = lib(4407).ClockIcon;
+            callback(4162).open(obj5);
             c5 = 0;
             c7 = 3;
             return { value: true, done: true };
@@ -247,7 +289,7 @@ function _editScheduledMessage() {
       }
     })();
   });
-  closure_8 = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -266,18 +308,18 @@ function _cancelScheduledMessage() {
     return (function*(arg0) {
       dependencyMap = tmp3;
       c4 = 1;
-      let obj4 = lib(closure_1_2[2]);
+      let obj4 = lib(closure_1_2[3]);
       yield obj4.deleteScheduledMessage(lib);
       if (1 === tmp7) {
         c4 = 0;
         lib = closure_3;
-        obj1 = callback(4098);
+        obj1 = callback(4162);
         const obj2 = { key: "SCHEDULED_MESSAGE_DELETE_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
         const intl = lib(1236).intl;
         const obj3 = { error: null };
         obj3[0] = lib.message;
         obj2[1] = intl.formatToPlainString(lib(1236).t.sUvyW3, obj3);
-        obj2[2] = lib(6105).CircleXIcon;
+        obj2[2] = lib(6171).CircleXIcon;
         obj1.open(obj2);
         c6 = 3;
       } else if (arg0 === 1) {
@@ -287,16 +329,16 @@ function _cancelScheduledMessage() {
         obj4 = { key: "SCHEDULED_MESSAGE_DELETE_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
         const intl2 = lib(1236).intl;
         obj4[1] = intl2.string(lib(1236).t["JF/LWn"]);
-        obj4[2] = lib(4343).ClockIcon;
-        callback(4098).open(obj4);
+        obj4[2] = lib(4407).ClockIcon;
+        callback(4162).open(obj4);
         c4 = 0;
-        const obj9 = callback(4098);
+        const obj9 = callback(4162);
       }
       c4 = 0;
       return arg1;
     })();
   });
-  closure_9 = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -351,22 +393,23 @@ function openSendTimeActionSheet(key) {
   const intl4 = title(1236).intl;
   obj3[0] = intl4.string(title(1236).t.stHooC);
   obj3[1] = function onPress() {
-    let obj = closure_1_1(closure_1_2[16]);
+    let obj = closure_1_1(closure_1_2[20]);
     obj = { title, mode: "datetime", startDate: closure_1.toDate(), minimumDate: null, maximumDate: null, onSubmit: null };
-    const tmp = title(closure_1_2[12])(closure_1_2[17], closure_1_2.paths);
-    const obj3 = closure_1_1(closure_1_2[14])();
-    obj[3] = closure_1_1(closure_1_2[14])().add(closure_1_5, "seconds").toDate();
-    const addResult = closure_1_1(closure_1_2[14])().add(closure_1_5, "seconds");
-    const obj5 = closure_1_1(closure_1_2[14])();
-    obj[4] = closure_1_1(closure_1_2[14])().add(closure_1_4, "seconds").toDate();
+    const tmp = title(closure_1_2[16])(closure_1_2[21], closure_1_2.paths);
+    const obj3 = closure_1_1(closure_1_2[18])();
+    obj[3] = closure_1_1(closure_1_2[18])().add(closure_1_6, "seconds").toDate();
+    const addResult = closure_1_1(closure_1_2[18])().add(closure_1_6, "seconds");
+    const obj5 = closure_1_1(closure_1_2[18])();
+    obj[4] = closure_1_1(closure_1_2[18])().add(closure_1_5, "seconds").toDate();
     obj[5] = closure_2;
     return obj.openLazy(tmp, "DatePicker", obj);
   };
   items1[tmp4] = obj3;
   obj2[3] = items1;
-  const result3 = title(5867).showSimpleActionSheet(obj2);
+  const result3 = title(5933).showSimpleActionSheet(obj2);
 }
-({ MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c4, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c5 } = MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS);
+({ MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c5, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: closure_6 } = MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS);
+const ScheduledMessagesCreateRoadblock = "ScheduledMessagesCreateRoadblock";
 let result = require("set").fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesUtils.native.tsx");
 
 export const scheduleMessage = function scheduleMessage(arg0) {
@@ -384,21 +427,19 @@ export const openScheduleMessageActionSheet = function openScheduleMessageAction
   let obj = { key: "schedule-message", title: null, startDate: null, onSelect: null };
   const intl = _require(1236).intl;
   obj[1] = intl.string(_require(1236).t["3+ii4F"]);
-  obj[2] = _require(11572).getDefaultScheduledTime();
+  obj[2] = _require(11643).getDefaultScheduledTime();
   obj[3] = function onSelect(toISOString) {
-    let obj = closure_1_1(closure_1_2[9]);
+    let obj = closure_1_1(closure_1_2[13]);
     obj = { scheduledTimestamp: toISOString.toISOString() };
     return obj.changeScheduledMessage(closure_0, obj);
   };
   openSendTimeActionSheet(obj);
 };
-export const showScheduledMessagesModal = function showScheduledMessagesModal() {
-  _modDef4611.pushLazy(asyncRequireImpl(11574, dependencyMap.paths), {}, "scheduled-messages-modal", { presentation: "modal" });
-};
+export { showScheduledMessagesModal };
 export const openScheduledMessageEditContentModal = function openScheduledMessageEditContentModal(scheduledMessage) {
-  let obj = _modDef4611;
+  let obj = _modDef4675;
   obj = { scheduledMessage };
-  obj.pushLazy(asyncRequireImpl(11585, dependencyMap.paths), obj, "scheduled-message-edit-content", { presentation: "modal" });
+  obj.pushLazy(asyncRequireImpl(11658, dependencyMap.paths), obj, "scheduled-message-edit-content", { presentation: "modal" });
 };
 export const openRescheduleMessageActionSheet = function openRescheduleMessageActionSheet(scheduledMessageId, sendAtTimestamp) {
   const _require = scheduledMessageId;
@@ -407,7 +448,7 @@ export const openRescheduleMessageActionSheet = function openRescheduleMessageAc
   obj[1] = intl.string(_require(1236).t.jbdHj3);
   obj[2] = hooksDefault(sendAtTimestamp);
   obj[3] = function onSelect(toISOString) {
-    return closure_1_7(closure_0, { scheduledTimestamp: toISOString.toISOString() });
+    return closure_1_10(closure_0, { scheduledTimestamp: toISOString.toISOString() });
   };
   openSendTimeActionSheet(obj);
 };

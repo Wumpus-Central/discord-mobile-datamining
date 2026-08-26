@@ -1,6 +1,6 @@
-// === Module 11720: CommandListSortOrder ===
+// === Module 11793: CommandListSortOrder ===
 
-// Module 11720 (CommandListSortOrder)
+// Module 11793 (CommandListSortOrder)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/app_launcher/AppLauncherConstants.tsx");

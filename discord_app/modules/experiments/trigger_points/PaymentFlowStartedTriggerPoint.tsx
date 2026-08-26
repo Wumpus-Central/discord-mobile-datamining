@@ -1,11 +1,11 @@
-// === Module 7518: commonTriggerPointConfiguration ===
+// === Module 7584: commonTriggerPointConfiguration ===
 
-// Module 7518 (commonTriggerPointConfiguration)
+// Module 7584 (commonTriggerPointConfiguration)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4294 */;
-import registeredExperimentIds from "registeredExperimentIds" /* 7519 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4358 */;
+import registeredExperimentIds from "registeredExperimentIds" /* 7585 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration([], ExperimentBuckets.CommonTriggerPoints.PAYMENT_FLOW_STARTED, { location: "payment flow started" });

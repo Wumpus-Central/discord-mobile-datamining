@@ -1,12 +1,12 @@
-// === Module 16035: ? ===
+// === Module 16116: ? ===
 
-// Module 16035
+// Module 16116
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "teardown" /* 11934 */;
-import closure_6 from "prototype" /* 11906 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8554 */;
-import { SearchResultContentEntityTypes as closure_9 } from "SearchEntrypointAnalyticsLocations" /* 8553 */;
+import closure_5 from "teardown" /* 12007 */;
+import closure_6 from "prototype" /* 11979 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8622 */;
+import { SearchResultContentEntityTypes as closure_9 } from "SearchEntrypointAnalyticsLocations" /* 8621 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -55,7 +55,7 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -99,7 +99,7 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
             const result = callback(stateFromStores[12]).trackSearchResultClicked(obj2);
             closure_1_6(closure_0, closure_2);
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           c5 = tmp;

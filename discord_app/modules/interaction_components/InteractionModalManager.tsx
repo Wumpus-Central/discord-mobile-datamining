@@ -1,10 +1,10 @@
-// === Module 16728: _handleInteractionModalCreate ===
+// === Module 16813: _handleInteractionModalCreate ===
 
-// Module 16728 (_handleInteractionModalCreate)
-import initializeDefault from "initialize" /* 5367 */;
+// Module 16813 (_handleInteractionModalCreate)
+import initializeDefault from "initialize" /* 5433 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4421 */;
-import closure_5 from "deleteNonce" /* 8200 */;
+import closure_4 from "addApplication" /* 4485 */;
+import closure_5 from "deleteNonce" /* 8267 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 let require = arg1;
@@ -26,7 +26,7 @@ function _handleInteractionModalCreate() {
           obj[0] = openInteractionModal;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -114,7 +114,7 @@ function _handleInteractionModalCreate() {
               obj.addBreadcrumb(obj4);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp19) {
           c4 = tmp;

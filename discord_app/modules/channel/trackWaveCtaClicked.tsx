@@ -1,6 +1,6 @@
-// === Module 11833: getDmHasMessageHistory ===
+// === Module 11906: getDmHasMessageHistory ===
 
-// Module 11833 (getDmHasMessageHistory)
+// Module 11906 (getDmHasMessageHistory)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
 import { AnalyticEvents } from "ME" /* 676 */;

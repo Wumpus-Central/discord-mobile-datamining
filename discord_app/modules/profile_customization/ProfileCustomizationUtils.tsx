@@ -1,12 +1,12 @@
-// === Module 8423: useAvatarsWithGuilds ===
+// === Module 8490: useAvatarsWithGuilds ===
 
-// Module 8423 (useAvatarsWithGuilds)
+// Module 8490 (useAvatarsWithGuilds)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer4 from "AccessibilityAnnouncer" /* 1363 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleFormOpen" /* 8417 */;
-import closure_4 from "createUserWidgetFromServer" /* 7227 */;
+import closure_3 from "handleFormOpen" /* 8484 */;
+import closure_4 from "createUserWidgetFromServer" /* 7293 */;
 import closure_5 from "trackCommunicationDisabled" /* 1992 */;
 
 require = arg1;

@@ -1,12 +1,12 @@
-// === Module 7891: BuyNitroMarketingHeader ===
+// === Module 7958: BuyNitroMarketingHeader ===
 
-// Module 7891 (BuyNitroMarketingHeader)
+// Module 7958 (BuyNitroMarketingHeader)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { Gradients } from "items" /* 7039 */;
+import { Gradients } from "items" /* 7105 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 ({ Platform, StyleSheet: c4, View: c5 } = get_ActivityIndicator);
@@ -56,8 +56,8 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   obj[1] = obj;
   const tmp3 = -ThemesDefault.space.PX_16;
   const tmp5 = absoluteFillObject;
-  obj[2] = { position: "absolute", top: -ThemesDefault.space.PX_16, right: "call", left: "max", alignSelf: 16125694357471467000000000000000000000000000000000000000000000000000000000000000000 };
-  obj1 = { position: "absolute", top: -ThemesDefault.space.PX_16, right: "call", left: "max", alignSelf: 16125694357471467000000000000000000000000000000000000000000000000000000000000000000 };
+  obj[2] = { position: "absolute", top: -ThemesDefault.space.PX_16, right: "call", left: "options", alignSelf: 139264.21504641374 };
+  obj1 = { position: "absolute", top: -ThemesDefault.space.PX_16, right: "call", left: "options", alignSelf: 139264.21504641374 };
   obj[3] = { position: "absolute", top: arg0 + ThemesDefault.space.PX_20, right: ThemesDefault.space.PX_4 };
   const obj2 = { position: "absolute", top: arg0 + ThemesDefault.space.PX_20, right: ThemesDefault.space.PX_4 };
   obj[4] = { height: ThemesDefault.space.PX_80 + ThemesDefault.space.PX_4 };

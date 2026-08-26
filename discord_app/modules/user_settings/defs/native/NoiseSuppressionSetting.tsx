@@ -1,11 +1,11 @@
-// === Module 14700: toggle ===
+// === Module 14773: toggle ===
 
-// Module 14700 (toggle)
+// Module 14773 (toggle)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import handleAutomaticGainControlChange from "handleAutomaticGainControlChange" /* 10947 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4431 */;
-import createToggle from "createToggle" /* 10516 */;
+import handleAutomaticGainControlChange from "handleAutomaticGainControlChange" /* 11019 */;
+import closure_2 from "_detectH265HardwareDecode" /* 4495 */;
+import createToggle from "createToggle" /* 10584 */;
 
 require = arg1;
 createToggle = {

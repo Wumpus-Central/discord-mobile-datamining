@@ -1,14 +1,14 @@
-// === Module 14356: FamilyCenterActivityPurchaseRow ===
+// === Module 14429: FamilyCenterActivityPurchaseRow ===
 
-// Module 14356 (FamilyCenterActivityPurchaseRow)
+// Module 14429 (FamilyCenterActivityPurchaseRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8432 */;
-import getCollectibleTypeName from "getCollectibleTypeName" /* 14357 */;
-import AvatarDecorationPreviewImageDefault from "AvatarDecorationPreviewImage" /* 14358 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8499 */;
+import getCollectibleTypeName from "getCollectibleTypeName" /* 14430 */;
+import AvatarDecorationPreviewImageDefault from "AvatarDecorationPreviewImage" /* 14431 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 noopAll;
@@ -43,7 +43,7 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     return null;
   } else {
     let combined = displayName;
-    const tmp5Result = tmp5(5962);
+    const tmp5Result = tmp5(6028);
     if (null != typeName) {
       const _HermesInternal = HermesInternal;
       combined = "" + displayName + " \u2022 " + typeName;
@@ -52,7 +52,7 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     obj[0] = tmp.container;
     obj = { displayName: null, product: null, isSubscription: null, subscriptionPlanId: null };
     obj[0] = displayName;
-    const formatPriceResult = tmp5(5962).formatPrice(total, currency);
+    const formatPriceResult = tmp5(6028).formatPrice(total, currency);
     if (product == null) {
       product = null;
     }
@@ -64,10 +64,10 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     obj1[0] = tmp.textContainer;
     const obj2 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
     obj2[4] = combined;
-    const items1 = [closure_4(tmp5(4376).Text, obj2), ];
+    const items1 = [closure_4(tmp5(4440).Text, obj2), ];
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
     obj3[2] = formatPriceResult;
-    items1[1] = closure_4(tmp5(4376).Text, obj3);
+    items1[1] = closure_4(tmp5(4440).Text, obj3);
     obj1[1] = items1;
     items[1] = closure_5(View, obj1);
     obj[1] = items;

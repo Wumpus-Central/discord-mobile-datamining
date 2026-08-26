@@ -1,9 +1,9 @@
-// === Module 12666: useUserProfileWidgets ===
+// === Module 12739: useUserProfileWidgets ===
 
-// Module 12666 (useUserProfileWidgets)
+// Module 12739 (useUserProfileWidgets)
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "createUserWidgetFromServer" /* 7227 */;
-import closure_4 from "initialize" /* 7231 */;
+import closure_3 from "createUserWidgetFromServer" /* 7293 */;
+import closure_4 from "initialize" /* 7297 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useUserProfileWidgets.tsx");

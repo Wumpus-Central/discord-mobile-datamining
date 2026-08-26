@@ -1,6 +1,6 @@
-// === Module 15293: useScreenRecordingStore ===
+// === Module 15372: useScreenRecordingStore ===
 
-// Module 15293 (useScreenRecordingStore)
+// Module 15372 (useScreenRecordingStore)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 
@@ -62,7 +62,7 @@ let obj = keys.create((arg0, arg1) => {
       return callback({ currentStep: 0, stepStartedTime: Date.now(), isCompleted: false });
     },
     completeActionSheet() {
-      callback(15294).handleStopAndSend();
+      callback(15373).handleStopAndSend();
       callback({ currentStep: 0, stepStartedTime: null, isCompleted: false });
     }
   };

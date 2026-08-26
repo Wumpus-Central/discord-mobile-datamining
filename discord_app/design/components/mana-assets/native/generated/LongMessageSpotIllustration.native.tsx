@@ -1,10 +1,10 @@
-// === Module 6649: LongMessageSpotIllustration ===
+// === Module 6715: LongMessageSpotIllustration ===
 
-// Module 6649 (LongMessageSpotIllustration)
+// Module 6715 (LongMessageSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6650 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 6716 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/LongMessageSpotIllustration.native.tsx");

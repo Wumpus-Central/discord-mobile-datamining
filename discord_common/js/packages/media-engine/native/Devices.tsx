@@ -1,9 +1,9 @@
-// === Module 4550: sanitizeDevices ===
+// === Module 4614: sanitizeDevices ===
 
-// Module 4550 (sanitizeDevices)
+// Module 4614 (sanitizeDevices)
 import set from "set" /* 2 */;
 import formatDefault from "format" /* 669 */;
-import AudioSubsystems from "AudioSubsystems" /* 4481 */;
+import AudioSubsystems from "AudioSubsystems" /* 4545 */;
 
 ({ DEFAULT_DEVICE_ID: c3, DeviceTypes: c4 } = AudioSubsystems);
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Devices.tsx");

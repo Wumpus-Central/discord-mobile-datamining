@@ -1,6 +1,6 @@
-// === Module 13557: __INTERNAL_VIEW_CONFIG ===
+// === Module 13630: __INTERNAL_VIEW_CONFIG ===
 
-// Module 13557 (__INTERNAL_VIEW_CONFIG)
+// Module 13630 (__INTERNAL_VIEW_CONFIG)
 import set from "set" /* 2 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 

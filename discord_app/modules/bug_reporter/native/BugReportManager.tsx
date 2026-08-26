@@ -1,12 +1,12 @@
-// === Module 10045: showNotification ===
+// === Module 10112: showNotification ===
 
-// Module 10045 (showNotification)
-import initializeDefault from "initialize" /* 5367 */;
+// Module 10112 (showNotification)
+import initializeDefault from "initialize" /* 5433 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "refreshSourceMapCookie" /* 706 */;
 import { InAppNotificationTypes } from "ME" /* 676 */;
-import { NativePermissionStatus } from "NativePermissionStatus" /* 4618 */;
+import { NativePermissionStatus } from "NativePermissionStatus" /* 4682 */;
 
 const require = arg1;
 function showNotification(uri) {
@@ -24,7 +24,7 @@ function showNotification(uri) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -71,7 +71,7 @@ function showNotification(uri) {
               }
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp14) {
           c3 = tmp;
@@ -104,7 +104,7 @@ function showNotification(uri) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -149,12 +149,12 @@ function showNotification(uri) {
             }
             obj1 = tmp7;
             BUG_REPORTER = closure_1_7.BUG_REPORTER;
-            dependencyMap = obj1(9924).getNotificationDuration(BUG_REPORTER);
-            const obj5 = obj1(9924);
+            dependencyMap = obj1(9991).getNotificationDuration(BUG_REPORTER);
+            const obj5 = obj1(9991);
             const obj3 = { type: null, duration: null, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
             obj3[0] = BUG_REPORTER;
             obj3[1] = dependencyMap;
-            const obj6 = BUG_REPORTER(9926);
+            const obj6 = BUG_REPORTER(9993);
             obj3[2] = obj1(514).v4();
             obj3[3] = obj1;
             uri = undefined;
@@ -169,7 +169,7 @@ function showNotification(uri) {
             obj3[6] = obj1(514).v4();
             obj6.enqueueNotification(obj3);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -218,7 +218,7 @@ prototype["initBugReporter"] = function initBugReporter() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -279,7 +279,7 @@ prototype["initBugReporter"] = function initBugReporter() {
             })();
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c3 = tmp;

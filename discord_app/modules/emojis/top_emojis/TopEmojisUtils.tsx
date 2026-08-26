@@ -1,10 +1,10 @@
-// === Module 8790: maybeFetchTopEmojisByGuild ===
+// === Module 8858: maybeFetchTopEmojisByGuild ===
 
-// Module 8790 (maybeFetchTopEmojisByGuild)
-import fetchTopEmojis from "fetchTopEmojis" /* 8791 */;
+// Module 8858 (maybeFetchTopEmojisByGuild)
+import fetchTopEmojis from "fetchTopEmojis" /* 8859 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "getEmojiToGroupId" /* 5282 */;
-import closure_4 from "initialize" /* 5285 */;
+import closure_3 from "getEmojiToGroupId" /* 5348 */;
+import closure_4 from "initialize" /* 5351 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisUtils.tsx");

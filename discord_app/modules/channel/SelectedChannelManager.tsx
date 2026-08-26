@@ -1,15 +1,15 @@
-// === Module 16828: handleGuildCreate ===
+// === Module 16913: handleGuildCreate ===
 
-// Module 16828 (handleGuildCreate)
+// Module 16913 (handleGuildCreate)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import transitionTo from "transitionTo" /* 1222 */;
-import _modDef5236 from "module_5236" /* 5236 */;
-import initializeDefault from "initialize" /* 5367 */;
-import transitionToGuild from "transitionToGuild" /* 6066 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4431 */;
+import _modDef5302 from "module_5302" /* 5302 */;
+import initializeDefault from "initialize" /* 5433 */;
+import transitionToGuild from "transitionToGuild" /* 6132 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4495 */;
 import closure_4 from "handleConnectionOpen" /* 1981 */;
 import { findFirstVoiceChannelId } from "handleConnectionOpen" /* 1981 */;
-import closure_6 from "handleConnectionOpen" /* 4202 */;
+import closure_6 from "handleConnectionOpen" /* 4266 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -39,8 +39,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
     tmp6 = null == voiceChannelId;
   }
   if (tmp6) {
-    const voiceChannel = _modDef5236.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
-    const obj2 = _modDef5236;
+    const voiceChannel = _modDef5302.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
+    const obj2 = _modDef5302;
   }
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
@@ -55,8 +55,8 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const obj3 = store;
     tmp = null == guildId.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {
-      const voiceChannel = _modDef5236.selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
-      const obj2 = _modDef5236;
+      const voiceChannel = _modDef5302.selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
+      const obj2 = _modDef5302;
     }
     tmp7 = null != originChannelId && originChannelId === store.getVoiceChannelId();
   }

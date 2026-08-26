@@ -1,6 +1,6 @@
-// === Module 8180: REMEDIATION_ELEMENT_TYPES ===
+// === Module 8247: REMEDIATION_ELEMENT_TYPES ===
 
-// Module 8180 (REMEDIATION_ELEMENT_TYPES)
+// Module 8247 (REMEDIATION_ELEMENT_TYPES)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/in_app_reports/MenuConstants.tsx");

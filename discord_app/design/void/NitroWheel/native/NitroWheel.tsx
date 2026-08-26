@@ -1,9 +1,9 @@
-// === Module 13582: NitroWheel ===
+// === Module 13655: NitroWheel ===
 
-// Module 13582 (NitroWheel)
+// Module 13655 (NitroWheel)
 import noopAll from "noop" /* 19 */;
-import preloadDefault from "preload" /* 5374 */;
-import registerAssetDefault from "registerAsset" /* 8847 */;
+import preloadDefault from "preload" /* 5440 */;
+import registerAssetDefault from "registerAsset" /* 8915 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;

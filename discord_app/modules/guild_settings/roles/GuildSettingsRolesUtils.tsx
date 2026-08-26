@@ -1,12 +1,12 @@
-// === Module 16960: ADD_MEMBER_QUERY_LIMIT ===
+// === Module 17045: ADD_MEMBER_QUERY_LIMIT ===
 
-// Module 16960 (ADD_MEMBER_QUERY_LIMIT)
+// Module 17045 (ADD_MEMBER_QUERY_LIMIT)
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5335 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5401 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "trackCommunicationDisabled" /* 1992 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { GuildSettingsRoleEditSections as closure_6 } from "MAX_SUBCATEGORIES" /* 16951 */;
+import { GuildSettingsRoleEditSections as closure_6 } from "MAX_SUBCATEGORIES" /* 17036 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;

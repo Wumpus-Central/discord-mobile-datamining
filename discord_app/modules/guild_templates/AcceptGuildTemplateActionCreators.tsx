@@ -1,8 +1,8 @@
-// === Module 11365: ? ===
+// === Module 11437: ? ===
 
-// Module 11365
+// Module 11437
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_handleConnectionOpen" /* 5102 */;
+import closure_3 from "_handleConnectionOpen" /* 5168 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -39,9 +39,9 @@ export default {
             }
           });
         } else {
-          callback(6066).transitionToGuild(body.id);
+          callback(6132).transitionToGuild(body.id);
           body(body);
-          const obj3 = callback(6066);
+          const obj3 = callback(6132);
         }
       }, (body) => {
         let obj = callback2(709);

@@ -1,6 +1,6 @@
-// === Module 11375: GiftIntentType ===
+// === Module 11447: GiftIntentType ===
 
-// Module 11375 (GiftIntentType)
+// Module 11447 (GiftIntentType)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;

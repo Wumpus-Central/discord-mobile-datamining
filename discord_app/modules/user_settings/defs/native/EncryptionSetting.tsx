@@ -1,11 +1,11 @@
-// === Module 15084: route ===
+// === Module 15163: route ===
 
-// Module 15084 (route)
+// Module 15163 (route)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSecureFramesVerifiedUserIds from "useSecureFramesVerifiedUserIds" /* 15085 */;
-import closure_2 from "items" /* 9358 */;
-import createToggle from "createToggle" /* 10516 */;
+import useSecureFramesVerifiedUserIds from "useSecureFramesVerifiedUserIds" /* 15164 */;
+import closure_2 from "items" /* 9426 */;
+import createToggle from "createToggle" /* 10584 */;
 
 require = arg1;
 createToggle = {
@@ -30,7 +30,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.SECURE_FRAMES,
   getComponent() {
-    return require(15086) /* UserListItem */.default;
+    return require(15165) /* UserListItem */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

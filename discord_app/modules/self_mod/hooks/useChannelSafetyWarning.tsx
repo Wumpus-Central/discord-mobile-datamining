@@ -1,7 +1,7 @@
-// === Module 10410: useChannelSafetyWarning ===
+// === Module 10478: useChannelSafetyWarning ===
 
-// Module 10410 (useChannelSafetyWarning)
-import closure_2 from "handleConnectionOpen" /* 9818 */;
+// Module 10478 (useChannelSafetyWarning)
+import closure_2 from "handleConnectionOpen" /* 9885 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/hooks/useChannelSafetyWarning.tsx");

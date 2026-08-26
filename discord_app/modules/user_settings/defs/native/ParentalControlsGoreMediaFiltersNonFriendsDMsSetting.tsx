@@ -1,11 +1,11 @@
-// === Module 15136: useGoreContentNonFriendsDmSettingValue ===
+// === Module 15215: useGoreContentNonFriendsDmSettingValue ===
 
-// Module 15136 (useGoreContentNonFriendsDmSettingValue)
+// Module 15215 (useGoreContentNonFriendsDmSettingValue)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7206 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14279 */;
-import closure_2 from "freshTeenActivityWithMap" /* 7143 */;
-import createToggle from "createToggle" /* 10516 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7272 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14352 */;
+import closure_2 from "freshTeenActivityWithMap" /* 7209 */;
+import createToggle from "createToggle" /* 10584 */;
 
 require = arg1;
 function useGoreContentNonFriendsDmSettingValue() {
@@ -24,7 +24,7 @@ function useGoreContentNonFriendsDmSettingValue() {
 function onGoreContentNonFriendsDmOnPress() {
   selectedTeenId = selectedTeenId.getSelectedTeenId();
   if (null != selectedTeenId) {
-    let obj = selectedTeenId(14283);
+    let obj = selectedTeenId(14356);
     obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
     const intl = selectedTeenId(1236).intl;
     obj[0] = intl.string(selectedTeenId(1236).t["16/3Bi"]);
@@ -38,8 +38,8 @@ function onGoreContentNonFriendsDmOnPress() {
     obj[3] = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
     const items = [selectedTeenId(1306).ExplicitContentRedaction.SHOW];
     obj[4] = items;
-    const result = selectedTeenId(14276).handleSensitiveMediaFilterPress(obj);
-    const obj2 = selectedTeenId(14276);
+    const result = selectedTeenId(14349).handleSensitiveMediaFilterPress(obj);
+    const obj2 = selectedTeenId(14349);
   }
 }
 createToggle = {

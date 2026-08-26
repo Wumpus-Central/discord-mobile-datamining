@@ -1,6 +1,6 @@
-// === Module 12513: getReactNativeSVGImageSource ===
+// === Module 12584: getReactNativeSVGImageSource ===
 
-// Module 12513 (getReactNativeSVGImageSource)
+// Module 12584 (getReactNativeSVGImageSource)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/svg/native/getReactNativeSVGImageSource.tsx");

@@ -1,11 +1,11 @@
-// === Module 12506: UserProfileActivityVoiceChannel ===
+// === Module 12577: UserProfileActivityVoiceChannel ===
 
-// Module 12506 (UserProfileActivityVoiceChannel)
+// Module 12577 (UserProfileActivityVoiceChannel)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import sum from "sum" /* 505 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4089 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 import set from "set" /* 500 */;
 
 const View = get_ActivityIndicator.View;
@@ -101,7 +101,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
       onAction({ action: "OPEN_VOICE_CHANNEL" });
       guild(onAction[21]).openGuildVoiceModal(channel, newestAnalyticsLocation);
       const obj = guild(onAction[21]);
-      channel(onAction[22]).hideActionSheet();
+      channel(onAction[22]).hideAllActionSheets();
     };
     const items3 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" }), ];
     const obj7 = { style: null, variant: "text-xs/normal", lineClamp: 1, children: null };

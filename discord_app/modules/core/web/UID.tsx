@@ -1,9 +1,9 @@
-// === Module 8748: uid ===
+// === Module 8816: uid ===
 
-// Module 8748 (uid)
+// Module 8816 (uid)
 import set from "set" /* 2 */;
-import uniqueIdDefault from "uniqueId" /* 4612 */;
-import useInitialValueDefault from "useInitialValue" /* 5822 */;
+import uniqueIdDefault from "uniqueId" /* 4676 */;
+import useInitialValueDefault from "useInitialValue" /* 5888 */;
 
 const result = set.fileFinishedImporting("modules/core/web/UID.tsx");
 

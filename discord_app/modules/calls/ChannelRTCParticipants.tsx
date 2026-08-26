@@ -1,27 +1,27 @@
-// === Module 10726: sortKey ===
+// === Module 10798: sortKey ===
 
-// Module 10726 (sortKey)
+// Module 10798 (sortKey)
 import apply from "apply" /* 12 */;
-import version from "version" /* 4021 */;
-import isStreamKey from "isStreamKey" /* 4446 */;
-import getNicknameDefault from "getNickname" /* 4573 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5252 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 8960 */;
-import useIsSpeaking from "useIsSpeaking" /* 10728 */;
-import apexExperiment from "apexExperiment" /* 10729 */;
+import version from "version" /* 4085 */;
+import isStreamKey from "isStreamKey" /* 4510 */;
+import getNicknameDefault from "getNickname" /* 4637 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5318 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 9028 */;
+import useIsSpeaking from "useIsSpeaking" /* 10800 */;
+import apexExperiment from "apexExperiment" /* 10801 */;
 import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "reset" /* 4402 */;
+import closure_4 from "reset" /* 4466 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "callConnect" /* 5103 */;
+import closure_6 from "callConnect" /* 5169 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4431 */;
-import closure_9 from "anyoneHasFlagInContext" /* 5244 */;
+import closure_8 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_9 from "anyoneHasFlagInContext" /* 5310 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "makeTimeoutKey" /* 10727 */;
-import closure_12 from "updateVoiceState" /* 4399 */;
-import ParticipantTypes from "ParticipantTypes" /* 4401 */;
+import closure_11 from "makeTimeoutKey" /* 10799 */;
+import closure_12 from "updateVoiceState" /* 4463 */;
+import ParticipantTypes from "ParticipantTypes" /* 4465 */;
 import ME from "ME" /* 676 */;
-import DesktopSources from "DesktopSources" /* 4444 */;
+import DesktopSources from "DesktopSources" /* 4508 */;
 
 require = arg1;
 function sortKey(type) {
@@ -221,11 +221,11 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
   }
   return flag;
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f75792) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f76061) {
   const self = this;
-  closure_0 = f75792;
+  closure_0 = f76061;
   let flag;
-  if (this.participants[f75792] != null) {
+  if (this.participants[f76061] != null) {
     flag = arr.reduce((arg0, type) => {
       let flag = arg0;
       if (type.type === closure_1_14.USER) {
@@ -265,11 +265,11 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f757
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f75799, closure_1, closure_2) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f76068, closure_1, closure_2) {
   const self = this;
   closure_0 = closure_2;
   let flag;
-  if (this.participants[f75799] != null) {
+  if (this.participants[f76068] != null) {
     flag = arr.reduce((arg0, type) => {
       let flag = arg0;
       if (type.type === closure_1_14.STREAM) {

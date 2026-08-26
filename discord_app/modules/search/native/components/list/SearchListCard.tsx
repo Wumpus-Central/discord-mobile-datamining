@@ -1,20 +1,20 @@
-// === Module 16020: SearchListContentAuthor ===
+// === Module 16101: SearchListContentAuthor ===
 
-// Module 16020 (SearchListContentAuthor)
+// Module 16101 (SearchListContentAuthor)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import nameFromUserDefault from "nameFromUser" /* 4224 */;
-import Text from "Text" /* 4376 */;
-import computeChannelNameDefault from "computeChannelName" /* 4574 */;
-import getChannelIcon from "getChannelIcon" /* 4866 */;
-import ForumIcon from "ForumIcon" /* 4918 */;
-import PressableCard from "PressableCard" /* 5482 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9813 */;
+import nameFromUserDefault from "nameFromUser" /* 4288 */;
+import Text from "Text" /* 4440 */;
+import computeChannelNameDefault from "computeChannelName" /* 4638 */;
+import getChannelIcon from "getChannelIcon" /* 4932 */;
+import ForumIcon from "ForumIcon" /* 4984 */;
+import PressableCard from "PressableCard" /* 5548 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9880 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 class SearchListContentAuthor {

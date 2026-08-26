@@ -1,15 +1,15 @@
-// === Module 15251: ? ===
+// === Module 15330: ? ===
 
-// Module 15251
-import itemsDefault from "items" /* 15252 */;
+// Module 15330
+import itemsDefault from "items" /* 15331 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 8717 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 8785 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
 let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
 const memoResult = importAllResult.memo(function DevToolsGuildTagBadgesModal() {
-  let obj = _require(5889);
+  let obj = _require(5955);
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions(navigation) {

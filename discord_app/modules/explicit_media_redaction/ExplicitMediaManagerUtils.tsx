@@ -1,6 +1,6 @@
-// === Module 7217: hasAttachmentsEmbedsComponentsOrSnapshots ===
+// === Module 7283: hasAttachmentsEmbedsComponentsOrSnapshots ===
 
-// Module 7217 (hasAttachmentsEmbedsComponentsOrSnapshots)
+// Module 7283 (hasAttachmentsEmbedsComponentsOrSnapshots)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");

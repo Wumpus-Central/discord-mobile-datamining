@@ -1,6 +1,6 @@
-// === Module 6009: reset ===
+// === Module 6075: reset ===
 
-// Module 6009 (reset)
+// Module 6075 (reset)
 import timestampDefault from "timestamp" /* 3 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;

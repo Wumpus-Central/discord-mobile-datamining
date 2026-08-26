@@ -1,6 +1,6 @@
-// === Module 12234: ContactSyncLandingPage ===
+// === Module 12306: ContactSyncLandingPage ===
 
-// Module 12234 (ContactSyncLandingPage)
+// Module 12306 (ContactSyncLandingPage)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/contact_sync/native/ContactSyncConstants.tsx");

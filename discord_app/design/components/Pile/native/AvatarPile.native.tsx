@@ -1,11 +1,11 @@
-// === Module 12509: AvatarPile ===
+// === Module 12580: AvatarPile ===
 
-// Module 12509 (AvatarPile)
-import SolidCutout from "SolidCutout" /* 8447 */;
-import Pile from "Pile" /* 11267 */;
-import map from "map" /* 11268 */;
-import getListSummaryLabel from "getListSummaryLabel" /* 12177 */;
-import StaticNativeCutoutAvatarImage from "StaticNativeCutoutAvatarImage" /* 12510 */;
+// Module 12580 (AvatarPile)
+import SolidCutout from "SolidCutout" /* 8514 */;
+import Pile from "Pile" /* 11339 */;
+import map from "map" /* 11340 */;
+import getListSummaryLabel from "getListSummaryLabel" /* 12250 */;
+import StaticNativeCutoutAvatarImage from "StaticNativeCutoutAvatarImage" /* 12581 */;
 import closure_2 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 

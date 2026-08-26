@@ -1,12 +1,12 @@
-// === Module 8834: ShinyButton ===
+// === Module 8902: ShinyButton ===
 
-// Module 8834 (ShinyButton)
+// Module 8902 (ShinyButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import CollapsingText from "CollapsingText" /* 4816 */;
-import registerAssetDefault from "registerAsset" /* 8835 */;
+import CollapsingText from "CollapsingText" /* 4880 */;
+import registerAssetDefault from "registerAsset" /* 8903 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 noopAll;

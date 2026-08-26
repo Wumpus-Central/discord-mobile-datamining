@@ -1,10 +1,10 @@
-// === Module 11902: ? ===
+// === Module 11975: ? ===
 
-// Module 11902
+// Module 11975
 import ThemesDefault from "Themes" /* 712 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5885 */;
-import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 11880 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5951 */;
+import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 11953 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
@@ -13,7 +13,7 @@ import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 import { JoinGuildSources } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 let c5 = importAllResult;
@@ -50,7 +50,7 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -109,7 +109,7 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
               c3 = 0;
               closure_1_2(false);
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               let guildId;
               if (channelId != null) {
@@ -119,7 +119,7 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
               c3 = 0;
               closure_1_2(false);
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           }
         } catch (tmp37) {
@@ -172,7 +172,7 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
   obj4[2] = result;
   const items1 = [closure_10(GuildIconSizesDefault, obj4), ];
   const obj5 = { style: tmp.guildInfoContainer, children: null };
-  const items2 = [closure_10(entry(4376).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
+  const items2 = [closure_10(entry(4440).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: entry.name }), ];
   const obj6 = { style: tmp.memberInfo, children: null };
   let tmp10Result = null;
   if (null != approximatePresenceCount) {
@@ -185,7 +185,7 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
     const obj10 = { membersOnline: null };
     obj10[0] = approximatePresenceCount;
     obj9[2] = intl3.format(tmp2(1236).t["LC+S+m"], obj10);
-    items3[1] = tmp9(tmp2(4376).Text, obj9);
+    items3[1] = tmp9(tmp2(4440).Text, obj9);
     obj7[0] = items3;
     tmp10Result = tmp10(closure_11, obj7);
   }
@@ -201,7 +201,7 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
     const obj14 = { count: null };
     obj14[0] = approximateMemberCount;
     obj13[2] = intl4.format(tmp2(1236).t.zRl6XR, obj14);
-    items5[1] = tmp9(tmp2(4376).Text, obj13);
+    items5[1] = tmp9(tmp2(4440).Text, obj13);
     obj11[0] = items5;
     tmp10Result = tmp10(closure_11, obj11);
   }
@@ -224,7 +224,7 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
     const obj16 = { lineClamp: 3, style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj16[1] = tmp.guildDescription;
     obj16[4] = description;
-    tmp9Result = tmp9(tmp2(4376).Text, obj16);
+    tmp9Result = tmp9(tmp2(4440).Text, obj16);
   }
   items7[1] = tmp9Result;
   items7[2] = closure_10(View, { style: tmp.flex });
@@ -249,10 +249,10 @@ const memoResult = importAllResult.memo(function GuildDirectoryRow(entry) {
   }
   obj18[2] = str2;
   obj18[3] = stringResult;
-  items7[3] = closure_10(entry(4815).Button, obj18);
+  items7[3] = closure_10(entry(4879).Button, obj18);
   obj1[1] = items7;
   obj[1] = closure_12(View, obj1);
-  return closure_10(entry(5482).Card, obj);
+  return closure_10(entry(5548).Card, obj);
 });
 let result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryRow.tsx");
 

@@ -1,14 +1,14 @@
-// === Module 17174: _navigateToGuild ===
+// === Module 17259: _navigateToGuild ===
 
-// Module 17174 (_navigateToGuild)
+// Module 17259 (_navigateToGuild)
 import v1 from "v1" /* 514 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import prototypeDefault from "prototype" /* 17173 */;
+import prototypeDefault from "prototype" /* 17258 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_getSystemLocale" /* 1996 */;
-import closure_6 from "map" /* 13171 */;
-import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9170 */;
+import closure_6 from "map" /* 13244 */;
+import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9238 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;
@@ -30,7 +30,7 @@ function _navigateToGuild() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -72,7 +72,7 @@ function _navigateToGuild() {
               obj2 = {};
               const merged = Object.assign(c5);
               obj2.loadId = c0;
-              let obj4 = callback2(6065);
+              let obj4 = callback2(6131);
               dependencyMap = 2;
               c4 = 1;
               const obj3 = { value: null, done: false };
@@ -97,7 +97,7 @@ function _navigateToGuild() {
             obj5[4] = c4;
             obj.track(constants.GUILD_DISCOVERY_GUILD_SELECTED, obj5);
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp28) {
           c4 = tmp;
@@ -258,7 +258,7 @@ export const fromDiscoverableGuildServer = function fromDiscoverableGuildServer(
   return obj;
 };
 export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildSearchResult(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "call", discoverySplash: false, emojis: false };
+  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "isArray", discoverySplash: "FK", emojis: "+500" };
   ({ approximate_presence_count: obj[7], approximate_member_count: obj[8], discovery_splash: obj[11] } = id);
   obj[12] = [];
   return obj;

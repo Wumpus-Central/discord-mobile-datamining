@@ -1,15 +1,15 @@
-// === Module 4594: hasPendingMemberAction ===
+// === Module 4658: hasPendingMemberAction ===
 
-// Module 4594 (hasPendingMemberAction)
+// Module 4658 (hasPendingMemberAction)
 import hasFlagAll from "hasFlag" /* 1403 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 4597 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 4661 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import closure_4 from "trackCommunicationDisabled" /* 1992 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleSettingsLoadSuccess" /* 4595 */;
-import closure_7 from "set" /* 4596 */;
+import closure_6 from "handleSettingsLoadSuccess" /* 4659 */;
+import closure_7 from "set" /* 4660 */;
 import { GuildFeatures } from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4013 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
 
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/hasPendingMemberAction.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 6959: Tome3dIllustration ===
+// === Module 7025: Tome3dIllustration ===
 
-// Module 6959 (Tome3dIllustration)
+// Module 7025 (Tome3dIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6960 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 7026 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/Tome3dIllustration.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 8461: useProfileTileGradient ===
+// === Module 8528: useProfileTileGradient ===
 
-// Module 8461 (useProfileTileGradient)
+// Module 8528 (useProfileTileGradient)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -13,7 +13,7 @@ export default function useProfileTileGradient(userId) {
   dependencyMap = undefined;
   let tmp2 = guildId(1367)(userId.location);
   dependencyMap = tmp2;
-  const tmp3 = guildId(8462)(userId, guildId);
+  const tmp3 = guildId(8529)(userId, guildId);
   let items = null;
   if (tmp2) {
     let themeColors;
@@ -40,5 +40,5 @@ export default function useProfileTileGradient(userId) {
   }, items1);
   const tmp4 = closure_3;
   const tmp4Result = closure_3(items, 2);
-  return userId(8467).useVideoTileGradientColors(tmp7, tmp8);
+  return userId(8534).useVideoTileGradientColors(tmp7, tmp8);
 };

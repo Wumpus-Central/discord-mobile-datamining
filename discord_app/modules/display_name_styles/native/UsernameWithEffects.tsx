@@ -1,6 +1,6 @@
-// === Module 9617: AVERAGE_FONT_WIDTH_RATIO ===
+// === Module 9685: AVERAGE_FONT_WIDTH_RATIO ===
 
-// Module 9617 (AVERAGE_FONT_WIDTH_RATIO)
+// Module 9685 (AVERAGE_FONT_WIDTH_RATIO)
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import ThemesDefault from "Themes" /* 712 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1935 */;
@@ -8,7 +8,7 @@ import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { MIN_PRISM_GRADIENT_WIDTH } from "items3" /* 1934 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 let c3 = importAllResult;
@@ -103,7 +103,7 @@ const memoResult = importAllResult.memo((userName) => {
   let STATIC = userName.effectDisplayType;
   ({ userId, guildId } = userName);
   if (STATIC === undefined) {
-    STATIC = userName(9618).EffectDisplayType.STATIC;
+    STATIC = userName(9686).EffectDisplayType.STATIC;
   }
   ({ defaultColor, containerStyle, ignoreDisabledStylesSetting, pendingDisplayNameStyles } = userName);
   if (ignoreDisabledStylesSetting === undefined) {
@@ -111,14 +111,14 @@ const memoResult = importAllResult.memo((userName) => {
   }
   const merged = Object.assign(userName, Object.create(null));
   let num2;
-  const tmp6 = num2(4635)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
-  let obj = userName(9385);
+  const tmp6 = num2(4699)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
+  let obj = userName(9453);
   const isDisplayNameStylesFlywheelViewersEnabled = obj.useIsDisplayNameStylesFlywheelViewersEnabled("UsernameWithEffects");
   obj1 = userName(1933);
   const result = obj1.applyFlywheelViewingFallback(tmp6, isDisplayNameStylesFlywheelViewersEnabled);
-  let obj2 = userName(4636);
+  let obj2 = userName(4700);
   const displayNameStylesEnabled = obj2.useDisplayNameStylesEnabled({ location: "UsernameWithEffects" });
-  let obj3 = userName(9384);
+  let obj3 = userName(9452);
   const displayNameStylesFont = obj3.useDisplayNameStylesFont({ displayNameStyles: result, ignoreDisabledStylesSetting });
   let tmp12;
   if (null != displayNameStylesFont) {
@@ -140,11 +140,11 @@ const memoResult = importAllResult.memo((userName) => {
     }
     tmp13 = tmp14;
   }
-  let tmp7Result = tmp7(4101);
+  let tmp7Result = tmp7(4165);
   const token = tmp7Result.useToken(tmp4(712).colors.BACKGROUND_BASE_LOW);
-  tmp7Result = tmp7(4101);
+  tmp7Result = tmp7(4165);
   const token1 = tmp7Result.useToken(tmp4(712).colors.WHITE);
-  const displayNameStylesAccessibleColors = userName(9619).useDisplayNameStylesAccessibleColors({ displayNameStyles: result, backgroundColor: token });
+  const displayNameStylesAccessibleColors = userName(9687).useDisplayNameStylesAccessibleColors({ displayNameStyles: result, backgroundColor: token });
   let first;
   if (displayNameStylesAccessibleColors.length > 0) {
     first = displayNameStylesAccessibleColors[0];
@@ -161,8 +161,8 @@ const memoResult = importAllResult.memo((userName) => {
     colorVariants = tmp7(1933).generateColorVariants(first);
     const tmp7Result2 = tmp7(1933);
   }
-  const tmp7Result3 = userName(4386);
-  const tmp20 = userName(4376).TextStyleSheet[tmp7Result3.useTypographyVariantRemap(tmp7Result3, merged.variant, false)];
+  const tmp7Result3 = userName(4450);
+  const tmp20 = userName(4440).TextStyleSheet[tmp7Result3.useTypographyVariantRemap(tmp7Result3, merged.variant, false)];
   const flattenResult = closure_7.flatten(merged.style);
   num2 = undefined;
   if (flattenResult != null) {
@@ -217,16 +217,16 @@ const memoResult = importAllResult.memo((userName) => {
   const tmp28Result = closure_12(str, num2);
   if (displayNameStylesEnabled) {
     if (null != tmp6) {
-      if (STATIC !== tmp7(9618).EffectDisplayType.PLAIN) {
+      if (STATIC !== tmp7(9686).EffectDisplayType.PLAIN) {
         if (null != colorVariants) {
           const items1 = [merged.style, tmp13];
           if (tmp7Result4.doesEffectImpactLayout(effectId)) {
             const layoutImpact = tmp28Result.layoutImpact;
           }
           if (effectId === tmp7(1935).DisplayNameEffect.GUMMY) {
-            const tmp4Result = tmp4(9622);
+            const tmp4Result = tmp4(9690);
             const tmp66 = callback2;
-            let str3 = tmp7(4104).getNodeText(userName);
+            let str3 = tmp7(4168).getNodeText(userName);
             if (str3 == null) {
               str3 = "";
             }
@@ -293,7 +293,7 @@ const memoResult = importAllResult.memo((userName) => {
                     const items5 = [items1, tmp28Result.popBackLayer];
                     obj4.style = items5;
                     obj4.children = userName;
-                    const items6 = [callback2(tmp7(4376).Text, obj4), ];
+                    const items6 = [callback2(tmp7(4440).Text, obj4), ];
                     const obj5 = {};
                     const merged3 = Object.assign(merged);
                     obj5.textStrokeWidth = sum;
@@ -305,7 +305,7 @@ const memoResult = importAllResult.memo((userName) => {
                     const items7 = [items1, tmp28Result.popFrontLayer];
                     obj5.style = items7;
                     obj5.children = userName;
-                    items6[1] = callback2(tmp7(4376).Text, obj5);
+                    items6[1] = callback2(tmp7(4440).Text, obj5);
                     obj3[1] = items6;
                     return closure_10(closure_4, obj3);
                   }
@@ -343,7 +343,7 @@ const memoResult = importAllResult.memo((userName) => {
               obj7.textStrokeWidth = tmp32;
               obj7.textStrokeColor = tmp31;
               obj7.children = userName;
-              return callback2(tmp7(4376).Text, obj7);
+              return callback2(tmp7(4440).Text, obj7);
             }
             const mapped = displayNameStylesAccessibleColors.map((arg0) => callback(arg0));
             const found = mapped.filter(tmp7(1370).isNotNullish);
@@ -378,14 +378,14 @@ const memoResult = importAllResult.memo((userName) => {
       obj8.style = items13;
       obj8.color = defaultColor;
       obj8.children = userName;
-      return callback2(tmp7(4376).Text, obj8);
+      return callback2(tmp7(4440).Text, obj8);
     }
   }
   const obj9 = {};
   const merged6 = Object.assign(merged);
   obj9.color = defaultColor;
   obj9.children = userName;
-  return callback2(userName(4376).Text, obj9);
+  return callback2(userName(4440).Text, obj9);
 });
 let result = require("set").fileFinishedImporting("modules/display_name_styles/native/UsernameWithEffects.tsx");
 

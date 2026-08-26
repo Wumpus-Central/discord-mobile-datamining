@@ -1,7 +1,7 @@
-// === Module 10408: useIsSpamMessageRequest ===
+// === Module 10476: useIsSpamMessageRequest ===
 
-// Module 10408 (useIsSpamMessageRequest)
-import closure_2 from "processChannel" /* 5948 */;
+// Module 10476 (useIsSpamMessageRequest)
+import closure_2 from "processChannel" /* 6014 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/message_request/hooks/useIsSpamMessageRequest.tsx");

@@ -1,6 +1,6 @@
-// === Module 9145: _updatePermission ===
+// === Module 9213: _updatePermission ===
 
-// Module 9145 (_updatePermission)
+// Module 9213 (_updatePermission)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
@@ -26,7 +26,7 @@ function _updatePermission() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -52,7 +52,7 @@ function _updatePermission() {
                   c6 = 1;
                   c7 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = guildId(9146).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp22, tmp25, tmp24);
+                  obj1[0] = guildId(9214).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp22, tmp25, tmp24);
                   return obj1;
                 }
               }
@@ -80,7 +80,7 @@ function _updatePermission() {
           obj2[3] = dependencyMap;
           obj1.dispatch(obj2);
           c7 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp16) {
           c7 = tmp;
           throw tmp16;
@@ -143,18 +143,18 @@ export const savePermissionUpdates = function savePermissionUpdates(id, items, a
         if (null == arr) {
           return chain();
         } else {
-          const result = chain(4393).updatePermissionOverwrite(callback, arr);
+          const result = chain(4457).updatePermissionOverwrite(callback, arr);
           result.then(chain, chain);
-          const obj2 = chain(4393);
+          const obj2 = chain(4457);
         }
       } else {
         arr = closure_1_2.pop();
         if (null == arr) {
           return chain();
         } else {
-          const result1 = chain(4393).clearPermissionOverwrite(callback, arr);
+          const result1 = chain(4457).clearPermissionOverwrite(callback, arr);
           result1.then(chain, chain);
-          const obj = chain(4393);
+          const obj = chain(4457);
         }
       }
     }
@@ -186,18 +186,18 @@ export const saveAndClearPermissionUpdates = function saveAndClearPermissionUpda
         if (null == arr) {
           return chain();
         } else {
-          const result = chain(4393).updatePermissionOverwrite(callback, arr);
+          const result = chain(4457).updatePermissionOverwrite(callback, arr);
           result.then(chain, chain);
-          const obj2 = chain(4393);
+          const obj2 = chain(4457);
         }
       } else {
         arr = closure_1_2.pop();
         if (null == arr) {
           return chain();
         } else {
-          const result1 = chain(4393).clearPermissionOverwrite(callback, arr);
+          const result1 = chain(4457).clearPermissionOverwrite(callback, arr);
           result1.then(chain, chain);
-          const obj = chain(4393);
+          const obj = chain(4457);
         }
       }
     }

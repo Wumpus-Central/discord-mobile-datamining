@@ -1,27 +1,27 @@
-// === Module 9945: PreviewIcon ===
+// === Module 10012: PreviewIcon ===
 
-// Module 9945 (PreviewIcon)
+// Module 10012 (PreviewIcon)
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
-import map from "map" /* 4101 */;
-import LinkIcon from "LinkIcon" /* 4323 */;
-import Text from "Text" /* 4376 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
-import getFontScale from "getFontScale" /* 4821 */;
-import ImageIcon from "ImageIcon" /* 4917 */;
-import StickerIcon from "StickerIcon" /* 7851 */;
-import VideoIcon from "VideoIcon" /* 7859 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 8555 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 8557 */;
-import map2 from "map" /* 9598 */;
-import MusicIcon from "MusicIcon" /* 9799 */;
-import formatMessagePreview from "formatMessagePreview" /* 9923 */;
-import AttachmentIcon from "AttachmentIcon" /* 9946 */;
-import getOrParseMessagePreviewMarkupAST from "getOrParseMessagePreviewMarkupAST" /* 9948 */;
-import getLayoutStyles from "getLayoutStyles" /* 9951 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
+import map from "map" /* 4165 */;
+import LinkIcon from "LinkIcon" /* 4387 */;
+import Text from "Text" /* 4440 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
+import getFontScale from "getFontScale" /* 4886 */;
+import ImageIcon from "ImageIcon" /* 4983 */;
+import StickerIcon from "StickerIcon" /* 7918 */;
+import VideoIcon from "VideoIcon" /* 7926 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 8623 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 8625 */;
+import map2 from "map" /* 9666 */;
+import MusicIcon from "MusicIcon" /* 9866 */;
+import formatMessagePreview from "formatMessagePreview" /* 9990 */;
+import AttachmentIcon from "AttachmentIcon" /* 10013 */;
+import getOrParseMessagePreviewMarkupAST from "getOrParseMessagePreviewMarkupAST" /* 10015 */;
+import getLayoutStyles from "getLayoutStyles" /* 10018 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "markAllUserIdListsStale" /* 4034 */;
+import closure_5 from "markAllUserIdListsStale" /* 4098 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

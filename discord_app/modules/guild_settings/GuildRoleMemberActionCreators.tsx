@@ -1,9 +1,9 @@
-// === Module 5465: _fetchMemberCountsFromBackend ===
+// === Module 5531: _fetchMemberCountsFromBackend ===
 
-// Module 5465 (_fetchMemberCountsFromBackend)
+// Module 5531 (_fetchMemberCountsFromBackend)
 import privDefault from "priv" /* 1405 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getRoleMemberCount" /* 5464 */;
+import closure_4 from "getRoleMemberCount" /* 5530 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -74,7 +74,7 @@ function _fetchMemberCounts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -117,7 +117,7 @@ function _fetchMemberCounts() {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp7) {
           c1 = tmp;
           throw tmp7;

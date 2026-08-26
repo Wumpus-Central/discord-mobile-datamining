@@ -1,10 +1,10 @@
-// === Module 4317: UserPlusIcon ===
+// === Module 4381: UserPlusIcon ===
 
-// Module 4317 (UserPlusIcon)
+// Module 4381 (UserPlusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 4318 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 4382 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,15 +1,15 @@
-// === Module 7969: MethodsScreen ===
+// === Module 8036: MethodsScreen ===
 
-// Module 7969 (MethodsScreen)
+// Module 8036 (MethodsScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import { TRUSTED_PROVIDERS_URL } from "set" /* 7943 */;
+import { TRUSTED_PROVIDERS_URL } from "set" /* 8010 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 function MethodsScreen(onClose) {
@@ -73,7 +73,7 @@ function MethodsScreen(onClose) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -372,7 +372,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
     closure_1 = closure_0;
     closure_2 = closure_1;
     closeModal = function closeModal() {
-      let arr = callback(4611);
+      let arr = callback(4675);
       arr = arr.pop();
       dependencyMap();
     };
@@ -399,7 +399,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
     const obj3 = entryPoint(closure_2[38]);
     obj[2] = entryPoint(closure_2[38]).getHeaderBackButton();
     obj[3] = function render() {
-      return closure_1_9(callback(8099), { onClose: closeModal, modalSessionId: closure_0 });
+      return closure_1_9(callback(8166), { onClose: closeModal, modalSessionId: closure_0 });
     };
     obj[closure_1_12.GOOGLE_WALLET_VERIFICATION] = obj;
     return obj;
@@ -410,5 +410,5 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
   let obj = { screens: memo1, initialRouteName: constants.METHODS, headerBackTitle: null };
   const intl = entryPoint(1236).intl;
   obj[2] = intl.string(entryPoint(1236).t["13/7kX"]);
-  return callback(entryPoint(5889).Navigator, obj);
+  return callback(entryPoint(5955).Navigator, obj);
 };

@@ -1,13 +1,13 @@
-// === Module 15978: ? ===
+// === Module 16059: ? ===
 
-// Module 15978
-import _modDef15979 from "module_15979" /* 15979 */;
-import SearchFilterPrefixRowDefault from "SearchFilterPrefixRow" /* 15981 */;
-import _modDef15988 from "module_15988" /* 15988 */;
+// Module 16059
+import _modDef16060 from "module_16060" /* 16060 */;
+import SearchFilterPrefixRowDefault from "SearchFilterPrefixRow" /* 16062 */;
+import _modDef16069 from "module_16069" /* 16069 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ header: { flexDirection: "row", alignItems: "center", paddingLeft: 16, zIndex: 10 }, headerWithBackButton: { paddingLeft: 0 }, headerSearch: { flex: 1, flexGrow: 1 }, headerControlsRight: { paddingRight: 16, paddingLeft: 12 }, suggestionsAnchor: { height: 0 }, suggestions: { position: "absolute", left: 0, right: -50, top: 8 }, suggestionsWithBackButton: { left: -28 } });
@@ -21,7 +21,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
   const items1 = [backButton, , ];
   obj = { style: tmp.headerSearch, children: null };
   obj = { ref, searchContext, setSuggestionsDismissed };
-  const items2 = [callback(_modDef15979, obj), ];
+  const items2 = [callback(_modDef16060, obj), ];
   obj1 = { style: tmp.suggestionsAnchor, children: null };
   const obj2 = { searchContext, onLayoutMeasure: onSuggestionsLayoutMesure, dismissed: suggestionsDismissed, containerStyle: null };
   const items3 = [tmp.suggestions, ];
@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
   const tmp4 = null != backButton && tmp.headerWithBackButton;
   const tmp6 = importDefault;
   const tmp8 = SearchFilterPrefixRowDefault;
-  items1[2] = callback(View, { style: tmp.headerControlsRight, children: callback(_modDef15988, { searchContext }) });
+  items1[2] = callback(View, { style: tmp.headerControlsRight, children: callback(_modDef16069, { searchContext }) });
   obj[1] = items1;
   return closure_4(View, obj);
 }));

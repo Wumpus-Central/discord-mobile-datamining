@@ -1,17 +1,17 @@
-// === Module 12303: DiscoverabilityLandingScene ===
+// === Module 12375: DiscoverabilityLandingScene ===
 
-// Module 12303 (DiscoverabilityLandingScene)
+// Module 12375 (DiscoverabilityLandingScene)
 import keys from "keys" /* 691 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NavigationStack from "NavigationStack" /* 5889 */;
-import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 12253 */;
+import NavigationStack from "NavigationStack" /* 5955 */;
+import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 12325 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useContactSyncModalStore } from "ContactSyncModes" /* 12233 */;
+import { useContactSyncModalStore } from "ContactSyncModes" /* 12305 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function DiscoverabilityLandingScene() {
@@ -63,9 +63,9 @@ function DiscoverabilityNameScene() {
   }, items);
   let obj = { style: tmp.container, children: null };
   callback = React.useCallback((arg0) => {
-    const result = allowPhone(12260).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(12260);
-    const result1 = allowPhone(12260).closeDiscoverabilityModal(false);
+    const result = allowPhone(12332).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(12332);
+    const result1 = allowPhone(12332).closeDiscoverabilityModal(false);
   }, []);
   obj = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();

@@ -1,9 +1,9 @@
-// === Module 9569: useFetchVirtualCurrencyBalance ===
+// === Module 9637: useFetchVirtualCurrencyBalance ===
 
-// Module 9569 (useFetchVirtualCurrencyBalance)
+// Module 9637 (useFetchVirtualCurrencyBalance)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_3 from "redeemError" /* 9570 */;
+import closure_3 from "redeemError" /* 9638 */;
 
 const useEffect = noop.useEffect;
 const result = set.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");

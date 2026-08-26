@@ -1,10 +1,10 @@
-// === Module 5835: fetchApplication ===
+// === Module 5901: fetchApplication ===
 
-// Module 5835 (fetchApplication)
+// Module 5901 (fetchApplication)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5836 */;
-import closure_5 from "createExecutable" /* 4406 */;
-import importDefaultResult from "addApplication" /* 4421 */;
+import closure_4 from "set" /* 5902 */;
+import closure_5 from "createExecutable" /* 4470 */;
+import importDefaultResult from "addApplication" /* 4485 */;
 import ME from "ME" /* 676 */;
 import initialize from "initialize" /* 589 */;
 
@@ -40,7 +40,7 @@ function _fetchApplication() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -246,7 +246,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

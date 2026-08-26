@@ -1,13 +1,13 @@
-// === Module 8445: PremiumFeaturesBackground ===
+// === Module 8512: PremiumFeaturesBackground ===
 
-// Module 8445 (PremiumFeaturesBackground)
+// Module 8512 (PremiumFeaturesBackground)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4826 */;
-import { Gradients } from "items" /* 7039 */;
+import LinearGradientDefault from "LinearGradient" /* 4891 */;
+import { Gradients } from "items" /* 7105 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 noopAll;

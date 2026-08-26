@@ -1,6 +1,6 @@
-// === Module 10669: useMediaModalFooterActionStore ===
+// === Module 10738: useMediaModalFooterActionStore ===
 
-// Module 10669 (useMediaModalFooterActionStore)
+// Module 10738 (useMediaModalFooterActionStore)
 import set from "set" /* 2 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import keys from "keys" /* 644 */;

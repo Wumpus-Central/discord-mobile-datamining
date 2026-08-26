@@ -1,10 +1,10 @@
-// === Module 9692: ? ===
+// === Module 9760: ? ===
 
-// Module 9692
+// Module 9760
 import ThemesDefault from "Themes" /* 712 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { jsxs } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -51,7 +51,7 @@ const memoResult = importAllResult.memo(function UserProfileAboutMeCardCommand(c
         const obj3 = closure_2_0(channel[9]);
         const tmp5 = closure_1_1;
         const tmp6 = closure_1_2;
-        command(channel[10]).hideActionSheet();
+        command(channel[10]).hideAllActionSheets();
         command(channel[11])();
         if (bestActiveInput != null) {
           obj5.openSystemKeyboard();

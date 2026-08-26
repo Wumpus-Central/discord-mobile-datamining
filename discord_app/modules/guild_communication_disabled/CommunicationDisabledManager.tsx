@@ -1,10 +1,10 @@
-// === Module 12023: clearGuildMemberTimeout ===
+// === Module 12096: clearGuildMemberTimeout ===
 
-// Module 12023 (clearGuildMemberTimeout)
+// Module 12096 (clearGuildMemberTimeout)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4014 */;
-import initializeDefault from "initialize" /* 5367 */;
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4078 */;
+import initializeDefault from "initialize" /* 5433 */;
 import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1992 */;
 import closure_5 from "trackCommunicationDisabled" /* 1992 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;

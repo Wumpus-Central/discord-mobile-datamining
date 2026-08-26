@@ -1,6 +1,6 @@
-// === Module 11398: handleStopEditingRoles ===
+// === Module 11470: handleStopEditingRoles ===
 
-// Module 11398 (handleStopEditingRoles)
+// Module 11470 (handleStopEditingRoles)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "trackCommunicationDisabled" /* 1992 */;

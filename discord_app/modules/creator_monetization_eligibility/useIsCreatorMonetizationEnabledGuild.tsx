@@ -1,6 +1,6 @@
-// === Module 5978: useIsCreatorMonetizationEnabledGuild ===
+// === Module 6044: useIsCreatorMonetizationEnabledGuild ===
 
-// Module 5978 (useIsCreatorMonetizationEnabledGuild)
+// Module 6044 (useIsCreatorMonetizationEnabledGuild)
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 

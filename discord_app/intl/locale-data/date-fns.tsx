@@ -1,6 +1,6 @@
-// === Module 3471: dateFnsLocales ===
+// === Module 3535: dateFnsLocales ===
 
-// Module 3471 (dateFnsLocales)
+// Module 3535 (dateFnsLocales)
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;

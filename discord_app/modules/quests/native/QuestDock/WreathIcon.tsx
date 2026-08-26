@@ -1,10 +1,10 @@
-// === Module 14553: WreathIcon ===
+// === Module 14626: WreathIcon ===
 
-// Module 14553 (WreathIcon)
+// Module 14626 (WreathIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 14554 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 14627 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

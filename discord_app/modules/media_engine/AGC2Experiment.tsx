@@ -1,6 +1,6 @@
-// === Module 13303: getAGC2ExperimentConfig ===
+// === Module 13376: getAGC2ExperimentConfig ===
 
-// Module 13303 (getAGC2ExperimentConfig)
+// Module 13376 (getAGC2ExperimentConfig)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

@@ -1,7 +1,7 @@
-// === Module 8460: prototype ===
+// === Module 8527: prototype ===
 
-// Module 8460 (prototype)
-import initializeDefault from "initialize" /* 5367 */;
+// Module 8527 (prototype)
+import initializeDefault from "initialize" /* 5433 */;
 import closure_0 from "handleConnectionOpen" /* 1981 */;
 
 initializeDefault;

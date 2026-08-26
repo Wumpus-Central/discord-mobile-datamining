@@ -1,8 +1,8 @@
-// === Module 13573: AccessibilityFocusView ===
+// === Module 13646: AccessibilityFocusView ===
 
-// Module 13573 (AccessibilityFocusView)
+// Module 13646 (AccessibilityFocusView)
 import noopAll from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 13574 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 13647 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;

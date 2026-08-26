@@ -1,21 +1,21 @@
-// === Module 12007: SpamMessageRequestHamActionSheet ===
+// === Module 12080: SpamMessageRequestHamActionSheet ===
 
-// Module 12007 (SpamMessageRequestHamActionSheet)
+// Module 12080 (SpamMessageRequestHamActionSheet)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Button from "Button" /* 4815 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5502 */;
-import Background from "Background" /* 5503 */;
-import ActionSheetCloseButton from "ActionSheetCloseButton" /* 5871 */;
-import Form from "Form" /* 8118 */;
-import useMessageRequestActions from "useMessageRequestActions" /* 12002 */;
+import Button from "Button" /* 4879 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5568 */;
+import Background from "Background" /* 5569 */;
+import ActionSheetCloseButton from "ActionSheetCloseButton" /* 5937 */;
+import Form from "Form" /* 8185 */;
+import useMessageRequestActions from "useMessageRequestActions" /* 12075 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -46,15 +46,15 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   obj = {
     user: stateFromStores,
     onError() {
-      let obj = callback(4098);
+      let obj = callback(4162);
       obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = recipientId(1236).intl;
       obj[1] = intl.string(recipientId(1236).t["EDYbS+"]);
-      obj[2] = callback(8602);
+      obj[2] = callback(8670);
       obj.open(obj);
     },
     onAcceptSuccess(arg0) {
-      callback(4347).hideActionSheet();
+      callback(4411).hideActionSheet();
     }
   };
   const messageRequestActions = obj1.useMessageRequestActions(obj);

@@ -1,10 +1,10 @@
-// === Module 6895: SpeakerSpotIllustration ===
+// === Module 6961: SpeakerSpotIllustration ===
 
-// Module 6895 (SpeakerSpotIllustration)
+// Module 6961 (SpeakerSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6896 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 6962 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SpeakerSpotIllustration.native.tsx");

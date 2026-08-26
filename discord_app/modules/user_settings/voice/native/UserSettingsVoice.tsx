@@ -1,22 +1,22 @@
-// === Module 10933: UserSettingsVoice ===
+// === Module 11005: UserSettingsVoice ===
 
-// Module 10933 (UserSettingsVoice)
+// Module 11005 (UserSettingsVoice)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4376 */;
-import Stack from "Stack" /* 4813 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5434 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5873 */;
-import apexExperimentDefault from "apexExperiment" /* 10936 */;
-import handleInputModePressDefault from "handleInputModePress" /* 10937 */;
-import SoundboardVolumeDefault from "SoundboardVolume" /* 10943 */;
-import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 10944 */;
-import VoiceProcessingOptionsDefault from "VoiceProcessingOptions" /* 10946 */;
+import Text from "Text" /* 4440 */;
+import Stack from "Stack" /* 4877 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5500 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5939 */;
+import apexExperimentDefault from "apexExperiment" /* 11008 */;
+import handleInputModePressDefault from "handleInputModePress" /* 11009 */;
+import SoundboardVolumeDefault from "SoundboardVolume" /* 11015 */;
+import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 11016 */;
+import VoiceProcessingOptionsDefault from "VoiceProcessingOptions" /* 11018 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { isMobileOverlaySupported } from "getUserAgnosticState" /* 10934 */;
-import { USER_SETTINGS_VOICE_GUILD_URL as closure_5 } from "combined" /* 10935 */;
+import { isMobileOverlaySupported } from "getUserAgnosticState" /* 11006 */;
+import { USER_SETTINGS_VOICE_GUILD_URL as closure_5 } from "combined" /* 11007 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 noopAll;
@@ -31,7 +31,7 @@ export default function UserSettingsVoice() {
   obj = { style: tmp.container, children: null };
   const items = [callback(handleInputModePressDefault, {}), , , , , , ];
   if (nonContextualStreamOutputPresent) {
-    nonContextualStreamOutputPresent = tmp4(tmp2(10939), {});
+    nonContextualStreamOutputPresent = tmp4(tmp2(11011), {});
   }
   items[1] = nonContextualStreamOutputPresent;
   obj = { style: tmp.tableRow, variant: "text-sm/medium", children: null };

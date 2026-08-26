@@ -1,14 +1,14 @@
-// === Module 13930: validateEmbeddedAppFrame ===
+// === Module 14003: validateEmbeddedAppFrame ===
 
-// Module 13930 (validateEmbeddedAppFrame)
-import getApplicationFlags from "getApplicationFlags" /* 7733 */;
-import prototypeDefault from "prototype" /* 10824 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 10829 */;
-import closure_3 from "map" /* 10677 */;
-import closure_4 from "getBuilderPreviewApplicationId" /* 13931 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4282 */;
+// Module 14003 (validateEmbeddedAppFrame)
+import getApplicationFlags from "getApplicationFlags" /* 7799 */;
+import prototypeDefault from "prototype" /* 10896 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 10901 */;
+import closure_3 from "map" /* 10749 */;
+import closure_4 from "getBuilderPreviewApplicationId" /* 14004 */;
+import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4346 */;
 import ME from "ME" /* 676 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 10678 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 10750 */;
 
 require = arg1;
 function validateEmbeddedAppFrame(transport) {

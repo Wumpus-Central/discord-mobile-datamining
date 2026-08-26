@@ -1,12 +1,12 @@
-// === Module 11308: asString ===
+// === Module 11380: asString ===
 
-// Module 11308 (asString)
+// Module 11380 (asString)
 import setDefault from "set" /* 687 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4403 */;
-import closure_5 from "isProtocolRegistered" /* 11309 */;
-import closure_6 from "upsertAccount" /* 5105 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 9050 */;
+import closure_4 from "initialize" /* 4467 */;
+import closure_5 from "isProtocolRegistered" /* 11381 */;
+import closure_6 from "upsertAccount" /* 5171 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 9118 */;
 import { PlatformTypes } from "ME" /* 676 */;
 
 const require = arg1;
@@ -38,7 +38,7 @@ function _getSpotifyMetadataFromActivity() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -155,7 +155,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     if (observedAppRunning.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(11310).setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(11382).setActiveDevice(socket.accountId, device.id);
         obj = { socket: null, device: null };
         obj[0] = socket;
         obj[1] = device;
@@ -224,7 +224,7 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
     if (socket.isPremium) {
       let resolved = Promise.resolve();
     } else {
-      const profile = socket(11310).getProfile(socket.accountId, socket.accessToken);
+      const profile = socket(11382).getProfile(socket.accountId, socket.accessToken);
       resolved = profile.then(() => {
         if (!socket.isPremium) {
           const _Error = Error;
@@ -232,7 +232,7 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
           return Promise.reject(error);
         }
       });
-      const obj = socket(11310);
+      const obj = socket(11382);
     }
     return resolved;
   }

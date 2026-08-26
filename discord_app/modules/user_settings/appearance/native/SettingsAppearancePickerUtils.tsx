@@ -1,10 +1,10 @@
-// === Module 14743: getMaxColors ===
+// === Module 14816: getMaxColors ===
 
-// Module 14743 (getMaxColors)
+// Module 14816 (getMaxColors)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1339 */;
 import ClientThemeType from "ClientThemeType" /* 1349 */;
-import getCustomThemesName from "getCustomThemesName" /* 4312 */;
+import getCustomThemesName from "getCustomThemesName" /* 4376 */;
 import closure_3 from "noop" /* 19 */;
 import { ThemeTypes } from "sum" /* 505 */;
 
@@ -255,7 +255,7 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
 export const useLaunchWelcomeSystemTheme = function useLaunchWelcomeSystemTheme() {
   let tmp = importDefault;
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARKER;
-  token = token(4101).useToken(ThemesDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(4165).useToken(ThemesDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   let items = [token];
   return React.useMemo(() => {
     let obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

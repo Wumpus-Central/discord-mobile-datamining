@@ -1,16 +1,16 @@
-// === Module 16670: handleGuildCreate ===
+// === Module 16755: handleGuildCreate ===
 
-// Module 16670 (handleGuildCreate)
+// Module 16755 (handleGuildCreate)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 687 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5367 */;
+import initializeDefault from "initialize" /* 5433 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 4743 */;
+import closure_6 from "handleConnectionOpen" /* 4807 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "_handleConnectionOpen" /* 5102 */;
+import closure_8 from "_handleConnectionOpen" /* 5168 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
 import set from "set" /* 2 */;
@@ -281,7 +281,7 @@ function _scheduleGuildResyncs() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -429,7 +429,7 @@ function _scheduleGuildResyncs() {
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp9) {
           c4 = tmp;
@@ -479,7 +479,7 @@ function _getResyncGuilds() {
 }
 function scheduleIntegrityCheck(guild_id) {
   const _require = guild_id;
-  let obj = _require(13142);
+  let obj = _require(13215);
   if (obj.isChannelMetadataIntegrityCheckEnabled("scheduleIntegrityCheck")) {
     if (null != dependencyMap3[guild_id]) {
       let _clearTimeout = clearTimeout;

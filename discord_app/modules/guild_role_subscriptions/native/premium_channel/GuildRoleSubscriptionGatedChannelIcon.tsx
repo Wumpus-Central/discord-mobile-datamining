@@ -1,9 +1,9 @@
-// === Module 15475: SubscriptionGatedChannelIcon ===
+// === Module 15554: SubscriptionGatedChannelIcon ===
 
-// Module 15475 (SubscriptionGatedChannelIcon)
+// Module 15554 (SubscriptionGatedChannelIcon)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1297 */;
-import registerAssetDefault from "registerAsset" /* 8835 */;
+import registerAssetDefault from "registerAsset" /* 8903 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

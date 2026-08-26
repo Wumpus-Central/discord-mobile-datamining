@@ -1,8 +1,8 @@
-// === Module 8513: itemNeedsHeicPreConversion ===
+// === Module 8580: itemNeedsHeicPreConversion ===
 
-// Module 8513 (itemNeedsHeicPreConversion)
-import cancel from "cancel" /* 4954 */;
-import set from "set" /* 4996 */;
+// Module 8580 (itemNeedsHeicPreConversion)
+import cancel from "cancel" /* 5020 */;
+import set from "set" /* 5062 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
@@ -40,7 +40,7 @@ function _maybePreConvertHeicItem() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

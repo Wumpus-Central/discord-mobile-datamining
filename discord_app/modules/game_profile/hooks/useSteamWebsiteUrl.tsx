@@ -1,7 +1,7 @@
-// === Module 9435: buildSteamStoreUrl ===
+// === Module 9503: buildSteamStoreUrl ===
 
-// Module 9435 (buildSteamStoreUrl)
-import closure_2 from "handleLoadMessages" /* 4404 */;
+// Module 9503 (buildSteamStoreUrl)
+import closure_2 from "handleLoadMessages" /* 4468 */;
 import { Distributors } from "ME" /* 676 */;
 
 const require = arg1;
@@ -26,7 +26,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
           return null;
         } else {
           const websites = game.websites;
-          const found = websites.find((category) => category.category === callback(9434).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+          const found = websites.find((category) => category.category === callback(9502).ThirdPartyGameApplicationWebsiteCategory.STEAM);
           if (found != null) {
             const url = found.url;
           }

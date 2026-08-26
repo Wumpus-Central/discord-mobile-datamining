@@ -1,11 +1,11 @@
-// === Module 8849: useEmojiPickerData ===
+// === Module 8917: useEmojiPickerData ===
 
-// Module 8849 (useEmojiPickerData)
+// Module 8917 (useEmojiPickerData)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getEmojiToGroupId" /* 5282 */;
-import { LoadState } from "getEmojiToGroupId" /* 5282 */;
-import { EmojiCategoryTypes } from "EmojiCategoryTypes" /* 5286 */;
-import { EmojiPickerRenderingDataType as closure_7 } from "IMAGE_SIZE" /* 8787 */;
+import closure_4 from "getEmojiToGroupId" /* 5348 */;
+import { LoadState } from "getEmojiToGroupId" /* 5348 */;
+import { EmojiCategoryTypes } from "EmojiCategoryTypes" /* 5352 */;
+import { EmojiPickerRenderingDataType as closure_7 } from "IMAGE_SIZE" /* 8855 */;
 
 const require = arg1;
 let obj = { PLACEHOLDER: 0, [0]: "PLACEHOLDER", TITLE: 1, [1]: "TITLE", EMOJI_ROW: 2, [2]: "EMOJI_ROW", EMOJI_ROW_SLIM: 3, [3]: "EMOJI_ROW_SLIM", EMOJI_ROW_NSFW: 4, [4]: "EMOJI_ROW_NSFW", FOOTER_UPSELL: 5, [5]: "FOOTER_UPSELL", PREMIUM_INLINE_ROADBLOCK: 6, [6]: "PREMIUM_INLINE_ROADBLOCK", NATIVE_SECTION: 7, [7]: "NATIVE_SECTION" };

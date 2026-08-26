@@ -1,16 +1,16 @@
-// === Module 13276: noop ===
+// === Module 13349: noop ===
 
-// Module 13276 (noop)
+// Module 13349 (noop)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import set from "set" /* 500 */;
 import failsDefault from "fails" /* 584 */;
 import setDefault from "set" /* 687 */;
-import sleep from "sleep" /* 4458 */;
-import onDefault from "on" /* 4482 */;
+import sleep from "sleep" /* 4522 */;
+import onDefault from "on" /* 4546 */;
 import closure_3 from "refreshSourceMapCookie" /* 706 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4431 */;
-import DesktopSources from "DesktopSources" /* 4444 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4495 */;
+import DesktopSources from "DesktopSources" /* 4508 */;
 
 require = arg1;
 function noop() {
@@ -73,13 +73,13 @@ prototype["createWebSocket"] = function createWebSocket() {
     logger2.error("Connect called with already existing websocket");
     self.cleanupWebSocket((close) => close.close(4000));
   }
-  obj = self(4458);
+  obj = self(4522);
   self.connectionStartTime = obj.now();
   self.helloTimeout = setTimeout(() => {
     self.handleClose(false, 0, "The connection timed out after " + self(closure_1_2[7]).now() - self.connectionStartTime + " ms - did not receive OP_HELLO in time.");
   }, closure_13);
   obj = { location: "RTCControlSocket", supportsSfuUpdate: closure_4.supports(constants.UDP_ENDPOINT_UPDATE) };
-  const webSocket = new WebSocket("" + self.url + "?v=" + self(13277).getVoiceGatewayProtocolVersion(obj));
+  const webSocket = new WebSocket("" + self.url + "?v=" + self(13350).getVoiceGatewayProtocolVersion(obj));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";
   webSocket.onopen = () => {
@@ -376,7 +376,7 @@ prototype["handleHello"] = function handleHello(d) {
     tmp = require;
     const tmp2 = dependencyMap;
   }
-  const diff = tmp4(4458).now() - self.connectionStartTime;
+  const diff = tmp4(4522).now() - self.connectionStartTime;
   ({ logger, heartbeatInterval } = self);
   if (heartbeatInterval == null) {
     heartbeatInterval = "??";

@@ -1,34 +1,34 @@
-// === Module 5282: getEmojiToGroupId ===
+// === Module 5348: getEmojiToGroupId ===
 
-// Module 5282 (getEmojiToGroupId)
+// Module 5348 (getEmojiToGroupId)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import hooksDefault from "hooks" /* 3979 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5289 */;
-import _modDef5290 from "module_5290" /* 5290 */;
+import hooksDefault from "hooks" /* 4043 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5355 */;
+import _modDef5356 from "module_5356" /* 5356 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "getHash" /* 4293 */;
-import closure_6 from "computeRolesForGuild" /* 5283 */;
+import closure_5 from "getHash" /* 4357 */;
+import closure_6 from "computeRolesForGuild" /* 5349 */;
 import closure_7 from "_getSystemLocale" /* 1996 */;
 import closure_8 from "handleConnectionClosedOrResumed" /* 1340 */;
 import closure_9 from "trackCommunicationDisabled" /* 1992 */;
 import closure_10 from "allGuildIds" /* 1393 */;
 import closure_11 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "insertUnsortedGuilds" /* 5262 */;
+import closure_13 from "insertUnsortedGuilds" /* 5328 */;
 import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import closure_15 from "fromServer" /* 5284 */;
-import closure_16 from "initialize" /* 5285 */;
+import closure_15 from "fromServer" /* 5350 */;
+import closure_16 from "initialize" /* 5351 */;
 import set from "set" /* 1925 */;
 import { NULL_STRING_GUILD_ID } from "ME" /* 676 */;
-import { EmojiCategories } from "EmojiCategoryTypes" /* 5286 */;
+import { EmojiCategories } from "EmojiCategoryTypes" /* 5352 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
-import importDefaultResult from "parseRawEmojiObject" /* 4038 */;
-import importDefaultResult2 from "DEFAULT_FRECENCY" /* 4466 */;
+import importDefaultResult from "parseRawEmojiObject" /* 4102 */;
+import importDefaultResult2 from "DEFAULT_FRECENCY" /* 4530 */;
 
 let resetFrequentlyUsed = arg1;
 function getEmojiToGroupId() {
@@ -75,7 +75,7 @@ function _loadSavedEmojis() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -166,7 +166,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      obj = callback(5322);
+      obj = callback(5388);
       let flag = obj.canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis !== "function") {
         HermesBuiltin.throwTypeError();
@@ -194,7 +194,7 @@ function handleUserSettingsProtoStoreChange() {
     }
   }
   if (null != value) {
-    obj = importDefault(4038);
+    obj = importDefault(4102);
     const result = obj.setDefaultDiversitySurrogate(value);
   }
   EmojiDisambiguations.reset();
@@ -311,7 +311,7 @@ function handleRoleUpdate(guildId) {
   guildId = guildId.guildId;
   role = role.getRole(guildId, guildId.role.id);
   if (null != role) {
-    obj = callback(4016);
+    obj = callback(4080);
     if (obj.isSubscriptionRole(role)) {
       updateGuildEmoji(guildId);
       c33 = null;
@@ -374,7 +374,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(arg0);
       });
       if (!someResult) {
-        let result = callback(5287).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = callback(5353).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -383,7 +383,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        obj = callback(5287);
+        obj = callback(5353);
       }
       tmp6 = someResult;
     }
@@ -796,7 +796,7 @@ prototype2["isFrequentlyUsedReactionEmojiWithoutFetchingLatest"] = function isFr
   if (null != id.id) {
     return frequentlyUsedReactionNamesAndIds.has(id.id);
   } else {
-    let result = importDefault(4038).convertSurrogateToBase(id.surrogates);
+    let result = importDefault(4102).convertSurrogateToBase(id.surrogates);
     if (result == null) {
       result = id;
     }
@@ -948,7 +948,7 @@ let merged = Object.assign({
     return 100;
   },
   lookupKey(id1) {
-    let byName = importDefault(4038).getByName(id1);
+    let byName = importDefault(4102).getByName(id1);
     if (byName == null) {
       const tmp3 = getEmojiToGroupId()[id1];
       let tmp4;
@@ -981,7 +981,7 @@ const merged1 = Object.assign({
     return 100;
   },
   lookupKey(id1) {
-    let byName = importDefault(4038).getByName(id1);
+    let byName = importDefault(4102).getByName(id1);
     if (byName == null) {
       const tmp3 = getEmojiToGroupId()[id1];
       let tmp4;
@@ -1068,7 +1068,7 @@ Object.defineProperty(prototype3, "categories", {
 });
 Object.defineProperty(prototype3, "diversitySurrogate", {
   get: function diversitySurrogate() {
-    let str = importDefault(4038).getDefaultDiversitySurrogate();
+    let str = importDefault(4102).getDefaultDiversitySurrogate();
     if (str == null) {
       str = "";
     }
@@ -1139,7 +1139,7 @@ prototype3["getDisambiguatedEmojiContext"] = function getDisambiguatedEmojiConte
 prototype3["getSearchResultsOrder"] = function getSearchResultsOrder(locked, query, count, intention) {
   closure_0 = intention;
   let formatted = query.toLowerCase();
-  const escapeResult = formatted(4367).escape(formatted);
+  const escapeResult = formatted(4431).escape(formatted);
   let orderByResult = locked;
   if (locked.length > 0) {
     const _RegExp = RegExp;
@@ -1514,9 +1514,9 @@ const emojiStore = new EmojiStore(dispatcherDefault, {
           trackUsage(items1);
         }
       }
-      obj = importDefault(4038);
-      emoji = obj.getByName(importDefault(4038).convertSurrogateToName(optimistic.emoji.name, false));
-      const obj2 = importDefault(4038);
+      obj = importDefault(4102);
+      emoji = obj.getByName(importDefault(4102).convertSurrogateToName(optimistic.emoji.name, false));
+      const obj2 = importDefault(4102);
     } else {
       return false;
     }
@@ -1525,7 +1525,7 @@ const emojiStore = new EmojiStore(dispatcherDefault, {
     trackUsage(emojiUsed.emojiUsed);
   },
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
-    obj = _modDef5290;
+    obj = _modDef5356;
     obj.setEmojiLocale(locale.locale);
     if (settings.settings.type === UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
       if (settings.wasSaved) {

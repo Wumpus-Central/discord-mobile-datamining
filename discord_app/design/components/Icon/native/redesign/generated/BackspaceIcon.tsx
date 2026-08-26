@@ -1,10 +1,10 @@
-// === Module 8925: BackspaceIcon ===
+// === Module 8993: BackspaceIcon ===
 
-// Module 8925 (BackspaceIcon)
+// Module 8993 (BackspaceIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 8926 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 8994 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

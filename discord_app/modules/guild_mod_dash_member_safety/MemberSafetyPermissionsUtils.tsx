@@ -1,13 +1,13 @@
-// === Module 5992: getContextForPermission ===
+// === Module 6058: getContextForPermission ===
 
-// Module 5992 (getContextForPermission)
+// Module 6058 (getContextForPermission)
 import fromStringAll from "fromString" /* 506 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { MemberSafetyPagePermissions as closure_8 } from "MemberSafetyPagePermissions" /* 4029 */;
+import { MemberSafetyPagePermissions as closure_8 } from "MemberSafetyPagePermissions" /* 4093 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

@@ -1,6 +1,6 @@
-// === Module 16175: ChannelSettingsPermissionsOverrides ===
+// === Module 16256: ChannelSettingsPermissionsOverrides ===
 
-// Module 16175 (ChannelSettingsPermissionsOverrides)
+// Module 16256 (ChannelSettingsPermissionsOverrides)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
@@ -10,12 +10,12 @@ import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
 import closure_10 from "ensureGuildLoaded" /* 1391 */;
 import closure_11 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4025 */;
-import closure_14 from "markAllUserIdListsStale" /* 4034 */;
+import closure_13 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_14 from "markAllUserIdListsStale" /* 4098 */;
 import closure_15 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 ({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
@@ -72,7 +72,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -111,7 +111,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   tmp6 = throwTypeErrorResult;
                 }
                 if (tmp6) {
-                  obj1 = fromCreate(4030);
+                  obj1 = fromCreate(4094);
                   everyoneOverwrite = obj1.makeEveryoneOverwrite(throwTypeErrorResult);
                   tmp10 = everyoneOverwrite;
                 }
@@ -121,20 +121,20 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                 obj1.deny = obj3.remove(obj1.deny, throwTypeErrorResult);
                 let obj4 = fromCreate(506);
                 obj1.allow = obj4.remove(obj1.allow, throwTypeErrorResult);
-                if (throwTypeErrorResult === callback(4030).ALLOW) {
+                if (throwTypeErrorResult === callback(4094).ALLOW) {
                   obj1.allow = fromCreate(506).add(obj1.allow, throwTypeErrorResult);
                   const obj9 = fromCreate(506);
                 } else {
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  if (throwTypeErrorResult === callback(4030).DENY) {
+                  if (throwTypeErrorResult === callback(4094).DENY) {
                     throwTypeErrorResult = c5;
                     if (null != c5.guild_id) {
                       if (throwTypeErrorResult) {
                         c4 = 1;
                         c5 = 1;
                         const obj2 = { value: null, done: false };
-                        obj2[0] = callback(9146).checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, throwTypeErrorResult);
+                        obj2[0] = callback(9214).checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, throwTypeErrorResult);
                         return obj2;
                       }
                     }
@@ -147,14 +147,14 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   throwTypeErrorResult = dependencyMap;
                   throwTypeErrorResult = c5;
                   throwTypeErrorResult = closure_1_3;
-                  throwTypeErrorResult = id(4393).updatePermissionOverwrite(c5.id, closure_1_3);
+                  throwTypeErrorResult = id(4457).updatePermissionOverwrite(c5.id, closure_1_3);
                   c5 = 3;
-                  const obj17 = id(4393);
+                  const obj17 = id(4457);
                 } else if (closure_2_13.can(callback, c5)) {
                   if (!closure_1) {
                     if (!obj11.has(closure_1_2.allow, callback)) {
                       if (!obj12.has(closure_1_2.deny, callback)) {
-                        closure_1_6(callback, callback(4030).ALLOW);
+                        closure_1_6(callback, callback(4094).ALLOW);
                       }
                       obj12 = fromCreate(506);
                     }
@@ -165,8 +165,8 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                 if (callback(1955).PermissionOverwriteType.MEMBER === type) {
                   const user = closure_2_15.getUser(fromCreate.id);
                   if (null != user) {
-                    const name2 = id(4224).getName(user);
-                    const obj13 = id(4224);
+                    const name2 = id(4288).getName(user);
+                    const obj13 = id(4288);
                   }
                 } else {
                   throwTypeErrorResult = obj1;
@@ -216,8 +216,8 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   const obj = _undefined(obj1[26]);
                   obj.openURL(_undefined(obj1[27]).getArticleURL(constants.PERMISSIONS_LOCKOUT));
                 };
-                throwTypeErrorResult = id(4744).show(obj4);
-                const obj14 = id(4744);
+                throwTypeErrorResult = id(4808).show(obj4);
+                const obj14 = id(4808);
               }
             } else if (guild_id === 1) {
               c5 = 3;
@@ -229,7 +229,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
               return obj;
             } else if (!arg1) {
               c5 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
             obj5 = fromCreate(506);
             obj1.deny = obj5.add(obj1.deny, callback);
@@ -332,15 +332,15 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     }
   }, items4);
   obj = { variant: "text-md/medium", color: "text-muted", children: null };
-  let obj3 = _require(4574);
+  let obj3 = _require(4638);
   obj[2] = obj3.computeChannelName(stateFromStores, closure_15, closure_14, true);
-  let tmp10 = callback3(_require(4376).Text, obj);
+  let tmp10 = callback3(_require(4440).Text, obj);
   if (fromCreate.type === constants.MEMBER) {
     obj = { userId: null, guildId: null, start: true, end: true, trailing: null };
     obj[0] = id;
     obj[1] = stateFromStores.guild_id;
     obj[4] = tmp10;
-    let tmp9Result = tmp9(id(9845), obj);
+    let tmp9Result = tmp9(id(9912), obj);
   } else {
     role = role.getRole(stateFromStores.guild_id, id);
     let str;
@@ -353,7 +353,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     obj1 = { end: true, label: null, start: true, trailing: null };
     obj1[1] = str;
     obj1[3] = tmp10;
-    tmp9Result = tmp9(_require(5480).TableRow, obj1);
+    tmp9Result = tmp9(_require(5546).TableRow, obj1);
   }
   let obj2 = { style: tmp.container, contentContainerStyle: items5, children: null };
   items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1629)().bottom }];

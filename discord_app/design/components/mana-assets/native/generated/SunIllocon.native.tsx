@@ -1,10 +1,10 @@
-// === Module 6945: SunIllocon ===
+// === Module 7011: SunIllocon ===
 
-// Module 6945 (SunIllocon)
+// Module 7011 (SunIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6946 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 7012 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SunIllocon.native.tsx");

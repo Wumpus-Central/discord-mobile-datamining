@@ -1,8 +1,8 @@
-// === Module 15797: renderChannelPressableWrapper ===
+// === Module 15876: renderChannelPressableWrapper ===
 
-// Module 15797 (renderChannelPressableWrapper)
+// Module 15876 (renderChannelPressableWrapper)
 import noopAll from "noop" /* 19 */;
-import getLayoutStyles from "getLayoutStyles" /* 9951 */;
+import getLayoutStyles from "getLayoutStyles" /* 10018 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 

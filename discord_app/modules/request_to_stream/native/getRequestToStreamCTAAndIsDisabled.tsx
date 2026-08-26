@@ -1,11 +1,11 @@
-// === Module 12833: getRequestToStreamCTAAndIsDisabled ===
+// === Module 12907: getRequestToStreamCTAAndIsDisabled ===
 
-// Module 12833 (getRequestToStreamCTAAndIsDisabled)
+// Module 12907 (getRequestToStreamCTAAndIsDisabled)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2791 */;
-import result2 from "result" /* 11313 */;
-import canFulfillStreamRequest from "canFulfillStreamRequest" /* 11325 */;
+import messagesProxyDefault from "messagesProxy" /* 2823 */;
+import result2 from "result" /* 11385 */;
+import canFulfillStreamRequest from "canFulfillStreamRequest" /* 11397 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 
@@ -23,34 +23,34 @@ export default function getRequestToStreamCTAAndIsDisabled(id) {
   const stringResult = intl.string(messagesProxyDefault["5+172e"]);
   if (tmp9) {
     const intl6 = tmp(1236).intl;
-    let text = intl6.string(tmp6(2791).u4QmWl);
+    let text = intl6.string(tmp6(2823).u4QmWl);
     let isDisabled = true;
   } else if (id.author.id === id) {
     const intl5 = tmp(1236).intl;
-    text = intl5.string(tmp6(2791)["8HU1M2"]);
+    text = intl5.string(tmp6(2823)["8HU1M2"]);
     isDisabled = true;
   } else {
     isDisabled = false;
     text = stringResult;
     if (!tmp3[0]) {
-      if (tmp(11325).StreamRequestUnfulfillableReason.ALREADY_STREAMING === tmp4) {
+      if (tmp(11397).StreamRequestUnfulfillableReason.ALREADY_STREAMING === tmp4) {
         const intl4 = tmp(1236).intl;
-        text = intl4.string(tmp6(2791).P0wwmM);
+        text = intl4.string(tmp6(2823).P0wwmM);
         isDisabled = true;
-      } else if (tmp(11325).StreamRequestUnfulfillableReason.NOT_RUNNING_GAME === tmp4) {
+      } else if (tmp(11397).StreamRequestUnfulfillableReason.NOT_RUNNING_GAME === tmp4) {
         const intl3 = tmp(1236).intl;
-        text = intl3.string(tmp6(2791)["43zohO"]);
+        text = intl3.string(tmp6(2823)["43zohO"]);
         isDisabled = true;
-      } else if (tmp(11325).StreamRequestUnfulfillableReason.NOT_IN_VOICE_CHANNEL === tmp4) {
+      } else if (tmp(11397).StreamRequestUnfulfillableReason.NOT_IN_VOICE_CHANNEL === tmp4) {
         const intl2 = tmp(1236).intl;
-        text = intl2.string(tmp6(2791).qRXats);
+        text = intl2.string(tmp6(2823).qRXats);
         isDisabled = true;
       } else {
         isDisabled = false;
         text = stringResult;
-        if (tmp(11325).StreamRequestUnfulfillableReason.NO_PERMISSION === tmp4) {
+        if (tmp(11397).StreamRequestUnfulfillableReason.NO_PERMISSION === tmp4) {
           const intl7 = tmp(1236).intl;
-          text = intl7.string(tmp6(2791)["fac+eE"]);
+          text = intl7.string(tmp6(2823)["fac+eE"]);
           isDisabled = true;
         }
       }

@@ -1,6 +1,6 @@
-// === Module 8392: getFallbackHeroColor ===
+// === Module 8459: getFallbackHeroColor ===
 
-// Module 8392 (getFallbackHeroColor)
+// Module 8459 (getFallbackHeroColor)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 

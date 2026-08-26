@@ -1,23 +1,23 @@
-// === Module 11110: EmptyCustomizeCommunity ===
+// === Module 11182: EmptyCustomizeCommunity ===
 
-// Module 11110 (EmptyCustomizeCommunity)
+// Module 11182 (EmptyCustomizeCommunity)
 import ThemesDefault from "Themes" /* 712 */;
-import useThemeDefault from "useTheme" /* 4315 */;
-import Text from "Text" /* 4376 */;
-import EmojiDefault from "Emoji" /* 5466 */;
+import useThemeDefault from "useTheme" /* 4379 */;
+import Text from "Text" /* 4440 */;
+import EmojiDefault from "Emoji" /* 5532 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "getEmojiToGroupId" /* 5282 */;
+import closure_7 from "getEmojiToGroupId" /* 5348 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "generateOldThreadCutoff" /* 4395 */;
-import closure_10 from "handleConnectionOpen" /* 4202 */;
-import closure_11 from "handleUpdate" /* 5348 */;
-import serverPromptToClientPrompt from "serverPromptToClientPrompt" /* 5349 */;
+import closure_9 from "generateOldThreadCutoff" /* 4459 */;
+import closure_10 from "handleConnectionOpen" /* 4266 */;
+import closure_11 from "handleUpdate" /* 5414 */;
+import serverPromptToClientPrompt from "serverPromptToClientPrompt" /* 5415 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 4590 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 4654 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
-import importDefaultResult from "createTextStyle" /* 5342 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
+import importDefaultResult from "createTextStyle" /* 5408 */;
 
 require = arg1;
 function EmptyCustomizeCommunity(setTab) {
@@ -29,7 +29,7 @@ function EmptyCustomizeCommunity(setTab) {
   const items = [closure_10];
   importDefault = obj1.useStateFromStores(items, () => guildId.getGuildId());
   obj = { style: tmp.emptyContainer, children: null };
-  obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useThemeDefault()) ? 11111 : 11112) };
+  obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useThemeDefault()) ? 11183 : 11184) };
   const items1 = [closure_16(closure_5, obj), , ];
   obj1 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1236).intl;
@@ -44,7 +44,7 @@ function EmptyCustomizeCommunity(setTab) {
       }
     }
   });
-  items1[2] = closure_16(setTab(4376).Text, obj2);
+  items1[2] = closure_16(setTab(4440).Text, obj2);
   obj[1] = items1;
   return closure_17(closure_4, obj);
 }
@@ -134,11 +134,11 @@ function ConnectionsPrompt(guildId) {
     obj[0] = tmp.connectionsTitle;
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t.eDVMrA);
-    const items1 = [callback(tmp2(4376).Text, obj), , ];
+    const items1 = [callback(tmp2(4440).Text, obj), , ];
     obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl2 = tmp2(1236).intl;
     obj1[2] = intl2.string(tmp2(1236).t.BozOXu);
-    items1[1] = callback(tmp2(4376).Text, obj1);
+    items1[1] = callback(tmp2(4440).Text, obj1);
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.connectionsContainer;
     obj2[1] = stateFromStores.map((connection) => {
@@ -216,7 +216,7 @@ function DropdownOption(option) {
     tmp11 = importDefault;
     const tmp12 = EmojiDefault;
   }
-  const items1 = [tmp10Result, callback(option(4376).Text, { variant: "text-md/semibold", children: option.title })];
+  const items1 = [tmp10Result, callback(option(4440).Text, { variant: "text-md/semibold", children: option.title })];
   obj[1] = items1;
   return closure_17(closure_4, obj);
 }
@@ -484,7 +484,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(11113)(guildId);
+  const tmp7 = stateFromStores(11185)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);
@@ -545,7 +545,7 @@ export default function CustomizeCommunity(guildId) {
       const obj6 = { count: null };
       obj6[0] = newOnboardingPrompts.length + newAnswersCount;
       obj5[3] = intl.format(tmp4(1236).t.iB5Gqe, obj6);
-      const items5 = [callback(tmp4(4376).Text, obj5), newOnboardingPrompts.map(callback), onboardingPromptsWithNewAnswers.map(callback), ];
+      const items5 = [callback(tmp4(4440).Text, obj5), newOnboardingPrompts.map(callback), onboardingPromptsWithNewAnswers.map(callback), ];
       const obj7 = { style: null };
       obj7[0] = tmp.sectionSeparator;
       items5[3] = callback(closure_4, obj7);
@@ -560,11 +560,11 @@ export default function CustomizeCommunity(guildId) {
       obj9[0] = tmp.sheetTitle;
       const intl2 = tmp4(1236).intl;
       obj9[3] = intl2.string(tmp4(1236).t.BGkaer);
-      const items7 = [callback(tmp4(4376).Text, obj9), , ];
+      const items7 = [callback(tmp4(4440).Text, obj9), , ];
       const obj10 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl3 = tmp4(1236).intl;
       obj10[2] = intl3.string(tmp4(1236).t.r6Vm8T);
-      items7[1] = callback(tmp4(4376).Text, obj10);
+      items7[1] = callback(tmp4(4440).Text, obj10);
       items7[2] = onboardingPrompts.map(callback);
       obj8[0] = items7;
       tmp24Result = tmp24(closure_18, obj8);

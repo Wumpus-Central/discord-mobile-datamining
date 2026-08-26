@@ -1,6 +1,6 @@
-// === Module 15910: GUILD_FEED_CARD_MARGIN_HORIZONTAL ===
+// === Module 15989: GUILD_FEED_CARD_MARGIN_HORIZONTAL ===
 
-// Module 15910 (GUILD_FEED_CARD_MARGIN_HORIZONTAL)
+// Module 15989 (GUILD_FEED_CARD_MARGIN_HORIZONTAL)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_home/native/GuildFeedConstants.tsx");

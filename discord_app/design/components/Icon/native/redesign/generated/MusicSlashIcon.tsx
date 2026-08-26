@@ -1,10 +1,10 @@
-// === Module 10874: MusicSlashIcon ===
+// === Module 10946: MusicSlashIcon ===
 
-// Module 10874 (MusicSlashIcon)
+// Module 10946 (MusicSlashIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 10875 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 10947 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

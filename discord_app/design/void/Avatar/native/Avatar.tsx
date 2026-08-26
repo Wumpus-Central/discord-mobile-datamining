@@ -1,34 +1,34 @@
-// === Module 13571: getStatusSize ===
+// === Module 13644: getStatusSize ===
 
-// Module 13571 (getStatusSize)
+// Module 13644 (getStatusSize)
 import ThemesDefault from "Themes" /* 712 */;
-import getDecorationSizeForAvatarSize from "getDecorationSizeForAvatarSize" /* 8414 */;
-import StaticNativeCutoutAvatarImage from "StaticNativeCutoutAvatarImage" /* 12510 */;
+import getDecorationSizeForAvatarSize from "getDecorationSizeForAvatarSize" /* 8481 */;
+import StaticNativeCutoutAvatarImage from "StaticNativeCutoutAvatarImage" /* 12581 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { StatusTypes } from "ME" /* 676 */;
 import STATUS_PADDING from "STATUS_PADDING" /* 1298 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function getStatusSize(arg0) {
   if (StaticNativeCutoutAvatarImage.AvatarSizes.XXSMALL !== arg0) {
-    if (tmp(12510).AvatarSizes.XSMALL !== arg0) {
-      if (tmp(12510).AvatarSizes.XSMALL_20 !== arg0) {
-        if (tmp(12510).AvatarSizes.SMALL !== arg0) {
-          if (tmp(12510).AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
+    if (tmp(12581).AvatarSizes.XSMALL !== arg0) {
+      if (tmp(12581).AvatarSizes.XSMALL_20 !== arg0) {
+        if (tmp(12581).AvatarSizes.SMALL !== arg0) {
+          if (tmp(12581).AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
             return closure_7.REFRESH_MEDIUM_10;
           } else {
-            if (tmp(12510).AvatarSizes.NORMAL !== arg0) {
-              if (tmp(12510).AvatarSizes.TABS_22 !== arg0) {
-                if (tmp(12510).AvatarSizes.LARGE !== arg0) {
-                  if (tmp(12510).AvatarSizes.LARGE_48 !== arg0) {
-                    if (tmp(12510).AvatarSizes.XLARGE !== arg0) {
-                      if (tmp(12510).AvatarSizes.XLARGE_72 !== arg0) {
-                        if (tmp(12510).AvatarSizes.XXLARGE !== arg0) {
-                          if (tmp(12510).AvatarSizes.PROFILE !== arg0) {
-                            if (tmp(12510).AvatarSizes.YOUBAR_60 !== arg0) {
+            if (tmp(12581).AvatarSizes.NORMAL !== arg0) {
+              if (tmp(12581).AvatarSizes.TABS_22 !== arg0) {
+                if (tmp(12581).AvatarSizes.LARGE !== arg0) {
+                  if (tmp(12581).AvatarSizes.LARGE_48 !== arg0) {
+                    if (tmp(12581).AvatarSizes.XLARGE !== arg0) {
+                      if (tmp(12581).AvatarSizes.XLARGE_72 !== arg0) {
+                        if (tmp(12581).AvatarSizes.XXLARGE !== arg0) {
+                          if (tmp(12581).AvatarSizes.PROFILE !== arg0) {
+                            if (tmp(12581).AvatarSizes.YOUBAR_60 !== arg0) {
                               return null;
                             }
                           }

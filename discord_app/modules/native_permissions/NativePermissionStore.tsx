@@ -1,12 +1,12 @@
-// === Module 4969: initialize ===
+// === Module 5035: initialize ===
 
-// Module 4969 (initialize)
+// Module 5035 (initialize)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4618 */;
+import NativePermissionStatus from "NativePermissionStatus" /* 4682 */;
 
 const NativePermissionStates = NativePermissionStatus.NativePermissionStates;
 const AnalyticEvents = ME.AnalyticEvents;

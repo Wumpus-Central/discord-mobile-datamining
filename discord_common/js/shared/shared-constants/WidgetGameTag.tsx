@@ -1,6 +1,6 @@
-// === Module 7238: WidgetGameTag ===
+// === Module 7304: WidgetGameTag ===
 
-// Module 7238 (WidgetGameTag)
+// Module 7304 (WidgetGameTag)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/WidgetGameTag.tsx");

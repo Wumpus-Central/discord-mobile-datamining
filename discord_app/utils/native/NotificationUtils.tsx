@@ -1,12 +1,12 @@
-// === Module 11982: ? ===
+// === Module 12055: ? ===
 
-// Module 11982
+// Module 12055
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import createSoundForPack from "createSoundForPack" /* 9935 */;
-import NativeModulesDefault from "NativeModules" /* 10861 */;
+import createSoundForPack from "createSoundForPack" /* 10002 */;
+import NativeModulesDefault from "NativeModules" /* 10933 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import { PermissionStateType } from "set" /* 11973 */;
+import { PermissionStateType } from "set" /* 12046 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;
@@ -27,8 +27,8 @@ export default {
   },
   requestPermission(arg0) {
     const _require = arg0;
-    let result = _require(11976).setPushPermissionState(PermissionStateType.REQUESTED);
-    let obj = _require(11976);
+    let result = _require(12049).setPushPermissionState(PermissionStateType.REQUESTED);
+    let obj = _require(12049);
     expandEventPropertiesDefault.track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
     const obj2 = expandEventPropertiesDefault;
     const permissions = NativeModulesDefault.requestPermissions();
@@ -73,7 +73,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -88,7 +88,7 @@ export default {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp4) {
           c0 = tmp;

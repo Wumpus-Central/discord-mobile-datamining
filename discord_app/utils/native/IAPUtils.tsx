@@ -1,18 +1,18 @@
-// === Module 7564: serializePurchaseResponse ===
+// === Module 7630: serializePurchaseResponse ===
 
-// Module 7564 (serializePurchaseResponse)
+// Module 7630 (serializePurchaseResponse)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import set2 from "set" /* 500 */;
 import v1 from "v1" /* 514 */;
 import getConstantsAll from "getConstants" /* 1626 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4359 */;
-import productSK2ToIAPProductDefault from "productSK2ToIAPProduct" /* 7584 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 7585 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4423 */;
+import productSK2ToIAPProductDefault from "productSK2ToIAPProduct" /* 7650 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 7651 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4078 */;
+import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4142 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "updateProduct" /* 5965 */;
+import closure_7 from "updateProduct" /* 6031 */;
 import ME from "ME" /* 676 */;
 import { NAMESPACE_SNOWFLAKE_UUID } from "GuildFeatures" /* 1924 */;
 import set from "set" /* 500 */;
@@ -53,7 +53,7 @@ function _restorePurchases() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -276,7 +276,7 @@ function _fetchStoreFront() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -299,7 +299,7 @@ function _fetchStoreFront() {
               c4 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(7565).getStorefront();
+              obj1[0] = closure_1_0(7631).getStorefront();
               return obj1;
             } else {
               c5 = 3;
@@ -309,7 +309,7 @@ function _fetchStoreFront() {
         } else if (1 === tmp7) {
           dependencyMap = 0;
           closure_1 = closure_2;
-          obj1 = callback(4058);
+          obj1 = callback(4122);
           const result = obj1.captureBillingException(closure_1);
           c5 = 3;
           return { value: null, done: true };
@@ -352,17 +352,17 @@ function _fetchStoreFront() {
 }
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = ME);
 ({ InAppUtils: unpackModuleId, RNIapIosSk2: closure_12 } = require("get ActivityIndicator").NativeModules);
-let items = [require("module_7565").ErrorCode.E_USER_CANCELLED, ME.StoreKitErrors.PAYMENT_CANCELED];
+let items = [require("module_7631").ErrorCode.E_USER_CANCELLED, ME.StoreKitErrors.PAYMENT_CANCELED];
 let set = new Set(items);
 new timestampDefault("IAPUtils.tsx");
 let _default = {
   loadProducts() {
     if (obj.isIOS()) {
       const _Object = Object;
-      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(5968).ProductIds)), ];
+      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(6034).ProductIds)), ];
       const obj2 = productSK2ToIAPProductDefault;
       const _Object2 = Object;
-      items[1] = productSK2ToIAPProductDefault.fetchProducts(Object.values(tmp(5968).ProductIds));
+      items[1] = productSK2ToIAPProductDefault.fetchProducts(Object.values(tmp(6034).ProductIds));
       const obj3 = productSK2ToIAPProductDefault;
       let nextPromise = _Promise.all(items).then((arg0) => {
         [r10007, tmp] = arg0;
@@ -408,7 +408,7 @@ let _default = {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -612,7 +612,7 @@ export const makeIAPRequest = function makeIAPRequest(c1, arg1, closure_3) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

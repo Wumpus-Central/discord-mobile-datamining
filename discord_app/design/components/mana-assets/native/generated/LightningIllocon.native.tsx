@@ -1,10 +1,10 @@
-// === Module 6647: LightningIllocon ===
+// === Module 6713: LightningIllocon ===
 
-// Module 6647 (LightningIllocon)
+// Module 6713 (LightningIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6648 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 6714 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/LightningIllocon.native.tsx");

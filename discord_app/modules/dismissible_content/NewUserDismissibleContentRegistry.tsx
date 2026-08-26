@@ -1,6 +1,6 @@
-// === Module 4223: useNewUserDismissibleContent ===
+// === Module 4287: useNewUserDismissibleContent ===
 
-// Module 4223 (useNewUserDismissibleContent)
+// Module 4287 (useNewUserDismissibleContent)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import setDefault from "set" /* 687 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;

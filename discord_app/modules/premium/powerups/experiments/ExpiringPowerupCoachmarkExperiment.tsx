@@ -1,6 +1,6 @@
-// === Module 12067: useExpiringPowerupCoachmarkEnabled ===
+// === Module 12140: useExpiringPowerupCoachmarkEnabled ===
 
-// Module 12067 (useExpiringPowerupCoachmarkEnabled)
+// Module 12140 (useExpiringPowerupCoachmarkEnabled)
 import getUnitIdDefault from "getUnitId" /* 1368 */;
 
 const tmp2 = getUnitIdDefault({ name: "2026-02-expiring-powerup-coachmark", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

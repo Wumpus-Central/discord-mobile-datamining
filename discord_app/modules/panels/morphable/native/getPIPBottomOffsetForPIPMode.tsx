@@ -1,8 +1,8 @@
-// === Module 16256: PIP_WINDOW_OFFSET ===
+// === Module 16337: PIP_WINDOW_OFFSET ===
 
-// Module 16256 (PIP_WINDOW_OFFSET)
+// Module 16337 (PIP_WINDOW_OFFSET)
 import set from "set" /* 2 */;
-import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 11842 */;
+import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 11915 */;
 
 const PIP_WINDOW_OFFSET = MIN_PAN_GESTURE_MOVE.PIP_WINDOW_OFFSET;
 const fn = function _(arg0) {

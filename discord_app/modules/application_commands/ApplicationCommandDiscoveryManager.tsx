@@ -1,6 +1,6 @@
-// === Module 11964: useCommandDiscoveryManager ===
+// === Module 12037: useCommandDiscoveryManager ===
 
-// Module 11964 (useCommandDiscoveryManager)
+// Module 12037 (useCommandDiscoveryManager)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 

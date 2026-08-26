@@ -1,15 +1,15 @@
-// === Module 15975: PX_8 ===
+// === Module 16056: PX_8 ===
 
-// Module 15975 (PX_8)
+// Module 16056 (PX_8)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "prototype" /* 11906 */;
+import closure_5 from "prototype" /* 11979 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import useChannelDetailsStore from "useChannelDetailsStore" /* 8552 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9819 */;
+import useChannelDetailsStore from "useChannelDetailsStore" /* 8620 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9886 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 let c3 = importAllResult;

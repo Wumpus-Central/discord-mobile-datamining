@@ -1,6 +1,6 @@
-// === Module 11264: ForwardFailedAlertModal ===
+// === Module 11336: ForwardFailedAlertModal ===
 
-// Module 11264 (ForwardFailedAlertModal)
+// Module 11336 (ForwardFailedAlertModal)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

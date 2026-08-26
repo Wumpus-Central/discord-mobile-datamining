@@ -1,6 +1,6 @@
-// === Module 8647: useStableCallback ===
+// === Module 8715: useStableCallback ===
 
-// Module 8647 (useStableCallback)
+// Module 8715 (useStableCallback)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/hooks/useStableCallback.tsx");

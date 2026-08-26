@@ -1,10 +1,10 @@
-// === Module 8667: showInvalidUsernameToast ===
+// === Module 8735: showInvalidUsernameToast ===
 
-// Module 8667 (showInvalidUsernameToast)
+// Module 8735 (showInvalidUsernameToast)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4098 */;
-import registerAssetDefault from "registerAsset" /* 8178 */;
+import dispatcherDefault from "dispatcher" /* 4162 */;
+import registerAssetDefault from "registerAsset" /* 8245 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/account/native/showInvalidUsernameToastNative.tsx");
 

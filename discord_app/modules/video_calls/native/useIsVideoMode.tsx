@@ -1,12 +1,12 @@
-// === Module 10931: useIsVideoMode ===
+// === Module 11003: useIsVideoMode ===
 
-// Module 10931 (useIsVideoMode)
+// Module 11003 (useIsVideoMode)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "reset" /* 4402 */;
+import closure_2 from "reset" /* 4466 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4495 */;
 import closure_5 from "handleConnectionOpen" /* 1981 */;
-import closure_6 from "updateVoiceState" /* 4399 */;
+import closure_6 from "updateVoiceState" /* 4463 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");

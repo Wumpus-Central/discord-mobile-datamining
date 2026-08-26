@@ -1,12 +1,12 @@
-// === Module 7890: noop ===
+// === Module 7957: noop ===
 
-// Module 7890 (noop)
-import _mod5730 from "module_5730" /* 5730 */;
+// Module 7957 (noop)
+import _mod5796 from "module_5796" /* 5796 */;
 import importAllResult from "noop" /* 19 */;
 import { RefreshControl } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import set from "set" /* 500 */;
-import importDefaultResult from "module_4120" /* 4120 */;
+import importDefaultResult from "module_4184" /* 4184 */;
 
 require = arg1;
 let c3 = importAllResult;
@@ -20,9 +20,9 @@ function noop() {
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj = { maintainVisibleContentPosition: obj, ref };
   const merged = Object.assign(arg0);
-  return jsx(_mod5730.FlashList, { maintainVisibleContentPosition: obj, ref });
+  return jsx(_mod5796.FlashList, { maintainVisibleContentPosition: obj, ref });
 });
-let closure_8 = importDefaultResult.createAnimatedComponent(require("module_5730").FlashList);
+let closure_8 = importDefaultResult.createAnimatedComponent(require("module_5796").FlashList);
 const forwardRefResult1 = importAllResult.forwardRef((arg0, ref) => {
   obj = { maintainVisibleContentPosition: obj, ref };
   const merged = Object.assign(arg0);
@@ -32,9 +32,9 @@ const forwardRefResult2 = importAllResult.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0, Object.create(null));
   obj = { ref, maintainVisibleContentPosition: obj, masonry: true };
   const merged1 = Object.assign(merged);
-  return jsx(_mod5730.FlashList, { ref, maintainVisibleContentPosition: obj, masonry: true });
+  return jsx(_mod5796.FlashList, { ref, maintainVisibleContentPosition: obj, masonry: true });
 });
-let closure_9 = importDefaultResult.createAnimatedComponent(require("module_5730").FlashList);
+let closure_9 = importDefaultResult.createAnimatedComponent(require("module_5796").FlashList);
 const importDefaultResult1 = importDefaultResult;
 const forwardRefResult3 = importAllResult.forwardRef((arg0, ref) => {
   ({ preventNativeModalDismiss, refreshControl } = arg0);
@@ -59,12 +59,12 @@ const forwardRefResult3 = importAllResult.forwardRef((arg0, ref) => {
   obj = { ref, maintainVisibleContentPosition: obj };
   const merged1 = Object.assign(merged);
   obj.refreshControl = memo;
-  return jsx(refreshControl(5729), { ref, maintainVisibleContentPosition: obj });
+  return jsx(refreshControl(5795), { ref, maintainVisibleContentPosition: obj });
 });
 const result = set.fileFinishedImporting("../discord_common/js/packages/flash-list/index.js");
-for (const key10063 in require("module_5730")) {
+for (const key10063 in require("module_5796")) {
   let tmp8 = key10063;
-  arg5[key10063] = require("module_5730")[key10063];
+  arg5[key10063] = require("module_5796")[key10063];
   continue;
 }
 
@@ -94,7 +94,7 @@ export const BottomSheetMasonryFlashList = importAllResult.forwardRef((arg0, ref
     }
     return tmp2;
   }, items);
-  obj[3] = preventNativeModalDismiss(5505).BottomSheetScrollView;
+  obj[3] = preventNativeModalDismiss(5571).BottomSheetScrollView;
   const merged1 = Object.assign(merged);
   obj.refreshControl = memo;
   return <closure_9 ref={arg1} maintainVisibleContentPosition={obj} masonry renderScrollComponent={null} />;

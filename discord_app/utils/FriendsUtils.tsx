@@ -1,6 +1,6 @@
-// === Module 9395: validateDiscordTag ===
+// === Module 9463: validateDiscordTag ===
 
-// Module 9395 (validateDiscordTag)
+// Module 9463 (validateDiscordTag)
 import _modDef38 from "module_38" /* 38 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
@@ -22,9 +22,9 @@ function validateDiscordTag(arr) {
       }
       obj[2] = str2.length;
       obj[3] = tmp4[0].length;
-      let tmp5Result = tmp5(9085);
+      let tmp5Result = tmp5(9153);
       obj[4] = tmp5Result.isEmail(arr);
-      tmp5Result = tmp5(9085);
+      tmp5Result = tmp5(9153);
       obj[5] = tmp5Result.isInvite(arr);
       obj[6] = regex.test(arr);
       obj.track(constants2.FRIEND_REQUEST_FAILED, obj);

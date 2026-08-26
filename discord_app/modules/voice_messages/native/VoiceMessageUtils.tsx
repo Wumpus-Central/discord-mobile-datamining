@@ -1,17 +1,17 @@
-// === Module 11824: _startAudioRecording ===
+// === Module 11897: _startAudioRecording ===
 
-// Module 11824 (_startAudioRecording)
+// Module 11897 (_startAudioRecording)
 import timestampDefault from "timestamp" /* 3 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import set from "set" /* 500 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import HapticFeedbackTypes2 from "HapticFeedbackTypes" /* 4348 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4479 */;
-import downsampleWaveformDefault from "downsampleWaveform" /* 11825 */;
+import HapticFeedbackTypes2 from "HapticFeedbackTypes" /* 4412 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4543 */;
+import downsampleWaveformDefault from "downsampleWaveform" /* 11898 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4431 */;
-import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus" /* 11528 */;
-import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11529 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4495 */;
+import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus" /* 11600 */;
+import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11601 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import importDefaultResult from "apply" /* 12 */;
 
@@ -35,7 +35,7 @@ function _startAudioRecording() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -96,14 +96,14 @@ function _startAudioRecording() {
             if (state.getState().recordingId !== callback) {
               store = 0;
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               callback2(constants.STARTED);
               const _Date = Date;
               callback3(Date.now());
               store = 0;
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           }
         } catch (tmp22) {
@@ -170,7 +170,7 @@ function _endAudioRecording() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -263,7 +263,7 @@ function _stopAndCacheAudioRecording() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -301,7 +301,7 @@ function _stopAndCacheAudioRecording() {
           mediaEngine.removeListener(callback(table[9]).MediaEngineEvent.VoiceActivity, closure_21);
           callback2(callback);
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp18) {
         c3 = tmp;

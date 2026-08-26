@@ -1,6 +1,6 @@
-// === Module 15625: MAX_DISPLAYED_UPSELL_GUILDS ===
+// === Module 15704: MAX_DISPLAYED_UPSELL_GUILDS ===
 
-// Module 15625 (MAX_DISPLAYED_UPSELL_GUILDS)
+// Module 15704 (MAX_DISPLAYED_UPSELL_GUILDS)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesConstants.tsx");

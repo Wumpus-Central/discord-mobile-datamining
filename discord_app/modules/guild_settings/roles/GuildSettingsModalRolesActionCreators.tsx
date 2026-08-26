@@ -1,6 +1,6 @@
-// === Module 16963: updateGuildRole ===
+// === Module 17048: updateGuildRole ===
 
-// Module 16963 (updateGuildRole)
+// Module 17048 (updateGuildRole)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
@@ -34,7 +34,7 @@ function _updateGuildRole() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -106,7 +106,7 @@ function _updateGuildRole() {
             return obj5;
           } else {
             closure_7 = arg1;
-            obj = callback2(6047);
+            obj = callback2(6113);
             const result = obj.checkGuildTemplateDirty(callback);
             c5 = 3;
             const obj6 = { value: null, done: true };

@@ -1,8 +1,8 @@
-// === Module 10740: useIsActivityFocused ===
+// === Module 10812: useIsActivityFocused ===
 
-// Module 10740 (useIsActivityFocused)
-import sortKey from "sortKey" /* 10726 */;
-import closure_2 from "getParticipants" /* 4396 */;
+// Module 10812 (useIsActivityFocused)
+import sortKey from "sortKey" /* 10798 */;
+import closure_2 from "getParticipants" /* 4460 */;
 import closure_3 from "participantFromServer" /* 1390 */;
 
 require = arg1;

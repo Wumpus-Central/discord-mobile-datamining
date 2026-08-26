@@ -1,19 +1,19 @@
-// === Module 13927: getCapabilitiesForSocket ===
+// === Module 14000: getCapabilitiesForSocket ===
 
-// Module 13927 (getCapabilitiesForSocket)
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9303 */;
-import prototypeDefault from "prototype" /* 10824 */;
-import apexExperimentDefault from "apexExperiment" /* 13296 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 13930 */;
-import closure_3 from "isFramePooled" /* 13928 */;
-import closure_4 from "map" /* 10677 */;
+// Module 14000 (getCapabilitiesForSocket)
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9371 */;
+import prototypeDefault from "prototype" /* 10896 */;
+import apexExperimentDefault from "apexExperiment" /* 13369 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14003 */;
+import closure_3 from "isFramePooled" /* 14001 */;
+import closure_4 from "map" /* 10749 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4431 */;
-import closure_7 from "createRTCConnection" /* 4454 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_7 from "createRTCConnection" /* 4518 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "updateVoiceState" /* 4399 */;
+import closure_9 from "updateVoiceState" /* 4463 */;
 import { RPCErrors } from "ME" /* 676 */;
-import DesktopSources from "DesktopSources" /* 4444 */;
+import DesktopSources from "DesktopSources" /* 4508 */;
 import set from "set" /* 2 */;
 
 let set = arg1;
@@ -223,13 +223,13 @@ prototype["update"] = function update(id, id, arg2, arr) {
               obj.add(user_id);
               obj = { userId: null, position: null };
               obj[0] = user_id;
-              obj[1] = callback(13929).toListenerRelativePosition(callback, user_id.position);
+              obj[1] = callback(14002).toListenerRelativePosition(callback, user_id.position);
               return obj;
             }
           }
         }
         obj = { errorCode: closure_1_10.INVALID_PAYLOAD };
-        let tmp6 = set(10824);
+        let tmp6 = set(10896);
         tmp6 = new tmp6(obj, "Invalid spatial voice source " + user_id.user_id);
         throw tmp6;
       });

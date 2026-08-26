@@ -1,6 +1,6 @@
-// === Module 11742: getFirstInvalidOption ===
+// === Module 11815: getFirstInvalidOption ===
 
-// Module 11742 (getFirstInvalidOption)
+// Module 11815 (getFirstInvalidOption)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/application_commands/native/ApplicationCommandValidationUtils.tsx");

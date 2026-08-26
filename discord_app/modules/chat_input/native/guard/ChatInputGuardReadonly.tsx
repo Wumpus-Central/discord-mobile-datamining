@@ -1,16 +1,16 @@
-// === Module 12027: sortChannelsByLastMessageId ===
+// === Module 12100: sortChannelsByLastMessageId ===
 
-// Module 12027 (sortChannelsByLastMessageId)
+// Module 12100 (sortChannelsByLastMessageId)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import { isTextChannel } from "createChannelRecord" /* 1395 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "comparator" /* 1982 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "comparator" /* 1982 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4025 */;
-import closure_8 from "generateOldThreadCutoff" /* 4395 */;
-import closure_9 from "markAllUserIdListsStale" /* 4034 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_8 from "generateOldThreadCutoff" /* 4459 */;
+import closure_9 from "markAllUserIdListsStale" /* 4098 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import { TextAreaCta } from "TextAreaCta" /* 11530 */;
+import { TextAreaCta } from "TextAreaCta" /* 11602 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;

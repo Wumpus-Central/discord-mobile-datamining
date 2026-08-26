@@ -1,15 +1,15 @@
-// === Module 14647: QUEST_DOCK_EXPANDED_HEIGHT ===
+// === Module 14720: QUEST_DOCK_EXPANDED_HEIGHT ===
 
-// Module 14647 (QUEST_DOCK_EXPANDED_HEIGHT)
+// Module 14720 (QUEST_DOCK_EXPANDED_HEIGHT)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
-import { QuestDockMode } from "QuestsExperimentLocations" /* 5268 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14545 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import { QuestDockMode } from "QuestsExperimentLocations" /* 5334 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14618 */;
 import { VerticalGradient } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 let c4 = importAllResult;

@@ -1,10 +1,10 @@
-// === Module 8354: InstagramNeutralIcon ===
+// === Module 8421: InstagramNeutralIcon ===
 
-// Module 8354 (InstagramNeutralIcon)
+// Module 8421 (InstagramNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 8355 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 8422 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

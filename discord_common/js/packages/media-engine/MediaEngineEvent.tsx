@@ -1,6 +1,6 @@
-// === Module 4552: MediaEngineEvent ===
+// === Module 4616: MediaEngineEvent ===
 
-// Module 4552 (MediaEngineEvent)
+// Module 4616 (MediaEngineEvent)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/MediaEngineEvent.tsx");

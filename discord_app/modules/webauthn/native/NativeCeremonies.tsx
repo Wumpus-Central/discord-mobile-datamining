@@ -1,6 +1,6 @@
-// === Module 8633: _promptForRegisterCredential ===
+// === Module 8701: _promptForRegisterCredential ===
 
-// Module 8633 (_promptForRegisterCredential)
+// Module 8701 (_promptForRegisterCredential)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -24,7 +24,7 @@ function _promptForRegisterCredential() {
           obj[0] = credential;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -181,7 +181,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

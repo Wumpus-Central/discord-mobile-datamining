@@ -1,13 +1,13 @@
-// === Module 12237: _requestAndSyncContacts ===
+// === Module 12309: _requestAndSyncContacts ===
 
-// Module 12237 (_requestAndSyncContacts)
+// Module 12309 (_requestAndSyncContacts)
 import Storage3 from "Storage" /* 595 */;
-import initializeDefault from "initialize" /* 5367 */;
+import initializeDefault from "initialize" /* 5433 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "set" /* 5106 */;
+import closure_3 from "set" /* 5172 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import setStoredContacts from "setStoredContacts" /* 12235 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12234 */;
+import setStoredContacts from "setStoredContacts" /* 12307 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12306 */;
 import { PlatformTypes } from "ME" /* 676 */;
 
 require = arg1;
@@ -25,7 +25,7 @@ function _requestAndSyncContacts() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ function _requestAndSyncContacts() {
             if (null == phone) {
               currentUser = 0;
               v02 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               v0 = 2;
               v02 = 1;

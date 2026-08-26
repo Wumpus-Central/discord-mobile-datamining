@@ -1,10 +1,10 @@
-// === Module 4907: TextWarningIcon ===
+// === Module 4973: TextWarningIcon ===
 
-// Module 4907 (TextWarningIcon)
+// Module 4973 (TextWarningIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 4881 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 4947 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

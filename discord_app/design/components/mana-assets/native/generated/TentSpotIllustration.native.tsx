@@ -1,10 +1,10 @@
-// === Module 6957: TentSpotIllustration ===
+// === Module 7023: TentSpotIllustration ===
 
-// Module 6957 (TentSpotIllustration)
+// Module 7023 (TentSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6958 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 7024 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/TentSpotIllustration.native.tsx");

@@ -1,14 +1,14 @@
-// === Module 8469: GridAvatar ===
+// === Module 8536: GridAvatar ===
 
-// Module 8469 (GridAvatar)
+// Module 8536 (GridAvatar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
-import closure_4 from "sortActivity" /* 4469 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_4 from "sortActivity" /* 4533 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function GridAvatar(user) {
@@ -34,7 +34,7 @@ function GridAvatar(user) {
   obj[3] = size;
   if (undefined !== pendingAvatarSrc) {
     obj = { source: null };
-    const tmp2Result = tmp2(8457);
+    const tmp2Result = tmp2(8524);
     obj[0] = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
     const merged = Object.assign(obj);
     obj1 = obj;

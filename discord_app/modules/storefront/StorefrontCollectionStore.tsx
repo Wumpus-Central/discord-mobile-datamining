@@ -1,6 +1,6 @@
-// === Module 12373: getFetchState ===
+// === Module 12445: getFetchState ===
 
-// Module 12373 (getFetchState)
+// Module 12445 (getFetchState)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

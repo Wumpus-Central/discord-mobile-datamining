@@ -1,10 +1,10 @@
-// === Module 13913: items2 ===
+// === Module 13986: items2 ===
 
-// Module 13913 (items2)
+// Module 13986 (items2)
 import set from "set" /* 2 */;
-import messagesProxyDefault from "messagesProxy" /* 2631 */;
-import NotifSettings from "NotifSettings" /* 13914 */;
-import NotifTypes from "NotifTypes" /* 13915 */;
+import messagesProxyDefault from "messagesProxy" /* 2663 */;
+import NotifSettings from "NotifSettings" /* 13987 */;
+import NotifTypes from "NotifTypes" /* 13988 */;
 
 let obj = { badge: true, visibility: "popup", vibrate: true, sound: true };
 obj = { badge: true, visibility: "default", vibrate: true, sound: true };

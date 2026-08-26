@@ -1,12 +1,12 @@
-// === Module 10978: getXboxURIForChannel ===
+// === Module 11050: getXboxURIForChannel ===
 
-// Module 10978 (getXboxURIForChannel)
-import computeChannelName from "computeChannelName" /* 4574 */;
+// Module 11050 (getXboxURIForChannel)
+import computeChannelName from "computeChannelName" /* 4638 */;
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4431 */;
-import closure_4 from "markAllUserIdListsStale" /* 4034 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_4 from "markAllUserIdListsStale" /* 4098 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 10579 */;
+import XBOX_URL_BASE from "XBOX_URL_BASE" /* 10647 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

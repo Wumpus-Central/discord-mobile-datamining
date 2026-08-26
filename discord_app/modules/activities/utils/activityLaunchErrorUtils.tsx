@@ -1,9 +1,9 @@
-// === Module 10697: _getActivityLaunchErrorInfo ===
+// === Module 10769: _getActivityLaunchErrorInfo ===
 
-// Module 10697 (_getActivityLaunchErrorInfo)
+// Module 10769 (_getActivityLaunchErrorInfo)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 7732 */;
-import { DevShelfFetchState } from "initialize" /* 7732 */;
+import closure_4 from "initialize" /* 7798 */;
+import { DevShelfFetchState } from "initialize" /* 7798 */;
 import { AbortCodes } from "ME" /* 676 */;
 
 const require = arg1;
@@ -26,7 +26,7 @@ function _getActivityLaunchErrorInfo() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

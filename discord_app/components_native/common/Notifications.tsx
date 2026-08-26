@@ -1,10 +1,10 @@
-// === Module 9906: Notifications ===
+// === Module 9973: Notifications ===
 
-// Module 9906 (Notifications)
+// Module 9973 (Notifications)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
-import NotificationWrapperDefault from "NotificationWrapper" /* 9940 */;
-import closure_3 from "handleAlertMessage" /* 9907 */;
+import NotificationWrapperDefault from "NotificationWrapper" /* 10007 */;
+import closure_3 from "handleAlertMessage" /* 9974 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

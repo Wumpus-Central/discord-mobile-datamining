@@ -1,51 +1,60 @@
-// === Module 11948: BaseChannelSubtitle ===
+// === Module 12021: BaseChannelSubtitle ===
 
-// Module 11948 (BaseChannelSubtitle)
+// Module 12021 (BaseChannelSubtitle)
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4376 */;
+import Text from "Text" /* 4440 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { CHANNEL_TITLE_LINE_HEIGHT } from "hairlineWidth" /* 9950 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4590 */;
+import hairlineWidth from "hairlineWidth" /* 10017 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4654 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 class BaseChannelSubtitle {
   constructor(arg0) {
     ({ mode, subtitle } = global);
-    tmp = closure_10;
-    if (mode !== closure_10.UNREAD_IMPORTANT) {
+    tmp = closure_11;
+    if (mode !== closure_11.UNREAD_IMPORTANT) {
       if (mode !== tmp.RELEVANT) {
         if (mode !== tmp.SELECTED) {
           MUTED = tmp.MUTED;
-          obj = { variant: "text-xs/medium", color: "text-muted" };
+          obj = { variant: null, color: "text-muted" };
+          tmp2 = closure_5;
+          obj[0] = closure_5;
         }
-        tmp2 = null;
+        tmp4Result = null;
         if (null != subtitle) {
-          tmp3 = jsx;
-          tmp4 = closure_0;
-          tmp5 = closure_2;
-          obj = { experimental_useNativeText: null, lineClamp: 1 };
+          tmp5 = closure_0;
+          tmp6 = closure_2;
+          tmp4 = jsx;
           obj3 = require("PlatformTypes");
-          obj[0] = !obj3.isAndroid();
-          tmp6 = obj;
-          tmp7 = obj;
+          isAndroidResult = obj3.isAndroid();
+          tmp8 = !isAndroidResult;
+          if (!isAndroidResult) {
+            tmp8 = typeof subtitle === "string";
+          }
+          obj = { experimental_useNativeText: null, lineClamp: 1 };
+          obj[0] = tmp8;
+          tmp9 = obj;
+          tmp10 = obj;
           merged = Object.assign(obj);
           obj.children = subtitle;
-          tmp2 = jsx(require("Text").Text, obj);
+          tmp4Result = tmp4(require("Text").Text, obj);
         }
-        return tmp2;
+        return tmp4Result;
       }
     }
-    obj = { variant: "text-xs/medium", color: "redesign-channel-name-text" };
+    obj1 = { variant: closure_5, color: "redesign-channel-name-text" };
+    obj = obj1;
     return;
   }
 }
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles((arg0) => {
+({ CHANNEL_SUBTITLE_TEXT_VARIANT: c5, CHANNEL_TITLE_LINE_HEIGHT: closure_6 } = hairlineWidth);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
+let closure_10 = createCacheKey.createStyles((arg0) => {
   let obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
   obj = { borderRadius: ThemesDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: ThemesDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
   obj[1] = obj;
@@ -69,7 +78,7 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj[7] = { tintColor: ThemesDefault.colors.ICON_MUTED };
   obj[8] = { paddingHorizontal: 8, paddingVertical: 8, flexDirection: "row", alignItems: "center", position: "relative" };
   obj[9] = { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "center" };
-  const obj4 = { flexGrow: 1, textAlign: "left", lineHeight: CHANNEL_TITLE_LINE_HEIGHT, opacity: null };
+  const obj4 = { flexGrow: 1, textAlign: "left", lineHeight: closure_6, opacity: null };
   if (arg0 === createCacheKey.MUTED) {
     num = 0.5;
   }
@@ -105,7 +114,7 @@ export default function BaseChannelItem(mode) {
         rowPaddingNoIcon = tmp.rowPaddingNoIcon;
       }
       items[1] = rowPaddingNoIcon;
-      items[2] = mode === closure_1_10.SELECTED && channel.rowSelected;
+      items[2] = mode === closure_1_11.SELECTED && channel.rowSelected;
       return items;
     }, items),
     children: null
@@ -121,9 +130,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj[1] = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(11949);
+      let AnimatedPressableHighlight = hideIcon(12022);
     } else {
-      AnimatedPressableHighlight = mode(8810).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8878).AnimatedPressableHighlight;
     }
     obj = {};
     const merged1 = Object.assign(merged);
@@ -140,9 +149,9 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj[2] = ALL_MESSAGES;
-    closure_7(hideIcon(9997), obj);
-    const tmp6 = closure_7;
-    const tmp9 = hideIcon(9997);
+    closure_8(hideIcon(10064), obj);
+    const tmp6 = closure_8;
+    const tmp9 = hideIcon(10064);
   }
 };
 export const ChannelModes = createCacheKey;
@@ -208,10 +217,13 @@ export const getChannelSubtitleTextProps = function getChannelSubtitleTextProps(
     if (channelMode !== tmp.RELEVANT) {
       if (channelMode !== tmp.SELECTED) {
         const MUTED = tmp.MUTED;
+        let obj = { variant: null, color: "text-muted" };
+        obj[0] = closure_5;
       }
-      return { variant: "text-xs/medium", color: "redesign-channel-name-text" };
+      return obj;
     }
   }
+  obj = { variant: closure_5, color: "redesign-channel-name-text" };
 };
 export const BaseChannelName = function BaseChannelName(mode) {
   mode = mode.mode;
@@ -240,7 +252,7 @@ export const BaseChannelName = function BaseChannelName(mode) {
     obj1[1] = subtitle;
     items1[1] = tmp4(BaseChannelSubtitle, obj1);
     obj[1] = items1;
-    return closure_8(View, obj);
+    return closure_9(View, obj);
   }
   obj = { variant: "text-md/semibold", color: "redesign-channel-name-text" };
 };

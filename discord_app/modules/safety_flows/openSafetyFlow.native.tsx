@@ -1,6 +1,6 @@
-// === Module 17208: _openSafetyFlow ===
+// === Module 17293: _openSafetyFlow ===
 
-// Module 17208 (_openSafetyFlow)
+// Module 17293 (_openSafetyFlow)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleRequiredAction" /* 1385 */;
 import { UserRequiredActions } from "ME" /* 676 */;
@@ -25,7 +25,7 @@ function _openSafetyFlow() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -127,7 +127,7 @@ function _openSafetyFlow() {
               }
               constants = 0;
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
             c7 = 3;
           }

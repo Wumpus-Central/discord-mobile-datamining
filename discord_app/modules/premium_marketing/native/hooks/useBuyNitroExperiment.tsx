@@ -1,10 +1,10 @@
-// === Module 7738: useBuyNitroExperiment ===
+// === Module 7805: useBuyNitroExperiment ===
 
-// Module 7738 (useBuyNitroExperiment)
-import useInitialValueDefault from "useInitialValue" /* 5822 */;
+// Module 7805 (useBuyNitroExperiment)
+import useInitialValueDefault from "useInitialValue" /* 5888 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import { usePremiumPlanPurchasedStore as closure_5 } from "usePremiumPlanPurchasedStore" /* 7028 */;
+import { usePremiumPlanPurchasedStore as closure_5 } from "usePremiumPlanPurchasedStore" /* 7094 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroExperiment.tsx");

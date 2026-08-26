@@ -1,23 +1,23 @@
-// === Module 10172: NewCaption ===
+// === Module 10239: NewCaption ===
 
-// Module 10172 (NewCaption)
+// Module 10239 (NewCaption)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import Text from "Text" /* 4376 */;
-import ImageIcon from "ImageIcon" /* 4917 */;
-import AttachmentIcon from "AttachmentIcon" /* 9946 */;
-import registerAssetDefault from "registerAsset" /* 10117 */;
-import CameraIcon from "CameraIcon" /* 10177 */;
+import Text from "Text" /* 4440 */;
+import ImageIcon from "ImageIcon" /* 4983 */;
+import AttachmentIcon from "AttachmentIcon" /* 10013 */;
+import registerAssetDefault from "registerAsset" /* 10184 */;
+import CameraIcon from "CameraIcon" /* 10244 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "map" /* 4741 */;
-import frozen from "frozen" /* 10173 */;
+import closure_6 from "map" /* 4805 */;
+import frozen from "frozen" /* 10240 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
-import importDefaultResult from "module_4120" /* 4120 */;
-import hexToRgba from "hexToRgba" /* 4228 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
+import importDefaultResult from "module_4184" /* 4184 */;
+import hexToRgba from "hexToRgba" /* 4292 */;
 
 require = arg1;
 function NewCaption(arg0) {

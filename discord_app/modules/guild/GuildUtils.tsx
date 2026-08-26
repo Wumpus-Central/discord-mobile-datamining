@@ -1,8 +1,8 @@
-// === Module 8896: handleJoinGuild ===
+// === Module 8964: handleJoinGuild ===
 
-// Module 8896 (handleJoinGuild)
+// Module 8964 (handleJoinGuild)
 import set from "set" /* 2 */;
-import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 5338 */;
+import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 5404 */;
 
 let result = set.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 

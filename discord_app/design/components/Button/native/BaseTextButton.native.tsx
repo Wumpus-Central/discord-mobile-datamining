@@ -1,16 +1,16 @@
-// === Module 4816: CollapsingText ===
+// === Module 4880: CollapsingText ===
 
-// Module 4816 (CollapsingText)
+// Module 4880 (CollapsingText)
 import ThemesDefault from "Themes" /* 712 */;
-import IconSizesDefault from "IconSizes" /* 4817 */;
-import styleProperties from "styleProperties" /* 4820 */;
+import IconSizesDefault from "IconSizes" /* 4881 */;
+import styleProperties from "styleProperties" /* 4885 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
-import { LARGE_BUTTON_HEIGHT, LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA" /* 4819 */;
-import importDefaultResult from "module_4120" /* 4120 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
+import { LARGE_BUTTON_HEIGHT, LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA" /* 4884 */;
+import importDefaultResult from "module_4184" /* 4184 */;
 
 require = arg1;
 function CollapsingText(children) {
@@ -145,15 +145,15 @@ let closure_18 = createCacheKey.createStyles((arg0, arg1) => {
 });
 createCacheKey = { sm: null, md: null, lg: null };
 const bound = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT) / 2, 0);
-createCacheKey = { top: bound, left: "Array", right: "isArray", bottom: true };
+createCacheKey = { top: bound, left: "Array", right: "paddingHorizontal", bottom: -452984278 };
 createCacheKey[3] = bound;
 createCacheKey[0] = createCacheKey;
 const bound1 = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT) / 2, 0);
-createCacheKey = { top: bound1, left: "Array", right: "isArray", bottom: true };
+createCacheKey = { top: bound1, left: "Array", right: "paddingHorizontal", bottom: -452984278 };
 createCacheKey[3] = bound1;
 createCacheKey[1] = createCacheKey;
 const bound2 = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").LARGE_BUTTON_HEIGHT) / 2, 0);
-let obj4 = { top: bound2, left: "Array", right: "isArray", bottom: true };
+let obj4 = { top: bound2, left: "Array", right: "paddingHorizontal", bottom: -452984278 };
 obj4[3] = bound2;
 createCacheKey[2] = obj4;
 function getTextPlatformLineHeight(arg0, arg1) {

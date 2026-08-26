@@ -1,6 +1,6 @@
-// === Module 11718: AppDetailsOverflowMenu ===
+// === Module 11791: AppDetailsOverflowMenu ===
 
-// Module 11718 (AppDetailsOverflowMenu)
+// Module 11791 (AppDetailsOverflowMenu)
 import noopAll from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

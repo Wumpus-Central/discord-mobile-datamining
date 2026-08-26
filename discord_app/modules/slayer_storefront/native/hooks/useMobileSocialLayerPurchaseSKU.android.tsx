@@ -1,7 +1,7 @@
-// === Module 10246: useMobileSocialLayerPurchaseSKU ===
+// === Module 10313: useMobileSocialLayerPurchaseSKU ===
 
-// Module 10246 (useMobileSocialLayerPurchaseSKU)
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10247 */;
+// Module 10313 (useMobileSocialLayerPurchaseSKU)
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10314 */;
 import closure_3 from "noop" /* 19 */;
 import { PriceSetAssignmentPurchaseTypes as closure_4 } from "ME" /* 676 */;
 

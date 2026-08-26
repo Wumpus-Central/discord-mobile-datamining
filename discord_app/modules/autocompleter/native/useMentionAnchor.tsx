@@ -1,6 +1,6 @@
-// === Module 11958: useMentionAnchor ===
+// === Module 12031: useMentionAnchor ===
 
-// Module 11958 (useMentionAnchor)
+// Module 12031 (useMentionAnchor)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 
@@ -31,7 +31,7 @@ export default function useMentionAnchor(c22) {
       startsWithResult = arg1 >= anchor + arg3.length;
     }
     if (startsWithResult) {
-      obj1 = _require(10066);
+      obj1 = _require(10133);
       startsWithResult = obj1.isUnbrokenRun(c22, anchor + arg3.length, arg1);
     }
     tmp5 = startsWithResult;
@@ -60,8 +60,8 @@ export default function useMentionAnchor(c22) {
             startsWithResult1 = arg1 >= lastIndexOfResult + arg3.length;
           }
           if (startsWithResult1) {
-            startsWithResult1 = tmp25(10066).isUnbrokenRun(c22, lastIndexOfResult + arg3.length, arg1);
-            const tmp25Result = tmp25(10066);
+            startsWithResult1 = tmp25(10133).isUnbrokenRun(c22, lastIndexOfResult + arg3.length, arg1);
+            const tmp25Result = tmp25(10133);
           }
           tmp18 = null;
           if (startsWithResult1) {
@@ -69,7 +69,7 @@ export default function useMentionAnchor(c22) {
           }
         }
         tmp16 = tmp18;
-        obj9 = _require(10066);
+        obj9 = _require(10133);
         tmp25 = _require;
       }
       if (null != tmp16) {

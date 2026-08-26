@@ -1,6 +1,6 @@
-// === Module 5857: RoleDot ===
+// === Module 5923: RoleDot ===
 
-// Module 5857 (RoleDot)
+// Module 5923 (RoleDot)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -8,7 +8,7 @@ import closure_5 from "trackCommunicationDisabled" /* 1992 */;
 import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 function RoleDot(color) {
@@ -180,8 +180,8 @@ export default function UserProfileRolesCard(userId) {
     obj[0] = guildId;
     obj[1] = roles;
     obj[2] = callback(RolesList, obj);
-    tmp4 = callback(guildId(5881), obj);
-    const tmp7 = guildId(5881);
+    tmp4 = callback(guildId(5947), obj);
+    const tmp7 = guildId(5947);
   }
   return tmp4;
 };

@@ -1,8 +1,8 @@
-// === Module 7178: fromServer ===
+// === Module 7244: fromServer ===
 
-// Module 7178 (fromServer)
+// Module 7244 (fromServer)
 import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 7179 */;
+import ShopBlockType from "ShopBlockType" /* 7245 */;
 
 let prototype;
 prototype = function CountdownTimerBlockRecord(end_time) {

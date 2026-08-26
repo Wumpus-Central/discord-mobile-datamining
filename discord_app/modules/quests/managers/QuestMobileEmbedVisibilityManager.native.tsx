@@ -1,23 +1,23 @@
-// === Module 17161: log ===
+// === Module 17246: log ===
 
-// Module 17161 (log)
+// Module 17246 (log)
 import privDefault from "priv" /* 1405 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4235 */;
-import useAlertStore2 from "useAlertStore" /* 4746 */;
-import initializeDefault from "initialize" /* 5367 */;
-import getQuestLogger from "getQuestLogger" /* 7311 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4299 */;
+import useAlertStore2 from "useAlertStore" /* 4810 */;
+import initializeDefault from "initialize" /* 5433 */;
+import getQuestLogger from "getQuestLogger" /* 7377 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "setContent" /* 4090 */;
-import closure_6 from "getParticipants" /* 4396 */;
-import useChannelDetailsStore from "useChannelDetailsStore" /* 8552 */;
-import closure_9 from "withEqualityFn" /* 4616 */;
+import closure_5 from "setContent" /* 4154 */;
+import closure_6 from "getParticipants" /* 4460 */;
+import useChannelDetailsStore from "useChannelDetailsStore" /* 8620 */;
+import closure_9 from "withEqualityFn" /* 4680 */;
 import { isTextChannel } from "createChannelRecord" /* 1395 */;
 import closure_11 from "ensureGuildLoaded" /* 1391 */;
 import closure_12 from "handleConnectionOpen" /* 1981 */;
-import closure_13 from "getAlert" /* 11105 */;
-import closure_14 from "getState" /* 7019 */;
-import closure_15 from "initializeState" /* 7305 */;
-import { MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE as closure_16 } from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 9668 */;
+import closure_13 from "getAlert" /* 11177 */;
+import closure_14 from "getState" /* 7085 */;
+import closure_15 from "initializeState" /* 7371 */;
+import { MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE as closure_16 } from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 9736 */;
 import { MessageStates } from "ME" /* 676 */;
 
 require = arg1;
@@ -231,8 +231,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(9918).isChannelFocused();
-      applyArgumentsResult(4234);
+      let isChannelFocusedResult = applyArgumentsResult(9985).isChannelFocused();
+      applyArgumentsResult(4298);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }

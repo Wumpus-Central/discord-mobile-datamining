@@ -11,10 +11,10 @@ import _modDef1208 from "module_1208" /* 1208 */;
 import transitionTo from "transitionTo" /* 1222 */;
 import getToken from "getToken" /* 1371 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import prototypeDefault from "prototype" /* 4279 */;
-import getAuthenticationErrorsFromAPIError from "getAuthenticationErrorsFromAPIError" /* 8632 */;
-import isStaffDefault from "isStaff" /* 11979 */;
-import fetchExperiments from "fetchExperiments" /* 13647 */;
+import prototypeDefault from "prototype" /* 4343 */;
+import getAuthenticationErrorsFromAPIError from "getAuthenticationErrorsFromAPIError" /* 8700 */;
+import isStaffDefault from "isStaff" /* 12052 */;
+import fetchExperiments from "fetchExperiments" /* 13720 */;
 import closure_6 from "initialize" /* 1219 */;
 import closure_7 from "clearAll" /* 1220 */;
 import ME from "ME" /* 676 */;
@@ -70,7 +70,7 @@ function fetchFingerprint(arg0) {
           if (null != c23) {
             obj["X-Installation-ID"] = c23;
           }
-          tmpResult = tmp(13647);
+          tmpResult = tmp(13720);
           obj = { withGuildExperiments: null, headers: null, context: null };
           obj[0] = true;
           obj[1] = obj;
@@ -102,7 +102,7 @@ function fetchFingerprint(arg0) {
             callback2(709).dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
             c33 = null;
             const obj5 = callback2(709);
-            callback(13648).onExperimentsLoaded();
+            callback(13721).onExperimentsLoaded();
           }, () => {
             c33 = null;
             callback2(709).dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
@@ -246,13 +246,13 @@ prototype["initialize"] = function initialize() {
     }
     if (tmp7) {
       function fireApex() {
-        const installationExperiments = callback(10530).fetchInstallationExperiments(null);
+        const installationExperiments = callback(10598).fetchInstallationExperiments(null);
       }
       promise.then(fireApex, fireApex);
     }
     promise = fetchFingerprint();
   }
-  this.addChangeListener(() => callback(13650).setClientState(closure_17));
+  this.addChangeListener(() => callback(13723).setClientState(closure_17));
 };
 prototype["getLoginStatus"] = function getLoginStatus() {
   return NONE;
@@ -355,7 +355,7 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
     if (null != installation) {
       installation = apexExperiments.installation;
       if (null == installation) {
-        let tmp6Result = tmp6(13649);
+        let tmp6Result = tmp6(13722);
         if (tmp6Result.canUseInstallationId()) {
           const Storage3 = tmp4(595).Storage;
           const result1 = Storage3.set(analytics_installation, installation);
@@ -719,7 +719,7 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
       callback2(709).dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
       c33 = null;
       const obj5 = callback2(709);
-      callback(13648).onExperimentsLoaded();
+      callback(13721).onExperimentsLoaded();
     }, () => {
       c33 = null;
       callback2(709).dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
@@ -796,7 +796,7 @@ let obj = {
     if (null != installation) {
       installation = apexExperiments.installation;
       if (null == installation) {
-        let tmp6Result = tmp6(13649);
+        let tmp6Result = tmp6(13722);
         if (tmp6Result.canUseInstallationId()) {
           const Storage3 = tmp4(595).Storage;
           const result1 = Storage3.set(analytics_installation, installation);
@@ -1160,7 +1160,7 @@ let obj = {
       callback2(709).dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
       c33 = null;
       const obj5 = callback2(709);
-      callback(13648).onExperimentsLoaded();
+      callback(13721).onExperimentsLoaded();
     }, () => {
       c33 = null;
       callback2(709).dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });

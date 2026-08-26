@@ -1,136 +1,44 @@
-// === Module 9419: ClickableGameIcon ===
+// === Module 9487: ClickableGameIcon ===
 
-// Module 9419 (ClickableGameIcon)
+// Module 9487 (ClickableGameIcon)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4376 */;
-import useGuildProfileGamesDefault from "useGuildProfileGames" /* 12412 */;
+import Text from "Text" /* 4440 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function ClickableGameIcon(game) {
   game = game.game;
-  ({ enabled, onPressFallback } = game);
+  const onPressFallback = game.onPressFallback;
   dependencyMap = undefined;
-  enabled = undefined;
+  let React;
   ({ style, activityLevel } = game);
-  const obj = { gameId: game.id, source: game(9431).GameProfileSources.GuildProfileGames, trackEntryPointImpression: enabled };
-  const tmp3Result = onPressFallback(9420)(obj);
+  const obj = { gameId: game.id, source: game(9499).GameProfileSources.GuildProfileGames, trackEntryPointImpression: true };
+  const tmp3Result = onPressFallback(9488)(obj);
   dependencyMap = tmp3Result;
-  if (enabled) {
-    enabled = null != tmp3Result;
-  }
-  const items = [enabled, tmp3Result, onPressFallback, game];
-  if (enabled) {
-    const onPress = enabled.useCallback(() => {
-      if (enabled) {
+  React = tmp5;
+  const items = [null != tmp3Result, tmp3Result, onPressFallback, game];
+  if (null != tmp3Result) {
+    const onPress = React.useCallback(() => {
+      if (closure_3) {
         callback();
       } else if (onPressFallback != null) {
         tmp(game);
       }
     }, items);
   }
-  return callback(onPressFallback(12408), { style, game, activityLevel, onPress });
+  return callback(onPressFallback(12480), { style, game, activityLevel, onPress });
 }
-function FavoriteGame(game) {
-  game = game.game;
-  ({ activityLevel, clickable } = game);
+function FavoriteGame(activityLevel) {
+  const game = activityLevel.game;
   let obj = { style: createCacheKey().favoriteGame, children: null };
-  const items = [callback(ClickableGameIcon, { game, activityLevel, enabled: clickable }), ];
+  const items = [callback(ClickableGameIcon, { game, activityLevel: activityLevel.activityLevel }), ];
   obj = { variant: "text-sm/medium", color: "text-subtle", children: game.name };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
-}
-function GuildProfileGamesContent(profile) {
-  profile = profile.profile;
-  ({ gamesToDisplay, lastGameToDisplay } = profile);
-  const remainingGames = profile.remainingGames;
-  let React;
-  let gameActivity;
-  let enabled;
-  closure_6 = undefined;
-  createCacheKey = undefined;
-  let tmp = createCacheKey();
-  React = tmp;
-  gameActivity = profile.gameActivity;
-  let obj = profile(remainingGames[10]);
-  enabled = obj.useGuildProfileGameProfilesExperiment({ location: "guild_profile_games" }).enabled;
-  let iconURL;
-  if (lastGameToDisplay != null) {
-    iconURL = lastGameToDisplay.getIconURL(24);
-  }
-  closure_6 = tmp5;
-  let items = [lastGameToDisplay, null != iconURL, remainingGames, gameActivity, tmp, enabled];
-  const memo = React.useMemo(() => {
-    let tmp = lastGameToDisplay;
-    let tmp2 = null;
-    if (null != lastGameToDisplay) {
-      if (!callback) {
-        tmp2 = null;
-      } else if (0 === remainingGames.length) {
-        let obj = { game: null, activityLevel: null, enabled: null };
-        obj[0] = tmp;
-        tmp = gameActivity[tmp.id];
-        obj[1] = tmp;
-        obj[2] = enabled;
-        let tmp9 = enabled(closure_1_8, obj);
-      } else {
-        obj = { style: null, children: null };
-        obj[0] = closure_3.lastItem;
-        obj = { style: null, game: null, activityLevel: null };
-        obj[0] = closure_3.lastItemImage;
-        obj[1] = tmp;
-        obj[2] = gameActivity[tmp.id];
-        const items = [enabled(lastGameToDisplay(remainingGames[7]), obj), , ];
-        obj1 = { style: null };
-        obj1[0] = closure_3.lastItemOverlay;
-        items[1] = enabled(gameActivity, obj1);
-        const obj2 = { style: null, children: null };
-        obj2[0] = closure_3.lastItemText;
-        const obj3 = { variant: "text-xs/medium", color: "text-overlay-light", children: null };
-        const _HermesInternal = HermesInternal;
-        obj3[2] = "+" + arr.length;
-        obj2[1] = enabled(profile(remainingGames[8]).Text, obj3);
-        items[2] = enabled(gameActivity, obj2);
-        obj[1] = items;
-        tmp9 = callback(gameActivity, obj);
-      }
-    }
-    return tmp2;
-  }, items);
-  createCacheKey = React.useCallback((content) => {
-    let obj = lastGameToDisplay(remainingGames[11]);
-    obj = { key: "profile-game-" + content.id, content: content.name };
-    obj.open(obj);
-  }, []);
-  [][0] = profile;
-  if (1 === gamesToDisplay.length) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { game: null, activityLevel: null, clickable: null };
-    obj[0] = gamesToDisplay[0];
-    obj[1] = gameActivity[gamesToDisplay[0].id];
-    obj[2] = enabled;
-    obj[1] = enabled(FavoriteGame, obj);
-    let tmp14Result = enabled(gameActivity, obj);
-  } else if (tmp7) {
-    obj1 = { style: null, onPress: null, children: null };
-    obj1[0] = tmp.container;
-    obj1[1] = tmp8;
-    const items1 = [gamesToDisplay.map((game) => enabled(lastGameToDisplay(remainingGames[7]), { game, activityLevel: gameActivity[game.id] }, game.id)), memo];
-    obj1[2] = items1;
-    tmp14Result = tmp14(profile(remainingGames[15]).PressableHighlight, obj1);
-  } else {
-    let obj2 = { style: null, children: null };
-    obj2[0] = tmp.container;
-    const items2 = [gamesToDisplay.map((game) => enabled(closure_1_8, { game, activityLevel: gameActivity[game.id], enabled, onPressFallback: closure_7 }, game.id)), memo];
-    obj2[1] = items2;
-    tmp14Result = tmp14(gameActivity, obj2);
-  }
-  return tmp14Result;
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { display: "flex", flexDirection: "row", gap: 8 }, favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, lastItem: { position: "relative", width: 32, height: 32 }, lastItemOverlay: null, lastItemImage: null, lastItemText: null };
@@ -143,19 +51,96 @@ const result = require("set").fileFinishedImporting("modules/guild_profile/nativ
 
 export default function GuildProfileGames(profile) {
   profile = profile.profile;
-  const gamesToDisplay = useGuildProfileGamesDefault(profile).gamesToDisplay;
-  let tmp4 = null;
+  lastGameToDisplay = undefined;
+  let remainingGames;
+  let React;
+  let gameActivity;
+  let callback;
+  closure_6 = undefined;
+  let tmp2 = lastGameToDisplay(remainingGames[9])(profile);
+  ({ gamesToDisplay, lastGameToDisplay } = tmp2);
+  remainingGames = tmp2.remainingGames;
+  let tmp3 = createCacheKey();
+  React = tmp3;
+  gameActivity = profile.gameActivity;
+  let iconURL;
+  if (lastGameToDisplay != null) {
+    iconURL = lastGameToDisplay.getIconURL(24);
+  }
+  callback = tmp5;
+  let items = [lastGameToDisplay, null != iconURL, remainingGames, gameActivity, tmp3];
+  const memo = React.useMemo(() => {
+    let tmp = lastGameToDisplay;
+    let tmp2 = null;
+    if (null != lastGameToDisplay) {
+      if (!callback) {
+        tmp2 = null;
+      } else if (0 === remainingGames.length) {
+        let obj = { game: null, activityLevel: null };
+        obj[0] = tmp;
+        tmp = gameActivity[tmp.id];
+        obj[1] = tmp;
+        let tmp8 = callback(closure_1_8, obj);
+      } else {
+        obj = { style: null, children: null };
+        obj[0] = closure_3.lastItem;
+        obj = { style: null, game: null, activityLevel: null };
+        obj[0] = closure_3.lastItemImage;
+        obj[1] = tmp;
+        obj[2] = gameActivity[tmp.id];
+        const items = [callback(lastGameToDisplay(remainingGames[7]), obj), , ];
+        obj1 = { style: null };
+        obj1[0] = closure_3.lastItemOverlay;
+        items[1] = callback(gameActivity, obj1);
+        const obj2 = { style: null, children: null };
+        obj2[0] = closure_3.lastItemText;
+        const obj3 = { variant: "text-xs/medium", color: "text-overlay-light", children: null };
+        const _HermesInternal = HermesInternal;
+        obj3[2] = "+" + arr.length;
+        obj2[1] = callback(profile(remainingGames[8]).Text, obj3);
+        items[2] = callback(gameActivity, obj2);
+        obj[1] = items;
+        tmp8 = callback2(gameActivity, obj);
+      }
+    }
+    return tmp2;
+  }, items);
+  closure_6 = React.useCallback((content) => {
+    let obj = lastGameToDisplay(remainingGames[10]);
+    obj = { key: "profile-game-" + content.id, content: content.name };
+    obj.open(obj);
+  }, []);
+  [][0] = profile;
+  let tmp9 = null;
   if (null != gamesToDisplay) {
-    tmp4 = null;
+    tmp9 = null;
     if (0 !== gamesToDisplay.length) {
-      const obj = { profile: null, gamesToDisplay: null, lastGameToDisplay: null, remainingGames: null };
-      obj[0] = profile;
-      obj[1] = gamesToDisplay;
-      obj[2] = tmp2;
-      obj[3] = tmp3;
-      tmp4 = callback(GuildProfileGamesContent, obj);
+      if (1 === gamesToDisplay.length) {
+        let obj = { style: null, children: null };
+        obj[0] = tmp3.container;
+        tmp3 = FavoriteGame;
+        obj = { game: null, activityLevel: null };
+        obj[0] = gamesToDisplay[0];
+        gamesToDisplay = gameActivity[gamesToDisplay[0].id];
+        obj[1] = gamesToDisplay;
+        obj[1] = callback(FavoriteGame, obj);
+        let tmp16Result = callback(gameActivity, obj);
+      } else if (tmp7) {
+        obj1 = { style: null, onPress: null, children: null };
+        obj1[0] = tmp3.container;
+        obj1[1] = tmp8;
+        const items1 = [gamesToDisplay.map((game) => callback(lastGameToDisplay(remainingGames[7]), { game, activityLevel: gameActivity[game.id] }, game.id)), memo];
+        obj1[2] = items1;
+        tmp16Result = tmp16(profile(remainingGames[14]).PressableHighlight, obj1);
+      } else {
+        obj = { style: null, children: null };
+        obj[0] = tmp3.container;
+        const items2 = [gamesToDisplay.map((game) => callback(closure_1_8, { game, activityLevel: gameActivity[game.id], onPressFallback: closure_6 }, game.id)), memo];
+        obj[1] = items2;
+        tmp16Result = tmp16(gameActivity, obj);
+      }
     }
   }
-  return tmp4;
+  return tmp9;
 };
 export const useStyles = createCacheKey;

@@ -1,9 +1,9 @@
-// === Module 9709: NitroIcon ===
+// === Module 9777: NitroIcon ===
 
-// Module 9709 (NitroIcon)
+// Module 9777 (NitroIcon)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 7985 */;
-import inlineStylesDefault from "inlineStyles" /* 7985 */;
+import inlineStyles from "inlineStyles" /* 8052 */;
+import inlineStylesDefault from "inlineStyles" /* 8052 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

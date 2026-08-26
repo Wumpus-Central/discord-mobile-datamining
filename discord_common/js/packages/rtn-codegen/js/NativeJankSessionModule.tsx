@@ -1,6 +1,6 @@
-// === Module 16749: NativeJankSessionModule ===
+// === Module 16834: NativeJankSessionModule ===
 
-// Module 16749 (NativeJankSessionModule)
+// Module 16834 (NativeJankSessionModule)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

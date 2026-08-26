@@ -1,15 +1,15 @@
-// === Module 11593: ForumPostUsername ===
+// === Module 11666: ForumPostUsername ===
 
-// Module 11593 (ForumPostUsername)
+// Module 11666 (ForumPostUsername)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 1401 */;
-import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 8560 */;
-import useChatWidthDefault from "useChatWidth" /* 11083 */;
+import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 8628 */;
+import useChatWidthDefault from "useChatWidth" /* 11155 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
-import { useForumChannelStore } from "set" /* 11589 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import { useForumChannelStore } from "set" /* 11662 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function ForumPostUsername(arg0) {
@@ -20,7 +20,7 @@ function ForumPostUsername(arg0) {
   if (useForumChannelStore(thread.parent_id).layoutType === set.ForumLayout.GRID) {
     num = 72;
   }
-  const diff = useChatWidthDefault() - tmp2(11594).GRID_HORIZONTAL_PADDING - num;
+  const diff = useChatWidthDefault() - tmp2(11667).GRID_HORIZONTAL_PADDING - num;
   let tmp2Result = tmp2(589);
   const items = [closure_4];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => roleStyle.roleStyle);
@@ -29,9 +29,9 @@ function ForumPostUsername(arg0) {
       let obj = { color: null };
       obj[0] = authorColor;
     }
-    tmp2Result = tmp2(8222);
+    tmp2Result = tmp2(8289);
     const processColorStringsArray = tmp2Result.useProcessColorStringsArray(authorColors);
-    const tmp2Result1 = tmp2(8222);
+    const tmp2Result1 = tmp2(8289);
     const useIsRoleStyleAndRoleColorsEligibleForERC = tmp2Result1.useIsRoleStyleAndRoleColorsEligibleForERC;
     const guild_id = thread.guild_id;
     let tmp19Result = null;
@@ -64,7 +64,7 @@ function ForumPostUsername(arg0) {
       obj4[4] = items4;
       const items5 = [authorName, suffix];
       obj4[5] = items5;
-      items3[1] = closure_7(tmp2(4376).Text, obj4);
+      items3[1] = closure_7(tmp2(4440).Text, obj4);
       obj[2] = items3;
       tmp19Result = tmp19(tmp20, obj);
     }

@@ -1,12 +1,12 @@
-// === Module 7984: MethodPathIcon ===
+// === Module 8051: MethodPathIcon ===
 
-// Module 7984 (MethodPathIcon)
+// Module 8051 (MethodPathIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import inlineStylesDefault from "inlineStyles" /* 7985 */;
+import inlineStylesDefault from "inlineStyles" /* 8052 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 noopAll;
@@ -18,7 +18,7 @@ const result = require("set").fileFinishedImporting("modules/age_assurance/nativ
 
 export default function MethodPathIcon(icon) {
   let _require;
-  let obj = _require(4101);
+  let obj = _require(4165);
   _require = obj.useToken(ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT);
   obj = { style: callback().container, children: null };
   obj = { width: 24, height: 24, viewBox: "0 0 24 24", children: null };

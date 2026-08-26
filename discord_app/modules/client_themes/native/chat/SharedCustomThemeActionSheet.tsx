@@ -1,16 +1,16 @@
-// === Module 11515: PrimaryActionButton ===
+// === Module 11587: PrimaryActionButton ===
 
-// Module 11515 (PrimaryActionButton)
+// Module 11587 (PrimaryActionButton)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_9 from "reset" /* 4049 */;
+import closure_9 from "reset" /* 4113 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 function PrimaryActionButton(onPressApply) {
@@ -25,10 +25,10 @@ function PrimaryActionButton(onPressApply) {
     obj[0] = intl2.string(tmp2(1236).t.pj0XBN);
     obj[1] = function onPressSubscribe() {
       const obj = { premiumType: TIER_2.TIER_2, analyticsLocations: null, analyticsLocation: null };
-      const items = [callback(5854).SHARE_CUSTOM_CLIENT_THEME_EMBED];
+      const items = [callback(5920).SHARE_CUSTOM_CLIENT_THEME_EMBED];
       obj[1] = items;
       obj[2] = {};
-      callback(7029)(obj);
+      callback(7095)(obj);
     };
     obj[2] = function renderIcon() {
       const style = [lib.nitroWheelButton];
@@ -41,7 +41,7 @@ function PrimaryActionButton(onPressApply) {
     const intl = tmp2(1236).intl;
     obj[0] = intl.string(tmp2(1236).t["1Qm822"]);
     obj[1] = onPressApply.onPressApply;
-    tmp6 = callback4(tmp2(4815).Button, obj);
+    tmp6 = callback4(tmp2(4879).Button, obj);
   }
   return tmp6;
 }

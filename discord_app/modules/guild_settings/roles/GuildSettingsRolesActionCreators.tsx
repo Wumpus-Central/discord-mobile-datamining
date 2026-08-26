@@ -1,6 +1,6 @@
-// === Module 16970: AsyncFromSyncIterator ===
+// === Module 17055: AsyncFromSyncIterator ===
 
-// Module 16970 (AsyncFromSyncIterator)
+// Module 17055 (AsyncFromSyncIterator)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
@@ -114,7 +114,7 @@ function _saveRoleSettings() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -135,7 +135,7 @@ function _saveRoleSettings() {
                 c18 = 0;
                 let num3 = 3;
                 c21 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 let tmp19 = closure_8;
                 throw closure_8;

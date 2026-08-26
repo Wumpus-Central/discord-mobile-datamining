@@ -1,10 +1,10 @@
-// === Module 12276: InviteRolesList ===
+// === Module 12348: InviteRolesList ===
 
-// Module 12276 (InviteRolesList)
+// Module 12348 (InviteRolesList)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -40,13 +40,13 @@ export default function InviteRolesList(invite) {
       obj = { variant: "text-sm/semibold", color: "text-default", children: null };
       const intl = guild(1236).intl;
       obj[2] = intl.string(guild(1236).t.stcSfI);
-      const items1 = [callback(guild(4376).Text, obj), ];
+      const items1 = [callback(guild(4440).Text, obj), ];
       obj = { style: null, children: null };
       obj[0] = tmp.rolesRow;
       obj[1] = memo.map((id) => closure_1_5(roles(closure_1_2[8]), { role: id, guildId: guild.id }, id.id));
       items1[1] = callback(View, obj);
       obj[2] = items1;
-      tmp2 = callback2(guild(4813).Stack, obj);
+      tmp2 = callback2(guild(4877).Stack, obj);
     }
   }
   return tmp2;

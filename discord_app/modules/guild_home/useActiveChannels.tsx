@@ -1,15 +1,15 @@
-// === Module 15423: getActiveTextChannels ===
+// === Module 15502: getActiveTextChannels ===
 
-// Module 15423 (getActiveTextChannels)
+// Module 15502 (getActiveTextChannels)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import set2 from "set" /* 1398 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4025 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 4589 */;
-import closure_6 from "truncateOldMessageData" /* 13172 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_5 from "updateUserGuildSettingsInternal" /* 4653 */;
+import closure_6 from "truncateOldMessageData" /* 13245 */;
 
 const isTextChannel = createChannelRecord.isTextChannel;
 const Permissions = ME.Permissions;

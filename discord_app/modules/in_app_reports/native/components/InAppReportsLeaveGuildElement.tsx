@@ -1,6 +1,6 @@
-// === Module 12858: LeaveGuildElement ===
+// === Module 12932: LeaveGuildElement ===
 
-// Module 12858 (LeaveGuildElement)
+// Module 12932 (LeaveGuildElement)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 676 */;

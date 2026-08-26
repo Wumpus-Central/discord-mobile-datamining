@@ -1,13 +1,13 @@
-// === Module 13636: Badge ===
+// === Module 13709: Badge ===
 
-// Module 13636 (Badge)
+// Module 13709 (Badge)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "_getSystemLocale" /* 1996 */;
 import PX_16 from "PX_16" /* 1299 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 import set from "set" /* 500 */;
 
 let require = arg1;
@@ -118,7 +118,7 @@ class Badge {
         items4[0] = items2.badgeText;
         items4[1] = textStyle;
         obj3[0] = items4;
-        tmp11 = require("module_8150");
+        tmp11 = require("module_8217");
         tmpResult2 = require("shortenAndLocalizeNumber");
         tmp12 = globalThis;
         _Math = Math;

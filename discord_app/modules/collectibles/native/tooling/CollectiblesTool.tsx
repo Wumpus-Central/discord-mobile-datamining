@@ -1,16 +1,16 @@
-// === Module 15266: FramePreviewOverrideSection ===
+// === Module 15345: FramePreviewOverrideSection ===
 
-// Module 15266 (FramePreviewOverrideSection)
+// Module 15345 (FramePreviewOverrideSection)
 import ThemesDefault from "Themes" /* 712 */;
-import CollectiblesShopCardInternalV2Default from "CollectiblesShopCardInternalV2" /* 9492 */;
+import CollectiblesShopCardInternalV2Default from "CollectiblesShopCardInternalV2" /* 9560 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "updateCategoriesAndProducts" /* 7148 */;
-import closure_8 from "map" /* 7164 */;
-import { useFramePreviewOverrideStore as closure_9 } from "measure" /* 8946 */;
+import closure_7 from "updateCategoriesAndProducts" /* 7214 */;
+import closure_8 from "map" /* 7230 */;
+import { useFramePreviewOverrideStore as closure_9 } from "measure" /* 9014 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 function FramePreviewOverrideSection() {
@@ -31,28 +31,28 @@ function FramePreviewOverrideSection() {
     obj[0] = tmp.sectionHeader;
     obj = { variant: "heading-md/semibold", style: null, children: "Frame Preview Override" };
     obj[1] = tmp.sectionTitle;
-    obj[1] = callback3(_require(4376).Text, obj);
+    obj[1] = callback3(_require(4440).Text, obj);
     const items = [callback3(closure_6, obj), , , , ];
     obj1 = { variant: "text-sm/normal", style: null, children: "Overrides every profile-frame preview with a frame pushed to this device. Tap Load after Cap (or pushFrameOverride.mjs) pushes one." };
     obj1[1] = tmp.description;
-    items[1] = callback3(_require(4376).Text, obj1);
+    items[1] = callback3(_require(4440).Text, obj1);
     const obj2 = { variant: "text-xs/normal", style: null, children: null };
     const items1 = [tmp.statusText, statusError];
     obj2[1] = items1;
     obj2[2] = "Loading\u2026";
-    items[2] = callback3(_require(4376).Text, obj2);
+    items[2] = callback3(_require(4440).Text, obj2);
     const obj3 = { pillStyle: null, text: "Load from device", onPress: null };
     obj3[0] = tmp.secondaryButton;
     obj3[2] = function onPress() {
       callback();
     };
-    items[3] = callback3(_require(4816).BaseTextButton, obj3);
+    items[3] = callback3(_require(4880).BaseTextButton, obj3);
     let tmp13Result = null != tmp2;
     if (tmp13Result) {
       const obj4 = { pillStyle: null, text: "Clear override", onPress: null };
       obj4[0] = tmp.secondaryButton;
       obj4[2] = tmp4;
-      tmp13Result = callback3(_require(4816).BaseTextButton, obj4);
+      tmp13Result = callback3(_require(4880).BaseTextButton, obj4);
     }
     items[4] = tmp13Result;
     obj[1] = items;

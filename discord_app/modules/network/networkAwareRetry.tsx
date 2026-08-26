@@ -1,6 +1,6 @@
-// === Module 13389: _networkAwareRetry ===
+// === Module 13462: _networkAwareRetry ===
 
-// Module 13389 (_networkAwareRetry)
+// Module 13462 (_networkAwareRetry)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 
@@ -25,7 +25,7 @@ function _networkAwareRetry() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -76,7 +76,7 @@ function _networkAwareRetry() {
               if (closure_3 + 1 >= num14) {
                 throw store;
               } else {
-                let obj6 = callback(4264);
+                let obj6 = callback(4328);
                 c6 = 4;
                 c7 = 1;
                 const obj2 = { value: null, done: false };

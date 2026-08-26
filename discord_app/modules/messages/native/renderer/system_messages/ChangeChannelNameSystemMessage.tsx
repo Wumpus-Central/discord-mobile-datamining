@@ -1,10 +1,10 @@
-// === Module 8242: createChangeChannelNameSystemMessage ===
+// === Module 8309: createChangeChannelNameSystemMessage ===
 
-// Module 8242 (createChangeChannelNameSystemMessage)
-import resultDefault from "result" /* 8214 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8221 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8223 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8224 */;
+// Module 8309 (createChangeChannelNameSystemMessage)
+import resultDefault from "result" /* 8281 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8288 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8290 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8291 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 
 require = arg1;
@@ -70,7 +70,7 @@ export const createChangeChannelNameSystemMessage = function createChangeChannel
     const obj4 = { label: null, name: null };
     const intl2 = tmp4(1236).intl;
     obj4[0] = intl2.string(tmp4(1236).t["5Q9+/L"]);
-    obj4[1] = tmp4(8227).MessageAccessibilityAction.EDIT_GDM;
+    obj4[1] = tmp4(8294).MessageAccessibilityAction.EDIT_GDM;
     items[HermesBuiltin.arraySpread(accessibilityActions, 0)] = obj4;
     obj3[0] = items;
     tmp12 = obj3;

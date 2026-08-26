@@ -1,6 +1,6 @@
-// === Module 5101: requireSortedDescending ===
+// === Module 5167: requireSortedDescending ===
 
-// Module 5101 (requireSortedDescending)
+// Module 5167 (requireSortedDescending)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;

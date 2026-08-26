@@ -1,14 +1,14 @@
-// === Module 10241: SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY ===
+// === Module 10308: SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY ===
 
-// Module 10241 (SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY)
+// Module 10308 (SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import messagesProxyDefault from "messagesProxy" /* 3275 */;
-import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4056 */;
-import _modDef4611 from "module_4611" /* 4611 */;
-import _modDef4745 from "module_4745" /* 4745 */;
-import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 7902 */;
-import closure_3 from "addSku" /* 4429 */;
+import messagesProxyDefault from "messagesProxy" /* 3339 */;
+import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4120 */;
+import _modDef4675 from "module_4675" /* 4675 */;
+import _modDef4809 from "module_4809" /* 4809 */;
+import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 7969 */;
+import closure_3 from "addSku" /* 4493 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -21,7 +21,7 @@ export const SOCIAL_LAYER_STOREFRONT_GIFT_MODAL_KEY = "social-layer-storefront-n
 export const SOCIAL_LAYER_STOREFRONT_SELF_PURCHASE_SUCCESS_MODAL_KEY = "social-layer-storefront-self-purchase-success-native-modal";
 export const SOCIAL_LAYER_STOREFRONT_GIFT_PURCHASE_SUCCESS_MODAL_KEY = "social-layer-storefront-gift-purchase-success-native-modal";
 export const openSocialLayerStorefrontUnsupportedOnMobileAlert = function openSocialLayerStorefrontUnsupportedOnMobileAlert() {
-  let obj = _modDef4745;
+  let obj = _modDef4809;
   obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(messagesProxyDefault.XjhkM5);
@@ -32,18 +32,18 @@ export const openSocialLayerStorefrontUnsupportedOnMobileAlert = function openSo
 export const openSocialLayerStorefrontProductDetailsModal = function openSocialLayerStorefrontProductDetailsModal(closure_0) {
   const socialLayerStorefrontConfig = _fetchSocialLayerStorefront.fetchSocialLayerStorefrontConfig();
   const obj = _fetchSocialLayerStorefront;
-  _modDef4611.pushLazy(asyncRequireImpl(10242, dependencyMap.paths), closure_0, c5, { presentation: "modal" });
+  _modDef4675.pushLazy(asyncRequireImpl(10309, dependencyMap.paths), closure_0, c5, { presentation: "modal" });
 };
 export const closeSocialLayerStorefrontProductDetailsModal = function closeSocialLayerStorefrontProductDetailsModal() {
-  _modDef4611.popWithKey(c5);
+  _modDef4675.popWithKey(c5);
 };
 export const openSocialLayerStorefrontGiftModal = function openSocialLayerStorefrontGiftModal(skuId) {
   let obj = isPremiumGiftingSupported;
   if (obj.isSocialLayerStorefrontGiftingSupported()) {
-    let tmp3Result = tmp3(4611);
-    tmp3Result.pushLazy(asyncRequireImpl(10252, dependencyMap.paths), skuId, c6);
+    let tmp3Result = tmp3(4675);
+    tmp3Result.pushLazy(asyncRequireImpl(10319, dependencyMap.paths), skuId, c6);
   } else {
-    tmp3Result = tmp3(10248);
+    tmp3Result = tmp3(10315);
     const value = closure_3.get(skuId.skuId);
     let applicationId;
     if (value != null) {
@@ -56,11 +56,11 @@ export const openSocialLayerStorefrontGiftModal = function openSocialLayerStoref
   }
 };
 export const closeSocialLayerStorefrontGiftModal = function closeSocialLayerStorefrontGiftModal() {
-  _modDef4611.popWithKey(c6);
+  _modDef4675.popWithKey(c6);
 };
 export const openSocialLayerStorefrontProductSelfPurchaseSuccessModal = function openSocialLayerStorefrontProductSelfPurchaseSuccessModal(arg0) {
   closure_0 = arg0;
-  let obj = _modDef4745;
+  let obj = _modDef4809;
   obj = {
     importer() {
       return callback(closure_1_2[8])(closure_1_2[12], closure_1_2.paths).then((SocialLayerStorefrontProductSelfPurchaseSuccessModal) => {
@@ -77,7 +77,7 @@ export const openSocialLayerStorefrontProductSelfPurchaseSuccessModal = function
 };
 export const openSocialLayerStorefrontProductGiftPurchaseSuccessModal = function openSocialLayerStorefrontProductGiftPurchaseSuccessModal(arg0) {
   closure_0 = arg0;
-  let obj = _modDef4745;
+  let obj = _modDef4809;
   obj = {
     importer() {
       return callback(closure_1_2[8])(closure_1_2[12], closure_1_2.paths).then((SocialLayerStorefrontProductGiftPurchaseSuccessModal) => {

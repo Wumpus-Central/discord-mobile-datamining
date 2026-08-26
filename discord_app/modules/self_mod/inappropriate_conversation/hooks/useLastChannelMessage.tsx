@@ -1,7 +1,7 @@
-// === Module 10441: useLastChannelMessage ===
+// === Module 10509: useLastChannelMessage ===
 
-// Module 10441 (useLastChannelMessage)
-import closure_2 from "reinjectEphemerals" /* 4623 */;
+// Module 10509 (useLastChannelMessage)
+import closure_2 from "reinjectEphemerals" /* 4687 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx");

@@ -1,7 +1,7 @@
-// === Module 14707: DEFAULT_FONT_SCALE_STORE_STATE ===
+// === Module 14780: DEFAULT_FONT_SCALE_STORE_STATE ===
 
-// Module 14707 (DEFAULT_FONT_SCALE_STORE_STATE)
-import enforcingDefault from "enforcing" /* 9599 */;
+// Module 14780 (DEFAULT_FONT_SCALE_STORE_STATE)
+import enforcingDefault from "enforcing" /* 9667 */;
 import set from "set" /* 500 */;
 import identity from "identity" /* 700 */;
 

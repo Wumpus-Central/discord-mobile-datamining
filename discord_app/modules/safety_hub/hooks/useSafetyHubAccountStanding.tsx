@@ -1,8 +1,8 @@
-// === Module 11449: useSafetyHubAccountStanding ===
+// === Module 11521: useSafetyHubAccountStanding ===
 
-// Module 11449 (useSafetyHubAccountStanding)
+// Module 11521 (useSafetyHubAccountStanding)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11442 */;
+import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11514 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubAccountStanding.tsx");

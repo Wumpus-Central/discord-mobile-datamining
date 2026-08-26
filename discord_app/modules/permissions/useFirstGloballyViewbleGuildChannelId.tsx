@@ -1,6 +1,6 @@
-// === Module 15419: useFirstGloballyViewbleGuildChannelId ===
+// === Module 15498: useFirstGloballyViewbleGuildChannelId ===
 
-// Module 15419 (useFirstGloballyViewbleGuildChannelId)
+// Module 15498 (useFirstGloballyViewbleGuildChannelId)
 import closure_3 from "comparator" /* 1982 */;
 import { Permissions } from "sum" /* 505 */;
 

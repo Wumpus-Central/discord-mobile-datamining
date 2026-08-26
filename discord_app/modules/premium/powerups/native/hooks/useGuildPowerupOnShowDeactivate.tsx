@@ -1,12 +1,12 @@
-// === Module 12097: useGuildPowerupOnShowDeactivate ===
+// === Module 12170: useGuildPowerupOnShowDeactivate ===
 
-// Module 12097 (useGuildPowerupOnShowDeactivate)
+// Module 12170 (useGuildPowerupOnShowDeactivate)
 import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
-let closure_4 = importAllResult.lazy(() => asyncRequireImpl(12098, dependencyMap.paths));
+let closure_4 = importAllResult.lazy(() => asyncRequireImpl(12171, dependencyMap.paths));
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx");
 
 export default function useGuildPowerupOnShowDeactivate(arg0, arg1) {

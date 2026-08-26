@@ -1,9 +1,9 @@
-// === Module 10285: useHandleUseNow ===
+// === Module 10353: useHandleUseNow ===
 
-// Module 10285 (useHandleUseNow)
-import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 10289 */;
+// Module 10353 (useHandleUseNow)
+import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 10357 */;
 import closure_3 from "noop" /* 19 */;
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 9721 */;
+import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 9789 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
@@ -30,13 +30,13 @@ export const useHandleUseNow = function useHandleUseNow(onSuccess) {
     }
   }, items);
   const callback1 = React.useCallback(() => {
-    let obj = callback(4098);
+    let obj = callback(4162);
     obj = { key: "collectible shop apply error", content: null };
     const intl = onSuccess(1236).intl;
     obj[1] = intl.string(onSuccess(1236).t.CKsXk3);
     obj.open(obj);
   }, []);
-  let obj = onSuccess(10286);
+  let obj = onSuccess(10354);
   handleUseNow = obj.useHandleUseNow({ product, onSuccess: callback, onError: callback1 });
   ({ handleUseNow, isApplying, canUseNow } = handleUseNow);
   const tmp4 = useOpenProfileSettingsDefault({ analyticsLocations });

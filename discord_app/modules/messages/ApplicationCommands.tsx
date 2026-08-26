@@ -1,6 +1,6 @@
-// === Module 8270: getApplicationCommand ===
+// === Module 8337: getApplicationCommand ===
 
-// Module 8270 (getApplicationCommand)
+// Module 8337 (getApplicationCommand)
 import closure_0 from "_slicedToArray" /* 32 */;
 
 const re1 = /<\/([^\s]+):(\d+)>(?:\s?(.*))?/;

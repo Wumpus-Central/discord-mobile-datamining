@@ -1,6 +1,6 @@
-// === Module 7298: ClickArea ===
+// === Module 7364: ClickArea ===
 
-// Module 7298 (ClickArea)
+// Module 7364 (ClickArea)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import closure_3 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 676 */;
@@ -18,10 +18,10 @@ export const trackAppEmbedViewed = function trackAppEmbedViewed(arg0) {
   expandEventPropertiesDefault.track(AnalyticEvents.APP_EMBED_VIEWED, { application_id: appId, link_type: linkType, referrer_id: referrerId, custom_id: customId, guild_id: guildId, channel_id: channelId, message_id: messageId, app_embed_state: appEmbedState });
 };
 export const useTrackAppEmbedViewed = function useTrackAppEmbedViewed(id) {
-  _require = _require(7299).trackingConfigWithDefaults(id);
+  _require = _require(7365).trackingConfigWithDefaults(id);
   closure_1 = React.useRef(false);
-  let obj = _require(7299);
-  return _require(7300).useIsVisible((arg0) => {
+  let obj = _require(7365);
+  return _require(7366).useIsVisible((arg0) => {
     const current = ref.current;
     let tmp2 = !current;
     if (!current) {

@@ -1,6 +1,6 @@
-// === Module 9802: StatusDisplayTypes ===
+// === Module 9869: StatusDisplayTypes ===
 
-// Module 9802 (StatusDisplayTypes)
+// Module 9869 (StatusDisplayTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx");

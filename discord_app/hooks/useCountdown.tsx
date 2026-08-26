@@ -1,6 +1,6 @@
-// === Module 7046: useCountdown ===
+// === Module 7112: useCountdown ===
 
-// Module 7046 (useCountdown)
+// Module 7112 (useCountdown)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 

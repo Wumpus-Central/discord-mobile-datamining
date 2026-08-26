@@ -1,10 +1,10 @@
-// === Module 14975: toggle ===
+// === Module 15054: toggle ===
 
-// Module 14975 (toggle)
+// Module 15054 (toggle)
 import initialize from "initialize" /* 589 */;
-import updateDevToolsSettings from "updateDevToolsSettings" /* 14054 */;
-import closure_2 from "initialize" /* 7323 */;
-import createToggle from "createToggle" /* 10516 */;
+import updateDevToolsSettings from "updateDevToolsSettings" /* 14127 */;
+import closure_2 from "initialize" /* 7389 */;
+import createToggle from "createToggle" /* 10584 */;
 
 require = arg1;
 createToggle = {

@@ -1,6 +1,6 @@
-// === Module 11118: categoryCollapse ===
+// === Module 11190: categoryCollapse ===
 
-// Module 11118 (categoryCollapse)
+// Module 11190 (categoryCollapse)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

@@ -1,11 +1,11 @@
-// === Module 4975: ? ===
+// === Module 5041: ? ===
 
-// Module 4975
+// Module 5041
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import launchCamera from "launchCamera" /* 4977 */;
-import openPickerDefault from "openPicker" /* 4979 */;
+import launchCamera from "launchCamera" /* 5043 */;
+import openPickerDefault from "openPicker" /* 5045 */;
 import closure_3 from "handleThemeChange" /* 1302 */;
 import { ThemeTypes } from "sum" /* 505 */;
 
@@ -28,10 +28,10 @@ export default {
     if (obj2.isIOS()) {
       str2 = "pageSheet";
     }
-    let tmp4Result = tmp4(4976);
+    let tmp4Result = tmp4(5042);
     obj2 = set;
     const tmp3 = !mediaType.disableNewIOSPicker;
-    tmp4Result = tmp4(4977);
+    tmp4Result = tmp4(5043);
     obj = {};
     const merged = Object.assign(mediaType);
     obj.mediaType = str;

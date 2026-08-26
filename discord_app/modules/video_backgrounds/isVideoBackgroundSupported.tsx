@@ -1,8 +1,8 @@
-// === Module 9315: isVideoBackgroundSupported ===
+// === Module 9383: isVideoBackgroundSupported ===
 
-// Module 9315 (isVideoBackgroundSupported)
-import closure_0 from "_detectH265HardwareDecode" /* 4431 */;
-import { Features } from "DesktopSources" /* 4444 */;
+// Module 9383 (isVideoBackgroundSupported)
+import closure_0 from "_detectH265HardwareDecode" /* 4495 */;
+import { Features } from "DesktopSources" /* 4508 */;
 
 const result = require("set").fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 

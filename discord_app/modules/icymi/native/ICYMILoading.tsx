@@ -1,14 +1,14 @@
-// === Module 15870: ICYMILoadingItem ===
+// === Module 15949: ICYMILoadingItem ===
 
-// Module 15870 (ICYMILoadingItem)
+// Module 15949 (ICYMILoadingItem)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4120 from "module_4120" /* 4120 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12197 */;
-import Separator from "Separator" /* 15848 */;
+import _modDef4184 from "module_4184" /* 4184 */;
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12270 */;
+import Separator from "Separator" /* 15927 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 15809 */;
+import createICYMIStyles from "createICYMIStyles" /* 15888 */;
 
 require = arg1;
 function ICYMILoadingItem() {
@@ -22,7 +22,7 @@ function ICYMILoadingItem() {
   const items = [, , ];
   ({ backgroundColor: arr[0], avatar: arr[1] } = tmp);
   items[2] = tmp2;
-  const items1 = [callback(_modDef4120.View, { style: items }), ];
+  const items1 = [callback(_modDef4184.View, { style: items }), ];
   obj1 = { style: null };
   const items2 = [, , , ];
   ({ backgroundColor: arr3[0], avatarTitle: arr3[1] } = tmp);
@@ -32,7 +32,7 @@ function ICYMILoadingItem() {
   obj2[0] = "" + (result - Math.floor(result)) * 30 + 30 + "%";
   items2[3] = obj2;
   obj1[0] = items2;
-  items1[1] = callback(_modDef4120.View, obj1);
+  items1[1] = callback(_modDef4184.View, obj1);
   obj[1] = items1;
   const items3 = [callback2(View, obj), , , ];
   const obj3 = { style: null };
@@ -44,7 +44,7 @@ function ICYMILoadingItem() {
   obj4[0] = "" + (result1 - Math.floor(result1)) * 25 + 75 + "%";
   items4[3] = obj4;
   obj3[0] = items4;
-  items3[1] = callback(_modDef4120.View, obj3);
+  items3[1] = callback(_modDef4184.View, obj3);
   const obj5 = { style: null };
   const items5 = [, , , ];
   ({ backgroundColor: arr6[0], subtitle: arr6[1] } = tmp);
@@ -54,11 +54,11 @@ function ICYMILoadingItem() {
   obj6[0] = "" + (result2 - Math.floor(result2)) * 25 + 75 + "%";
   items5[3] = obj6;
   obj5[0] = items5;
-  items3[2] = callback(_modDef4120.View, obj5);
+  items3[2] = callback(_modDef4184.View, obj5);
   const items6 = [, , ];
   ({ backgroundColor: arr7[0], image: arr7[1] } = tmp);
   items6[2] = tmp2;
-  items3[3] = callback(_modDef4120.View, { style: items6 });
+  items3[3] = callback(_modDef4184.View, { style: items6 });
   obj[1] = items3;
   const items7 = [callback2(View, obj), callback(Separator.Separator, {})];
   obj[0] = items7;

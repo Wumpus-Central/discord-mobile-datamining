@@ -1,9 +1,9 @@
-// === Module 12914: usePremiumPrimaryGradientColors ===
+// === Module 12988: usePremiumPrimaryGradientColors ===
 
-// Module 12914 (usePremiumPrimaryGradientColors)
+// Module 12988 (usePremiumPrimaryGradientColors)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4101 */;
+import map from "map" /* 4165 */;
 
 const result = set.fileFinishedImporting("modules/premium/native/usePremiumPrimaryGradientColors.tsx");
 

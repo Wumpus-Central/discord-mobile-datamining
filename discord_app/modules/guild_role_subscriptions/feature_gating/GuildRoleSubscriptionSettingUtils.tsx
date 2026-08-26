@@ -1,10 +1,10 @@
-// === Module 5987: computeGuildRoleSubscriptionSettingsVisibility ===
+// === Module 6053: computeGuildRoleSubscriptionSettingsVisibility ===
 
-// Module 5987 (computeGuildRoleSubscriptionSettingsVisibility)
+// Module 6053 (computeGuildRoleSubscriptionSettingsVisibility)
 import set from "set" /* 2 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import set2 from "set" /* 5988 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4025 */;
+import set2 from "set" /* 6054 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
@@ -69,8 +69,8 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
     return tmp3;
   });
   const obj2 = _require(589);
-  const isUserInCreatorMonetizationEligibleCountry = _require(5988).useIsUserInCreatorMonetizationEligibleCountry();
-  _require(5980);
+  const isUserInCreatorMonetizationEligibleCountry = _require(6054).useIsUserInCreatorMonetizationEligibleCountry();
+  _require(6046);
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }

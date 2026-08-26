@@ -1,13 +1,13 @@
-// === Module 14607: useVideoExternallyPaused ===
+// === Module 14680: useVideoExternallyPaused ===
 
-// Module 14607 (useVideoExternallyPaused)
+// Module 14680 (useVideoExternallyPaused)
 import set from "set" /* 500 */;
 import initialize from "initialize" /* 589 */;
-import coerceMainRoute from "coerceMainRoute" /* 4234 */;
-import useAlertStore from "useAlertStore" /* 4746 */;
-import updateContextMenuState from "updateContextMenuState" /* 8746 */;
-import getVideoQuestWatchCtaText from "getVideoQuestWatchCtaText" /* 10671 */;
-import closure_2 from "setContent" /* 4090 */;
+import coerceMainRoute from "coerceMainRoute" /* 4298 */;
+import useAlertStore from "useAlertStore" /* 4810 */;
+import updateContextMenuState from "updateContextMenuState" /* 8814 */;
+import getVideoQuestWatchCtaText from "getVideoQuestWatchCtaText" /* 10743 */;
+import closure_2 from "setContent" /* 4154 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx");

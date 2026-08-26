@@ -1,10 +1,10 @@
-// === Module 7857: DoorEnterIcon ===
+// === Module 7924: DoorEnterIcon ===
 
-// Module 7857 (DoorEnterIcon)
+// Module 7924 (DoorEnterIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 7858 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 7925 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

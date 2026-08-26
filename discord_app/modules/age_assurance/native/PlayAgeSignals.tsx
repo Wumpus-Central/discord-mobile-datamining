@@ -1,6 +1,6 @@
-// === Module 16804: _getAgeSignals ===
+// === Module 16889: _getAgeSignals ===
 
-// Module 16804 (_getAgeSignals)
+// Module 16889 (_getAgeSignals)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -18,7 +18,7 @@ function _getAgeSignals() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

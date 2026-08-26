@@ -1,17 +1,17 @@
-// === Module 10076: ExpressionPickerActionSheet ===
+// === Module 10143: ExpressionPickerActionSheet ===
 
-// Module 10076 (ExpressionPickerActionSheet)
+// Module 10143 (ExpressionPickerActionSheet)
 import initialize from "initialize" /* 589 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import KeyboardTypes from "KeyboardTypes" /* 1627 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _mod4120 from "module_4120" /* 4120 */;
-import useKeyboardType from "useKeyboardType" /* 4244 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5373 */;
+import _mod4184 from "module_4184" /* 4184 */;
+import useKeyboardType from "useKeyboardType" /* 4308 */;
+import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5439 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5504 */;
-import { STICKER_FORMATS } from "PADDING_HORIZONTAL" /* 10077 */;
+import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5570 */;
+import { STICKER_FORMATS } from "PADDING_HORIZONTAL" /* 10144 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -21,7 +21,7 @@ const result = require("set").fileFinishedImporting("modules/expression_picker/n
 export default function ExpressionPickerActionSheet(arg0) {
   ({ channelId: require, onPressEmoji: importDefault, onPressSticker: dependencyMap, onPressGIF: closure_3 } = arg0);
   ({ hideGifFavorites, onDismiss, visibleTabs, initialGifQuery } = arg0);
-  let obj = _mod4120;
+  let obj = _mod4184;
   const sharedValue = obj.useSharedValue(-1);
   obj1 = useKeyboardType;
   const keyboardContextForType = obj1.useKeyboardContextForType(KeyboardTypes.KeyboardTypes.EXPRESSION);
@@ -36,7 +36,7 @@ export default function ExpressionPickerActionSheet(arg0) {
     if (isIOSResult) {
       obj = { animatedSheetIndex: null, followSystemKeyboard: true };
       obj[0] = sharedValue;
-      isIOSResult = callback(tmp7(8820), obj);
+      isIOSResult = callback(tmp7(8888), obj);
     }
     obj = { children: null };
     const items1 = [isIOSResult, ];
@@ -73,8 +73,8 @@ export default function ExpressionPickerActionSheet(arg0) {
     obj2[9] = initialGifQuery;
     obj2[10] = STICKER_FORMATS;
     obj2[11] = diff;
-    obj1[5] = callback(tmp7(10079), obj2);
-    items1[1] = callback(tmp2(5503).BottomSheet, obj1);
+    obj1[5] = callback(tmp7(10146), obj2);
+    items1[1] = callback(tmp2(5569).BottomSheet, obj1);
     obj[0] = items1;
     tmp15Result = closure_9(closure_8, obj);
     const tmp15 = closure_9;

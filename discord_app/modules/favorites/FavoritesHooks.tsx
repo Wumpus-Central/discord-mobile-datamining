@@ -1,13 +1,13 @@
-// === Module 9860: useFavoritesAccess ===
+// === Module 9927: useFavoritesAccess ===
 
-// Module 9860 (useFavoritesAccess)
+// Module 9927 (useFavoritesAccess)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initialize from "initialize" /* 589 */;
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
 import isPremiumAtLeastDefault from "isPremiumAtLeast" /* 1946 */;
-import FREE_FAVORITE_LIMIT from "FREE_FAVORITE_LIMIT" /* 9861 */;
-import useFavoritesGuildConfig from "useFavoritesGuildConfig" /* 9862 */;
-import closure_3 from "handleConnectionOpen" /* 4202 */;
+import FREE_FAVORITE_LIMIT from "FREE_FAVORITE_LIMIT" /* 9928 */;
+import useFavoritesGuildConfig from "useFavoritesGuildConfig" /* 9929 */;
+import closure_3 from "handleConnectionOpen" /* 4266 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import closure_5 from "initializeFromUserSettings" /* 1394 */;
 import { MAX_FAVORITE_CHANNELS } from "date" /* 1429 */;

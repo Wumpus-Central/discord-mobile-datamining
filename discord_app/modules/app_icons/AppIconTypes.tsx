@@ -1,6 +1,6 @@
-// === Module 7808: FreemiumAppIconIds ===
+// === Module 7875: FreemiumAppIconIds ===
 
-// Module 7808 (FreemiumAppIconIds)
+// Module 7875 (FreemiumAppIconIds)
 import set from "set" /* 2 */;
 
 let obj = { DEFAULT: "AppIcon" };

@@ -1,6 +1,6 @@
-// === Module 17021: CommunityRequirementSatisfiedForm ===
+// === Module 17106: CommunityRequirementSatisfiedForm ===
 
-// Module 17021 (CommunityRequirementSatisfiedForm)
+// Module 17106 (CommunityRequirementSatisfiedForm)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -12,7 +12,7 @@ let result = require("set").fileFinishedImporting("modules/public_guilds/native/
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
-  let obj = formSwitchDisabled(17011);
+  let obj = formSwitchDisabled(17096);
   const enableCommunitySharedStyles = obj.useEnableCommunitySharedStyles();
   obj = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
   const items = [formSwitchDisabled.children, ];
@@ -26,7 +26,7 @@ export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
         const obj = formSwitchDisabled(closure_1_1[3]);
       }
     };
-    tmp6 = callback(formSwitchDisabled(4949).PressableOpacity, obj);
+    tmp6 = callback(formSwitchDisabled(5015).PressableOpacity, obj);
   }
   items[1] = tmp6;
   obj[1] = items;

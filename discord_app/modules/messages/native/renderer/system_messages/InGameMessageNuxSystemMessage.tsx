@@ -1,10 +1,10 @@
-// === Module 8304: createInGameMessageNuxSystemMessage ===
+// === Module 8371: createInGameMessageNuxSystemMessage ===
 
-// Module 8304 (createInGameMessageNuxSystemMessage)
+// Module 8371 (createInGameMessageNuxSystemMessage)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import resultDefault from "result" /* 8214 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8221 */;
-import closure_3 from "addApplication" /* 4421 */;
+import resultDefault from "result" /* 8281 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8288 */;
+import closure_3 from "addApplication" /* 4485 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 
 require = arg1;
@@ -29,7 +29,7 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = roleStyle;
-    obj[1] = tmp(8223)(obj);
+    obj[1] = tmp(8290)(obj);
     obj[2] = application.name;
     obj1 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
     obj1[1] = tmp(1995).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
@@ -38,7 +38,7 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     const obj2 = { content: null };
     const intl = getSystemLocale.intl;
     obj2[0] = intl.formatToParts(getSystemLocale.t["92erOB"], obj);
-    const merged = Object.assign(tmp(8224)(message));
+    const merged = Object.assign(tmp(8291)(message));
     return obj2;
   }
   tmp3 = resultDefault(theme);

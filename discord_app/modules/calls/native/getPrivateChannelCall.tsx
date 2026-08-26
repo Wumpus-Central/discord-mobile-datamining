@@ -1,7 +1,7 @@
-// === Module 9781: getPrivateChannelCall ===
+// === Module 9848: getPrivateChannelCall ===
 
-// Module 9781 (getPrivateChannelCall)
-import closure_2 from "updateVoiceState" /* 4399 */;
+// Module 9848 (getPrivateChannelCall)
+import closure_2 from "updateVoiceState" /* 4463 */;
 import { NOOP_NULL } from "ME" /* 676 */;
 
 const require = arg1;

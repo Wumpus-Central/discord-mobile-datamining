@@ -1,6 +1,6 @@
-// === Module 10818: _createWebviewHtmlFile ===
+// === Module 10890: _createWebviewHtmlFile ===
 
-// Module 10818 (_createWebviewHtmlFile)
+// Module 10890 (_createWebviewHtmlFile)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 
@@ -24,7 +24,7 @@ function _createWebviewHtmlFile() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

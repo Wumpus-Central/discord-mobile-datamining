@@ -1,13 +1,13 @@
-// === Module 15795: ForYouSuggestedFriendsSectionHeader ===
+// === Module 15874: ForYouSuggestedFriendsSectionHeader ===
 
-// Module 15795 (ForYouSuggestedFriendsSectionHeader)
+// Module 15874 (ForYouSuggestedFriendsSectionHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4376 */;
+import Text from "Text" /* 4440 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 noopAll;

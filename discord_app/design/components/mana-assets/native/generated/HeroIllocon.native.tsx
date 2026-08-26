@@ -1,10 +1,10 @@
-// === Module 6625: HeroIllocon ===
+// === Module 6691: HeroIllocon ===
 
-// Module 6625 (HeroIllocon)
+// Module 6691 (HeroIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6626 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 6692 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/HeroIllocon.native.tsx");

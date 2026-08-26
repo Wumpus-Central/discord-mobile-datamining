@@ -1,6 +1,6 @@
-// === Module 10366: canFollowIntoChannel ===
+// === Module 10434: canFollowIntoChannel ===
 
-// Module 10366 (canFollowIntoChannel)
+// Module 10434 (canFollowIntoChannel)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -9,11 +9,11 @@ import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import closure_8 from "comparator" /* 1982 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_9 } from "comparator" /* 1982 */;
 import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4025 */;
-import closure_12 from "insertUnsortedGuilds" /* 5262 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_12 from "insertUnsortedGuilds" /* 5328 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 function canFollowIntoChannel(channel) {

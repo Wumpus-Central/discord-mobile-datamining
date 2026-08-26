@@ -1,10 +1,10 @@
-// === Module 7849: NitroWheelIcon ===
+// === Module 7916: NitroWheelIcon ===
 
-// Module 7849 (NitroWheelIcon)
+// Module 7916 (NitroWheelIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 7850 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 7917 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

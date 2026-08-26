@@ -1,10 +1,10 @@
-// === Module 11259: ImagesIcon ===
+// === Module 11331: ImagesIcon ===
 
-// Module 11259 (ImagesIcon)
+// Module 11331 (ImagesIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 11260 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 11332 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

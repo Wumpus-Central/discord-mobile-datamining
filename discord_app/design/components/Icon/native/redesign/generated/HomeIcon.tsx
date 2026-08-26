@@ -1,10 +1,10 @@
-// === Module 16896: HomeIcon ===
+// === Module 16981: HomeIcon ===
 
-// Module 16896 (HomeIcon)
+// Module 16981 (HomeIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 16897 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 16982 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

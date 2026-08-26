@@ -1,6 +1,6 @@
-// === Module 15227: PasswordScreen ===
+// === Module 15306: PasswordScreen ===
 
-// Module 15227 (PasswordScreen)
+// Module 15306 (PasswordScreen)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -86,26 +86,24 @@ export default function PasswordScreen(finish) {
   const intl = finish(first[8]).intl;
   obj[0] = intl.string(finish(first[8]).t.Rw1XuM);
   obj = { style: screenStyles.inputContainer, children: null };
-  obj1 = { autoFocus: true, required: true, textContentType: "password", label: null, placeholder: null, autoComplete: "current-password", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, isDisabled: null, isClearable: true, secureTextEntry: true };
+  obj1 = { autoFocus: true, required: true, textContentType: "password", label: null, autoComplete: "current-password", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, isDisabled: null, isClearable: true, secureTextEntry: true };
   const intl2 = finish(first[8]).intl;
   obj1[3] = intl2.string(finish(first[8]).t["CIGa+7"]);
-  const intl3 = finish(first[8]).intl;
-  obj1[4] = intl3.string(finish(first[8]).t["CIGa+7"]);
-  obj1[6] = tmp5[0];
-  obj1[8] = tmp6[1];
-  obj1[9] = sendPassword;
+  obj1[5] = tmp5[0];
+  obj1[7] = tmp6[1];
+  obj1[8] = sendPassword;
   let tmp15 = tmp8;
   if (!tmp8) {
     tmp15 = tmp10;
   }
-  obj1[10] = tmp15;
-  obj[1] = jsx(finish(first[9]).TextInput, { autoFocus: true, required: true, textContentType: "password", label: null, placeholder: null, autoComplete: "current-password", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, isDisabled: null, isClearable: true, secureTextEntry: true });
+  obj1[9] = tmp15;
+  obj[1] = jsx(finish(first[9]).TextInput, { autoFocus: true, required: true, textContentType: "password", label: null, autoComplete: "current-password", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, isDisabled: null, isClearable: true, secureTextEntry: true });
   obj[1] = <View style={screenStyles.inputContainer}>{null}</View>;
   const obj2 = { text: null, disabled: null, loading: null, onPress: null };
   const tmp12 = importDefault(first[7]);
   const tmp14 = View;
-  const intl4 = tmp13(tmp2[8]).intl;
-  obj2[0] = intl4.string(finish(first[8]).t.geKm7t);
+  const intl3 = tmp13(tmp2[8]).intl;
+  obj2[0] = intl3.string(finish(first[8]).t.geKm7t);
   let tmp17 = tmp8;
   if (!tmp8) {
     tmp17 = tmp10;

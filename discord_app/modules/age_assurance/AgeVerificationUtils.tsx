@@ -1,28 +1,28 @@
-// === Module 4621: useAgeVerificationRunner ===
+// === Module 4685: useAgeVerificationRunner ===
 
-// Module 4621 (useAgeVerificationRunner)
+// Module 4685 (useAgeVerificationRunner)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import messagesProxyDefault from "messagesProxy" /* 2855 */;
-import isFeatureAgeGated2 from "isFeatureAgeGated" /* 4076 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5248 */;
-import usePreviousDefault from "usePrevious" /* 9000 */;
-import apexExperiment from "apexExperiment" /* 11496 */;
-import isManualAgeAssuranceFallbackEnabled from "isManualAgeAssuranceFallbackEnabled" /* 13231 */;
+import messagesProxyDefault from "messagesProxy" /* 2887 */;
+import isFeatureAgeGated2 from "isFeatureAgeGated" /* 4140 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5314 */;
+import usePreviousDefault from "usePrevious" /* 9068 */;
+import apexExperiment from "apexExperiment" /* 11568 */;
+import isManualAgeAssuranceFallbackEnabled from "isManualAgeAssuranceFallbackEnabled" /* 13304 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "initialize" /* 4622 */;
-import closure_7 from "getRegionalFeatureConfig" /* 4077 */;
+import closure_6 from "initialize" /* 4686 */;
+import closure_7 from "getRegionalFeatureConfig" /* 4141 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "reinjectEphemerals" /* 4623 */;
+import closure_9 from "reinjectEphemerals" /* 4687 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "initialize" /* 7977 */;
-import { FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS as closure_12 } from "set" /* 7943 */;
+import closure_11 from "initialize" /* 8044 */;
+import { FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS as closure_12 } from "set" /* 8010 */;
 import ME from "ME" /* 676 */;
 import result from "result" /* 1221 */;
-import { SafetyToastType } from "SafetyToastType" /* 7924 */;
+import { SafetyToastType } from "SafetyToastType" /* 7991 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -73,7 +73,7 @@ function useAgeVerificationRunner(onComplete) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -215,8 +215,8 @@ function useShouldCallReactiveCheck() {
     tmp5 = prop1 !== tmp(1955).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   _require = tmp5;
-  let tmpResult = tmp(4076);
-  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5248).AgeGatedFeature.REACTIVE_CHECK);
+  let tmpResult = tmp(4140);
+  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5314).AgeGatedFeature.REACTIVE_CHECK);
   tmpResult = tmp(589);
   const items1 = [closure_11];
   const items2 = [tmp5, isFeatureAgeGated];
@@ -248,7 +248,7 @@ function shouldCallReactiveCheck() {
   }
   let tmp7 = !tmp5;
   if (!tmp5) {
-    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5248).AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5314).AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
       isFeatureAgeGatedResult = closure_11.shouldCallReactiveCheck();
     }
@@ -270,7 +270,7 @@ function _maybePerformReactiveCheck() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -348,7 +348,7 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
   }
   let tmp5 = prop !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (tmp5) {
-    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5248).AgeGatedFeature.REACTIVE_CHECK);
+    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5314).AgeGatedFeature.REACTIVE_CHECK);
     let tmp8 = !isFeatureAgeGatedResult;
     if (isFeatureAgeGatedResult) {
       tmp8 = prop !== tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
@@ -401,8 +401,8 @@ export const isVerifiedAdult = function isVerifiedAdult() {
   }
   let tmp5 = prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (!tmp5) {
-    tmp5 = closure_7.isFeatureAgeGated(tmp3(5248).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
-    const tmp7 = closure_7.isFeatureAgeGated(tmp3(5248).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    tmp5 = closure_7.isFeatureAgeGated(tmp3(5314).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    const tmp7 = closure_7.isFeatureAgeGated(tmp3(5314).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   return tmp5;
 };

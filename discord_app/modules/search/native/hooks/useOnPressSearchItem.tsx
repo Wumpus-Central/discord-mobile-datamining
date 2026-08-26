@@ -1,13 +1,13 @@
-// === Module 15995: handleVoiceOrStageChannelConnectPress ===
+// === Module 16076: handleVoiceOrStageChannelConnectPress ===
 
-// Module 15995 (handleVoiceOrStageChannelConnectPress)
+// Module 16076 (handleVoiceOrStageChannelConnectPress)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "prototype" /* 11906 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8554 */;
-import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 15996 */;
-import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 8553 */;
+import closure_6 from "prototype" /* 11979 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8622 */;
+import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16077 */;
+import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 8621 */;
 import ME from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
 
@@ -40,7 +40,7 @@ function _handleVoiceOrStageChannelConnectPress() {
           obj[0] = openGuildVoiceModal;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

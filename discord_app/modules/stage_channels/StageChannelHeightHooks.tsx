@@ -1,8 +1,8 @@
-// === Module 10850: CALL_ACTION_BAR_HEIGHT ===
+// === Module 10922: CALL_ACTION_BAR_HEIGHT ===
 
-// Module 10850 (CALL_ACTION_BAR_HEIGHT)
+// Module 10922 (CALL_ACTION_BAR_HEIGHT)
 import set from "set" /* 2 */;
-import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8158 */;
+import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8225 */;
 
 const result = set.fileFinishedImporting("modules/stage_channels/StageChannelHeightHooks.tsx");
 

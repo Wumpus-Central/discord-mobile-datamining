@@ -1,8 +1,8 @@
-// === Module 7294: set ===
+// === Module 7360: set ===
 
-// Module 7294 (set)
+// Module 7360 (set)
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import CodedLinkType from "CodedLinkType" /* 4368 */;
+import CodedLinkType from "CodedLinkType" /* 4432 */;
 import set from "set" /* 2 */;
 
 const items = [CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE, CodedLinkType.CodedLinkType.ACTIVITY_BOOKMARK, CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT, CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU, CodedLinkType.CodedLinkType.APP_OAUTH2_LINK];
@@ -21,10 +21,10 @@ export const isApplicationCodedLinkMobileSupported = function isApplicationCoded
 };
 export const getApplicationCodedLinkData = function getApplicationCodedLinkData(type, code, url) {
   if (CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
-    if (tmp(4368).CodedLinkType.APP_OAUTH2_LINK !== type) {
-      if (tmp(4368).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
-        if (tmp(4368).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
-          let tmpResult = tmp(7295);
+    if (tmp(4432).CodedLinkType.APP_OAUTH2_LINK !== type) {
+      if (tmp(4432).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
+        if (tmp(4432).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
+          let tmpResult = tmp(7361);
           const result = tmpResult.parseStorefrontSkuCodedLink(code);
           let tmp5 = null;
           if (null != result) {
@@ -34,11 +34,11 @@ export const getApplicationCodedLinkData = function getApplicationCodedLinkData(
             tmp5 = obj;
           }
           return tmp5;
-        } else if (tmp(4368).CodedLinkType.ACTIVITY_BOOKMARK === type) {
+        } else if (tmp(4432).CodedLinkType.ACTIVITY_BOOKMARK === type) {
           obj = { type: null, applicationId: null, params: null };
           obj[0] = type;
           obj[1] = code;
-          tmpResult = tmp(7296);
+          tmpResult = tmp(7362);
           obj[2] = tmpResult.extractActivityBookmarkParams(url);
           return obj;
         }

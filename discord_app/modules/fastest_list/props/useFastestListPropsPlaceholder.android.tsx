@@ -1,7 +1,7 @@
-// === Module 8687: createNativePlaceholderConfig ===
+// === Module 8755: createNativePlaceholderConfig ===
 
-// Module 8687 (createNativePlaceholderConfig)
-import FastestListPropsPlaceholderType from "FastestListPropsPlaceholderType" /* 8688 */;
+// Module 8755 (createNativePlaceholderConfig)
+import FastestListPropsPlaceholderType from "FastestListPropsPlaceholderType" /* 8756 */;
 import closure_2 from "noop" /* 19 */;
 import { processColor } from "get ActivityIndicator" /* 17 */;
 
@@ -15,12 +15,13 @@ function createNativePlaceholderConfig(type) {
   if (type == null) {
     NONE = FastestListPropsPlaceholderType.FastestListPropsPlaceholderType.NONE;
   }
-  obj = { borderRadius: "Array", borderTopLeftRadius: "create", borderTopRightRadius: "diversity", borderBottomLeftRadius: "Button", borderBottomRightRadius: "e", divider: "isArray", dividerColor: "isArray", dividerPaddingLeft: "t", dividerPaddingRight: "e", placeholderShape: "isArray", placeholderShapeColor: "isArray", placeholderShapeCount: "to", placeholderShapeGap: "e", placeholderShapePaddingHorizontal: "isArray", placeholderShapePaddingVertical: "isArray", placeholderFeedBackgroundColor: "Date", placeholderFeedColor: "e", placeholderFeedLabelPadding: "isArray", placeholderFeedLabelPaddingInnerRatio: "isArray", placeholderFeedLabelSize: "TypeError", placeholderFeedLabelSecondarySize: "e", placeholderFeedPadding: "isArray", placeholderFeedShape: "isArray", placeholderFeedShapeSize: "diversity", placeholderType: NONE, width: null, height: null, verticalAlignment: null, horizontalAlignment: null };
+  obj = { borderRadius: "Array", borderTopLeftRadius: "create", borderTopRightRadius: "call", borderBottomLeftRadius: "color", borderBottomRightRadius: "flags", divider: "Array", dividerColor: "call", dividerPaddingLeft: "ip", dividerPaddingRight: "user", placeholderShape: "HermesInternal", placeholderShapeColor: "Array", placeholderShapeCount: "View", placeholderShapeGap: "WireType", placeholderShapePaddingHorizontal: "WireType", placeholderShapePaddingVertical: "WireType", placeholderFeedBackgroundColor: "WireType", placeholderFeedColor: "WireType", placeholderFeedLabelPadding: "WireType", placeholderFeedLabelPaddingInnerRatio: "Set", placeholderFeedLabelSize: "accessibilityLabel", placeholderFeedLabelSecondarySize: "channel", placeholderFeedPadding: "ao", placeholderFeedShape: "container", placeholderFeedShapeSize: "type", placeholderType: "PERSONAL_WIDGET_COVER", width: "y", height: "isGA", verticalAlignment: "\u{1F468}\u{1F3FE}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F468}\u{1F3FB}", horizontalAlignment: "ActionBarPrimaryButton" };
+  obj[24] = NONE;
   if (null == type) {
     return obj;
   } else {
     if (FastestListPropsPlaceholderType.FastestListPropsPlaceholderType.NONE !== type) {
-      if (tmp15(8688).FastestListPropsPlaceholderType.SHAPE === type) {
+      if (tmp15(8756).FastestListPropsPlaceholderType.SHAPE === type) {
         let num9 = type.borderRadius;
         if (num9 == null) {
           num9 = 0;
@@ -41,7 +42,7 @@ function createNativePlaceholderConfig(type) {
           num11 = 0;
         }
         obj.placeholderShapePaddingVertical = num11;
-        const tmp14 = processColor(tmp15(4228).hexToRgbaString(type.colorHex, type.opacity));
+        const tmp14 = processColor(tmp15(4292).hexToRgbaString(type.colorHex, type.opacity));
         obj.placeholderShapeColor = tmp14;
         let num12 = type.shapeCount;
         if (num12 == null) {
@@ -58,8 +59,8 @@ function createNativePlaceholderConfig(type) {
           str2 = "center";
         }
         obj.horizontalAlignment = str2;
-        const tmp15Result = tmp15(4228);
-      } else if (tmp15(8688).FastestListPropsPlaceholderType.FEED_ITEM === type) {
+        const tmp15Result = tmp15(4292);
+      } else if (tmp15(8756).FastestListPropsPlaceholderType.FEED_ITEM === type) {
         let num = type.borderRadius;
         if (num == null) {
           num = 0;

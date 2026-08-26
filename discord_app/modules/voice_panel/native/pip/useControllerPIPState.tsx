@@ -1,16 +1,16 @@
-// === Module 16429: useControllerPIPState ===
+// === Module 16512: useControllerPIPState ===
 
-// Module 16429 (useControllerPIPState)
+// Module 16512 (useControllerPIPState)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "participantFromServer" /* 1390 */;
-import closure_6 from "getParticipants" /* 4396 */;
-import closure_7 from "map" /* 10677 */;
+import closure_6 from "getParticipants" /* 4460 */;
+import closure_7 from "map" /* 10749 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "anyoneHasFlagInContext" /* 5244 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 11841 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9915 */;
-import { asLaunched } from "FrameLayoutModes" /* 10678 */;
+import closure_9 from "anyoneHasFlagInContext" /* 5310 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 11914 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9982 */;
+import { asLaunched } from "FrameLayoutModes" /* 10750 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
@@ -29,7 +29,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   let first1;
   c7 = undefined;
   obj = React;
-  ref = React.useRef({ id: "dispatch", mode: "isArray", width: false, height: "INVALID_MESSAGE_SEND_USER", containerHeight: null, showSecondaryPIP: "\u{1F9BB}\u{1F3FC}" });
+  ref = React.useRef({ id: "dispatch", mode: "isArray", width: false, height: "blond_haired_person_tone3", containerHeight: "person_with_blond_hair_tone3", showSecondaryPIP: "blond_haired_person_tone4" });
   const tmp2 = first(React.useState(undefined), 2);
   first = tmp2[0];
   React = tmp2[1];
@@ -40,7 +40,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   obj = channelId;
   ref = mode;
   dependencyMap = undefined;
-  const tmp7 = ref(16385)(channelId);
+  const tmp7 = ref(16466)(channelId);
   dependencyMap = tmp7;
   let items = [closure_5, c7, closure_8];
   const items1 = [channelId, tmp7, mode];
@@ -88,7 +88,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     }
     obj3 = connectedActivityLocation;
   }, items1);
-  let tmp10 = ref(16430)(channelId);
+  let tmp10 = ref(16513)(channelId);
   first1 = first(React.useState(() => ref(closure_2[16])((arg0) => arg0(), 1000, { leading: true })), 1)[0];
   const items2 = [first1];
   const layoutEffect = React.useLayoutEffect(() => () => closure_6.cancel(), items2);
@@ -97,7 +97,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   [tmp14, c7] = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
   obj = { connected, mode, focusedId, participantTargetDimensions: tmp14, selfHasVideo: tmp10, showSecondaryPIP: stateFromStores };
   let tmp13 = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
-  ({ participant, dimensions } = ref(16431)(channelId, layoutManager, focusedId, first, obj));
+  ({ participant, dimensions } = ref(16514)(channelId, layoutManager, focusedId, first, obj));
   obj = {};
   const merged = Object.assign(ref.current);
   const merged1 = Object.assign(dimensions);
@@ -107,10 +107,10 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   }
   obj.id = id;
   obj.showSecondaryPIP = stateFromStores;
-  let tmp8Result = tmp8(16432);
+  let tmp8Result = tmp8(16515);
   obj.mode = tmp8Result.getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp10 });
   dependencyMap = undefined;
-  tmp8Result = tmp8(8923);
+  tmp8Result = tmp8(8991);
   let result = tmp8Result.cheapWorkletShallowEqual(obj, ref.current);
   dependencyMap = !result;
   const effect = obj.useEffect(() => {
@@ -175,6 +175,6 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       });
     });
   }, items4);
-  tmp5(16434)(channelId, layoutManager, focusedId);
+  tmp5(16517)(channelId, layoutManager, focusedId);
   return obj;
 };

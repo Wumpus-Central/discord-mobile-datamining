@@ -1,8 +1,8 @@
-// === Module 9851: InstantInviteUsesLabel ===
+// === Module 9918: InstantInviteUsesLabel ===
 
-// Module 9851 (InstantInviteUsesLabel)
+// Module 9918 (InstantInviteUsesLabel)
 import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4376 */;
+import Text from "Text" /* 4440 */;
 import { jsxs } from "jsxProd" /* 21 */;
 
 require = arg1;

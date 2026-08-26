@@ -1,10 +1,10 @@
-// === Module 14976: StaffBadgeIcon ===
+// === Module 15055: StaffBadgeIcon ===
 
-// Module 14976 (StaffBadgeIcon)
+// Module 15055 (StaffBadgeIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 14977 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 15056 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

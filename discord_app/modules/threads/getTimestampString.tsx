@@ -1,6 +1,6 @@
-// === Module 7105: getTimestampString ===
+// === Module 7171: getTimestampString ===
 
-// Module 7105 (getTimestampString)
+// Module 7171 (getTimestampString)
 import set from "set" /* 2 */;
 
 let c3 = 2592000;

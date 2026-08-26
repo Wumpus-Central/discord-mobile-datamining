@@ -1,10 +1,10 @@
-// === Module 4893: isValidFormResponse ===
+// === Module 4959: isValidFormResponse ===
 
-// Module 4893 (isValidFormResponse)
+// Module 4959 (isValidFormResponse)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4205 */;
-import items from "items" /* 4894 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4269 */;
+import items from "items" /* 4960 */;
 
 ({ AUTOMATIC_APPROVAL_FORM_FIELDS: obj1, MANUAL_APPROVAL_FORM_FIELDS: c3 } = items);
 const GuildFeatures = ME.GuildFeatures;
@@ -17,10 +17,10 @@ export const isValidFormResponse = function isValidFormResponse(required) {
       return false;
     } else {
       if (MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TERMS !== field_type) {
-        if (tmp4(4205).VerificationFormFieldTypes.VERIFICATION !== field_type) {
-          if (tmp4(4205).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
-            if (tmp4(4205).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
-              if (tmp4(4205).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+        if (tmp4(4269).VerificationFormFieldTypes.VERIFICATION !== field_type) {
+          if (tmp4(4269).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
+            if (tmp4(4269).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
+              if (tmp4(4269).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
                 return typeof response === "number";
               } else {
                 return tmp4(1370).assertNever(field_type);

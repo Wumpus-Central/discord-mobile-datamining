@@ -1,11 +1,11 @@
-// === Module 8263: createUserPremiumGuildSubscriptionSystemMessage ===
+// === Module 8330: createUserPremiumGuildSubscriptionSystemMessage ===
 
-// Module 8263 (createUserPremiumGuildSubscriptionSystemMessage)
+// Module 8330 (createUserPremiumGuildSubscriptionSystemMessage)
 import set from "set" /* 2 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8221 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8223 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8224 */;
-import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8264 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8288 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8290 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8291 */;
+import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8331 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");
 

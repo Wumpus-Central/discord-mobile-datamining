@@ -1,6 +1,6 @@
-// === Module 10331: useCanSetThumbnail ===
+// === Module 10399: useCanSetThumbnail ===
 
-// Module 10331 (useCanSetThumbnail)
+// Module 10399 (useCanSetThumbnail)
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
 
 const require = arg1;

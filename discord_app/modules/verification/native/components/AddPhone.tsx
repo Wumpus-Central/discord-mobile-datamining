@@ -1,18 +1,18 @@
-// === Module 8673: AddPhone ===
+// === Module 8741: AddPhone ===
 
-// Module 8673 (AddPhone)
+// Module 8741 (AddPhone)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleSetLocationMetadata" /* 8628 */;
+import closure_8 from "handleSetLocationMetadata" /* 8696 */;
 import closure_9 from "handleRequiredAction" /* 1385 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import { UserFlags } from "ME" /* 676 */;
 import { NOOP_NULL } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
@@ -56,7 +56,7 @@ export default function AddPhone(reason) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -1,6 +1,6 @@
-// === Module 4809: __INTERNAL_VIEW_CONFIG ===
+// === Module 4873: __INTERNAL_VIEW_CONFIG ===
 
-// Module 4809 (__INTERNAL_VIEW_CONFIG)
+// Module 4873 (__INTERNAL_VIEW_CONFIG)
 import set from "set" /* 2 */;
 import result2 from "result" /* 26 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;

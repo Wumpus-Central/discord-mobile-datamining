@@ -1,8 +1,8 @@
-// === Module 10958: VoicePanelRiveMicButton ===
+// === Module 11030: VoicePanelRiveMicButton ===
 
-// Module 10958 (VoicePanelRiveMicButton)
+// Module 11030 (VoicePanelRiveMicButton)
 import noopAll from "noop" /* 19 */;
-import ManaContext from "ManaContext" /* 4108 */;
+import ManaContext from "ManaContext" /* 4172 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -21,9 +21,9 @@ export const VoicePanelRiveMicButton = function VoicePanelRiveMicButton(arg0) {
   }
   obj[1] = str;
   if (muted) {
-    let MicrophoneIcon = tmp3(9334).MicrophoneSlashIcon;
+    let MicrophoneIcon = tmp3(9402).MicrophoneSlashIcon;
   } else {
-    MicrophoneIcon = tmp3(10959).MicrophoneIcon;
+    MicrophoneIcon = tmp3(11031).MicrophoneIcon;
   }
   obj[2] = <MicrophoneIcon color={color} />;
   obj[1] = jsx(ManaContext.MicrophoneRive, { fill: color, on: !muted });

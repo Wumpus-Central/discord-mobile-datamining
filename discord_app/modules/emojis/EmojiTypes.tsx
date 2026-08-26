@@ -1,6 +1,6 @@
-// === Module 4041: EmojiTypes ===
+// === Module 4105: EmojiTypes ===
 
-// Module 4041 (EmojiTypes)
+// Module 4105 (EmojiTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/emojis/EmojiTypes.tsx");

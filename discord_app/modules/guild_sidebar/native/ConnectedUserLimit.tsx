@@ -1,9 +1,9 @@
-// === Module 15476: ConnectedUserLimit ===
+// === Module 15555: ConnectedUserLimit ===
 
-// Module 15476 (ConnectedUserLimit)
+// Module 15555 (ConnectedUserLimit)
 import noopAll from "noop" /* 19 */;
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9302 */;
-import _modDef15477 from "module_15477" /* 15477 */;
+import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9370 */;
+import _modDef15556 from "module_15556" /* 15556 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;
@@ -31,5 +31,5 @@ export const ConnectedUserLimit = function ConnectedUserLimit(users) {
     videoLimit = num < 0 || limit < num;
     const tmp4 = num < 0 || limit < num;
   }
-  return jsx(_modDef15477, { users: users.userCount, total, videoLimit });
+  return jsx(_modDef15556, { users: users.userCount, total, videoLimit });
 };

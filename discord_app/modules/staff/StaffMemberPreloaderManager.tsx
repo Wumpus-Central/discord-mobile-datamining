@@ -1,7 +1,7 @@
-// === Module 16834: prototype ===
+// === Module 16919: prototype ===
 
-// Module 16834 (prototype)
-import initializeDefault from "initialize" /* 5367 */;
+// Module 16919 (prototype)
+import initializeDefault from "initialize" /* 5433 */;
 
 let require = arg1;
 initializeDefault;

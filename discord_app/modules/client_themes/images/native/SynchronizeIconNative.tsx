@@ -1,9 +1,9 @@
-// === Module 14719: SynchronizeIcon ===
+// === Module 14792: SynchronizeIcon ===
 
-// Module 14719 (SynchronizeIcon)
+// Module 14792 (SynchronizeIcon)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 7985 */;
-import inlineStylesDefault from "inlineStyles" /* 7985 */;
+import inlineStyles from "inlineStyles" /* 8052 */;
+import inlineStylesDefault from "inlineStyles" /* 8052 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

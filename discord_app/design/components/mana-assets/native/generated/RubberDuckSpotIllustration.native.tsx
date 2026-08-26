@@ -1,10 +1,10 @@
-// === Module 6809: RubberDuckSpotIllustration ===
+// === Module 6875: RubberDuckSpotIllustration ===
 
-// Module 6809 (RubberDuckSpotIllustration)
+// Module 6875 (RubberDuckSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5374 */;
-import metadataDefault from "metadata" /* 6810 */;
+import preloadDefault from "preload" /* 5440 */;
+import metadataDefault from "metadata" /* 6876 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/RubberDuckSpotIllustration.native.tsx");

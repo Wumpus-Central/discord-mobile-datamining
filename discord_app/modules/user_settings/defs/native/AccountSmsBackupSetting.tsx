@@ -1,20 +1,20 @@
-// === Module 14253: toggle ===
+// === Module 14326: toggle ===
 
-// Module 14253 (toggle)
+// Module 14326 (toggle)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import _modDef4611 from "module_4611" /* 4611 */;
-import _modDef4745 from "module_4745" /* 4745 */;
-import ChangePhoneReason from "ChangePhoneReason" /* 8674 */;
-import _modDef14199 from "module_14199" /* 14199 */;
-import getSMSBackupDisabledMessage from "getSMSBackupDisabledMessage" /* 14249 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14251 */;
+import _modDef4675 from "module_4675" /* 4675 */;
+import _modDef4809 from "module_4809" /* 4809 */;
+import ChangePhoneReason from "ChangePhoneReason" /* 8742 */;
+import _modDef14272 from "module_14272" /* 14272 */;
+import getSMSBackupDisabledMessage from "getSMSBackupDisabledMessage" /* 14322 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14324 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { UserFlags } from "ME" /* 676 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8672 */;
+import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8740 */;
 import apply from "apply" /* 12 */;
-import createToggle from "createToggle" /* 10516 */;
+import createToggle from "createToggle" /* 10584 */;
 
 require = arg1;
 let closure_6 = apply.debounce(function toggleSMS(user) {
@@ -26,7 +26,7 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
     const str2 = intl2.string(getSystemLocale.t["CIGa+7"]);
     let obj = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
     const formatted1 = intl3.string(getSystemLocale.t.wlfmlR).toUpperCase();
-    obj[0] = _modDef14199.disableSMS;
+    obj[0] = _modDef14272.disableSMS;
     obj[1] = formatted1;
     obj[2] = formatted;
     showUserSettingsInputAlertDefault(obj);
@@ -39,21 +39,21 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
         const str = intl.string(getSystemLocale.t.DZQe23);
         obj = { title: null };
         obj[0] = formatted2;
-        const obj3 = _modDef4745;
-        _modDef4745.confirm(obj).then((arg0) => {
+        const obj3 = _modDef4809;
+        _modDef4809.confirm(obj).then((arg0) => {
           if (arg0) {
             callback(table[7]).enableSMS();
             const obj = callback(table[7]);
           }
         });
-        const confirmResult = _modDef4745.confirm(obj);
+        const confirmResult = _modDef4809.confirm(obj);
       }
     }
-    obj = _modDef4611;
+    obj = _modDef4675;
     obj1 = { reason: null };
     obj1[0] = ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(8671, dependencyMap.paths), obj1, closure_5);
-    const tmp5 = asyncRequireImpl(8671, dependencyMap.paths);
+    obj.pushLazy(asyncRequireImpl(8739, dependencyMap.paths), obj1, closure_5);
+    const tmp5 = asyncRequireImpl(8739, dependencyMap.paths);
   }
 }, 200);
 apply = {

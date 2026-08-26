@@ -1,10 +1,10 @@
-// === Module 9439: SteamNeutralIcon ===
+// === Module 9507: SteamNeutralIcon ===
 
-// Module 9439 (SteamNeutralIcon)
+// Module 9507 (SteamNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 9440 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 9508 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

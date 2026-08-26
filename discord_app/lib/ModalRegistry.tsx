@@ -1,6 +1,6 @@
-// === Module 16262: getStores ===
+// === Module 16343: getStores ===
 
-// Module 16262 (getStores)
+// Module 16343 (getStores)
 import set2 from "set" /* 2 */;
 
 class ModalRegistry {

@@ -1,9 +1,9 @@
-// === Module 9437: useXboxGamePassStoreUrl ===
+// === Module 9505: useXboxGamePassStoreUrl ===
 
-// Module 9437 (useXboxGamePassStoreUrl)
+// Module 9505 (useXboxGamePassStoreUrl)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import XBOX_DISCORD_OCID from "XBOX_DISCORD_OCID" /* 9430 */;
+import XBOX_DISCORD_OCID from "XBOX_DISCORD_OCID" /* 9498 */;
 
 const Distributors = ME.Distributors;
 const result = set.fileFinishedImporting("modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx");

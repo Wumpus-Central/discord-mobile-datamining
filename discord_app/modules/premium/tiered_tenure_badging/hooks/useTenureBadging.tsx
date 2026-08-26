@@ -1,12 +1,12 @@
-// === Module 9656: usePremiumSince ===
+// === Module 9724: usePremiumSince ===
 
-// Module 9656 (usePremiumSince)
+// Module 9724 (usePremiumSince)
 import initialize from "initialize" /* 589 */;
-import hooksDefault from "hooks" /* 3979 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 9657 */;
-import closure_3 from "createUserWidgetFromServer" /* 7227 */;
+import hooksDefault from "hooks" /* 4043 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 9725 */;
+import closure_3 from "createUserWidgetFromServer" /* 7293 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 4049 */;
+import closure_5 from "reset" /* 4113 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 require = arg1;
@@ -135,7 +135,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
     if (null != stateFromStores1) {
       earnedOnDate = null;
       if (null != stateFromStores1.premiumSince) {
-        tmpResult = tmp(7240);
+        tmpResult = tmp(7306);
         earnedOnDate = tmpResult.getEarnedOnDate(tieredTenureBadgeForUser, stateFromStores1.premiumSince);
       }
     }
@@ -150,7 +150,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(9657);
+  let tmpResult = tmp(9725);
   const tieredTenureBadgeForUser = tmpResult.useTieredTenureBadgeForUser(id);
   let tmp7 = null;
   if (null != tieredTenureBadgeForUser) {
@@ -177,8 +177,8 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
     if (null != stateFromStores2) {
       earnedOnDate = null;
       if (null != stateFromStores2.premiumSince) {
-        earnedOnDate = tmp(7240).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
-        const tmpResult3 = tmp(7240);
+        earnedOnDate = tmp(7306).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
+        const tmpResult3 = tmp(7306);
       }
     }
   }

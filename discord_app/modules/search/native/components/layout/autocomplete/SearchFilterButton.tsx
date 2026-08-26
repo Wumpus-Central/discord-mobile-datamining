@@ -1,8 +1,8 @@
-// === Module 15988: ? ===
+// === Module 16069: ? ===
 
-// Module 15988
+// Module 16069
 import importAllResult from "noop" /* 19 */;
-import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 8553 */;
+import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 8621 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -11,7 +11,7 @@ const memoResult = importAllResult.memo((searchContext) => {
   searchContext = searchContext.searchContext;
   let validOrderedFilterTokens;
   dependencyMap = undefined;
-  let obj = searchContext(15987);
+  let obj = searchContext(16068);
   validOrderedFilterTokens = obj.useValidOrderedFilterTokens(searchContext);
   const items = [searchContext, validOrderedFilterTokens];
   const memo = importAllResult.useMemo(() => validOrderedFilterTokens.map((searchTokenType) => {
@@ -38,10 +38,10 @@ const memoResult = importAllResult.memo((searchContext) => {
       str = "md";
     }
     obj.size = str;
-    obj.icon = closure_1_5(searchContext(14454).FiltersHorizontalIcon, { size: "sm", color: "redesign-button-tertiary-text" });
-    return closure_1_5(searchContext(7896).IconButton, obj);
+    obj.icon = closure_1_5(searchContext(14527).FiltersHorizontalIcon, { size: "sm", color: "redesign-button-tertiary-text" });
+    return closure_1_5(searchContext(7963).IconButton, obj);
   };
-  return jsx(searchContext(8745).ContextMenu, { items: memo, align: "below", title: null, keyboardShouldPersistTaps: "handled", children: null });
+  return jsx(searchContext(8813).ContextMenu, { items: memo, align: "below", title: null, keyboardShouldPersistTaps: "handled", children: null });
 });
 const result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterButton.tsx");
 

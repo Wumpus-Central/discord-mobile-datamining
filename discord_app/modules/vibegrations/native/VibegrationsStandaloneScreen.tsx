@@ -1,22 +1,22 @@
-// === Module 15942: ProjectList ===
+// === Module 16021: ProjectList ===
 
-// Module 15942 (ProjectList)
+// Module 16021 (ProjectList)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4025 */;
-import closure_11 from "newMessage" /* 15943 */;
-import rejectPendingPublish from "rejectPendingPublish" /* 15946 */;
-import closure_15 from "rejectPendingPublish" /* 15946 */;
-import closure_16 from "isProjectOwner" /* 15944 */;
-import { isProjectOwner } from "isProjectOwner" /* 15944 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_11 from "newMessage" /* 16022 */;
+import rejectPendingPublish from "rejectPendingPublish" /* 16025 */;
+import closure_15 from "rejectPendingPublish" /* 16025 */;
+import closure_16 from "isProjectOwner" /* 16023 */;
+import { isProjectOwner } from "isProjectOwner" /* 16023 */;
 import { Permissions } from "ME" /* 676 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 10678 */;
+import { MAIN_SURFACE } from "FrameLayoutModes" /* 10750 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 function ProjectList(guildId) {
@@ -103,7 +103,7 @@ function ProjectList(guildId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -129,7 +129,7 @@ function ProjectList(guildId) {
                 closure_1_9(null);
                 c3 = 2;
                 let obj2 = closure_1_0(arr[18]);
-                obj1 = { guild_id: null };
+                obj1 = { guild_id: null, install_scope: "guild" };
                 obj1[0] = closure_1_0;
                 c4 = 3;
                 c5 = 1;
@@ -438,7 +438,7 @@ function ChatScene(guildId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -592,39 +592,33 @@ function ChatScene(guildId) {
     if (tmp) {
       tmp = supportsVisibility;
     }
-    if (!tmp) {
-      if (stateFromStores2) {
-        obj = { label: null, IconComponent: null, action: null };
-        const intl3 = guildId(navigation[19]).intl;
-        obj[0] = intl3.string(projectId(navigation[20])["2NWMqY"]);
-        obj[1] = guildId(navigation[37]).FiltersHorizontalIcon;
-        obj[2] = callback3;
-        items.push(obj);
-      }
-      obj = { label: null, IconComponent: null, action: null };
-      const intl4 = guildId(navigation[19]).intl;
-      obj[0] = intl4.string(projectId(navigation[20]).xKexN1);
-      obj[1] = guildId(navigation[38]).RetryIcon;
-      obj[2] = callback1;
-      items.push(obj);
-      return items;
-    } else {
+    if (tmp) {
+      obj = { label: null, trailingIndicator: null, action: null };
       const intl2 = guildId(navigation[19]).intl;
-      const tmp15 = projectId(navigation[20]);
-      obj1 = { label: null, IconComponent: null, action: null };
-      obj1[0] = intl2.string(isPublic ? tmp15.XC0HHn : tmp15["Hn/5vP"]);
-      let tmp16Result = navigation;
-      if (tmp12) {
-        tmp16Result = tmp16(tmp16Result[35]);
-        let GlobeEarthIcon = tmp16Result.LockIcon;
-      } else {
-        GlobeEarthIcon = tmp16(tmp16Result[36]).GlobeEarthIcon;
+      obj[0] = intl2.string(projectId(navigation[20]).fvxLKl);
+      let CheckmarkSmallIcon;
+      if (isPublic) {
+        CheckmarkSmallIcon = guildId(navigation[35]).CheckmarkSmallIcon;
       }
-      obj1[1] = GlobeEarthIcon;
-      obj1[2] = callback4;
-      obj1 = items.push(obj1);
-      tmp12 = isPublic;
+      obj[1] = CheckmarkSmallIcon;
+      obj[2] = callback4;
+      items.push(obj);
     }
+    if (stateFromStores2) {
+      obj = { label: null, IconComponent: null, action: null };
+      const intl3 = guildId(navigation[19]).intl;
+      obj[0] = intl3.string(projectId(navigation[20])["2NWMqY"]);
+      obj[1] = guildId(navigation[36]).FiltersHorizontalIcon;
+      obj[2] = callback3;
+      items.push(obj);
+    }
+    obj1 = { label: null, IconComponent: null, action: null };
+    const intl4 = guildId(navigation[19]).intl;
+    obj1[0] = intl4.string(projectId(navigation[20]).xKexN1);
+    obj1[1] = guildId(navigation[37]).RetryIcon;
+    obj1[2] = callback1;
+    items.push(obj1);
+    return items;
   }, items14);
   let formatToPlainStringResult;
   if (null != stateFromStores1) {
@@ -646,18 +640,18 @@ function ChatScene(guildId) {
     guildId = stringResult;
     navigation.setOptions({
       headerTitle() {
-        return closure_2_20(guildId(navigation[39]).NavigatorHeader, { title: closure_0, subtitle: closure_1_18 });
+        return closure_2_20(guildId(navigation[38]).NavigatorHeader, { title: closure_0, subtitle: closure_1_18 });
       },
       headerRight() {
         let obj = { style: headerActions.headerActions, children: null };
         let tmp3 = null;
         if (closure_11) {
           obj = { IconComponent: null, onPress: null, accessibilityLabel: null };
-          obj[0] = stringResult(closure_1_2[41]).PlayIcon;
+          obj[0] = stringResult(closure_1_2[40]).PlayIcon;
           obj[1] = closure_10;
           let intl = stringResult(closure_1_2[19]).intl;
           obj[2] = intl.string(closure_1_1(closure_1_2[20]).ecod4C);
-          tmp3 = closure_1_20(stringResult(closure_1_2[40]).HeaderActionButton, obj);
+          tmp3 = closure_1_20(stringResult(closure_1_2[39]).HeaderActionButton, obj);
         }
         const items = [tmp3, ];
         obj = {
@@ -665,15 +659,15 @@ function ChatScene(guildId) {
           align: "below",
           children(arg0) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-            const obj = { ref, IconComponent: callback(8751).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
+            const obj = { ref, IconComponent: callback(8819).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
             const intl = callback(1236).intl;
             obj[3] = intl.string(callback(1236).t["UKOtz+"]);
             obj[4] = accessibilityActions;
             obj[5] = onAccessibilityAction;
-            return callback2(callback(6117).HeaderActionButton, obj);
+            return callback2(callback(6183).HeaderActionButton, obj);
           }
         };
-        items[1] = closure_1_20(stringResult(closure_1_2[42]).ContextMenu, obj);
+        items[1] = closure_1_20(stringResult(closure_1_2[41]).ContextMenu, obj);
         obj[1] = items;
         return closure_1_21(closure_1_8, obj);
       }
@@ -684,7 +678,7 @@ function ChatScene(guildId) {
     const result = guildId(navigation[18]).setSelectedProjectForGuild(guildId, projectId);
     return () => closure_1_0(closure_1_2[18]).setSelectedProjectForGuild(closure_0, null);
   }, items16);
-  obj = { style: tmp5.content, children: callback2(tmp4(tmp2[44]), { projectId }) };
+  obj = { style: tmp5.content, children: callback2(tmp4(tmp2[43]), { projectId }) };
   return callback2(supportsVisibility, obj);
 }
 ({ ActivityIndicator: closure_6, ScrollView: error, View: closure_8 } = get_ActivityIndicator);
@@ -722,8 +716,8 @@ export default function VibegrationsStandaloneScreen(guildId) {
   const items = [closure_9];
   const items1 = [guildId];
   stateFromStores = obj1.useStateFromStores(items, () => closure_1_9.getGuild(guildId), items1);
-  isVibegrationsGuildEnabled = guildId(stateFromStores[45]).useIsVibegrationsGuildEnabled({ guildId, location: "VibegrationsStandaloneScreen" });
-  const obj3 = guildId(stateFromStores[45]);
+  isVibegrationsGuildEnabled = guildId(stateFromStores[44]).useIsVibegrationsGuildEnabled({ guildId, location: "VibegrationsStandaloneScreen" });
+  const obj3 = guildId(stateFromStores[44]);
   const items2 = [closure_9, closure_10];
   const items3 = [guildId];
   stateFromStores1 = guildId(stateFromStores[16]).useStateFromStores(items2, () => {
@@ -750,12 +744,12 @@ export default function VibegrationsStandaloneScreen(guildId) {
   obj = {};
   obj = { headerLeft: null, headerTitle: null, render: null };
   const obj4 = guildId(stateFromStores[16]);
-  obj[0] = guildId(stateFromStores[39]).getHeaderCloseButton(() => navigation.goBack());
+  obj[0] = guildId(stateFromStores[38]).getHeaderCloseButton(() => navigation.goBack());
   obj[1] = function headerTitle() {
     const obj = { title: null };
     const intl = guildId(stateFromStores[19]).intl;
     obj[0] = intl.string(navigation(stateFromStores[20]).Xmvb23);
-    return callback(guildId(stateFromStores[39]).NavigatorHeader, obj);
+    return callback(guildId(stateFromStores[38]).NavigatorHeader, obj);
   };
   obj[2] = function render() {
     return closure_1_20(closure_1_24, { guildId, canManageGuild: stateFromStores1 });
@@ -770,5 +764,5 @@ export default function VibegrationsStandaloneScreen(guildId) {
   obj1 = { screens: obj, initialRouteName: constants.PROJECTS, headerBackTitle: null };
   let intl = guildId(stateFromStores[19]).intl;
   obj1[2] = intl.string(navigation(stateFromStores[20]).Xmvb23);
-  return callback2(guildId(stateFromStores[46]).Navigator, obj1);
+  return callback2(guildId(stateFromStores[45]).Navigator, obj1);
 };

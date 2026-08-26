@@ -1,9 +1,9 @@
-// === Module 8991: _openMediaModal ===
+// === Module 9059: _openMediaModal ===
 
-// Module 8991 (_openMediaModal)
+// Module 9059 (_openMediaModal)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "setContent" /* 4090 */;
+import closure_5 from "setContent" /* 4154 */;
 import { MEDIA_MODAL_KEY } from "ME" /* 676 */;
 
 const require = arg1;
@@ -25,7 +25,7 @@ function _openMediaModal() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -98,7 +98,7 @@ function _openMediaModal() {
             dependencyMap = v0(closure_8, 3);
             setMediaViewerSources = 32.setMediaViewerSources;
             MediaViewerAnalytics = 5.MediaViewerAnalytics;
-            initVideoStateStore = 4090.initVideoStateStore;
+            initVideoStateStore = 4154.initVideoStateStore;
             !(function getMeasureInWindowFunction(c0) {
               closure_0 = c0;
               if (null != c0) {
@@ -162,7 +162,7 @@ function _openMediaModal() {
               initVideoStateStore();
             });
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp8) {
           c4 = tmp;

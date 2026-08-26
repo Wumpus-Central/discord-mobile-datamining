@@ -1,12 +1,12 @@
-// === Module 14049: navigateToDevTools ===
+// === Module 14122: navigateToDevTools ===
 
-// Module 14049 (navigateToDevTools)
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4347 */;
-import _modDef4611 from "module_4611" /* 4611 */;
-import DevToolsContentSortButtonsDefault from "DevToolsContentSortButtons" /* 14050 */;
+// Module 14122 (navigateToDevTools)
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4411 */;
+import _modDef4675 from "module_4675" /* 4675 */;
+import DevToolsContentSortButtonsDefault from "DevToolsContentSortButtons" /* 14123 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 8717 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 8785 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -15,7 +15,7 @@ let closure_6 = createNativeStackNavigator.createNativeStackNavigator();
 let closure_7 = importAllResult.memo((screenKey) => {
   let str = screenKey.screenKey;
   let _require;
-  let obj = _require(5889);
+  let obj = _require(5955);
   _require = obj.useAccessibilityNativeStackOptions();
   if (str == null) {
     str = "home";
@@ -44,11 +44,11 @@ let closure_7 = importAllResult.memo((screenKey) => {
       return {
         headerTitle() {
           let obj = { style: { flexDirection: "row" }, children: null };
-          const items = [callback3(callback(10613).HammerIcon, { size: "sm" }), ];
+          const items = [callback3(callback(10681).HammerIcon, { size: "sm" }), ];
           obj = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
           obj = { marginLeft: callback2(712).space.PX_8 };
           obj[0] = obj;
-          items[1] = callback3(callback(4376).Text, obj);
+          items[1] = callback3(callback(4440).Text, obj);
           obj[1] = items;
           return callback4(closure_3, obj);
         },
@@ -57,8 +57,8 @@ let closure_7 = importAllResult.memo((screenKey) => {
     }
   };
   let items = [callback(Navigator.Screen, obj), ];
-  let merged = Object.assign(tmp(14052).DevToolsScreens);
-  let merged1 = Object.assign(tmp(14052).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(14125).DevToolsScreens);
+  let merged1 = Object.assign(tmp(14125).PerformanceTestingScreens);
   const entries = Object.entries({});
   items[1] = entries.map((arg0) => {
     [tmp, ] = arg0;
@@ -82,5 +82,5 @@ export const navigateToDevTools = function navigateToDevTools(arg0) {
   }
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
   const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
-  _modDef4611.pushLazy(() => Promise.resolve(closure_7), { screenKey: obj.screenKey }, "DevToolsNavigator");
+  _modDef4675.pushLazy(() => Promise.resolve(closure_7), { screenKey: obj.screenKey }, "DevToolsNavigator");
 };

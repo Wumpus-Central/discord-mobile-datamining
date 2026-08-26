@@ -1,8 +1,8 @@
-// === Module 9238: ? ===
+// === Module 9306: ? ===
 
-// Module 9238
-import registerAssetDefault from "registerAsset" /* 9239 */;
-import registerAssetDefault2 from "registerAsset" /* 9240 */;
+// Module 9306
+import registerAssetDefault from "registerAsset" /* 9307 */;
+import registerAssetDefault2 from "registerAsset" /* 9308 */;
 import set from "set" /* 500 */;
 
 if (set.isIOS()) {

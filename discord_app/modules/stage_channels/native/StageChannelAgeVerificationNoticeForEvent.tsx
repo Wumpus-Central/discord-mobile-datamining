@@ -1,25 +1,25 @@
-// === Module 9167: StageChannelAgeVerificationNoticeContent ===
+// === Module 9235: StageChannelAgeVerificationNoticeContent ===
 
-// Module 9167 (StageChannelAgeVerificationNoticeContent)
+// Module 9235 (StageChannelAgeVerificationNoticeContent)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4335 */;
-import Text2 from "Text" /* 4376 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4621 */;
-import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5247 */;
-import WarningIcon2 from "WarningIcon" /* 8113 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4399 */;
+import Text2 from "Text" /* 4440 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4685 */;
+import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5313 */;
+import WarningIcon2 from "WarningIcon" /* 8180 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
   closure_1 = undefined;
   closure_1 = callback2();
-  let obj = onConfirmPress(4621);
+  let obj = onConfirmPress(4685);
   const isVerifiedTeen = obj.useIsVerifiedTeen();
   const intl = onConfirmPress(1236).intl;
   const format = intl.format;

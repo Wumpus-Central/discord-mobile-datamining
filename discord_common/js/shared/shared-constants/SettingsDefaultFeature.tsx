@@ -1,6 +1,6 @@
-// === Module 4083: SettingsDefaultFeature ===
+// === Module 4147: SettingsDefaultFeature ===
 
-// Module 4083 (SettingsDefaultFeature)
+// Module 4147 (SettingsDefaultFeature)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx");

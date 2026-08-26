@@ -1,11 +1,11 @@
-// === Module 14124: getSavedBadgeSettings ===
+// === Module 14197: getSavedBadgeSettings ===
 
-// Module 14124 (getSavedBadgeSettings)
+// Module 14197 (getSavedBadgeSettings)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getProfileBadgeIconUrl from "getProfileBadgeIconUrl" /* 9671 */;
+import getProfileBadgeIconUrl from "getProfileBadgeIconUrl" /* 9739 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "initialize" /* 8937 */;
+import closure_5 from "initialize" /* 9005 */;
 
 require = arg1;
 function getSavedBadgeSettings() {
@@ -69,18 +69,18 @@ moveBadgeInDisplayOrder.__workletHash = 15133920248237;
 moveBadgeInDisplayOrder.__initData = { code: "function moveBadgeInDisplayOrder_PendingBadgeSettingsTsx1(badgeIds,fromIndex,toIndex){if(fromIndex===toIndex||fromIndex<0||fromIndex>=badgeIds.length){return badgeIds;}const next=[...badgeIds];const[moved]=next.splice(fromIndex,1);next.splice(Math.min(Math.max(toIndex,0),next.length),0,moved);return next;}" };
 let result = require("set").fileFinishedImporting("modules/badges/PendingBadgeSettings.tsx");
 
-export const setPendingBadgeDisplayOrder = function setPendingBadgeDisplayOrder(arr) {
+export const setPendingBadgeDisplayOrder = function setPendingBadgeDisplayOrder(items) {
   const tmp = getSavedBadgeSettings();
   let tmp2 = null != tmp;
   if (tmp2) {
     const displayOrder = tmp.displayOrder;
-    tmp2 = arr.length === displayOrder.length && arr.every((arg0, arg1) => arg0 === displayOrder[arg1]);
-    const tmp3 = arr.length === displayOrder.length && arr.every((arg0, arg1) => arg0 === displayOrder[arg1]);
+    tmp2 = items.length === displayOrder.length && items.every((arg0, arg1) => arg0 === displayOrder[arg1]);
+    const tmp3 = items.length === displayOrder.length && items.every((arg0, arg1) => arg0 === displayOrder[arg1]);
   }
   let tmp4;
   if (!tmp2) {
-    const items = [];
-    HermesBuiltin.arraySpread(arr, 0);
+    items = [];
+    HermesBuiltin.arraySpread(items, 0);
     tmp4 = items;
   }
   dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: tmp4 });
@@ -102,7 +102,7 @@ export const setPendingBadgeHiddenBadges = function setPendingBadgeHiddenBadges(
   dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp4 });
 };
 export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "accessible", pendingBadgeHiddenBadges: "user" });
+  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "accessibilityRole", pendingBadgeHiddenBadges: "kind" });
 };
 export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stateFromStoresArray, arg1) {
   ({ pendingBadgeDisplayOrder, pendingBadgeHiddenBadges } = arg1);
@@ -139,7 +139,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
       let tmp11 = item10026;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let NON_CUSTOMIZABLE_BADGE_IDS = set(9671).NON_CUSTOMIZABLE_BADGE_IDS;
+      let NON_CUSTOMIZABLE_BADGE_IDS = set(9739).NON_CUSTOMIZABLE_BADGE_IDS;
       if (NON_CUSTOMIZABLE_BADGE_IDS.has(item10026.badge_id)) {
         let tmp16 = item10026;
         let arr = items1.push(tmp11);
@@ -210,11 +210,11 @@ export const applyPendingBadgeSettingsToProfileBadges = function applyPendingBad
       let tmp11 = item10027;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let obj = set(8938);
+      let obj = set(9006);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let NON_CUSTOMIZABLE_BADGE_IDS = tmp12(9671).NON_CUSTOMIZABLE_BADGE_IDS;
+        let NON_CUSTOMIZABLE_BADGE_IDS = tmp12(9739).NON_CUSTOMIZABLE_BADGE_IDS;
         let tmp16 = profileBadgeId;
         if (!NON_CUSTOMIZABLE_BADGE_IDS.has(tmp15)) {
           let tmp17 = profileBadgeId;

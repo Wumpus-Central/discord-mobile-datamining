@@ -1,10 +1,10 @@
-// === Module 12402: TwitchNeutralIcon ===
+// === Module 12474: TwitchNeutralIcon ===
 
-// Module 12402 (TwitchNeutralIcon)
+// Module 12474 (TwitchNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 12403 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 12475 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

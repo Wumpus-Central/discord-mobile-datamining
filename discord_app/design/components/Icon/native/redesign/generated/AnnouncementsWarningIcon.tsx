@@ -1,10 +1,10 @@
-// === Module 4921: AnnouncementsWarningIcon ===
+// === Module 4987: AnnouncementsWarningIcon ===
 
-// Module 4921 (AnnouncementsWarningIcon)
+// Module 4987 (AnnouncementsWarningIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 4883 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 4949 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

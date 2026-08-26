@@ -1,12 +1,12 @@
-// === Module 8417: handleFormOpen ===
+// === Module 8484: handleFormOpen ===
 
-// Module 8417 (handleFormOpen)
+// Module 8484 (handleFormOpen)
 import initializeDefault from "initialize" /* 589 */;
 import INVITE from "INVITE" /* 677 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import date from "date" /* 1429 */;
-import ANALYTICS_NAME from "ANALYTICS_NAME" /* 8418 */;
-import useBioMaxLength from "useBioMaxLength" /* 8419 */;
+import ANALYTICS_NAME from "ANALYTICS_NAME" /* 8485 */;
+import useBioMaxLength from "useBioMaxLength" /* 8486 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 

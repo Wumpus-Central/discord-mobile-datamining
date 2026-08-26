@@ -1,8 +1,8 @@
-// === Module 4738: getEffectiveVideoProvider ===
+// === Module 4802: getEffectiveVideoProvider ===
 
-// Module 4738 (getEffectiveVideoProvider)
+// Module 4802 (getEffectiveVideoProvider)
 import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 4739 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 4803 */;
 import ME from "ME" /* 676 */;
 
 function getEffectiveVideoProvider(name, url) {
@@ -69,7 +69,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   }
   if (null != footer.timestamp) {
     const _Date = Date;
-    let tmpResult = tmp(3979);
+    let tmpResult = tmp(4043);
     const date = new Date(footer.timestamp);
     obj.timestamp = tmpResult(date);
   }
@@ -236,13 +236,13 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     obj.fields = [];
   }
   if (null != footer.components) {
-    const transformComponentsResult = obj6(4627).transformComponents(footer.components);
+    const transformComponentsResult = obj6(4691).transformComponents(footer.components);
     let tmp40;
     if (transformComponentsResult.length > 0) {
       tmp40 = transformComponentsResult;
     }
     obj.components = tmp40;
-    const obj17 = obj6(4627);
+    const obj17 = obj6(4691);
   }
   return obj;
 };

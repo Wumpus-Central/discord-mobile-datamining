@@ -1,23 +1,23 @@
-// === Module 9305: snapVolumeToDefault ===
+// === Module 9373: snapVolumeToDefault ===
 
-// Module 9305 (snapVolumeToDefault)
+// Module 9373 (snapVolumeToDefault)
 import set from "set" /* 2 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4479 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4543 */;
 
 let closure_2 = MAX_FAVORITES.ProtoAudioSettingsContextTypes;
 let result = set.fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
 
 export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
   if (DEFAULT === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-    USER = tmp(9306).AudioSettingsDefaultVolumes.STREAM;
+    USER = tmp(9374).AudioSettingsDefaultVolumes.STREAM;
   } else {
-    USER = tmp(9306).AudioSettingsDefaultVolumes.USER;
+    USER = tmp(9374).AudioSettingsDefaultVolumes.USER;
   }
   let tmp3 = USER;
-  let tmpResult = tmp(4853);
+  let tmpResult = tmp(4919);
   const result = tmpResult.amplitudeToPerceptual(USER);
-  tmpResult = tmp(4853);
+  tmpResult = tmp(4919);
   if (Math.abs(result - tmpResult.amplitudeToPerceptual(USER)) < 1) {
     tmp3 = USER;
   }

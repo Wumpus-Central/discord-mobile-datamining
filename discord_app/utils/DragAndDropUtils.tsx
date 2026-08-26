@@ -1,6 +1,6 @@
-// === Module 11980: calculatePositionDeltas ===
+// === Module 12053: calculatePositionDeltas ===
 
-// Module 11980 (calculatePositionDeltas)
+// Module 12053 (calculatePositionDeltas)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 

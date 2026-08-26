@@ -1,6 +1,6 @@
-// === Module 4400: isVoiceMuted ===
+// === Module 4464: isVoiceMuted ===
 
-// Module 4400 (isVoiceMuted)
+// Module 4464 (isVoiceMuted)
 import toJSDefault from "toJS" /* 1931 */;
 
 toJSDefault;

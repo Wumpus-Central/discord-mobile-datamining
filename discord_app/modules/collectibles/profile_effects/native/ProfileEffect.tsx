@@ -1,16 +1,16 @@
-// === Module 9526: StaticEffect ===
+// === Module 9594: StaticEffect ===
 
-// Module 9526 (StaticEffect)
+// Module 9594 (StaticEffect)
 import initialize from "initialize" /* 589 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8969 */;
-import sortEffectLayers from "sortEffectLayers" /* 9527 */;
+import useProfileEffectDefault from "useProfileEffect" /* 9037 */;
+import sortEffectLayers from "sortEffectLayers" /* 9595 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
-import closure_8 from "getState" /* 7019 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_8 from "getState" /* 7085 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function StaticEffect(useThumbnail) {
@@ -77,8 +77,8 @@ function StaticEffect(useThumbnail) {
     obj3[2] = 0 - bannerAdjustment;
     items1[1] = obj3;
     obj1[7] = items1;
-    obj[3] = tmp10(tmp4(5374), obj1);
-    const tmp4Result = tmp4(5374);
+    obj[3] = tmp10(tmp4(5440), obj1);
+    const tmp4Result = tmp4(5440);
   }
   return <closure_5 {...obj} />;
 }
@@ -141,7 +141,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = React.useRef(-memo(9528).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = React.useRef(-memo(9596).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(React.useState([]), 2);
   closure_12 = React.useRef([]);
   closure_13 = React.useRef(false);
@@ -157,7 +157,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(React.useState([]), 2);
-  const tmp9Result = memo1(9531)(React.useCallback((arg0) => {
+  const tmp9Result = memo1(9599)(React.useCallback((arg0) => {
     if (ref.current) {
       if (!ref4.current) {
         tmp.current = true;

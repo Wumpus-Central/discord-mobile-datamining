@@ -1,10 +1,10 @@
-// === Module 8845: saveGuildFolders ===
+// === Module 8913: saveGuildFolders ===
 
-// Module 8845 (saveGuildFolders)
+// Module 8913 (saveGuildFolders)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "isSyncedModeThemesEnabled" /* 4200 */;
+import closure_4 from "isSyncedModeThemesEnabled" /* 4264 */;
 import closure_5 from "initialize" /* 1303 */;
 import closure_6 from "handleThemeChange" /* 1302 */;
 import { ThemeTypes } from "ME" /* 676 */;
@@ -64,7 +64,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -115,7 +115,7 @@ export default {
                   if (gradientPreset != null) {
                     id = gradientPreset.id;
                   }
-                  const ClientThemeSettings = tmp4(4070).ClientThemeSettings;
+                  const ClientThemeSettings = tmp4(4134).ClientThemeSettings;
                   const setting = ClientThemeSettings.getSetting();
                   let prop;
                   if (setting != null) {
@@ -144,7 +144,7 @@ export default {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             c3 = 3;
             throw arg1;
@@ -172,10 +172,10 @@ export default {
             }
             const obj4 = { backgroundGradientPresetId: null, customUserThemeSettings: null };
             obj4[0] = id;
-            let ClientThemeSettings = closure_1_0(4070).ClientThemeSettings;
+            let ClientThemeSettings = closure_1_0(4134).ClientThemeSettings;
             obj4[1] = ClientThemeSettings.getSetting().customUserThemeSettings;
             obj3[1] = obj4;
-            const DeveloperMode = closure_1_0(4070).DeveloperMode;
+            const DeveloperMode = closure_1_0(4134).DeveloperMode;
             obj3[2] = DeveloperMode.getSetting();
           }
           const obj5 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };

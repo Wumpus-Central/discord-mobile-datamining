@@ -1,10 +1,10 @@
-// === Module 12075: GuildPowerupRollbackSheet ===
+// === Module 12148: GuildPowerupRollbackSheet ===
 
-// Module 12075 (GuildPowerupRollbackSheet)
+// Module 12148 (GuildPowerupRollbackSheet)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import Button from "Button" /* 4815 */;
-import PromoSheet from "PromoSheet" /* 7878 */;
+import Button from "Button" /* 4879 */;
+import PromoSheet from "PromoSheet" /* 7945 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx");

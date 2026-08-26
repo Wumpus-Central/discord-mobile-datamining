@@ -1,40 +1,40 @@
-// === Module 9720: GiftButton ===
+// === Module 9788: GiftButton ===
 
-// Module 9720 (GiftButton)
+// Module 9788 (GiftButton)
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import map from "map" /* 4101 */;
-import Text from "Text" /* 4376 */;
-import Button from "Button" /* 4815 */;
-import context from "context" /* 5834 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 7159 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7160 */;
-import useIsEligibleForBogoOffer from "useIsEligibleForBogoOffer" /* 7486 */;
-import inlineStyles from "inlineStyles" /* 7985 */;
-import useCurrentUser from "useCurrentUser" /* 9496 */;
-import getProductPurchaseState from "getProductPurchaseState" /* 9559 */;
-import _mod9568 from "module_9568" /* 9568 */;
-import useIsPremiumSubscriber from "useIsPremiumSubscriber" /* 9628 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 9716 */;
-import useHandleUseNow from "useHandleUseNow" /* 10285 */;
-import useHandleClaim from "useHandleClaim" /* 12367 */;
-import useCanGiftProduct from "useCanGiftProduct" /* 12370 */;
-import UnlockWithNitroButton from "UnlockWithNitroButton" /* 12371 */;
+import map from "map" /* 4165 */;
+import Text from "Text" /* 4440 */;
+import Button from "Button" /* 4879 */;
+import context from "context" /* 5900 */;
+import getProductOrbPrice from "getProductOrbPrice" /* 7225 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7226 */;
+import useIsEligibleForBogoOffer from "useIsEligibleForBogoOffer" /* 7552 */;
+import inlineStyles from "inlineStyles" /* 8052 */;
+import useCurrentUser from "useCurrentUser" /* 9564 */;
+import getProductPurchaseState from "getProductPurchaseState" /* 9627 */;
+import _mod9636 from "module_9636" /* 9636 */;
+import useIsPremiumSubscriber from "useIsPremiumSubscriber" /* 9696 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 9784 */;
+import useHandleUseNow from "useHandleUseNow" /* 10353 */;
+import useHandleClaim from "useHandleClaim" /* 12439 */;
+import useCanGiftProduct from "useCanGiftProduct" /* 12442 */;
+import UnlockWithNitroButton from "UnlockWithNitroButton" /* 12443 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useNativeCheckoutStore } from "context" /* 7031 */;
-import closure_7 from "map" /* 7164 */;
+import { useNativeCheckoutStore } from "context" /* 7097 */;
+import closure_7 from "map" /* 7230 */;
 import items from "items" /* 678 */;
 import ME from "ME" /* 676 */;
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 9721 */;
+import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 9789 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function GiftButton(onTrackPress) {
@@ -263,7 +263,7 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
   const tmp = callback3();
   const tmp5 = require;
   let obj = AccessibilityAnnouncer;
-  const isThemeDarkResult = obj.isThemeDark(onTrackPress(4315)());
+  const isThemeDarkResult = obj.isThemeDark(onTrackPress(4379)());
   obj1 = map;
   const token = obj1.useToken(onTrackPress(712).colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let obj2 = useCurrentUser;
@@ -276,7 +276,7 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
   const items1 = [product];
   let obj5 = useIsPremiumSubscriber;
   const isPremiumSubscriber = obj5.useIsPremiumSubscriber(TIER_2.TIER_2);
-  let obj6 = onTrackPress(4043);
+  let obj6 = onTrackPress(4107);
   const canUseShopDiscountsResult = obj6.canUseShopDiscounts(currentUser);
   let obj7 = getItemRecordsFromPurchases;
   const result = obj7.isPremiumCollectiblesProduct(product);
@@ -284,7 +284,7 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
   const result1 = obj8.isFreeCollectiblesProduct(product);
   let obj9 = getProductOrbPrice;
   const result2 = obj9.isOrbsExclusiveProduct(product);
-  let obj10 = _mod9568;
+  let obj10 = _mod9636;
   const balance = obj10.useFetchVirtualCurrencyBalance().balance;
   let obj11 = useVirtualCurrencyData;
   const canAfford = obj11.useVirtualCurrencyData(product, canUseShopDiscountsResult).canAfford;
@@ -295,22 +295,22 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
   const tmp16 = useNativeCheckoutStore((orderRecord) => orderRecord.orderRecord);
   obj = { product, analyticsLocations, onBuy: onBuy.onBuy, orderId: null };
   let id;
-  const tmp4 = onTrackPress(4315)();
+  const tmp4 = onTrackPress(4379)();
   if (tmp16 != null) {
     id = tmp16.id;
   }
   obj[3] = id;
-  const tmp17 = onTrackPress(12366);
-  ({ handleBuyNow: c4, isBuying } = onTrackPress(12366)(obj));
+  const tmp17 = onTrackPress(12438);
+  ({ handleBuyNow: c4, isBuying } = onTrackPress(12438)(obj));
   let tmp5Result = useHandleClaim;
   handleClaim = tmp5Result.useHandleClaim({ product }).handleClaim;
-  const tmp20 = onTrackPress(12368)({ location: "ProductDetailsActionSheetPurchaseSection", product });
+  const tmp20 = onTrackPress(12440)({ location: "ProductDetailsActionSheetPurchaseSection", product });
   let tmp25Result = tmp20;
   if (tmp20) {
     tmp25Result = !isPurchased;
   }
   tmp5Result = useIsEligibleForBogoOffer;
-  const tmp17Result = onTrackPress(12366)(obj);
+  const tmp17Result = onTrackPress(12438)(obj);
   const tmp23 = tmp5Result.useIsEligibleForBogoOffer() ? closure_15.MONTH : closure_15.YEAR;
   let canGiftProduct = useCanGiftProduct.useCanGiftProduct(product);
   let PX_16 = tmp2(1629)().bottom;
@@ -333,7 +333,7 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
     obj1[3] = { x: 1, y: 1 };
     const items3 = [tmp.gradientOverlay, ];
     obj2 = !isThemeDarkResult;
-    let tmp2Result = tmp2(4826);
+    let tmp2Result = tmp2(4891);
     if (!isThemeDarkResult) {
       obj2 = { opacity: 0.4 };
     }
@@ -343,7 +343,7 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
     const items4 = [callback2(tmp2Result, obj1), ];
     obj4 = { style: null, preserveAspectRatio: "none", viewBox: "0 0 100 100", pointerEvents: "none", children: null };
     obj4[0] = tmp.gradientOverlay;
-    tmp2Result = tmp2(7985);
+    tmp2Result = tmp2(8052);
     obj5 = { children: null };
     obj6 = { id: "frameEAVignette", cx: "50%", cy: "100%", rx: "100%", ry: "100%", fx: "50%", fy: "100%", children: null };
     obj7 = { offset: "60%", stopColor: null, stopOpacity: 1 };
@@ -410,7 +410,7 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
     const obj13 = { value: null, children: null };
     const items9 = [];
     const tmp49 = PlatformTypes.isAndroid() ? t.COObWR : t["7wpqfj"];
-    items9[HermesBuiltin.arraySpread(analyticsLocations, 0)] = tmp2(5854).PROFILE_FRAMES_EA_MARKETING;
+    items9[HermesBuiltin.arraySpread(analyticsLocations, 0)] = tmp2(5920).PROFILE_FRAMES_EA_MARKETING;
     obj13[0] = items9;
     const obj14 = { style: null, children: null };
     obj14[0] = tmp.framesEAContainer;
@@ -431,7 +431,7 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
     const obj19 = { paidURL: null, interval: null, ctaText: null };
     obj19[0] = constants2.PAID_TERMS;
     const tmp2Result1 = tmp2(1995);
-    obj19[1] = tmp2(4043).getIntervalStringAsNoun(tmp23);
+    obj19[1] = tmp2(4107).getIntervalStringAsNoun(tmp23);
     const intl11 = getSystemLocale.intl;
     obj19[2] = intl11.string(getSystemLocale.t["9wfL34"]);
     obj18[1] = intl10.format(tmp49, obj19);
@@ -439,7 +439,7 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
     obj14[1] = items10;
     obj13[1] = tmp25(tmp26, obj14);
     tmp25Result2 = callback2(context.AnalyticsLocationProvider, obj13);
-    const tmp2Result2 = tmp2(4043);
+    const tmp2Result2 = tmp2(4107);
   } else {
     if (result) {
       if (!isPremiumSubscriber) {

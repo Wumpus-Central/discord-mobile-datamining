@@ -1,38 +1,38 @@
-// === Module 13016: BoostPurchaseNitroBanner ===
+// === Module 13090: BoostPurchaseNitroBanner ===
 
-// Module 13016 (BoostPurchaseNitroBanner)
+// Module 13090 (BoostPurchaseNitroBanner)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4043 */;
-import Text from "Text" /* 4376 */;
-import Stack from "Stack" /* 4813 */;
-import LinearGradientDefault from "LinearGradient" /* 4826 */;
-import createTextStyleDefault from "createTextStyle" /* 5342 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6136 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 7849 */;
-import registerAssetDefault from "registerAsset" /* 13018 */;
-import registerAssetDefault2 from "registerAsset" /* 13019 */;
-import registerAssetDefault3 from "registerAsset" /* 13020 */;
-import registerAssetDefault4 from "registerAsset" /* 13021 */;
-import registerAssetDefault5 from "registerAsset" /* 13022 */;
-import registerAssetDefault6 from "registerAsset" /* 13023 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
+import Text from "Text" /* 4440 */;
+import Stack from "Stack" /* 4877 */;
+import LinearGradientDefault from "LinearGradient" /* 4891 */;
+import createTextStyleDefault from "createTextStyle" /* 5408 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6202 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 7916 */;
+import registerAssetDefault from "registerAsset" /* 13092 */;
+import registerAssetDefault2 from "registerAsset" /* 13093 */;
+import registerAssetDefault3 from "registerAsset" /* 13094 */;
+import registerAssetDefault4 from "registerAsset" /* 13095 */;
+import registerAssetDefault5 from "registerAsset" /* 13096 */;
+import registerAssetDefault6 from "registerAsset" /* 13097 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { useNativeCheckoutStore } from "context" /* 7031 */;
+import { useNativeCheckoutStore } from "context" /* 7097 */;
 import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "addSubscriptionPlan" /* 4048 */;
-import closure_12 from "reset" /* 4049 */;
-import closure_13 from "updateProduct" /* 5965 */;
-import usePremiumPlanSelectStore from "usePremiumPlanSelectStore" /* 13017 */;
+import closure_11 from "addSubscriptionPlan" /* 4112 */;
+import closure_12 from "reset" /* 4113 */;
+import closure_13 from "updateProduct" /* 6031 */;
+import usePremiumPlanSelectStore from "usePremiumPlanSelectStore" /* 13091 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import ME from "ME" /* 676 */;
-import items from "items" /* 7039 */;
-import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4362 */;
+import items from "items" /* 7105 */;
+import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4426 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 function BoostPurchaseNitroBanner() {
@@ -445,7 +445,7 @@ function PlanSection(showBoostOnlyLabels) {
     obj = { title: null, hasIcons: true, children: null };
     obj[0] = showBoostOnlyLabels.label;
     obj[2] = mapped;
-    let tmp7Result = tmp7(shouldShowModernBoostFlow(5873).TableRowGroup, obj);
+    let tmp7Result = tmp7(shouldShowModernBoostFlow(5939).TableRowGroup, obj);
   } else {
     obj = { children: null };
     obj[0] = mapped;
@@ -462,18 +462,18 @@ function CurrentPlanRow(subscription) {
   const tmp = callback5();
   if (subscription.showCurrentPlan) {
     if (null != subscription) {
-      productIdFromSubscription = subscription(7014).getProductIdFromSubscription(subscription, true);
-      let obj4 = subscription(7014);
+      productIdFromSubscription = subscription(7080).getProductIdFromSubscription(subscription, true);
+      let obj4 = subscription(7080);
       const tmp13 = subscription;
-      const premiumBundledItemsFromProductId = subscription(7014).getPremiumBundledItemsFromProductId(productIdFromSubscription);
+      const premiumBundledItemsFromProductId = subscription(7080).getPremiumBundledItemsFromProductId(productIdFromSubscription);
       const premiumTier = premiumBundledItemsFromProductId.premiumTier;
       if (null != premiumTier) {
         let PREMIUM_GUILD = callback2(premiumTier);
       } else {
         PREMIUM_GUILD = constants6.PREMIUM_GUILD;
       }
-      const obj5 = subscription(7014);
-      toggledIntervalProduct = tmp13(7014).getToggledIntervalProduct(productIdFromSubscription);
+      const obj5 = subscription(7080);
+      toggledIntervalProduct = tmp13(7080).getToggledIntervalProduct(productIdFromSubscription);
       let obj = { style: null, colors: null, start: null, end: null, children: null };
       obj[0] = tmp.currentPlanGradient;
       obj[1] = PREMIUM_GUILD;
@@ -483,7 +483,7 @@ function CurrentPlanRow(subscription) {
       obj[1] = subscription;
       obj[2] = analyticsLoadId;
       let tmp11 = null == toggledIntervalProduct;
-      const tmp13Result = tmp13(7014);
+      const tmp13Result = tmp13(7080);
       if (tmp11) {
         tmp11 = subscription.status !== constants5.CANCELED;
       }
@@ -513,8 +513,8 @@ function CurrentPlanRow(subscription) {
                     let obj = {};
                     const merged = Object.assign(arg0);
                     obj.productId = closure_1_1;
-                    obj.continueWithUpsell = closure_3_3(/* F122042 */ function() { ... });
-                    obj.continueWithDefault = closure_3_3(/* F122043 */ function() { ... });
+                    obj.continueWithUpsell = closure_3_3(/* F122353 */ function() { ... });
+                    obj.continueWithDefault = closure_3_3(/* F122354 */ function() { ... });
                     return closure_3_32(closure_0, obj);
                   };
                 });
@@ -933,7 +933,7 @@ let closure_46 = importAllResult.forwardRef(function PremiumPlanSelect(isBoostPu
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -966,8 +966,8 @@ let closure_46 = importAllResult.forwardRef(function PremiumPlanSelect(isBoostPu
                 obj1 = { value: null, done: false };
                 obj1[0] = v0(modifySubscriptionItemsForProduct.map((planId) => {
                   const obj = { sku_id: null, subscription_plan_id: null, quantity: null, purchase_type: null };
-                  obj2 = callback(4043);
-                  obj[0] = obj2.castPremiumSubscriptionAsSkuId(callback2(4043).getSkuIdForPlan(planId.planId));
+                  obj2 = callback(4107);
+                  obj[0] = obj2.castPremiumSubscriptionAsSkuId(callback2(4107).getSkuIdForPlan(planId.planId));
                   ({ planId: obj[1], quantity: obj[2] } = planId);
                   obj[3] = constants.SUBSCRIPTION;
                   return obj;

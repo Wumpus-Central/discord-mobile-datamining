@@ -1,10 +1,10 @@
-// === Module 14774: SettingsAccessibilityScreen ===
+// === Module 14847: SettingsAccessibilityScreen ===
 
-// Module 14774 (SettingsAccessibilityScreen)
+// Module 14847 (SettingsAccessibilityScreen)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
-import closure_5 from "updateExistingSettings" /* 4071 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8235 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_5 from "updateExistingSettings" /* 4135 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8302 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 

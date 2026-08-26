@@ -1,11 +1,11 @@
-// === Module 9910: isOnlyDayLoss ===
+// === Module 9977: isOnlyDayLoss ===
 
-// Module 9910 (isOnlyDayLoss)
+// Module 9977 (isOnlyDayLoss)
 import set2 from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2337 */;
-import setsEqual from "setsEqual" /* 9911 */;
+import messagesProxyDefault from "messagesProxy" /* 2369 */;
+import setsEqual from "setsEqual" /* 9978 */;
 
 function isOnlyDayLoss(label, label2) {
   if (label.label !== label2.label) {

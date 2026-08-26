@@ -1,10 +1,10 @@
-// === Module 4902: ChatIcon ===
+// === Module 4968: ChatIcon ===
 
-// Module 4902 (ChatIcon)
+// Module 4968 (ChatIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 4885 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 4951 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

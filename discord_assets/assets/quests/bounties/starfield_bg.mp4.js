@@ -1,6 +1,6 @@
-// === Module 14504: metadata ===
+// === Module 14577: metadata ===
 
-// Module 14504 (metadata)
+// Module 14577 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/quests/bounties/starfield_bg.mp4.js");

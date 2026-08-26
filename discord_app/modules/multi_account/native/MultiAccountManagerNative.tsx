@@ -1,14 +1,14 @@
-// === Module 16766: push ===
+// === Module 16851: push ===
 
-// Module 16766 (push)
+// Module 16851 (push)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 687 */;
-import dispatcherDefault from "dispatcher" /* 4098 */;
-import _modDef4611 from "module_4611" /* 4611 */;
-import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11978 */;
-import _initializeDefault from "_initialize" /* 16768 */;
-import registerAssetDefault from "registerAsset" /* 16769 */;
+import dispatcherDefault from "dispatcher" /* 4162 */;
+import _modDef4675 from "module_4675" /* 4675 */;
+import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 12051 */;
+import _initializeDefault from "_initialize" /* 16853 */;
+import registerAssetDefault from "registerAsset" /* 16854 */;
 import ME from "ME" /* 676 */;
 
 let obj = require;
@@ -91,7 +91,7 @@ class MultiAccountManagerNative extends tmp5 {
 }
 const prototype = MultiAccountManagerNative.prototype;
 prototype["onSwitchStart"] = function onSwitchStart() {
-  obj = _modDef4611;
+  obj = _modDef4675;
   obj.popWithKey(SWITCH_ACCOUNTS_MODAL_KEY);
   logger.info("Closing fast-connect socket because of account switch logout");
   let result = obj(15).closeFastConnectSocket();
@@ -110,10 +110,10 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
   if (navigateHome) {
     obj = obj(1222);
     obj.transitionTo(constants.ME, { navigationReplace: true });
-    const MobileHomeDrawerExperiment = obj(4240).MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = obj(4304).MobileHomeDrawerExperiment;
     if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
-      tmp(4234).setHomeDrawerState(false);
-      const tmpResult = tmp(4234);
+      tmp(4298).setHomeDrawerState(false);
+      const tmpResult = tmp(4298);
     }
     tmp = obj;
   }
@@ -136,7 +136,7 @@ prototype["onSwitchError"] = function onSwitchError(currentUser) {
   obj.open(obj);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {
-  obj = _modDef4611;
+  obj = _modDef4675;
   obj.popWithKey(SWITCH_ACCOUNTS_MODAL_KEY);
   obj.pop();
   if (null !== c9) {

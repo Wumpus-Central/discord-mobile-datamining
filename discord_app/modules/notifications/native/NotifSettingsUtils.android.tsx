@@ -1,11 +1,11 @@
-// === Module 13917: inferImportanceFromBehavior ===
+// === Module 13990: inferImportanceFromBehavior ===
 
-// Module 13917 (inferImportanceFromBehavior)
+// Module 13990 (inferImportanceFromBehavior)
 import set from "set" /* 2 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 13918 */;
-import items2 from "items2" /* 13913 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 13991 */;
+import items2 from "items2" /* 13986 */;
 
 function inferImportanceFromBehavior(visibility) {
   if (!("ringtone" in visibility)) {
@@ -55,7 +55,7 @@ function formatSetting(item10022, arg1) {
   }
 }
 function buildChannelsAndMapping() {
-  let obj = map(13919);
+  let obj = map(13992);
   const assignedNotifSettingsAndMappings = obj.getAssignedNotifSettingsAndMappings();
   ({ settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = (function computeInheritedImportances(mappings) {

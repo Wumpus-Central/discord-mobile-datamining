@@ -1,6 +1,6 @@
-// === Module 4942: AgeRestrictionStatus ===
+// === Module 5008: AgeRestrictionStatus ===
 
-// Module 4942 (AgeRestrictionStatus)
+// Module 5008 (AgeRestrictionStatus)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AgeRestrictionStatus.tsx");

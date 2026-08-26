@@ -1,6 +1,6 @@
-// === Module 8530: PremiumUpsellSubfeatureNames ===
+// === Module 8598: PremiumUpsellSubfeatureNames ===
 
-// Module 8530 (PremiumUpsellSubfeatureNames)
+// Module 8598 (PremiumUpsellSubfeatureNames)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumUpsellSubfeatureNames.tsx");

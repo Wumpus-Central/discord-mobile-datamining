@@ -1,9 +1,9 @@
-// === Module 5940: useShouldShowInlineGuildCapUpsell ===
+// === Module 6006: useShouldShowInlineGuildCapUpsell ===
 
-// Module 5940 (useShouldShowInlineGuildCapUpsell)
+// Module 6006 (useShouldShowInlineGuildCapUpsell)
 import initialize from "initialize" /* 589 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4043 */;
-import HotspotStore2 from "HotspotStore" /* 5941 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4107 */;
+import HotspotStore2 from "HotspotStore" /* 6007 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { MAX_USER_GUILDS } from "ME" /* 676 */;
@@ -17,12 +17,12 @@ export const useShouldShowInlineGuildCapUpsell = function useShouldShowInlineGui
   const obj = initialize;
   const items1 = [HotspotStore2.HotspotStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => {
-    const HotspotStore = callback(5941).HotspotStore;
-    return HotspotStore.hasHotspot(callback(5941).HotspotLocations.GUILD_CAP_INLINE_UPSELL);
+    const HotspotStore = callback(6007).HotspotStore;
+    return HotspotStore.hasHotspot(callback(6007).HotspotLocations.GUILD_CAP_INLINE_UPSELL);
   });
   const obj2 = initialize;
   const items2 = [closure_4];
-  const stateFromStoresObject = initialize.useStateFromStoresObject(items2, () => !callback2(4043).isPremium(currentUser.getCurrentUser()));
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items2, () => !callback2(4107).isPremium(currentUser.getCurrentUser()));
   if (stateFromStores) {
     stateFromStores = stateFromStores1;
   }

@@ -1,12 +1,12 @@
-// === Module 9076: SharePreparingModal ===
+// === Module 9144: SharePreparingModal ===
 
-// Module 9076 (SharePreparingModal)
+// Module 9144 (SharePreparingModal)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef9078 from "module_9078" /* 9078 */;
+import _modDef9146 from "module_9146" /* 9146 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
@@ -28,22 +28,22 @@ export default function SharePreparingModal(onCancel) {
   const items = [onCancel];
   const effect = React.useEffect(() => () => callback(), items);
   let obj = { style: tmp.content, children: null };
-  const items1 = [callback(onCancel(4803).Backdrop, { blur: "none", "aria-hidden": true }), , , ];
+  const items1 = [callback(onCancel(4867).Backdrop, { blur: "none", "aria-hidden": true }), , , ];
   obj = { style: tmp.topBar, pointerEvents: "box-none", children: null };
   obj = { style: tmp.topBarEnd, children: null };
   obj1 = { accessibilityLabel: null, icon: null, onPress: null };
   const intl = onCancel(1236).intl;
   obj1[0] = intl.string(onCancel(1236).t.cpT0Cq);
-  obj1[1] = callback(onCancel(5432).XSmallIcon, { size: "md", color: "interactive-text-active" });
+  obj1[1] = callback(onCancel(5498).XSmallIcon, { size: "md", color: "interactive-text-active" });
   obj1[2] = onCancel;
-  obj[1] = callback(_modDef9078, obj1);
-  obj[2] = callback(onCancel(9077).MediaModalOverlayHeaderWrapper, obj);
+  obj[1] = callback(_modDef9146, obj1);
+  obj[2] = callback(onCancel(9145).MediaModalOverlayHeaderWrapper, obj);
   items1[1] = callback(closure_4, obj);
-  items1[2] = callback(onCancel(5929).ActivityIndicator, {});
+  items1[2] = callback(onCancel(5995).ActivityIndicator, {});
   const obj2 = { variant: "text-sm/medium", color: "text-overlay-light", children: null };
   const intl2 = onCancel(1236).intl;
   obj2[2] = intl2.string(onCancel(1236).t.DwTQE5);
-  items1[3] = callback(onCancel(4376).Text, obj2);
+  items1[3] = callback(onCancel(4440).Text, obj2);
   obj[1] = items1;
   return callback2(closure_4, obj);
 };

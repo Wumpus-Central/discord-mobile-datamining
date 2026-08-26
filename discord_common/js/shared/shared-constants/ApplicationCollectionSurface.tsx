@@ -1,6 +1,6 @@
-// === Module 11660: ApplicationCollectionSurface ===
+// === Module 11733: ApplicationCollectionSurface ===
 
-// Module 11660 (ApplicationCollectionSurface)
+// Module 11733 (ApplicationCollectionSurface)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationCollectionSurface.tsx");

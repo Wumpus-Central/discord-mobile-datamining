@@ -1,9 +1,9 @@
-// === Module 11001: useMyCurrentStageChannelRole ===
+// === Module 11073: useMyCurrentStageChannelRole ===
 
-// Module 11001 (useMyCurrentStageChannelRole)
+// Module 11073 (useMyCurrentStageChannelRole)
 import closure_2 from "fetchFingerprint" /* 1218 */;
 import closure_3 from "handleConnectionOpen" /* 1981 */;
-import closure_4 from "buildStageChannelUserRoles" /* 5246 */;
+import closure_4 from "buildStageChannelUserRoles" /* 5312 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannelRole.tsx");

@@ -1,10 +1,10 @@
-// === Module 6120: SettingsIcon ===
+// === Module 6186: SettingsIcon ===
 
-// Module 6120 (SettingsIcon)
+// Module 6186 (SettingsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 6121 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 6187 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

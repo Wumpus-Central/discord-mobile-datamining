@@ -1,14 +1,14 @@
-// === Module 4036: MAX_REACTIONS ===
+// === Module 4100: MAX_REACTIONS ===
 
-// Module 4036 (MAX_REACTIONS)
+// Module 4100 (MAX_REACTIONS)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4038 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
-import ReactionTypes from "ReactionTypes" /* 7366 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
+import ReactionTypes from "ReactionTypes" /* 7432 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import ME from "ME" /* 676 */;
-import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags" /* 4037 */;
+import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags" /* 4101 */;
 
 require = arg1;
 ({ AnalyticsSections: c4, AnalyticEvents: c5 } = ME);

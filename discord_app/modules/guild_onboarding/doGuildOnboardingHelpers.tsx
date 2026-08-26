@@ -1,8 +1,8 @@
-// === Module 5352: waitForOnboardingCompletion ===
+// === Module 5418: waitForOnboardingCompletion ===
 
-// Module 5352 (waitForOnboardingCompletion)
+// Module 5418 (waitForOnboardingCompletion)
 import closure_3 from "trackCommunicationDisabled" /* 1992 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4013 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_onboarding/doGuildOnboardingHelpers.tsx");

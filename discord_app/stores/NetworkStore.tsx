@@ -1,6 +1,6 @@
-// === Module 4474: handleConnectionInfoChange ===
+// === Module 4538: handleConnectionInfoChange ===
 
-// Module 4474 (handleConnectionInfoChange)
+// Module 4538 (handleConnectionInfoChange)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

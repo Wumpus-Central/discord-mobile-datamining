@@ -1,8 +1,8 @@
-// === Module 11663: useCustomKeyboardBottomSheetConfig ===
+// === Module 11736: useCustomKeyboardBottomSheetConfig ===
 
-// Module 11663 (useCustomKeyboardBottomSheetConfig)
+// Module 11736 (useCustomKeyboardBottomSheetConfig)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx");

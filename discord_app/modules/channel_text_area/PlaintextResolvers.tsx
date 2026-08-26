@@ -1,20 +1,20 @@
-// === Module 10149: resolvePlaintextInlineVoid ===
+// === Module 10216: resolvePlaintextInlineVoid ===
 
-// Module 10149 (resolvePlaintextInlineVoid)
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4038 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4042 */;
-import createEmptyState from "createEmptyState" /* 7290 */;
+// Module 10216 (resolvePlaintextInlineVoid)
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4106 */;
+import createEmptyState from "createEmptyState" /* 7356 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getEmojiToGroupId" /* 5282 */;
-import closure_5 from "rebuild" /* 5329 */;
+import closure_4 from "getEmojiToGroupId" /* 5348 */;
+import closure_5 from "rebuild" /* 5395 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
 import closure_7 from "comparator" /* 1982 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "comparator" /* 1982 */;
 import closure_9 from "trackCommunicationDisabled" /* 1992 */;
 import closure_10 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4025 */;
-import closure_13 from "markAllUserIdListsStale" /* 4034 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_13 from "markAllUserIdListsStale" /* 4098 */;
 import closure_14 from "mergeGuildAvatar" /* 1922 */;
 import { Permissions } from "ME" /* 676 */;
 import { EmojiIntention } from "set" /* 1925 */;
@@ -165,8 +165,8 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceInclude
             num[Symbol.iterator]();
             const obj2 = callback2(11);
           }
-          callback(4574).unescapeChannelName(arr.slice(2, arr.length - num));
-          const obj = callback(4574);
+          callback(4638).unescapeChannelName(arr.slice(2, arr.length - num));
+          const obj = callback(4638);
         }
         const substr = arr.slice(1);
       }

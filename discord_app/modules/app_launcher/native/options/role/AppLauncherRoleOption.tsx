@@ -1,6 +1,6 @@
-// === Module 11768: AppLauncherRoleOption ===
+// === Module 11841: AppLauncherRoleOption ===
 
-// Module 11768 (AppLauncherRoleOption)
+// Module 11841 (AppLauncherRoleOption)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRoleRecordFromRust" /* 1985 */;

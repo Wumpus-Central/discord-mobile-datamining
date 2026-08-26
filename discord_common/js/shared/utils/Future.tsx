@@ -1,6 +1,6 @@
-// === Module 8497: Future ===
+// === Module 8564: Future ===
 
-// Module 8497 (Future)
+// Module 8564 (Future)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");

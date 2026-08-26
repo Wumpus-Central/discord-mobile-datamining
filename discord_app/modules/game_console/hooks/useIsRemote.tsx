@@ -1,8 +1,8 @@
-// === Module 5998: useIsRemote ===
+// === Module 6064: useIsRemote ===
 
-// Module 5998 (useIsRemote)
+// Module 6064 (useIsRemote)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "set" /* 4397 */;
+import closure_2 from "set" /* 4461 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_console/hooks/useIsRemote.tsx");

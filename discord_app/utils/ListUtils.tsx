@@ -1,6 +1,6 @@
-// === Module 12177: getListSummaryLabel ===
+// === Module 12250: getListSummaryLabel ===
 
-// Module 12177 (getListSummaryLabel)
+// Module 12250 (getListSummaryLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

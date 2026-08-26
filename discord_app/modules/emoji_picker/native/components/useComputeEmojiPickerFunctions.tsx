@@ -1,13 +1,13 @@
-// === Module 8825: _computeCategories ===
+// === Module 8893: _computeCategories ===
 
-// Module 8825 (_computeCategories)
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4038 */;
-import initializeSearch from "initializeSearch" /* 8788 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 8826 */;
+// Module 8893 (_computeCategories)
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
+import initializeSearch from "initializeSearch" /* 8856 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 8894 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import EmojiCategoryTypes from "EmojiCategoryTypes" /* 5286 */;
-import { EmojiPickerRenderingDataType as closure_7 } from "IMAGE_SIZE" /* 8787 */;
+import EmojiCategoryTypes from "EmojiCategoryTypes" /* 5352 */;
+import { EmojiPickerRenderingDataType as closure_7 } from "IMAGE_SIZE" /* 8855 */;
 
 require = arg1;
 function _computeCategories(arg0) {

@@ -1,10 +1,10 @@
-// === Module 11272: BookmarkIcon ===
+// === Module 11344: BookmarkIcon ===
 
-// Module 11272 (BookmarkIcon)
+// Module 11344 (BookmarkIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4100 */;
-import registerAsset from "registerAsset" /* 11273 */;
+import BaseIconImage from "BaseIconImage" /* 4164 */;
+import registerAsset from "registerAsset" /* 11345 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

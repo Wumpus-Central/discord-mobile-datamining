@@ -1,6 +1,6 @@
-// === Module 9538: getNameplateAssets ===
+// === Module 9606: getNameplateAssets ===
 
-// Module 9538 (getNameplateAssets)
+// Module 9606 (getNameplateAssets)
 import set from "set" /* 2 */;
 import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1901 */;
 

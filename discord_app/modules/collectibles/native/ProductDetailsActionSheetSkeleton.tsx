@@ -1,12 +1,12 @@
-// === Module 12376: ProductDetailsActionSheetSkeleton ===
+// === Module 12448: ProductDetailsActionSheetSkeleton ===
 
-// Module 12376 (ProductDetailsActionSheetSkeleton)
+// Module 12448 (ProductDetailsActionSheetSkeleton)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4120 from "module_4120" /* 4120 */;
+import _modDef4184 from "module_4184" /* 4184 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -34,14 +34,14 @@ let result = require("set").fileFinishedImporting("modules/collectibles/native/P
 export default function ProductDetailsActionSheetSkeleton() {
   const tmp = callback3();
   let sharedValue;
-  let obj = sharedValue(4120);
+  let obj = sharedValue(4184);
   sharedValue = obj.useSharedValue(0.3);
   const items = [sharedValue];
   const effect = React.useEffect(() => {
     const obj = sharedValue(closure_1_2[6]);
     const result = sharedValue.set(obj.withRepeat(sharedValue(closure_1_2[7]).withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  obj1 = sharedValue(4120);
+  obj1 = sharedValue(4184);
   const fn = function o() {
     return { opacity: sharedValue.get() };
   };
@@ -54,20 +54,20 @@ export default function ProductDetailsActionSheetSkeleton() {
   const items1 = [, , ];
   ({ block: arr2[0], preview: arr2[1] } = tmp);
   items1[2] = animatedStyle;
-  const items2 = [callback(_modDef4120.View, { style: items1 }), ];
+  const items2 = [callback(_modDef4184.View, { style: items1 }), ];
   obj1 = { style: tmp.info, children: null };
   const items3 = [, , ];
   ({ block: arr4[0], title: arr4[1] } = tmp);
   items3[2] = animatedStyle;
-  const items4 = [callback(_modDef4120.View, { style: items3 }), , ];
+  const items4 = [callback(_modDef4184.View, { style: items3 }), , ];
   const items5 = [, , ];
   ({ block: arr6[0], description: arr6[1] } = tmp);
   items5[2] = animatedStyle;
-  items4[1] = callback(_modDef4120.View, { style: items5 });
+  items4[1] = callback(_modDef4184.View, { style: items5 });
   const items6 = [, , ];
   ({ block: arr7[0], price: arr7[1] } = tmp);
   items6[2] = animatedStyle;
-  items4[2] = callback(_modDef4120.View, { style: items6 });
+  items4[2] = callback(_modDef4184.View, { style: items6 });
   obj1[1] = items4;
   items2[1] = callback2(View, obj1);
   obj[1] = items2;
@@ -75,7 +75,7 @@ export default function ProductDetailsActionSheetSkeleton() {
   const items8 = [, , ];
   ({ block: arr9[0], purchaseButton: arr9[1] } = tmp);
   items8[2] = animatedStyle;
-  items7[1] = callback(View, { style: tmp.purchaseSection, children: callback(_modDef4120.View, { style: items8 }) });
+  items7[1] = callback(View, { style: tmp.purchaseSection, children: callback(_modDef4184.View, { style: items8 }) });
   obj[1] = items7;
   return callback2(View, obj);
 };

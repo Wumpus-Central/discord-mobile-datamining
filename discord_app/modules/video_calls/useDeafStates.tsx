@@ -1,9 +1,9 @@
-// === Module 10988: useDeafStates ===
+// === Module 11060: useDeafStates ===
 
-// Module 10988 (useDeafStates)
+// Module 11060 (useDeafStates)
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4431 */;
-import closure_4 from "updateVoiceState" /* 4399 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_4 from "updateVoiceState" /* 4463 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/useDeafStates.tsx");

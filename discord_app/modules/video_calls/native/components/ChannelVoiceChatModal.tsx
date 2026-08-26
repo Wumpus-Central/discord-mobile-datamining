@@ -1,8 +1,8 @@
-// === Module 9893: ChannelVoiceChatModal ===
+// === Module 9960: ChannelVoiceChatModal ===
 
-// Module 9893 (ChannelVoiceChatModal)
-import computeChannelNameDefault from "computeChannelName" /* 4574 */;
-import _modDef9827 from "module_9827" /* 9827 */;
+// Module 9960 (ChannelVoiceChatModal)
+import computeChannelNameDefault from "computeChannelName" /* 4638 */;
+import _modDef9894 from "module_9894" /* 9894 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -23,8 +23,8 @@ export default function ChannelVoiceChatModal(channel) {
   if (tmp2 == null) {
     str = "";
   }
-  const tmp5 = _modDef9827;
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(4927).StageIcon, { size: "sm" })} render={function render() {
+  const tmp5 = _modDef9894;
+  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(4993).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     if (guild_id == null) {
       guild_id = null;

@@ -1,20 +1,20 @@
-// === Module 16261: StyleSheet ===
+// === Module 16342: StyleSheet ===
 
-// Module 16261 (StyleSheet)
+// Module 16342 (StyleSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4745 from "module_4745" /* 4745 */;
-import Dialog from "Dialog" /* 4798 */;
-import _modDef5930 from "module_5930" /* 5930 */;
-import getStoresDefault from "getStores" /* 16262 */;
+import _modDef4809 from "module_4809" /* 4809 */;
+import Dialog from "Dialog" /* 4862 */;
+import _modDef5996 from "module_5996" /* 5996 */;
+import getStoresDefault from "getStores" /* 16343 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
-import importDefaultResult from "initialize" /* 13219 */;
-import importDefaultResult1 from "handleUpdateVADPermission" /* 13865 */;
-import importDefaultResult2 from "fetchSurveyIfNeeded" /* 4599 */;
-import closure_12 from "getAlert" /* 11105 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import importDefaultResult from "initialize" /* 13292 */;
+import importDefaultResult1 from "handleUpdateVADPermission" /* 13938 */;
+import importDefaultResult2 from "fetchSurveyIfNeeded" /* 4663 */;
+import closure_12 from "getAlert" /* 11177 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 let c3 = importAllResult;
@@ -29,7 +29,7 @@ let obj = {
     return importDefaultResult.shouldShowWarning();
   },
   getComponent() {
-    return require(16263) /* render */.default;
+    return require(16344) /* render */.default;
   }
 };
 items = [importDefaultResult];
@@ -41,7 +41,7 @@ obj = {
     return importDefaultResult1.shouldShowWarning();
   },
   getComponent() {
-    return require(16267) /* render */.default;
+    return require(16348) /* render */.default;
   }
 };
 items2 = [importDefaultResult1];
@@ -54,7 +54,7 @@ items1[2] = {
     return null != importDefaultResult2.getCurrentSurvey();
   },
   getComponent() {
-    return require(16268) /* MobileSurvey */.default;
+    return require(16349) /* MobileSurvey */.default;
   }
 };
 let closure_15 = new getStoresDefault(items1);
@@ -125,7 +125,7 @@ AlertWrapper.prototype["render"] = function render() {
     str = "alerts-component";
   }
   const props = self.props;
-  let obj = { onClose: _modDef4745.close };
+  let obj = { onClose: _modDef4809.close };
   ({ opacity, scale } = self.state);
   obj = { dialogKey: str, onDismiss: self.handleRequestClose, children: null };
   obj = { style: items, children: null };
@@ -138,11 +138,11 @@ AlertWrapper.prototype["render"] = function render() {
   const items3 = [{ scale }];
   items2[1] = callback(RN.View, { style: { transform: items3 }, children: renderAlertResult });
   obj[1] = items2;
-  obj[2] = callback2(_modDef5930, obj);
+  obj[2] = callback2(_modDef5996, obj);
   return callback(Dialog.Dialog, obj);
 };
 AlertWrapper.contextType = require("ManaContext").ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "call", props: "Path" });
+let closure_18 = Object.freeze({ renderAlert: "ct", renderKey: "accessibilityRole", props: "body" });
 let obj1 = {
   stores: items3,
   center: true,
@@ -150,7 +150,7 @@ let obj1 = {
     return null != importDefaultResult2.getCurrentSurvey();
   },
   getComponent() {
-    return require(16268) /* MobileSurvey */.default;
+    return require(16349) /* MobileSurvey */.default;
   }
 };
 const tmp7 = new getStoresDefault(items1);
@@ -188,7 +188,7 @@ const memoResult = importAllResult.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "Array", renderKey: "call", props: "Path" };
+        return { renderAlert: "ct", renderKey: "accessibilityRole", props: "body" };
       }
     }
   });

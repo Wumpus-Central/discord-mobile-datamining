@@ -1,6 +1,6 @@
-// === Module 4016: isSubscriptionRole ===
+// === Module 4080: isSubscriptionRole ===
 
-// Module 4016 (isSubscriptionRole)
+// Module 4080 (isSubscriptionRole)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_role_subscriptions/PremiumRoleUtils.tsx");

@@ -1,12 +1,12 @@
-// === Module 11442: handleSafetyHubRequestAgeVerificationResetModalAction ===
+// === Module 11514: handleSafetyHubRequestAgeVerificationResetModalAction ===
 
-// Module 11442 (handleSafetyHubRequestAgeVerificationResetModalAction)
+// Module 11514 (handleSafetyHubRequestAgeVerificationResetModalAction)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import ContentIdType from "ContentIdType" /* 7951 */;
-import createAggregatorDefault from "createAggregator" /* 11443 */;
-import SafetyHubView from "SafetyHubView" /* 7950 */;
+import ContentIdType from "ContentIdType" /* 8018 */;
+import createAggregatorDefault from "createAggregator" /* 11515 */;
+import SafetyHubView from "SafetyHubView" /* 8017 */;
 
 function handleSafetyHubRequestAgeVerificationResetModalAction(arg0) {
   if (arg0 == null) {

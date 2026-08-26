@@ -1,17 +1,17 @@
-// === Module 15067: PersonalizationDisclaimerActionSheet ===
+// === Module 15146: PersonalizationDisclaimerActionSheet ===
 
-// Module 15067 (PersonalizationDisclaimerActionSheet)
+// Module 15146 (PersonalizationDisclaimerActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4376 */;
-import Button from "Button" /* 4815 */;
-import ButtonGroup from "ButtonGroup" /* 5257 */;
-import Background from "Background" /* 5503 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8105 */;
+import Text from "Text" /* 4440 */;
+import Button from "Button" /* 4879 */;
+import ButtonGroup from "ButtonGroup" /* 5323 */;
+import Background from "Background" /* 5569 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8172 */;
 import closure_3 from "noop" /* 19 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4380 */;
+import createCacheKey from "createCacheKey" /* 4444 */;
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -26,7 +26,7 @@ const result = require("set").fileFinishedImporting("modules/collectibles/native
 export default function PersonalizationDisclaimerActionSheet() {
   const tmp = callback3();
   const callback = React.useCallback(() => {
-    const obj = callback(4094);
+    const obj = callback(4158);
     obj.openURL(callback(1995).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
   }, []);
   let obj = { contentStyles: tmp.container, children: null };
@@ -45,7 +45,7 @@ export default function PersonalizationDisclaimerActionSheet() {
   const intl3 = getSystemLocale.intl;
   obj3[2] = intl3.string(getSystemLocale.t.WAI6xu);
   obj3[3] = function onPress() {
-    return callback(4347).hideActionSheet();
+    return callback(4411).hideActionSheet();
   };
   items1[1] = callback(Button.Button, obj3);
   obj[0] = items1;

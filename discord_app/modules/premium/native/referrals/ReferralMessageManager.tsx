@@ -1,13 +1,13 @@
-// === Module 17176: handleReferralMessages ===
+// === Module 17261: handleReferralMessages ===
 
-// Module 17176 (handleReferralMessages)
+// Module 17261 (handleReferralMessages)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import set from "set" /* 686 */;
-import initializeDefault from "initialize" /* 5367 */;
-import _fetchUserOffer from "_fetchUserOffer" /* 7736 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16763 */;
-import closure_3 from "reset" /* 4049 */;
-import closure_4 from "emitChanges" /* 7057 */;
+import initializeDefault from "initialize" /* 5433 */;
+import getPaymentGateway from "getPaymentGateway" /* 7802 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16848 */;
+import closure_3 from "reset" /* 4113 */;
+import closure_4 from "emitChanges" /* 7123 */;
 
 require = arg1;
 function handleReferralMessages(type) {
@@ -17,8 +17,8 @@ function handleReferralMessages(type) {
         premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
         const tmp9Result = tmp9(11);
         if (tmp6) {
-          const userOffer = _fetchUserOffer.fetchUserOffer("ReferralMessageManager");
-          const tmpResult = _fetchUserOffer;
+          const userOffer = getPaymentGateway.fetchUserOffer("ReferralMessageManager");
+          const tmpResult = getPaymentGateway;
         }
         tmp6 = null == premiumTypeSubscription && closure_4.shouldFetchReferralOffer(tmp9(11).extractTimestamp(type.content));
       }

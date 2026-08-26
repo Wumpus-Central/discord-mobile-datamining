@@ -1,9 +1,9 @@
-// === Module 12044: items5 ===
+// === Module 12117: items5 ===
 
-// Module 12044 (items5)
+// Module 12117 (items5)
 import set from "set" /* 2 */;
-import GameServerProviderType from "GameServerProviderType" /* 4269 */;
-import GameServerStatus from "GameServerStatus" /* 12045 */;
+import GameServerProviderType from "GameServerProviderType" /* 4333 */;
+import GameServerStatus from "GameServerStatus" /* 12118 */;
 
 const items = [{ title: "2", description: "GB" }, { title: "1", description: "vCPU" }, { title: "25", description: "GB" }];
 const items1 = [{ id: "1", name: "GameServer #1", cost: 3, specifications: items }, , ];

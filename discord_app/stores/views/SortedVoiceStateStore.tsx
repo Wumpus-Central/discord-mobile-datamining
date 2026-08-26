@@ -1,13 +1,13 @@
-// === Module 4455: getVoiceStatesForGuild ===
+// === Module 4519: getVoiceStatesForGuild ===
 
-// Module 4455 (getVoiceStatesForGuild)
+// Module 4519 (getVoiceStatesForGuild)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import version2 from "version" /* 4021 */;
-import nameFromUserDefault from "nameFromUser" /* 4224 */;
+import version2 from "version" /* 4085 */;
+import nameFromUserDefault from "nameFromUser" /* 4288 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "initializeFromUserSettings" /* 1394 */;
 import closure_5 from "createdAt" /* 1930 */;
@@ -15,7 +15,7 @@ import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import closure_8 from "trackCommunicationDisabled" /* 1992 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "updateVoiceState" /* 4399 */;
+import closure_10 from "updateVoiceState" /* 4463 */;
 import { ME } from "ME" /* 676 */;
 
 require = arg1;

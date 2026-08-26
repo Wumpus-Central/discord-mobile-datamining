@@ -1,6 +1,6 @@
-// === Module 7089: isPrivateChannel ===
+// === Module 7155: isPrivateChannel ===
 
-// Module 7089 (isPrivateChannel)
+// Module 7155 (isPrivateChannel)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/app_database/modules/messages/isPrivateChannel.tsx");

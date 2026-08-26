@@ -1,6 +1,6 @@
-// === Module 11960: useAutocompleteAnimatedHeightStyles ===
+// === Module 12033: useAutocompleteAnimatedHeightStyles ===
 
-// Module 11960 (useAutocompleteAnimatedHeightStyles)
+// Module 12033 (useAutocompleteAnimatedHeightStyles)
 import set from "set" /* 2 */;
 
 let closure_2 = { code: "function useAutocompleteAnimatedHeightStylesTsx1(){const{withTiming,height,timingStandard,isFrozenSharedValue}=this.__closure;return{height:withTiming(height,timingStandard),display:!isFrozenSharedValue.get()?'flex':'none'};}" };

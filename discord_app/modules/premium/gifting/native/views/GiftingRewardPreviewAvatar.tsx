@@ -1,10 +1,10 @@
-// === Module 10272: GiftingRewardPreviewAvatar ===
+// === Module 10340: GiftingRewardPreviewAvatar ===
 
-// Module 10272 (GiftingRewardPreviewAvatar)
+// Module 10340 (GiftingRewardPreviewAvatar)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import Button from "Button" /* 1297 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
 
