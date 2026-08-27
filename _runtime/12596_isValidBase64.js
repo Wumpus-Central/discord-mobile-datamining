@@ -2969,7 +2969,7 @@ if (self2) {
               if (issues.issues.length) {
                 tmp2 = issues;
                 if (undefined === tmp) {
-                  const obj = { issues: null, value: "r" };
+                  const obj = { issues: null, value: "Array" };
                   obj[0] = [];
                   tmp2 = obj;
                 }
@@ -2981,7 +2981,7 @@ if (self2) {
             if (runResult.issues.length) {
               nextPromise = runResult;
               if (undefined === tmp4) {
-                let obj = { issues: null, value: "r" };
+                let obj = { issues: null, value: "Array" };
                 obj[0] = [];
                 nextPromise = obj;
               }

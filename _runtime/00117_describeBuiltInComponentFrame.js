@@ -13096,7 +13096,7 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) 
         tmp5 = tmp6;
       }
       c124 = tmp5;
-      obj = { status: "pending", value: "Array", then: false };
+      obj = { status: "pending", value: "Array", then: "a" };
       obj[2] = function then(arg0) {
         items.push(arg0);
       };
@@ -14030,6 +14030,13 @@ let closure_355 = globalThis.nativeFabricUIManager.unstable_DiscreteEventPriorit
 let closure_356 = globalThis.nativeFabricUIManager.unstable_ContinuousEventPriority;
 let closure_357 = globalThis.nativeFabricUIManager.unstable_IdleEventPriority;
 let closure_358 = globalThis.nativeFabricUIManager.unstable_getCurrentEventPriority;
+let obj11 = { getInspectorDataForInstance: "r", getInspectorDataForViewTag: "flex", getInspectorDataForViewAtPoint: null };
+obj11[1] = function getInspectorDataForViewTag() {
+  throw Error("getInspectorDataForViewTag() is not available in production");
+};
+obj11[2] = function getInspectorDataForViewAtPoint() {
+  throw Error("getInspectorDataForViewAtPoint() is not available in production.");
+};
 const get = get_BatchedBridge.ReactNativeViewConfigRegistry.get;
 let c360 = 2;
 if (globalThis.nativeFabricUIManager.registerEventHandler) {
@@ -14647,15 +14654,6 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
     this.stopSurface(arg0);
   };
 }
-obj11 = {
-  getInspectorDataForInstance: "r",
-  getInspectorDataForViewTag() {
-    throw Error("getInspectorDataForViewTag() is not available in production");
-  },
-  getInspectorDataForViewAtPoint() {
-    throw Error("getInspectorDataForViewAtPoint() is not available in production.");
-  }
-};
 let obj12 = {
   onChange(stateNode, stateNode2) {
     if (stateNode) {

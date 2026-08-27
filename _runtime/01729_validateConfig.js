@@ -78,8 +78,8 @@ let fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "sa",
       lastTimestamp: null,
-      startTimestamp: 72,
-      reduceMotion: 4
+      startTimestamp: "disjunction",
+      reduceMotion: "text-md/medium"
     };
     let num = obj.velocity;
     if (num == null) {

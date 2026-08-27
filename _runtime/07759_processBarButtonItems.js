@@ -156,7 +156,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   }
   let headerLeftResult;
   if (headerLeft != null) {
-    obj = { tintColor: null, canGoBack: null, label: null, href: "Array" };
+    obj = { tintColor: null, canGoBack: null, label: null, href: "a" };
     obj[0] = text;
     obj[1] = tmp18;
     let tmp20 = headerBackTitle;
@@ -309,7 +309,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     tmp45 = callback3(tmp(4817).ScreenStackHeaderSearchBarView, obj14);
   }
   items7[3] = tmp45;
-  const obj16 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "find", backTitleFontFamily: true, backTitleFontSize: true, blurEffect: true, color: true, direction: true, disableBackButtonMenu: true, hidden: true, hideBackButton: true, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "chain", title: "chains", titleColor: "/assets/.cache/intl/ZGVzaWdu", titleFontFamily: null, titleFontSize: "86b91484df1ac0b8ccad956aae12b775", titleFontWeight: "bg.messages.86b91484df1ac0b8ccad956aae12b775.compiled.messages", topInsetEnabled: "jsona", disableTopInsetApplication: "accent", disableLeftInsetApplication: true, disableRightInsetApplication: "/assets/.cache/intl/ZGVzaWdu", disableBottomInsetApplication: null, translucent: "84406581322fd3209a5e50ba02a76da6", children: "el.messages.84406581322fd3209a5e50ba02a76da6.compiled.messages", headerLeftBarButtonItems: "jsona", headerRightBarButtonItems: "62%", experimental_userInterfaceStyle: true };
+  const obj16 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "find", backTitleFontFamily: true, backTitleFontSize: true, blurEffect: true, color: true, direction: true, disableBackButtonMenu: true, hidden: true, hideBackButton: true, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: 524288000, title: "premium_tier_0_yearly_likelihood", titleColor: "$0.00", titleFontFamily: "1", titleFontSize: "SUBSCRIPTION", titleFontWeight: "FREETRIAL", topInsetEnabled: "MONTH", disableTopInsetApplication: "0", disableLeftInsetApplication: "krv", disableRightInsetApplication: "krvna grupa 0", disableBottomInsetApplication: "tipka krvne grupe 0", translucent: -20.75, children: -18, headerLeftBarButtonItems: 0.54, headerRightBarButtonItems: 0.72, experimental_userInterfaceStyle: 1628845 };
   obj16[5] = tmp10;
   obj16[6] = fontSize;
   obj16[7] = headerBlurEffect;

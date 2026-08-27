@@ -22,7 +22,7 @@ arg5.callDispose = function callDispose(closure_0) {
         } else {
           try {
             let _Object = Object;
-            let definePropertyResult = Object.defineProperty(arg0, key10006, { value: "ct", enumerable: true, configurable: "/assets/.cache/intl/bW9kdWxlcy9hZHM=" });
+            let definePropertyResult = Object.defineProperty(arg0, key10006, { value: "ct", enumerable: true, configurable: "/assets/design/intl" });
             continue;
           } catch (err) {
             continue;

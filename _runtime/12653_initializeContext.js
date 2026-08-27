@@ -103,7 +103,7 @@ function process(_zod, seen) {
     }
     return value.schema;
   } else {
-    obj = { schema: null, count: 1, cycle: "Array", path: "CLIENT_REQUEST_TIMEOUT" };
+    obj = { schema: null, count: 1, cycle: "Array", path: "background" };
     obj[0] = {};
     obj[3] = tmp4.path;
     const seen2 = seen.seen;

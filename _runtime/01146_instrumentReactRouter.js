@@ -5,8 +5,8 @@ import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 1024 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 
-function instrumentReactRouter(f105219, arg1, arg2, location) {
-  const _require = f105219;
+function instrumentReactRouter(f105220, arg1, arg2, location) {
+  const _require = f105220;
   dependencyMap = arg4;
   let items = arg5;
   if (arg5 === undefined) {
@@ -55,7 +55,7 @@ function instrumentReactRouter(f105219, arg1, arg2, location) {
       obj[_require(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + arg4;
       obj[_require(817).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
       obj[1] = obj;
-      let result = obj.startBrowserTracingPageLoadSpan(f105219, obj);
+      let result = obj.startBrowserTracingPageLoadSpan(f105220, obj);
       let tmp4 = items(normalizeTransactionName(pathname), 2);
     }
   }

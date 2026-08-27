@@ -3,7 +3,7 @@
 // Module 14691 (U)
 import "module_0";
 
-let f95990 = global;
+let f95991 = global;
 function U(arg0, arg1) {
   if (typeof Symbol !== "undefined") {
     const _Symbol2 = Symbol;
@@ -247,8 +247,8 @@ function ue(arg0) {
 function pt(arg0, arg1, arg2, arg3) {
 
 }
-f95990 = () => {
-  if (typeof f95997 !== "function") {
+f95991 = () => {
+  if (typeof f95998 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (c0) {
@@ -257,17 +257,17 @@ f95990 = () => {
   }
 };
 create = undefined;
-let f95997 = () => {
+let f95998 = () => {
 
 };
-f95990 = () => {
+f95991 = () => {
 
 };
 create = undefined;
-f95997 = () => {
+f95998 = () => {
 
 };
-f95990 = (arg0, arg1) => {
+f95991 = (arg0, arg1) => {
   arg1.exports = function Ca(arg0, arg1) {
     let tmp = arg0;
     if (!("length" in arg0)) {
@@ -298,10 +298,10 @@ f95990 = (arg0, arg1) => {
   };
 };
 create = undefined;
-let f95998 = () => {
+let f95999 = () => {
 
 };
-f95990 = (arg0, arg1) => {
+f95991 = (arg0, arg1) => {
   class ve {
     constructor(arg0, arg1) {
       self = this;
@@ -344,7 +344,7 @@ f95990 = (arg0, arg1) => {
     }
   }
   c0 = ve;
-  if (typeof f95997 !== "function") {
+  if (typeof f95998 !== "function") {
     class ve {
       constructor(arg0, arg1) {
         self = this;
@@ -438,10 +438,10 @@ f95990 = (arg0, arg1) => {
   ve.prototype.nodeName = "#comment";
 };
 create = undefined;
-f95998 = () => {
+f95999 = () => {
 
 };
-f95990 = (arg0, arg1) => {
+f95991 = (arg0, arg1) => {
   class ae {
     constructor(arg0, arg1) {
       self = this;
@@ -494,7 +494,7 @@ f95990 = (arg0, arg1) => {
     }
   }
   c0 = ae;
-  if (typeof f95997 !== "function") {
+  if (typeof f95998 !== "function") {
     class ae {
       constructor(arg0, arg1) {
         self = this;
@@ -609,10 +609,10 @@ f95990 = (arg0, arg1) => {
   ae.prototype.nodeName = "#text";
 };
 create = undefined;
-f95998 = () => {
+f95999 = () => {
 
 };
-f95990 = (arg0, arg1) => {
+f95991 = (arg0, arg1) => {
   arg1.exports = function Ma(target) {
     let self = this;
     closure_0 = target;
@@ -639,10 +639,10 @@ f95990 = (arg0, arg1) => {
   };
 };
 create = undefined;
-f95998 = () => {
+f95999 = () => {
 
 };
-f95990 = (arg0, arg1) => {
+f95991 = (arg0, arg1) => {
   arg1.exports = function Ha(arg0, arg1) {
     const self = this;
     if (!this.listeners) {
@@ -659,10 +659,10 @@ f95990 = (arg0, arg1) => {
   };
 };
 create = undefined;
-f95998 = () => {
+f95999 = () => {
 
 };
-f95990 = (arg0, arg1) => {
+f95991 = (arg0, arg1) => {
   arg1.exports = function Ba(arg0, arg1) {
     const self = this;
     if (this.listeners) {
@@ -676,10 +676,10 @@ f95990 = (arg0, arg1) => {
   };
 };
 create = undefined;
-f95998 = () => {
+f95999 = () => {
 
 };
-f95990 = (arg0, arg1) => {
+f95991 = (arg0, arg1) => {
   function br(nodeType) {
     nodeType = nodeType.nodeType;
     if (3 === nodeType) {
@@ -917,7 +917,7 @@ f95990 = (arg0, arg1) => {
     }
   }
   closure_1 = br;
-  if (typeof f95997 !== "function") {
+  if (typeof f95998 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (closure_0) {
@@ -928,10 +928,10 @@ f95990 = (arg0, arg1) => {
   closure_0 = ["area", "base", "br", "col", "embed", "hr", "img", "input", "keygen", "link", "menuitem", "meta", "param", "source", "track", "wbr"];
 };
 create = undefined;
-f95998 = () => {
+f95999 = () => {
 
 };
-f95990 = (arg0, arg1) => {
+f95991 = (arg0, arg1) => {
   class I {
     constructor(arg0, arg1, arg2) {
       self = this;
@@ -1144,12 +1144,12 @@ f95990 = (arg0, arg1) => {
     }
     contains(arg0) {
       closure_0 = arg0;
-      tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+      tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
       return tmp;
     }
   }
   closure_3 = I;
-  if (typeof f95997 !== "function") {
+  if (typeof f95998 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
@@ -1362,7 +1362,7 @@ f95990 = (arg0, arg1) => {
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+        tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -1581,14 +1581,14 @@ f95990 = (arg0, arg1) => {
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+        tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
         return tmp;
       }
     }
     callback = 0;
     let lib = tmp(0);
   }
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
@@ -1801,7 +1801,7 @@ f95990 = (arg0, arg1) => {
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+        tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -2020,7 +2020,7 @@ f95990 = (arg0, arg1) => {
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+        tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -2030,7 +2030,7 @@ f95990 = (arg0, arg1) => {
     callback(obj.exports, lib);
   }
   callback = lib.exports;
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
@@ -2243,7 +2243,7 @@ f95990 = (arg0, arg1) => {
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+        tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -2462,7 +2462,7 @@ f95990 = (arg0, arg1) => {
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+        tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -2471,7 +2471,7 @@ f95990 = (arg0, arg1) => {
     lib = obj;
     callback(obj.exports, lib);
   }
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
@@ -2684,7 +2684,7 @@ f95990 = (arg0, arg1) => {
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+        tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -2903,7 +2903,7 @@ f95990 = (arg0, arg1) => {
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+        tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -2912,7 +2912,7 @@ f95990 = (arg0, arg1) => {
     lib = obj;
     callback(obj.exports, lib);
   }
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
@@ -3125,7 +3125,7 @@ f95990 = (arg0, arg1) => {
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+        tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -3344,7 +3344,7 @@ f95990 = (arg0, arg1) => {
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+        tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -3353,7 +3353,7 @@ f95990 = (arg0, arg1) => {
     lib = obj1;
     callback(obj1.exports, lib);
   }
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
@@ -3566,7 +3566,7 @@ f95990 = (arg0, arg1) => {
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+        tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -3785,7 +3785,7 @@ f95990 = (arg0, arg1) => {
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, /* F113266 */ function() { ... }) || false;
+        tmp = closure_0(this, /* F113267 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -3804,10 +3804,10 @@ f95990 = (arg0, arg1) => {
   I.prototype.dispatchEvent = lib.exports;
 };
 create = undefined;
-f95998 = () => {
+f95999 = () => {
 
 };
-f95990 = (arg0, arg1) => {
+f95991 = (arg0, arg1) => {
   class K {
     constructor(arg0) {
       self = this;
@@ -3851,7 +3851,7 @@ f95990 = (arg0, arg1) => {
     }
   }
   let callback = K;
-  if (typeof f95997 !== "function") {
+  if (typeof f95998 !== "function") {
     class K {
       constructor(arg0) {
         self = this;
@@ -3942,7 +3942,7 @@ f95990 = (arg0, arg1) => {
     callback = 0;
     let obj = tmp(0);
   }
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class K {
       constructor(arg0) {
         self = this;
@@ -4044,10 +4044,10 @@ f95990 = (arg0, arg1) => {
   K.prototype.removeChild = _exports.prototype.removeChild;
 };
 create = undefined;
-f95998 = () => {
+f95999 = () => {
 
 };
-f95990 = (arg0, arg1) => {
+f95991 = (arg0, arg1) => {
   class it {
     constructor(arg0) {
       return;
@@ -4062,10 +4062,10 @@ f95990 = (arg0, arg1) => {
   arg1.exports = it;
 };
 create = undefined;
-f95998 = () => {
+f95999 = () => {
 
 };
-f95990 = (arg0, arg1) => {
+f95991 = (arg0, arg1) => {
   class Ue {
     constructor() {
       self = this;
@@ -4110,7 +4110,7 @@ f95990 = (arg0, arg1) => {
       return;
     }
   }
-  if (typeof f95997 !== "function") {
+  if (typeof f95998 !== "function") {
     class Ue {
       constructor() {
         self = this;
@@ -4205,7 +4205,7 @@ f95990 = (arg0, arg1) => {
     callback = 0;
     let obj6 = tmp(0);
   }
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class Ue {
       constructor() {
         self = this;
@@ -4303,7 +4303,7 @@ f95990 = (arg0, arg1) => {
     callback(obj.exports, obj6);
   }
   callback = obj6.exports;
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class Ue {
       constructor() {
         self = this;
@@ -4401,7 +4401,7 @@ f95990 = (arg0, arg1) => {
     callback(obj.exports, obj6);
   }
   obj6 = obj6.exports;
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class Ue {
       constructor() {
         self = this;
@@ -4499,7 +4499,7 @@ f95990 = (arg0, arg1) => {
     callback(obj.exports, obj6);
   }
   closure_2 = obj6.exports;
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class Ue {
       constructor() {
         self = this;
@@ -4597,7 +4597,7 @@ f95990 = (arg0, arg1) => {
     callback(obj1.exports, obj6);
   }
   const _exports = obj6.exports;
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class Ue {
       constructor() {
         self = this;
@@ -4695,7 +4695,7 @@ f95990 = (arg0, arg1) => {
     callback(obj2.exports, obj6);
   }
   closure_4 = obj6.exports;
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class Ue {
       constructor() {
         self = this;
@@ -4793,7 +4793,7 @@ f95990 = (arg0, arg1) => {
     callback(obj3.exports, obj6);
   }
   closure_5 = obj6.exports;
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class Ue {
       constructor() {
         self = this;
@@ -4890,7 +4890,7 @@ f95990 = (arg0, arg1) => {
     obj6 = obj4;
     callback(obj4.exports, obj6);
   }
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class Ue {
       constructor() {
         self = this;
@@ -4987,7 +4987,7 @@ f95990 = (arg0, arg1) => {
     obj6 = obj5;
     callback(obj5.exports, obj6);
   }
-  if (typeof f95998 !== "function") {
+  if (typeof f95999 !== "function") {
     class Ue {
       constructor() {
         self = this;
@@ -5123,23 +5123,23 @@ f95990 = (arg0, arg1) => {
   prototype.dispatchEvent = obj6.exports;
 };
 create = undefined;
-f95998 = () => {
+f95999 = () => {
 
 };
-f95990 = (arg0, arg1) => {
-  if (typeof f95998 !== "function") {
+f95991 = (arg0, arg1) => {
+  if (typeof f95999 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (!obj) {
     obj = { exports: null };
     obj[0] = {};
-    f95990(obj.exports, obj);
+    f95991(obj.exports, obj);
   }
   const _exports = new obj.exports();
   arg1.exports = _exports;
 };
 create = undefined;
-f95998 = () => {
+f95999 = () => {
 
 };
 let obj = {};
@@ -5155,7 +5155,7 @@ for (const key10058 in obj) {
   let definePropertyResult = defineProperty(obj, key10058, obj);
   continue;
 }
-f95990 = obj;
+f95991 = obj;
 if (typeof obj === "object") {
   const ownPropertyNames = getOwnPropertyNames(obj);
   let num = 0;
@@ -5474,12 +5474,12 @@ let tmp11 = ((arg0) => {
 })("[mux]");
 let closure_38 = tmp11;
 let closure_39 = G(obj2.exports);
-if (f95990) {
-  f95990 = 0;
+if (f95991) {
+  f95991 = 0;
   create = require("module_0");
 }
-if (f95990) {
-  f95990 = 0;
+if (f95991) {
+  f95991 = 0;
   create = require("module_0");
 }
 class N {
@@ -5729,7 +5729,7 @@ let fn2 = function r() {
   }
   tmp2 = U(self, tmp);
 };
-f95990 = fn2;
+f95991 = fn2;
 let items2 = [
   {
     key: "on",
@@ -5970,7 +5970,7 @@ let fn3 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f95990 = fn3;
+f95991 = fn3;
 let items3 = [
   {
     key: "_startPlaybackHeartbeatInterval",
@@ -6162,7 +6162,7 @@ let fn5 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f95990 = fn5;
+f95991 = fn5;
 let items4 = [
   {
     key: "_updateWatchTime",
@@ -6289,7 +6289,7 @@ let fn6 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f95990 = fn6;
+f95991 = fn6;
 const items5 = [
   {
     key: "_startPlaybackTimeTracking",
@@ -6402,7 +6402,7 @@ let fn7 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f95990 = fn7;
+f95991 = fn7;
 const items6 = [
   {
     key: "_updateMaxPlayheadPosition",
@@ -6594,7 +6594,7 @@ const fn9 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f95990 = fn9;
+f95991 = fn9;
 const items7 = [
   {
     key: "_checkIfRebuffering",
@@ -6757,7 +6757,7 @@ const fn10 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f95990 = fn10;
+f95991 = fn10;
 const items8 = [
   {
     key: "_inPrerollPosition",
@@ -7244,7 +7244,7 @@ const fn13 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f95990 = fn13;
+f95991 = fn13;
 const items9 = [
   {
     key: "inPrerollPosition",
@@ -7781,7 +7781,7 @@ const fn15 = function e(arg0) {
   return fn;
 };
 create = fn15;
-f95990 = () => {
+f95991 = () => {
 
 };
 const fn16 = function i(arg0, arg1, arg2) {
@@ -8249,14 +8249,14 @@ for (const key10238 in obj14) {
   continue;
 }
 const fn17 = (arg0, arg1) => {
-  if (undefined !== f95990) {
-    if (typeof f95998 !== "function") {
+  if (undefined !== f95991) {
+    if (typeof f95999 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (!obj) {
       obj = { exports: null };
       obj[0] = {};
-      f95990(obj.exports, obj);
+      f95991(obj.exports, obj);
     }
     const _exports = obj.exports;
     const _document = document;
@@ -8905,7 +8905,7 @@ const fn18 = function r(mux, envKey) {
     tmp5 = U(self, tmp2);
   }
 };
-f95990 = fn18;
+f95991 = fn18;
 const items10 = [
   {
     key: "send",
@@ -9734,7 +9734,7 @@ const fn22 = function r(on) {
 };
 let closure_99 = ["viewstart", "ended", "loadstart", "pause", "play", "playing", "ratechange", "waiting", "adplay", "adpause", "adended", "aderror", "adplaying", "adrequest", "adresponse", "adbreakstart", "adbreakend", "adfirstquartile", "admidpoint", "adthirdquartile", "rebufferstart", "rebufferend", "seeked", "error", "hb", "requestcompleted", "requestfailed", "requestcanceled", "renditionchange", "cdnchange", "playbackmodechange"];
 const set = new Set(["requestcompleted", "requestfailed", "requestcanceled"]);
-f95990 = undefined;
+f95991 = undefined;
 class t {
   constructor(arg0, arg1, arg2) {
     self = this;
@@ -10658,7 +10658,7 @@ class t {
 create = t;
 t.prototype = Object.create(fn2.prototype, { constructor: { value: t, writable: true, configurable: true } });
 Le(t, fn2);
-f95990 = t;
+f95991 = t;
 create = (function Rt() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
@@ -10689,9 +10689,9 @@ create = (function Rt() {
   }
   return false;
 })();
-f95990 = function() {
+f95991 = function() {
   const self = this;
-  const obj = X(f95990);
+  const obj = X(f95991);
   if (closure_1) {
     const _Reflect = Reflect;
     let constructResult = Reflect.construct(obj, arguments, X(self).constructor);
@@ -12144,7 +12144,7 @@ const items11 = [
                   fn3({ type, request: tmp, chunk });
                 });
               }
-              closure_10 = { video: "IconComponent", audio: "dispatch", totalBitrate: "names" };
+              closure_10 = { video: "Boolean", audio: "disabled", totalBitrate: "isArray" };
               fn4 = function x(newQuality) {
                 let obj = newQuality;
                 if (typeof newQuality.newQuality === "number") {

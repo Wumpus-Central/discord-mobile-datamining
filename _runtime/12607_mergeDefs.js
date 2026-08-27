@@ -567,7 +567,9 @@ if (self2) {
             break;
             case "guildGameIds":
             break;
-            case "useYouBarActivityStatusEnabled":
+            case "frameX":
+            break;
+            case "user.id":
             break;
             case "dragOffsetFromRight":
             break;
@@ -609,29 +611,32 @@ if (self2) {
             break;
             case "serializeEnd":
             break;
-            case "discovery_splash":
-            break;
-            case "splash":
-            break;
-            case "hash_mask":
-              let expected = closure_2[code.expected];
+            case "controlEdgeToEdgeValues":
+              let parsedTypeResult = parsedType(input);
+              let tmp50 = str[parsedTypeResult];
+              if (tmp50 == null) {
+                tmp50 = parsedTypeResult;
+              }
+              let obj2 = /^[A-Z]/;
+              let isMatch = obj2.test(code.expected);
+              if (isMatch) {
+                let _HermesInternal16 = HermesInternal;
+                let combined = "Neplatn\u00FD vstup: o\u010Dek\u00E1v\u00E1no instanceof " + code.expected + ", obdr\u017Eeno " + tmp50;
+              } else {
+                let _HermesInternal15 = HermesInternal;
+                combined = "Neplatn\u00FD vstup: o\u010Dek\u00E1v\u00E1no " + expected + ", obdr\u017Eeno " + tmp50;
+              }
+              return combined;
+            case "supportsReferrerPolicy":
+              str = closure_2;
+              expected = closure_2[code.expected];
               if (expected == null) {
                 expected = code.expected;
               }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp51 = closure_2[parsedTypeResult];
-              if (tmp51 == null) {
-                tmp51 = parsedTypeResult;
-              }
-              if (obj2.test(code.expected)) {
-                const _HermesInternal16 = HermesInternal;
-                let combined = "Neplatn\u00FD vstup: o\u010Dek\u00E1v\u00E1no instanceof " + code.expected + ", obdr\u017Eeno " + tmp51;
-              } else {
-                const _HermesInternal15 = HermesInternal;
-                combined = "Neplatn\u00FD vstup: o\u010Dek\u00E1v\u00E1no " + expected + ", obdr\u017Eeno " + tmp51;
-              }
-              return combined;
-            case "maskContentUnits":
+              parsedType = closure_2.parsedType;
+              input = code.input;
+            break;
+            case "icymiDesktopEnabled":
             break;
             case "MarkupParserNodeTypeError":
               if (1 === code.values.length) {
@@ -882,6 +887,18 @@ if (self2) {
             break;
             case "$ZodCheckGreaterThan":
             break;
+            case "millisecondsInSecond":
+            break;
+            case "revealMessage":
+            break;
+            case "getAvatarDecoration":
+            break;
+            case "getAvatarDecorationURL":
+            break;
+            case "getCanUseMultiAccountMobile":
+            break;
+            case "MobileGoLiveEntrypointTreatment":
+            break;
             case "ToIntlMathematicalValue":
             break;
             case "th":
@@ -936,7 +953,13 @@ if (self2) {
             break;
             case "_":
             break;
-            case "successNodeId":
+            case "connectionType":
+            break;
+            case "connectionTypeBuckets":
+            break;
+            case "suggested_user":
+            break;
+            case "suggested_user_id":
             break;
             case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
             break;
@@ -1054,11 +1077,13 @@ if (self2) {
             break;
             case "RTC_CONNECTION_FLAGS":
             break;
-            case "handleToggleVideo":
+            case "updateRsvp":
             break;
-            case "ideograph_advantage":
+            case "gzindex":
             break;
-            case "getAppHardwareAccelerationEnabled":
+            case "indexChange":
+            break;
+            case "getAppIdForBotUserId":
             break;
             case "ActionSheetHeaderPressableText":
             break;
@@ -1068,7 +1093,7 @@ if (self2) {
             break;
             case "ext":
             break;
-            case "isReduceMotionEnabled":
+            case "isReduceTransparencyEnabled":
             break;
             case "AccessibilityFocusView":
             break;
@@ -1250,8 +1275,6 @@ if (self2) {
             break;
             case "mentionsCount":
             break;
-            case "PREMIUM_GIFT_YEAR_TIER_1":
-            break;
             case "dist":
             break;
             case "distance":
@@ -1293,6 +1316,8 @@ if (self2) {
             case "RoleFlags":
             break;
             case "scrollToQuestId":
+            break;
+            case "leadingText":
             break;
             case "accessibleDismiss":
             break;
@@ -1359,7 +1384,21 @@ if (self2) {
             case "family_adult_child_child":
             break;
             case "childButton":
-            break;
+              parsedTypeResult = parsedType(input);
+              tmp50 = str[parsedTypeResult];
+              if (tmp50 == null) {
+                tmp50 = parsedTypeResult;
+              }
+              obj2 = /^[A-Z]/;
+              isMatch = obj2.test(code.expected);
+              if (isMatch) {
+                _HermesInternal16 = HermesInternal;
+                combined = "Neplatn\u00FD vstup: o\u010Dek\u00E1v\u00E1no instanceof " + code.expected + ", obdr\u017Eeno " + tmp50;
+              } else {
+                _HermesInternal15 = HermesInternal;
+                combined = "Neplatn\u00FD vstup: o\u010Dek\u00E1v\u00E1no " + expected + ", obdr\u017Eeno " + tmp50;
+              }
+              return combined;
             case "childButtonText":
             break;
             case "externalLinkIcon":
@@ -1372,7 +1411,7 @@ if (self2) {
             break;
             case "Dao":
             break;
-            case "replaceCorrectMessageParams":
+            case "replaceExports":
             break;
             case "app":
             break;
@@ -1393,11 +1432,15 @@ if (self2) {
             case "showGuildTag":
             break;
             case "GuildTagBadgeSize":
-            break;
+              str = globalThis;
+              combined6 = "Neplatn\u00FD kl\u00ED\u010D v " + code.origin;
+              return combined6;
             case "_applyCombination":
             break;
             case "ly":
-            break;
+              _HermesInternal = HermesInternal;
+              combined7 = "Neplatn\u00E1 hodnota v " + code.origin;
+              return combined7;
             case "ios_backgroundColor":
             break;
             case "ba":
@@ -1413,15 +1456,11 @@ if (self2) {
             case "gr":
             break;
             case "und":
-              str = globalThis;
-              combined6 = "Neplatn\u00FD kl\u00ED\u010D v " + code.origin;
-              return combined6;
+            break;
             case "Color":
             break;
             case "ACTIVITY_LAUNCH_UNKNOWN_CHANNEL":
-              _HermesInternal = HermesInternal;
-              combined7 = "Neplatn\u00E1 hodnota v " + code.origin;
-              return combined7;
+            break;
             case "UNKNOWN":
             break;
             case "UNKNOWN_CHANNEL":
@@ -1432,7 +1471,11 @@ if (self2) {
             break;
             case "person_walking_facing_right_tone4":
             break;
-            case "optionId":
+            case "isMap":
+            break;
+            case "guildIconBorder":
+            break;
+            case "orderCollapsed":
             break;
             case "_bodyArrayBuffer":
             break;
@@ -1470,9 +1513,7 @@ if (self2) {
             break;
             case "shiftLeft":
             break;
-            case "InterceptingGestureDetector":
-            break;
-            case "StreamingTier1SmallBadge":
+            case "StreamingTier2LargeBadge":
             break;
             case "PREMIUM_UPSELL_FILE_UPLOAD":
             break;
@@ -1568,15 +1609,7 @@ if (self2) {
             break;
             case "ReactionsSpotIllustration":
             break;
-            case "_socketId":
-            break;
-            case "socketId":
-            break;
-            case "dims":
-            break;
-            case "slot_machine":
-            break;
-            case "gregory":
+            case "friend_anniversary_notifications":
             break;
             case "$constructor":
             break;
@@ -1636,31 +1669,17 @@ if (self2) {
             break;
             case "ug":
             break;
-            case "allowRTL":
-            break;
-            case "deprecate":
-            break;
-            case "deprecated":
-            break;
-            case "deprecatedCFWSNearAt":
-            break;
-            case "enableAppStartTracking":
-            break;
-            case "getHighestActiveScreenIndex":
-            break;
-            case "expiresMonth":
-            break;
             case "AccountAgeTier10LargeBadge":
             break;
             case "cou":
             break;
             case "Badge":
             break;
-            case "getGuildDiscoverySplashSource":
+            case "safeRe":
             break;
-            case "ComponentsConfiguration":
+            case "cardType":
             break;
-            case "getColorLightnessAdjusted":
+            case "getComboId":
             break;
             case "cr":
             break;
@@ -1678,11 +1697,9 @@ if (self2) {
             break;
             case "containerIndex":
             break;
-            case "expandEventProperties":
+            case "expandCTALabelContainer":
             break;
-            case "G9fGlP":
-            break;
-            case "PARENTAL_CONTROLS_DIRECT_MESSAGES":
+            case "CTALabel":
             break;
             case "getUTCMilliseconds":
             break;
@@ -1694,9 +1711,9 @@ if (self2) {
             break;
             case "so":
             break;
-            case "mur":
+            case "handleRedeemVirtualCurrencyFail":
             break;
-            case "murmur":
+            case "NitroRubyBadgeLargeBadge":
             break;
             case "_clientSdkMetadata":
             break;
@@ -1792,7 +1809,7 @@ if (self2) {
             break;
             case "led":
             break;
-            case "payment_id":
+            case "payment_source_id":
             break;
             case "_dispatch":
             break;
@@ -1814,7 +1831,9 @@ if (self2) {
             break;
             case "RewardsMouseSpotIllustration":
             break;
-            case "savedDependencies":
+            case "templatePair":
+            break;
+            case "scalars":
             break;
             case "renderActivityInstanceEmbed":
             break;
@@ -1853,36 +1872,6 @@ if (self2) {
             case "showStatus":
             break;
             case "useCanUseGuildSpace":
-            break;
-            case "getGuildFolderMenuItems":
-            break;
-            case "MenuItem":
-            break;
-            case "WHATS_ON_YOUR_MIND":
-            break;
-            case "INDIE":
-            break;
-            case "IE_PROTO":
-            break;
-            case "PROTO_THEME_MAP_MOBILE":
-            break;
-            case "PROTO_THEME_MAP_MOBILE_REFRESH":
-            break;
-            case "MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK":
-            break;
-            case "mmh":
-            break;
-            case "getNextAssetPage":
-            break;
-            case "PageUp":
-            break;
-            case "ageUpper":
-            break;
-            case "performAutocomplete":
-            break;
-            case "completeNewMemberAction":
-            break;
-            case "NewMemberActionTypes":
             break;
             case "english":
             break;
@@ -1968,10 +1957,6 @@ if (self2) {
             break;
             case "referrerPolicy":
             break;
-            case "getSpatialCapabilities":
-            break;
-            case "setIncomingCallActive":
-            break;
             case "beforeAddRecordingEvent":
             break;
             case "../../../lib/braintree-error":
@@ -2026,6 +2011,14 @@ if (self2) {
             break;
             case "SocialMediaSpotIllustration":
             break;
+            case "sanitizeTags":
+            break;
+            case "onPressMutualGuild":
+            break;
+            case "MutualGuildRow":
+            break;
+            case "person_in_bed_tone5":
+            break;
             case "APP_LAUNCH_COMPLETED":
             break;
             case "COMPLETED":
@@ -2037,16 +2030,25 @@ if (self2) {
             case "[[calendar]]":
             break;
             case "calendar":
-              joinValuesResult = closure_2.joinValues(code.keys, ", ");
-              _HermesInternal2 = HermesInternal;
-              combined5 = "Nezn\u00E1m\u00E9 kl\u00ED\u010De: " + joinValuesResult;
-              return combined5;
+              parsedTypeResult = parsedType(input);
+              tmp50 = str[parsedTypeResult];
+              if (tmp50 == null) {
+                tmp50 = parsedTypeResult;
+              }
+              obj2 = /^[A-Z]/;
+              isMatch = obj2.test(code.expected);
+              if (isMatch) {
+                _HermesInternal16 = HermesInternal;
+                combined = "Neplatn\u00FD vstup: o\u010Dek\u00E1v\u00E1no instanceof " + code.expected + ", obdr\u017Eeno " + tmp50;
+              } else {
+                _HermesInternal15 = HermesInternal;
+                combined = "Neplatn\u00FD vstup: o\u010Dek\u00E1v\u00E1no " + expected + ", obdr\u017Eeno " + tmp50;
+              }
+              return combined;
             case "EntitlementTenantFulfillmentStatus":
             break;
             case "ill":
-              str = globalThis;
-              combined6 = "Neplatn\u00FD kl\u00ED\u010D v " + code.origin;
-              return combined6;
+            break;
             case "__findAnimatedPropsNodes":
             break;
             case "flag_bs":
@@ -2054,9 +2056,7 @@ if (self2) {
             case "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS":
             break;
             case "system_channel_flags":
-              _HermesInternal = HermesInternal;
-              combined7 = "Neplatn\u00E1 hodnota v " + code.origin;
-              return combined7;
+            break;
             case "channel_flags":
             break;
             case "_flags":
@@ -2070,11 +2070,16 @@ if (self2) {
             case "gs":
             break;
             case "_oldestUnreadMessageId":
-            break;
+              joinValuesResult = closure_2.joinValues(code.keys, ", ");
+              _HermesInternal2 = HermesInternal;
+              combined5 = "Nezn\u00E1m\u00E9 kl\u00ED\u010De: " + joinValuesResult;
+              return combined5;
             case "oldestUnreadMessageId":
             break;
             case "oldestUnreadMessageIdStale":
-            break;
+              str = globalThis;
+              combined6 = "Neplatn\u00FD kl\u00ED\u010D v " + code.origin;
+              return combined6;
             case "USER_INTERACTION":
             break;
             case "INTERACTION_MESSAGE_COMPONENT":
@@ -2082,7 +2087,9 @@ if (self2) {
             case "MESSAGE_COMPONENT":
             break;
             case "COMPONENT_PLAYGROUND":
-            break;
+              _HermesInternal = HermesInternal;
+              combined7 = "Neplatn\u00E1 hodnota v " + code.origin;
+              return combined7;
             case "PLAYGROUND":
             break;
             case "ROUND_CEIL":
@@ -2097,7 +2104,13 @@ if (self2) {
             break;
             case "forEachChannel":
             break;
-            case "getGuildFavorites":
+            case "8SuVoE":
+            break;
+            case "oEAioF":
+            break;
+            case "woman_in_motorized_wheelchair_medium_skin_tone":
+            break;
+            case "man_in_motorized_wheelchair_medium_skin_tone":
             break;
             case "DiscountsMegaphoneSpotIllustration":
             break;
@@ -2109,8 +2122,6 @@ if (self2) {
             break;
             case "phone":
             break;
-            case "$ZodCheckMinSize":
-            break;
             case "__reanimatedModuleProxy":
             break;
             case "getChannelA11yHint":
@@ -2119,17 +2130,9 @@ if (self2) {
             break;
             case "interpolationIndex":
             break;
-            case "exploding_head":
+            case "explicitMediaFalsePositiveInfo":
             break;
-            case "headMetaAuthorship":
-            break;
-            case "shippingAddress":
-            break;
-            case "shippingAddressOverride":
-            break;
-            case "scopes":
-            break;
-            case "scopesContainer":
+            case "footerTitle":
             break;
             case "getCurrent":
             break;
@@ -2245,23 +2248,13 @@ if (self2) {
             break;
             case "XBOX_URL_BASE":
             break;
-            case "getEmbeddedActivitiesForLocationIncludingHidden":
+            case "usePrivateThreadMode":
             break;
-            case "endImportTime":
+            case "PrivateThreadMode":
             break;
-            case "selectedRewardText":
+            case "optInChannels":
             break;
-            case "getRNSentryOnDrawReporter":
-            break;
-            case "tRNS":
-            break;
-            case "RNSentry":
-            break;
-            case "Sentry":
-            break;
-            case "entry":
-            break;
-            case "openStickerPickerToPackId":
+            case "optInChannelsEnabled":
             break;
             case "player_height":
             break;
@@ -2323,20 +2316,6 @@ if (self2) {
             break;
             case "registerTimerPolyfills":
             break;
-            case "getDurationStats":
-            break;
-            case "QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL":
-            break;
-            case "AuditLogActions":
-            break;
-            case "DiscordSupergraphicLogo":
-            break;
-            case "Super":
-            break;
-            case "graph":
-            break;
-            case "graphic":
-            break;
             case "__internalInstanceHandle":
             break;
             case "_int":
@@ -2376,14 +2355,6 @@ if (self2) {
             case "isAnyVoicePanelOpen":
             break;
             case "nativePhoneIntegrationEnabled":
-            break;
-            case "AUTO_MODERATION_EXEMPT_CHANNELS":
-            break;
-            case "CHANNELS_DEFAULT":
-            break;
-            case "DEFAULT_APP_ENTRY_KEY":
-            break;
-            case "APP_ENTRY_KEYS":
             break;
             case "activity_items":
             break;
@@ -2456,6 +2427,68 @@ if (self2) {
             case "byAppEntry":
             break;
             case "tryItOutAvatarDecoration":
+            break;
+            case "frameY":
+            break;
+            case "Buf8":
+            break;
+            case "f8wNDl":
+            break;
+            case "DlcqlU":
+            break;
+            case "lcq":
+            break;
+            case "trialOffer":
+            break;
+            case "arrow_left":
+            break;
+            case "leftActions":
+            break;
+            case "topUserActivities":
+            break;
+            case "_$esjava$I_length":
+            break;
+            case "I_length":
+            break;
+            case "_l":
+            break;
+            case "_length":
+            break;
+            case "len":
+            break;
+            case "lengthComputable":
+            break;
+            case "analyticsLoadId":
+            break;
+            case "disableIntegration":
+            break;
+            case "onReject":
+            break;
+            case "onRejectSuccess":
+            break;
+            case "getChannelPermalink":
+            break;
+            case "linkCode":
+            break;
+            case "dependentSkuId":
+            break;
+            case "drawerStatusBar":
+            break;
+            case "StatusBar":
+            break;
+            case "load":
+            break;
+            case "J":
+            break;
+            case "setCurrentGuild":
+            break;
+            case "POLL_EXPIRE":
+            break;
+            case "EXPIRE_BEHAVIOR":
+            break;
+            case "upgradeTransaction":
+            break;
+            case "action_location":
             break;
             default:
               return "Neplatn\u00FD vstup";

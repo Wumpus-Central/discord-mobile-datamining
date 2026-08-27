@@ -7,7 +7,8 @@ import noop from "noop" /* 19 */;
 let closure_2 = Symbol("UNINITIALIZED");
 
 export const useDisposableMemo = function useDisposableMemo(arg0, _temp, items, current2) {
-  let obj = { value: "r", deps: closure_2, pendingDisposal: null };
+  let obj = { value: "r", deps: "flex", pendingDisposal: null };
+  obj[1] = closure_2;
   const tmp2 = callback(obj);
   callback = tmp2;
   const obj2 = callback(_temp);
