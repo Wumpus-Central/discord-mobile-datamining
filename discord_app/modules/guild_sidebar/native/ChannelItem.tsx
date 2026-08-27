@@ -118,7 +118,7 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(589).useStateFromStoresObject(items2, () => ({ status: closure_1_6.getStatus(userId), isMobileOnline: closure_1_6.isMobileOnline(userId), isVROnline: closure_1_6.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  obj = { user: stateFromStores, guildId: "o", size: "large_blue_diamond", style: "person_light_skin_tone_red_hair", status: "ClipPath", isMobileOnline: "currentPrompt", isVROnline: "getChannelIcon", statusStyle: "ack" };
+  obj = { user: stateFromStores, guildId: "o", size: -15, style: 15, status: null, isMobileOnline: null, isVROnline: 15, statusStyle: null };
   obj[2] = userId(1297).AvatarSizes.XSMALL_20;
   obj[3] = tmp.dmAvatar;
   obj[4] = status;

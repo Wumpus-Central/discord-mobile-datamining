@@ -10,7 +10,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   closure_1 = arg1;
-  obj = { dragSpecs: "Boolean", overSpecs: "disabled", dropSpecs: "isArray", dragRegion: require("../../reanimated/ReanimatedRexport.tsx").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "spades", scrollPosition: "spade_suit", windowSize: "attachment", setStateShallow: null, dropStart: null, dropComplete: null };
+  obj = { dragSpecs: "Boolean", overSpecs: "disabled", dropSpecs: "isArray", dragRegion: require("../../reanimated/ReanimatedRexport.tsx").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "person_lifting_weights_tone2", scrollPosition: "lifter_tone2", windowSize: "weight_lifter_tone2", setStateShallow: null, dropStart: null, dropComplete: false };
   const obj2 = ReanimatedRexport;
   obj[4] = require("../../reanimated/ReanimatedRexport.tsx").makeMutable(obj);
   const obj3 = ReanimatedRexport;

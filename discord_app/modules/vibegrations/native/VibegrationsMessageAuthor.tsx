@@ -33,7 +33,7 @@ export default function VibegrationsMessageAuthor(userId) {
   if (null != stateFromStores) {
     obj = { style: null, children: null };
     obj[0] = tmp.author;
-    obj = { size: null, user: null, guildId: "r" };
+    obj = { size: null, user: null, guildId: "Array" };
     obj[0] = tmp3(1297).AvatarSizes.SIZE_16;
     obj[1] = stateFromStores;
     const items3 = [callback(tmp3(1297).Avatar, obj), ];

@@ -172,7 +172,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
             originalMd5 = lib.originalMd5;
             if (null != base64) {
               obj = closure_1_0(14210);
-              obj3 = { assetOrigin: null, imageUri: null, description: "", originalAsset: "Array", originalMd5: true };
+              obj3 = { assetOrigin: null, imageUri: null, description: "", originalAsset: "Array", originalMd5: 13 };
               obj3[0] = closure_1_0(7694).AssetOriginTypes.NEW_ASSET;
               obj3[1] = base64;
               obj3[4] = originalMd5;

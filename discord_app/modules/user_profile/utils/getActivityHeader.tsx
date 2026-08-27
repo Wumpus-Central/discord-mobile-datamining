@@ -246,7 +246,7 @@ export default function getActivityHeader(session_id) {
             obj25[2] = str;
             obj = obj25;
           } else {
-            obj = { text: "r", platformIcon: null, platformLabel: null };
+            obj = { text: "r", platformIcon: "flex", platformLabel: null };
             obj[1] = icon;
             obj[2] = str;
           }

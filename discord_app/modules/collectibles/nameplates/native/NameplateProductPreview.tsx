@@ -45,7 +45,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = React.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: false, autoStatusCutout: false, "aria-hidden": false };
+    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "FRAME", autoStatusCutout: null, "aria-hidden": null };
     obj[2] = currentUser(stateFromStores[19]).AvatarSizes.NORMAL;
     obj[3] = closure_1;
     obj[4] = !stateFromStores;

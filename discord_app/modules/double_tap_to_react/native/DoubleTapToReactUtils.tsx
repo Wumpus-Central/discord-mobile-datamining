@@ -118,7 +118,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
         const result1 = obj3.convertNameToSurrogate("heart");
         let tmp11 = null;
         if ("" !== result1) {
-          obj = { name: null, id: "ct", animated: "\u2713" };
+          obj = { name: null, id: "ct", animated: "kasvot" };
           obj[0] = result1;
           tmp11 = obj;
         }

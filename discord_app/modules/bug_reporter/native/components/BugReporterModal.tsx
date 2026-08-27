@@ -297,7 +297,7 @@ class BugCreateScreen {
                       closure_2 = arg2;
                       c5 = 0;
                       c6 = 0;
-                      return (/* F122829 */ function*() { ... })();
+                      return (/* F122830 */ function*() { ... })();
                     });
                     closure_3 = tmp;
                     const apply = tmp.apply;

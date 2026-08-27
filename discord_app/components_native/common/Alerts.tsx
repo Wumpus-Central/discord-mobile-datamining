@@ -143,7 +143,7 @@ AlertWrapper.prototype["render"] = function render() {
   return callback(Dialog.Dialog, obj);
 };
 AlertWrapper.contextType = require("ManaContext").ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "IconComponent", renderKey: "dispatch", props: "names" });
+let closure_18 = Object.freeze({ renderAlert: "Boolean", renderKey: "disabled", props: "isArray" });
 let obj1 = {
   stores: items3,
   center: true,
@@ -189,7 +189,7 @@ const memoResult = importAllResult.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "IconComponent", renderKey: "dispatch", props: "names" };
+        return { renderAlert: "Boolean", renderKey: "disabled", props: "isArray" };
       }
     }
   });

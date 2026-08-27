@@ -159,8 +159,10 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
             obj7[1] = intl2.formatToPlainString(callback(navigation[8]).t.e5WzVa, obj8);
             obj7[2] = closure_1;
             obj7[3] = callback;
-            obj7[4] = function onPhoneTokenReceived(phoneToken) {
-              let obj = { email: "r", phone: closure_1, phoneToken };
+            obj7[4] = function onPhoneTokenReceived(arg0) {
+              let obj = { email: "r", phone: "flex", phoneToken: null };
+              obj[1] = closure_1;
+              obj[2] = arg0;
               v3(obj);
               obj = { step: closure_2_10.PHONE_VERIFICATION, toStep: callback(closure_2_2[14]).getNextRegistrationTransitionStep(callback), actionType: closure_2_11.SUCCESS };
               _undefined(obj);

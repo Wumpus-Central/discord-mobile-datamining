@@ -100,7 +100,7 @@ export const setPendingBadgeHiddenBadges = function setPendingBadgeHiddenBadges(
   dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp4 });
 };
 export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "accessibilityRole", pendingBadgeHiddenBadges: "to" });
+  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "accessibilityRole", pendingBadgeHiddenBadges: "HTTP" });
 };
 export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stateFromStoresArray, arg1) {
   ({ pendingBadgeDisplayOrder, pendingBadgeHiddenBadges } = arg1);

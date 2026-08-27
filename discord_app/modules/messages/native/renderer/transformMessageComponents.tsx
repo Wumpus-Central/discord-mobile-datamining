@@ -17,15 +17,15 @@ function transformToRowGeneratedComponent(message, accessory) {
   let _require = message;
   let initialSnowflakeSelectOptions = accessory;
   message = message.message;
-  let f81472 = message;
+  let f81473 = message;
   ({ interaction, guildId, shouldDisableInteractiveComponents, shouldObscureSpoiler } = message);
   const enabledContentHarmTypeFlags = message.enabledContentHarmTypeFlags;
   ({ shouldShowMosaicMediaDescriptions: processColor, shouldAgeVerify } = message);
   const type = accessory.type;
   let tmp = _require;
-  let tmp2 = f81472;
+  let tmp2 = f81473;
   ({ colors, markdownConfigs } = message);
-  if (_require(f81472[6]).ComponentType.ACTION_ROW === type) {
+  if (_require(f81473[6]).ComponentType.ACTION_ROW === type) {
     const components = accessory.components;
     let mapped = components.map((arg0) => {
       const tmp = closure_1_8(closure_0, arg0);
@@ -72,22 +72,22 @@ function transformToRowGeneratedComponent(message, accessory) {
     obj1.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
     _require = accessory;
     initialSnowflakeSelectOptions = found1;
-    f81472 = (arg0) => initialSnowflakeSelectOptions.options[arg0].label;
+    f81473 = (arg0) => initialSnowflakeSelectOptions.options[arg0].label;
     const tmpResult3 = tmp(tmp2[7]);
     const obj2 = { expensive: null, cheap: null };
     obj2[0] = function expensive() {
       if (null != initialSnowflakeSelectOptions) {
         if (0 !== arr.length) {
-          const mapped = arr.map(f81472);
-          const intl = accessory(f81472[8]).intl;
+          const mapped = arr.map(f81473);
+          const intl = accessory(f81473[8]).intl;
           const obj = { selections: null };
           obj[0] = mapped.join(",");
-          return intl.formatToPlainString(accessory(f81472[8]).t["I/ROH+"], obj);
+          return intl.formatToPlainString(accessory(f81473[8]).t["I/ROH+"], obj);
         }
       }
-      const placeholder = accessory(f81472[7]).getSelectPlaceholder(accessory);
-      const intl2 = accessory(f81472[8]).intl;
-      return intl2.formatToPlainString(accessory(f81472[8]).t["3aednA"], { placeholder });
+      const placeholder = accessory(f81473[7]).getSelectPlaceholder(accessory);
+      const intl2 = accessory(f81473[8]).intl;
+      return intl2.formatToPlainString(accessory(f81473[8]).t["3aednA"], { placeholder });
     };
     const tmpResult4 = tmp(tmp2[19]);
     obj2[1] = tmp(tmp2[7]).getSelectPlaceholder(accessory);
@@ -213,7 +213,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                   if (width > 0) {
                     if (null != height) {
                       if (height > 0) {
-                        let obj = accessory(f81472[20]);
+                        let obj = accessory(f81473[20]);
                         if (obj.isImageContentType(contentType)) {
                           let VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.IMAGE;
                           let tmp3 = tmp2;
@@ -243,7 +243,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                         spoiler = false;
                       }
                       obj[2] = spoiler;
-                      obj[3] = f81472.author.bot;
+                      obj[3] = f81473.author.bot;
                       obj[4] = shouldObscureSpoiler;
                       obj[5] = enabledContentHarmTypeFlags;
                       obj[6] = shouldAgeVerify;
@@ -293,7 +293,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                         let combined = null;
                         if (VISUAL_PLACEHOLDER === tmp4(tmp3[14]).MediaGalleryItemType.VIDEO) {
                           const _HermesInternal = HermesInternal;
-                          combined = "" + f81472.id + "_MediaGallery(" + initialSnowflakeSelectOptions.id + ")_" + arg1;
+                          combined = "" + f81473.id + "_MediaGallery(" + initialSnowflakeSelectOptions.id + ")_" + arg1;
                         }
                         obj.portalId = combined;
                         let tmp16 = obj;
@@ -313,8 +313,8 @@ function transformToRowGeneratedComponent(message, accessory) {
                     }
                   }
                 }
-                tmp3 = f81472;
-                VISUAL_PLACEHOLDER = accessory(f81472[14]).MediaGalleryItemType.VISUAL_PLACEHOLDER;
+                tmp3 = f81473;
+                VISUAL_PLACEHOLDER = accessory(f81473[14]).MediaGalleryItemType.VISUAL_PLACEHOLDER;
                 tmp4 = accessory;
               });
               const found2 = mapped3.filter(tmp(tmp2[5]).isNotNullish);
@@ -507,22 +507,22 @@ function transformToRowGeneratedComponent(message, accessory) {
     const tmpResult21 = tmp(tmp2[12]);
     obj17.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
     _require = accessory;
-    f81472 = (label) => label.label;
+    f81473 = (label) => label.label;
     const tmpResult22 = tmp(tmp2[7]);
     obj18 = { expensive: null, cheap: null };
     obj18[0] = function expensive() {
       if (null != initialSnowflakeSelectOptions) {
         if (0 !== arr.length) {
-          const mapped = arr.map(f81472);
-          const intl = accessory(f81472[8]).intl;
+          const mapped = arr.map(f81473);
+          const intl = accessory(f81473[8]).intl;
           const obj = { selections: null };
           obj[0] = mapped.join(",");
-          return intl.formatToPlainString(accessory(f81472[8]).t["I/ROH+"], obj);
+          return intl.formatToPlainString(accessory(f81473[8]).t["I/ROH+"], obj);
         }
       }
-      const placeholder = accessory(f81472[7]).getSelectPlaceholder(accessory);
-      const intl2 = accessory(f81472[8]).intl;
-      return intl2.formatToPlainString(accessory(f81472[8]).t["3aednA"], { placeholder });
+      const placeholder = accessory(f81473[7]).getSelectPlaceholder(accessory);
+      const intl2 = accessory(f81473[8]).intl;
+      return intl2.formatToPlainString(accessory(f81473[8]).t["3aednA"], { placeholder });
     };
     const tmpResult23 = tmp(tmp2[19]);
     obj18[1] = tmp(tmp2[7]).getSelectPlaceholder(accessory);

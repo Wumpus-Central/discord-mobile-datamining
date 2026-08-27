@@ -2110,7 +2110,7 @@ export const subscribe = function subscribe() {
   }
   return applyArgumentsResult;
 };
-export const verifyPurchase = function verifyPurchase() {
+export const verifyPurchase = function verifyPurchase(purchase, closure_2) {
   const self = this;
   const apply = _verifyPurchase.apply;
   if (typeof apply === "unknown") {
@@ -2120,8 +2120,8 @@ export const verifyPurchase = function verifyPurchase() {
   }
   return applyArgumentsResult;
 };
-export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytics(productId) {
-  const tmp = state.getState().analyticsByProductId[productId.productId];
+export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytics(purchase) {
+  const tmp = state.getState().analyticsByProductId[purchase.productId];
   if (null != tmp) {
     const succeededOnlyFields = tmp.succeededOnlyFields;
     const tmp4 = callback2(tmp, closure_4);
@@ -2131,7 +2131,7 @@ export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytic
     const merged = Object.assign(tmp4);
     const merged1 = Object.assign(succeededOnlyFields);
     _true(getUserCountry[20]).track(constants.PAYMENT_FLOW_SUCCEEDED, obj);
-    callback3(productId.productId);
+    callback3(purchase.productId);
     const obj2 = _true(getUserCountry[20]);
   }
 };

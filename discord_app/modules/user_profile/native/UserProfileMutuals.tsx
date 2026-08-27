@@ -74,7 +74,7 @@ export default function UserProfileMutuals(user) {
       obj1[0] = tmp2(1297).AvatarSizes.SIZE_16;
       obj1[1] = mapped.length;
       obj1[2] = mapped.map((username) => username.username);
-      obj1[3] = mapped.map((id) => callback(user(_undefined[16]).Avatar, { user: id, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "r" }, id.id));
+      obj1[3] = mapped.map((id) => callback(user(_undefined[16]).Avatar, { user: id, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "Array" }, id.id));
       const items = [callback(tmp2(9348).AvatarPile, obj1), ];
       const obj2 = { variant: null, color: null, children: null };
       obj2[0] = c8;

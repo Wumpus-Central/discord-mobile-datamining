@@ -6,7 +6,7 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 let require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = { input: "", error: "apply" };
+let closure_5 = { input: "", error: "call" };
 const PureComponent = importAllResult.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {

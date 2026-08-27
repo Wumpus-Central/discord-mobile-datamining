@@ -20,7 +20,7 @@ function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
   }
   if (isEligibleForQuests) {
     if ("active" === obj2.getState()) {
-      if (!fetchingQuestToDeliverByPlacement.isFetchingQuestToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
+      if (!fetchingAdToDeliverByPlacement.isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
         if (obj4.canRefreshAd(QUEST_HOME_BANNER_DESKTOP)) {
           let tmpResult = tmp(10833);
           const currentQuests = tmpResult.fetchCurrentQuests();
@@ -28,7 +28,7 @@ function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
           const questToDeliver = tmpResult.fetchQuestToDeliver(QUEST_HOME_BANNER_DESKTOP, arg2);
         }
       }
-      obj4 = fetchingQuestToDeliverByPlacement;
+      obj4 = fetchingAdToDeliverByPlacement;
     } else if (null != fetchedAt) {
       tmp(10833).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
       const tmpResult1 = tmp(10833);
@@ -48,8 +48,8 @@ export default function useFetchQuestForAdPlacement(arg0) {
   const items = [closure_5];
   const items1 = [arg0];
   stateFromStores = _require(stateFromStores[7]).useStateFromStores(items, () => {
-    const questAdDecisionByPlacement = closure_1_5.questAdDecisionByPlacement;
-    let value = questAdDecisionByPlacement.get(closure_0);
+    const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
+    let value = deliveryAdDecisionByPlacement.get(closure_0);
     if (value == null) {
       value = null;
     }
@@ -65,8 +65,8 @@ export default function useFetchQuestForAdPlacement(arg0) {
     }
     closure_1_9(stateFromStores, current, "questBar-open");
     ref.current = setInterval(() => {
-      const questAdDecisionByPlacement = closure_1_5.questAdDecisionByPlacement;
-      let value = questAdDecisionByPlacement.get(current);
+      const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
+      let value = deliveryAdDecisionByPlacement.get(current);
       if (value == null) {
         value = null;
       }
@@ -85,8 +85,8 @@ export default function useFetchQuestForAdPlacement(arg0) {
   const items3 = [closure_5];
   const items4 = [arg0];
   const stateFromStores1 = _require(stateFromStores[7]).useStateFromStores(items3, () => {
-    const questAdDecisionByPlacement = closure_1_5.questAdDecisionByPlacement;
-    let value = questAdDecisionByPlacement.get(closure_0);
+    const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
+    let value = deliveryAdDecisionByPlacement.get(closure_0);
     if (value == null) {
       value = null;
     }
@@ -127,8 +127,8 @@ export const useAdDecisionForPlacement = function useAdDecisionForPlacement(MOBI
   const items = [closure_5];
   const items1 = [MOBILE_HOME_DOCK_AREA];
   return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    const questAdDecisionByPlacement = closure_1_5.questAdDecisionByPlacement;
-    let value = questAdDecisionByPlacement.get(closure_0);
+    const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
+    let value = deliveryAdDecisionByPlacement.get(closure_0);
     if (value == null) {
       value = null;
     }
@@ -142,8 +142,8 @@ export const useAdRefreshLoop = function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA)
   const items = [closure_5];
   const items1 = [MOBILE_HOME_DOCK_AREA];
   stateFromStores = _require(stateFromStores[7]).useStateFromStores(items, () => {
-    const questAdDecisionByPlacement = closure_1_5.questAdDecisionByPlacement;
-    let value = questAdDecisionByPlacement.get(closure_0);
+    const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
+    let value = deliveryAdDecisionByPlacement.get(closure_0);
     if (value == null) {
       value = null;
     }
@@ -159,8 +159,8 @@ export const useAdRefreshLoop = function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA)
     }
     closure_1_9(stateFromStores, current, "questBar-open");
     ref.current = setInterval(() => {
-      const questAdDecisionByPlacement = closure_1_5.questAdDecisionByPlacement;
-      let value = questAdDecisionByPlacement.get(current);
+      const deliveryAdDecisionByPlacement = closure_1_5.deliveryAdDecisionByPlacement;
+      let value = deliveryAdDecisionByPlacement.get(current);
       if (value == null) {
         value = null;
       }

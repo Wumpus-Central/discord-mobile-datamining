@@ -254,7 +254,7 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
     let obj = dispatcherDefault;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "xs" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "text" };
     obj = {};
     const merged = Object.assign(found);
     obj.status = require("../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx").GameServerStatus.STARTING;
@@ -270,7 +270,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
     let resolved = Promise.resolve();
   } else {
     let obj = dispatcherDefault;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "xs" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "text" };
     obj = {};
     const merged = Object.assign(found);
     obj.name = name;
@@ -340,7 +340,7 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
     let obj = dispatcherDefault;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "xs" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "text" };
     obj = {};
     let merged = Object.assign(found);
     obj.status = require("../../../discord_common/js/shared/shared-constants/GameServerStatus.tsx").GameServerStatus.STARTING;
@@ -360,7 +360,7 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
       obj.status = callback(11964).GameServerStatus.STARTING;
       tmp3 = obj;
     }
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "xs" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "text" };
     obj[2] = tmp3;
     obj.dispatch(obj);
   }).catch((arg0) => {

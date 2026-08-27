@@ -80,8 +80,8 @@ prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endp
   }
   let tmp2 = null;
   if (null != tmp) {
-    const questAdDecisionByPlacement = obj.questAdDecisionByPlacement;
-    let value = questAdDecisionByPlacement.get(tmp);
+    const deliveryAdDecisionByPlacement = obj.deliveryAdDecisionByPlacement;
+    let value = deliveryAdDecisionByPlacement.get(tmp);
     if (value == null) {
       value = null;
     }

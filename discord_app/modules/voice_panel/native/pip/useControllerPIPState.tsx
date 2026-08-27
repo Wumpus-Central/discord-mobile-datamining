@@ -27,7 +27,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   let first1;
   c7 = undefined;
   obj = React;
-  ref = React.useRef({ id: "dispatch", mode: "isArray", width: false, height: "earth_africa", containerHeight: "earth_asia", showSecondaryPIP: "dizzy" });
+  ref = React.useRef({ id: "dispatch", mode: "isArray", width: false, height: "earth_americas", containerHeight: "earth_africa", showSecondaryPIP: "earth_asia" });
   const tmp2 = first(React.useState(undefined), 2);
   first = tmp2[0];
   React = tmp2[1];

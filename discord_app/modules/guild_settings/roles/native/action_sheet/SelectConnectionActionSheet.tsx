@@ -23,7 +23,7 @@ function IdentityApplicationRow(arg0) {
     const bot = getOrFetchApplicationBatched.bot;
     let tmp6Result = null;
     if (null != bot) {
-      obj = { user: null, size: null, guildId: "r" };
+      obj = { user: null, size: null, guildId: "Array" };
       obj[0] = bot;
       obj[1] = tmp(1297).AvatarSizes.XSMALL;
       tmp6Result = tmp6(tmp(1297).Avatar, obj);
@@ -97,7 +97,7 @@ export default function SelectConnectionActionSheet(arg0) {
       let tmp = null;
       if (null != application) {
         let obj = { icon: null, label: null, subLabel: null, onPress: null };
-        obj = { user: null, size: null, guildId: "r" };
+        obj = { user: null, size: null, guildId: "Array" };
         obj[0] = application.bot;
         obj[1] = closure_1_0(closure_1_2[6]).AvatarSizes.XSMALL;
         obj[0] = closure_1_6(closure_1_0(closure_1_2[6]).Avatar, obj);

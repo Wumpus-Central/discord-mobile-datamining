@@ -632,7 +632,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state.setStateShallow({ dragSpecs: "isArray", overSpecs: "accessibilityRole" });
+    state.setStateShallow({ dragSpecs: "Array", overSpecs: "ct" });
     const value = gestureState.get();
     if (null != value.mode) {
       const obj5 = {};
@@ -757,7 +757,7 @@ export default function useGuildsBarGesture() {
             }
           }
         }
-        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: -1 };
+        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: "tongue" };
         obj5[0] = obj;
         obj5[2] = sum;
         setStateShallow(obj5);

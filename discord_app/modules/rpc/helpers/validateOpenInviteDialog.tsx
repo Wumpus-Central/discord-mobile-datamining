@@ -61,7 +61,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
           throw tmp48Result;
         } else {
           if (obj10.canViewInviteModal(closure_6, guild, obj9)) {
-            const obj5 = { frame: "r", channel: null, guild: null };
+            const obj5 = { frame: "r", channel: "flex", guild: null };
             obj5[1] = obj9;
             obj5[2] = guild;
             return obj5;

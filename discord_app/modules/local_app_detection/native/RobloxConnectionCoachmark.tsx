@@ -71,7 +71,7 @@ function UserIcon() {
   obj = { style: tmp.avatarContainer, children: null };
   obj = { style: tmp.avatarInnerBorder };
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const items1 = [callback(View, obj), callback(Button.Avatar, { size: Button.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" })];
+  const items1 = [callback(View, obj), callback(Button.Avatar, { size: Button.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" })];
   obj[1] = items1;
   return callback2(View, obj);
 }

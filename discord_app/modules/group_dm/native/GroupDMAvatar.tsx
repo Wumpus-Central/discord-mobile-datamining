@@ -51,7 +51,7 @@ class FacepileGroupDMAvatar {
     }, items1);
     tmp9 = jsxs;
     tmp10 = View;
-    obj1 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: -898957311, animate: -688521215 };
+    obj1 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: false, animate: false };
     obj1[3] = memo1;
     obj1[4] = animate;
     if (null == users) {
@@ -65,7 +65,7 @@ class FacepileGroupDMAvatar {
     merged = Object.assign(obj3);
     items3 = [, ];
     items3[0] = tmp11(require("Button").Avatar, obj1);
-    obj4 = { status, statusSizeOverride: require("Button").StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "text-feedback-positive" };
+    obj4 = { status, statusSizeOverride: require("Button").StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "hgM48av5Q69A" };
     obj4[6] = animate;
     if (null == users) {
       obj5 = { source: null };

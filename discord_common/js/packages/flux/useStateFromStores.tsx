@@ -23,7 +23,7 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVer
   let callback3;
   const tmp2 = callback2(null);
   if (null == tmp2.current) {
-    const obj = { stores: null, areStatesEqual: null, getStateFromStores: null, prevDeps: "apply", state: "paddingHorizontal" };
+    const obj = { stores: null, areStatesEqual: null, getStateFromStores: null, prevDeps: "Boolean", state: "padding" };
     obj[0] = items;
     obj[1] = tmp;
     obj[2] = getCurrentRestrictedHoursState;

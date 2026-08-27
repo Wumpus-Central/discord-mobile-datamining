@@ -722,7 +722,7 @@ function _submitBugReportWithScreenRecording() {
                       throwTypeErrorResult = closure_3;
                       obj14 = closure_3;
                       if (closure_3 == null) {
-                        obj14 = { name: null, squad: null, asana_inbox_id: "r" };
+                        obj14 = { name: null, squad: null, asana_inbox_id: "Array" };
                         obj14[0] = uri.uploadConfig.featureName;
                         obj14[1] = uri.uploadConfig.squadName;
                       }
