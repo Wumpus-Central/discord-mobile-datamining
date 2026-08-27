@@ -4,8 +4,8 @@ import closure_2 from "metro/00032__slicedToArray.js";
 import closure_3 from "00019_noop.js";
 import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 
-function instrumentReactRouter(f105219, arg1, arg2, location) {
-  const _require = f105219;
+function instrumentReactRouter(f105220, arg1, arg2, location) {
+  const _require = f105220;
   dependencyMap = arg4;
   let items = arg5;
   if (arg5 === undefined) {
@@ -54,7 +54,7 @@ function instrumentReactRouter(f105219, arg1, arg2, location) {
       obj[require("00817_registerSpanErrorInstrumentation.js").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + arg4;
       obj[require("00817_registerSpanErrorInstrumentation.js").SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
       obj[1] = obj;
-      let result = obj.startBrowserTracingPageLoadSpan(f105219, obj);
+      let result = obj.startBrowserTracingPageLoadSpan(f105220, obj);
       let tmp4 = items(normalizeTransactionName(pathname), 2);
     }
   }

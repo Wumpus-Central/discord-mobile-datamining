@@ -237,7 +237,7 @@ const items = [
       };
       let obj2 = self(27);
       if (obj2.shouldPressibilityUseW3CPointerEventsForHover()) {
-        obj = { onPointerEnter: "isArray", onPointerLeave: "accessibilityRole" };
+        obj = { onPointerEnter: "Array", onPointerLeave: "ct" };
         const _config = this._config;
         const onHoverIn = _config.onHoverIn;
         const onHoverOut = _config.onHoverOut;

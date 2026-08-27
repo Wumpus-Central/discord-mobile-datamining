@@ -25,7 +25,7 @@ arg5.PartitionPattern = function PartitionPattern(arr) {
           obj[1] = arr.substring(num4, index);
           arr = items.push(obj);
         }
-        obj = { type: null, value: "r" };
+        obj = { type: null, value: "Array" };
         obj[0] = arr.substring(index + 1, index1);
         arr = items.push(obj);
         let sum = index1 + 1;

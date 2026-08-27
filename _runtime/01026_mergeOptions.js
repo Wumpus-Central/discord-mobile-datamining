@@ -2336,7 +2336,7 @@ function retrieveStringValue(get) {
   return str2;
 }
 function Form(onSubmitError) {
-  ({ options, defaultEmail, defaultName, onSubmit: f104880, onSubmitSuccess } = onSubmitError);
+  ({ options, defaultEmail, defaultName, onSubmit: f104881, onSubmitSuccess } = onSubmitError);
   onSubmitError = onSubmitError.onSubmitError;
   let screenshotInput = onSubmitError.screenshotInput;
   c4 = undefined;
@@ -2378,13 +2378,13 @@ function Form(onSubmitError) {
   c46 = 1;
   const tmp6 = onSubmitError(fn(D, null), 2);
   [tmp12, c14] = tmp3(tmp(tmp2, null), 2);
-  f104880 = (arg0) => {
+  f104881 = (arg0) => {
     _undefined2(arg0);
     callback(false);
   };
   c46 = 8;
   items = [emailLabel, isEmailRequired, isNameRequired, messageLabel, nameLabel];
-  f104880 = (name) => {
+  f104881 = (name) => {
     let tmp2 = isEmailRequired;
     let tmp3 = isNameRequired;
     if (isNameRequired) {
@@ -2415,8 +2415,8 @@ function Form(onSubmitError) {
   const tmp13 = fn2;
   const tmp3Result = tmp3(tmp(tmp2, null), 2);
   closure_15 = fn2(() => f69682, items);
-  f104880 = undefined;
-  f104880 = screenshotInput((arg0) => {
+  f104881 = undefined;
+  f104881 = screenshotInput((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -2532,7 +2532,7 @@ function Form(onSubmitError) {
               c4 = 1;
               closure_4 = closure_3;
               if (messageLabel) {
-                const debug = f104880(onSubmitSuccess[2]).debug;
+                const debug = f104881(onSubmitSuccess[2]).debug;
                 debug.error(closure_4);
               }
               closure_1_11(closure_4);
@@ -2573,9 +2573,9 @@ function Form(onSubmitError) {
     screenshotInput = first;
   }
   const items1 = [screenshotInput, onSubmitSuccess, onSubmitError];
-  f104880 = function(arg0) {
+  f104881 = function(arg0) {
     const self = this;
-    const apply = f104880.apply;
+    const apply = f104881.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {

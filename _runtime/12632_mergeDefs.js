@@ -565,7 +565,9 @@ if (self2) {
             break;
             case "guildGameIds":
             break;
-            case "useYouBarActivityStatusEnabled":
+            case "frameX":
+            break;
+            case "user.id":
             break;
             case "dragOffsetFromRight":
             break;
@@ -588,30 +590,31 @@ if (self2) {
             case "ary":
             break;
             case "u":
-            break;
+              let obj = /^[A-Z]/;
+              let isMatch = obj.test(code.expected);
+              if (isMatch) {
+                let _HermesInternal17 = HermesInternal;
+                let combined = "Ugyldig input: forventet instanceof " + code.expected + ", fikk " + tmp48;
+              } else {
+                let _HermesInternal16 = HermesInternal;
+                combined = "Ugyldig input: forventet " + expected + ", fikk " + tmp48;
+              }
+              return combined;
             case "tt":
-            break;
-            case "on":
-              let expected = closure_2[code.expected];
+              expected = closure_2[code.expected];
               if (expected == null) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp48 = closure_2[parsedTypeResult];
+              tmp48 = closure_2[parsedTypeResult];
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              if (obj.test(code.expected)) {
-                const _HermesInternal17 = HermesInternal;
-                let combined = "Ugyldig input: forventet instanceof " + code.expected + ", fikk " + tmp48;
-              } else {
-                const _HermesInternal16 = HermesInternal;
-                combined = "Ugyldig input: forventet " + expected + ", fikk " + tmp48;
-              }
-              return combined;
-            case "$ZodDate":
+              const tmp44 = closure_2;
             break;
-            case "ZodDate":
+            case "on":
+            break;
+            case "$ZodDate":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
                 code = "Ugyldig verdi: forventet " + closure_2.stringifyPrimitive(code.values[0]);
@@ -620,9 +623,9 @@ if (self2) {
                 code = "Ugyldig valg: forventet en av " + closure_2.joinValues(code.values, "|");
               }
               return code;
-            case "D":
+            case "ZodDate":
             break;
-            case "DateParser":
+            case "D":
               let str25 = "<";
               if (code.inclusive) {
                 str25 = "<=";
@@ -654,9 +657,9 @@ if (self2) {
                 const str28 = code.maximum;
               }
               return combined1;
-            case "at":
+            case "DateParser":
             break;
-            case "te":
+            case "at":
               let str19 = ">";
               if (code.inclusive) {
                 str19 = ">=";
@@ -675,9 +678,9 @@ if (self2) {
                 combined2 = "For lite(n): forventet " + origin + " til \u00E5 ha " + str19 + str1;
               }
               return combined2;
-            case "serializeEnd":
+            case "te":
             break;
-            case "discovery_splash":
+            case "serializeEnd":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
                 let combined3 = "Ugyldig streng: m\u00E5 starte med \"" + code.prefix + "\"";
@@ -699,12 +702,12 @@ if (self2) {
                 combined3 = "Ugyldig " + format;
               }
               return combined3;
-            case "splash":
+            case "controlEdgeToEdgeValues":
             break;
-            case "hash_mask":
+            case "supportsReferrerPolicy":
               const _HermesInternal4 = HermesInternal;
               return "Ugyldig tall: m\u00E5 v\u00E6re et multiplum av " + code.divisor;
-            case "maskContentUnits":
+            case "icymiDesktopEnabled":
             break;
             case "MarkupParserNodeTypeError":
               let str3 = "Ukjent n\u00F8kkel";
@@ -865,6 +868,18 @@ if (self2) {
             break;
             case "$ZodCheckGreaterThan":
             break;
+            case "millisecondsInSecond":
+            break;
+            case "revealMessage":
+            break;
+            case "getAvatarDecoration":
+            break;
+            case "getAvatarDecorationURL":
+            break;
+            case "getCanUseMultiAccountMobile":
+            break;
+            case "MobileGoLiveEntrypointTreatment":
+            break;
             case "ToIntlMathematicalValue":
             break;
             case "th":
@@ -919,7 +934,13 @@ if (self2) {
             break;
             case "_":
             break;
-            case "successNodeId":
+            case "connectionType":
+            break;
+            case "connectionTypeBuckets":
+            break;
+            case "suggested_user":
+            break;
+            case "suggested_user_id":
             break;
             case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
             break;
@@ -1037,11 +1058,13 @@ if (self2) {
             break;
             case "RTC_CONNECTION_FLAGS":
             break;
-            case "handleToggleVideo":
+            case "updateRsvp":
             break;
-            case "ideograph_advantage":
+            case "gzindex":
             break;
-            case "getAppHardwareAccelerationEnabled":
+            case "indexChange":
+            break;
+            case "getAppIdForBotUserId":
             break;
             case "ActionSheetHeaderPressableText":
             break;
@@ -1051,7 +1074,7 @@ if (self2) {
             break;
             case "ext":
             break;
-            case "isReduceMotionEnabled":
+            case "isReduceTransparencyEnabled":
             break;
             case "AccessibilityFocusView":
             break;
@@ -1233,8 +1256,6 @@ if (self2) {
             break;
             case "mentionsCount":
             break;
-            case "PREMIUM_GIFT_YEAR_TIER_1":
-            break;
             case "dist":
             break;
             case "distance":
@@ -1277,6 +1298,8 @@ if (self2) {
             break;
             case "scrollToQuestId":
             break;
+            case "leadingText":
+            break;
             case "accessibleDismiss":
             break;
             case "accessibleDismissStyle":
@@ -1304,7 +1327,16 @@ if (self2) {
             case "tal":
             break;
             case "collapseText":
-            break;
+              obj = /^[A-Z]/;
+              isMatch = obj.test(code.expected);
+              if (isMatch) {
+                _HermesInternal17 = HermesInternal;
+                combined = "Ugyldig input: forventet instanceof " + code.expected + ", fikk " + tmp48;
+              } else {
+                _HermesInternal16 = HermesInternal;
+                combined = "Ugyldig input: forventet " + expected + ", fikk " + tmp48;
+              }
+              return combined;
             case "paddingVertical":
             break;
             case "PLUM_4":
@@ -1342,7 +1374,10 @@ if (self2) {
             case "family_adult_child_child":
             break;
             case "childButton":
-            break;
+              _HermesInternal = HermesInternal;
+              str = "Ugyldig verdi i ";
+              combined4 = "Ugyldig verdi i " + code.origin;
+              return combined4;
             case "childButtonText":
             break;
             case "externalLinkIcon":
@@ -1355,17 +1390,14 @@ if (self2) {
             break;
             case "Dao":
             break;
-            case "replaceCorrectMessageParams":
+            case "replaceExports":
             break;
             case "app":
             break;
             case "application":
             break;
             case "applicationIdToGuildIds":
-              _HermesInternal = HermesInternal;
-              str = "Ugyldig verdi i ";
-              combined4 = "Ugyldig verdi i " + code.origin;
-              return combined4;
+            break;
             case "pl":
             break;
             case "ca":
@@ -1414,7 +1446,11 @@ if (self2) {
             break;
             case "person_walking_facing_right_tone4":
             break;
-            case "optionId":
+            case "isMap":
+            break;
+            case "guildIconBorder":
+            break;
+            case "orderCollapsed":
             break;
             case "_bodyArrayBuffer":
             break;
@@ -1452,9 +1488,7 @@ if (self2) {
             break;
             case "shiftLeft":
             break;
-            case "InterceptingGestureDetector":
-            break;
-            case "StreamingTier1SmallBadge":
+            case "StreamingTier2LargeBadge":
             break;
             case "PREMIUM_UPSELL_FILE_UPLOAD":
             break;
@@ -1550,15 +1584,7 @@ if (self2) {
             break;
             case "ReactionsSpotIllustration":
             break;
-            case "_socketId":
-            break;
-            case "socketId":
-            break;
-            case "dims":
-            break;
-            case "slot_machine":
-            break;
-            case "gregory":
+            case "friend_anniversary_notifications":
             break;
             case "$constructor":
             break;
@@ -1618,31 +1644,17 @@ if (self2) {
             break;
             case "ug":
             break;
-            case "allowRTL":
-            break;
-            case "deprecate":
-            break;
-            case "deprecated":
-            break;
-            case "deprecatedCFWSNearAt":
-            break;
-            case "enableAppStartTracking":
-            break;
-            case "getHighestActiveScreenIndex":
-            break;
-            case "expiresMonth":
-            break;
             case "AccountAgeTier10LargeBadge":
             break;
             case "cou":
             break;
             case "Badge":
             break;
-            case "getGuildDiscoverySplashSource":
+            case "safeRe":
             break;
-            case "ComponentsConfiguration":
+            case "cardType":
             break;
-            case "getColorLightnessAdjusted":
+            case "getComboId":
             break;
             case "cr":
             break;
@@ -1660,11 +1672,9 @@ if (self2) {
             break;
             case "containerIndex":
             break;
-            case "expandEventProperties":
+            case "expandCTALabelContainer":
             break;
-            case "G9fGlP":
-            break;
-            case "PARENTAL_CONTROLS_DIRECT_MESSAGES":
+            case "CTALabel":
             break;
             case "getUTCMilliseconds":
             break;
@@ -1676,9 +1686,9 @@ if (self2) {
             break;
             case "so":
             break;
-            case "mur":
+            case "handleRedeemVirtualCurrencyFail":
             break;
-            case "murmur":
+            case "NitroRubyBadgeLargeBadge":
             break;
             case "_clientSdkMetadata":
             break;
@@ -1774,7 +1784,7 @@ if (self2) {
             break;
             case "led":
             break;
-            case "payment_id":
+            case "payment_source_id":
             break;
             case "_dispatch":
             break;
@@ -1796,7 +1806,9 @@ if (self2) {
             break;
             case "RewardsMouseSpotIllustration":
             break;
-            case "savedDependencies":
+            case "templatePair":
+            break;
+            case "scalars":
             break;
             case "renderActivityInstanceEmbed":
             break;
@@ -1835,36 +1847,6 @@ if (self2) {
             case "showStatus":
             break;
             case "useCanUseGuildSpace":
-            break;
-            case "getGuildFolderMenuItems":
-            break;
-            case "MenuItem":
-            break;
-            case "WHATS_ON_YOUR_MIND":
-            break;
-            case "INDIE":
-            break;
-            case "IE_PROTO":
-            break;
-            case "PROTO_THEME_MAP_MOBILE":
-            break;
-            case "PROTO_THEME_MAP_MOBILE_REFRESH":
-            break;
-            case "MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK":
-            break;
-            case "mmh":
-            break;
-            case "getNextAssetPage":
-            break;
-            case "PageUp":
-            break;
-            case "ageUpper":
-            break;
-            case "performAutocomplete":
-            break;
-            case "completeNewMemberAction":
-            break;
-            case "NewMemberActionTypes":
             break;
             case "english":
             break;
@@ -1950,10 +1932,6 @@ if (self2) {
             break;
             case "referrerPolicy":
             break;
-            case "getSpatialCapabilities":
-            break;
-            case "setIncomingCallActive":
-            break;
             case "beforeAddRecordingEvent":
             break;
             case "../../../lib/braintree-error":
@@ -2008,6 +1986,23 @@ if (self2) {
             break;
             case "SocialMediaSpotIllustration":
             break;
+            case "sanitizeTags":
+            break;
+            case "onPressMutualGuild":
+            break;
+            case "MutualGuildRow":
+            break;
+            case "person_in_bed_tone5":
+              obj = /^[A-Z]/;
+              isMatch = obj.test(code.expected);
+              if (isMatch) {
+                _HermesInternal17 = HermesInternal;
+                combined = "Ugyldig input: forventet instanceof " + code.expected + ", fikk " + tmp48;
+              } else {
+                _HermesInternal16 = HermesInternal;
+                combined = "Ugyldig input: forventet " + expected + ", fikk " + tmp48;
+              }
+              return combined;
             case "APP_LAUNCH_COMPLETED":
             break;
             case "COMPLETED":
@@ -2019,10 +2014,7 @@ if (self2) {
             case "[[calendar]]":
             break;
             case "calendar":
-              _HermesInternal = HermesInternal;
-              str = "Ugyldig verdi i ";
-              combined4 = "Ugyldig verdi i " + code.origin;
-              return combined4;
+            break;
             case "EntitlementTenantFulfillmentStatus":
             break;
             case "ill":
@@ -2048,7 +2040,10 @@ if (self2) {
             case "gs":
             break;
             case "_oldestUnreadMessageId":
-            break;
+              _HermesInternal = HermesInternal;
+              str = "Ugyldig verdi i ";
+              combined4 = "Ugyldig verdi i " + code.origin;
+              return combined4;
             case "oldestUnreadMessageId":
             break;
             case "oldestUnreadMessageIdStale":
@@ -2075,7 +2070,13 @@ if (self2) {
             break;
             case "forEachChannel":
             break;
-            case "getGuildFavorites":
+            case "8SuVoE":
+            break;
+            case "oEAioF":
+            break;
+            case "woman_in_motorized_wheelchair_medium_skin_tone":
+            break;
+            case "man_in_motorized_wheelchair_medium_skin_tone":
             break;
             case "DiscountsMegaphoneSpotIllustration":
             break;
@@ -2087,8 +2088,6 @@ if (self2) {
             break;
             case "phone":
             break;
-            case "$ZodCheckMinSize":
-            break;
             case "__reanimatedModuleProxy":
             break;
             case "getChannelA11yHint":
@@ -2097,17 +2096,9 @@ if (self2) {
             break;
             case "interpolationIndex":
             break;
-            case "exploding_head":
+            case "explicitMediaFalsePositiveInfo":
             break;
-            case "headMetaAuthorship":
-            break;
-            case "shippingAddress":
-            break;
-            case "shippingAddressOverride":
-            break;
-            case "scopes":
-            break;
-            case "scopesContainer":
+            case "footerTitle":
             break;
             case "getCurrent":
             break;
@@ -2223,23 +2214,13 @@ if (self2) {
             break;
             case "XBOX_URL_BASE":
             break;
-            case "getEmbeddedActivitiesForLocationIncludingHidden":
+            case "usePrivateThreadMode":
             break;
-            case "endImportTime":
+            case "PrivateThreadMode":
             break;
-            case "selectedRewardText":
+            case "optInChannels":
             break;
-            case "getRNSentryOnDrawReporter":
-            break;
-            case "tRNS":
-            break;
-            case "RNSentry":
-            break;
-            case "Sentry":
-            break;
-            case "entry":
-            break;
-            case "openStickerPickerToPackId":
+            case "optInChannelsEnabled":
             break;
             case "player_height":
             break;
@@ -2301,20 +2282,6 @@ if (self2) {
             break;
             case "registerTimerPolyfills":
             break;
-            case "getDurationStats":
-            break;
-            case "QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL":
-            break;
-            case "AuditLogActions":
-            break;
-            case "DiscordSupergraphicLogo":
-            break;
-            case "Super":
-            break;
-            case "graph":
-            break;
-            case "graphic":
-            break;
             case "__internalInstanceHandle":
             break;
             case "_int":
@@ -2355,14 +2322,6 @@ if (self2) {
             break;
             case "nativePhoneIntegrationEnabled":
             break;
-            case "AUTO_MODERATION_EXEMPT_CHANNELS":
-            break;
-            case "CHANNELS_DEFAULT":
-            break;
-            case "DEFAULT_APP_ENTRY_KEY":
-            break;
-            case "APP_ENTRY_KEYS":
-            break;
             case "activity_items":
             break;
             case "_items":
@@ -2402,6 +2361,68 @@ if (self2) {
             case "justify":
             break;
             case "if":
+            break;
+            case "Content":
+            break;
+            case "setCurrentAnalyticsStep":
+            break;
+            case "PasskeysSpotIllustration":
+            break;
+            case "ke":
+            break;
+            case "isPrioritySpeaker":
+            break;
+            case "toSearchListUserItem":
+            break;
+            case "embedded_activity_location_kind":
+            break;
+            case "ki":
+            break;
+            case "kin":
+            break;
+            case "Backspace":
+            break;
+            case "BackspaceIcon":
+            break;
+            case "aria-label":
+            break;
+            case "aria-labelledby":
+            break;
+            case "lab":
+            break;
+            case "byAppEntry":
+            break;
+            case "tryItOutAvatarDecoration":
+            break;
+            case "frameY":
+            break;
+            case "Buf8":
+            break;
+            case "f8wNDl":
+            break;
+            case "DlcqlU":
+            break;
+            case "lcq":
+            break;
+            case "trialOffer":
+            break;
+            case "arrow_left":
+            break;
+            case "leftActions":
+            break;
+            case "topUserActivities":
+            break;
+            case "_$esjava$I_length":
+            break;
+            case "I_length":
+            break;
+            case "_l":
+            break;
+            case "_length":
+            break;
+            case "len":
+            break;
+            case "lengthComputable":
             break;
             default:
               return "Ugyldig input";

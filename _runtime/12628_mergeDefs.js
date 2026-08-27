@@ -565,7 +565,9 @@ if (self2) {
             break;
             case "guildGameIds":
             break;
-            case "useYouBarActivityStatusEnabled":
+            case "frameX":
+            break;
+            case "user.id":
             break;
             case "dragOffsetFromRight":
             break;
@@ -607,13 +609,11 @@ if (self2) {
             break;
             case "serializeEnd":
             break;
-            case "discovery_splash":
+            case "controlEdgeToEdgeValues":
             break;
-            case "splash":
+            case "supportsReferrerPolicy":
             break;
-            case "hash_mask":
-            break;
-            case "maskContentUnits":
+            case "icymiDesktopEnabled":
             break;
             case "MarkupParserNodeTypeError":
             break;
@@ -765,6 +765,18 @@ if (self2) {
             break;
             case "$ZodCheckGreaterThan":
             break;
+            case "millisecondsInSecond":
+            break;
+            case "revealMessage":
+            break;
+            case "getAvatarDecoration":
+            break;
+            case "getAvatarDecorationURL":
+            break;
+            case "getCanUseMultiAccountMobile":
+            break;
+            case "MobileGoLiveEntrypointTreatment":
+            break;
             case "ToIntlMathematicalValue":
             break;
             case "th":
@@ -819,7 +831,13 @@ if (self2) {
             break;
             case "_":
             break;
-            case "successNodeId":
+            case "connectionType":
+            break;
+            case "connectionTypeBuckets":
+            break;
+            case "suggested_user":
+            break;
+            case "suggested_user_id":
             break;
             case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
             break;
@@ -937,11 +955,13 @@ if (self2) {
             break;
             case "RTC_CONNECTION_FLAGS":
             break;
-            case "handleToggleVideo":
+            case "updateRsvp":
             break;
-            case "ideograph_advantage":
+            case "gzindex":
             break;
-            case "getAppHardwareAccelerationEnabled":
+            case "indexChange":
+            break;
+            case "getAppIdForBotUserId":
             break;
             case "ActionSheetHeaderPressableText":
             break;
@@ -951,7 +971,7 @@ if (self2) {
             break;
             case "ext":
             break;
-            case "isReduceMotionEnabled":
+            case "isReduceTransparencyEnabled":
             break;
             case "AccessibilityFocusView":
             break;
@@ -1062,70 +1082,29 @@ if (self2) {
             case "__FORMATJS_LISTFORMAT_DATA__":
             break;
             case "TJS":
-            break;
-            case "pa":
-            break;
-            case "pack":
-            break;
-            case "package":
-            break;
-            case "ack":
-            break;
-            case "ka":
-            break;
-            case "age":
-            break;
-            case "ge":
-            break;
-            case "ger":
-            break;
-            case "_a":
-            break;
-            case "as":
-              let tmp40 = closure_1_3;
-              if (str24 == null) {
-                str24 = code.origin;
-              }
-              if (str24 == null) {
-                str24 = "reik\u0161m\u0117";
-              }
-              if (typeof tmp40 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              let str37 = str24.charAt(0);
-              let formatted = str37.toUpperCase();
-              let substr = str24.slice(1);
-              let sum = formatted + substr;
-              let verb = tmp29.verb;
-              let str38 = code.minimum;
-              let str = str38.toString();
-              let str39 = tmp29.unit;
-              if (str39 == null) {
-                str39 = "element\u0173";
-              }
-              let combined = "" + sum + " " + verb + " " + str + " " + str39;
+              let combined = concat(sum3, " turi b\u016Bti ", str28, " ", str3, " ", unit);
               return combined;
-            case "ass":
+            case "pa":
               let expected = closure_2[code.expected];
               if (expected == null) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp86 = closure_2[parsedTypeResult];
-              if (tmp86 == null) {
-                tmp86 = parsedTypeResult;
+              let tmp84 = closure_2[parsedTypeResult];
+              if (tmp84 == null) {
+                tmp84 = parsedTypeResult;
               }
               if (obj3.test(code.expected)) {
                 const _HermesInternal14 = HermesInternal;
-                let combined1 = "Gautas tipas " + tmp86 + ", o tik\u0117tasi - instanceof " + code.expected;
+                let combined1 = "Gautas tipas " + tmp84 + ", o tik\u0117tasi - instanceof " + code.expected;
               } else {
                 const _HermesInternal13 = HermesInternal;
-                combined1 = "Gautas tipas " + tmp86 + ", o tik\u0117tasi - " + expected;
+                combined1 = "Gautas tipas " + tmp84 + ", o tik\u0117tasi - " + expected;
               }
               return combined1;
-            case "asset":
+            case "pack":
             break;
-            case "assetDark":
+            case "package":
               if (1 === code.values.length) {
                 const _HermesInternal12 = HermesInternal;
                 let combined2 = "Privalo b\u016Bti " + closure_2.stringifyPrimitive(code.values[0]);
@@ -1134,9 +1113,9 @@ if (self2) {
                 combined2 = "Privalo b\u016Bti vienas i\u0161 " + closure_2.joinValues(code.values, "|") + " pasirinkim\u0173";
               }
               return combined2;
-            case "ss":
+            case "ack":
             break;
-            case "_w":
+            case "ka":
               let str45 = closure_2[code.origin];
               if (str45 == null) {
                 str45 = code.origin;
@@ -1162,24 +1141,24 @@ if (self2) {
               if (flag2 == null) {
                 flag2 = false;
               }
-              let tmp57 = dependencyMap[code.origin];
-              if (tmp57 == null) {
-                tmp57 = null;
+              let tmp55 = dependencyMap[code.origin];
+              if (tmp55 == null) {
+                tmp55 = null;
               }
-              let tmp58 = tmp57;
-              if (null !== tmp57) {
+              let tmp56 = tmp55;
+              if (null !== tmp55) {
                 let obj = { unit: null, verb: null };
-                obj[0] = tmp57.unit[str46];
+                obj[0] = tmp55.unit[str46];
                 let str48 = "notInclusive";
                 if (flag2) {
                   str48 = "inclusive";
                 }
-                obj[1] = tmp57.verb.smaller[str48];
-                tmp58 = obj;
+                obj[1] = tmp55.verb.smaller[str48];
+                tmp56 = obj;
               }
-              verb = undefined;
-              if (tmp58 != null) {
-                verb = tmp58.verb;
+              let verb;
+              if (tmp56 != null) {
+                verb = tmp56.verb;
               }
               if (verb) {
                 if (str45 == null) {
@@ -1191,16 +1170,16 @@ if (self2) {
                 if (typeof closure_1_3 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                const formatted1 = str45.charAt(0).toUpperCase();
-                const sum1 = formatted1 + str45.slice(1);
-                const verb2 = tmp58.verb;
-                const str1 = code.maximum.toString();
-                let str60 = tmp58.unit;
+                const formatted = str45.charAt(0).toUpperCase();
+                const sum = formatted + str45.slice(1);
+                const verb2 = tmp56.verb;
+                let str = code.maximum.toString();
+                let str60 = tmp56.unit;
                 if (str60 == null) {
                   str60 = "element\u0173";
                 }
                 const _HermesInternal10 = HermesInternal;
-                return "" + sum1 + " " + verb2 + " " + str1 + " " + str60;
+                return "" + sum + " " + verb2 + " " + str + " " + str60;
               } else {
                 let str49 = "ma\u017Eesnis kaip";
                 if (code.inclusive) {
@@ -1216,21 +1195,21 @@ if (self2) {
                 if (typeof closure_1_3 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                const formatted2 = str50.charAt(0).toUpperCase();
-                const sum2 = formatted2 + str50.slice(1);
-                let str2 = code.maximum.toString();
-                let unit;
-                if (tmp58 != null) {
-                  unit = tmp58.unit;
+                const formatted1 = str50.charAt(0).toUpperCase();
+                const sum1 = formatted1 + str50.slice(1);
+                const str1 = code.maximum.toString();
+                unit = undefined;
+                if (tmp56 != null) {
+                  unit = tmp56.unit;
                 }
                 const _HermesInternal9 = HermesInternal;
-                return "" + sum2 + " turi b\u016Bti " + str49 + " " + str2 + " " + unit;
+                return "" + sum1 + " turi b\u016Bti " + str49 + " " + str1 + " " + unit;
               }
             break;
-            case "wo":
+            case "age":
             break;
-            case "work":
-              str24 = closure_2[code.origin];
+            case "ge":
+              let str24 = closure_2[code.origin];
               if (str24 == null) {
                 str24 = code.origin;
               }
@@ -1260,7 +1239,7 @@ if (self2) {
               if (tmp28 == null) {
                 tmp28 = null;
               }
-              tmp29 = tmp28;
+              let tmp29 = tmp28;
               if (null !== tmp28) {
                 obj = { unit: null, verb: null };
                 obj[0] = tmp28.unit[str25];
@@ -1275,8 +1254,27 @@ if (self2) {
               if (tmp29 != null) {
                 verb1 = tmp29.verb;
               }
-              if (!verb1) {
-                let str28 = "didesnis kaip";
+              if (verb1) {
+                if (str24 == null) {
+                  str24 = code.origin;
+                }
+                if (str24 == null) {
+                  str24 = "reik\u0161m\u0117";
+                }
+                if (typeof closure_1_3 !== "function") {
+                  HermesBuiltin.throwTypeError();
+                }
+                const formatted2 = str24.charAt(0).toUpperCase();
+                const sum2 = formatted2 + str24.slice(1);
+                verb = tmp29.verb;
+                let str2 = code.minimum.toString();
+                let str39 = tmp29.unit;
+                if (str39 == null) {
+                  str39 = "element\u0173";
+                }
+                return "" + sum2 + " " + verb + " " + str2 + " " + str39;
+              } else {
+                str28 = "didesnis kaip";
                 if (code.inclusive) {
                   str28 = "ne ma\u017Eesnis kaip";
                 }
@@ -1287,22 +1285,24 @@ if (self2) {
                 if (str29 == null) {
                   str29 = "reik\u0161m\u0117";
                 }
-                if (typeof closure_1_3 !== "function") {
+                if (typeof tmp31 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 const formatted3 = str29.charAt(0).toUpperCase();
-                const sum3 = formatted3 + str29.slice(1);
-                let str3 = code.minimum.toString();
-                let unit1;
+                sum3 = formatted3 + str29.slice(1);
+                str3 = code.minimum.toString();
                 if (tmp29 != null) {
-                  unit1 = tmp29.unit;
+                  unit = tmp29.unit;
                 }
-                return "" + sum3 + " turi b\u016Bti " + str28 + " " + str3 + " " + unit1;
+                concat = code.HermesInternal.concat;
+                const str30 = str29.charAt(0);
+                const str31 = code.minimum;
+                tmp31 = closure_1_3;
               }
             break;
-            case "worklet":
+            case "ger":
             break;
-            case "kl":
+            case "_a":
               if ("starts_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
                 let combined3 = "Eilut\u0117 privalo prasid\u0117ti \"" + code.prefix + "\"";
@@ -1324,14 +1324,14 @@ if (self2) {
                 combined3 = "Neteisingas " + format;
               }
               return combined3;
-            case "let":
+            case "as":
             break;
-            case "Hash":
+            case "ass":
               const _HermesInternal3 = HermesInternal;
               return "Skai\u010Dius privalo b\u016Bti " + code.divisor + " kartotinis.";
-            case "sh":
+            case "asset":
             break;
-            case "flag_de":
+            case "assetDark":
               let str6 = "as";
               let str7 = "as";
               if (code.keys.length > 1) {
@@ -1342,17 +1342,17 @@ if (self2) {
               }
               const _HermesInternal2 = HermesInternal;
               return "Neatpa\u017Eint" + str7 + " rakt" + str6 + ": " + closure_2.joinValues(code.keys, ", ");
-            case "de":
+            case "ss":
             break;
-            case "desired":
+            case "_w":
               return "Rastas klaidingas raktas";
-            case "es":
+            case "wo":
             break;
-            case "si":
+            case "work":
               return "Klaidinga \u012Fvestis";
-            case "sir":
+            case "worklet":
             break;
-            case "red":
+            case "kl":
               str = closure_2[code.origin];
               if (str == null) {
                 str = code.origin;
@@ -1369,12 +1369,32 @@ if (self2) {
               }
               str2 = str.charAt(0);
               let formatted4 = str2.toUpperCase();
-              let substr1 = str.slice(1);
-              let sum4 = formatted4 + substr1;
+              let substr = str.slice(1);
+              let sum4 = formatted4 + substr;
               let _HermesInternal = HermesInternal;
               str3 = " turi klaiding\u0105 \u012Fvest\u012F";
               let combined4 = "" + sum4 + " turi klaiding\u0105 \u012Fvest\u012F";
               return combined4;
+            case "let":
+            break;
+            case "Hash":
+            break;
+            case "sh":
+            break;
+            case "flag_de":
+            break;
+            case "de":
+            break;
+            case "desired":
+            break;
+            case "es":
+            break;
+            case "si":
+            break;
+            case "sir":
+            break;
+            case "red":
+            break;
             case "redBoxV2Android":
             break;
             case "cancelBubble":
@@ -1386,8 +1406,6 @@ if (self2) {
             case "mentions":
             break;
             case "mentionsCount":
-            break;
-            case "PREMIUM_GIFT_YEAR_TIER_1":
             break;
             case "dist":
             break;
@@ -1430,6 +1448,8 @@ if (self2) {
             case "RoleFlags":
             break;
             case "scrollToQuestId":
+            break;
+            case "leadingText":
             break;
             case "accessibleDismiss":
             break;
@@ -1509,7 +1529,7 @@ if (self2) {
             break;
             case "Dao":
             break;
-            case "replaceCorrectMessageParams":
+            case "replaceExports":
             break;
             case "app":
             break;
@@ -1565,7 +1585,11 @@ if (self2) {
             break;
             case "person_walking_facing_right_tone4":
             break;
-            case "optionId":
+            case "isMap":
+            break;
+            case "guildIconBorder":
+            break;
+            case "orderCollapsed":
             break;
             case "_bodyArrayBuffer":
             break;
@@ -1603,9 +1627,7 @@ if (self2) {
             break;
             case "shiftLeft":
             break;
-            case "InterceptingGestureDetector":
-            break;
-            case "StreamingTier1SmallBadge":
+            case "StreamingTier2LargeBadge":
             break;
             case "PREMIUM_UPSELL_FILE_UPLOAD":
             break;
@@ -1701,15 +1723,7 @@ if (self2) {
             break;
             case "ReactionsSpotIllustration":
             break;
-            case "_socketId":
-            break;
-            case "socketId":
-            break;
-            case "dims":
-            break;
-            case "slot_machine":
-            break;
-            case "gregory":
+            case "friend_anniversary_notifications":
             break;
             case "$constructor":
             break;
@@ -1769,31 +1783,17 @@ if (self2) {
             break;
             case "ug":
             break;
-            case "allowRTL":
-            break;
-            case "deprecate":
-            break;
-            case "deprecated":
-            break;
-            case "deprecatedCFWSNearAt":
-            break;
-            case "enableAppStartTracking":
-            break;
-            case "getHighestActiveScreenIndex":
-            break;
-            case "expiresMonth":
-            break;
             case "AccountAgeTier10LargeBadge":
             break;
             case "cou":
             break;
             case "Badge":
             break;
-            case "getGuildDiscoverySplashSource":
+            case "safeRe":
             break;
-            case "ComponentsConfiguration":
+            case "cardType":
             break;
-            case "getColorLightnessAdjusted":
+            case "getComboId":
             break;
             case "cr":
             break;
@@ -1811,11 +1811,9 @@ if (self2) {
             break;
             case "containerIndex":
             break;
-            case "expandEventProperties":
+            case "expandCTALabelContainer":
             break;
-            case "G9fGlP":
-            break;
-            case "PARENTAL_CONTROLS_DIRECT_MESSAGES":
+            case "CTALabel":
             break;
             case "getUTCMilliseconds":
             break;
@@ -1827,9 +1825,9 @@ if (self2) {
             break;
             case "so":
             break;
-            case "mur":
+            case "handleRedeemVirtualCurrencyFail":
             break;
-            case "murmur":
+            case "NitroRubyBadgeLargeBadge":
             break;
             case "_clientSdkMetadata":
             break;
@@ -1925,7 +1923,7 @@ if (self2) {
             break;
             case "led":
             break;
-            case "payment_id":
+            case "payment_source_id":
             break;
             case "_dispatch":
             break;
@@ -1942,34 +1940,15 @@ if (self2) {
             case "tc":
             break;
             case "_debouncedFlush":
-              tmp40 = closure_1_3;
-              if (str24 == null) {
-                str24 = code.origin;
-              }
-              if (str24 == null) {
-                str24 = "reik\u0161m\u0117";
-              }
-              if (typeof tmp40 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              str37 = str24.charAt(0);
-              formatted = str37.toUpperCase();
-              substr = str24.slice(1);
-              sum = formatted + substr;
-              verb = tmp29.verb;
-              str38 = code.minimum;
-              str = str38.toString();
-              str39 = tmp29.unit;
-              if (str39 == null) {
-                str39 = "element\u0173";
-              }
-              combined = "" + sum + " " + verb + " " + str + " " + str39;
-              return combined;
-            case "debounce":
             break;
+            case "debounce":
+              combined = concat(sum3, " turi b\u016Bti ", str28, " ", str3, " ", unit);
+              return combined;
             case "RewardsMouseSpotIllustration":
             break;
-            case "savedDependencies":
+            case "templatePair":
+            break;
+            case "scalars":
             break;
             case "renderActivityInstanceEmbed":
             break;
@@ -2018,8 +1997,8 @@ if (self2) {
               }
               str2 = str.charAt(0);
               formatted4 = str2.toUpperCase();
-              substr1 = str.slice(1);
-              sum4 = formatted4 + substr1;
+              substr = str.slice(1);
+              sum4 = formatted4 + substr;
               _HermesInternal = HermesInternal;
               str3 = " turi klaiding\u0105 \u012Fvest\u012F";
               combined4 = "" + sum4 + " turi klaiding\u0105 \u012Fvest\u012F";
@@ -2029,36 +2008,6 @@ if (self2) {
             case "showStatus":
             break;
             case "useCanUseGuildSpace":
-            break;
-            case "getGuildFolderMenuItems":
-            break;
-            case "MenuItem":
-            break;
-            case "WHATS_ON_YOUR_MIND":
-            break;
-            case "INDIE":
-            break;
-            case "IE_PROTO":
-            break;
-            case "PROTO_THEME_MAP_MOBILE":
-            break;
-            case "PROTO_THEME_MAP_MOBILE_REFRESH":
-            break;
-            case "MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK":
-            break;
-            case "mmh":
-            break;
-            case "getNextAssetPage":
-            break;
-            case "PageUp":
-            break;
-            case "ageUpper":
-            break;
-            case "performAutocomplete":
-            break;
-            case "completeNewMemberAction":
-            break;
-            case "NewMemberActionTypes":
             break;
             case "english":
             break;
@@ -2144,10 +2093,6 @@ if (self2) {
             break;
             case "referrerPolicy":
             break;
-            case "getSpatialCapabilities":
-            break;
-            case "setIncomingCallActive":
-            break;
             case "beforeAddRecordingEvent":
             break;
             case "../../../lib/braintree-error":
@@ -2201,6 +2146,14 @@ if (self2) {
             case "he":
             break;
             case "SocialMediaSpotIllustration":
+            break;
+            case "sanitizeTags":
+            break;
+            case "onPressMutualGuild":
+            break;
+            case "MutualGuildRow":
+            break;
+            case "person_in_bed_tone5":
             break;
             case "APP_LAUNCH_COMPLETED":
             break;
@@ -2266,7 +2219,13 @@ if (self2) {
             break;
             case "forEachChannel":
             break;
-            case "getGuildFavorites":
+            case "8SuVoE":
+            break;
+            case "oEAioF":
+            break;
+            case "woman_in_motorized_wheelchair_medium_skin_tone":
+            break;
+            case "man_in_motorized_wheelchair_medium_skin_tone":
             break;
             case "DiscountsMegaphoneSpotIllustration":
             break;
@@ -2278,8 +2237,6 @@ if (self2) {
             break;
             case "phone":
             break;
-            case "$ZodCheckMinSize":
-            break;
             case "__reanimatedModuleProxy":
             break;
             case "getChannelA11yHint":
@@ -2288,17 +2245,9 @@ if (self2) {
             break;
             case "interpolationIndex":
             break;
-            case "exploding_head":
+            case "explicitMediaFalsePositiveInfo":
             break;
-            case "headMetaAuthorship":
-            break;
-            case "shippingAddress":
-            break;
-            case "shippingAddressOverride":
-            break;
-            case "scopes":
-            break;
-            case "scopesContainer":
+            case "footerTitle":
             break;
             case "getCurrent":
             break;
@@ -2414,23 +2363,13 @@ if (self2) {
             break;
             case "XBOX_URL_BASE":
             break;
-            case "getEmbeddedActivitiesForLocationIncludingHidden":
+            case "usePrivateThreadMode":
             break;
-            case "endImportTime":
+            case "PrivateThreadMode":
             break;
-            case "selectedRewardText":
+            case "optInChannels":
             break;
-            case "getRNSentryOnDrawReporter":
-            break;
-            case "tRNS":
-            break;
-            case "RNSentry":
-            break;
-            case "Sentry":
-            break;
-            case "entry":
-            break;
-            case "openStickerPickerToPackId":
+            case "optInChannelsEnabled":
             break;
             case "player_height":
             break;
@@ -2492,20 +2431,6 @@ if (self2) {
             break;
             case "registerTimerPolyfills":
             break;
-            case "getDurationStats":
-            break;
-            case "QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL":
-            break;
-            case "AuditLogActions":
-            break;
-            case "DiscordSupergraphicLogo":
-            break;
-            case "Super":
-            break;
-            case "graph":
-            break;
-            case "graphic":
-            break;
             case "__internalInstanceHandle":
             break;
             case "_int":
@@ -2546,14 +2471,6 @@ if (self2) {
             break;
             case "nativePhoneIntegrationEnabled":
             break;
-            case "AUTO_MODERATION_EXEMPT_CHANNELS":
-            break;
-            case "CHANNELS_DEFAULT":
-            break;
-            case "DEFAULT_APP_ENTRY_KEY":
-            break;
-            case "APP_ENTRY_KEYS":
-            break;
             case "activity_items":
             break;
             case "_items":
@@ -2591,29 +2508,7 @@ if (self2) {
             case "jus":
             break;
             case "justify":
-              tmp40 = closure_1_3;
-              if (str24 == null) {
-                str24 = code.origin;
-              }
-              if (str24 == null) {
-                str24 = "reik\u0161m\u0117";
-              }
-              if (typeof tmp40 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              str37 = str24.charAt(0);
-              formatted = str37.toUpperCase();
-              substr = str24.slice(1);
-              sum = formatted + substr;
-              verb = tmp29.verb;
-              str38 = code.minimum;
-              str = str38.toString();
-              str39 = tmp29.unit;
-              if (str39 == null) {
-                str39 = "element\u0173";
-              }
-              combined = "" + sum + " " + verb + " " + str + " " + str39;
-              return combined;
+            break;
             case "if":
             break;
             case "Content":
@@ -2651,28 +2546,7 @@ if (self2) {
             case "frameY":
             break;
             case "Buf8":
-              str = closure_2[code.origin];
-              if (str == null) {
-                str = code.origin;
-              }
-              tmp3 = closure_1_3;
-              if (str == null) {
-                str = code.origin;
-              }
-              if (str == null) {
-                str = "reik\u0161m\u0117";
-              }
-              if (typeof tmp3 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              str2 = str.charAt(0);
-              formatted4 = str2.toUpperCase();
-              substr1 = str.slice(1);
-              sum4 = formatted4 + substr1;
-              _HermesInternal = HermesInternal;
-              str3 = " turi klaiding\u0105 \u012Fvest\u012F";
-              combined4 = "" + sum4 + " turi klaiding\u0105 \u012Fvest\u012F";
-              return combined4;
+            break;
             case "f8wNDl":
             break;
             case "DlcqlU":
@@ -2696,7 +2570,8 @@ if (self2) {
             case "_length":
             break;
             case "len":
-            break;
+              combined = concat(sum3, " turi b\u016Bti ", str28, " ", str3, " ", unit);
+              return combined;
             case "lengthComputable":
             break;
             case "analyticsLoadId":
@@ -2706,6 +2581,16 @@ if (self2) {
             case "onReject":
             break;
             case "onRejectSuccess":
+            break;
+            case "getChannelPermalink":
+            break;
+            case "linkCode":
+            break;
+            case "dependentSkuId":
+            break;
+            case "drawerStatusBar":
+            break;
+            case "StatusBar":
             break;
             case "load":
             break;
@@ -2724,7 +2609,28 @@ if (self2) {
             case "loc":
             break;
             case "locationAnalyticsObject":
-            break;
+              str = closure_2[code.origin];
+              if (str == null) {
+                str = code.origin;
+              }
+              tmp3 = closure_1_3;
+              if (str == null) {
+                str = code.origin;
+              }
+              if (str == null) {
+                str = "reik\u0161m\u0117";
+              }
+              if (typeof tmp3 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              str2 = str.charAt(0);
+              formatted4 = str2.toUpperCase();
+              substr = str.slice(1);
+              sum4 = formatted4 + substr;
+              _HermesInternal = HermesInternal;
+              str3 = " turi klaiding\u0105 \u012Fvest\u012F";
+              combined4 = "" + sum4 + " turi klaiding\u0105 \u012Fvest\u012F";
+              return combined4;
             case "AnalyticsObjects":
             break;
             case "__mapperRegistry":
@@ -2805,6 +2711,8 @@ if (self2) {
             break;
             case "SOUNDBOARD_SOUND_GUILD_DATA":
             break;
+            case "showCaptcha":
+            break;
             case "Ambient":
             break;
             case "Ambient_Lightmode":
@@ -2817,9 +2725,7 @@ if (self2) {
             break;
             case "modeOptions":
             break;
-            case "edges":
-            break;
-            case "edgesLimit":
+            case "sled":
             break;
             case "contact_names":
             break;
@@ -2888,6 +2794,16 @@ if (self2) {
             case "res":
             break;
             case "setTermsAccepted":
+            break;
+            case "appliedTags":
+            break;
+            case "imageEmoji":
+            break;
+            case "fetchGuildProfile":
+            break;
+            case "GuildProfileCTAContext":
+            break;
+            case "textBreakStrategy":
             break;
             case "_opacityActive":
             break;
@@ -2969,6 +2885,8 @@ if (self2) {
             break;
             case "prototypeInitialized":
             break;
+            case "channelOrMessageUrl":
+            break;
             case "getCurrentScope":
             break;
             case "openForwardModal":
@@ -3012,6 +2930,10 @@ if (self2) {
             case "eject":
             break;
             case "ErrorNumber":
+            break;
+            case "writeInt32LE":
+            break;
+            case "getMinHeaderHeight":
             break;
             case "__replaceAnimatedNodeWithValues":
             break;
@@ -3165,6 +3087,22 @@ if (self2) {
             break;
             case "newFlowAnalyticsLoadId":
             break;
+            case "_safeDecode":
+            break;
+            case "_safeDecodeAsync":
+            break;
+            case "safe":
+            break;
+            case "safeDecode":
+            break;
+            case "safeDecodeAsync":
+            break;
+            case "syncAndroidClipBoundsWithOverflow":
+            break;
+            case "getNativeNodeReference":
+            break;
+            case "getNativeNodeReferenceFromReactNativeDocumentInstanceHandle":
+            break;
             case "_splitColorsIntoChannels":
             break;
             case "MMlhsr":
@@ -3205,11 +3143,7 @@ if (self2) {
             break;
             case "statusAllowsPerks":
             break;
-            case "maxToRenderPerBatch":
-            break;
-            case "maxToRenderPerBatchOrDefault":
-            break;
-            case "bubblingEventTypes":
+            case "partial_updates":
             break;
             case "_$esjava$s":
             break;
@@ -3229,7 +3163,11 @@ if (self2) {
             break;
             case "string_id":
             break;
-            case "toExpNeg":
+            case "canManageChannels":
+            break;
+            case "showReportModalForGuildScheduledEvent":
+            break;
+            case "GuildScheduledEventEntityTypes":
             break;
             case "DEPRECATED_style":
             break;
@@ -3326,29 +3264,7 @@ if (self2) {
             case "$":
             break;
             case "maxReturnedEndOffset":
-              tmp40 = closure_1_3;
-              if (str24 == null) {
-                str24 = code.origin;
-              }
-              if (str24 == null) {
-                str24 = "reik\u0161m\u0117";
-              }
-              if (typeof tmp40 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              str37 = str24.charAt(0);
-              formatted = str37.toUpperCase();
-              substr = str24.slice(1);
-              sum = formatted + substr;
-              verb = tmp29.verb;
-              str38 = code.minimum;
-              str = str38.toString();
-              str39 = tmp29.unit;
-              if (str39 == null) {
-                str39 = "element\u0173";
-              }
-              combined = "" + sum + " " + verb + " " + str + " " + str39;
-              return combined;
+            break;
             case "setBigUint64":
             break;
             case "int64toString":
@@ -3368,7 +3284,8 @@ if (self2) {
             case "couple_with_heart_woman_woman_medium_skin_tone_medium_dark_skin_tone":
             break;
             case "next_track":
-            break;
+              combined = concat(sum3, " turi b\u016Bti ", str28, " ", str3, " ", unit);
+              return combined;
             case "_trackIfSessionMetadataExists":
             break;
             case "tra":
@@ -3386,28 +3303,7 @@ if (self2) {
             case "mel":
             break;
             case "APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED":
-              str = closure_2[code.origin];
-              if (str == null) {
-                str = code.origin;
-              }
-              tmp3 = closure_1_3;
-              if (str == null) {
-                str = code.origin;
-              }
-              if (str == null) {
-                str = "reik\u0161m\u0117";
-              }
-              if (typeof tmp3 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              str2 = str.charAt(0);
-              formatted4 = str2.toUpperCase();
-              substr1 = str.slice(1);
-              sum4 = formatted4 + substr1;
-              _HermesInternal = HermesInternal;
-              str3 = " turi klaiding\u0105 \u012Fvest\u012F";
-              combined4 = "" + sum4 + " turi klaiding\u0105 \u012Fvest\u012F";
-              return combined4;
+            break;
             case "OAUTH":
             break;
             case "OAUTH2":
@@ -3427,7 +3323,28 @@ if (self2) {
             case "useFocusEffect":
             break;
             case "use":
-            break;
+              str = closure_2[code.origin];
+              if (str == null) {
+                str = code.origin;
+              }
+              tmp3 = closure_1_3;
+              if (str == null) {
+                str = code.origin;
+              }
+              if (str == null) {
+                str = "reik\u0161m\u0117";
+              }
+              if (typeof tmp3 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              str2 = str.charAt(0);
+              formatted4 = str2.toUpperCase();
+              substr = str.slice(1);
+              sum4 = formatted4 + substr;
+              _HermesInternal = HermesInternal;
+              str3 = " turi klaiding\u0105 \u012Fvest\u012F";
+              combined4 = "" + sum4 + " turi klaiding\u0105 \u012Fvest\u012F";
+              return combined4;
             case "Call":
             break;
             case "effectClick":
@@ -3454,7 +3371,11 @@ if (self2) {
             break;
             case "Memo":
             break;
-            case "handleSubmit":
+            case "installApplication":
+            break;
+            case "installApplicationOnDemandIfNeeded":
+            break;
+            case "OnDemand":
             break;
             case "useStateFromStoresArray":
             break;
@@ -3479,6 +3400,10 @@ if (self2) {
             case "userIds":
             break;
             case "userIdsAndWishlistIds":
+            break;
+            case "avatarHash":
+            break;
+            case "MANAGE_OFFICIAL_MESSAGES":
             break;
             case "__sentry_template_values__":
             break;
@@ -3704,41 +3629,39 @@ if (self2) {
             break;
             case "FAVORITES_GUILD_SUGGESTIONS":
             break;
-            case "powerup_metadata":
+            case "originalBuffer":
             break;
-            case "metadataSealed":
+            case "ferry":
+            break;
+            case "APPLICATION_DISCLOSURES":
+            break;
+            case "DISCLOSURE":
+            break;
+            case "RESIZABLE":
+            break;
+            case "EnsureSingleNavigator":
+            break;
+            case "SingleNavigatorContext":
+            break;
+            case "textInputRef":
+            break;
+            case "fetchSocialLayerStorefrontSku":
+            break;
+            case "fetchSocialLayerStorefrontSkuForApplication":
+            break;
+            case "PlaySpeedUp":
+            break;
+            case "buildXboxGamePassStoreDeepLinkUrl":
+            break;
+            case "GUILD_ROOM_INTERACTED":
+            break;
+            case "getAcronym":
+            break;
+            case "mfaEnabled":
             break;
             case "#3498db":
             break;
-            case "customer":
-            break;
-            case "customerActionCancelled":
-            break;
-            case "onCancel":
-            break;
-            case "onCancelled":
-            break;
-            case "disregardSeriousThermalState":
-            break;
-            case "chat":
-            break;
-            case "chatChannelId":
-            break;
-            case "disableWrite":
-            break;
-            case "disableWrites":
-            break;
-            case "opencriticTopCriticImage":
-            break;
-            case "getAutoArchiveOptions":
-            break;
-            case "getBuildOverrideMeta":
-            break;
-            case "MetaStickerType":
-            break;
-            case "person_with_blond_hair_tone2":
-            break;
-            case "switchIconsEnabled":
+            case "sync_id":
             break;
             case "#546e7a":
             break;
@@ -3756,9 +3679,9 @@ if (self2) {
             break;
             case "scheduleLayoutAnimation":
             break;
-            case "errorCodes":
+            case "target_application":
             break;
-            case "targetMessageId":
+            case "target_application_id":
             break;
             case "#71368a":
             break;
@@ -3782,7 +3705,7 @@ if (self2) {
             break;
             case "aa":
             break;
-            case "NitroBronzeBadgeLargeBadge":
+            case "NitroBronzeBadgeSmallBadge":
             break;
             case "#9b59b6":
             break;
@@ -3842,6 +3765,8 @@ if (self2) {
             break;
             case "onValueUpdated":
             break;
+            case "memberListGradient":
+            break;
             case "$ZodAny":
             break;
             case "Z":
@@ -3854,9 +3779,9 @@ if (self2) {
             break;
             case "notificationSoundPackId":
             break;
-            case "lastRenderedState":
+            case "topSheetDetentChanged":
             break;
-            case "useStickerCategories":
+            case "useStickerPackCategories":
             break;
             case "useOriginalIfSmaller":
             break;
@@ -3973,29 +3898,7 @@ if (self2) {
             case "person_walking_facing_right_tone5":
             break;
             case "$ZodCheckEndsWith":
-              tmp40 = closure_1_3;
-              if (str24 == null) {
-                str24 = code.origin;
-              }
-              if (str24 == null) {
-                str24 = "reik\u0161m\u0117";
-              }
-              if (typeof tmp40 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              str37 = str24.charAt(0);
-              formatted = str37.toUpperCase();
-              substr = str24.slice(1);
-              sum = formatted + substr;
-              verb = tmp29.verb;
-              str38 = code.minimum;
-              str = str38.toString();
-              str39 = tmp29.unit;
-              if (str39 == null) {
-                str39 = "element\u0173";
-              }
-              combined = "" + sum + " " + verb + " " + str + " " + str39;
-              return combined;
+            break;
             case "End":
             break;
             case "nds":
@@ -4007,7 +3910,8 @@ if (self2) {
             case "Svg":
             break;
             case "SvgAst":
-            break;
+              combined = concat(sum3, " turi b\u016Bti ", str28, " ", str3, " ", unit);
+              return combined;
             case "createProfileChunkPayload":
             break;
             case "$ZodCheckIncludes":
@@ -4033,6 +3937,18 @@ if (self2) {
             case "qua":
             break;
             case "alsoForwardToChannelId":
+            break;
+            case "ls":
+            break;
+            case "disableHighlightOnPress":
+            break;
+            case "calendarFormat":
+            break;
+            case "calendarFormatCompact":
+            break;
+            case "activeSpeakerIcon":
+            break;
+            case "confirmRedirectedPaymentSource":
               str = closure_2[code.origin];
               if (str == null) {
                 str = code.origin;
@@ -4049,33 +3965,19 @@ if (self2) {
               }
               str2 = str.charAt(0);
               formatted4 = str2.toUpperCase();
-              substr1 = str.slice(1);
-              sum4 = formatted4 + substr1;
+              substr = str.slice(1);
+              sum4 = formatted4 + substr;
               _HermesInternal = HermesInternal;
               str3 = " turi klaiding\u0105 \u012Fvest\u012F";
               combined4 = "" + sum4 + " turi klaiding\u0105 \u012Fvest\u012F";
               return combined4;
-            case "ls":
-            break;
-            case "disableHighlightOnPress":
-            break;
-            case "calendarFormat":
-            break;
-            case "calendarFormatCompact":
-            break;
-            case "activeSpeakerIcon":
-            break;
-            case "confirmRedirectedPaymentSource":
-            break;
             case "$ZodCheckLessThan":
             break;
             case "hand_with_index_finger_and_thumb_crossed_tone3":
             break;
             case "generateSessionId":
             break;
-            case "useNavigatorBackPressHandler":
-            break;
-            case "BackPressHandler":
+            case "BackHandler":
             break;
             case "$ZodCheckLowerCase":
             break;
@@ -4097,15 +3999,41 @@ if (self2) {
             break;
             case "peekGradient":
             break;
+            case "PREMIUM_INLINE_ROADBLOCK":
+            break;
+            case "BLOCK_USER_CONFIRMED":
+            break;
+            case "MEDIA_ENGINE_SOUNDSHARE_FAILED":
+            break;
+            case "SOUNDSHARE_FAILED":
+            break;
             case "$ZodCheckMinLength":
             break;
             case "Mi":
             break;
             case "thirdPartyTaskDetails":
             break;
-            case "shine":
+            case "screenY":
             break;
-            case "shineContainer":
+            case "voicePanelsFullscreen":
+            break;
+            case "screenIsLandscape":
+            break;
+            case "FlingNativeProperties":
+            break;
+            case "mediaImage":
+            break;
+            case "getApplicationFlags":
+            break;
+            case "is_coppa":
+            break;
+            case "topLongPressSticker":
+            break;
+            case "DisguiseSpotIllustration":
+            break;
+            case "sg":
+            break;
+            case "$ZodCheckMinSize":
             break;
             case "$ZodCheckMultipleOf":
             break;
@@ -4180,7 +4108,7 @@ if (self2) {
             case "ToString":
             break;
             case "expectedCurrency":
-            break;
+              return "Rastas klaidingas raktas";
             case "currencyIsoCode":
             break;
             case "deepLinkUri":
@@ -4192,7 +4120,7 @@ if (self2) {
             case "ZodCodec":
             break;
             case "Code":
-              return "Rastas klaidingas raktas";
+            break;
             case "dec":
             break;
             case "decay":
@@ -4325,10 +4253,6 @@ if (self2) {
             break;
             case "File":
             break;
-            case "PremiumUpsellTypes":
-            break;
-            case "UpsellTypes":
-            break;
             case "javascript":
             break;
             case "javascript:":
@@ -4419,6 +4343,8 @@ if (self2) {
             break;
             case "Time":
             break;
+            case "pregnant_woman_tone5":
+            break;
             case "$ZodISODuration":
             break;
             case "ZodISODuration":
@@ -4482,10 +4408,6 @@ if (self2) {
             case "VERIFICATION_FAQ":
             break;
             case "QUEST_ACTIVITY_BOTTOM_SHEET":
-            break;
-            case "_eventFromRejectionWithPrimitive":
-            break;
-            case "PrimitiveToString":
             break;
             case "CUSTOM_BACKGROUND_GRADIENT":
             break;
@@ -4613,6 +4535,8 @@ if (self2) {
             break;
             case "nl":
             break;
+            case "OGiMXJ":
+            break;
             case "docx":
             break;
             case "pages":
@@ -4627,12 +4551,23 @@ if (self2) {
             break;
             case "InkQuill3dIllustration":
             break;
+            case "TimestampMillisecondsParser":
+            break;
+            case "Millis":
+            break;
+            case "lis":
+            break;
+            case "second":
+            break;
+            case "seconds":
+            break;
             case "xls":
             break;
             case "xlsx":
             break;
             case "csv":
-            break;
+              combined = concat(sum3, " turi b\u016Bti ", str28, " ", str3, " ", unit);
+              return combined;
             case "sv":
             break;
             case "$ZodRecord":
@@ -4650,29 +4585,7 @@ if (self2) {
             case "ZodStringFormat":
             break;
             case "$ZodSuccess":
-              tmp40 = closure_1_3;
-              if (str24 == null) {
-                str24 = code.origin;
-              }
-              if (str24 == null) {
-                str24 = "reik\u0161m\u0117";
-              }
-              if (typeof tmp40 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              str37 = str24.charAt(0);
-              formatted = str37.toUpperCase();
-              substr = str24.slice(1);
-              sum = formatted + substr;
-              verb = tmp29.verb;
-              str38 = code.minimum;
-              str = str38.toString();
-              str39 = tmp29.unit;
-              if (str39 == null) {
-                str39 = "element\u0173";
-              }
-              combined = "" + sum + " " + verb + " " + str + " " + str39;
-              return combined;
+            break;
             case "ZodSuccess":
             break;
             case "$ZodTemplateLiteral":
@@ -4684,24 +4597,6 @@ if (self2) {
             case "allowedUserIds":
             break;
             case "$ZodTransform":
-            break;
-            case "ZodTransform":
-            break;
-            case "renderLinearGradient":
-            break;
-            case "$ZodTuple":
-            break;
-            case "ZodTuple":
-            break;
-            case "up":
-            break;
-            case "pleading_face":
-            break;
-            case "$ZodType":
-            break;
-            case "ZodType":
-            break;
-            case "peer":
             break;
             default:
               return "Klaidinga \u012Fvestis";

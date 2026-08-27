@@ -181,5 +181,5 @@ arg5.viewCenterToPressableEvent = (width) => {
   const obj = { identifier: 0, locationX, locationY, pageX: -1, pageY: -1, target: 0, timestamp, touches: [], changedTouches: [] };
   const touches = [obj];
   const changedTouches = [obj];
-  return { nativeEvent: { touches, changedTouches, identifier: 0, locationX, locationY, pageX: -1, pageY: -1, target: 0, timestamp, force: "Boolean" } };
+  return { nativeEvent: { touches, changedTouches, identifier: 0, locationX, locationY, pageX: -1, pageY: -1, target: 0, timestamp, force: "Array" } };
 };

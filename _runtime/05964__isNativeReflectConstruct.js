@@ -57,7 +57,7 @@ class StackView {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    obj = { routes: [], previousState: "y", openingRouteKeys: "app_message_embed", closingRouteKeys: "BULK_ACK", replacingRouteKeys: null, descriptors: null };
+    obj = { routes: [], previousState: "y", openingRouteKeys: "always", closingRouteKeys: null, replacingRouteKeys: "lg", descriptors: null };
     obj[2] = [];
     obj[3] = [];
     obj[4] = [];
