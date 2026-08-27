@@ -1,52 +1,84 @@
 // === Module 5153: ? ===
 
 // Module 5153
+import getDataView from "getDataView" /* 5109 */;
+import readTag from "readTag" /* 5129 */;
+import importDefaultResult1 from "importDefaultResult1" /* 5130 */;
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
-let c2 = 4;
-let c3 = 7;
+let obj = { K3_III: 78420 };
+obj = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
 arg5.default = {
-  read(getUint8, sum) {
-    let obj = module(5121);
-    const byteAt = obj.getByteAt(getUint8, sum);
-    let num = 0;
-    if (16 & byteAt) {
-      num = 1;
+  read(byteLength) {
+    obj = module(5114);
+    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
+    const sum = arg1 + arg2;
+    obj1 = readTag;
+    const ifd = obj1.readIfd(byteLength, importDefaultResult1.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
+    let LevelInfo = ifd.PentaxModelID;
+    if (LevelInfo) {
+      LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
     }
-    obj = { value: num, description: null };
-    let str = "No";
-    let str2 = "No";
-    if (16 & byteAt) {
-      str2 = "Yes";
+    if (LevelInfo) {
+      LevelInfo = ifd.LevelInfo;
     }
-    obj = { Alpha: obj };
-    obj[1] = str2;
-    let num2 = 0;
-    if (2 & byteAt) {
-      num2 = 1;
+    let tmp10 = ifd;
+    if (LevelInfo) {
+      const sum1 = sum + ifd.LevelInfo.__offset;
+      obj = {};
+      if (sum1 + 7 <= byteLength.byteLength) {
+        const int8 = byteLength.getInt8(sum1 + obj.CAMERA_ORIENTATION);
+        obj = { value: null, description: null };
+        obj[0] = int8;
+        let str6 = "Horizontal (normal)";
+        if (0 !== int8) {
+          let str = "Rotate 270 CW";
+          if (1 !== int8) {
+            let str2 = "Rotate 180";
+            if (2 !== int8) {
+              let str3 = "Rotate 90 CW";
+              if (3 !== int8) {
+                let str4 = "Upwards";
+                if (4 !== int8) {
+                  let str5 = "Unknown";
+                  if (5 === int8) {
+                    str5 = "Downwards";
+                  }
+                  str4 = str5;
+                }
+                str3 = str4;
+              }
+              str2 = str3;
+            }
+            str = str2;
+          }
+          str6 = str;
+        }
+        obj[1] = str6;
+        obj.CameraOrientation = obj;
+        const sum2 = sum1 + tmp17.ROLL_ANGLE;
+        const int16 = byteLength.getInt16(sum2, byteOrder === tmp3(5114).LITTLE_ENDIAN);
+        obj1 = { value: null, description: null };
+        obj1[0] = int16;
+        obj1[1] = "" + -0.5 * int16;
+        obj.RollAngle = obj1;
+        const sum3 = sum1 + tmp17.PITCH_ANGLE;
+        const int161 = byteLength.getInt16(sum3, byteOrder === tmp3(5114).LITTLE_ENDIAN);
+        const obj2 = { value: null, description: null };
+        obj2[0] = int161;
+        obj2[1] = "" + -0.5 * int161;
+        obj.PitchAngle = obj2;
+      }
+      const tmp7Result = getDataView;
+      delete tmp[tmp2];
+      tmp10 = getDataView.objectAssign({}, ifd, obj);
+      const objectAssignResult = getDataView.objectAssign({}, ifd, obj);
     }
-    obj1 = { value: num2, description: null };
-    if (2 & byteAt) {
-      str = "Yes";
-    }
-    obj1[1] = str;
-    obj.Animation = obj1;
-    sum = sum + c2;
-    let tmpResult = tmp(5121);
-    const byteAt1 = tmpResult.getByteAt(getUint8, sum);
-    tmpResult = tmp(5121);
-    const sum1 = byteAt1 + 256 * tmpResult.getByteAt(getUint8, sum + 1);
-    const sum2 = sum1 + 65536 * module(5121).getByteAt(getUint8, sum + 2) + 1;
-    obj.ImageWidth = { value: sum2, description: `${tmp9}px` };
-    const sum3 = sum + c3;
-    const obj2 = { value: sum2, description: `${tmp9}px` };
-    const tmpResult1 = module(5121);
-    const byteAt2 = module(5121).getByteAt(getUint8, sum3);
-    const tmpResult2 = module(5121);
-    const sum4 = byteAt2 + 256 * module(5121).getByteAt(getUint8, sum3 + 1);
-    const tmpResult3 = module(5121);
-    const sum5 = sum4 + 65536 * module(5121).getByteAt(getUint8, sum3 + 2) + 1;
-    obj.ImageHeight = { value: sum5, description: `${tmp13}px` };
-    return obj;
-  }
+    return tmp10;
+  },
+  PENTAX_IFD_OFFSET: 10,
+  MODEL_ID: obj,
+  LIK3III: obj
 };

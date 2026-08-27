@@ -1,27 +1,36 @@
 // === Module 13879: ? ===
 
 // Module 13879
-import call from "call" /* 13862 */;
-import _mod13880 from "module_13880" /* 13880 */;
+import withoutSetter from "withoutSetter" /* 13880 */;
+import all from "all" /* 13891 */;
 
+let closure_3 = withoutSetter("toPrimitive");
 
-export default (arg0, arg1, arg2) => {
-  const arr = _mod13880(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp4 = require;
-    let tmp5 = dependencyMap;
-    let tmp6 = call(arg0, tmp3);
-    let tmp7 = num;
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = tmp4(13862)(arg2, tmp3);
+export default (arg0, arg1) => {
+  if (all(arg0)) {
+    if (!tmp(13893)(arg0)) {
+      let str = arg1;
+      const tmp4 = tmp(13896)(arg0, closure_3);
+      if (tmp4) {
+        if (undefined === str) {
+          str = "default";
+        }
+        const tmp5 = tmp(13899)(tmp4, arg0, str);
+        if (tmp(13891)(tmp5)) {
+          if (!tmp(13893)(tmp5)) {
+            const tmp9 = new TypeError("Can't convert object to primitive value");
+            throw tmp9;
+          }
+        }
+        return tmp5;
+      } else {
+        let str2 = str;
+        if (undefined === str) {
+          str2 = "number";
+        }
+        return tmp(13900)(arg0, str2);
       }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
     }
   }
+  return arg0;
 };

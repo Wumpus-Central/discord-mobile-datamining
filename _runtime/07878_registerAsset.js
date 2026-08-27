@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/MidnightPrismIcon", width: 60, height: 60, scales: [2, 3], hash: "44efb56cf36c8202533bcbc557ebf8e5", name: "MidnightPrismIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/public_guilds", width: 240, height: 240, scales: [1], hash: "409ea8be644aaa2b6a1519af84a7b604", name: "system-user-avatar", type: "png" });

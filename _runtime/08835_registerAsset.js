@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "bb53327d21615c77cfbccb9f06aeb711", name: "wumpus-link", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 150, height: 150, scales: [2, 3], hash: "e8a1ca4b2fed2cda940e645e0f79dbd9", name: "img_no_results_dark", type: "png" });

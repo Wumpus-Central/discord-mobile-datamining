@@ -1,49 +1,14 @@
 // === Module 13896: ? ===
 
 // Module 13896
-import all from "all" /* 13865 */;
+import _mod13877 from "module_13877" /* 13877 */;
+import all from "all" /* 13897 */;
 
 
-export default (arg0, arg1, arg2, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
+export default (arg0, arg1) => {
+  let tmp4;
+  if (!_mod13877(arg0[arg1])) {
+    tmp4 = all(tmp);
   }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (all(arg2)) {
-    tmp3(13897)(arg2, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = arg2;
-    } else {
-      tmp3(13840)(arg1, arg2);
-    }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = arg2;
-      } else {
-        obj = { value: null, enumerable: false, configurable: null, writable: null };
-        obj[0] = arg2;
-        obj[2] = !obj.nonConfigurable;
-        obj[3] = !obj.nonWritable;
-        tmp3(13893).f(arg0, arg1, obj);
-        const tmp3Result = tmp3(13893);
-      }
-    } catch (err) {
-    }
-  }
-  return arg0;
+  return tmp4;
 };

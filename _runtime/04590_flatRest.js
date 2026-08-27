@@ -1,12 +1,15 @@
 // === Module 4590: flatRest ===
 
 // Module 4590 (flatRest)
-import shortOut from "shortOut" /* 4591 */;
-import overRest from "overRest" /* 4595 */;
-import flatten from "flatten" /* 4597 */;
+import flatRest from "flatRest" /* 4591 */;
+import basePick from "basePick" /* 4601 */;
 
 
-export default function flatRest(arg0) {
-  const tmp = shortOut;
-  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
-};
+export default flatRest((arg0, arg1) => {
+  if (null == arg0) {
+    let obj = {};
+  } else {
+    obj = basePick(arg0, arg1);
+  }
+  return obj;
+});

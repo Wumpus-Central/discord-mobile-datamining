@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images", width: 128, height: 128, scales: [1], hash: "dd1fce0fb6695abbba4a340bc5cd823e", name: "nameplate_avatar_placeholder_dark_mode", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "be0495259d7800ba5ff04ac01243104d", name: "LocationIcon", type: "png" });

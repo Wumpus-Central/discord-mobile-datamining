@@ -3,6 +3,8 @@
 // Module 5098
 import _mod5099 from "module_5099" /* 5099 */;
 import _mod5100 from "module_5100" /* 5100 */;
+import _mod5101 from "module_5101" /* 5101 */;
+import _mod5102 from "module_5102" /* 5102 */;
 
 const self = this;
 let self2 = this;
@@ -44,6 +46,8 @@ if (self2) {
   const _Object2 = Object;
   fn(_mod5099, exports);
   fn(_mod5100, exports);
+  fn(_mod5101, exports);
+  fn(_mod5102, exports);
 } else {
   let _Object = Object;
 }

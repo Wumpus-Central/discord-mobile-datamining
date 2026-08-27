@@ -1,7 +1,0 @@
-// === Module 7539: registerAsset ===
-
-// Module 7539 (registerAsset)
-import registerAsset from "registerAsset" /* 1241 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 87, height: 100, scales: [2, 3], hash: "fea63c35d752daa1f371f2069e1b5793", name: "img_wumpus_lightro", type: "png" });

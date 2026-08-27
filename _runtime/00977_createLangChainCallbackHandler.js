@@ -26,7 +26,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
   exitSpan = function exitSpan(arg0) {
 
   };
-  obj = { lc_serializable: false, lc_namespace: ["langchain_core", "callbacks", "sentry"], lc_secrets: "r", lc_attributes: "accessibilityRole", lc_aliases: "kind", lc_serializable_keys: "lc", lc_id: ["langchain_core", "callbacks", "sentry"], lc_kwargs: false, name: false, ignoreLLM: false, ignoreChain: false, ignoreAgent: false, ignoreRetriever: false, ignoreCustomEvent: true, raiseError: null, awaitHandlers: null, handleLLMStart: null, handleChatModelStart: null, handleLLMEnd: null, handleLLMError: null, handleChainStart: null, handleChainEnd: null, handleChainError: null, handleToolStart: null, handleToolEnd: null, handleToolError: null, copy: null, toJSON: "BounceOut", toJSONNotImplemented: null };
+  obj = { lc_serializable: false, lc_namespace: ["langchain_core", "callbacks", "sentry"], lc_secrets: "r", lc_attributes: "accessibilityRole", lc_aliases: "status", lc_serializable_keys: "space", lc_id: ["langchain_core", "callbacks", "sentry"], lc_kwargs: false, name: false, ignoreLLM: false, ignoreChain: false, ignoreAgent: false, ignoreRetriever: false, ignoreCustomEvent: true, raiseError: null, awaitHandlers: null, handleLLMStart: null, handleChatModelStart: null, handleLLMEnd: null, handleLLMError: null, handleChainStart: null, handleChainEnd: null, handleChainError: null, handleToolStart: null, handleToolEnd: null, handleToolError: null, copy: null, toJSON: "fromJson", toJSONNotImplemented: null };
   obj[7] = {};
   obj[16] = function handleLLMStart(arg0, arr, closure_0, arg3, arg4, invocation_params, ls_provider) {
     obj = flag(flag2[0]);

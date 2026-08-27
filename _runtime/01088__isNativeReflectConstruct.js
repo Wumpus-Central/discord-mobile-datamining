@@ -4836,7 +4836,7 @@ function initObservers(doc) {
                     } catch (tmp7) {
                       if (closure_1_79) {
                         if (true === tmp8(tmp7)) {
-                          return /* F104800 */ function() { ... };
+                          return /* F105054 */ function() { ... };
                         }
                       }
                       throw tmp7;

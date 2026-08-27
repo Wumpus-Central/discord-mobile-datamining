@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 275, height: 42, scales: [2, 3], hash: "ad7c8b7fe5cb5b3227b2fba22a45cc38", name: "img_nitro_tier_2_activated_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/auth", width: 1424, height: 1500, scales: [1], hash: "1241abd72512c72c105ef9e9870d04e3", name: "background-splash-mobile", type: "png" });

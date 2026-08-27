@@ -5,7 +5,7 @@ function concatty(arg0, arg1) {
 
 }
 
-export default function bind(self, c165, cache, serializer, bindResult, closure_2) {
+export default function bind(self, c165, cache, serializer, bindResult, closure_2, error) {
   let length;
   let sum;
   self = this;

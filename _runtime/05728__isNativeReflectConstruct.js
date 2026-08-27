@@ -2,7 +2,7 @@
 
 // Module 5728 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import ManualGesture from "_classCallCheck" /* 41 */;
+import RotationGesture from "_classCallCheck" /* 41 */;
 import closure_1 from "_possibleConstructorReturn" /* 93 */;
 import closure_2 from "_getPrototypeOf" /* 95 */;
 import closure_3 from "_get" /* 96 */;
@@ -27,18 +27,28 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function changeEventCalculator(arg0, arg1) {
-  return arg0;
+function changeEventCalculator(rotation, rotation2) {
+  if (undefined === rotation2) {
+    let obj = { rotationChange: null };
+    obj[0] = rotation.rotation;
+  } else {
+    obj = { rotationChange: null };
+    obj[0] = rotation.rotation - rotation2.rotation;
+  }
+  obj = {};
+  const merged = Object.assign(rotation);
+  const merged1 = Object.assign(obj);
+  return obj;
 }
 changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 12945462865583;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;}" };
-class ManualGesture {
+changeEventCalculator.__workletHash = 11988645380499;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}" };
+class RotationGesture {
   constructor() {
     self = this;
-    tmp = ManualGesture(this, ManualGesture);
+    tmp = RotationGesture(this, RotationGesture);
     tmp2 = closure_2;
-    obj = closure_2(ManualGesture);
+    obj = closure_2(RotationGesture);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
@@ -48,11 +58,11 @@ class ManualGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "ManualGestureHandler";
+    tmp3Result.handlerName = "RotationGestureHandler";
     return tmp3Result;
   }
 }
-_inheritsDefault(ManualGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
+_inheritsDefault(RotationGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
 let items = [
   {
     key: "onChange",
@@ -70,4 +80,4 @@ let items = [
   }
 ];
 
-export const ManualGesture = importDefaultResult(ManualGesture, items);
+export const RotationGesture = importDefaultResult(RotationGesture, items);
