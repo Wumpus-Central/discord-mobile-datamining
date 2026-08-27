@@ -33,8 +33,8 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
   if (null != tmp3) {
     return tmp3;
   } else {
-    const questAdDecisionByPlacement = obj.questAdDecisionByPlacement;
-    const value = questAdDecisionByPlacement.get(arg0);
+    const deliveryAdDecisionByPlacement = obj.deliveryAdDecisionByPlacement;
+    const value = deliveryAdDecisionByPlacement.get(arg0);
     if (arg0 === tmp(5342).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
       if (null != value) {
         obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };

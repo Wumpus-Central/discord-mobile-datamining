@@ -283,7 +283,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          obj = { sourceType: "embed", source: null, mediaType: "image", mediaUrl: null, contentType: "o" };
+          obj = { sourceType: "embed", source: null, mediaType: "image", mediaUrl: null, contentType: "r" };
           obj[1] = tmp8;
           obj[3] = tmp8.url;
           return obj;

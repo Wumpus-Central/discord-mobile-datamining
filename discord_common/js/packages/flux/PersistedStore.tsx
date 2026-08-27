@@ -10,7 +10,7 @@ import set from "set" /* 2 */;
 
 require = arg1;
 let closure_3 = ["_state", "_version"];
-let closure_6 = { _state: "isArray", _version: "accessibilityRole" };
+let closure_6 = { _state: "Array", _version: "ct" };
 let c7 = null;
 let PersistedStore;
 class PersistedStore extends r10016 {

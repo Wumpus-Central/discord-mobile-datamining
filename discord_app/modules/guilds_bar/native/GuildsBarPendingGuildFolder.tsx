@@ -55,7 +55,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
       const result1 = closure_1_1(closure_1_2[10]).toggleGuildFolderExpand(closure_0);
     }
   }), items2);
-  obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "call", config: "<string:1532035871>", externalChildren: "<string:3696296223>", children: "<string:2587952411>" };
+  obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "channelId", config: "<string:607912339>", externalChildren: "<string:47935553>", children: "<string:2724544768>" };
   const obj3 = id(4185);
   obj[0] = "" + id;
   obj[1] = accessibilityActions;
@@ -75,7 +75,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
   }
   obj[12] = tmp8Result;
   obj[13] = jsx(id(9317).HourglassIcon, {});
-  return jsx(UnreadIndicatorDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "call", config: "<string:1532035871>", externalChildren: "<string:3696296223>", children: "<string:2587952411>" });
+  return jsx(UnreadIndicatorDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "channelId", config: "<string:607912339>", externalChildren: "<string:47935553>", children: "<string:2724544768>" });
 });
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuildFolder.tsx");
 

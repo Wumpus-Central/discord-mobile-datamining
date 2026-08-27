@@ -71,7 +71,7 @@ export const useCardLayout = function useCardLayout() {
     const diff2 = tmp12 - 1;
     if (result3 + (bound + tmp10(8810).COLLECTIBLES_SHOP_CARD_GAP * diff2) > width) {
       if (1 < tmp12) {
-        obj = { columns: 1, cardWidth: "Array", rowWidth: "context" };
+        obj = { columns: 1, cardWidth: "Array", rowWidth: "call" };
       }
       return obj;
     }

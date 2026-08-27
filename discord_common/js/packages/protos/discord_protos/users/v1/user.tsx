@@ -3202,7 +3202,7 @@ class AgeAssuranceData$Type extends MessageType20 {
             return callback(1336).Timestamp;
           }
     };
-    items = [, , , , , , , ];
+    items = [, , , , , , , , ];
     items[0] = obj;
     items[1] = {
       no: 2,
@@ -3231,20 +3231,27 @@ class AgeAssuranceData$Type extends MessageType20 {
             return callback(1336).Timestamp;
           }
     };
-    obj = { no: 6, name: "estimated_age_group", kind: "enum", T: null };
+    items[5] = {
+      no: 6,
+      name: "estimated_age_group",
+      kind: "enum",
+      T() {
+            const items = ["discord_protos.users.v1.AgeAssuranceGroup", closure_11];
+            return items;
+          }
+    };
+    items[6] = { no: 7, name: "is_regional_adult", kind: "scalar", T: 8 };
+    obj = { no: 8, name: "cooldown_reset_at", kind: "message", T: null };
     class T {
       constructor() {
-        items = ["discord_protos.users.v1.AgeAssuranceGroup"];
-        items[1] = closure_11;
-        return items;
+        return require("now").Timestamp;
       }
     }
     obj[3] = T;
-    items[5] = obj;
-    items[6] = { no: 7, name: "is_regional_adult", kind: "scalar", T: 8 };
-    items[7] = {
-      no: 8,
-      name: "cooldown_reset_at",
+    items[7] = obj;
+    items[8] = {
+      no: 9,
+      name: "excluded_from_prediction_since",
       kind: "message",
       T() {
             return callback(1336).Timestamp;
@@ -3280,13 +3287,13 @@ prototype20["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        let tmp32 = require;
-        let tmp33 = dependencyMap;
-        let Timestamp3 = now.Timestamp;
-        let tmp34 = Timestamp3;
-        let tmp35 = pos;
-        let tmp36 = readUnknownField;
-        obj.estimatedDateOfBirth = Timestamp3.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.estimatedDateOfBirth);
+        let tmp37 = require;
+        let tmp38 = dependencyMap;
+        let Timestamp4 = now.Timestamp;
+        let tmp39 = Timestamp4;
+        let tmp40 = pos;
+        let tmp41 = readUnknownField;
+        obj.estimatedDateOfBirth = Timestamp4.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.estimatedDateOfBirth);
       } else if (2 === tmp5) {
         obj.method = pos.int32();
       } else if (3 === tmp5) {
@@ -3294,25 +3301,33 @@ prototype20["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (4 === tmp5) {
         obj.vendor = pos.int32();
       } else if (5 === tmp5) {
+        let tmp32 = require;
+        let tmp33 = dependencyMap;
+        let Timestamp3 = now.Timestamp;
+        let tmp34 = Timestamp3;
+        let tmp35 = pos;
+        let tmp36 = readUnknownField;
+        obj.verifiedAt = Timestamp3.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.verifiedAt);
+      } else if (6 === tmp5) {
+        obj.estimatedAgeGroup = pos.int32();
+      } else if (7 === tmp5) {
+        obj.isRegionalAdult = pos.bool();
+      } else if (8 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
         let Timestamp2 = now.Timestamp;
         let tmp29 = Timestamp2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
-        obj.verifiedAt = Timestamp2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.verifiedAt);
-      } else if (6 === tmp5) {
-        obj.estimatedAgeGroup = pos.int32();
-      } else if (7 === tmp5) {
-        obj.isRegionalAdult = pos.bool();
-      } else if (8 === tmp5) {
+        obj.cooldownResetAt = Timestamp2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.cooldownResetAt);
+      } else if (9 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
         let Timestamp = now.Timestamp;
         let tmp24 = Timestamp;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
-        obj.cooldownResetAt = Timestamp.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.cooldownResetAt);
+        obj.excludedFromPredictionSince = Timestamp.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.excludedFromPredictionSince);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -3388,6 +3403,12 @@ prototype20["internalBinaryWrite"] = function internalBinaryWrite(estimatedDateO
     const joined2 = Timestamp3.internalBinaryWrite(estimatedDateOfBirth.cooldownResetAt, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = Timestamp3.internalBinaryWrite(estimatedDateOfBirth.cooldownResetAt, tag.tag(8, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
+  if (estimatedDateOfBirth.excludedFromPredictionSince) {
+    const Timestamp4 = now.Timestamp;
+    const tagResult8 = tag.tag(9, _mod1307.WireType.LengthDelimited);
+    const joined3 = Timestamp4.internalBinaryWrite(estimatedDateOfBirth.excludedFromPredictionSince, tag.tag(9, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = Timestamp4.internalBinaryWrite(estimatedDateOfBirth.excludedFromPredictionSince, tag.tag(9, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -3447,6 +3468,14 @@ const items18 = [
   {
     no: 8,
     name: "cooldown_reset_at",
+    kind: "message",
+    T() {
+      return callback(1336).Timestamp;
+    }
+  },
+  {
+    no: 9,
+    name: "excluded_from_prediction_since",
     kind: "message",
     T() {
       return callback(1336).Timestamp;

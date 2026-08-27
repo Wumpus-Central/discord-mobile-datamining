@@ -122,7 +122,7 @@ const memoResult = importAllResult.memo((userName) => {
   const displayNameStylesFont = obj3.useDisplayNameStylesFont({ displayNameStyles: result, ignoreDisabledStylesSetting });
   let tmp12;
   if (null != displayNameStylesFont) {
-    obj = { fontFamily: null, lineHeight: "r" };
+    obj = { fontFamily: null, lineHeight: "Array" };
     obj[0] = displayNameStylesFont;
     tmp12 = obj;
   }

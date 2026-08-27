@@ -176,9 +176,9 @@ export default function VerificationModal() {
             onVerified(arg0) {
               let arr = arg0;
               let obj = { hideUnverifiedBanner: true, onSubmit: null, onSuccess: null };
-              closure_2 = closure_1_3(/* F122798 */ function() { ... });
+              closure_2 = closure_1_3(/* F122799 */ function() { ... });
               obj[1] = () => { ... };
-              closure_1 = closure_1_3(/* F122800 */ function() { ... });
+              closure_1 = closure_1_3(/* F122801 */ function() { ... });
               obj[2] = () => { ... };
               arr = arr.push(closure_1_10.VERIFY_PASSWORD, obj);
             }
@@ -334,9 +334,9 @@ export default function VerificationModal() {
             onVerified(arg0) {
               let arr = arg0;
               let obj = { hideUnverifiedBanner: true, onSubmit: null, onSuccess: null };
-              closure_2 = closure_1_3(/* F122798 */ function() { ... });
+              closure_2 = closure_1_3(/* F122799 */ function() { ... });
               obj[1] = () => { ... };
-              closure_1 = closure_1_3(/* F122800 */ function() { ... });
+              closure_1 = closure_1_3(/* F122801 */ function() { ... });
               obj[2] = () => { ... };
               arr = arr.push(closure_1_10.VERIFY_PASSWORD, obj);
             }

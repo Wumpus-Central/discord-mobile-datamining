@@ -28,7 +28,7 @@ const Permissions = sum.Permissions;
 let closure_16 = new timestampDefault("MediaPlayerManager");
 let obj = keys.create((arg0) => {
   closure_0 = arg0;
-  obj = { activeMediaPlayerSource: "HermesInternal", mediaSourceMessage: "PX_16", canAccessMedia: "disabled", isPlaying: false, wasPipClosedByUser: null, progress: null, rate: "ct", showPip: "suspicious-download", closePip: "Suspicious Download", displayedMediaItemIdsPerChannel: "Warns users about potentially dangerous file downloads", currentlyDisplayedChannelId: null };
+  obj = { activeMediaPlayerSource: "HermesInternal", mediaSourceMessage: "PX_16", canAccessMedia: "disabled", isPlaying: false, wasPipClosedByUser: null, progress: null, rate: "ct", showPip: "japonsk\u00FD", closePip: "j\u00EDdlo", displayedMediaItemIdsPerChannel: "kebab", currentlyDisplayedChannelId: "mo\u0159sk\u00E9 plody" };
   obj[8] = function closePip() {
     callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
   };

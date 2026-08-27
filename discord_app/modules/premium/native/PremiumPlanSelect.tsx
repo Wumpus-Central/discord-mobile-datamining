@@ -513,8 +513,8 @@ function CurrentPlanRow(subscription) {
                     let obj = {};
                     const merged = Object.assign(arg0);
                     obj.productId = closure_1_1;
-                    obj.continueWithUpsell = closure_3_3(/* F122627 */ function() { ... });
-                    obj.continueWithDefault = closure_3_3(/* F122628 */ function() { ... });
+                    obj.continueWithUpsell = closure_3_3(/* F122628 */ function() { ... });
+                    obj.continueWithDefault = closure_3_3(/* F122629 */ function() { ... });
                     return closure_3_32(closure_0, obj);
                   };
                 });

@@ -208,7 +208,7 @@ export const handleClick = function handleClick(href, preventDefault) {
       }
       tmp3(8577).trackLinkClicked(tmp8);
       if (null == onClick) {
-        const obj3 = { skipExtensionCheck: "a", analyticsLocations: "", messageId: "apply", channelId: true };
+        const obj3 = { skipExtensionCheck: "a", analyticsLocations: "<string:2715680769>", messageId: "<string:3529244673>", channelId: "<string:1337458689>" };
         obj3[1] = items;
         obj3[2] = messageId;
         obj3[3] = channelId;

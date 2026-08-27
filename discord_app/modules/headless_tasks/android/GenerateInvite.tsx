@@ -20364,7 +20364,7 @@ function f21772() {
   class ReplayContainer {
     constructor(arg0) {
       self = this;
-      f105096 = this;
+      f105097 = this;
       options = arg0.options;
       tmp = closure_1_7(this, ReplayContainer);
       this.eventBuffer = null;
@@ -20392,10 +20392,10 @@ function f21772() {
       obj1 = {};
       merged = Object.assign(obj);
       obj1.setTimeoutImpl = closure_0(closure_1[9]).setTimeout;
-      this._debouncedFlush = obj3.debounce(() => f105096._flush(), this._options.flushMinDelay, obj1);
-      f105096 = (timestamp) => {
+      this._debouncedFlush = obj3.debounce(() => f105097._flush(), this._options.flushMinDelay, obj1);
+      f105097 = (timestamp) => {
         let flag = false;
-        if (f105096.eventBuffer) {
+        if (f105097.eventBuffer) {
           flag = false;
           if (!obj.isPaused()) {
             flag = false;
@@ -20498,19 +20498,19 @@ function f21772() {
         setConfigResult = closure_1_133.setConfig(obj3);
       }
       self._handleVisibilityChange = () => {
-        if ("visible" === f105096(map[8]).GLOBAL_OBJ.document.visibilityState) {
-          const result = f105096._doChangeToForegroundTasks();
+        if ("visible" === f105097(map[8]).GLOBAL_OBJ.document.visibilityState) {
+          const result = f105097._doChangeToForegroundTasks();
         } else {
-          const result1 = f105096._doChangeToBackgroundTasks();
+          const result1 = f105097._doChangeToBackgroundTasks();
         }
       };
       self._handleWindowBlur = () => {
         const merged = Object.assign({ category: "ui.blur" });
-        const result = f105096._doChangeToBackgroundTasks({ timestamp: Date.now() / 1000, type: "default" });
+        const result = f105097._doChangeToBackgroundTasks({ timestamp: Date.now() / 1000, type: "default" });
       };
       self._handleWindowFocus = () => {
         const merged = Object.assign({ category: "ui.focus" });
-        const result = f105096._doChangeToForegroundTasks({ timestamp: Date.now() / 1000, type: "default" });
+        const result = f105097._doChangeToForegroundTasks({ timestamp: Date.now() / 1000, type: "default" });
       };
       self._handleKeyboardEvent = (arg0) => {
         if (obj.isEnabled()) {
@@ -20537,7 +20537,7 @@ function f21772() {
                   tmp5 = altKey;
                 }
                 if (tmp5) {
-                  let obj1 = f105096(map[8]);
+                  let obj1 = f105097(map[8]);
                   const tmp9 = obj1.htmlTreeAsString(target, { maxStringLength: 200 }) || "<unknown>";
                   obj = { category: "ui.keyDown", message: null, data: null };
                   obj[1] = tmp9;
@@ -23377,7 +23377,7 @@ function f21799() {
     constructor(arg0) {
       self = this;
       self = this;
-      tmp = closure_1_3(this, f105124);
+      tmp = closure_1_3(this, f105125);
       map = new Map();
       this.pendingCanvasMutations = map;
       this.rafStamps = { latestId: 0, invokeId: null };
@@ -23417,7 +23417,7 @@ function f21799() {
       }
       sampling = str;
       recordCanvas = arg0.recordCanvas;
-      f105124 = recordCanvas;
+      f105125 = recordCanvas;
       errorHandler = arg0.errorHandler;
       arg0.sampling = str;
       ({ mutationCb: self.mutationCb, mirror: self.mirror } = arg0);
@@ -23457,7 +23457,7 @@ function f21799() {
             const canvasFPSObserver = self.initCanvasFPSObserver();
           }
         };
-        f105124 = fn;
+        f105125 = fn;
         tmp8 = errorHandler;
         if (errorHandler) {
           fn = () => {
@@ -23763,13 +23763,13 @@ function f21799() {
           HermesBuiltin.arraySpread(callback3(closure_1.WebGL2RenderingContext.prototype, WebGL.WebGL2, bindResult, closure_3, closure_4, closure_5, 0, closure_1), 0);
           HermesBuiltin.apply(items2, items);
         }
-        const f117318 = () => {
+        const f117319 = () => {
   
         };
         this.restoreHandlers.push(() => {
           items();
           callback();
-          if (typeof f117318 !== "function") {
+          if (typeof f117319 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const item = items.forEach((arg0) => arg0());
@@ -25017,7 +25017,7 @@ function encodeLL(arg0, arg1, arg2, arg3, arg4, depth) {
   return closure_5(obj, arg1, arg2, arg6, arg7);
 }
 
-function f76088(originalFilename) {
+function f76089(originalFilename) {
   originalFilename = originalFilename.originalFilename;
   let isMatch = typeof originalFilename === "string";
   if (typeof originalFilename === "string") {
@@ -25030,7 +25030,7 @@ function f76088(originalFilename) {
   return isMatch;
 }
 
-function f76331(arg0, arg1) {
+function f76332(arg0, arg1) {
   return arg1[1].lastUsedMs - arg0[1].lastUsedMs;
 }
 
@@ -25157,7 +25157,7 @@ function InsertUnicodeExtensionAndCanonicalize(arr) {
   tmp2 = arg1[Symbol.iterator]();
 }
 
-function f105678() {
+function f105679() {
   return {
     navigate(arg0, arg1) {
       const navigation = closure_0.navigation;
@@ -25174,11 +25174,11 @@ function f105678() {
   };
 }
 
-function f105679() {
+function f105680() {
   return { emit: closure_0.navigation.emit };
 }
 
-function f108965(arg0) {
+function f108966(arg0) {
   try {
     const _JSON = JSON;
     return JSON.parse(arg0);
@@ -25194,66 +25194,97 @@ function ot(str) {
   return closure_38(closure_38({}, found[0]), found[1]);
 }
 
-function f112204(arg0) {
+function f112205(arg0) {
   return closure_2.stringifyPrimitive(arg0);
 }
 
-function f113399(soft_deleted) {
+function f113400(soft_deleted) {
   return !soft_deleted.soft_deleted;
 }
 
-function f113400(soft_deleted) {
+function f113401(soft_deleted) {
   return soft_deleted.soft_deleted;
 }
 
-function _asyncIterator(arg0) {
-  if (typeof Symbol !== "undefined") {
-    const _Symbol = Symbol;
-    let str2 = Symbol.asyncIterator;
-    const _Symbol2 = Symbol;
-    let str = Symbol.iterator;
+function maybeAckNotificationCenter() {
+  const self = this;
+  const apply = closure_33.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
   }
-  let num = 1;
-  while (true) {
-    let tmp2 = str;
-    let tmp3 = str2;
-    let tmp = num;
-    if (str2) {
-      if (null != arg0[str2]) {
-        break;
-      }
-    }
-    if (str) {
-      let tmp5 = arg0[str];
-      if (null != tmp5) {
-        let call = tmp5.call;
-        let tmp10 = closure_4;
-        let tmp11 = typeof call === "unknown" ? tmp5() : call(arg0);
-        let tmp12 = new.target;
-        let tmp13 = new.target;
-        let tmp14 = tmp11;
-        tmp10 = new tmp10(tmp11);
-        let tmp16 = tmp10;
-        return tmp10;
-      }
-    }
-    num = num - 1;
-    str = "@@iterator";
-    str2 = "@@asyncIterator";
-    if (tmp) {
-      continue;
-    } else {
-      let _TypeError = TypeError;
-      let tmp6 = new.target;
-      let str3 = "Object is not async iterable";
-      let tmp7 = new.target;
-      let typeError = new TypeError("Object is not async iterable");
-      let tmp9 = typeError;
-      throw typeError;
-    }
+  return applyArgumentsResult;
+}
+
+function f116849() {
+  closure_1_0(closure_1_3[50]).transitionTo(closure_1_14.CHANNEL(closure_0.guild_id, closure_0.channel_id), { navigationReplace: true, openChannel: true });
+}
+
+function handleRelationshipAddNotification() {
+  const self = this;
+  const apply = closure_29.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
   }
-  const call2 = tmp4.call;
-  return typeof call2 === "unknown" ? tmp4() : call2(arg0);
+  return applyArgumentsResult;
+}
+
+function handleCallRingNotification() {
+  const self = this;
+  const apply = closure_30.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+
+function handleCallConnectNotification() {
+  const self = this;
+  const apply = closure_31.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+
+function handleFriendSuggestionCreateNotification() {
+  const self = this;
+  const apply = closure_32.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+
+function handleGuildEventNotification() {
+  const self = this;
+  const apply = closure_28.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+
+function handleStageNotification() {
+  const self = this;
+  const apply = closure_27.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 }
 
 function _asyncIterator(arg0) {
@@ -25356,7 +25387,57 @@ function _asyncIterator(arg0) {
   return typeof call2 === "unknown" ? tmp4() : call2(arg0);
 }
 
-function f117743(baggage) {
+function _asyncIterator(arg0) {
+  if (typeof Symbol !== "undefined") {
+    const _Symbol = Symbol;
+    let str2 = Symbol.asyncIterator;
+    const _Symbol2 = Symbol;
+    let str = Symbol.iterator;
+  }
+  let num = 1;
+  while (true) {
+    let tmp2 = str;
+    let tmp3 = str2;
+    let tmp = num;
+    if (str2) {
+      if (null != arg0[str2]) {
+        break;
+      }
+    }
+    if (str) {
+      let tmp5 = arg0[str];
+      if (null != tmp5) {
+        let call = tmp5.call;
+        let tmp10 = closure_4;
+        let tmp11 = typeof call === "unknown" ? tmp5() : call(arg0);
+        let tmp12 = new.target;
+        let tmp13 = new.target;
+        let tmp14 = tmp11;
+        tmp10 = new tmp10(tmp11);
+        let tmp16 = tmp10;
+        return tmp10;
+      }
+    }
+    num = num - 1;
+    str = "@@iterator";
+    str2 = "@@asyncIterator";
+    if (tmp) {
+      continue;
+    } else {
+      let _TypeError = TypeError;
+      let tmp6 = new.target;
+      let str3 = "Object is not async iterable";
+      let tmp7 = new.target;
+      let typeError = new TypeError("Object is not async iterable");
+      let tmp9 = typeError;
+      throw typeError;
+    }
+  }
+  const call2 = tmp4.call;
+  return typeof call2 === "unknown" ? tmp4() : call2(arg0);
+}
+
+function f117744(baggage) {
   closure_8.setRequestHeader(baggage, closure_6[baggage]);
 }
 
@@ -25378,18 +25459,18 @@ function shouldRecreateSetupIntentForPaymentElement(code) {
   return tmp;
 }
 
-function f118211(error) {
+function f118212(error) {
   const intl = closure_0(closure_3[5]).intl;
   let obj = closure_0(closure_3[6]);
   obj = { tags: { source: "payment_elements" } };
   return obj.dispatchConfirmationError(error, true, intl.string(closure_0(closure_3[5]).t.khEaRI), obj);
 }
 
-function f118450(planId) {
+function f118451(planId) {
   return { plan_id: planId.planId, quantity: planId.quantity };
 }
 
-function f118451() {
+function f118452() {
   return closure_1_32(closure_0, closure_7, closure_5, true);
 }
 
@@ -25415,7 +25496,7 @@ function getTrialOfferSignature() {
   return applyArgumentsResult;
 }
 
-function f118458() {
+function f118459() {
   let obj = closure_1_1(closure_1_3[30]);
   obj = {
     importer() {
@@ -25438,14 +25519,14 @@ function f118458() {
   obj.openLazy(obj);
 }
 
-function f119123(arr) {
+function f119124(arr) {
   return arr.every((arg0) => {
     const ipV6 = regex.regex.ipV6;
     return ipV6.test(arg0);
   });
 }
 
-function f119124(arg0, tldBlacklist) {
+function f119125(arg0, tldBlacklist) {
   const _Array = Array;
   if (tldBlacklist.tldBlacklist) {
     if (!isArray(tldBlacklist.tldBlacklist)) {
@@ -25471,7 +25552,7 @@ function f119124(arg0, tldBlacklist) {
   }
 }
 
-function f119125(arg0, arg1, arg2) {
+function f119126(arg0, arg1, arg2) {
   let tmp14;
   let obj = arg1;
   let typeError = arg2;
@@ -27177,7 +27258,7 @@ function t(options) {
   this.options = options;
 }
 
-function f119300(arg0, arg1) {
+function f119301(arg0, arg1) {
   let length;
   const self = this;
   const options = this.options;
@@ -27807,12 +27888,12 @@ function get() {
   return this.yearinfo.nmdaymask;
 }
 
-function f119313() {
+function f119314() {
   const items = [closure_7(this.yearlen), 0, this.yearlen];
   return items;
 }
 
-function f119314(arg0, arg1) {
+function f119315(arg0, arg1) {
   const yearlen = this.yearlen;
   if (typeof closure_8 !== "function") {
     HermesBuiltin.throwTypeError();
@@ -27847,7 +27928,7 @@ function f119314(arg0, arg1) {
   return items2;
 }
 
-function f119315(arg0, arg1, arg2) {
+function f119316(arg0, arg1, arg2) {
   const self = this;
   const sum = this.yearlen + 7;
   if (typeof closure_8 !== "function") {
@@ -27912,7 +27993,7 @@ function f119315(arg0, arg1, arg2) {
   return items2;
 }
 
-function f119316(arg0, arg1, arg2) {
+function f119317(arg0, arg1, arg2) {
   const yearlen = this.yearlen;
   if (typeof closure_8 !== "function") {
     HermesBuiltin.throwTypeError();
@@ -27958,7 +28039,7 @@ function f119316(arg0, arg1, arg2) {
   return items2;
 }
 
-function f119317(arg0, arg1, arg2, arg3) {
+function f119318(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
   closure_1 = arg2;
   closure_2 = arg3;
@@ -27978,7 +28059,7 @@ function f119317(arg0, arg1, arg2, arg3) {
   return closure_4;
 }
 
-function f119318(arg0, arg1, arg2, arg3) {
+function f119319(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg3;
@@ -28005,7 +28086,7 @@ function f119318(arg0, arg1, arg2, arg3) {
   return mapped;
 }
 
-function f119319(hour, minute, second) {
+function f119320(hour, minute, second) {
   if (typeof closure_49 !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -28019,7 +28100,7 @@ function f119319(hour, minute, second) {
   return items;
 }
 
-function f119320(arg0) {
+function f119321(arg0) {
   const self = this;
   if (closure_39.YEARLY === arg0) {
     const ydayset = self.ydayset;
@@ -28037,7 +28118,7 @@ function f119320(arg0) {
   }
 }
 
-function f119321(arg0) {
+function f119322(arg0) {
   const self = this;
   if (closure_39.HOURLY === arg0) {
     const htimeset = self.htimeset;
@@ -28484,11 +28565,11 @@ function t(arg0, arg1) {
   throw error1;
 }
 
-function f119323(arg0, arg1) {
+function f119324(arg0, arg1) {
   return closure_47(arg0, arg1);
 }
 
-function f119324(arg0, arg1) {
+function f119325(arg0, arg1) {
   let tmp = arg1;
   if (undefined === arg1) {
     tmp = closure_41;
@@ -28498,18 +28579,18 @@ function f119324(arg0, arg1) {
   return new.target;
 }
 
-function f119325(arg0) {
+function f119326(arg0) {
   let tmp = closure_0;
   const tmp2 = closure_0.parseString(arg0) || undefined;
   tmp = new tmp(tmp2);
   return Object.create(tmp.prototype);
 }
 
-function f119326(arg0) {
+function f119327(arg0) {
   return closure_68(arg0, this.options);
 }
 
-function f119327(arg0, arg1) {
+function f119328(arg0, arg1) {
   let _cacheGetResult = this._cache;
   if (_cacheGetResult) {
     const _cache = tmp._cache;
@@ -28518,14 +28599,14 @@ function f119327(arg0, arg1) {
   return _cacheGetResult;
 }
 
-function f119328(arg0, arg1, arg2) {
+function f119329(arg0, arg1, arg2) {
   if (this._cache) {
     const _cache = tmp._cache;
     return _cache._cacheAdd(arg0, arg1, arg2);
   }
 }
 
-function f119329(iterator) {
+function f119330(iterator) {
   const self = this;
   if (iterator) {
     if (typeof closure_40 !== "function") {
@@ -28555,7 +28636,7 @@ function f119329(iterator) {
   }
 }
 
-function f119330(getTime, getTime2, arg2, iterator) {
+function f119331(getTime, getTime2, arg2, iterator) {
   let flag = arg2;
   if (undefined === arg2) {
     flag = false;
@@ -28621,7 +28702,7 @@ function f119330(getTime, getTime2, arg2, iterator) {
   throw error;
 }
 
-function f119331(getTime) {
+function f119332(getTime) {
   let flag = arg1;
   if (undefined === arg1) {
     flag = false;
@@ -28657,7 +28738,7 @@ function f119331(getTime) {
   }
 }
 
-function f119332(getTime) {
+function f119333(getTime) {
   let flag = arg1;
   if (undefined === arg1) {
     flag = false;
@@ -28693,24 +28774,24 @@ function f119332(getTime) {
   }
 }
 
-function f119333() {
+function f119334() {
   return this.all().length;
 }
 
-function f119334() {
+function f119335() {
   return closure_56(this.origOptions);
 }
 
-function f119335(arg0, arg1, arg2) {
+function f119336(arg0, arg1, arg2) {
   new closure_45(this, arg0, arg1, arg2);
   return new.target.toString();
 }
 
-function f119336() {
+function f119337() {
   return closure_48(this);
 }
 
-function f119337() {
+function f119338() {
   new closure_0(this.origOptions);
   return Object.create(closure_0.prototype);
 }
@@ -28740,7 +28821,7 @@ function e(arg0) {
   return callResult;
 }
 
-function f119339(accept) {
+function f119340(accept) {
   ({ _rrule, _exrule, _rdate, _exdate } = this);
   const tzidResult = this.tzid();
   let after = accept;
@@ -28878,43 +28959,43 @@ function f119339(accept) {
   return tmp13;
 }
 
-function f119340(arg0) {
+function f119341(arg0) {
   closure_77(arg0, this._rrule);
 }
 
-function f119341(arg0) {
+function f119342(arg0) {
   closure_77(arg0, this._exrule);
 }
 
-function f119342(arg0) {
+function f119343(arg0) {
   closure_78(arg0, this._rdate);
 }
 
-function f119343(arg0) {
+function f119344(arg0) {
   closure_78(arg0, this._exdate);
 }
 
-function f119344() {
+function f119345() {
   const _rrule = this._rrule;
   return _rrule.map((arg0) => callback(arg0.toString()));
 }
 
-function f119345() {
+function f119346() {
   const _exrule = this._exrule;
   return _exrule.map((arg0) => callback(arg0.toString()));
 }
 
-function f119346() {
+function f119347() {
   const _rdate = this._rdate;
   return _rdate.map((getTime) => new Date(getTime.getTime()));
 }
 
-function f119347() {
+function f119348() {
   const _exdate = this._exdate;
   return _exdate.map((getTime) => new Date(getTime.getTime()));
 }
 
-function f119348() {
+function f119349() {
   const self = this;
   closure_0 = [];
   let _dtstart = !length;
@@ -29021,11 +29102,11 @@ function f119348() {
   }
 }
 
-function f119349() {
+function f119350() {
   return this.valueOf().join("\n");
 }
 
-function f119350() {
+function f119351() {
   const self = this;
   const _cache = this._cache;
   let obj = Object.create(closure_1.prototype);
@@ -29056,7 +29137,7 @@ function f119350() {
   return callResult;
 }
 
-function f120520(channelId) {
+function f120521(channelId) {
   let obj = { channelId: channelId.channel_id };
   let result = closure_2_22.canWithPartialContext(closure_2_31.CONNECT, obj);
   if (result) {
@@ -29089,7 +29170,7 @@ function f120520(channelId) {
   }
 }
 
-function f120521(id) {
+function f120522(id) {
   const user = closure_2_26.getUser(id);
   if (null != user) {
     if (user.bot) {
@@ -29115,24 +29196,24 @@ function f120521(id) {
   }
 }
 
-function f120522(userId) {
+function f120523(userId) {
   userId = userId.userId;
   closure_10(userId, closure_2_23.getPrimaryActivity(userId, closure_1_1), userId);
 }
 
-function f120523(event) {
+function f120524(event) {
   return closure_13.push({ kind: "guild-event", event, isLive: true });
 }
 
-function f120524(event) {
+function f120525(event) {
   return closure_13.push({ kind: "guild-event", event, isLive: false });
 }
 
-function f120900(arg0) {
+function f120901(arg0) {
   return closure_1_0.deleteMessage(closure_1, closure_0, arg0);
 }
 
-function f121114(name, name2) {
+function f121115(name, name2) {
   return Number("" !== name.name.trim()) - Number("" !== name2.name.trim());
 }
 
@@ -29186,7 +29267,7 @@ function _asyncIterator(arg0) {
   return typeof call2 === "unknown" ? tmp4() : call2(arg0);
 }
 
-function f121197(arg0, arg1) {
+function f121198(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   function subscribeOnce(LOGIN_SUCCESS, arg1) {
@@ -29209,19 +29290,19 @@ function f121197(arg0, arg1) {
   subscribeOnce("LOGIN_SUCCESS", () => callback());
 }
 
-function f121198(arg0) {
-  return closure_7(arg0);
-}
-
 function f121199(arg0) {
   return closure_7(arg0);
 }
 
 function f121200(arg0) {
+  return closure_7(arg0);
+}
+
+function f121201(arg0) {
   return setTimeout(arg0, 1000);
 }
 
-function f121201(arg0, arg1) {
+function f121202(arg0, arg1) {
   closure_0 = arg0;
   const timeout = setTimeout(arg1, 15000);
   const result = closure_1_10.addConditionalChangeListener(() => {
@@ -29241,15 +29322,15 @@ function f121201(arg0, arg1) {
   });
 }
 
-function f121202(arg0) {
+function f121203(arg0) {
   return setTimeout(arg0, 1000);
 }
 
-function f121845(arg0) {
+function f121846(arg0) {
   return closure_0[arg0];
 }
 
-function f122547(str) {
+function f122548(str) {
   if (2 === str.length) {
     return closure_69[str];
   } else {

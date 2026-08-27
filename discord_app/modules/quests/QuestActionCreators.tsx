@@ -2559,7 +2559,7 @@ function _fetchQuestHomeHero() {
               throwTypeErrorResult = closure_1_2;
               const QUEST_HOME_BANNER_DESKTOP = closure_1_0(closure_1_2[13]).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
               callback = QUEST_HOME_BANNER_DESKTOP;
-              if (!closure_1_4.isFetchingQuestToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
+              if (!closure_1_4.isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
                 const lastFetchedQuestHomeHero = obj22.getLastFetchedQuestHomeHero();
                 if (null != lastFetchedQuestHomeHero) {
                   const _Date = Date;

@@ -7,7 +7,7 @@ import { OrderStatus } from "CustomCheckoutFlow" /* 4427 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
-function getOrders() {
+function getOrders(arg0) {
   const self = this;
   const apply = _getOrders.apply;
   if (typeof apply === "unknown") {

@@ -343,9 +343,9 @@ function Content(arg0) {
             onDelete() {
               const ref_type = closure_1;
               if (ref_type.ref_type === closure_2_10.CHANNEL) {
-                closure_1_8((arr) => arr.filter(/* F122706 */ function() { ... }));
+                closure_1_8((arr) => arr.filter(/* F122707 */ function() { ... }));
               } else {
-                closure_1_10((arr) => arr.filter(/* F122707 */ function() { ... }));
+                closure_1_10((arr) => arr.filter(/* F122708 */ function() { ... }));
               }
             },
             onSave(ref_type) {

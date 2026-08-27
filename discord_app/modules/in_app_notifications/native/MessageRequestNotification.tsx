@@ -30,8 +30,8 @@ export default function MessageRequestInAppNotification(notification) {
     }
   }, []);
   let obj = { icon: null, header: null, children: null, onPress: null, notification: null };
-  obj = { user: author, size: author(1297).AvatarSizes.NORMAL, guildId: "r" };
-  obj[0] = jsx(author(1297).Avatar, { user: author, size: author(1297).AvatarSizes.NORMAL, guildId: "r" });
+  obj = { user: author, size: author(1297).AvatarSizes.NORMAL, guildId: "Array" };
+  obj[0] = jsx(author(1297).Avatar, { user: author, size: author(1297).AvatarSizes.NORMAL, guildId: "Array" });
   obj[1] = memo;
   obj = { text: null };
   let intl = author(1236).intl;

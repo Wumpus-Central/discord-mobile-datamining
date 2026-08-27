@@ -1226,7 +1226,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result7 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "PX_16", hasSpoilerEmbeds: "+1", hasBailedAst: "anla\u015Ft\u0131k" };
+    parseMessageMarkupResult = { content: "PX_16", hasSpoilerEmbeds: "CONNECTION_OPEN", hasBailedAst: "WRITE_CACHES" };
     const tmp13Result1 = tmp13(tmp3[42]);
   }
 }

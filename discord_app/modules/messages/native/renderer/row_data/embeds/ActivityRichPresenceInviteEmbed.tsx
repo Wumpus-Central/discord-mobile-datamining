@@ -421,7 +421,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                       obj5[2] = remoteJoinFooterLabel;
                       let obj11 = obj5;
                     } else if (canSendInvite) {
-                      const obj6 = { label: null, disabled: null, footerLabel: "r" };
+                      const obj6 = { label: null, disabled: null, footerLabel: "Array" };
                       const intl12 = intl(1236).intl;
                       obj6[0] = intl12.string(intl(1236).t["hC/Zey"]);
                       obj6[1] = message.author.id === id1;
@@ -432,7 +432,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                       obj7[0] = intl11.string(intl(1236).t.KC26NR);
                       obj11 = obj7;
                     } else if (id2) {
-                      const obj8 = { label: "ct", disabled: null, footerLabel: "HOSTED_FIELDS_TOKENIZATION_CVV_VERIFICATION_FAILED" };
+                      const obj8 = { label: "ct", disabled: null, footerLabel: null };
                       const intl10 = intl(1236).intl;
                       const obj9 = { username: null, appName: null };
                       obj9[0] = message.author.globalName;
@@ -448,7 +448,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                           obj11 = obj10;
                         }
                       }
-                      obj11 = { label: "ct", disabled: null, footerLabel: "HOSTED_FIELDS_TOKENIZATION_CVV_VERIFICATION_FAILED" };
+                      obj11 = { label: "ct", disabled: null, footerLabel: null };
                       const intl8 = intl(1236).intl;
                       obj11[2] = intl8.string(intl(1236).t.OAB5TK);
                     }
@@ -597,7 +597,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
               return null;
             }
           }
-          const obj15 = { displayType: null, headerText: null, subtitle: null, ctaButtonEnabled: false, ctaButtonText: "ct", ctaButtonIsLoading: "Array", footerLabel: "PX_16", gradientColors: 0, iconSrc: null, isPlatformSupported: "Array", isSpotifyParty: "accessibilityRole", maxPartySize: "description", partyMemberAvatarURIs: "ref", partySizeText: null, platformIconKeys: "user", coverImageUrl: null, detailsText: null, title: 68 };
+          const obj15 = { displayType: null, headerText: null, subtitle: null, ctaButtonEnabled: false, ctaButtonText: "ct", ctaButtonIsLoading: "Array", footerLabel: "PX_16", gradientColors: 0, iconSrc: null, isPlatformSupported: "Array", isSpotifyParty: "channel", maxPartySize: "flex", partyMemberAvatarURIs: "isArray", partySizeText: "r", platformIconKeys: "disabled", coverImageUrl: "end", detailsText: "isArray", title: "isArray" };
           obj15[0] = obj.BLOCKED;
           const intl2 = intl(1236).intl;
           obj15[1] = intl2.string(intl(1236).t.pkq6Vq);

@@ -43,7 +43,7 @@ const memoResult = importAllResult.memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "call", type: null };
+    return { channelId: "call", type: "OPEN_APP_DM" };
   });
   if ("private" === stateFromStoresObject.type) {
     obj = { style: null, children: null };

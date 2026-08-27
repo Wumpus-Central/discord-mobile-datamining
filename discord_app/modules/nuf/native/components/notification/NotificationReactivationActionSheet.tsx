@@ -38,7 +38,7 @@ export default function NotificationReactivationActionSheet(location) {
   }, items);
   const callback1 = React.useCallback(() => {
     let obj = closure_1_1(closure_1_2[7]);
-    obj = { action_type: closure_1_6.SKIP_STEP, action_location: _location, permission_granted: "r" };
+    obj = { action_type: closure_1_6.SKIP_STEP, action_location: _location, permission_granted: "Array" };
     obj.track(closure_1_7.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
     closure_1_1(closure_1_2[9]).hideActionSheet();
   }, items1);

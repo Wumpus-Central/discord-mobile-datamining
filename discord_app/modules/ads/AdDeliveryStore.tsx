@@ -31,7 +31,7 @@ Object.defineProperty(prototype, "lastFetchedQuestToDeliver", {
   },
   set: undefined
 });
-prototype["isFetchingQuestToDeliverByPlacement"] = function isFetchingQuestToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP) {
+prototype["isFetchingAdToDeliverByPlacement"] = function isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP) {
   let flag;
   if (map != null) {
     flag = map.get(QUEST_HOME_BANNER_DESKTOP);
@@ -53,8 +53,8 @@ prototype["canRefreshAd"] = function canRefreshAd(QUEST_HOME_BANNER_DESKTOP) {
   }
   return tmp3;
 };
-Object.defineProperty(prototype, "questAdDecisionByPlacement", {
-  get: function questAdDecisionByPlacement() {
+Object.defineProperty(prototype, "deliveryAdDecisionByPlacement", {
+  get: function deliveryAdDecisionByPlacement() {
     return map1;
   },
   set: undefined

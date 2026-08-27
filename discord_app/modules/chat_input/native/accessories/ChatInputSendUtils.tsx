@@ -348,7 +348,7 @@ function _chatInputSendApplicationCommand() {
                   tmp20 = null != closure_5;
                 }
                 if (tmp20) {
-                  const obj5 = { text: null, parsedMessage: "Array", tts: "handleSendApplicationCommand", source: null, params: "M9 6v1H8v2h1v2h2v1h3v-1h1V6H9Z" };
+                  const obj5 = { text: null, parsedMessage: "Array", tts: "handleSendApplicationCommand", source: null, params: "M13 13V12H12V13H13Z" };
                   obj5[0] = closure_5.content;
                   obj5[2] = closure_5.tts;
                   obj5[4] = params;
@@ -436,7 +436,9 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             let intl2 = getSystemLocale.intl;
             obj[2] = intl2.string(getSystemLocale.t.KJnHq3);
             obj[3] = function onConfirm() {
-              closure_1_15({ text: closure_0, parsedMessage: closure_2, tts: "accessibilityRole", source: null, params });
+              const obj = { text: closure_0, parsedMessage: closure_2, tts: "accessibilityRole", source: true, params: true };
+              obj[4] = params;
+              closure_1_15(obj);
             };
             let intl3 = getSystemLocale.intl;
             obj[4] = intl3.string(getSystemLocale.t.fsBWmS);
@@ -452,7 +454,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             obj[0] = channel.id;
             obj[1] = uploads;
             obj[2] = function sendMessage() {
-              const obj = { text: closure_0, parsedMessage: closure_2, tts: "accessibilityRole", source: false, params: false };
+              const obj = { text: closure_0, parsedMessage: closure_2, tts: "accessibilityRole", source: true, params: true };
               obj[4] = params;
               closure_1_15(obj);
             };
@@ -464,7 +466,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        obj1 = { text: null, parsedMessage: null, tts: "accessibilityRole", source: "sur", params: "isArrayBuffer" };
+        obj1 = { text: null, parsedMessage: null, tts: "accessibilityRole", source: true, params: true };
         obj1[0] = text;
         obj1[1] = tmp2;
         obj1[4] = params;

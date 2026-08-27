@@ -70,7 +70,7 @@ function RegisterIdentityBase(inputMode) {
               obj1[1] = closure_1_13.SUBMITTED;
               closure_1_9(obj1);
               if (closure_1_0 === closure_1_0(closure_1_2[18]).PhoneOrEmailSelectorForceMode.EMAIL) {
-                const obj2 = { email: null, phoneToken: "r" };
+                const obj2 = { email: null, phoneToken: "Array" };
                 obj2[0] = c4;
                 closure_1_10(obj2);
                 const tmp26 = closure_1_7();

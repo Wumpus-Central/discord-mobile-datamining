@@ -179,7 +179,7 @@ export default function TransferOwnership(guild) {
   const tmp7 = callback(_handleTransfer.useState(false), 2);
   const items2 = [callback2(guild(1297).Avatar, { user: stateFromStores, guildId: guild.id, size: guild(1297).AvatarSizes.XXLARGE }), ];
   const obj6 = { style: tmp5.avatarFauxBorder, children: null };
-  const obj7 = { user: toUser, guildId: "r", size: "LU", style: "+352" };
+  const obj7 = { user: toUser, guildId: "r", size: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009464427057833978, style: 5168188345740660000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
   obj7[2] = guild(1297).AvatarSizes.XXLARGE;
   obj7[3] = tmp5.otherUserAvatar;
   obj6[1] = callback2(guild(1297).Avatar, obj7);

@@ -93,7 +93,7 @@ function loadThread(channelId) {
         }).catch(() => {
           closure_1_11[closure_0] = { type: "NOT_FOUND" };
           let obj = lib(closure_1_2[6]);
-          obj = { id: closure_0, guild_id: null, parent_id: "r" };
+          obj = { id: closure_0, guild_id: null, parent_id: "Array" };
           let guildId;
           if (lib != null) {
             const params = lib.params;

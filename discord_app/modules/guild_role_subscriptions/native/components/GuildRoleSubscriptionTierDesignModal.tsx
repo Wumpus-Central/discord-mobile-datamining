@@ -80,7 +80,7 @@ function Content() {
   obj2[2] = UPLOAD_SMALL_SIZE;
   obj2[3] = _require(17227).PreviewShape.SQUIRCLE;
   obj2[5] = function setImage(icon) {
-    return callback({ icon: icon.uri, unicodeEmoji: "r" });
+    return callback({ icon: icon.uri, unicodeEmoji: "Array" });
   };
   obj2[6] = roleSubscriptionSettingsDisabled;
   items1[2] = callback2(tmpResult, obj2);

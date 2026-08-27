@@ -359,7 +359,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
                   if (0 === arg1) {
                     num = screenIndex(tmp4[17]).space.PX_4;
                   }
-                  obj = { style: { marginLeft: num }, user: user.user, guildId: "r", size: -898957311, cutout: -688521215 };
+                  obj = { style: { marginLeft: num }, user: user.user, guildId: "r", size: false, cutout: false };
                   obj[3] = channelId(closure_2[15]).AvatarSizes.XSMALL;
                   if (arg1 !== diff) {
                     const tmp7 = closure_1_23;

@@ -3722,7 +3722,7 @@ obj = {
     });
     const item = found.forEach((messageId) => {
       const value = closure_81.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "ct", isExplicitUserAction: "literal", trackAnalytics: "scale" });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "ct", isExplicitUserAction: true, trackAnalytics: false });
     });
     if (context === closure_41) {
       const push = navigation.push;
