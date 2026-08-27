@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCard.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import CONFIG_NEVER_ANIMATE from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04891_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04892_LinearGradient.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -1173,13 +1173,13 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
     str2 = "animate-never";
   }
   obj = { originX: obj.withSpring(originX.targetOriginX, SUBTLE_SPRING, str2), originY: null, width: null, height: null };
-  let tmpResult = tmp(4878);
+  let tmpResult = tmp(4879);
   let str3 = str;
   if (flag) {
     str3 = "animate-never";
   }
   obj[1] = tmpResult.withSpring(originX.targetOriginY, SUBTLE_SPRING, str3);
-  tmpResult = tmp(4878);
+  tmpResult = tmp(4879);
   let str4 = str;
   if (flag) {
     str4 = "animate-never";
@@ -1445,7 +1445,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp25 = callback;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "call", layout: true, layoutPhysics: true };
+  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "accessibilityRole", layout: true, layoutPhysics: true };
   obj8[3] = layoutTransition;
   obj8[4] = physics;
   tmp26Result = callback(closure_37, obj8);

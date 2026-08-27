@@ -5,7 +5,7 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef4158 from "../../../../lib/native/Linking.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import BottomSheetModal from "../../../../../_runtime/05571_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05576_BottomSheetModal.js";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import _getDeepLinkUrlDefault from "../../hooks/useOpenExternalUrlFromGameProfile.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";

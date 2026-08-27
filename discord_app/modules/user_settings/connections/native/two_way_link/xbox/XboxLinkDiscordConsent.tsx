@@ -21,6 +21,6 @@ export default function XboxLinkDiscordConsent(arg0) {
   const callback1 = React.useCallback(() => {
     navigation.push(closure_1_3.ERROR);
   }, items1);
-  obj = { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(10686).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 };
-  return jsx(navigation(10648).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(10686).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 });
+  obj = { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(9236).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 };
+  return jsx(navigation(9235).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.XBOX, callbackCode, callbackState, clientId: navigation(9236).ConsoleOAuthApplications.XBOX_APPLICATION_ID, scopes: XBOX_CLIENT_SCOPES, onNext: callback, onError: callback1 });
 };

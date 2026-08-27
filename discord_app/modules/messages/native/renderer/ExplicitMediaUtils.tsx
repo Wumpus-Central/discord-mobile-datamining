@@ -30,15 +30,15 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
     num3 = 0;
   }
   obj[1] = num3;
-  let tmpResult = tmp(6082);
-  obj = { type: tmp(6087).ObscuredMediaTypes.Attachment, media: obj };
+  let tmpResult = tmp(6090);
+  obj = { type: tmp(6095).ObscuredMediaTypes.Attachment, media: obj };
   const mediaObscuredReasonFromBitmask = tmpResult.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
-  tmpResult = tmp(6082);
+  tmpResult = tmp(6090);
   let isVerifiedTeenResult = tmp5;
   obj1 = { type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj };
   if (mediaObscuredReasonFromBitmask.length > 0) {
-    isVerifiedTeenResult = tmp(4685).isVerifiedTeen();
-    const tmpResult1 = tmp(4685);
+    isVerifiedTeenResult = tmp(4686).isVerifiedTeen();
+    const tmpResult1 = tmp(4686);
   }
   let tmp7 = shouldObscureSpoiler;
   if (shouldObscureSpoiler) {
@@ -80,9 +80,9 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
   let isMediaScanPendingResult = !isAuthorBot;
   const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
   if (!isAuthorBot) {
-    let tmpResult = tmp(6082);
+    let tmpResult = tmp(6090);
     obj = { type: null, media: null };
-    obj[0] = tmp(6087).ObscuredMediaTypes.GenericMedia;
+    obj[0] = tmp(6095).ObscuredMediaTypes.GenericMedia;
     obj[1] = mediaItem;
     isMediaScanPendingResult = tmpResult.isMediaScanPending(obj, enabledContentHarmTypeFlags);
   }
@@ -91,7 +91,7 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
   }
   let isVerifiedTeenResult = tmp4;
   if (mediaObscuredReasonFromBitmask.length > 0) {
-    tmpResult = tmp(4685);
+    tmpResult = tmp(4686);
     isVerifiedTeenResult = tmpResult.isVerifiedTeen();
   }
   obj1 = { isSpoiler: isSpoilered, spoilerDescription: null, isObscured: null, obscureDescription: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null };

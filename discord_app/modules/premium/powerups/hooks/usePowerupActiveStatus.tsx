@@ -54,7 +54,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (null != stateFromStores) {
           if (null != guild) {
             if (null == closure_1_6[skuId.skuId]) {
-              obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "call" };
+              obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "disabled" };
             } else {
               let tmp4;
               if (null != closure_1_7[tmp22]) {
@@ -123,11 +123,11 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           return obj;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "call" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "disabled" };
     }
   });
   if (mapped.length <= 0) {
-    obj = { type: null, sourceEntitlement: "Array", sourcePowerup: "paddingHorizontal" };
+    obj = { type: null, sourceEntitlement: "Array", sourcePowerup: "isArray" };
     obj[0] = constants.INACTIVE;
     let first = obj;
   } else {
@@ -178,7 +178,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
         if (null != stateFromStores) {
           if (null != guild) {
             if (null == closure_1_6[skuId.skuId]) {
-              obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "call" };
+              obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "disabled" };
             } else {
               let tmp4;
               if (null != closure_1_7[tmp22]) {
@@ -247,7 +247,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
           return obj;
         }
       }
-      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "call" };
+      obj = { isActiveFromLevel: false, levelEntitlement: "Boolean", levelPowerup: "disabled" };
     }
   });
 };

@@ -178,7 +178,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   const callback3 = obj1.useCallback(() => {
     const result = channel(isPressed[19]).openChannelLongPressActionSheet(channel.id);
   }, items12);
-  obj = { onPressIn: callback, onPressOut: callback1, onPress: callback2, onLongPress: callback3, accessibilityRole: "button", accessibilityLabel: tmp4(tmp2[21])({ channel, unread: hasUnreadMessages, mentionCount, isIncomingCall, isOngoingCall }), accessibilityHint: null, underlayColor: null, style: null, children: null };
+  obj = { onPressIn: callback, onPressOut: callback1, onPress: callback2, onLongPress: callback3, accessibilityRole: "button", accessibilityLabel: tmp4(tmp2[21])({ channel, unread: hasUnreadMessages, mentionCount, isIncomingCall, isOngoingCall, ignored, blocked }), accessibilityHint: null, underlayColor: null, style: null, children: null };
   const obj8 = channel(isPressed[15]);
   const tmp24 = closure_13;
   obj[6] = channel(isPressed[21]).getChannelA11yHint({ channel, muted, userStatus: status, isFavorite: favorite });

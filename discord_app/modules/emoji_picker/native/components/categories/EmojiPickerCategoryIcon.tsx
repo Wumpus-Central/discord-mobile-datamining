@@ -1,7 +1,8 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx
 import ClockIcon from "../../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
-import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
+import FlagIcon from "../../../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import TrophyIcon from "../../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 import StarIcon from "../../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import NatureIcon from "../../../../../design/components/Icon/native/redesign/generated/NatureIcon.tsx";
@@ -10,7 +11,6 @@ import GameControllerIcon from "../../../../../design/components/Icon/native/red
 import BicycleIcon from "../../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx";
 import ObjectIcon from "../../../../../design/components/Icon/native/redesign/generated/ObjectIcon.tsx";
 import HeartIcon from "../../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
-import FlagIcon from "../../../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import { EmojiCategories } from "../../../EmojiPickerConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";

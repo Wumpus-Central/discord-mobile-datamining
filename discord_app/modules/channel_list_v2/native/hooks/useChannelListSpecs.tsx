@@ -7,12 +7,12 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
 
 export default function useChannelListSpecs(banner) {
-  redesignGuildHeaderHeight = redesignGuildHeaderHeight(15569).useRedesignGuildHeaderHeight(banner);
+  redesignGuildHeaderHeight = redesignGuildHeaderHeight(15634).useRedesignGuildHeaderHeight(banner);
   height = height(1494)().height;
-  const tmp2 = height(15456)();
+  const tmp2 = height(15521)();
   dependencyMap = tmp2;
-  const obj = redesignGuildHeaderHeight(15569);
-  const fontScale = redesignGuildHeaderHeight(4886).useFontScale();
+  const obj = redesignGuildHeaderHeight(15634);
+  const fontScale = redesignGuildHeaderHeight(4887).useFontScale();
   closure_4 = tmp4;
   const top = height(1629)().top;
   const items = [null != banner.banner, tmp2, height, redesignGuildHeaderHeight, top, fontScale];
@@ -22,6 +22,6 @@ export default function useChannelListSpecs(banner) {
       const _Math = Math;
       num = Math.min(dependencyMap / closure_4, height * top);
     }
-    return { bannerHeight: height(11321)(num), bannerWidth: height(11321)(dependencyMap), headerHeight: height(11321)(redesignGuildHeaderHeight), fontScale, listTop: height(11321)(num + redesignGuildHeaderHeight), listBottom: 0, listPaddingBottom: height(11321)(24), listViewportHeight: height(11321)(height - top) };
+    return { bannerHeight: height(10650)(num), bannerWidth: height(10650)(dependencyMap), headerHeight: height(10650)(redesignGuildHeaderHeight), fontScale, listTop: height(10650)(num + redesignGuildHeaderHeight), listBottom: 0, listPaddingBottom: height(10650)(24), listViewportHeight: height(10650)(height - top) };
   }, items);
 };

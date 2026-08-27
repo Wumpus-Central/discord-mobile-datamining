@@ -1,7 +1,7 @@
 // discord_app/design/components/Navigator/native/PostponeRender.native.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
-import _modDef5996 from "../../../../modules/keyboard/native/KeyboardAwareView.tsx";
+import _modDef6001 from "../../../../modules/keyboard/native/KeyboardAwareView.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -42,12 +42,12 @@ export const PostponeRender = function PostponeRender(children) {
     }
   });
   if (first) {
-    children = jsx(first(5994).SceneLoadingIndicator, {});
+    children = jsx(first(5999).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;
   } else {
-    tmp4Result = _modDef5996;
+    tmp4Result = _modDef6001;
   }
   const style = [callback2().view, viewStyle];
   return <tmp4Result style={style}>{children}</tmp4Result>;

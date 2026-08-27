@@ -11,8 +11,8 @@ import XSmallIcon from "../../../design/components/Icon/native/redesign/generate
 import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import SettingsIcon from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
-import GiftIcon from "../../../design/components/Icon/native/redesign/generated/GiftIcon.tsx";
 import ServerIcon from "../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx";
+import GiftIcon from "../../../design/components/Icon/native/redesign/generated/GiftIcon.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import PhoneIcon from "../../../design/components/Icon/native/redesign/generated/PhoneIcon.tsx";
 import CreditCardIcon from "../../../design/components/Icon/native/redesign/generated/CreditCardIcon.tsx";
@@ -34,8 +34,8 @@ function RowGroup(children) {
       if (true === negative) {
         str = "text-status-dnd";
       }
-      obj[2] = closure_3(callback(5546).TableRow.Icon, { variant: str, IconComponent });
-      return closure_3(callback(5546).TableRow, obj, header);
+      obj[2] = closure_3(callback(5551).TableRow.Icon, { variant: str, IconComponent });
+      return closure_3(callback(5551).TableRow, obj, header);
     })
   };
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);

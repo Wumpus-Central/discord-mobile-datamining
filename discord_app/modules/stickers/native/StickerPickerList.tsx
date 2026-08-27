@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../_runtime/10202_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/10326_registerAsset.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";

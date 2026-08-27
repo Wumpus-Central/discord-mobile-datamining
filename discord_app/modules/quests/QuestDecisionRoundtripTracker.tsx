@@ -5,8 +5,8 @@ import isForegrounded from "../analytics_sessions/SessionForegroundUtils.native.
 import getDeviceMetadataDefault from "../device/getDeviceMetadata.native.tsx";
 import result2 from "../ads/utils/AdDecisionUtils.tsx";
 import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import closure_3 from "../../stores/NetworkStore.tsx";
-import closure_4 from "QuestStore.tsx";
+import closure_3 from "../ads/AdDeliveryStore.tsx";
+import closure_4 from "../../stores/NetworkStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 import set from "../../../_runtime/00002_set.js";
 
@@ -140,8 +140,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         let str4 = "quest";
         if (AdCreativeType.AdCreativeType.QUEST !== type) {
           str4 = "bounty";
-          if (tmp8(7387).AdCreativeType.BOUNTY !== type) {
-            if (tmp8(7387).AdCreativeType.QUEST_HOME_HERO === type) {
+          if (tmp8(7379).AdCreativeType.BOUNTY !== type) {
+            if (tmp8(7379).AdCreativeType.QUEST_HOME_HERO === type) {
               str4 = "quest_home_hero";
             }
           }
@@ -158,8 +158,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         let str7 = "quest";
         if (AdCreativeType.AdCreativeType.QUEST !== type2) {
           str7 = "bounty";
-          if (tmp10(7387).AdCreativeType.BOUNTY !== type2) {
-            if (tmp10(7387).AdCreativeType.QUEST_HOME_HERO === type2) {
+          if (tmp10(7379).AdCreativeType.BOUNTY !== type2) {
+            if (tmp10(7379).AdCreativeType.QUEST_HOME_HERO === type2) {
               str7 = "quest_home_hero";
             }
           }

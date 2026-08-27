@@ -31,15 +31,15 @@ export const clearMessageCombo = function clearMessageCombo(arg0) {
   obj[1] = obj;
   obj.dispatch(obj);
 };
-export const updateComboOnMessageSend = function updateComboOnMessageSend(throwTypeErrorResult, id) {
+export const updateComboOnMessageSend = function updateComboOnMessageSend(closure_1_0, id) {
   id = id.getId();
-  const iter = userCombo.getUserCombo(id, throwTypeErrorResult);
+  const iter = userCombo.getUserCombo(id, closure_1_0);
   if (null != iter) {
     let obj = dispatcherDefault;
     obj = { type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: null };
     obj = { combo: null, channelId: null, messageId: null, displayed: false };
     obj[0] = iter;
-    obj[1] = throwTypeErrorResult;
+    obj[1] = closure_1_0;
     obj[2] = id;
     obj[1] = obj;
     obj.dispatch(obj);
@@ -62,5 +62,5 @@ export const updateComboOnMessageSend = function updateComboOnMessageSend(throwT
       num = num3 + 1;
     }
   }
-  dispatcherDefault.dispatch({ type: "POGGERMODE_UPDATE_COMBO", channelId: throwTypeErrorResult, userId: id, multiplier: num, value: 0 });
+  dispatcherDefault.dispatch({ type: "POGGERMODE_UPDATE_COMBO", channelId: closure_1_0, userId: id, multiplier: num, value: 0 });
 };

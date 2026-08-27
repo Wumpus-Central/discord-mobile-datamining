@@ -8,9 +8,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 16446;
+    let tmp4 = 16510;
   } else {
-    tmp4 = 16452;
+    tmp4 = 16516;
   }
   return closure_7(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }

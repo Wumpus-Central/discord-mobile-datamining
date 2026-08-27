@@ -1,9 +1,10 @@
 // discord_app/modules/quests/utils/QuestDataUtils.tsx
 import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
 import QuestsVisibleMessagesChangedSource from "../QuestTypes.tsx";
-import closure_3 from "../../user_settings/LocaleStore.tsx";
-import closure_4 from "../BountyStore.tsx";
-import closure_5 from "../QuestStore.tsx";
+import closure_3 from "../../ads/AdDeliveryStore.tsx";
+import closure_4 from "../../user_settings/LocaleStore.tsx";
+import closure_5 from "../BountyStore.tsx";
+import closure_6 from "../QuestStore.tsx";
 import QuestsExperimentLocations from "../QuestConstants.tsx";
 
 require = arg1;
@@ -15,9 +16,9 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
       let tmp8 = null;
       if (null != adDecisionByPlacementAndAdCreativeId) {
         obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-        let tmpResult = tmp(7386);
+        let tmpResult = tmp(7378);
         obj[0] = tmpResult.getDeliveredQuestId(adDecisionByPlacementAndAdCreativeId.creative);
-        tmpResult = tmp(7386);
+        tmpResult = tmp(7378);
         obj[1] = tmpResult.getDeliveredAdCreativeId(adDecisionByPlacementAndAdCreativeId.creative);
         ({ adDecisionData: obj[2], adContext: obj[3], metadataSealed: obj[4], trafficMetadataSealed: obj[5] } = adDecisionByPlacementAndAdCreativeId);
         tmp8 = obj;
@@ -30,34 +31,34 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
   if (null != tmp3) {
     return tmp3;
   } else {
-    const questAdDecisionByPlacement = quest.questAdDecisionByPlacement;
+    const questAdDecisionByPlacement = obj.questAdDecisionByPlacement;
     const value = questAdDecisionByPlacement.get(arg0);
-    if (arg0 === tmp(5337).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
+    if (arg0 === tmp(5342).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
       if (null != value) {
         obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-        obj[0] = tmp(7386).getDeliveredQuestId(value.creative);
-        const tmpResult1 = tmp(7386);
-        obj[1] = tmp(7386).getDeliveredAdCreativeId(value.creative);
+        obj[0] = tmp(7378).getDeliveredQuestId(value.creative);
+        const tmpResult1 = tmp(7378);
+        obj[1] = tmp(7378).getDeliveredAdCreativeId(value.creative);
         ({ adDecisionData: obj7[2], adContext: obj7[3], metadataSealed: obj7[4], trafficMetadataSealed: obj7[5] } = value);
         let tmp9 = obj;
-        const tmpResult2 = tmp(7386);
+        const tmpResult2 = tmp(7378);
       }
       return tmp9;
     }
     tmp9 = null;
     if (null != value) {
       obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-      obj[0] = tmp(7386).getDeliveredQuestId(value.creative);
-      const tmpResult3 = tmp(7386);
-      obj[1] = tmp(7386).getDeliveredAdCreativeId(value.creative);
+      obj[0] = tmp(7378).getDeliveredQuestId(value.creative);
+      const tmpResult3 = tmp(7378);
+      obj[1] = tmp(7378).getDeliveredAdCreativeId(value.creative);
       ({ adDecisionData: obj4[2], adContext: obj4[3], metadataSealed: obj4[4], trafficMetadataSealed: obj4[5] } = value);
       tmp9 = obj;
-      const tmpResult4 = tmp(7386);
+      const tmpResult4 = tmp(7378);
     }
   }
 }
-({ DismissibleQuestContentFlags: closure_6, BILLABLE_PLACEMENTS: error, EMPTY_AD_DECISION_DATA: closure_8 } = QuestsExperimentLocations);
-let c9 = 2592000000;
+({ DismissibleQuestContentFlags: error, BILLABLE_PLACEMENTS: closure_8, EMPTY_AD_DECISION_DATA: c9 } = QuestsExperimentLocations);
+let c10 = 2592000000;
 let obj = {};
 obj[require("QuestsVisibleMessagesChangedSource").QuestContent.QUEST_BAR] = require("QuestsVisibleMessagesChangedSource").AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
 obj[require("QuestsVisibleMessagesChangedSource").QuestContent.QUEST_BAR_V2] = require("QuestsVisibleMessagesChangedSource").AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
@@ -112,17 +113,17 @@ export const findQuestOrReplacement = function findQuestOrReplacement(questId, q
   }
 };
 export const isDismissible = function isDismissible(closure_1) {
-  const keys = Object.keys(closure_6);
+  const keys = Object.keys(closure_7);
   return keys.includes(QuestsVisibleMessagesChangedSource.QuestContent[closure_1]);
 };
 export const isDismissed = function isDismissed(dismissedQuestContent) {
-  const keys = Object.keys(closure_6);
+  const keys = Object.keys(closure_7);
   if (keys.includes(QuestsVisibleMessagesChangedSource.QuestContent[arg1])) {
-    return tmp2(1403).hasFlag(dismissedQuestContent.dismissedQuestContent, tmp[tmp2(undefined, 5337).QuestContent[arg1]]);
+    return tmp2(1403).hasFlag(dismissedQuestContent.dismissedQuestContent, tmp[tmp2(undefined, 5342).QuestContent[arg1]]);
   } else {
     return false;
   }
-  tmp = closure_6;
+  tmp = closure_7;
 };
 export const isQuestConfigExpired = function isQuestConfigExpired(expiresAt) {
   const date = new Date(expiresAt.expiresAt);
@@ -137,7 +138,7 @@ export const getIsQuestExpiredButWithinThirtyDayLookback = function getIsQuestEx
   if (valueOfResult <= Date.now()) {
     const _Date = Date;
     const _Date2 = Date;
-    const diff = Date.now() - c9;
+    const diff = Date.now() - c10;
     const date1 = new Date(quest.config.expiresAt);
     return null != quest.config.expiresAt && date1.valueOf() > diff;
   } else {
@@ -199,7 +200,7 @@ export const isBillableQuestContent = function isBillableQuestContent(questConte
 };
 export const getAdDecisionData = function getAdDecisionData(adContentId, sourceQuestContent) {
   if (null == obj[sourceQuestContent]) {
-    return closure_8;
+    return closure_9;
   } else {
     obj = getQuestDeliveryDataForPlacement(tmp, adContentId);
     if (obj == null) {
@@ -207,7 +208,7 @@ export const getAdDecisionData = function getAdDecisionData(adContentId, sourceQ
     }
     const adDecisionData = obj.adDecisionData;
     if (null == adDecisionData) {
-      let tmp6 = closure_8;
+      let tmp6 = closure_9;
     } else {
       tmp6 = adDecisionData;
       if (tmp4 !== adContentId) {
@@ -215,7 +216,7 @@ export const getAdDecisionData = function getAdDecisionData(adContentId, sourceQ
         if (tmp5 !== adContentId) {
           tmp6 = adDecisionData;
           if (adDecisionData.ad_id !== adContentId) {
-            tmp6 = closure_8;
+            tmp6 = closure_9;
           }
         }
       }

@@ -10,7 +10,7 @@ import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import result2 from "../../../../design/migrations/native/LegacyTokens.tsx";
 import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
 import calculateFractionalPremiumInfoDefault from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
-import registerAssetDefault from "../../../../../_runtime/07917_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07892_registerAsset.js";
 import roundFPCountdownUnitsDefault from "../../../billing/hooks/useFPDurationLeft.tsx";
 import CheckIconDefault from "PremiumFeaturesTable.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -470,7 +470,7 @@ function FractionalPremiumCredits(durationText) {
   if (showPremiumFeaturesCard) {
     obj = { premiumType: null, forFractionalPremium: true, hideButton: true };
     obj[0] = closure_27.TIER_2;
-    showPremiumFeaturesCard = callback3(tmp(8839), obj);
+    showPremiumFeaturesCard = callback3(tmp(8150), obj);
   }
   const items = [showPremiumFeaturesCard, ];
   obj = { style: tmp3.extraInfoContainer, children: null };
@@ -489,7 +489,7 @@ function FractionalPremiumCredits(durationText) {
   const obj5 = { style: tmp3.fpRowIcon, children: null };
   const obj6 = { style: null, start: null, end: null, colors: null, children: null };
   const obj7 = { padding: 6, borderRadius: null };
-  tmpResult = tmp(4891);
+  tmpResult = tmp(4892);
   obj7[1] = ThemesDefault.radii.sm;
   obj6[0] = obj7;
   obj6[1] = { x: 0, y: 0 };
@@ -509,7 +509,7 @@ function FractionalPremiumCredits(durationText) {
     if (fractionalPremiumInfo.fractionalState === constants3.NONE) {
       const obj12 = { variant: "text-sm/medium", children: null };
       obj12[1] = unactivatedHoursString;
-      let tmp8Result = tmp8(tmp9(4440).Text, obj12);
+      let tmp8Result = tmp8(tmp9(4441).Text, obj12);
     }
     items4[1] = tmp8Result;
     obj10[1] = items4;
@@ -531,7 +531,7 @@ function FractionalPremiumCredits(durationText) {
         const obj17 = { variant: "text-md/semibold", children: null };
         const intl6 = tmp9(1236).intl;
         obj17[1] = intl6.string(tmp9(1236).t["hT6i/0"]);
-        const items6 = [tmp8(tmp9(4440).Text, obj17), ];
+        const items6 = [tmp8(tmp9(4441).Text, obj17), ];
         tmp8Result = undefined !== activationDate;
         if (tmp8Result) {
           const obj18 = { variant: "text-xs/medium", color: "text-subtle", children: null };
@@ -539,7 +539,7 @@ function FractionalPremiumCredits(durationText) {
           const obj19 = { activateDate: null };
           obj19[0] = activationDate;
           obj18[2] = intl7.format(tmp9(1236).t["0Vwb/l"], obj19);
-          tmp8Result = tmp8(tmp9(4440).Text, obj18);
+          tmp8Result = tmp8(tmp9(4441).Text, obj18);
         }
         const obj20 = { children: null };
         items6[1] = tmp8Result;
@@ -554,7 +554,7 @@ function FractionalPremiumCredits(durationText) {
           const obj22 = { variant: "text-sm/medium", style: null, children: null };
           obj22[1] = tmp3.fpTimeRemainingText;
           obj22[2] = unactivatedHoursString;
-          obj21[1] = tmp8(tmp9(4440).Text, obj22);
+          obj21[1] = tmp8(tmp9(4441).Text, obj22);
           let tmp8Result1 = tmp8(tmp5, obj21);
         }
         const obj23 = { children: null };
@@ -574,19 +574,19 @@ function FractionalPremiumCredits(durationText) {
       const obj25 = { variant: "text-sm/medium", style: null, children: null };
       obj25[1] = tmp3.fpTimeRemainingText;
       obj25[2] = durationText.durationText;
-      obj24[1] = tmp8(tmp9(4440).Text, obj25);
+      obj24[1] = tmp8(tmp9(4441).Text, obj25);
       tmp8Result1 = tmp8(tmp5, obj24);
     }
     const obj26 = { variant: "text-md/semibold", style: null, children: null };
     obj26[1] = tmp3.fpTimeRemaining;
     const intl5 = tmp9(1236).intl;
     obj26[2] = intl5.string(tmp9(1236).t["3G0CTC"]);
-    tmp8Result2 = tmp8(tmp9(4440).Text, obj26);
+    tmp8Result2 = tmp8(tmp9(4441).Text, obj26);
   }
   const obj27 = { variant: "text-sm/medium", style: tmp3.fpUnitsStatusText, children: null };
   const intl4 = tmp9(1236).intl;
   obj27[2] = intl4.string(getSystemLocale.t["B66Z+f"]);
-  tmp8Result = tmp8(tmp9(4440).Text, obj27);
+  tmp8Result = tmp8(tmp9(4441).Text, obj27);
 }
 ({ Image: closure_6, ImageBackground: error, View: closure_8, ScrollView: c9, ActivityIndicator: c10 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_19, HelpdeskArticles: closure_20, SubscriptionStatusTypes: closure_21, UserSettingsSections: closure_22 } = ME);
@@ -669,7 +669,7 @@ export default function PremiumManagePlan() {
   const tmp = callback5();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  let obj = navigation(7851);
+  let obj = navigation(12925);
   const youBarSettingsOutsideSafeAreaTop = obj.useYouBarSettingsOutsideSafeAreaTop();
   obj1 = navigation(1500);
   navigation = obj1.useNavigation();
@@ -697,15 +697,15 @@ export default function PremiumManagePlan() {
       isSubscriptionFetching = obj.isSubscriptionFetching;
     }
     if (!isSubscriptionFetching) {
-      obj = navigation(4789);
+      obj = navigation(4790);
       const subscriptions = obj.fetchSubscriptions();
     }
     if (!tmp5) {
-      const premiumSubscriptionPlans = navigation(6050).fetchPremiumSubscriptionPlans();
-      const obj3 = navigation(6050);
+      const premiumSubscriptionPlans = navigation(6056).fetchPremiumSubscriptionPlans();
+      const obj3 = navigation(6056);
     }
   });
-  let obj7 = navigation(8386);
+  let obj7 = navigation(7906);
   let isInReverseTrial = obj7.useIsInReverseTrial();
   const tmp9 = callback2(obj4.useStateFromStoresArray(items2, () => {
     const items = [closure_15.getPremiumTypeSubscription(), closure_15.hasFetchedSubscriptions()];
@@ -769,7 +769,7 @@ export default function PremiumManagePlan() {
   obj = { style: tmp.background, children: null };
   const items5 = [tmp.topBlur, ];
   let num = 0;
-  let tmp2Result = tmp2(4868);
+  let tmp2Result = tmp2(4869);
   if (!youBarSettingsOutsideSafeAreaTop) {
     num = top;
   }
@@ -797,7 +797,7 @@ export default function PremiumManagePlan() {
   if (isInReverseTrial) {
     obj3 = { premiumType: null, forFractionalPremium: true, hideButton: true };
     obj3[0] = closure_27.TIER_2;
-    isInReverseTrial = tmp29(tmp2(8839), obj3);
+    isInReverseTrial = tmp29(tmp2(8150), obj3);
   }
   items9[1] = isInReverseTrial;
   tmp29Result = result;
@@ -808,7 +808,7 @@ export default function PremiumManagePlan() {
     obj4 = { premiumType: null, hideButton: true, hidePrice: true, isPremiumGroup: true, premiumGroupRole: null };
     obj4[0] = closure_27.TIER_2;
     obj4[4] = premiumGroupRole;
-    tmp29Result = tmp29(tmp2(8839), obj4);
+    tmp29Result = tmp29(tmp2(8150), obj4);
   }
   items9[2] = tmp29Result;
   if (tmp29Result1) {
@@ -841,25 +841,25 @@ export default function PremiumManagePlan() {
       }
     };
     obj7[2] = tmp10;
-    const items10 = [tmp29(tmp2(7807), obj7), ];
+    const items10 = [tmp29(tmp2(12884), obj7), ];
     obj8 = { style: null, subscription: null };
     obj8[0] = tmp.billingInfo;
     obj8[1] = tmp10;
-    items10[1] = tmp29(tmp2(7847), obj8);
+    items10[1] = tmp29(tmp2(12921), obj8);
     obj6[0] = items10;
     tmp27Result = tmp27(tmp28, obj6);
   }
   items9[4] = tmp27Result;
   const obj9 = { style: tmp.accountCredit, creditListContainerStyle: tmp.accountCreditList, currentSubscription: tmp10, entitlements: stateFromStores2, hasPremiumGroup: null };
   let flag = result;
-  tmp2Result = tmp2(7849);
+  tmp2Result = tmp2(12923);
   if (result == null) {
     flag = false;
   }
   obj9[4] = flag;
   items9[5] = closure_29(tmp2Result, obj9);
   const obj10 = { style: tmp.featuresTable, variant: "nitro_home", titleOverride: null, isFractionalOnly: null, isPremiumGroup: null, premiumGroupRole: null };
-  tmp15Result = roundFPCountdownUnitsDefault(tmp12.endsAt, navigation(13009).CountDownMessageTypes.SHORT_TIME);
+  tmp15Result = roundFPCountdownUnitsDefault(tmp12.endsAt, navigation(13032).CountDownMessageTypes.SHORT_TIME);
   const tmp31 = closure_9;
   const intl = tmp4(1236).intl;
   obj10[2] = intl.string(navigation(1236).t.QXx2gs);

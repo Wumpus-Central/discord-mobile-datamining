@@ -3,9 +3,9 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
-import StageSparkleInnerDefault from "../../../../stage_channels/native/components/StageSparkle.tsx";
 import Form from "../../../../../design/void/Form/native/index.tsx";
-import registerAssetDefault from "../../../../../../_runtime/09361_registerAsset.js";
+import StageSparkleInnerDefault from "../../../../stage_channels/native/components/StageSparkle.tsx";
+import registerAssetDefault from "../../../../../../_runtime/09691_registerAsset.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../../stores/PresenceStore.tsx";
@@ -223,7 +223,7 @@ const memoResult = importAllResult.memo((eventUser) => {
   eventUser = eventUser.eventUser;
   let analyticsLocations;
   const tmp = callback3();
-  analyticsLocations = analyticsLocations(5900)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5905)().analyticsLocations;
   let obj = eventUser(589);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getUser(eventUser.user_id));
@@ -248,12 +248,12 @@ const memoResult = importAllResult.memo((eventUser) => {
   obj1 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
   const member = eventUser.member;
   let nick;
-  let tmp2Result = tmp2(9346);
+  let tmp2Result = tmp2(9692);
   if (member != null) {
     nick = member.nick;
   }
   if (nick == null) {
-    tmp2Result = tmp2(4288);
+    tmp2Result = tmp2(4289);
     nick = tmp2Result.getName(eventUser.user);
   }
   obj1[1] = nick;
@@ -262,7 +262,7 @@ const memoResult = importAllResult.memo((eventUser) => {
   obj[3] = function onPress() {
     analyticsLocations(closure_1_2[20])({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8185).FormRow, obj, eventUser.user_id);
+  return closure_7(eventUser(8295).FormRow, obj, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
 let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 16, height: 32, width: 32, alignItems: "center", justifyContent: "center" };

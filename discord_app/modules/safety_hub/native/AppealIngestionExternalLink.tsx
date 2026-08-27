@@ -4,7 +4,7 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import registerAsset from "../../../../_runtime/08249_registerAsset.js";
+import registerAsset from "../../../../_runtime/08691_registerAsset.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";

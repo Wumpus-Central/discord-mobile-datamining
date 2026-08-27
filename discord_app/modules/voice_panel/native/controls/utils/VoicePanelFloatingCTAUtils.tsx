@@ -201,7 +201,7 @@ function getDismissableCTAProps(arg0) {
     return getBadConnectionCTAProps();
   } else if (tmp(1377).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA === dismissableContent) {
     obj = { icon: null, onPress: null, label: null, trailing: null };
-    obj[0] = jsx(tmp(7921).SoundboardIcon, { color: "interactive-icon-default" });
+    obj[0] = jsx(tmp(12007).SoundboardIcon, { color: "interactive-icon-default" });
     obj[1] = function onPress() {
       if (null != closure_0) {
         obj = closure_1_0(closure_1_2[33]);
@@ -213,7 +213,7 @@ function getDismissableCTAProps(arg0) {
     };
     obj = { quest: null };
     obj[0] = tmp(1236).t.XLlWUe;
-    obj[2] = tmp(7493).getDeviceSpecificString(obj, tmp(1236).t.IJgkPX);
+    obj[2] = tmp(7501).getDeviceSpecificString(obj, tmp(1236).t.IJgkPX);
     obj[3] = <CloseSoundboardMobileFloatingCtaIcon />;
     return obj;
   } else {

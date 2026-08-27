@@ -157,13 +157,13 @@ function _isEligibleForBOGOPromotion() {
                   isClaimedResult = currentUser2.isClaimed();
                 }
                 dependencyMap = !isClaimedResult;
-                let obj2 = flag(7090);
+                let obj2 = flag(7096);
                 isPaymentsBlocked = obj2.getIsPaymentsBlocked();
-                let obj3 = flag(13017);
+                let obj3 = flag(13040);
                 authStore = obj3.getBogoPromotionGateEnabled("bogo eligibility async check");
-                let obj4 = flag(13019);
+                let obj4 = flag(13042);
                 store = obj4.getBogoMarketingMaterialsEnabled("bogo marketing eligibility async check");
-                const isMobile = flag(4706).isMobile;
+                const isMobile = flag(4707).isMobile;
                 let isAndroidResult = !isMobile;
                 if (isMobile) {
                   let obj5 = flag(500);
@@ -193,7 +193,7 @@ function _isEligibleForBOGOPromotion() {
                             isPaymentsBlocked = 2;
                             authStore = 1;
                             obj2 = { value: null, done: false };
-                            obj2[0] = flag(4789).fetchMostRecentSubscription();
+                            obj2[0] = flag(4790).fetchMostRecentSubscription();
                             return obj2;
                           }
                         }
@@ -239,7 +239,7 @@ function _isEligibleForBOGOPromotion() {
               isPaymentsBlocked = 3;
               authStore = 1;
               const obj6 = { value: null, done: false };
-              obj6[0] = flag(4789).fetchSubscriptions();
+              obj6[0] = flag(4790).fetchSubscriptions();
               return obj6;
             }
           }
@@ -394,14 +394,14 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
     num2 = valueOfResult - timestamp;
   }
   useScheduledForcedUpdateDefault({ delay: num2 });
-  const isMobile = tmp(4706).isMobile;
+  const isMobile = tmp(4707).isMobile;
   let isAndroidResult = !isMobile;
   if (isMobile) {
     let tmpResult = tmp(500);
     isAndroidResult = tmpResult.isAndroid();
   }
   const tmp11 = useScheduledForcedUpdateDefault;
-  tmpResult = tmp(13019);
+  tmpResult = tmp(13042);
   let bogoMarketingMaterialsEnabled = tmpResult.useBogoMarketingMaterialsEnabled("bogo marketing eligibility hook");
   let tmp16 = !tmp10;
   if (timestamp <= valueOfResult) {

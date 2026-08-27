@@ -1,9 +1,9 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBarMarker.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import registerAssetDefault from "../../../../../_runtime/13133_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/13134_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/13135_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13156_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/13157_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/13158_registerAsset.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { BoostedGuildTiers } from "../../../../Constants.tsx";
@@ -19,7 +19,7 @@ function ProgressBarMarkerInnerContent(arg0) {
   const tmp = callback();
   obj = isTierUnlocked;
   let items3 = dependencyMap;
-  obj1 = sharedValue(4184);
+  obj1 = sharedValue(4185);
   let num = 1;
   sharedValue = obj1.useSharedValue(1);
   if (isTierUnlocked) {
@@ -33,7 +33,7 @@ function ProgressBarMarkerInnerContent(arg0) {
       obj = sharedValue(closure_1_2[11]);
     }
   }, items);
-  let tmp3Result = tmp3(4184);
+  let tmp3Result = tmp3(4185);
   const fn = function y() {
     obj = { transform: null };
     obj = { scale: sharedValue.get() };
@@ -53,7 +53,7 @@ function ProgressBarMarkerInnerContent(arg0) {
     obj = { style: null, children: null };
     const items1 = [tmp.progressBarMarkerInnerCircle];
     obj[0] = items1;
-    let View = obj(4184).View;
+    let View = obj(4185).View;
     const items2 = [tmp.progressBarMarkerInnerCircleBackground, , ];
     let tmp16 = !useReducedMotion;
     if (!useReducedMotion) {
@@ -66,7 +66,7 @@ function ProgressBarMarkerInnerContent(arg0) {
     if (isTierUnlocked) {
       let PREMIUM_PERK_PINK = obj(712).unsafe_rawColors.PREMIUM_PERK_PINK;
     } else {
-      tmp3Result = tmp3(4292);
+      tmp3Result = tmp3(4293);
       if (tmp3Result1.isThemeDark(tmp2)) {
         num = 0.5;
       }
@@ -86,7 +86,7 @@ function ProgressBarMarkerInnerContent(arg0) {
     const tmp14 = closure_4;
     const tmp15 = closure_7;
   } else if (isDisabled) {
-    let tmp18Result = tmp18(tmp3(12215).BoostGemSlashIcon, { size: "xxs", color: "currentColor" });
+    let tmp18Result = tmp18(tmp3(12063).BoostGemSlashIcon, { size: "xxs", color: "currentColor" });
   } else {
     obj1 = { source: null, style: null };
     obj1[0] = obj[tier];
@@ -130,7 +130,7 @@ export default function ProgressBarMarker(arg0) {
   dependencyMap = undefined;
   ({ revealedTier, isDisabled } = arg0);
   let tmp = callback2();
-  obj = sharedValue(4184);
+  obj = sharedValue(4185);
   sharedValue = obj.useSharedValue(1);
   importDefault = tmp7;
   let tmp15Result = tmp9;
@@ -150,7 +150,7 @@ export default function ProgressBarMarker(arg0) {
       obj = sharedValue(table[11]);
     }
   }, items);
-  let tmp5Result = tmp5(4184);
+  let tmp5Result = tmp5(4185);
   class P {
     constructor() {
       obj = { transform: null };
@@ -184,7 +184,7 @@ export default function ProgressBarMarker(arg0) {
     obj2[0] = PREMIUM_PERK_PINK;
     items2[2] = obj2;
     obj1[0] = items2;
-    const items3 = [tmp15(tmp2(4184).View, obj1), , ];
+    const items3 = [tmp15(tmp2(4185).View, obj1), , ];
     const obj3 = { tier: null, isDisabled: null, isTierUnlocked: null, isTierAnimated: null, isCurrentTier: null, useReducedMotion: null };
     obj3[0] = tier;
     obj3[1] = isDisabled;
@@ -214,7 +214,7 @@ export default function ProgressBarMarker(arg0) {
     }
     if (tmp15Result) {
       const obj5 = { source: null, style: null };
-      obj5[0] = tmp2(11196);
+      obj5[0] = tmp2(11079);
       obj5[1] = tmp.progressBarMarkerUnlockedIcon;
       tmp15Result = tmp15(closure_5, obj5);
     }
@@ -231,7 +231,7 @@ export default function ProgressBarMarker(arg0) {
       }
     }
     obj6[1] = obj12.getTierName(tier, { useLevels: false });
-    items5[1] = tmp15(tmp5(4440).Text, obj6);
+    items5[1] = tmp15(tmp5(4441).Text, obj6);
     obj4[1] = items5;
     items3[2] = tmp13(tmp14, obj4);
     obj[1] = items3;
@@ -240,7 +240,7 @@ export default function ProgressBarMarker(arg0) {
   tmp5Result = tmp5(1363);
   const tmp4 = useThemeDefault();
   const isThemeDarkResult = tmp5Result.isThemeDark(useThemeDefault());
-  const hexWithOpacity = sharedValue(4292).hexWithOpacity;
+  const hexWithOpacity = sharedValue(4293).hexWithOpacity;
   const unsafe_rawColors = tmp2(712).unsafe_rawColors;
   if (isThemeDarkResult) {
     PREMIUM_PERK_PINK = hexWithOpacity(unsafe_rawColors.WHITE, 0.4);

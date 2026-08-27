@@ -55,7 +55,7 @@ export default {
               dependencyMap = 1;
               v0 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = v0(5404).setCommunicationDisabledUntil(obj1);
+              obj2[0] = v0(5409).setCommunicationDisabledUntil(obj1);
               return obj2;
             }
           } else if (arg0 === 1) {

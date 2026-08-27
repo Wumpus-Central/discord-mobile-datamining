@@ -123,11 +123,11 @@ function _unfurlEmbedUrl() {
             obj[0] = body.body;
             return obj;
           }
-        } catch (tmp23) {
-          closure_3 = tmp23;
+        } catch (tmp19) {
+          closure_3 = tmp19;
           if (tmp4 === constants) {
             c6 = tmp2;
-            throw tmp23;
+            throw tmp19;
           } else {
             c5 = tmp;
           }

@@ -2,8 +2,8 @@
 import set from "../../../utils/PlatformUtils.tsx";
 import useSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import OpenableUserProfileAvatarDefault from "UserProfileAvatar.tsx";
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice.tsx";
 import WidgetRendererDefault from "UserProfileWidgetsBoard.tsx";
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -18,9 +18,9 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(16223).trackYouTabAvatarPress();
-    const obj = callback(16223);
-    const result1 = callback(15808).showYouAccountActionSheet();
+    const result = callback(16288).trackYouTabAvatarPress();
+    const obj = callback(16288);
+    const result1 = callback(15873).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();

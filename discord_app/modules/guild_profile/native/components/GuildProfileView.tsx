@@ -5,7 +5,7 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import map from "../../../../design/tokens/native/useToken.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04891_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04892_LinearGradient.js";
 import useProfilePrimaryColor from "../GuildProfileUtils.tsx";
 import stylesDefault from "GuildProfileHeader.tsx";
 import ClickableGameIconDefault from "GuildProfileGames.tsx";
@@ -35,7 +35,7 @@ function GuildProfileBackground(guildProfile) {
     if (null != guildProfile.customBanner) {
       obj = { id: null, splash: null, size: null };
       ({ id: obj3[0], customBanner: obj3[1] } = guildProfile);
-      obj[2] = tmp3(9473)() * useWindowDimensionsDefault().width;
+      obj[2] = tmp3(8937)() * useWindowDimensionsDefault().width;
       obj = { style: null, source: null };
       obj[0] = tmp4.imageBanner;
       obj[1] = tmp3(1435).getGuildDiscoverySplashSource(obj);
@@ -114,7 +114,7 @@ export default function GuildProfileView(guildProfile) {
   if (tmp5Result) {
     obj = { variant: "text-md/medium", color: "text-subtle", children: null };
     obj[2] = guildProfile.description;
-    tmp5Result = tmp5(guildProfile(4440).Text, obj);
+    tmp5Result = tmp5(guildProfile(4441).Text, obj);
   }
   const items2 = [tmp5Result, callback(ClickableGameIconDefault, { profile: guildProfile }), callback(TraitEmojiDefault, { profile: guildProfile })];
   obj[1] = items2;

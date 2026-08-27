@@ -3,7 +3,7 @@ import set from "../../../../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import frozen from "../../EmbedUtils.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/08375_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/07889_registerAsset.js";
 import getPremiumGroupInviteEmbedText from "../../../../../premium/premium_group/PremiumGroupUtils.native.tsx";
 import SubscriptionStatusTypes from "../../../../../premium/premium_group/PremiumGroupConstants.tsx";
 

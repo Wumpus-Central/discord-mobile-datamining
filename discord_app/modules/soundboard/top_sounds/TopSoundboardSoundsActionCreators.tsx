@@ -1,6 +1,5 @@
 // discord_app/modules/soundboard/top_sounds/TopSoundboardSoundsActionCreators.tsx
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import apexExperimentDefault from "TopSoundboardSoundsExperiment.tsx";
 import closure_3 from "../../../stores/UserStore.tsx";
 import closure_4 from "../SoundboardStore.tsx";
 import closure_5 from "TopSoundboardSoundStore.tsx";
@@ -13,7 +12,8 @@ const result = require("set").fileFinishedImporting("modules/soundboard/top_soun
 export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundboardSoundsByGuild(id) {
   if (null != id) {
     if (null != currentUser.getCurrentUser()) {
-      if (obj5.getConfig({ location: "maybeFetchTopSoundboardSoundsByGuild" }).enabled) {
+      const TopSoundboardSoundsMobileExperiment = require("TopSoundboardSoundsExperiment.tsx").TopSoundboardSoundsMobileExperiment;
+      if (TopSoundboardSoundsMobileExperiment.getConfig({ location: "maybeFetchTopSoundboardSoundsByGuild" }).enabled) {
         topSoundboardSoundsMetadata = topSoundboardSoundsMetadata.getTopSoundboardSoundsMetadata(id);
         if (null != topSoundboardSoundsMetadata) {
           const topSoundsTTL = topSoundboardSoundsMetadata.topSoundsTTL;
@@ -22,13 +22,12 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
           }
         }
         if (!isFetching.getIsFetching(id)) {
-          const _require = id;
-          let obj = RouteParam;
-          if (!obj.isPseudoGuildId(id)) {
-            obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: null };
+          _require = id;
+          if (!tmp9Result.isPseudoGuildId(id)) {
+            let obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: null };
             obj[1] = id;
-            tmp9(709).dispatch(obj);
-            const HTTP = tmp4(530).HTTP;
+            dispatcherDefault.dispatch(obj);
+            const HTTP = tmp9(530).HTTP;
             obj = { url: null, oldFormErrors: true, rejectWithError: true };
             obj[0] = Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(id);
             const value = HTTP.get(obj);
@@ -44,13 +43,11 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
               obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId: closure_0 };
               return obj.dispatch(obj);
             });
-            const tmp9Result = tmp9(709);
+            const obj2 = dispatcherDefault;
           }
-          tmp4 = _require;
+          tmp9Result = tmp9(4285);
         }
       }
-      obj5 = apexExperimentDefault;
-      tmp9 = importDefault;
     }
   }
 };

@@ -13,8 +13,8 @@ function ClickableGameIcon(game) {
   dependencyMap = undefined;
   let React;
   ({ style, activityLevel } = game);
-  const obj = { gameId: game.id, source: game(9499).GameProfileSources.GuildProfileGames, trackEntryPointImpression: true };
-  const tmp3Result = onPressFallback(9488)(obj);
+  const obj = { gameId: game.id, source: game(8737).GameProfileSources.GuildProfileGames, trackEntryPointImpression: true };
+  const tmp3Result = onPressFallback(8726)(obj);
   dependencyMap = tmp3Result;
   React = tmp5;
   const items = [null != tmp3Result, tmp3Result, onPressFallback, game];
@@ -27,7 +27,7 @@ function ClickableGameIcon(game) {
       }
     }, items);
   }
-  return callback(onPressFallback(12480), { style, game, activityLevel, onPress });
+  return callback(onPressFallback(8942), { style, game, activityLevel, onPress });
 }
 function FavoriteGame(activityLevel) {
   const game = activityLevel.game;

@@ -7,7 +7,7 @@ let closure_5 = { code: "function useSegmentedPagesHeightTsx1(){const{pageHeight
 let result = require("set").fileFinishedImporting("modules/user_profile/native/useSegmentedPagesHeight.tsx");
 
 export const usePageHeights = function usePageHeights() {
-  let obj = sharedValue(4184);
+  let obj = sharedValue(4185);
   sharedValue = obj.useSharedValue([]);
   closure_1 = React.useRef([]);
   let items = [sharedValue];

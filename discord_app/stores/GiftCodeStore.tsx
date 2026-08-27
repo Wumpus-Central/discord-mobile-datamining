@@ -17,7 +17,7 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4328).Timeout();
+      const timeout = new code(4329).Timeout();
       closure_7[code] = timeout;
       value = obj.get(code);
       if (null != value) {

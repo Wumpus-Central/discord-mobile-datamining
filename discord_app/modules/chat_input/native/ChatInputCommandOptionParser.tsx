@@ -5,7 +5,7 @@ import ME from "../../../Constants.tsx";
 import set3 from "../../emojis/EmojiConstants.tsx";
 import getEmojiUnavailableReasonDefault from "../../../utils/EmojiUtils.tsx";
 import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
-import registerAssetDefault from "../../../../_runtime/08165_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07972_registerAsset.js";
 import addRule from "ChatInputParser.tsx";
 import closure_4 from "../../a11y/AccessibilityStore.tsx";
 import closure_5 from "../../emojis/EmojiStore.tsx";
@@ -428,33 +428,27 @@ export const getGameHighlightNodes = function getGameHighlightNodes(mentionGames
   return items1;
 };
 export const getGameMentionInputNodes = function getGameMentionInputNodes(arr) {
-  const GameMentionsMobileExperiment = require("../../game_mentions/GameMentionsMobileExperiment.tsx").GameMentionsMobileExperiment;
-  const config = GameMentionsMobileExperiment.getConfig({ location: "game mention input highlight" });
-  if (config.enabled) {
-    const IncludeGameMentionsInAutocomplete = require("../../user_settings/UserSettings.tsx").IncludeGameMentionsInAutocomplete;
-    if (IncludeGameMentionsInAutocomplete.getSetting()) {
-      if (!tmp4) {
-        arr = closure_9;
-        _require = closure_9;
-        const items = [];
-        let index = arr.indexOf(closure_9);
-        if (-1 !== index) {
-          do {
-            let tmp7 = _require;
-            let tmp8 = dependencyMap;
-            let obj = AutocompleteFormDivider;
-            let tmp9 = index;
-            if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
-              arr = items.push(index);
-            }
-            index = arr.indexOf(arr, index + arr.length);
-          } while (-1 !== index);
+  const IncludeGameMentionsInAutocomplete = require("../../user_settings/UserSettings.tsx").IncludeGameMentionsInAutocomplete;
+  const items = [];
+  if (IncludeGameMentionsInAutocomplete.getSetting()) {
+    _require = closure_9;
+    let index = arr.indexOf(closure_9);
+    if (-1 !== index) {
+      do {
+        let tmp3 = _require;
+        let tmp4 = dependencyMap;
+        let obj = AutocompleteFormDivider;
+        let tmp5 = index;
+        if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
+          arr = items.push(index);
         }
-        return items.map((location) => ({ location, length: length.length }));
-      }
+        index = arr.indexOf(arr2, index + arr2.length);
+      } while (-1 !== index);
     }
+    return items.map((location) => ({ location, length: length.length }));
+  } else {
+    return items;
   }
-  return [];
 };
 export const getRoleHighlightNodes = (getGuildId) => {
   const items = [];
@@ -522,7 +516,7 @@ export const getChannelHighlightNodes = function getChannelHighlightNodes(channe
             }
           }
         }
-        let obj = lib(closure_2[18]);
+        let obj = lib(closure_2[17]);
         lib = obj.unescapeChannelName(str2.substring(tmp2 + 2, closure_3));
         if (null != closure_2.find((text) => text.text === closure_0)) {
           obj = { location: null, length: null };

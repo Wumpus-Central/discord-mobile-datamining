@@ -21,16 +21,17 @@ import showAgeVerificationTestModal from "screens/DevToolsAgeVerificationScreen.
 import Select from "screens/DevToolsComponentsTestingScreen.tsx";
 import DevToolsShopScreen from "screens/DevToolsShopScreen.tsx";
 import FramePreviewOverrideSection from "../../../collectibles/native/tooling/CollectiblesTool.tsx";
+import SlayerStorefrontDevTools from "../../../slayer_storefront/native/devtools/SlayerStorefrontDevTools.tsx";
 import ActionSheetSelector from "screens/DevToolsActionSheetsScreen.tsx";
 import DevToolsAccountLinkingScreen from "screens/DevToolsAccountLinkingScreen.tsx";
-import _mod15351 from "screens/DevToolsPerformanceTestingScreen.tsx";
+import _mod15416 from "screens/DevToolsPerformanceTestingScreen.tsx";
 import getSelectedGuildChannel from "screens/DevToolsInAppNotificationTestingScreen.tsx";
 import effectName from "screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;
 noopAll;
-let obj = { analytics: null, buildOverride: null, experiments: null, loggingFlags: null, cacheStats: null, generatedTestUsers: null, dataStorage: null, designSystems: null, dismissibleContent: null, gameCommunityUpsell: null, i18n: null, otatest: null, profiling: null, quickActions: null, revenuePlayground: null, surveyOverride: null, toggles: null, ageVerification: null, components: null, shop: null, shopProductPreview: null, actionSheets: null, accountLinking: null, performanceTesting: null, inAppNotificationTesting: null };
+let obj = { analytics: null, buildOverride: null, experiments: null, loggingFlags: null, cacheStats: null, generatedTestUsers: null, dataStorage: null, designSystems: null, dismissibleContent: null, gameCommunityUpsell: null, i18n: null, otatest: null, profiling: null, quickActions: null, revenuePlayground: null, surveyOverride: null, toggles: null, ageVerification: null, components: null, shop: null, shopProductPreview: null, slayerStorefront: null, actionSheets: null, accountLinking: null, performanceTesting: null, inAppNotificationTesting: null };
 obj = {
   headerTitle: "Analytics",
   Icon: require("ClipboardListIcon").ClipboardListIcon,
@@ -320,70 +321,84 @@ const obj19 = {
   }
 };
 obj[21] = {
-  headerTitle: "Action Sheets",
-  Icon: require("CompassIcon").CompassIcon,
+  headerTitle: "Slayer Storefront",
+  Icon: require("ShopIcon").ShopIcon,
   render() {
-    return jsx(ActionSheetSelector.default, {});
+    return jsx(SlayerStorefrontDevTools.default, {});
   }
 };
 const obj20 = {
+  headerTitle: "Slayer Storefront",
+  Icon: require("ShopIcon").ShopIcon,
+  render() {
+    return jsx(SlayerStorefrontDevTools.default, {});
+  }
+};
+obj[22] = {
   headerTitle: "Action Sheets",
   Icon: require("CompassIcon").CompassIcon,
   render() {
     return jsx(ActionSheetSelector.default, {});
   }
 };
-obj[22] = {
-  headerTitle: "Account Linking",
-  Icon: require("LinkIcon").LinkIcon,
-  render() {
-    return jsx(DevToolsAccountLinkingScreen.default, {});
-  }
-};
 const obj21 = {
-  headerTitle: "Account Linking",
-  Icon: require("LinkIcon").LinkIcon,
+  headerTitle: "Action Sheets",
+  Icon: require("CompassIcon").CompassIcon,
   render() {
-    return jsx(DevToolsAccountLinkingScreen.default, {});
+    return jsx(ActionSheetSelector.default, {});
   }
 };
 obj[23] = {
-  headerTitle: "Performance Testing",
-  Icon: require("SpeedometerIcon").SpeedometerIcon,
+  headerTitle: "Account Linking",
+  Icon: require("LinkIcon").LinkIcon,
   render() {
-    return jsx(_mod15351.default, {});
+    return jsx(DevToolsAccountLinkingScreen.default, {});
   }
 };
 const obj22 = {
-  headerTitle: "Performance Testing",
-  Icon: require("SpeedometerIcon").SpeedometerIcon,
+  headerTitle: "Account Linking",
+  Icon: require("LinkIcon").LinkIcon,
   render() {
-    return jsx(_mod15351.default, {});
+    return jsx(DevToolsAccountLinkingScreen.default, {});
   }
 };
 obj[24] = {
-  headerTitle: "In App Notification Testing",
-  Icon: require("MagicWandIcon").MagicWandIcon,
+  headerTitle: "Performance Testing",
+  Icon: require("SpeedometerIcon").SpeedometerIcon,
   render() {
-    return jsx(getSelectedGuildChannel.default, {});
+    return jsx(_mod15416.default, {});
   }
 };
-const obj24 = { displayNameEffectsBenchmark: null };
 const obj23 = {
+  headerTitle: "Performance Testing",
+  Icon: require("SpeedometerIcon").SpeedometerIcon,
+  render() {
+    return jsx(_mod15416.default, {});
+  }
+};
+obj[25] = {
   headerTitle: "In App Notification Testing",
   Icon: require("MagicWandIcon").MagicWandIcon,
   render() {
     return jsx(getSelectedGuildChannel.default, {});
   }
 };
-obj24[0] = {
+const obj25 = { displayNameEffectsBenchmark: null };
+const obj24 = {
+  headerTitle: "In App Notification Testing",
+  Icon: require("MagicWandIcon").MagicWandIcon,
+  render() {
+    return jsx(getSelectedGuildChannel.default, {});
+  }
+};
+obj25[0] = {
   headerTitle: "Display Name Effects Benchmark",
   Icon: require("PaintPaletteIcon").PaintPaletteIcon,
   render() {
     return jsx(effectName.default, {});
   }
 };
-const obj25 = {
+const obj26 = {
   headerTitle: "Display Name Effects Benchmark",
   Icon: require("PaintPaletteIcon").PaintPaletteIcon,
   render() {
@@ -393,4 +408,4 @@ const obj25 = {
 const result = require("set").fileFinishedImporting("modules/devtools/native/components/DevToolsScreens.tsx");
 
 export const DevToolsScreens = obj;
-export const PerformanceTestingScreens = obj24;
+export const PerformanceTestingScreens = obj25;

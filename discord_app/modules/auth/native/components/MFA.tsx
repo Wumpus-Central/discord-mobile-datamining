@@ -20,7 +20,7 @@ export default function ConnectedMFA() {
   let navigation;
   navigation = isMultiAccount(1500).useNavigation();
   if (inContainer) {
-    inContainer = navigation(8697)();
+    inContainer = navigation(7650)();
   }
   let tmpResult = tmp(589);
   const items = [closure_4];
@@ -57,7 +57,7 @@ export default function ConnectedMFA() {
       tmp13 = obj;
     }
     obj[7] = tmp13;
-    return jsx(tmp(15293).MFAModal, obj);
+    return jsx(tmp(15357).MFAModal, obj);
   } else {
     tmpResult = tmp(501);
     let space = tmp4(712).space;

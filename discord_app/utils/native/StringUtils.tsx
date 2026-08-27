@@ -1,6 +1,6 @@
 // discord_app/utils/native/StringUtils.tsx
 import set from "../../../_runtime/00002_set.js";
-import rawDefault from "../../../_runtime/09691_raw.js";
+import rawDefault from "../../../_runtime/08854_raw.js";
 
 const result = set.fileFinishedImporting("utils/native/StringUtils.tsx");
 

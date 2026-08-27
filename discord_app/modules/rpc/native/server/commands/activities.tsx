@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/native/server/commands/activities.tsx
-import showInstantInviteActionSheet from "../../../../instant_invite/native/InstantInviteUtils.tsx";
 import prototypeDefault from "../../../RPCError.tsx";
+import showInstantInviteActionSheet from "../../../../instant_invite/native/InstantInviteUtils.tsx";
 import validateOpenInviteDialog from "../../../helpers/validateOpenInviteDialog.tsx";
 import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import RPC_SCOPE_CONFIG from "../../../Constants.tsx";

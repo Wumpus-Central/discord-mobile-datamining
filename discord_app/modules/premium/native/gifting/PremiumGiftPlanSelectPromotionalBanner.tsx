@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04891_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04892_LinearGradient.js";
 import create from "../../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_plan_selection_card_banner.tsx";
 import useThemeAndReducedMotionAwareAssetUrl from "../../promotions/MarketingComponentHooks.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -60,7 +60,7 @@ const memoResult = importAllResult.memo(function PremiumGiftPlanSelectPromotiona
     obj1 = { uri: null };
     obj1[0] = themeAndReducedMotionAwareAssetUrl;
     obj[2] = obj1;
-    tmp9 = callback(tmp7(5440), obj);
+    tmp9 = callback(tmp7(5445), obj);
   }
   const items = [tmp9, , ];
   const obj2 = { style: tmp.content, children: null };
@@ -94,9 +94,9 @@ const memoResult = importAllResult.memo(function PremiumGiftPlanSelectPromotiona
     items3[1] = logoLargeTilted;
     obj7[1] = items3;
     obj7[2] = themeAndReducedMotionAwareAssetUrl1;
-    obj6[1] = tmp12(tmp7(10265), obj7);
+    obj6[1] = tmp12(tmp7(10450), obj7);
     tmp12Result = tmp12(View, obj6);
-    const tmp7Result = tmp7(10265);
+    const tmp7Result = tmp7(10450);
   }
   items[2] = tmp12Result;
   obj[6] = items;

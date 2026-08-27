@@ -2,7 +2,7 @@
 import dispatcherDefault from "../../Dispatcher.tsx";
 import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef4675 from "../../actions/ModalActionCreators.tsx";
+import _modDef4676 from "../../actions/ModalActionCreators.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import SafetyHubView from "SafetyHubConstants.tsx";
 import { AGE_VERIFICATION_GET_STARTED_MODAL_KEY as closure_6 } from "../age_assurance/AgeVerificationConstants.tsx";
@@ -15,7 +15,7 @@ let obj = {
     obj = dispatcherDefault;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { classificationId, onClose };
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11532, dependencyMap.paths), closure_4, obj);
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11386, dependencyMap.paths), closure_4, obj);
   },
   openV2(arg0, onClose) {
     closure_0 = arg0;
@@ -23,7 +23,7 @@ let obj = {
     obj = dispatcherDefault;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { onClose };
-    _modDef4675.pushLazy(callback(function*() {
+    _modDef4676.pushLazy(callback(function*() {
       closure_0 = tmp2;
       yield closure_1_0(paths[7])(paths[9], paths.paths);
       closure_0 = arg1.default;

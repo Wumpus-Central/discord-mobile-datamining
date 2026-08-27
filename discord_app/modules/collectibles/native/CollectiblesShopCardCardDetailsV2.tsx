@@ -5,10 +5,10 @@ import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import hexToRgba from "../../../utils/ColorUtils.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/04891_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04892_LinearGradient.js";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
-import useCanPurchaseFrames from "../hooks/useCanPurchaseFrames.tsx";
 import getCardProductName from "../utils/getProductName.tsx";
+import useCanPurchaseFrames from "../hooks/useCanPurchaseFrames.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../stores/native/IAPStore.android.tsx";
@@ -227,12 +227,12 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
   obj1 = useCanPurchaseFrames;
   let isProfileFramesEarlyAccessPhase = obj1.useIsProfileFramesEarlyAccessPhase("CollectiblesShopCardCardDetailsV2");
   if (isProfileFramesEarlyAccessPhase) {
-    let tmp2Result = tmp2(7225);
+    let tmp2Result = tmp2(7231);
     const productType = tmp2Result.getProductType(product);
     isProfileFramesEarlyAccessPhase = productType === tmp2(1950).CollectiblesItemType.PROFILE_FRAME;
   }
   let obj3 = getPremiumPlanItemDefault;
-  tmp2Result = tmp2(7226);
+  tmp2Result = tmp2(7232);
   const shopDiscountSource = tmp2Result.getShopDiscountSource(currentUser);
   const tmp8 = obj3.canUseShopDiscounts(currentUser) || isProfileFramesEarlyAccessPhase;
   const token = map.useToken(tmp7(712).colors.BACKGROUND_BASE_LOW);
@@ -269,7 +269,7 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
     const items4 = [tmp17(closure_11, obj2), ];
     obj3 = { product: null };
     obj3[0] = product;
-    items4[1] = tmp17(tmp7(9644), obj3);
+    items4[1] = tmp17(tmp7(12537), obj3);
     obj1[1] = items4;
     tmp15Result = tmp15(View, obj1);
   }

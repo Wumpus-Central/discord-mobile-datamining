@@ -88,7 +88,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         obj = {};
       }
       let items = obj.items;
-      obj = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, premiumType: null, items: null, categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: "r", isFirstParty: "png", bundledProducts: "text-sm/normal" };
+      obj = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, premiumType: null, items: null, categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: "r", isFirstParty: "mu\u017E s plnovousem", bundledProducts: "plnovous" };
       ({ id: obj2[0], id: obj2[1] } = first);
       ({ name: obj2[2], summary: obj2[3], primaryCollectionStyles: obj2[4] } = skus);
       obj[5] = type;
@@ -135,7 +135,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             }
             ({ items, item } = obj);
             first = closure_1_3(tenantMetadata.selectedOptions, 1)[0];
-            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "e", type: "Array", premiumType: "channel", items: "disabled", categorySkuId: true, isCategoryReward: true, prices: true, previewAssets: true, googleSkuIds: true, eligibleOffers: true, variants: true, bundledProducts: true, isFirstParty: true };
+            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "e", type: "Array", premiumType: "accessibilityRole", items: "scales", categorySkuId: 1, isCategoryReward: 0, prices: 0, previewAssets: 1, googleSkuIds: 0, eligibleOffers: 0, variants: "<rootDir>/example/node_modules", bundledProducts: "<rootDir>/lib/", isFirstParty: "billingSettingsNitroGiftBanner" };
             obj[0] = skus.name;
             obj[1] = first.id;
             let str;

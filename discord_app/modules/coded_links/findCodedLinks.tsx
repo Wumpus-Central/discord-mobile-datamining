@@ -1054,7 +1054,7 @@ export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
           let flag;
           if (url.pathname != null) {
             const formatted = str2.toUpperCase();
-            flag = formatted.includes(url(4432).CodedLinkType.INVITE);
+            flag = formatted.includes(url(4433).CodedLinkType.INVITE);
           }
           if (flag == null) {
             flag = false;

@@ -76,17 +76,17 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
   if (null != focusedEmbeddedActivityParticipant) {
     if (callback(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(9110).OrientationType.LANDSCAPE;
+        return tmp2(8534).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(9110).OrientationType;
+    OrientationType = tmp2(8534).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp8.PORTRAIT) {
-      LANDSCAPE = tmp2(9110).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(8534).OrientationType.PORTRAIT;
     }
   }
 };

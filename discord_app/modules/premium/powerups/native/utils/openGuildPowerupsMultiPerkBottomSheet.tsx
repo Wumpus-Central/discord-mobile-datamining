@@ -8,5 +8,5 @@ const result = set.fileFinishedImporting("modules/premium/powerups/native/utils/
 
 export default function openGuildPowerupsMultiPerkBottomSheet(arg0) {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj.openLazy(asyncRequireImpl(12178, dependencyMap.paths), openGuildPowerupsBottomSheet.GUILD_POWERUPS_BOTTOM_SHEET_KEY, arg0);
+  obj.openLazy(asyncRequireImpl(12026, dependencyMap.paths), openGuildPowerupsBottomSheet.GUILD_POWERUPS_BOTTOM_SHEET_KEY, arg0);
 };

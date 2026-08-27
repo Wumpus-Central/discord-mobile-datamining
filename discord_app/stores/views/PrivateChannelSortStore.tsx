@@ -78,7 +78,7 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap(function inde
 let closure_15 = [];
 let closure_16 = [];
 let closure_17 = [];
-const f37021 = () => {
+const f37091 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -91,7 +91,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f37021 !== "function") {
+  if (typeof f37091 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let values = secondaryIndexMap.values(constants.FAVORITE);

@@ -1,6 +1,6 @@
 // discord_app/modules/activities/native/openIgnoreThermalStateAlert.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import _modDef4809 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef4810 from "../../../actions/native/AlertActionCreators.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/activities/native/o
 
 export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(arg0) {
   closure_0 = arg0;
-  let obj = _modDef4809;
+  let obj = _modDef4810;
   obj = {
     importer() {
       return callback(closure_1_2[4])(closure_1_2[3], closure_1_2.paths).then((IgnoreThermalStateAlert) => {

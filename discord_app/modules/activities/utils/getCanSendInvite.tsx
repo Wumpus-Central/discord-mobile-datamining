@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/getCanSendInvite.tsx
 import set from "../../../../_runtime/00002_set.js";
-import resultDefault from "isInviteActive.tsx";
 import getPartySize from "getPartySize.tsx";
 import hasPartySize from "hasPartySize.tsx";
+import resultDefault from "isInviteActive.tsx";
 import ME from "../../../Constants.tsx";
 
 ({ ActivityFlags: c3, ActivityActionTypes: c4 } = ME);
@@ -20,15 +20,15 @@ export const getCanSendInvite = function getCanSendInvite(findActivityResult, au
       }
       if (type !== constants2.JOIN_REQUEST) {
         return false;
-      } else if (tmp11(6103)(findActivityResult, constants.JOIN)) {
+      } else if (tmp11(6110)(findActivityResult, constants.JOIN)) {
         const partySize = getPartySize.getPartySize(findActivityResult);
         const obj = getPartySize;
         const tmp5 = require;
         const hasPartySizeResult = hasPartySize.hasPartySize(partySize);
         let isPartyFullResult = !hasPartySizeResult;
         if (hasPartySizeResult) {
-          isPartyFullResult = tmp5(11388).isPartyFull(partySize);
-          const tmp5Result = tmp5(11388);
+          isPartyFullResult = tmp5(9370).isPartyFull(partySize);
+          const tmp5Result = tmp5(9370);
         }
         return !isPartyFullResult;
       } else {

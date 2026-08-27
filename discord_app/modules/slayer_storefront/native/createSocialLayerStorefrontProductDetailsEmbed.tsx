@@ -44,7 +44,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
       return null;
     } else {
       if (null != application) {
-        if (tmp(11161)(application)) {
+        if (tmp(11047)(application)) {
           if ("guild" !== guildOrApplication.type) {
             const result1 = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(value);
             const obj4 = useSKUPrice;

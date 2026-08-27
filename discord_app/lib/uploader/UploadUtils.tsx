@@ -116,7 +116,7 @@ export const canUploadNatively = function canUploadNatively(item) {
     fileIsInAppDirResult = null != item.uri;
   }
   if (fileIsInAppDirResult) {
-    let tmpResult = tmp(5028);
+    let tmpResult = tmp(5033);
     fileIsInAppDirResult = tmpResult.fileIsInAppDir(item.uri);
   }
   if (fileIsInAppDirResult) {

@@ -17,5 +17,5 @@ export default function openInstantInviteActionSheet(invite_channel_id) {
   const merged = Object.assign(invite_channel_id);
   obj.impressionName = encodeProperties.ImpressionNames.GUILD_INVITE;
   obj.impressionProperties = { invite_channel_id: invite_channel_id.channel.id, invite_guild_id: invite_channel_id.channel.guild_id };
-  obj.openLazy(asyncRequireImpl(9289, dependencyMap.paths), combined, obj, invite_channel_id.stackingBehavior);
+  obj.openLazy(asyncRequireImpl(9837, dependencyMap.paths), combined, obj, invite_channel_id.stackingBehavior);
 };

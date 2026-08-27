@@ -6,7 +6,7 @@ import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import getFontScale from "../../screen/native/useFontScale.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../_runtime/05555_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/05560_registerAsset.js";
 import getLayoutStyles from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 import AvatarDuoPile from "../../../design/components/Pile/native/AvatarDuoPile.native.tsx";
 import renderChannelPressableWrapper from "../../main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx";

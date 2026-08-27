@@ -4,8 +4,8 @@ import isThemeLight from "../../../design/utils/shared/themes.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import hexToRgba from "../../../utils/ColorUtils.tsx";
 import useTheme from "../../../hooks/useTheme.tsx";
-import useQuests from "../hooks/QuestHooks.tsx";
 import items5 from "../utils/QuestOrbMultiplierUtils.tsx";
+import useQuests from "../hooks/QuestHooks.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -78,13 +78,13 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     let tmp21Result = !tmp13;
     let tmp19 = tmp21Result;
     if (!tmp13) {
-      tmp19 = questOrbRewardMultiplier(tmp2(7916).NitroWheelIcon, { size: "xs", color: "white" });
+      tmp19 = questOrbRewardMultiplier(tmp2(8028).NitroWheelIcon, { size: "xs", color: "white" });
     }
     obj1 = { children: null };
     const items2 = [tmp19, ];
     obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
     obj2[2] = formatToPlainStringResult;
-    items2[1] = questOrbRewardMultiplier(tmp2(4440).Text, obj2);
+    items2[1] = questOrbRewardMultiplier(tmp2(4441).Text, obj2);
     obj1[0] = items2;
     obj3 = { onPress: null, activeOpacity: 0.8, accessibilityRole: "button", accessibilityLabel: null, children: null };
     obj3[0] = function onPress() {
@@ -108,7 +108,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
       obj6[1] = items;
       obj6[2] = closure_8;
       obj6[3] = closure_9;
-      tmp21Result = tmp21(tmp6(4891), obj6);
+      tmp21Result = tmp21(tmp6(4892), obj6);
     }
     const items4 = [tmp21Result, ];
     obj7 = { style: null, children: null };
@@ -117,7 +117,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     items4[1] = questOrbRewardMultiplier(token3, obj7);
     obj4[1] = items4;
     obj3[4] = closure_7(token3, obj4);
-    return questOrbRewardMultiplier(tmp2(5015).PressableOpacity, obj3);
+    return questOrbRewardMultiplier(tmp2(5020).PressableOpacity, obj3);
   }
   const obj10 = items5;
 };

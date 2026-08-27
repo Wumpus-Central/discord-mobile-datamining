@@ -134,7 +134,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
     if (null != stateFromStores1) {
       earnedOnDate = null;
       if (null != stateFromStores1.premiumSince) {
-        tmpResult = tmp(7306);
+        tmpResult = tmp(7312);
         earnedOnDate = tmpResult.getEarnedOnDate(tieredTenureBadgeForUser, stateFromStores1.premiumSince);
       }
     }
@@ -149,7 +149,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(9725);
+  let tmpResult = tmp(8890);
   const tieredTenureBadgeForUser = tmpResult.useTieredTenureBadgeForUser(id);
   let tmp7 = null;
   if (null != tieredTenureBadgeForUser) {
@@ -176,8 +176,8 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
     if (null != stateFromStores2) {
       earnedOnDate = null;
       if (null != stateFromStores2.premiumSince) {
-        earnedOnDate = tmp(7306).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
-        const tmpResult3 = tmp(7306);
+        earnedOnDate = tmp(7312).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
+        const tmpResult3 = tmp(7312);
       }
     }
   }

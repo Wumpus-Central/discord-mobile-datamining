@@ -31,7 +31,7 @@ export default function CaptchaModal(arg0) {
   ({ close: dependencyMap, sitekey: closure_3, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
   let navigation;
   let callback;
-  const tmp2 = callback2(onReject(8697)());
+  const tmp2 = callback2(onReject(7650)());
   let obj = createStandardNavigationFactories;
   navigation = obj.useNavigation();
   const items = [navigation];
@@ -53,7 +53,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  callback = onReject(16713)({ onReject, analyticsType: memo });
+  callback = onReject(16779)({ onReject, analyticsType: memo });
   const effect = React.useEffect(() => {
     closure_4.dismiss();
   }, []);

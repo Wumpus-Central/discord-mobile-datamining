@@ -339,7 +339,7 @@ export default function HomeDrawerGuildRow(guildId) {
   obj = guildId(589);
   const items = [closure_10];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getGuild(guildId));
-  const MobileHomeDrawerExperiment = guildId(4304).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = guildId(4305).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

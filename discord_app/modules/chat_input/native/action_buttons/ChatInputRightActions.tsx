@@ -1,7 +1,7 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputRightActions.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
-import _modDef4184 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4185 from "../../../reanimated/ReanimatedRexport.tsx";
 import renderChatInputActionButtonGiftAndThreadDefault from "ChatInputActionButtonGiftOrThread.tsx";
 import FadeTransitionItem from "ChatInputActionButtonTransitionItem.tsx";
 import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce.tsx";
@@ -22,8 +22,8 @@ function LeftSlot(state) {
   items = [wrapperStyle, { width: slotWidth }, animatedStyle];
   const tmp = useChatInputFloatingBounceDefault(obj);
   const merged = Object.assign(FadeTransitionItem.interactivityProps(isInteractive));
-  obj.children = callback2(renderChatInputActionButtonGiftAndThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "_updatePlayheadTime" });
-  return callback2(_modDef4184.View, obj);
+  obj.children = callback2(renderChatInputActionButtonGiftAndThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "suspicious-download" });
+  return callback2(_modDef4185.View, obj);
 }
 let c4 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -75,7 +75,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   }
   const items1 = [tmp14Result, ];
   obj1 = { active: keyboardType === channel(1627).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
-  items1[1] = callback2(onPressAction(11832), obj1);
+  items1[1] = callback2(onPressAction(11661), obj1);
   obj[1] = items1;
   return closure_8(View, obj);
 });

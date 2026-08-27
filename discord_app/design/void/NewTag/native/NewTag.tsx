@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04891_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04892_LinearGradient.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { HorizontalGradient } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";

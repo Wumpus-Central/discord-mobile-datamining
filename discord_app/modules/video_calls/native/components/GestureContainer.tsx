@@ -24,9 +24,9 @@ export default function GestureContainer(children) {
   let sharedValue;
   const tmp = callback();
   height = sharedValue(1494)().height;
-  let obj = height(4184);
+  let obj = height(4185);
   sharedValue = obj.useSharedValue(0);
-  const Gesture = height(5599).Gesture;
+  const Gesture = height(5604).Gesture;
   const tmp2 = useChannelCallStore((isGestureEnabled) => isGestureEnabled.isGestureEnabled);
   const PanResult = Gesture.Pan();
   class S {
@@ -51,7 +51,7 @@ export default function GestureContainer(children) {
     }
     height(closure_1_2[8]).runOnJS(sharedValue(closure_1_2[10]).pop)();
   };
-  obj = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4184).runOnJS, ModalActionCreators: sharedValue(4675), withTiming: height(4445).withTiming, DECELERATED_EASING: height(1297).DECELERATED_EASING };
+  obj = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4185).runOnJS, ModalActionCreators: sharedValue(4676), withTiming: height(4446).withTiming, DECELERATED_EASING: height(1297).DECELERATED_EASING };
   fn.__closure = obj;
   fn.__workletHash = 10736744030668;
   fn.__initData = closure_9;
@@ -73,13 +73,13 @@ export default function GestureContainer(children) {
     obj[1] = items1;
     return obj;
   };
-  obj = { interpolate: height(4184).interpolate, position: sharedValue, height };
+  obj = { interpolate: height(4185).interpolate, position: sharedValue, height };
   fn2.__closure = obj;
   fn2.__workletHash = 16049033434372;
   fn2.__initData = closure_11;
   obj1 = { style: tmp.background, children: null };
-  const animatedStyle = height(4184).useAnimatedStyle(fn2);
-  const obj8 = height(4184);
-  obj1[1] = jsx(height(5599).GestureDetector, { gesture: failOffsetXResult, children: jsx(sharedValue(4184).View, { style: animatedStyle, children: children.children }) });
+  const animatedStyle = height(4185).useAnimatedStyle(fn2);
+  const obj8 = height(4185);
+  obj1[1] = jsx(height(5604).GestureDetector, { gesture: failOffsetXResult, children: jsx(sharedValue(4185).View, { style: animatedStyle, children: children.children }) });
   return <View style={tmp.background}>{null}</View>;
 };

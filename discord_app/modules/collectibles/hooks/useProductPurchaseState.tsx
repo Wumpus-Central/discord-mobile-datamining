@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
-import compactDefault from "../../../../_runtime/09628_compact.js";
+import compactDefault from "../../../../_runtime/12453_compact.js";
 import closure_3 from "../CollectiblesPurchaseStore.tsx";
 
 const require = arg1;

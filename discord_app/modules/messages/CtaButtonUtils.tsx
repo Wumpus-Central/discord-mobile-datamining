@@ -14,11 +14,11 @@ export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
   if (obj.shouldRenderReportFalsePositiveButton(id)) {
     let CONNECT_TO_TEEN = obj.MARK_AS_FALSE_POSITIVE;
   } else {
-    let tmpResult = tmp(4685);
+    let tmpResult = tmp(4686);
     if (tmpResult.isAgeVerificationMessageWithRetryCta(channel_id, id)) {
       CONNECT_TO_TEEN = obj.AGE_VERIFICATION_RETRY;
     } else {
-      tmpResult = tmp(4685);
+      tmpResult = tmp(4686);
       if (tmpResult.isAgeVerificationMessageWithConnectToTeenCta(channel_id, id)) {
         CONNECT_TO_TEEN = obj.CONNECT_TO_TEEN;
       }

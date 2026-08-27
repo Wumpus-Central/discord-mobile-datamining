@@ -40,7 +40,7 @@ function Footer(arg0) {
   items[1] = obj;
   obj[0] = items;
   obj = { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed };
-  obj[1] = callback(tmp5(4879).Button, obj);
+  obj[1] = callback(tmp5(4880).Button, obj);
   return callback(closure_4, obj);
 }
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);

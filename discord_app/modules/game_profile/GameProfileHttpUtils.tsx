@@ -194,7 +194,7 @@ function _getGameAnnouncements() {
         const obj6 = { type: "GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS", gameId: null, messages: null, channelId: null, guildId: null };
         obj6[1] = callback;
         const obj9 = body(709);
-        obj6[2] = callback(9551).toAnnouncementMessages(body.messages);
+        obj6[2] = callback(8801).toAnnouncementMessages(body.messages);
         const channel_id = body.channel_id;
         dependencyMap = channel_id;
         if (channel_id == null) {
@@ -209,7 +209,7 @@ function _getGameAnnouncements() {
         obj6[4] = c3;
         obj9.dispatch(obj6);
         c7 = 0;
-        const obj11 = callback(9551);
+        const obj11 = callback(8801);
       }
       c7 = 0;
       return body;

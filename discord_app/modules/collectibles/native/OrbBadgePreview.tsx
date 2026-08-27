@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/native/OrbBadgePreview.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import filterLayerDefault from "../../user_profile/native/UserProfilePreview.tsx";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import hasAtLeastOneGPlaySynced from "CollectiblesUtils.tsx";
-import filterLayerDefault from "../../user_profile/native/UserProfilePreview.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";

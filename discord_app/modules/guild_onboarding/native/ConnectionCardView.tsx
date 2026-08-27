@@ -40,7 +40,7 @@ export default function ConnectionCardView(description) {
   if (tmp4Result) {
     const obj2 = { variant: "text-sm/normal", color: "text-subtle", children: null };
     obj2[2] = description;
-    tmp4Result = tmp4(tmp5(4440).Text, obj2);
+    tmp4Result = tmp4(tmp5(4441).Text, obj2);
   }
   items1[1] = tmp4Result;
   obj1[1] = items1;
@@ -55,7 +55,7 @@ export default function ConnectionCardView(description) {
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: null };
     const intl2 = tmp5(1236).intl;
     obj4[2] = intl2.string(tmp5(1236).t["LV+CXH"]);
-    const items3 = [tmp4(tmp5(4440).Text, obj4), tmp4(tmp5(4404).CircleCheckIcon, { size: "sm", color: "status-positive" })];
+    const items3 = [tmp4(tmp5(4441).Text, obj4), tmp4(tmp5(4405).CircleCheckIcon, { size: "sm", color: "status-positive" })];
     obj3[1] = items3;
     tmp4Result = tmp2(tmp3, obj3);
   } else {
@@ -64,7 +64,7 @@ export default function ConnectionCardView(description) {
     const intl = tmp5(1236).intl;
     obj5[3] = intl.string(tmp5(1236).t.S0W8Z5);
     obj5[4] = !canConnect;
-    tmp4Result = tmp4(tmp5(4879).Button, obj5);
+    tmp4Result = tmp4(tmp5(4880).Button, obj5);
   }
   items2[1] = tmp4Result;
   obj[1] = items2;

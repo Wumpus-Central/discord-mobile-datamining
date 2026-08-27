@@ -44,7 +44,7 @@ export const canLaunchActivity = function canLaunchActivity(quest) {
   }
   return hasPlayActivityTaskResult;
 };
-export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEntrypoints(stateFromStores, closure_1_15) {
+export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEntrypoints(stateFromStores, closure_1_16) {
   const map = new Map();
   while (tmp !== undefined) {
     let tmp3 = callback;

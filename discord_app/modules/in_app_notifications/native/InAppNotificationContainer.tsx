@@ -1,12 +1,12 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationContainer.tsx
-import _modDef10009 from "MessageNotification.tsx";
-import _modDef10078 from "MessageFailedToSendNotification.tsx";
+import _modDef10109 from "MessageNotification.tsx";
+import _modDef10184 from "MessageFailedToSendNotification.tsx";
 import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification.tsx";
 import BugReporterNotification from "../../bug_reporter/native/BugReporterNotification.tsx";
 import AlertNotificationDefault from "AlertNotification.tsx";
 import ReactionNotificationBodyDefault from "ReactionNotification.tsx";
 import NotificationAvatarDefault from "ReminderNotification.tsx";
-import _modDef10426 from "RestrictedHoursWarningNotification.tsx";
+import _modDef10876 from "RestrictedHoursWarningNotification.tsx";
 import MessageRequestInAppNotificationDefault from "MessageRequestNotification.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
@@ -25,11 +25,11 @@ function NotificationWrapper(notification) {
   if (constants.MESSAGE === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10009, { notification: null });
+    return jsx(_modDef10109, { notification: null });
   } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10078, { notification: null });
+    return jsx(_modDef10184, { notification: null });
   } else if (tmp.FORUM_THREAD_CREATED === type) {
     obj1 = { notification: null };
     obj1[0] = notification;
@@ -64,7 +64,7 @@ function NotificationWrapper(notification) {
     }
     const obj6 = { notification: null };
     obj6[0] = notification;
-    return jsx(_modDef10426, { notification: null });
+    return jsx(_modDef10876, { notification: null });
   }
 }
 ({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = set);

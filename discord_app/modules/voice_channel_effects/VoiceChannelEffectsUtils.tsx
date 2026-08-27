@@ -2,12 +2,6 @@
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
 import getEmojiUnavailableReasonDefault from "../../utils/EmojiUtils.tsx";
-import _modDef6140 from "../../../_runtime/metro/06140__.js";
-import _modDef6141 from "../../../_runtime/metro/06141__.js";
-import _modDef6142 from "../../../_runtime/metro/06142__.js";
-import _modDef6143 from "../../../_runtime/metro/06143__.js";
-import _modDef6144 from "../../../_runtime/metro/06144__.js";
-import _modDef6145 from "../../../_runtime/metro/06145__.js";
 import _modDef6146 from "../../../_runtime/metro/06146__.js";
 import _modDef6147 from "../../../_runtime/metro/06147__.js";
 import _modDef6148 from "../../../_runtime/metro/06148__.js";
@@ -24,14 +18,20 @@ import _modDef6158 from "../../../_runtime/metro/06158__.js";
 import _modDef6159 from "../../../_runtime/metro/06159__.js";
 import _modDef6160 from "../../../_runtime/metro/06160__.js";
 import _modDef6161 from "../../../_runtime/metro/06161__.js";
+import _modDef6162 from "../../../_runtime/metro/06162__.js";
+import _modDef6163 from "../../../_runtime/metro/06163__.js";
+import _modDef6164 from "../../../_runtime/metro/06164__.js";
+import _modDef6165 from "../../../_runtime/metro/06165__.js";
+import _modDef6166 from "../../../_runtime/metro/06166__.js";
+import _modDef6167 from "../../../_runtime/metro/06167__.js";
 import closure_3 from "../../stores/UserStore.tsx";
 import VoiceChannelEffectAnimationType from "VoiceChannelEffectsConstants.tsx";
 import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 const require = arg1;
 ({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
-const items = [_modDef6140];
-const items1 = [_modDef6141, _modDef6142, _modDef6143, _modDef6144, _modDef6145, _modDef6146, _modDef6147, _modDef6148, _modDef6149, _modDef6150, _modDef6151, _modDef6152, _modDef6153, _modDef6154, _modDef6155, _modDef6156, _modDef6157, _modDef6158, _modDef6159, _modDef6160, _modDef6161];
+const items = [_modDef6146];
+const items1 = [_modDef6147, _modDef6148, _modDef6149, _modDef6150, _modDef6151, _modDef6152, _modDef6153, _modDef6154, _modDef6155, _modDef6156, _modDef6157, _modDef6158, _modDef6159, _modDef6160, _modDef6161, _modDef6162, _modDef6163, _modDef6164, _modDef6165, _modDef6166, _modDef6167];
 let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const memoizeResult = importDefaultResult.memoize((arg0) => {
   closure_0 = arg0;

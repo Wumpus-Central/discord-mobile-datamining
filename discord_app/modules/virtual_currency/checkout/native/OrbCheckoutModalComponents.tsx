@@ -6,9 +6,9 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import ProfileEffectAssetPreviewDefault from "../../../collectibles/native/CollectiblesShopCheckoutDetails.tsx";
 import OrbCheckoutAmountTagDefault from "../../native/OrbCheckoutAmountTag.tsx";
+import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import useOrbCheckoutModalContextProvider from "../OrbCheckoutModalContext.tsx";
 import useVirtualCurrencyBalance from "../../hooks/useVirtualCurrencyBalance.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
@@ -86,12 +86,12 @@ export const OrbCheckoutPaymentSourceDetails = function OrbCheckoutPaymentSource
   return callback2(closure_4, obj);
 };
 export const OrbCheckoutLegalFinePrint = function OrbCheckoutLegalFinePrint() {
-  let obj = skuId(12432);
+  let obj = skuId(12475);
   skuId = obj.useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = React.useMemo(() => skuId(closure_1_2[12]).getOrbCheckoutDisclaimerMessage(skuId), items);
   obj = { style: callback3().disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo };
-  return callback(skuId(4440).Text, obj);
+  return callback(skuId(4441).Text, obj);
 };
 export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPress) {
   const tmp2 = useThemeDefault();

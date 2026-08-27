@@ -862,15 +862,15 @@ export default function handleSupportedURL(payload) {
               } else if (result.QUESTS === type) {
                 addPostConnectionCallback(() => {
                   if (null != payload.questId) {
-                    let obj = payload(inviteCode[70]);
-                    obj = { questId: null, event: null, sourceQuestContent: null, properties: null };
+                    let obj = { questId: null, event: null, sourceQuestContent: null, properties: null };
                     obj[0] = arr.questId;
                     obj[1] = closure_1_12.QUEST_SHARE_LINK_DEEP_LINKED_INTO_MOBILE_CLIENT;
                     obj[2] = payload(inviteCode[71]).QuestContent.QUEST_EMBED_MOBILE;
                     obj = { referrer_id: null };
                     obj[0] = arr.referrerId;
                     obj[3] = obj;
-                    obj.trackQuestEvent(obj);
+                    payload(inviteCode[70]).trackQuestEvent(obj);
+                    const obj3 = payload(inviteCode[70]);
                   }
                   let sort;
                   if (payload != null) {
@@ -880,25 +880,26 @@ export default function handleSupportedURL(payload) {
                   if (payload != null) {
                     filter = arr.filter;
                   }
+                  obj = payload(inviteCode[72]);
                   obj1 = { scrollToQuestId: payload.questId, sort: null, filter: null, fromContent: null };
-                  let tmp9 = null;
+                  let tmp3 = null;
                   if (null != sort) {
-                    tmp9 = null;
+                    tmp3 = null;
                     if ("" !== sort) {
-                      tmp9 = sort;
+                      tmp3 = sort;
                     }
                   }
-                  obj1[1] = tmp9;
-                  let tmp10 = null;
+                  obj1[1] = tmp3;
+                  let tmp4 = null;
                   if (null != filter) {
-                    tmp10 = null;
+                    tmp4 = null;
                     if ("" !== filter) {
-                      tmp10 = filter;
+                      tmp4 = filter;
                     }
                   }
-                  obj1[2] = tmp10;
+                  obj1[2] = tmp4;
                   obj1[3] = payload(inviteCode[71]).QuestContent.QUEST_SHARE_LINK;
-                  payload(inviteCode[72]).openQuestHome(obj1);
+                  obj.openQuestHome(obj1);
                 });
                 flag = true;
               } else if (result.QUEST_HOME_PREVIEW === type) {

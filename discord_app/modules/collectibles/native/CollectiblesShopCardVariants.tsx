@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardVariants.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import CheckmarkSmallIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
+import PlusSmallIcon from "../../../design/components/Icon/native/redesign/generated/PlusSmallIcon.tsx";
 import getProductPurchaseState from "../hooks/useProductPurchaseState.tsx";
 import useIsVariantColorLightDefault from "../hooks/useIsVariantColorLight.tsx";
-import PlusSmallIcon from "../../../design/components/Icon/native/redesign/generated/PlusSmallIcon.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -69,7 +69,7 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
 const memoResult = importAllResult.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
-  let obj = defaultVariantIndex(9561);
+  let obj = defaultVariantIndex(8811);
   defaultVariantIndex = obj.useDefaultVariantIndex(product);
   const tmp = callback2();
   if (obj2.getIsVariantProduct(product)) {
@@ -101,7 +101,7 @@ const memoResult = importAllResult.memo(function CardProductVariants(product) {
   } else {
     return null;
   }
-  obj2 = defaultVariantIndex(7225);
+  obj2 = defaultVariantIndex(7231);
 });
 const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardVariants.tsx");
 

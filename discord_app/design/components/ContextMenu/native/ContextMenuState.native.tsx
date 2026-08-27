@@ -1,6 +1,6 @@
 // discord_app/design/components/ContextMenu/native/ContextMenuState.native.tsx
 import batchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod4184 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod4185 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import HapticFeedbackTypes from "../../../../modules/haptics/HapticUtils.native.tsx";
 import closure_2 from "../../../../../_runtime/00019_noop.js";
 import keys from "../../../../../_runtime/00644_keys.js";
@@ -31,9 +31,9 @@ function updateContextMenuState(absoluteX, absoluteY, closure_17) {
     const result1 = num / 4;
     if (activeIndex.get() !== result1) {
       const result2 = activeIndex.set(result1);
-      const obj = _mod4184;
-      _mod4184.runOnJS(HapticFeedbackTypes.triggerHapticFeedback)(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_LIGHT);
-      const runOnJSResult = _mod4184.runOnJS(HapticFeedbackTypes.triggerHapticFeedback);
+      const obj = _mod4185;
+      _mod4185.runOnJS(HapticFeedbackTypes.triggerHapticFeedback)(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_LIGHT);
+      const runOnJSResult = _mod4185.runOnJS(HapticFeedbackTypes.triggerHapticFeedback);
     }
   }
   const result3 = activeIndex.set(-1);

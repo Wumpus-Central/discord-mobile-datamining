@@ -2,9 +2,9 @@
 import timestampDefault from "../../debug/Logger.tsx";
 import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import trackDeviceChangedDefault from "../../../actions/AudioActionCreators.tsx";
 import createSoundForPack from "../../sound_playback/SoundUtils.tsx";
-import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import enforcingDefault2 from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTelecomModule.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -373,9 +373,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       obj[0] = guildId;
       tmp19 = obj;
     }
-    const obj4 = self(16924);
-    const reportIncomingCallResult = self(16924).reportIncomingCall(channelId, channelName, tmp19);
-    self(16924).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const obj4 = self(16990);
+    const reportIncomingCallResult = self(16990).reportIncomingCall(channelId, channelName, tmp19);
+    self(16990).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         closure_1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -384,7 +384,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       closure_1_25.warn("Failed to report incoming call:", arg0);
       self.clearCall(closure_0);
     });
-    const nextPromise = self(16924).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const nextPromise = self(16990).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         closure_1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -398,7 +398,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(16924);
+  obj = self(16990);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj.cancelIncomingCall(channelId).then(() => {
     self.clearCall(closure_0);
@@ -886,7 +886,7 @@ prototype["endCall"] = function endCall(currentCall) {
   const self = this;
   closure_0 = currentCall;
   obj.info("Ending call:", currentCall.channelId);
-  obj = self(16924);
+  obj = self(16990);
   const endCallResult = obj.endCall(currentCall.channelId);
   return obj.endCall(currentCall.channelId).then((arg0) => {
     self.clearCall(currentCall.channelId);
@@ -1042,7 +1042,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(16924);
+            obj = self(16990);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

@@ -22,7 +22,7 @@ const result = require("set").fileFinishedImporting("modules/favorites/native/Fa
 export default function FavoritesGuildSuggestedChannels() {
   let tmp = callback6();
   const tmp4 = useIsMobileVisualRefreshExperimentEnabledDefault("FavoritesGuildSuggestedChannels");
-  let obj = arr(15542);
+  let obj = arr(15607);
   const categoryStyles = obj.useCategoryStyles(tmp4);
   arr = callback();
   const tmp7 = callback2();
@@ -33,7 +33,7 @@ export default function FavoritesGuildSuggestedChannels() {
     const intl = arr(1236).intl;
     obj[0] = intl.string(callback(3147).F3dWTe);
     obj[1] = callback;
-    obj[2] = arr(5498).XSmallIcon;
+    obj[2] = arr(5503).XSmallIcon;
     return obj;
   }, items);
   const tmp9 = useScaledRowHeightDefault();
@@ -50,12 +50,12 @@ export default function FavoritesGuildSuggestedChannels() {
     obj[2] = categoryStyles;
     obj[3] = tmp4;
     obj[4] = memo;
-    const items2 = [tmp5(15542).renderCategoryItem(obj), ];
+    const items2 = [tmp5(15607).renderCategoryItem(obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.rows;
     obj1[1] = arr.map((result) => {
       let obj = { style: closure_3, children: null };
-      obj = { result, onPressDestination: callback(15641), onLongPress: closure_1_7, start: 0 === arg1, end: arg1 === result.length - 1, trailing: null };
+      obj = { result, onPressDestination: callback(15705), onLongPress: closure_1_7, start: 0 === arg1, end: arg1 === result.length - 1, trailing: null };
       obj = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
       const intl = arr(1236).intl;
       obj[3] = intl.string(result(1236).t.OYkgVk);
@@ -63,14 +63,14 @@ export default function FavoritesGuildSuggestedChannels() {
         const tmp = closure_1_1(closure_1_2[15]);
         return tmp(callback(closure_1_2[17]).getDestinationIdFromResult(callback));
       };
-      obj[5] = closure_1_9(result(4879).Button, obj);
-      obj[1] = closure_1_9(callback(15640), obj);
+      obj[5] = closure_1_9(result(4880).Button, obj);
+      obj[1] = closure_1_9(callback(15704), obj);
       return closure_1_9(closure_1_4, obj, "" + result.type + "-" + result.record.id);
     });
     items2[1] = callback4(View, obj1);
     obj[1] = items2;
     tmp10 = callback5(View, obj);
-    const tmp5Result = tmp5(15542);
+    const tmp5Result = tmp5(15607);
   }
   return tmp10;
 };

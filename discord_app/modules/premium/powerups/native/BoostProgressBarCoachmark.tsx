@@ -24,7 +24,7 @@ export default function BoostProgressBarCoachmark(guild) {
   const items1 = [guild.id, markAsDismissed];
   callback1 = callback.useCallback(() => {
     markAsDismissed(closure_1_5.TAKE_ACTION);
-    markAsDismissed(9236).saveGuild(guild.id, { premiumProgressBarEnabled: true });
+    markAsDismissed(9649).saveGuild(guild.id, { premiumProgressBarEnabled: true });
   }, items1);
   const items2 = [callback, callback1, tmp.riveContainer];
   const memo = callback.useMemo(() => {
@@ -42,6 +42,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj[9] = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(8868).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(8895).useCoachmark(guild.targetRef, memo);
   return null;
 };

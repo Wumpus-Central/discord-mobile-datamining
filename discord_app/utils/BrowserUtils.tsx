@@ -1,5 +1,5 @@
 // discord_app/utils/BrowserUtils.tsx
-import formatDefault from "../../_runtime/04788_format.js";
+import formatDefault from "../../_runtime/04789_format.js";
 
 let str = formatDefault.name;
 if (str == null) {

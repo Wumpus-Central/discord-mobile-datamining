@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelIconButton.tsx
-import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import setDefault from "../../../core/native/ReanimatedNativeView.tsx";
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 

@@ -5,7 +5,7 @@ import Button from "../../../design/void/native.tsx";
 import useIsMobileVisualRefreshExperimentEnabled from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../_runtime/08693_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07646_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../a11y/AccessibilityStore.tsx";
@@ -32,7 +32,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     obj[3] = tmp3.floatingReplyTextWrapper;
     const intl3 = tmp(1236).intl;
     obj[4] = intl3.string(tmp(1236).t["5IEsGx"]);
-    const items = [callback(tmp(4440).Text, obj), ];
+    const items = [callback(tmp(4441).Text, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp3.floatingRightActions;
     obj2 = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
@@ -45,11 +45,11 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     obj2[3] = tmp13;
     obj2[4] = onCancelReplying;
     const obj3 = { source: null, size: null, style: null };
-    obj3[0] = tmp4(8693);
+    obj3[0] = tmp4(7646);
     obj3[1] = tmp(1297).Icon.Sizes.CUSTOM;
     obj3[2] = tmp3.floatingCloseIcon;
     obj2[5] = callback(tmp(1297).Icon, obj3);
-    obj1[1] = callback(tmp(5015).PressableOpacity, obj2);
+    obj1[1] = callback(tmp(5020).PressableOpacity, obj2);
     items[1] = callback(closure_5, obj1);
     obj[1] = items;
     let tmp7Result = tmp7(tmp11, obj);
@@ -62,7 +62,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp3.contextCancelIconWrapper;
     const obj6 = { source: null, size: null };
-    obj6[0] = tmp4(8693);
+    obj6[0] = tmp4(7646);
     obj6[1] = tmp(1297).Icon.Sizes.SMALL_20;
     obj5[1] = callback(tmp(1297).Icon, obj6);
     const items1 = [callback(closure_5, obj5), ];
@@ -70,9 +70,9 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     obj7[3] = tmp3.contextButtonText;
     const intl2 = tmp(1236).intl;
     obj7[4] = intl2.string(tmp(1236).t["5IEsGx"]);
-    items1[1] = callback(tmp(4440).Text, obj7);
+    items1[1] = callback(tmp(4441).Text, obj7);
     obj4[5] = items1;
-    tmp7Result = tmp7(tmp(5015).PressableOpacity, obj4);
+    tmp7Result = tmp7(tmp(5020).PressableOpacity, obj4);
   }
   return tmp7Result;
 }
@@ -452,7 +452,7 @@ function ChatInputEditBar(onCancelEditing) {
   }
   obj1[2] = floatingCloseIcon;
   obj[6] = closure_12(Button.Icon, obj1);
-  tmp7Result = tmp7(tmp(5015).PressableOpacity, obj);
+  tmp7Result = tmp7(tmp(5020).PressableOpacity, obj);
   obj2 = { style: tmp3.contextBarRow, children: null };
   const obj3 = { children: null };
   const items = [, ];
@@ -521,7 +521,7 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   }
   obj2[2] = floatingCloseIcon;
   obj1[6] = closure_12(Button.Icon, obj2);
-  tmp7Result = tmp7(tmp(5015).PressableOpacity, obj1);
+  tmp7Result = tmp7(tmp(5020).PressableOpacity, obj1);
   const obj3 = { style: tmp3.contextBarRow, children: null };
   const obj4 = { children: null };
   const items = [, ];

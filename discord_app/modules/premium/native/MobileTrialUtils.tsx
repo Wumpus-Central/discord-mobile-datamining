@@ -14,11 +14,11 @@ export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShou
   let tmp3 = null != premiumTrialOffer;
   const result = UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
   if (tmp3) {
-    let expiresAt;
+    let hasAcknowledged;
     if (premiumTrialOffer != null) {
-      expiresAt = premiumTrialOffer.expiresAt;
+      hasAcknowledged = premiumTrialOffer.hasAcknowledged;
     }
-    tmp3 = null == expiresAt;
+    tmp3 = true !== hasAcknowledged;
   }
   if (tmp3) {
     tmp3 = !result;
@@ -46,7 +46,7 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
   if (null == subscriptionTrial) {
     return null;
   } else {
-    let tmpResult = tmp(7537);
+    let tmpResult = tmp(12873);
     obj = { location: null };
     obj[0] = user_profile_premium_upsell_card;
     if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj)) {

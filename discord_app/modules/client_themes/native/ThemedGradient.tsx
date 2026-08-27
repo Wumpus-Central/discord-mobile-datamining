@@ -7,7 +7,7 @@ import hslToRgbDefault from "../../../utils/Color.tsx";
 import set from "../../guild_themes/GuildThemePresets.tsx";
 import getGuildIdFromNavigationStateDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/04891_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04892_LinearGradient.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../ClientThemesBackgroundStore.tsx";
@@ -67,10 +67,10 @@ function getMixedGradientColor(mixColorOverride) {
   } else if (null != mixAmount1.light) {
     num3 = 1 - mixAmount1.light;
   }
-  let tmp12Result = tmp12(4292);
+  let tmp12Result = tmp12(4293);
   obj6 = AccessibilityAnnouncer;
   ({ r, g, b } = tmp12Result.hexToRgb(mixColorOverride.color));
-  tmp12Result = tmp12(4292);
+  tmp12Result = tmp12(4293);
   const hexToRgbResult = tmp12Result.hexToRgb(mixColorOverride.color);
   const tmp15 = new hslToRgbDefault(r, g, b, num3);
   return tmp12Result.mixColors(mixColorOverride, new hslToRgbDefault(r, g, b, num3)).toHexString();
@@ -420,7 +420,7 @@ export default function ThemedGradient(overlayOpacity) {
   const items = [closure_5];
   const preset = tmp6Result.useStateFromStoresObject(items, () => ({ preset: gradientPreset.gradientPreset })).preset;
   const tmp10 = getGuildIdFromNavigationStateDefault();
-  tmp6Result = tmp6(4378);
+  tmp6Result = tmp6(4379);
   const customThemeDisplaySettings = tmp6Result.useCustomThemeDisplaySettings();
   if (null != gradientOverride) {
     if (tmp12) {
@@ -438,13 +438,13 @@ export default function ThemedGradient(overlayOpacity) {
           obj1 = { style: null };
           const items2 = [tmp2.softenGradient, ];
           const obj2 = { backgroundColor: null };
-          obj2[0] = tmp6(4292).hexWithOpacity(tmp8, num);
+          obj2[0] = tmp6(4293).hexWithOpacity(tmp8, num);
           items2[1] = obj2;
           obj1[0] = items2;
           items1[1] = callback(View, obj1);
           obj[1] = items1;
           tmp60 = callback2(View, obj);
-          const tmp6Result1 = tmp6(4292);
+          const tmp6Result1 = tmp6(4293);
         }
         return tmp60;
       }
@@ -462,13 +462,13 @@ export default function ThemedGradient(overlayOpacity) {
         const obj5 = { style: null };
         const items4 = [tmp2.softenGradient, ];
         const obj6 = { backgroundColor: null };
-        obj6[0] = tmp6(4292).hexWithOpacity(tmp8, num);
+        obj6[0] = tmp6(4293).hexWithOpacity(tmp8, num);
         items4[1] = obj6;
         obj5[0] = items4;
         items3[1] = callback(View, obj5);
         obj4[1] = items3;
         tmp49 = callback2(View, obj4);
-        const tmp6Result2 = tmp6(4292);
+        const tmp6Result2 = tmp6(4293);
       }
       return tmp49;
     }
@@ -487,13 +487,13 @@ export default function ThemedGradient(overlayOpacity) {
       const obj9 = { style: null };
       const items6 = [tmp2.softenGradient, ];
       const obj10 = { backgroundColor: null };
-      obj10[0] = tmp6(4292).hexWithOpacity(tmp8, num);
+      obj10[0] = tmp6(4293).hexWithOpacity(tmp8, num);
       items6[1] = obj10;
       obj9[0] = items6;
       items5[1] = tmp34(View, obj9);
       obj8[1] = items5;
       tmp40 = callback2(View, obj8);
-      const tmp6Result3 = tmp6(4292);
+      const tmp6Result3 = tmp6(4293);
     }
     let tmp13 = tmp40;
     tmp34 = callback;
@@ -513,13 +513,13 @@ export default function ThemedGradient(overlayOpacity) {
           const obj13 = { style: null };
           const items8 = [tmp2.softenGradient, ];
           const obj14 = { backgroundColor: null };
-          obj14[0] = tmp6(4292).hexWithOpacity(tmp8, num);
+          obj14[0] = tmp6(4293).hexWithOpacity(tmp8, num);
           items8[1] = obj14;
           obj13[0] = items8;
           items7[1] = tmp23(View, obj13);
           obj12[1] = items7;
           tmp31 = callback2(View, obj12);
-          const tmp6Result4 = tmp6(4292);
+          const tmp6Result4 = tmp6(4293);
         }
         tmp13 = tmp31;
         tmp23 = callback;
@@ -539,13 +539,13 @@ export default function ThemedGradient(overlayOpacity) {
         const obj17 = { style: null };
         const items10 = [tmp2.softenGradient, ];
         const obj18 = { backgroundColor: null };
-        obj18[0] = tmp6(4292).hexWithOpacity(tmp8, num);
+        obj18[0] = tmp6(4293).hexWithOpacity(tmp8, num);
         items10[1] = obj18;
         obj17[0] = items10;
         items9[1] = tmp14(View, obj17);
         obj16[1] = items9;
         tmp20 = callback2(View, obj16);
-        const tmp6Result5 = tmp6(4292);
+        const tmp6Result5 = tmp6(4293);
       }
       tmp13 = tmp20;
       tmp14 = callback;

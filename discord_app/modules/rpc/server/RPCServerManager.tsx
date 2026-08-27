@@ -553,7 +553,7 @@ prototype["init"] = function init() {
     callback(698).track(constants.AUTHORIZED_APP_CONNECTED, obj);
   };
   this.rpcServer.onDisconnect = (id, reason) => {
-    let obj = callback(14000);
+    let obj = callback(14027);
     obj.releaseSocket(id.id);
     obj = { type: "RPC_APP_DISCONNECTED", socketId: id.id, application: id.application, source: id.source, reason };
     callback(709).dispatch(obj);

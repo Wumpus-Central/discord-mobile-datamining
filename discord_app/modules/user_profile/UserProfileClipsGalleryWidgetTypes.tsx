@@ -8,11 +8,11 @@ function convertClip(gameId) {
   if ("saved" === gameId.status) {
     obj = {};
     const merged = Object.assign(obj);
-    ({ id: obj3.id, fileId: obj3.file_id } = gameId);
+    ({ id: obj3.id, fileId: obj3.file_id, localClipId: obj3.local_clip_id } = gameId);
   } else {
     obj = {};
     const merged1 = Object.assign(obj);
-    obj.upload_filename = gameId.uploadFilename;
+    ({ uploadFilename: obj2.upload_filename, localClipId: obj2.local_clip_id } = gameId);
   }
   return obj;
 }

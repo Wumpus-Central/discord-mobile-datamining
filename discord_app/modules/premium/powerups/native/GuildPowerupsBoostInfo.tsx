@@ -4,8 +4,8 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
+import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import getGuildPowerupsBoostInfoText from "../utils/getGuildPowerupsBoostInfoText.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";

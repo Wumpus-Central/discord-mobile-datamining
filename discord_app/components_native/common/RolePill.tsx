@@ -29,7 +29,7 @@ export default function RolePill(role) {
   let combined;
   const DeveloperMode = role(4134).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj = role(5924);
+  let obj = role(5929);
   obj = { guildId, roleId: role.id, size: 12 };
   const roleIcon = obj.useRoleIcon(obj);
   let name = role.name;
@@ -74,8 +74,8 @@ export default function RolePill(role) {
     }
     obj2[2] = guildId;
     obj2[3] = color;
-    let tmp10Result = tmp10(combined(5944), obj2);
-    const tmp15 = combined(5944);
+    let tmp10Result = tmp10(combined(5949), obj2);
+    const tmp15 = combined(5949);
   } else {
     const items = [tmp9.bubble, ];
     if (null != color) {
@@ -99,8 +99,8 @@ export default function RolePill(role) {
     tmp10Result = tmp10(tmp12, obj6);
   }
   items1[1] = tmp10Result;
-  items1[2] = closure_6(role(4440).Text, { variant: "text-xs/semibold", color: "interactive-text-active", children: name });
+  items1[2] = closure_6(role(4441).Text, { variant: "text-xs/semibold", color: "interactive-text-active", children: name });
   obj1[1] = items1;
   obj[4] = closure_7(View, obj1);
-  return closure_6(role(5015).PressableHighlight, obj);
+  return closure_6(role(5020).PressableHighlight, obj);
 };

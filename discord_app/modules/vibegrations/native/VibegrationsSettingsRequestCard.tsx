@@ -53,7 +53,7 @@ export default function VibegrationsSettingsRequestCard(projectId) {
   obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = tmp2(1236).intl;
   obj[2] = intl.string(request(3469).wgDhiQ);
-  const items2 = [callback(projectId(4440).Text, obj), , , ];
+  const items2 = [callback(projectId(4441).Text, obj), , , ];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -77,7 +77,7 @@ export default function VibegrationsSettingsRequestCard(projectId) {
     obj3[2] = callback;
     const intl3 = tmp2(1236).intl;
     obj3[3] = intl3.string(tmp8(3469)["KO2xN+"]);
-    items2[3] = tmp7(tmp2(4879).Button, obj3);
+    items2[3] = tmp7(tmp2(4880).Button, obj3);
     obj[1] = items2;
     return closure_7(tmp6, obj);
   }

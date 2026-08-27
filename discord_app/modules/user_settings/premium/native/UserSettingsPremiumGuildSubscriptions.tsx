@@ -107,7 +107,7 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
       const obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
       obj2[0] = tmp.externalManagement;
       obj2[3] = externalManagementMessage;
-      tmp6Result = tmp6(tmp7(4440).Text, obj2);
+      tmp6Result = tmp6(tmp7(4441).Text, obj2);
     }
     const obj3 = { children: null };
     items1[2] = tmp6Result;
@@ -183,11 +183,11 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   if (flag == null) {
     flag = true;
   }
-  ({ fractionalState: c2, endsAt } = flag(7069)({ forceFetch: true }));
-  let tmpResult = tmp(8386);
+  ({ fractionalState: c2, endsAt } = flag(7075)({ forceFetch: true }));
+  let tmpResult = tmp(7906);
   closure_3 = tmpResult.useIsInReverseTrial();
-  const tmp3 = flag(7069)({ forceFetch: true });
-  closure_4 = flag(13009)(endsAt, tmp(13009).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp3 = flag(7075)({ forceFetch: true });
+  closure_4 = flag(13032)(endsAt, tmp(13032).CountDownMessageTypes.LONG_TIME_LEFT);
   tmpResult = tmp(589);
   const items = [closure_8, closure_7, closure_9, closure_6];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items, () => {
@@ -209,7 +209,7 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     obj[10] = premiumGroupRole;
     return obj;
   });
-  const tmp4 = flag(13009);
+  const tmp4 = flag(13032);
   const items1 = [closure_10];
   const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
   const tmpResult1 = initialize;

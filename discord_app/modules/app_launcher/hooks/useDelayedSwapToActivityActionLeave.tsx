@@ -11,7 +11,7 @@ export const useDelayedSwapToActivityActionLeave = function useDelayedSwapToActi
   closure_1 = tmp[1];
   const items = [activityAction];
   const layoutEffect = React.useLayoutEffect(() => {
-    if (activityAction === activityAction(11713).ActivityAction.LEAVE) {
+    if (activityAction === activityAction(11546).ActivityAction.LEAVE) {
       const _setTimeout = setTimeout;
       activityAction = setTimeout(() => callback(closure_0), 100);
       return () => clearTimeout(closure_0);

@@ -7,8 +7,8 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import TableRowArrow from "../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import FormSwitch from "../../../design/components/Forms/native/FormSwitch.native.tsx";
-import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import Input from "../../../design/components/Input/native/Input.native.tsx";
+import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -148,7 +148,7 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
     callback(closure_0);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(5015).PressableHighlight;
+    let PressableHighlight = tmp2(5020).PressableHighlight;
   } else {
     PressableHighlight = closure_4;
   }

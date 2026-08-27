@@ -192,7 +192,7 @@ export const useUserQRLinkUrl = function useUserQRLinkUrl() {
 export const useHasMaxConnections = function useHasMaxConnections() {
   const ACTIVE = constants.ACTIVE;
   let stateFromStores;
-  const tmp = stateFromStores(7547)();
+  const tmp = stateFromStores(8698)();
   const items = [closure_5];
   stateFromStores = ACTIVE(647).useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, ACTIVE];
@@ -293,8 +293,8 @@ export const useActivityWindowTimeStamp = function useActivityWindowTimeStamp(ac
   if (null != stateFromStores) {
     const _Date = Date;
     const date = new Date(stateFromStores);
-    result = tmp(7265).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
-    const tmpResult = tmp(7265);
+    result = tmp(7271).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
+    const tmpResult = tmp(7271);
   }
   return result;
 };

@@ -9,7 +9,7 @@ import getUncachedChannelPermissionsDefault from "../stores/PermissionStore.tsx"
 import getPremiumPlanItemDefault from "../utils/PremiumUtils.tsx";
 import readSnowflake from "../modules/instant_invite/InviteCodeUtils.tsx";
 import collectGuildAnalyticsMetadataDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
-import t2 from "../../_runtime/04657_t.js";
+import t2 from "../../_runtime/04658_t.js";
 import items2 from "../utils/UploadUtils.tsx";
 import redactionSettingToRenderedString from "../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import createMessage from "../modules/messages/createMessage.tsx";
@@ -57,7 +57,7 @@ function trackInvite(channelId) {
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   let result1 = null != invite;
   if (result1) {
-    let tmp3Result = tmp3(7405);
+    let tmp3Result = tmp3(7413);
     result1 = tmp3Result.isEmbeddedApplicationInvite(invite);
   }
   let id1;
@@ -68,7 +68,7 @@ function trackInvite(channelId) {
     }
   }
   if (tmp8) {
-    tmp3Result = tmp3(7364);
+    tmp3Result = tmp3(7371);
     const result2 = tmp3Result.trackAppEmbedLinkSent(id1, LinkType.ACTIVITY_INVITE, id);
   }
   let channel = store.getChannel(channelId.channelId);
@@ -109,14 +109,14 @@ function trackInvite(channelId) {
             STREAM = GDM_INVITE;
             if (lastActiveStream.channelId === channel.id) {
               obj.destination_user_id = lastActiveStream.ownerId;
-              const streamerApplication = tmp3(7408).getStreamerApplication(lastActiveStream, closure_22);
+              const streamerApplication = tmp3(7416).getStreamerApplication(lastActiveStream, closure_22);
               let id3 = null;
               if (null != streamerApplication) {
                 id3 = streamerApplication.id;
               }
               obj.application_id = id3;
               STREAM = constants3.STREAM;
-              const tmp3Result1 = tmp3(7408);
+              const tmp3Result1 = tmp3(7416);
             }
           }
         }
@@ -142,13 +142,13 @@ function trackInvite(channelId) {
     obj.message_id = messageId;
     obj.send_type = constants4.DIRECT_MESSAGE;
     obj.invite_guild_scheduled_event_id = result.guildScheduledEventId;
-    let inviteInstanceId = tmp3(4429).getInviteInstanceId(result.baseCode, messageId);
+    let inviteInstanceId = tmp3(4430).getInviteInstanceId(result.baseCode, messageId);
     if (inviteInstanceId == null) {
       inviteInstanceId = null;
     }
     obj.invite_instance_id = inviteInstanceId;
     const merged1 = Object.assign(overrideProperties);
-    const tmp3Result2 = tmp3(4429);
+    const tmp3Result2 = tmp3(4430);
     collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.INVITE_SENT, obj);
     const obj13 = collectGuildAnalyticsMetadataDefault;
   } else {
@@ -172,13 +172,13 @@ function trackInvite(channelId) {
       obj2.message_id = messageId;
       obj2.send_type = constants4.DIRECT_MESSAGE;
       obj2.invite_guild_scheduled_event_id = result.guildScheduledEventId;
-      let inviteInstanceId1 = tmp3(4429).getInviteInstanceId(result.baseCode, messageId);
+      let inviteInstanceId1 = tmp3(4430).getInviteInstanceId(result.baseCode, messageId);
       if (inviteInstanceId1 == null) {
         inviteInstanceId1 = null;
       }
       obj2.invite_instance_id = inviteInstanceId1;
       const merged3 = Object.assign(overrideProperties);
-      const tmp3Result3 = tmp3(4429);
+      const tmp3Result3 = tmp3(4430);
       collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.INVITE_SENT, obj2);
       const obj8 = collectGuildAnalyticsMetadataDefault;
     }
@@ -607,7 +607,7 @@ let obj14 = {
           } else {
             closure_0 = arg1;
             if (closure_0.body.length > 0) {
-              obj = closure_1_0(4689);
+              obj = closure_1_0(4690);
               dependencyMap = 3;
               const obj5 = { value: null, done: true };
               obj5[0] = obj.createMessageRecord(closure_0.body[0]);
@@ -837,8 +837,8 @@ let obj14 = {
               closure_2 = undefined;
               dependencyMap = undefined;
               basicChannel = closure_1_17.getBasicChannel(closure_1_0);
-              const orCreate = closure_1_1(5163).getOrCreate(closure_1_0);
-              const obj13 = closure_1_1(5163);
+              const orCreate = closure_1_1(5168).getOrCreate(closure_1_0);
+              const obj13 = closure_1_1(5168);
               const databaseResult = closure_1_1(1956).database();
               c1 = databaseResult;
               if (null != databaseResult) {
@@ -891,7 +891,7 @@ let obj14 = {
                 tmp30 = closure_2.connectionId === closure_1_6.lastTimeConnectedChanged();
               }
               dependencyMap = tmp30;
-              obj2 = closure_1_1(7160);
+              obj2 = closure_1_1(7166);
               const result = obj2.recordChannelFetchedLocal(basicChannel, c1, closure_2, dependencyMap, closure_4, closure_2.messages);
               let obj3 = closure_1_1(709);
               obj3 = { type: "LOCAL_MESSAGES_LOADED", guildId: null, channelId: null, users: null, members: null, messages: null, stale: null };
@@ -961,7 +961,7 @@ let obj14 = {
                     orCreate = 1;
                     c3 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = obj2.tryLoadAsync(() => closure_2_1(7149).load(c1, basicChannel, c1));
+                    obj1[0] = obj2.tryLoadAsync(() => closure_2_1(7155).load(c1, basicChannel, c1));
                     return obj1;
                   }
                 }
@@ -1237,14 +1237,16 @@ let obj14 = {
               closure_2 = obj2.backgroundify(function _trySend() {
                 return closure_1_55._sendMessage(closure_0, closure_1, c3);
               }, undefined);
-              const result = closure_1_9.recordMessageSendAttempt(closure_1_0, closure_1, obj5);
+              if (null == obj5.scheduledTimestamp) {
+                const result = closure_1_9.recordMessageSendAttempt(closure_1_0, closure_1, obj5);
+              }
               if (closure_1_21.isReady(closure_1_0)) {
                 closure_1_2();
               } else {
                 if (closure_1_2) {
                   if (closure_1_0 !== closure_1_0(obj5[53]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
                     const _HermesInternal = HermesInternal;
-                    closure_1_50.info("Waiting for channel " + closure_0 + " to be ready before sending.");
+                    closure_1_50.info("Waiting for channel " + closure_1_0 + " to be ready before sending.");
                     new Promise((arg0, arg1) => {
                       closure_0 = arg0;
                       closure_1 = arg1;
@@ -1260,9 +1262,9 @@ let obj14 = {
               c4 = 3;
             }
           }
-        } catch (tmp57) {
+        } catch (tmp61) {
           c4 = tmp;
-          throw tmp57;
+          throw tmp61;
         }
       }
     })();
@@ -1418,7 +1420,7 @@ let obj14 = {
     obj.location = constants10.POLL_CREATION;
     return obj14._sendMessage(id, { content: "", tts: false, validNonShortcutEmojis: [], invalidEmojis: [] }, obj);
   },
-  validateMessage(invalidEmojis, currentUser, throwTypeErrorResult) {
+  validateMessage(invalidEmojis, currentUser, closure_1_0) {
     if (invalidEmojis.some((animated) => animated.animated)) {
       let obj = getPremiumPlanItemDefault;
       if (!obj.canUseAnimatedEmojis(currentUser)) {
@@ -1472,32 +1474,34 @@ let obj14 = {
                 obj[0] = arg1;
                 return obj;
               } else {
-                stickerIds = tmp3;
-                c3 = tmp5;
+                let stickerIds = tmp3;
+                let inviteAnalyticsMetadata = tmp5;
                 closure_0 = undefined;
                 closure_1 = undefined;
                 c2 = undefined;
-                c3 = undefined;
+                inviteAnalyticsMetadata = undefined;
                 stickerIds = undefined;
                 let messageReference;
                 c6 = undefined;
                 c7 = undefined;
                 c8 = undefined;
-                c9 = undefined;
-                c10 = undefined;
-                closure_11 = undefined;
+                let onAttachmentUploadError;
+                let scheduledTimestamp;
+                c11 = undefined;
+                c12 = undefined;
                 let DEFAULT;
-                closure_13 = undefined;
                 closure_14 = undefined;
+                closure_15 = undefined;
                 let uploader;
                 let obj4;
-                closure_17 = undefined;
-                attachments = undefined;
+                c18 = undefined;
                 c19 = undefined;
                 c20 = undefined;
                 c21 = undefined;
                 c22 = undefined;
                 c23 = undefined;
+                c24 = undefined;
+                closure_25 = undefined;
                 throwTypeErrorResult = closure_1_1;
                 throwTypeErrorResult = closure_1_3;
                 throwTypeErrorResult = closure_1_0;
@@ -1517,66 +1521,90 @@ let obj14 = {
                   const content = closure_1_1.content;
                   closure_0 = content;
                   ({ invalidEmojis, validNonShortcutEmojis: closure_1, tts } = closure_1_1);
-                  let tmp40 = undefined !== tts;
-                  if (tmp40) {
-                    tmp40 = tts;
+                  let tmp75 = undefined !== tts;
+                  if (tmp75) {
+                    tmp75 = tts;
                   }
-                  ({ activityAction, location: _location } = closure_1_2);
+                  const activityAction = closure_1_2.activityAction;
+                  const _location = closure_1_2.location;
                   c2 = _location;
-                  ({ inviteAnalyticsMetadata: c3, stickerIds } = closure_1_2);
+                  inviteAnalyticsMetadata = closure_1_2.inviteAnalyticsMetadata;
+                  stickerIds = closure_1_2.stickerIds;
                   messageReference = closure_1_2.messageReference;
-                  ({ allowedMentions, poll } = closure_1_2);
+                  const allowedMentions = closure_1_2.allowedMentions;
+                  const poll = closure_1_2.poll;
                   c6 = poll;
-                  ({ sharedCustomTheme, contentInventoryEntry } = closure_1_2);
+                  const sharedCustomTheme = closure_1_2.sharedCustomTheme;
+                  const contentInventoryEntry = closure_1_2.contentInventoryEntry;
                   c7 = contentInventoryEntry;
-                  ({ attachments, attachmentsToUpload } = closure_1_2);
+                  let attachments = closure_1_2.attachments;
+                  const attachmentsToUpload = closure_1_2.attachmentsToUpload;
                   c8 = attachmentsToUpload;
-                  ({ onAttachmentUploadError: c9, announcementSendOptions, withCheckpoint, mediaMention, flags } = closure_1_2);
+                  onAttachmentUploadError = closure_1_2.onAttachmentUploadError;
+                  const announcementSendOptions = closure_1_2.announcementSendOptions;
+                  const withCheckpoint = closure_1_2.withCheckpoint;
+                  const mediaMention = closure_1_2.mediaMention;
+                  scheduledTimestamp = closure_1_2.scheduledTimestamp;
+                  const flags = closure_1_2.flags;
                   closure_0 = flags;
                   if (flags == null) {
                     closure_0 = 0;
                   }
-                  const tmp45 = closure_1_4(throwTypeErrorResult(closure_1_3[67])(content), 2);
+                  const tmp97 = closure_1_4(closure_1_1(closure_1_3[67])(content), 2);
                   let addFlagResult = closure_0;
-                  let tmp48 = content;
-                  if (tmp45[0]) {
-                    closure_0 = tmp46;
-                    obj4 = closure_1_0(closure_1_3[68]);
-                    addFlagResult = obj4.addFlag(tmp42, closure_1_33.SUPPRESS_NOTIFICATIONS);
-                    tmp48 = tmp46;
+                  throwTypeErrorResult = content;
+                  if (tmp97[0]) {
+                    closure_0 = tmp98;
+                    throwTypeErrorResult = closure_1_0;
+                    throwTypeErrorResult = closure_1_3;
+                    let obj12 = closure_1_0(closure_1_3[68]);
+                    throwTypeErrorResult = closure_1_33;
+                    addFlagResult = obj12.addFlag(tmp93, closure_1_33.SUPPRESS_NOTIFICATIONS);
+                    throwTypeErrorResult = tmp98;
                   }
-                  let channel = closure_1_17.getChannel(throwTypeErrorResult);
-                  let guild_id;
-                  if (channel != null) {
-                    guild_id = channel.guild_id;
+                  throwTypeErrorResult = closure_1_17;
+                  throwTypeErrorResult = closure_1_0;
+                  throwTypeErrorResult = closure_1_17.getChannel(closure_1_0);
+                  throwTypeErrorResult = undefined;
+                  throwTypeErrorResult = attachments;
+                  if (throwTypeErrorResult != null) {
+                    throwTypeErrorResult = throwTypeErrorResult.guild_id;
                   }
-                  const guild = closure_1_19.getGuild(guild_id);
-                  let obj5 = closure_1_0(closure_1_3[69]);
-                  let addFlagResult1 = addFlagResult;
-                  if (obj5.canSendGuildOfficialMessages(guild, channel, "_sendMessage")) {
-                    let obj6 = closure_1_0(closure_1_3[68]);
-                    addFlagResult1 = obj6.addFlag(addFlagResult, closure_1_33.IS_GUILD_OFFICIAL);
+                  throwTypeErrorResult = closure_1_0;
+                  throwTypeErrorResult = closure_1_3;
+                  throwTypeErrorResult = attachments.getGuild(throwTypeErrorResult);
+                  let obj13 = closure_1_0(closure_1_3[69]);
+                  throwTypeErrorResult = addFlagResult;
+                  if (obj13.canSendGuildOfficialMessages(throwTypeErrorResult, throwTypeErrorResult, "_sendMessage")) {
+                    throwTypeErrorResult = closure_1_0;
+                    throwTypeErrorResult = closure_1_3;
+                    obj14 = closure_1_0(closure_1_3[68]);
+                    throwTypeErrorResult = closure_1_33;
+                    throwTypeErrorResult = obj14.addFlag(addFlagResult, closure_1_33.IS_GUILD_OFFICIAL);
                   }
-                  c10 = false;
-                  const messageReference2 = tmp41.messageReference;
-                  let type;
+                  c11 = false;
+                  throwTypeErrorResult = closure_1_2;
+                  const messageReference2 = closure_1_2.messageReference;
+                  throwTypeErrorResult = undefined;
                   if (messageReference2 != null) {
-                    type = messageReference2.type;
+                    throwTypeErrorResult = messageReference2.type;
                   }
-                  closure_11 = tmp65;
-                  if ("" === tmp48) {
+                  throwTypeErrorResult = closure_1_39;
+                  throwTypeErrorResult = throwTypeErrorResult === closure_1_39.FORWARD;
+                  c12 = throwTypeErrorResult;
+                  if ("" === throwTypeErrorResult) {
                     if (null == activityAction) {
                       if (null == stickerIds) {
                         if (null == poll) {
                           if (null == sharedCustomTheme) {
                             if (null == contentInventoryEntry) {
-                              if (!tmp65) {
+                              if (!throwTypeErrorResult) {
                                 if (null == attachments) {
                                   if (!withCheckpoint) {
                                     if (null == throwTypeErrorResult.components) {
                                       if (null != attachmentsToUpload) {
                                         if (attachmentsToUpload.length > 0) {
-                                          c10 = true;
+                                          c11 = true;
                                         }
                                       }
                                       c8 = 3;
@@ -1594,102 +1622,132 @@ let obj14 = {
                     }
                   }
                   if (null != messageReference) {
+                    throwTypeErrorResult = closure_1_35;
                     DEFAULT = closure_1_35.REPLY;
                   } else {
+                    throwTypeErrorResult = closure_1_35;
                     DEFAULT = closure_1_35.DEFAULT;
                   }
-                  const nonce = tmp41.nonce;
+                  throwTypeErrorResult = closure_1_2;
+                  const nonce = closure_1_2.nonce;
                   closure_1 = nonce;
                   if (nonce == null) {
-                    let obj8 = closure_1_0(closure_1_3[49]);
-                    closure_1 = obj8.createNonce();
+                    throwTypeErrorResult = closure_1_0;
+                    throwTypeErrorResult = closure_1_3;
+                    let obj16 = closure_1_0(closure_1_3[49]);
+                    closure_1 = obj16.createNonce();
                   }
-                  closure_13 = closure_1;
+                  throwTypeErrorResult = closure_1;
                   closure_14 = closure_1;
+                  closure_15 = closure_1;
+                  throwTypeErrorResult = closure_1_1;
+                  throwTypeErrorResult = closure_1_3;
                   let obj3 = { channelId: null, content: null, tts: null, type: null, messageReference: null, allowedMentions: null, flags: null, nonce: null, poll: null, sharedCustomTheme: null, mediaMention: null };
-                  obj3[0] = throwTypeErrorResult;
-                  obj3[1] = tmp48;
-                  obj3[2] = tmp40;
+                  throwTypeErrorResult = closure_1_0;
+                  obj3[0] = closure_1_0;
+                  obj3[1] = throwTypeErrorResult;
+                  obj3[2] = tmp75;
                   obj3[3] = DEFAULT;
                   obj3[4] = messageReference;
                   obj3[5] = allowedMentions;
-                  let tmp73;
-                  if (0 !== addFlagResult1) {
-                    tmp73 = addFlagResult1;
-                  }
-                  obj3[6] = tmp73;
-                  obj3[7] = closure_1;
-                  let obj10 = closure_1_0(closure_1_3[70]);
-                  obj3[8] = obj10.createPollServerDataFromCreateRequest(poll);
+                  throwTypeErrorResult = undefined;
+                  throwTypeErrorResult = closure_1_1(closure_1_3[47]);
+                  obj3[6] = throwTypeErrorResult;
+                  obj3[7] = throwTypeErrorResult;
+                  throwTypeErrorResult = closure_1_0;
+                  throwTypeErrorResult = closure_1_3;
+                  let obj18 = closure_1_0(closure_1_3[70]);
+                  obj3[8] = obj18.createPollServerDataFromCreateRequest(poll);
                   obj3[9] = sharedCustomTheme;
                   obj3[10] = mediaMention;
-                  const tmpResultResult = throwTypeErrorResult(closure_1_3[47])(obj3);
-                  if (false !== closure_1_2.eagerDispatch) {
-                    let result = closure_1_0(closure_1_3[71]).updateComboOnMessageSend(throwTypeErrorResult, tmpResultResult.id);
+                  throwTypeErrorResult = throwTypeErrorResult(obj3);
+                  throwTypeErrorResult = closure_1_2;
+                  throwTypeErrorResult = false !== closure_1_2.eagerDispatch;
+                  if (throwTypeErrorResult) {
+                    throwTypeErrorResult = null == scheduledTimestamp;
+                  }
+                  if (throwTypeErrorResult) {
+                    throwTypeErrorResult = closure_1_0;
+                    throwTypeErrorResult = closure_1_3;
+                    throwTypeErrorResult = closure_1_0;
+                    throwTypeErrorResult = closure_1_0(closure_1_3[71]).updateComboOnMessageSend(closure_1_0, throwTypeErrorResult.id);
                     if (null != stickerIds) {
                       const mapped = stickerIds.map((arg0) => stickerById.getStickerById(arg0));
-                      tmpResultResult.sticker_items = mapped.filter((arg0) => null != arg0);
+                      throwTypeErrorResult.sticker_items = mapped.filter((arg0) => null != arg0);
                     }
-                    closure_1_55.receiveMessage(throwTypeErrorResult, tmpResultResult, true, tmp41);
-                    let obj12 = closure_1_0(closure_1_3[71]);
+                    throwTypeErrorResult = closure_1_55;
+                    throwTypeErrorResult = closure_1_0;
+                    throwTypeErrorResult = closure_1_2;
+                    throwTypeErrorResult = closure_1_55;
+                    throwTypeErrorResult = closure_1_55.receiveMessage(closure_1_0, throwTypeErrorResult, true, closure_1_2);
+                    let obj20 = closure_1_0(closure_1_3[71]);
                   }
+                  throwTypeErrorResult = c51;
                   if (!c51) {
                     if (null != invalidEmojis) {
                       if (invalidEmojis.length > 0) {
                         c51 = true;
-                        const validateMessageResult = closure_1_55.validateMessage(invalidEmojis, closure_1_25.getCurrentUser(), throwTypeErrorResult);
-                        closure_1_55.sendBotMessage(throwTypeErrorResult, validateMessageResult.errorMessage, validateMessageResult.errorMessageName);
+                        throwTypeErrorResult = closure_1_25;
+                        throwTypeErrorResult = closure_1_55;
+                        throwTypeErrorResult = closure_1_0;
+                        throwTypeErrorResult = closure_1_55.validateMessage(invalidEmojis, closure_1_25.getCurrentUser(), closure_1_0);
+                        throwTypeErrorResult = closure_1_0;
+                        throwTypeErrorResult = closure_1_55.sendBotMessage(closure_1_0, throwTypeErrorResult.errorMessage, throwTypeErrorResult.errorMessageName);
                       }
                     }
                   }
                   if (null != announcementSendOptions) {
+                    throwTypeErrorResult = closure_1_0;
+                    throwTypeErrorResult = closure_1_3;
                     let SEND = closure_1_0(closure_1_3[72]).MessageDataType.SEND_ANNOUNCEMENT;
                   } else {
+                    throwTypeErrorResult = closure_1_0;
+                    throwTypeErrorResult = closure_1_3;
                     SEND = closure_1_0(closure_1_3[72]).MessageDataType.SEND;
                   }
                   obj4 = { type: null, message: null };
                   obj4[0] = SEND;
-                  obj5 = { channelId: null, content: null, nonce: null, tts: null, message_reference: null, allowed_mentions: null, flags: null, analyticsLocation: null };
-                  obj5[0] = throwTypeErrorResult;
-                  obj5[1] = tmp48;
-                  obj5[2] = closure_1;
-                  obj5[3] = tmp40;
+                  let obj5 = { channelId: null, content: null, nonce: null, tts: null, message_reference: null, allowed_mentions: null, flags: null, analyticsLocation: null };
+                  throwTypeErrorResult = closure_1_0;
+                  obj5[0] = closure_1_0;
+                  obj5[1] = throwTypeErrorResult;
+                  obj5[2] = throwTypeErrorResult;
+                  obj5[3] = tmp75;
                   obj5[4] = messageReference;
                   obj5[5] = allowedMentions;
-                  obj5[6] = addFlagResult1;
+                  obj5[6] = throwTypeErrorResult;
                   obj5[7] = _location;
                   obj4[1] = obj5;
                   if (null != throwTypeErrorResult.components) {
                     obj4.message.components = throwTypeErrorResult.components;
                   }
                   if (null != announcementSendOptions) {
-                    ({ createThread: obj13.message.create_thread, threadName: obj13.message.title, publish } = announcementSendOptions);
+                    ({ createThread: obj21.message.create_thread, threadName: obj21.message.title, publish } = announcementSendOptions);
                     c2 = publish;
                     if (publish == null) {
                       c2 = false;
                     }
+                    throwTypeErrorResult = c2;
                     obj4.message.publish = c2;
                   }
                   if (null != activityAction) {
-                    let session_id;
+                    throwTypeErrorResult = undefined;
                     if (activityAction != null) {
-                      session_id = activityAction.activity.session_id;
+                      throwTypeErrorResult = activityAction.activity.session_id;
                     }
-                    let sessionId = session_id;
                     if (activityAction.type !== closure_1_43.JOIN_REQUEST) {
-                      sessionId = session_id;
-                      if (activityAction.type !== tmp97.STREAM_REQUEST) {
-                        sessionId = session_id;
-                        if (null == session_id) {
-                          sessionId = closure_1_16.getSessionId();
+                      if (activityAction.type !== throwTypeErrorResult.STREAM_REQUEST) {
+                        if (null == throwTypeErrorResult) {
+                          throwTypeErrorResult = uploader;
+                          throwTypeErrorResult = uploader.getSessionId();
                         }
                       }
                     }
-                    if (null != sessionId) {
-                      obj6 = { type: null, session_id: null, target_user_id: null };
+                    if (null != throwTypeErrorResult) {
+                      let obj6 = { type: null, session_id: null, target_user_id: null };
                       obj6[0] = activityAction.type;
-                      obj6[1] = sessionId;
-                      ({ targetUserId: obj15[2], activity } = activityAction);
+                      obj6[1] = throwTypeErrorResult;
+                      ({ targetUserId: obj23[2], activity } = activityAction);
                       throwTypeErrorResult = null != activity.party;
                       if (throwTypeErrorResult) {
                         throwTypeErrorResult = null != activity.party.id;
@@ -1736,334 +1794,462 @@ let obj14 = {
                       throwTypeErrorResult = closure_1_0;
                       throwTypeErrorResult = closure_1_3;
                       let obj7 = { channelId: null, nonce: null, items: null, message: null, shouldUploadFailureSendNotification: null };
-                      obj7[0] = throwTypeErrorResult;
-                      obj7[1] = tmp70;
+                      throwTypeErrorResult = closure_1_0;
+                      obj7[0] = closure_1_0;
+                      obj7[1] = throwTypeErrorResult;
                       obj7[2] = attachmentsToUpload;
-                      obj7[3] = tmpResultResult;
-                      const doNotNotifyOnError = tmp41.doNotNotifyOnError;
+                      obj7[3] = throwTypeErrorResult;
+                      throwTypeErrorResult = closure_1_2;
+                      const doNotNotifyOnError = closure_1_2.doNotNotifyOnError;
                       throwTypeErrorResult = !doNotNotifyOnError;
                       obj7[4] = throwTypeErrorResult;
                       c7 = 2;
                       c8 = 1;
-                      obj8 = { value: null, done: false };
+                      let obj8 = { value: null, done: false };
                       obj8[0] = closure_1_0(closure_1_3[73]).uploadMessageAttachments(obj7);
                       return obj8;
                     }
                   }
-                  throwTypeErrorResult = c3;
-                  throwTypeErrorResult = new.target;
-                  throwTypeErrorResult = new.target;
-                  throwTypeErrorResult = new Promise((arg0, arg1) => {
-                    closure_0 = arg0;
-                    closure_1 = arg1;
-                    closure_2 = Date.now();
-                    closure_2_1(closure_2_3[72]).length;
-                    const rounded = Math.floor(10000 * Math.random());
-                    closure_2_50.info("Queueing message to be sent LogId:" + rounded);
-                    closure_2_1(closure_2_3[72]).enqueue(obj4, (ok) => {
-                      pendingReplyActionSource = ok;
-                      if (ok.ok) {
-                        obj14 = closure_3_1(closure_3_3[65]);
-                        obj14.donateSentMessage(closure_0, closure_0);
-                        let obj = { sendAnalytics: null, poll: null };
-                        obj = { duration: null, queueSize: null };
-                        obj[0] = pendingReplyActionSource;
-                        obj[1] = pendingReplyActionSource;
-                        obj[0] = obj;
-                        obj[1] = closure_1_6;
-                        closure_3_55.receiveMessage(closure_0, ok.body, true, obj);
-                        if (null != c2.alsoForwardToChannelId) {
-                          let obj17 = closure_3_1(closure_3_3[75]);
-                          let obj19 = closure_3_0(closure_3_3[52]);
-                          const sendForwardResult = obj17.sendForward(closure_3_0(closure_3_3[52]).createMessageRecord(ok.body), c2.alsoForwardToChannelId);
-                          obj17.sendForward(closure_3_0(closure_3_3[52]).createMessageRecord(ok.body), c2.alsoForwardToChannelId).then(() => {
-                            const body = pendingReplyActionSource.body;
-                            id = undefined;
-                            if (body != null) {
-                              id = body.id;
-                            }
-                            const body2 = tmp.body;
-                            let guild_id;
-                            if (body2 != null) {
-                              guild_id = body2.guild_id;
-                            }
-                            const body3 = tmp.body;
-                            let channel_id;
-                            if (body3 != null) {
-                              channel_id = body3.channel_id;
-                            }
-                            closure_4_1(closure_4_3[37]).track(closure_4_27.MESSAGE_ALSO_SEND_TO_CHANNEL_SENT, { referenced_message_id: id, guild_id, channel_id, destination_channel_id: attachments.alsoForwardToChannelId });
-                          }).catch((arg0) => {
-                            const body = pendingReplyActionSource.body;
-                            id = undefined;
-                            const combined = "Failed to forward thread message to parent channel LogId:" + closure_4;
-                            if (body != null) {
-                              id = body.id;
-                            }
-                            closure_4_49.log(combined, { referencedMessageId: id, channelId: closure_0, destinationChannelId: attachments.alsoForwardToChannelId, error: arg0.toString() });
-                          });
-                          const nextPromise = obj17.sendForward(closure_3_0(closure_3_3[52]).createMessageRecord(ok.body), c2.alsoForwardToChannelId).then(() => {
-                            const body = pendingReplyActionSource.body;
-                            id = undefined;
-                            if (body != null) {
-                              id = body.id;
-                            }
-                            const body2 = tmp.body;
-                            let guild_id;
-                            if (body2 != null) {
-                              guild_id = body2.guild_id;
-                            }
-                            const body3 = tmp.body;
-                            let channel_id;
-                            if (body3 != null) {
-                              channel_id = body3.channel_id;
-                            }
-                            closure_4_1(closure_4_3[37]).track(closure_4_27.MESSAGE_ALSO_SEND_TO_CHANNEL_SENT, { referenced_message_id: id, guild_id, channel_id, destination_channel_id: attachments.alsoForwardToChannelId });
-                          });
+                  tmp93 = closure_0;
+                }
+              }
+            } else if (1 === tmp8) {
+              c6 = 0;
+              closure_20 = messageReference;
+              file = closure_20.file;
+              code = closure_20.code;
+              reason = closure_20.reason;
+              responseBody = closure_20.responseBody;
+              let obj9 = closure_1_0(closure_1_3[74]);
+              obj9 = { fileItems: null, failureCode: null, errorMessage: null };
+              obj9[0] = file.items;
+              obj9[1] = code;
+              let msg;
+              if (reason != null) {
+                msg = reason.msg;
+              }
+              obj9[2] = msg;
+              let result = obj9.logMessageSendFailure(obj9);
+              if (closure_2_9 != null) {
+                tmp68(closure_1_21, closure_1_22, closure_1_23, closure_1_24);
+              }
+              c8 = 3;
+              let obj10 = { value: null, done: true };
+              obj10[0] = undefined;
+              return obj10;
+            } else if (2 === tmp8) {
+              if (arg0 === 1) {
+                c8 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c6 = 0;
+                c8 = 3;
+                let obj11 = { value: null, done: true };
+                obj11[0] = arg1;
+                return obj11;
+              } else {
+                throwTypeErrorResult = inviteAnalyticsMetadata;
+                closure_18 = arg1;
+                throwTypeErrorResult = closure_18;
+                if (null == closure_18) {
+                  c6 = 0;
+                  c8 = 3;
+                  return { value: "HermesInternal", done: null };
+                } else {
+                  throwTypeErrorResult = inviteAnalyticsMetadata;
+                  throwTypeErrorResult = closure_18;
+                  attachments = closure_18.attachments;
+                  throwTypeErrorResult = closure_18;
+                  uploader = closure_18.uploader;
+                  throwTypeErrorResult = closure_1_11;
+                  if (closure_1_11) {
+                    c6 = 0;
+                    c8 = 3;
+                    return { value: "HermesInternal", done: null };
+                  }
+                  if (null != attachments) {
+                    closure_1_17.message.attachments = attachments.map((closure_0, closure_1) => callback(inviteAnalyticsMetadata[45]).getAttachmentPayload(closure_0, closure_1));
+                  }
+                  c6 = 0;
+                }
+              }
+            } else if (3 === tmp8) {
+              c6 = 0;
+              closure_26 = messageReference;
+              if (null != uploader) {
+                obj5 = closure_1_1(closure_1_3[46]);
+                obj12 = { type: "UPLOAD_FAIL", channelId: null, file: null, messageId: null, noSendFailed: true };
+                obj12[1] = closure_0;
+                obj12[2] = uploader._file;
+                obj12[3] = closure_15;
+                obj5.dispatch(obj12);
+              }
+              if (true !== closure_1_2.doNotNotifyOnError) {
+                obj7 = closure_1_0(closure_1_3[76]);
+                let result1 = obj7.handleScheduleMessageError(closure_26);
+              }
+              throw closure_26;
+            } else if (arg0 === 1) {
+              c8 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 0;
+              c8 = 3;
+              obj13 = { value: null, done: true };
+              obj13[0] = arg1;
+              return obj13;
+            } else {
+              throwTypeErrorResult = inviteAnalyticsMetadata;
+              closure_25 = arg1;
+              throwTypeErrorResult = uploader;
+              if (null != uploader) {
+                obj = closure_1_1(closure_1_3[46]);
+                obj14 = { type: "UPLOAD_COMPLETE", channelId: null, file: null, aborted: false };
+                obj14[1] = closure_0;
+                obj14[2] = uploader._file;
+                obj.dispatch(obj14);
+              }
+              obj2 = closure_1_0(closure_1_3[76]);
+              let result2 = obj2.showScheduleMessageSuccessToast(closure_1_10);
+              c6 = 0;
+              c8 = 3;
+              let obj15 = { value: null, done: true };
+              obj15[0] = closure_1_25;
+              return obj15;
+            }
+            throwTypeErrorResult = inviteAnalyticsMetadata;
+            throwTypeErrorResult = closure_2_10;
+            if (null != closure_2_10) {
+              throwTypeErrorResult = inviteAnalyticsMetadata;
+              throwTypeErrorResult = stickerIds;
+              c6 = 2;
+              throwTypeErrorResult = closure_1_0;
+              throwTypeErrorResult = closure_1_3;
+              obj16 = { channelId: null, scheduledTimestamp: null, messageSendData: null };
+              throwTypeErrorResult = closure_0;
+              obj16[0] = closure_0;
+              throwTypeErrorResult = scheduledTimestamp;
+              obj16[1] = scheduledTimestamp;
+              throwTypeErrorResult = obj4;
+              obj16[2] = obj4.message;
+              c7 = 4;
+              c8 = 1;
+              let obj17 = { value: null, done: false };
+              obj17[0] = closure_1_0(closure_1_3[75]).createScheduledMessage(obj16);
+              return obj17;
+            } else {
+              throwTypeErrorResult = inviteAnalyticsMetadata;
+              throwTypeErrorResult = new.target;
+              throwTypeErrorResult = new.target;
+              throwTypeErrorResult = new Promise((arg0, arg1) => {
+                closure_0 = arg0;
+                closure_1 = arg1;
+                closure_2 = Date.now();
+                closure_2_1(closure_2_3[72]).length;
+                const rounded = Math.floor(10000 * Math.random());
+                closure_2_50.info("Queueing message to be sent LogId:" + rounded);
+                closure_2_1(closure_2_3[72]).enqueue(obj4, (ok) => {
+                  pendingReplyActionSource = ok;
+                  if (ok.ok) {
+                    obj14 = closure_3_1(closure_3_3[65]);
+                    obj14.donateSentMessage(closure_0, closure_0);
+                    let obj = { sendAnalytics: null, poll: null };
+                    obj = { duration: null, queueSize: null };
+                    obj[0] = pendingReplyActionSource;
+                    obj[1] = pendingReplyActionSource;
+                    obj[0] = obj;
+                    obj[1] = closure_1_6;
+                    closure_3_55.receiveMessage(closure_0, ok.body, true, obj);
+                    if (null != c2.alsoForwardToChannelId) {
+                      let obj17 = closure_3_1(closure_3_3[77]);
+                      let obj19 = closure_3_0(closure_3_3[52]);
+                      const sendForwardResult = obj17.sendForward(closure_3_0(closure_3_3[52]).createMessageRecord(ok.body), c2.alsoForwardToChannelId);
+                      obj17.sendForward(closure_3_0(closure_3_3[52]).createMessageRecord(ok.body), c2.alsoForwardToChannelId).then(() => {
+                        const body = pendingReplyActionSource.body;
+                        id = undefined;
+                        if (body != null) {
+                          id = body.id;
                         }
-                        request = request.getRequest(closure_3_1(closure_3_3[57]).cast(closure_0));
-                        if (null != request) {
-                          ({ guildId, userId, applicationStatus } = request);
-                          obj1 = { guildId: null, channelId: null, messageId: null, joinRequestStatus: null, joinRequestUserId: null };
-                          obj1[0] = guildId;
-                          obj1[1] = closure_0;
-                          obj1[2] = ok.body.id;
-                          obj1[3] = applicationStatus;
-                          obj1[4] = userId;
-                          let result = closure_3_0(closure_3_3[76]).trackMemberApplicationInterviewMessage(obj1);
-                          const obj21 = closure_3_0(closure_3_3[76]);
+                        const body2 = tmp.body;
+                        let guild_id;
+                        if (body2 != null) {
+                          guild_id = body2.guild_id;
                         }
-                        let result1 = closure_3_9.recordMessageSendApiResponse(closure_1_13);
-                        pendingReplyActionSource = closure_3_35;
-                        if (closure_1_12 === closure_3_35.REPLY) {
-                          id = ok.body.id;
-                          pendingReplyActionSource = closure_0;
-                          if (closure_1_5 != null) {
-                            const message_id = closure_1_5.message_id;
-                          }
-                          pendingReplyActionSource = closure_3_11;
-                          pendingReplyActionSource = closure_3_11.getPendingReplyActionSource(pendingReplyActionSource);
-                          if ("message_swipe" === pendingReplyActionSource) {
-                            pendingReplyActionSource = null;
-                            if (null != message_id) {
-                              pendingReplyActionSource = closure_3_21;
-                              pendingReplyActionSource = closure_3_21.getMessage(pendingReplyActionSource, message_id);
-                            }
-                            pendingReplyActionSource = closure_3_17;
-                            pendingReplyActionSource = closure_3_17.getChannel(pendingReplyActionSource);
-                            pendingReplyActionSource = closure_3_25;
-                            pendingReplyActionSource = closure_3_25.getCurrentUser();
-                            pendingReplyActionSource = closure_3_1;
-                            pendingReplyActionSource = closure_3_3;
-                            pendingReplyActionSource = closure_3_27;
-                            let obj2 = { message_id: null, channel_id: null, guild_id: null, swipe_action: "reply", is_own_message: null };
-                            obj2[0] = id;
-                            obj2[1] = pendingReplyActionSource;
-                            pendingReplyActionSource = undefined;
-                            if (pendingReplyActionSource != null) {
-                              pendingReplyActionSource = pendingReplyActionSource.guild_id;
-                            }
-                            obj2[2] = pendingReplyActionSource;
-                            pendingReplyActionSource = null != pendingReplyActionSource;
-                            if (pendingReplyActionSource) {
-                              pendingReplyActionSource = undefined;
-                              if (pendingReplyActionSource != null) {
-                                pendingReplyActionSource = pendingReplyActionSource.author.id;
-                              }
-                              pendingReplyActionSource = pendingReplyActionSource.id === pendingReplyActionSource;
-                            }
-                            obj2[4] = pendingReplyActionSource;
-                            pendingReplyActionSource = closure_3_1(closure_3_3[37]).track(closure_3_27.MESSAGE_SWIPE_ACTION_SENT, obj2);
-                            const obj25 = closure_3_1(closure_3_3[37]);
-                          } else if ("message_shortcut" === pendingReplyActionSource) {
-                            pendingReplyActionSource = closure_3_17;
-                            pendingReplyActionSource = closure_3_17.getChannel(pendingReplyActionSource);
-                            pendingReplyActionSource = closure_3_1;
-                            pendingReplyActionSource = closure_3_3;
-                            pendingReplyActionSource = closure_3_27;
-                            let obj3 = { message_id: null, channel_id: null, guild_id: null, original_message_id: null, action: "reply" };
-                            obj3[0] = id;
-                            obj3[1] = pendingReplyActionSource;
-                            pendingReplyActionSource = undefined;
-                            if (pendingReplyActionSource != null) {
-                              pendingReplyActionSource = pendingReplyActionSource.guild_id;
-                            }
-                            obj3[2] = pendingReplyActionSource;
-                            obj3[3] = message_id;
-                            pendingReplyActionSource = closure_3_0;
-                            pendingReplyActionSource = closure_3_3;
-                            const obj41 = closure_3_1(closure_3_3[37]);
-                            pendingReplyActionSource = undefined;
-                            if (pendingReplyActionSource != null) {
-                              pendingReplyActionSource = pendingReplyActionSource.guild_id;
-                            }
-                            pendingReplyActionSource = obj3;
-                            pendingReplyActionSource = Object.assign(closure_3_0(closure_3_3[33]).collectGuildAnalyticsMetadata(pendingReplyActionSource));
-                            pendingReplyActionSource = closure_3_0;
-                            pendingReplyActionSource = closure_3_3;
-                            const obj23 = closure_3_0(closure_3_3[33]);
-                            pendingReplyActionSource = obj3;
-                            pendingReplyActionSource = Object.assign(closure_3_0(closure_3_3[33]).collectChannelAnalyticsMetadata(pendingReplyActionSource));
-                            pendingReplyActionSource = obj41.track(closure_3_27.MESSAGE_SHORTCUT_ACTION_SENT, obj3);
-                            const obj24 = closure_3_0(closure_3_3[33]);
-                          }
+                        const body3 = tmp.body;
+                        let channel_id;
+                        if (body3 != null) {
+                          channel_id = body3.channel_id;
                         }
-                        pendingReplyActionSource = closure_3_1;
-                        pendingReplyActionSource = closure_3_3;
-                        const obj20 = closure_3_1(closure_3_3[57]);
-                        obj4 = { type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: null, channelId: null };
-                        pendingReplyActionSource = closure_3_24;
-                        obj4[1] = closure_3_24.SendMessage;
-                        pendingReplyActionSource = closure_0;
-                        obj4[2] = closure_0;
-                        pendingReplyActionSource = closure_3_1(closure_3_3[46]).dispatch(obj4);
-                        pendingReplyActionSource = closure_3_1;
-                        pendingReplyActionSource = closure_3_3;
-                        const obj27 = closure_3_1(closure_3_3[46]);
-                        let obj5 = { type: "EMOJI_TRACK_USAGE", emojiUsed: null };
-                        pendingReplyActionSource = closure_1;
-                        obj5[1] = closure_1;
-                        pendingReplyActionSource = closure_3_1(closure_3_3[46]).dispatch(obj5);
-                        pendingReplyActionSource = closure_3_1;
-                        pendingReplyActionSource = closure_3_3;
-                        const obj29 = closure_3_1(closure_3_3[46]);
-                        const obj6 = { type: "STICKER_TRACK_USAGE", stickerIds: null };
-                        pendingReplyActionSource = rounded;
-                        obj6[1] = rounded;
-                        pendingReplyActionSource = closure_3_1(closure_3_3[46]).dispatch(obj6);
-                        pendingReplyActionSource = closure_3_1;
-                        pendingReplyActionSource = closure_3_3;
-                        const obj31 = closure_3_1(closure_3_3[46]);
-                        let obj7 = { type: "LOCAL_MESSAGE_CREATE", message: null };
-                        const obj8 = { channel_id: null, author: null };
-                        pendingReplyActionSource = closure_0;
-                        obj8[0] = closure_0;
+                        closure_4_1(closure_4_3[37]).track(closure_4_27.MESSAGE_ALSO_SEND_TO_CHANNEL_SENT, { referenced_message_id: id, guild_id, channel_id, destination_channel_id: attachments.alsoForwardToChannelId });
+                      }).catch((arg0) => {
+                        const body = pendingReplyActionSource.body;
+                        id = undefined;
+                        const combined = "Failed to forward thread message to parent channel LogId:" + closure_4;
+                        if (body != null) {
+                          id = body.id;
+                        }
+                        closure_4_49.log(combined, { referencedMessageId: id, channelId: closure_0, destinationChannelId: attachments.alsoForwardToChannelId, error: arg0.toString() });
+                      });
+                      const nextPromise = obj17.sendForward(closure_3_0(closure_3_3[52]).createMessageRecord(ok.body), c2.alsoForwardToChannelId).then(() => {
+                        const body = pendingReplyActionSource.body;
+                        id = undefined;
+                        if (body != null) {
+                          id = body.id;
+                        }
+                        const body2 = tmp.body;
+                        let guild_id;
+                        if (body2 != null) {
+                          guild_id = body2.guild_id;
+                        }
+                        const body3 = tmp.body;
+                        let channel_id;
+                        if (body3 != null) {
+                          channel_id = body3.channel_id;
+                        }
+                        closure_4_1(closure_4_3[37]).track(closure_4_27.MESSAGE_ALSO_SEND_TO_CHANNEL_SENT, { referenced_message_id: id, guild_id, channel_id, destination_channel_id: attachments.alsoForwardToChannelId });
+                      });
+                    }
+                    request = request.getRequest(closure_3_1(closure_3_3[57]).cast(closure_0));
+                    if (null != request) {
+                      ({ guildId, userId, applicationStatus } = request);
+                      obj1 = { guildId: null, channelId: null, messageId: null, joinRequestStatus: null, joinRequestUserId: null };
+                      obj1[0] = guildId;
+                      obj1[1] = closure_0;
+                      obj1[2] = ok.body.id;
+                      obj1[3] = applicationStatus;
+                      obj1[4] = userId;
+                      let result = closure_3_0(closure_3_3[78]).trackMemberApplicationInterviewMessage(obj1);
+                      const obj21 = closure_3_0(closure_3_3[78]);
+                    }
+                    let result1 = closure_3_9.recordMessageSendApiResponse(closure_1_14);
+                    pendingReplyActionSource = closure_3_35;
+                    if (closure_1_13 === closure_3_35.REPLY) {
+                      id = ok.body.id;
+                      pendingReplyActionSource = closure_0;
+                      if (closure_1_5 != null) {
+                        const message_id = closure_1_5.message_id;
+                      }
+                      pendingReplyActionSource = closure_3_11;
+                      pendingReplyActionSource = closure_3_11.getPendingReplyActionSource(pendingReplyActionSource);
+                      if ("message_swipe" === pendingReplyActionSource) {
+                        pendingReplyActionSource = null;
+                        if (null != message_id) {
+                          pendingReplyActionSource = closure_3_21;
+                          pendingReplyActionSource = closure_3_21.getMessage(pendingReplyActionSource, message_id);
+                        }
+                        pendingReplyActionSource = closure_3_17;
+                        pendingReplyActionSource = closure_3_17.getChannel(pendingReplyActionSource);
                         pendingReplyActionSource = closure_3_25;
-                        obj8[1] = closure_3_25.getCurrentUser();
-                        obj7[1] = obj8;
-                        pendingReplyActionSource = closure_3_1(closure_3_3[46]).dispatch(obj7);
-                        let obj9 = { content: null, channelId: null, messageId: null, location: null, inviteAnalyticsMetadata: null };
-                        obj9[0] = closure_0;
-                        pendingReplyActionSource = closure_0;
-                        obj9[1] = closure_0;
-                        obj9[2] = ok.body.id;
-                        let str4 = closure_2;
-                        let str5 = closure_2;
-                        if (closure_2 == null) {
-                          str5 = "chat_input";
-                        }
-                        obj9[3] = str5;
-                        pendingReplyActionSource = length;
-                        obj9[4] = length;
-                        ({ channelId: pendingReplyActionSource, messageId: id, location: attachments, inviteAnalyticsMetadata: pendingReplyActionSource, overrideProperties, content } = obj9);
-                        if (overrideProperties === undefined) {
-                          overrideProperties = {};
-                        }
-                        let messageByReference = overrideProperties;
-                        let id2;
-                        pendingReplyActionSource = closure_3_16;
-                        id2 = closure_3_16.getId();
+                        pendingReplyActionSource = closure_3_25.getCurrentUser();
                         pendingReplyActionSource = closure_3_1;
                         pendingReplyActionSource = closure_3_3;
-                        const obj33 = closure_3_1(closure_3_3[46]);
-                        pendingReplyActionSource = closure_3_1(closure_3_3[28])(content).forEach((url) => {
-                          ({ type, code } = url);
-                          let obj = pendingReplyActionSource(pendingReplyActionSource[29]);
-                          if (obj.isApplicationCodedLink(type)) {
-                            let tmpResult = tmp(tmp2[29]);
-                            const applicationCodedLinkData = tmpResult.getApplicationCodedLinkData(type, code, url.url);
-                            if (null != applicationCodedLinkData) {
-                              ({ applicationId, type: type2 } = applicationCodedLinkData);
-                              if (tmp(tmp2[30]).CodedLinkType.APP_DIRECTORY_PROFILE === type2) {
-                                tmpResult = tmp(tmp2[31]);
-                                const result = tmpResult.trackAppDirectoryProfileEmbed(applicationId);
-                                const result1 = tmp(tmp2[32]).trackAppEmbedLinkSent(code, closure_1_44.APP_DISCOVERY, closure_5);
-                                const tmpResult1 = tmp(tmp2[32]);
-                              } else if (tmp(tmp2[30]).CodedLinkType.APP_DIRECTORY_STOREFRONT === type2) {
-                                const result2 = tmp(tmp2[31]).trackAppDirectoryProfileEmbed(applicationId, "storefront");
-                                const tmpResult2 = tmp(tmp2[31]);
-                              } else if (tmp(tmp2[30]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type2) {
-                                const result3 = tmp(tmp2[31]).trackAppDirectoryProfileEmbed(applicationId, "storefront_sku");
-                                const tmpResult3 = tmp(tmp2[31]);
-                              } else if (tmp(tmp2[30]).CodedLinkType.ACTIVITY_BOOKMARK === type2) {
-                                const params = applicationCodedLinkData.params;
-                                const tmpResult4 = tmp(tmp2[32]);
-                                const ACTIVITY = closure_1_44.ACTIVITY;
-                                let referrerId = params.referrerId;
-                                if (referrerId == null) {
-                                  referrerId = closure_5;
-                                }
-                                const result4 = tmpResult4.trackAppEmbedLinkSent(applicationId, ACTIVITY, referrerId, params.customId);
-                              } else if (tmp(tmp2[30]).CodedLinkType.APP_OAUTH2_LINK === type2) {
-                                const result5 = tmp(tmp2[32]).trackAppEmbedLinkSent(applicationId, closure_1_44.OAUTH, closure_5);
-                                const tmpResult5 = tmp(tmp2[32]);
-                                obj = { application_id: null };
-                                obj[0] = applicationId;
-                                id(tmp2[33]).trackWithMetadata(closure_1_27.APP_OAUTH2_LINK_EMBED_URL_SENT, obj);
-                                const obj19 = id(tmp2[33]);
-                              }
+                        pendingReplyActionSource = closure_3_27;
+                        let obj2 = { message_id: null, channel_id: null, guild_id: null, swipe_action: "reply", is_own_message: null };
+                        obj2[0] = id;
+                        obj2[1] = pendingReplyActionSource;
+                        pendingReplyActionSource = undefined;
+                        if (pendingReplyActionSource != null) {
+                          pendingReplyActionSource = pendingReplyActionSource.guild_id;
+                        }
+                        obj2[2] = pendingReplyActionSource;
+                        pendingReplyActionSource = null != pendingReplyActionSource;
+                        if (pendingReplyActionSource) {
+                          pendingReplyActionSource = undefined;
+                          if (pendingReplyActionSource != null) {
+                            pendingReplyActionSource = pendingReplyActionSource.author.id;
+                          }
+                          pendingReplyActionSource = pendingReplyActionSource.id === pendingReplyActionSource;
+                        }
+                        obj2[4] = pendingReplyActionSource;
+                        pendingReplyActionSource = closure_3_1(closure_3_3[37]).track(closure_3_27.MESSAGE_SWIPE_ACTION_SENT, obj2);
+                        const obj25 = closure_3_1(closure_3_3[37]);
+                      } else if ("message_shortcut" === pendingReplyActionSource) {
+                        pendingReplyActionSource = closure_3_17;
+                        pendingReplyActionSource = closure_3_17.getChannel(pendingReplyActionSource);
+                        pendingReplyActionSource = closure_3_1;
+                        pendingReplyActionSource = closure_3_3;
+                        pendingReplyActionSource = closure_3_27;
+                        let obj3 = { message_id: null, channel_id: null, guild_id: null, original_message_id: null, action: "reply" };
+                        obj3[0] = id;
+                        obj3[1] = pendingReplyActionSource;
+                        pendingReplyActionSource = undefined;
+                        if (pendingReplyActionSource != null) {
+                          pendingReplyActionSource = pendingReplyActionSource.guild_id;
+                        }
+                        obj3[2] = pendingReplyActionSource;
+                        obj3[3] = message_id;
+                        pendingReplyActionSource = closure_3_0;
+                        pendingReplyActionSource = closure_3_3;
+                        const obj41 = closure_3_1(closure_3_3[37]);
+                        pendingReplyActionSource = undefined;
+                        if (pendingReplyActionSource != null) {
+                          pendingReplyActionSource = pendingReplyActionSource.guild_id;
+                        }
+                        pendingReplyActionSource = obj3;
+                        pendingReplyActionSource = Object.assign(closure_3_0(closure_3_3[33]).collectGuildAnalyticsMetadata(pendingReplyActionSource));
+                        pendingReplyActionSource = closure_3_0;
+                        pendingReplyActionSource = closure_3_3;
+                        const obj23 = closure_3_0(closure_3_3[33]);
+                        pendingReplyActionSource = obj3;
+                        pendingReplyActionSource = Object.assign(closure_3_0(closure_3_3[33]).collectChannelAnalyticsMetadata(pendingReplyActionSource));
+                        pendingReplyActionSource = obj41.track(closure_3_27.MESSAGE_SHORTCUT_ACTION_SENT, obj3);
+                        const obj24 = closure_3_0(closure_3_3[33]);
+                      }
+                    }
+                    pendingReplyActionSource = closure_3_1;
+                    pendingReplyActionSource = closure_3_3;
+                    const obj20 = closure_3_1(closure_3_3[57]);
+                    obj4 = { type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: null, channelId: null };
+                    pendingReplyActionSource = closure_3_24;
+                    obj4[1] = closure_3_24.SendMessage;
+                    pendingReplyActionSource = closure_0;
+                    obj4[2] = closure_0;
+                    pendingReplyActionSource = closure_3_1(closure_3_3[46]).dispatch(obj4);
+                    pendingReplyActionSource = closure_3_1;
+                    pendingReplyActionSource = closure_3_3;
+                    const obj27 = closure_3_1(closure_3_3[46]);
+                    let obj5 = { type: "EMOJI_TRACK_USAGE", emojiUsed: null };
+                    pendingReplyActionSource = closure_1;
+                    obj5[1] = closure_1;
+                    pendingReplyActionSource = closure_3_1(closure_3_3[46]).dispatch(obj5);
+                    pendingReplyActionSource = closure_3_1;
+                    pendingReplyActionSource = closure_3_3;
+                    const obj29 = closure_3_1(closure_3_3[46]);
+                    const obj6 = { type: "STICKER_TRACK_USAGE", stickerIds: null };
+                    pendingReplyActionSource = rounded;
+                    obj6[1] = rounded;
+                    pendingReplyActionSource = closure_3_1(closure_3_3[46]).dispatch(obj6);
+                    pendingReplyActionSource = closure_3_1;
+                    pendingReplyActionSource = closure_3_3;
+                    const obj31 = closure_3_1(closure_3_3[46]);
+                    let obj7 = { type: "LOCAL_MESSAGE_CREATE", message: null };
+                    const obj8 = { channel_id: null, author: null };
+                    pendingReplyActionSource = closure_0;
+                    obj8[0] = closure_0;
+                    pendingReplyActionSource = closure_3_25;
+                    obj8[1] = closure_3_25.getCurrentUser();
+                    obj7[1] = obj8;
+                    pendingReplyActionSource = closure_3_1(closure_3_3[46]).dispatch(obj7);
+                    let obj9 = { content: null, channelId: null, messageId: null, location: null, inviteAnalyticsMetadata: null };
+                    obj9[0] = closure_0;
+                    pendingReplyActionSource = closure_0;
+                    obj9[1] = closure_0;
+                    obj9[2] = ok.body.id;
+                    let str4 = closure_2;
+                    let str5 = closure_2;
+                    if (closure_2 == null) {
+                      str5 = "chat_input";
+                    }
+                    obj9[3] = str5;
+                    pendingReplyActionSource = length;
+                    obj9[4] = length;
+                    ({ channelId: pendingReplyActionSource, messageId: id, location: attachments, inviteAnalyticsMetadata: pendingReplyActionSource, overrideProperties, content } = obj9);
+                    if (overrideProperties === undefined) {
+                      overrideProperties = {};
+                    }
+                    let messageByReference = overrideProperties;
+                    let id2;
+                    pendingReplyActionSource = uploader;
+                    id2 = uploader.getId();
+                    pendingReplyActionSource = closure_3_1;
+                    pendingReplyActionSource = closure_3_3;
+                    const obj33 = closure_3_1(closure_3_3[46]);
+                    pendingReplyActionSource = closure_3_1(closure_3_3[28])(content).forEach((url) => {
+                      ({ type, code } = url);
+                      let obj = pendingReplyActionSource(pendingReplyActionSource[29]);
+                      if (obj.isApplicationCodedLink(type)) {
+                        let tmpResult = tmp(tmp2[29]);
+                        const applicationCodedLinkData = tmpResult.getApplicationCodedLinkData(type, code, url.url);
+                        if (null != applicationCodedLinkData) {
+                          ({ applicationId, type: type2 } = applicationCodedLinkData);
+                          if (tmp(tmp2[30]).CodedLinkType.APP_DIRECTORY_PROFILE === type2) {
+                            tmpResult = tmp(tmp2[31]);
+                            const result = tmpResult.trackAppDirectoryProfileEmbed(applicationId);
+                            const result1 = tmp(tmp2[32]).trackAppEmbedLinkSent(code, closure_1_44.APP_DISCOVERY, closure_5);
+                            const tmpResult1 = tmp(tmp2[32]);
+                          } else if (tmp(tmp2[30]).CodedLinkType.APP_DIRECTORY_STOREFRONT === type2) {
+                            const result2 = tmp(tmp2[31]).trackAppDirectoryProfileEmbed(applicationId, "storefront");
+                            const tmpResult2 = tmp(tmp2[31]);
+                          } else if (tmp(tmp2[30]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type2) {
+                            const result3 = tmp(tmp2[31]).trackAppDirectoryProfileEmbed(applicationId, "storefront_sku");
+                            const tmpResult3 = tmp(tmp2[31]);
+                          } else if (tmp(tmp2[30]).CodedLinkType.ACTIVITY_BOOKMARK === type2) {
+                            const params = applicationCodedLinkData.params;
+                            const tmpResult4 = tmp(tmp2[32]);
+                            const ACTIVITY = closure_1_44.ACTIVITY;
+                            let referrerId = params.referrerId;
+                            if (referrerId == null) {
+                              referrerId = closure_5;
                             }
-                          } else if (tmp(tmp2[30]).CodedLinkType.INVITE === type) {
-                            obj = { inviteKey: null, channelId: null, messageId: null, location: null, inviteAnalyticsMetadata: null, overrideProperties: null };
-                            obj[0] = code;
-                            obj[1] = pendingReplyActionSource;
-                            obj[2] = id;
-                            obj[3] = attachments;
-                            obj[4] = pendingReplyActionSource;
-                            obj[5] = closure_4;
-                            closure_1_53(obj);
-                          } else if (tmp(tmp2[30]).CodedLinkType.TEMPLATE === type) {
-                            const guildTemplate = closure_1_8.getGuildTemplate(code);
-                            if (null != guildTemplate) {
-                              if (guildTemplate.state !== closure_1_45.RESOLVING) {
-                                obj1 = { guild_template_code: null, guild_template_name: null, guild_template_description: null, guild_template_guild_id: null };
-                                obj1[0] = code;
-                                ({ name: obj10[1], description: obj10[2], sourceGuildId: obj10[3] } = guildTemplate);
-                                id(tmp2[33]).trackWithMetadata(closure_1_27.GUILD_TEMPLATE_LINK_SENT, obj1);
-                                const obj9 = id(tmp2[33]);
-                              }
-                            }
-                          } else if (tmp(tmp2[30]).CodedLinkType.BUILD_OVERRIDE !== type) {
-                            if (tmp(tmp2[30]).CodedLinkType.EXPERIMENT !== type) {
-                              if (tmp(tmp2[30]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
-                                if (tmp(tmp2[30]).CodedLinkType.EVENT !== type) {
-                                  if (tmp(tmp2[30]).CodedLinkType.CHANNEL_LINK !== type) {
-                                    if (tmp(tmp2[30]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE === type) {
-                                      const result6 = tmp(tmp2[32]).trackAppEmbedLinkSent(code, closure_1_44.ACTIVITY_INVITE, closure_5);
-                                      const tmpResult6 = tmp(tmp2[32]);
-                                    } else if (tmp(tmp2[30]).CodedLinkType.GUILD_PRODUCT !== type) {
-                                      if (tmp(tmp2[30]).CodedLinkType.SERVER_SHOP !== type) {
-                                        if (tmp(tmp2[30]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
-                                          if (tmp(tmp2[30]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
-                                            if (tmp(tmp2[30]).CodedLinkType.QUESTS_EMBED === type) {
-                                              const adMetadataSealed = tmp(tmp2[34]).getAdMetadataSealed(tmp(tmp2[35]).QuestContent.QUESTS_EMBED);
-                                              const tmpResult7 = tmp(tmp2[34]);
-                                              const obj2 = { questId: null, event: null, properties: null, trackGuildAndChannelMetadata: true, sourceQuestContent: null };
-                                              obj2[0] = code;
-                                              obj2[1] = closure_1_27.QUEST_LINK_SHARED;
-                                              let tmp8 = null;
-                                              if (null != adMetadataSealed) {
-                                                tmp8 = adMetadataSealed;
-                                              }
-                                              const obj3 = { metadata_sealed: null };
-                                              obj3[0] = tmp8;
-                                              obj2[2] = obj3;
-                                              obj2[4] = tmp(tmp2[35]).QuestContent.QUESTS_EMBED;
-                                              tmp(tmp2[36]).trackQuestEvent(obj2);
-                                              const tmpResult8 = tmp(tmp2[36]);
-                                            } else if (tmp(tmp2[30]).CodedLinkType.GAME_PROFILE === type) {
-                                              obj1 = id(tmp2[37]);
-                                              obj4 = { game_id: null };
-                                              obj4[0] = code;
-                                              obj1.track(closure_1_27.GAME_PROFILE_LINK_EMBED_SENT, obj4);
-                                            } else if (tmp(tmp2[30]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
-                                              if (tmp(tmp2[30]).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                                if (tmp(tmp2[30]).CodedLinkType.USER_PROFILE !== type) {
-                                                  const _Error = Error;
-                                                  const _HermesInternal = HermesInternal;
-                                                  throw Error("Unknown coded link type: " + type);
-                                                }
-                                              }
+                            const result4 = tmpResult4.trackAppEmbedLinkSent(applicationId, ACTIVITY, referrerId, params.customId);
+                          } else if (tmp(tmp2[30]).CodedLinkType.APP_OAUTH2_LINK === type2) {
+                            const result5 = tmp(tmp2[32]).trackAppEmbedLinkSent(applicationId, closure_1_44.OAUTH, closure_5);
+                            const tmpResult5 = tmp(tmp2[32]);
+                            obj = { application_id: null };
+                            obj[0] = applicationId;
+                            id(tmp2[33]).trackWithMetadata(closure_1_27.APP_OAUTH2_LINK_EMBED_URL_SENT, obj);
+                            const obj19 = id(tmp2[33]);
+                          }
+                        }
+                      } else if (tmp(tmp2[30]).CodedLinkType.INVITE === type) {
+                        obj = { inviteKey: null, channelId: null, messageId: null, location: null, inviteAnalyticsMetadata: null, overrideProperties: null };
+                        obj[0] = code;
+                        obj[1] = pendingReplyActionSource;
+                        obj[2] = id;
+                        obj[3] = attachments;
+                        obj[4] = pendingReplyActionSource;
+                        obj[5] = closure_4;
+                        closure_1_53(obj);
+                      } else if (tmp(tmp2[30]).CodedLinkType.TEMPLATE === type) {
+                        const guildTemplate = closure_1_8.getGuildTemplate(code);
+                        if (null != guildTemplate) {
+                          if (guildTemplate.state !== closure_1_45.RESOLVING) {
+                            obj1 = { guild_template_code: null, guild_template_name: null, guild_template_description: null, guild_template_guild_id: null };
+                            obj1[0] = code;
+                            ({ name: obj10[1], description: obj10[2], sourceGuildId: obj10[3] } = guildTemplate);
+                            id(tmp2[33]).trackWithMetadata(closure_1_27.GUILD_TEMPLATE_LINK_SENT, obj1);
+                            const obj9 = id(tmp2[33]);
+                          }
+                        }
+                      } else if (tmp(tmp2[30]).CodedLinkType.BUILD_OVERRIDE !== type) {
+                        if (tmp(tmp2[30]).CodedLinkType.EXPERIMENT !== type) {
+                          if (tmp(tmp2[30]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
+                            if (tmp(tmp2[30]).CodedLinkType.EVENT !== type) {
+                              if (tmp(tmp2[30]).CodedLinkType.CHANNEL_LINK !== type) {
+                                if (tmp(tmp2[30]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE === type) {
+                                  const result6 = tmp(tmp2[32]).trackAppEmbedLinkSent(code, closure_1_44.ACTIVITY_INVITE, closure_5);
+                                  const tmpResult6 = tmp(tmp2[32]);
+                                } else if (tmp(tmp2[30]).CodedLinkType.GUILD_PRODUCT !== type) {
+                                  if (tmp(tmp2[30]).CodedLinkType.SERVER_SHOP !== type) {
+                                    if (tmp(tmp2[30]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
+                                      if (tmp(tmp2[30]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
+                                        if (tmp(tmp2[30]).CodedLinkType.QUESTS_EMBED === type) {
+                                          const adMetadataSealed = tmp(tmp2[34]).getAdMetadataSealed(tmp(tmp2[35]).QuestContent.QUESTS_EMBED);
+                                          const tmpResult7 = tmp(tmp2[34]);
+                                          const obj2 = { questId: null, event: null, properties: null, trackGuildAndChannelMetadata: true, sourceQuestContent: null };
+                                          obj2[0] = code;
+                                          obj2[1] = closure_1_27.QUEST_LINK_SHARED;
+                                          let tmp8 = null;
+                                          if (null != adMetadataSealed) {
+                                            tmp8 = adMetadataSealed;
+                                          }
+                                          const obj3 = { metadata_sealed: null };
+                                          obj3[0] = tmp8;
+                                          obj2[2] = obj3;
+                                          obj2[4] = tmp(tmp2[35]).QuestContent.QUESTS_EMBED;
+                                          tmp(tmp2[36]).trackQuestEvent(obj2);
+                                          const tmpResult8 = tmp(tmp2[36]);
+                                        } else if (tmp(tmp2[30]).CodedLinkType.GAME_PROFILE === type) {
+                                          obj1 = id(tmp2[37]);
+                                          obj4 = { game_id: null };
+                                          obj4[0] = code;
+                                          obj1.track(closure_1_27.GAME_PROFILE_LINK_EMBED_SENT, obj4);
+                                        } else if (tmp(tmp2[30]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
+                                          if (tmp(tmp2[30]).CodedLinkType.GAME_SERVER_SHARE !== type) {
+                                            if (tmp(tmp2[30]).CodedLinkType.USER_PROFILE !== type) {
+                                              const _Error = Error;
+                                              const _HermesInternal = HermesInternal;
+                                              throw Error("Unknown coded link type: " + type);
                                             }
                                           }
                                         }
@@ -2074,329 +2260,273 @@ let obj14 = {
                               }
                             }
                           }
-                        });
-                        let str6 = str4;
-                        pendingReplyActionSource = closure_0;
-                        if (str4 == null) {
-                          str6 = "chat_input";
                         }
-                        pendingReplyActionSource = c2;
-                        id = ok.body.id;
-                        attachments = str6;
-                        pendingReplyActionSource = c2.isGiftLinkSentOnBehalfOfUser;
+                      }
+                    });
+                    let str6 = str4;
+                    pendingReplyActionSource = closure_0;
+                    if (str4 == null) {
+                      str6 = "chat_input";
+                    }
+                    pendingReplyActionSource = c2;
+                    id = ok.body.id;
+                    attachments = str6;
+                    pendingReplyActionSource = c2.isGiftLinkSentOnBehalfOfUser;
+                    pendingReplyActionSource = closure_3_0;
+                    pendingReplyActionSource = closure_3_3;
+                    const arr2 = closure_3_1(closure_3_3[28])(content);
+                    const obj37 = closure_3_0(closure_3_3[41]);
+                    pendingReplyActionSource = closure_3_0(closure_3_3[41]).findGiftCodes(closure_0).forEach((arg0) => {
+                      const channel = closure_1_17.getChannel(pendingReplyActionSource);
+                      if (null != channel) {
+                        const obj = { location: null, gift_code: null, guild_id: null, channel_id: null, channel_type: null, message_id: null, automatic_send: null };
+                        obj[0] = attachments;
+                        obj[1] = arg0;
+                        obj[2] = channel.getGuildId();
+                        ({ id: obj3[3], type: obj3[4] } = channel);
+                        obj[5] = id;
+                        obj[6] = pendingReplyActionSource;
+                        id(pendingReplyActionSource[33]).trackWithMetadata(closure_1_27.GIFT_CODE_SENT, obj);
+                        const obj2 = id(pendingReplyActionSource[33]);
+                      }
+                    });
+                    pendingReplyActionSource = c2;
+                    if (null != c2.gifMetadata) {
+                      pendingReplyActionSource = c2;
+                      pendingReplyActionSource = closure_0;
+                      if (str4 == null) {
+                        str4 = "chat_input";
+                      }
+                      pendingReplyActionSource = closure_3_17;
+                      let channel = closure_3_17.getChannel(pendingReplyActionSource);
+                      if (null != channel) {
+                        pendingReplyActionSource = closure_3_1;
+                        pendingReplyActionSource = closure_3_3;
+                        pendingReplyActionSource = closure_3_27;
+                        const obj10 = { location: null, message_id: null, gif_provider: null, load_id: null, source_object: null, gif_url: null, gif_id: null };
+                        obj10[0] = str4;
+                        obj10[1] = ok.body.id;
+                        ({ gif_provider: obj44[2], load_id: obj44[3], source_object: obj44[4], gif_url: obj44[5], gif_id: obj44[6] } = c2.gifMetadata);
                         pendingReplyActionSource = closure_3_0;
                         pendingReplyActionSource = closure_3_3;
-                        const arr2 = closure_3_1(closure_3_3[28])(content);
-                        const obj37 = closure_3_0(closure_3_3[41]);
-                        pendingReplyActionSource = closure_3_0(closure_3_3[41]).findGiftCodes(closure_0).forEach((arg0) => {
-                          const channel = closure_1_17.getChannel(pendingReplyActionSource);
-                          if (null != channel) {
-                            const obj = { location: null, gift_code: null, guild_id: null, channel_id: null, channel_type: null, message_id: null, automatic_send: null };
-                            obj[0] = attachments;
-                            obj[1] = arg0;
-                            obj[2] = channel.getGuildId();
-                            ({ id: obj3[3], type: obj3[4] } = channel);
-                            obj[5] = id;
-                            obj[6] = pendingReplyActionSource;
-                            id(pendingReplyActionSource[33]).trackWithMetadata(closure_1_27.GIFT_CODE_SENT, obj);
-                            const obj2 = id(pendingReplyActionSource[33]);
+                        const obj43 = closure_3_1(closure_3_3[37]);
+                        pendingReplyActionSource = obj10;
+                        pendingReplyActionSource = Object.assign(closure_3_0(closure_3_3[33]).collectGuildAnalyticsMetadata(channel.getGuildId()));
+                        pendingReplyActionSource = closure_3_0;
+                        pendingReplyActionSource = closure_3_3;
+                        const obj45 = closure_3_0(closure_3_3[33]);
+                        pendingReplyActionSource = obj10;
+                        pendingReplyActionSource = Object.assign(closure_3_0(closure_3_3[33]).collectChannelAnalyticsMetadata(channel));
+                        pendingReplyActionSource = obj43.track(closure_3_27.MESSAGE_SENT_WITH_GIF, obj10);
+                        const obj46 = closure_3_0(closure_3_3[33]);
+                      }
+                    }
+                    pendingReplyActionSource = closure_0;
+                    attachments = ok.body.attachments;
+                    if (attachments == null) {
+                      attachments = [];
+                    }
+                    let items = closure_1_8;
+                    if (closure_1_8 == null) {
+                      items = [];
+                    }
+                    id = ok.body.id;
+                    if (attachments.length === items.length) {
+                      pendingReplyActionSource = closure_3_17;
+                      pendingReplyActionSource = closure_3_17.getChannel(pendingReplyActionSource);
+                      if (null != pendingReplyActionSource) {
+                        pendingReplyActionSource = closure_3_12;
+                        messageByReference = closure_3_12.getMessageByReference(pendingReplyActionSource);
+                        pendingReplyActionSource = items.forEach((clip) => {
+                          clip = clip.clip;
+                          if (null != clip) {
+                            let someResult = closure_4.state === closure_1_13.LOADED;
+                            if (someResult) {
+                              attachments = closure_4.message.attachments;
+                              someResult = attachments.some(() => { ... });
+                            }
+                            let obj = id(pendingReplyActionSource[37]);
+                            obj = {};
+                            const merged = Object.assign(attachments(pendingReplyActionSource[42]).getClipBaseProperties(clip));
+                            const obj3 = attachments(pendingReplyActionSource[42]);
+                            const merged1 = Object.assign(attachments(pendingReplyActionSource[42]).getClipContextProperties("trackClipsShared"));
+                            obj.channel_id = clip;
+                            obj.guild_id = pendingReplyActionSource.getGuildId();
+                            obj.channel_type = pendingReplyActionSource.type;
+                            ({ applicationId: obj2.application_id, id: obj2.clip_uuid, remoteClipId: obj2.remote_clip_id } = clip);
+                            obj.message_id = id;
+                            obj.attachment_id = attachments[arg1].id;
+                            obj.is_distributed_clip_reply = someResult;
+                            obj.track(closure_1_27.CLIP_SHARED, obj);
+                            obj4 = attachments(pendingReplyActionSource[42]);
                           }
                         });
-                        pendingReplyActionSource = c2;
-                        if (null != c2.gifMetadata) {
-                          pendingReplyActionSource = c2;
-                          pendingReplyActionSource = closure_0;
-                          if (str4 == null) {
-                            str4 = "chat_input";
-                          }
-                          pendingReplyActionSource = closure_3_17;
-                          let channel = closure_3_17.getChannel(pendingReplyActionSource);
-                          if (null != channel) {
-                            pendingReplyActionSource = closure_3_1;
-                            pendingReplyActionSource = closure_3_3;
-                            pendingReplyActionSource = closure_3_27;
-                            const obj10 = { location: null, message_id: null, gif_provider: null, load_id: null, source_object: null, gif_url: null, gif_id: null };
-                            obj10[0] = str4;
-                            obj10[1] = ok.body.id;
-                            ({ gif_provider: obj44[2], load_id: obj44[3], source_object: obj44[4], gif_url: obj44[5], gif_id: obj44[6] } = c2.gifMetadata);
-                            pendingReplyActionSource = closure_3_0;
-                            pendingReplyActionSource = closure_3_3;
-                            const obj43 = closure_3_1(closure_3_3[37]);
-                            pendingReplyActionSource = obj10;
-                            pendingReplyActionSource = Object.assign(closure_3_0(closure_3_3[33]).collectGuildAnalyticsMetadata(channel.getGuildId()));
-                            pendingReplyActionSource = closure_3_0;
-                            pendingReplyActionSource = closure_3_3;
-                            const obj45 = closure_3_0(closure_3_3[33]);
-                            pendingReplyActionSource = obj10;
-                            pendingReplyActionSource = Object.assign(closure_3_0(closure_3_3[33]).collectChannelAnalyticsMetadata(channel));
-                            pendingReplyActionSource = obj43.track(closure_3_27.MESSAGE_SENT_WITH_GIF, obj10);
-                            const obj46 = closure_3_0(closure_3_3[33]);
-                          }
-                        }
-                        pendingReplyActionSource = closure_0;
-                        attachments = ok.body.attachments;
-                        if (attachments == null) {
-                          attachments = [];
-                        }
-                        let items = closure_1_8;
-                        if (closure_1_8 == null) {
-                          items = [];
-                        }
-                        id = ok.body.id;
-                        if (attachments.length === items.length) {
-                          pendingReplyActionSource = closure_3_17;
-                          pendingReplyActionSource = closure_3_17.getChannel(pendingReplyActionSource);
-                          if (null != pendingReplyActionSource) {
-                            pendingReplyActionSource = closure_3_12;
-                            messageByReference = closure_3_12.getMessageByReference(pendingReplyActionSource);
-                            pendingReplyActionSource = items.forEach((clip) => {
-                              clip = clip.clip;
-                              if (null != clip) {
-                                let someResult = closure_4.state === closure_1_13.LOADED;
-                                if (someResult) {
-                                  attachments = closure_4.message.attachments;
-                                  someResult = attachments.some(() => { ... });
-                                }
-                                let obj = id(pendingReplyActionSource[37]);
-                                obj = {};
-                                const merged = Object.assign(attachments(pendingReplyActionSource[42]).getClipBaseProperties(clip));
-                                const obj3 = attachments(pendingReplyActionSource[42]);
-                                const merged1 = Object.assign(attachments(pendingReplyActionSource[42]).getClipContextProperties("trackClipsShared"));
-                                obj.channel_id = clip;
-                                obj.guild_id = pendingReplyActionSource.getGuildId();
-                                obj.channel_type = pendingReplyActionSource.type;
-                                ({ applicationId: obj2.application_id, id: obj2.clip_uuid, remoteClipId: obj2.remote_clip_id } = clip);
-                                obj.message_id = id;
-                                obj.attachment_id = attachments[arg1].id;
-                                obj.is_distributed_clip_reply = someResult;
-                                obj.track(closure_1_27.CLIP_SHARED, obj);
-                                obj4 = attachments(pendingReplyActionSource[42]);
-                              }
-                            });
-                          }
-                        }
-                        pendingReplyActionSource = closure_1_15;
-                        if (null != closure_1_15) {
-                          pendingReplyActionSource = closure_3_1;
-                          pendingReplyActionSource = closure_3_3;
-                          let obj11 = { type: "UPLOAD_COMPLETE", channelId: null, file: null, aborted: false };
-                          pendingReplyActionSource = closure_0;
-                          obj11[1] = closure_0;
-                          pendingReplyActionSource = closure_1_15;
-                          obj11[2] = closure_1_15._file;
-                          pendingReplyActionSource = closure_3_1(closure_3_3[46]).dispatch(obj11);
-                          const obj39 = closure_3_1(closure_3_3[46]);
-                        }
-                        pendingReplyActionSource = pendingReplyActionSource(ok);
-                        const findGiftCodesResult = closure_3_0(closure_3_3[41]).findGiftCodes(closure_0);
-                      } else {
-                        obj = { hasErr: null, status: null, code: null, error: null };
-                        ({ hasErr: obj[0], status: obj[1], body } = ok);
-                        code = undefined;
-                        if (body != null) {
-                          code = body.code;
-                        }
-                        obj[2] = code;
-                        obj[3] = ok.err;
-                        closure_3_49.log("Failed to send message", obj);
-                        if (ok.hasErr) {
-                          let flag = false;
-                          if ("ABORTED" === ok.err.code) {
-                            flag = true;
-                          }
-                        } else {
-                          flag = false;
-                          if (ok.status >= 400) {
-                            flag = false;
-                            if (ok.status < 500) {
-                              flag = false;
-                              if (ok.body) {
-                                if (ok.body.code === closure_3_26.SLOWMODE_RATE_LIMITED) {
-                                  const retry_after = ok.body.retry_after;
-                                  let tmp21 = null != retry_after;
-                                  if (tmp21) {
-                                    tmp21 = retry_after > 0;
-                                  }
-                                  flag = false;
-                                  if (tmp21) {
-                                    obj5 = closure_3_1(closure_3_3[46]);
-                                    const obj12 = { type: "SLOWMODE_SET_COOLDOWN", channelId: null, slowmodeType: null, cooldownMs: null };
-                                    obj12[1] = closure_0;
-                                    obj12[2] = closure_3_24.SendMessage;
-                                    obj12[3] = retry_after * closure_3_1(closure_3_3[77]).Millis.SECOND;
-                                    obj5.dispatch(obj12);
-                                    flag = false;
-                                  }
-                                } else {
-                                  pendingReplyActionSource = closure_3_0;
-                                  pendingReplyActionSource = closure_3_3;
-                                  const AUTOMOD_ERROR_CODES = closure_3_0(closure_3_3[78]).AUTOMOD_ERROR_CODES;
-                                  if (AUTOMOD_ERROR_CODES.has(ok.body.code)) {
-                                    obj2 = closure_3_1(closure_3_3[46]);
-                                    let obj13 = { type: "MESSAGE_SEND_FAILED_AUTOMOD", messageData: null, errorResponseBody: null };
-                                    obj13[1] = closure_1_16;
-                                    obj14 = { code: null, message: null };
-                                    obj14[0] = ok.body.code;
-                                    obj14[1] = ok.body.message;
-                                    obj13[2] = obj14;
-                                    obj2.dispatch(obj13);
-                                    flag = false;
-                                  } else if (ok.body.code === tmp6.POGGERMODE_TEMPORARILY_DISABLED) {
-                                    obj1 = closure_3_1(closure_3_3[46]);
-                                    obj1.dispatch({ type: "POGGERMODE_TEMPORARILY_DISABLED" });
-                                    flag = false;
-                                  } else if (ok.body.code === tmp6.EXPLICIT_CONTENT) {
-                                    const EXPLICIT_CONTENT = closure_3_46.EXPLICIT_CONTENT;
-                                    flag = false;
-                                  } else {
-                                    let tmp8 = null != closure_1_6 || closure_1_11;
-                                    if (!tmp8) {
-                                      tmp8 = null != closure_1_7;
-                                    }
-                                    flag = false;
-                                    if (!tmp8) {
-                                      closure_3_55.sendClydeError(closure_0, ok.body.code);
-                                      flag = false;
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                        if (flag) {
-                          if (null != closure_3_21.getMessage(closure_0, closure_1_14)) {
-                            closure_3_55.deleteMessage(closure_0, closure_1_14, true);
-                          }
-                        } else {
-                          if (null != closure_1_15) {
-                            obj7 = closure_3_1(closure_3_3[46]);
-                            const obj15 = { type: "UPLOAD_FAIL", channelId: null, file: null, messageId: null, reason: null, noSendFailed: true };
-                            obj15[1] = closure_0;
-                            obj15[2] = closure_1_15._file;
-                            obj15[3] = closure_1_14;
-                            obj15[4] = EXPLICIT_CONTENT;
-                            obj7.dispatch(obj15);
-                          }
-                          let hasErr = ok.hasErr;
-                          if (!hasErr) {
-                            hasErr = EXPLICIT_CONTENT !== closure_3_46.EXPLICIT_CONTENT;
-                          }
-                          if (!hasErr) {
-                            let body2 = ok.body;
-                            let attachments1;
-                            if (body2 != null) {
-                              attachments1 = body2.attachments;
-                            }
-                            let result2 = closure_3_55.sendExplicitMediaClydeError(closure_0, attachments1, closure_3_0(closure_3_3[50]).TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
-                            const tmp38 = closure_0;
-                          }
-                          obj9 = closure_3_1(closure_3_3[46]);
-                          const obj16 = { type: "MESSAGE_SEND_FAILED", messageId: null, channelId: null, shouldNotify: null, reason: null };
-                          obj16[1] = closure_1_14;
-                          obj16[2] = closure_0;
-                          obj16[3] = !c2.doNotNotifyOnError;
-                          obj16[4] = EXPLICIT_CONTENT;
-                          obj9.dispatch(obj16);
-                          obj11 = closure_3_0(closure_3_3[74]);
-                          let status;
-                          if (!ok.hasErr) {
-                            status = ok.status;
-                          }
-                          obj17 = { failureCode: null, errorMessage: null };
-                          obj17[0] = status;
-                          let message;
-                          if (ok.hasErr) {
-                            message = ok.err.message;
-                          }
-                          obj17[1] = message;
-                          let result3 = obj11.logMessageSendFailure(obj17);
-                          obj13 = closure_3_1(closure_3_3[72]);
-                          let result4 = obj13.cancelPendingSendRequests(closure_0);
-                          const item = result4.forEach((messageId) => {
-                            logger.log("Cancelling pending message", messageId.nonce);
-                            let obj = id(pendingReplyActionSource[46]);
-                            obj = { type: "MESSAGE_SEND_FAILED", messageId: messageId.nonce, channelId: messageId.channelId };
-                            obj.dispatch(obj);
-                          });
-                        }
-                        id(ok);
                       }
-                    }, rounded);
-                  });
-                  c8 = 3;
-                  const throwTypeErrorResultResult = throwTypeErrorResult(closure_1_3[47]);
-                  tmp42 = closure_0;
-                }
-              }
-            } else if (1 === tmp8) {
-              c6 = 0;
-              closure_19 = messageReference;
-              file = closure_19.file;
-              code = closure_19.code;
-              reason = closure_19.reason;
-              responseBody = closure_19.responseBody;
-              obj1 = closure_1_0(closure_1_3[74]);
-              let obj9 = { fileItems: null, failureCode: null, errorMessage: null };
-              obj9[0] = file.items;
-              obj9[1] = code;
-              let msg;
-              if (reason != null) {
-                msg = reason.msg;
-              }
-              obj9[2] = msg;
-              let result1 = obj1.logMessageSendFailure(obj9);
-              if (closure_2_9 != null) {
-                tmp33(closure_1_20, closure_1_21, closure_1_22, closure_1_23);
-              }
-              c8 = 3;
-              obj10 = { value: null, done: true };
-              obj10[0] = undefined;
-              return obj10;
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 0;
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              throwTypeErrorResult = c3;
-              closure_17 = arg1;
-              throwTypeErrorResult = closure_17;
-              if (null == closure_17) {
-                c6 = 0;
-                c8 = 3;
-                return { value: "HermesInternal", done: null };
-              } else {
-                throwTypeErrorResult = c3;
-                throwTypeErrorResult = closure_17;
-                attachments = closure_17.attachments;
-                throwTypeErrorResult = closure_17;
-                uploader = closure_17.uploader;
-                throwTypeErrorResult = c10;
-                if (!c10) {
-                  if (null != attachments) {
-                    obj4.message.attachments = attachments.map((closure_0, closure_1) => callback(_undefined[45]).getAttachmentPayload(closure_0, closure_1));
+                    }
+                    pendingReplyActionSource = closure_1_16;
+                    if (null != closure_1_16) {
+                      pendingReplyActionSource = closure_3_1;
+                      pendingReplyActionSource = closure_3_3;
+                      let obj11 = { type: "UPLOAD_COMPLETE", channelId: null, file: null, aborted: false };
+                      pendingReplyActionSource = closure_0;
+                      obj11[1] = closure_0;
+                      pendingReplyActionSource = closure_1_16;
+                      obj11[2] = closure_1_16._file;
+                      pendingReplyActionSource = closure_3_1(closure_3_3[46]).dispatch(obj11);
+                      const obj39 = closure_3_1(closure_3_3[46]);
+                    }
+                    pendingReplyActionSource = pendingReplyActionSource(ok);
+                    const findGiftCodesResult = closure_3_0(closure_3_3[41]).findGiftCodes(closure_0);
+                  } else {
+                    obj = { hasErr: null, status: null, code: null, error: null };
+                    ({ hasErr: obj[0], status: obj[1], body } = ok);
+                    code = undefined;
+                    if (body != null) {
+                      code = body.code;
+                    }
+                    obj[2] = code;
+                    obj[3] = ok.err;
+                    closure_3_49.log("Failed to send message", obj);
+                    if (ok.hasErr) {
+                      let flag = false;
+                      if ("ABORTED" === ok.err.code) {
+                        flag = true;
+                      }
+                    } else {
+                      flag = false;
+                      if (ok.status >= 400) {
+                        flag = false;
+                        if (ok.status < 500) {
+                          flag = false;
+                          if (ok.body) {
+                            if (ok.body.code === constants.SLOWMODE_RATE_LIMITED) {
+                              const retry_after = ok.body.retry_after;
+                              let tmp21 = null != retry_after;
+                              if (tmp21) {
+                                tmp21 = retry_after > 0;
+                              }
+                              flag = false;
+                              if (tmp21) {
+                                obj5 = closure_3_1(closure_3_3[46]);
+                                const obj12 = { type: "SLOWMODE_SET_COOLDOWN", channelId: null, slowmodeType: null, cooldownMs: null };
+                                obj12[1] = closure_0;
+                                obj12[2] = closure_3_24.SendMessage;
+                                obj12[3] = retry_after * closure_3_1(closure_3_3[79]).Millis.SECOND;
+                                obj5.dispatch(obj12);
+                                flag = false;
+                              }
+                            } else {
+                              pendingReplyActionSource = closure_3_0;
+                              pendingReplyActionSource = closure_3_3;
+                              const AUTOMOD_ERROR_CODES = closure_3_0(closure_3_3[80]).AUTOMOD_ERROR_CODES;
+                              if (AUTOMOD_ERROR_CODES.has(ok.body.code)) {
+                                obj2 = closure_3_1(closure_3_3[46]);
+                                let obj13 = { type: "MESSAGE_SEND_FAILED_AUTOMOD", messageData: null, errorResponseBody: null };
+                                obj13[1] = closure_1_17;
+                                obj14 = { code: null, message: null };
+                                obj14[0] = ok.body.code;
+                                obj14[1] = ok.body.message;
+                                obj13[2] = obj14;
+                                obj2.dispatch(obj13);
+                                flag = false;
+                              } else if (ok.body.code === tmp6.POGGERMODE_TEMPORARILY_DISABLED) {
+                                obj1 = closure_3_1(closure_3_3[46]);
+                                obj1.dispatch({ type: "POGGERMODE_TEMPORARILY_DISABLED" });
+                                flag = false;
+                              } else if (ok.body.code === tmp6.EXPLICIT_CONTENT) {
+                                const EXPLICIT_CONTENT = closure_3_46.EXPLICIT_CONTENT;
+                                flag = false;
+                              } else {
+                                let tmp8 = null != closure_1_6 || closure_1_12;
+                                if (!tmp8) {
+                                  tmp8 = null != closure_1_7;
+                                }
+                                flag = false;
+                                if (!tmp8) {
+                                  closure_3_55.sendClydeError(closure_0, ok.body.code);
+                                  flag = false;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    if (flag) {
+                      if (null != closure_3_21.getMessage(closure_0, closure_1_15)) {
+                        closure_3_55.deleteMessage(closure_0, closure_1_15, true);
+                      }
+                    } else {
+                      if (null != closure_1_16) {
+                        obj7 = closure_3_1(closure_3_3[46]);
+                        const obj15 = { type: "UPLOAD_FAIL", channelId: null, file: null, messageId: null, reason: null, noSendFailed: true };
+                        obj15[1] = closure_0;
+                        obj15[2] = closure_1_16._file;
+                        obj15[3] = closure_1_15;
+                        obj15[4] = EXPLICIT_CONTENT;
+                        obj7.dispatch(obj15);
+                      }
+                      let hasErr = ok.hasErr;
+                      if (!hasErr) {
+                        hasErr = EXPLICIT_CONTENT !== closure_3_46.EXPLICIT_CONTENT;
+                      }
+                      if (!hasErr) {
+                        let body2 = ok.body;
+                        let attachments1;
+                        if (body2 != null) {
+                          attachments1 = body2.attachments;
+                        }
+                        let result2 = closure_3_55.sendExplicitMediaClydeError(closure_0, attachments1, closure_3_0(closure_3_3[50]).TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                        const tmp38 = closure_0;
+                      }
+                      obj9 = closure_3_1(closure_3_3[46]);
+                      const obj16 = { type: "MESSAGE_SEND_FAILED", messageId: null, channelId: null, shouldNotify: null, reason: null };
+                      obj16[1] = closure_1_15;
+                      obj16[2] = closure_0;
+                      obj16[3] = !c2.doNotNotifyOnError;
+                      obj16[4] = EXPLICIT_CONTENT;
+                      obj9.dispatch(obj16);
+                      obj11 = closure_3_0(closure_3_3[74]);
+                      let status;
+                      if (!ok.hasErr) {
+                        status = ok.status;
+                      }
+                      obj17 = { failureCode: null, errorMessage: null };
+                      obj17[0] = status;
+                      let message;
+                      if (ok.hasErr) {
+                        message = ok.err.message;
+                      }
+                      obj17[1] = message;
+                      let result3 = obj11.logMessageSendFailure(obj17);
+                      obj13 = closure_3_1(closure_3_3[72]);
+                      let result4 = obj13.cancelPendingSendRequests(closure_0);
+                      const item = result4.forEach((messageId) => {
+                        logger.log("Cancelling pending message", messageId.nonce);
+                        let obj = id(pendingReplyActionSource[46]);
+                        obj = { type: "MESSAGE_SEND_FAILED", messageId: messageId.nonce, channelId: messageId.channelId };
+                        obj.dispatch(obj);
+                      });
+                    }
+                    id(ok);
                   }
-                  c6 = 0;
-                }
-              }
+                }, rounded);
+              });
+              c8 = 3;
+              obj18 = { value: null, done: true };
+              obj18[0] = throwTypeErrorResult;
+              return obj18;
             }
-            c6 = 0;
-            c8 = 3;
-            return { value: "HermesInternal", done: null };
           } catch (throwTypeErrorResult) {
             messageReference = throwTypeErrorResult;
-            throwTypeErrorResult = c6;
             if (tmp4 === c6) {
               throwTypeErrorResult = tmp2;
               c8 = tmp2;
               throw throwTypeErrorResult;
-            } else {
+            } else if (throwTypeErrorResult === throwTypeErrorResult) {
               c7 = throwTypeErrorResult;
+            } else {
+              c7 = tmp2;
             }
           }
         }
@@ -2412,7 +2542,7 @@ let obj14 = {
     let obj = hasFlag;
     if (obj.hasFlag(flags.flags, closure_33.IS_COMPONENTS_V2)) {
       const components = flags.components;
-      const found = components.filter((type) => type.type === callback(table[79]).ComponentType.TEXT_DISPLAY);
+      const found = components.filter((type) => type.type === callback(table[81]).ComponentType.TEXT_DISPLAY);
       if (found.length > 0) {
         const mapped = found.map((content) => content.content);
         const joined = mapped.join("\n");
@@ -2488,7 +2618,7 @@ let obj14 = {
                   obj.track(constants2.MESSAGE_SWIPE_ACTION_SENT, obj);
                 }
               })(closure_1_1, closure_1_0);
-              obj1 = closure_1_1(7434);
+              obj1 = closure_1_1(7442);
               obj2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2537,18 +2667,18 @@ let obj14 = {
             obj2[4] = closure_0;
             obj2[5] = dependencyMap;
             const obj3 = { type: null, message: null };
-            obj3[0] = closure_1_0(7503).MessageDataType.EDIT;
+            obj3[0] = closure_1_0(7511).MessageDataType.EDIT;
             obj3[1] = obj2;
-            closure_1_1(7503).enqueue(obj3, (hasErr) => {
+            closure_1_1(7511).enqueue(obj3, (hasErr) => {
               hasErr = hasErr.hasErr;
               let hasItem = !hasErr;
               if (!hasErr) {
-                const AUTOMOD_ERROR_CODES = closure_2_0(7533).AUTOMOD_ERROR_CODES;
+                const AUTOMOD_ERROR_CODES = closure_2_0(7781).AUTOMOD_ERROR_CODES;
                 hasItem = AUTOMOD_ERROR_CODES.has(hasErr.body.code);
               }
               if (hasItem) {
                 let obj = { type: null, message: null };
-                obj[0] = closure_2_0(7503).MessageDataType.EDIT;
+                obj[0] = closure_2_0(7511).MessageDataType.EDIT;
                 obj[1] = obj2;
                 obj1 = closure_2_1(709);
                 obj = { type: "MESSAGE_EDIT_FAILED_AUTOMOD", messageData: null, errorResponseBody: null };
@@ -2622,7 +2752,7 @@ let obj14 = {
               closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              obj1 = closure_1_1(7434);
+              obj1 = closure_1_1(7442);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2695,7 +2825,7 @@ let obj14 = {
               closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              obj1 = closure_1_1(7434);
+              obj1 = closure_1_1(7442);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2766,7 +2896,7 @@ let obj14 = {
               return obj;
             } else {
               closure_0 = tmp4;
-              obj1 = v0(closure_1_3[80]);
+              obj1 = v0(closure_1_3[82]);
               v0 = 1;
               c2 = 1;
               obj1 = { value: null, done: false };
@@ -2848,7 +2978,7 @@ let obj14 = {
                 })();
                 dependencyMap = 3;
               } else {
-                obj1 = closure_1_1(7434);
+                obj1 = closure_1_1(7442);
                 c2 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
@@ -2961,7 +3091,7 @@ let obj14 = {
               formatToPlainStringResult = intl.string(closure_1_0(1236).t.z2gyNF);
             }
             c0 = formatToPlainStringResult;
-            obj3 = closure_1_1(4808);
+            obj3 = closure_1_1(4809);
             const obj4 = { title: null, body: null, confirmText: null };
             const intl3 = closure_1_0(1236).intl;
             obj4[0] = intl3.string(closure_1_0(1236).t.Vd1hs6);

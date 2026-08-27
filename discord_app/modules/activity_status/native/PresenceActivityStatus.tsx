@@ -1,9 +1,9 @@
 // discord_app/modules/activity_status/native/PresenceActivityStatus.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
-import AppsIcon2 from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
+import AppsIcon2 from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import getActivityStatusTextDefault from "../getActivityStatusText.tsx";
 import { ActivityTypes } from "../../../Constants.tsx";
@@ -54,7 +54,7 @@ export default function PresenceActivityStatus(hideText) {
     let obj = { icon: null, style: null };
     obj[0] = AppsIcon;
     obj[1] = iconStyle;
-    tmp12 = callback(tmp(9860), obj);
+    tmp12 = callback(tmp(9165), obj);
   }
   const children = [tmp12, ];
   let tmp15 = !flag;
@@ -63,7 +63,7 @@ export default function PresenceActivityStatus(hideText) {
     obj[0] = textStyle;
     obj[1] = maxFontSizeMultiplier;
     obj[2] = getActivityStatusTextDefault(activity, true).text;
-    tmp15 = callback(tmp(9863), obj);
+    tmp15 = callback(tmp(9168), obj);
   }
   children[1] = tmp15;
   return closure_6(closure_5, { children });

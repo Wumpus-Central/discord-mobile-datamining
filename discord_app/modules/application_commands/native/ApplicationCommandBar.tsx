@@ -324,9 +324,9 @@ export default function _default(command) {
     obj1 = { style: null, source: null };
     obj1[0] = tmp.applicationIcon;
     obj1[1] = memo;
-    tmp22 = callback2(section(5440), obj1);
+    tmp22 = callback2(section(5445), obj1);
   }
-  const items5 = [tmp22, callback2(command(4440).Text, { style: tmp.applicationName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
+  const items5 = [tmp22, callback2(command(4441).Text, { style: tmp.applicationName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
   let options = command.options;
   let mapped;
   if (options != null) {
@@ -368,7 +368,7 @@ export default function _default(command) {
     obj4[0] = tmp.applicationOptionalOptionsIndicator;
     const intl = tmp12(1236).intl;
     obj4[4] = intl.string(tmp12(1236).t.U19GM3);
-    items7[1] = tmp25(tmp12(4440).Text, obj4);
+    items7[1] = tmp25(tmp12(4441).Text, obj4);
     const options1 = command.options;
     let mapped1;
     if (options1 != null) {
@@ -398,7 +398,7 @@ export default function _default(command) {
   }
   items5[3] = tmp19Result;
   obj[5] = items5;
-  const items8 = [c10(closure_6, obj), callback2(command(8185).FormDivider, { style: tmp.applicationDescriptionDivider }), callback2(stateFromStores, { command, option: currentOption, optionState: tmp17 }), callback2(command(8185).FormDivider, { style: tmp.applicationDescriptionDivider })];
+  const items8 = [c10(closure_6, obj), callback2(command(8295).FormDivider, { style: tmp.applicationDescriptionDivider }), callback2(stateFromStores, { command, option: currentOption, optionState: tmp17 }), callback2(command(8295).FormDivider, { style: tmp.applicationDescriptionDivider })];
   obj[1] = items8;
   return c10(onPressOption, obj);
 };

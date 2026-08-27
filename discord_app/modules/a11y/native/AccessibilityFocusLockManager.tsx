@@ -46,14 +46,14 @@ prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusL
     }
   }
   if (self._focusLockEnabled) {
-    item10014(4812).disableFocusLock();
+    item10014(4813).disableFocusLock();
     self._focusLockEnabled = false;
-    const obj = item10014(4812);
+    const obj = item10014(4813);
   }
 };
 prototype["_initialize"] = function _initialize() {
   const self = this;
-  this._screenReaderEnabledListener = self(4866).addScreenReaderEnabledListener((_screenReaderEnabled) => {
+  this._screenReaderEnabledListener = self(4867).addScreenReaderEnabledListener((_screenReaderEnabled) => {
     self._screenReaderEnabled = _screenReaderEnabled;
     const result = self._updateAccessibilityFocusLock();
   });

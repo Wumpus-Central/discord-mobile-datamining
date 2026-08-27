@@ -1,7 +1,7 @@
 // discord_app/modules/reactions/canReactToMessage.tsx
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import isCommunicationDisabled from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
-import _modDef8298 from "canAddNewReactions.tsx";
+import _modDef7812 from "canAddNewReactions.tsx";
 import closure_3 from "../../stores/GuildMemberStore.tsx";
 import closure_4 from "../../stores/GuildVerificationStore.tsx";
 import closure_5 from "../../stores/PermissionStore.tsx";
@@ -24,7 +24,7 @@ function canReactToMessageInternal(state, getGuildId, items) {
       member = obj2.getMember(guildId, currentUser.id);
     }
   }
-  let tmp6 = _modDef8298(getGuildId) && !getGuildId.isArchivedLockedThread();
+  let tmp6 = _modDef7812(getGuildId) && !getGuildId.isArchivedLockedThread();
   if (tmp6) {
     tmp6 = state.state !== constants.SEND_FAILED;
   }

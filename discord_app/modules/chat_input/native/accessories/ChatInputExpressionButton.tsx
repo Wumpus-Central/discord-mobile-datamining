@@ -83,9 +83,9 @@ const memoResult = importAllResult.memo((active) => {
   }
   const items2 = [expressionButtonIconPosition, tmp11.expressionButtonIconTint];
   obj[1] = items2;
-  obj[2] = tmp4(showKeyboardIcon ? 10411 : 7868);
+  obj[2] = tmp4(showKeyboardIcon ? 10805 : 8161);
   obj[7] = jsx(onPress(1297).Icon, { size: token3, style: null, source: null });
-  return jsx(onPress(5015).PressableOpacity, { size: token3, style: null, source: null });
+  return jsx(onPress(5020).PressableOpacity, { size: token3, style: null, source: null });
 });
 const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputExpressionButton.tsx");
 

@@ -16,7 +16,7 @@ function ICYMIGuildEventRow(event) {
   dependencyMap = undefined;
   let React;
   const tmp = callback4();
-  const tmp4 = guild(9163)(event, null);
+  const tmp4 = guild(9558)(event, null);
   const tmp5 = callback2(event);
   dependencyMap = tmp5;
   let toISOStringResult;
@@ -26,40 +26,40 @@ function ICYMIGuildEventRow(event) {
   }
   React = toISOStringResult;
   const items = [toISOStringResult, tmp5];
-  const tmp7 = guild(4638)(channel);
-  let obj = event(9160);
+  const tmp7 = guild(4639)(channel);
+  let obj = event(9596);
   const locationFromEvent = obj.getLocationFromEvent(event);
-  obj1 = event(9247);
+  obj1 = event(9660);
   const eventLocationIconSource = obj1.getEventLocationIconSource(event, channel, true);
-  let obj2 = event(9247);
+  let obj2 = event(9660);
   const eventLocationIconComponent = obj2.getEventLocationIconComponent(event, channel, true);
-  let obj3 = event(9157);
+  let obj3 = event(9555);
   const items1 = [event];
   const nextRecurrenceIdInEvent = obj3.getNextRecurrenceIdInEvent(event);
   const items2 = [guild.id, event.id];
   const callback = React.useCallback(() => {
-    let obj = guild(9128);
+    let obj = guild(8553);
     obj.itemInteracted(event.id, "guild_event", "press_event");
     obj = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_body", actionIntentType: "navigate", actionDestinationType: "event" } };
-    guild(9128).feedItemActioned(obj);
-    const obj2 = guild(9128);
+    guild(8553).feedItemActioned(obj);
+    const obj2 = guild(8553);
     obj = { eventId: event.id, event };
-    const result = event(9164).openGuildEventDetails(obj);
+    const result = event(9680).openGuildEventDetails(obj);
   }, items1);
   const callback1 = React.useCallback(() => {
-    let obj = guild(9128);
+    let obj = guild(8553);
     obj.itemInteracted(event.id, "guild_event", "press_event");
     obj = { itemId: event.id, itemType: "guild_event", actionParameters: { actionGestureType: "press", actionTargetElement: "item_header", actionIntentType: "navigate", actionDestinationType: "guild" } };
-    guild(9128).feedItemActioned(obj);
-    const obj2 = guild(9128);
-    event(6132).transitionToGuild(guild.id);
+    guild(8553).feedItemActioned(obj);
+    const obj2 = guild(8553);
+    event(6138).transitionToGuild(guild.id);
   }, items2);
   let title = null != event.description;
   if (title) {
     title = event.description.length > 0;
   }
   let guild_id;
-  let tmp2Result = tmp2(9167);
+  let tmp2Result = tmp2(9671);
   if (event != null) {
     guild_id = event.guild_id;
   }
@@ -68,7 +68,7 @@ function ICYMIGuildEventRow(event) {
     id = event.id;
   }
   obj = { actionLabel: null, id: null, interactionType: "guild_event", channelId: null, guildId: null, timestamp: null, onHeaderPress: null, onHeaderLongPress: null, children: null };
-  tmp2Result = tmp2(15929);
+  tmp2Result = tmp2(15994);
   let intl = tmp8(1236).intl;
   obj[0] = intl.string(event(1236).t["6pFsLQ"]);
   obj[1] = event.id;
@@ -88,7 +88,7 @@ function ICYMIGuildEventRow(event) {
   if (tmp5) {
     str = "status-positive";
   }
-  obj1[1] = closure_11(event(4440).Text, {
+  obj1[1] = closure_11(event(4441).Text, {
     variant: "text-sm/semibold",
     color: str,
     children: React.useMemo(() => {
@@ -98,8 +98,8 @@ function ICYMIGuildEventRow(event) {
         obj[0] = intl.string(event(1236).t.TxqPQR);
         let eventTimeData = obj;
       } else {
-        eventTimeData = tmp(9157).getEventTimeData(c3);
-        const tmpResult = tmp(9157);
+        eventTimeData = tmp(9555).getEventTimeData(c3);
+        const tmpResult = tmp(9555);
       }
       return eventTimeData;
     }, items).startDateTimeString
@@ -109,28 +109,28 @@ function ICYMIGuildEventRow(event) {
     title = tmp.title;
   }
   obj2 = { style: title, variant: "text-lg/semibold", children: event.name };
-  items3[1] = closure_11(event(4440).Text, obj2);
+  items3[1] = closure_11(event(4441).Text, obj2);
   let tmp19Result = null != event.description;
   if (tmp19Result) {
     tmp19Result = event.description.length > 0;
   }
   if (tmp19Result) {
     obj3 = { variant: "text-md/normal", color: "text-subtle", lineClamp: 5, children: null };
-    let tmp8Result = tmp8(9249);
+    let tmp8Result = tmp8(9661);
     const obj4 = { guildId: null };
     obj4[0] = guild.id;
     obj3[3] = tmp8Result.guildEventDetailsParser(event.description, true, obj4);
-    tmp19Result = tmp19(tmp8(4440).Text, obj3);
+    tmp19Result = tmp19(tmp8(4441).Text, obj3);
   }
   items3[2] = tmp19Result;
   items3[3] = closure_11(closure_5, { style: tmp.separator });
   const obj6 = { style: tmp.infoContainer, children: null };
   const obj7 = { style: tmp.locationContainer, children: null };
-  const items4 = [closure_11(event(4985).GroupIcon, { size: "xs", style: tmp.eventsChannelIcon }), ];
+  const items4 = [closure_11(event(4990).GroupIcon, { size: "xs", style: tmp.eventsChannelIcon }), ];
   const obj9 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: null };
   const intl2 = tmp8(1236).intl;
   obj9[3] = intl2.format(event(1236).t["+DLsD8"], { count: tmp2ResultResult });
-  items4[1] = closure_11(event(4440).Text, obj9);
+  items4[1] = closure_11(event(4441).Text, obj9);
   obj7[1] = items4;
   const items5 = [closure_12(closure_5, obj7), ];
   const obj10 = { style: tmp.locationContainer, children: null };
@@ -153,12 +153,12 @@ function ICYMIGuildEventRow(event) {
   if (tmp7 == null) {
     let result = null;
     if (null != locationFromEvent) {
-      tmp8Result = tmp8(9249);
+      tmp8Result = tmp8(9661);
       result = tmp8Result.guildEventLocationParser(locationFromEvent, true);
     }
     tmp27 = result;
   }
-  items6[1] = closure_11(event(4440).Text, { lineClamp: 2, variant: "text-xs/normal", color: "text-muted", children: tmp27 });
+  items6[1] = closure_11(event(4441).Text, { lineClamp: 2, variant: "text-xs/normal", color: "text-muted", children: tmp27 });
   obj10[1] = items6;
   items5[1] = closure_12(closure_5, obj10);
   obj6[1] = items5;

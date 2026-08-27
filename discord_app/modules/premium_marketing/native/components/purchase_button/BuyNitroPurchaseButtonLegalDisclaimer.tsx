@@ -59,7 +59,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       obj1 = { style: null, variant: "text-xxs/medium", children: null };
       obj1[0] = tmp.disclaimer;
       obj1[2] = formatResult;
-      jsx(tmp10(4440).Text, { style: null, variant: "text-xxs/medium", children: null });
+      jsx(tmp10(4441).Text, { style: null, variant: "text-xxs/medium", children: null });
     }
     const tmp3Result1 = set;
     t = tmp3(1236).t;

@@ -1,18 +1,18 @@
 // discord_app/modules/age_gate/AgeGateUtils.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import ME from "../../Constants.tsx";
 import result2 from "AgeGateConstants.tsx";
+import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
 import combinedDefault from "../../utils/HelpdeskUtils.tsx";
 import isFeatureAgeGated2 from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import useAgeVerificationRunner from "../age_assurance/AgeVerificationUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import openAgeGateModal from "AgeGateModalActionCreators.tsx";
-import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import closure_6 from "../../stores/GuildNSFWAgreeStore.tsx";
-import closure_7 from "../../stores/GuildStore.tsx";
-import closure_8 from "../../stores/UserStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildNSFWAgreeStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import ME from "../../Constants.tsx";
 import set from "../../../_runtime/00002_set.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { useAgeVerificationRunner } from "../age_assurance/AgeVerificationUtils.tsx";
@@ -26,12 +26,12 @@ function shouldShowAgeGateForVoiceChannel(channelId) {
     const currentUser = authStore.getCurrentUser();
     let flag = false;
     if (null != currentUser) {
-      let tmpResult = tmp(4685);
+      let tmpResult = tmp(4686);
       const result1 = tmpResult.shouldShowTiggerPawtect();
       tmpResult = tmp(4140);
-      const tmp9 = tmpResult.isFeatureAgeGated(tmp(5314).AgeGatedFeature.AGE_GATED_SPACES) && result1;
-      flag = true !== currentUser.nsfwAllowed || tmpResult.isFeatureAgeGated(tmp(5314).AgeGatedFeature.AGE_GATED_SPACES) && result1;
-      const tmp10 = true !== currentUser.nsfwAllowed || tmpResult.isFeatureAgeGated(tmp(5314).AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      const tmp9 = tmpResult.isFeatureAgeGated(tmp(5319).AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      flag = true !== currentUser.nsfwAllowed || tmpResult.isFeatureAgeGated(tmp(5319).AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      const tmp10 = true !== currentUser.nsfwAllowed || tmpResult.isFeatureAgeGated(tmp(5319).AgeGatedFeature.AGE_GATED_SPACES) && result1;
     }
     let tmp12 = !flag;
     if (flag) {
@@ -49,7 +49,7 @@ function isChannelContentGated(channel, arg1) {
   if (null == channel) {
     return false;
   } else {
-    let didAgreeResult = closure_6.didAgree(channel.guild_id);
+    let didAgreeResult = closure_5.didAgree(channel.guild_id);
     const currentUser = authStore.getCurrentUser();
     if (currentUser != null) {
       const nsfwAllowed = currentUser.nsfwAllowed;
@@ -75,8 +75,8 @@ function isChannelContentGated(channel, arg1) {
     const guild = store2.getGuild(channel.guild_id);
     let tmp9 = null != guild;
     if (tmp9) {
-      tmp9 = callback(guild) && tmp6;
-      const tmp11 = callback(guild) && tmp6;
+      tmp9 = isGuildNSFW(guild) && tmp6;
+      const tmp11 = isGuildNSFW(guild) && tmp6;
     }
     return tmp9;
   }
@@ -85,16 +85,16 @@ function useIsChannelContentGated(channel) {
   const _require = channel;
   const shouldShowTiggerPawtect = require("../age_assurance/AgeVerificationUtils.tsx").useShouldShowTiggerPawtect();
   const obj = useAgeVerificationRunner;
-  const items = [closure_6];
+  items = [closure_5];
   let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    return closure_1_6.didAgree(guild_id);
+    return closure_1_5.didAgree(guild_id);
   });
   const obj2 = initialize;
-  const items1 = [closure_8];
+  const items1 = [closure_7];
   const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
@@ -106,13 +106,13 @@ function useIsChannelContentGated(channel) {
   const obj3 = initialize;
   let isFeatureAgeGated = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx").useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx").AgeGatedFeature.AGE_GATED_SPACES);
   const obj4 = isFeatureAgeGated;
-  const items2 = [closure_7];
+  const items2 = [closure_6];
   const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    return closure_1_7.getGuild(guild_id);
+    return closure_1_6.getGuild(guild_id);
   });
   if (stateFromStores) {
     stateFromStores = !stateFromStores1;
@@ -135,7 +135,7 @@ function useIsChannelContentGated(channel) {
     if (tmp9) {
       let tmp11 = null != stateFromStores2;
       if (tmp11) {
-        const tmp13 = callback(stateFromStores2);
+        const tmp13 = isGuildNSFW(stateFromStores2);
         let tmp14 = !tmp13;
         if (tmp13) {
           tmp14 = !tmp6;
@@ -148,13 +148,15 @@ function useIsChannelContentGated(channel) {
   }
   return tmp7;
 }
-({ isGuildNSFW: c3, RESTRICTED_CONTENT_LEVELS: c4 } = GuildNSFWContentLevel);
+const isGuildNSFW = GuildNSFWContentLevel.isGuildNSFW;
 const AgeGateSource = result2.AgeGateSource;
-const HelpdeskArticles = ME.HelpdeskArticles;
+({ GuildNSFWContentLevel, HelpdeskArticles: c9 } = ME);
 const date = new Date("06/16/2020");
-let items = [, , ];
-({ NSFW_SERVER: arr[0], NSFW_SERVER_INVITE: arr[1], NSFW_SERVER_INVITE_EMBED: arr[2] } = AgeGateSource);
-let set = new Set(items);
+let items = [, ];
+({ AGE_RESTRICTED: arr[0], EXPLICIT: arr[1] } = GuildNSFWContentLevel);
+let items1 = [, , ];
+({ NSFW_SERVER: arr2[0], NSFW_SERVER_INVITE: arr2[1], NSFW_SERVER_INVITE_EMBED: arr2[2] } = AgeGateSource);
+let set = new Set(items1);
 let result = set.fileFinishedImporting("modules/age_gate/AgeGateUtils.tsx");
 
 export const SERVER_AGE_GATE_SOURCES = set;
@@ -171,13 +173,8 @@ export const userNeedsAgeGate = function userNeedsAgeGate() {
   }
   return tmp2;
 };
-export const guildNeedsAgeGate = function guildNeedsAgeGate(ownerConfiguredContentLevel) {
-  if (null == ownerConfiguredContentLevel.ownerConfiguredContentLevel) {
-    let hasItem = set.has(ownerConfiguredContentLevel.nsfwLevel);
-  } else {
-    hasItem = callback(ownerConfiguredContentLevel);
-  }
-  return hasItem;
+export const guildNeedsAgeGate = function guildNeedsAgeGate(nsfwLevel) {
+  return items.includes(nsfwLevel.nsfwLevel);
 };
 export const shouldAgeVerifyForAgeGate = function shouldAgeVerifyForAgeGate() {
   const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
@@ -197,8 +194,8 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
   let NSFW_CHANNEL_AGE_VERIFY = dependencyMap;
   let obj = useAgeVerificationRunner;
   const isAgeVerified = obj.useIsAgeVerified();
-  const tmp3 = callback(stateFromStores);
-  const items = [closure_8];
+  const tmp3 = isGuildNSFW(stateFromStores);
+  items = [closure_7];
   stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
@@ -232,7 +229,7 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
       obj[1] = stringResult1;
       const intl7 = tmp(1236).intl;
       obj[2] = intl7.string(tmp(1236).t.FDSSia);
-      obj[3] = tmp(8011).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
+      obj[3] = tmp(8615).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
     }
     const format = intl6.format;
     let string2 = tmp(1236).t;
@@ -245,7 +242,7 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
     const intl8 = tmp(1236).intl;
     string2 = intl8.string;
     obj[2] = string2(tmp(1236).t.Zt4Mf4);
-    NSFW_CHANNEL_AGE_VERIFY = tmp(8011).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
+    NSFW_CHANNEL_AGE_VERIFY = tmp(8615).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
     obj[3] = NSFW_CHANNEL_AGE_VERIFY;
   } else if (stateFromStores) {
     const intl4 = tmp(1236).intl;
@@ -254,9 +251,9 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
     const intl5 = tmp(1236).intl;
     let NSFW_CHANNEL_UNDERAGE = tmp(1236).t;
     obj = { helpURL: null };
-    obj[0] = combinedDefault.getArticleURL(HelpdeskArticles.NSFW_AGE_GATING);
+    obj[0] = combinedDefault.getArticleURL(constants.NSFW_AGE_GATING);
     obj[1] = intl5.format(tmp3 ? NSFW_CHANNEL_UNDERAGE["6++3cX"] : NSFW_CHANNEL_UNDERAGE["2kHZes"], obj);
-    NSFW_CHANNEL_UNDERAGE = tmp(8011).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE;
+    NSFW_CHANNEL_UNDERAGE = tmp(8615).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE;
     obj[3] = NSFW_CHANNEL_UNDERAGE;
     const obj7 = combinedDefault;
     const tmp9 = tmp3 ? NSFW_CHANNEL_UNDERAGE["6++3cX"] : NSFW_CHANNEL_UNDERAGE["2kHZes"];
@@ -267,7 +264,7 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
     obj[1] = intl2.string(tmp3 ? t2.ZtuRts : t2.E4Cd5I);
     const intl3 = tmp(1236).intl;
     obj[2] = intl3.string(tmp(1236).t.wVq7uo);
-    obj[3] = tmp(8011).NsfwSpaceWarningModalType.NSFW_CHANNEL_VERIFIED;
+    obj[3] = tmp(8615).NsfwSpaceWarningModalType.NSFW_CHANNEL_VERIFIED;
     return obj;
   }
 };
@@ -282,7 +279,7 @@ export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) 
     shouldShowTiggerPawtect = obj2.useShouldShowTiggerPawtect();
   }
   initialize;
-  [][0] = closure_8;
+  [][0] = closure_7;
   if (source !== AgeGateSource.JOIN_LARGE_GUILD_UNDERAGE) {
     if (source !== tmp6.ACCESS_LARGE_GUILD_UNDERAGE) {
       if (isAgeVerified) {
@@ -327,7 +324,7 @@ export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) 
                 obj1[0] = intl.string(tmp(1236).t["H0SG/g"]);
                 const intl2 = tmp(1236).intl;
                 obj2 = { helpURL: null };
-                obj2[0] = combinedDefault.getArticleURL(HelpdeskArticles.AGE_GATE);
+                obj2[0] = combinedDefault.getArticleURL(constants.AGE_GATE);
                 obj1[1] = intl2.format(tmp(1236).t["6++3cX"], obj2);
                 const obj6 = combinedDefault;
               }
@@ -416,7 +413,7 @@ export const shouldShowAgeGateForGuildContentLevel = function shouldShowAgeGateF
       const guild = store2.getGuild(arg0);
       let tmp10 = null != guild;
       if (tmp10) {
-        tmp10 = callback(guild);
+        tmp10 = isGuildNSFW(guild);
       }
       return tmp10;
     }
@@ -472,7 +469,7 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
       const guild = store2.getGuild(guildId);
       let tmp10 = null != guild;
       if (tmp10) {
-        tmp10 = callback(guild);
+        tmp10 = isGuildNSFW(guild);
       }
       flag3 = tmp10;
     }
@@ -523,7 +520,7 @@ export const isChannelOrGuildNSFW = function isChannelOrGuildNSFW(channel) {
   if (tmp) {
     let isNSFWResult = channel.isNSFW();
     if (!isNSFWResult) {
-      isNSFWResult = callback(store2.getGuild(channel.guild_id));
+      isNSFWResult = isGuildNSFW(store2.getGuild(channel.guild_id));
     }
     tmp = isNSFWResult;
   }
@@ -538,7 +535,7 @@ export const isChannelAgeVerificationGated = function isChannelAgeVerificationGa
     if (tmp4) {
       let isNSFWResult = isNSFW.isNSFW();
       if (!isNSFWResult) {
-        isNSFWResult = callback(store2.getGuild(isNSFW.guild_id));
+        isNSFWResult = isGuildNSFW(store2.getGuild(isNSFW.guild_id));
       }
       tmp4 = isNSFWResult;
     }
@@ -560,7 +557,7 @@ export const userCannotSeeNSFWContent = function userCannotSeeNSFWContent(channe
     if (tmp3) {
       let isNSFWResult = channel.isNSFW();
       if (!isNSFWResult) {
-        isNSFWResult = callback(store2.getGuild(channel.guild_id));
+        isNSFWResult = isGuildNSFW(store2.getGuild(channel.guild_id));
       }
       tmp3 = isNSFWResult;
     }

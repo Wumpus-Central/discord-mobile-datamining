@@ -25,13 +25,13 @@ function PasswordStrength(passwordScore) {
             const intl2 = tmp9(1236).intl;
             let str = intl2.string(tmp9(1236).t["w/8TuV"]);
             let strong = tmp.weak;
-          } else if (passwordScore === tmp9(15409).PasswordScore.MEDIUM) {
+          } else if (passwordScore === tmp9(15474).PasswordScore.MEDIUM) {
             const intl = tmp9(1236).intl;
             str = intl.string(tmp9(1236).t["2fmTpT"]);
             strong = tmp.medium;
           } else {
             str = "";
-            if (passwordScore === tmp9(15409).PasswordScore.STRONG) {
+            if (passwordScore === tmp9(15474).PasswordScore.STRONG) {
               const intl4 = tmp9(1236).intl;
               str = intl4.string(tmp9(1236).t.Xraqqc);
               strong = tmp.strong;

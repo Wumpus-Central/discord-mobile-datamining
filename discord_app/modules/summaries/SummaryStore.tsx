@@ -270,7 +270,7 @@ obj = {
     if (null != summary) {
       const _Object = Object;
       if (Object.keys(summary).length > 0) {
-        obj = summaryFromServer(10458);
+        obj = summaryFromServer(10905);
         summaryFromServer = obj.createSummaryFromServer(summary, channelId);
         let items = dependencyMap2[channelId];
         if (items == null) {

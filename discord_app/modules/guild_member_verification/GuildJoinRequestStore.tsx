@@ -16,7 +16,7 @@ function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatu
         dependencyMap[guildId] = dependencyMap[guildId] + 1;
         const result = map.set(guildId, hooksDefault());
       }
-      if (applicationStatus === tmp12(4269).GuildJoinRequestApplicationStatuses.SUBMITTED) {
+      if (applicationStatus === tmp12(4270).GuildJoinRequestApplicationStatuses.SUBMITTED) {
         const _Math = Math;
         dependencyMap[guildId] = Math.max(0, dependencyMap[guildId] - 1);
         const result1 = map.set(guildId, hooksDefault());

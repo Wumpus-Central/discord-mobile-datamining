@@ -29,15 +29,15 @@ export default function FamilyCenterActivityPage() {
   const items = [callback(FamilyCenterParentalConsentNoticeDefault, {}), ];
   if (0 === activeLinkUserIds.length) {
     obj1 = { children: null };
-    const items1 = [tmp3(tmp7(14403), {}), tmp3(tmp7(14413), {}), ];
+    const items1 = [tmp3(tmp7(14430), {}), tmp3(tmp7(14440), {}), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.dataConfirmation;
-    obj2[1] = tmp3(tmp7(11559), {});
+    obj2[1] = tmp3(tmp7(11410), {});
     items1[2] = tmp3(tmp6, obj2);
     obj1[0] = items1;
     let tmp3Result = tmp5(closure_6, obj1);
   } else {
-    tmp3Result = tmp3(tmp7(14417), {});
+    tmp3Result = tmp3(tmp7(14444), {});
   }
   items[1] = tmp3Result;
   obj[1] = items;

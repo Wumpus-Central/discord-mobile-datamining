@@ -47,7 +47,7 @@ let closure_13 = importAllResult.memo(function GuildItemInner(guildId) {
     guildId(closure_1_2[9]).transitionToGuild(guildId);
   }, items1);
   obj = { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor };
-  obj[1] = callback(onGuildSelect(16399), obj);
+  obj[1] = callback(onGuildSelect(16463), obj);
   return callback(closure_5, obj);
 });
 let closure_14 = importAllResult.memo(function PrivateChannelItemInner(channelId) {

@@ -86,7 +86,7 @@ prototype["lastSeenChangelogDate"] = function lastSeenChangelogDate() {
 prototype["getStateForDebugging"] = function getStateForDebugging() {
   return { changelogConfig: c10, loadedChangelogs: closure_7, lastSeenChangelogId: c12, lastSeenChangelogDate: c13 };
 };
-prototype["isLocked"] = function isLocked() {
+prototype["isLocked"] = function isLocked(SoundButtonEmoji, arg1) {
   return set.size > 0;
 };
 ChangelogStore.displayName = "ChangelogStore";

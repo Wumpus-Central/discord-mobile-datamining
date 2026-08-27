@@ -119,7 +119,7 @@ function computeGuildMediaState(closure_0) {
       }
       continue;
     }
-    obj = { skipMutedVcs: callback(13248).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"), currentUserId: id.getId(), selectedVoiceChannelId: voiceChannelId, selectedVoiceGuildId: null, selectedVoiceChannelHasVideo: null, isSelectedVoiceChannelStage: null, blockedOrIgnoredUserIds: null, streamChannelIdsByGuild: null };
+    obj = { skipMutedVcs: callback(13274).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"), currentUserId: id.getId(), selectedVoiceChannelId: voiceChannelId, selectedVoiceGuildId: null, selectedVoiceChannelHasVideo: null, isSelectedVoiceChannelStage: null, blockedOrIgnoredUserIds: null, streamChannelIdsByGuild: null };
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -244,7 +244,7 @@ function computeGuildMediaState(closure_0) {
           const basicChannel = store.getBasicChannel(arg0);
           let tmp2 = null != basicChannel;
           if (tmp2) {
-            tmp2 = lib(5307)(basicChannel, closure_12);
+            tmp2 = lib(5312)(basicChannel, closure_12);
           }
           return tmp2;
         });
@@ -255,7 +255,7 @@ function computeGuildMediaState(closure_0) {
           _location = first.location;
         }
         let embeddedActivityLocationChannelId = obj5.getEmbeddedActivityLocationChannelId(_location);
-        let tmp34Result = tmp34(8559);
+        let tmp34Result = tmp34(8076);
         let tmp38 = store;
         if (tmp34Result.isActivitiesInTextEnabled(store.getChannel(embeddedActivityLocationChannelId))) {
           let someResult2 = found.length > 0;
@@ -274,7 +274,7 @@ function computeGuildMediaState(closure_0) {
         obj[1] = flag;
         obj[2] = someResult;
         obj[3] = someResult1;
-        tmp34Result = tmp34(9253);
+        tmp34Result = tmp34(9552);
         obj[4] = null != tmp34Result.getGuildActiveEvent(arg0);
         obj[5] = someResult2;
         return obj;

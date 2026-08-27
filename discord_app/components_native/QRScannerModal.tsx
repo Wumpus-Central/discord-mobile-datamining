@@ -1,8 +1,8 @@
 // discord_app/components_native/QRScannerModal.tsx
 import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../modules/safe_area/useSafeAreaInsets.native.tsx";
-import _modDef4675 from "../actions/ModalActionCreators.tsx";
-import registerAssetDefault from "../../_runtime/08278_registerAsset.js";
+import _modDef4676 from "../actions/ModalActionCreators.tsx";
+import registerAssetDefault from "../../_runtime/07745_registerAsset.js";
 import renderDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import __INTERNAL_VIEW_CONFIGDefault from "../../discord_common/js/packages/rtn-codegen/js/QRScannerNativeComponent.tsx";
 import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
@@ -130,7 +130,7 @@ export default function QRScannerModal(showHelp) {
   obj1[2] = registerAssetDefault;
   const items2 = [tmp12.closeButton, { marginTop: top }];
   obj1[3] = items2;
-  obj1[4] = _modDef4675.pop;
+  obj1[4] = _modDef4676.pop;
   items1[1] = tmp14(renderDefault, obj1);
   let tmp14Result = null;
   if (tmp) {

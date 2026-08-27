@@ -3,10 +3,10 @@ import timestampDefault from "../modules/debug/Logger.tsx";
 import debounceDefault from "../../_runtime/00636_debounce.js";
 import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import isPremiumResolution from "../utils/StreamQualityUtils.tsx";
 import snapVolumeToDefault from "../modules/user_settings/voice/AudioSettingsUtils.tsx";
 import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "../modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx";
 import _getFilterBlob from "../modules/video_backgrounds/applyBackgroundOption.tsx";
-import isPremiumResolution from "../utils/StreamQualityUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../stores/CertifiedDeviceStore.tsx";
 import closure_5 from "../stores/ChannelStore.tsx";
@@ -637,7 +637,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9375)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
+              obj1[0] = v0(9706)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -724,7 +724,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9375)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
+              obj1[0] = v0(9706)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
               return obj1;
             }
           } else if (arg0 === 1) {

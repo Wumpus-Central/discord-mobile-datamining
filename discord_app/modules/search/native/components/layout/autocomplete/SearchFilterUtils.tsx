@@ -3,13 +3,13 @@ import set from "../../../../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../../../../intl/index.native.tsx";
 import AtIcon from "../../../../../../design/components/Icon/native/redesign/generated/AtIcon.tsx";
 import SearchEntrypointAnalyticsLocations from "../../../tracking/TrackingConstants.tsx";
+import RobotIcon from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import CalendarIcon from "../../../../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
 import AttachmentIcon from "../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import RobotIcon from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import UserIcon from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
+import CalendarPlusIcon from "../../../../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
 import ChannelListMagnifyingGlassIcon from "../../../../../../design/components/Icon/native/redesign/generated/ChannelListMagnifyingGlassIcon.tsx";
 import CalendarMinusIcon from "../../../../../../design/components/Icon/native/redesign/generated/CalendarMinusIcon.tsx";
-import CalendarPlusIcon from "../../../../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
 import MessageEmbedTypes from "../../../../SearchConstants.tsx";
 import ME from "../../../../../../Constants.tsx";
 
@@ -207,7 +207,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(cl
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(11981));
+  const keys = Object.keys(items(11825));
   const item = keys.forEach((type) => {
     let obj = textInputValue(closure_1_2[12]);
     if (obj.isSearchFilterTokenType(type)) {

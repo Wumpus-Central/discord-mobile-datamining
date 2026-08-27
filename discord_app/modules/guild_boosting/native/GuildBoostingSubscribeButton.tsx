@@ -60,7 +60,7 @@ function _handleBoostPress() {
               c4 = 1;
               c5 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = callback(7074).launchGuildBoostFlowOrAlert(obj1);
+              obj3[0] = callback(7080).launchGuildBoostFlowOrAlert(obj1);
               return obj3;
             }
           } else if (arg0 === 1) {
@@ -72,7 +72,7 @@ function _handleBoostPress() {
             obj4[0] = arg1;
             return obj4;
           } else {
-            obj = callback(5324);
+            obj = callback(5329);
             obj.closeApplyBoostModal();
             c5 = 3;
             return { value: "HermesInternal", done: null };

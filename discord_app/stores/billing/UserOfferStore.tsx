@@ -85,7 +85,7 @@ function handleReferralTrialStoreUpdate() {
 }
 ({ ANNUAL_DISCOUNT_IDS: c9, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: c10, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: unpackModuleId, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = GuildFeatures);
 let closure_17 = performance.now();
-let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "flex", userDiscountOffers: null, userDiscounts: "\u{1F443}\u{1F3FC}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: "TRANSPARENT" };
+let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "flex", userDiscountOffers: null, userDiscounts: "\u{1F443}\u{1F3FE}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: "nose_tone4" };
 obj[1] = {};
 obj[2] = {};
 obj[7] = { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 };
@@ -368,7 +368,7 @@ prototype["getUnacknowledgedOffers"] = function getUnacknowledgedOffers(arg0) {
 };
 prototype["hasAnyUnexpiredOffer"] = function hasAnyUnexpiredOffer() {
   const values = Object.values(obj.userTrialOffers);
-  return values.some((hasExpired) => !hasExpired.hasExpired());
+  return values.some((hasExpired) => !hasExpired.hasExpired);
 };
 prototype["hasAnyUnexpiredDiscountOffer"] = function hasAnyUnexpiredDiscountOffer() {
   const values = Object.values(obj.userDiscountOffers);

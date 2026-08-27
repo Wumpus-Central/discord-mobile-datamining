@@ -4,7 +4,8 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import getQuestDeliveryDataForPlacement from "utils/QuestDataUtils.tsx";
 import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "QuestStore.tsx";
+import closure_3 from "../ads/AdDeliveryStore.tsx";
+import closure_4 from "QuestStore.tsx";
 
 require = arg1;
 function getOrCreateSet(QUEST) {
@@ -18,7 +19,7 @@ function getOrCreateSet(QUEST) {
   return value;
 }
 function syncWithQuestStore() {
-  const quests = lastFetchedQuestHomeHero.quests;
+  const quests = closure_4.quests;
   const obj = getOrCreateSet(AdCreativeType.AdCreativeType.QUEST);
   let flag = false;
   while (tmp !== undefined) {
@@ -65,7 +66,7 @@ function syncWithQuestStore() {
     }
     continue;
   }
-  if (0 !== lastFetchedQuestHomeHero.lastFetchedCurrentQuests) {
+  if (0 !== closure_4.lastFetchedCurrentQuests) {
     if (quests.size > 0) {
       for (const item10063 of obj) {
         let tmp24 = item10063;
@@ -116,7 +117,7 @@ class AdContentSeenStore extends PersistedStore {
 const prototype = AdContentSeenStore.prototype;
 prototype["initialize"] = function initialize(seenContentIds) {
   const self = this;
-  this.waitFor(closure_3);
+  this.waitFor(closure_4, closure_3);
   map = new Map();
   if (null != seenContentIds) {
     const _Object = Object;
@@ -139,7 +140,7 @@ prototype["initialize"] = function initialize(seenContentIds) {
       continue;
     }
   }
-  const items = [closure_3];
+  const items = [closure_4, closure_3];
   self.syncWith(items, syncWithQuestStore);
 };
 prototype["getState"] = function getState() {

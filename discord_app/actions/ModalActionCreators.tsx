@@ -3,7 +3,7 @@ import set from "../../_runtime/00002_set.js";
 import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import coerceMainRoute from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import uniqueIdDefault from "../../_runtime/04676_uniqueId.js";
+import uniqueIdDefault from "../../_runtime/04677_uniqueId.js";
 import getDeprecatedModalDataDefault from "../utils/getDeprecatedModalData.tsx";
 import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 
@@ -28,12 +28,12 @@ export default {
     dispatcherDefault.dispatch(obj);
     return tmp;
   },
-  pushLazy(closure_1_1, closure_0, closure_4, navigationParams) {
+  pushLazy(closure_1_1, closure_0, c3, navigationParams) {
     const self = this;
     importDefault = closure_1_1;
     dependencyMap = closure_0;
-    let tmp = closure_4;
-    if (closure_4 === undefined) {
+    let tmp = c3;
+    if (c3 === undefined) {
       tmp = uniqueIdDefault("modal");
     }
     closure_3 = tmp;

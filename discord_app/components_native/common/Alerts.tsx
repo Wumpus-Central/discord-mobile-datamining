@@ -1,8 +1,8 @@
 // discord_app/components_native/common/Alerts.tsx
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4809 from "../../actions/native/AlertActionCreators.tsx";
+import _modDef4810 from "../../actions/native/AlertActionCreators.tsx";
 import Dialog from "../../design/components/Dialog/native/Dialog.native.tsx";
-import _modDef5996 from "../../modules/keyboard/native/KeyboardAwareView.tsx";
+import _modDef6001 from "../../modules/keyboard/native/KeyboardAwareView.tsx";
 import getStoresDefault from "../../lib/ModalRegistry.tsx";
 import importAllResult from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
@@ -126,7 +126,7 @@ AlertWrapper.prototype["render"] = function render() {
     str = "alerts-component";
   }
   const props = self.props;
-  let obj = { onClose: _modDef4809.close };
+  let obj = { onClose: _modDef4810.close };
   ({ opacity, scale } = self.state);
   obj = { dialogKey: str, onDismiss: self.handleRequestClose, children: null };
   obj = { style: items, children: null };
@@ -139,11 +139,11 @@ AlertWrapper.prototype["render"] = function render() {
   const items3 = [{ scale }];
   items2[1] = callback(RN.View, { style: { transform: items3 }, children: renderAlertResult });
   obj[1] = items2;
-  obj[2] = callback2(_modDef5996, obj);
+  obj[2] = callback2(_modDef6001, obj);
   return callback(Dialog.Dialog, obj);
 };
 AlertWrapper.contextType = require("ManaContext").ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "ct", renderKey: "accessibilityRole", props: "body" });
+let closure_18 = Object.freeze({ renderAlert: "IconComponent", renderKey: "dispatch", props: "names" });
 let obj1 = {
   stores: items3,
   center: true,
@@ -189,7 +189,7 @@ const memoResult = importAllResult.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "ct", renderKey: "accessibilityRole", props: "body" };
+        return { renderAlert: "IconComponent", renderKey: "dispatch", props: "names" };
       }
     }
   });

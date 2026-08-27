@@ -28,7 +28,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
   importDefault = undefined;
   const tmp2 = callback4();
   const tmp5 = stylesDefault();
-  let obj = onDone(17172);
+  let obj = onDone(17238);
   const editStateContext = obj.useEditStateContext();
   ({ guildId, editStateId } = editStateContext);
   [tmp9, tmp10] = callback2(React.useState(false), 2);
@@ -118,7 +118,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
       obj = { children: null };
       obj1 = { style: null, children: null };
       obj1[0] = tmp5.header;
-      let tmp3Result = tmp3(9275);
+      let tmp3Result = tmp3(9825);
       const intl3 = tmp6(1236).intl;
       obj1[1] = intl3.string(tmp6(1236).t["3S8gA7"]);
       const items1 = [callback3(tmp3Result, obj1), ];
@@ -127,7 +127,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
       const obj3 = { style: null, resizeMode: "cover", source: null };
       obj3[0] = tmp2.coverPhoto;
       obj3[2] = first;
-      obj2[1] = callback3(tmp3(5440), obj3);
+      obj2[1] = callback3(tmp3(5445), obj3);
       items1[1] = callback3(View, obj2);
       obj[0] = items1;
       tmp13Result = tmp13(tmp16, obj);
@@ -136,18 +136,18 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     const items2 = [tmp13Result, , ];
     const obj5 = { style: null, children: null };
     obj5[0] = tmp5.header;
-    tmp3Result = tmp3(9275);
+    tmp3Result = tmp3(9825);
     const intl4 = tmp6(1236).intl;
     obj5[1] = intl4.string(tmp6(1236).t["74JctW"]);
     items2[1] = callback3(tmp3Result, obj5);
     const obj6 = { style: null, variant: "text-md/medium", color: "interactive-text-active", children: null };
     obj6[0] = tmp2.description;
     obj6[3] = callback2(closure_7.useGroupDescriptionState(), 1)[0];
-    items2[2] = callback3(tmp6(4440).Text, obj6);
+    items2[2] = callback3(tmp6(4441).Text, obj6);
     obj4[0] = items2;
     flag = tmp13(tmp16, obj4);
   }
-  const items3 = [flag, callback3(onDone(17196).GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];
+  const items3 = [flag, callback3(onDone(17262).GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];
   obj.children = items3;
   return closure_10(HeaderDefault, obj);
 };

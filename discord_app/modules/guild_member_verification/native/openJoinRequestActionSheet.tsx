@@ -8,5 +8,5 @@ const result = set.fileFinishedImporting("modules/guild_member_verification/nati
 export default function openJoinRequestActionSheet(joinRequest) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { joinRequest };
-  obj.openLazy(asyncRequireImpl(16015, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
+  obj.openLazy(asyncRequireImpl(16080, dependencyMap.paths), "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
 };

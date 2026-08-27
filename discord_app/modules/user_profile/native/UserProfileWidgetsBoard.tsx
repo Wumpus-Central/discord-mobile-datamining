@@ -2,10 +2,10 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import createDefaultFieldsSection from "../UserProfilePersonalWidget.tsx";
 import toSubmission from "../UserProfileApplicationWidgetTypes.tsx";
+import PersonalWidgetTextDefault from "UserProfilePersonalWidgetCard.tsx";
 import useOpenGameProfileModalDefault from "../../game_profile/hooks/useOpenGameProfileModal.tsx";
 import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
 import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard.tsx";
-import PersonalWidgetTextDefault from "UserProfilePersonalWidgetCard.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -205,11 +205,11 @@ let closure_17 = importAllResult.memo((game) => {
     obj3[0] = tmp.comment;
     const obj4 = { size: "xxs", color: null };
     obj4[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items3 = [tmp10(tmp6(12624).QuoteIcon, obj4), ];
+    const items3 = [tmp10(tmp6(12577).QuoteIcon, obj4), ];
     const obj5 = { variant: "text-sm/normal", color: "text-muted", lineClamp: 3, style: null, children: null };
     obj5[3] = tmp.commentText;
     obj5[4] = game.comment;
-    items3[1] = tmp10(tmp6(4440).Text, obj5);
+    items3[1] = tmp10(tmp6(4441).Text, obj5);
     obj3[1] = items3;
     tmp8Result = tmp8(tmp9, obj3);
   }

@@ -44,7 +44,7 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
     endDate = null;
   }
   ({ id, component_type } = start_date);
-  const PremiumMarketingComponentProperties = textDecoder(7556).PremiumMarketingComponentProperties;
+  const PremiumMarketingComponentProperties = textDecoder(8383).PremiumMarketingComponentProperties;
   const fromBinary = PremiumMarketingComponentProperties.fromBinary;
   const obj2 = textDecoder(1307);
   function readerFactory(buf) {

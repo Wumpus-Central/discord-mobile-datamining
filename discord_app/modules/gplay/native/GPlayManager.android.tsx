@@ -24,9 +24,12 @@ function handleConnectionStateUpdated(connectionState) {
   dispatcherDefault.dispatch({ type: "GPLAY_UPDATE_CONNECTION_STATE", connectionState });
   if (connectionState === constants.CONNECTED) {
     const userCountry = getPlanIdForProduct.loadUserCountry();
-    userCountry.finally(() => callback(table[17]).loadSkus());
+    userCountry.finally(() => callback(table[18]).ensureSkusLoaded(closure_30));
     const obj2 = getPlanIdForProduct;
   }
+}
+function handleConnectionOpen() {
+  getPlanIdForProduct.ensureSkusLoaded(items);
 }
 function handlePurchaseStateUpdated(arg0) {
   ({ billingResult, isActivePurchase } = arg0);
@@ -92,7 +95,7 @@ function _handlePurchaseUpdated() {
                   let dispatchResult = obj4.dispatch(obj);
                   let tmp24 = lib;
                   let tmp25 = dependencyMap;
-                  let obj7 = lib(4789);
+                  let obj7 = lib(4790);
                   c6 = 8;
                   let num4 = 1;
                   c7 = 1;
@@ -115,7 +118,7 @@ function _handlePurchaseUpdated() {
               } else {
                 let tmp15 = lib;
                 let tmp16 = dependencyMap;
-                obj1 = lib(4789);
+                obj1 = lib(4790);
                 c6 = 9;
                 let num2 = 1;
                 c7 = 1;
@@ -152,7 +155,7 @@ function _handlePurchaseUpdated() {
     iter.next();
     return iter;
   });
-  closure_33 = tmp;
+  closure_35 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -228,7 +231,7 @@ function _handleDowngradeCommand() {
                 const obj2 = { value: null, done: false };
                 obj2[0] = (function executePendingDowngrade() {
                   const self = this;
-                  const apply = closure_36.apply;
+                  const apply = closure_38.apply;
                   if (typeof apply === "unknown") {
                     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                   } else {
@@ -266,7 +269,7 @@ function _handleDowngradeCommand() {
     iter.next();
     return iter;
   });
-  closure_35 = tmp;
+  closure_37 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -310,12 +313,12 @@ function _executePendingDowngrade() {
             pendingDowngrade = closure_1_11.getPendingDowngrade();
             if (null != pendingDowngrade) {
               c3 = 2;
-              closure_1_1(closure_1_2[16]).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: true });
-              const obj13 = closure_1_1(closure_1_2[16]);
+              closure_1_1(closure_1_2[17]).dispatch({ type: "GPLAY_UPDATE_IS_DOWNGRADING", isDowngrading: true });
+              const obj13 = closure_1_1(closure_1_2[17]);
               c4 = 3;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(closure_1_2[17]).downgradeSubscription(pendingDowngrade);
+              obj1[0] = closure_1_0(closure_1_2[18]).downgradeSubscription(pendingDowngrade);
               return obj1;
             } else {
               c5 = 3;
@@ -327,7 +330,7 @@ function _executePendingDowngrade() {
             lib = dependencyMap;
             let obj5 = pendingDowngrade(4122);
             const result = obj5.captureBillingException(lib);
-            let obj6 = lib(4809);
+            let obj6 = lib(4810);
             const obj2 = { title: null, body: null };
             const intl = pendingDowngrade(1236).intl;
             obj2[0] = intl.string(pendingDowngrade(1236).t["U+H+kd"]);
@@ -402,7 +405,7 @@ function _executePendingDowngrade() {
       }
     }
   });
-  closure_36 = tmp;
+  closure_38 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -456,7 +459,7 @@ function _fetchAndAlertActiveSubscription() {
             closure_1 = tmp5;
             let callback = tmp2;
             callback = undefined;
-            obj1 = closure_1_0(4789);
+            obj1 = closure_1_0(4790);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
@@ -502,7 +505,7 @@ function _fetchAndAlertActiveSubscription() {
       }
     }
   });
-  closure_39 = tmp;
+  closure_41 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -555,7 +558,7 @@ function _handleAppStateUpdated() {
               obj[0] = arg1;
               return obj;
             } else {
-              closure_2 = tmp3;
+              const table = tmp3;
               closure_1 = tmp5;
               let state;
               state = state.state;
@@ -576,6 +579,8 @@ function _handleAppStateUpdated() {
               } else if (ready.isReady()) {
                 if (authenticated.isAuthenticated()) {
                   if (state === constants.ACTIVE) {
+                    obj1 = state(table[18]);
+                    obj1.ensureSkusLoaded(closure_30);
                     c4 = 1;
                     c5 = 3;
                     c6 = 1;
@@ -603,11 +608,11 @@ function _handleAppStateUpdated() {
             }
             c6 = 3;
           }
-        } catch (tmp22) {
-          closure_3 = tmp22;
+        } catch (tmp27) {
+          closure_3 = tmp27;
           if (tmp4 === c4) {
             c6 = tmp2;
-            throw tmp22;
+            throw tmp27;
           } else {
             c5 = tmp;
           }
@@ -617,7 +622,7 @@ function _handleAppStateUpdated() {
     iter.next();
     return iter;
   });
-  closure_41 = tmp;
+  closure_43 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -640,31 +645,40 @@ let c26 = null;
 let c27 = null;
 let c28 = null;
 let c29 = null;
+const items = [require("SubscriptionPlans").ProductIds.PREMIUM_TIER_2_MONTHLY];
 obj = {
   giftInfoOptionsCache: obj,
   initialize() {
-    BillingManager.open();
     closure_26 = nativeEventEmitter.addListener("billing-manager-connection-state-updated", handleConnectionStateUpdated);
     closure_27 = nativeEventEmitter.addListener("billing-manager-purchase-state-updated", handlePurchaseStateUpdated);
     closure_28 = nativeEventEmitter.addListener("billing-manager-purchase-updated", handlePurchaseUpdated);
     closure_29 = nativeEventEmitter.addListener("billing-manager-downgrade-command", handleDowngradeCommand);
     const subscription = dispatcherDefault.subscribe("APP_STATE_UPDATE", handleAppStateUpdated);
+    obj = dispatcherDefault;
+    const subscription1 = dispatcherDefault.subscribe("CONNECTION_OPEN", handleConnectionOpen);
+    BillingManager.open();
   },
   terminate() {
     BillingManager.close();
     if (c26 != null) {
-      c26.remove();
+      obj.remove();
     }
     if (c27 != null) {
-      c27.remove();
+      obj2.remove();
     }
     if (c28 != null) {
-      c28.remove();
+      obj3.remove();
     }
     if (c29 != null) {
-      c29.remove();
+      obj4.remove();
     }
     dispatcherDefault.unsubscribe("APP_STATE_UPDATE", handleAppStateUpdated);
+    obj = c26;
+    obj2 = c27;
+    obj3 = c28;
+    obj4 = c29;
+    const obj5 = dispatcherDefault;
+    dispatcherDefault.unsubscribe("CONNECTION_OPEN", handleConnectionOpen);
   }
 };
 const tmp7 = new timestampDefault("GPlayManager.android");

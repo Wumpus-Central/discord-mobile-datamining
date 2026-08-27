@@ -26,8 +26,8 @@ export default function UserSettingsDesignSystemText() {
       obj = { variant: null, children: null };
       obj[0] = arg0;
       obj[1] = arg0;
-      obj[0] = callback2(callback(4440).Text, obj, arg0);
-      tmp = callback2(callback(5546).TableRow, obj, arg0);
+      obj[0] = callback2(callback(4441).Text, obj, arg0);
+      tmp = callback2(callback(5551).TableRow, obj, arg0);
     }
     return tmp;
   });

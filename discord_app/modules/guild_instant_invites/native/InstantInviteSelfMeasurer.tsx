@@ -30,11 +30,11 @@ const memoResult = importAllResult.memo(function InstantInviteSelfMeasurer(type)
   if ("invite" === item.type) {
     obj = { invite: null };
     obj[0] = item.data;
-    let tmp2Result = tmp2(str(9902), obj);
+    let tmp2Result = tmp2(str(10589), obj);
   } else {
     obj = { channel: null };
     obj[0] = item.data;
-    tmp2Result = tmp2(onMeasured(9902).LinkedChannelInvite, obj);
+    tmp2Result = tmp2(onMeasured(10589).LinkedChannelInvite, obj);
   }
   obj[6] = tmp2Result;
   return <View style={items1} onLayout={importAllResult.useCallback((nativeEvent) => {

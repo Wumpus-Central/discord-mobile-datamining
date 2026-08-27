@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/voice/VibegrationsVoiceSessionCoordinator.tsx
-import trackDeviceChangedDefault from "../../../actions/AudioActionCreators.tsx";
 import prototypeDefault from "../../rpc/RPCError.tsx";
+import trackDeviceChangedDefault from "../../../actions/AudioActionCreators.tsx";
 import apexExperimentDefault from "../../voice_panel/SpatialAudioForVoiceExperiment.tsx";
 import validateEmbeddedAppFrameDefault from "../../rpc/helpers/validateEmbeddedAppFrame.tsx";
 import closure_3 from "../../frames/FrameVisibilityStore.tsx";
@@ -221,13 +221,13 @@ prototype["update"] = function update(id, id, arg2, arr) {
               obj.add(user_id);
               obj = { userId: null, position: null };
               obj[0] = user_id;
-              obj[1] = callback(14002).toListenerRelativePosition(callback, user_id.position);
+              obj[1] = callback(14029).toListenerRelativePosition(callback, user_id.position);
               return obj;
             }
           }
         }
         obj = { errorCode: closure_1_10.INVALID_PAYLOAD };
-        let tmp6 = set(10896);
+        let tmp6 = set(9424);
         tmp6 = new tmp6(obj, "Invalid spatial voice source " + user_id.user_id);
         throw tmp6;
       });

@@ -2,7 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import inlineStyles from "../../../../_runtime/08052_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08173_inlineStyles.js";
 import noop from "../../../../_runtime/00019_noop.js";
 import importDefaultResult from "../../../../_runtime/00019_noop.js";
 import closure_8 from "../../a11y/AccessibilityStore.tsx";
@@ -105,18 +105,18 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   D.__initData = closure_16;
   const animatedProps = progress(stateFromStores[4]).useAnimatedProps(D);
   const tmpResult1 = progress(stateFromStores[4]);
-  class R {
+  class E {
     constructor() {
       obj = { opacity: closure_8.get() };
       merged = Object.assign(closure_6.opacityMask);
       return obj;
     }
   }
-  R.__closure = { underlayOpacity: sharedValue1, styles: tmp9 };
-  R.__workletHash = 4427598698568;
-  R.__initData = closure_17;
+  E.__closure = { underlayOpacity: sharedValue1, styles: tmp9 };
+  E.__workletHash = 4427598698568;
+  E.__initData = closure_17;
   const items1 = [sharedValue, progress, stateFromStores];
-  const animatedStyle1 = progress(stateFromStores[4]).useAnimatedStyle(R);
+  const animatedStyle1 = progress(stateFromStores[4]).useAnimatedStyle(E);
   callback2(() => {
     let num = 500;
     if (stateFromStores) {
@@ -232,4 +232,6 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
 let result = set.fileFinishedImporting("modules/quests/native/QuestProgressIndicator.tsx");
 
 export default memoResult;
+export const COMPLETION_GLOW_SHADOW_RADIUS = 20;
+export const COMPLETION_GLOW_CLEARANCE = 40;
 export const QUEST_PROGRESS_DIAMETER_BY_SIZE = obj;

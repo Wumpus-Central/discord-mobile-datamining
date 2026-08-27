@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/useActionBarHeight.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import useCanCurrentUserSpeakInChannelDefault from "../../stage_channels/useCanSpeakInChannel.tsx";
 import useIsFiveButtonLayout from "useIsFiveButtonLayout.tsx";
+import useCanCurrentUserSpeakInChannelDefault from "../../stage_channels/useCanSpeakInChannel.tsx";
 import closure_3 from "../../../stores/MediaEngineStore.tsx";
 import { InputModes } from "../../../Constants.tsx";
 import { ACTION_SHEET_HANDLE_SPACING as closure_5 } from "../../action_sheet/native/ActionSheetConstants.tsx";

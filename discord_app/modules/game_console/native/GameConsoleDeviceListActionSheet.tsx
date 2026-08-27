@@ -4,8 +4,8 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
 import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
-import registerAssetDefault from "../../../../_runtime/11047_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/11048_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/09807_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/09808_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../_runtime/00019_noop.js";
@@ -117,7 +117,7 @@ export default function GameConsoleListActionSheet(arg0) {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(11045).transferToPlaystationWithAlert(closure_1_0, dependencyMap[closure_1_4], v0);
+              obj1[0] = closure_1_0(9805).transferToPlaystationWithAlert(closure_1_0, dependencyMap[closure_1_4], v0);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -129,7 +129,7 @@ export default function GameConsoleListActionSheet(arg0) {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = v0(4411);
+            obj = v0(4412);
             obj.hideActionSheet();
             const ComponentDispatch = closure_1_0(1231).ComponentDispatch;
             ComponentDispatch.dispatch(closure_1_11.TOGGLE_CALL_CONTROL_DRAWER);

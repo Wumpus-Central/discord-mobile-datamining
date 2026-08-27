@@ -40,7 +40,7 @@ function PromptHeader(currentPrompt) {
     const obj3 = { variant: "text-sm/medium", color: "text-brand", children: null };
     const intl2 = tmp6(1236).intl;
     obj3[2] = intl2.string(tmp6(1236).t.Ur8Vrt);
-    items1[1] = tmp5(tmp6(4440).Text, obj3);
+    items1[1] = tmp5(tmp6(4441).Text, obj3);
     obj1[0] = items1;
     tmp2Result = tmp2(tmp3, obj1);
   }
@@ -213,7 +213,7 @@ function DropdownOption(option) {
   }
   obj1[3] = str;
   obj[1] = closure_15(EmojiDefault, obj1);
-  const items1 = [closure_15(closure_6, obj), closure_15(option(4440).Text, { variant: "text-md/semibold", children: option.title })];
+  const items1 = [closure_15(closure_6, obj), closure_15(option(4441).Text, { variant: "text-md/semibold", children: option.title })];
   obj[1] = items1;
   return closure_16(closure_6, obj);
 }

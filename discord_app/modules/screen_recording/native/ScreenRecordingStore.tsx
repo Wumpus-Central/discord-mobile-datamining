@@ -60,7 +60,7 @@ let obj = keys.create((arg0, arg1) => {
       return callback({ currentStep: 0, stepStartedTime: Date.now(), isCompleted: false });
     },
     completeActionSheet() {
-      callback(15373).handleStopAndSend();
+      callback(15438).handleStopAndSend();
       callback({ currentStep: 0, stepStartedTime: null, isCompleted: false });
     }
   };

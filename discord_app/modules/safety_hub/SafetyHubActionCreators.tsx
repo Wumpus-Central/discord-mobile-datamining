@@ -265,7 +265,7 @@ function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = callback(8016);
+                      obj3 = callback(8620);
                     }
                   }
                   let obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: null, accountStanding: null, isDsaEligible: null, username: null, isAppealEligible: null };
@@ -322,7 +322,7 @@ function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = callback(8016);
+                      obj3 = callback(8620);
                     }
                   }
                   let obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: null, accountStanding: null, isDsaEligible: null, username: null, isAppealEligible: null };

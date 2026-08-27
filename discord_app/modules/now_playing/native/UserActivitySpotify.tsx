@@ -3,7 +3,7 @@ import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPU
 import Button from "../../../design/void/native.tsx";
 import getConstantsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import _modDef4158 from "../../../lib/native/Linking.tsx";
-import registerAssetDefault from "../../../../_runtime/08466_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07984_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import SPOTIFY_APP_PROTOCOL from "../../spotify/SpotifyConstants.tsx";
@@ -246,7 +246,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   let obj = { style: activity.style, children: null };
   obj = { icon: null, text: null, size: "sm", onPress: null, grow: true };
   obj = { source: registerAssetDefault };
-  obj[0] = callback(activity(4879).Button.Icon, obj);
+  obj[0] = callback(activity(4880).Button.Icon, obj);
   const intl = activity(1236).intl;
   obj[1] = intl.formatToPlainString(activity(1236).t.LEgD7t, { platform: activity.name });
   obj[3] = function onPress() {
@@ -272,7 +272,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
 
     });
   };
-  obj[1] = callback(activity(4879).Button, obj);
+  obj[1] = callback(activity(4880).Button, obj);
   return callback(closure_5, obj);
 };
 export { SpotifyTrack };

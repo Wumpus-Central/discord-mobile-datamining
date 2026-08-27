@@ -64,8 +64,8 @@ const memoResult = importAllResult.memo((arg0) => {
       return callback(closure_1_7.USER_DISMISS);
     };
     obj[2] = tmp.closeButton;
-    obj[3] = callback2(tmp2(5498).XSmallIcon, { size: "sm", color: "text-default" });
-    const items = [callback2(tmp2(5015).PressableOpacity, obj), , , , ];
+    obj[3] = callback2(tmp2(5503).XSmallIcon, { size: "sm", color: "text-default" });
+    const items = [callback2(tmp2(5020).PressableOpacity, obj), , , , ];
     obj1 = { imageSrc: null };
     obj1[0] = coverImageUrl;
     items[1] = callback2(importDefaultResult1Default, obj1);
@@ -75,19 +75,19 @@ const memoResult = importAllResult.memo((arg0) => {
     const obj3 = { gameName: null };
     obj3[0] = tmp8;
     obj2[3] = intl2.format(tmp2(1236).t.Q11WTQ, obj3);
-    items[2] = callback2(tmp2(4440).Text, obj2);
+    items[2] = callback2(tmp2(4441).Text, obj2);
     const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", style: null, children: null };
     const items1 = [, ];
     ({ body: arr2[0], centeredText: arr2[1] } = tmp);
     obj4[2] = items1;
     obj4[3] = stringResult;
-    items[3] = callback2(tmp2(4440).Text, obj4);
+    items[3] = callback2(tmp2(4441).Text, obj4);
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.cta;
     const obj6 = { variant: "primary", size: "sm", text: null, icon: null, iconPosition: "end", onPress: null };
     const intl3 = tmp2(1236).intl;
     obj6[2] = intl3.string(tmp2(1236).t["2u6ZlY"]);
-    obj6[3] = callback2(tmp2(8172).LinkExternalSmallIcon, { size: "xs", color: "white" });
+    obj6[3] = callback2(tmp2(8653).LinkExternalSmallIcon, { size: "xs", color: "white" });
     obj6[5] = callback(function*() {
       if (v0 === 2) {
         v0 = 3;
@@ -141,10 +141,10 @@ const memoResult = importAllResult.memo((arg0) => {
         }
       }
     });
-    obj5[1] = callback2(tmp2(4879).Button, obj6);
+    obj5[1] = callback2(tmp2(4880).Button, obj6);
     items[4] = callback2(View, obj5);
     obj[2] = items;
-    return callback3(tmp2(5548).Card, obj);
+    return callback3(tmp2(5553).Card, obj);
   }
   const tmp6Result = useGameNameAndCoverImageDefault(first, intl.string(getSystemLocale.t.VQq92a));
 });

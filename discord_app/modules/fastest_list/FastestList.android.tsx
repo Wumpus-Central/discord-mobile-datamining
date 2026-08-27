@@ -4,7 +4,7 @@ import __INTERNAL_VIEW_CONFIGDefault from "../../../discord_common/js/packages/r
 import importAllResult from "../../../_runtime/00019_noop.js";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 import importDefaultResult1 from "../reanimated/ReanimatedRexport.tsx";
-import BottomSheetModal from "../../../_runtime/05571_BottomSheetModal.js";
+import BottomSheetModal from "../../../_runtime/05576_BottomSheetModal.js";
 
 const require = arg1;
 _readOnlyErrorDefault;

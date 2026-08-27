@@ -20,5 +20,5 @@ export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(ch
       closure_1_1(closure_1_2[1]).hideActionSheet(closure_0);
     }
   };
-  obj.openLazy(asyncRequireImpl(10511, dependencyMap.paths), tmp, obj);
+  obj.openLazy(asyncRequireImpl(10946, dependencyMap.paths), tmp, obj);
 };

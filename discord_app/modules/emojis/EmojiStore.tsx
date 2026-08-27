@@ -6,7 +6,7 @@ import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import hooksDefault from "../../../_runtime/04043_hooks.js";
 import dedupeEmojisByNameOrIdDefault from "utils/dedupeEmojisByNameOrId.tsx";
-import _modDef5356 from "../emoji_terms/EmojiTerms.tsx";
+import _modDef5361 from "../emoji_terms/EmojiTerms.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../experiments/ExperimentStore.tsx";
@@ -165,7 +165,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      obj = callback(5388);
+      obj = callback(5393);
       let flag = obj.canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis !== "function") {
         HermesBuiltin.throwTypeError();
@@ -373,7 +373,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(arg0);
       });
       if (!someResult) {
-        let result = callback(5353).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = callback(5358).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -382,7 +382,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        obj = callback(5353);
+        obj = callback(5358);
       }
       tmp6 = someResult;
     }
@@ -1138,7 +1138,7 @@ prototype3["getDisambiguatedEmojiContext"] = function getDisambiguatedEmojiConte
 prototype3["getSearchResultsOrder"] = function getSearchResultsOrder(locked, query, count, intention) {
   closure_0 = intention;
   let formatted = query.toLowerCase();
-  const escapeResult = formatted(4431).escape(formatted);
+  const escapeResult = formatted(4432).escape(formatted);
   let orderByResult = locked;
   if (locked.length > 0) {
     const _RegExp = RegExp;
@@ -1524,7 +1524,7 @@ const emojiStore = new EmojiStore(dispatcherDefault, {
     trackUsage(emojiUsed.emojiUsed);
   },
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
-    obj = _modDef5356;
+    obj = _modDef5361;
     obj.setEmojiLocale(locale.locale);
     if (settings.settings.type === UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
       if (settings.wasSaved) {

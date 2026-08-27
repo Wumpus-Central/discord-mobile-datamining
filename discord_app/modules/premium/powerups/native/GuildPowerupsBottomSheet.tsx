@@ -43,7 +43,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
   if (powerup.type === constants.LEVEL) {
     obj = { style: null };
     obj[0] = tmp.gemContainer;
-    let tmp15 = callback(tmp2(12154), obj);
+    let tmp15 = callback(tmp2(12000), obj);
     let tmp14 = callback;
   } else if (tmp10 === closure_7) {
     obj = { style: null, children: null };
@@ -60,7 +60,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
     obj3[0] = str;
     obj3[1] = tmp.image;
     tmp14 = callback;
-    tmp15 = callback(tmp2(12156), obj3);
+    tmp15 = callback(tmp2(12002), obj3);
   }
   const obj4 = { children: null };
   const items1 = [tmp15, ];
@@ -107,13 +107,13 @@ function GuildPowerupsBottomSheetBody(powerup) {
       obj[0] = tmp.cooldownInfo;
       obj1 = { size: "xs", color: null };
       obj1[1] = ThemesDefault.colors.TEXT_MUTED;
-      const items1 = [tmp7(tmp8(4399).CircleInformationIcon, obj1), ];
+      const items1 = [tmp7(tmp8(4400).CircleInformationIcon, obj1), ];
       const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = tmp8(1236).intl;
       const obj3 = { cooldownDays: null };
       obj3[0] = powerup.deactivationCooldownPeriodDays;
       obj2[2] = intl.formatToPlainString(messagesProxyDefault.GMhQcE, obj3);
-      items1[1] = tmp7(tmp8(4440).Text, obj2);
+      items1[1] = tmp7(tmp8(4441).Text, obj2);
       obj[1] = items1;
       tmp5Result = tmp5(View, obj);
     }
@@ -136,10 +136,10 @@ function GuildPowerupsBottomSheetFooter(arg0) {
   const tmp4 = useHasAllocateBoostPermissionDefault(guildId);
   ({ showToggleButton, showConfigureButton, isPowerupActive } = useGuildPowerupCardFooterConfigDefault(guildId, powerup));
   if (showConfigureButton) {
-    let result = powerup.skuId !== isPowerupActive(4334).GUILD_POWERUP_TAG_SKU_ID;
+    let result = powerup.skuId !== isPowerupActive(4335).GUILD_POWERUP_TAG_SKU_ID;
     if (!result) {
-      result = tmp6(9239).canUseMobileServerTagSettings(guildId);
-      const tmp6Result = tmp6(9239);
+      result = tmp6(9652).canUseMobileServerTagSettings(guildId);
+      const tmp6Result = tmp6(9652);
     }
     showConfigureButton = result;
     tmp6 = isPowerupActive;
@@ -148,7 +148,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
   ({ disabled, reason } = useCanGuildPowerupBeToggledDefault(guildId, powerup, isPowerupActive));
   const tmp8 = useCanGuildPowerupBeToggledDefault(guildId, powerup, isPowerupActive);
   ({ onActivate: c1, isLoading } = useGuildPowerupOnActivateDefault(guildId, powerup));
-  dependencyMap = tmp2(12170)(guildId, powerup);
+  dependencyMap = tmp2(12018)(guildId, powerup);
   if (tmp4) {
     let tmp14 = !showConfigureButton;
     const hasItem = set.has(powerup.skuId);
@@ -171,7 +171,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
       obj[0] = tmp.description;
       const intl = isPowerupActive(1236).intl;
       obj[2] = intl.string(tmp2(2401)["jo5++h"]);
-      tmp14 = callback(isPowerupActive(4440).Text, obj);
+      tmp14 = callback(isPowerupActive(4441).Text, obj);
     }
     const items = [tmp14, , , ];
     let tmp21 = disabled;
@@ -181,7 +181,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
     if (tmp21) {
       obj1 = { text: null };
       obj1[0] = reason;
-      tmp21 = callback(tmp2(12176), obj1);
+      tmp21 = callback(tmp2(12024), obj1);
     }
     items[1] = tmp21;
     if (showConfigureButton) {
@@ -189,7 +189,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
       const intl2 = isPowerupActive(1236).intl;
       obj2[1] = intl2.string(tmp2(2401).g5Ds69);
       obj2[2] = tmp10;
-      showConfigureButton = callback(isPowerupActive(4879).Button, obj2);
+      showConfigureButton = callback(isPowerupActive(4880).Button, obj2);
     }
     items[2] = showConfigureButton;
     if (showToggleButton) {
@@ -227,7 +227,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
           tmp();
         }
       };
-      callback(isPowerupActive(4879).Button, obj3);
+      callback(isPowerupActive(4880).Button, obj3);
       const tmp27 = callback;
       const tmp28 = isPowerupActive;
     }

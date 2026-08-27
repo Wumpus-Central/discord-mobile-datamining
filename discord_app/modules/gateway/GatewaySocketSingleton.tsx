@@ -4,7 +4,7 @@ import setRequestedByAll from "RequestGatewaySocket.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import setDefault from "../../lib/DiscordNative.tsx";
-import _modDef10625 from "../app_state/DiscordAppState.native.tsx";
+import _modDef10857 from "../app_state/DiscordAppState.native.tsx";
 import noopDefault from "GatewaySocket.tsx";
 import getInitialStateDefault from "LocalPresenceStateManager.tsx";
 import guildIdDefault from "LocalVoiceStateManager.tsx";
@@ -25,12 +25,12 @@ obj.handleIdentify = () => {
   if (null == token) {
     return null;
   } else {
-    const state = _modDef10625.getState();
+    const state = _modDef10857.getState();
     const installationForTracking = obj.getInstallationForTracking();
     obj = { token: null, properties: null, presence: null };
     obj[0] = token;
     obj1 = {};
-    const obj5 = _modDef10625;
+    const obj5 = _modDef10857;
     const merged = Object.assign(expandEventPropertiesDefault.getSuperProperties());
     obj1.client_app_state = state;
     obj1.is_fast_connect = false;

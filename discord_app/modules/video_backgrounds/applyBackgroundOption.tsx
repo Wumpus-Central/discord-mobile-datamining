@@ -86,23 +86,23 @@ function _applyBackgroundOption() {
               return obj;
             } else {
               c5 = tmp3;
-              c4 = tmp30;
+              c4 = tmp32;
               let source;
               c4 = undefined;
               c5 = undefined;
               closure_3 = false;
               if (null == source) {
-                closure_1_10(tmp57, tmp58, callback(4543).FilterSettingsGraph.NONE);
+                closure_1_10(tmp59, tmp60, callback(4544).FilterSettingsGraph.NONE);
                 c9 = 3;
                 return { value: "HermesInternal", done: null };
-              } else if (tmp59 === c7) {
-                closure_1_10(tmp57, tmp58, callback(4543).FilterSettingsGraph.BACKGROUND_BLUR);
+              } else if (tmp61 === c7) {
+                closure_1_10(tmp59, tmp60, callback(4544).FilterSettingsGraph.BACKGROUND_BLUR);
                 c9 = 3;
                 return { value: "HermesInternal", done: null };
               } else {
-                if (typeof tmp59 !== "string") {
-                  if (typeof tmp59 !== "number") {
-                    const asset = tmp59.asset;
+                if (typeof tmp61 !== "string") {
+                  if (typeof tmp61 !== "number") {
+                    const asset = tmp61.asset;
                     let isAnimatedIconHashResult = callback(1435).isAnimatedIconHash(asset);
                     if (!isAnimatedIconHashResult) {
                       let obj3 = callback(1435);
@@ -111,7 +111,7 @@ function _applyBackgroundOption() {
                     closure_3 = isAnimatedIconHashResult;
                     let obj4 = callback(1435);
                     obj1 = { userId: null, assetId: null, assetHash: null, size: null };
-                    ({ user_id: obj6[0], id: obj6[1] } = tmp59);
+                    ({ user_id: obj6[0], id: obj6[1] } = tmp61);
                     obj1[2] = asset;
                     obj1[3] = closure_1_6.width;
                     let videoFilterAssetURL = obj4.getVideoFilterAssetURL(obj1);
@@ -139,31 +139,20 @@ function _applyBackgroundOption() {
                         return obj2;
                       } else {
                         c5 = tmp8;
-                        callback3(callback, callback2, callback(source[7]).FilterSettingsGraph.BACKGROUND_REPLACEMENT, c4, c5);
+                        callback3(callback, callback2, callback(source[6]).FilterSettingsGraph.BACKGROUND_REPLACEMENT, c4, c5);
                         c7 = 0;
-                        tmp30 = callback3;
+                        tmp32 = callback3;
                       }
                     } else {
                       c8 = 2;
                       c9 = 1;
                       obj3 = { value: null, done: false };
-                      obj3[0] = (function getFilterImage(videoFilterAssetURL) {
-                        closure_0 = videoFilterAssetURL;
-                        return new Promise((arg0, arg1) => {
-                          closure_0 = arg0;
-                          closure_1 = arg1;
-                          const image = new globalThis.Image();
-                          image.crossOrigin = "anonymous";
-                          image.onload = function onload() { ... };
-                          image.onerror = function onerror() { ... };
-                          image.src = closure_0;
-                        });
-                      })(videoFilterAssetURL);
+                      obj3[0] = callback2(9718)(videoFilterAssetURL);
                       return obj3;
                     }
                   }
                 }
-                const tmp24 = callback2(9382)()[tmp59];
+                const tmp24 = callback2(9713)()[tmp61];
                 const isVideo = tmp24.isVideo;
                 closure_3 = isVideo;
                 if (isVideo == null) {
@@ -176,8 +165,8 @@ function _applyBackgroundOption() {
             }
           } else if (1 === tmp7) {
             c7 = 0;
-            obj2 = callback(source[6]);
-            let result = obj2.errorApplyingMediaFilterSettings();
+            obj2 = callback(source[5]);
+            const result = obj2.errorApplyingMediaFilterSettings();
           } else if (2 === tmp7) {
             if (arg0 === 1) {
               c9 = 3;
@@ -206,11 +195,11 @@ function _applyBackgroundOption() {
             tmp8 = arg1;
           }
           c9 = 3;
-        } catch (tmp48) {
-          closure_6 = tmp48;
+        } catch (tmp50) {
+          closure_6 = tmp50;
           if (tmp4 === c7) {
             c9 = tmp2;
-            throw tmp48;
+            throw tmp50;
           } else {
             c8 = tmp;
           }
@@ -295,11 +284,11 @@ function _applyBackgroundOptionLive() {
               return obj1;
             } else {
               const obj2 = { type: null };
-              obj2[0] = callback(location[7]).FilterTargetType.INPUT_DEVICE;
+              obj2[0] = callback(location[6]).FilterTargetType.INPUT_DEVICE;
               c4 = 2;
               c5 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = callback2(callback(location[7]).FilterSettingsKey.CAMERA_BACKGROUND_LIVE, obj2, callback);
+              obj3[0] = callback2(callback(location[6]).FilterSettingsKey.CAMERA_BACKGROUND_LIVE, obj2, callback);
               return obj3;
             }
           } else if (arg0 === 1) {
@@ -318,9 +307,9 @@ function _applyBackgroundOptionLive() {
             c5 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp24) {
+        } catch (tmp16) {
           c5 = tmp;
-          throw tmp24;
+          throw tmp16;
         }
       }
     })();
@@ -394,14 +383,14 @@ function _applyBackgroundOptionPreview() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              const result = callback(flag[6]).startApplyMediaFilterSettings();
+              const result = callback(flag[5]).startApplyMediaFilterSettings();
               const obj2 = { type: null, streamId: null };
-              obj2[0] = callback(flag[7]).FilterTargetType.STREAM;
+              obj2[0] = callback(flag[6]).FilterTargetType.STREAM;
               obj2[1] = closure_1;
               c5 = 2;
               c6 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = callback2(callback(flag[7]).FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW, obj2, callback);
+              obj3[0] = callback2(callback(flag[6]).FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW, obj2, callback);
               return obj3;
             }
           } else if (arg0 === 1) {

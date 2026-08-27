@@ -43,7 +43,7 @@ export default function useGuildActionRows(id) {
   const items1 = [id.id];
   const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_4.getNewMemberActions(id.id), items1);
   const obj6 = defaultAreStatesEqual;
-  const canManageVibegrations = require("../vibegrations/lib/VibegrationsUtils.tsx").useCanManageVibegrations(id, "useGuildActionRows");
+  const canAccessVibegrations = require("../vibegrations/lib/VibegrationsUtils.tsx").useCanAccessVibegrations(id, "useGuildActionRows");
   const obj7 = vibegrationsAppIdFromTopic;
   const tmp10 = useIsNewMemberDefault(id.id);
   const allActionsCompleted = require("../guild_onboarding_home/MemberActionUtils.tsx").useAllActionsCompleted(id.id);
@@ -135,7 +135,7 @@ export default function useGuildActionRows(id) {
                   items3.push(ChannelListGuildActionRow.GAME_SERVERS_EMPTY);
                 }
               }
-              if (canManageVibegrations) {
+              if (canAccessVibegrations) {
                 items3.push(ChannelListGuildActionRow.GUILD_VIBEGRATIONS);
               }
               return items3;

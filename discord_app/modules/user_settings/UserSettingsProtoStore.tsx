@@ -132,7 +132,7 @@ prototype["hasLoaded"] = function hasLoaded(arg0) {
   return dependencyMap[arg0].editInfo.loaded;
 };
 Object.defineProperty(prototype, "settings", {
-  get: function settings(arg0) {
+  get: function settings() {
     return obj.proto;
   },
   set: undefined

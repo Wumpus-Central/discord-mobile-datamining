@@ -4,9 +4,9 @@ import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_Activ
 import ME from "../../../../../../Constants.tsx";
 import getSystemLocale from "../../../../../../intl/index.native.tsx";
 import hooksDefault from "../../../../../../../_runtime/04043_hooks.js";
-import SafetyHubView from "../../../../../safety_hub/SafetyHubConstants.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/08181_registerAsset.js";
 import frozen from "../../EmbedUtils.tsx";
+import SafetyHubView from "../../../../../safety_hub/SafetyHubConstants.tsx";
+import registerAssetDefault from "../../../../../../../_runtime/08662_registerAsset.js";
 
 const Image = get_ActivityIndicator.Image;
 const MessageEmbedTypes = ME.MessageEmbedTypes;

@@ -2,7 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef4675 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4676 from "../../../actions/ModalActionCreators.tsx";
 import MAX_ACCOUNTS from "../Constants.tsx";
 
 const SWITCH_ACCOUNTS_MODAL_KEY = MAX_ACCOUNTS.SWITCH_ACCOUNTS_MODAL_KEY;
@@ -12,5 +12,5 @@ export default function openManageAccountsModal(initialRouteName) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj.hideActionSheet();
   obj = { initialRouteName };
-  _modDef4675.pushLazy(asyncRequireImpl(15814, dependencyMap.paths), obj, SWITCH_ACCOUNTS_MODAL_KEY);
+  _modDef4676.pushLazy(asyncRequireImpl(15879, dependencyMap.paths), obj, SWITCH_ACCOUNTS_MODAL_KEY);
 };

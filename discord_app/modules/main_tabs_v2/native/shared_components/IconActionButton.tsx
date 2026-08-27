@@ -84,7 +84,7 @@ export default function IconActionButton(variant) {
   if (str === undefined) {
     str = "filled";
   }
-  ({ buttonText, badge, badgePosition, color, accessibilityLabel, style } = variant);
+  ({ buttonText, badge, badgePosition, color, buttonTextColor, accessibilityLabel, style } = variant);
   if (badgePosition === undefined) {
     badgePosition = "left";
   }
@@ -116,10 +116,11 @@ export default function IconActionButton(variant) {
   obj[6] = items;
   const items1 = [callback(closure_7, { IconComponent, color, source, isRefreshEnabled: tmp2 }), , , ];
   if (tmp11Result) {
-    obj = { variant: "text-sm/bold", style: null, children: null };
-    obj[1] = tmp3.actionText;
-    obj[2] = buttonText;
-    tmp11Result = tmp11(tmp4(4440).Text, obj);
+    obj = { variant: "text-sm/bold", color: null, style: null, children: null };
+    obj[1] = buttonTextColor;
+    obj[2] = tmp3.actionText;
+    obj[3] = buttonText;
+    tmp11Result = tmp11(tmp4(4441).Text, obj);
   }
   items1[1] = tmp11Result;
   tmp11Result = null;

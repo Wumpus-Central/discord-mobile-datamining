@@ -51,11 +51,11 @@ function handleEmbeddedActivityLaunchSuccess(applicationId) {
       if (features.includes(QuestVariants.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
         let tmp9 = tmp5;
         let tmp10 = tmp7;
-        let tmp6Result = tmp6(10601);
+        let tmp6Result = tmp6(10833);
         obj = { questContent: null, questContentCTA: null, sourceQuestContent: null };
-        obj[0] = tmp6(5337).QuestContent.RUNNING_ACTIVITY;
-        obj[1] = tmp6(7398).QuestContentCTA.START_QUEST;
-        obj[2] = tmp6(5337).QuestContent.RUNNING_ACTIVITY;
+        obj[0] = tmp6(5342).QuestContent.RUNNING_ACTIVITY;
+        obj[1] = tmp6(7406).QuestContentCTA.START_QUEST;
+        obj[2] = tmp6(5342).QuestContent.RUNNING_ACTIVITY;
         let tmp12 = obj2;
         let enrollInQuestResult = tmp6Result.enrollInQuest(item10020.id, obj);
         obj2.return();
@@ -102,7 +102,7 @@ class QuestProgressManager extends tmp4 {
       if (null != value) {
         if (null != value.config) {
           if (null != value.userStatus) {
-            const questTaskDetails = lib(7394).getQuestTaskDetails(value, lib(5341).FirstPartyQuestTaskTypesSets.DESKTOP);
+            const questTaskDetails = lib(7402).getQuestTaskDetails(value, lib(5346).FirstPartyQuestTaskTypesSets.DESKTOP);
             const _Math = Math;
             const diff = questTaskDetails.targetSeconds - questTaskDetails.progressSeconds;
             const bound = Math.max(0, diff * applyArgumentsResult(687).Millis.SECOND);
@@ -462,9 +462,9 @@ prototype["getActivelyProgressingQuests"] = function getActivelyProgressingQuest
   const self = this;
   if (set2.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingPlayOnDesktopQuests();
-  } else if (tmp(5341).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
+  } else if (tmp(5346).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingStreamOnDesktopQuests();
-  } else if (tmp(5341).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
+  } else if (tmp(5346).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === closure_1) {
     return self.getActivelyProgressingActivityQuests();
   } else {
     tmp(1370).assertNever(closure_1);

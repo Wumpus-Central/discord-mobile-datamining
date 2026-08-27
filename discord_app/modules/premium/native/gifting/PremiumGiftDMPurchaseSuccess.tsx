@@ -2,8 +2,8 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation.android.tsx";
 import NativeGiftContextProvider from "../../../payments/native/NativeGiftContext.tsx";
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation.android.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";

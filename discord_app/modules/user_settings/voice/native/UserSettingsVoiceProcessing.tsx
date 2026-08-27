@@ -5,8 +5,8 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text2 from "../../../../design/components/Text/native/Text.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import context from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import UserSettingsVoice from "UserSettingsVoice.tsx";
 import handleAutomaticGainControlChange from "UserSettingsVoiceUtils.tsx";
 import getNoiseCancellationDeferredToSystem from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
@@ -38,9 +38,9 @@ class VoiceProcessingOptions {
       obj1 = { value: null, onChange: null, title: null, hasIcons: false, children: null };
       obj1[0] = selectedNoiseSuppressionOption;
       obj1[1] = function noiseCancellationChanged(arg0) {
-        callback2(9371).setNoiseCancellation(arg0 === callback(11019).NoiseSuppressionOpt.KRISP);
-        const obj = callback2(9371);
-        callback2(9371).setNoiseSuppression(arg0 === callback(11019).NoiseSuppressionOpt.STANDARD);
+        callback2(9702).setNoiseCancellation(arg0 === callback(9996).NoiseSuppressionOpt.KRISP);
+        const obj = callback2(9702);
+        callback2(9702).setNoiseSuppression(arg0 === callback(9996).NoiseSuppressionOpt.STANDARD);
       };
       intl3 = require("getSystemLocale").intl;
       obj1[2] = intl3.string(require("getSystemLocale").t.t8Qhib);
@@ -109,8 +109,8 @@ class VoiceProcessingOptions {
       obj10[1] = intl2.string(require("getSystemLocale").t.najZCV);
       obj10[2] = selectedNoiseSuppressionOption === require("handleAutomaticGainControlChange").NoiseSuppressionOpt.STANDARD;
       obj10[3] = function onValueChange(arg0) {
-        const NoiseSuppressionOpt = callback(11019).NoiseSuppressionOpt;
-        return callback(11019).handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
+        const NoiseSuppressionOpt = callback(9996).NoiseSuppressionOpt;
+        return callback(9996).handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
       };
       obj9[1] = jsx(require("TableSwitchRow").TableSwitchRow, obj10);
       return jsx(require("UserSettingsVoice").UserSettingsTableRowGroup, obj9);
@@ -163,7 +163,7 @@ export default function UserSettingsVoiceProcessing() {
       obj = { vadUseKrisp };
       return obj.setMode(closure_0, obj);
     };
-    advancedVoiceActivitySupported = callback(tmp(5940).TableSwitchRow, obj2);
+    advancedVoiceActivitySupported = callback(tmp(5945).TableSwitchRow, obj2);
   }
   const obj3 = { children: null };
   items2[1] = advancedVoiceActivitySupported;

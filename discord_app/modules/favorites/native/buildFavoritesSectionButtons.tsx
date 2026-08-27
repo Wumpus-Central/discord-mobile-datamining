@@ -154,7 +154,7 @@ function _removeChannelFromFavorites() {
 }
 function openNoAccessUpsell() {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj.openLazy(asyncRequireImpl(9931, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
+  obj.openLazy(asyncRequireImpl(10230, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
 }
 let result = require("set").fileFinishedImporting("modules/favorites/native/buildFavoritesSectionButtons.tsx");
 

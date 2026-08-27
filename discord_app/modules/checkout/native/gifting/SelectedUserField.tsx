@@ -66,7 +66,7 @@ export default function SelectedUserField(onPress) {
     const obj4 = { variant: "text-md/medium", style: null, children: null };
     obj4[1] = tmp.userPillText;
     obj4[2] = nameFromUserDefault.getName(selectedUser);
-    items2[1] = tmp2(tmp4(4440).Text, obj4);
+    items2[1] = tmp2(tmp4(4441).Text, obj4);
     obj2[1] = items2;
     let tmp2Result = tmp6(tmp3, obj2);
     const obj10 = nameFromUserDefault;
@@ -75,7 +75,7 @@ export default function SelectedUserField(onPress) {
     obj5[2] = tmp.userPillText;
     const intl4 = tmp4(1236).intl;
     obj5[3] = intl4.string(tmp4(1236).t.R0vK0N);
-    tmp2Result = tmp2(tmp4(4440).Text, obj5);
+    tmp2Result = tmp2(tmp4(4441).Text, obj5);
   }
   items1[1] = tmp2Result;
   obj[4] = items1;
@@ -91,7 +91,7 @@ export default function SelectedUserField(onPress) {
     const obj7 = { text: null };
     obj7[0] = nameFromUserDefault.getName(selectedUser);
     obj6[3] = intl5.formatToPlainString(tmp4(1236).t["0Vb9FQ"], obj7);
-    obj6[4] = tmp2(tmp4(6171).CircleXIcon, { size: "xs" });
+    obj6[4] = tmp2(tmp4(6177).CircleXIcon, { size: "xs" });
     tmp2Result = tmp2(tmp7, obj6);
     const obj13 = nameFromUserDefault;
   }

@@ -76,7 +76,7 @@ class RoleItem {
         const tmp5 = colorString;
       }
       obj = { children: null };
-      const items = [tmp3Result, roleIcon, tmp8(role(name[17]).Text, { variant: "text-xs/medium", children: name })];
+      const items = [tmp3Result, tmp8(role(name[17]).Text, { variant: "text-xs/medium", children: name }), roleIcon];
       obj[0] = items;
       return closure_1_11(closure_1_10, obj);
     };
@@ -178,8 +178,8 @@ export default function UserProfileRolesCard(userId) {
     obj[0] = guildId;
     obj[1] = roles;
     obj[2] = callback(RolesList, obj);
-    tmp4 = callback(guildId(5947), obj);
-    const tmp7 = guildId(5947);
+    tmp4 = callback(guildId(5952), obj);
+    const tmp7 = guildId(5952);
   }
   return tmp4;
 };

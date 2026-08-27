@@ -7,5 +7,5 @@ const result = set.fileFinishedImporting("modules/application_commands/native/sh
 
 export default function showExecutedApplicationCommandPopout(messageId) {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj.openLazy(asyncRequireImpl(11241, dependencyMap.paths), "ExecutedCommandPopout:" + messageId.messageId, messageId);
+  obj.openLazy(asyncRequireImpl(11122, dependencyMap.paths), "ExecutedCommandPopout:" + messageId.messageId, messageId);
 };

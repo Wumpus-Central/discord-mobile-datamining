@@ -1,7 +1,7 @@
 // discord_app/modules/oauth2/Authorize.tsx
 import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
-import keysSorter from "../../../_runtime/05345_keysSorter.js";
+import keysSorter from "../../../_runtime/05350_keysSorter.js";
 import set from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";
 import closure_4 from "../../stores/SelectedGuildStore.tsx";
@@ -18,10 +18,10 @@ export const filterScopes = function filterScopes(items) {
   });
   let hasItem = found.includes(set.OAuth2Scopes.BOT);
   if (hasItem) {
-    hasItem = !found.includes(tmp(9117).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    hasItem = !found.includes(tmp(8541).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   if (hasItem) {
-    found.push(tmp(9117).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    found.push(tmp(8541).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   return found;
 };

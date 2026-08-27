@@ -80,7 +80,7 @@ export const Input = function Input(arg0) {
     if (required) {
       const obj5 = { variant: "text-sm/bold", color: "text-feedback-critical", "aria-hidden": true, children: null };
       obj5[3] = [" ", "*"];
-      tmp7Result = tmp7(tmp22(4440).Text, obj5);
+      tmp7Result = tmp7(tmp22(4441).Text, obj5);
     }
     items2[1] = tmp7Result;
     obj4[5] = items2;

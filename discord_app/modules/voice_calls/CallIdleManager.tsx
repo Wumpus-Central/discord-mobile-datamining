@@ -1,7 +1,7 @@
 // discord_app/modules/voice_calls/CallIdleManager.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
 import start from "../../../discord_common/js/packages/timers/Timers.tsx";
-import _modDef5302 from "../../actions/SelectedChannelActionCreators.tsx";
+import _modDef5307 from "../../actions/SelectedChannelActionCreators.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
 import closure_3 from "../activities/EmbeddedActivitiesStore.tsx";
@@ -36,8 +36,8 @@ function disconnect() {
       const intl = getSystemLocale.intl;
       trackInviteDefault.sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(getSystemLocale.t.XYof5G, { number: 3 }));
       const obj3 = trackInviteDefault;
-      const voiceChannel = _modDef5302.selectVoiceChannel(null);
-      const obj4 = _modDef5302;
+      const voiceChannel = _modDef5307.selectVoiceChannel(null);
+      const obj4 = _modDef5307;
     }
   }
 }

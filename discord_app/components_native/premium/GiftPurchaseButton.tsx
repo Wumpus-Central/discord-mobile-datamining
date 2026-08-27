@@ -95,7 +95,7 @@ export default function GiftPurchaseButton(style) {
           }
         } else if (1 === tmp7) {
           premiumType = 0;
-          obj1 = closure_1_1(4809);
+          obj1 = closure_1_1(4810);
           const obj3 = { title: null, body: null };
           const intl = closure_1_0(1236).intl;
           obj3[0] = intl.string(closure_1_0(1236).t.R0RpRX);
@@ -129,7 +129,7 @@ export default function GiftPurchaseButton(style) {
           obj5[3] = premiumTypeFromPlanId;
           obj5[4] = c4;
           obj5[5] = closure_0;
-          closure_1_0(10252).openGiftModal(obj5);
+          closure_1_0(10373).openGiftModal(obj5);
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }

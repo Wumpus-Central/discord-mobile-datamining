@@ -8,8 +8,8 @@ import PressableCard from "../../../../design/components/Card/native/Card.native
 import RedesignBottomSheetTitleHeaderBase from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetRowIcon from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
-import PromoSheet from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
+import PromoSheet from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -41,14 +41,14 @@ function DemoActionSheet() {
     obj = { onPress: null, label: null };
     obj[0] = NOOP;
     obj[1] = tmp12;
-    tmp14Result = tmp14(tmp15(9191).ActionSheetHeaderPressableText, obj);
+    tmp14Result = tmp14(tmp15(9609).ActionSheetHeaderPressableText, obj);
   }
   obj[2] = tmp14Result;
   tmp14Result = tmp2;
   if (tmp2) {
     obj = { onPress: null };
     obj[0] = NOOP;
-    tmp14Result = tmp14(tmp15(5937).ActionSheetCloseButton, obj);
+    tmp14Result = tmp14(tmp15(5942).ActionSheetCloseButton, obj);
   }
   obj1 = { header: closure_7(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), children: null };
   obj[3] = tmp14Result;
@@ -105,14 +105,14 @@ function DemoPromoSheet() {
     obj = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
     obj = { type: "image", src: null, aspectRatio: "16/9" };
     obj1 = { uri: null };
-    obj1[0] = tmp(6318);
+    obj1[0] = tmp(6324);
     obj[1] = obj1;
     obj[0] = obj;
     obj[4] = tmp5;
     let obj2 = obj;
   } else {
     obj2 = { illustration: null, title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
-    obj2[0] = tmp4(tmp(13311), {});
+    obj2[0] = tmp4(tmp(13338), {});
     obj2[3] = tmp5;
   }
   return callback2(PromoSheet.PromoSheet, obj2);

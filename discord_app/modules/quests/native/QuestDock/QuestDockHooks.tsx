@@ -139,8 +139,8 @@ export const useQuestDockExternalOffset = function useQuestDockExternalOffset() 
   }, items1);
 };
 export const useQuestDockDismissalReset = function useQuestDockDismissalReset() {
-  setRestingQuestDockMode = React.useContext(setRestingQuestDockMode(14622).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  const activeQuestDockMode = React.useContext(setRestingQuestDockMode(14619).QuestDockGestureContext).activeQuestDockMode;
+  setRestingQuestDockMode = React.useContext(setRestingQuestDockMode(14649).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const activeQuestDockMode = React.useContext(setRestingQuestDockMode(14646).QuestDockGestureContext).activeQuestDockMode;
   const items = [setRestingQuestDockMode, activeQuestDockMode];
   const effect = React.useEffect(() => {
     let isSoftDismissedResult = activeQuestDockMode.get() !== closure_1_6.SOFT_DISMISSED;

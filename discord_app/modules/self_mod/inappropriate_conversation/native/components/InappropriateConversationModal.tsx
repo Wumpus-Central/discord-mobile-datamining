@@ -98,16 +98,16 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp = callback4();
   let obj = { style: tmp.container, children: null };
-  const items = [callback2(trackAnalyticsEvent(6202).SafetyChatSpotIllustration, {}), , ];
+  const items = [callback2(trackAnalyticsEvent(6208).SafetyChatSpotIllustration, {}), , ];
   obj = { style: tmp.warningText, children: null };
   obj = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
   const intl = trackAnalyticsEvent(1236).intl;
   obj[3] = intl.string(trackAnalyticsEvent(1236).t.NUMAsF);
-  const items1 = [callback2(trackAnalyticsEvent(4440).Text, obj), ];
+  const items1 = [callback2(trackAnalyticsEvent(4441).Text, obj), ];
   obj1 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
   const intl2 = trackAnalyticsEvent(1236).intl;
   obj1[2] = intl2.string(trackAnalyticsEvent(1236).t.uicS5l);
-  items1[1] = callback2(trackAnalyticsEvent(4440).Text, obj1);
+  items1[1] = callback2(trackAnalyticsEvent(4441).Text, obj1);
   obj[1] = items1;
   items[1] = callback3(closure_7, obj);
   const obj2 = { style: tmp.ctaContainer, children: null };
@@ -118,7 +118,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
     closure_1_6.openURL(closure_1_9);
     trackAnalyticsEvent(trackAnalyticsEvent(closure_1_2[15]).CtaEventTypes.USER_TAKEOVER_MODAL_CTL_SMS);
   };
-  const items2 = [callback2(trackAnalyticsEvent(4879).Button, obj3), ];
+  const items2 = [callback2(trackAnalyticsEvent(4880).Button, obj3), ];
   const obj4 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl4 = trackAnalyticsEvent(1236).intl;
   obj4[2] = intl4.string(trackAnalyticsEvent(1236).t.ogLlvy);
@@ -126,7 +126,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
     closure_1_6.openURL(closure_1_10);
     trackAnalyticsEvent(trackAnalyticsEvent(closure_1_2[15]).CtaEventTypes.USER_TAKEOVER_MODAL_CTL_WEB);
   };
-  items2[1] = callback2(trackAnalyticsEvent(4879).Button, obj4);
+  items2[1] = callback2(trackAnalyticsEvent(4880).Button, obj4);
   obj2[1] = items2;
   items[2] = callback3(closure_7, obj2);
   obj[1] = items;

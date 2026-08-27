@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/04408_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/04409_registerAsset.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
-import registerAssetDefault2 from "../../../../../_runtime/08293_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/08660_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/08827_registerAsset.js";
-import registerAssetDefault5 from "../../../../../_runtime/11196_registerAsset.js";
-import registerAssetDefault6 from "../../../../../_runtime/12397_registerAsset.js";
-import registerAssetDefault7 from "../../../../../_runtime/15095_registerAsset.js";
-import registerAssetDefault8 from "../../../../../_runtime/15096_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/07603_registerAsset.js";
+import registerAssetDefault3 from "../../../../../_runtime/07807_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/10811_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/11079_registerAsset.js";
+import registerAssetDefault6 from "../../../../../_runtime/12225_registerAsset.js";
+import registerAssetDefault7 from "../../../../../_runtime/15159_registerAsset.js";
+import registerAssetDefault8 from "../../../../../_runtime/15160_registerAsset.js";
 import closure_2 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -49,7 +49,7 @@ function DemoContextMenu(align) {
         obj = { length: dependencyMap };
         const obj2 = callback(12);
         return Array.from(obj).map((arg0, arg1) => {
-          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: true, variant: true, action: true };
+          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000140159758078922, variant: -0.000000011175878740889506, action: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012886619833379218 };
           obj[2] = length2[arg1 % length2.length];
           let str = "default";
           if (arg1 === closure_0 - 1) {
@@ -72,7 +72,7 @@ function DemoContextMenu(align) {
       obj[0] = closure_1;
       arr = Array.from(obj);
       mapped = arr.map((arg0, arg1) => {
-        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: true, variant: true, action: true };
+        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000140159758078922, variant: -0.000000011175878740889506, action: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012886619833379218 };
         obj[2] = length2[arg1 % length2.length];
         let str = "default";
         if (arg1 === closure_0 - 1) {
@@ -107,7 +107,7 @@ function DemoContextMenu(align) {
 }
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let items = [registerAssetDefault6, registerAssetDefault3, registerAssetDefault2, registerAssetDefault4, registerAssetDefault, registerAssetDefault7, registerAssetDefault8, registerAssetDefault5];
+let items = [registerAssetDefault6, registerAssetDefault2, registerAssetDefault3, registerAssetDefault4, registerAssetDefault, registerAssetDefault7, registerAssetDefault8, registerAssetDefault5];
 let closure_8 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
 createCacheKey = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: null };
 createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 12 };

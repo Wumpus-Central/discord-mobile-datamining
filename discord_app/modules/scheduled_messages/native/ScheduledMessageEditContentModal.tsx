@@ -30,16 +30,16 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
   let callback;
   let React;
   const tmp = callback2();
-  channelId = scheduledMessage.scheduledMessage.channelId;
+  channelId = scheduledMessage.createArgs.channelId;
   let obj = scheduledMessage(stateFromStores[10]);
   const items = [closure_7];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getChannel(channelId));
   const tmp7 = callback(React.useState(() => {
     const obj = channelId(stateFromStores[11]);
-    return obj.unparse(scheduledMessage(stateFromStores[12]).unparseContentAndFlagsForSilentMessage(scheduledMessage.scheduledMessage), channelId);
+    return obj.unparse(scheduledMessage(stateFromStores[12]).unparseContentAndFlagsForSilentMessage(scheduledMessage.createArgs), channelId);
   }), 2);
   first = tmp7[0];
-  const items1 = [stateFromStores, first, scheduledMessage.scheduledMessage.flags, scheduledMessage.scheduledMessageId];
+  const items1 = [stateFromStores, first, scheduledMessage.createArgs.flags, scheduledMessage.scheduledMessageId];
   callback = React.useCallback(first(function*() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
@@ -68,14 +68,14 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
             return obj;
           } else {
             closure_0 = tmp4;
-            const obj5 = v0(7353);
+            const obj5 = v0(7360);
             obj1 = { content: null, flags: null };
             obj1[0] = obj5.parse(dependencyMap, closure_1_3).content;
-            obj1[1] = closure_1_0.scheduledMessage.flags;
+            obj1[1] = closure_1_0.createArgs.flags;
             v0 = 1;
             dependencyMap = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = closure_1_0(11640).editScheduledMessage(closure_1_0.scheduledMessageId, obj1);
+            obj2[0] = closure_1_0(11711).editScheduledMessage(closure_1_0.scheduledMessageId, obj1);
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -88,7 +88,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
           return obj;
         } else {
           if (arg1) {
-            let arr = v0(4675);
+            let arr = v0(4676);
             arr = arr.pop();
           }
           dependencyMap = 3;

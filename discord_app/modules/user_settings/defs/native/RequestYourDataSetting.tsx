@@ -6,8 +6,8 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import hooksDefault from "../../../../../_runtime/04043_hooks.js";
 import isIterable from "../../../../../_runtime/04074_isIterable.js";
-import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import saveProfileAndAccountRequest from "../../../../actions/UserSettingsAccountActionCreators.tsx";
+import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import harvestDisabled from "../../../harvester/HarvesterUtils.tsx";
 import closure_4 from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";

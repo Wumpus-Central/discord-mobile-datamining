@@ -4,8 +4,8 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import context from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { UserNotificationSettings } from "../../../../Constants.tsx";

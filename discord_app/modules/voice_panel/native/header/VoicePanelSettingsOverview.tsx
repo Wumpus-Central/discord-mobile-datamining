@@ -7,7 +7,7 @@ import TableRowInner from "../../../../design/components/TableRow/native/TableRo
 import TableRowIcon from "../../../../design/components/TableRow/native/TableRowIcon.native.tsx";
 import TableRowArrow from "../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/08236_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08679_registerAsset.js";
 import useIsUserSecureFramesVerified from "../../../rtc/hooks/useIsSecureFramesVerified.tsx";
 import useIsSecureFramesUIEnabled from "../../../rtc/hooks/useIsSecureFramesUIEnabled.tsx";
 import WrenchIcon from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";

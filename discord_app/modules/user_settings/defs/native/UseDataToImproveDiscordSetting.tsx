@@ -24,7 +24,7 @@ createToggle = {
     if (arg0) {
       let items = [Consents.USAGE_STATISTICS];
       const obj3 = handleRequestSuccess;
-      handleRequestSuccess.setConsents(items, []).catch((message) => callback(14384).showDataPrivacyRateLimitAlert(message.message));
+      handleRequestSuccess.setConsents(items, []).catch((message) => callback(14411).showDataPrivacyRateLimitAlert(message.message));
       const setConsentsResult = handleRequestSuccess.setConsents(items, []);
     } else {
       let obj = setDefault;
@@ -40,7 +40,7 @@ createToggle = {
       obj[4] = componentDidMountDefault.Colors.RED;
       obj[5] = function onConfirm() {
         const items = [constants.USAGE_STATISTICS];
-        return callback(14383).setConsents([], items);
+        return callback(14410).setConsents([], items);
       };
       obj.show(obj);
     }

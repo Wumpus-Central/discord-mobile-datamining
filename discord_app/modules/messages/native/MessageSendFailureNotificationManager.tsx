@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/MessageSendFailureNotificationManager.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
+import NativeModulesDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import isReactionMilestoneNotification from "../../in_app_notifications/native/InAppNotificationUtils.tsx";
 import dispatcherDefault from "../../../actions/native/InAppNotificationActionCreators.tsx";
-import NativeModulesDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import closure_3 from "../../../stores/SelectedChannelStore.tsx";
 import closure_4 from "../../../stores/SelectedGuildStore.tsx";
 import closure_5 from "../../../stores/UserStore.tsx";

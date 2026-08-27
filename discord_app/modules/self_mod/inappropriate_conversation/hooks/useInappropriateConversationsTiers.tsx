@@ -1,7 +1,7 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel.tsx";
 import InappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel.tsx";
 import closure_2 from "../../../../stores/UserStore.tsx";
 import { SafetyWarningTypes } from "../../ChannelSafetyWarningsStore.tsx";
 

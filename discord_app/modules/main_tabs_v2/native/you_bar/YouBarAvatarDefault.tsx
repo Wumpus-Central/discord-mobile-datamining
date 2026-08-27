@@ -2,9 +2,9 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
-import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import SolidCutout from "../../../../design/components/Icon/native/ClipView.tsx";
 import SolidCutoutDefault from "../../../../design/components/Icon/native/ClipView.tsx";
+import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import CONNECTION_BANNER_HEIGHT from "YouBarConstants.tsx";
 import { StatusTypes } from "../../../../Constants.tsx";
@@ -26,7 +26,7 @@ function AvatarDefault() {
   const result = num / 2;
   const sum = result + tmp2(1297).STATUS_PADDING;
   const diff = tmp7 - sum - num / 4 * 2;
-  obj = { shape: tmp2(8514).CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
+  obj = { shape: tmp2(8030).CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
   obj = { style: null, children: null };
   obj1 = { height: tmp2(1297).AVATAR_SIZE_MAP[tmp6], width: tmp2(1297).AVATAR_SIZE_MAP[tmp6], position: "relative" };
   obj[0] = obj1;

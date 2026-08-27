@@ -1,27 +1,27 @@
 // discord_app/modules/guild_scheduled_events/saveGuildEventRecurrence.tsx
 import set from "../../../_runtime/00002_set.js";
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef9155 from "GuildScheduledEventsActionCreators.tsx";
 import getRRule from "utils/ScheduleUtils.tsx";
+import _modDef9594 from "GuildScheduledEventsActionCreators.tsx";
 
 let result = set.fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
 
-export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_exception_id) {
+export default function saveGuildEventRecurrence(guild_id, nextRecurrenceIdInEvent, startDate, event_exception_id) {
   let obj = getRRule;
-  const baseScheduleForRecurrence = obj.getBaseScheduleForRecurrence(c2, guild_id);
+  const baseScheduleForRecurrence = obj.getBaseScheduleForRecurrence(nextRecurrenceIdInEvent, guild_id);
   startDate = null;
   if (!obj2.areDatesIdentical(baseScheduleForRecurrence.startDate, startDate.startDate)) {
     startDate = startDate.startDate;
   }
-  let tmpResult = tmp(9157);
+  let tmpResult = tmp(9555);
   let endDate = null;
   if (!tmpResult.areDatesIdentical(baseScheduleForRecurrence.endDate, startDate.endDate)) {
     endDate = startDate.endDate;
   }
   if (null != event_exception_id) {
-    tmpResult = tmp(9157);
+    tmpResult = tmp(9555);
     const result = tmpResult.areSchedulesIdentical(startDate, baseScheduleForRecurrence);
-    const obj5 = _modDef9155;
+    const obj5 = _modDef9594;
     if (result) {
       let result1 = obj5.deleteGuildEventException(guild_id.guild_id, guild_id.id, event_exception_id.event_exception_id);
     } else {
@@ -37,11 +37,11 @@ export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_
       }
       obj[1] = toISOStringResult1;
       obj[2] = event_exception_id.is_canceled;
-      result1 = obj5.updateGuildEventException(obj, guild_id.guild_id, guild_id.id, c2);
+      result1 = obj5.updateGuildEventException(obj, guild_id.guild_id, guild_id.id, nextRecurrenceIdInEvent);
     }
     return result1;
   } else {
-    const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(c2);
+    const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(nextRecurrenceIdInEvent);
     const obj7 = DISCORD_EPOCHDefault;
     obj = { original_scheduled_start_time: null, scheduled_start_time: null, scheduled_end_time: null, is_canceled: false };
     const _Date = Date;
@@ -57,7 +57,7 @@ export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_
       toISOStringResult3 = endDate.toISOString();
     }
     obj[2] = toISOStringResult3;
-    return _modDef9155.createGuildEventException(obj, guild_id.guild_id, guild_id.id);
+    return _modDef9594.createGuildEventException(obj, guild_id.guild_id, guild_id.id);
   }
   obj2 = getRRule;
 };

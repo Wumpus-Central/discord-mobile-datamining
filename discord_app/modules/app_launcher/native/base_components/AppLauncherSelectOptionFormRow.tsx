@@ -46,7 +46,7 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
   }
   obj[4] = fn;
   const tmp2 = callback();
-  obj[5] = jsx(Button.Icon, { source: unselectedSubLabel(5555), size: Button.IconSizes.SMALL_20 });
+  obj[5] = jsx(Button.Icon, { source: unselectedSubLabel(5560), size: Button.IconSizes.SMALL_20 });
   const merged1 = Object.assign(merged);
   return jsx(Form.FormRow, { variant: str, color: null, lineClamp: 1, children: null });
 };

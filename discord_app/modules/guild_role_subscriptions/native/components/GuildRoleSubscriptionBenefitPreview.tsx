@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import Button from "../../../../design/void/native.tsx";
 import parseRawEmojiObjectDefault from "../../../emojis/UnicodeEmojis.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../_runtime/10976_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09950_registerAsset.js";
 import getUsedTemplateChannelsForGuild from "../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx";
 import EmojiIconDefault from "EmojiIcon.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -66,15 +66,15 @@ function ChannelBenefitRow(benefit) {
   const channelWithTemplateFallback = obj.useChannelWithTemplateFallback(benefit.ref_id);
   let channelIcon = null;
   if (null != channelWithTemplateFallback) {
-    channelIcon = tmp2(4932).getChannelIcon(channelWithTemplateFallback);
-    const tmp2Result = tmp2(4932);
+    channelIcon = tmp2(4933).getChannelIcon(channelWithTemplateFallback);
+    const tmp2Result = tmp2(4933);
   }
   if (null == channelWithTemplateFallback) {
     obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1236).intl;
     const _HermesInternal = HermesInternal;
     obj[2] = "[" + intl.string(tmp2(1236).t.bz1PZX) + "]";
-    let tmp9 = callback(tmp2(4440).Text, obj);
+    let tmp9 = callback(tmp2(4441).Text, obj);
   } else {
     obj = { benefit: null, guildId: null, isInteractive: null, children: null };
     obj[0] = benefit;
@@ -89,7 +89,7 @@ function ChannelBenefitRow(benefit) {
     const items = [callback(tmp2(1297).Icon, obj2), ];
     const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj3[2] = tmp5;
-    items[1] = callback(tmp2(4440).Text, obj3);
+    items[1] = callback(tmp2(4441).Text, obj3);
     obj1[1] = items;
     obj[3] = callback2(View, obj1);
     tmp9 = callback(DescriptiveBenefitRow, obj);

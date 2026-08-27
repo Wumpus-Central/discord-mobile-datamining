@@ -8,14 +8,14 @@ let result = set.fileFinishedImporting("modules/user_settings/voice/AudioSetting
 
 export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
   if (DEFAULT === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-    USER = tmp(9374).AudioSettingsDefaultVolumes.STREAM;
+    USER = tmp(9705).AudioSettingsDefaultVolumes.STREAM;
   } else {
-    USER = tmp(9374).AudioSettingsDefaultVolumes.USER;
+    USER = tmp(9705).AudioSettingsDefaultVolumes.USER;
   }
   let tmp3 = USER;
-  let tmpResult = tmp(4919);
+  let tmpResult = tmp(4920);
   const result = tmpResult.amplitudeToPerceptual(USER);
-  tmpResult = tmp(4919);
+  tmpResult = tmp(4920);
   if (Math.abs(result - tmpResult.amplitudeToPerceptual(USER)) < 1) {
     tmp3 = USER;
   }

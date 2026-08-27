@@ -1,22 +1,22 @@
 // discord_common/js/shared/constants/KeyboardConstants.tsx
-import _mod7177 from "../../../../_runtime/metro/07177__.js";
+import _mod7183 from "../../../../_runtime/metro/07183__.js";
 import set from "../../../../_runtime/00002_set.js";
 
-const items = [_mod7177.Key.F6, "f6"];
+const items = [_mod7183.Key.F6, "f6"];
 const items1 = [items, , , , , , , ];
-const items2 = [_mod7177.Key.Tab, "tab"];
+const items2 = [_mod7183.Key.Tab, "tab"];
 items1[1] = items2;
-const items3 = [_mod7177.Key.ArrowDown, "down"];
+const items3 = [_mod7183.Key.ArrowDown, "down"];
 items1[2] = items3;
-const items4 = [_mod7177.Key.ArrowUp, "up"];
+const items4 = [_mod7183.Key.ArrowUp, "up"];
 items1[3] = items4;
-const items5 = [_mod7177.Key.ArrowLeft, "left"];
+const items5 = [_mod7183.Key.ArrowLeft, "left"];
 items1[4] = items5;
-const items6 = [_mod7177.Key.ArrowRight, "right"];
+const items6 = [_mod7183.Key.ArrowRight, "right"];
 items1[5] = items6;
-const items7 = [_mod7177.Key.Home, "home"];
+const items7 = [_mod7183.Key.Home, "home"];
 items1[6] = items7;
-const items8 = [_mod7177.Key.End, "end"];
+const items8 = [_mod7183.Key.End, "end"];
 items1[7] = items8;
 let set = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
 const frozen = Object.freeze({ esc: 9, f1: 67, f2: 68, f3: 69, f4: 70, f5: 71, f6: 72, f7: 73, f8: 74, f9: 75, f10: 76, f11: 95, f12: 96, f14: 107, f15: 78, f16: 127, "`": 49, 1: 10, 2: 11, 3: 12, 4: 13, 5: 14, 6: 15, 7: 16, 8: 17, 9: 18, 0: 19, "-": 20, "=": 21, backspace: 22, tab: 23, q: 24, w: 25, e: 26, r: 27, t: 28, y: 29, u: 30, i: 31, o: 32, p: 33, "[": 34, "]": 35, "\\": 51, "caps lock": 66, a: 38, s: 39, d: 40, f: 41, g: 42, h: 43, j: 44, k: 45, l: 46, ";": 47, "'": 48, enter: 36, shift: 50, z: 52, x: 53, c: 54, v: 55, b: 56, n: 57, m: 58, ",": 59, ".": 60, "/": 61, "right shift": 62, ctrl: 37, alt: 64, meta: 133, space: 65, "right meta": 134, "right alt": 108, "right ctrl": 105, menu: 135, "num lock": 77, "numpad =": 125, "numpad /": 106, "numpad *": 63, "numpad 7": 79, "numpad 8": 80, "numpad 9": 81, "numpad -": 82, "numpad 4": 83, "numpad 5": 84, "numpad 6": 85, "numpad +": 86, "numpad 1": 87, "numpad 2": 88, "numpad 3": 89, "numpad enter": 104, "numpad 0": 90, "numpad .": 91, home: 110, "page up": 112, end: 115, "page down": 117, insert: 118, delete: 119, left: 113, right: 114, down: 116, up: 111, sleep: 150, back: 166, forward: 167, "home key": 180, favorites: 164, email: 163, play: 172, stop: 174, "vol down": 122, "vol up": 123, "track back": 173, "track skip": 171 });
@@ -25,8 +25,8 @@ const merged = Object.assign(Object.freeze({ "^": 220, "§": 220, "½": 220, plu
 const frozen2 = Object.freeze({ a: 65, s: 83, d: 68, f: 70, h: 72, g: 71, z: 90, x: 88, c: 67, v: 86, b: 66, q: 81, w: 87, e: 69, r: 82, y: 89, t: 84, 1: 49, 2: 50, 3: 51, 4: 52, 6: 54, 5: 53, "=": 187, 9: 57, 7: 55, "-": 189, 8: 56, 0: 48, "]": 221, o: 79, u: 85, "[": 219, i: 73, p: 80, l: 76, j: 74, k: 75, ";": 186, ",": 188, "/": 191, n: 78, m: 77, ".": 190, "numpad .": 110, "numpad *": 106, "numpad +": 107, "numpad clear": 144, "numpad /": 111, "numpad -": 109, "numpad =": 226, "numpad 0": 96, "numpad 1": 97, "numpad 2": 98, "numpad 3": 99, "numpad 4": 100, "numpad 5": 101, "numpad 6": 102, "numpad 7": 103, "numpad 8": 104, "numpad 9": 105, enter: 13, tab: 9, space: 32, backspace: 8, esc: 27, meta: 91, shift: 160, "caps lock": 20, alt: 164, ctrl: 162, "right shift": 161, "right alt": 165, "right ctrl": 163, "right meta": 93, f1: 112, f2: 113, f3: 114, f4: 115, f5: 116, f6: 117, f7: 118, f8: 119, f9: 120, f10: 121, f11: 122, f12: 123, f13: 124, f14: 125, f15: 126, f16: 127, f17: 128, f18: 129, f19: 130, f20: 131, f21: 132, f22: 133, f23: 134, f24: 135, home: 36, "page up": 33, del: 46, end: 35, "page down": 34, left: 37, right: 39, down: 40, up: 38, insert: 45, break: 19, "scroll lock": 145, "print screen": 44, rewind: 177, play: 179, "fast forward": 176 });
 const result = set.fileFinishedImporting("../discord_common/js/shared/constants/KeyboardConstants.tsx");
 
-export const KeyboardEventKey = _mod7177.Key;
-export const FOCUS_SECTION_JUMP_KEY = _mod7177.Key.F6;
+export const KeyboardEventKey = _mod7183.Key;
+export const FOCUS_SECTION_JUMP_KEY = _mod7183.Key.F6;
 export const NavigationKeyShortcutMap = new Map(items1);
 export const NavigationShortcuts = set;
 export const KeyboardDeviceTypes = { KEYBOARD_KEY: 0, [0]: "KEYBOARD_KEY", MOUSE_BUTTON: 1, [1]: "MOUSE_BUTTON", KEYBOARD_MODIFIER_KEY: 2, [2]: "KEYBOARD_MODIFIER_KEY", GAMEPAD_BUTTON: 3, [3]: "GAMEPAD_BUTTON" };

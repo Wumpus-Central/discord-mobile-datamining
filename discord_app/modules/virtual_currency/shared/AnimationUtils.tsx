@@ -6,17 +6,25 @@ let result = set.fileFinishedImporting("modules/virtual_currency/shared/Animatio
 
 export const EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS = 3000;
 export const ORB_LOTTIE_COUNTER_ANIMATION_FACTORS = obj;
-export const getDesiredAnimationConfigs = function getDesiredAnimationConfigs(diff, EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS) {
-  let str = "SPEND";
-  if (diff > 0) {
-    str = "EARN";
+export const getOrbBalanceCounterAnimationConfigs = function getOrbBalanceCounterAnimationConfigs(diff, targetTime) {
+  targetTime = targetTime.targetTime;
+  if (targetTime.isRenderedWithoutLottieAnimation) {
+    obj = { duration: null, delay: 0 };
+    obj[0] = targetTime;
+    return obj;
+  } else {
+    let str = "SPEND";
+    if (diff > 0) {
+      str = "EARN";
+    }
+    const result = targetTime * obj[str];
+    obj = { duration: null, delay: null };
+    obj[0] = result;
+    let num2 = 0;
+    if (diff > 0) {
+      num2 = targetTime - result;
+    }
+    obj[1] = num2;
+    return obj;
   }
-  const result = EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS * obj[str];
-  obj = { duration: result, delay: null };
-  let num = 0;
-  if (diff > 0) {
-    num = EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - result;
-  }
-  obj[1] = num;
-  return obj;
 };

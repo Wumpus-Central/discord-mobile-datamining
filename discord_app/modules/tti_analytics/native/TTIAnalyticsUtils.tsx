@@ -160,7 +160,7 @@ function _trackAppUIViewedAsync() {
               closure_5 = 1;
               c6 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback2(4305).getAppFirstVisibleTimestamp();
+              obj1[0] = callback2(4306).getAppFirstVisibleTimestamp();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -174,15 +174,15 @@ function _trackAppUIViewedAsync() {
           } else {
             closure_4 = arg1;
             closure_5 = closure_3 - closure_4;
-            callback2(4305).reportFullyDrawn();
-            const obj5 = callback2(4305);
+            callback2(4306).reportFullyDrawn();
+            const obj5 = callback2(4306);
             callback2(10).mark("\u2757", "Track app_ui_viewed");
             const obj6 = callback2(10);
             callback2(10).addDetail("TTI", closure_5);
             const obj7 = callback2(10);
             callback2(10).markAt("\u{1F3C3}", "app_opened", closure_4);
             const obj8 = callback2(10);
-            callback(7345).ttiRecorded(closure_5);
+            callback(7351).ttiRecorded(closure_5);
             let _setTimeout = setTimeout;
             let timerId = setTimeout(() => {
               let str = closure_0;
@@ -204,7 +204,7 @@ function _trackAppUIViewedAsync() {
               if (null == timeout) {
                 let _setTimeout = setTimeout;
                 timeout = setTimeout(() => {
-                  callback(9).setTTICallback(/* F122201 */ function() { ... });
+                  callback(9).setTTICallback(/* F122477 */ function() { ... });
                   callback3();
                   c25 = null;
                 }, 15 * callback(687).Millis.SECOND);
@@ -314,7 +314,7 @@ function _logLegacyAppUiViewed() {
               c7 = 1;
               c8 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback(4305).getJSBundleTimestamps();
+              obj1[0] = callback(4306).getJSBundleTimestamps();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -406,17 +406,17 @@ function _trackAppUIViewed() {
           } else {
             let extraProperties = tmp5;
             c3 = tmp2;
-            closure_0 = undefined;
+            let callback;
             let lib;
             let appCreatedTime;
             c3 = undefined;
             extraProperties = undefined;
             closure_5 = undefined;
             theme = undefined;
-            const tmp72 = closure_1_21();
-            closure_0 = tmp72;
-            if (tmp72 == null) {
-              closure_0 = "unknown";
+            const tmp76 = closure_1_21();
+            callback = tmp76;
+            if (tmp76 == null) {
+              callback = "unknown";
             }
             const AppStartInfo = closure_1_0(appCreatedTime[20]).AppStartInfo;
             closure_5 = 1;
@@ -469,7 +469,7 @@ function _trackAppUIViewed() {
           }
           closure_5 = lib;
           obj = {};
-          let merged = Object.assign(callback());
+          let merged = Object.assign(callback2());
           appCreatedTime = extraProperties;
           if (extraProperties == null) {
             appCreatedTime = {};
@@ -478,7 +478,7 @@ function _trackAppUIViewed() {
           obj1 = lib(appCreatedTime[23]);
           const merged2 = Object.assign(obj1.serializeTTITracker(c3));
           obj.load_id = closure_16;
-          obj.screen_name = closure_0;
+          obj.screen_name = callback;
           obj.has_cached_data = extraProperties.hasCache();
           obj.startup_cpu_usage_cumulative = closure_5;
           obj.theme = theme.theme;
@@ -487,12 +487,14 @@ function _trackAppUIViewed() {
           obj2.mark("\u2757", "Track app_ui_viewed2");
           obj3 = lib(appCreatedTime[19]);
           obj3.track(APP_UI_VIEWED2.APP_UI_VIEWED2, theme, { logEventProperties: true });
+          obj4 = callback(appCreatedTime[26]);
+          const result = obj4.trackAndroidArtProfileSnapshot(closure_16, callback2());
           closure_26 = theme;
           if (alertStartupMetrics.alertStartupMetrics) {
-            obj4 = lib(appCreatedTime[26]);
-            const obj5 = { importer: null };
+            let obj5 = lib(appCreatedTime[27]);
+            obj5 = { importer: null };
             obj5[0] = function importer() {
-              return callback(paths[28])(paths[27], paths.paths).then((arg0) => {
+              return callback(paths[29])(paths[28], paths.paths).then((arg0) => {
                 closure_0 = arg0.default;
                 return (arg0) => {
                   let str = closure_1_6.app_launch_scenario;
@@ -507,10 +509,10 @@ function _trackAppUIViewed() {
                 };
               });
             };
-            obj4.openLazy(obj5);
+            obj5.openLazy(obj5);
           }
-          const obj14 = lib(appCreatedTime[25]);
-          if (obj7.runningTTIAutomation()) {
+          const obj15 = lib(appCreatedTime[25]);
+          if (obj8.runningTTIAutomation()) {
             (function logToDevice(json) {
               let obj = {};
               let merged = Object.assign(json);
@@ -546,9 +548,9 @@ function _trackAppUIViewed() {
           theme = 3;
           return { value: "HermesInternal", done: null };
         }
-      } catch (tmp53) {
+      } catch (tmp57) {
         theme = tmp;
-        throw tmp53;
+        throw tmp57;
       }
     }
   });
@@ -670,7 +672,7 @@ let set = new Set(["private_channel", "guild-forum", "guild-directory", "guild-t
 const set1 = new Set(["friends_list", "guild-voice", "redesign-guild-voice", "unknown-channel", "redesign-unknown-channel", "channel-list", "other"]);
 let c25 = null;
 let c26 = null;
-const result = set.fileFinishedImporting("modules/tti_analytics/native/TTIAnalyticsUtils.tsx");
+let result = set.fileFinishedImporting("modules/tti_analytics/native/TTIAnalyticsUtils.tsx");
 
 export { getDeviceMetadata };
 export function currentLoadId() {

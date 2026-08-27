@@ -35,7 +35,7 @@ function AdTopicRow(adTopic) {
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(5940).TableSwitchRow, obj);
+  return closure_5(adTopic(5945).TableSwitchRow, obj);
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

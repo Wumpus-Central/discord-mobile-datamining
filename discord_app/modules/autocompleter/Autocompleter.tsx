@@ -368,8 +368,8 @@ prototype["queryTextChannels"] = function queryTextChannels(closure_1, _limit) {
   const self = this;
   if (this._include(AutocompleterResultTypes.TEXT_CHANNEL)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(5332).getBoosterMap(tmp);
-      const obj2 = blacklist(5332);
+      let boosterMap = blacklist(5337).getBoosterMap(tmp);
+      const obj2 = blacklist(5337);
     } else {
       boosterMap = {};
     }
@@ -416,8 +416,8 @@ prototype["queryGuilds"] = function queryGuilds(arg0, arg1) {
   const self = this;
   if (this._include(AutocompleterResultTypes.GUILD)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(5332).getBoosterMap(tmp);
-      const obj2 = blacklist(5332);
+      let boosterMap = blacklist(5337).getBoosterMap(tmp);
+      const obj2 = blacklist(5337);
     } else {
       boosterMap = {};
     }
@@ -524,8 +524,8 @@ prototype["queryGroupDMs"] = function queryGroupDMs(arg0, arg1) {
   if (this._include(AutocompleterResultTypes.GROUP_DM)) {
     const blacklist = self.options.blacklist;
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(5332).getBoosterMap(tmp);
-      const obj2 = blacklist(5332);
+      let boosterMap = blacklist(5337).getBoosterMap(tmp);
+      const obj2 = blacklist(5337);
     } else {
       boosterMap = {};
     }
@@ -599,7 +599,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
       obj = { type: null, record: null, score: null };
       obj[0] = tmp.LINK;
       obj[1] = closure_4.fromInviteCode(findCodedLinkResult.code);
-      let tmp3Result = tmp3(5332);
+      let tmp3Result = tmp3(5337);
       obj[2] = tmp3Result.calculateScore(11);
       const items = [obj];
       return items;
@@ -626,7 +626,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
               obj = { type: null, record: null, score: null };
               obj[0] = tmp.LINK;
               obj[1] = closure_4.fromPath(pathname);
-              tmp3Result = tmp3(5332);
+              tmp3Result = tmp3(5337);
               obj[2] = tmp3Result.calculateScore(11);
               const items1 = [obj];
               let items2 = items1;

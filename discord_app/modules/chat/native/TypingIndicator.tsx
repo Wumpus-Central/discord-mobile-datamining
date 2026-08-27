@@ -171,13 +171,13 @@ function TypingIndicatorInner(channel) {
   const obj4 = { style: tmp13.wrapperHoriz, children: null };
   const obj5 = { style: tmp13.horiz, children: null };
   if (null != stateFromStoresObject.config) {
-    const obj6 = { config: null, username: null, emojiSize: 16, onPress: null };
+    const obj6 = { config: null, username: null, onPress: null };
     ({ config: obj20[0], name: obj20[1] } = stateFromStoresObject);
     let tmp27;
     if (customTypingIndicatorConfig.canSet) {
       tmp27 = callback;
     }
-    obj6[3] = tmp27;
+    obj6[2] = tmp27;
     let tmp21Result = tmp19(tmp6(tmp2[24]), obj6);
     const tmp6Result = tmp6(tmp2[24]);
   } else {

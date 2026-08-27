@@ -35,9 +35,9 @@ function handleThreadMembersUpdate(addedMembers) {
   let id;
   id = store.getId();
   if (tmp2) {
-    const result = id(9926).autoAddJoinedThreadToFavorites(addedMembers.id);
+    const result = id(10225).autoAddJoinedThreadToFavorites(addedMembers.id);
     result.catch(NOOP);
-    const obj = id(9926);
+    const obj = id(10225);
   }
 }
 function handleThreadCreate(channel) {

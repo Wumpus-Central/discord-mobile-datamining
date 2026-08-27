@@ -10,8 +10,8 @@ function WebsiteGameStoreLinkButton(data) {
   data = data.data;
   const trackAction = data.trackAction;
   dependencyMap = undefined;
-  dependencyMap = trackAction(9496)(trackAction(4158).openURL);
-  return callback(data(4879).Button, {
+  dependencyMap = trackAction(8734)(trackAction(4158).openURL);
+  return callback(data(4880).Button, {
     variant: "secondary",
     size: "md",
     text: data.title,

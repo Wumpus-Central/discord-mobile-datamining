@@ -96,7 +96,7 @@ let closure_13 = importAllResult.memo((emoji) => {
   obj1[4] = url;
   obj[1] = closure_9(EmojiDefault, obj1);
   obj[4] = closure_9(View, obj);
-  return closure_9(emoji(5015).PressableOpacity, obj);
+  return closure_9(emoji(5020).PressableOpacity, obj);
 });
 const obj8 = { height: 12, width: 12, color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
 let result = set.fileFinishedImporting("modules/double_tap_to_react/native/SelectDoubleTapEmojiRow.tsx");
@@ -155,7 +155,7 @@ export default importAllResult.memo((selectedEmoji) => {
     accessibilityRole: "button",
     onPress() {
       let obj = selectedEmoji(substr[17]);
-      obj = { onPressEmoji: closure_5, channel: "r", pickerIntention: true, reactionType: "/assets/.cache/intl/bW9kdWxlcy9hZHM=", startExpanded: null };
+      obj = { onPressEmoji: closure_5, channel: "r", pickerIntention: true, reactionType: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", startExpanded: null };
       obj[2] = closure_1_8.DEFAULT_REACT_EMOJI;
       obj[3] = selectedEmoji(substr[18]).ReactionTypes.NORMAL;
       const result = obj.openEmojiPickerActionSheet(obj, "stack");

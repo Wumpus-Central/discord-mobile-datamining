@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/PriceUtils.tsx
-import addDefault from "../../../../_runtime/06030_add.js";
+import addDefault from "../../../../_runtime/06035_add.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { CurrencyCodes } from "../Constants.tsx";

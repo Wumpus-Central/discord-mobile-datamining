@@ -27,7 +27,7 @@ export default function CustomTypingIndicatorDisplay(showName) {
   }
   let num = showName.emojiSize;
   if (num === undefined) {
-    num = 16;
+    num = 14;
   }
   let flag2 = showName.justifyCenter;
   if (flag2 === undefined) {

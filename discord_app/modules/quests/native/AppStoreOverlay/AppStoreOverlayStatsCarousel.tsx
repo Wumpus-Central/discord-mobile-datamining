@@ -23,10 +23,10 @@ function AppStoreOverlayStatCardItem(stat) {
     const result = obj2.formatAppStoreRatingValue(stat.rating, getSystemLocale.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      let tmp9Result = tmp9(10733);
+      let tmp9Result = tmp9(11017);
       result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1236).intl.currentLocale);
     }
-    tmp9Result = tmp9(10733);
+    tmp9Result = tmp9(11017);
     const appStoreStarFillAmounts = tmp9Result.getAppStoreStarFillAmounts(stat.rating, num);
     const intl = tmp9(1236).intl;
     let obj = { label: null, rating: null, maxRating: null, ratingCount: null };
@@ -85,7 +85,7 @@ function AppStoreOverlayStatCardItem(stat) {
     if (null == secondaryContent) {
       const obj5 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
       obj5[3] = secondaryText;
-      secondaryContent = tmp21(tmp18(4440).Text, obj5);
+      secondaryContent = tmp21(tmp18(4441).Text, obj5);
     }
     obj4[1] = secondaryContent;
     tmp21Result = tmp21(tmp17, obj4);

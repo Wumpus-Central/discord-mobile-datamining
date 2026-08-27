@@ -14,10 +14,10 @@ const require = arg1;
 let c3 = importAllResult;
 ({ DEFAULT_FONT_SCALE_STORE_STATE: error, useFontScaleStore: closure_8 } = DEFAULT_FONT_SCALE_STORE_STATE);
 const memoResult = importAllResult.memo(() => {
-  nativeStackNavigation(4896)(() => {
+  nativeStackNavigation(4897)(() => {
     if (closure_5.shouldSync("appearance")) {
-      const userCustomThemes = lib(14781).fetchUserCustomThemes();
-      const obj = lib(14781);
+      const userCustomThemes = lib(14808).fetchUserCustomThemes();
+      const obj = lib(14808);
     }
   });
   let items = [closure_6, closure_4];
@@ -62,7 +62,7 @@ const memoResult = importAllResult.memo(() => {
     callback(table[13]).batchUpdates(() => state.setState(closure_7));
   }, []);
   const node = importAllResult.useMemo(() => {
-    let obj = lib(10584);
+    let obj = lib(10988);
     obj = { sections: null };
     const items = [constants.MOBILE_VISUAL_REFRESH];
     const items1 = [{ settings: items }, , , , , , , , , ];
@@ -110,7 +110,7 @@ const memoResult = importAllResult.memo(() => {
     return obj.createList(obj);
   }, []);
   let obj2 = useNavigation;
-  return jsx(nativeStackNavigation(14167), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(14194), { node }, "" + theme + "-" + gradientPresetId);
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 

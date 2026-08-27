@@ -15,33 +15,33 @@ function WordTopic(categoryid) {
   categoryid = categoryid.categoryid;
   ({ selected, handlePress: importDefault } = categoryid);
   if (GuildPrimaryCategory.GAMING === categoryid) {
-    let tmp2 = callback2(categoryid(8977).GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    let tmp2 = callback2(categoryid(9119).GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.ENTERTAINMENT === categoryid) {
-    tmp2 = callback2(categoryid(9861).TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(9166).TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.GENERAL_CHATTING === categoryid) {
-    tmp2 = callback2(categoryid(4984).ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(4989).ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.SCIENCE_AND_TECH === categoryid) {
-    tmp2 = callback2(categoryid(15914).ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(15979).ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.MUSIC === categoryid) {
-    tmp2 = callback2(categoryid(9866).MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(9172).MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.EDUCATION === categoryid) {
-    tmp2 = callback2(categoryid(4972).BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(4976).BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.CREATIVE_ARTS === categoryid) {
-    tmp2 = callback2(categoryid(7933).PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(12953).PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.FINANCE === categoryid) {
-    tmp2 = callback2(categoryid(11565).PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(11416).PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.BOTS === categoryid) {
-    tmp2 = callback2(categoryid(10683).RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(9296).RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.SPORTS === categoryid) {
-    tmp2 = callback2(categoryid(15915).MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(15980).MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.TRAVEL_AND_FOOD === categoryid) {
-    tmp2 = callback2(categoryid(8975).FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(9117).FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.FASHION_AND_BEAUTY === categoryid) {
-    tmp2 = callback2(categoryid(15917).PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(15982).PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.FITNESS_AND_HEALTH === categoryid) {
-    tmp2 = callback2(categoryid(8978).BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(9120).BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (16 === categoryid) {
-    tmp2 = callback2(categoryid(10407).PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = callback2(categoryid(10801).PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   }
   let obj = categoryid(4173);
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: selected });
@@ -60,7 +60,7 @@ function WordTopic(categoryid) {
       return callback(categoryid);
     };
     obj[5] = tmp2;
-    tmp48Result = callback2(categoryid(4879).Button, obj);
+    tmp48Result = callback2(categoryid(4880).Button, obj);
     const tmp48 = callback2;
   }
   return tmp48Result;
@@ -200,11 +200,11 @@ export default function ICYMITopicsScreen() {
   obj = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1236).intl;
   obj[3] = intl.string(first(1236).t.Y5d99L);
-  const children = [callback2(first(4440).Text, obj), , , , ];
+  const children = [callback2(first(4441).Text, obj), , , , ];
   obj = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = first(1236).intl;
   obj[3] = intl2.string(first(1236).t.MGZsfv);
-  children[1] = callback2(first(4440).Text, obj);
+  children[1] = callback2(first(4441).Text, obj);
   obj1 = { style: tmp.separator };
   children[2] = callback2(closure_6, obj1);
   let obj2 = { showsVerticalScrollIndicator: false, style: tmp.container, contentContainerStyle: tmp.scrollContentContainer, contentInset: obj3, children: null };
@@ -227,7 +227,7 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1236).intl;
     obj7[2] = intl3.string(tmp7(1236).t.PDTjLN);
     obj7[3] = callback;
-    obj5[1] = tmp12(tmp7(4879).Button, obj7);
+    obj5[1] = tmp12(tmp7(4880).Button, obj7);
     tmp12Result = tmp12(tmp13, obj5);
   }
   children[4] = tmp12Result;

@@ -1,5 +1,5 @@
 // discord_app/components_native/common/LottieAnimationView.tsx
-import _isNativeReflectConstructDefault from "../../../_runtime/05892__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault from "../../../_runtime/05897__isNativeReflectConstruct.js";
 import closure_3 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";

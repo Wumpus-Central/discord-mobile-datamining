@@ -766,7 +766,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj1;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4369).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4370).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= closure_1_9[arg0]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

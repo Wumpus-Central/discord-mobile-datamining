@@ -8,7 +8,7 @@ import Text from "../../../../../design/components/Text/native/Text.tsx";
 import computeChannelName from "../../../../channel/useChannelName.tsx";
 import getChannelIcon from "../../../../../utils/native/ChannelUtils.tsx";
 import FacepileGroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef12830 from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
+import _modDef12849 from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -47,7 +47,7 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj[5] = tmp6;
     obj[6] = tmp2.wrapper;
     obj[7] = children;
-    tmp7Result = callback2(titleContentHeight(5015).PressableOpacity, obj);
+    tmp7Result = callback2(titleContentHeight(5020).PressableOpacity, obj);
     const tmp7 = callback2;
   }
   return tmp7Result;
@@ -82,9 +82,9 @@ function ChannelTitle(guildId) {
     obj[3] = str2;
     ({ channelName: obj4[6], channelNameContainer: obj4[7] } = tmp4);
     obj[8] = accessibleTitle;
-    let tmp8Result = tmp11(tmp(9685), obj);
+    let tmp8Result = tmp11(tmp(8846), obj);
     let tmp8 = tmp11;
-    const tmpResult = tmp(9685);
+    const tmpResult = tmp(8846);
   } else {
     tmp8 = closure_9;
     let str = "heading-lg/bold";
@@ -102,7 +102,7 @@ function ChannelTitle(guildId) {
   tmp8Result = !disableArrow;
   if (!disableArrow) {
     const obj2 = { source: null, size: null, style: null };
-    obj2[0] = tmp(12829);
+    obj2[0] = tmp(12848);
     obj2[1] = Button.Icon.Sizes.REFRESH_SMALL_16;
     obj2[2] = tmp4.arrowIcon;
     tmp8Result = tmp8(Button.Icon, obj2);
@@ -132,7 +132,7 @@ function GroupDMIcon(channel) {
 function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: "done", isMobileOnline: true, isVROnline: null, style: null, autoStatusCutout: 189.518 };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: false, isMobileOnline: "done", isVROnline: "flowing", style: "hourglass", autoStatusCutout: "hours" };
   obj[3] = Button.AvatarSizes.REFRESH_MEDIUM_32;
   let tmp3 = null;
   if (!user.isSystemUser()) {
@@ -199,7 +199,7 @@ function MemberCountText(arg0) {
     tmp9 = leadingAccessoryWidth;
   }
   obj[3] = tmp9;
-  const children = [closure_9(_modDef12830, obj), ];
+  const children = [closure_9(_modDef12849, obj), ];
   let tmp7Result = null;
   if (withSeparator) {
     let str3 = "text-xs/medium";

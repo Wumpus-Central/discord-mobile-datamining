@@ -19,7 +19,7 @@ export const queryMentionables = function queryMentionables(type, arg1, channelI
     return [];
   } else {
     const tmp2 = type === require("../../flow/Server.tsx").ComponentType.USER_SELECT || type === require("../../flow/Server.tsx").ComponentType.MENTIONABLE_SELECT;
-    let obj = channel(5332);
+    let obj = channel(5337);
     obj = { query: null, channel: null, canMentionEveryone: false, canMentionHere: false, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, limit: 15 };
     obj[0] = arg1;
     obj[1] = channel;
@@ -57,7 +57,7 @@ export const queryChannels = function queryChannels(arg0, arg1, arg2) {
     obj[2] = arg2;
     const channels = obj.queryApplicationCommandChannelResults(obj).channels;
     items = channels.map((id) => {
-      const obj = { type: callback(4697).SelectOptionType.CHANNEL, value: id.id, label: callback(4638).computeChannelName(id, closure_8, closure_7) };
+      const obj = { type: callback(4698).SelectOptionType.CHANNEL, value: id.id, label: callback(4639).computeChannelName(id, closure_8, closure_7) };
       return obj;
     });
   }

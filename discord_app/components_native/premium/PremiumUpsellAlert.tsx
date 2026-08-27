@@ -8,10 +8,10 @@ import Text from "../../design/components/Text/native/Text.tsx";
 import createCacheKey2 from "../../design/components/Styles/native/createStyles.tsx";
 import usePremiumTrialOffer from "../../modules/premium/hooks/usePremiumTrialOffer.android.tsx";
 import useMessageMaxLengthDefault from "../../modules/messages/useMessageMaxLength.tsx";
-import registerAssetDefault from "../../../_runtime/08586_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/08587_registerAsset.js";
-import registerAssetDefault3 from "../../../_runtime/08907_registerAsset.js";
-import registerAssetDefault4 from "../../../_runtime/08908_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/08102_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/08103_registerAsset.js";
+import registerAssetDefault3 from "../../../_runtime/08139_registerAsset.js";
+import registerAssetDefault4 from "../../../_runtime/08140_registerAsset.js";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
@@ -126,9 +126,9 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   const tmp6 = closure_14;
   const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(8905);
+    let tmp4Result = tmp4(8137);
   } else {
-    tmp4Result = tmp4(8906);
+    tmp4Result = tmp4(8138);
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = tmp(1236).intl;
@@ -203,9 +203,9 @@ function LongerMessageUpsell(alertWidth) {
   const tmp7 = closure_14;
   const tmp8 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(8909);
+    let tmp4Result = tmp4(8141);
   } else {
-    tmp4Result = tmp4(8910);
+    tmp4Result = tmp4(8142);
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = tmp(1236).intl;
@@ -223,9 +223,9 @@ function GuildCapUpsell(alertWidth) {
   const tmp6 = closure_14;
   const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(8911);
+    let tmp4Result = tmp4(8143);
   } else {
-    tmp4Result = tmp4(8912);
+    tmp4Result = tmp4(8144);
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = tmp(1236).intl;
@@ -254,7 +254,7 @@ function UploadUpsell(arg0) {
       obj = { dataSavingMode };
       const result = obj.updatedUnsyncedSettings(obj);
     };
-    tmp6Result = callback2(tmp(5940).TableSwitchRow, obj);
+    tmp6Result = callback2(tmp(5945).TableSwitchRow, obj);
   }
   children[1] = tmp6Result;
   return closure_15(closure_16, { children });

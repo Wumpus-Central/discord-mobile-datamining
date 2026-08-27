@@ -6,8 +6,8 @@ import Text from "../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../design/void/Pressables/native/Pressables.tsx";
 import setOptionsDefault from "../../modules/messages/native/renderer/RowGenerator.tsx";
 import getPreviousMessagesDefault from "../../modules/messages/native/renderer/ChatManager.tsx";
-import GuildNSFWDefault from "../warnings/GuildNSFW.tsx";
 import DCDChatListDefault from "../../modules/chat/native/Chat.android.tsx";
+import GuildNSFWDefault from "../warnings/GuildNSFW.tsx";
 import ChannelSpoilerDefault from "../../modules/spoiler_channels/native/ChannelSpoiler.tsx";
 import importAllResult from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
@@ -91,7 +91,7 @@ class ChatPreviewBase extends PureComponent {
           let arr = items;
           const first = items[0];
           if (null != first) {
-            if (messages(11592)(c0, first[first.length - 1], props)) {
+            if (messages(11443)(c0, first[first.length - 1], props)) {
               items = [props];
               arr = arr.unshift(items);
             } else {
@@ -214,7 +214,7 @@ class ChatPreviewBase extends PureComponent {
         const jumpTargetId = tmp3.jumpTargetId;
         let tmp23;
         if (!tmp7) {
-          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "PX_16", shouldInitialScroll: "Array", animated: 0, scrollPosition: 1, focusTargetId: 4 };
+          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "PX_16", shouldInitialScroll: "Array", animated: 0, scrollPosition: 1, focusTargetId: 0 };
           obj[0] = tmp22;
           obj[1] = jumpTargetId;
           obj[2] = jumpTargetId;
@@ -502,7 +502,7 @@ prototype["render"] = function render() {
   const obj2 = { bottom: true, style: tmp.jumpToChatButtonContainer, children: null };
   tmp9Result = set;
   obj2[2] = callback(PressableBase.PressableOpacity, { accessibilityRole: "button", style: tmp.jumpToChatButton, onPress: self.handleJumpToChat, children: callback(Text.Text, obj4) });
-  tmp6Result = tmp6(tmp9(5500).SafeAreaPaddingView, obj2);
+  tmp6Result = tmp6(tmp9(5505).SafeAreaPaddingView, obj2);
   tmp14 = tmp6Result;
 };
 ChatPreviewBase.contextType = require("ManaContext").ThemeContext;
@@ -524,10 +524,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [closure_8];
   const stateFromStores1 = channelId(589).useStateFromStores(items1, () => closure_1_8.getChannel(channelId));
   const obj2 = channelId(589);
-  const isChannelSpoilerGated = channelId(6119).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6119);
-  const isChannelContentGated = channelId(4683).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4683);
+  const isChannelSpoilerGated = channelId(6126).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6126);
+  const isChannelContentGated = channelId(4684).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4684);
   const items2 = [closure_7];
   obj = {};
   const stateFromStores2 = channelId(589).useStateFromStores(items2, () => null != content.getContent());

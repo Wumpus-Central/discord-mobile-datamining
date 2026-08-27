@@ -12,6 +12,7 @@ export const useYouBarCoachmark = function useYouBarCoachmark(isQuestRendered) {
   isQuestRendered = isQuestRendered.isQuestRendered;
   const visibleContent = isQuestRendered;
   let markAsDismissed;
+  let isTinyBroncoEligible;
   let isFocused;
   let stateFromStores;
   const animatedRef = visibleContent(markAsDismissed[6]).useAnimatedRef();
@@ -19,17 +20,19 @@ export const useYouBarCoachmark = function useYouBarCoachmark(isQuestRendered) {
   const isInPrivateProfilesExperiment = visibleContent(markAsDismissed[7]).useIsInPrivateProfilesExperiment("PrivateProfileCoachmark");
   markAsDismissed = isInPrivateProfilesExperiment;
   const obj2 = visibleContent(markAsDismissed[7]);
-  isFocused = visibleContent(markAsDismissed[8]).useIsFocused();
+  isTinyBroncoEligible = visibleContent(markAsDismissed[8]).useIsTinyBroncoEligible();
   const obj3 = visibleContent(markAsDismissed[8]);
-  let items = [closure_4];
-  stateFromStores = visibleContent(markAsDismissed[9]).useStateFromStores(items, () => {
-    let obj = visibleContent(markAsDismissed[10]);
-    obj = { from: "authed", unit: visibleContent(markAsDismissed[11]).TimeUnits.DAYS };
+  isFocused = visibleContent(markAsDismissed[9]).useIsFocused();
+  const obj4 = visibleContent(markAsDismissed[9]);
+  let items = [stateFromStores];
+  stateFromStores = visibleContent(markAsDismissed[10]).useStateFromStores(items, () => {
+    let obj = visibleContent(markAsDismissed[11]);
+    obj = { from: "authed", unit: visibleContent(markAsDismissed[12]).TimeUnits.DAYS };
     const tmp = obj.getFirstInstallTimeElapsed(obj) >= 10;
-    return null != guildId.getGuildId() && obj.getFirstInstallTimeElapsed(obj) >= 10;
+    return null != stateFromStores.getGuildId() && obj.getFirstInstallTimeElapsed(obj) >= 10;
   });
-  const items1 = [isInPrivateProfilesExperiment, isQuestRendered, stateFromStores, isFocused];
-  const memo = stateFromStores.useMemo(() => {
+  const items1 = [isInPrivateProfilesExperiment, isQuestRendered, stateFromStores, isTinyBroncoEligible, isFocused];
+  const memo = isFocused.useMemo(() => {
     if (!visibleContent) {
       if (isFocused) {
         const items = [];
@@ -39,16 +42,19 @@ export const useYouBarCoachmark = function useYouBarCoachmark(isQuestRendered) {
         if (markAsDismissed) {
           items.push(visibleContent(markAsDismissed[5]).DismissibleContent.PRIVATE_PROFILE_COACHMARK);
         }
+        if (isTinyBroncoEligible) {
+          items.push(visibleContent(markAsDismissed[5]).DismissibleContent.TINY_BRONCO);
+        }
         return items;
       }
     }
     return closure_1_6;
   }, items1);
-  const obj4 = visibleContent(markAsDismissed[9]);
-  const obj5 = visibleContent(markAsDismissed[12]);
-  [tmp7, tmp8] = isFocused(visibleContent(markAsDismissed[12]).useSelectedDismissibleContent(memo), 2);
+  const obj5 = visibleContent(markAsDismissed[10]);
+  const obj6 = visibleContent(markAsDismissed[13]);
+  [tmp8, tmp9] = isTinyBroncoEligible(visibleContent(markAsDismissed[13]).useSelectedDismissibleContent(memo), 2);
   const items2 = [markAsDismissed, visibleContent];
-  const memo1 = stateFromStores.useMemo(() => {
+  const memo1 = isFocused.useMemo(() => {
     const obj = { title: null, description: null, position: "top", visible: null, onDismiss: null };
     const intl = visibleContent(markAsDismissed[4]).intl;
     obj[0] = intl.string(visibleContent(markAsDismissed[4]).t.gMFchc);
@@ -60,11 +66,11 @@ export const useYouBarCoachmark = function useYouBarCoachmark(isQuestRendered) {
     };
     return obj;
   }, items2);
-  const tmp6 = isFocused(visibleContent(markAsDismissed[12]).useSelectedDismissibleContent(memo), 2);
-  const privateProfileCoachmarkProps = visibleContent(markAsDismissed[13]).usePrivateProfileCoachmarkProps({ visibleContent, markAsDismissed });
-  const obj6 = visibleContent(markAsDismissed[13]);
-  const coachmark = visibleContent(markAsDismissed[14]).useCoachmark(animatedRef, privateProfileCoachmarkProps);
+  const tmp7 = isTinyBroncoEligible(visibleContent(markAsDismissed[13]).useSelectedDismissibleContent(memo), 2);
+  const privateProfileCoachmarkProps = visibleContent(markAsDismissed[14]).usePrivateProfileCoachmarkProps({ visibleContent, markAsDismissed });
   const obj7 = visibleContent(markAsDismissed[14]);
-  const coachmark1 = visibleContent(markAsDismissed[14]).useCoachmark(animatedRef, memo1);
+  const coachmark = visibleContent(markAsDismissed[15]).useCoachmark(animatedRef, privateProfileCoachmarkProps);
+  const obj8 = visibleContent(markAsDismissed[15]);
+  const coachmark1 = visibleContent(markAsDismissed[15]).useCoachmark(animatedRef, memo1);
   return { animatedRef, visibleContent, markAsDismissed };
 };

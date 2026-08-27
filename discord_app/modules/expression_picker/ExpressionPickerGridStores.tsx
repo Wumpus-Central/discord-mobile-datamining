@@ -1,7 +1,7 @@
 // discord_app/modules/expression_picker/ExpressionPickerGridStores.tsx
 import set from "../../../_runtime/00002_set.js";
 import identity from "../../../_runtime/00700_identity.js";
-import createJSONStorage from "../../../_runtime/04311_createJSONStorage.js";
+import createJSONStorage from "../../../_runtime/04312_createJSONStorage.js";
 
 let c0 = require;
 let closure_2 = Object.freeze({ inspectedExpressionPosition: { rowIndex: 0, columnIndex: 0 }, hasInteracted: false, activeCategoryIndex: 0, searchPlaceholder: null, bottomPosition: null, analyticsId: null });
@@ -106,7 +106,7 @@ const result = set.fileFinishedImporting("modules/expression_picker/ExpressionPi
 export default function createStore() {
   let obj = _undefined(700);
   const withEqualityFn = obj.createWithEqualityFn();
-  const withEqualityFnResult = withEqualityFn(_undefined(4311).subscribeWithSelector(() => closure_2));
+  const withEqualityFnResult = withEqualityFn(_undefined(4312).subscribeWithSelector(() => closure_2));
   _undefined = withEqualityFnResult;
   obj = {
     useStore: withEqualityFnResult,

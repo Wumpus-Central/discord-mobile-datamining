@@ -4,7 +4,7 @@ import getAvatarURL from "../../utils/AvatarUtils.tsx";
 import PressableBase from "../../design/void/Pressables/native/Pressables.tsx";
 import GuildIconSizes from "../../modules/guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../modules/guild/native/GuildIcon.tsx";
-import registerAssetDefault from "../../../_runtime/09899_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/10586_registerAsset.js";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";

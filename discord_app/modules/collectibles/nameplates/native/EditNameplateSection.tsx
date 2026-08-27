@@ -77,7 +77,7 @@ const memoResult1 = importAllResult.memo((nameplate) => {
   }, items1);
   const tmp = callback3();
   const items2 = [tmp.nameplate, { borderRadius: 6 }];
-  return callback(nameplate(8508).EditCollectiblesListItemProduct, { skuId: nameplate.skuId, isSelected, onPress: callback, size, accessibilityLabel: nameplate.label, children: callback(setSelectedNameplate(9605), { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: items2 }) });
+  return callback(nameplate(8023).EditCollectiblesListItemProduct, { skuId: nameplate.skuId, isSelected, onPress: callback, size, accessibilityLabel: nameplate.label, children: callback(setSelectedNameplate(8454), { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: items2 }) });
 });
 memoResult1.displayName = "EditNameplateItem";
 const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/EditNameplateSection.tsx");

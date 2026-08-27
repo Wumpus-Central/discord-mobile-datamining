@@ -34,7 +34,7 @@ export default function MessagePreview(message) {
   const items = [callback(Text.Text, obj), ];
   const hexWithOpacityResult = obj.hexWithOpacity(tmp.borderColor.color, 0.08);
   const items1 = [tmp.chatItemContainer, { borderColor: hexWithOpacityResult }];
-  items[1] = callback(View, { style: items1, children: callback(DCDChatItemDefault, obj2) });
+  items[1] = callback(View, { accessible: true, style: items1, children: callback(DCDChatItemDefault, obj2) });
   obj[1] = items;
   return callback2(View, obj);
 };

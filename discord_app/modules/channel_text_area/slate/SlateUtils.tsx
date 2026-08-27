@@ -1,11 +1,6 @@
 // discord_app/modules/channel_text_area/slate/SlateUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
 
-let obj = { type: "line", children: null };
-let items = [Object.freeze({ text: "" })];
-obj[1] = Object.freeze(items);
-const items1 = [Object.freeze(obj)];
-let closure_0 = Object.freeze(items1);
 const result = set.fileFinishedImporting("modules/channel_text_area/slate/SlateUtils.tsx");
 
 export function createEmptyState() {
@@ -15,29 +10,19 @@ export function createEmptyState() {
 }
 export const createState = function createState(textValue) {
   const obj = { textValue, richValue: null };
-  if ("" !== textValue) {
-    const parts = textValue.split("\n");
-    let mapped = parts.map((text) => {
-      const children = [{ text }];
-      return { type: "line", children };
-    });
-  } else {
-    mapped = closure_0;
-  }
-  obj[1] = mapped;
+  const parts = textValue.split("\n");
+  obj[1] = parts.map((text) => {
+    const children = [{ text }];
+    return { type: "line", children };
+  });
   return obj;
 };
 export const toRichValue = function toRichValue(content) {
-  if ("" !== content) {
-    const parts = content.split("\n");
-    let mapped = parts.map((text) => {
-      const children = [{ text }];
-      return { type: "line", children };
-    });
-  } else {
-    mapped = closure_0;
-  }
-  return mapped;
+  const parts = content.split("\n");
+  return parts.map((text) => {
+    const children = [{ text }];
+    return { type: "line", children };
+  });
 };
 export const voidToOptionValue = function voidToOptionValue(type) {
   type = type.type;

@@ -3,7 +3,7 @@ import set from "../../../../../_runtime/00002_set.js";
 import isIterable from "../../../../../_runtime/04074_isIterable.js";
 import identity from "../../../../../_runtime/00700_identity.js";
 
-let closure_2 = Object.freeze({ name: "", emojiId: "call", emojiName: "PX_8", description: "withTiming", refId: "accessibilityRole" });
+let closure_2 = Object.freeze({ name: "", emojiId: "channel", emojiName: "justifyContent", description: "length", refId: "o" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};

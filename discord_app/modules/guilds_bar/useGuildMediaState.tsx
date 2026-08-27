@@ -43,22 +43,33 @@ export default function useGuildMediaState(guild_id) {
   let obj2 = _require(isDontBadgeMutedVcsEnabled[15]);
   const guildActiveEvent = _require(isDontBadgeMutedVcsEnabled[16]).useGuildActiveEvent(guild_id);
   const obj3 = _require(isDontBadgeMutedVcsEnabled[16]);
-  const items1 = [guildActiveEvent, closure_11];
+  const items1 = [guildActiveEvent, selectedVoiceChannelHasVideo, closure_11];
   const stateFromStoresArray = _require(isDontBadgeMutedVcsEnabled[14]).useStateFromStoresArray(items1, () => {
     const embeddedActivitiesForGuild = guildActiveEvent.getEmbeddedActivitiesForGuild(closure_0);
-    return embeddedActivitiesForGuild.filter((userIds) => {
-      const items = [...userIds.userIds];
-      return !callback(table[17]).hasBlockedOrIgnoredUserIds(items, blockedOrIgnoredIDs.getBlockedOrIgnoredIDs());
+    return embeddedActivitiesForGuild.filter((location) => {
+      basicChannel = basicChannel.getBasicChannel(callback(table[17]).getEmbeddedActivityLocationChannelId(location.location));
+      let type;
+      if (basicChannel != null) {
+        type = basicChannel.type;
+      }
+      if (type === callback(table[13]).ChannelTypes.GUILD_SPACE) {
+        return false;
+      } else {
+        blockedOrIgnoredIDs = blockedOrIgnoredIDs.getBlockedOrIgnoredIDs();
+        const items = [];
+        HermesBuiltin.arraySpread(location.userIds, 0);
+        return !tmp(tmp2[18]).hasBlockedOrIgnoredUserIds(items, blockedOrIgnoredIDs);
+      }
+      const obj = callback(table[17]);
     });
   });
   const obj4 = _require(isDontBadgeMutedVcsEnabled[14]);
-  let tmp7 = guildActiveEvent;
   const first = stateFromStoresArray[0];
   let _location;
   if (first != null) {
     _location = first.location;
   }
-  const embeddedActivityLocationChannelId = _require(isDontBadgeMutedVcsEnabled[18]).getEmbeddedActivityLocationChannelId(_location);
+  const embeddedActivityLocationChannelId = _require(isDontBadgeMutedVcsEnabled[17]).getEmbeddedActivityLocationChannelId(_location);
   let tmpResult = tmp(tmp2[19]);
   const isActivitiesInTextEnabled = tmpResult.useIsActivitiesInTextEnabled(embeddedActivityLocationChannelId);
   tmpResult = tmp(tmp2[14]);
@@ -72,7 +83,7 @@ export default function useGuildMediaState(guild_id) {
       afkChannelId = guild.afkChannelId;
     }
     const usersWithVideo = closure_1_14.getUsersWithVideo(tmp3);
-    let obj = guild_id(isDontBadgeMutedVcsEnabled[17]);
+    let obj = guild_id(isDontBadgeMutedVcsEnabled[18]);
     const result = obj.filterBlockedUsersFromVoiceStates(closure_1_14.getVoiceStates(tmp3));
     isDontBadgeMutedVcsEnabled = result;
     let flag = false;
@@ -181,8 +192,8 @@ export default function useGuildMediaState(guild_id) {
   const guildHasVideo = stateFromStoresObject.guildHasVideo;
   selectedVoiceChannelHasVideo = stateFromStoresObject.selectedVoiceChannelHasVideo;
   id = guildHasVideo.getId();
-  let obj5 = _require(isDontBadgeMutedVcsEnabled[18]);
-  const items4 = [closure_12, selectedVoiceChannelHasVideo, tmp7, stateFromStoresArray, guildHasVoice, closure_10, closure_13];
+  let obj5 = _require(isDontBadgeMutedVcsEnabled[17]);
+  const items4 = [closure_12, selectedVoiceChannelHasVideo, stateFromStoresArray, guildHasVoice, closure_10, closure_13];
   const items5 = [guild_id, stateFromStores, selectedVoiceChannelHasVideo, id, isActivitiesInTextEnabled, stateFromStoresArray, guildActiveEvent, guildHasVoice, guildHasVideo, isDontBadgeMutedVcsEnabled];
   return _require(isDontBadgeMutedVcsEnabled[14]).useStateFromStoresObject(items4, () => {
     const voiceChannelId = closure_1_12.getVoiceChannelId();
@@ -225,8 +236,8 @@ export default function useGuildMediaState(guild_id) {
       }
       return tmp2;
     });
-    let result = guild_id(tmp7[17]).filterOutStreamsByBlockedOwner(guildHasVoice.getAllApplicationStreams());
-    const obj5 = guild_id(tmp7[17]);
+    let result = guild_id(tmp7[18]).filterOutStreamsByBlockedOwner(guildHasVoice.getAllApplicationStreams());
+    const obj5 = guild_id(tmp7[18]);
     let tmp14 = (() => {
       if (closure_5) {
         return arr.length > 0;
@@ -236,7 +247,7 @@ export default function useGuildMediaState(guild_id) {
           let tmp6 = closure_1_8;
           let tmp7 = closure_1_0;
           let tmp8 = closure_1_2;
-          let obj2 = closure_1_0(closure_1_2[18]);
+          let obj2 = closure_1_0(closure_1_2[17]);
           let channel = closure_1_8.getChannel(obj2.getEmbeddedActivityLocationChannelId(tmp4.location));
           if (null != channel) {
             let tmp11 = closure_1_5;

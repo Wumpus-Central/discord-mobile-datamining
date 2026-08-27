@@ -2,8 +2,8 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import useMaybeFetchProfileFrameDefault from "../../collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
 import getNameplateAssets from "../../collectibles/nameplates/native/NameplateUtils.tsx";
+import useMaybeFetchProfileFrameDefault from "../../collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
 import ShopIcon from "../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
 import getCollectibleTypeName from "../FamilyCenterActivityPurchaseRowUtils.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -72,9 +72,9 @@ function ProfileFramePreviewImage(arg0) {
     obj[1] = getCollectibleTypeName.PREVIEW_SIZE * closure_5;
     obj[2] = getCollectibleTypeName.PREVIEW_SIZE;
     obj[3] = tmp(712).colors.BACKGROUND_BASE_LOW;
-    obj[1] = jsx(tmp(9609), { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null });
+    obj[1] = jsx(tmp(10669), { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null });
     tmp4 = <closure_3 profileFrame={null} previewWidth={null} previewHeight={null} profileBackgroundColor={null} />;
-    const tmpResult = tmp(9609);
+    const tmpResult = tmp(10669);
   }
   return tmp4;
 }
@@ -91,9 +91,9 @@ function SubscriptionPreview(arg0) {
     obj1 = { style: null, children: null };
     obj1[0] = styles.purchasePlaceholder;
     if (obj4.isGuildBoostSubscription(subscriptionPlanId)) {
-      let NitroWheelIcon = tmp5(7907).BoostGemIcon;
+      let NitroWheelIcon = tmp5(8166).BoostGemIcon;
     } else {
-      NitroWheelIcon = tmp5(7916).NitroWheelIcon;
+      NitroWheelIcon = tmp5(8028).NitroWheelIcon;
     }
     obj = { size: "custom", style: null };
     obj[1] = { width: 20, height: 20 };
@@ -142,7 +142,7 @@ function CollectiblePreview(arg0) {
       obj[0] = styles.purchasePlaceholder;
       const obj5 = { size: "custom", style: null };
       obj5[1] = { width: 20, height: 20 };
-      obj[1] = jsx(tmp17(11796).ShopIcon, { size: "custom", style: null });
+      obj[1] = jsx(tmp17(11626).ShopIcon, { size: "custom", style: null });
       return <closure_3 style={null}>{null}</closure_3>;
     }
   }

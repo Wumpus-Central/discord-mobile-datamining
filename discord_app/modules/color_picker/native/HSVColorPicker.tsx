@@ -1,6 +1,6 @@
 // discord_app/modules/color_picker/native/HSVColorPicker.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import _mod4184 from "../../reanimated/ReanimatedRexport.tsx";
+import _mod4185 from "../../reanimated/ReanimatedRexport.tsx";
 import ColorBoxDefault from "SaturationValueColorPicker.tsx";
 import HuePickerDefault from "HuePicker.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -16,15 +16,15 @@ const result = require("set").fileFinishedImporting("modules/color_picker/native
 export default function HSVColorPicker(arg0) {
   ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
   ({ saturationValuePickerStyle, saturationValueColorBoxStyle, saturationValueColorBoxInnerStyle, saturationValueSelectorStyle, huePickerStyle, hueColorBarInnerStyle, hueSliderStyle } = arg0);
-  let obj = _mod4184;
+  let obj = _mod4185;
   const sharedValue = obj.useSharedValue(0);
   const tmp = callback();
-  const sharedValue1 = _mod4184.useSharedValue(1);
-  const obj2 = _mod4184;
+  const sharedValue1 = _mod4185.useSharedValue(1);
+  const obj2 = _mod4185;
   obj = { style: tmp.hsvColorPicker, children: null };
-  const sharedValue2 = _mod4184.useSharedValue(1);
+  const sharedValue2 = _mod4185.useSharedValue(1);
   let tmp11 = hue;
-  const obj3 = _mod4184;
+  const obj3 = _mod4185;
   const tmp6 = closure_5;
   const tmp7 = View;
   const tmp9 = importDefault;

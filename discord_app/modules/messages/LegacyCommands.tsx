@@ -4,7 +4,7 @@ import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 import collectGuildAnalyticsMetadataDefault from "../app_analytics/AppAnalyticsUtils.tsx";
 import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
 import checkReactionResponse from "../reactions/ReactionActionCreators.tsx";
-import _modDef8574 from "../../actions/ChangeNicknameActionCreators.tsx";
+import _modDef8091 from "../../actions/ChangeNicknameActionCreators.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../emojis/EmojiStore.tsx";
 import closure_5 from "../../stores/MessageStore.tsx";
@@ -77,7 +77,7 @@ obj4 = {
   action(arg0, channel) {
     channel = channel.channel;
     if (null != channel.guild_id) {
-      obj = _modDef8574;
+      obj = _modDef8091;
       obj.changeNickname(channel.guild_id, channel.id, closure_8, arg0);
       return { content: "" };
     }

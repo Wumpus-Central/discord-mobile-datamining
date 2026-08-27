@@ -894,7 +894,7 @@ function _fetchCollections() {
                 if (fetchState !== constants.FETCHING) {
                   let tmp29 = !dependencyMap;
                   if (!dependencyMap) {
-                    tmp29 = ACTIVE === APPLICATION_DIRECTORY(11734).ApplicationCollectionActiveState.ACTIVE;
+                    tmp29 = ACTIVE === APPLICATION_DIRECTORY(11567).ApplicationCollectionActiveState.ACTIVE;
                   }
                   c6 = tmp29;
                   let obj5 = ACTIVE(709);
@@ -913,10 +913,10 @@ function _fetchCollections() {
                   let obj9 = APPLICATION_DIRECTORY(500);
                   locale = APPLICATION_DIRECTORY;
                   if (obj9.isAndroid()) {
-                    let WEB = locale(11732).ApplicationCollectionPlatforms.ANDROID;
+                    let WEB = locale(11565).ApplicationCollectionPlatforms.ANDROID;
                   } else {
                     const localeResult = locale(500);
-                    const ApplicationCollectionPlatforms = APPLICATION_DIRECTORY(11732).ApplicationCollectionPlatforms;
+                    const ApplicationCollectionPlatforms = APPLICATION_DIRECTORY(11565).ApplicationCollectionPlatforms;
                     if (isIOSResult) {
                       WEB = ApplicationCollectionPlatforms.IOS;
                     } else {

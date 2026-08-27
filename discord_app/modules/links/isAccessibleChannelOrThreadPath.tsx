@@ -107,7 +107,7 @@ function _isAccessibleChannelOrThreadPath() {
                           throwTypeErrorResult = callback;
                           throwTypeErrorResult = guild2;
                           throwTypeErrorResult = guild2;
-                          throwTypeErrorResult = callback(guild2[8]).canManageVibegrations(guild2, "isAccessibleChannelOrThreadPath");
+                          throwTypeErrorResult = callback(guild2[8]).canAccessVibegrations(guild2, "isAccessibleChannelOrThreadPath");
                           const obj34 = callback(guild2[8]);
                         }
                         c5 = 3;

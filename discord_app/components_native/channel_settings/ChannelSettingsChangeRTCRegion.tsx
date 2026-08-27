@@ -2,8 +2,8 @@
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import Form from "../../design/void/Form/native/index.tsx";
 import TableRadioRow from "../../design/components/TableRow/native/TableRadioRow.native.tsx";
+import Form from "../../design/void/Form/native/index.tsx";
 import closure_3 from "../../../_runtime/00853__toArray.js";
 import closure_4 from "../../stores/ChannelStore.tsx";
 import closure_5 from "../../stores/RegionStore.tsx";
@@ -78,7 +78,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(8234).updateChannel({ rtcRegion: tmp });
+  self(8677).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     let obj = self(closure_1_2[9]);
     obj = { rtcRegion: c0 };
@@ -92,7 +92,7 @@ prototype["renderRegions"] = function renderRegions() {
   const self = this;
   const substr = callback(this.state.regions).slice(0);
   const mapped = substr.map(this.renderRegion, this);
-  return jsx(self(8203).TableRadioGroup, {
+  return jsx(self(7625).TableRadioGroup, {
     defaultValue: this.state.selectedRegionId,
     onChange(arg0) {
       return self.handleSetRegion(arg0);

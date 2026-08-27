@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/AvatarDecorationProductPreview.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import firstAvatarDecoration2 from "../hooks/useShopProductItems.tsx";
+import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -24,11 +24,11 @@ export default function AvatarDecorationProductPreview(product) {
     obj = { a11y_text: null };
     obj[0] = firstAvatarDecoration.label;
     obj[2] = intl.formatToPlainString(tmp2(1236).t.Do2lxE, obj);
-    obj1 = { user: null, guildId: "r", size: true, avatarDecoration: "/assets/.cache/intl/bW9kdWxlcy9hZHM=", animate: null };
+    obj1 = { user: null, guildId: "r", size: true, avatarDecoration: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", animate: null };
     obj1[0] = currentUser;
     obj1[2] = tmp2(1297).AvatarSizes.GIFT_START;
     obj1[3] = firstAvatarDecoration;
-    obj[5] = jsx(tmp2(1297).Avatar, { user: null, guildId: "r", size: true, avatarDecoration: "/assets/.cache/intl/bW9kdWxlcy9hZHM=", animate: null });
+    obj[5] = jsx(tmp2(1297).Avatar, { user: null, guildId: "r", size: true, avatarDecoration: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", animate: null });
     tmp5 = <View a11y_text={null} />;
   }
   return tmp5;

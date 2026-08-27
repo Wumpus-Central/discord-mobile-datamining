@@ -3,7 +3,7 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
-import registerAssetDefault from "../../../../_runtime/10663_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/09202_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -46,7 +46,7 @@ export default function ErrorResult(error) {
     obj2[2] = function onPress() {
       return callback(table[10]).pop();
     };
-    tmp6Result = tmp6(tmp3(4879).Button, obj2);
+    tmp6Result = tmp6(tmp3(4880).Button, obj2);
   }
   items1[1] = tmp6Result;
   obj[2] = items1;

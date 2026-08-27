@@ -2,9 +2,9 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import Button from "../../../design/void/native.tsx";
 import AccessibilityAnnouncer from "../../../design/shared.tsx";
-import GuildVisibility from "../../guild_badge/GuildTraits.tsx";
-import BadgeCategory from "../../guild_badge/BadgeCategory.tsx";
 import badgeVariants from "../../guild_badge/native/GuildBadgeImageSource.tsx";
+import BadgeCategory from "../../guild_badge/BadgeCategory.tsx";
+import GuildVisibility from "../../guild_badge/GuildTraits.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
@@ -23,7 +23,7 @@ export default function GuildBadgeV2(arg0) {
   if (null == guild) {
     return null;
   } else {
-    const guildBadgeImageSource = tmp5(9480).getGuildBadgeImageSource(guild, tmp8);
+    const guildBadgeImageSource = tmp5(8790).getGuildBadgeImageSource(guild, tmp8);
     let tmp10 = null;
     if (null != guildBadgeImageSource) {
       const obj = { size: null, source: null, style: null, disableColor: true };

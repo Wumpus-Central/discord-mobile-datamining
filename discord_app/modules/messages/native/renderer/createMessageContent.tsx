@@ -5,10 +5,10 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import computeChannelName from "../../../channel/useChannelName.tsx";
 import processMessage from "../../../replies/ReferencedMessageStore.tsx";
+import _formatMessageCountLabel from "../../../threads/MessageCountUtils.tsx";
 import Changeset from "RowGeneratorConstants.tsx";
 import items6 from "../../../guild_tag/GuildTagConstants.tsx";
 import getEmbedThemeColorsDefault from "row_data/embeds/getEmbedThemeColors.tsx";
-import _formatMessageCountLabel from "../../../threads/MessageCountUtils.tsx";
 import closure_4 from "../../../a11y/AccessibilityStore.tsx";
 import closure_5 from "../../../applications/ApplicationStore.tsx";
 import closure_6 from "../../../client_themes/ClientThemesBackgroundStore.tsx";
@@ -49,7 +49,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
         let string2 = _formatMessageCountLabel.formatMessageCountLabel(count, channel1.id);
         if (null != count) {
           if (count > 0) {
-            let tmp15Result = tmp15(6119);
+            let tmp15Result = tmp15(6126);
             if (tmp15Result.isChannelSpoilerGated(channel1)) {
               let obj = { title: null, messageCountLabel: null, messageCountAccessibilityLabel: null, messagePreviewString: null, archived: false, backgroundColor: null };
               obj[0] = channelName;
@@ -74,8 +74,8 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 obj[2] = string2;
                 const intl4 = tmp15(1236).intl;
                 obj[3] = intl4.string(tmp15(1236).t.ZTo4HS);
-                tmp15Result = tmp15(8273);
-                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(8274));
+                tmp15Result = tmp15(7788);
+                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(7789));
                 obj[6] = backgroundColor;
                 obj1 = obj;
               } else {
@@ -1224,7 +1224,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result7 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "PX_16", hasSpoilerEmbeds: "_updateStateData", hasBailedAst: null };
+    parseMessageMarkupResult = { content: "PX_16", hasSpoilerEmbeds: "+1", hasBailedAst: "anla\u015Ft\u0131k" };
     const tmp13Result1 = tmp13(tmp3[42]);
   }
 }

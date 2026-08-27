@@ -2,16 +2,17 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../Text/native/Text.tsx";
-import useTextFieldState from "../../TextField/native/useTextField.native.tsx";
 import useInputStyles from "../../Input/native/InputFieldContainer.native.tsx";
 import useKeyboardBlurring from "../../Input/native/NativeTextInput.native.tsx";
 import Input from "../../Input/native/Input.native.tsx";
+import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
+let closure_3 = ["labelId"];
 noopAll;
-let closure_4 = createCacheKey.createStyles(() => {
+let closure_6 = createCacheKey.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
     str = "lg";
@@ -37,12 +38,16 @@ export const GhostInput = function GhostInput(size) {
   let obj = useInputStyles;
   obj = { size: size.size };
   const inputStyles = obj.useInputStyles(obj);
-  const tmp4 = callback(size.size, size.status);
+  const tmp4 = callback2(size.size, size.status);
   const isCentered = size.isCentered;
   const autoFocus = size.autoFocus;
-  const textField = useTextFieldState.useTextField(size, undefined);
+  let tmpResult = tmp(4174);
+  const fieldLabelA11yNative = tmpResult.useFieldLabelA11yNative(size);
+  tmpResult = tmp(6175);
+  const textField = tmpResult.useTextField(size, undefined);
   obj = {};
   const merged = Object.assign(size);
+  obj.labelId = fieldLabelA11yNative.labelId;
   const items = [size.containerStyle, ];
   let prop;
   if (tmp5) {
@@ -52,6 +57,7 @@ export const GhostInput = function GhostInput(size) {
   obj.containerStyle = items;
   obj1 = {};
   const merged1 = Object.assign(textField.inputProps);
+  const merged2 = Object.assign(callback(fieldLabelA11yNative, closure_3));
   obj1.ref = textField.innerRef;
   const items1 = [tmp4.input];
   obj1.style = items1;

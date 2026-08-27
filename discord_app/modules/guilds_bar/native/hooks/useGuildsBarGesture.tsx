@@ -268,7 +268,7 @@ function getItemAndNodeFromTouchEvent(arg0, arg1, current) {
         if (null != GUILDS) {
           const type = item.type;
           if (renderDefaultEmpty.FastListItemTypes.SECTION !== type) {
-            if (tmp10(8226).FastListItemTypes.ITEM === type) {
+            if (tmp10(7728).FastListItemTypes.ITEM === type) {
               if (GUILDS.type !== GuildsNodeType.ROOT) {
                 let tmp13 = GUILDS;
                 if (GUILDS.type !== tmp12.FOLDER) {
@@ -296,7 +296,7 @@ let c12 = 160;
 let c13 = 16.666666666666668;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
 obj[0] = require("module_4294967295");
-obj[1] = module_4184.makeMutable([]);
+obj[1] = module_4185.makeMutable([]);
 obj[2] = require("module_4294967295");
 let closure_16 = importDefaultResult1(require("HapticFeedbackTypes").triggerHapticFeedback, 16);
 let closure_17 = importDefaultResult1((intl) => {

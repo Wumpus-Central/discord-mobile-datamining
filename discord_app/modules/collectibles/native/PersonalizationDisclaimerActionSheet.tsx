@@ -43,7 +43,7 @@ export default function PersonalizationDisclaimerActionSheet() {
   const intl3 = getSystemLocale.intl;
   obj3[2] = intl3.string(getSystemLocale.t.WAI6xu);
   obj3[3] = function onPress() {
-    return callback(4411).hideActionSheet();
+    return callback(4412).hideActionSheet();
   };
   items1[1] = callback(Button.Button, obj3);
   obj[0] = items1;

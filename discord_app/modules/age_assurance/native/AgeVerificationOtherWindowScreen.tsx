@@ -5,9 +5,9 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../AgeAssurance.messages.js";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import MobilePhoneIcon from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
 import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../design/components/Modal/native/ModalContent.native.tsx";
-import MobilePhoneIcon from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 

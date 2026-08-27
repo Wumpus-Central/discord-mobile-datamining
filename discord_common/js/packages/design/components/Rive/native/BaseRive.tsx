@@ -2,7 +2,7 @@
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import { DataBindByName } from "../../../../../../../_runtime/04179_DataBindByName.js";
+import { DataBindByName } from "../../../../../../../_runtime/04180_DataBindByName.js";
 
 const require = arg1;
 ({ View: c3, StyleSheet, Image: c4, PixelRatio: c5, Platform } = get_ActivityIndicator);
@@ -162,7 +162,7 @@ export const BaseRive = forwardRefResult;
 export const useNumberBinding = function useNumberBinding(AnimationState, instance, AnimationState2, AnimationState1, playIfNeeded) {
   let _require = AnimationState2;
   dependencyMap = playIfNeeded;
-  const iter = require("../../../../../../../_runtime/04179_DataBindByName.js").useRiveNumber(AnimationState, instance);
+  const iter = require("../../../../../../../_runtime/04180_DataBindByName.js").useRiveNumber(AnimationState, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
@@ -209,7 +209,7 @@ export const useNumberBinding = function useNumberBinding(AnimationState, instan
 export const useStringBinding = function useStringBinding(LVL, instance, LVL2, LVL1, playIfNeeded) {
   let _require = LVL2;
   dependencyMap = playIfNeeded;
-  const iter = require("../../../../../../../_runtime/04179_DataBindByName.js").useRiveString(LVL, instance);
+  const iter = require("../../../../../../../_runtime/04180_DataBindByName.js").useRiveString(LVL, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
@@ -242,7 +242,7 @@ export const useStringBinding = function useStringBinding(LVL, instance, LVL2, L
 export const useBooleanBinding = function useBooleanBinding(reducedMotion, instance, reducedMotionEnabled, pressed1, playIfNeeded) {
   let _require = reducedMotionEnabled;
   dependencyMap = playIfNeeded;
-  const iter = require("../../../../../../../_runtime/04179_DataBindByName.js").useRiveBoolean(reducedMotion, instance);
+  const iter = require("../../../../../../../_runtime/04180_DataBindByName.js").useRiveBoolean(reducedMotion, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
@@ -276,7 +276,7 @@ export const useBooleanBinding = function useBooleanBinding(reducedMotion, insta
 export const useColorBinding = function useColorBinding(FillColor, instance, FillColor2, FillColor1, playIfNeeded) {
   const _require = FillColor2;
   dependencyMap = FillColor1;
-  const iter = require("../../../../../../../_runtime/04179_DataBindByName.js").useRiveColor(FillColor, instance);
+  const iter = require("../../../../../../../_runtime/04180_DataBindByName.js").useRiveColor(FillColor, instance);
   const setValue = iter.setValue;
   const value = iter.value;
   closure_4 = value;
@@ -307,7 +307,7 @@ export const useColorBinding = function useColorBinding(FillColor, instance, Fil
 export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2, stateFromStores) {
   let _require = arg2;
   dependencyMap = arg4;
-  const iter = require("../../../../../../../_runtime/04179_DataBindByName.js").useRiveEnum(FillColor, instance);
+  const iter = require("../../../../../../../_runtime/04180_DataBindByName.js").useRiveEnum(FillColor, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;

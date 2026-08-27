@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/useActivityShelfItem.tsx
 import getApplicationFlags from "../../applications/utils/ApplicationFlagUtils.tsx";
-import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
 import getPlatformDefault from "getPlatform.tsx";
+import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
 import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication.tsx";
 import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity.tsx";
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground.tsx";
@@ -26,7 +26,7 @@ function useActivityAction(applicationId) {
   }
   const tmp4 = useCurrentEmbeddedActivityDefault();
   const tmp5 = useCurrentEmbeddedApplicationDefault({ fetchesApplication });
-  obj = getOrFetchApplication(5906);
+  obj = getOrFetchApplication(5911);
   getOrFetchApplication = obj.useGetOrFetchApplication(applicationId.applicationId, fetchesApplication);
   useEmbeddedAppsDefault(channel);
   if (null == getOrFetchApplication) {
@@ -74,8 +74,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = useActivityAction({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(5900)().analyticsLocations;
-  closure_14 = context(10876)();
+  analyticsLocations = context(5905)().analyticsLocations;
+  closure_14 = context(9523)();
   obj = canLaunchFrame;
   closure_15 = obj.canLaunchFrame(application);
   if (null == application) {
@@ -371,10 +371,10 @@ export default function useActivityShelfItem(backgroundResolution) {
   let tmp9 = null;
   const tmp3 = getPlatformDefault;
   if (null != activity.activity_preview_video_asset_id) {
-    tmp9 = tmp(11714)(application.id, activity.activity_preview_video_asset_id);
+    tmp9 = tmp(11547)(application.id, activity.activity_preview_video_asset_id);
   }
   let channel;
-  let tmpResult = tmp(11715);
+  let tmpResult = tmp(11548);
   if ("channel" === context.type) {
     channel = context.channel;
   }
@@ -384,9 +384,9 @@ export default function useActivityShelfItem(backgroundResolution) {
   obj1 = { application: activityItem.application, context, locationObject, embeddedActivitiesManager, onActivityItemSelectedProp: onActivityItemSelected, launchingComponentId, commandOrigin, source };
   const tmpResultResult = tmpResult(channel);
   const tmp13 = useActivityAction(obj);
-  let tmp4Result = tmp4(7799);
+  let tmp4Result = tmp4(8368);
   if (tmp4Result.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-    tmpResult = tmp(10763);
+    tmpResult = tmp(8369);
     tmp4Result = tmp4(500);
     const str = activityItem.activity.client_platform_config[tmpResult(undefined, tmp4Result.getOS(tmp4Result))].release_phase;
     let replaced;
@@ -396,7 +396,7 @@ export default function useActivityShelfItem(backgroundResolution) {
     }
     const tmp16 = replaced;
   } else {
-    const tmp4Result1 = tmp4(7799);
+    const tmp4Result1 = tmp4(8368);
   }
   const obj2 = { imageBackground: tmp8, videoUrl: tmp9, joinableEmbeddedApp: found, activityAction: tmp13, onActivityItemSelected: useOnActivityItemSelected(obj1), labelType: null, staffReleasePhase: null };
   if (tmp7) {
@@ -411,7 +411,7 @@ export default function useActivityShelfItem(backgroundResolution) {
 export const ActivityAction = obj;
 export const getStaffReleasePhase = function getStaffReleasePhase(application) {
   if (!obj.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-    let tmpResult = tmp(7799);
+    let tmpResult = tmp(8368);
   }
   obj = getApplicationFlags;
   const tmp3 = ApplicationFlags;

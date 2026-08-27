@@ -79,19 +79,18 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
       }
       obj = { style: null, children: null };
       obj[0] = tmp.form;
+      obj = { spacing: 16, children: null };
       const items5 = [
         prop.map((application_id) => {
               closure_0 = application_id;
               const obj = { identity: application_id, token: authorizedApps.find((application) => application.application.id === application_id.application_id) };
-              return closure_1_11(callback(paths[21]), obj, "" + application_id.application_id + "-" + application_id.provider_issued_user_id);
+              return closure_1_11(callback(paths[22]), obj, "" + application_id.application_id + "-" + application_id.provider_issued_user_id);
             }),
-
+        accounts.map((account) => closure_1_11(callback(paths[23]), { theme: callback, locale: paths, account }, account.id))
       ];
-      obj = { spacing: 16, children: null };
-      obj[1] = accounts.map((account) => closure_1_11(callback(paths[23]), { theme: callback, locale: paths, account }, account.id));
-      items5[1] = callback(tmp4(4877).Stack, obj);
       obj[1] = items5;
-      tmp14 = callback2(tmp4(8185).Form, obj);
+      obj[1] = callback2(tmp4(4878).Stack, obj);
+      tmp14 = callback(tmp4(8295).Form, obj);
     }
     return tmp14;
   }

@@ -411,17 +411,17 @@ export const fetchChurnDiscountOffer = function fetchChurnDiscountOffer() {
   }
   return applyArgumentsResult;
 };
-export const acknowledgeUserOffer = function acknowledgeUserOffer(expiresAt, hasAcknowledged) {
+export const acknowledgeUserOffer = function acknowledgeUserOffer(hasAcknowledged, hasAcknowledged2) {
   let id;
-  if (null != expiresAt) {
-    if (null == expiresAt.expiresAt) {
-      id = expiresAt.id;
+  if (null != hasAcknowledged) {
+    if (!hasAcknowledged.hasAcknowledged) {
+      id = hasAcknowledged.id;
     }
   }
   let id1;
-  if (null != hasAcknowledged) {
-    if (!hasAcknowledged.hasAcknowledged()) {
-      id1 = hasAcknowledged.id;
+  if (null != hasAcknowledged2) {
+    if (!hasAcknowledged2.hasAcknowledged()) {
+      id1 = hasAcknowledged2.id;
     }
   }
   const HTTP = sendRequest.HTTP;

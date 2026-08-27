@@ -24,7 +24,7 @@ function TierTemplatesRenderer(groupListingId) {
     obj = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
     const items = ["Error: ", error.message];
     obj[2] = items;
-    tmp3 = callback2(guildId(4440).Text, obj);
+    tmp3 = callback2(guildId(4441).Text, obj);
   } else {
     tmp3 = null;
     if (null != templates) {
@@ -43,7 +43,7 @@ function TierTemplatesRenderer(groupListingId) {
           const style = { height: "100%", width: closure_16 };
           return callback(closure_8, { style });
         };
-        obj[6] = guildId(17214).CARD_WIDTH + c16;
+        obj[6] = guildId(17280).CARD_WIDTH + c16;
         obj[7] = function renderItem(item) {
           return closure_1_14(groupListingId(closure_1_3[10]), { template: item.item, priceTiers: tiers, guildId, groupListingId, editGroupId: guildId });
         };

@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native
 
 export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
-  let obj = channelId(12073);
+  let obj = channelId(11919);
   const items = [channelId];
   const isMessageRequestRestrictedViewer = obj.useIsMessageRequestRestrictedViewer("MessageRequestsPreviewScreen");
   const effect = React.useEffect(() => {
@@ -21,14 +21,14 @@ export default function MessageRequestsScreen(route) {
   if (isMessageRequestRestrictedViewer) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp5Result = tmp5(tmp7(16322), obj);
+    let tmp5Result = tmp5(tmp7(16387), obj);
   } else {
     obj1 = { guildId: null, channelId: null, chatInputRef: null, HACK_fixModalInteraction: true, screenIndex: "message-request" };
     obj1[0] = tmp6;
     obj1[1] = channelId;
     obj1[2] = ref;
-    tmp5Result = tmp5(tmp7(10450), obj1);
+    tmp5Result = tmp5(tmp7(10897), obj1);
   }
   obj[2] = tmp5Result;
-  return jsx(channelId(9972).ChannelContainer, { guildId: ME, channelId, children: null });
+  return jsx(channelId(10080).ChannelContainer, { guildId: ME, channelId, children: null });
 };

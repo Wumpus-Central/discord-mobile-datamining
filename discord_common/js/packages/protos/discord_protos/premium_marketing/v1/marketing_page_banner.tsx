@@ -20,7 +20,7 @@ class MarketingPageBanner$Type extends MessageType {
       name: "button",
       kind: "message",
       T() {
-            return callback(7560).CTAButton;
+            return callback(8387).CTAButton;
           }
     };
     items[5] = {
@@ -28,7 +28,7 @@ class MarketingPageBanner$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(7559).HelpArticle;
+            return callback(8386).HelpArticle;
           }
     };
     items[6] = {
@@ -36,7 +36,7 @@ class MarketingPageBanner$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(7558).LocalizedString;
+            return callback(8385).LocalizedString;
           }
     };
     obj = { no: 8, name: "body_localized", kind: "message", T: null };
@@ -228,7 +228,7 @@ let items = [
     name: "button",
     kind: "message",
     T() {
-      return callback(7560).CTAButton;
+      return callback(8387).CTAButton;
     }
   },
   {
@@ -236,7 +236,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(7559).HelpArticle;
+      return callback(8386).HelpArticle;
     }
   },
   {
@@ -244,7 +244,7 @@ let items = [
     name: "header_localized",
     kind: "message",
     T() {
-      return callback(7558).LocalizedString;
+      return callback(8385).LocalizedString;
     }
   },
 ,

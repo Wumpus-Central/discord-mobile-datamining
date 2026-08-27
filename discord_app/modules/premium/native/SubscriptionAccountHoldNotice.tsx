@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/SubscriptionAccountHoldNotice.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../_runtime/07846_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12221_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { SubscriptionStatusTypes } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -41,7 +41,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     obj2[0] = subscription.currentPeriodEnd;
     obj2[1] = subscription(4107).getDisplayName(subscription.planId);
     obj1[2] = intl.format(subscription(1236).t["7I21Iz"], obj2);
-    items[1] = callback(subscription(4440).Text, obj1);
+    items[1] = callback(subscription(4441).Text, obj1);
     obj[1] = items;
     const items1 = [callback2(closure_4, obj), ];
     const obj3 = { size: "sm", text: null, onPress: null };
@@ -50,7 +50,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     obj3[2] = function onPress() {
       return closure_1_3.openURL(subscription(closure_1_2[10]).getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
     };
-    items1[1] = callback(subscription(4879).Button, obj3);
+    items1[1] = callback(subscription(4880).Button, obj3);
     obj[1] = items1;
     tmp2 = callback2(closure_4, obj);
     const obj6 = subscription(4107);

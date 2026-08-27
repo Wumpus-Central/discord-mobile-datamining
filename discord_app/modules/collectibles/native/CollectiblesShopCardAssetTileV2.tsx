@@ -6,14 +6,14 @@ import hexToRgba from "../../../utils/ColorUtils.tsx";
 import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import getProductOrbPrice from "../utils/CollectiblesProductUtils.tsx";
-import CheckmarkLargeBoldIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
-import useDefaultVariantIndex from "../hooks/useDefaultVariantIndex.tsx";
 import BundleStaticPreviewContentDefault from "BundleSampleV2.tsx";
 import ProfileEffectSampleDefault from "ProfileEffectSampleV2.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
+import useDefaultVariantIndex from "../hooks/useDefaultVariantIndex.tsx";
+import CheckmarkLargeBoldIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeBoldIcon.tsx";
 import filterLayerDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import NameplateCardPreviewDefault from "../nameplates/native/NameplateCardPreview.tsx";
 import metadataDefault from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
+import NameplateCardPreviewDefault from "../nameplates/native/NameplateCardPreview.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -71,7 +71,7 @@ function ProductPreviewInner(arg0) {
   ({ product, cardWidth } = arg0);
   ({ disableBundleStaticBackground, muteBundleStaticBackground } = arg0);
   const tmp = callback3();
-  let obj = cardWidth(9589);
+  let obj = cardWidth(8425);
   const shopProductItems = obj.useShopProductItems(product);
   const items = [cardWidth];
   ({ firstProfileEffect, firstAvatarDecoration, firstNameplate } = shopProductItems);
@@ -104,9 +104,9 @@ function ProductPreviewInner(arg0) {
     if (ALL.has(product.skuId)) {
       const obj2 = { skuId: null, width: null, height: null };
       obj2[0] = product.skuId;
-      obj2[1] = tmp2(9631).FRACTIONAL_NITRO_COIN_SIZE.CARD;
-      obj2[2] = tmp2(9631).FRACTIONAL_NITRO_COIN_SIZE.CARD;
-      return callback2(tmp2(9631).FractionalNitroCoinIllustration, obj2);
+      obj2[1] = tmp2(10671).FRACTIONAL_NITRO_COIN_SIZE.CARD;
+      obj2[2] = tmp2(10671).FRACTIONAL_NITRO_COIN_SIZE.CARD;
+      return callback2(tmp2(10671).FractionalNitroCoinIllustration, obj2);
     } else {
       const first = callback(product.items, 1)[0];
       let type;
@@ -129,7 +129,7 @@ function ProductPreviewInner(arg0) {
         obj6[0] = tmp.profileFrameContainer;
         const obj7 = { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null };
         obj7[0] = first;
-        obj7[1] = tmp2(9560).COLLECTIBLES_SHOP_CARD_WIDTH - ThemesDefault.space.PX_32;
+        obj7[1] = tmp2(8810).COLLECTIBLES_SHOP_CARD_WIDTH - ThemesDefault.space.PX_32;
         obj7[2] = closure_9;
         obj7[3] = ThemesDefault.colors.BACKGROUND_BASE_LOW;
         obj6[1] = callback2(filterLayerDefault, obj7);

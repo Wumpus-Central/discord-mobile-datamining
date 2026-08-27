@@ -40,7 +40,7 @@ export default {
               closure_1 = tmp3;
               let body = tmp7;
               body = undefined;
-              if (null == closure_1_0.expiresAt) {
+              if (!closure_1_0.hasAcknowledged) {
                 c3 = 1;
                 const HTTP = closure_1_0(closure_1_2[3]).HTTP;
                 obj1 = { url: null, body: null, rejectWithError: null };
@@ -48,10 +48,11 @@ export default {
                 const obj2 = { payment_gateway: null };
                 obj2[0] = closure_1_6.GOOGLE;
                 obj1[1] = obj2;
-                obj1[2] = closure_1_0(closure_1_2[3]).rejectWithMigratedError();
+                let obj5 = closure_1_0(closure_1_2[3]);
+                obj1[2] = obj5.rejectWithMigratedError();
                 c4 = 2;
                 c5 = 1;
-                let obj3 = { value: null, done: false };
+                const obj3 = { value: null, done: false };
                 obj3[0] = HTTP.post(obj1);
                 return obj3;
               }
@@ -60,8 +61,8 @@ export default {
             if (1 === tmp7) {
               c3 = 0;
               if (404 === status.status) {
-                obj3 = closure_1_1(closure_1_2[4]);
-                obj3.dispatch({ type: "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS", userTrialOffer: null });
+                closure_1_1(closure_1_2[4]).dispatch({ type: "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS", userTrialOffer: null });
+                const obj10 = closure_1_1(closure_1_2[4]);
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -80,16 +81,16 @@ export default {
             }
             c3 = 0;
             c5 = 3;
-            const obj5 = { value: null, done: true };
+            obj5 = { value: null, done: true };
             obj5[0] = arg1;
             return obj5;
           }
           c5 = 3;
-        } catch (tmp30) {
-          status = tmp30;
+        } catch (tmp26) {
+          status = tmp26;
           if (tmp4 === c3) {
             c5 = tmp2;
-            throw tmp30;
+            throw tmp26;
           } else {
             c4 = tmp;
           }

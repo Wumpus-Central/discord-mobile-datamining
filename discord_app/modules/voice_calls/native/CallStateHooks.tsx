@@ -58,7 +58,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(10927)();
+  const tmp3 = id(9571)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
   stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);

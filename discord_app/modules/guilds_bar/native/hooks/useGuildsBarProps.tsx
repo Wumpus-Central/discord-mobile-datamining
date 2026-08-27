@@ -464,11 +464,11 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((arg0) => {
             if ("unavailable-guilds" === arg0) {
-              return callback2(callback(15789), {}, arg0);
+              return callback2(callback(15853), {}, arg0);
             } else if ("empty-nux" === arg0) {
-              return callback2(callback(15790), {}, arg0);
+              return callback2(callback(15854), {}, arg0);
             } else if ("create-join-guild" === arg0) {
-              return callback2(callback(15792), {}, arg0);
+              return callback2(callback(15856), {}, arg0);
             }
           })
         };

@@ -244,7 +244,7 @@ function _optimisticallySetAnswers() {
                     let tmp6 = closure_6;
                     obj[4] = closure_6;
                     let tmp7 = _undefined;
-                    obj[6] = _undefined(7432).ReactionTypes.VOTE;
+                    obj[6] = _undefined(7440).ReactionTypes.VOTE;
                     dispatchResult = obj.dispatch(obj);
                     continue;
                   }
@@ -977,16 +977,16 @@ function _createPoll() {
               c5 = 3;
               v0 = 1;
               const obj5 = { value: null, done: false };
-              obj5[0] = lib2(7129).sendPollMessage(lib.id, obj2, obj4);
+              obj5[0] = lib2(7135).sendPollMessage(lib.id, obj2, obj4);
               return obj5;
             }
           } else if (2 === tmp7) {
             c4 = 0;
             closure_10 = dependencyMap;
-            if (closure_10 instanceof lib(4342).APIError) {
+            if (closure_10 instanceof lib(4343).APIError) {
               let aPIError = closure_10;
             } else {
-              aPIError = new lib(4342).APIError(closure_10);
+              aPIError = new lib(4343).APIError(closure_10);
             }
             if ("poll" === aPIError.getAnyErrorMessage()) {
               if (null != closure_10.text) {
@@ -1099,7 +1099,7 @@ function _endPollEarly() {
               dependencyMap = 2;
               c4 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = callback2(4808).confirm(obj2);
+              obj3[0] = callback2(4809).confirm(obj2);
               return obj3;
             }
           } else {
@@ -1113,7 +1113,7 @@ function _endPollEarly() {
                 obj4[0] = arg1;
                 return obj4;
               } else if (arg1) {
-                obj1 = callback3(11357);
+                obj1 = callback3(11219);
                 const obj5 = { channelId: null, messageId: null };
                 obj5[0] = callback;
                 obj5[1] = callback2;

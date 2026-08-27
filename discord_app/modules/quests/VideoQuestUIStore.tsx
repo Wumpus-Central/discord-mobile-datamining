@@ -1,7 +1,7 @@
 // discord_app/modules/quests/VideoQuestUIStore.tsx
 import closure_3 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import identity from "../../../_runtime/00700_identity.js";
-import createJSONStorage from "../../../_runtime/04311_createJSONStorage.js";
+import createJSONStorage from "../../../_runtime/04312_createJSONStorage.js";
 import { frozen } from "../zustand/LocalStorageWrapper.tsx";
 
 const require = arg1;

@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/FloatingChatInputContainer.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4184 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4185 from "../../reanimated/ReanimatedRexport.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
@@ -45,7 +45,7 @@ function useKeyboardOpenPaddingStyle() {
     }
     return num > 0;
   }), 2);
-  const obj3 = token(4308);
+  const obj3 = token(4309);
   if (!tmp5) {
     tmp5 = true === obj3.useKeyboardContextForType(token(1627).KeyboardTypes.SYSTEM).keyboardWillOpen;
   }
@@ -53,7 +53,7 @@ function useKeyboardOpenPaddingStyle() {
     tmp5 = tmp7 !== token(1627).KeyboardTypes.SYSTEM;
   }
   dependencyMap = tmp5;
-  let tmpResult = tmp(4184);
+  let tmpResult = tmp(4185);
   let num = 0;
   if (tmp5) {
     num = token;
@@ -61,15 +61,15 @@ function useKeyboardOpenPaddingStyle() {
   sharedValue = tmpResult.useSharedValue(num);
   const items = [tmp5, token, sharedValue];
   const effect1 = obj2.useEffect(() => {
-    let obj = token(4445);
+    let obj = token(4446);
     let num = 0;
     if (dependencyMap) {
       num = token;
     }
-    obj = { duration: token(4448).timingStandardDuration, easing: closure_1_6 };
+    obj = { duration: token(4449).timingStandardDuration, easing: closure_1_6 };
     const result = sharedValue.set(obj.withTiming(num, obj));
   }, items);
-  tmpResult = tmp(4184);
+  tmpResult = tmp(4185);
   const fn = function b() {
     return { paddingBottom: sharedValue.get() };
   };
@@ -87,6 +87,6 @@ export default function FloatingChatInputContainer(arg0) {
   style = [, ];
   style[0] = style;
   style[1] = useKeyboardOpenPaddingStyle();
-  return jsx(_modDef4184.View, { style, onLayout, children });
+  return jsx(_modDef4185.View, { style, onLayout, children });
 };
 export { useKeyboardOpenPaddingStyle };

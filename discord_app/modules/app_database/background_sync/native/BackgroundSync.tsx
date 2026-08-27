@@ -559,11 +559,11 @@ function _backgroundSyncGuildData() {
               let guilds;
               let api_code_version;
               closure_11 = undefined;
-              const items = [callback2(7325).getCommittedVersions(), , ];
-              const obj18 = callback2(7325);
-              items[1] = callback2(7328).getCommittedVersions();
-              const obj19 = callback2(7328);
-              items[2] = callback2(7326).canUseGuildVersions();
+              const items = [callback2(7331).getCommittedVersions(), , ];
+              const obj18 = callback2(7331);
+              items[1] = callback2(7334).getCommittedVersions();
+              const obj19 = callback2(7334);
+              items[2] = callback2(7332).canUseGuildVersions();
               c5 = 1;
               c6 = 1;
               obj1 = { value: null, done: false };
@@ -593,12 +593,12 @@ function _backgroundSyncGuildData() {
                 obj4[0] = c5;
                 obj4[1] = c6.highest_last_message_id;
                 obj4[2] = c6.api_code_version;
-                let obj11 = callback(13215);
+                let obj11 = callback(13238);
                 obj4[3] = obj11.isChannelMetadataObfuscationEnabled("background-sync");
                 let obj5 = obj4;
               } else {
                 obj5 = { channel_privacy: null };
-                let obj9 = callback(13215);
+                let obj9 = callback(13238);
                 obj5[0] = obj9.isChannelMetadataObfuscationEnabled("background-sync");
               }
               obj3[1] = obj5;
@@ -725,7 +725,7 @@ function _backgroundSyncGuildData() {
               c6 = 3;
               throw body;
             } else if (arg0 !== 2) {
-              obj = callback(15051);
+              obj = callback(15115);
               obj.writeCaches(true);
               const _Date = Date;
               callback.time_save_guild_data = Date.now() - callback2;
@@ -1321,7 +1321,7 @@ function _processChannelChanges() {
                 let tmp23 = callback;
                 let tmp24 = dependencyMap;
                 let tmp25 = callback3;
-                let tmp26 = callback3(obj2.partition(modified_messages, callback(7149).isLikelyNotDelta), 2);
+                let tmp26 = callback3(obj2.partition(modified_messages, callback(7155).isLikelyNotDelta), 2);
                 let arr4 = tmp26[1];
                 dependencyMap2 = arr4;
                 let push = new_messages.push;

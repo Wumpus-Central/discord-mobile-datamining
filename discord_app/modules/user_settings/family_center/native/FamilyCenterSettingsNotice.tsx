@@ -10,7 +10,7 @@ noopAll;
 const result = require("set").fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  let obj = activeLinkUserIds(7546);
+  let obj = activeLinkUserIds(8697);
   activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = {
     label: messagesProxyDefault.i284fU,

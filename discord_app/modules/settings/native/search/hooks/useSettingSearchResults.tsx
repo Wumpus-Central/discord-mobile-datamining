@@ -10,8 +10,8 @@ const result = require("set").fileFinishedImporting("modules/settings/native/sea
 
 export const useSettingSearchResults = function useSettingSearchResults() {
   const memo = memo1.useMemo(() => {
-    let tmp = callback(15237);
-    tmp = new tmp(memo(14172).getSettingSearchableTitles());
+    let tmp = callback(15301);
+    tmp = new tmp(memo(14199).getSettingSearchableTitles());
     return tmp;
   }, []);
   const settings = callback(memo1.useState(closure_7), 2);

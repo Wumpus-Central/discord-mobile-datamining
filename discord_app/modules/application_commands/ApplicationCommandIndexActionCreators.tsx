@@ -54,7 +54,7 @@ function _fetchApplicationCommandIndex() {
                   closure_0 = arg0;
                   c2 = 0;
                   c3 = 0;
-                  return (/* F122239 */ function*() { ... })();
+                  return (/* F122493 */ function*() { ... })();
                 });
                 closure_7 = tmp;
                 const apply = tmp.apply;

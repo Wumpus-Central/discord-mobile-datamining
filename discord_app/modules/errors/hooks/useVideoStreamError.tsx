@@ -13,12 +13,12 @@ export default function useVideoStreamError(arg0, arg1) {
   const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (closure_1_2.getId() !== dependencyMap) {
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9385).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT), 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9385).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM), arraySpreadResult);
+      let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9486).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT), 0);
+      arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9486).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM), arraySpreadResult);
       items[Symbol.iterator]();
     }
     if (callback === closure_1_4.STREAM) {
-      let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9385).AVError.SCREENSHARE_OS_ERROR);
+      let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9486).AVError.SCREENSHARE_OS_ERROR);
     } else {
       activeErrorsOfType = [];
     }
@@ -37,12 +37,12 @@ export const useVideoStreamErrorContext = function useVideoStreamErrorContext(ar
   return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (closure_1_2.getId() !== dependencyMap) {
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9385).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT), 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9385).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM), arraySpreadResult);
+      let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9486).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT), 0);
+      arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9486).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM), arraySpreadResult);
       items[Symbol.iterator]();
     }
     if (callback === closure_1_4.STREAM) {
-      let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9385).AVError.SCREENSHARE_OS_ERROR);
+      let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9486).AVError.SCREENSHARE_OS_ERROR);
     } else {
       activeErrorsOfType = [];
     }

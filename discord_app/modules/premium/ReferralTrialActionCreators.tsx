@@ -311,7 +311,7 @@ function _createReferralTrial() {
       if (closure_3.body.code === constants.INVALID_MESSAGE_SEND_USER) {
         dependencyMap = currentlySelectedChannelId.getCurrentlySelectedChannelId();
         if (null != dependencyMap) {
-          const obj6 = fromServer(7129);
+          const obj6 = fromServer(7135);
           obj6.sendClydeError(dependencyMap, closure_3.body.code);
         }
       }

@@ -11,7 +11,7 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 require = arg1;
 function VariantOption(onPress) {
-  ({ variant, isSelected } = onPress);
+  ({ variant, isSelected, disabled } = onPress);
   const tmp = callback3(isSelected);
   let obj = getProductPurchaseState;
   let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
@@ -23,7 +23,7 @@ function VariantOption(onPress) {
   } else {
     name = variant.name;
   }
-  obj = { accessibilityRole: "button", accessibilityLabel: name, accessibilityState: { selected: isSelected }, onPress: onPress.onSelect, style: tmp.variantOption, children: null };
+  obj = { accessibilityRole: "button", accessibilityLabel: name, accessibilityState: { selected: isSelected, disabled }, disabled, onPress: onPress.onSelect, style: tmp.variantOption, children: null };
   obj1 = { style: items, children: null };
   items = [tmp.variantOptionInner, { backgroundColor: variant.variantValue }];
   if (isPurchased) {
@@ -32,7 +32,7 @@ function VariantOption(onPress) {
     isPurchased = tmp4(VariantCheckmark, obj2);
   }
   obj1[1] = isPurchased;
-  obj[5] = closure_4(View, obj1);
+  obj[6] = closure_4(View, obj1);
   return closure_4(PressableBase.PressableOpacity, obj);
 }
 function VariantCheckmark(variant) {
@@ -63,11 +63,15 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
 let obj2 = { display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 const result = require("set").fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetVariants.tsx");
 
-export default function ProductDetailsActionSheetVariants(onVariantSelect) {
-  ({ product, selectedVariantIndex } = onVariantSelect);
-  onVariantSelect = onVariantSelect.onVariantSelect;
+export default function ProductDetailsActionSheetVariants(disabled) {
+  ({ product, selectedVariantIndex } = disabled);
+  let flag = disabled.disabled;
+  if (flag === undefined) {
+    flag = false;
+  }
+  const onVariantSelect = disabled.onVariantSelect;
   const tmp = callback2();
-  let obj = selectedVariantIndex(7225);
+  let obj = selectedVariantIndex(onVariantSelect[10]);
   let tmp5Result = null;
   if (obj.getIsVariantProduct(product)) {
     obj = { style: null, children: null };
@@ -75,15 +79,15 @@ export default function ProductDetailsActionSheetVariants(onVariantSelect) {
     obj = { style: null, children: null };
     obj[0] = tmp.headerRow;
     obj1 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp2(1236).intl;
-    obj1[2] = intl.string(tmp2(1236).t.wbgaj6);
-    const items = [callback(tmp2(4440).Text, obj1), ];
+    const intl = tmp2(tmp3[7]).intl;
+    obj1[2] = intl.string(tmp2(tmp3[7]).t.wbgaj6);
+    const items = [callback(tmp2(tmp3[11]).Text, obj1), ];
     let tmp7Result = product.variants.length > selectedVariantIndex;
     if (tmp7Result) {
       const obj2 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, style: null, children: null };
       obj2[3] = tmp.text;
       obj2[4] = product.variants[selectedVariantIndex].variantLabel;
-      tmp7Result = tmp7(tmp2(4440).Text, obj2);
+      tmp7Result = tmp7(tmp2(tmp3[11]).Text, obj2);
     }
     items[1] = tmp7Result;
     obj[1] = items;
@@ -96,8 +100,9 @@ export default function ProductDetailsActionSheetVariants(onVariantSelect) {
       return closure_1_4(closure_1_8, {
         variant,
         isSelected: closure_0 === arg1,
+        disabled: flag,
         onSelect() {
-          return closure_1_1(closure_0);
+          return closure_1_2(closure_0);
         }
       }, variant.variantValue);
     });

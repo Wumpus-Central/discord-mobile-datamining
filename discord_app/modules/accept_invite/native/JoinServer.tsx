@@ -4,7 +4,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import _modDef8690 from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import _modDef7637 from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import NUXGuildTemplatesAnalytics from "../../create_guild/native/CreateGuildConstants.tsx";
@@ -76,12 +76,12 @@ export default function JoinServer(arg0) {
     obj2[0] = tmp.header;
     const intl = tmp4(1236).intl;
     obj2[4] = intl.string(tmp4(1236).t.jlfuFW);
-    const items2 = [callback(tmp4(4440).Text, obj2), ];
+    const items2 = [callback(tmp4(4441).Text, obj2), ];
     const obj3 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj3[0] = tmp.description;
     const intl2 = tmp4(1236).intl;
     obj3[3] = intl2.string(tmp4(1236).t.lVvN3A);
-    items2[1] = callback(tmp4(4440).Text, obj3);
+    items2[1] = callback(tmp4(4441).Text, obj3);
     obj1[0] = items2;
     tmp7Result = tmp7(closure_10, obj1);
   }
@@ -98,7 +98,7 @@ export default function JoinServer(arg0) {
   obj5[5] = intl4.string(navigation(1236).t.qreV25);
   obj5[10] = tmp.textInput;
   obj5[11] = onDone;
-  items3[1] = callback(_modDef8690, obj5);
+  items3[1] = callback(_modDef7637, obj5);
   const obj6 = { style: tmp.exampleText, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl5 = tmp4(1236).intl;
   obj6[3] = intl5.format(navigation(1236).t.vwWaTe, {
@@ -109,7 +109,7 @@ export default function JoinServer(arg0) {
       return callback(navigation(table[6]).Text, { variant: "text-sm/medium", color: "text-default", children }, arg1);
     }
   });
-  items3[2] = callback(navigation(4440).Text, obj6);
+  items3[2] = callback(navigation(4441).Text, obj6);
   obj4[0] = items3;
   const items4 = [closure_9(closure_4, obj4), ];
   const obj8 = { children: null };
@@ -122,7 +122,7 @@ export default function JoinServer(arg0) {
   obj10[3] = submitting;
   obj10[4] = submitting;
   obj10[5] = onDone;
-  items5[1] = callback(navigation(4879).Button, obj10);
+  items5[1] = callback(navigation(4880).Button, obj10);
   items5[2] = callback(OrSeparator, {});
   const obj11 = { size: "lg", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
   const intl8 = tmp4(1236).intl;
@@ -130,7 +130,7 @@ export default function JoinServer(arg0) {
   const intl9 = tmp4(1236).intl;
   obj11[3] = intl9.string(navigation(1236).t["MOqX/G"]);
   obj11[4] = callback;
-  items5[3] = callback(navigation(4879).Button, obj11);
+  items5[3] = callback(navigation(4880).Button, obj11);
   obj8[0] = items5;
   items4[1] = closure_9(closure_10, obj8);
   obj[2] = items4;

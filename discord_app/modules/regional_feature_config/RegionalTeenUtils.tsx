@@ -32,7 +32,7 @@ export const useIsTeenInCountrySet = function useIsTeenInCountrySet(set) {
     }
   }, items1);
   const obj = stateFromStores(589);
-  let userIsTeen = stateFromStores(8254).useUserIsTeen();
+  let userIsTeen = stateFromStores(8696).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }
@@ -53,7 +53,7 @@ export const useIsTeenInStrictCountry = function useIsTeenInStrictCountry() {
   }, items1);
   let obj = set;
   const obj2 = stateFromStores(589);
-  let userIsTeen = stateFromStores(8254).useUserIsTeen();
+  let userIsTeen = stateFromStores(8696).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }

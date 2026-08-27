@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../../_runtime/07917_registerAsset.js";
 import frozen from "../EmbedUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import createPremiumGroupInviteEmbed from "../row_data/embeds/PremiumGroupInviteEmbed.tsx";
+import registerAssetDefault from "../../../../../../_runtime/07892_registerAsset.js";
 import closure_3 from "../../../../../stores/AuthenticationStore.tsx";
 import closure_4 from "../../../../../stores/ChannelStore.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";

@@ -104,8 +104,8 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
-    if (stateFromStores !== tmp(12587).ActivityJoinability.CANNOT_JOIN) {
-      if (stateFromStores === tmp(12587).ActivityJoinability.JOINED) {
+    if (stateFromStores !== tmp(9361).ActivityJoinability.CANNOT_JOIN) {
+      if (stateFromStores === tmp(9361).ActivityJoinability.JOINED) {
         const intl2 = tmp(1236).intl;
         let stringResult = intl2.string(tmp(1236).t.DPfdsq);
       } else {
@@ -114,7 +114,7 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
       }
       obj = { text: null, variant: "active", disabled: null, onPress: null };
       obj[0] = stringResult;
-      JOINED = tmp(12587).ActivityJoinability.JOINED;
+      JOINED = tmp(9361).ActivityJoinability.JOINED;
       obj[2] = stateFromStores === JOINED;
       obj[3] = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
@@ -123,7 +123,7 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
         const joined = obj.join(obj);
         closure_1_1(closure_1_2[28]).hideAllActionSheets();
       };
-      jsx(tmp(4879).Button, { text: null, variant: "active", disabled: null, onPress: null });
+      jsx(tmp(4880).Button, { text: null, variant: "active", disabled: null, onPress: null });
       const tmp6 = jsx;
     }
   }
@@ -134,7 +134,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
   let sync_id;
   sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(9871)(activity)) {
+  if (sync_id(9177)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
@@ -144,7 +144,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
       obj[0] = intl.formatToPlainString(getSystemLocale.t.LEgD7t, obj);
       obj = { size: null, source: null, disableColor: true, style: null };
       obj[0] = Button.Icon.Sizes.SMALL;
-      obj[1] = sync_id(8466);
+      obj[1] = sync_id(7984);
       obj[3] = tmp.icon;
       obj[1] = jsx(Button.Icon, { size: null, source: null, disableColor: true, style: null });
       obj[3] = callback(function*() {

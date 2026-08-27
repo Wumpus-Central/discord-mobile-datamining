@@ -17,7 +17,7 @@ import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx"
 function ViewDebugLogsActionSheetRow(icon) {
   const title = icon.title;
   ({ screenKey: importDefault, render: dependencyMap } = icon);
-  return callback(title(5938).ActionSheetRow, {
+  return callback(title(5943).ActionSheetRow, {
     icon: icon.icon,
     label: title,
     onPress() {
@@ -42,24 +42,24 @@ function ViewDebugLogsActionSheet() {
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.XpPGhL);
   obj[3] = function render() {
-    return callback2(callback(15045), {});
+    return callback2(callback(15109), {});
   };
   const items = [callback(ViewDebugLogsActionSheetRow, obj), , ];
   obj1 = { icon: callback(ClockIcon.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
   const intl3 = getSystemLocale.intl;
   obj1[1] = intl3.string(getSystemLocale.t.b0nJvk);
   obj1[3] = function render() {
-    return callback2(closure_3, { children: callback2(callback(15048), {}) });
+    return callback2(closure_3, { children: callback2(callback(15112), {}) });
   };
   items[1] = callback(ViewDebugLogsActionSheetRow, obj1);
   let tmpResult = null;
   if (obj5.isAndroid()) {
     const obj2 = { icon: null, title: null, screenKey: "pushNotificationLogs", render: null };
-    obj2[0] = tmp(tmp2(9956).ChannelNotificationIcon, {});
+    obj2[0] = tmp(tmp2(10618).ChannelNotificationIcon, {});
     const intl4 = tmp2(1236).intl;
     obj2[1] = intl4.string(tmp2(1236).t.Ljj0ps);
     obj2[3] = function render() {
-      return callback2(callback(15049), {});
+      return callback2(callback(15113), {});
     };
     tmpResult = tmp(ViewDebugLogsActionSheetRow, obj2);
   }

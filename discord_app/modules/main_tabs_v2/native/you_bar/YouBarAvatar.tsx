@@ -182,7 +182,7 @@ function YouBarAvatarLarge(transitionState) {
     obj4[0] = obj5;
     obj2[2] = closure_22(sharedValue1, obj4);
     const items6 = [closure_22(tmp23Result, obj2), , , ];
-    const obj6 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "GuildProgress" };
+    const obj6 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "ADDED_TO_FAVORITES" };
     obj6[0] = stateFromStores;
     obj6[2] = closure_11;
     if (OFFLINE === StatusTypes.UNKNOWN) {

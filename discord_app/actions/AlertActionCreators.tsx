@@ -1,7 +1,7 @@
 // discord_app/actions/AlertActionCreators.tsx
 import set from "../../_runtime/00002_set.js";
-import _mod4809 from "native/AlertActionCreators.tsx";
+import _mod4810 from "native/AlertActionCreators.tsx";
 
 const result = set.fileFinishedImporting("actions/AlertActionCreators.tsx");
 
-export default _mod4809.default;
+export default _mod4810.default;

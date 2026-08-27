@@ -137,7 +137,7 @@ export const getTextForDisclosure = function getTextForDisclosure(toFixed) {
   if (create.ApplicationDisclosureType.IP_LOCATION === toFixed) {
     const intl2 = tmp(1236).intl;
     return intl2.string(tmp(1236).t["6wPmjo"]);
-  } else if (tmp(10655).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === toFixed) {
+  } else if (tmp(9212).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === toFixed) {
     const intl = tmp(1236).intl;
     return intl.string(tmp(1236).t["/uOMKZ"]);
   } else {

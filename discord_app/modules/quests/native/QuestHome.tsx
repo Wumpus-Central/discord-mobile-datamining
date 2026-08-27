@@ -38,7 +38,7 @@ function EmptyStateNoQuestsAvailable() {
   const intl = navigation(1236).intl;
   obj[1] = intl.string(navigation(1236).t["/g10LC"]);
   obj[2] = callback;
-  obj[0] = callback2(navigation(4879).Button, obj);
+  obj[0] = callback2(navigation(4880).Button, obj);
   return callback2(QuestHomeEmptyStateDefault, obj);
 }
 function EmptyStateFiltered(onClearFilters) {
@@ -56,10 +56,10 @@ function EmptyStateFiltered(onClearFilters) {
 }
 function HeaderPreviewButton() {
   const callback = importAllResult.useCallback(() => {
-    let obj = callback2(4675);
+    let obj = callback2(4676);
     obj.popAll();
     obj = { screen: QUEST_PREVIEW_TOOL_2.QUEST_PREVIEW_TOOL_2 };
-    callback(6191).openUserSettings(obj);
+    callback(6197).openUserSettings(obj);
   }, []);
   let obj = useQuests;
   let tmp5 = null;
@@ -70,7 +70,7 @@ function HeaderPreviewButton() {
     obj[1] = callback;
     const intl = tmp3(1236).intl;
     obj[3] = intl.string(tmp3(1236).t.tx5Ax5);
-    obj[1] = callback2(tmp3(4879).Button, obj);
+    obj[1] = callback2(tmp3(4880).Button, obj);
     tmp5 = callback2(closure_5, obj);
   }
   return tmp5;
@@ -90,15 +90,15 @@ function HeaderWithBounties(arg0) {
     obj = { variant: "text-lg/semibold", color: "text-strong", children: null };
     const intl = tmp2(1236).intl;
     obj[2] = intl.string(tmp2(1236).t.qetVDw);
-    const items2 = [tmp6(tmp2(4440).Text, obj), ];
+    const items2 = [tmp6(tmp2(4441).Text, obj), ];
     obj1 = { onPress: null, hitSlop: 14, "aria-label": null, accessibilityRole: "button", children: null };
     obj1[0] = openBountiesNuxPromoSheetDefault;
     const intl2 = tmp2(1236).intl;
     obj1[2] = intl2.string(tmp2(1236).t.hvVgAZ);
     const obj2 = { size: "xs", color: null };
     obj2[1] = ThemesDefault.colors.ICON_SUBTLE;
-    obj1[4] = tmp6(tmp2(4399).CircleInformationIcon, obj2);
-    items2[1] = tmp6(tmp2(5015).PressableOpacity, obj1);
+    obj1[4] = tmp6(tmp2(4400).CircleInformationIcon, obj2);
+    items2[1] = tmp6(tmp2(5020).PressableOpacity, obj1);
     obj[1] = items2;
     tmp4Result = tmp4(closure_5, obj);
   }
@@ -356,7 +356,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
   obj = { name: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").ImpressionNames.QUEST_HOME, type: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").ImpressionTypes.VIEW, properties: null };
   obj = { utm_source_current: tmp24.utmSourceCurrent, utm_medium_current: tmp24.utmMediumCurrent, utm_campaign_current: tmp24.utmCampaignCurrent, utm_content_current: tmp24.utmContentCurrent, tab: require("../hooks/QuestHooks.tsx").QuestTabs.ALL };
   obj[2] = obj;
-  navigation(9565)(obj);
+  navigation(8815)(obj);
   const items12 = [isEligibleForQuests];
   const effect3 = importAllResult.useEffect(() => {
     if (closure_3) {
@@ -378,7 +378,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
   let obj7 = useQuests;
   obj1 = { selectedSortMethod: sortMethod, selectedFilters: filters, numQuestsVisible: quests.length };
   const questHomeSortingFilteringAnalytics = obj7.useQuestHomeSortingFilteringAnalytics(obj1);
-  const tmp25 = navigation(9565);
+  const tmp25 = navigation(8815);
   let tmp5 = navigation;
   showBounties = require("../../virtual_currency/hooks/native/useVirtualCurrencyMobileEnabled.tsx").useVirtualCurrencyMobileEnabled().enabled;
   const obj10 = isVirtualCurrencyEnabled;
@@ -393,7 +393,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
   if (params != null) {
     previewAdCreativeIds = params.previewAdCreativeIds;
   }
-  let tmpResult = tmp(10599);
+  let tmpResult = tmp(11003);
   const fetchQuestHomeBounties = tmpResult.useFetchQuestHomeBounties({ previewAdCreativeIds });
   isLoading = fetchQuestHomeBounties.isLoading;
   questHomeBounties = fetchQuestHomeBounties.questHomeBounties;
@@ -423,10 +423,10 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
     showBounties = !OrbsHoldoutExperiment.useConfig(obj2).enabled;
   }
   if (showBounties) {
-    tmpResult = tmp(7392);
+    tmpResult = tmp(7400);
     showBounties = tmpResult.shouldShowBountiesGivenFilters(filters);
   }
-  const BountiesShopCarouselExperiment = tmp(14594).BountiesShopCarouselExperiment;
+  const BountiesShopCarouselExperiment = tmp(14621).BountiesShopCarouselExperiment;
   obj3 = { location: tmp30.QUEST_HOME_MOBILE };
   const config = BountiesShopCarouselExperiment.useConfig(obj3);
   ({ enabled, variation } = config);
@@ -613,7 +613,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
     obj6[9] = callback2;
     obj6[10] = callback1;
     obj6[11] = callback3;
-    tmp63Result = verticalScrollEnabled(tmp(7957).FlashList, obj6);
+    tmp63Result = verticalScrollEnabled(tmp(8037).FlashList, obj6);
     const tmp63 = verticalScrollEnabled;
   }
 });

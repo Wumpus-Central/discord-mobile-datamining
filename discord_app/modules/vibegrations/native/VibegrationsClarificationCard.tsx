@@ -113,9 +113,9 @@ export default function VibegrationsClarificationCard(clarification) {
     obj1[0] = bound + 1;
     obj1[1] = length;
     obj[2] = intl.formatToPlainString(onSubmit(3469)["7bypa+"], obj1);
-    tmp14 = callback(clarification(4440).Text, obj);
+    tmp14 = callback(clarification(4441).Text, obj);
   }
-  const items4 = [tmp14, callback(clarification(4440).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , ];
+  const items4 = [tmp14, callback(clarification(4441).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , ];
   const options = tmp8.options;
   items4[2] = options.map((answer) => {
     closure_0 = answer;
@@ -168,7 +168,7 @@ export default function VibegrationsClarificationCard(clarification) {
       let intl2 = tmp20(1236).intl;
       obj4[2] = intl2.string(onSubmit(3469).yKdgqw);
       obj4[3] = callback1;
-      tmp19Result = tmp19(tmp20(4879).Button, obj4);
+      tmp19Result = tmp19(tmp20(4880).Button, obj4);
     }
   }
   const items5 = [tmp19Result, ];
@@ -187,7 +187,7 @@ export default function VibegrationsClarificationCard(clarification) {
     });
   };
   obj6[5] = callback2;
-  obj5[1] = callback(clarification(13700).GhostInput, obj6);
+  obj5[1] = callback(clarification(13727).GhostInput, obj6);
   items5[1] = callback(closure_5, obj5);
   obj3[1] = items5;
   items4[3] = closure_7(closure_5, obj3);

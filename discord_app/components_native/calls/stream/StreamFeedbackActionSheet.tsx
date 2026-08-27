@@ -14,7 +14,7 @@ export default function StreamFeedbackActionSheet(stream) {
   stream = stream.stream;
   const analyticsData = stream.analyticsData;
   dependencyMap = undefined;
-  let obj = stream(7408);
+  let obj = stream(7416);
   dependencyMap = obj.useGetStreamApplication(stream);
   obj1 = stream(589);
   const items = [closure_3];
@@ -38,14 +38,14 @@ export default function StreamFeedbackActionSheet(stream) {
   const intl5 = tmp(1236).intl;
   obj[2] = intl5.string(stream(1236).t["6Y1t5P"]);
   const stringResult1 = intl2.string(stream(1236).t["0uxA2V"]);
-  obj[3] = stream(11249).getStreamFeedbackOptions({ isStreamer: stateFromStores });
+  obj[3] = stream(11130).getStreamFeedbackOptions({ isStreamer: stateFromStores });
   obj = { value: constants.FREEFORM, label: null };
   const intl6 = tmp(1236).intl;
   obj[1] = intl6.string(stream(1236).t.emlT91);
   obj[4] = obj;
   obj1 = { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null };
   const tmp11 = jsx;
-  const tmpResult = stream(11249);
+  const tmpResult = stream(11130);
   if (stateFromStores) {
     stringResult2 = stringResult1;
   }
@@ -126,5 +126,5 @@ export default function StreamFeedbackActionSheet(stream) {
       const obj4 = stream(paths[17]);
     }
   };
-  return tmp11(tmp10(16779), obj1);
+  return tmp11(tmp10(16845), obj1);
 };

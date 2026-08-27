@@ -3,24 +3,24 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02009_asyncRequireImpl.js";
-import registerAssetDefault from "../../../../../_runtime/04388_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/04389_registerAsset.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import getInviteURLDefault from "../../getInviteURL.tsx";
-import _modDef9306 from "../../../icons/native/Share.tsx";
-import registerAssetDefault2 from "../../../../../_runtime/09309_registerAsset.js";
-import registerAssetDefault3 from "../../../../../_runtime/09310_registerAsset.js";
-import registerAssetDefault4 from "../../../../../_runtime/09311_registerAsset.js";
-import registerAssetDefault5 from "../../../../../_runtime/09312_registerAsset.js";
-import registerAssetDefault6 from "../../../../../_runtime/09330_registerAsset.js";
-import registerAssetDefault7 from "../../../../../_runtime/09331_registerAsset.js";
-import registerAssetDefault8 from "../../../../../_runtime/09332_registerAsset.js";
-import registerAssetDefault9 from "../../../../../_runtime/09333_registerAsset.js";
-import registerAssetDefault10 from "../../../../../_runtime/09334_registerAsset.js";
-import registerAssetDefault11 from "../../../../../_runtime/09335_registerAsset.js";
-import registerAssetDefault12 from "../../../../../_runtime/09336_registerAsset.js";
-import registerAssetDefault13 from "../../../../../_runtime/09337_registerAsset.js";
-import registerAssetDefault14 from "../../../../../_runtime/09338_registerAsset.js";
-import registerAssetDefault15 from "../../../../../_runtime/09339_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/09666_registerAsset.js";
+import _modDef9868 from "../../../icons/native/Share.tsx";
+import registerAssetDefault3 from "../../../../../_runtime/09871_registerAsset.js";
+import registerAssetDefault4 from "../../../../../_runtime/09872_registerAsset.js";
+import registerAssetDefault5 from "../../../../../_runtime/09873_registerAsset.js";
+import registerAssetDefault6 from "../../../../../_runtime/09891_registerAsset.js";
+import registerAssetDefault7 from "../../../../../_runtime/09892_registerAsset.js";
+import registerAssetDefault8 from "../../../../../_runtime/09893_registerAsset.js";
+import registerAssetDefault9 from "../../../../../_runtime/09894_registerAsset.js";
+import registerAssetDefault10 from "../../../../../_runtime/09895_registerAsset.js";
+import registerAssetDefault11 from "../../../../../_runtime/09896_registerAsset.js";
+import registerAssetDefault12 from "../../../../../_runtime/09897_registerAsset.js";
+import registerAssetDefault13 from "../../../../../_runtime/09898_registerAsset.js";
+import registerAssetDefault14 from "../../../../../_runtime/09899_registerAsset.js";
+import registerAssetDefault15 from "../../../../../_runtime/09900_registerAsset.js";
 import SHARE_APPS_KEY from "../InstantInviteConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import isMetaQuest from "../../../device/MetaQuestUtils.android.tsx";
@@ -35,7 +35,7 @@ const SHARE_URLS = SHARE_APPS_KEY.SHARE_URLS;
 let obj = { SHARE: 0, [0]: "SHARE", COPY: 1, [1]: "COPY", QR_CODE: 2, [2]: "QR_CODE", MESSAGES: 3, [3]: "MESSAGES", MAIL: 4, [4]: "MAIL", FB_MESSENGER: 5, [5]: "FB_MESSENGER", GMAIL: 6, [6]: "GMAIL", TELEGRAM: 7, [7]: "TELEGRAM", TWITTER: 8, [8]: "TWITTER", WHATSAPP: 9, [9]: "WHATSAPP", LINE: 10, [10]: "LINE" };
 obj = {
   type: obj.SHARE,
-  icon: _modDef9306,
+  icon: _modDef9868,
   isAvailable: Promise.resolve(true),
   IconComponent: registerAssetDefault2,
   backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_500,
@@ -80,7 +80,7 @@ obj1[5] = function onPress(code) {
   obj[0] = getInviteURLDefault(code);
   obj[1] = _location;
   obj[2] = channel;
-  obj.openLazy(asyncRequireImpl(9313, dependencyMap.paths), combined, obj, "stack");
+  obj.openLazy(asyncRequireImpl(9874, dependencyMap.paths), combined, obj, "stack");
 };
 items[2] = obj1;
 let obj2 = { type: obj.MESSAGES, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
@@ -103,15 +103,15 @@ obj2[5] = function onPress(channel) {
   channel = channel.channel;
   const code = channel.code;
   ({ message, location: _location } = channel);
-  channel(9280).trackOptionClicked(code, channel, constants.SMS, _location);
-  let obj = channel(9280);
+  channel(9829).trackOptionClicked(code, channel, constants.SMS, _location);
+  let obj = channel(9829);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(4411).hideActionSheet();
-    const obj3 = code(4411);
+    code(4412).hideActionSheet();
+    const obj3 = code(4412);
   }
   obj2 = channel(500);
-  tmp(4621).sendSMS({ body: message }, (arg0, arg1, arg2) => {
+  tmp(4622).sendSMS({ body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       let obj = code(closure_1_2[21]);
       obj = { inviteKey: null, channelId: null, messageId: null, location: "SMS Option", overrideProperties: null };
@@ -159,15 +159,15 @@ obj3[5] = function onPress(channel) {
   channel = channel.channel;
   const code = channel.code;
   ({ message, location: _location } = channel);
-  channel(9280).trackOptionClicked(code, channel, constants.EMAIL, _location);
-  let obj = channel(9280);
+  channel(9829).trackOptionClicked(code, channel, constants.EMAIL, _location);
+  let obj = channel(9829);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(4411).hideActionSheet();
-    const obj3 = code(4411);
+    code(4412).hideActionSheet();
+    const obj3 = code(4412);
   }
   obj2 = channel(500);
-  tmp(4621).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
+  tmp(4622).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       let obj = code(closure_1_2[21]);
       obj = { inviteKey: null, channelId: null, messageId: null, location: "Email Option", overrideProperties: null };

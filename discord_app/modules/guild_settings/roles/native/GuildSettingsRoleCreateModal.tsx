@@ -64,7 +64,7 @@ function RoleCreateScene() {
     if (dependencyMap === closure_1_17) {
       const num5 = 0;
     }
-    yield closure_1_1(5404).createRole(closure_1_1.id, c2, num5);
+    yield closure_1_1(5409).createRole(closure_1_1.id, c2, num5);
     if (1 === tmp7) {
       c2 = 0;
       callback(false);
@@ -90,13 +90,13 @@ function RoleCreateScene() {
               tmp3(4161).roleCreatedToast();
               const obj5 = tmp3(4161);
               const tmp13 = tmp3;
-              tmp3(17037).setRoleJustCreated(true);
+              tmp3(17103).setRoleJustCreated(true);
               let STEP_MEMBERS = closure_1_25.STEP_PERMISSIONS;
               const guild2 = obj.getProps().guild;
               tmp32(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
               const currentUser = closure_1_11.getCurrentUser();
               const tmp23 = closure_1_9(guild2, currentUser);
-              const obj6 = tmp3(17037);
+              const obj6 = tmp3(17103);
               const tmp18 = tmp32;
               obj = { permission: null, user: null, context: null };
               obj[0] = closure_1_20.ADMINISTRATOR;
@@ -116,7 +116,7 @@ function RoleCreateScene() {
               obj[1] = closure_1_26[closure_1_25.STEP_DISPLAY];
               obj[2] = closure_1_26[STEP_MEMBERS];
               const tmp18Result = tmp18(698);
-              const merged = Object.assign(tmp13(4652).collectGuildAnalyticsMetadata(guild.id));
+              const merged = Object.assign(tmp13(4653).collectGuildAnalyticsMetadata(guild.id));
               tmp18Result.track(closure_1_18.USER_FLOW_TRANSITION, obj);
               return false;
             }
@@ -514,5 +514,5 @@ export default function GuildSettingsRoleCreateModal() {
     obj.track(closure_1_18.USER_FLOW_TRANSITION, obj);
   });
   obj = { screens: closure_32, initialRouteName: obj4.STEP_DISPLAY };
-  return callback3(stateFromStores(5955).Navigator, obj);
+  return callback3(stateFromStores(5960).Navigator, obj);
 };

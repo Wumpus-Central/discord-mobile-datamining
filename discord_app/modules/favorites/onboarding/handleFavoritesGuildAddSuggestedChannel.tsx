@@ -57,7 +57,7 @@ function _handleFavoritesGuildAddSuggestedChannel() {
               } else {
                 callback = arg1;
                 if (null != callback) {
-                  obj1 = callback(9926);
+                  obj1 = callback(10225);
                   const obj3 = { channelIds: null, categoryName: null, source: "suggestions" };
                   const items = [callback];
                   obj3[0] = items;

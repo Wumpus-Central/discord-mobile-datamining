@@ -16,9 +16,9 @@ createToggle = {
   IconComponent: function InstallNativeUpdateIcon() {
     const items = [closure_4];
     if (obj.useStateFromStores(items, () => null !== closure_4.latestFetchedBuild().newBuild)) {
-      let RefreshIcon = tmp(4393).DownloadIcon;
+      let RefreshIcon = tmp(4394).DownloadIcon;
     } else {
-      RefreshIcon = tmp(14128).RefreshIcon;
+      RefreshIcon = tmp(14155).RefreshIcon;
     }
     return <RefreshIcon />;
   },

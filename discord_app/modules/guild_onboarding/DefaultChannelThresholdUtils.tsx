@@ -364,7 +364,7 @@ function _checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
             obj4[0] = tmp54;
             return obj4;
           } else {
-            obj = callback(4808);
+            obj = callback(4809);
             obj5 = { title: null, body: null };
             const intl = guildId(1236).intl;
             obj5[0] = intl.string(guildId(1236).t.ut7sq0);

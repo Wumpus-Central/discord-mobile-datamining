@@ -42,9 +42,9 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
             set.add(userInfo);
           }
         }
-        const result = callback(10933).cancelLocalNotifications(userInfo);
-        const obj = callback(10933);
-        const result1 = callback(10933).cancelLocalNotifications(userInfo);
+        const result = callback(9578).cancelLocalNotifications(userInfo);
+        const obj = callback(9578);
+        const result1 = callback(9578).cancelLocalNotifications(userInfo);
         set.delete(userInfo);
       });
     });
@@ -76,8 +76,8 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
               obj[2] = guild.name;
               const intl = getSystemLocale.intl;
               obj[3] = intl.string(getSystemLocale.t["hrDBa+"]);
-              const result = tmp15(10933).scheduleLocalNotification(obj);
-              const tmp15Result = tmp15(10933);
+              const result = tmp15(9578).scheduleLocalNotification(obj);
+              const tmp15Result = tmp15(9578);
             }
             tmp15 = importDefault;
           }

@@ -28,15 +28,15 @@ let result = require("set").fileFinishedImporting("modules/collectibles/native/C
 export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgress) {
   const tmp = callback3(useSafeAreaInsetsDefault().top);
   const callback = React.useCallback(() => {
-    let arr = callback2(4675);
+    let arr = callback2(4676);
     arr = arr.pop();
   }, []);
   const callback1 = React.useCallback(() => {
-    let obj = callback(7213);
+    let obj = callback(7219);
     obj = { analyticsLocations: null, analyticsSource: null };
-    const items = [callback2(5920).GIFTING_BADGE_POST_PURCHASE];
+    const items = [callback2(5925).GIFTING_BADGE_POST_PURCHASE];
     obj[0] = items;
-    obj[1] = callback2(5920).GIFTING_BADGE_POST_PURCHASE;
+    obj[1] = callback2(5925).GIFTING_BADGE_POST_PURCHASE;
     const result = obj.openCollectiblesShopMobile(obj);
   }, []);
   let obj = { children: null };

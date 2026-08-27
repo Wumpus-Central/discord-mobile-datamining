@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockGestureDetector.tsx
-import LegacyBaseButton from "../../../../../_runtime/05599_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05604_LegacyBaseButton.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { QuestDockMode } from "../../QuestConstants.tsx";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QuestDockConstants.tsx";

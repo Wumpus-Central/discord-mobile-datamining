@@ -1,7 +1,7 @@
 // discord_app/modules/age_gate/native/AgeGateUtils.tsx
 import set2 from "../../../utils/PlatformUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
-import _modDef4675 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4676 from "../../../actions/ModalActionCreators.tsx";
 import resolveNsfwTogglesWithDefaults from "../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 import closure_3 from "../../../stores/GuildStore.tsx";
 import closure_4 from "../../../stores/PermissionStore.tsx";
@@ -57,7 +57,7 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
     let flag2 = !tmp10;
     if (!tmp10) {
       id = undefined;
-      const obj2 = _modDef4675;
+      const obj2 = _modDef4676;
       if (invite != null) {
         const guild3 = invite.guild;
         if (guild3 != null) {
@@ -66,9 +66,9 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
       }
       obj = { guildId: null };
       obj[0] = id;
-      obj2.pushLazy(asyncRequireImpl(8895, tmp2.paths), obj);
+      obj2.pushLazy(asyncRequireImpl(9052, tmp2.paths), obj);
       flag2 = true;
-      const tmp12 = asyncRequireImpl(8895, tmp2.paths);
+      const tmp12 = asyncRequireImpl(9052, tmp2.paths);
     }
     return flag2;
   } else {

@@ -6,9 +6,9 @@ import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/Act
 const PremiumUpsellActionSheetKey = "PremiumUpsellActionSheetKey";
 const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx");
 
-export default function openPremiumUpsellActionSheet(featureName, subfeatureName, analyticsLocations) {
+export default function openPremiumUpsellActionSheet(featureName, subfeatureName, analyticsLocations, onDismiss) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { featureName, subfeatureName, analyticsLocations };
-  obj.openLazy(asyncRequireImpl(8594, dependencyMap.paths), PremiumUpsellActionSheetKey, obj);
+  obj = { featureName, subfeatureName, analyticsLocations, onDismiss };
+  obj.openLazy(asyncRequireImpl(7528, dependencyMap.paths), PremiumUpsellActionSheetKey, obj);
 };
 export const PREMIUM_UPSELL_ACTION_SHEET_KEY = "PremiumUpsellActionSheetKey";

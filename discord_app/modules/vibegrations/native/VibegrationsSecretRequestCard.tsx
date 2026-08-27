@@ -34,7 +34,7 @@ export default function VibegrationsSecretRequestCard(projectId) {
   obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = projectId(1236).intl;
   obj[2] = intl.string(request(3469)["/e28TK"]);
-  const items1 = [callback(projectId(4440).Text, obj), , , ];
+  const items1 = [callback(projectId(4441).Text, obj), , , ];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -55,7 +55,7 @@ export default function VibegrationsSecretRequestCard(projectId) {
     obj2[2] = callback;
     const intl3 = tmp6(1236).intl;
     obj2[3] = intl3.string(tmp8(3469)["gVV+HX"]);
-    items1[3] = tmp5(tmp6(4879).Button, obj2);
+    items1[3] = tmp5(tmp6(4880).Button, obj2);
     obj[1] = items1;
     return closure_6(tmp4, obj);
   }

@@ -78,9 +78,9 @@ let closure_9 = createCacheKey.createStyles(() => {
 });
 const result = require("set").fileFinishedImporting("modules/premium/native/components/PremiumGiftPromotionDetails.tsx");
 
-export default function PremiumGiftPromotionDetails(imageUrl) {
-  imageUrl = imageUrl.imageUrl;
-  ({ style, title, subtitle, shouldAnimate } = imageUrl);
+export default function PremiumGiftPromotionDetails(arg0) {
+  ({ imageUrl, titleVariant, titleColor, subtitleVariant, subtitleColor } = arg0);
+  ({ style, title, subtitle, shouldAnimate } = arg0);
   const tmp = callback2();
   let obj = { style: items, children: null };
   items = [tmp.container, style];
@@ -94,7 +94,26 @@ export default function PremiumGiftPromotionDetails(imageUrl) {
   }
   const items1 = [tmp4, ];
   obj = { style: tmp.textContainer, children: null };
-  const items2 = [callback(Text.Text, { variant: "text-md/bold", color: "text-default", children: title }), callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: subtitle })];
+  if (titleVariant == null) {
+    titleVariant = "text-md/semibold";
+  }
+  obj1 = { variant: titleVariant, color: null, children: null };
+  if (titleColor == null) {
+    titleColor = "text-default";
+  }
+  obj1[1] = titleColor;
+  obj1[2] = title;
+  const items2 = [callback(Text.Text, obj1), ];
+  if (subtitleVariant == null) {
+    subtitleVariant = "text-sm/medium";
+  }
+  const obj2 = { variant: subtitleVariant, color: null, children: null };
+  if (subtitleColor == null) {
+    subtitleColor = "text-subtle";
+  }
+  obj2[1] = subtitleColor;
+  obj2[2] = subtitle;
+  items2[1] = callback(Text.Text, obj2);
   obj[1] = items2;
   items1[1] = closure_8(View, obj);
   obj[1] = items1;

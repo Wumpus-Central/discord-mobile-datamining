@@ -283,7 +283,7 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
       });
       const merged = Object.assign(obj);
       const tmp9Result = obj(12)(store4.getVoiceStates(guildId));
-      const merged1 = Object.assign(id(4655).getVoiceAnalyticsMetadataAdditional());
+      const merged1 = Object.assign(id(4656).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
   }

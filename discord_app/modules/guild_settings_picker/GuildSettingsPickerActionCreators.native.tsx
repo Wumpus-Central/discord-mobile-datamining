@@ -6,5 +6,5 @@ import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetA
 const result = set.fileFinishedImporting("modules/guild_settings_picker/GuildSettingsPickerActionCreators.native.tsx");
 
 export const openGuildSettingsPickerModal = function openGuildSettingsPickerModal(arg0) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(13515, dependencyMap.paths), "GuildSettingsPickerBottomSheet", arg0);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(13542, dependencyMap.paths), "GuildSettingsPickerBottomSheet", arg0);
 };

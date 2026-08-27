@@ -2,10 +2,10 @@
 import set from "../../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import shouldShowAgeGateForVoiceChannel from "../../../age_gate/AgeGateUtils.tsx";
-import openIncodeAgeVerificationModalDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import resolveNsfwTogglesWithDefaults from "../../content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 import useNSFWAllowed from "../../content_and_social/useNSFWAllowed.tsx";
+import openIncodeAgeVerificationModalDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 const toggle = createToggle.createToggle({
@@ -26,7 +26,7 @@ const toggle = createToggle.createToggle({
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
-        obj[0] = tmp(8011).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
+        obj[0] = tmp(8615).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
         const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
         const obj2 = openIncodeAgeVerificationModalDefault;
       }
@@ -41,7 +41,7 @@ const toggle = createToggle.createToggle({
     if (flag == null) {
       flag = true;
     }
-    let tmpResult = tmp(4685);
+    let tmpResult = tmp(4686);
     if (shouldAgeVerifyForSettingsToggles) {
       shouldAgeVerifyForSettingsToggles = !tmpResult.useIsVerifiedTeen();
     }
@@ -73,7 +73,7 @@ let obj = {
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
-        obj[0] = tmp(8011).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
+        obj[0] = tmp(8615).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
         const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
         const obj2 = openIncodeAgeVerificationModalDefault;
       }
@@ -88,7 +88,7 @@ let obj = {
     if (flag == null) {
       flag = true;
     }
-    let tmpResult = tmp(4685);
+    let tmpResult = tmp(4686);
     if (shouldAgeVerifyForSettingsToggles) {
       shouldAgeVerifyForSettingsToggles = !tmpResult.useIsVerifiedTeen();
     }

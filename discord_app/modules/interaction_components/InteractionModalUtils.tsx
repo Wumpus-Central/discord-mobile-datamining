@@ -2123,7 +2123,7 @@ function _submitModal() {
             obj[0] = arg1;
             return obj;
           } else {
-            closure_5 = arr.map((closure_0, closure_1) => lib(5021).getAttachmentPayload(closure_0, closure_1));
+            closure_5 = arr.map((closure_0, closure_1) => lib(5026).getAttachmentPayload(closure_0, closure_1));
             const obj4 = { uploads: null };
             obj4[0] = arr;
             c6 = callback2(lib.customId, lib.components, obj4);

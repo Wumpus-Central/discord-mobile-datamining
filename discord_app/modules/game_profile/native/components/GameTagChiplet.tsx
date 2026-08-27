@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/native/components/GameTagChiplet.tsx
-import memoResult1 from "../../../guild_tag/native/GuildTag.tsx";
 import useOpenGameProfileModalDefault from "../../hooks/useOpenGameProfileModal.tsx";
 import GameProfileEmbedAction from "../../GameProfileAnalyticUtils.tsx";
+import memoResult1 from "../../../guild_tag/native/GuildTag.tsx";
 import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";

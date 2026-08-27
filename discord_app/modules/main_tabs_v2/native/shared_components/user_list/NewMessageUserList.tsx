@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/NewMessageUserList.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import computeChannelName from "../../../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/05401_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/05406_fuzzysearch.js";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -31,7 +31,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         let num3 = 1;
         return 1;
       } else {
-        let tmp19Result = tmp19(4288);
+        let tmp19Result = tmp19(4289);
         let tmp5 = user;
         let globalName = tmp19Result.getGlobalName(tmp4);
         let toLocaleLowerCaseResult1;
@@ -40,7 +40,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         }
         if (null != toLocaleLowerCaseResult1) {
           let tmp8 = toLocaleLowerCaseResult1;
-          if (tmp19(5401)(trimmed1, tmp7)) {
+          if (tmp19(5406)(trimmed1, tmp7)) {
             let tmp15 = obj;
             obj.return();
             let num2 = 1;
@@ -56,7 +56,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         }
         if (null != toLocaleLowerCaseResult2) {
           let tmp13 = toLocaleLowerCaseResult2;
-          if (tmp19(5401)(trimmed1, tmp12)) {
+          if (tmp19(5406)(trimmed1, tmp12)) {
             let tmp14 = obj;
             obj.return();
             let num = 1;

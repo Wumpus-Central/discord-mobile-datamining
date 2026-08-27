@@ -1,6 +1,6 @@
 // discord_app/modules/activities/utils/tryLaunchAsFrame.tsx
-import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
 import _launchFrameOnNativeDefault from "../../frames/FramesActionCreators.native.tsx";
+import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
 import closure_3 from "../../applications/ApplicationStore.tsx";
 import { MAIN_SURFACE } from "../../frames/FramesConstants.tsx";
 

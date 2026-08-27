@@ -36,7 +36,7 @@ const memoResult = importAllResult.memo(function GuildsBarMessages() {
   const obj2 = initialize;
   ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 }));
   const colors = ThemesDefault.colors;
-  obj = { selected: stateFromStores, circle: null, unread: false, styles: null, cutouts: null, config: null, overState: "y", label: "Grant Channel Access", externalChildren: "Manage Channel Access", expandedChildren: "Guild Scheduled Event Invite Button Embed", children: "PUSH_FEEDBACK_CLEANUP" };
+  obj = { selected: stateFromStores, circle: null, unread: false, styles: null, cutouts: null, config: null, overState: "y", label: "Grant Channel Access", externalChildren: "Manage Channel Access", expandedChildren: "Guild Scheduled Event Invite Button Embed", children: "REMOVE_AUTOMOD_MESSAGE_NOTICE" };
   let tmp11 = !tmp3;
   const tmp7 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp8 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -52,7 +52,7 @@ const memoResult = importAllResult.memo(function GuildsBarMessages() {
   obj[8] = badge;
   obj[9] = jsx(HomeDrawerDMsRowDefault, {});
   obj[10] = jsx(ChatIcon.ChatIcon, { color: tmp8 });
-  return jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: null, unread: false, styles: null, cutouts: null, config: null, overState: "y", label: "Grant Channel Access", externalChildren: "Manage Channel Access", expandedChildren: "Guild Scheduled Event Invite Button Embed", children: "PUSH_FEEDBACK_CLEANUP" });
+  return jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: null, unread: false, styles: null, cutouts: null, config: null, overState: "y", label: "Grant Channel Access", externalChildren: "Manage Channel Access", expandedChildren: "Guild Scheduled Event Invite Button Embed", children: "REMOVE_AUTOMOD_MESSAGE_NOTICE" });
 });
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarMessages.tsx");
 

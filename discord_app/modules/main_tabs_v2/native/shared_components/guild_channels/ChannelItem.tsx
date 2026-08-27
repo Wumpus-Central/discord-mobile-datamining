@@ -5,8 +5,8 @@ import getSystemLocale from "../../../../../intl/index.native.tsx";
 import GuildIconSizesDefault from "../../../../guild/native/GuildIcon.tsx";
 import getRelativeTimestamp from "../../../../notification_center/NotificationCenterUtils.tsx";
 import getChannelA11yLabelDefault from "../../../../channel/getChannelA11yLabel.tsx";
-import FacepileGroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
 import getLayoutStyles from "layouts/ChannelListLayout.tsx";
+import FacepileGroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
 import renderChannelWrapper from "ChannelWrapper.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../../../stores/GuildStore.tsx";
@@ -20,7 +20,7 @@ require = arg1;
 function LaunchpadChannelIcon(channel) {
   channel = channel.channel;
   const layout = channel.layout;
-  let obj = channel(10018);
+  let obj = channel(10122);
   const layoutStyles = obj.getLayoutStyles(layout);
   obj1 = channel(589);
   const items = [closure_4];
@@ -40,14 +40,14 @@ function LaunchpadChannelIcon(channel) {
     str = "md";
   }
   obj1[1] = str;
-  obj6 = channel(10018);
+  obj6 = channel(10122);
   let num = 32;
   if (tmp2Result.isLayoutCozy(layout)) {
     num = 48;
   }
   const obj2 = { children: null };
   obj1[2] = num;
-  items1[1] = tmp8(channel(11846).ChannelIcon, obj1);
+  items1[1] = tmp8(channel(11675).ChannelIcon, obj1);
   obj2[0] = items1;
   return tmp6(tmp7, obj2);
 }
@@ -141,10 +141,10 @@ export const renderChannelItem = function renderChannelItem(unread) {
   }
   obj[1] = tmp10Result;
   children[1] = closure_8(View, obj);
-  let tmp5Result = tmp5(16094);
+  let tmp5Result = tmp5(16157);
   const obj3 = { layout, name: null, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, channel: null, locked: null, connected: null, live: null, mentionCount: null, mentionBadge: null, isSubscriptionGated: null, needSubscriptionToAccess: null };
   if (channelName == null) {
-    tmp5Result = tmp5(4638);
+    tmp5Result = tmp5(4639);
     channelName = tmp5Result.computeChannelName(channel, closure_6, closure_5);
   }
   obj3[1] = channelName;

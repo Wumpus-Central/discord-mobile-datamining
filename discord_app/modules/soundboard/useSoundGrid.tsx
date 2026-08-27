@@ -211,21 +211,23 @@ export default function useSoundGrid(guild_id) {
     }
     return guild;
   });
-  let obj12 = flag(flag2[17]);
-  const config = tmp4(flag2[18]).useConfig({ location: "useSoundGrid" });
+  const TopSoundboardSoundsMobileExperiment = tmp(tmp2[18]).TopSoundboardSoundsMobileExperiment;
+  const config = TopSoundboardSoundsMobileExperiment.getConfig({ location: "useSoundGrid" });
   enabled = config.enabled;
   topSoundsFirst = config.topSoundsFirst;
-  if (enabled) {
-    tmpResult = tmp(tmp2[19]);
-    let id;
-    if (stateFromStores3 != null) {
-      id = stateFromStores3.id;
+  tmp4(flag2[19])(() => {
+    if (enabled) {
+      let id;
+      if (stateFromStores3 != null) {
+        id = stateFromStores3.id;
+      }
+      const result = guild_id(flag2[20]).maybeFetchTopSoundboardSoundsByGuild(id);
+      const obj = guild_id(flag2[20]);
     }
-    let result1 = tmpResult.maybeFetchTopSoundboardSoundsByGuild(id);
-  }
-  const tmp4Result = tmp4(flag2[18]);
+  });
+  tmpResult = tmp(tmp2[13]);
   const items8 = [tmp6];
-  stateFromStoresArray1 = _require(flag2[13]).useStateFromStoresArray(items8, () => {
+  stateFromStoresArray1 = tmpResult.useStateFromStoresArray(items8, () => {
     let id;
     if (stateFromStores3 != null) {
       id = stateFromStores3.id;

@@ -5,9 +5,9 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 const require = arg1;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 16472;
+    let tmp4 = 16536;
   } else {
-    tmp4 = 16473;
+    tmp4 = 16537;
   }
   return jsx(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }

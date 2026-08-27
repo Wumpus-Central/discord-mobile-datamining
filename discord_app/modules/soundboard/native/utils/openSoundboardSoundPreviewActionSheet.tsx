@@ -5,8 +5,8 @@ import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/Action
 
 const result = set.fileFinishedImporting("modules/soundboard/native/utils/openSoundboardSoundPreviewActionSheet.tsx");
 
-export default function openSoundboardSoundPreviewActionSheet(channelId, sound) {
+export default function openSoundboardSoundPreviewActionSheet(channel, sound, soundGridLocation) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { channelId, sound };
-  obj.openLazy(asyncRequireImpl(16504, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj);
+  obj = { channel, sound, soundGridLocation };
+  obj.openLazy(asyncRequireImpl(16570, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj);
 };

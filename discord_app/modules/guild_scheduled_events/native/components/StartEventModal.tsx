@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import registerAssetDefault from "../../../../../_runtime/08278_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07745_registerAsset.js";
 import GuildEventCardControlsDefault from "GuildEventCard.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -27,7 +27,7 @@ function NavigationBar(onClose) {
   };
   obj = { source: registerAssetDefault };
   obj[3] = callback(onClose(1297).Icon, obj);
-  obj[0] = callback(onClose(5015).PressableOpacity, obj);
+  obj[0] = callback(onClose(5020).PressableOpacity, obj);
   return callback(View, obj);
 }
 function StartEventHeader(children) {

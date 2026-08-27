@@ -22,7 +22,7 @@ const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionShee
   safeAreaBottomKeyboardAware = useExpressionPickerInsetsDefault({ hasCategories: false }).safeAreaBottomKeyboardAware;
   const items = [safeAreaBottomKeyboardAware];
   const memo = importAllResult.useMemo(() => ({ paddingBottom: safeAreaBottomKeyboardAware, flex: 1 }), items);
-  let obj = safeAreaBottomKeyboardAware(8931);
+  let obj = safeAreaBottomKeyboardAware(9075);
   const searchEmptySource = obj.useSearchEmptySource();
   if (inActionSheet.categoryType === GIFPickerResultTypes.FAVORITES) {
     const intl2 = tmp4(1236).intl;
@@ -31,9 +31,9 @@ const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionShee
     const intl = tmp4(1236).intl;
     stringResult = intl.string(tmp4(1236).t["5dX4UM"]);
   }
-  const modalDismissGuardRefreshControl = safeAreaBottomKeyboardAware(8935).useModalDismissGuardRefreshControl();
+  const modalDismissGuardRefreshControl = safeAreaBottomKeyboardAware(9079).useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp4(5571).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp4(5576).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }

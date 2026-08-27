@@ -18,11 +18,11 @@ const memoResult = importAllResult.memo((row) => {
     num = participants.length;
   }
   if (1 === num) {
-    THIRD = tmp2(11087).StageTileSize.FULL;
+    THIRD = tmp2(10050).StageTileSize.FULL;
   } else if (2 === num) {
-    THIRD = tmp2(11087).StageTileSize.HALF;
+    THIRD = tmp2(10050).StageTileSize.HALF;
   } else {
-    THIRD = tmp2(11087).StageTileSize.THIRD;
+    THIRD = tmp2(10050).StageTileSize.THIRD;
   }
   const items = [tmp.container, ];
   if (containerLandscape) {

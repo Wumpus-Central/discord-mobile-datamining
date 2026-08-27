@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/native/CollectiblesProgressiveImage.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import _modDef4184 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4185 from "../../reanimated/ReanimatedRexport.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
@@ -13,7 +13,7 @@ export const CollectiblesProgressiveImage = function CollectiblesProgressiveImag
   ({ source, style } = arg0);
   let sharedValue;
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = sharedValue(4184);
+  let obj = sharedValue(4185);
   sharedValue = obj.useSharedValue(0);
   obj = { style, children: null };
   obj = {};
@@ -30,6 +30,6 @@ export const CollectiblesProgressiveImage = function CollectiblesProgressiveImag
     obj[1] = Easing.inOut(sharedValue(closure_1_2[3]).Easing.ease);
     const result = sharedValue.set(obj.withTiming(1, obj));
   };
-  obj[1] = jsx(_modDef4184.Image, {});
+  obj[1] = jsx(_modDef4185.Image, {});
   return <closure_3 />;
 };

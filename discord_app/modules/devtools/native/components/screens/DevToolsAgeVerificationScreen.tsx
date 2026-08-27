@@ -47,10 +47,10 @@ function _showAgeVerificationTestModal() {
       obj2[4] = function onComplete() {
         tmp3(tmp15[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
       };
-      obj2[5] = lib(8011).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
-      callback(8009).showAgeVerification(obj2);
+      obj2[5] = lib(8615).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
+      callback(8613).showAgeVerification(obj2);
       c3 = 0;
-      const obj7 = callback(8009);
+      const obj7 = callback(8613);
     }
     c3 = 0;
     return arg1;
@@ -87,8 +87,8 @@ export default function DevToolsAgeVerificationScreen() {
   items1[1] = callback2(TableRowInner.TableRow, {
     label: "Launch Age Verification Modal",
     onPress() {
-      let obj = callback2(8009);
-      obj = { entryPoint: callback(8011).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
+      let obj = callback2(8613);
+      obj = { entryPoint: callback(8615).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
       return obj.showAgeVerificationGetStartedModal(obj);
     },
     icon: callback2(KeyIcon.KeyIcon, {}),

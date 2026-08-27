@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import map from "../../../design/tokens/native/useToken.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import styleProperties from "../../../design/components/Button/native/ButtonHooks.native.tsx";
-import SolidCutoutDefault from "../../../design/components/Icon/native/ClipView.tsx";
 import SavedMessageSortTypes from "../SavedMessagesTypes.tsx";
+import SolidCutoutDefault from "../../../design/components/Icon/native/ClipView.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../SavedMessagesStore.tsx";
@@ -20,9 +20,9 @@ function BadgedIcon(arg0) {
   obj1 = styleProperties;
   const iconSizeStyles = obj1.useIconSizeStyles("sm", true, 2);
   if (type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
-    let BookmarkIcon = tmp4(4407).ClockIcon;
+    let BookmarkIcon = tmp4(4408).ClockIcon;
   } else {
-    BookmarkIcon = tmp4(11344).BookmarkIcon;
+    BookmarkIcon = tmp4(11206).BookmarkIcon;
   }
   obj = { style: items, children: null };
   items = [tmp6.container, iconSizeStyles];

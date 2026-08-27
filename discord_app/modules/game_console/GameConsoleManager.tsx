@@ -235,14 +235,14 @@ let prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      let obj = callback(11038);
+      let obj = callback(9798);
       obj.disconnectRemote();
       obj = { title: null, body: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.wGMxr3);
       const intl2 = callback(1236).intl;
       obj[1] = intl2.string(callback(1236).t.i5k8b5);
-      callback2(4808).show(obj);
+      callback2(4809).show(obj);
     });
   };
   applyArgumentsResult.handleConsoleCommandUpdate = function handleConsoleCommandUpdate(arg0) {

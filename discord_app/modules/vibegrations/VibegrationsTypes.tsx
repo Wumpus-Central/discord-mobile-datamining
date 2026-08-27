@@ -12,9 +12,10 @@ obj = { main: items1, subagent: items1, thinking: obj.thinking };
 const result = set.fileFinishedImporting("modules/vibegrations/VibegrationsTypes.tsx");
 
 export const UNNAMED_PROJECT_NAME = "Untitled App";
+export const MAX_PROJECT_COLLABORATOR_ROLES = 25;
 export const VibegrationsProjectFlags = frozen;
-export const isProjectPublic = function isProjectPublic(project) {
-  let num = project.flags;
+export const isProjectPublic = function isProjectPublic(flags) {
+  let num = flags.flags;
   if (num == null) {
     num = 0;
   }
@@ -27,8 +28,11 @@ export const isProjectShared = function isProjectShared(flags) {
   }
   return num & frozen.SHAREABLE;
 };
-export const projectSupportsVisibility = function projectSupportsVisibility(project) {
-  return null != project.flags;
+export const projectSupportsVisibility = function projectSupportsVisibility(stateFromStores) {
+  return null != stateFromStores.flags;
+};
+export const projectSupportsCollaboratorRoles = function projectSupportsCollaboratorRoles(stateFromStores) {
+  return null != stateFromStores.collaborator_role_ids;
 };
 export const runesFromUsd = function runesFromUsd(cost_usd) {
   return Math.floor(100 * cost_usd);

@@ -6,7 +6,7 @@ import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import setDefault2 from "../lib/DiscordNative.tsx";
 import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
-import _modDef5302 from "../actions/SelectedChannelActionCreators.tsx";
+import _modDef5307 from "../actions/SelectedChannelActionCreators.tsx";
 import closure_4 from "AuthenticationStore.tsx";
 import ME from "../Constants.tsx";
 import { SpeakingFlags } from "../../discord_common/js/packages/media-engine/Constants.tsx";
@@ -139,7 +139,7 @@ if (require("set").isPlatformEmbedded) {
       c11 = true;
       closure_3 = Date.now();
       checkIdleAFK();
-      _modDef5302.disconnect();
+      _modDef5307.disconnect();
     });
     const powerMonitor3 = setDefault2.powerMonitor;
     class IdleStore extends r10079 {

@@ -5,9 +5,9 @@ import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/exper
 import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
-import _mod9636 from "../hooks/index.tsx";
 import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton.tsx";
+import _mod11267 from "../hooks/index.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { AnalyticEvents } from "../../../Constants.tsx";
@@ -69,7 +69,7 @@ class OrbsOnboardingMenuDismissibleContent {
 }
 function BalanceWidgetMenu(style) {
   let str;
-  let obj = str(9636);
+  let obj = str(11267);
   str = obj.useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = React.useCallback(() => {
@@ -142,7 +142,7 @@ let closure_15 = createCacheKey.createStyles((arg0) => {
 let result = require("set").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
 
 export default function BalanceWidgetMenuWrapper(style) {
-  let obj = _mod9636;
+  let obj = _mod11267;
   const balance = obj.useFetchVirtualCurrencyBalance().balance;
   UNSAFE_isDismissibleContentDismissed;
   if (null == balance) {
@@ -156,7 +156,7 @@ export default function BalanceWidgetMenuWrapper(style) {
     obj[3] = { busy: true };
     obj = { style: null, children: null };
     obj[0] = tmp2.loadingContainer;
-    obj[1] = callback(tmp3(4895).Ellipsis, { variant: "primary", size: "sm" });
+    obj[1] = callback(tmp3(4896).Ellipsis, { variant: "primary", size: "sm" });
     obj[4] = callback(View, obj);
     let tmp6Result = callback(BalanceWidget, obj);
   } else {

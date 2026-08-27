@@ -46,18 +46,18 @@ function getChannel(id, arr) {
   if (null != channel) {
     obj = { type: null, id: null, guildId: null, name: null, isDm: null, isForumPost: null, isMentionable: null, canViewChannel: null, roleSubscriptionGated: null, iconType: null, parentId: null };
     ({ type: obj4[0], id: obj4[1], guild_id: obj4[2] } = channel);
-    let tmpResult = tmp(4638);
+    let tmpResult = tmp(4639);
     obj[3] = tmpResult.computeChannelName(channel, closure_8, closure_7);
     obj[4] = channel.isPrivate();
     obj[5] = channel.isForumPost();
-    tmpResult = tmp(4912);
+    tmpResult = tmp(4913);
     obj[6] = tmpResult.isChannelTypeMentionable(channel.type);
-    obj[7] = tmp(4639).canViewChannel(channel);
+    obj[7] = tmp(4640).canViewChannel(channel);
     obj[8] = isSubscriptionGated;
     obj[9] = str;
     obj[10] = channel.parent_id;
     tmp4 = obj;
-    const tmpResult1 = tmp(4639);
+    const tmpResult1 = tmp(4640);
   }
   return tmp4;
 }
@@ -169,9 +169,9 @@ function parseChannel(canViewChannel) {
             if (canViewChannel.isForumPost) {
               const channel = store.getChannel(canViewChannel.parentId);
               if (null != channel) {
-                let tmp35Result = tmp35(4638);
+                let tmp35Result = tmp35(4639);
                 const channelName = tmp35Result.computeChannelName(channel, closure_8, closure_7);
-                tmp35Result = tmp35(4630);
+                tmp35Result = tmp35(4631);
                 let str3 = tmp35Result.getMentionIconType(channel);
                 if (str3 == null) {
                   str3 = "forum";

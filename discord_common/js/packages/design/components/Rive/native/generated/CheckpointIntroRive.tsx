@@ -24,7 +24,7 @@ let closure_9 = {
       Subtitle1 = onDataBindingChange.Subtitle;
     }
     const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
-    let tmpResult = tmp(4178);
+    let tmpResult = tmp(4179);
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["StartButton Pressed"];
@@ -34,7 +34,7 @@ let closure_9 = {
       prop1 = onDataBindingChange["StartButton Pressed"];
     }
     const booleanBinding1 = tmpResult.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
-    tmpResult = tmp(4178);
+    tmpResult = tmp(4179);
     let StartButton;
     if (dataBinding != null) {
       StartButton = dataBinding.StartButton;
@@ -59,7 +59,7 @@ let closure_9 = {
       Subtitle1 = onDataBindingChange.Subtitle;
     }
     const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
-    let tmpResult = tmp(4178);
+    let tmpResult = tmp(4179);
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["StartButton Pressed"];
@@ -69,7 +69,7 @@ let closure_9 = {
       prop1 = onDataBindingChange["StartButton Pressed"];
     }
     const booleanBinding1 = tmpResult.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
-    tmpResult = tmp(4178);
+    tmpResult = tmp(4179);
     let StartButton;
     if (dataBinding != null) {
       StartButton = dataBinding.StartButton;

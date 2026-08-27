@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/utils/GuildEventRsvpUtils.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
-import useEventException from "../useEventException.tsx";
 import useEventSchedule from "../useEventSchedule.tsx";
+import useEventException from "../useEventException.tsx";
 import closure_2 from "../../../stores/AuthenticationStore.tsx";
 import closure_3 from "../GuildScheduledEventStore.tsx";
 import GUILD_EVENT_MAX_NAME_LENGTH from "../GuildScheduledEventsConstants.tsx";
@@ -40,7 +40,7 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
     }
     let recurrenceStatus = null;
     if (null != scheduled_start_time) {
-      let tmp33Result = tmp33(9157);
+      let tmp33Result = tmp33(9555);
       let scheduled_start_time1;
       if (guildScheduledEvent != null) {
         scheduled_start_time1 = guildScheduledEvent.scheduled_start_time;
@@ -50,7 +50,7 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
     }
     if (null == recurrenceStatus) {
       if (recurrenceId == null) {
-        tmp33Result = tmp33(9157);
+        tmp33Result = tmp33(9555);
         recurrenceId = tmp33Result.getNextRecurrenceIdInEvent(guildScheduledEvent);
       }
       let tmp12 = recurrenceId;

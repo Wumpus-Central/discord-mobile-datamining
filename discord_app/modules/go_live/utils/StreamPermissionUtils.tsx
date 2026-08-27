@@ -1,5 +1,4 @@
 // discord_app/modules/go_live/utils/StreamPermissionUtils.tsx
-import getSystemLocale from "../../../intl/index.native.tsx";
 import allowChannelAccess from "../../../utils/ChannelUtils.tsx";
 import shouldShowAgeGateForVoiceChannel from "../../age_gate/AgeGateUtils.tsx";
 import canJoinVoiceChannelDefault from "../../channel/canJoinVoiceChannel.tsx";
@@ -108,52 +107,6 @@ let obj = { REMOTE_MODE: 0, [0]: "REMOTE_MODE", CHANNEL_FULL: 1, [1]: "CHANNEL_F
 let result = require("set").fileFinishedImporting("modules/go_live/utils/StreamPermissionUtils.tsx");
 
 export { canStreamInChannel };
-export const getStreamCTAString = function getStreamCTAString(arg0) {
-  if (obj.REMOTE_MODE === arg0) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t["1i3tSY"]);
-  } else if (tmp.CHANNEL_FULL === arg0) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.elyVbv);
-  } else if (tmp.NO_PERMISSION === arg0) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.pgUTZC);
-  } else if (tmp.AGE_RESTRICTED === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.b5FqhF);
-  } else {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["7Xq/nV"]);
-  }
-};
-export const getStreamCTAAriaLabel = function getStreamCTAAriaLabel(arg0) {
-  if (obj.REMOTE_MODE === arg0) {
-    const intl7 = getSystemLocale.intl;
-    const intl8 = getSystemLocale.intl;
-    const _HermesInternal4 = HermesInternal;
-    return "" + intl7.string(getSystemLocale.t["7Xq/nV"]) + ": " + intl8.string(getSystemLocale.t["1i3tSY"]);
-  } else if (tmp.CHANNEL_FULL === arg0) {
-    const intl5 = getSystemLocale.intl;
-    const intl6 = getSystemLocale.intl;
-    const _HermesInternal3 = HermesInternal;
-    return "" + intl5.string(getSystemLocale.t["7Xq/nV"]) + ": " + intl6.string(getSystemLocale.t.elyVbv);
-  } else if (tmp.NO_PERMISSION === arg0) {
-    const intl3 = getSystemLocale.intl;
-    const intl4 = getSystemLocale.intl;
-    const _HermesInternal2 = HermesInternal;
-    return "" + intl3.string(getSystemLocale.t["7Xq/nV"]) + ": " + intl4.string(getSystemLocale.t.pgUTZC);
-  } else if (tmp.AGE_RESTRICTED === arg0) {
-    const intl = getSystemLocale.intl;
-    const intl2 = getSystemLocale.intl;
-    const _HermesInternal = HermesInternal;
-    return "" + intl.string(getSystemLocale.t["7Xq/nV"]) + ": " + intl2.string(getSystemLocale.t.b5FqhF);
-  } else {
-    const intl9 = getSystemLocale.intl;
-    const intl10 = getSystemLocale.intl;
-    const _HermesInternal5 = HermesInternal;
-    return "" + intl9.string(getSystemLocale.t["7Xq/nV"]) + ": " + intl10.string(getSystemLocale.t["9C444m"]);
-  }
-};
 export const StreamUnavailableReasons = obj;
 export { canWatchStream };
 export const useCanWatchStream = function useCanWatchStream(stateFromStores) {

@@ -71,7 +71,7 @@ let prototype = function AgeVerificationManager() {
         }
         if (tmp16) {
           (function handleLoadChannelMessages(channelId) {
-            let obj = callback(7129);
+            let obj = callback(7135);
             obj = { channelId, limit: closure_9 };
             const messages = obj.fetchMessages(obj);
           })(tmp12);
@@ -90,8 +90,8 @@ let prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              channelId(6093).preloadForumThreads(channel);
-              const obj = channelId(6093);
+              channelId(6101).preloadForumThreads(channel);
+              const obj = channelId(6101);
             }
           })(tmp12);
         }

@@ -10,7 +10,7 @@ import useFetchListingsForGuild from "../../GuildRoleSubscriptionsHooks.tsx";
 import FormSeparatorDefault from "../components/FormSeparator.tsx";
 import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
 import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import registerAssetDefault from "../../../../../_runtime/14752_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/14779_registerAsset.js";
 import FastAssetImageDefault from "../components/FastAssetImage.tsx";
 import SectionTitleAll from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -73,8 +73,8 @@ function CancelSubscriptionButtonFooter(guild) {
   const tmp = callback4();
   [tmp3, c3] = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
   const tmp2 = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
-  analyticsLocations = subscription(5900)(subscription(5920).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL).analyticsLocations;
-  let obj = subscription(7863);
+  analyticsLocations = subscription(5905)(subscription(5925).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL).analyticsLocations;
+  let obj = subscription(8153);
   cancelSubscription = obj.useCancelSubscription(subscription.id, subscription.isACOM);
   cancelSubscription = cancelSubscription.cancelSubscription;
   isPurchasedViaAppleGeneric = subscription.isPurchasedViaAppleGeneric;
@@ -120,7 +120,7 @@ function CancelSubscriptionButtonFooter(guild) {
             const obj2 = { guildName: null };
             obj2[0] = lib.name;
             obj1[0] = intl2.formatToPlainString(lib(1236).t.sBs7sh, obj2);
-            const obj15 = lib2(4809);
+            const obj15 = lib2(4810);
             const _HermesInternal = HermesInternal;
             obj1[1] = "You can resubscribe any time before " + lib2(4043)(lib2.currentPeriodEnd).format(closure_1_12) + ".";
             const intl3 = lib(1236).intl;
@@ -153,7 +153,7 @@ function CancelSubscriptionButtonFooter(guild) {
                 obj5[0] = v0();
                 return obj5;
               } else if (lib2.isPurchasedViaDesktop) {
-                let obj7 = closure_1_2(4789);
+                let obj7 = closure_1_2(4790);
                 c4 = 4;
                 v0 = 1;
                 let obj6 = { value: null, done: false };
@@ -200,7 +200,7 @@ function CancelSubscriptionButtonFooter(guild) {
                   obj7[0] = arg1;
                   return obj7;
                 } else {
-                  obj1 = closure_1_2(4789);
+                  obj1 = closure_1_2(4790);
                   c4 = 5;
                   v0 = 1;
                   const obj8 = { value: null, done: false };
@@ -259,7 +259,7 @@ function CancelSubscriptionButtonFooter(guild) {
   let intl = tmp10(1236).intl;
   obj[2] = intl.string(guild(1236).t.cM1H0K);
   obj[3] = callback;
-  obj[1] = closure_10(guild(4879).Button, obj);
+  obj[1] = closure_10(guild(4880).Button, obj);
   return closure_10(closure_7, obj);
 }
 function Content(subscription) {
@@ -298,7 +298,7 @@ function Content(subscription) {
       obj4[2] = { textTransform: "uppercase" };
       const intl = tmp5(1236).intl;
       obj4[3] = intl.string(tmp5(1236).t.xyvN8p);
-      items1[2] = callback2(tmp5(4440).Text, obj4);
+      items1[2] = callback2(tmp5(4441).Text, obj4);
       items1[3] = callback2(tmp5(1297).Spacer, { size: 16 });
       const obj5 = { listingId: null, guildId: null };
       obj5[0] = listing.id;

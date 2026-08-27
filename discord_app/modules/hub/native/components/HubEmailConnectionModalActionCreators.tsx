@@ -1,5 +1,5 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionModalActionCreators.tsx
-import _modDef4675 from "../../../../actions/ModalActionCreators.tsx";
+import _modDef4676 from "../../../../actions/ModalActionCreators.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/hub/native/componen
 export default {
   open(closure_0) {
     closure_0 = arg1;
-    _modDef4675.pushLazy(callback(function*() {
+    _modDef4676.pushLazy(callback(function*() {
       closure_1 = tmp5;
       closure_0 = tmp2;
       yield closure_1_0(paths[3])(paths[2], paths.paths);
@@ -23,6 +23,6 @@ export default {
     }), closure_0, HUB_EMAIL_CONNECTION_MODAL_KEY);
   },
   close() {
-    _modDef4675.popWithKey(HUB_EMAIL_CONNECTION_MODAL_KEY);
+    _modDef4676.popWithKey(HUB_EMAIL_CONNECTION_MODAL_KEY);
   }
 };

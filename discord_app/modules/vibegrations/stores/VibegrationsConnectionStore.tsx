@@ -3,7 +3,7 @@ import failsDefault from "../../../../discord_common/js/packages/backoff/Backoff
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import snowflakeSequence from "../../messages/createNonce.tsx";
-import _modDef16024 from "../lib/VibegrationsPlatformUtils.native.tsx";
+import _modDef16089 from "../lib/VibegrationsPlatformUtils.native.tsx";
 import vibegrationLocation from "../lib/VibegrationsAnalytics.tsx";
 import map10 from "../lib/vibegrationsPreviewClaims.tsx";
 import open2 from "../lib/VibegrationsWebSocket.tsx";
@@ -385,13 +385,19 @@ function handleEvent(projectId, pendingEvents, type) {
         hasItem = map.has(content.nonce);
       }
       if (hasItem) {
-        hasItem = map.get(content.nonce) === content.user_id;
+        if (null != content.nonce) {
+          const value = map.get(content.nonce);
+        }
       }
-      let tmp4 = hasItem;
       if (hasItem) {
-        tmp4 = null != content.nonce;
+        hasItem = null == value || null == content.user_id || value === content.user_id;
+        const tmp5 = null == value || null == content.user_id || value === content.user_id;
       }
-      if (tmp4) {
+      let tmp6 = hasItem;
+      if (hasItem) {
+        tmp6 = null != content.nonce;
+      }
+      if (tmp6) {
         map.delete(content.nonce);
       }
       attachment_id(709);
@@ -404,7 +410,7 @@ function handleEvent(projectId, pendingEvents, type) {
         }
         const merged = Object.assign(obj);
         ({ user_id: obj.userId, ts: obj.timestamp, attachments: obj.attachments } = content);
-        tmp8(obj);
+        tmp10(obj);
       }
       obj = {};
     })(projectId, type);
@@ -868,10 +874,10 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            obj8 = attachment_id(16024);
+            obj8 = attachment_id(16089);
             const result3 = obj8.beginPreviewOperation(projectId);
           } else {
-            obj7 = attachment_id(16024);
+            obj7 = attachment_id(16089);
             obj7.endPreviewOperation(projectId);
           }
         } else if ("model_settings" === type.type) {
@@ -919,9 +925,9 @@ function handleEvent(projectId, pendingEvents, type) {
                   value.add(combined);
                   ({ location: obj3[0], code: obj3[1] } = tmp2);
                   ({ message: obj3[2], source: obj3[3] } = level);
-                  const result1 = pendingEvents(16026).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
+                  const result1 = pendingEvents(16091).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
                   obj = { location: null, code: null, message: null, details: null };
-                  const obj2 = pendingEvents(16026);
+                  const obj2 = pendingEvents(16091);
                 }
                 obj4 = closure_29;
                 const str = level.message;
@@ -1149,8 +1155,8 @@ function teardown(closure_0) {
     ws.close();
     obj.delete(closure_0);
     map7.delete(closure_0);
-    const result = _modDef16024.releasePreviewControl(closure_0);
-    const obj2 = _modDef16024;
+    const result = _modDef16089.releasePreviewControl(closure_0);
+    const obj2 = _modDef16089;
     const result1 = map10.clearVibegrationsPreviewClaims(closure_0);
     const obj3 = map10;
     obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: null, connState: "closed" };
@@ -2762,6 +2768,7 @@ function closeAllConnections() {
     continue;
   }
   map2.clear();
+  map5.clear();
   map8.clear();
 }
 const map = new Map();

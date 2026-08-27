@@ -185,7 +185,7 @@ export default function IntlTestingSettingsPage() {
   obj6[1] = intl6.format(messagesProxyDefault.XOdbAy, {
     username: "some user",
     usernameHook(children) {
-      obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: callback2(callback(4440).Text, obj) };
+      obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: callback2(callback(4441).Text, obj) };
       obj = { variant: "text-sm/normal", color: "text-overlay-light", children };
       return callback2(closure_6, obj);
     }

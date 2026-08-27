@@ -4,8 +4,8 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
+import registerAssetDefault from "../../../../_runtime/07697_registerAsset.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import registerAssetDefault from "../../../../_runtime/08245_registerAsset.js";
 import AutomatedUnderageAppealStatusDefault from "SafetyHubPage.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { SafetyHubLinks } from "../SafetyHubConstants.tsx";
@@ -35,7 +35,7 @@ export default function SuspendedUserSafetyHubPage() {
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.cpT0Cq);
   obj1[2] = function onPress() {
-    callback(5999).closeSuspendedUser();
+    callback(6004).closeSuspendedUser();
   };
   obj1[3] = registerAssetDefault;
   const items = [callback(IconButton.IconButton, obj1), ];

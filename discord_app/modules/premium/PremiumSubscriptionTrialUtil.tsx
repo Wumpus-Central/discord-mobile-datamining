@@ -69,6 +69,6 @@ export const useCurrentPremiumTrialTier = function useCurrentPremiumTrialTier() 
 };
 export const getPremiumTrialOffer = function getPremiumTrialOffer() {
   const mapped = closure_9.map((closure_9) => userTrialOffer.getUserTrialOffer(closure_9));
-  const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired());
+  const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired);
   return found.shift();
 };

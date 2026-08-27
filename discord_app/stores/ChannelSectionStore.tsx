@@ -193,7 +193,7 @@ prototype["getCurrentSidebarChannelId"] = function getCurrentSidebarChannelId(ch
     let tmp9 = null;
     if (null != dependencyMap[tmp]) {
       if (tmp8.type !== SidebarType.SidebarType.VIEW_THREAD) {
-        if (tmp8.type !== tmp10(6073).SidebarType.VIEW_CHANNEL) {
+        if (tmp8.type !== tmp10(6081).SidebarType.VIEW_CHANNEL) {
           channelId = null;
         }
         tmp9 = channelId;
@@ -224,7 +224,7 @@ prototype["getCurrentSidebarMessageId"] = function getCurrentSidebarMessageId(ch
     let tmp9 = null;
     if (null != dependencyMap[tmp]) {
       if (tmp8.type !== SidebarType.SidebarType.VIEW_THREAD) {
-        if (tmp8.type !== tmp10(6073).SidebarType.VIEW_CHANNEL) {
+        if (tmp8.type !== tmp10(6081).SidebarType.VIEW_CHANNEL) {
           let tmp12 = null;
         }
         tmp9 = tmp12;

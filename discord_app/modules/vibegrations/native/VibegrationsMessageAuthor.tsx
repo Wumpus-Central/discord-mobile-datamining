@@ -28,18 +28,18 @@ export default function VibegrationsMessageAuthor(userId) {
     }
     return userId(closure_1_1[6]).resolveMessageAuthor(userId, user, closure_1_4.getCurrentUser());
   }, items2);
-  userId(4288);
+  userId(4289);
   let tmp8 = null;
   if (null != stateFromStores) {
     obj = { style: null, children: null };
     obj[0] = tmp.author;
-    obj = { size: null, user: null, guildId: "Array" };
+    obj = { size: null, user: null, guildId: "r" };
     obj[0] = tmp3(1297).AvatarSizes.SIZE_16;
     obj[1] = stateFromStores;
     const items3 = [callback(tmp3(1297).Avatar, obj), ];
     obj1 = { variant: "text-xs/semibold", color: "text-muted", children: null };
     obj1[2] = tmp7;
-    items3[1] = callback(tmp3(4440).Text, obj1);
+    items3[1] = callback(tmp3(4441).Text, obj1);
     obj[1] = items3;
     tmp8 = callback2(View, obj);
   }

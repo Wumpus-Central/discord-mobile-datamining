@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx
 import handleRelationshipAddErrorDefault from "../../../../../actions/RelationshipActionCreators.tsx";
-import _modDef9849 from "../../../../people/PeopleUtils.tsx";
+import _modDef8996 from "../../../../people/PeopleUtils.tsx";
 import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../stores/ChannelStore.tsx";
 import { AnalyticsSections } from "../../../../../Constants.tsx";
@@ -72,17 +72,17 @@ function _sendWave() {
                   c7 = 4;
                   c8 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = flag(4457).getDMChannel(callback);
+                  obj2[0] = flag(4458).getDMChannel(callback);
                   return obj2;
                 } else {
                   constants = 2;
                   if (null != dMFromUserId2) {
-                    let obj7 = callback(11906);
+                    let obj7 = callback(11749);
                     const obj3 = { channelId: null, source: null };
                     obj3[0] = dMFromUserId2;
                     obj3[1] = dependencyMap;
                     obj7.trackWaveCtaClicked(obj3);
-                    let obj9 = flag(7129);
+                    let obj9 = flag(7135);
                     let obj4 = { location: null };
                     obj4[0] = constants.SEND_WAVE;
                     c7 = 5;
@@ -122,7 +122,7 @@ function _sendWave() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   if (flag) {
-                    obj = flag(4457);
+                    obj = flag(4458);
                     obj7 = { recipientIds: null };
                     obj7[0] = callback;
                     obj.openPrivateChannel(obj7);
@@ -173,13 +173,13 @@ let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/f
 
 export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef9849;
+  let obj = _modDef8996;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.cancelFriendRequest(obj);
 };
 export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef9849;
+  let obj = _modDef8996;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   const result = obj.maybeConfirmFriendRequestAccept(obj);
 };

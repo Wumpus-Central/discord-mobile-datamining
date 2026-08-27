@@ -80,7 +80,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               closure_1_2(true);
               closure_1_3(false);
               c4 = 2;
-              let obj2 = lib(8045);
+              let obj2 = lib(8641);
               c5 = 3;
               c6 = 1;
               obj2 = { value: null, done: false };

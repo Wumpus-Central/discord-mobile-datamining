@@ -249,7 +249,7 @@ export default function HubEmailConnectionContent(arg0) {
   }
   obj = { ref, contentContainerStyle: null, children: null };
   const items = [tmp.scrollViewContainer, ];
-  obj1 = { paddingBottom: invite(5541)().insets.bottom + invite(712).space.PX_16 };
+  obj1 = { paddingBottom: invite(5546)().insets.bottom + invite(712).space.PX_16 };
   items[1] = obj1;
   obj[1] = items;
   obj2 = { style: tmp.container, children: null };
@@ -305,7 +305,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items1[3] = callback2(invite(8690), obj7);
+  items1[3] = callback2(invite(7637), obj7);
   obj2[1] = items1;
   const items2 = [closure_13(ref, obj2), callback2(ref, { style: tmp.growSpacing }), ];
   const obj11 = { style: tmp.buttonContainer, children: null };

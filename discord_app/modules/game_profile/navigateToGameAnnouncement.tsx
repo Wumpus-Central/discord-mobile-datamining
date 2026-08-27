@@ -89,7 +89,7 @@ function _navigateToGameAnnouncement() {
                     if (null != set) {
                       if (!set.has(constants.PREVIEW_ENABLED)) {
                         if (null != lib) {
-                          let obj5 = id(7970);
+                          let obj5 = id(8580);
                           const obj2 = { inviteKey: null, context: null, skipOnboarding: true };
                           obj2[0] = lib.code;
                           let obj3 = { location: null };
@@ -103,7 +103,7 @@ function _navigateToGameAnnouncement() {
                         }
                       }
                     }
-                    let obj9 = lib(6131);
+                    let obj9 = lib(6137);
                     obj5 = { shouldNavigate: true, channelId: null, messageId: null, joinSource: null };
                     obj5[1] = dependencyMap;
                     obj5[2] = c3;

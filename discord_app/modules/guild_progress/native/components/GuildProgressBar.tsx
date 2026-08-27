@@ -19,7 +19,7 @@ export default function GuildProgressBar(percent) {
   percent = percent.percent;
   let sharedValue;
   const tmp = callback();
-  let obj = percent(4184);
+  let obj = percent(4185);
   sharedValue = obj.useSharedValue(0);
   const items = [percent, sharedValue];
   const effect = React.useEffect(() => {
@@ -33,8 +33,8 @@ export default function GuildProgressBar(percent) {
   fn.__initData = closure_7;
   obj = { style: items1, children: null };
   items1 = [tmp.wrapper, percent.style];
-  const animatedStyle = percent(4184).useAnimatedStyle(fn);
+  const animatedStyle = percent(4185).useAnimatedStyle(fn);
   const items2 = [tmp.progress, animatedStyle];
-  obj[1] = jsx(sharedValue(4184).View, { style: items2 });
+  obj[1] = jsx(sharedValue(4185).View, { style: items2 });
   return <View style={items1}>{null}</View>;
 };

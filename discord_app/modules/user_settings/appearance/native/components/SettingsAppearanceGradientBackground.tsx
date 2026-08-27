@@ -8,7 +8,7 @@ import importDefaultResult from "../../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 let c3 = importAllResult;
-let num = module_4184.processColor("rgba(0, 0, 0, 0)");
+let num = module_4185.processColor("rgba(0, 0, 0, 0)");
 if (num == null) {
   num = 0;
 }

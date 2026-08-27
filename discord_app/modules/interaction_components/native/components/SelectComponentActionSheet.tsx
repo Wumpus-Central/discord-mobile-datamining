@@ -70,10 +70,10 @@ function SelectionHeader(renderIcon) {
     obj[3] = renderIcon.submitSelection;
     const intl3 = tmp6(1236).intl;
     obj[4] = intl3.string(tmp6(1236).t.XqMe3N);
-    tmp5Result = tmp5(tmp6(4879).Button, obj);
+    tmp5Result = tmp5(tmp6(4880).Button, obj);
   }
   obj[2] = tmp5Result;
-  const children = [closure_8(renderIcon(5568).BottomSheetTitleHeader, obj), ];
+  const children = [closure_8(renderIcon(5573).BottomSheetTitleHeader, obj), ];
   let tmp5Result1 = null;
   if (null != onQueryChange) {
     tmp5Result1 = null;
@@ -108,8 +108,8 @@ function SelectionHeader(renderIcon) {
         }
         onQueryChange(arg0);
       };
-      tmp5Result1 = tmp5(selectedOptions(9224), obj1);
-      const tmp13 = selectedOptions(9224);
+      tmp5Result1 = tmp5(selectedOptions(9637), obj1);
+      const tmp13 = selectedOptions(9637);
     }
   }
   children[1] = tmp5Result1;
@@ -174,17 +174,17 @@ function SelectionOptionItem(item) {
     }
     const obj2 = { checked: null };
     obj2[0] = selected;
-    tmp6Result = tmp6(tmp2(8187).FormCheckbox, obj2);
+    tmp6Result = tmp6(tmp2(7617).FormCheckbox, obj2);
   } else {
     tmp6Result = null;
     if (true === selected) {
-      tmp6Result = tmp6(tmp2(9348).CheckmarkSmallBoldIcon, { color: "text-brand" });
+      tmp6Result = tmp6(tmp2(8857).CheckmarkSmallBoldIcon, { color: "text-brand" });
     }
   }
   items1[1] = tmp6Result;
   obj1[1] = items1;
   obj[12] = closure_10(View, obj1);
-  return closure_8(item(5546).TableRow, obj);
+  return closure_8(item(5551).TableRow, obj);
 }
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { selectionOptionItemIconWrapper: null, tagListIconWrapper: null, tagListIcon: null, textInputWrapper: null };

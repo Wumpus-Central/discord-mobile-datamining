@@ -25,15 +25,15 @@ function DCDChatItem(message) {
     if (AUTOMOD_INCIDENT_ACTIONS.has(message.type)) {
       obj = {};
       const merged2 = Object.assign(merged);
-      tmp3Result = callback(tmp21(8806).default, obj);
+      tmp3Result = callback(tmp21(8706).default, obj);
     } else if (isSystemMessageDefault(message)) {
       obj1 = {};
       const merged3 = Object.assign(merged);
-      tmp3Result = tmp3(tmp21(8807).default, obj1);
+      tmp3Result = tmp3(tmp21(8707).default, obj1);
     } else {
       obj = {};
       const merged4 = Object.assign(merged);
-      tmp3Result = tmp3(tmp21(8806).default, obj);
+      tmp3Result = tmp3(tmp21(8706).default, obj);
     }
   }
   return tmp3Result;

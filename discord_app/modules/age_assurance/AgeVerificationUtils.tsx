@@ -215,7 +215,7 @@ function useShouldCallReactiveCheck() {
   }
   _require = tmp5;
   let tmpResult = tmp(4140);
-  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5314).AgeGatedFeature.REACTIVE_CHECK);
+  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5319).AgeGatedFeature.REACTIVE_CHECK);
   tmpResult = tmp(589);
   const items1 = [closure_11];
   const items2 = [tmp5, isFeatureAgeGated];
@@ -247,7 +247,7 @@ function shouldCallReactiveCheck() {
   }
   let tmp7 = !tmp5;
   if (!tmp5) {
-    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5314).AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5319).AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
       isFeatureAgeGatedResult = closure_11.shouldCallReactiveCheck();
     }
@@ -347,7 +347,7 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
   }
   let tmp5 = prop !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (tmp5) {
-    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5314).AgeGatedFeature.REACTIVE_CHECK);
+    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5319).AgeGatedFeature.REACTIVE_CHECK);
     let tmp8 = !isFeatureAgeGatedResult;
     if (isFeatureAgeGatedResult) {
       tmp8 = prop !== tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
@@ -400,8 +400,8 @@ export const isVerifiedAdult = function isVerifiedAdult() {
   }
   let tmp5 = prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (!tmp5) {
-    tmp5 = closure_7.isFeatureAgeGated(tmp3(5314).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
-    const tmp7 = closure_7.isFeatureAgeGated(tmp3(5314).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    tmp5 = closure_7.isFeatureAgeGated(tmp3(5319).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    const tmp7 = closure_7.isFeatureAgeGated(tmp3(5319).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   return tmp5;
 };

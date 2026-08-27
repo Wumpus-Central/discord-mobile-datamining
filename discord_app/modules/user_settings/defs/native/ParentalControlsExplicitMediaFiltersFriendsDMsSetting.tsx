@@ -28,7 +28,7 @@ createToggle = {
   onPress: function onObscuredContentFriendsDmOnPress() {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
-      let obj = selectedTeenId(14356);
+      let obj = selectedTeenId(14383);
       const intl = selectedTeenId(1236).intl;
       const stringResult = intl.string(selectedTeenId(1236).t.GYpoAq);
       obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
@@ -43,8 +43,8 @@ createToggle = {
       obj[3] = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentFriendDm;
       const items = [selectedTeenId(1306).ExplicitContentRedaction.SHOW];
       obj[4] = items;
-      const result = selectedTeenId(14349).handleSensitiveMediaFilterPress(obj);
-      const obj2 = selectedTeenId(14349);
+      const result = selectedTeenId(14376).handleSensitiveMediaFilterPress(obj);
+      const obj2 = selectedTeenId(14376);
     }
   },
   unsearchable: true

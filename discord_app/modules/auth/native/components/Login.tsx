@@ -1,7 +1,7 @@
 // discord_app/modules/auth/native/components/Login.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef4809 from "../../../../actions/native/AlertActionCreators.tsx";
+import _modDef4810 from "../../../../actions/native/AlertActionCreators.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -32,7 +32,7 @@ class LinkButton {
   }
 }
 function handlePressPasswordManagerHint() {
-  let obj = _modDef4809;
+  let obj = _modDef4810;
   obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.lzsy7t);
@@ -158,7 +158,7 @@ export default function Login(isMultiAccount) {
             v0(true);
             v02({});
             c3 = 2;
-            let obj3 = callback(5999);
+            let obj3 = callback(6004);
             v0 = 3;
             v02 = 1;
             obj1 = { value: null, done: false };
@@ -172,7 +172,7 @@ export default function Login(isMultiAccount) {
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            let obj2 = closure_1_0(8700);
+            let obj2 = closure_1_0(7654);
             callback = obj2.getAuthenticationErrorsFromV6OrEarlierAPIError(dependencyMap);
             callback2(callback);
             c3 = 0;
@@ -191,9 +191,9 @@ export default function Login(isMultiAccount) {
           } else {
             closure_0 = arg1;
             if (false !== closure_0) {
-              if (closure_0 === closure_1_0(8698).PasswordResetMethods.ONE_TIME_LOGIN) {
-                obj = closure_1_0(4810);
-                obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(8699), {}));
+              if (closure_0 === closure_1_0(7652).PasswordResetMethods.ONE_TIME_LOGIN) {
+                obj = closure_1_0(4811);
+                obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(7653), {}));
               } else {
                 obj3 = { title: null, body: null };
                 const intl = closure_1_0(1236).intl;
@@ -202,8 +202,8 @@ export default function Login(isMultiAccount) {
                 const obj4 = { email: null };
                 obj4[0] = closure_6;
                 obj3[1] = intl2.format(closure_1_0(1236).t["6u5hQ9"], obj4);
-                callback(4809).show(obj3);
-                const obj8 = callback(4809);
+                callback(4810).show(obj3);
+                const obj8 = callback(4810);
               }
               c3 = 1;
             }

@@ -12,7 +12,7 @@ import MAX_ACCOUNTS from "../Constants.tsx";
 import { ManageAccountsScreens } from "ManageAccountsConstants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../_runtime/08785_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../_runtime/07755_createNativeStackNavigator.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
 
@@ -135,8 +135,8 @@ function RemoveMultiAccountUserButton(user) {
     };
     obj = { color: null };
     obj[0] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
-    obj[3] = callback2(tmp(14829).CircleMinusIcon, obj);
-    return callback2(tmp(5015).PressableOpacity, obj);
+    obj[3] = callback2(tmp(14856).CircleMinusIcon, obj);
+    return callback2(tmp(5020).PressableOpacity, obj);
   }
   let obj2 = user(589);
 }
@@ -376,14 +376,14 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return obj;
       },
       children() {
-        return callback2(_undefined(15416), {
+        return callback2(_undefined(15481), {
           handleLogin(login, password, undelete) {
-            let obj = callback(5999);
+            let obj = callback(6004);
             obj = { login, password, undelete };
             obj.login(obj);
           },
           onReset(arg0, arg1, arg2) {
-            callback(5999).loginReset(true);
+            callback(6004).loginReset(true);
           }
         });
       }
@@ -394,7 +394,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(8695), { isMultiAccount: true });
+        return callback2(_undefined(7648), { isMultiAccount: true });
       }
     }),
     callback2(closure_20.Screen, {
@@ -403,7 +403,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(15415), { isMultiAccount: true });
+        return callback2(_undefined(15480), { isMultiAccount: true });
       }
     })
   ];

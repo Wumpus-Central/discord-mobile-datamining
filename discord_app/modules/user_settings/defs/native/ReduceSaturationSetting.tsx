@@ -17,7 +17,7 @@ createToggle = {
     return jsx(Button.BetaTag, { size: Button.BetaSizes.SMALL });
   },
   useProps: function useSaturationSettingProps() {
-    return React.useMemo(() => ({ value: saturation.saturation, onSlidingComplete: callback(13979).setSaturation, minimumValue: 0, maximumValue: 1, step: 0.05, startIcon: callback2(callback(14829).CircleMinusIcon, {}), endIcon: callback2(callback(9745).CirclePlusIcon, {}) }), []);
+    return React.useMemo(() => ({ value: saturation.saturation, onSlidingComplete: callback(14006).setSaturation, minimumValue: 0, maximumValue: 1, step: 0.05, startIcon: callback2(callback(14856).CircleMinusIcon, {}), endIcon: callback2(callback(9145).CirclePlusIcon, {}) }), []);
   }
 };
 createToggle = createToggle.createSlider(createToggle);

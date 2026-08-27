@@ -1,7 +1,7 @@
 // discord_app/utils/native/NotificationUtils.tsx
 import expandEventPropertiesDefault from "../AnalyticsUtils.tsx";
-import createSoundForPack from "../../modules/sound_playback/SoundUtils.tsx";
 import NativeModulesDefault from "../../lib/pushnotification/PushNotification.tsx";
+import createSoundForPack from "../../modules/sound_playback/SoundUtils.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { PermissionStateType } from "../../stores/native/PushNotificationPermissionStore.tsx";

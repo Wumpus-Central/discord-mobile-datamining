@@ -113,31 +113,34 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
     const items2 = [callback3(tmp(tmp2[18]).TableRadioGroup, obj3), , ];
     let tmp13Result = null;
     if (stateFromStores.isForumChannel()) {
-      const obj6 = { groupRef: null, hasIcons: false, defaultValue: null, onChange: null, title: null, accessibilityLabel: null, children: null };
-      obj6[0] = ref1;
-      obj6[2] = layoutType;
-      obj6[3] = function onChange(arg0) {
-        _undefined3(arg0);
-      };
-      const intl7 = tmp(tmp2[5]).intl;
-      obj6[4] = intl7.string(tmp(tmp2[5]).t.mFMDSq);
-      const intl8 = tmp(tmp2[5]).intl;
-      obj6[5] = intl8.string(tmp(tmp2[5]).t.h850Ss);
-      const obj7 = { label: null, value: null };
-      const intl9 = tmp(tmp2[5]).intl;
-      obj7[0] = intl9.string(tmp(tmp2[5]).t["NJFr+g"]);
-      obj7[1] = tmp(tmp2[7]).ForumLayout.LIST;
-      const items3 = [obj7, ];
-      const obj8 = { label: null, value: null };
-      const intl10 = tmp(tmp2[5]).intl;
-      obj8[0] = intl10.string(tmp(tmp2[5]).t.wKeggb);
-      obj8[1] = tmp(tmp2[7]).ForumLayout.GRID;
-      items3[1] = obj8;
-      obj6[6] = items3.map((label) => {
-        const value = label.value;
-        return _undefined3(channelId(sortOrder[19]).TableRadioRow, { label: label.label, value }, value);
-      });
-      tmp13Result = tmp13(tmp(tmp2[18]).TableRadioGroup, obj6);
+      tmp13Result = null;
+      if (!stateFromStores.isGameInvitesChannel()) {
+        const obj6 = { groupRef: null, hasIcons: false, defaultValue: null, onChange: null, title: null, accessibilityLabel: null, children: null };
+        obj6[0] = ref1;
+        obj6[2] = layoutType;
+        obj6[3] = function onChange(arg0) {
+          _undefined3(arg0);
+        };
+        const intl7 = tmp(tmp2[5]).intl;
+        obj6[4] = intl7.string(tmp(tmp2[5]).t.mFMDSq);
+        const intl8 = tmp(tmp2[5]).intl;
+        obj6[5] = intl8.string(tmp(tmp2[5]).t.h850Ss);
+        const obj7 = { label: null, value: null };
+        const intl9 = tmp(tmp2[5]).intl;
+        obj7[0] = intl9.string(tmp(tmp2[5]).t["NJFr+g"]);
+        obj7[1] = tmp(tmp2[7]).ForumLayout.LIST;
+        const items3 = [obj7, ];
+        const obj8 = { label: null, value: null };
+        const intl10 = tmp(tmp2[5]).intl;
+        obj8[0] = intl10.string(tmp(tmp2[5]).t.wKeggb);
+        obj8[1] = tmp(tmp2[7]).ForumLayout.GRID;
+        items3[1] = obj8;
+        obj6[6] = items3.map((label) => {
+          const value = label.value;
+          return _undefined3(channelId(sortOrder[19]).TableRadioRow, { label: label.label, value }, value);
+        });
+        tmp13Result = tmp13(tmp(tmp2[18]).TableRadioGroup, obj6);
+      }
     }
     items2[1] = tmp13Result;
     tmp13Result = null;

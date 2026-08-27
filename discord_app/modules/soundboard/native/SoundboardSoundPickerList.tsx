@@ -14,64 +14,69 @@ function getSectionLabel(category) {
   const type = category.category.categoryInfo.type;
   if (SoundButtonOverlay.SoundboardSoundGridSectionType.GUILD === type) {
     return category.category.categoryInfo.guild.name;
-  } else if (tmp(4924).SoundboardSoundGridSectionType.DEFAULTS === type) {
+  } else if (tmp(4925).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl4 = tmp(1236).intl;
     return intl4.string(tmp(1236).t.Rtvk9X);
-  } else if (tmp(4924).SoundboardSoundGridSectionType.FAVORITES === type) {
+  } else if (tmp(4925).SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl3 = tmp(1236).intl;
     return intl3.string(tmp(1236).t.y3LQCG);
-  } else if (tmp(4924).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+  } else if (tmp(4925).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
     const intl2 = tmp(1236).intl;
     return intl2.string(tmp(1236).t["+cGVV6"]);
-  } else if (tmp(4924).SoundboardSoundGridSectionType.SEARCH === type) {
+  } else if (tmp(4925).SoundboardSoundGridSectionType.SEARCH === type) {
     return null;
-  } else if (tmp(4924).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+  } else if (tmp(4925).SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
     const intl = tmp(1236).intl;
     const obj = { guildName: null };
     obj[0] = category.category.categoryInfo.guild.name;
     return intl.formatToPlainString(tmp(1236).t.GXs41w, obj);
   }
 }
-function SoundPickerButtonRow(section) {
-  section = section.section;
-  const channel = section.channel;
-  dependencyMap = undefined;
-  c3 = undefined;
+function SoundPickerButtonRow(row) {
+  row = row.row;
+  ({ sectionIndex: importDefault, section } = row);
+  const channel = row.channel;
+  closure_4 = undefined;
+  c5 = undefined;
   const tmp = callback2();
-  dependencyMap = tmp;
-  let obj = section(589);
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => channel(soundButtonNotFirst[11]).canUseSoundboardEverywhere(currentUser.getCurrentUser()));
+  closure_4 = tmp;
+  let obj = row(section[10]);
+  const items = [c5];
+  const stateFromStores = obj.useStateFromStores(items, () => callback(section[11]).canUseSoundboardEverywhere(_undefined.getCurrentUser()));
   if (null == section) {
     return null;
   } else {
     let result = !stateFromStores;
     if (!stateFromStores) {
-      result = tmp2(8898).isSoundboardSectionNitroLocked(channel.guild_id, section.category.categoryInfo);
-      const tmp2Result = tmp2(8898);
+      result = tmp2(tmp3[12]).isSoundboardSectionNitroLocked(channel.guild_id, section.category.categoryInfo);
+      const tmp2Result = tmp2(tmp3[12]);
     }
-    c3 = result;
+    c5 = result;
     obj = { style: null, children: null };
     const items1 = [tmp.row];
     obj[0] = items1;
     if (result) {
-      result = callback(tmp2(8921).PremiumUpsellGradientBackground, {});
+      result = callback(tmp2(tmp3[13]).PremiumUpsellGradientBackground, {});
     }
     const items2 = [
       result,
-      section.soundsByRow[section.row].map((type) => {
+      section.soundsByRow[row].map((type) => {
           type = type.type;
-          if (section(soundButtonNotFirst[7]).SoundboardSoundItemType.SOUND === type) {
+          if (row(section[7]).SoundboardSoundItemType.SOUND === type) {
             const sound = type.sound;
-            const obj = { sound: null, channel: null, style: null, isSectionLocked: null };
+            let obj = { sound: null, channel: null, soundGridLocation: null, style: null, isSectionLocked: null };
             obj[0] = sound;
             obj[1] = channel;
-            soundButtonNotFirst = null;
+            obj = { section: null, item: null };
+            obj[0] = closure_1;
+            obj[1] = row;
+            obj[2] = obj;
+            let soundButtonNotFirst = null;
             if (arg1 > 0) {
               soundButtonNotFirst = soundButtonNotFirst.soundButtonNotFirst;
             }
-            obj[2] = soundButtonNotFirst;
-            obj[3] = c3;
+            obj[3] = soundButtonNotFirst;
+            obj[4] = c5;
             const _HermesInternal = HermesInternal;
             return closure_1_7(tmp(tmp2[14]).SoundButton, obj, "" + section.category.key + "-" + sound.soundId);
           } else if (tmp(tmp2[7]).SoundboardSoundItemType.ADD_SOUND === type) {
@@ -82,7 +87,7 @@ function SoundPickerButtonRow(section) {
         })
     ];
     obj[1] = items2;
-    return closure_8(View, obj);
+    return closure_8(closure_4, obj);
   }
 }
 let c3 = importAllResult;
@@ -154,7 +159,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     START = END;
   }
   closure_5 = callback2();
-  let obj = channel(4886);
+  let obj = channel(4887);
   const fontScale = obj.useFontScale();
   let tmp3 = (function getFastListSectionsFromCategories(categories, closure_6, fontScale) {
     const items = [];
@@ -163,7 +168,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     while (iter !== undefined) {
       let tmp2 = callback;
       let tmp3 = dependencyMap;
-      let arr2 = callback(8967)(nextResult.items, closure_6);
+      let arr2 = callback(9109)(nextResult.items, closure_6);
       let tmp4 = closure_9;
       let obj = { category: null, height: null, soundsByRow: null };
       obj[0] = nextResult;
@@ -178,7 +183,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
   let items = [tmp3];
   callback = importAllResult.useMemo(() => closure_6.map((height) => height.height), items);
   const items1 = [tmp3, channel];
-  callback = importAllResult.useCallback((arg0, row) => lib(closure_1_12, { row, section: closure_6[arg0], channel }), items1);
+  callback = importAllResult.useCallback((sectionIndex, row) => lib(closure_1_12, { row, sectionIndex, section: closure_6[sectionIndex], channel }), items1);
   let tmp2 = (function calculateRowsPerSection(categories, closure_6) {
     const items = [];
     const iter = categories[Symbol.iterator]();

@@ -20,7 +20,7 @@ function ShopThisLookCard(skuId) {
   closure_6 = undefined;
   let callback;
   let wishlistButton = callback3();
-  let obj = skuId(12444);
+  let obj = skuId(12489);
   const collectiblesShopProduct = obj.useCollectiblesShopProduct(skuId, { needsCategory: false, shouldFetchProduct: false });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
@@ -103,7 +103,7 @@ function ShopThisLookCard(skuId) {
     obj[1] = function renderPreview() {
       return callback(type, {});
     };
-    let tmp23 = callback(onPress(9570), obj);
+    let tmp23 = callback(onPress(10701), obj);
   } else {
     tmp23 = null;
     if (null != stateFromStores) {
@@ -114,14 +114,14 @@ function ShopThisLookCard(skuId) {
         obj1[0] = stateFromStores;
         obj1[1] = size;
         obj1[2] = callback1;
-        const items7 = [callback(onPress(10326), obj1), ];
+        const items7 = [callback(onPress(10697), obj1), ];
         let tmp17Result = null != memo1;
         if (tmp17Result) {
           callback1 = { selectedProduct: null, style: null };
           callback1[0] = memo1;
           wishlistButton = wishlistButton.wishlistButton;
           callback1[1] = wishlistButton;
-          tmp17Result = tmp17(tmp18(9624), callback1);
+          tmp17Result = tmp17(tmp18(12448), callback1);
         }
         items7[1] = tmp17Result;
         obj[1] = items7;
@@ -134,10 +134,10 @@ function ShopThisLookCard(skuId) {
         const obj2 = { sku: null, size: null, overlay: null, onPress: null };
         obj2[0] = stateFromStores;
         obj2[1] = size;
-        obj2[2] = skuId(9570).WishlistItemCardOverlay.LOCKED;
+        obj2[2] = skuId(10701).WishlistItemCardOverlay.LOCKED;
         obj2[3] = tmp10;
-        tmp15Result = callback(onPress(10326), obj2);
-        const tmp13 = onPress(10326);
+        tmp15Result = callback(onPress(10697), obj2);
+        const tmp13 = onPress(10697);
       }
     }
   }
@@ -169,21 +169,21 @@ export default function ShopThisLookActionSheet(arg0) {
   let obj = useEquippedCollectibleSkuIds;
   const equippedCollectibleSkuIds = obj.useEquippedCollectibleSkuIds(userId, guildId);
   obj = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12760)(obj));
-  const tmp2 = analyticsLocations(12760)(obj);
-  analyticsLocations = analyticsLocations(5900)(analyticsLocations(5920).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
+  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12435)(obj));
+  const tmp2 = analyticsLocations(12435)(obj);
+  analyticsLocations = analyticsLocations(5905)(analyticsLocations(5925).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
   const items = [analyticsLocations];
   dependencyMap = React.useCallback((initialProductSkuId) => {
-    let obj = analyticsLocations(4411);
+    let obj = analyticsLocations(4412);
     obj.hideActionSheet();
-    obj = { initialProductSkuId, analyticsLocations, analyticsSource: analyticsLocations(5920).USER_PROFILE_OVERFLOW_MENU };
-    const result = _undefined(7213).openCollectiblesShopMobile(obj);
+    obj = { initialProductSkuId, analyticsLocations, analyticsSource: analyticsLocations(5925).USER_PROFILE_OVERFLOW_MENU };
+    const result = _undefined(7219).openCollectiblesShopMobile(obj);
   }, items);
   obj = { value: null, children: null };
-  const items1 = [analyticsLocations(5920).SHOP_THIS_LOOK_ACTION_SHEET];
+  const items1 = [analyticsLocations(5925).SHOP_THIS_LOOK_ACTION_SHEET];
   obj[0] = items1;
   obj1 = { startExpanded: true, title: null, children: null };
-  const tmp3 = analyticsLocations(5900);
+  const tmp3 = analyticsLocations(5905);
   const intl = require("../../../../intl/index.native.tsx").intl;
   obj1[1] = intl.string(require("../../../../intl/index.native.tsx").t.xNdRDO);
   const obj2 = { style: tmp.container, children: null };
@@ -191,7 +191,7 @@ export default function ShopThisLookActionSheet(arg0) {
   const intl2 = require("../../../../intl/index.native.tsx").intl;
   obj3[3] = intl2.string(require("../../../../intl/index.native.tsx").t["ws+0Lr"]);
   const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj3), ];
-  const tmp4 = analyticsLocations(9682);
+  const tmp4 = analyticsLocations(9139);
   const items3 = [tmp.itemsContainer, { gap, width: rowWidth }];
   items2[1] = callback(closure_5, {
     style: items3,

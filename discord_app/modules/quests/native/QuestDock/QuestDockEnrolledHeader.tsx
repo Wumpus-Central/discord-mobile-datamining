@@ -4,7 +4,7 @@ import QuestsVisibleMessagesChangedSource from "../../QuestTypes.tsx";
 import useQuests from "../../hooks/QuestHooks.tsx";
 import _getQuestsInstructionsToWinReward from "../../hooks/QuestCopyHooks.tsx";
 import getDeliveredQuest from "QuestDockCreativeContext.tsx";
-import QUEST_PROGRESS_DIAMETER_BY_SIZEDefault from "../QuestProgressIndicator.tsx";
+import COMPLETION_GLOW_SHADOW_RADIUSDefault from "../QuestProgressIndicator.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -28,7 +28,7 @@ const memoResult = importAllResult.memo(function QuestDockEnrolledHeader() {
   obj1 = { style: tmp2.progressIndicatorWrapper, children: null };
   const questBarSubtitle = _getQuestsInstructionsToWinReward.useQuestBarSubtitle(obj);
   obj2 = { quest: questCreative, size: "x-sm", progress: questTaskDetails.percentComplete, loading: false, hasConfetti: true };
-  obj1[1] = callback2(QUEST_PROGRESS_DIAMETER_BY_SIZEDefault, obj2);
+  obj1[1] = callback2(COMPLETION_GLOW_SHADOW_RADIUSDefault, obj2);
   const items = [callback2(View, obj1), ];
   obj3 = { style: tmp2.copy, children: null };
   const items1 = [callback2(Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: questBarTitle }), callback2(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: questBarSubtitle })];

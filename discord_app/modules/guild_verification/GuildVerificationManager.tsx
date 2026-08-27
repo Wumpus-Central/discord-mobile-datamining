@@ -4,7 +4,7 @@ import ME from "../../Constants.tsx";
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import set2 from "../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
-import _modDef12947 from "../hub/HubUtils.native.tsx";
+import _modDef12711 from "../hub/HubUtils.native.tsx";
 import inviteGuildHasPendingMemberDisabledVerification from "GuildVerificationUtils.tsx";
 
 function handleInviteData(invite) {
@@ -22,15 +22,15 @@ function handleInviteData(invite) {
       }
     }
     if (hasItem) {
-      _modDef12947.onOpenHubInvite(invite.invite);
-      const obj5 = _modDef12947;
+      _modDef12711.onOpenHubInvite(invite.invite);
+      const obj5 = _modDef12711;
     }
   }
   let new_member = invite.invite.new_member;
   if (new_member) {
     let hasFlagResult = hasFlag.hasFlag(num, set2.GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp3(1403).hasFlag(num, tmp3(7984).GuildInviteFlags.IS_APPLICATION_BYPASS);
+      hasFlagResult = tmp3(1403).hasFlag(num, tmp3(8594).GuildInviteFlags.IS_APPLICATION_BYPASS);
       const tmp3Result = tmp3(1403);
     }
     new_member = !hasFlagResult;

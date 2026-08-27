@@ -7,8 +7,8 @@ import TableRowInner from "../../../../design/components/TableRow/native/TableRo
 import FormCheckbox from "../../../../design/components/Forms/native/FormCheckbox.native.tsx";
 import getRoleRowDataAll from "../../ChannelPermissionsUtils.tsx";
 import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
-import registerAssetDefault from "../../../../../_runtime/09222_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/09223_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09635_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/09636_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../stores/UserStore.tsx";
 import { RowType } from "../../ChannelPermissionsConstants.tsx";
@@ -59,8 +59,8 @@ function RemoveIcon(item) {
     }
     obj = { style: null };
     obj[0] = prop;
-    obj[4] = closure_7(item(6171).CircleXIcon, obj);
-    tmp3Result = tmp3(item(5015).PressableOpacity, obj);
+    obj[4] = closure_7(item(6177).CircleXIcon, obj);
+    tmp3Result = tmp3(item(5020).PressableOpacity, obj);
   }
   return tmp3Result;
 }

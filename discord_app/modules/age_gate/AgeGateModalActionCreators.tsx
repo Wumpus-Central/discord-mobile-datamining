@@ -12,15 +12,10 @@ const AgeGateAnalyticAction = result2.AgeGateAnalyticAction;
 const result = set.fileFinishedImporting("modules/age_gate/AgeGateModalActionCreators.tsx");
 
 export const openAgeGateModal = function openAgeGateModal(JOIN_LARGE_GUILD_UNDERAGE) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  ({ onConfirm, guild } = obj);
+  let obj = expandEventPropertiesDefault;
   obj = { section: JOIN_LARGE_GUILD_UNDERAGE };
-  expandEventPropertiesDefault.track(constants2.OPEN_MODAL, { type: "Enter Your Birthday", source: obj });
-  const obj2 = expandEventPropertiesDefault;
-  obj = { type: "AGE_GATE_MODAL_OPEN", source: JOIN_LARGE_GUILD_UNDERAGE, onConfirm, guild };
+  obj.track(constants2.OPEN_MODAL, { type: "Enter Your Birthday", source: obj });
+  obj = { type: "AGE_GATE_MODAL_OPEN", source: JOIN_LARGE_GUILD_UNDERAGE };
   dispatcherDefault.dispatch(obj);
 };
 export const closeAgeGateModal = function closeAgeGateModal(closure_0) {

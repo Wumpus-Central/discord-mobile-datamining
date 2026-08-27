@@ -1,6 +1,7 @@
 // discord_app/modules/user_offers/records/UserTrialOfferRecord.tsx
 import toJSDefault from "../../../lib/Record.tsx";
 import closure_0 from "../../billing/records/SubscriptionTrialRecord.tsx";
+import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_1 } from "../../premium/PremiumConstants.tsx";
 
 toJSDefault;
 let UserTrialOfferRecord;
@@ -93,19 +94,41 @@ UserTrialOfferRecord["createFromServer"] = function createFromServer(expires_at)
   tmp13.redeemedAt = date1;
   return tmp13;
 };
-prototype["hasExpired"] = function hasExpired() {
-  let tmp2 = null != this.expiresAt;
-  if (tmp2) {
-    const _Date = Date;
-    const expiresAt = tmp.expiresAt;
-    const timestamp = Date.now();
-    tmp2 = timestamp > expiresAt.getTime();
-  }
-  return tmp2;
-};
-prototype["isRedeemed"] = function isRedeemed() {
-  return null != this.redeemedAt;
-};
+Object.defineProperty(prototype, "hasExpired", {
+  get: function hasExpired() {
+    let tmp2 = null != this.expiresAt;
+    if (tmp2) {
+      const _Date = Date;
+      const expiresAt = tmp.expiresAt;
+      const timestamp = Date.now();
+      tmp2 = timestamp > expiresAt.getTime();
+    }
+    return tmp2;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "isRedeemed", {
+  get: function isRedeemed() {
+    return null != this.redeemedAt;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "hasAcknowledged", {
+  get: function hasAcknowledged() {
+    return null != this.expiresAt;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "isReferralTrial", {
+  get: function isReferralTrial() {
+    let tmp = this.trialId === closure_1;
+    if (!tmp) {
+      tmp = null != this.referrerId;
+    }
+    return tmp;
+  },
+  set: undefined
+});
 const result = require("set").fileFinishedImporting("modules/user_offers/records/UserTrialOfferRecord.tsx");
 
 export default UserTrialOfferRecord;

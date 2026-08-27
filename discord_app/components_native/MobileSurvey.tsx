@@ -114,8 +114,8 @@ export default function MobileSurvey() {
     obj[5] = function renderConfirmRightIcon() {
       return closure_1_7(lib(closure_1_2[12]).Icon, { style: lib.confirmIcon, color: stateFromStores(closure_1_2[13]).unsafe_rawColors.WHITE, size: lib(closure_1_2[12]).Icon.Sizes.SMALL, source: stateFromStores(closure_1_2[14]) });
     };
-    tmp5 = jsx(stateFromStores(4898), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
-    const tmp8 = stateFromStores(4898);
+    tmp5 = jsx(stateFromStores(4899), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
+    const tmp8 = stateFromStores(4899);
   }
   return tmp5;
 };

@@ -1,9 +1,9 @@
 // discord_app/modules/app_icons/native/SettingsItemAppIcon.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import fetchCurrentAppIcon from "AppIconUtils.tsx";
 import FreemiumAppIconIds from "../AppIconTypes.tsx";
 import ClydeIcon from "../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
+import fetchCurrentAppIcon from "AppIconUtils.tsx";
 import AppIconDefault from "AppIcon.tsx";
 import { getIconById } from "AppIconConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";

@@ -85,10 +85,10 @@ export default function ChooseAccount() {
                 intl2 = tmp31(1236).intl;
                 string = intl2.string;
                 obj1[4] = string(lib(1236).t["ETE/oC"]);
-                obj1 = closure_1_1(4809).confirm(obj1);
+                obj1 = closure_1_1(4810).confirm(obj1);
                 dependencyMap = 1;
                 c4 = 1;
-                const obj8 = closure_1_1(4809);
+                const obj8 = closure_1_1(4810);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -100,9 +100,9 @@ export default function ChooseAccount() {
               return obj3;
             } else {
               if (arg1) {
-                obj = closure_1_1(4411);
+                obj = closure_1_1(4412);
                 obj.hideActionSheet();
-                obj1 = closure_1_2(12054);
+                obj1 = closure_1_2(11900);
                 obj1.removeAccount(lib.id);
               }
               c4 = 3;
@@ -136,7 +136,7 @@ export default function ChooseAccount() {
   let intl2 = require("../../../intl/index.native.tsx").intl;
   obj[2] = intl2.string(require("../../../intl/index.native.tsx").t["0M5fN7"]);
   obj[1] = callback(require("../../../design/components/Text/native/Text.tsx").Text, obj);
-  obj[2] = multiAccountUsers(13490);
+  obj[2] = multiAccountUsers(13517);
   obj[4] = tmp.container;
   obj1 = { style: tmp.mainCard, children: null };
   let items = [
@@ -207,8 +207,8 @@ export default function ChooseAccount() {
 
   ];
   let obj2 = { leading: null, label: null, labelStyle: null, onPress: null };
-  const tmp2 = multiAccountUsers(8722);
-  obj2[0] = callback(require("../../../design/void/Form/native/index.tsx").FormRow.Icon, { themedColor: multiAccountUsers(712).colors.TEXT_LINK, size: require("../../../design/void/native.tsx").Icon.Sizes.SMALL_20, source: multiAccountUsers(15392) });
+  const tmp2 = multiAccountUsers(7678);
+  obj2[0] = callback(require("../../../design/void/Form/native/index.tsx").FormRow.Icon, { themedColor: multiAccountUsers(712).colors.TEXT_LINK, size: require("../../../design/void/native.tsx").Icon.Sizes.SMALL_20, source: multiAccountUsers(15457) });
   let intl3 = require("../../../intl/index.native.tsx").intl;
   obj2[1] = intl3.string(require("../../../intl/index.native.tsx").t.bPP34Q);
   obj2[2] = tmp.addAccountLabel;

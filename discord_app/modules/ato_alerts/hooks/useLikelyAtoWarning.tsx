@@ -1,10 +1,10 @@
 // discord_app/modules/ato_alerts/hooks/useLikelyAtoWarning.tsx
 import set from "../../../../_runtime/00002_set.js";
 import handleConnectionOpen from "../../self_mod/ChannelSafetyWarningsStore.tsx";
+import useInappropriateConversationWarningsForChannel from "../../self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx";
+import useChannelSafetyWarning from "../../self_mod/hooks/useChannelSafetyWarning.tsx";
 import useIsSpamMessageRequest from "../../message_request/hooks/useIsSpamMessageRequest.tsx";
 import useIsMessageRequest from "../../message_request/hooks/useIsMessageRequest.tsx";
-import useChannelSafetyWarning from "../../self_mod/hooks/useChannelSafetyWarning.tsx";
-import useInappropriateConversationWarningsForChannel from "../../self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx";
 
 const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
 const result = set.fileFinishedImporting("modules/ato_alerts/hooks/useLikelyAtoWarning.tsx");

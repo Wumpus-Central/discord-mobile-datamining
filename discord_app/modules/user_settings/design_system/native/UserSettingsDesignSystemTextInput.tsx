@@ -11,11 +11,11 @@ import Background from "../../../../design/components/Sheet/native/BottomSheet.n
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
 import TextField from "../../../../design/components/TextField/native/TextField.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
-import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import Input from "../../../../design/components/Input/native/Input.native.tsx";
-import TextArea from "../../../../design/components/TextInput/native/TextArea.native.tsx";
 import SplitTextInput from "../../../../design/components/SplitTextInput/native/SplitTextInput.native.tsx";
+import TextArea from "../../../../design/components/TextInput/native/TextArea.native.tsx";
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import GhostInput from "../../../../design/components/TextInput/native/GhostInput.native.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
@@ -215,8 +215,8 @@ export default function UserSettingsDesignSystemTextInput() {
   const obj12 = { children: callback2(TextInput.TextInput, { defaultValue: "Can't edit this value", isDisabled: true }) };
   items1[28] = callback2(Sample, { children: callback2(TextArea.TextArea, { label: "Limited length", maxLength: 124 }) });
   items1[29] = callback2(Text.Text, { variant: "text-md/normal", children: "Exceeding the maxLength will prevent the user from inputting any more text for the value until it has been shortened under the maximum length." });
-  items1[30] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Ghost Inputs" });
-  items1[31] = callback2(Text.Text, { variant: "text-md/normal", children: "GhostInput is a minimal version of TextInput with no container shape. These should be used sparingly, only in cases where a single input is the primary focus of the surrounding area." });
+  items1[30] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Ghost Inputs (Deprecated)" });
+  items1[31] = callback2(Text.Text, { variant: "text-md/normal", children: "GhostInput is deprecated and should not be used in new work; prefer TextInput. It is a minimal version of TextInput with no container shape, intended for cases where a single input is the primary focus of the surrounding area." });
   const obj13 = { children: callback2(TextArea.TextArea, { label: "Limited length", maxLength: 124 }) };
   items1[32] = callback2(Sample, { children: callback2(Button.Button, obj15) });
   items1[33] = callback2(Text.Text, { variant: "text-md/normal", children: "GhostInputs can also appear left-aligned by setting `isCentered` to false." });

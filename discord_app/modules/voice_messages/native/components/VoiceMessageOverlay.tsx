@@ -1,7 +1,7 @@
 // discord_app/modules/voice_messages/native/components/VoiceMessageOverlay.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import result2 from "../../../../design/migrations/native/LegacyTokens.tsx";
-import inlineStyles from "../../../../../_runtime/08052_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08173_inlineStyles.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";

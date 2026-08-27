@@ -16,7 +16,7 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     let _require;
     let chatInputFloating;
     const merged = Object.assign(arg0, undefined);
-    const tmp6 = chatInputFloating(4308)();
+    const tmp6 = chatInputFloating(4309)();
     _require = tmp6;
     let obj = useIsMobileVisualRefreshExperimentEnabled;
     chatInputFloating = obj.useMobileVisualRefreshConfig({ location: "MediaKeyboardButtonIcon" }).chatInputFloating;
@@ -55,6 +55,6 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     obj1 = {};
     const merged1 = Object.assign(merged);
     obj[1] = jsx(require("../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx").PlusLargeIcon, {});
-    return jsx(chatInputFloating(4184).View, { style: null, children: null });
+    return jsx(chatInputFloating(4185).View, { style: null, children: null });
   }
 };

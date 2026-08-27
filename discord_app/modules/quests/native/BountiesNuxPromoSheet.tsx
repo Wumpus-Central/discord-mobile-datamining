@@ -18,7 +18,7 @@ const result = require("set").fileFinishedImporting("modules/quests/native/Bount
 
 export default function BountiesNuxPromoSheet() {
   const callback = React.useCallback(() => {
-    callback2(4411).hideActionSheet(callback(14589).PROMO_SHEET_KEY);
+    callback2(4412).hideActionSheet(callback(14616).PROMO_SHEET_KEY);
   }, []);
   let obj = { gradientColor: "purple", title: null, description: null, illustration: null, actions: null };
   const intl = getSystemLocale.intl;

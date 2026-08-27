@@ -60,17 +60,17 @@ export const useIsProfileFramesEarlyAccessPhase = function useIsProfileFramesEar
   }
   return isProfileFramesEnabled;
 };
-export const isUserPaidTier2 = function isUserPaidTier2(currentUser) {
-  let isPremiumExactlyResult = isPremiumAtLeast.isPremiumExactly(currentUser, PremiumTypes.TIER_2);
+export const isUserPaidTier2 = function isUserPaidTier2(premiumState) {
+  let isPremiumExactlyResult = isPremiumAtLeast.isPremiumExactly(premiumState, PremiumTypes.TIER_2);
   if (isPremiumExactlyResult) {
-    let premiumState;
-    if (currentUser != null) {
-      premiumState = currentUser.premiumState;
+    premiumState = undefined;
+    if (premiumState != null) {
+      premiumState = premiumState.premiumState;
     }
     isPremiumExactlyResult = null != premiumState;
   }
   if (isPremiumExactlyResult) {
-    isPremiumExactlyResult = currentUser.premiumState.premiumSubscriptionType === create.PremiumSubscriptionType.TIER_2;
+    isPremiumExactlyResult = premiumState.premiumState.premiumSubscriptionType === create.PremiumSubscriptionType.TIER_2;
   }
   return isPremiumExactlyResult;
 };

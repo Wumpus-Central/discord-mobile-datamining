@@ -1,6 +1,6 @@
 // discord_app/modules/virtual_currency/native/BalanceCounter.tsx
 import context from "../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import _mod4184 from "../../reanimated/ReanimatedRexport.tsx";
+import _mod4185 from "../../reanimated/ReanimatedRexport.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../_runtime/00019_noop.js";
@@ -81,8 +81,11 @@ class BalanceCounter {
               const diff = tmp - tmp2.current;
               onValueChange(diff);
               tmp2.current = tmp;
-              const desiredAnimationConfigs = value(ref[6]).getDesiredAnimationConfigs(diff, value(ref[6]).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS);
-              duration = desiredAnimationConfigs.duration;
+              let obj = value(ref[6]);
+              obj = { targetTime: null };
+              obj[0] = value(ref[6]).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS;
+              const orbBalanceCounterAnimationConfigs = obj.getOrbBalanceCounterAnimationConfigs(diff, obj);
+              duration = orbBalanceCounterAnimationConfigs.duration;
               if (null != ref2.current) {
                 const _clearTimeout = clearTimeout;
                 clearTimeout(tmp12.current);
@@ -93,7 +96,7 @@ class BalanceCounter {
               ref2.current = setTimeout(() => {
                 closure_1_10(closure_1_3, duration, duration);
                 closure_1_4.current = null;
-              }, desiredAnimationConfigs.delay);
+              }, orbBalanceCounterAnimationConfigs.delay);
               return clearAnimationTimeout;
             } else {
               _undefined(tmp);
