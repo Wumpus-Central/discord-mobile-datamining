@@ -1,14 +1,14 @@
-// === Module 15630: AccountLinkLargeBanner ===
+// === Module 15695: AccountLinkLargeBanner ===
 
-// Module 15630 (AccountLinkLargeBanner)
+// Module 15695 (AccountLinkLargeBanner)
 import ThemesDefault from "Themes" /* 712 */;
-import apexExperiment from "apexExperiment" /* 15631 */;
-import apexExperimentDefault from "apexExperiment" /* 15631 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4885 */;
+import map from "map" /* 9009 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -16,10 +16,10 @@ function AccountLinkLargeBanner(arg0) {
   ({ application, markAsDismissed: require, startAuthorization: importDefault } = arg0);
   let analyticsLocations;
   const tmp = callback3();
-  let obj = require(analyticsLocations[11]);
-  const items = [closure_5];
+  let obj = require(analyticsLocations[10]);
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  analyticsLocations = importDefault(analyticsLocations[12])(importDefault(analyticsLocations[13]).MOBILE_ACCOUNT_LINK_LARGE_BANNER).analyticsLocations;
+  analyticsLocations = importDefault(analyticsLocations[11])(importDefault(analyticsLocations[12]).MOBILE_ACCOUNT_LINK_LARGE_BANNER).analyticsLocations;
   const applicationAccountLinkBenefitConfig = application.applicationAccountLinkBenefitConfig;
   let reward_name;
   if (applicationAccountLinkBenefitConfig != null) {
@@ -31,11 +31,11 @@ function AccountLinkLargeBanner(arg0) {
     obj[1] = tmp.card;
     obj = { accessibilityRole: "button", onPress: null, style: null, children: null };
     obj[1] = function onPress() {
-      return callback(closure_1_6.USER_DISMISS);
+      return callback(closure_1_5.USER_DISMISS);
     };
     obj[2] = tmp.closeButton;
-    obj[3] = callback(tmp2(tmp3[16]).XSmallIcon, { size: "sm", color: "text-muted" });
-    const items1 = [callback(tmp2(tmp3[15]).PressableOpacity, obj), , , , ];
+    obj[3] = callback(tmp2(tmp3[15]).XSmallIcon, { size: "sm", color: "text-muted" });
+    const items1 = [callback(tmp2(tmp3[14]).PressableOpacity, obj), , , , ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.imagesContainer;
     const obj2 = { game: null, size: null };
@@ -46,128 +46,64 @@ function AccountLinkLargeBanner(arg0) {
     obj3[0] = tmp.ellipsisContainer;
     const obj4 = { style: null };
     obj4[0] = tmp.ellipsisDot;
-    const items3 = [callback(closure_4, obj4), , ];
+    const items3 = [callback(View, obj4), , ];
     const obj5 = { style: null };
     obj5[0] = tmp.ellipsisDot;
-    items3[1] = callback(closure_4, obj5);
+    items3[1] = callback(View, obj5);
     const obj6 = { style: null };
     obj6[0] = tmp.ellipsisDot;
-    items3[2] = callback(closure_4, obj6);
+    items3[2] = callback(View, obj6);
     obj3[1] = items3;
-    items2[1] = callback2(closure_4, obj3);
-    const obj7 = { user: null, size: null, guildId: "Array" };
+    items2[1] = callback2(View, obj3);
+    const obj7 = { user: null, size: null, guildId: "r" };
     obj7[0] = stateFromStores;
-    obj7[1] = tmp2(tmp3[17]).AvatarSizes.LARGE_48;
-    items2[2] = callback(tmp2(tmp3[17]).Avatar, obj7);
+    obj7[1] = tmp2(tmp3[16]).AvatarSizes.LARGE_48;
+    items2[2] = callback(tmp2(tmp3[16]).Avatar, obj7);
     obj1[1] = items2;
-    items1[1] = callback2(closure_4, obj1);
+    items1[1] = callback2(View, obj1);
     const obj8 = { variant: null, color: "mobile-text-heading-primary", style: null, children: null };
-    obj8[0] = c17;
+    obj8[0] = c15;
     obj8[2] = tmp.title;
-    const intl = tmp2(tmp3[19]).intl;
+    const intl = tmp2(tmp3[18]).intl;
     const obj9 = { gameName: null };
     obj9[0] = application.name;
-    obj8[3] = intl.formatToPlainString(tmp2(tmp3[19]).t["3gpxqO"], obj9);
-    items1[2] = callback(tmp2(tmp3[18]).Text, obj8);
+    obj8[3] = intl.formatToPlainString(tmp2(tmp3[18]).t["3gpxqO"], obj9);
+    items1[2] = callback(tmp2(tmp3[17]).Text, obj8);
     const obj10 = { variant: null, color: "text-muted", style: null, children: null };
-    obj10[0] = c18;
+    obj10[0] = c16;
     obj10[2] = tmp.body;
-    const intl2 = tmp2(tmp3[19]).intl;
+    const intl2 = tmp2(tmp3[18]).intl;
     const obj11 = { rewardName: null };
     obj11[0] = reward_name;
-    obj10[3] = intl2.formatToPlainString(tmp2(tmp3[19]).t.vxvKMm, obj11);
-    items1[3] = callback(tmp2(tmp3[18]).Text, obj10);
+    obj10[3] = intl2.formatToPlainString(tmp2(tmp3[18]).t.vxvKMm, obj11);
+    items1[3] = callback(tmp2(tmp3[17]).Text, obj10);
     const obj12 = { style: null, children: null };
     obj12[0] = tmp.ctaContainer;
     const obj13 = { variant: "secondary", size: "md", text: null, onPress: null, icon: null };
-    const intl3 = tmp2(tmp3[19]).intl;
-    obj13[2] = intl3.string(tmp2(tmp3[19]).t["0mvtKL"]);
+    const intl3 = tmp2(tmp3[18]).intl;
+    obj13[2] = intl3.string(tmp2(tmp3[18]).t["0mvtKL"]);
     obj13[3] = function onPress() {
       callback2({ analyticsLocations });
     };
-    obj13[4] = callback(tmp2(tmp3[21]).ExperimentalGameControllerLinkIcon, { size: "sm" });
-    obj12[1] = callback(tmp2(tmp3[20]).Button, obj13);
-    items1[4] = callback(closure_4, obj12);
+    obj13[4] = callback(tmp2(tmp3[20]).ExperimentalGameControllerLinkIcon, { size: "sm" });
+    obj12[1] = callback(tmp2(tmp3[19]).Button, obj13);
+    items1[4] = callback(View, obj12);
     obj[2] = items1;
-    tmp8 = callback2(tmp2(tmp3[14]).Card, obj);
+    tmp8 = callback2(tmp2(tmp3[13]).Card, obj);
   }
   return tmp8;
 }
-function AccountLinkMediumBanner(arg0) {
-  ({ application, markAsDismissed: require, startAuthorization: importDefault } = arg0);
-  let analyticsLocations;
-  const tmp = callback4();
-  analyticsLocations = importDefault(analyticsLocations[12])(importDefault(analyticsLocations[13]).MOBILE_ACCOUNT_LINK_MEDIUM_BANNER).analyticsLocations;
-  const applicationAccountLinkBenefitConfig = application.applicationAccountLinkBenefitConfig;
-  let reward_name;
-  if (applicationAccountLinkBenefitConfig != null) {
-    reward_name = applicationAccountLinkBenefitConfig.reward_name;
-  }
-  const applicationAccountLinkBenefitConfig2 = application.applicationAccountLinkBenefitConfig;
-  if (applicationAccountLinkBenefitConfig2 != null) {
-    const reward_image = applicationAccountLinkBenefitConfig2.reward_image;
-  }
-  let tmp5 = null;
-  if (null != reward_name) {
-    tmp5 = null;
-    if (null != reward_image) {
-      let obj = { variant: "secondary", style: null, children: null };
-      obj[1] = tmp.card;
-      obj = { style: null, children: null };
-      obj[0] = tmp.contentContainer;
-      obj = { source: null, style: null, resizeMode: "contain" };
-      obj1 = { uri: null };
-      obj1[0] = reward_image;
-      obj[0] = obj1;
-      obj[1] = tmp.rewardImage;
-      const items = [callback(closure_3, obj), , ];
-      const obj2 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: null, children: null };
-      obj2[2] = tmp.bodyText;
-      const intl = require(tmp2[19]).intl;
-      const obj3 = { gameName: null, rewardName: null };
-      obj3[0] = application.name;
-      obj3[1] = reward_name;
-      obj2[3] = intl.formatToPlainString(require(tmp2[19]).t["V/C76E"], obj3);
-      items[1] = callback(require(tmp2[18]).Text, obj2);
-      const obj4 = { accessibilityRole: "button", onPress: null, style: null, children: null };
-      obj4[1] = function onPress() {
-        return callback(closure_1_6.USER_DISMISS);
-      };
-      obj4[2] = tmp.closeButton;
-      obj4[3] = callback(require(tmp2[16]).XSmallIcon, { size: "sm", color: "text-muted" });
-      items[2] = callback(require(tmp2[15]).PressableOpacity, obj4);
-      obj[1] = items;
-      const items1 = [callback2(closure_4, obj), ];
-      const obj5 = { style: null, children: null };
-      obj5[0] = tmp.ctaContainer;
-      const obj6 = { variant: "secondary", size: "sm", text: null, onPress: null, icon: null };
-      const intl2 = require(tmp2[19]).intl;
-      obj6[2] = intl2.string(require(tmp2[19]).t["0mvtKL"]);
-      obj6[3] = function onPress() {
-        callback2({ analyticsLocations });
-      };
-      obj6[4] = callback(require(tmp2[21]).ExperimentalGameControllerLinkIcon, { size: "xs" });
-      obj5[1] = callback(require(tmp2[20]).Button, obj6);
-      items1[1] = callback(closure_4, obj5);
-      obj[2] = items1;
-      tmp5 = callback2(require(tmp2[14]).Card, obj);
-    }
-  }
-  return tmp5;
-}
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
+({ jsx: closure_6, jsxs: error } = jsxProd);
 const PX_8 = ThemesDefault.space.PX_8;
 const PX_82 = ThemesDefault.space.PX_8;
 const PX_12 = ThemesDefault.space.PX_12;
 const PX_16 = ThemesDefault.space.PX_16;
 const PX_4 = ThemesDefault.space.PX_4;
 const NORMAL = require("GameIcon").GameIconSizes.NORMAL;
-let closure_16 = require("GameIcon").GameIconImageSize[NORMAL];
-let c17 = "heading-md/bold";
-let c18 = "text-sm/medium";
+let closure_14 = require("GameIcon").GameIconImageSize[NORMAL];
+let c15 = "heading-md/bold";
+let c16 = "text-sm/medium";
 const PX_162 = ThemesDefault.space.PX_16;
-const PX_122 = ThemesDefault.space.PX_12;
 let obj = { card: { padding: PX_12 }, closeButton: null, imagesContainer: null, ellipsisContainer: null, ellipsisDot: null, title: null, body: null, ctaContainer: null };
 obj = { position: "absolute", top: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj[1] = obj;
@@ -178,43 +114,11 @@ obj[4] = { width: ThemesDefault.space.PX_4, height: ThemesDefault.space.PX_4, bo
 obj[5] = { marginTop: PX_16, textAlign: "center" };
 obj[6] = { marginTop: PX_4, textAlign: "center" };
 obj[7] = { marginTop: PX_162 };
-let closure_21 = createCacheKey.createStyles(obj);
-let obj3 = { card: { padding: PX_12 }, closeButton: { width: 24, height: 24, alignItems: "center", justifyContent: "center", alignSelf: "flex-start" }, contentContainer: null, rewardImage: null, bodyText: null, ctaContainer: null };
+let closure_18 = createCacheKey.createStyles(obj);
 let obj2 = { width: ThemesDefault.space.PX_4, height: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.space.PX_4 / 2, backgroundColor: ThemesDefault.colors.INTERACTIVE_MUTED };
-obj3[2] = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
-obj3[3] = { width: 48, height: 48 };
-obj3[4] = { flexGrow: 1, flexShrink: 1, alignSelf: "center" };
-obj3[5] = { marginTop: PX_122, width: "100%" };
-let closure_23 = createCacheKey.createStyles(obj3);
-let obj4 = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
 const memoResult = importAllResult.memo((arg0) => {
-  let obj = apexExperimentDefault;
-  const config = obj.useConfig({ location: "AccountLinkBanner" });
-  const bannerSize = config.bannerSize;
-  let tmp5Result = null;
-  if (config.enabled) {
-    let tmp8 = bannerSize === apexExperiment.MobileAccountLinkingBannerSize.LARGE;
-    if (tmp8) {
-      obj = {};
-      const merged = Object.assign(arg0);
-      tmp8 = callback(AccountLinkLargeBanner, obj);
-    }
-    const items = [tmp8, ];
-    let tmp14 = bannerSize === apexExperiment.MobileAccountLinkingBannerSize.MEDIUM;
-    if (tmp14) {
-      obj = {};
-      const merged1 = Object.assign(arg0);
-      tmp14 = callback(AccountLinkMediumBanner, obj);
-    }
-    obj1 = { children: null };
-    items[1] = tmp14;
-    obj1[0] = items;
-    tmp5Result = closure_8(closure_9, obj1);
-    const tmp5 = closure_8;
-    const tmp6 = closure_9;
-    const tmp7 = require;
-  }
-  return tmp5Result;
+  const merged = Object.assign(arg0);
+  return callback(AccountLinkLargeBanner, {});
 });
 const result = require("set").fileFinishedImporting("modules/application_account_linking/native/AccountLinkBanner.tsx");
 
@@ -222,24 +126,9 @@ export default memoResult;
 export const ACCOUNT_LINK_BANNER_MARGIN_TOP = PX_8;
 export const ACCOUNT_LINK_BANNER_MARGIN_BOTTOM = PX_82;
 export const getScaledAccountLinkBannerHeight = function getScaledAccountLinkBannerHeight(fontScale) {
-  let sum3 = dependencyMap;
-  const config = apexExperimentDefault.getConfig({ location: "getScaledAccountLinkBannerHeight" });
-  const bannerSize = config.bannerSize;
-  if (!config.enabled) {
-    return 0;
-  } else if (bannerSize === apexExperiment.MobileAccountLinkingBannerSize.LARGE) {
-    const sum = PX_8 + PX_12 + closure_16 + PX_16;
-    let tmp3Result = tmp3(9666);
-    const sum1 = sum + tmp3Result.scaleTextLineHeight(c17, fontScale) + PX_4;
-    tmp3Result = tmp3(9666);
-    const sum2 = sum1 + 2 * tmp3Result.scaleTextLineHeight(c18, fontScale) + PX_162;
-    sum3 = sum2 + tmp3(4884).MEDIUM_BUTTON_HEIGHT + PX_12;
-    let num = sum3 + PX_82;
-  } else {
-    num = 0;
-    if (bannerSize === tmp3(15631).MobileAccountLinkingBannerSize.MEDIUM) {
-      const sum4 = PX_8 + PX_12 + 48 + PX_122;
-      num = sum4 + tmp3(4884).SMALL_BUTTON_HEIGHT + PX_12 + PX_82;
-    }
-  }
+  const sum = PX_8 + PX_12 + closure_14 + PX_16;
+  const sum1 = sum + map.scaleTextLineHeight(c15, fontScale) + PX_4;
+  const obj = map;
+  const sum2 = sum1 + 2 * map.scaleTextLineHeight(c16, fontScale) + PX_162;
+  return sum2 + MINIMUM_HIT_AREA.MEDIUM_BUTTON_HEIGHT + PX_12 + PX_82;
 };

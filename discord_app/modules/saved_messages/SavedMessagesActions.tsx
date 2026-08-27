@@ -1,8 +1,8 @@
-// === Module 11342: _upsertSavedMessage ===
+// === Module 11204: _upsertSavedMessage ===
 
-// Module 11342 (_upsertSavedMessage)
+// Module 11204 (_upsertSavedMessage)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getTimeSafe" /* 11280 */;
+import closure_4 from "getTimeSafe" /* 11159 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -165,10 +165,10 @@ function _fetchAndUpdateSavedMessages() {
           callback = results.map((message) => {
             let messageRecord = null;
             if (null != message.message) {
-              let obj = callback(4689);
+              let obj = callback(4690);
               messageRecord = obj.createMessageRecord(message.message);
             }
-            obj = { message: messageRecord, saveData: callback(8604).savedMessageDataToClient(message.save_data) };
+            obj = { message: messageRecord, saveData: callback(7537).savedMessageDataToClient(message.save_data) };
             return obj;
           });
           obj10 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: null };

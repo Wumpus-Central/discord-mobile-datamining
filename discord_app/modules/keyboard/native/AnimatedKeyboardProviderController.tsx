@@ -1,16 +1,16 @@
-// === Module 14115: mutable ===
+// === Module 14142: mutable ===
 
-// Module 14115 (mutable)
+// Module 14142 (mutable)
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1643 */;
-import _mod4184 from "module_4184" /* 4184 */;
+import _mod4185 from "module_4185" /* 4185 */;
 import jsxProd from "jsxProd" /* 21 */;
-import module_4184 from "module_4184" /* 4184 */;
+import module_4185 from "module_4185" /* 4185 */;
 import mutable from "module_0" /* 0 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const mutable1 = module_4184.makeMutable(require("module_4184").KeyboardState.UNKNOWN);
+const mutable1 = module_4185.makeMutable(require("module_4185").KeyboardState.UNKNOWN);
 let closure_6 = { code: "function AnimatedKeyboardProviderControllerTsx1(e){const{animatedKeyboardState,KeyboardState}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);}" };
 let closure_7 = { code: "function AnimatedKeyboardProviderControllerTsx2(e){const{animatedKeyboardHeight}=this.__closure;animatedKeyboardHeight.set(e.height);}" };
 let closure_8 = { code: "function AnimatedKeyboardProviderControllerTsx3(e){const{animatedKeyboardState,KeyboardState,animatedKeyboardHeight}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);animatedKeyboardHeight.set(e.height);}" };
@@ -19,13 +19,13 @@ let closure_9 = importAllResult.memo(() => {
   obj = { onStart: null, onMove: null, onEnd: null };
   const fn = function o(height) {
     if (0 === height.height) {
-      let OPEN = callback(4184).KeyboardState.CLOSED;
+      let OPEN = callback(4185).KeyboardState.CLOSED;
     } else {
-      OPEN = callback(4184).KeyboardState.OPEN;
+      OPEN = callback(4185).KeyboardState.OPEN;
     }
     const result = store2.set(OPEN);
   };
-  obj = { animatedKeyboardState: mutable1, KeyboardState: _mod4184.KeyboardState };
+  obj = { animatedKeyboardState: mutable1, KeyboardState: _mod4185.KeyboardState };
   fn.__closure = obj;
   fn.__workletHash = 12130162639136;
   fn.__initData = closure_6;
@@ -39,14 +39,14 @@ let closure_9 = importAllResult.memo(() => {
   obj[1] = fn2;
   const fn3 = function e(height) {
     if (0 === height.height) {
-      let OPEN = callback(4184).KeyboardState.CLOSED;
+      let OPEN = callback(4185).KeyboardState.CLOSED;
     } else {
-      OPEN = callback(4184).KeyboardState.OPEN;
+      OPEN = callback(4185).KeyboardState.OPEN;
     }
     const result = store2.set(OPEN);
     const result1 = store.set(height.height);
   };
-  fn3.__closure = { animatedKeyboardState: mutable1, KeyboardState: _mod4184.KeyboardState, animatedKeyboardHeight: mutable };
+  fn3.__closure = { animatedKeyboardState: mutable1, KeyboardState: _mod4185.KeyboardState, animatedKeyboardHeight: mutable };
   fn3.__workletHash = 10688534401196;
   fn3.__initData = closure_8;
   obj[2] = fn3;

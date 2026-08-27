@@ -1,11 +1,11 @@
-// === Module 15395: useIdentityRegistrationStep ===
+// === Module 15460: useIdentityRegistrationStep ===
 
-// Module 15395 (useIdentityRegistrationStep)
+// Module 15460 (useIdentityRegistrationStep)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15385 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15386 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15450 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15451 */;
 import { AbortCodes } from "ME" /* 676 */;
 
 const require = arg1;
@@ -161,10 +161,8 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
             obj7[1] = intl2.formatToPlainString(callback(navigation[8]).t.e5WzVa, obj8);
             obj7[2] = closure_1;
             obj7[3] = callback;
-            obj7[4] = function onPhoneTokenReceived(arg0) {
-              let obj = { email: "r", phone: "flex", phoneToken: null };
-              obj[1] = closure_1;
-              obj[2] = arg0;
+            obj7[4] = function onPhoneTokenReceived(phoneToken) {
+              let obj = { email: "r", phone: closure_1, phoneToken };
               v3(obj);
               obj = { step: closure_2_10.PHONE_VERIFICATION, toStep: callback(closure_2_2[14]).getNextRegistrationTransitionStep(callback), actionType: closure_2_11.SUCCESS };
               _undefined(obj);

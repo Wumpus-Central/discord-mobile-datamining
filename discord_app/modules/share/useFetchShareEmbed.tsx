@@ -1,6 +1,6 @@
-// === Module 13527: useFetchShareEmbed ===
+// === Module 13554: useFetchShareEmbed ===
 
-// Module 13527 (useFetchShareEmbed)
+// Module 13554 (useFetchShareEmbed)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -17,15 +17,16 @@ export default function useFetchShareEmbed(arg0) {
   closure_3 = hasTriedResolving[1];
   callback = React.useRef(true);
   React = React.useRef(undefined);
+  closure_6 = React.useRef(0);
   let items = [arg0];
   const effect = React.useEffect(() => {
-    function _unfurl() {
+    function _unfurl(arg0) {
       const self = this;
       const tmp = callback(function*() {
         if (c5 === 2) {
           c5 = 3;
           HermesBuiltin.throwTypeError();
-        } else if (tmp7 === 3) {
+        } else if (tmp8 === 3) {
           if (arg0 === 1) {
             throw arg1;
           } else if (arg0 === 2) {
@@ -49,48 +50,69 @@ export default function useFetchShareEmbed(arg0) {
                 return obj;
               } else {
                 closure_1 = tmp4;
-                closure_0 = tmp8;
-                closure_0 = undefined;
+                c0 = tmp6;
+                c0 = undefined;
+                closure_1 = undefined;
                 if (null != closure_1_0) {
+                  const sum = closure_1_6.current + 1;
+                  closure_1_6.current = sum;
+                  c0 = sum;
+                  c5.current = closure_1_0;
                   c3 = 2;
                   closure_1_2(true);
                   const items = [closure_1_0];
                   c4 = 3;
                   c5 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = closure_2_0(11508).unfurlEmbedUrl(items);
+                  obj1[0] = closure_2_0(11362).unfurlEmbedUrl(items);
                   return obj1;
                 } else {
                   c5 = 3;
                 }
               }
-            } else if (1 !== tmp8) {
-              if (2 === tmp8) {
+            } else if (1 !== tmp9) {
+              if (2 === tmp9) {
                 c3 = 1;
-                closure_1_1(undefined);
+                if (closure_1_6.current === closure_1_0) {
+                  closure_1_1(undefined);
+                }
               } else if (arg0 === 1) {
                 c5 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
                 c3 = 0;
-                let obj3 = closure_2_0(705);
-                obj3.batchUpdates(() => {
+                closure_2_0(705).batchUpdates(() => {
                   v0(true);
-                  tmp48(false);
+                  if (closure_1_6.current === c0) {
+                    tmp62(false);
+                  }
                 });
                 c5 = 3;
                 const obj2 = { value: null, done: true };
                 obj2[0] = arg1;
                 return obj2;
               } else {
-                closure_0 = arg1;
-                if (0 === closure_0.embeds.length) {
+                closure_1 = arg1;
+                if (closure_1_6.current !== c0) {
+                  c3 = 0;
+                  let obj3 = closure_2_0(705);
+                  obj3.batchUpdates(() => {
+                    v0(true);
+                    if (closure_1_6.current === c0) {
+                      tmp62(false);
+                    }
+                  });
+                  c5 = 3;
+                  return { value: "HermesInternal", done: null };
+                } else if (0 === closure_1.embeds.length) {
                   closure_1_1(undefined);
                   c3 = 0;
                   obj1 = closure_2_0(705);
                   obj1.batchUpdates(() => {
                     v0(true);
-                    tmp48(false);
+                    if (closure_1_6.current === c0) {
+                      tmp62(false);
+                    }
                   });
                   c5 = 3;
                   obj3 = { value: null, done: true };
@@ -98,8 +120,8 @@ export default function useFetchShareEmbed(arg0) {
                   return obj3;
                 } else {
                   obj = { embed: null, url: null };
-                  obj[0] = closure_0.embeds[0];
-                  obj[1] = closure_0;
+                  obj[0] = closure_1.embeds[0];
+                  obj[1] = c0;
                   closure_1_1(obj);
                   c3 = 1;
                 }
@@ -107,22 +129,26 @@ export default function useFetchShareEmbed(arg0) {
               c3 = 0;
               closure_2_0(705).batchUpdates(() => {
                 v0(true);
-                tmp48(false);
+                if (closure_1_6.current === c0) {
+                  tmp62(false);
+                }
               });
-              const obj6 = closure_2_0(705);
+              const obj7 = closure_2_0(705);
             }
             c3 = 0;
             closure_2_0(705).batchUpdates(() => {
               v0(true);
-              tmp48(false);
+              if (closure_1_6.current === c0) {
+                tmp62(false);
+              }
             });
             throw dependencyMap;
-          } catch (tmp48) {
-            dependencyMap = tmp48;
+          } catch (tmp62) {
+            dependencyMap = tmp62;
             if (tmp5 === c3) {
               c5 = tmp3;
-              throw tmp48;
-            } else if (tmp2 === tmp50) {
+              throw tmp62;
+            } else if (tmp2 === tmp64) {
               c4 = tmp2;
             } else {
               c4 = tmp;
@@ -148,9 +174,11 @@ export default function useFetchShareEmbed(arg0) {
         }
         closure_0 = atResult;
         if (atResult !== ref2.current) {
-          ref2.current = atResult;
           if (null == atResult) {
+            ref2.current = undefined;
+            ref3.current = ref3.current + 1;
             callback(undefined);
+            _unfurl(false);
             ref.current = false;
           } else {
             function unfurl() {
@@ -166,18 +194,22 @@ export default function useFetchShareEmbed(arg0) {
             if (ref.current) {
               tmp2.current = false;
               unfurl();
+            } else {
+              const _setTimeout = setTimeout;
+              callback = setTimeout(unfurl, 1000);
+              return () => {
+                clearTimeout(closure_1);
+              };
             }
-            const _setTimeout = setTimeout;
-            callback = setTimeout(unfurl, 1000);
-            return () => {
-              clearTimeout(closure_1);
-            };
           }
         }
       }
     }
     ref.current = false;
+    ref2.current = undefined;
+    ref3.current = ref3.current + 1;
     callback(undefined);
+    _unfurl(false);
   }, items);
   return { embed: embed[0], isLoading, hasTriedResolving: hasTriedResolving[0] };
 };

@@ -1,16 +1,16 @@
-// === Module 12024: num2 ===
+// === Module 11868: num2 ===
 
-// Module 12024 (num2)
+// Module 11868 (num2)
 import ThemesDefault from "Themes" /* 712 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import EmojiDefault from "Emoji" /* 5532 */;
+import EmojiDefault from "Emoji" /* 5537 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5570 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5575 */;
 import set from "set" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -98,7 +98,7 @@ let closure_13 = importAllResult.memo((emoji) => {
   obj1[4] = url;
   obj[1] = closure_9(EmojiDefault, obj1);
   obj[4] = closure_9(View, obj);
-  return closure_9(emoji(5015).PressableOpacity, obj);
+  return closure_9(emoji(5020).PressableOpacity, obj);
 });
 const obj8 = { height: 12, width: 12, color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
 let result = set.fileFinishedImporting("modules/double_tap_to_react/native/SelectDoubleTapEmojiRow.tsx");
@@ -157,7 +157,7 @@ export default importAllResult.memo((selectedEmoji) => {
     accessibilityRole: "button",
     onPress() {
       let obj = selectedEmoji(substr[17]);
-      obj = { onPressEmoji: closure_5, channel: "r", pickerIntention: true, reactionType: "/assets/.cache/intl/bW9kdWxlcy9hZHM=", startExpanded: null };
+      obj = { onPressEmoji: closure_5, channel: "r", pickerIntention: true, reactionType: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", startExpanded: null };
       obj[2] = closure_1_8.DEFAULT_REACT_EMOJI;
       obj[3] = selectedEmoji(substr[18]).ReactionTypes.NORMAL;
       const result = obj.openEmojiPickerActionSheet(obj, "stack");

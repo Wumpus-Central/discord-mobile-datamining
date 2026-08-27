@@ -1,6 +1,6 @@
-// === Module 11388: isPartyFull ===
+// === Module 9370: isPartyFull ===
 
-// Module 11388 (isPartyFull)
+// Module 9370 (isPartyFull)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/utils/isPartyFull.tsx");

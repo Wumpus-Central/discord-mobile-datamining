@@ -1,6 +1,6 @@
-// === Module 13285: getSkuIdForChannel ===
+// === Module 13312: getSkuIdForChannel ===
 
-// Module 13285 (getSkuIdForChannel)
+// Module 13312 (getSkuIdForChannel)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

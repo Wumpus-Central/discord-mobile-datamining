@@ -1,14 +1,14 @@
-// === Module 11187: optIntoAllChannelsForExistingMember ===
+// === Module 11070: optIntoAllChannelsForExistingMember ===
 
-// Module 11187 (optIntoAllChannelsForExistingMember)
+// Module 11070 (optIntoAllChannelsForExistingMember)
 import create from "create" /* 1306 */;
 import hasFlag from "hasFlag" /* 1403 */;
-import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 7207 */;
+import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 7213 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
 import comparator from "comparator" /* 1982 */;
 import closure_6 from "comparator" /* 1982 */;
 import closure_7 from "trackCommunicationDisabled" /* 1992 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 4653 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 4654 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
 
 require = arg1;
@@ -41,7 +41,7 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
   });
   mapped = found.map((channel) => channel.channel.id);
   const item = include.forEach((arg0) => mapped.push(arg0));
-  const obj2 = mapped(5419);
+  const obj2 = mapped(5424);
   const result = obj2.onboardExistingMember(id, new Set(mapped));
 }
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c4, GUILD_VOCAL_CHANNELS_KEY: c5 } = comparator);
@@ -93,10 +93,10 @@ export const toggleShowAllChannels = function toggleShowAllChannels(id) {
   if (tmp7) {
     optIntoAllChannelsForExistingMember(id);
   } else {
-    tmpResult = tmp(7207);
+    tmpResult = tmp(7213);
     const result1 = tmpResult.isOptInEnabledForGuild(id);
-    tmp(5428).setGuildOptIn(id, !result1);
-    const tmpResult1 = tmp(5428);
+    tmp(5433).setGuildOptIn(id, !result1);
+    const tmpResult1 = tmp(5433);
   }
 };
 export { optIntoAllChannelsForExistingMember };

@@ -1,24 +1,24 @@
-// === Module 15927: Separator ===
+// === Module 15992: Separator ===
 
-// Module 15927 (Separator)
+// Module 15992 (Separator)
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import GuildIconSizes from "GuildIconSizes" /* 5951 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5951 */;
-import _safeTransitionToDefault from "_safeTransitionTo" /* 6038 */;
-import SolidCutout from "SolidCutout" /* 8514 */;
-import SolidCutoutDefault from "SolidCutout" /* 8514 */;
+import GuildIconSizes from "GuildIconSizes" /* 5956 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5956 */;
+import _safeTransitionToDefault from "_safeTransitionTo" /* 6043 */;
+import SolidCutout from "SolidCutout" /* 8030 */;
+import SolidCutoutDefault from "SolidCutout" /* 8030 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateState" /* 6095 */;
+import closure_5 from "updateState" /* 6103 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
 import closure_7 from "trackCommunicationDisabled" /* 1992 */;
 import closure_8 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 15888 */;
+import createICYMIStyles from "createICYMIStyles" /* 15953 */;
 
 require = arg1;
 class Separator {
@@ -195,14 +195,14 @@ export const navigateToPost = function navigateToPost(id, id2, id3) {
   }, 1500);
   _safeTransitionToDefault(closure_17.CHANNEL(id2, id, id3), { openChannel: true, navigationReplace: false });
   if (null != id3) {
-    _require(5993).runAfterInteractions(() => {
+    _require(5998).runAfterInteractions(() => {
       let obj = id3(closure_1_2[17]);
       obj = { channelId: id, limit: closure_1_14, jump: null };
       obj = { messageId: id3, flash: true, jumpType: id(closure_1_2[18]).JumpType.ANIMATED };
       obj[2] = obj;
       const messages = obj.fetchMessages(obj);
     }, 150);
-    let obj = _require(5993);
+    let obj = _require(5998);
   }
 };
 export { Separator };
@@ -482,25 +482,25 @@ export const SimplePost = function SimplePost(arg0) {
   let sharedValue;
   const tmp = callback3();
   let obj = highlight(4165);
-  token = obj.useToken(token(712).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, token(4379)());
-  obj1 = highlight(4292);
+  token = obj.useToken(token(712).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, token(4380)());
+  obj1 = highlight(4293);
   const hexWithOpacityResult = obj1.hexWithOpacity(token(712).unsafe_rawColors.BRAND_360, 0.25);
   dependencyMap = hexWithOpacityResult;
-  let obj2 = highlight(4184);
+  let obj2 = highlight(4185);
   sharedValue = obj2.useSharedValue(0);
   const tmp2 = token;
-  const tmp4 = token(4379)();
+  const tmp4 = token(4380)();
   const fn = function c() {
     const obj = { backgroundColor: highlight(_undefined[44]).interpolateColor(sharedValue.get(), [0, 1], items) };
     items = [token, _undefined];
     return obj;
   };
-  obj = { interpolateColor: highlight(4184).interpolateColor, progress: sharedValue, bgColor: token, bgColorHighlighted: hexWithOpacityResult };
+  obj = { interpolateColor: highlight(4185).interpolateColor, progress: sharedValue, bgColor: token, bgColorHighlighted: hexWithOpacityResult };
   fn.__closure = obj;
   fn.__workletHash = 11116019021445;
   fn.__initData = closure_26;
   let items = [highlight, sharedValue];
-  const animatedStyle = highlight(4184).useAnimatedStyle(fn);
+  const animatedStyle = highlight(4185).useAnimatedStyle(fn);
   const effect = sharedValue.useEffect(() => {
     if (highlight) {
       const obj = highlight(_undefined[44]);
@@ -517,7 +517,7 @@ export const SimplePost = function SimplePost(arg0) {
     const items1 = [tmp.simplePostContent, animatedStyle];
     obj1[0] = items1;
     obj1[1] = children;
-    const items2 = [tmp12(tmp2(4184).View, obj1), ];
+    const items2 = [tmp12(tmp2(4185).View, obj1), ];
     let tmp12Result = null;
     if (!hideDivider) {
       tmp12Result = tmp12(Separator, {});

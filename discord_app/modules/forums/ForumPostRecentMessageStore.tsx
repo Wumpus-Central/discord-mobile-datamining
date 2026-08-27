@@ -1,11 +1,11 @@
-// === Module 6098: handleLoadThreadsSuccess ===
+// === Module 6105: handleLoadThreadsSuccess ===
 
-// Module 6098 (handleLoadThreadsSuccess)
+// Module 6105 (handleLoadThreadsSuccess)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4689 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4690 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 

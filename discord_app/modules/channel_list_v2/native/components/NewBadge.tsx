@@ -1,16 +1,16 @@
-// === Module 11936: NewBadge ===
+// === Module 11780: NewBadge ===
 
-// Module 11936 (NewBadge)
+// Module 11780 (NewBadge)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4379 */;
-import Text from "Text" /* 4440 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8617 */;
+import useThemeDefault from "useTheme" /* 4380 */;
+import Text from "Text" /* 4441 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7550 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;

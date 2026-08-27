@@ -1,6 +1,6 @@
-// === Module 17055: AsyncFromSyncIterator ===
+// === Module 17121: AsyncFromSyncIterator ===
 
-// Module 17055 (AsyncFromSyncIterator)
+// Module 17121 (AsyncFromSyncIterator)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;

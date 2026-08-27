@@ -1,6 +1,6 @@
-// === Module 9893: useNavigatorBackHandler ===
+// === Module 10580: useNavigatorBackHandler ===
 
-// Module 9893 (useNavigatorBackHandler)
+// Module 10580 (useNavigatorBackHandler)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

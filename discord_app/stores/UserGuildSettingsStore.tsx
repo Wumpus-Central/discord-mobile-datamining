@@ -1,6 +1,6 @@
-// === Module 4653: updateUserGuildSettingsInternal ===
+// === Module 4654: updateUserGuildSettingsInternal ===
 
-// Module 4653 (updateUserGuildSettingsInternal)
+// Module 4654 (updateUserGuildSettingsInternal)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -15,7 +15,7 @@ import closure_9 from "createGuildRecordFromRust" /* 1910 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { AccountNotificationFlags } from "AccountNotificationFlags" /* 4101 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4654 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4655 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 import set from "set" /* 2 */;
 

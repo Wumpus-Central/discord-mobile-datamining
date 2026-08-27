@@ -1,6 +1,6 @@
-// === Module 15513: _getEmojiSource ===
+// === Module 15578: _getEmojiSource ===
 
-// Module 15513 (_getEmojiSource)
+// Module 15578 (_getEmojiSource)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 

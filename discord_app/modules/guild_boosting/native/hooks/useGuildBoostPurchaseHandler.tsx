@@ -1,6 +1,6 @@
-// === Module 12169: useGuildBoostPurchaseHandler ===
+// === Module 12017: useGuildBoostPurchaseHandler ===
 
-// Module 12169 (useGuildBoostPurchaseHandler)
+// Module 12017 (useGuildBoostPurchaseHandler)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
@@ -13,7 +13,7 @@ let result = require("set").fileFinishedImporting("modules/guild_boosting/native
 
 export default function useGuildBoostPurchaseHandler(arg0) {
   let _require = arg0;
-  let obj = _require(7077);
+  let obj = _require(7083);
   _require = undefined;
   const result = obj.isMobileWebRedirectCheckoutEnabled();
   _require = callback((arg0, arg1) => {

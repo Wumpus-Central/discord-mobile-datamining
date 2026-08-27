@@ -1,10 +1,10 @@
-// === Module 9975: computeAlertSettings ===
+// === Module 10083: computeAlertSettings ===
 
-// Module 9975 (computeAlertSettings)
+// Module 10083 (computeAlertSettings)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import DATE_CONFIG from "DATE_CONFIG" /* 8342 */;
-import closure_2 from "getHash" /* 4357 */;
+import DATE_CONFIG from "DATE_CONFIG" /* 7856 */;
+import closure_2 from "getHash" /* 4358 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import closure_5 from "getUncachedChannelPermissions" /* 4089 */;
@@ -37,8 +37,8 @@ function updateGuildIncident(id) {
   if (null != incidentsData) {
     let hasDetectedActivityResult = DATE_CONFIG.hasDetectedActivity(incidentsData);
     if (!hasDetectedActivityResult) {
-      hasDetectedActivityResult = tmp6(8342).isUnderLockdown(incidentsData);
-      const tmp6Result = tmp6(8342);
+      hasDetectedActivityResult = tmp6(7856).isUnderLockdown(incidentsData);
+      const tmp6Result = tmp6(7856);
     }
     if (hasDetectedActivityResult) {
       tmp5 = incidentsData;
@@ -99,8 +99,8 @@ const guildIncidentsStore = new GuildIncidentsStore(dispatcherDefault, {
     if (null != incidentsData) {
       let hasDetectedActivityResult = DATE_CONFIG.hasDetectedActivity(incidentsData);
       if (!hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp6(8342).isUnderLockdown(incidentsData);
-        const tmp6Result = tmp6(8342);
+        hasDetectedActivityResult = tmp6(7856).isUnderLockdown(incidentsData);
+        const tmp6Result = tmp6(7856);
       }
       if (hasDetectedActivityResult) {
         tmp5 = incidentsData;
@@ -131,8 +131,8 @@ const guildIncidentsStore = new GuildIncidentsStore(dispatcherDefault, {
     if (null != incidentsData) {
       let hasDetectedActivityResult = DATE_CONFIG.hasDetectedActivity(incidentsData);
       if (!hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp6(8342).isUnderLockdown(incidentsData);
-        const tmp6Result = tmp6(8342);
+        hasDetectedActivityResult = tmp6(7856).isUnderLockdown(incidentsData);
+        const tmp6Result = tmp6(7856);
       }
       if (hasDetectedActivityResult) {
         tmp5 = incidentsData;

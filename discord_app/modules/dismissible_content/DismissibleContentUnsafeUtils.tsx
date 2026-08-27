@@ -1,13 +1,13 @@
-// === Module 4265: UNSAFE_isDismissibleContentDismissed ===
+// === Module 4266: UNSAFE_isDismissibleContentDismissed ===
 
-// Module 4265 (UNSAFE_isDismissibleContentDismissed)
+// Module 4266 (UNSAFE_isDismissibleContentDismissed)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import setDefault from "set" /* 687 */;
 import isSingleUseDismissibleContent from "isSingleUseDismissibleContent" /* 1378 */;
-import useNewUserDismissibleContent from "useNewUserDismissibleContent" /* 4287 */;
+import useNewUserDismissibleContent from "useNewUserDismissibleContent" /* 4288 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "handleConnectionOpen" /* 4266 */;
+import closure_5 from "handleConnectionOpen" /* 4267 */;
 
 require = arg1;
 class UNSAFE_isDismissibleContentDismissed {

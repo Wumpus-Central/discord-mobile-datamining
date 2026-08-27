@@ -1,6 +1,6 @@
-// === Module 10193: getStickerDiscoverableGuild ===
+// === Module 10317: getStickerDiscoverableGuild ===
 
-// Module 10193 (getStickerDiscoverableGuild)
+// Module 10317 (getStickerDiscoverableGuild)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;

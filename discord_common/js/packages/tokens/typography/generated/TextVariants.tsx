@@ -1,6 +1,6 @@
-// === Module 4441: TEXT_VARIANT ===
+// === Module 4442: TEXT_VARIANT ===
 
-// Module 4441 (TEXT_VARIANT)
+// Module 4442 (TEXT_VARIANT)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/typography/generated/TextVariants.tsx");

@@ -1,6 +1,6 @@
-// === Module 8331: getNumSubscriptionsPurchasedFromSystemMessage ===
+// === Module 7845: getNumSubscriptionsPurchasedFromSystemMessage ===
 
-// Module 8331 (getNumSubscriptionsPurchasedFromSystemMessage)
+// Module 7845 (getNumSubscriptionsPurchasedFromSystemMessage)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx");

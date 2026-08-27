@@ -1,14 +1,14 @@
-// === Module 9431: useSecureFramesPairwiseFingerprint ===
+// === Module 9766: useSecureFramesPairwiseFingerprint ===
 
-// Module 9431 (useSecureFramesPairwiseFingerprint)
+// Module 9766 (useSecureFramesPairwiseFingerprint)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4495 */;
-import closure_8 from "createRTCConnection" /* 4518 */;
-import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_9 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9427 */;
-import { Features } from "DesktopSources" /* 4508 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4496 */;
+import closure_8 from "createRTCConnection" /* 4519 */;
+import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_9 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9762 */;
+import { Features } from "DesktopSources" /* 4509 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");

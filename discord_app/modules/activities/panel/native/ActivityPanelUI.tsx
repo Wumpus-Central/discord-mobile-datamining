@@ -1,18 +1,18 @@
-// === Module 16445: renderActivityOrPIP ===
+// === Module 16509: renderActivityOrPIP ===
 
-// Module 16445 (renderActivityOrPIP)
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16466 */;
+// Module 16509 (renderActivityOrPIP)
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16530 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9982 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9387 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 16446;
+    let tmp4 = 16510;
   } else {
-    tmp4 = 16452;
+    tmp4 = 16516;
   }
   return closure_7(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }

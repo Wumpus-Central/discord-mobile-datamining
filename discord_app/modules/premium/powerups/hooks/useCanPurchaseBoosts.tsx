@@ -1,8 +1,8 @@
-// === Module 12138: useCanPurchaseBoosts ===
+// === Module 11984: useCanPurchaseBoosts ===
 
-// Module 12138 (useCanPurchaseBoosts)
+// Module 11984 (useCanPurchaseBoosts)
 import initialize from "initialize" /* 589 */;
-import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 7069 */;
+import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 7075 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { FractionalPremiumStates } from "GuildFeatures" /* 1924 */;
 

@@ -1,8 +1,8 @@
-// === Module 8303: useCanReplyToMessage ===
+// === Module 7817: useCanReplyToMessage ===
 
-// Module 8303 (useCanReplyToMessage)
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6062 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8304 */;
+// Module 7817 (useCanReplyToMessage)
+import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6068 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7818 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
@@ -16,14 +16,14 @@ const result = require("set").fileFinishedImporting("modules/replies/canReplyToM
 export const useCanReplyToMessage = function useCanReplyToMessage(channel, message) {
   const _require = channel;
   dependencyMap = message;
-  const canUnarchiveThread = _require(6062).useCanUnarchiveThread(channel);
-  const obj = _require(6062);
+  const canUnarchiveThread = _require(6068).useCanUnarchiveThread(channel);
+  const obj = _require(6068);
   let tmp = _require;
   let guildId;
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  const obj2 = _require(8304);
+  const obj2 = _require(7818);
   const items = [closure_3];
   let stateFromStores = tmp(589).useStateFromStores(items, () => {
     let tmp = null != channel;

@@ -1,7 +1,7 @@
-// === Module 10856: isDiscordVisible ===
+// === Module 9501: isDiscordVisible ===
 
-// Module 10856 (isDiscordVisible)
-import closure_2 from "getState" /* 7085 */;
+// Module 9501 (isDiscordVisible)
+import closure_2 from "getState" /* 7091 */;
 import { AppStates } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("lib/WindowVisibilityUtils.native.tsx");

@@ -1,17 +1,17 @@
-// === Module 10916: ModeratorViewOverlay ===
+// === Module 9549: ModeratorViewOverlay ===
 
-// Module 10916 (ModeratorViewOverlay)
+// Module 9549 (ModeratorViewOverlay)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4184 from "module_4184" /* 4184 */;
-import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 10940 */;
-import JoinStageViewDefault from "JoinStageView" /* 10977 */;
-import RootThemeContextProvider from "RootThemeContextProvider" /* 11116 */;
+import _modDef4185 from "module_4185" /* 4185 */;
+import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 9909 */;
+import JoinStageViewDefault from "JoinStageView" /* 9951 */;
+import RootThemeContextProvider from "RootThemeContextProvider" /* 10078 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function ModeratorViewOverlay(channel) {
@@ -77,7 +77,7 @@ function JoinStageOverlay(channel) {
   const tmp = callback(React.useState(false), 2);
   first = tmp[0];
   importDefault = tmp[1];
-  let obj = first(4184);
+  let obj = first(4185);
   const fn = function s() {
     let obj = first(closure_1_2[7]);
     let num = 0;
@@ -87,7 +87,7 @@ function JoinStageOverlay(channel) {
     obj = { opacity: obj.withSpring(num, closure_1_11) };
     return obj;
   };
-  obj = { withSpring: first(4878).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
+  obj = { withSpring: first(4879).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
   fn.__closure = obj;
   fn.__workletHash = 1929951426580;
   fn.__initData = closure_15;
@@ -104,7 +104,7 @@ function JoinStageOverlay(channel) {
   const items = [closure_5.absoluteFill, { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800 }, animatedStyle];
   obj[0] = items;
   obj[1] = callback2(JoinStageViewDefault, { channel: channel.channel });
-  return callback2(_modDef4184.View, obj);
+  return callback2(_modDef4185.View, obj);
 }
 function StagePromptWrapper(channel) {
   return callback2(RootThemeContextProvider.DisableCustomTheme, { children: callback2(StagePromptInner, { channel: channel.channel }) });

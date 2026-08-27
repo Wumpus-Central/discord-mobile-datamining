@@ -1,11 +1,11 @@
-// === Module 8297: canReactToMessageInternal ===
+// === Module 7811: canReactToMessageInternal ===
 
-// Module 8297 (canReactToMessageInternal)
+// Module 7811 (canReactToMessageInternal)
 import hasFlag from "hasFlag" /* 1403 */;
 import isCommunicationDisabled from "isCommunicationDisabled" /* 4078 */;
-import _modDef8298 from "module_8298" /* 8298 */;
+import _modDef7812 from "module_7812" /* 7812 */;
 import closure_3 from "trackCommunicationDisabled" /* 1992 */;
-import closure_4 from "recomputeGuild" /* 5304 */;
+import closure_4 from "recomputeGuild" /* 5309 */;
 import closure_5 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
@@ -26,7 +26,7 @@ function canReactToMessageInternal(state, getGuildId, items) {
       member = obj2.getMember(guildId, currentUser.id);
     }
   }
-  let tmp6 = _modDef8298(getGuildId) && !getGuildId.isArchivedLockedThread();
+  let tmp6 = _modDef7812(getGuildId) && !getGuildId.isArchivedLockedThread();
   if (tmp6) {
     tmp6 = state.state !== constants.SEND_FAILED;
   }

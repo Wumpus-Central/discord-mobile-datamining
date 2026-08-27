@@ -1,6 +1,6 @@
-// === Module 13191: prettyPrintTrace_ ===
+// === Module 13214: prettyPrintTrace_ ===
 
-// Module 13191 (prettyPrintTrace_)
+// Module 13214 (prettyPrintTrace_)
 import isTracingDefault from "isTracing" /* 10 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import closure_5 from "_objectWithoutProperties" /* 109 */;

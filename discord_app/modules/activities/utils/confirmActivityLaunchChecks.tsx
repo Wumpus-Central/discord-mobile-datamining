@@ -1,6 +1,6 @@
-// === Module 10786: getOrFetchApplicationForLaunch ===
+// === Module 9399: getOrFetchApplicationForLaunch ===
 
-// Module 10786 (getOrFetchApplicationForLaunch)
+// Module 9399 (getOrFetchApplicationForLaunch)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "participantFromServer" /* 1390 */;
@@ -76,16 +76,16 @@ function _getOrFetchApplicationForLaunch() {
               c7 = 3;
               c8 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = callback2(10787)(callback, callback2);
+              obj2[0] = callback2(9400)(callback, callback2);
               return obj2;
             }
           } else if (2 === tmp7) {
             c6 = 0;
             closure_4 = closure_5;
             if (null != dependencyMap) {
-              PRIVATE_CHANNEL = callback(10772).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+              PRIVATE_CHANNEL = callback(9394).EmbeddedActivityLocationKind.GUILD_CHANNEL;
             } else {
-              PRIVATE_CHANNEL = callback(10772).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+              PRIVATE_CHANNEL = callback(9394).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
             }
             obj2 = callback2(709);
             const obj3 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: "", applicationId: null, channelId: null, guildId: null, error: null, locationKind: null };
@@ -98,7 +98,7 @@ function _getOrFetchApplicationForLaunch() {
               dependencyMap = null;
             }
             obj3[4] = dependencyMap;
-            const aPIError = new callback(4342).APIError(closure_4);
+            const aPIError = new callback(4343).APIError(closure_4);
             obj3[5] = aPIError;
             obj3[6] = PRIVATE_CHANNEL;
             obj2.dispatch(obj3);
@@ -211,7 +211,7 @@ function _confirmActivityChange() {
                       if (dependencyMap != null) {
                         dependencyMap();
                       }
-                      _undefined2(10789)(tmp, channel, () => {
+                      _undefined2(9402)(tmp, channel, () => {
                         let obj = value(table[10])();
                         obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
                         obj.leaveActivity(obj);

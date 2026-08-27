@@ -1,10 +1,10 @@
-// === Module 6479: FamilySpotIllustration ===
+// === Module 6485: FamilySpotIllustration ===
 
-// Module 6479 (FamilySpotIllustration)
+// Module 6485 (FamilySpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6480 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6486 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/FamilySpotIllustration.native.tsx");

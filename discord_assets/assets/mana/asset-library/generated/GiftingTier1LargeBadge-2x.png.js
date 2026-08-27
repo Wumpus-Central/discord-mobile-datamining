@@ -1,6 +1,6 @@
-// === Module 6644: vanityUrl ===
+// === Module 6650: vanityUrl ===
 
-// Module 6644 (vanityUrl)
+// Module 6650 (vanityUrl)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftingTier1LargeBadge-2x.png.js");

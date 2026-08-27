@@ -1,56 +1,16 @@
-// === Module 7454: items ===
+// === Module 7462: items ===
 
-// Module 7454 (items)
+// Module 7462 (items)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
 let closure_0 = arg1;
 let obj = {
   load() {
-    return callback(7455);
+    return callback(7463);
   }
 };
 const items = [
   obj,
-  {
-    load() {
-      return callback(7456);
-    }
-  },
-  {
-    load() {
-      return callback(7457);
-    }
-  },
-  {
-    load() {
-      return callback(7458);
-    }
-  },
-  {
-    load() {
-      return callback(7459);
-    }
-  },
-  {
-    load() {
-      return callback(7460);
-    }
-  },
-  {
-    load() {
-      return callback(7461);
-    }
-  },
-  {
-    load() {
-      return callback(7462);
-    }
-  },
-  {
-    load() {
-      return callback(7463);
-    }
-  },
   {
     load() {
       return callback(7464);
@@ -95,15 +55,12 @@ const items = [
     load() {
       return callback(7472);
     }
-  }
-];
-obj = {
-  load() {
-    return callback(7473);
-  }
-};
-const items1 = [
-  obj,
+  },
+  {
+    load() {
+      return callback(7473);
+    }
+  },
   {
     load() {
       return callback(7474);
@@ -138,12 +95,15 @@ const items1 = [
     load() {
       return callback(7480);
     }
-  },
-  {
-    load() {
-      return callback(7481);
-    }
-  },
+  }
+];
+obj = {
+  load() {
+    return callback(7481);
+  }
+};
+const items1 = [
+  obj,
   {
     load() {
       return callback(7482);
@@ -187,6 +147,46 @@ const items1 = [
   {
     load() {
       return callback(7490);
+    }
+  },
+  {
+    load() {
+      return callback(7491);
+    }
+  },
+  {
+    load() {
+      return callback(7492);
+    }
+  },
+  {
+    load() {
+      return callback(7493);
+    }
+  },
+  {
+    load() {
+      return callback(7494);
+    }
+  },
+  {
+    load() {
+      return callback(7495);
+    }
+  },
+  {
+    load() {
+      return callback(7496);
+    }
+  },
+  {
+    load() {
+      return callback(7497);
+    }
+  },
+  {
+    load() {
+      return callback(7498);
     }
   }
 ];

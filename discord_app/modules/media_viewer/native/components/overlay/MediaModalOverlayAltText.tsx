@@ -1,9 +1,9 @@
-// === Module 12524: ? ===
+// === Module 12746: ? ===
 
-// Module 12524
+// Module 12746
 import ThemesDefault from "Themes" /* 712 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -36,8 +36,8 @@ const memoResult = importAllResult.memo(function MediaModalOverlayAltTextButton(
       obj = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
       const intl = tmp3(1236).intl;
       obj[2] = intl.string(tmp3(1236).t.Q5VqrN);
-      obj[3] = jsx(tmp3(4440).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(5015).PressableOpacity, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      obj[3] = jsx(tmp3(4441).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      tmp4 = jsx(tmp3(5020).PressableOpacity, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
     }
   }
   return tmp4;

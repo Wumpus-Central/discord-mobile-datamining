@@ -1,6 +1,6 @@
-// === Module 11782: getCollectionItemAssetUrl ===
+// === Module 11613: getCollectionItemAssetUrl ===
 
-// Module 11782 (getCollectionItemAssetUrl)
+// Module 11613 (getCollectionItemAssetUrl)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;

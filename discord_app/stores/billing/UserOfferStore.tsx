@@ -1,16 +1,16 @@
-// === Module 7123: emitChanges ===
+// === Module 7129: emitChanges ===
 
-// Module 7123 (emitChanges)
+// Module 7129 (emitChanges)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
-import apexExperiment from "apexExperiment" /* 7536 */;
-import closure_2 from "createFromServer" /* 7124 */;
-import closure_3 from "emitChanges" /* 7125 */;
-import closure_4 from "createFromServer" /* 7535 */;
-import closure_5 from "createFromServer" /* 7127 */;
+import apexExperiment from "apexExperiment" /* 12872 */;
+import closure_2 from "createFromServer" /* 7130 */;
+import closure_3 from "emitChanges" /* 7131 */;
+import closure_4 from "createFromServer" /* 7904 */;
+import closure_5 from "createFromServer" /* 7133 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "addEntitlement" /* 7070 */;
+import closure_7 from "addEntitlement" /* 7076 */;
 import closure_8 from "reset" /* 4113 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import { OfferTriggerTypes } from "sum" /* 505 */;
@@ -86,7 +86,7 @@ function handleReferralTrialStoreUpdate() {
 }
 ({ ANNUAL_DISCOUNT_IDS: c9, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: c10, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: unpackModuleId, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = GuildFeatures);
 let closure_17 = performance.now();
-let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "flex", userDiscountOffers: null, userDiscounts: "\u{1F443}\u{1F3FC}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: "TRANSPARENT" };
+let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "flex", userDiscountOffers: null, userDiscounts: "\u{1F443}\u{1F3FE}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: "nose_tone4" };
 obj[1] = {};
 obj[2] = {};
 obj[7] = { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 };
@@ -369,7 +369,7 @@ prototype["getUnacknowledgedOffers"] = function getUnacknowledgedOffers(arg0) {
 };
 prototype["hasAnyUnexpiredOffer"] = function hasAnyUnexpiredOffer() {
   const values = Object.values(obj.userTrialOffers);
-  return values.some((hasExpired) => !hasExpired.hasExpired());
+  return values.some((hasExpired) => !hasExpired.hasExpired);
 };
 prototype["hasAnyUnexpiredDiscountOffer"] = function hasAnyUnexpiredDiscountOffer() {
   const values = Object.values(obj.userDiscountOffers);

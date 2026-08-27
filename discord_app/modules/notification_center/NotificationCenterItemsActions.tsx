@@ -1,10 +1,10 @@
-// === Module 15850: _fetchNotificationCenterItems ===
+// === Module 15915: _fetchNotificationCenterItems ===
 
-// Module 15850 (_fetchNotificationCenterItems)
+// Module 15915 (_fetchNotificationCenterItems)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getRelativeTimestamp from "getRelativeTimestamp" /* 7313 */;
+import getRelativeTimestamp from "getRelativeTimestamp" /* 7319 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_validate" /* 7311 */;
+import closure_4 from "_validate" /* 7317 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;
@@ -96,7 +96,7 @@ function _fetchNotificationCenterItems() {
               c6 = 3;
               c7 = 1;
               let obj6 = { value: null, done: false };
-              obj6[0] = callback(4665).get(obj3);
+              obj6[0] = callback(4666).get(obj3);
               return obj6;
             }
           } else if (2 === tmp7) {

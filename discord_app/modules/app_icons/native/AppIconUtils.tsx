@@ -1,14 +1,14 @@
-// === Module 7873: fetchCurrentAppIcon ===
+// === Module 12938: fetchCurrentAppIcon ===
 
-// Module 7873 (fetchCurrentAppIcon)
+// Module 12938 (fetchCurrentAppIcon)
 import timestampDefault from "timestamp" /* 3 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4896 */;
-import openUserSettings from "openUserSettings" /* 6191 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4897 */;
+import openUserSettings from "openUserSettings" /* 6197 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
-import items from "items" /* 7874 */;
+import items from "items" /* 8110 */;
 import ME from "ME" /* 676 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import set from "set" /* 500 */;
@@ -150,7 +150,7 @@ function _setAppIcon() {
         obj3[0] = callback;
         obj3[1] = callback2;
         let TIER_2 = null;
-        if (callback !== callback(7875).FreemiumAppIconIds.DEFAULT) {
+        if (callback !== callback(8111).FreemiumAppIconIds.DEFAULT) {
           TIER_2 = TIER_2.TIER_2;
         }
         obj3[2] = TIER_2;
@@ -180,7 +180,7 @@ if (set.isAndroid()) {
   DCDIconManager = require("get ActivityIndicator").NativeModules.DCDIconManager;
 }
 function useCurrentAppIcon() {
-  const tmp = callback(React.useState(_require(7875).FreemiumAppIconIds.DEFAULT), 2);
+  const tmp = callback(React.useState(_require(8111).FreemiumAppIconIds.DEFAULT), 2);
   _require = tmp[1];
   importDefault = React.useCallback(callback2(function*() {
     if (c3 === 2) {
@@ -262,7 +262,7 @@ export const setAppIcon = function setAppIcon(DEFAULT, premiumType) {
   return applyArgumentsResult;
 };
 export const useAppIcons = function useAppIcons() {
-  const currentAppIcon = callback(React.useState(_require(7875).FreemiumAppIconIds.DEFAULT), 2);
+  const currentAppIcon = callback(React.useState(_require(8111).FreemiumAppIconIds.DEFAULT), 2);
   _require = currentAppIcon[1];
   importDefault = React.useCallback(callback2(function*() {
     if (c3 === 2) {

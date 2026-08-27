@@ -1,6 +1,6 @@
-// === Module 17037: setRoleJustCreated ===
+// === Module 17103: setRoleJustCreated ===
 
-// Module 17037 (setRoleJustCreated)
+// Module 17103 (setRoleJustCreated)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 

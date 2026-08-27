@@ -1,8 +1,8 @@
-// === Module 16728: DEFAULT_EXPIRATION_DAYS ===
+// === Module 16794: DEFAULT_EXPIRATION_DAYS ===
 
-// Module 16728 (DEFAULT_EXPIRATION_DAYS)
+// Module 16794 (DEFAULT_EXPIRATION_DAYS)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 7970 */;
+import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8580 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import closure_4 from "markAllUserIdListsStale" /* 4098 */;
 
@@ -18,7 +18,7 @@ export const revokeAllFriendInvites = function revokeAllFriendInvites() {
     obj = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
     const intl = callback(1236).intl;
     obj[1] = intl.string(callback(1236).t.jSHEOQ);
-    obj[2] = callback2(10095);
+    obj[2] = callback2(9439);
     obj.open(obj);
   });
 };

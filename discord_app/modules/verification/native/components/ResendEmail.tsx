@@ -1,6 +1,6 @@
-// === Module 8683: ResendEmail ===
+// === Module 7630: ResendEmail ===
 
-// Module 8683 (ResendEmail)
+// Module 7630 (ResendEmail)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -8,7 +8,7 @@ import closure_6 from "handleRequiredAction" /* 1385 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { VerificationModalScenes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -30,7 +30,7 @@ export default function ResendEmail() {
   let obj2 = navigation(589);
   const items1 = [closure_6];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => action.getAction());
-  let obj3 = verified(8684);
+  let obj3 = verified(7631);
   const result = obj3.isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
   [tmp10, dependencyMap] = callback(React.useState(false), 2);
@@ -54,11 +54,11 @@ export default function ResendEmail() {
   callback = React.useCallback(() => {
     navigation.push(closure_1_8.ENTER_EMAIL);
   }, items3);
-  const items4 = [callback2(navigation(6202).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
+  const items4 = [callback2(navigation(6208).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = navigation(1236).intl;
   obj[4] = intl.string(navigation(1236).t.fUtddV);
-  items4[1] = callback2(navigation(4440).Text, obj);
+  items4[1] = callback2(navigation(4441).Text, obj);
   obj1 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1236).intl;
   if (tmp10) {
@@ -69,7 +69,7 @@ export default function ResendEmail() {
     formatResult = intl2.string(tmp2(1236).t.tSXg8O);
   }
   obj1[3] = formatResult;
-  items4[2] = callback2(navigation(4440).Text, obj1);
+  items4[2] = callback2(navigation(4441).Text, obj1);
   obj3 = { style: tmp.resend, children: null };
   const obj4 = { text: null, variant: "primary", onPress: null, grow: true };
   const intl3 = tmp2(1236).intl;
@@ -83,7 +83,7 @@ export default function ResendEmail() {
     obj[1] = intl.string(navigation(closure_1_2[15]).t["84yeoz"]);
     verified(closure_1_2[18]).open(obj);
   };
-  obj3[1] = callback2(navigation(4879).Button, obj4);
+  obj3[1] = callback2(navigation(4880).Button, obj4);
   items4[3] = callback2(View, obj3);
   if (!result) {
     const obj5 = { style: null, children: null };
@@ -92,7 +92,7 @@ export default function ResendEmail() {
     const intl4 = tmp2(1236).intl;
     obj6[0] = intl4.string(tmp2(1236).t.Vm8akB);
     obj6[2] = callback;
-    obj5[1] = tmp16(tmp2(4879).Button, obj6);
+    obj5[1] = tmp16(tmp2(4880).Button, obj6);
     tmp16Result = tmp16(tmp15, obj5);
   }
   items4[4] = tmp16Result;

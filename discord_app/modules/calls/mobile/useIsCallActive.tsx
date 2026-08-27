@@ -1,9 +1,9 @@
-// === Module 8308: useIsCallActive ===
+// === Module 7822: useIsCallActive ===
 
-// Module 8308 (useIsCallActive)
-import closure_2 from "callConnect" /* 5169 */;
-import closure_3 from "getParticipants" /* 4460 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4465 */;
+// Module 7822 (useIsCallActive)
+import closure_2 from "callConnect" /* 5174 */;
+import closure_3 from "getParticipants" /* 4461 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4466 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");

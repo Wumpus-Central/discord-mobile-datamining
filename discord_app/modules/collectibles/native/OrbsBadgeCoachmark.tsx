@@ -1,12 +1,12 @@
-// === Module 9727: OrbsBadgeCoachmarkImg ===
+// === Module 8893: OrbsBadgeCoachmarkImg ===
 
-// Module 9727 (OrbsBadgeCoachmarkImg)
-import useCoachmark from "useCoachmark" /* 8868 */;
-import metadataDefault from "metadata" /* 9728 */;
+// Module 8893 (OrbsBadgeCoachmarkImg)
+import metadataDefault from "metadata" /* 8894 */;
+import useCoachmark from "useCoachmark" /* 8895 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function OrbsBadgeCoachmarkImg() {

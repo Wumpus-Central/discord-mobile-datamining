@@ -1,6 +1,6 @@
-// === Module 12179: useGuildPowerupColorConfig ===
+// === Module 12027: useGuildPowerupColorConfig ===
 
-// Module 12179 (useGuildPowerupColorConfig)
+// Module 12027 (useGuildPowerupColorConfig)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 

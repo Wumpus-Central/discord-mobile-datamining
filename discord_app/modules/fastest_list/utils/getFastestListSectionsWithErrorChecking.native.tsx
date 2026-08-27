@@ -1,8 +1,8 @@
-// === Module 8759: getFastestListSectionsWithErrorChecking ===
+// === Module 7721: getFastestListSectionsWithErrorChecking ===
 
-// Module 8759 (getFastestListSectionsWithErrorChecking)
+// Module 7721 (getFastestListSectionsWithErrorChecking)
 import set from "set" /* 2 */;
-import logFastestListError from "logFastestListError" /* 8753 */;
+import logFastestListError from "logFastestListError" /* 7715 */;
 
 const result = set.fileFinishedImporting("modules/fastest_list/utils/getFastestListSectionsWithErrorChecking.native.tsx");
 

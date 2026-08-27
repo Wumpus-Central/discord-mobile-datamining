@@ -1,17 +1,17 @@
-// === Module 4436: maybeApplyNoTextColorForLightCustomTheme ===
+// === Module 4437: maybeApplyNoTextColorForLightCustomTheme ===
 
-// Module 4436 (maybeApplyNoTextColorForLightCustomTheme)
+// Module 4437 (maybeApplyNoTextColorForLightCustomTheme)
 import initializeDefault from "initialize" /* 589 */;
 import Storage7 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import setDefault from "set" /* 4438 */;
+import setDefault from "set" /* 4439 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "initialize" /* 1303 */;
 import closure_6 from "handleThemeChange" /* 1302 */;
 import closure_7 from "handleConnectionClosedOrResumed" /* 1340 */;
 import ME from "ME" /* 676 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4437 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4438 */;
 
 require = arg1;
 function maybeApplyNoTextColorForLightCustomTheme() {

@@ -1,14 +1,14 @@
-// === Module 8384: useHasDiscountApplied ===
+// === Module 7899: useHasDiscountApplied ===
 
-// Module 8384 (useHasDiscountApplied)
+// Module 7899 (useHasDiscountApplied)
 import initialize from "initialize" /* 589 */;
 import hooksDefault from "hooks" /* 4043 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7120 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7550 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 7551 */;
-import getPaymentGateway from "getPaymentGateway" /* 7802 */;
-import useHasActiveTrial from "useHasActiveTrial" /* 8385 */;
-import useIsInReverseTrial from "useIsInReverseTrial" /* 8386 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7126 */;
+import useHasActiveTrial from "useHasActiveTrial" /* 7900 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7901 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 7902 */;
+import getPaymentGateway from "getPaymentGateway" /* 7903 */;
+import useIsInReverseTrial from "useIsInReverseTrial" /* 7906 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "reset" /* 4113 */;

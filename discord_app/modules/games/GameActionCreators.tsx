@@ -1,9 +1,9 @@
-// === Module 6100: requestGames ===
+// === Module 6107: requestGames ===
 
-// Module 6100 (requestGames)
+// Module 6107 (requestGames)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleLoadMessages" /* 4468 */;
+import closure_4 from "handleLoadMessages" /* 4469 */;
 import { Endpoints } from "ME" /* 676 */;
 
 let closure_0 = arg1;

@@ -1,9 +1,9 @@
-// === Module 12068: usePendingGameProfileReturn ===
+// === Module 11914: usePendingGameProfileReturn ===
 
-// Module 12068 (usePendingGameProfileReturn)
+// Module 11914 (usePendingGameProfileReturn)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleLoadMessages" /* 4468 */;
-import closure_5 from "getSimilarGames" /* 9495 */;
+import closure_4 from "handleLoadMessages" /* 4469 */;
+import closure_5 from "getSimilarGames" /* 8733 */;
 import { AVATAR_SIZE } from "ME" /* 676 */;
 
 const require = arg1;

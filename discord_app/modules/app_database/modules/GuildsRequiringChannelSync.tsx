@@ -1,6 +1,6 @@
-// === Module 7324: getAll ===
+// === Module 7330: getAll ===
 
-// Module 7324 (getAll)
+// Module 7330 (getAll)
 import set2 from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import sum from "sum" /* 505 */;

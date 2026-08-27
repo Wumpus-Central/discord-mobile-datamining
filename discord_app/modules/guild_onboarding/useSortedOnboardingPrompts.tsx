@@ -1,8 +1,8 @@
-// === Module 11185: useSortedOnboardingPrompts ===
+// === Module 11068: useSortedOnboardingPrompts ===
 
-// Module 11185 (useSortedOnboardingPrompts)
+// Module 11068 (useSortedOnboardingPrompts)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleUpdate" /* 5414 */;
+import closure_3 from "handleUpdate" /* 5419 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/useSortedOnboardingPrompts.tsx");

@@ -1,6 +1,6 @@
-// === Module 6000: setPromoEmailConsentState ===
+// === Module 6005: setPromoEmailConsentState ===
 
-// Module 6000 (setPromoEmailConsentState)
+// Module 6005 (setPromoEmailConsentState)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 

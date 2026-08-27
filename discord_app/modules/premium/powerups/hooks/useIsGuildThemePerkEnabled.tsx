@@ -1,8 +1,8 @@
-// === Module 15595: useIsGuildThemePerkEnabled ===
+// === Module 15660: useIsGuildThemePerkEnabled ===
 
-// Module 15595 (useIsGuildThemePerkEnabled)
+// Module 15660 (useIsGuildThemePerkEnabled)
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "calculateAppliedBoosts" /* 4330 */;
+import closure_3 from "calculateAppliedBoosts" /* 4331 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 const require = arg1;

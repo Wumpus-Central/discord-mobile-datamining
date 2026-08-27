@@ -1,9 +1,9 @@
-// === Module 14240: SvgComponent ===
+// === Module 14267: SvgComponent ===
 
-// Module 14240 (SvgComponent)
+// Module 14267 (SvgComponent)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 8052 */;
-import inlineStylesDefault from "inlineStyles" /* 8052 */;
+import inlineStyles from "inlineStyles" /* 8173 */;
+import inlineStylesDefault from "inlineStyles" /* 8173 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

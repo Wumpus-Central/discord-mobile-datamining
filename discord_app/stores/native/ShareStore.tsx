@@ -1,17 +1,17 @@
-// === Module 13937: handleTokenUpdated ===
+// === Module 13964: handleTokenUpdated ===
 
-// Module 13937 (handleTokenUpdated)
+// Module 13964 (handleTokenUpdated)
 import encodeProperties from "encodeProperties" /* 503 */;
 import initializeDefault from "initialize" /* 589 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import enforcingDefault from "enforcing" /* 9139 */;
+import enforcingDefault from "enforcing" /* 8564 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 import closure_9 from "handleConnectionOpen" /* 1981 */;
-import closure_10 from "handleConnectionOpen" /* 4266 */;
+import closure_10 from "handleConnectionOpen" /* 4267 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
 import { AppStates } from "ME" /* 676 */;
 

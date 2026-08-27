@@ -1,6 +1,6 @@
-// === Module 11552: disableFalsePositiveButton ===
+// === Module 8330: disableFalsePositiveButton ===
 
-// Module 11552 (disableFalsePositiveButton)
+// Module 8330 (disableFalsePositiveButton)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

@@ -1,6 +1,6 @@
-// === Module 5916: ProviderConnectionCard ===
+// === Module 5921: ProviderConnectionCard ===
 
-// Module 5916 (ProviderConnectionCard)
+// Module 5921 (ProviderConnectionCard)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 676 */;
@@ -69,7 +69,7 @@ export default function ProviderConnectionCard(connection) {
             } else {
               obj1 = {};
               const obj5 = v0(698);
-              const merged = Object.assign(closure_1_0(4652).collectGuildAnalyticsMetadata(v0));
+              const merged = Object.assign(closure_1_0(4653).collectGuildAnalyticsMetadata(v0));
               obj1.connection_type = "provider";
               const provider_id = closure_1_0.provider_id;
               c0 = provider_id;

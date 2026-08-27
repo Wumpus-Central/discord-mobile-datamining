@@ -1,10 +1,10 @@
-// === Module 7579: create ===
+// === Module 8406: create ===
 
-// Module 7579 (create)
+// Module 8406 (create)
 import _mod1307 from "module_1307" /* 1307 */;
 import defineProperty from "defineProperty" /* 1337 */;
-import create from "create" /* 7558 */;
-import create2 from "create" /* 7559 */;
+import create from "create" /* 8385 */;
+import create2 from "create" /* 8386 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
@@ -19,7 +19,7 @@ class ShopNagbar$Type extends MessageType {
       name: "cta_action",
       kind: "enum",
       T() {
-            const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(7560).ButtonAction, "BUTTON_ACTION_"];
+            const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(8387).ButtonAction, "BUTTON_ACTION_"];
             return items;
           }
     };
@@ -29,7 +29,7 @@ class ShopNagbar$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(7559).HelpArticle;
+            return callback(8386).HelpArticle;
           }
     };
     items[5] = {
@@ -37,7 +37,7 @@ class ShopNagbar$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(7558).LocalizedString;
+            return callback(8385).LocalizedString;
           }
     };
     obj = { no: 7, name: "cta_label_localized", kind: "message", T: null };
@@ -220,7 +220,7 @@ let items = [
     name: "cta_action",
     kind: "enum",
     T() {
-      const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(7560).ButtonAction, "BUTTON_ACTION_"];
+      const items = ["discord_protos.premium_marketing.v1.ButtonAction", callback(8387).ButtonAction, "BUTTON_ACTION_"];
       return items;
     }
   },
@@ -230,7 +230,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(7559).HelpArticle;
+      return callback(8386).HelpArticle;
     }
   },
   {
@@ -238,7 +238,7 @@ let items = [
     name: "body_localized",
     kind: "message",
     T() {
-      return callback(7558).LocalizedString;
+      return callback(8385).LocalizedString;
     }
   },
 ,

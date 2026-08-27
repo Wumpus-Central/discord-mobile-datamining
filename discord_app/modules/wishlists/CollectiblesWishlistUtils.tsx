@@ -1,9 +1,9 @@
-// === Module 9566: getProductNameAndTypeFromSku ===
+// === Module 8816: getProductNameAndTypeFromSku ===
 
-// Module 9566 (getProductNameAndTypeFromSku)
+// Module 8816 (getProductNameAndTypeFromSku)
 import set from "set" /* 2 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7226 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7232 */;
 
 let result = set.fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");
 

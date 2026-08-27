@@ -1,19 +1,19 @@
-// === Module 5019: set ===
+// === Module 5024: set ===
 
-// Module 5019 (set)
+// Module 5024 (set)
 import timestampDefault from "timestamp" /* 3 */;
 import failsDefault from "fails" /* 584 */;
 import setDefault from "set" /* 687 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import cancel from "cancel" /* 5020 */;
-import cancelDefault from "cancel" /* 5020 */;
-import fromBlobDefault from "fromBlob" /* 5060 */;
+import cancel from "cancel" /* 5025 */;
+import cancelDefault from "cancel" /* 5025 */;
+import fromBlobDefault from "fromBlob" /* 5065 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "_slicedToArray" /* 32 */;
-import closure_7 from "getUserAgnosticState" /* 4443 */;
+import closure_7 from "getUserAgnosticState" /* 4444 */;
 import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_9 from "handleConnectionInfoChange" /* 4538 */;
+import closure_9 from "handleConnectionInfoChange" /* 4539 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -228,10 +228,23 @@ class CloudUpload extends tmp5 {
     tmp10 = global.platform === require("cancel").UploadPlatform.WEB && null != global.compressionMetadata;
     if (tmp10) {
       tmp5.mimeType = global.compressionMetadata.originalContentType;
+      tmp5.preCompressionSize = global.compressionMetadata.preCompressionSize;
     }
     tmp11 = global.platform === require("cancel").UploadPlatform.WEB && null != global.originalMd5;
     if (tmp11) {
       tmp5._originalMd5 = global.originalMd5;
+    }
+    if (global.platform === require("cancel").UploadPlatform.WEB) {
+      if (null != global.heicConversionAnalytics) {
+        ({ convertedMimeType, conversionFailureReason, compressTimeMs } = global.heicConversionAnalytics);
+        if (null != convertedMimeType) {
+          tmp5.uploadAnalytics.convertedMimeType = convertedMimeType;
+        }
+        if (null != conversionFailureReason) {
+          tmp5.uploadAnalytics.conversionFailureReason = conversionFailureReason;
+        }
+        tmp5.uploadAnalytics.timing.compressTimeMs = compressTimeMs;
+      }
     }
     abortController = new AbortController();
     tmp5._abortController = abortController;
@@ -2237,7 +2250,7 @@ prototype["delete"] = function delete() {
             obj[0] = arg1;
             return obj;
           } else if (null != v0.uploadedFilename) {
-            obj1 = v0(5065);
+            obj1 = v0(5070);
             const uploadTarget = obj1.getUploadTarget(tmp18.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(tmp18.uploadedFilename);

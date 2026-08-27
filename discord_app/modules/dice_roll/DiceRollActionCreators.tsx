@@ -1,6 +1,6 @@
-// === Module 6039: startDiceRoll ===
+// === Module 6044: startDiceRoll ===
 
-// Module 6039 (startDiceRoll)
+// Module 6044 (startDiceRoll)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

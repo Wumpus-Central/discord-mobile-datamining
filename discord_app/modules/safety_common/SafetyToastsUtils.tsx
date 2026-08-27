@@ -1,11 +1,11 @@
-// === Module 7997: getSafetyToastTypeContent ===
+// === Module 8607: getSafetyToastTypeContent ===
 
-// Module 7997 (getSafetyToastTypeContent)
+// Module 8607 (getSafetyToastTypeContent)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getNicknameDefault from "getNickname" /* 4637 */;
+import getNicknameDefault from "getNickname" /* 4638 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { SafetyToastType } from "SafetyToastType" /* 7991 */;
+import { SafetyToastType } from "SafetyToastType" /* 8601 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");
@@ -24,8 +24,8 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
   }
   let name = obj.getName(guild_id, id, user);
   if (name == null) {
-    name = tmp3(4288).getGlobalName(user);
-    const tmp3Result = tmp3(4288);
+    name = tmp3(4289).getGlobalName(user);
+    const tmp3Result = tmp3(4289);
   }
   if (SafetyToastType.IGNORE_SUCCESS === BLOCK_SUCCESS) {
     const intl18 = getSystemLocale.intl;

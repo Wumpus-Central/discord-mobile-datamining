@@ -1,6 +1,6 @@
-// === Module 15123: useShopOrientationLock ===
+// === Module 15187: useShopOrientationLock ===
 
-// Module 15123 (useShopOrientationLock)
+// Module 15187 (useShopOrientationLock)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

@@ -1,13 +1,13 @@
-// === Module 11451: PopoutCheck ===
+// === Module 11306: PopoutCheck ===
 
-// Module 11451 (PopoutCheck)
+// Module 11306 (PopoutCheck)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4379 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4395 */;
-import Text from "Text" /* 4440 */;
-import officialApplicationIds2 from "officialApplicationIds" /* 5298 */;
+import useThemeDefault from "useTheme" /* 4380 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4396 */;
+import Text from "Text" /* 4441 */;
+import officialApplicationIds2 from "officialApplicationIds" /* 5303 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -16,11 +16,11 @@ import closure_8 from "fetchFingerprint" /* 1218 */;
 import closure_9 from "trackCommunicationDisabled" /* 1992 */;
 import closure_10 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "map" /* 11452 */;
-import { OperatorTypes } from "OperatorTypes" /* 5299 */;
+import closure_12 from "map" /* 11307 */;
+import { OperatorTypes } from "OperatorTypes" /* 5304 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function PopoutCheck(arg0) {
@@ -145,7 +145,7 @@ class PopoutChecks {
               const items1 = [null, , , ];
               let tmp26 = null;
               if (null != tmp7) {
-                const obj3 = { style: null, user: null, size: null, guildId: "a" };
+                const obj3 = { style: null, user: null, size: null, guildId: "Array" };
                 obj3[0] = tmp21.popoutCheckGroupPlatformIcon;
                 obj3[1] = tmp7;
                 obj3[2] = tmp11(tmp3[24]).AvatarSizes.XSMALL;

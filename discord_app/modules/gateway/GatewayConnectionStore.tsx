@@ -1,26 +1,26 @@
-// === Module 5168: _handleConnectionOpen ===
+// === Module 5173: _handleConnectionOpen ===
 
-// Module 5168 (_handleConnectionOpen)
+// Module 5173 (_handleConnectionOpen)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import set from "set" /* 500 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import handleIdentify from "handleIdentify" /* 13177 */;
-import CLOSEDDefault from "CLOSED" /* 13192 */;
-import getIsPausedAll from "getIsPaused" /* 13213 */;
-import defineSimpleDispatchDefault from "defineSimpleDispatch" /* 13221 */;
+import handleIdentify from "handleIdentify" /* 13200 */;
+import CLOSEDDefault from "CLOSED" /* 13215 */;
+import getIsPausedAll from "getIsPaused" /* 13236 */;
+import defineSimpleDispatchDefault from "defineSimpleDispatch" /* 13244 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "handleConnectionClosedOrResumed" /* 1340 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "callConnect" /* 5169 */;
+import closure_7 from "callConnect" /* 5174 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "_detectH265HardwareDecode" /* 4495 */;
-import closure_10 from "createRTCConnection" /* 4518 */;
-import closure_11 from "initialize" /* 4539 */;
+import closure_9 from "_detectH265HardwareDecode" /* 4496 */;
+import closure_10 from "createRTCConnection" /* 4519 */;
+import closure_11 from "initialize" /* 4540 */;
 import closure_12 from "handleConnectionOpen" /* 1981 */;
-import closure_13 from "filterPlayingActivities" /* 5170 */;
-import closure_14 from "initialize" /* 4532 */;
+import closure_13 from "filterPlayingActivities" /* 5175 */;
+import closure_14 from "initialize" /* 4533 */;
 import ME from "ME" /* 676 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
@@ -66,7 +66,7 @@ function _handleConnectionOpen() {
               const _Date2 = Date;
               closure_20 = Date.now();
               sessionId = obj2.sessionId;
-              const localPresenceState = callback(13177).localPresenceState;
+              const localPresenceState = callback(13200).localPresenceState;
               localPresenceState.handleConnectionOpen();
               obj2 = {};
               voiceChannelId = closure_1_12.getVoiceChannelId();
@@ -122,11 +122,11 @@ function _handleConnectionOpen() {
                   obj2 = { guildId: null, channelId: null };
                   obj2[0] = guildId.getGuildId();
                   obj2[1] = voiceChannelId;
-                  callback(6128).muteCustomJoinSound(voiceChannelId);
-                  const obj5 = callback(6128);
+                  callback(6134).muteCustomJoinSound(voiceChannelId);
+                  const obj5 = callback(6134);
                 }
               }
-              const localVoiceState = callback(13177).localVoiceState;
+              const localVoiceState = callback(13200).localVoiceState;
               localVoiceState.update(obj2, true);
               c22 = false;
               c24 = null;
@@ -147,7 +147,7 @@ function _handleConnectionOpen() {
                   tmp11 = voiceChannelId;
                 }
                 const result = lastSessionVoiceChannelId.setLastSessionVoiceChannelId(tmp11);
-                obj = voiceChannelId(5302);
+                obj = voiceChannelId(5307);
                 const voiceChannel = obj.selectVoiceChannel(null);
               }
             }
@@ -246,9 +246,9 @@ const gatewayConnectionStore = new GatewayConnectionStore(dispatcherDefault, {
     const socket2 = handleIdentify.socket;
     let connectResult = socket2.isSessionEstablished();
     if (connectResult) {
-      const socket3 = tmp(13177).socket;
+      const socket3 = tmp(13200).socket;
       socket3.close();
-      const socket4 = tmp(13177).socket;
+      const socket4 = tmp(13200).socket;
       connectResult = socket4.connect();
     }
     return connectResult;
@@ -321,13 +321,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(dispatcherDefault, {
     }
     if (isIOSResult) {
       if (null == guildId.channelId) {
-        const socket3 = tmp(13177).socket;
+        const socket3 = tmp(13200).socket;
         socket3.close(true);
       } else {
-        const socket = tmp(13177).socket;
+        const socket = tmp(13200).socket;
         if (socket.isClosed()) {
           getIsPausedAll.setIsPaused(false);
-          const socket2 = tmp(13177).socket;
+          const socket2 = tmp(13200).socket;
           socket2.connect();
           const obj3 = getIsPausedAll;
         }
@@ -346,16 +346,16 @@ const gatewayConnectionStore = new GatewayConnectionStore(dispatcherDefault, {
             closure_19.verbose("Ignoring voice state for own session due to VSU lock on channel:", closure_24);
             return arg0;
           } else {
-            const localVoiceState2 = callback(13177).localVoiceState;
+            const localVoiceState2 = callback(13200).localVoiceState;
             const obj = { guildId: null, channelId: null };
             ({ guildId: obj[0], channelId: obj[1] } = userId);
             localVoiceState2.setState(obj);
           }
         } else {
-          if (userId.guildId !== callback(13177).localVoiceState.guildId) {
+          if (userId.guildId !== callback(13200).localVoiceState.guildId) {
             return arg0;
           } else {
-            const localVoiceState = tmp(13177).localVoiceState;
+            const localVoiceState = tmp(13200).localVoiceState;
             localVoiceState.setState({ guildId: null, channelId: null });
           }
           tmp = callback;
@@ -422,7 +422,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(dispatcherDefault, {
   },
   GUILD_MEMBERS_REQUEST: function handleGuildMembersRequest(userIds) {
     const _require = userIds;
-    let socket = _require(13177).socket;
+    let socket = _require(13200).socket;
     if (socket.isSessionEstablished()) {
       if ("userIds" in userIds) {
         const obj2 = applyDefault(userIds.userIds);
@@ -432,7 +432,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(dispatcherDefault, {
         });
         const chunkResult = applyDefault(userIds.userIds).chunk(100);
       } else {
-        const socket2 = _require(13177).socket;
+        const socket2 = _require(13200).socket;
         const obj = { query: null, limit: null, presences: null };
         ({ query: obj[0], limit: obj[1] } = userIds);
         obj[2] = userIds.presences;
@@ -507,22 +507,22 @@ const gatewayConnectionStore = new GatewayConnectionStore(dispatcherDefault, {
   },
   STREAM_WATCH: function handleStreamWatch(arg0) {
     ({ streamKey, allowMultiple } = arg0);
-    let socket = _require(13177).socket;
+    let socket = _require(13200).socket;
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = store.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((streamKey) => callback(4510).decodeStreamKey(streamKey).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((streamKey) => callback(4511).decodeStreamKey(streamKey).ownerId === id.getId());
         const allActiveStreamKeys1 = store.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((arg0) => arg0 !== closure_0);
         const item = found.forEach((streamKey) => {
-          const socket = callback(13177).socket;
+          const socket = callback(13200).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = callback(13177).socket;
+            const socket2 = callback(13200).socket;
             socket2.streamDelete(streamKey);
           }
         });
       }
-      let socket2 = _require(13177).socket;
+      let socket2 = _require(13200).socket;
       socket2.streamWatch(streamKey);
     }
     return false;
@@ -530,10 +530,10 @@ const gatewayConnectionStore = new GatewayConnectionStore(dispatcherDefault, {
   STREAM_STOP: function handleStreamStop(streamKey) {
     const socket = handleIdentify.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = tmp(13177).socket;
+      const socket2 = tmp(13200).socket;
       socket2.streamDelete(streamKey.streamKey);
     }
-    const localVoiceState = tmp(13177).localVoiceState;
+    const localVoiceState = tmp(13200).localVoiceState;
     localVoiceState.update();
     return false;
   },
@@ -614,9 +614,9 @@ let obj = {
     const socket2 = handleIdentify.socket;
     let connectResult = socket2.isSessionEstablished();
     if (connectResult) {
-      const socket3 = tmp(13177).socket;
+      const socket3 = tmp(13200).socket;
       socket3.close();
-      const socket4 = tmp(13177).socket;
+      const socket4 = tmp(13200).socket;
       connectResult = socket4.connect();
     }
     return connectResult;
@@ -689,13 +689,13 @@ let obj = {
     }
     if (isIOSResult) {
       if (null == guildId.channelId) {
-        const socket3 = tmp(13177).socket;
+        const socket3 = tmp(13200).socket;
         socket3.close(true);
       } else {
-        const socket = tmp(13177).socket;
+        const socket = tmp(13200).socket;
         if (socket.isClosed()) {
           getIsPausedAll.setIsPaused(false);
-          const socket2 = tmp(13177).socket;
+          const socket2 = tmp(13200).socket;
           socket2.connect();
           const obj3 = getIsPausedAll;
         }
@@ -714,16 +714,16 @@ let obj = {
             closure_19.verbose("Ignoring voice state for own session due to VSU lock on channel:", closure_24);
             return arg0;
           } else {
-            const localVoiceState2 = callback(13177).localVoiceState;
+            const localVoiceState2 = callback(13200).localVoiceState;
             const obj = { guildId: null, channelId: null };
             ({ guildId: obj[0], channelId: obj[1] } = userId);
             localVoiceState2.setState(obj);
           }
         } else {
-          if (userId.guildId !== callback(13177).localVoiceState.guildId) {
+          if (userId.guildId !== callback(13200).localVoiceState.guildId) {
             return arg0;
           } else {
-            const localVoiceState = tmp(13177).localVoiceState;
+            const localVoiceState = tmp(13200).localVoiceState;
             localVoiceState.setState({ guildId: null, channelId: null });
           }
           tmp = callback;
@@ -790,7 +790,7 @@ let obj = {
   },
   GUILD_MEMBERS_REQUEST: function handleGuildMembersRequest(userIds) {
     const _require = userIds;
-    let socket = _require(13177).socket;
+    let socket = _require(13200).socket;
     if (socket.isSessionEstablished()) {
       if ("userIds" in userIds) {
         const obj2 = applyDefault(userIds.userIds);
@@ -800,7 +800,7 @@ let obj = {
         });
         const chunkResult = applyDefault(userIds.userIds).chunk(100);
       } else {
-        const socket2 = _require(13177).socket;
+        const socket2 = _require(13200).socket;
         const obj = { query: null, limit: null, presences: null };
         ({ query: obj[0], limit: obj[1] } = userIds);
         obj[2] = userIds.presences;
@@ -875,22 +875,22 @@ let obj = {
   },
   STREAM_WATCH: function handleStreamWatch(arg0) {
     ({ streamKey, allowMultiple } = arg0);
-    let socket = _require(13177).socket;
+    let socket = _require(13200).socket;
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = store.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((streamKey) => callback(4510).decodeStreamKey(streamKey).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((streamKey) => callback(4511).decodeStreamKey(streamKey).ownerId === id.getId());
         const allActiveStreamKeys1 = store.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((arg0) => arg0 !== closure_0);
         const item = found.forEach((streamKey) => {
-          const socket = callback(13177).socket;
+          const socket = callback(13200).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = callback(13177).socket;
+            const socket2 = callback(13200).socket;
             socket2.streamDelete(streamKey);
           }
         });
       }
-      let socket2 = _require(13177).socket;
+      let socket2 = _require(13200).socket;
       socket2.streamWatch(streamKey);
     }
     return false;
@@ -898,10 +898,10 @@ let obj = {
   STREAM_STOP: function handleStreamStop(streamKey) {
     const socket = handleIdentify.socket;
     if (socket.isSessionEstablished()) {
-      const socket2 = tmp(13177).socket;
+      const socket2 = tmp(13200).socket;
       socket2.streamDelete(streamKey.streamKey);
     }
-    const localVoiceState = tmp(13177).localVoiceState;
+    const localVoiceState = tmp(13200).localVoiceState;
     localVoiceState.update();
     return false;
   },

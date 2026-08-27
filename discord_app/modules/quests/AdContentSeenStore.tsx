@@ -1,12 +1,13 @@
-// === Module 14608: getOrCreateSet ===
+// === Module 14635: getOrCreateSet ===
 
-// Module 14608 (getOrCreateSet)
+// Module 14635 (getOrCreateSet)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7369 */;
-import AdCreativeType from "AdCreativeType" /* 7387 */;
+import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7376 */;
+import AdCreativeType from "AdCreativeType" /* 7379 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "initializeState" /* 7371 */;
+import closure_3 from "map" /* 7377 */;
+import closure_4 from "initializeState" /* 7381 */;
 
 require = arg1;
 function getOrCreateSet(QUEST) {
@@ -20,7 +21,7 @@ function getOrCreateSet(QUEST) {
   return value;
 }
 function syncWithQuestStore() {
-  const quests = lastFetchedQuestHomeHero.quests;
+  const quests = closure_4.quests;
   const obj = getOrCreateSet(AdCreativeType.AdCreativeType.QUEST);
   let flag = false;
   while (tmp !== undefined) {
@@ -67,7 +68,7 @@ function syncWithQuestStore() {
     }
     continue;
   }
-  if (0 !== lastFetchedQuestHomeHero.lastFetchedCurrentQuests) {
+  if (0 !== closure_4.lastFetchedCurrentQuests) {
     if (quests.size > 0) {
       for (const item10063 of obj) {
         let tmp24 = item10063;
@@ -118,7 +119,7 @@ class AdContentSeenStore extends PersistedStore {
 const prototype = AdContentSeenStore.prototype;
 prototype["initialize"] = function initialize(seenContentIds) {
   const self = this;
-  this.waitFor(closure_3);
+  this.waitFor(closure_4, closure_3);
   map = new Map();
   if (null != seenContentIds) {
     const _Object = Object;
@@ -141,7 +142,7 @@ prototype["initialize"] = function initialize(seenContentIds) {
       continue;
     }
   }
-  const items = [closure_3];
+  const items = [closure_4, closure_3];
   self.syncWith(items, syncWithQuestStore);
 };
 prototype["getState"] = function getState() {

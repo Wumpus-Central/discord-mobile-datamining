@@ -1,16 +1,16 @@
-// === Module 11160: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11046: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11160 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11046 (createSocialLayerStorefrontProductDetailsEmbed)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPrice from "getPrice" /* 6020 */;
-import useSKUPrice from "useSKUPrice" /* 6025 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8271 */;
+import getPrice from "getPrice" /* 6025 */;
+import useSKUPrice from "useSKUPrice" /* 6030 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7787 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "addApplication" /* 4485 */;
-import closure_6 from "addSku" /* 4493 */;
+import closure_5 from "addApplication" /* 4486 */;
+import closure_6 from "addSku" /* 4494 */;
 import { PaymentGateways } from "ME" /* 676 */;
-import { InviteTypes } from "InviteSendStates" /* 7406 */;
+import { InviteTypes } from "InviteSendStates" /* 7414 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
@@ -46,7 +46,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
       return null;
     } else {
       if (null != application) {
-        if (tmp(11161)(application)) {
+        if (tmp(11047)(application)) {
           if ("guild" !== guildOrApplication.type) {
             const result1 = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(value);
             const obj4 = useSKUPrice;

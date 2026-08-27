@@ -1,6 +1,6 @@
-// === Module 7306: getTieredTenureBadgeData ===
+// === Module 7312: getTieredTenureBadgeData ===
 
-// Module 7306 (getTieredTenureBadgeData)
+// Module 7312 (getTieredTenureBadgeData)
 import set from "set" /* 2 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import hooksDefault from "hooks" /* 4043 */;

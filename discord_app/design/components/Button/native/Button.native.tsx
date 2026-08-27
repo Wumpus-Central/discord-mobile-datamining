@@ -1,8 +1,8 @@
-// === Module 4879: Button ===
+// === Module 4880: Button ===
 
-// Module 4879 (Button)
+// Module 4880 (Button)
 import set from "set" /* 2 */;
-import CollapsingText from "CollapsingText" /* 4880 */;
+import CollapsingText from "CollapsingText" /* 4881 */;
 
 const result = set.fileFinishedImporting("design/components/Button/native/Button.native.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 7833: getWhatYouLoseProfileTier1Source ===
+// === Module 12910: getWhatYouLoseProfileTier1Source ===
 
-// Module 7833 (getWhatYouLoseProfileTier1Source)
+// Module 12910 (getWhatYouLoseProfileTier1Source)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getIllustrationSource from "getIllustrationSource" /* 7834 */;
+import getIllustrationSource from "getIllustrationSource" /* 8834 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getWhatYouLoseProfileTier1Source = function getWhatYouLoseProfileTi
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(7835);
+      return callback(12911);
     },
     darker() {
-      return callback(7836);
+      return callback(12912);
     },
     light() {
-      return callback(7837);
+      return callback(12913);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useWhatYouLoseProfileTier1Source = function useWhatYouLoseProfileTi
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(7835);
+      return callback(12911);
     },
     darker() {
-      return callback(7836);
+      return callback(12912);
     },
     light() {
-      return callback(7837);
+      return callback(12913);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const WhatYouLoseProfileTier1 = function WhatYouLoseProfileTier1(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(7835);
+      return callback(12911);
     },
     darker() {
-      return callback(7836);
+      return callback(12912);
     },
     light() {
-      return callback(7837);
+      return callback(12913);
     }
   };
   obj = {};

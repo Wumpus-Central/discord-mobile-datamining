@@ -1,6 +1,6 @@
-// === Module 15227: onNotifyFriendsOnProfileUpdateSettingsChanged ===
+// === Module 15291: onNotifyFriendsOnProfileUpdateSettingsChanged ===
 
-// Module 15227 (onNotifyFriendsOnProfileUpdateSettingsChanged)
+// Module 15291 (onNotifyFriendsOnProfileUpdateSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;

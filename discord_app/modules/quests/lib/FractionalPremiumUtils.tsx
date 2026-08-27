@@ -1,6 +1,6 @@
-// === Module 10619: getDurationStringOfFractionalPremium ===
+// === Module 10851: getDurationStringOfFractionalPremium ===
 
-// Module 10619 (getDurationStringOfFractionalPremium)
+// Module 10851 (getDurationStringOfFractionalPremium)
 import set from "set" /* 2 */;
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;

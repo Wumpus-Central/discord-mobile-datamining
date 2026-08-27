@@ -1,19 +1,19 @@
-// === Module 16195: handleOneRecipientInDM ===
+// === Module 16260: handleOneRecipientInDM ===
 
-// Module 16195 (handleOneRecipientInDM)
+// Module 16260 (handleOneRecipientInDM)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "performQuery" /* 13295 */;
-import closure_10 from "createRTCConnection" /* 4518 */;
+import closure_9 from "performQuery" /* 13322 */;
+import closure_10 from "createRTCConnection" /* 4519 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import { UserRowModes } from "UserRowModes" /* 9837 */;
+import { UserRowModes } from "UserRowModes" /* 10552 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function handleOneRecipientInDM() {
@@ -124,7 +124,7 @@ function _handleInviteUsers() {
                         return obj2;
                       }
                     }
-                    const obj13 = arr(4457);
+                    const obj13 = arr(4458);
                     c5 = 2;
                     c6 = 1;
                     let obj3 = { value: null, done: false };
@@ -135,7 +135,7 @@ function _handleInviteUsers() {
                 if (null != lib) {
                   if (store.getChannelId() === lib.id) {
                     if (lib.isDM()) {
-                      let obj10 = lib(4679);
+                      let obj10 = lib(4680);
                       obj10.showGuardCallAlert(callback(function*() {
                         if (dependencyMap === 2) {
                           dependencyMap = 3;
@@ -171,7 +171,7 @@ function _handleInviteUsers() {
                                   obj1[0] = closure_1_20(tmp33, dependencyMap);
                                   return obj1;
                                 } else {
-                                  let obj5 = v0(4457);
+                                  let obj5 = v0(4458);
                                   v0 = 1;
                                   dependencyMap = 1;
                                   let obj2 = { value: null, done: false };
@@ -209,19 +209,19 @@ function _handleInviteUsers() {
                                 obj[0] = arg1;
                                 return obj;
                               } else {
-                                const tmp8 = v0(9458);
+                                const tmp8 = v0(9791);
                                 const call = tmp8.call;
                                 if (typeof call === "unknown") {
                                   tmp8(false, true);
                                 } else {
                                   call(tmp9, false, true);
                                 }
-                                v0(11131)(closure_3);
+                                v0(12379)(closure_3);
                                 dependencyMap = 3;
                                 tmp9 = closure_3;
                               }
                               closure_3 = arg1;
-                              obj2 = closure_1_0(4679);
+                              obj2 = closure_1_0(4680);
                               v0 = 3;
                               dependencyMap = 1;
                               obj5 = { value: null, done: false };
@@ -235,7 +235,7 @@ function _handleInviteUsers() {
                         }
                       }));
                     } else if (lib.isGroupDM()) {
-                      let obj8 = arr(4457);
+                      let obj8 = arr(4458);
                       c5 = 5;
                       c6 = 1;
                       let obj4 = { value: null, done: false };
@@ -244,7 +244,7 @@ function _handleInviteUsers() {
                     }
                   }
                 }
-                let obj5 = arr(4457);
+                let obj5 = arr(4458);
                 obj5 = { recipientIds: null, location: "New Group DM", onBeforeTransition: null };
                 obj5[0] = arr;
                 obj5[2] = dependencyMap;
@@ -293,7 +293,7 @@ function _handleInviteUsers() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   closure_3 = arg1;
-                  obj = arr(9458);
+                  obj = arr(9791);
                   obj.ring(closure_3, arr, "gdm_invite");
                 }
                 c6 = 3;
@@ -303,9 +303,9 @@ function _handleInviteUsers() {
               }
               closure_3 = arg1;
             }
-            arr(4411).hideActionSheet(closure_16);
+            arr(4412).hideActionSheet(closure_16);
             c6 = 3;
-            const obj12 = arr(4411);
+            const obj12 = arr(4412);
           }
         } catch (tmp77) {
           c6 = tmp;
@@ -398,7 +398,7 @@ export default function NewGroupDMScreen(navigation) {
   }
   const sum = first.length + (num + 1);
   UserRowModes = sum;
-  const tmp13 = sum > importDefault(locationPage[19])(stateFromStores);
+  const tmp13 = sum > importDefault(locationPage[19])();
   closure_13 = tmp13;
   const items3 = [locationPage];
   const effect = obj3.useEffect(() => {
@@ -545,7 +545,7 @@ export default function NewGroupDMScreen(navigation) {
       obj.isGroupDM();
     }
     const intl2 = options(locationPage[22]).intl;
-    obj = { numMembers: c12, maxMemberLimit: closure_1_1(locationPage[19])(obj) };
+    obj = { numMembers: c12, maxMemberLimit: closure_1_1(locationPage[19])() };
     const formatToPlainStringResult = intl2.formatToPlainString(options(locationPage[22]).t.YUhnoy, obj);
     closure_1 = formatToPlainStringResult;
     obj = {
@@ -647,7 +647,7 @@ export default function NewGroupDMScreen(navigation) {
     isGroupDMResult = null != stateFromStores1;
   }
   if (isGroupDMResult) {
-    isGroupDMResult = sum < tmp12(tmp3[19])(stateFromStores);
+    isGroupDMResult = sum < tmp12(tmp3[19])();
   }
   if (isGroupDMResult) {
     obj = { style: null, children: null };

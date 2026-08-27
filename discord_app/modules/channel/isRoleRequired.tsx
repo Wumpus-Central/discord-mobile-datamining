@@ -1,6 +1,6 @@
-// === Module 4962: isRoleRequired ===
+// === Module 4964: isRoleRequired ===
 
-// Module 4962 (isRoleRequired)
+// Module 4964 (isRoleRequired)
 import set from "set" /* 2 */;
 import sum from "sum" /* 505 */;
 import fromStringAll from "fromString" /* 506 */;

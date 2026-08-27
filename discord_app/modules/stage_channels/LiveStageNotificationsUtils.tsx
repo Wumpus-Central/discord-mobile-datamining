@@ -1,7 +1,7 @@
-// === Module 9273: useCanSendStageStartNotification ===
+// === Module 9823: useCanSendStageStartNotification ===
 
-// Module 9273 (useCanSendStageStartNotification)
-import closure_2 from "handleInviteData" /* 4364 */;
+// Module 9823 (useCanSendStageStartNotification)
+import closure_2 from "handleInviteData" /* 4365 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
 import { Permissions } from "sum" /* 505 */;
 

@@ -1,6 +1,6 @@
-// === Module 13526: getAttachmentsRestriction ===
+// === Module 13553: getAttachmentsRestriction ===
 
-// Module 13526 (getAttachmentsRestriction)
+// Module 13553 (getAttachmentsRestriction)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -11,10 +11,10 @@ import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_9 from "ensureGuildLoaded" /* 1391 */;
 import closure_10 from "getUncachedChannelPermissions" /* 4089 */;
 import ME from "ME" /* 676 */;
-import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT" /* 11306 */;
-import { UserRowModes } from "UserRowModes" /* 9837 */;
+import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT" /* 11182 */;
+import { UserRowModes } from "UserRowModes" /* 10552 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import set from "set" /* 500 */;
 
 require = arg1;
@@ -258,7 +258,7 @@ export default function ShareScreen(sharedContent) {
                               c4 = 3;
                               return { value: false, done: true };
                             } else {
-                              obj1 = callback(13528);
+                              obj1 = callback(13555);
                               obj1 = { attachments: null, channel: null, comment: null };
                               obj1[0] = closure_1_1;
                               obj1[1] = channel;

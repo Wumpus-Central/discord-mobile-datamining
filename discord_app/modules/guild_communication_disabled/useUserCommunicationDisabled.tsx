@@ -1,6 +1,6 @@
-// === Module 8304: useUserCommunicationDisabled ===
+// === Module 7818: useUserCommunicationDisabled ===
 
-// Module 8304 (useUserCommunicationDisabled)
+// Module 7818 (useUserCommunicationDisabled)
 import isCommunicationDisabled from "isCommunicationDisabled" /* 4078 */;
 import closure_2 from "trackCommunicationDisabled" /* 1992 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;

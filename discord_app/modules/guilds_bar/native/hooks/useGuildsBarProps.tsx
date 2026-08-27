@@ -1,21 +1,21 @@
-// === Module 15732: findGuildSectionIndex ===
+// === Module 15796: findGuildSectionIndex ===
 
-// Module 15732 (findGuildSectionIndex)
+// Module 15796 (findGuildSectionIndex)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 5168 */;
+import closure_4 from "_handleConnectionOpen" /* 5173 */;
 import closure_5 from "initialize" /* 4090 */;
-import closure_6 from "processChannel" /* 6013 */;
-import closure_7 from "processChannel" /* 6014 */;
-import closure_8 from "getGeoRestrictedGuilds" /* 13286 */;
-import closure_9 from "handleConnectionOpen" /* 4807 */;
+import closure_6 from "processChannel" /* 6018 */;
+import closure_7 from "processChannel" /* 6019 */;
+import closure_8 from "getGeoRestrictedGuilds" /* 13313 */;
+import closure_9 from "handleConnectionOpen" /* 4808 */;
 import closure_10 from "trackCommunicationDisabled" /* 1992 */;
 import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "rebuildUnreads" /* 13294 */;
-import closure_13 from "handleConnectionOpen" /* 4266 */;
-import closure_14 from "insertUnsortedGuilds" /* 5328 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5328 */;
-import closure_16 from "withEqualityFn" /* 15723 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15724 */;
+import closure_12 from "rebuildUnreads" /* 13321 */;
+import closure_13 from "handleConnectionOpen" /* 4267 */;
+import closure_14 from "insertUnsortedGuilds" /* 5333 */;
+import { GuildsNodeType } from "insertUnsortedGuilds" /* 5333 */;
+import closure_16 from "withEqualityFn" /* 15787 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15788 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -466,11 +466,11 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((arg0) => {
             if ("unavailable-guilds" === arg0) {
-              return callback2(callback(15789), {}, arg0);
+              return callback2(callback(15853), {}, arg0);
             } else if ("empty-nux" === arg0) {
-              return callback2(callback(15790), {}, arg0);
+              return callback2(callback(15854), {}, arg0);
             } else if ("create-join-guild" === arg0) {
-              return callback2(callback(15792), {}, arg0);
+              return callback2(callback(15856), {}, arg0);
             }
           })
         };

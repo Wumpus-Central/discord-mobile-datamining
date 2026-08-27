@@ -1,19 +1,19 @@
-// === Module 12846: IntroDemo ===
+// === Module 12865: IntroDemo ===
 
-// Module 12846 (IntroDemo)
+// Module 12865 (IntroDemo)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ClockIcon from "ClockIcon" /* 4407 */;
-import Text from "Text" /* 4440 */;
-import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5570 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 5950 */;
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8604 */;
-import BookmarkIcon from "BookmarkIcon" /* 11344 */;
-import setDefault from "set" /* 12849 */;
+import ClockIcon from "ClockIcon" /* 4408 */;
+import Text from "Text" /* 4441 */;
+import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5575 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 5955 */;
+import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7537 */;
+import BookmarkIcon from "BookmarkIcon" /* 11206 */;
+import setDefault from "set" /* 12868 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 function IntroDemo(isReminder) {
   isReminder = isReminder.isReminder;
@@ -125,7 +125,7 @@ export default function ForLaterIntro(type) {
   const tmp4 = type.type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER;
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: importDefault(tmp4 ? 12847 : 12848), style: tmp.upsellImage };
+  obj = { source: importDefault(tmp4 ? 12866 : 12867), style: tmp.upsellImage };
   const items = [closure_6(closure_3, obj), , ];
   obj1 = { style: tmp.textContainer, children: null };
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };

@@ -1,7 +1,7 @@
-// === Module 13983: _initialize ===
+// === Module 14010: _initialize ===
 
-// Module 13983 (_initialize)
-import initializeDefault from "initialize" /* 4626 */;
+// Module 14010 (_initialize)
+import initializeDefault from "initialize" /* 4627 */;
 
 initializeDefault;
 class CallKitLifecycleManager extends tmp2 {

@@ -1,6 +1,6 @@
-// === Module 6193: GuildBoostingMarketingOverview ===
+// === Module 6199: GuildBoostingMarketingOverview ===
 
-// Module 6193 (GuildBoostingMarketingOverview)
+// Module 6199 (GuildBoostingMarketingOverview)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
@@ -8,7 +8,7 @@ import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ AnalyticEvents: closure_8, AnalyticsPages: c9 } = ME);
@@ -79,9 +79,9 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, items3);
   const effect1 = obj3.useEffect(() => {
     guildBoostSlots(stateFromStores[16]).wait(() => {
-      const premiumSubscriptionPlans = callback(6050).fetchPremiumSubscriptionPlans();
-      const obj = callback(6050);
-      const paymentSources = callback(4789).fetchPaymentSources();
+      const premiumSubscriptionPlans = callback(6056).fetchPremiumSubscriptionPlans();
+      const obj = callback(6056);
+      const paymentSources = callback(4790).fetchPaymentSources();
     });
   }, []);
   let tmp18 = null;

@@ -1,12 +1,12 @@
-// === Module 7968: navigateToSocialLayerStorefrontWithGuildPreview ===
+// === Module 12975: navigateToSocialLayerStorefrontWithGuildPreview ===
 
-// Module 7968 (navigateToSocialLayerStorefrontWithGuildPreview)
+// Module 12975 (navigateToSocialLayerStorefrontWithGuildPreview)
 import transitionTo from "transitionTo" /* 1222 */;
-import getPrice from "getPrice" /* 6020 */;
-import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 7969 */;
+import getPrice from "getPrice" /* 6025 */;
+import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8427 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleUserSettingsStoreUpdate" /* 6022 */;
+import closure_5 from "handleUserSettingsStoreUpdate" /* 6027 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -102,7 +102,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
                     if (null != set) {
                       if (!set.has(guild3.PREVIEW_ENABLED)) {
                         if (null != lib) {
-                          let obj4 = lib(7970);
+                          let obj4 = lib(8580);
                           let obj2 = { inviteKey: null, context: null, skipOnboarding: true };
                           obj2[0] = lib.code;
                           obj2[1] = { location: "game_shop" };
@@ -117,7 +117,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
                     c3 = 2;
                     guild = 1;
                     obj4 = { value: null, done: false };
-                    obj4[0] = id(6131).startLurking(id, {}, { shouldNavigate: false });
+                    obj4[0] = id(6137).startLurking(id, {}, { shouldNavigate: false });
                     return obj4;
                   }
                 } else {

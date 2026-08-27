@@ -1,26 +1,26 @@
-// === Module 15036: handleLogout ===
+// === Module 15100: handleLogout ===
 
-// Module 15036 (handleLogout)
+// Module 15100 (handleLogout)
 import set from "set" /* 2 */;
 import Storage2 from "Storage" /* 595 */;
 import keys from "keys" /* 691 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useAlertStore from "useAlertStore" /* 4810 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4814 */;
-import _modDef5302 from "module_5302" /* 5302 */;
-import handleLogoutDefault from "handleLogout" /* 5999 */;
-import dispatcherDefault from "dispatcher" /* 7804 */;
-import NativeModulesDefault from "NativeModules" /* 10933 */;
-import DoorExitIcon from "DoorExitIcon" /* 10949 */;
+import useAlertStore from "useAlertStore" /* 4811 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4815 */;
+import _modDef5307 from "module_5307" /* 5307 */;
+import handleLogoutDefault from "handleLogout" /* 6004 */;
+import dispatcherDefault from "dispatcher" /* 7695 */;
+import NativeModulesDefault from "NativeModules" /* 9578 */;
+import DoorExitIcon from "DoorExitIcon" /* 9923 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10584 */;
+import createToggle from "createToggle" /* 10988 */;
 
 function handleLogout() {
   const Storage = Storage2.Storage;
   const result = Storage.set(keys.StorageKeys.LOGOUT_TIMESTAMP_KEY, new Date().getTime());
   const date = new Date();
-  _modDef5302.disconnect();
-  const obj2 = _modDef5302;
+  _modDef5307.disconnect();
+  const obj2 = _modDef5307;
   const result1 = NativeModulesDefault.clearAllNotifications();
   const obj3 = NativeModulesDefault;
   dispatcherDefault.close();

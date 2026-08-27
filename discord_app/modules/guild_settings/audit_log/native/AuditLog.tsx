@@ -1,11 +1,11 @@
-// === Module 16986: ApplicationHook ===
+// === Module 17052: ApplicationHook ===
 
-// Module 16986 (ApplicationHook)
+// Module 17052 (ApplicationHook)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4440 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 5906 */;
-import getPermissionChangesAll from "getPermissionChanges" /* 16969 */;
+import Text from "Text" /* 4441 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 5911 */;
+import getPermissionChangesAll from "getPermissionChanges" /* 17035 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import importDefaultResult from "handleThemeChange" /* 1302 */;
@@ -14,7 +14,7 @@ import closure_8 from "markAllUserIdListsStale" /* 4098 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import set from "set" /* 500 */;
 import importDefaultResult1 from "initialize" /* 589 */;
 
@@ -556,7 +556,7 @@ prototype["render"] = function render() {
   obj1[3] = str3;
   obj1[4] = onHeaderClick;
   const obj2 = { style: tmp.rowContainer, children: null };
-  const items2 = [callback(user(16978), { action: log.action }), , , ];
+  const items2 = [callback(user(17044), { action: log.action }), , , ];
   const obj4 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
   const intl = tmp10(1236).intl;
   obj4[1] = intl.string(tmp10(1236).t.iXAna6);
@@ -581,7 +581,7 @@ prototype["render"] = function render() {
       if (log.action !== tmp21.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
         if (log.action !== tmp21.AUTO_MODERATION_QUARANTINE_USER) {
           if (null != log.options.integration_type) {
-            const value = tmp18(5174).get(log.options.integration_type);
+            const value = tmp18(5179).get(log.options.integration_type);
             if (null != value) {
               let tmp9Result = tmp9(1363);
               const icon = value.icon;
@@ -589,7 +589,7 @@ prototype["render"] = function render() {
               let source = tmp9Result.makeSource(tmp9Result.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG);
               const tmp25 = tmp9Result.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG;
             }
-            const tmp18Result = tmp18(5174);
+            const tmp18Result = tmp18(5179);
           }
           if (null != guildId) {
             const user2 = log.user;
@@ -603,7 +603,7 @@ prototype["render"] = function render() {
         obj5[1] = source;
         obj5[2] = tmp10(1297).AvatarSizes.SMALL;
         obj4[4] = tmp17(tmp20, obj5);
-        items2[1] = tmp17(tmp10(5015).PressableOpacity, obj4);
+        items2[1] = tmp17(tmp10(5020).PressableOpacity, obj4);
         const obj6 = { accessibilityRole: "button", accessibilityState: null, onPress: null, style: null, disabled: null, children: null };
         obj7 = { expanded: null, disabled: null };
         obj7[0] = expanded;
@@ -614,14 +614,14 @@ prototype["render"] = function render() {
         obj6[4] = !checkChangesToRenderResult;
         const items3 = [self.renderTitle(), tmp8];
         obj6[5] = items3;
-        items2[2] = tmp15(tmp10(5015).PressableOpacity, obj6);
+        items2[2] = tmp15(tmp10(5020).PressableOpacity, obj6);
         let tmp17Result = null;
         if (checkChangesToRenderResult) {
           const obj8 = { style: null, size: null, source: null };
           const items4 = [tmp.arrow, rotate90];
           obj8[0] = items4;
           obj8[1] = tmp10(1297).Icon.Sizes.CUSTOM;
-          obj8[2] = tmp18(14192);
+          obj8[2] = tmp18(14219);
           tmp17Result = tmp17(tmp10(1297).Icon, obj8);
         }
         items2[3] = tmp17Result;
@@ -633,7 +633,7 @@ prototype["render"] = function render() {
         }
         items5[1] = renderChangeSummaryResult;
         obj1[5] = items5;
-        return tmp15(tmp10(5548).Card, obj1);
+        return tmp15(tmp10(5553).Card, obj1);
       }
     }
   }

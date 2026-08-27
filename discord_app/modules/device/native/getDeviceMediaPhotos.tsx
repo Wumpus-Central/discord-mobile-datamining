@@ -1,11 +1,11 @@
-// === Module 10236: getDeviceMediaPhotos ===
+// === Module 10357: getDeviceMediaPhotos ===
 
-// Module 10236 (getDeviceMediaPhotos)
+// Module 10357 (getDeviceMediaPhotos)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 500 */;
-import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 10237 */;
+import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 10358 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let closure_4 = new timestampDefault("DeviceMedia.tsx");

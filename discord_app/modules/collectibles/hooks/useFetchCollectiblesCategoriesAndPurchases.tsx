@@ -1,11 +1,11 @@
-// === Module 8501: useFetchPurchases ===
+// === Module 8016: useFetchPurchases ===
 
-// Module 8501 (useFetchPurchases)
-import setDefault from "set" /* 8502 */;
+// Module 8016 (useFetchPurchases)
+import setDefault from "set" /* 8017 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import closure_6 from "getHash" /* 4357 */;
-import closure_7 from "map" /* 7230 */;
+import closure_6 from "getHash" /* 4358 */;
+import closure_7 from "map" /* 7236 */;
 
 const require = arg1;
 function useFetchPurchases(flag) {

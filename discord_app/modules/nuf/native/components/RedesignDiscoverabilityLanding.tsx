@@ -1,18 +1,18 @@
-// === Module 16878: RedesignDiscoverabilityLanding ===
+// === Module 16944: RedesignDiscoverabilityLanding ===
 
-// Module 16878 (RedesignDiscoverabilityLanding)
+// Module 16944 (RedesignDiscoverabilityLanding)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4440 */;
-import Button from "Button" /* 4879 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5439 */;
-import preloadDefault from "preload" /* 5440 */;
-import registerAssetDefault from "registerAsset" /* 12378 */;
+import Text from "Text" /* 4441 */;
+import Button from "Button" /* 4880 */;
+import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5444 */;
+import preloadDefault from "preload" /* 5445 */;
+import registerAssetDefault from "registerAsset" /* 12202 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;
@@ -57,7 +57,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   const intl4 = getSystemLocale.intl;
   items1[2] = intl4.format(getSystemLocale.t.VcSQ4n, {
     learnMoreHook(children) {
-      return callback2(callback(4440).Text, { onPress: callback(12308).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
+      return callback2(callback(4441).Text, { onPress: callback(12132).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
     }
   });
   obj4[3] = items1;

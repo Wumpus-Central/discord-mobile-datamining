@@ -1,10 +1,10 @@
-// === Module 4684: initialize ===
+// === Module 4685: initialize ===
 
-// Module 4684 (initialize)
+// Module 4685 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4683 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4684 */;
 
 require = arg1;
 const GuildNSFWAgreeStore = "GuildNSFWAgreeStore";

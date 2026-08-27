@@ -1,6 +1,6 @@
-// === Module 17243: ContentInventoryFeature ===
+// === Module 17309: ContentInventoryFeature ===
 
-// Module 17243 (ContentInventoryFeature)
+// Module 17309 (ContentInventoryFeature)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentInventoryFeature.tsx");

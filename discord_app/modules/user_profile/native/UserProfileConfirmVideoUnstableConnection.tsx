@@ -1,9 +1,9 @@
-// === Module 12255: UserProfileConfirmVideoUnstableConnection ===
+// === Module 9002: UserProfileConfirmVideoUnstableConnection ===
 
-// Module 12255 (UserProfileConfirmVideoUnstableConnection)
+// Module 9002 (UserProfileConfirmVideoUnstableConnection)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4814 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4815 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

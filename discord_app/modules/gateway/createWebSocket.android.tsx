@@ -1,6 +1,6 @@
-// === Module 13181: createWebSocket ===
+// === Module 13204: createWebSocket ===
 
-// Module 13181 (createWebSocket)
+// Module 13204 (createWebSocket)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/gateway/createWebSocket.android.tsx");

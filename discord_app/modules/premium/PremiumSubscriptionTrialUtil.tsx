@@ -1,10 +1,10 @@
-// === Module 8385: useHasActiveTrial ===
+// === Module 7900: useHasActiveTrial ===
 
-// Module 8385 (useHasActiveTrial)
+// Module 7900 (useHasActiveTrial)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import closure_3 from "reset" /* 4113 */;
-import closure_4 from "emitChanges" /* 7123 */;
+import closure_4 from "emitChanges" /* 7129 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 require = arg1;
@@ -71,6 +71,6 @@ export const useCurrentPremiumTrialTier = function useCurrentPremiumTrialTier() 
 };
 export const getPremiumTrialOffer = function getPremiumTrialOffer() {
   const mapped = closure_9.map((closure_9) => userTrialOffer.getUserTrialOffer(closure_9));
-  const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired());
+  const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired);
   return found.shift();
 };

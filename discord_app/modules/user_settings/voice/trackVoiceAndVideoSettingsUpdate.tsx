@@ -1,6 +1,6 @@
-// === Module 9375: trackVoiceAndVideoDebuggingSettingsUpdated ===
+// === Module 9706: trackVoiceAndVideoDebuggingSettingsUpdated ===
 
-// Module 9375 (trackVoiceAndVideoDebuggingSettingsUpdated)
+// Module 9706 (trackVoiceAndVideoDebuggingSettingsUpdated)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;

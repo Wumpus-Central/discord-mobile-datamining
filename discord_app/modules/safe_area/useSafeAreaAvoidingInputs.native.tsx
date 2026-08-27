@@ -1,6 +1,6 @@
-// === Module 9676: _calculateScrollOffset ===
+// === Module 9134: _calculateScrollOffset ===
 
-// Module 9676 (_calculateScrollOffset)
+// Module 9134 (_calculateScrollOffset)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 

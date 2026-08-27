@@ -1,11 +1,11 @@
-// === Module 14184: UserProfileUpsellButton ===
+// === Module 14211: UserProfileUpsellButton ===
 
-// Module 14184 (UserProfileUpsellButton)
+// Module 14211 (UserProfileUpsellButton)
 import closure_3 from "noop" /* 19 */;
 import ME from "ME" /* 676 */;
 import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ AnalyticsPages: c4, UpsellTypes: c5, AnalyticsSections: closure_6, AnalyticEvents: error } = ME);
@@ -15,8 +15,8 @@ let result = require("set").fileFinishedImporting("modules/user_profile/native/U
 export default function UserProfileUpsellButton(analyticsObject) {
   analyticsObject = analyticsObject.analyticsObject;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5900)().analyticsLocations;
-  let obj = analyticsObject(7119);
+  analyticsLocations = analyticsLocations(5905)().analyticsLocations;
+  let obj = analyticsObject(7125);
   let label = obj.useNitroTrialCtaOverride("user_profile_upsell_button");
   const items = [analyticsLocations, analyticsObject];
   const effect = React.useEffect(() => {
@@ -45,6 +45,6 @@ export default function UserProfileUpsellButton(analyticsObject) {
   }
   obj[2] = label;
   obj = { color: "white", size: "sm", style: callback().nitroWheel };
-  obj[3] = jsx(analyticsObject(7916).NitroWheelIcon, { color: "white", size: "sm", style: callback().nitroWheel });
-  return jsx(analyticsObject(4879).Button, { color: "white", size: "sm", style: callback().nitroWheel });
+  obj[3] = jsx(analyticsObject(8028).NitroWheelIcon, { color: "white", size: "sm", style: callback().nitroWheel });
+  return jsx(analyticsObject(4880).Button, { color: "white", size: "sm", style: callback().nitroWheel });
 };

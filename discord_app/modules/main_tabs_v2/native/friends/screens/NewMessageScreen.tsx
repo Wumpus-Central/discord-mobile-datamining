@@ -1,8 +1,8 @@
-// === Module 16182: isPrivateChannelMatch ===
+// === Module 16245: isPrivateChannelMatch ===
 
-// Module 16182 (isPrivateChannelMatch)
+// Module 16245 (isPrivateChannelMatch)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4184 from "module_4184" /* 4184 */;
+import _modDef4185 from "module_4185" /* 4185 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -10,11 +10,11 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import { PrivateChannelRecord } from "createChannelRecord" /* 1395 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
 import closure_9 from "markAllUserIdListsStale" /* 4098 */;
-import closure_10 from "makeSortedChannel" /* 6012 */;
-import { UserRowModes } from "UserRowModes" /* 9837 */;
+import closure_10 from "makeSortedChannel" /* 6017 */;
+import { UserRowModes } from "UserRowModes" /* 10552 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import set from "set" /* 500 */;
 
 const require = arg1;
@@ -167,7 +167,7 @@ function Header(title) {
   const numInGroup = title.numInGroup;
   const items = [numInGroup];
   const memo = React.useMemo(() => closure_1_1(closure_1_2[22])() - (numInGroup + 1), items);
-  let obj = numInGroup(4184);
+  let obj = numInGroup(4185);
   const fn = function s() {
     let obj = numInGroup(closure_1_2[23]);
     let num = 0;
@@ -182,13 +182,13 @@ function Header(title) {
     obj[1] = numInGroup(closure_1_2[23]).withTiming(num2);
     return obj;
   };
-  obj = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(4445).withTiming };
+  obj = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(4446).withTiming };
   fn.__closure = obj;
   fn.__workletHash = 12426216833792;
   fn.__initData = closure_24;
   obj = { style: callback5().header, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items1 = [callback3(numInGroup(8607).GenericHeaderTitle, { title: title.title }), ];
+  const items1 = [callback3(numInGroup(7540).GenericHeaderTitle, { title: title.title }), ];
   obj1 = { style: animatedStyle, variant: "text-xs/medium", color: null, children: null };
   let str = "text-muted";
   if (0 === memo) {
@@ -227,22 +227,22 @@ function ChatPreview(channelId) {
     obj.track(closure_1_12.MESSAGE_COMPOSER_TRANSITIONED, obj);
     navigateToChannel(channelId);
   }, items1);
-  navigateToChannel(16183)(callback);
+  navigateToChannel(16246)(callback);
   let obj = { style: tmp.background, children: null };
   obj = { style: tmp.container, children: null };
   obj = { guildId: closure_15, channelId, chatInputRef: React.useRef(null), HACK_fixModalInteraction: true, alwaysRespectKeyboard: true, screenIndex: "new-message", secondaryTextFieldRef: channelId.tagListInputRef };
-  const items2 = [callback3(navigateToChannel(10450), obj), ];
+  const items2 = [callback3(navigateToChannel(10897), obj), ];
   obj1 = { portal: null };
   const ref = React.useRef(null);
   obj1[0] = channelId(500).isAndroid();
-  items2[1] = callback3(channelId(16185).PortalKeyboardRenderer, obj1);
+  items2[1] = callback3(channelId(16250).PortalKeyboardRenderer, obj1);
   obj[1] = items2;
   obj[1] = callback4(View, obj);
   return callback3(View, obj);
 }
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, ChannelTypes: closure_14, ME: closure_15, Routes: closure_16 } = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let closure_19 = _modDef4184.createAnimatedComponent(require("Text").Text);
+let closure_19 = _modDef4185.createAnimatedComponent(require("Text").Text);
 let obj = { container: { flex: 1 }, background: null, header: null, emptyContainer: null, emptyKeyboardView: null, addFriendsButtonContainer: null };
 obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[1] = obj;
@@ -275,9 +275,9 @@ export default function NewMessageScreen(navigation) {
   let stateFromStores1;
   let tmp = callback5();
   dependencyMap = tmp;
-  const insets = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(5541)({ includeKeyboardHeight: true }).insets;
+  const insets = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(5546)({ includeKeyboardHeight: true }).insets;
   stateFromStores = insets;
-  FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(4896)(() => {
+  FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(4897)(() => {
     let obj = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[20]);
     obj = { source_page: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID };
     obj.track(closure_1_12.MESSAGE_COMPOSER_OPENED, obj);
@@ -293,7 +293,7 @@ export default function NewMessageScreen(navigation) {
   first = tmp6[0];
   React = tmp6[1];
   let tmp2 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
-  let tmp4 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(5900);
+  let tmp4 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(5905);
   [tmp8, c6] = first(obj.useState(false), 2);
   let tmp7 = first(obj.useState(false), 2);
   [tmp10, c7] = first(obj.useState(false), 2);
@@ -472,7 +472,7 @@ export default function NewMessageScreen(navigation) {
         return () => {
           let obj = callback2(709);
           obj = { type: "CHANNEL_DELETE", channel: null };
-          obj = { id: callback(6015).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "paddingHorizontal" };
+          obj = { id: callback(6020).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "isArray" };
           obj[1] = obj;
           obj.dispatch(obj);
         };
@@ -568,7 +568,7 @@ export default function NewMessageScreen(navigation) {
                 const items = [];
                 HermesBuiltin.arraySpread(c4, 0);
                 if (-1 === index) {
-                  if (arr.length >= FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(16184)() - 1) {
+                  if (arr.length >= FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(16247)() - 1) {
                     let obj5 = callback(4161);
                     obj5.showMaxGroupMembers();
                     FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(698).track(closure_2_12.MESSAGE_COMPOSER_MAX_USERS_ADDED);
@@ -587,7 +587,7 @@ export default function NewMessageScreen(navigation) {
                 closure_1_7(false);
                 c4 = 3;
               } else {
-                let obj3 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(4457);
+                let obj3 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(4458);
                 c3 = 1;
                 c4 = 1;
                 obj3 = { value: null, done: false };
@@ -644,7 +644,7 @@ export default function NewMessageScreen(navigation) {
     if (!tmp10) {
       if (first.length > 0) {
         if (null == FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
-          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp13(6015).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp13(6020).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
         }
         obj = { channelId: null, navigateToChannel: null, tagListInputRef: null };
         obj[0] = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
@@ -722,7 +722,7 @@ export default function NewMessageScreen(navigation) {
     obj[1] = closure_1_17(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(lib[39]), obj);
     return closure_1_17(c6, obj);
   }, items13);
-  obj = { value: tmp4(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(5920).NEW_MESSAGE_COMPOSER).analyticsLocations, children: callback3(tmp2(12008), obj1) };
+  obj = { value: tmp4(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(5925).NEW_MESSAGE_COMPOSER).analyticsLocations, children: callback3(tmp2(11852), obj1) };
   obj1 = { actions: memo, noResultActions: memo1, rowMode: stateFromStores1.NONE, tagListInputRef: ref, onSelectUser: callback1, onQueryChanged: callback3, selectedUserIds: first, withAffinitySuggestions: true, overrideResults: tmp26Result, withGuildMembers: tmp28, withGDMNames: true, forceSearchResults: tmp10, onForceSearchResults: callback2, defaultNoResultsFound: memo2, autoFocusSearch: true };
-  return callback3(_require(5900).AnalyticsLocationProvider, obj);
+  return callback3(_require(5905).AnalyticsLocationProvider, obj);
 };

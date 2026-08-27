@@ -1,10 +1,10 @@
-// === Module 9741: ActivityEmoji ===
+// === Module 9141: ActivityEmoji ===
 
-// Module 9741 (ActivityEmoji)
-import EmojiDefault from "Emoji" /* 5532 */;
+// Module 9141 (ActivityEmoji)
+import EmojiDefault from "Emoji" /* 5537 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles({ emoji: { flexShrink: 0, width: "100%", height: "100%" }, text: { textAlign: "center", fontFamily: "System" } });
@@ -62,7 +62,7 @@ export default function ActivityEmoji(emoji) {
     }
   }
   if (null == emoji) {
-    ReactionIcon = ReactionIcon(7867).ReactionIcon;
+    ReactionIcon = ReactionIcon(8160).ReactionIcon;
     obj = { style: null, size: "sm" };
     obj[0] = style;
     <ReactionIcon style={null} size="sm" />;

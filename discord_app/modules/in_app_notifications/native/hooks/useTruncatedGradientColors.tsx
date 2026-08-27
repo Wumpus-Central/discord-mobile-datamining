@@ -1,10 +1,10 @@
-// === Module 10011: useTruncatedGradientColors ===
+// === Module 10111: useTruncatedGradientColors ===
 
-// Module 10011 (useTruncatedGradientColors)
+// Module 10111 (useTruncatedGradientColors)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const useMemo = noop.useMemo;
 let closure_4 = createCacheKey.createStyles({ gradient: { height: 40 } });

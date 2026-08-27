@@ -1,10 +1,10 @@
-// === Module 11031: MicrophoneIcon ===
+// === Module 10008: MicrophoneIcon ===
 
-// Module 11031 (MicrophoneIcon)
+// Module 10008 (MicrophoneIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 11032 */;
+import registerAsset from "registerAsset" /* 10009 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

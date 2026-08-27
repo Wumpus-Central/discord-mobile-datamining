@@ -1,9 +1,9 @@
-// === Module 10437: openChannelPicker ===
+// === Module 10886: openChannelPicker ===
 
-// Module 10437 (openChannelPicker)
+// Module 10886 (openChannelPicker)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4411 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4412 */;
 import closure_3 from "comparator" /* 1982 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 
@@ -36,5 +36,5 @@ export default function openChannelPicker(onClose) {
   obj[2] = found.map((channel) => channel.channel);
   obj[3] = selectedChannel;
   const merged1 = Object.assign(merged);
-  obj.openLazy(asyncRequireImpl(10438, dependencyMap.paths), "ChannelPicker", obj);
+  obj.openLazy(asyncRequireImpl(10887, dependencyMap.paths), "ChannelPicker", obj);
 };

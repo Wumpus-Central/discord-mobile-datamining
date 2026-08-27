@@ -1,8 +1,8 @@
-// === Module 9937: useCanShowFavoritesGuildOnboarding ===
+// === Module 10237: useCanShowFavoritesGuildOnboarding ===
 
-// Module 9937 (useCanShowFavoritesGuildOnboarding)
+// Module 10237 (useCanShowFavoritesGuildOnboarding)
 import initialize from "initialize" /* 589 */;
-import coerceMainRoute from "coerceMainRoute" /* 4298 */;
+import coerceMainRoute from "coerceMainRoute" /* 4299 */;
 import closure_2 from "setContent" /* 4154 */;
 import closure_3 from "handleConnectionOpen" /* 1981 */;
 

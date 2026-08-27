@@ -1,6 +1,6 @@
-// === Module 11205: _putRoleConnectionsConfigurations ===
+// === Module 11088: _putRoleConnectionsConfigurations ===
 
-// Module 11205 (_putRoleConnectionsConfigurations)
+// Module 11088 (_putRoleConnectionsConfigurations)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 

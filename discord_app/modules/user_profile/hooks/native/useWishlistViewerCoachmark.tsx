@@ -1,6 +1,6 @@
-// === Module 12745: useWishlistViewerCoachmark ===
+// === Module 12418: useWishlistViewerCoachmark ===
 
-// Module 12745 (useWishlistViewerCoachmark)
+// Module 12418 (useWishlistViewerCoachmark)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 

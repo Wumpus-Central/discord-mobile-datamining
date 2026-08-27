@@ -1,17 +1,17 @@
-// === Module 17056: GuildSettingsRoleEditDisplay ===
+// === Module 17122: GuildSettingsRoleEditDisplay ===
 
-// Module 17056 (GuildSettingsRoleEditDisplay)
+// Module 17122 (GuildSettingsRoleEditDisplay)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1986 */;
-import closure_6 from "handleSetSection" /* 17041 */;
-import { RoleColorsStyle } from "handleSetSection" /* 17041 */;
-import { STYLE_CONFIGS } from "title" /* 17040 */;
+import closure_6 from "handleSetSection" /* 17107 */;
+import { RoleColorsStyle } from "handleSetSection" /* 17107 */;
+import { STYLE_CONFIGS } from "title" /* 17106 */;
 import ME from "ME" /* 676 */;
-import { DEFAULT_GRADIENT_ROLE_COLORS as closure_11 } from "HOLOGRAPHIC_ROLE_COLORS" /* 17043 */;
+import { DEFAULT_GRADIENT_ROLE_COLORS as closure_11 } from "HOLOGRAPHIC_ROLE_COLORS" /* 17109 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ DEFAULT_ROLE_COLOR: c9, MAX_ROLE_LENGTH: c10 } = ME);

@@ -1,22 +1,22 @@
-// === Module 10425: NotificationAvatar ===
+// === Module 10875: NotificationAvatar ===
 
-// Module 10425 (NotificationAvatar)
+// Module 10875 (NotificationAvatar)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import ClockIcon from "ClockIcon" /* 4407 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 9991 */;
-import NativeMessagePreviewContentDefault from "NativeMessagePreviewContent" /* 10010 */;
-import LocationTextDefault from "LocationText" /* 10071 */;
-import VideoBadge from "VideoBadge" /* 10073 */;
+import ClockIcon from "ClockIcon" /* 4408 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10097 */;
+import NativeMessagePreviewContentDefault from "NativeMessagePreviewContent" /* 10110 */;
+import LocationTextDefault from "LocationText" /* 10177 */;
+import VideoBadge from "VideoBadge" /* 10179 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import set from "set" /* 9992 */;
+import set from "set" /* 10098 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function NotificationAvatar(arg0) {
@@ -39,7 +39,7 @@ function NotificationBody(channel) {
   obj1 = channel(589);
   const items1 = [closure_5];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getChannel(channel.parent_id));
-  let obj2 = channel(9991);
+  let obj2 = channel(10097);
   const hasPreviewableMedia = obj2.useHasPreviewableMedia(message);
   const tmp6 = channel.type === channel(692).ChannelTypes.DM;
   let num = 1;
@@ -47,7 +47,7 @@ function NotificationBody(channel) {
     num = closure_8;
   }
   let tmp10 = null;
-  const messagePreviewTextVariant = channel(9991).getMessagePreviewTextVariant();
+  const messagePreviewTextVariant = channel(10097).getMessagePreviewTextVariant();
   if (!tmp6) {
     obj = { channel: null, parentChannel: null, guild: null, author: null };
     obj[0] = channel;
@@ -64,7 +64,7 @@ function NotificationBody(channel) {
       obj[3] = tmp(4139).ChannelListLayoutTypes.COZY;
       obj[4] = messagePreviewTextVariant;
       obj[6] = num;
-      let tmp14 = callback(tmp(10012).ChannelRowPreview, obj);
+      let tmp14 = callback(tmp(10112).ChannelRowPreview, obj);
     }
     obj1 = { children: null };
     items2[1] = tmp14;
@@ -118,5 +118,5 @@ export default importAllResult.memo(function ReminderNotification(notification) 
     closure_1_1(closure_1_2[24]).track(closure_1_9.FOR_LATER_REMINDER_NOTIFICATION_CLICKED, obj);
   }, items);
   obj = { icon: callback(NotificationAvatar, obj), header: memo, onPress: callback, notification, rightAccessory: callback(closure_16, { message }), children: callback(NotificationBody, { channel, message }) };
-  return callback(notification(10069).NotificationPressable, obj);
+  return callback(notification(10175).NotificationPressable, obj);
 });

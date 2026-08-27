@@ -1,6 +1,6 @@
-// === Module 8859: fetchTopEmojis ===
+// === Module 9026: fetchTopEmojis ===
 
-// Module 8859 (fetchTopEmojis)
+// Module 9026 (fetchTopEmojis)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -10,7 +10,7 @@ const result = set.fileFinishedImporting("modules/emojis/top_emojis/TopEmojisAct
 
 export const fetchTopEmojis = function fetchTopEmojis(guildId) {
   const _require = guildId;
-  let obj = _require(4284);
+  let obj = _require(4285);
   if (!obj.isPseudoGuildId(guildId)) {
     obj = { type: "TOP_EMOJIS_FETCH", guildId: null };
     obj[1] = guildId;

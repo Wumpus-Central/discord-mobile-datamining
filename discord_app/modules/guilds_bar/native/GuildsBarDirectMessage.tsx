@@ -1,17 +1,17 @@
-// === Module 15781: ? ===
+// === Module 15845: ? ===
 
-// Module 15781
+// Module 15845
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "callConnect" /* 5169 */;
+import closure_5 from "callConnect" /* 5174 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "updateGuildUnreadSentinel" /* 7308 */;
+import closure_7 from "updateGuildUnreadSentinel" /* 7314 */;
 import closure_8 from "markAllUserIdListsStale" /* 4098 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import { ChannelTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -105,7 +105,7 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
   if (channel != null) {
     isMultiUserDMResult = channel.isMultiUserDM();
   }
-  obj = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: "done", externalChildren: true, expandedChildren: null, children: null };
+  obj = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: false, externalChildren: "done", expandedChildren: "flowing", children: "hourglass" };
   obj[6] = memo1;
   obj[7] = cutouts;
   obj[8] = badge;
@@ -137,7 +137,7 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
     }
   }
   obj[10] = tmp11Result;
-  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: "done", externalChildren: true, expandedChildren: null, children: null });
+  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: false, externalChildren: "done", expandedChildren: "flowing", children: "hourglass" });
 });
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDirectMessage.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 7942: TagIcon ===
+// === Module 10339: TagIcon ===
 
-// Module 7942 (TagIcon)
+// Module 10339 (TagIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 7943 */;
+import registerAsset from "registerAsset" /* 10340 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,15 +1,15 @@
-// === Module 11744: handleDismissWithDismissed ===
+// === Module 8366: handleDismissWithDismissed ===
 
-// Module 11744 (handleDismissWithDismissed)
+// Module 8366 (handleDismissWithDismissed)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9767 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 8367 */;
 
 require = arg1;
 function handleDismissWithDismissed() {
   let DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.DISMISSED;
   if (DISMISSED === undefined) {
-    DISMISSED = tmp(9767).AppLauncherCloseReason.DISMISSED;
+    DISMISSED = tmp(8367).AppLauncherCloseReason.DISMISSED;
   }
   obj.show = false;
   obj.entrypoint = AppLauncherEntrypoint.AppLauncherEntrypoint.NONE;
@@ -20,7 +20,7 @@ function handleDismissWithDismissed() {
 function handleSetActiveCommand() {
   let DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.COMMAND;
   if (DISMISSED === undefined) {
-    DISMISSED = tmp(9767).AppLauncherCloseReason.DISMISSED;
+    DISMISSED = tmp(8367).AppLauncherCloseReason.DISMISSED;
   }
   obj.show = false;
   obj.entrypoint = AppLauncherEntrypoint.AppLauncherEntrypoint.NONE;

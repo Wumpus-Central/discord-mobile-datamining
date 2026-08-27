@@ -1,11 +1,11 @@
-// === Module 8271: getEmbedThemeColors ===
+// === Module 7787: getEmbedThemeColors ===
 
-// Module 8271 (getEmbedThemeColors)
+// Module 7787 (getEmbedThemeColors)
 import ThemesDefault from "Themes" /* 712 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import hexToRgba from "hexToRgba" /* 4292 */;
+import hexToRgba from "hexToRgba" /* 4293 */;
 import closure_3 from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 const result = createCacheKey.experimental_createToken((theme) => {

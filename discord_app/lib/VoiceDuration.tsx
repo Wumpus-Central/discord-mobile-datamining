@@ -1,8 +1,8 @@
-// === Module 13362: start ===
+// === Module 13389: start ===
 
-// Module 13362 (start)
+// Module 13389 (start)
 import set2 from "set" /* 2 */;
-import sleep from "sleep" /* 4522 */;
+import sleep from "sleep" /* 4523 */;
 
 let closure_2 = [1, 100, 1000, 10000];
 let closure_3 = [100, 500, 1000, 5000];
@@ -84,7 +84,7 @@ prototype["start"] = function start(flag, flag2) {
   const connected2 = self.connected;
   connected2.start();
   const connection = self.connection;
-  connection.on(self(4559).BaseConnectionEvent.Speaking, (arg0, arg1) => {
+  connection.on(self(4560).BaseConnectionEvent.Speaking, (arg0, arg1) => {
     if (self.userId === arg0) {
       obj.onSpeaking(0 !== arg1);
     } else {
@@ -94,11 +94,11 @@ prototype["start"] = function start(flag, flag2) {
   self.onMuted(flag);
   self.onDeafened(flag2);
   const connection2 = self.connection;
-  connection2.on(self(4559).BaseConnectionEvent.Mute, (flag) => {
+  connection2.on(self(4560).BaseConnectionEvent.Mute, (flag) => {
     self.onMuted(flag);
   });
   const connection3 = self.connection;
-  connection3.on(self(4559).BaseConnectionEvent.Deafen, (flag2) => {
+  connection3.on(self(4560).BaseConnectionEvent.Deafen, (flag2) => {
     self.onDeafened(flag2);
   });
 };

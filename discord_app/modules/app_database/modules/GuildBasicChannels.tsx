@@ -1,12 +1,12 @@
-// === Module 7320: hasBasicChannelChanged ===
+// === Module 7326: hasBasicChannelChanged ===
 
-// Module 7320 (hasBasicChannelChanged)
+// Module 7326 (hasBasicChannelChanged)
 import timestampDefault from "timestamp" /* 3 */;
 import fromStringAll from "fromString" /* 506 */;
 import itemsDefault from "items" /* 1956 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "_handleConnectionOpen" /* 5168 */;
+import closure_6 from "_handleConnectionOpen" /* 5173 */;
 import { createChannelRecordFromServer as closure_7 } from "createChannelRecord" /* 1395 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
 import closure_9 from "ensureGuildLoaded" /* 1391 */;

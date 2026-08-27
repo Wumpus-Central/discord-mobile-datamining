@@ -1,12 +1,12 @@
-// === Module 8629: set ===
+// === Module 7562: set ===
 
-// Module 8629 (set)
+// Module 7562 (set)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "handleThreadCreateOrUpdate" /* 5396 */;
+import closure_2 from "handleThreadCreateOrUpdate" /* 5401 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "generateOldThreadCutoff" /* 4459 */;
+import closure_4 from "generateOldThreadCutoff" /* 4460 */;
 import set from "set" /* 2 */;
 
 let closure_5 = {};

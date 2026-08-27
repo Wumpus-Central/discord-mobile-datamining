@@ -1,6 +1,6 @@
-// === Module 7865: useBuyNitroListData ===
+// === Module 12934: useBuyNitroListData ===
 
-// Module 7865 (useBuyNitroListData)
+// Module 12934 (useBuyNitroListData)
 import closure_2 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
@@ -12,7 +12,7 @@ export default function useBuyNitroListData(selection) {
   let analyticsLocations = setTier;
   dependencyMap = undefined;
   let React;
-  const tmp = analyticsLocations(7866)(selection.tier);
+  const tmp = analyticsLocations(12935)(selection.tier);
   const ref = React.useRef(null);
   dependencyMap = ref;
   React = React.useRef(false);
@@ -40,7 +40,7 @@ export default function useBuyNitroListData(selection) {
   let obj = { onScroll: null, onSelectNitroTier: null, listData: null, listRef: null };
   analyticsLocations = undefined;
   dependencyMap = undefined;
-  analyticsLocations = analyticsLocations(5900)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5905)().analyticsLocations;
   dependencyMap = React.useRef(false);
   obj[0] = function onScroll(nativeEvent) {
     const current = ref.current;

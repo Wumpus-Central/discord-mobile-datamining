@@ -1,6 +1,6 @@
-// === Module 4327: GuildThemePreviewOrigin ===
+// === Module 4328: GuildThemePreviewOrigin ===
 
-// Module 4327 (GuildThemePreviewOrigin)
+// Module 4328 (GuildThemePreviewOrigin)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_themes/GuildThemePreviewConstants.tsx");

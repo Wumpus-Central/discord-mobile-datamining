@@ -1,8 +1,8 @@
-// === Module 12496: getAssetURL ===
+// === Module 12719: getAssetURL ===
 
-// Module 12496 (getAssetURL)
+// Module 12719 (getAssetURL)
 import set from "set" /* 2 */;
-import CustomLinkType from "CustomLinkType" /* 12497 */;
+import CustomLinkType from "CustomLinkType" /* 12720 */;
 
 let result = set.fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
 class CustomActivityLinkRecord {
@@ -36,10 +36,10 @@ class CustomActivityLinkRecord {
 CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
   const self = this;
   if (this.type === CustomLinkType.CustomLinkType.MANAGED) {
-    let tmpResult = tmp(8463);
+    let tmpResult = tmp(7981);
     let assetImage = tmpResult.getAssetImage(self.applicationId, self.assetId, 512);
-  } else if (self.type === tmp(12497).CustomLinkType.QUICK) {
-    tmpResult = tmp(12494);
+  } else if (self.type === tmp(12720).CustomLinkType.QUICK) {
+    tmpResult = tmp(12717);
     assetImage = tmpResult.getQuickLinkImage(self.assetPath);
   }
   return assetImage;

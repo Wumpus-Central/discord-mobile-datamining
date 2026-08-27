@@ -1,6 +1,6 @@
-// === Module 7532: trackMemberApplicationViewed ===
+// === Module 7595: trackMemberApplicationViewed ===
 
-// Module 7532 (trackMemberApplicationViewed)
+// Module 7595 (trackMemberApplicationViewed)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
 import closure_3 from "trackCommunicationDisabled" /* 1992 */;

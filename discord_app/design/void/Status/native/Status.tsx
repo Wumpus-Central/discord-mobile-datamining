@@ -1,17 +1,17 @@
-// === Module 13635: Status ===
+// === Module 13662: Status ===
 
-// Module 13635 (Status)
+// Module 13662 (Status)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import getAnimatedTypingTranslateX from "getAnimatedTypingTranslateX" /* 13633 */;
-import STATUS_PADDINGDefault from "STATUS_PADDING" /* 13634 */;
+import getAnimatedTypingTranslateX from "getAnimatedTypingTranslateX" /* 13660 */;
+import STATUS_PADDINGDefault from "STATUS_PADDING" /* 13661 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { STATUS_PADDING } from "STATUS_PADDING" /* 1298 */;
 import { StatusTypes } from "ME" /* 676 */;
-import n from "n" /* 12582 */;
+import n from "n" /* 9350 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;
@@ -71,23 +71,23 @@ export default function Status(isMobileOnline) {
   obj[0] = items;
   obj = { style: callback2().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = tmp4(13636);
+    let tmp4Result = tmp4(13663);
   } else if (flag2) {
-    tmp4Result = tmp4(13637);
+    tmp4Result = tmp4(13664);
   } else if (flag) {
-    tmp4Result = tmp4(13638);
+    tmp4Result = tmp4(13665);
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = tmp4(13639);
+    tmp4Result = tmp4(13666);
   } else if (tmp7.DND === status) {
-    tmp4Result = tmp4(13640);
+    tmp4Result = tmp4(13667);
   } else {
     if (tmp7.OFFLINE !== status) {
       if (tmp7.INVISIBLE !== status) {
         const ONLINE = tmp7.ONLINE;
-        tmp4Result = tmp4(13642);
+        tmp4Result = tmp4(13669);
       }
     }
-    tmp4Result = tmp4(13641);
+    tmp4Result = tmp4(13668);
   }
   obj[1] = tmp4Result;
   obj[1] = closure_11(closure_4, obj);

@@ -1,6 +1,6 @@
-// === Module 5305: MAX_STAGE_TOPIC_LENGTH ===
+// === Module 5310: MAX_STAGE_TOPIC_LENGTH ===
 
-// Module 5305 (MAX_STAGE_TOPIC_LENGTH)
+// Module 5310 (MAX_STAGE_TOPIC_LENGTH)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;

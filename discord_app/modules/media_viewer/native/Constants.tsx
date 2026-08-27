@@ -1,6 +1,6 @@
-// === Module 9079: THUMBNAIL_MARGIN ===
+// === Module 8519: THUMBNAIL_MARGIN ===
 
-// Module 9079 (THUMBNAIL_MARGIN)
+// Module 8519 (THUMBNAIL_MARGIN)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/media_viewer/native/Constants.tsx");

@@ -1,9 +1,9 @@
-// === Module 9739: getProfileBadgeIconUrl ===
+// === Module 8927: getProfileBadgeIconUrl ===
 
-// Module 9739 (getProfileBadgeIconUrl)
-import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 9000 */;
-import BadgeId from "BadgeId" /* 9001 */;
-import set2 from "set" /* 9006 */;
+// Module 8927 (getProfileBadgeIconUrl)
+import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8488 */;
+import BadgeId from "BadgeId" /* 8489 */;
+import set2 from "set" /* 8493 */;
 import set from "set" /* 2 */;
 
 function getProfileBadgeIconUrl(iconSrc) {

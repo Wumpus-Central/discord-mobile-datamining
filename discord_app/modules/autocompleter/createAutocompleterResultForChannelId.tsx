@@ -1,7 +1,7 @@
-// === Module 7529: createAutocompleterResultForChannelId ===
+// === Module 9855: createAutocompleterResultForChannelId ===
 
-// Module 7529 (createAutocompleterResultForChannelId)
-import computeChannelName from "computeChannelName" /* 4638 */;
+// Module 9855 (createAutocompleterResultForChannelId)
+import computeChannelName from "computeChannelName" /* 4639 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
 import closure_3 from "markAllUserIdListsStale" /* 4098 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;

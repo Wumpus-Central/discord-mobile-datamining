@@ -1,10 +1,10 @@
-// === Module 9458: ? ===
+// === Module 9791: ? ===
 
-// Module 9458
+// Module 9791
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef5302 from "module_5302" /* 5302 */;
-import useCanRingToGuildVoiceChannel from "useCanRingToGuildVoiceChannel" /* 9450 */;
+import _modDef5307 from "module_5307" /* 5307 */;
+import useCanRingToGuildVoiceChannel from "useCanRingToGuildVoiceChannel" /* 9785 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import closure_4 from "markAllUserIdListsStale" /* 4098 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
@@ -35,7 +35,7 @@ export default {
           if (closure_3) {
             ringable = body.body.ringable;
           }
-          const voiceChannel = id(5302).selectVoiceChannel(id, dependencyMap);
+          const voiceChannel = id(5307).selectVoiceChannel(id, dependencyMap);
           if (ringable) {
             self.ring(tmp2);
           }
@@ -63,11 +63,11 @@ export default {
             obj = { userId: closure_4, context: { location: "Call" } };
             obj.addRelationship(obj);
           };
-          id(4808).show(obj);
+          id(4809).show(obj);
         });
       }
     } else {
-      obj = _modDef5302;
+      obj = _modDef5307;
       let voiceChannel = obj.selectVoiceChannel(id, c1);
       if (arg2) {
         self.ring(id);

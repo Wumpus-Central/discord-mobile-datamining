@@ -1,9 +1,9 @@
-// === Module 7233: fromServer ===
+// === Module 7239: fromServer ===
 
-// Module 7233 (fromServer)
-import closure_0 from "fromServer" /* 7234 */;
-import { AssetDisplayConfigRecord } from "fromServer" /* 7227 */;
-import closure_2 from "fromServer" /* 7235 */;
+// Module 7239 (fromServer)
+import closure_0 from "fromServer" /* 7240 */;
+import { AssetDisplayConfigRecord } from "fromServer" /* 7233 */;
+import closure_2 from "fromServer" /* 7241 */;
 
 let prototype;
 prototype = function StorefrontCollectionRecord(arg0) {

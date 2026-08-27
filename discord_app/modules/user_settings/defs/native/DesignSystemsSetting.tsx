@@ -1,11 +1,11 @@
-// === Module 15066: route ===
+// === Module 15130: route ===
 
-// Module 15066 (route)
+// Module 15130 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 7933 */;
-import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 15067 */;
-import createToggle from "createToggle" /* 10584 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 12953 */;
+import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 15131 */;
+import createToggle from "createToggle" /* 10988 */;
 
 obj = {
   useTitle() {
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM,
   getComponent() {
-    return require(14166) /* SettingsDesignSystemsScreen */.default;
+    return require(14193) /* SettingsDesignSystemsScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

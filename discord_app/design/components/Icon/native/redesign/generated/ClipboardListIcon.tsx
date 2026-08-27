@@ -1,10 +1,10 @@
-// === Module 8649: ClipboardListIcon ===
+// === Module 7591: ClipboardListIcon ===
 
-// Module 8649 (ClipboardListIcon)
+// Module 7591 (ClipboardListIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 8650 */;
+import registerAsset from "registerAsset" /* 7592 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

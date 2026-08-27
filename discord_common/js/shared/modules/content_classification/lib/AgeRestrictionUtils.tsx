@@ -1,8 +1,8 @@
-// === Module 5014: compare ===
+// === Module 5019: compare ===
 
-// Module 5014 (compare)
+// Module 5019 (compare)
 import set from "set" /* 2 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5008 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5013 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 14991: onServerTrendingNotificationSettingsChanged ===
+// === Module 15055: onServerTrendingNotificationSettingsChanged ===
 
-// Module 14991 (onServerTrendingNotificationSettingsChanged)
+// Module 15055 (onServerTrendingNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;

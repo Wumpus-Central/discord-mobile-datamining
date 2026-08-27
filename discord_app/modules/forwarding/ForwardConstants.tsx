@@ -1,6 +1,6 @@
-// === Module 11306: MAX_DESTINATION_COUNT ===
+// === Module 11182: MAX_DESTINATION_COUNT ===
 
-// Module 11306 (MAX_DESTINATION_COUNT)
+// Module 11182 (MAX_DESTINATION_COUNT)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/forwarding/ForwardConstants.tsx");

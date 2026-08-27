@@ -1,13 +1,13 @@
-// === Module 15240: SettingSearchBar ===
+// === Module 15304: SettingSearchBar ===
 
-// Module 15240 (SettingSearchBar)
+// Module 15304 (SettingSearchBar)
 import ThemesDefault from "Themes" /* 712 */;
-import SearchField from "SearchField" /* 6167 */;
+import SearchField from "SearchField" /* 6173 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "zustandStore" /* 14169 */;
+import closure_4 from "zustandStore" /* 14196 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 createCacheKey = { container: null };
@@ -23,7 +23,7 @@ export default function SettingSearchBar() {
     const result = callback(1892).dismissGlobalKeyboard();
   }, []);
   const callback1 = React.useCallback(() => {
-    const result = callback(6190).trackSettingSearchInputFocused();
+    const result = callback(6196).trackSettingSearchInputFocused();
     store.setState({ isActive: true, isFocused: true });
   }, []);
   const callback2 = React.useCallback(() => {

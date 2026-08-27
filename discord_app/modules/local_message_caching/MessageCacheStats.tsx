@@ -1,6 +1,6 @@
-// === Module 7160: recordChannelFetchStart ===
+// === Module 7166: recordChannelFetchStart ===
 
-// Module 7160 (recordChannelFetchStart)
+// Module 7166 (recordChannelFetchStart)
 import set from "set" /* 2 */;
 
 class MessageCacheStats {

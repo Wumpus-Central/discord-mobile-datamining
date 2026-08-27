@@ -1,6 +1,6 @@
-// === Module 12182: metadata ===
+// === Module 12030: metadata ===
 
-// Module 12182 (metadata)
+// Module 12030 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/powerups/badge-packs/group-animated.png.js");

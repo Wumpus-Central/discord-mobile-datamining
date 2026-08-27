@@ -1,20 +1,20 @@
-// === Module 11951: GuildDirectoryCreateOrAddHeader ===
+// === Module 11795: GuildDirectoryCreateOrAddHeader ===
 
-// Module 11951 (GuildDirectoryCreateOrAddHeader)
+// Module 11795 (GuildDirectoryCreateOrAddHeader)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4440 */;
-import Button from "Button" /* 4879 */;
-import useSegmentedControlState from "useSegmentedControlState" /* 9171 */;
-import SegmentedControl from "SegmentedControl" /* 9357 */;
+import Text from "Text" /* 4441 */;
+import Button from "Button" /* 4880 */;
+import useSegmentedControlState from "useSegmentedControlState" /* 9181 */;
+import SegmentedControl from "SegmentedControl" /* 9683 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "isFetching" /* 11952 */;
-import { GuildDirectoryCreate } from "GuildDirectoryCreate" /* 11950 */;
+import closure_8 from "isFetching" /* 11796 */;
+import { GuildDirectoryCreate } from "GuildDirectoryCreate" /* 11794 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function GuildDirectoryCreateOrAddHeader(arg0) {
@@ -84,9 +84,9 @@ let closure_13 = importAllResult.memo((guild) => {
   let obj = guild(589);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getDirectoryEntry(directoryChannelId, guild.id));
-  obj = { label: guild.name, icon: callback(directoryChannelId(5951), obj), trailing: callback(directoryChannelId(11953), { entry: stateFromStores }), start, end };
+  obj = { label: guild.name, icon: callback(directoryChannelId(5956), obj), trailing: callback(directoryChannelId(11797), { entry: stateFromStores }), start, end };
   obj = { style: callback3().guildIcon, guild };
-  return callback(guild(5546).TableRow, obj);
+  return callback(guild(5551).TableRow, obj);
 });
 let closure_14 = importAllResult.memo((guild) => {
   guild = guild.guild;
@@ -103,11 +103,11 @@ let closure_14 = importAllResult.memo((guild) => {
     end: null
   };
   obj = { style: callback3().guildIcon, guild };
-  obj[2] = callback(handleItemPress(5951), obj);
-  obj[3] = callback(guild(5546).TableRow.Arrow, {});
+  obj[2] = callback(handleItemPress(5956), obj);
+  obj[3] = callback(guild(5551).TableRow.Arrow, {});
   obj[4] = start;
   obj[5] = end;
-  return callback(guild(5546).TableRow, obj);
+  return callback(guild(5551).TableRow, obj);
 });
 let obj2 = { paddingHorizontal: ThemesDefault.space.PX_12, width: "100%", marginTop: 18 };
 const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCreateOrAdd.tsx");

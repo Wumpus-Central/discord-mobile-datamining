@@ -1,17 +1,17 @@
-// === Module 14750: getUsedTemplateChannelsForGuild ===
+// === Module 14777: getUsedTemplateChannelsForGuild ===
 
-// Module 14750 (getUsedTemplateChannelsForGuild)
-import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 6053 */;
-import GuildFeatures2 from "GuildFeatures" /* 13519 */;
+// Module 14777 (getUsedTemplateChannelsForGuild)
+import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 6059 */;
+import GuildFeatures2 from "GuildFeatures" /* 13546 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { useMemo } from "noop" /* 19 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
 import closure_7 from "makeGroupListingIndexSubscriptionListingTag" /* 4083 */;
-import { useEditStateStore } from "AllChannelAccessOptions" /* 14745 */;
-import closure_9 from "initialize" /* 14751 */;
+import { useEditStateStore } from "AllChannelAccessOptions" /* 14772 */;
+import closure_9 from "initialize" /* 14778 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
-import importDefaultResult from "allSettled" /* 4708 */;
+import importDefaultResult from "allSettled" /* 4709 */;
 
 require = arg1;
 function getUsedTemplateChannelsForGuild(arg0) {

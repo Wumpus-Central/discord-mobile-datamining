@@ -1,21 +1,21 @@
-// === Module 10455: handleQuickSwitcherUpdate ===
+// === Module 10902: handleQuickSwitcherUpdate ===
 
-// Module 10455 (handleQuickSwitcherUpdate)
+// Module 10902 (handleQuickSwitcherUpdate)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import canSeeChannelSummaries from "canSeeChannelSummaries" /* 10457 */;
+import canSeeChannelSummaries from "canSeeChannelSummaries" /* 10904 */;
 import closure_7 from "_slicedToArray" /* 32 */;
-import closure_8 from "getHash" /* 4357 */;
-import closure_9 from "handleConnectionOpen" /* 7517 */;
+import closure_8 from "getHash" /* 4358 */;
+import closure_9 from "handleConnectionOpen" /* 9843 */;
 import closure_10 from "ensureGuildLoaded" /* 1391 */;
 import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "generateOldThreadCutoff" /* 4459 */;
+import closure_12 from "generateOldThreadCutoff" /* 4460 */;
 import closure_13 from "handleConnectionOpen" /* 1981 */;
-import closure_14 from "updateUserGuildSettingsInternal" /* 4653 */;
+import closure_14 from "updateUserGuildSettingsInternal" /* 4654 */;
 import closure_15 from "mergeGuildAvatar" /* 1922 */;
-import { SUMMARY_POLL_INTERVAL } from "result" /* 10456 */;
+import { SUMMARY_POLL_INTERVAL } from "result" /* 10903 */;
 
 require = arg1;
 function handleQuickSwitcherUpdate() {
@@ -272,7 +272,7 @@ obj = {
     if (null != summary) {
       const _Object = Object;
       if (Object.keys(summary).length > 0) {
-        obj = summaryFromServer(10458);
+        obj = summaryFromServer(10905);
         summaryFromServer = obj.createSummaryFromServer(summary, channelId);
         let items = dependencyMap2[channelId];
         if (items == null) {

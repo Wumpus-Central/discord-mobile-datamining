@@ -1,6 +1,6 @@
-// === Module 5329: set ===
+// === Module 5334: set ===
 
-// Module 5329 (set)
+// Module 5334 (set)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "handleConnectionClosedOrResumed" /* 1340 */;

@@ -1,15 +1,15 @@
-// === Module 7618: Divider ===
+// === Module 8301: Divider ===
 
-// Module 7618 (Divider)
+// Module 8301 (Divider)
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import ManaContext from "ManaContext" /* 4172 */;
-import context from "context" /* 5545 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 5922 */;
+import context from "context" /* 5550 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 5927 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 ({ View: c4, StyleSheet: c5, Platform } = get_ActivityIndicator);
@@ -41,9 +41,9 @@ export default function Divider(outer) {
   let tmp7 = null;
   if (tmp6) {
     obj = { backgroundColor: null };
-    obj[0] = tmp3(4292).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
+    obj[0] = tmp3(4293).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
     tmp7 = obj;
-    const tmp3Result = tmp3(4292);
+    const tmp3Result = tmp3(4293);
   }
   let tmp10Result = null;
   if (!React.useContext(context.RedesignCompatContext)) {

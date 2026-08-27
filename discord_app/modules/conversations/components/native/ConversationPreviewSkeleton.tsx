@@ -1,12 +1,12 @@
-// === Module 8799: ConversationPreviewSkeleton ===
+// === Module 7769: ConversationPreviewSkeleton ===
 
-// Module 8799 (ConversationPreviewSkeleton)
+// Module 7769 (ConversationPreviewSkeleton)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MOBILE_PREVIEW_MESSAGE_COUNT as closure_5 } from "CONVERSATION_COLORS" /* 7270 */;
+import { MOBILE_PREVIEW_MESSAGE_COUNT as closure_5 } from "CONVERSATION_COLORS" /* 7276 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -29,7 +29,7 @@ let result = require("set").fileFinishedImporting("modules/conversations/compone
 
 export default function ConversationPreviewSkeleton() {
   const _require = callback2();
-  let obj = _require(4184);
+  let obj = _require(4185);
   const sharedValue = obj.useSharedValue(0.4);
   let items = [sharedValue];
   const effect = React.useEffect(() => {
@@ -42,7 +42,7 @@ export default function ConversationPreviewSkeleton() {
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 11432452203963;
   fn.__initData = closure_9;
-  const animatedStyle = _require(4184).useAnimatedStyle(fn);
+  const animatedStyle = _require(4185).useAnimatedStyle(fn);
   obj = {
     style: animatedStyle,
     "aria-hidden": true,
@@ -61,5 +61,5 @@ export default function ConversationPreviewSkeleton() {
     })
   };
   obj = { length: closure_5 };
-  return callback(sharedValue(4184).View, obj);
+  return callback(sharedValue(4185).View, obj);
 };

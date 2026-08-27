@@ -1,13 +1,13 @@
-// === Module 15800: PreviewItem ===
+// === Module 15864: PreviewItem ===
 
-// Module 15800 (PreviewItem)
+// Module 15864 (PreviewItem)
 import isIterable from "isIterable" /* 4074 */;
 import importAllResult from "noop" /* 19 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5328 */;
-import closure_5 from "withEqualityFn" /* 15723 */;
-import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE" /* 15724 */;
+import { GuildsNodeType } from "insertUnsortedGuilds" /* 5333 */;
+import closure_5 from "withEqualityFn" /* 15787 */;
+import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE" /* 15788 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function PreviewItem(dragRegion) {
@@ -134,7 +134,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "call", expanded: 32195649, children: 762380800 };
+        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "call", expanded: 32212545, children: -2005859840 };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
         obj[6] = items;
@@ -338,7 +338,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "GUILD_MEMBER_UPDATE", scrollPosition: "lg", dragRegion: "icon-strong", windowSize: null, dropComplete: 12, listInsets: 54 };
+          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "user", scrollPosition: "2023-09_iar_user_reporting", dragRegion: "Safety Experience IAR User Reporting", windowSize: null, dropComplete: null, listInsets: 148 };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
           obj[2] = state;
           let node;

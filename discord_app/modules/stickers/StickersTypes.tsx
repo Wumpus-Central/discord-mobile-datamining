@@ -1,9 +1,9 @@
-// === Module 5159: StickerFormat ===
+// === Module 5164: StickerFormat ===
 
-// Module 5159 (StickerFormat)
+// Module 5164 (StickerFormat)
 import set from "set" /* 2 */;
 import TypeTag2 from "TypeTag" /* 1432 */;
-import MetaStickerType from "MetaStickerType" /* 5160 */;
+import MetaStickerType from "MetaStickerType" /* 5165 */;
 
 const TypeTag = TypeTag2.TypeTag;
 const result = set.fileFinishedImporting("modules/stickers/StickersTypes.tsx");

@@ -1,12 +1,12 @@
-// === Module 9744: formatClearAfterValue ===
+// === Module 9144: formatClearAfterValue ===
 
-// Module 9744 (formatClearAfterValue)
+// Module 9144 (formatClearAfterValue)
 import set from "set" /* 2 */;
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import resetCache from "resetCache" /* 4131 */;
-import StatusTypes from "StatusTypes" /* 9670 */;
+import StatusTypes from "StatusTypes" /* 9013 */;
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
 let result = set.fileFinishedImporting("modules/custom_status/utils/formatClearAfterValue.tsx");

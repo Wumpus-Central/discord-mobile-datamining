@@ -1,15 +1,15 @@
-// === Module 8639: MemberVerificationModal ===
+// === Module 7581: MemberVerificationModal ===
 
-// Module 8639 (MemberVerificationModal)
+// Module 7581 (MemberVerificationModal)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "trackCommunicationDisabled" /* 1992 */;
-import closure_6 from "get" /* 5437 */;
-import BANNER_RATIO_HEIGHT_16_9 from "BANNER_RATIO_HEIGHT_16_9" /* 8640 */;
+import closure_6 from "get" /* 5442 */;
+import BANNER_RATIO_HEIGHT_16_9 from "BANNER_RATIO_HEIGHT_16_9" /* 7582 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
-import importDefaultResult from "module_4184" /* 4184 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
+import importDefaultResult from "module_4185" /* 4185 */;
 
 const require = arg1;
 ({ SCROLL_EVENT_TIMER_MS: error, useBannerHeight: closure_8 } = BANNER_RATIO_HEIGHT_16_9);

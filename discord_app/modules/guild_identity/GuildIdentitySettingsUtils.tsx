@@ -1,6 +1,6 @@
-// === Module 14243: canResetThemeColors ===
+// === Module 14270: canResetThemeColors ===
 
-// Module 14243 (canResetThemeColors)
+// Module 14270 (canResetThemeColors)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_identity/GuildIdentitySettingsUtils.tsx");

@@ -1,9 +1,9 @@
-// === Module 5406: openQuarantineModeInfoModal ===
+// === Module 5411: openQuarantineModeInfoModal ===
 
-// Module 5406 (openQuarantineModeInfoModal)
+// Module 5411 (openQuarantineModeInfoModal)
 import noopAll from "noop" /* 19 */;
-import getBestActiveInput from "getBestActiveInput" /* 4306 */;
-import _modDef4809 from "module_4809" /* 4809 */;
+import getBestActiveInput from "getBestActiveInput" /* 4307 */;
+import _modDef4810 from "module_4810" /* 4810 */;
 import { Keyboard } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -29,5 +29,5 @@ export default function openQuarantineModeInfoModal() {
       });
     }
   };
-  _modDef4809.openLazy(obj);
+  _modDef4810.openLazy(obj);
 };

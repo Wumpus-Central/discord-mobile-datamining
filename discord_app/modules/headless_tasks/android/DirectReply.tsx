@@ -1,10 +1,10 @@
-// === Module 17365: promise ===
+// === Module 17431: promise ===
 
-// Module 17365 (promise)
+// Module 17431 (promise)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4437 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4438 */;
 
 let closure_5 = new timestampDefault("DirectReply");
 let tmp = new timestampDefault("DirectReply");
@@ -24,7 +24,7 @@ export default (arg0) => {
           closure_0 = arg0;
           c3 = 0;
           c4 = 0;
-          return (/* F122440 */ function*() { ... })();
+          return (/* F122714 */ function*() { ... })();
         });
         closure_0 = tmp;
         const apply = tmp.apply;

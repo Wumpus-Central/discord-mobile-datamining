@@ -1,10 +1,10 @@
-// === Module 9643: getCardProductName ===
+// === Module 10676: getCardProductName ===
 
-// Module 9643 (getCardProductName)
+// Module 10676 (getCardProductName)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 7225 */;
+import getProductOrbPrice from "getProductOrbPrice" /* 7231 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/utils/getProductName.tsx");
 

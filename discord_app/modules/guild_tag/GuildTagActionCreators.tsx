@@ -1,6 +1,6 @@
-// === Module 13540: _adoptGuildIdentity ===
+// === Module 13567: _adoptGuildIdentity ===
 
-// Module 13540 (_adoptGuildIdentity)
+// Module 13567 (_adoptGuildIdentity)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { Endpoints } from "ME" /* 676 */;

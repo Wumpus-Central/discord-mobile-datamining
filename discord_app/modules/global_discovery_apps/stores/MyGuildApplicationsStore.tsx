@@ -1,6 +1,6 @@
-// === Module 11731: addToApplicationIdToGuildIds ===
+// === Module 11564: addToApplicationIdToGuildIds ===
 
-// Module 11731 (addToApplicationIdToGuildIds)
+// Module 11564 (addToApplicationIdToGuildIds)
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

@@ -1,17 +1,17 @@
-// === Module 9179: EditGuildEventModalNavbar ===
+// === Module 9598: EditGuildEventModalNavbar ===
 
-// Module 9179 (EditGuildEventModalNavbar)
+// Module 9598 (EditGuildEventModalNavbar)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4440 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5500 */;
-import HeaderActionButton from "HeaderActionButton" /* 6183 */;
-import registerAssetDefault from "registerAsset" /* 8245 */;
-import EditGuildEventScreens from "EditGuildEventScreens" /* 9156 */;
+import Text from "Text" /* 4441 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5505 */;
+import HeaderActionButton from "HeaderActionButton" /* 6189 */;
+import registerAssetDefault from "registerAsset" /* 7697 */;
+import EditGuildEventScreens from "EditGuildEventScreens" /* 9595 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;
@@ -24,9 +24,9 @@ export default function EditGuildEventModalNavbar(screen) {
   const tmp = callback4();
   if (EditGuildEventScreens.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
     let items = [1, 3];
-  } else if (tmp2(9156).EditGuildEventScreens.DETAILS === screen) {
+  } else if (tmp2(9595).EditGuildEventScreens.DETAILS === screen) {
     items = [2, 3];
-  } else if (tmp2(9156).EditGuildEventScreens.PREVIEW === screen) {
+  } else if (tmp2(9595).EditGuildEventScreens.PREVIEW === screen) {
     items = [3, 3];
   } else {
     tmp2(1370).assertNever(screen);

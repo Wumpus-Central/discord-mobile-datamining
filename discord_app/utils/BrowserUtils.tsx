@@ -1,7 +1,7 @@
-// === Module 4787: num2 ===
+// === Module 4788: num2 ===
 
-// Module 4787 (num2)
-import formatDefault from "format" /* 4788 */;
+// Module 4788 (num2)
+import formatDefault from "format" /* 4789 */;
 
 let str = formatDefault.name;
 if (str == null) {

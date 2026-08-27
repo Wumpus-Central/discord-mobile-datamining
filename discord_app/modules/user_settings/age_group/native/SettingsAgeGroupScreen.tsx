@@ -1,23 +1,23 @@
-// === Module 14298: SettingsAgeGroupHeader ===
+// === Module 14325: SettingsAgeGroupHeader ===
 
-// Module 14298 (SettingsAgeGroupHeader)
+// Module 14325 (SettingsAgeGroupHeader)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2887 */;
-import Text from "Text" /* 4440 */;
-import _modDef14167 from "module_14167" /* 14167 */;
+import Text from "Text" /* 4441 */;
+import _modDef14194 from "module_14194" /* 14194 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8302 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7816 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function SettingsAgeGroupHeader() {
   let obj = { style: callback3().headerContainer, children: null };
   const callback = React.useCallback(() => {
-    const obj = callback(8009);
+    const obj = callback(8613);
     obj.openUrl(callback(1995).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
   }, []);
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
@@ -40,7 +40,7 @@ const result = require("set").fileFinishedImporting("modules/user_settings/age_g
 
 export default function SettingsAgeGroupScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(10584);
+    let obj = callback(10988);
     obj = { sections: null, ListHeaderComponent: null };
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;
@@ -53,5 +53,5 @@ export default function SettingsAgeGroupScreen() {
     obj[1] = closure_10;
     return obj.createList(obj);
   }, []);
-  return callback(_modDef14167, { node });
+  return callback(_modDef14194, { node });
 };

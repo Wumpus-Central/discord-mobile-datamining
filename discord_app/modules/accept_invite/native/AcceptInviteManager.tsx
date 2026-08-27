@@ -1,14 +1,14 @@
-// === Module 16726: prototype ===
+// === Module 16792: prototype ===
 
-// Module 16726 (prototype)
-import initializeDefault from "initialize" /* 5433 */;
+// Module 16792 (prototype)
+import initializeDefault from "initialize" /* 5438 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "trackCommunicationDisabled" /* 1992 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "updateInvite" /* 4428 */;
+import closure_7 from "updateInvite" /* 4429 */;
 import closure_8 from "getUncachedChannelPermissions" /* 4089 */;
-import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 7341 */;
+import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 7347 */;
 import ME from "ME" /* 676 */;
 
 let require = arg1;
@@ -76,7 +76,7 @@ let prototype = function AcceptInviteManager() {
               applyArgumentsResult(closure_2_2[15]).acceptFriendInvite(invite, obj);
               const obj6 = applyArgumentsResult(closure_2_2[15]);
               const tmp34 = closure_2_2;
-              closure_2_1(closure_2_2[16]).wait(() => set(9548).clearDisplayedInvite());
+              closure_2_1(closure_2_2[16]).wait(() => set(8787).clearDisplayedInvite());
               flag = false;
               const obj8 = closure_2_1(closure_2_2[16]);
             }
@@ -130,7 +130,7 @@ let prototype = function AcceptInviteManager() {
           tmp40 = closure_2_2;
         }
         if (flag2) {
-          closure_2_1(closure_2_2[16]).wait(() => set(9548).clearDisplayedInvite());
+          closure_2_1(closure_2_2[16]).wait(() => set(8787).clearDisplayedInvite());
           flag = false;
           const obj5 = closure_2_1(closure_2_2[16]);
         } else {

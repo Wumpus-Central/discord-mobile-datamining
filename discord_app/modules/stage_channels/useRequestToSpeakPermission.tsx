@@ -1,6 +1,6 @@
-// === Module 10953: useRequestToSpeakPermission ===
+// === Module 9927: useRequestToSpeakPermission ===
 
-// Module 10953 (useRequestToSpeakPermission)
+// Module 9927 (useRequestToSpeakPermission)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;

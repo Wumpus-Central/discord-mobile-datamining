@@ -1,11 +1,11 @@
-// === Module 8841: PremiumGroupWordmark ===
+// === Module 8172: PremiumGroupWordmark ===
 
-// Module 8841 (PremiumGroupWordmark)
+// Module 8172 (PremiumGroupWordmark)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import map from "map" /* 4165 */;
-import inlineStyles from "inlineStyles" /* 8052 */;
-import inlineStylesDefault from "inlineStyles" /* 8052 */;
+import inlineStyles from "inlineStyles" /* 8173 */;
+import inlineStylesDefault from "inlineStyles" /* 8173 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

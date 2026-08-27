@@ -1,10 +1,10 @@
-// === Module 5430: initialize ===
+// === Module 5435: initialize ===
 
-// Module 5430 (initialize)
+// Module 5435 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "trackCommunicationDisabled" /* 1992 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4653 */;
+import closure_3 from "updateUserGuildSettingsInternal" /* 4654 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
 let c5 = null;

@@ -1,6 +1,6 @@
-// === Module 14024: _fetchIsLinkTrusted ===
+// === Module 14051: _fetchIsLinkTrusted ===
 
-// Module 14024 (_fetchIsLinkTrusted)
+// Module 14051 (_fetchIsLinkTrusted)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 

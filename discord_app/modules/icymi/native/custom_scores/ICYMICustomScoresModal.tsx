@@ -1,11 +1,11 @@
-// === Module 15891: ICYMICustomScoresModal ===
+// === Module 15956: ICYMICustomScoresModal ===
 
-// Module 15891 (ICYMICustomScoresModal)
+// Module 15956 (ICYMICustomScoresModal)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 8785 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7755 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 noopAll;
@@ -19,7 +19,7 @@ const result = require("set").fileFinishedImporting("modules/icymi/native/custom
 
 export default function ICYMICustomScoresModal() {
   const _require = callback3();
-  let obj = _require(5955);
+  let obj = _require(5960);
   closure_1 = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions() {
@@ -43,12 +43,12 @@ export default function ICYMICustomScoresModal() {
       const obj = { title: null, headerLeft: null };
       const intl = lib(1236).intl;
       obj[0] = intl.string(lib(1236).t.jVshKt);
-      obj[1] = lib(8607).getRenderModalCloseImage(navigation.navigation);
-      const merged = Object.assign(callback(9895)());
+      obj[1] = lib(7540).getRenderModalCloseImage(navigation.navigation);
+      const merged = Object.assign(callback(10582)());
       return obj;
     },
     getComponent() {
-      return lib(15892).default;
+      return lib(15957).default;
     }
   };
   const items = [
@@ -56,11 +56,11 @@ export default function ICYMICustomScoresModal() {
     callback(closure_5.Screen, {
       name: "guild",
       options(navigation) {
-        const obj = { headerLeft: lib(8607).getRenderModalBackImage(navigation.navigation) };
+        const obj = { headerLeft: lib(7540).getRenderModalBackImage(navigation.navigation) };
         return obj;
       },
       getComponent() {
-        return lib(15893).default;
+        return lib(15958).default;
       }
     })
   ];

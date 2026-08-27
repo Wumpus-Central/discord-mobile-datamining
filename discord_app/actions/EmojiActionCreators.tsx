@@ -1,14 +1,14 @@
-// === Module 8955: _updateEmoji ===
+// === Module 9097: _updateEmoji ===
 
-// Module 8955 (_updateEmoji)
+// Module 9097 (_updateEmoji)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
-import fromBlobDefault from "fromBlob" /* 5060 */;
+import fromBlobDefault from "fromBlob" /* 5065 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getEmojiToGroupId" /* 5348 */;
-import closure_5 from "_handleConnectionOpen" /* 5168 */;
-import closure_6 from "handleConnectionOpen" /* 4807 */;
+import closure_4 from "getEmojiToGroupId" /* 5353 */;
+import closure_5 from "_handleConnectionOpen" /* 5173 */;
+import closure_6 from "handleConnectionOpen" /* 4808 */;
 import { Endpoints } from "ME" /* 676 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 
@@ -85,7 +85,7 @@ function _updateEmoji() {
           } else if (2 === tmp8) {
             c4 = 0;
             c4 = c3;
-            const tmp18 = new callback2(4343)(c4);
+            const tmp18 = new callback2(4344)(c4);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;

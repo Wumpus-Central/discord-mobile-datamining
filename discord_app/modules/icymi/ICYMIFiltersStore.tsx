@@ -1,9 +1,9 @@
-// === Module 9125: initialize ===
+// === Module 8549: initialize ===
 
-// Module 9125 (initialize)
+// Module 8549 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7514 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8550 */;
 
 require = arg1;
 let closure_2 = {};

@@ -1,8 +1,8 @@
-// === Module 9381: getLastUsedVideoBackgroundOption ===
+// === Module 9712: getLastUsedVideoBackgroundOption ===
 
-// Module 9381 (getLastUsedVideoBackgroundOption)
+// Module 9712 (getLastUsedVideoBackgroundOption)
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4107 */;
-import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9378 */;
+import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9709 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;

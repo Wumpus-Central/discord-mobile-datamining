@@ -1,10 +1,10 @@
-// === Module 15400: useInitialRegistrationStep ===
+// === Module 15465: useInitialRegistrationStep ===
 
-// Module 15400 (useInitialRegistrationStep)
+// Module 15465 (useInitialRegistrationStep)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "hasConsented" /* 6001 */;
-import { resetRegistration } from "useRegistrationUIStore" /* 15385 */;
+import closure_5 from "hasConsented" /* 6006 */;
+import { resetRegistration } from "useRegistrationUIStore" /* 15450 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");

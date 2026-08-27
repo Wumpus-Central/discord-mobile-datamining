@@ -1,9 +1,9 @@
-// === Module 10263: useShouldShowGiftingPromotionDeco ===
+// === Module 10448: useShouldShowGiftingPromotionDeco ===
 
-// Module 10263 (useShouldShowGiftingPromotionDeco)
+// Module 10448 (useShouldShowGiftingPromotionDeco)
 import set from "set" /* 2 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
-import NativeGiftContextProvider from "NativeGiftContextProvider" /* 9824 */;
+import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10396 */;
 
 const PremiumTypes = GuildFeatures.PremiumTypes;
 const result = set.fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");

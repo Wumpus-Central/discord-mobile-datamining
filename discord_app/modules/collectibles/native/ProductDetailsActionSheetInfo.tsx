@@ -1,17 +1,17 @@
-// === Module 9779: ProductNameAndDescription ===
+// === Module 12464: ProductNameAndDescription ===
 
-// Module 9779 (ProductNameAndDescription)
+// Module 12464 (ProductNameAndDescription)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import Text from "Text" /* 4440 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7226 */;
-import getProductPurchaseState from "getProductPurchaseState" /* 9627 */;
-import getBundleDescription from "getBundleDescription" /* 9780 */;
-import PriceTagDefault from "PriceTag" /* 9781 */;
+import Text from "Text" /* 4441 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7232 */;
+import getProductPurchaseState from "getProductPurchaseState" /* 12452 */;
+import getBundleDescription from "getBundleDescription" /* 12465 */;
+import PriceTagDefault from "PriceTag" /* 12466 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 function ProductNameAndDescription(product) {
   product = product.product;
@@ -34,12 +34,12 @@ function ProductPurchaseStatus(product) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
     const intl2 = tmp(1236).intl;
     obj[2] = intl2.string(tmp(1236).t["6cfuDj"]);
-    let children = tmp6(tmp(4440).Text, obj);
+    let children = tmp6(tmp(4441).Text, obj);
   } else if (tmp5) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t.BEjTij);
-    children = tmp6(tmp(4440).Text, obj);
+    children = tmp6(tmp(4441).Text, obj);
   } else {
     children = !result;
     if (!result) {

@@ -1,10 +1,10 @@
-// === Module 10335: useFetchCollectiblesProduct ===
+// === Module 8424: useFetchCollectiblesProduct ===
 
-// Module 10335 (useFetchCollectiblesProduct)
+// Module 8424 (useFetchCollectiblesProduct)
 import closure_2 from "_slicedToArray" /* 32 */;
 import { useEffect } from "noop" /* 19 */;
-import closure_4 from "addSku" /* 4493 */;
-import closure_5 from "updateCategoriesAndProducts" /* 7214 */;
+import closure_4 from "addSku" /* 4494 */;
+import closure_5 from "updateCategoriesAndProducts" /* 7220 */;
 import { SKUProductLines } from "ME" /* 676 */;
 
 const require = arg1;
@@ -86,5 +86,68 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
     state = tmp8.state;
   }
   obj[1] = "fetching" === state;
+  return obj;
+};
+export const useFetchCollectiblesProducts = function useFetchCollectiblesProducts(arg0, arg1) {
+  const _require = arg0;
+  dependencyMap = arg1;
+  let obj = _require(647);
+  let items = [obj3];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_0.map((arg0) => closure_4.get(arg0)));
+  const items1 = [closure_5];
+  let tmp2 = stateFromStores(_require(647).useStateFromStoresArray(items1, () => {
+    const items = [closure_0.map((arg0) => store.getProduct(arg0)), closure_0.map((closure_0) => store.getProductFetch(closure_0)), closure_0.map((closure_0) => store.isProductFetchBackedOff(closure_0))];
+    return items;
+  }), 3);
+  const first = tmp2[0];
+  obj3 = tmp2[1];
+  closure_5 = tmp3;
+  const items2 = [arg0, stateFromStores, first, obj3, tmp2[2], arg1];
+  first(() => {
+    const item = closure_0.forEach((closure_0) => {
+      let tmp2 = null != tmp;
+      if (tmp2) {
+        tmp2 = tmp.productLine !== closure_1_6.COLLECTIBLES;
+      }
+      let tmp7 = true === closure_1;
+      if (tmp7) {
+        let type;
+        if (tmp4 != null) {
+          type = tmp4.type;
+        }
+        tmp7 = type === closure_1_0(closure_1_1[6]).CollectiblesItemType.BUNDLE;
+      }
+      if (tmp7) {
+        tmp7 = 0 === tmp4.items.length;
+      }
+      let tmp11 = null != tmp4 && !tmp7 || tmp2;
+      if (!tmp11) {
+        let state;
+        if (tmp5 != null) {
+          state = tmp5.state;
+        }
+        tmp11 = "fetching" === state;
+      }
+      if (!tmp11) {
+        tmp11 = table4[arg1];
+      }
+      if (!tmp11) {
+        let obj = closure_1_0(closure_1_1[7]);
+        obj = { includeBundles: null };
+        obj[0] = closure_1;
+        const collectiblesProduct = obj.fetchCollectiblesProduct(closure_0, obj);
+      }
+    });
+  }, items2);
+  obj = {
+    products: first.filter((arg0) => null != arg0),
+    isFetching: obj3.some((state) => {
+      state = undefined;
+      if (state != null) {
+        state = state.state;
+      }
+      return "fetching" === state;
+    })
+  };
   return obj;
 };

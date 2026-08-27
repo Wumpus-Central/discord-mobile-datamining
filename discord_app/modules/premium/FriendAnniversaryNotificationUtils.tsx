@@ -1,6 +1,6 @@
-// === Module 14980: onFriendAnniversaryNotificationSettingsChanged ===
+// === Module 15045: onFriendAnniversaryNotificationSettingsChanged ===
 
-// Module 14980 (onFriendAnniversaryNotificationSettingsChanged)
+// Module 15045 (onFriendAnniversaryNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;

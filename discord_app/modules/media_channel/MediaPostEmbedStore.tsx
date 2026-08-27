@@ -1,6 +1,6 @@
-// === Module 10547: getMediaPostEmbed ===
+// === Module 10980: getMediaPostEmbed ===
 
-// Module 10547 (getMediaPostEmbed)
+// Module 10980 (getMediaPostEmbed)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

@@ -1,19 +1,19 @@
-// === Module 14591: EmptyState ===
+// === Module 14618: EmptyState ===
 
-// Module 14591 (EmptyState)
+// Module 14618 (EmptyState)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4440 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6202 */;
-import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression" /* 11404 */;
-import BountiesCtaDescriptionDefault from "BountiesCtaDescription" /* 14607 */;
+import Text from "Text" /* 4441 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6208 */;
+import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression" /* 11256 */;
+import BountiesCtaDescriptionDefault from "BountiesCtaDescription" /* 14634 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "set" /* 7370 */;
-import { BountyCarouselEmptyStateReason as closure_7 } from "QuestsExperimentLocations" /* 5334 */;
+import closure_6 from "set" /* 7380 */;
+import { BountyCarouselEmptyStateReason as closure_7 } from "QuestsExperimentLocations" /* 5339 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function EmptyState(reason) {
@@ -380,7 +380,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(arg0) {
     showOrbShopPlaceholderCarousel = false;
   }
   let obj = dependencyMap;
-  obj1 = first(10599);
+  obj1 = first(11003);
   const questHomeBounties = obj1.useQuestHomeBounties().questHomeBounties;
   const tmp2 = callback4();
   first = undefined;
@@ -392,7 +392,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(arg0) {
   } else {
     items1 = [];
   }
-  let tmpResult = tmp(6197);
+  let tmpResult = tmp(6203);
   const tmp3 = callback(tmpResult.useSelectedDismissibleContent(items1), 2);
   first = tmp3[0];
   importDefault = tmp5;
@@ -435,8 +435,8 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(arg0) {
     tmp10 = obtainableOrbRewards > 0;
   }
   if (tmp10) {
-    tmp10 = orbShopProducts.length >= tmp(14593).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-    const tmp11 = orbShopProducts.length >= tmp(14593).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+    tmp10 = orbShopProducts.length >= tmp(14620).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+    const tmp11 = orbShopProducts.length >= tmp(14620).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
   }
   if (!tmp8) {
     if (!stateFromStores) {
@@ -452,7 +452,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(arg0) {
           obj1[0] = orbShopProducts;
           obj1[1] = obtainableOrbRewards;
           obj1[2] = showOrbShopPlaceholderCarousel;
-          tmp17Result = tmp17(tmp18(14604), obj1);
+          tmp17Result = tmp17(tmp18(14631), obj1);
         }
         items5[1] = tmp17Result;
         obj[1] = items5;

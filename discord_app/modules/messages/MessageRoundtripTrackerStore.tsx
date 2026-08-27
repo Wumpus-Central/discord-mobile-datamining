@@ -1,15 +1,15 @@
-// === Module 7132: trackRoundtrip ===
+// === Module 7138: trackRoundtrip ===
 
-// Module 7132 (trackRoundtrip)
+// Module 7138 (trackRoundtrip)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 7133 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7348 */;
+import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 7139 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7355 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleInviteData" /* 4364 */;
-import closure_5 from "handleConnectionInfoChange" /* 4538 */;
+import closure_4 from "handleInviteData" /* 4365 */;
+import closure_5 from "handleConnectionInfoChange" /* 4539 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;
@@ -102,10 +102,10 @@ prototype["recordMessageSendAttempt"] = function recordMessageSendAttempt(closur
     }
   }, 30000);
 };
-prototype["recordMessageSendApiResponse"] = function recordMessageSendApiResponse(closure_1_13) {
+prototype["recordMessageSendApiResponse"] = function recordMessageSendApiResponse(closure_1_14) {
   const self = this;
   const pendingMessages = this.pendingMessages;
-  const value = pendingMessages.get(closure_1_13);
+  const value = pendingMessages.get(closure_1_14);
   if (null != value) {
     const obj = {};
     const merged = Object.assign(value);
@@ -114,10 +114,10 @@ prototype["recordMessageSendApiResponse"] = function recordMessageSendApiRespons
     if (tmp6) {
       trackRoundtrip(obj);
       const pendingMessages3 = self.pendingMessages;
-      pendingMessages3.delete(closure_1_13);
+      pendingMessages3.delete(closure_1_14);
     } else {
       const pendingMessages2 = self.pendingMessages;
-      const result = pendingMessages2.set(closure_1_13, obj);
+      const result = pendingMessages2.set(closure_1_14, obj);
     }
     tmp6 = null != obj.apiResponseTimestamp && null != obj.gatewaySeenTimestamp;
   }

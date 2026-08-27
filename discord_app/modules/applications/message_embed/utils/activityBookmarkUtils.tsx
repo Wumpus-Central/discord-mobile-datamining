@@ -1,6 +1,6 @@
-// === Module 7362: extractActivityBookmarkParams ===
+// === Module 7369: extractActivityBookmarkParams ===
 
-// Module 7362 (extractActivityBookmarkParams)
+// Module 7369 (extractActivityBookmarkParams)
 import set from "set" /* 2 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 

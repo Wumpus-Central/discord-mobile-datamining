@@ -1,9 +1,9 @@
-// === Module 13038: _fetchPremiumGroupMembership ===
+// === Module 13061: _fetchPremiumGroupMembership ===
 
-// Module 13038 (_fetchPremiumGroupMembership)
+// Module 13061 (_fetchPremiumGroupMembership)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createdAt" /* 1930 */;
-import closure_5 from "createFromServer" /* 13039 */;
+import closure_5 from "createFromServer" /* 13062 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;

@@ -1,9 +1,9 @@
-// === Module 9406: useIsUserSecureFramesVerified ===
+// === Module 9741: useIsUserSecureFramesVerified ===
 
-// Module 9406 (useIsUserSecureFramesVerified)
+// Module 9741 (useIsUserSecureFramesVerified)
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "createRTCConnection" /* 4518 */;
-import closure_4 from "computeCallVerification" /* 9407 */;
+import closure_3 from "createRTCConnection" /* 4519 */;
+import closure_4 from "computeCallVerification" /* 9742 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesVerified.tsx");

@@ -1,9 +1,9 @@
-// === Module 6052: canUserSeeMonetizationOnboarding ===
+// === Module 6058: canUserSeeMonetizationOnboarding ===
 
-// Module 6052 (canUserSeeMonetizationOnboarding)
+// Module 6058 (canUserSeeMonetizationOnboarding)
 import isRestrictedFromShowingGuildPurchaseEntryPoints from "isRestrictedFromShowingGuildPurchaseEntryPoints" /* 4082 */;
-import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 6053 */;
-import set from "set" /* 6054 */;
+import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 6059 */;
+import set from "set" /* 6060 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

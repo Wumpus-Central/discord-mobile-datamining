@@ -1,6 +1,6 @@
-// === Module 16938: isEligibleForSafetyFlowsExperiment ===
+// === Module 17004: isEligibleForSafetyFlowsExperiment ===
 
-// Module 16938 (isEligibleForSafetyFlowsExperiment)
+// Module 17004 (isEligibleForSafetyFlowsExperiment)
 import getUnitIdDefault from "getUnitId" /* 1368 */;
 
 const tmp2 = getUnitIdDefault({ name: "2026-04-safety-flows", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

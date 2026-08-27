@@ -1,10 +1,10 @@
-// === Module 16638: useHideSelfVideo ===
+// === Module 16704: useHideSelfVideo ===
 
-// Module 16638 (useHideSelfVideo)
+// Module 16704 (useHideSelfVideo)
 import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4496 */;
 import { VideoToggleState } from "ME" /* 676 */;
-import DesktopSources from "DesktopSources" /* 4508 */;
+import DesktopSources from "DesktopSources" /* 4509 */;
 
 const require = arg1;
 ({ MediaEngineContextTypes: closure_6, Features: error } = DesktopSources);

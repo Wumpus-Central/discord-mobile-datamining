@@ -1,13 +1,13 @@
-// === Module 16268: WebhookItem ===
+// === Module 16333: WebhookItem ===
 
-// Module 16268 (WebhookItem)
+// Module 16333 (WebhookItem)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import combinedDefault from "combined" /* 1995 */;
-import Stack from "Stack" /* 4877 */;
-import NavScrim from "NavScrim" /* 5886 */;
-import Form from "Form" /* 8185 */;
+import Stack from "Stack" /* 4878 */;
+import NavScrim from "NavScrim" /* 5891 */;
+import Form from "Form" /* 8295 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
@@ -16,10 +16,10 @@ import closure_8 from "comparator" /* 1982 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
 import closure_10 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import closure_12 from "handleWebhookCreateUpdate" /* 16269 */;
+import closure_12 from "handleWebhookCreateUpdate" /* 16334 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function WebhookItem(avatar) {
@@ -229,7 +229,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
-  const items = [callback(webhookType(4440).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
+  const items = [callback(webhookType(4441).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }), , ];
   let tmp4Result = webhookType === constants2.INCOMING;
   if (tmp4Result) {
     let obj = { guild: null, channel: null };
@@ -240,7 +240,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   items[1] = tmp4Result;
   if (0 === found.length) {
     obj = { Illustration: null, title: null };
-    obj[0] = tmp5(16273).WebhookEmpty;
+    obj[0] = tmp5(16338).WebhookEmpty;
     if (webhookType === constants2.CHANNEL_FOLLOWER) {
       const intl2 = tmp5(1236).intl;
       dkHRkE = tmp5(1236).t.dkHRkE;
@@ -260,7 +260,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
       return closure_18(closure_23, obj, id);
     });
     obj1 = { children: null };
-    items[2] = tmp4(tmp5(5939).TableRowGroup, obj);
+    items[2] = tmp4(tmp5(5944).TableRowGroup, obj);
     obj1[0] = items;
     return closure_20(closure_19, obj1);
   }

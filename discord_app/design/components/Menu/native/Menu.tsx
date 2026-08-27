@@ -1,14 +1,14 @@
-// === Module 13660: NOOP ===
+// === Module 13687: NOOP ===
 
-// Module 13660 (NOOP)
+// Module 13687 (NOOP)
 import ThemesDefault from "Themes" /* 712 */;
-import _mod4184 from "module_4184" /* 4184 */;
+import _mod4185 from "module_4185" /* 4185 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { NOOP } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 let c4 = importAllResult;
@@ -25,19 +25,19 @@ obj[1] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 const context = importAllResult.createContext({ menuClose: NOOP, menuDismiss: NOOP });
 function measureButtonRef(arg0, arg1) {
-  const measureResult = _mod4184.measure(arg0);
+  const measureResult = _mod4185.measure(arg0);
   if (null != measureResult) {
-    _mod4184.runOnJS(arg1)(measureResult);
-    const tmpResult = _mod4184;
+    _mod4185.runOnJS(arg1)(measureResult);
+    const tmpResult = _mod4185;
   }
 }
-measureButtonRef.__closure = { measure: require("module_4184").measure, runOnJS: require("module_4184").runOnJS };
+measureButtonRef.__closure = { measure: require("module_4185").measure, runOnJS: require("module_4185").runOnJS };
 measureButtonRef.__workletHash = 15651320687527;
 measureButtonRef.__initData = { code: "function measureButtonRef_MenuTsx1(ref,setDimensions){const{measure,runOnJS}=this.__closure;const measurements=measure(ref);if(measurements==null)return;runOnJS(setDimensions)(measurements);}" };
 let closure_13 = { code: "function MenuTsx2(){const{runOnJS,openMenuCallback}=this.__closure;return runOnJS(openMenuCallback)();}" };
 let closure_14 = { code: "function MenuTsx3(){const{runOnJS,closeMenuCallback}=this.__closure;return runOnJS(closeMenuCallback)();}" };
 let closure_15 = { code: "function MenuTsx4(){const{visible,useReducedMotion,interpolate,dirX,size,offsetAnimated,dirY}=this.__closure;var _offsetAnimated,_offsetAnimated$get,_offsetAnimated2,_offsetAnimated$get2;return{opacity:visible.get(),transform:useReducedMotion?[]:[{translateX:interpolate(visible.get(),[0,1],[(dirX==='left'?-1:1)*size.get().width/4,((_offsetAnimated=offsetAnimated)===null||_offsetAnimated===void 0||(_offsetAnimated=_offsetAnimated.get())===null||_offsetAnimated===void 0?void 0:_offsetAnimated.x)!=null?(_offsetAnimated$get=offsetAnimated.get())===null||_offsetAnimated$get===void 0?void 0:_offsetAnimated$get.x:0])},{translateY:interpolate(visible.get(),[0,1],[(dirY==='top'?-1:1)*size.get().height/4,((_offsetAnimated2=offsetAnimated)===null||_offsetAnimated2===void 0||(_offsetAnimated2=_offsetAnimated2.get())===null||_offsetAnimated2===void 0?void 0:_offsetAnimated2.y)!=null?(_offsetAnimated$get2=offsetAnimated.get())===null||_offsetAnimated$get2===void 0?void 0:_offsetAnimated$get2.y:0])},{scale:visible.get()/2+0.5}]};}" };
-let obj3 = { measure: require("module_4184").measure, runOnJS: require("module_4184").runOnJS };
+let obj3 = { measure: require("module_4185").measure, runOnJS: require("module_4185").runOnJS };
 let result = require("set").fileFinishedImporting("design/components/Menu/native/Menu.tsx");
 
 export const MENU_OFFSET = 10;

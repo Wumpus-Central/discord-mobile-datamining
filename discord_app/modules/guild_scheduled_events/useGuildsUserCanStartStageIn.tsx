@@ -1,6 +1,6 @@
-// === Module 9185: useChannelsUserCanStartStageIn ===
+// === Module 9603: useChannelsUserCanStartStageIn ===
 
-// Module 9185 (useChannelsUserCanStartStageIn)
+// Module 9603 (useChannelsUserCanStartStageIn)
 import closure_2 from "comparator" /* 1982 */;
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4089 */;

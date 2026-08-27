@@ -1,10 +1,10 @@
-// === Module 8982: HeartIcon ===
+// === Module 9124: HeartIcon ===
 
-// Module 8982 (HeartIcon)
+// Module 9124 (HeartIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 8983 */;
+import registerAsset from "registerAsset" /* 9125 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

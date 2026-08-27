@@ -1,8 +1,8 @@
-// === Module 15562: useShallowArrayMemo ===
+// === Module 15627: useShallowArrayMemo ===
 
-// Module 15562 (useShallowArrayMemo)
+// Module 15627 (useShallowArrayMemo)
 import set from "set" /* 2 */;
-import useMemoWithEqualityFunctionDefault from "useMemoWithEqualityFunction" /* 15563 */;
+import useMemoWithEqualityFunctionDefault from "useMemoWithEqualityFunction" /* 15628 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/hooks/useShallowArrayMemo.tsx");
 

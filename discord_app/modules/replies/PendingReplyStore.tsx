@@ -1,12 +1,12 @@
-// === Module 7351: getState ===
+// === Module 7358: getState ===
 
-// Module 7351 (getState)
+// Module 7358 (getState)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reinjectEphemerals" /* 4687 */;
+import closure_4 from "reinjectEphemerals" /* 4688 */;
 
 let closure_5 = {};
 let closure_6 = {};

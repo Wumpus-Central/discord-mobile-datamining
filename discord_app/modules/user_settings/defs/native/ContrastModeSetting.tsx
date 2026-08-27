@@ -1,12 +1,12 @@
-// === Module 14893: slider ===
+// === Module 14958: slider ===
 
-// Module 14893 (slider)
+// Module 14958 (slider)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10584 */;
+import createToggle from "createToggle" /* 10988 */;
 
 require = arg1;
 createToggle = {
@@ -19,7 +19,7 @@ createToggle = {
     return jsx(Button.BetaTag, { size: Button.BetaSizes.SMALL });
   },
   useProps: function useContrastSettingProps() {
-    return React.useMemo(() => ({ value: contrast.contrast, onSlidingComplete: callback(13979).setContrast, minimumValue: 0, maximumValue: 2, step: 0.1, startIcon: callback2(callback(14829).CircleMinusIcon, {}), endIcon: callback2(callback(9745).CirclePlusIcon, {}) }), []);
+    return React.useMemo(() => ({ value: contrast.contrast, onSlidingComplete: callback(14006).setContrast, minimumValue: 0, maximumValue: 2, step: 0.1, startIcon: callback2(callback(14856).CircleMinusIcon, {}), endIcon: callback2(callback(9145).CirclePlusIcon, {}) }), []);
   }
 };
 createToggle = createToggle.createSlider(createToggle);

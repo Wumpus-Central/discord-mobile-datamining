@@ -1,10 +1,10 @@
-// === Module 9456: isPlayingGameActivity ===
+// === Module 9789: isPlayingGameActivity ===
 
-// Module 9456 (isPlayingGameActivity)
+// Module 9789 (isPlayingGameActivity)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import items3 from "items3" /* 4472 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7409 */;
+import items3 from "items3" /* 4473 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7417 */;
 
 let closure_2 = items3.XBOX_ACTIVITY_APPLICATION_ID;
 const ActivityTypes = ME.ActivityTypes;

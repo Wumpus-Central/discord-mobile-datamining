@@ -1,14 +1,14 @@
-// === Module 11767: AppInThisServer ===
+// === Module 11599: AppInThisServer ===
 
-// Module 11767 (AppInThisServer)
+// Module 11599 (AppInThisServer)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import Text from "Text" /* 4440 */;
+import Text from "Text" /* 4441 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function AppInThisServer(onAppSelected) {
@@ -17,7 +17,7 @@ function AppInThisServer(onAppSelected) {
   const tmp3 = application(1367)("AppLauncherInThisServer-native");
   const tmp4 = callback2();
   application = onAppSelected.appItem.application;
-  let obj = onAppSelected(11707);
+  let obj = onAppSelected(11540);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   obj = {
     accessible: true,
@@ -50,11 +50,11 @@ function AppInThisServer(onAppSelected) {
     obj = { iconSource: null, wrapperStyle: null, iconSize: 36 };
     obj[0] = appLauncherIconSource;
     obj[1] = tmp4.iconContainer;
-    tmp8 = callback(application(11712), obj);
+    tmp8 = callback(application(11545), obj);
   }
-  const items1 = [tmp8, callback(onAppSelected(4440).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
+  const items1 = [tmp8, callback(onAppSelected(4441).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
   obj[5] = items1;
-  return closure_6(onAppSelected(8878).PressableScale, obj, application.id);
+  return closure_6(onAppSelected(8906).PressableScale, obj, application.id);
 }
 noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
@@ -116,8 +116,8 @@ export default function InThisServerSection(arg0) {
       const obj2 = { variant: "text-sm/medium", color: "text-brand", children: null };
       const intl2 = tmp11(1236).intl;
       obj2[2] = intl2.string(tmp11(1236).t["/qG8v7"]);
-      obj1[3] = tmp5(tmp11(4440).Text, obj2);
-      tmp5Result = tmp5(tmp11(5015).PressableOpacity, obj1);
+      obj1[3] = tmp5(tmp11(4441).Text, obj2);
+      tmp5Result = tmp5(tmp11(5020).PressableOpacity, obj1);
     }
     items1[1] = tmp5Result;
     obj[1] = items1;

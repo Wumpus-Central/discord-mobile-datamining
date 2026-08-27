@@ -1,10 +1,10 @@
-// === Module 9941: PinIcon ===
+// === Module 10610: PinIcon ===
 
-// Module 9941 (PinIcon)
+// Module 10610 (PinIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 9942 */;
+import registerAsset from "registerAsset" /* 10611 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 9121: ContentInventoryListenedMediaProvider ===
+// === Module 8545: ContentInventoryListenedMediaProvider ===
 
-// Module 9121 (ContentInventoryListenedMediaProvider)
+// Module 8545 (ContentInventoryListenedMediaProvider)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentInventoryListenedMediaProvider.tsx");

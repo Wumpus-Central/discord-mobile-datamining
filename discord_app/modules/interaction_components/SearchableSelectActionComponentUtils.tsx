@@ -1,14 +1,14 @@
-// === Module 8446: MIN_REREQUEST_TIME ===
+// === Module 7961: MIN_REREQUEST_TIME ===
 
-// Module 8446 (MIN_REREQUEST_TIME)
-import NOOPDefault from "NOOP" /* 5332 */;
+// Module 7961 (MIN_REREQUEST_TIME)
+import NOOPDefault from "NOOP" /* 5337 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import closure_4 from "trackCommunicationDisabled" /* 1992 */;
 import closure_5 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import closure_7 from "markAllUserIdListsStale" /* 4098 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "getInteractionComponentStates" /* 8439 */;
+import closure_9 from "getInteractionComponentStates" /* 7954 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/interaction_components/SearchableSelectActionComponentUtils.tsx");
@@ -21,7 +21,7 @@ export const queryMentionables = function queryMentionables(type, arg1, channelI
     return [];
   } else {
     const tmp2 = type === _require(1955).ComponentType.USER_SELECT || type === _require(1955).ComponentType.MENTIONABLE_SELECT;
-    let obj = channel(5332);
+    let obj = channel(5337);
     obj = { query: null, channel: null, canMentionEveryone: false, canMentionHere: false, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, limit: 15 };
     obj[0] = arg1;
     obj[1] = channel;
@@ -59,7 +59,7 @@ export const queryChannels = function queryChannels(arg0, arg1, arg2) {
     obj[2] = arg2;
     const channels = obj.queryApplicationCommandChannelResults(obj).channels;
     items = channels.map((id) => {
-      const obj = { type: callback(4697).SelectOptionType.CHANNEL, value: id.id, label: callback(4638).computeChannelName(id, closure_8, closure_7) };
+      const obj = { type: callback(4698).SelectOptionType.CHANNEL, value: id.id, label: callback(4639).computeChannelName(id, closure_8, closure_7) };
       return obj;
     });
   }

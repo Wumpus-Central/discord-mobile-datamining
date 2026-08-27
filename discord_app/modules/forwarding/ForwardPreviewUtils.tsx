@@ -1,6 +1,6 @@
-// === Module 11327: useForwardPreviewContent ===
+// === Module 11194: useForwardPreviewContent ===
 
-// Module 11327 (useForwardPreviewContent)
+// Module 11194 (useForwardPreviewContent)
 import closure_2 from "getUncachedChannelPermissions" /* 4089 */;
 
 const require = arg1;

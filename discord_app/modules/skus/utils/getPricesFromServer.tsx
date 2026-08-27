@@ -1,6 +1,6 @@
-// === Module 4489: getPricesFromServer ===
+// === Module 4490: getPricesFromServer ===
 
-// Module 4489 (getPricesFromServer)
+// Module 4490 (getPricesFromServer)
 import set from "set" /* 2 */;
 import createFromServer from "createFromServer" /* 4108 */;
 

@@ -1,12 +1,12 @@
-// === Module 10216: resolvePlaintextInlineVoid ===
+// === Module 8374: resolvePlaintextInlineVoid ===
 
-// Module 10216 (resolvePlaintextInlineVoid)
+// Module 8374 (resolvePlaintextInlineVoid)
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
 import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4106 */;
-import createEmptyState from "createEmptyState" /* 7356 */;
+import createEmptyState from "createEmptyState" /* 7363 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getEmojiToGroupId" /* 5348 */;
-import closure_5 from "rebuild" /* 5395 */;
+import closure_4 from "getEmojiToGroupId" /* 5353 */;
+import closure_5 from "rebuild" /* 5400 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
 import closure_7 from "comparator" /* 1982 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "comparator" /* 1982 */;
@@ -165,8 +165,8 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceInclude
             num[Symbol.iterator]();
             const obj2 = callback2(11);
           }
-          callback(4638).unescapeChannelName(arr.slice(2, arr.length - num));
-          const obj = callback(4638);
+          callback(4639).unescapeChannelName(arr.slice(2, arr.length - num));
+          const obj = callback(4639);
         }
         const substr = arr.slice(1);
       }

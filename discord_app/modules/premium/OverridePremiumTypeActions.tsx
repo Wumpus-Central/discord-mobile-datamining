@@ -1,8 +1,8 @@
-// === Module 15308: updateClientPremiumTypeOverride ===
+// === Module 15372: updateClientPremiumTypeOverride ===
 
-// Module 15308 (updateClientPremiumTypeOverride)
+// Module 15372 (updateClientPremiumTypeOverride)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import createMessage from "createMessage" /* 7422 */;
+import createMessage from "createMessage" /* 7430 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

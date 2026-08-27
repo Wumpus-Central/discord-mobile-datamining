@@ -1,10 +1,10 @@
-// === Module 13467: SignPostIcon ===
+// === Module 13494: SignPostIcon ===
 
-// Module 13467 (SignPostIcon)
+// Module 13494 (SignPostIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 13468 */;
+import registerAsset from "registerAsset" /* 13495 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

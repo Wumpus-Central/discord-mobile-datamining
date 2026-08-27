@@ -1,11 +1,11 @@
-// === Module 7119: useShouldShowPremiumTrialUserSettingsAvatarBadge ===
+// === Module 7125: useShouldShowPremiumTrialUserSettingsAvatarBadge ===
 
-// Module 7119 (useShouldShowPremiumTrialUserSettingsAvatarBadge)
+// Module 7125 (useShouldShowPremiumTrialUserSettingsAvatarBadge)
 import set from "set" /* 2 */;
 import DismissibleContent from "DismissibleContent" /* 1377 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4265 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7120 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4266 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7126 */;
 
 let closure_2 = GuildFeatures.PremiumSubscriptionSKUToPremiumType;
 let result = set.fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");
@@ -16,11 +16,11 @@ export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShou
   let tmp3 = null != premiumTrialOffer;
   const result = UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
   if (tmp3) {
-    let expiresAt;
+    let hasAcknowledged;
     if (premiumTrialOffer != null) {
-      expiresAt = premiumTrialOffer.expiresAt;
+      hasAcknowledged = premiumTrialOffer.hasAcknowledged;
     }
-    tmp3 = null == expiresAt;
+    tmp3 = true !== hasAcknowledged;
   }
   if (tmp3) {
     tmp3 = !result;
@@ -48,7 +48,7 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
   if (null == subscriptionTrial) {
     return null;
   } else {
-    let tmpResult = tmp(7537);
+    let tmpResult = tmp(12873);
     obj = { location: null };
     obj[0] = user_profile_premium_upsell_card;
     if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj)) {

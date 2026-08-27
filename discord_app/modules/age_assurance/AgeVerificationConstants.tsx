@@ -1,9 +1,9 @@
-// === Module 8010: set ===
+// === Module 8614: set ===
 
-// Module 8010 (set)
+// Module 8614 (set)
 import ME from "ME" /* 676 */;
 import messagesProxyDefault from "messagesProxy" /* 2887 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8011 */;
+import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8615 */;
 import set from "set" /* 2 */;
 
 const HelpdeskArticles = ME.HelpdeskArticles;

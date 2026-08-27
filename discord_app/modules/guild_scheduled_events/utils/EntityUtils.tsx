@@ -1,6 +1,6 @@
-// === Module 9160: getChannelFromEvent ===
+// === Module 9596: getChannelFromEvent ===
 
-// Module 9160 (getChannelFromEvent)
+// Module 9596 (getChannelFromEvent)
 import closure_0 from "ensureGuildLoaded" /* 1391 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 

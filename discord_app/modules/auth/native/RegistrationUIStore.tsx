@@ -1,11 +1,11 @@
-// === Module 15385: useRegistrationUIStore ===
+// === Module 15450: useRegistrationUIStore ===
 
-// Module 15385 (useRegistrationUIStore)
+// Module 15450 (useRegistrationUIStore)
 import set from "set" /* 2 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import keys from "keys" /* 644 */;
 
-let obj = keys.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "HermesInternal" }));
+let obj = keys.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "accessible" }));
 const result = set.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export const useRegistrationUIStore = obj;

@@ -1,10 +1,10 @@
-// === Module 11996: TwitterNeutralIcon ===
+// === Module 11840: TwitterNeutralIcon ===
 
-// Module 11996 (TwitterNeutralIcon)
+// Module 11840 (TwitterNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 11997 */;
+import registerAsset from "registerAsset" /* 11841 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

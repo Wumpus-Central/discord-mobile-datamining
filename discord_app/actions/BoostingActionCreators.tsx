@@ -1,9 +1,9 @@
-// === Module 4339: _fetchAppliedGuildBoostsForGuild ===
+// === Module 4340: _fetchAppliedGuildBoostsForGuild ===
 
-// Module 4339 (_fetchAppliedGuildBoostsForGuild)
+// Module 4340 (_fetchAppliedGuildBoostsForGuild)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createFromServer" /* 4340 */;
-import closure_5 from "createFromServer" /* 4341 */;
+import closure_4 from "createFromServer" /* 4341 */;
+import closure_5 from "createFromServer" /* 4342 */;
 import closure_6 from "reset" /* 4113 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -316,7 +316,7 @@ function _fetchAppliedBoostsCooldown() {
             c5 = 3;
             return { value: null, done: true };
           } else {
-            const appliedGuildBoostError = new ends_at(4342).AppliedGuildBoostError(lib);
+            const appliedGuildBoostError = new ends_at(4343).AppliedGuildBoostError(lib);
             throw appliedGuildBoostError;
           }
         } else if (arg0 === 1) {
@@ -550,7 +550,7 @@ function _unapplyFromGuild() {
           } else if (1 === tmp7) {
             c5 = 0;
             dependencyMap = closure_4;
-            appliedGuildBoostError = new callback(4342).AppliedGuildBoostError(dependencyMap);
+            appliedGuildBoostError = new callback(4343).AppliedGuildBoostError(dependencyMap);
             let obj3 = appliedGuildBoostError(709);
             obj3 = { type: "GUILD_UNAPPLY_BOOST_FAIL", error: null };
             obj3[1] = appliedGuildBoostError;

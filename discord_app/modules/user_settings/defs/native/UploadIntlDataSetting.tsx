@@ -1,12 +1,12 @@
-// === Module 15020: _serializeIntlData ===
+// === Module 15084: _serializeIntlData ===
 
-// Module 15020 (_serializeIntlData)
+// Module 15084 (_serializeIntlData)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import keys from "keys" /* 644 */;
-import createToggle from "createToggle" /* 10584 */;
+import createToggle from "createToggle" /* 10988 */;
 
 const require = arg1;
 function _serializeIntlData() {
@@ -217,7 +217,7 @@ function _handleUploadIntlDataSettingPress() {
             dependencyMap = 1;
             let obj5 = callback(4162);
             obj1 = { key: "USER_SETTINGS_INTL_DATA_UPLOAD_FAILED", IconComponent: null, content: "Failed to upload internationalization data." };
-            obj1[1] = ANDROID_APP(4399).CircleInformationIcon;
+            obj1[1] = ANDROID_APP(4400).CircleInformationIcon;
             obj5.open(obj1);
             dependencyMap = 0;
             (function onUploadIntlDataRequestFinish() {
@@ -259,7 +259,7 @@ function _handleUploadIntlDataSettingPress() {
           } else if (arg0 !== 2) {
             obj = callback(4162);
             obj5 = { key: "USER_SETTINGS_INTL_DATA_UPLOADED", IconComponent: null, content: "Internationalization data uploaded successfully." };
-            obj5[1] = ANDROID_APP(4399).CircleInformationIcon;
+            obj5[1] = ANDROID_APP(4400).CircleInformationIcon;
             obj.open(obj5);
             dependencyMap = 1;
           }

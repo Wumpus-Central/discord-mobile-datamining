@@ -1,13 +1,13 @@
-// === Module 11993: SEARCH_TEXT_INPUT_DEBOUNCE_TIME ===
+// === Module 11837: SEARCH_TEXT_INPUT_DEBOUNCE_TIME ===
 
-// Module 11993 (SEARCH_TEXT_INPUT_DEBOUNCE_TIME)
+// Module 11837 (SEARCH_TEXT_INPUT_DEBOUNCE_TIME)
 import set from "set" /* 2 */;
 import LINKING_WHITELIST from "LINKING_WHITELIST" /* 4159 */;
-import FacebookNeutralIcon from "FacebookNeutralIcon" /* 8419 */;
-import InstagramNeutralIcon from "InstagramNeutralIcon" /* 8421 */;
-import TiktokNeutralIcon from "TiktokNeutralIcon" /* 11994 */;
-import TwitterNeutralIcon from "TwitterNeutralIcon" /* 11996 */;
-import YoutubeNeutralIcon from "YoutubeNeutralIcon" /* 11998 */;
+import FacebookNeutralIcon from "FacebookNeutralIcon" /* 7942 */;
+import InstagramNeutralIcon from "InstagramNeutralIcon" /* 7944 */;
+import TiktokNeutralIcon from "TiktokNeutralIcon" /* 11838 */;
+import TwitterNeutralIcon from "TwitterNeutralIcon" /* 11840 */;
+import YoutubeNeutralIcon from "YoutubeNeutralIcon" /* 11842 */;
 
 let obj = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.tiktok.regex, Icon: TiktokNeutralIcon.TiktokNeutralIcon };
 const items = [obj, , , , ];

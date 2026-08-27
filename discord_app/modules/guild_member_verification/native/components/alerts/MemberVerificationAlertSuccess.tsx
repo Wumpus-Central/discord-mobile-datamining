@@ -1,12 +1,12 @@
-// === Module 8645: MemberVerificationAlertSuccess ===
+// === Module 7587: MemberVerificationAlertSuccess ===
 
-// Module 8645 (MemberVerificationAlertSuccess)
+// Module 7587 (MemberVerificationAlertSuccess)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 noopAll;

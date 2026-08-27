@@ -1,11 +1,11 @@
-// === Module 12143: useGuildPowerupsNewBadge ===
+// === Module 11989: useGuildPowerupsNewBadge ===
 
-// Module 12143 (useGuildPowerupsNewBadge)
-import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 12136 */;
+// Module 11989 (useGuildPowerupsNewBadge)
+import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 11982 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "calculateAppliedBoosts" /* 4330 */;
-import { GuildPowerupNewPerkMarketingVersion as closure_6 } from "BoostedGuildTiers" /* 4331 */;
+import closure_5 from "calculateAppliedBoosts" /* 4331 */;
+import { GuildPowerupNewPerkMarketingVersion as closure_6 } from "BoostedGuildTiers" /* 4332 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
 const require = arg1;
@@ -37,7 +37,7 @@ export default function useGuildPowerupsNewBadge(arg0) {
       tmp6 = closure_8;
     }
   }
-  const tmp7 = callback(_require(6197).useSelectedVersionedDismissibleContent(tmp6, num), 2);
+  const tmp7 = callback(_require(6203).useSelectedVersionedDismissibleContent(tmp6, num), 2);
   _require = tmp8;
   importDefault = tmp9;
   const items1 = [tmp7[0] === closure_8, tmp7[1]];
@@ -60,7 +60,7 @@ export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildP
   const items = [closure_5];
   const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_5.getStateForGuild(closure_0));
   let obj = _require(589);
-  const tmp2Result = num(12136)(guildId, stateFromStores);
+  const tmp2Result = num(11982)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

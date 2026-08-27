@@ -1,10 +1,10 @@
-// === Module 7029: TreasureChestBannerSpotIllustration ===
+// === Module 7035: TreasureChestBannerSpotIllustration ===
 
-// Module 7029 (TreasureChestBannerSpotIllustration)
+// Module 7035 (TreasureChestBannerSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 7030 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 7036 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/TreasureChestBannerSpotIllustration.native.tsx");

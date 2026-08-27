@@ -1,14 +1,14 @@
-// === Module 8612: MaskedBadge ===
+// === Module 7545: MaskedBadge ===
 
-// Module 8612 (MaskedBadge)
+// Module 7545 (MaskedBadge)
 import ThemesDefault from "Themes" /* 712 */;
-import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 8613 */;
+import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7546 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
-createCacheKey = { maskStyle: { position: "relative", right: "channel" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: null };
+createCacheKey = { maskStyle: { position: "relative", right: "HermesInternal" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: null };
 createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
 createCacheKey[4] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);

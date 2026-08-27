@@ -1,6 +1,6 @@
-// === Module 16530: useCanInviteMembers ===
+// === Module 16596: useCanInviteMembers ===
 
-// Module 16530 (useCanInviteMembers)
+// Module 16596 (useCanInviteMembers)
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
 import { Permissions } from "sum" /* 505 */;

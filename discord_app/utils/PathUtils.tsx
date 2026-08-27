@@ -1,6 +1,6 @@
-// === Module 4504: pathJoin ===
+// === Module 4505: pathJoin ===
 
-// Module 4504 (pathJoin)
+// Module 4505 (pathJoin)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("utils/PathUtils.tsx");

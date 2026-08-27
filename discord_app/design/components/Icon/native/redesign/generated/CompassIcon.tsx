@@ -1,10 +1,10 @@
-// === Module 14143: CompassIcon ===
+// === Module 14170: CompassIcon ===
 
-// Module 14143 (CompassIcon)
+// Module 14170 (CompassIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 14144 */;
+import registerAsset from "registerAsset" /* 14171 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

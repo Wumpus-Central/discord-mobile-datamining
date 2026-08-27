@@ -1,10 +1,10 @@
-// === Module 6449: EmojiVomitExample ===
+// === Module 6455: EmojiVomitExample ===
 
-// Module 6449 (EmojiVomitExample)
+// Module 6455 (EmojiVomitExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6450 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6456 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiVomitExample.native.tsx");

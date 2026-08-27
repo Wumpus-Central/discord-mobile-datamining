@@ -1,6 +1,6 @@
-// === Module 16700: FORMAT_RE ===
+// === Module 16766: FORMAT_RE ===
 
-// Module 16700 (FORMAT_RE)
+// Module 16766 (FORMAT_RE)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/i18n/Constants.tsx");

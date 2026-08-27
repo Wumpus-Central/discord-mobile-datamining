@@ -1,10 +1,10 @@
-// === Module 12626: UserProfileWidgetReportButton ===
+// === Module 8714: UserProfileWidgetReportButton ===
 
-// Module 12626 (UserProfileWidgetReportButton)
+// Module 8714 (UserProfileWidgetReportButton)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ContextMenu from "ContextMenu" /* 8813 */;
-import FlagIcon from "FlagIcon" /* 8984 */;
+import FlagIcon from "FlagIcon" /* 8715 */;
+import ContextMenu from "ContextMenu" /* 8717 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -33,7 +33,7 @@ export default function UserProfileWidgetReportButton(arg0) {
       const intl = callback(1236).intl;
       obj.accessibilityLabel = intl.string(callback(1236).t.xpSHSk);
       obj = { size: "sm", color: callback2(712).colors.TEXT_MUTED };
-      obj.children = callback3(callback(8819).MoreHorizontalIcon, obj);
+      obj.children = callback3(callback(8723).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
     }
   };
@@ -47,7 +47,7 @@ export default function UserProfileWidgetReportButton(arg0) {
       const intl = callback(1236).intl;
       obj.accessibilityLabel = intl.string(callback(1236).t.xpSHSk);
       obj = { size: "sm", color: callback2(712).colors.TEXT_MUTED };
-      obj.children = callback3(callback(8819).MoreHorizontalIcon, obj);
+      obj.children = callback3(callback(8723).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
     }
   });

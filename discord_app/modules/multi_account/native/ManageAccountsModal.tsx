@@ -1,21 +1,21 @@
-// === Module 15814: RemoveMultiAccountUserButton ===
+// === Module 15879: RemoveMultiAccountUserButton ===
 
-// Module 15814 (RemoveMultiAccountUserButton)
+// Module 15879 (RemoveMultiAccountUserButton)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "initialize" /* 4289 */;
+import closure_9 from "initialize" /* 4290 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import { MultiAccountTokenStatus } from "initialize" /* 12050 */;
-import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 12051 */;
-import { ManageAccountsScreens } from "ManageAccountsScreens" /* 15815 */;
+import { MultiAccountTokenStatus } from "initialize" /* 11896 */;
+import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11897 */;
+import { ManageAccountsScreens } from "ManageAccountsScreens" /* 15880 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 8785 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7755 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function RemoveMultiAccountUserButton(user) {
@@ -136,8 +136,8 @@ function RemoveMultiAccountUserButton(user) {
     };
     obj = { color: null };
     obj[0] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
-    obj[3] = callback2(tmp(14829).CircleMinusIcon, obj);
-    return callback2(tmp(5015).PressableOpacity, obj);
+    obj[3] = callback2(tmp(14856).CircleMinusIcon, obj);
+    return callback2(tmp(5020).PressableOpacity, obj);
   }
   let obj2 = user(589);
 }
@@ -317,7 +317,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
   let _require;
   c1 = undefined;
   c2 = undefined;
-  let obj = _require(5955);
+  let obj = _require(5960);
   _require = obj.useAccessibilityNativeStackOptions();
   [c1, c2] = callback(importAllResult.useState(false), 2);
   obj = {
@@ -377,14 +377,14 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return obj;
       },
       children() {
-        return callback2(_undefined(15416), {
+        return callback2(_undefined(15481), {
           handleLogin(login, password, undelete) {
-            let obj = callback(5999);
+            let obj = callback(6004);
             obj = { login, password, undelete };
             obj.login(obj);
           },
           onReset(arg0, arg1, arg2) {
-            callback(5999).loginReset(true);
+            callback(6004).loginReset(true);
           }
         });
       }
@@ -395,7 +395,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(8695), { isMultiAccount: true });
+        return callback2(_undefined(7648), { isMultiAccount: true });
       }
     }),
     callback2(closure_20.Screen, {
@@ -404,7 +404,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(15415), { isMultiAccount: true });
+        return callback2(_undefined(15480), { isMultiAccount: true });
       }
     })
   ];

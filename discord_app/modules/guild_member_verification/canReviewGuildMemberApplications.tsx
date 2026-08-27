@@ -1,6 +1,6 @@
-// === Module 6057: canReviewGuildMemberApplications ===
+// === Module 6063: canReviewGuildMemberApplications ===
 
-// Module 6057 (canReviewGuildMemberApplications)
+// Module 6063 (canReviewGuildMemberApplications)
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
 import ME from "ME" /* 676 */;
@@ -35,8 +35,8 @@ export const useCanReviewGuildMemberApplications = function useCanReviewGuildMem
     hasItem = closure_3.can(constants2.KICK_MEMBERS, stateFromStores);
   }
   if (hasItem) {
-    hasItem = _require(4959).guildHasVerificationGate(stateFromStores);
-    const tmpResult = _require(4959);
+    hasItem = _require(4960).guildHasVerificationGate(stateFromStores);
+    const tmpResult = _require(4960);
   }
   return hasItem;
 };

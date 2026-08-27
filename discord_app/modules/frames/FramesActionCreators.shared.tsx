@@ -1,13 +1,13 @@
-// === Module 10755: _launchFrame ===
+// === Module 9384: _launchFrame ===
 
-// Module 10755 (_launchFrame)
+// Module 9384 (_launchFrame)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 10756 */;
-import getFramesManagerDefault from "getFramesManager" /* 11136 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9389 */;
+import getFramesManagerDefault from "getFramesManager" /* 9417 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 10749 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 10750 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9982 */;
+import closure_4 from "map" /* 9385 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 9386 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9387 */;
 
 require = arg1;
 function _launchFrame() {
@@ -84,7 +84,7 @@ function _launchFrame() {
                 return obj3;
               } else {
                 if (callback4(callback2) === c5.MAIN) {
-                  let obj9 = callback(10756);
+                  let obj9 = callback(9389);
                   const result = obj9.leaveCurrentEmbeddedActivity();
                   callback6();
                 }
@@ -98,15 +98,15 @@ function _launchFrame() {
                 c5 = 4;
                 c6 = 1;
                 const obj5 = { value: null, done: false };
-                obj5[0] = callback(10771).createProxyTicket(callback, callback3(callback2));
+                obj5[0] = callback(9390).createProxyTicket(callback, callback3(callback2));
                 return obj5;
               }
             }
           } else if (2 === tmp7) {
             frame = 0;
             callback3 = intent;
-            c5 = callback2(10757)();
-            let obj7 = callback(10769);
+            c5 = callback2(9373)();
+            let obj7 = callback(9416);
             c5 = 3;
             c6 = 1;
             const obj6 = { value: null, done: false };
@@ -328,8 +328,8 @@ function _refreshProxyTicket() {
           } else if (2 === tmp9) {
             frame = 1;
             c5 = closure_3;
-            closure_3 = applicationId(10757)();
-            let obj8 = callback(10769);
+            closure_3 = applicationId(9373)();
+            let obj8 = callback(9416);
             c5 = 3;
             c6 = 1;
             const obj4 = { value: null, done: false };

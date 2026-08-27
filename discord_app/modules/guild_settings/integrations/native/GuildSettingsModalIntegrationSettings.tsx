@@ -1,25 +1,25 @@
-// === Module 17026: GraceOption ===
+// === Module 17092: GraceOption ===
 
-// Module 17026 (GraceOption)
+// Module 17092 (GraceOption)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PressableBase from "PressableBase" /* 5015 */;
-import TableRowInner from "TableRowInner" /* 5546 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5939 */;
-import TableSwitchRow from "TableSwitchRow" /* 5940 */;
-import registerAssetDefault from "registerAsset" /* 17028 */;
+import PressableBase from "PressableBase" /* 5020 */;
+import TableRowInner from "TableRowInner" /* 5551 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5944 */;
+import TableSwitchRow from "TableSwitchRow" /* 5945 */;
+import registerAssetDefault from "registerAsset" /* 17094 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_6 from "handleFormInit" /* 9237 */;
+import closure_6 from "handleFormInit" /* 9650 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
 function GraceOption(option) {
   const iter = option.option;
   const onPress = option.onPress;
-  return callback(iter(8202).TableRadioRow, {
+  return callback(iter(7626).TableRadioRow, {
     value: iter.value,
     label: iter.label,
     legacyCompat_onPress() {
@@ -105,8 +105,8 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
     obj = { style: null, variant: "text-md/medium", color: "text-muted", children: null };
     obj[0] = iter.value;
     obj[3] = tmp.name;
-    obj[1] = callback(integration(4440).Text, obj);
-    const tmp2 = callback(integration(5546).TableRow, obj);
+    obj[1] = callback(integration(4441).Text, obj);
+    const tmp2 = callback(integration(5551).TableRow, obj);
   }
   if ("youtube" === integration.type) {
     const account = integration.account;
@@ -133,11 +133,11 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
     tmp15 = integration;
     const tmp13 = callback(TwitchEmoticonsRow, obj);
   }
-  let obj2 = self(5174);
+  let obj2 = self(5179);
   const value = obj2.get(integration.type);
   if (null == value) {
     const _Object = Object;
-    const values = Object.values(tmp12(17027).IntegrationExpireGracePeriodTypes);
+    const values = Object.values(tmp12(17093).IntegrationExpireGracePeriodTypes);
     const found = values.filter((arg0) => Number.isInteger(arg0));
     const mapped = found.map((days) => {
       let obj = { value: days, label: null };
@@ -163,8 +163,8 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
     obj4[0] = str;
     obj4[1] = combined;
     obj4[2] = null;
-    obj3[1] = callback(tmp15(5546).TableRow, obj4);
-    const items1 = [callback(tmp15(5939).TableRowGroup, obj3), , , , ];
+    obj3[1] = callback(tmp15(5551).TableRow, obj4);
+    const items1 = [callback(tmp15(5944).TableRowGroup, obj3), , , , ];
     const obj5 = { title: null, hasIcons: false, children: null };
     const intl3 = tmp15(1236).intl;
     obj5[0] = intl3.string(tmp15(1236).t.i17qFc);
@@ -191,34 +191,34 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
     obj10[0] = flag;
     obj10[1] = self.handleSync;
     obj6[2] = callback(ForceSyncIcon, obj10);
-    const items2 = [callback(tmp15(5546).TableRow, obj6), tmp2];
+    const items2 = [callback(tmp15(5551).TableRow, obj6), tmp2];
     obj5[2] = items2;
-    items1[1] = closure_8(tmp15(5939).TableRowGroup, obj5);
+    items1[1] = closure_8(tmp15(5944).TableRowGroup, obj5);
     const obj11 = { title: null, value: null, onChange: null, hasIcons: false, children: null };
     obj11[0] = stringResult;
     obj11[1] = integration.expire_behavior;
     obj11[2] = self.handleExpireBehaviorChange;
     const obj12 = { value: null, label: null };
-    obj12[0] = tmp15(17029).IntegrationExpireBehaviorTypes.REMOVE_ROLE;
+    obj12[0] = tmp15(17095).IntegrationExpireBehaviorTypes.REMOVE_ROLE;
     const intl6 = tmp15(1236).intl;
     obj12[1] = intl6.string(tmp15(1236).t["6kpw4i"]);
-    const items3 = [callback(tmp15(8202).TableRadioRow, obj12), ];
+    const items3 = [callback(tmp15(7626).TableRadioRow, obj12), ];
     const obj13 = { value: null, label: null };
-    obj13[0] = tmp15(17029).IntegrationExpireBehaviorTypes.KICK;
+    obj13[0] = tmp15(17095).IntegrationExpireBehaviorTypes.KICK;
     const intl7 = tmp15(1236).intl;
     obj13[1] = intl7.string(tmp15(1236).t.fQUQIJ);
-    items3[1] = callback(tmp15(8202).TableRadioRow, obj13);
+    items3[1] = callback(tmp15(7626).TableRadioRow, obj13);
     obj11[4] = items3;
-    items1[2] = closure_8(tmp15(8203).TableRadioGroup, obj11);
+    items1[2] = closure_8(tmp15(7625).TableRadioGroup, obj11);
     obj14 = { title: null, hasIcons: false, children: null };
     const intl8 = tmp15(1236).intl;
     obj14[0] = intl8.string(tmp15(1236).t.uiXMow);
     obj14[2] = mapped.map((option) => closure_1_7(closure_1_11, { integration, option, onPress: self.handleExpireGracePeriodChange }, arg1));
-    items1[3] = callback(tmp15(5939).TableRowGroup, obj14);
+    items1[3] = callback(tmp15(5944).TableRowGroup, obj14);
     items1[4] = tmp13;
     obj2[2] = items1;
-    obj1[2] = closure_8(tmp15(4877).Stack, obj2);
-    const items4 = [callback(tmp15(8185).Form, obj1), callback(tmp15(5886).NavScrim, {})];
+    obj1[2] = closure_8(tmp15(4878).Stack, obj2);
+    const items4 = [callback(tmp15(8295).Form, obj1), callback(tmp15(5891).NavScrim, {})];
     obj9[0] = items4;
     return closure_8(closure_9, obj9);
   } else {

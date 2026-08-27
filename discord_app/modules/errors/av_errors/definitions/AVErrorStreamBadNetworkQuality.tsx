@@ -1,8 +1,8 @@
-// === Module 17272: AVErrorStreamBadNetworkQualityDefinition ===
+// === Module 17338: AVErrorStreamBadNetworkQualityDefinition ===
 
-// Module 17272 (AVErrorStreamBadNetworkQualityDefinition)
+// Module 17338 (AVErrorStreamBadNetworkQualityDefinition)
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_2 from "initialize" /* 4532 */;
+import closure_2 from "initialize" /* 4533 */;
 import { RTCConnectionQuality } from "ME" /* 676 */;
 
 require = arg1;
@@ -15,10 +15,10 @@ export const AVErrorStreamBadNetworkQualityDefinition = {
       let tmp = null;
       if (quality.getQuality(streamKey) === constants.BAD) {
         const obj = { type: null };
-        obj[0] = callback(9385).AVError.STREAM_BAD_NETWORK_QUALITY;
-        const merged = Object.assign(callback(17265).getStreamErrorContext(streamKey));
+        obj[0] = callback(9486).AVError.STREAM_BAD_NETWORK_QUALITY;
+        const merged = Object.assign(callback(17331).getStreamErrorContext(streamKey));
         tmp = obj;
-        const obj2 = callback(17265);
+        const obj2 = callback(17331);
       }
       return tmp;
     });

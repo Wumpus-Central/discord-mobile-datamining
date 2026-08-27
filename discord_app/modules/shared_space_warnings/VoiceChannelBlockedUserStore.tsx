@@ -1,11 +1,11 @@
-// === Module 13273: init ===
+// === Module 13300: init ===
 
-// Module 13273 (init)
+// Module 13300 (init)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import handleChannelSelectDefault from "handleChannelSelect" /* 13274 */;
+import handleChannelSelectDefault from "handleChannelSelect" /* 13301 */;
 import closure_2 from "markAllUserIdListsStale" /* 4098 */;
-import closure_3 from "updateVoiceState" /* 4463 */;
+import closure_3 from "updateVoiceState" /* 4464 */;
 import set from "set" /* 2 */;
 
 function init() {

@@ -1,6 +1,6 @@
-// === Module 13703: AccessibleNativeStackNavigator ===
+// === Module 13730: AccessibleNativeStackNavigator ===
 
-// Module 13703 (AccessibleNativeStackNavigator)
+// Module 13730 (AccessibleNativeStackNavigator)
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

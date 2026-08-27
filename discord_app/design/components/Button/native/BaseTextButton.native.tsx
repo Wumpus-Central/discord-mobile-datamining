@@ -1,16 +1,16 @@
-// === Module 4880: CollapsingText ===
+// === Module 4881: CollapsingText ===
 
-// Module 4880 (CollapsingText)
+// Module 4881 (CollapsingText)
 import ThemesDefault from "Themes" /* 712 */;
-import IconSizesDefault from "IconSizes" /* 4881 */;
-import styleProperties from "styleProperties" /* 4885 */;
+import IconSizesDefault from "IconSizes" /* 4882 */;
+import styleProperties from "styleProperties" /* 4886 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
-import { LARGE_BUTTON_HEIGHT, LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA" /* 4884 */;
-import importDefaultResult from "module_4184" /* 4184 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
+import { LARGE_BUTTON_HEIGHT, LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA" /* 4885 */;
+import importDefaultResult from "module_4185" /* 4185 */;
 
 require = arg1;
 function CollapsingText(children) {
@@ -88,26 +88,29 @@ function BaseTextButtonIcon(arg0) {
   return callback(closure_12, obj);
 }
 let c4 = importAllResult;
-({ Platform, Text: c5, View: closure_6 } = get_ActivityIndicator);
+({ Text: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0, arg1) => {
-  let obj = { grow: { flexGrow: 1, alignSelf: "stretch" }, shrink: { flexShrink: 1 }, buttonText: null, icon: null, iconLeft: null, iconRight: null, expressiveButtonContainer: null };
+  let obj = { grow: { flexGrow: 1, alignSelf: "stretch" }, shrink: { flexShrink: 1 }, buttonText: { flexShrink: 1, flexGrow: 0 }, androidLineHeight: null, icon: null, iconLeft: null, iconRight: null, expressiveButtonContainer: null };
   if (typeof getTextPlatformLineHeight !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let tmp;
   if (null != arg1) {
     obj = { sm: null, md: null, lg: null };
     obj[0] = arg1;
     obj[1] = arg1 + 0.5;
     obj[2] = arg1 + 1.9;
-    tmp = obj[arg0];
+    const tmp = obj[arg0];
   }
-  obj[2] = { flexShrink: 1, flexGrow: 0, lineHeight: tmp };
-  obj[3] = { flexShrink: 0, flexGrow: 0 };
-  obj[4] = { paddingLeft: 4 };
-  obj[5] = { paddingRight: 4 };
-  obj[6] = { position: "relative" };
+  let tmp3;
+  if (obj3.isAndroid()) {
+    tmp3 = tmp;
+  }
+  obj[3] = { lineHeight: tmp3 };
+  obj[4] = { flexShrink: 0, flexGrow: 0 };
+  obj[5] = { paddingLeft: 4 };
+  obj[6] = { paddingRight: 4 };
+  obj[7] = { position: "relative" };
   return obj;
 });
 let closure_10 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", position: "relative" }, textCollapsed: { position: "absolute", left: 0 } });
@@ -145,15 +148,15 @@ let closure_18 = createCacheKey.createStyles((arg0, arg1) => {
 });
 createCacheKey = { sm: null, md: null, lg: null };
 const bound = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT) / 2, 0);
-createCacheKey = { top: bound, left: "Array", right: "paddingHorizontal", bottom: -452984278 };
+createCacheKey = { top: bound, left: "Array", right: "isArray", bottom: 2 };
 createCacheKey[3] = bound;
 createCacheKey[0] = createCacheKey;
 const bound1 = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT) / 2, 0);
-createCacheKey = { top: bound1, left: "Array", right: "paddingHorizontal", bottom: -452984278 };
+createCacheKey = { top: bound1, left: "Array", right: "isArray", bottom: 2 };
 createCacheKey[3] = bound1;
 createCacheKey[1] = createCacheKey;
 const bound2 = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").LARGE_BUTTON_HEIGHT) / 2, 0);
-let obj4 = { top: bound2, left: "Array", right: "paddingHorizontal", bottom: -452984278 };
+let obj4 = { top: bound2, left: "Array", right: "isArray", bottom: 2 };
 obj4[3] = bound2;
 createCacheKey[2] = obj4;
 function getTextPlatformLineHeight(arg0, arg1) {
@@ -192,17 +195,17 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
   onPressIn = iconOpticalOffsetMargin.onPressIn;
   const onPressOut = iconOpticalOffsetMargin.onPressOut;
   onLayout = iconOpticalOffsetMargin.onLayout;
-  let tmp7 = onPressOut(onLayout[12])("BaseTextButton");
+  let tmp7 = onPressOut(onLayout[13])("BaseTextButton");
   if (null != iconOpticalOffsetMargin.textVariant) {
     let textVariant = iconOpticalOffsetMargin.textVariant;
   } else {
     let obj = onPressIn(tmp6[10]);
     textVariant = obj.getButtonDefaultTextVariant(size);
   }
-  const tmp10 = onPressIn(onLayout[13]).TextStyleSheet[textVariant];
+  const tmp10 = onPressIn(onLayout[14]).TextStyleSheet[textVariant];
   const tmp11 = callback2(size, tmp10.fontSize);
   obj1 = importAllResult;
-  const enabled = importAllResult.useContext(onPressIn(tmp6[14]).AccessibilityPreferencesContext).reducedMotion.enabled;
+  const enabled = importAllResult.useContext(onPressIn(tmp6[15]).AccessibilityPreferencesContext).reducedMotion.enabled;
   let str3 = iconOpticalOffsetMargin.variant;
   if (str3 == null) {
     str3 = "primary";
@@ -251,8 +254,8 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
         obj[2] = nativeEvent.locationY - current.height / 2;
         callback(obj);
       }
-      const result = onPressIn(onLayout[15]).triggerHapticFeedback(onPressIn(onLayout[15]).HapticFeedbackTypes.IMPACT_HEAVY);
-      const obj2 = onPressIn(onLayout[15]);
+      const result = onPressIn(onLayout[16]).triggerHapticFeedback(onPressIn(onLayout[16]).HapticFeedbackTypes.IMPACT_HEAVY);
+      const obj2 = onPressIn(onLayout[16]);
     }
   }, items1);
   callback2 = obj1.useCallback((arg0) => {
@@ -266,11 +269,11 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
         obj.pressed = false;
         return obj;
       });
-      const result = onPressIn(onLayout[15]).triggerHapticFeedback(onPressIn(onLayout[15]).HapticFeedbackTypes.IMPACT_MEDIUM);
-      let obj = onPressIn(onLayout[15]);
+      const result = onPressIn(onLayout[16]).triggerHapticFeedback(onPressIn(onLayout[16]).HapticFeedbackTypes.IMPACT_MEDIUM);
+      let obj = onPressIn(onLayout[16]);
     }
   }, items2);
-  tmp9Result = tmp9(tmp6[11]);
+  tmp9Result = tmp9(tmp6[12]);
   const buttonTextColorStyles = tmp9Result.useButtonTextColorStyles(str3);
   if (null == icon) {
     obj = {};
@@ -295,10 +298,20 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
   if (null == textElement) {
     let obj2 = { maxFontSizeMultiplier: null, numberOfLines: 1, style: null, children: null };
     obj2[0] = maxFontSizeMultiplier;
-    const items4 = [tmp11.buttonText, tmp10, buttonTextColorStyles, obj];
+    const items4 = [tmp11.buttonText, tmp10, , , ];
+    let androidLineHeight = null;
+    if (tmp9Result1.isAndroid()) {
+      androidLineHeight = tmp11.androidLineHeight;
+    }
+    items4[2] = androidLineHeight;
+    items4[3] = buttonTextColorStyles;
+    items4[4] = obj;
     obj2[2] = items4;
     obj2[3] = text;
     textElement = callback(ref, obj2);
+    const tmp23 = callback;
+    const tmp24 = ref;
+    tmp9Result1 = tmp9(tmp6[11]);
   }
   const obj3 = { ref };
   let merged = Object.assign(iconOpticalOffsetMargin);
@@ -328,51 +341,51 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
   obj3.pressed = sharedValue;
   obj3.accessibilityRole = str2;
   if (accessibilityLabel == null) {
-    accessibilityLabel = tmp9(tmp6[17]).getNodeText(text);
-    const tmp9Result1 = tmp9(tmp6[17]);
+    accessibilityLabel = tmp9(tmp6[18]).getNodeText(text);
+    const tmp9Result2 = tmp9(tmp6[18]);
   }
   obj3.accessibilityLabel = accessibilityLabel;
   obj3.hitSlop = createCacheKey[size];
   const obj4 = { variant: str3, size, loading: iconOpticalOffsetMargin.loading, pressed: sharedValue, style: pillStyle, shiny: undefined !== shiny && shiny, expressiveRiveRef: null, expressivePressState: null, children: null };
-  let tmp27;
+  let tmp28;
   if (startsWithResult) {
-    tmp27 = ref;
+    tmp28 = ref;
   }
-  obj4[6] = tmp27;
+  obj4[6] = tmp28;
   let first;
   if (startsWithResult) {
     first = tmp15[0];
   }
   obj4[7] = first;
   const obj5 = { value: size, children: null };
-  let tmp30 = null != icon;
-  if (tmp30) {
-    tmp30 = "start" === str;
+  let tmp31 = null != icon;
+  if (tmp31) {
+    tmp31 = "start" === str;
   }
-  if (tmp30) {
-    tmp30 = tmp20;
+  if (tmp31) {
+    tmp31 = tmp20;
   }
-  const items6 = [tmp30, , ];
-  let tmp25Result = textElement;
+  const items6 = [tmp31, , ];
+  let tmp26Result = textElement;
   if (undefined !== collapseText) {
     const obj6 = { collapseText: null, children: null };
     obj6[0] = collapseText;
     obj6[1] = textElement;
-    tmp25Result = tmp25(CollapsingText, obj6);
+    tmp26Result = tmp26(CollapsingText, obj6);
   }
-  items6[1] = tmp25Result;
-  let tmp33 = null != icon;
-  if (tmp33) {
-    tmp33 = "end" === str;
+  items6[1] = tmp26Result;
+  let tmp34 = null != icon;
+  if (tmp34) {
+    tmp34 = "end" === str;
   }
-  if (tmp33) {
-    tmp33 = tmp20;
+  if (tmp34) {
+    tmp34 = tmp20;
   }
-  items6[2] = tmp33;
+  items6[2] = tmp34;
   obj5[1] = items6;
   obj4[8] = closure_8(redux.Provider, obj5);
-  obj3.children = callback(onPressIn(onLayout[18]).ButtonPill, obj4);
-  return callback(onPressIn(onLayout[16]).BaseButton, obj3);
+  obj3.children = callback(onPressIn(onLayout[19]).ButtonPill, obj4);
+  return callback(onPressIn(onLayout[17]).BaseButton, obj3);
 }), {
   Icon: function TextButtonIcon(source) {
     let str = source.variant;

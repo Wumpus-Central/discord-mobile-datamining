@@ -1,11 +1,11 @@
-// === Module 10748: useRefocusOrLaunchActivity ===
+// === Module 11032: useRefocusOrLaunchActivity ===
 
-// Module 10748 (useRefocusOrLaunchActivity)
+// Module 11032 (useRefocusOrLaunchActivity)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "map" /* 10749 */;
+import closure_5 from "map" /* 9385 */;
 import closure_6 from "participantFromServer" /* 1390 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 10750 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 9386 */;
 
 const require = arg1;
 ({ MAIN_SURFACE: error, FrameLayoutModes: closure_8 } = FrameLayoutModes);
@@ -70,8 +70,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     obj1 = { frameId: null, layoutMode: null };
                     obj1[0] = tmp10.id;
                     obj1[1] = closure_1_8.FOCUSED;
-                    const result = closure_1_1(10753).updateFrameLayoutMode(obj1);
-                    const obj9 = closure_1_1(10753);
+                    const result = closure_1_1(9382).updateFrameLayoutMode(obj1);
+                    const obj9 = closure_1_1(9382);
                   }
                 }
                 if (tmp9) {
@@ -80,15 +80,15 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   if ("guild_id" in _location) {
                     guild_id = _location.guild_id;
                   }
-                  closure_1_1(10808)(guild_id, _location);
-                  const tmp25 = closure_1_1(10808);
+                  closure_1_1(9440)(guild_id, _location);
+                  const tmp25 = closure_1_1(9440);
                 } else {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
                   c4 = 1;
                   if (closure_1_7) {
-                    let obj5 = closure_1_1(10753);
+                    let obj5 = closure_1_1(9382);
                     let obj2 = { applicationId: null, surface: null };
                     obj2[0] = tmp41;
                     obj2[1] = closure_1_7;
@@ -110,7 +110,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     }
                   }
                 }
-                obj2 = closure_1_0(11139);
+                obj2 = closure_1_0(11033);
                 const obj4 = { appId: null, botId: null, analyticsLocations: null };
                 obj4[0] = tmp41;
                 let id1;

@@ -1,6 +1,6 @@
-// === Module 6054: set ===
+// === Module 6060: set ===
 
-// Module 6054 (set)
+// Module 6060 (set)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import closure_3 from "handlePaymentSourceCreateEnd" /* 4109 */;

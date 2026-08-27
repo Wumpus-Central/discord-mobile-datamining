@@ -1,14 +1,14 @@
-// === Module 8373: createPremiumGroupInviteSystemMessage ===
+// === Module 7887: createPremiumGroupInviteSystemMessage ===
 
-// Module 8373 (createPremiumGroupInviteSystemMessage)
+// Module 7887 (createPremiumGroupInviteSystemMessage)
 import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 7917 */;
-import frozen from "frozen" /* 8273 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8291 */;
-import createPremiumGroupInviteEmbed from "createPremiumGroupInviteEmbed" /* 8374 */;
+import frozen from "frozen" /* 7788 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7805 */;
+import createPremiumGroupInviteEmbed from "createPremiumGroupInviteEmbed" /* 7888 */;
+import registerAssetDefault from "registerAsset" /* 7892 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };

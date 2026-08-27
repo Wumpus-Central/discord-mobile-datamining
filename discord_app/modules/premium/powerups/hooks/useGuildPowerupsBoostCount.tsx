@@ -1,11 +1,11 @@
-// === Module 4350: useGuildAppliedBoostCount ===
+// === Module 4351: useGuildAppliedBoostCount ===
 
-// Module 4350 (useGuildAppliedBoostCount)
-import experiment from "experiment" /* 4354 */;
+// Module 4351 (useGuildAppliedBoostCount)
+import experiment from "experiment" /* 4355 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleGameServerInstanceCreated" /* 4351 */;
+import closure_3 from "handleGameServerInstanceCreated" /* 4352 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "calculateAppliedBoosts" /* 4330 */;
+import closure_5 from "calculateAppliedBoosts" /* 4331 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx");

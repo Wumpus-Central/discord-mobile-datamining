@@ -1,10 +1,10 @@
-// === Module 6309: BountiesPosterIllocon ===
+// === Module 6315: BountiesPosterIllocon ===
 
-// Module 6309 (BountiesPosterIllocon)
+// Module 6315 (BountiesPosterIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6310 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6316 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BountiesPosterIllocon.native.tsx");

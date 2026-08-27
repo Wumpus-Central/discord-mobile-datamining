@@ -1,12 +1,12 @@
-// === Module 13363: round ===
+// === Module 13390: round ===
 
-// Module 13363 (round)
+// Module 13390 (round)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4543 */;
-import onDefault from "on" /* 4546 */;
-import parseEncoder from "parseEncoder" /* 7411 */;
-import _initStatsDefault from "_initStats" /* 13360 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4544 */;
+import onDefault from "on" /* 4547 */;
+import parseEncoder from "parseEncoder" /* 7419 */;
+import _initStatsDefault from "_initStats" /* 13387 */;
 
 require = arg1;
 function round(arg0) {
@@ -279,27 +279,27 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
         num = 0;
       }
       obj[1] = num;
-      let num2 = value.get(tmp2(7411).CodecTypes.H265);
+      let num2 = value.get(tmp2(7419).CodecTypes.H265);
       if (num2 == null) {
         num2 = 0;
       }
       obj[2] = num2;
-      let num3 = value.get(tmp2(7411).CodecTypes.VP8);
+      let num3 = value.get(tmp2(7419).CodecTypes.VP8);
       if (num3 == null) {
         num3 = 0;
       }
       obj[3] = num3;
-      let num4 = value.get(tmp2(7411).CodecTypes.VP9);
+      let num4 = value.get(tmp2(7419).CodecTypes.VP9);
       if (num4 == null) {
         num4 = 0;
       }
       obj[4] = num4;
-      let num5 = value.get(tmp2(7411).CodecTypes.AV1);
+      let num5 = value.get(tmp2(7419).CodecTypes.AV1);
       if (num5 == null) {
         num5 = 0;
       }
       obj[5] = num5;
-      let num6 = value.get(tmp2(7411).CodecTypes.UNKNOWN);
+      let num6 = value.get(tmp2(7419).CodecTypes.UNKNOWN);
       if (num6 == null) {
         num6 = 0;
       }
@@ -319,27 +319,27 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
     num8 = 0;
   }
   obj[1] = num8;
-  let num9 = map.get(tmp7(7411).CodecTypes.H265);
+  let num9 = map.get(tmp7(7419).CodecTypes.H265);
   if (num9 == null) {
     num9 = 0;
   }
   obj[2] = num9;
-  let num10 = map.get(tmp7(7411).CodecTypes.VP8);
+  let num10 = map.get(tmp7(7419).CodecTypes.VP8);
   if (num10 == null) {
     num10 = 0;
   }
   obj[3] = num10;
-  let num11 = map.get(tmp7(7411).CodecTypes.VP9);
+  let num11 = map.get(tmp7(7419).CodecTypes.VP9);
   if (num11 == null) {
     num11 = 0;
   }
   obj[4] = num11;
-  let num12 = map.get(tmp7(7411).CodecTypes.AV1);
+  let num12 = map.get(tmp7(7419).CodecTypes.AV1);
   if (num12 == null) {
     num12 = 0;
   }
   obj[5] = num12;
-  let num13 = map.get(tmp7(7411).CodecTypes.UNKNOWN);
+  let num13 = map.get(tmp7(7419).CodecTypes.UNKNOWN);
   if (num13 == null) {
     num13 = 0;
   }
@@ -1365,12 +1365,12 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   const set = new Set();
   const set1 = new Set();
   self.updateSendState({ receivers: num });
-  let tmp7 = self.connection.context === tmp(4543).MediaEngineContextTypes.DEFAULT;
+  let tmp7 = self.connection.context === tmp(4544).MediaEngineContextTypes.DEFAULT;
   if (tmp7) {
     tmp7 = null != transport.camera;
   }
   self.cameraDuration.value = tmp7;
-  let tmp9 = self.connection.context === tmp(4543).MediaEngineContextTypes.DEFAULT;
+  let tmp9 = self.connection.context === tmp(4544).MediaEngineContextTypes.DEFAULT;
   if (tmp9) {
     tmp9 = null != transport.camera;
   }
@@ -1378,7 +1378,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     tmp9 = self.callUserIdsCount > 1;
   }
   self.cameraOpportunityDuration.value = tmp9;
-  let tmp11 = self.connection.context === tmp(4543).MediaEngineContextTypes.DEFAULT;
+  let tmp11 = self.connection.context === tmp(4544).MediaEngineContextTypes.DEFAULT;
   if (tmp11) {
     tmp11 = null != transport.camera;
   }

@@ -1,9 +1,9 @@
-// === Module 11855: usePollDurationOptions ===
+// === Module 11684: usePollDurationOptions ===
 
-// Module 11855 (usePollDurationOptions)
+// Module 11684 (usePollDurationOptions)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7498 */;
+import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7506 */;
 
 const PollDurations = POLL_ATTACHMENT_FOLDER.PollDurations;
 const result = set.fileFinishedImporting("modules/polls/usePollDurationOptions.tsx");

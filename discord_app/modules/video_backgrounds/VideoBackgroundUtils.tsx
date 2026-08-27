@@ -1,12 +1,12 @@
-// === Module 9378: isAnimatedBackgroundOption ===
+// === Module 9709: isAnimatedBackgroundOption ===
 
-// Module 9378 (isAnimatedBackgroundOption)
+// Module 9709 (isAnimatedBackgroundOption)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4652 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4653 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4518 */;
-import VideoFilterType from "VideoFilterType" /* 8495 */;
+import closure_4 from "createRTCConnection" /* 4519 */;
+import VideoFilterType from "VideoFilterType" /* 7692 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;

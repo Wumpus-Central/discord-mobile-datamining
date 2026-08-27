@@ -1,6 +1,6 @@
-// === Module 5101: create ===
+// === Module 5106: create ===
 
-// Module 5101 (create)
+// Module 5106 (create)
 import decodeImageDefault from "decodeImage" /* 1953 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 

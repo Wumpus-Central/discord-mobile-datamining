@@ -1,11 +1,11 @@
-// === Module 11156: sum ===
+// === Module 11042: sum ===
 
-// Module 11156 (sum)
+// Module 11042 (sum)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import useChatLayout from "useChatLayout" /* 4301 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4303 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4303 */;
+import useChatLayout from "useChatLayout" /* 4302 */;
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4304 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4304 */;
 
 const DM_WIDTH = ME.DM_WIDTH;
 const sum = 260 + DM_WIDTH;

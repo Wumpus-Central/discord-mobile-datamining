@@ -1,17 +1,17 @@
-// === Module 15840: BadgedIcon ===
+// === Module 15905: BadgedIcon ===
 
-// Module 15840 (BadgedIcon)
+// Module 15905 (BadgedIcon)
 import ThemesDefault from "Themes" /* 712 */;
 import map from "map" /* 4165 */;
-import useThemeDefault from "useTheme" /* 4379 */;
-import styleProperties from "styleProperties" /* 4885 */;
-import SolidCutoutDefault from "SolidCutout" /* 8514 */;
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8604 */;
+import useThemeDefault from "useTheme" /* 4380 */;
+import styleProperties from "styleProperties" /* 4886 */;
+import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7537 */;
+import SolidCutoutDefault from "SolidCutout" /* 8030 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getTimeSafe" /* 11280 */;
+import closure_5 from "getTimeSafe" /* 11159 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function BadgedIcon(arg0) {
@@ -22,9 +22,9 @@ function BadgedIcon(arg0) {
   obj1 = styleProperties;
   const iconSizeStyles = obj1.useIconSizeStyles("sm", true, 2);
   if (type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
-    let BookmarkIcon = tmp4(4407).ClockIcon;
+    let BookmarkIcon = tmp4(4408).ClockIcon;
   } else {
-    BookmarkIcon = tmp4(11344).BookmarkIcon;
+    BookmarkIcon = tmp4(11206).BookmarkIcon;
   }
   obj = { style: items, children: null };
   items = [tmp6.container, iconSizeStyles];

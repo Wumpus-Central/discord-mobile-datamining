@@ -1,6 +1,6 @@
-// === Module 7319: handleBackgroundSync ===
+// === Module 7325: handleBackgroundSync ===
 
-// Module 7319 (handleBackgroundSync)
+// Module 7325 (handleBackgroundSync)
 import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;

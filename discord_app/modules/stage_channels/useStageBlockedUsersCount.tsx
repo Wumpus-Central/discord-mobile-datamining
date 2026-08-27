@@ -1,8 +1,8 @@
-// === Module 8225: useStageBlockedUsersCount ===
+// === Module 8672: useStageBlockedUsersCount ===
 
-// Module 8225 (useStageBlockedUsersCount)
-import sortKey from "sortKey" /* 5315 */;
-import closure_2 from "getActiveStageChannelIds" /* 5309 */;
+// Module 8672 (useStageBlockedUsersCount)
+import sortKey from "sortKey" /* 5320 */;
+import closure_2 from "getActiveStageChannelIds" /* 5314 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useStageBlockedUsersCount.tsx");

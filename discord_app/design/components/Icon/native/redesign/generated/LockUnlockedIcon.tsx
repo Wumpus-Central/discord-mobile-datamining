@@ -1,10 +1,10 @@
-// === Module 10120: LockUnlockedIcon ===
+// === Module 10244: LockUnlockedIcon ===
 
-// Module 10120 (LockUnlockedIcon)
+// Module 10244 (LockUnlockedIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 10121 */;
+import registerAsset from "registerAsset" /* 10245 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

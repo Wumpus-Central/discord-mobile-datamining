@@ -1,11 +1,11 @@
-// === Module 8728: AuthNavbarPlaceholder ===
+// === Module 7684: AuthNavbarPlaceholder ===
 
-// Module 8728 (AuthNavbarPlaceholder)
+// Module 7684 (AuthNavbarPlaceholder)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import HeaderBackImage from "HeaderBackImage" /* 5442 */;
+import HeaderBackImage from "HeaderBackImage" /* 5447 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;

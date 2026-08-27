@@ -1,13 +1,13 @@
-// === Module 8887: ActionSheetDragHandle ===
+// === Module 8915: ActionSheetDragHandle ===
 
-// Module 8887 (ActionSheetDragHandle)
+// Module 8915 (ActionSheetDragHandle)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef4184 from "module_4184" /* 4184 */;
+import _modDef4185 from "module_4185" /* 4185 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import PX_4 from "PX_4" /* 8879 */;
+import PX_4 from "PX_4" /* 8907 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo((accessibilityLabel) => {
     obj = { style: null };
     const items1 = [tmp3.bar, animatedBarStyles];
     obj[0] = items1;
-    let tmp4Result = tmp4(_modDef4184.View, obj);
+    let tmp4Result = tmp4(_modDef4185.View, obj);
   } else {
     obj1 = { style: null };
     obj1[0] = tmp3.bar;

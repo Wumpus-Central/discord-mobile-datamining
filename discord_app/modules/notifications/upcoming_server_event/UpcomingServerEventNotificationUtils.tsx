@@ -1,6 +1,6 @@
-// === Module 14994: onUpcomingServerEventNotificationSettingsChanged ===
+// === Module 15058: onUpcomingServerEventNotificationSettingsChanged ===
 
-// Module 14994 (onUpcomingServerEventNotificationSettingsChanged)
+// Module 15058 (onUpcomingServerEventNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;

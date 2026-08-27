@@ -1,11 +1,11 @@
-// === Module 10578: computeActivityFlags ===
+// === Module 9359: computeActivityFlags ===
 
-// Module 10578 (computeActivityFlags)
+// Module 9359 (computeActivityFlags)
 import set from "set" /* 2 */;
 import Storage2 from "Storage" /* 595 */;
 import hasFlag from "hasFlag" /* 1403 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7409 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7417 */;
 import ME from "ME" /* 676 */;
 
 ({ ActivityFlags: c3, ActivityPartyPrivacy: c4 } = ME);

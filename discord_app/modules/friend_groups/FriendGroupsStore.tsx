@@ -1,10 +1,10 @@
-// === Module 13241: initialize ===
+// === Module 13267: initialize ===
 
-// Module 13241 (initialize)
+// Module 13267 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "recomputeAffinities" /* 7331 */;
-import closure_1 from "hasConsented" /* 6001 */;
+import closure_0 from "recomputeAffinities" /* 7337 */;
+import closure_1 from "hasConsented" /* 6006 */;
 import closure_2 from "markAllUserIdListsStale" /* 4098 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 

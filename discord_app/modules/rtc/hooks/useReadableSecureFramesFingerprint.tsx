@@ -1,6 +1,6 @@
-// === Module 9432: useReadableSecureFramesFingerprint ===
+// === Module 9767: useReadableSecureFramesFingerprint ===
 
-// Module 9432 (useReadableSecureFramesFingerprint)
+// Module 9767 (useReadableSecureFramesFingerprint)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

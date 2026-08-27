@@ -1,6 +1,6 @@
-// === Module 4458: handleUserSettingsProtoStoreChange ===
+// === Module 4459: handleUserSettingsProtoStoreChange ===
 
-// Module 4458 (handleUserSettingsProtoStoreChange)
+// Module 4459 (handleUserSettingsProtoStoreChange)
 import initializeDefault from "initialize" /* 589 */;
 import Storage3 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -88,7 +88,7 @@ prototype["lastSeenChangelogDate"] = function lastSeenChangelogDate() {
 prototype["getStateForDebugging"] = function getStateForDebugging() {
   return { changelogConfig: c10, loadedChangelogs: closure_7, lastSeenChangelogId: c12, lastSeenChangelogDate: c13 };
 };
-prototype["isLocked"] = function isLocked() {
+prototype["isLocked"] = function isLocked(SoundButtonEmoji, arg1) {
   return set.size > 0;
 };
 ChangelogStore.displayName = "ChangelogStore";

@@ -1,17 +1,16 @@
-// === Module 11683: ForumPostListBody ===
+// === Module 11515: ForumPostListBody ===
 
-// Module 11683 (ForumPostListBody)
+// Module 11515 (ForumPostListBody)
 import noopAll from "noop" /* 19 */;
-import ForumPostUsername from "ForumPostUsername" /* 11666 */;
-import ForumPostMediaAndroid from "ForumPostMediaAndroid" /* 11670 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11675 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 11676 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 11677 */;
-import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 11684 */;
+import GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME from "GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME" /* 6071 */;
+import ForumPostUsername from "ForumPostUsername" /* 11498 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11507 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 11508 */;
+import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 11516 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 6097 */;
+import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 6072 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;
@@ -23,43 +22,54 @@ export default function ForumPostListBody(arg0) {
   ({ thread, firstMessage, hasUnreads, isNew, media } = arg0);
   ({ containerStyle, firstMessageLoaded, messageContent, isEmbed, isLocalDeviceMedia, senderModifier } = arg0);
   const tmp = callback2();
-  let obj = { style: items, children: null };
+  let obj = GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME;
+  const isGameInvitesPost = obj.useIsGameInvitesPost(thread);
+  obj = { style: items, children: null };
   items = [tmp.body, containerStyle];
   obj = { style: tmp.contentContainer, children: null };
-  obj = { style: tmp.details, children: null };
+  obj1 = { style: tmp.details, children: null };
   if (isNew) {
-    obj1 = { containerStyle: null };
-    obj1[0] = tmp.newTagContainer;
-    isNew = callback(ForumPostNewTagDefault, obj1);
+    const obj2 = { containerStyle: null };
+    obj2[0] = tmp.newTagContainer;
+    isNew = callback(ForumPostNewTagDefault, obj2);
   }
   const items1 = [isNew, callback(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }), callback(ForumPostTimestampDefault, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO })];
-  obj[1] = items1;
-  const items2 = [closure_6(View, obj), callback(ForumPostTitleDefault, { title: thread.name, lineClamp: 2, ellipsizeMode: "tail", hasUnreads }), callback(ForumPostMessageContentDefault, { messageContent, message: firstMessage, isMessageDeleted: false, messageLoaded: firstMessageLoaded, hasUnreads, senderModifier })];
+  obj1[1] = items1;
+  const items2 = [closure_6(View, obj1), , ];
+  let tmp9Result = !isGameInvitesPost;
+  if (!isGameInvitesPost) {
+    const obj4 = { title: null, lineClamp: 2, ellipsizeMode: "tail", hasUnreads: null };
+    obj4[0] = thread.name;
+    obj4[3] = hasUnreads;
+    tmp9Result = tmp9(tmp10(11509), obj4);
+  }
+  items2[1] = tmp9Result;
+  items2[2] = callback(ForumPostMessageContentDefault, { messageContent, message: firstMessage, isMessageDeleted: false, messageLoaded: firstMessageLoaded, hasUnreads, senderModifier });
   obj[1] = items2;
   const items3 = [closure_6(View, obj), ];
   let blocked;
   if (firstMessage != null) {
     blocked = firstMessage.blocked;
   }
-  let tmp7Result = null;
+  tmp9Result = null;
   if (!blocked) {
-    tmp7Result = null;
+    tmp9Result = null;
     if (null != media) {
-      const obj4 = { channel: null, media: null, isEmbed: null, isLocalDeviceMedia: null, firstMessageId: null, containerStyle: null };
-      obj4[0] = thread;
-      obj4[1] = media;
-      obj4[2] = isEmbed;
-      obj4[3] = isLocalDeviceMedia;
+      const obj5 = { channel: null, media: null, isEmbed: null, isLocalDeviceMedia: null, firstMessageId: null, containerStyle: null };
+      obj5[0] = thread;
+      obj5[1] = media;
+      obj5[2] = isEmbed;
+      obj5[3] = isLocalDeviceMedia;
       let id;
       if (firstMessage != null) {
         id = firstMessage.id;
       }
-      obj4[4] = id;
-      obj4[5] = tmp.thumbnailContainer;
-      tmp7Result = callback(ForumPostMediaAndroid.ForumPostMediaThumbnail, obj4);
+      obj5[4] = id;
+      obj5[5] = tmp.thumbnailContainer;
+      tmp9Result = tmp9(tmp2(11502).ForumPostMediaThumbnail, obj5);
     }
   }
-  items3[1] = tmp7Result;
+  items3[1] = tmp9Result;
   obj[1] = items3;
   return closure_6(View, obj);
 };

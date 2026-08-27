@@ -1,8 +1,8 @@
-// === Module 11743: useViewableAppLauncherHomeItems ===
+// === Module 11576: useViewableAppLauncherHomeItems ===
 
-// Module 11743 (useViewableAppLauncherHomeItems)
+// Module 11576 (useViewableAppLauncherHomeItems)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleDismissWithDismissed" /* 11744 */;
+import closure_3 from "handleDismissWithDismissed" /* 8366 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx");

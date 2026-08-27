@@ -1,6 +1,6 @@
-// === Module 15238: calculateJaroWinklerDistance ===
+// === Module 15302: calculateJaroWinklerDistance ===
 
-// Module 15238 (calculateJaroWinklerDistance)
+// Module 15302 (calculateJaroWinklerDistance)
 import set from "set" /* 2 */;
 
 function calculateJaroWinklerDistance(formatted, arg1) {

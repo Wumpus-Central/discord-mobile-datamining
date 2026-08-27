@@ -1,6 +1,6 @@
-// === Module 7330: recountRelationshipTypes ===
+// === Module 7336: recountRelationshipTypes ===
 
-// Module 7330 (recountRelationshipTypes)
+// Module 7336 (recountRelationshipTypes)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "markAllUserIdListsStale" /* 4098 */;

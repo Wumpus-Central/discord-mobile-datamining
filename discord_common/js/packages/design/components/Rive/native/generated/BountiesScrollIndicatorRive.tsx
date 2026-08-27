@@ -1,8 +1,8 @@
-// === Module 4236: BountiesScrollIndicatorRive ===
+// === Module 4237: BountiesScrollIndicatorRive ===
 
-// Module 4236 (BountiesScrollIndicatorRive)
-import BaseRive from "BaseRive" /* 4178 */;
-import getDerivedStateFromError from "getDerivedStateFromError" /* 4233 */;
+// Module 4237 (BountiesScrollIndicatorRive)
+import BaseRive from "BaseRive" /* 4179 */;
+import getDerivedStateFromError from "getDerivedStateFromError" /* 4234 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -24,7 +24,7 @@ let closure_9 = {
       startAnimation1 = onDataBindingChange.startAnimation;
     }
     const triggerBinding = BaseRive.useTriggerBinding("startAnimation", instance, startAnimation, startAnimation1, playIfNeeded);
-    let tmpResult = tmp(4178);
+    let tmpResult = tmp(4179);
     let looping;
     if (dataBinding != null) {
       looping = dataBinding.looping;
@@ -34,7 +34,7 @@ let closure_9 = {
       looping1 = onDataBindingChange.looping;
     }
     const booleanBinding = tmpResult.useBooleanBinding("looping", instance, looping, looping1, playIfNeeded);
-    tmpResult = tmp(4178);
+    tmpResult = tmp(4179);
     let color;
     if (dataBinding != null) {
       color = dataBinding.color;

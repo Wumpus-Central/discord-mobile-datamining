@@ -1,9 +1,9 @@
-// === Module 9840: makeUserListPillData ===
+// === Module 10555: makeUserListPillData ===
 
-// Module 9840 (makeUserListPillData)
+// Module 10555 (makeUserListPillData)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1297 */;
-import nameFromUserDefault from "nameFromUser" /* 4288 */;
+import nameFromUserDefault from "nameFromUser" /* 4289 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 15610: metadata ===
+// === Module 15675: metadata ===
 
-// Module 15610 (metadata)
+// Module 15675 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/powerups/level_background.png.js");

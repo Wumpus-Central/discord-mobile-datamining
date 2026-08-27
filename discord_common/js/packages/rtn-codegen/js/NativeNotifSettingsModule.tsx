@@ -1,6 +1,6 @@
-// === Module 13991: NativeNotifSettingsModule ===
+// === Module 14018: NativeNotifSettingsModule ===
 
-// Module 13991 (NativeNotifSettingsModule)
+// Module 14018 (NativeNotifSettingsModule)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

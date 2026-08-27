@@ -1,6 +1,6 @@
-// === Module 9753: useFriendsSinceDate ===
+// === Module 8963: useFriendsSinceDate ===
 
-// Module 9753 (useFriendsSinceDate)
+// Module 8963 (useFriendsSinceDate)
 import closure_2 from "_getSystemLocale" /* 1996 */;
 import closure_3 from "markAllUserIdListsStale" /* 4098 */;
 import { RelationshipTypes } from "ME" /* 676 */;
@@ -23,5 +23,5 @@ export const useFriendsSinceDate = function useFriendsSinceDate(userId) {
     return since;
   }, items2);
   const obj2 = _require(647);
-  return _require(5298).getCreatedAtDate(stateFromStores1, stateFromStores);
+  return _require(5303).getCreatedAtDate(stateFromStores1, stateFromStores);
 };

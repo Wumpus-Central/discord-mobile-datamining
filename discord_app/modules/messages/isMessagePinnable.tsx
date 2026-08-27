@@ -1,8 +1,8 @@
-// === Module 11284: isMessagePinnable ===
+// === Module 11163: isMessagePinnable ===
 
-// Module 11284 (isMessagePinnable)
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6062 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6063 */;
+// Module 11163 (isMessagePinnable)
+import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6068 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6069 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
 import ME from "ME" /* 676 */;
 

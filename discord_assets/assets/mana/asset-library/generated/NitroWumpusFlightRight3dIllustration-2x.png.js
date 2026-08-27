@@ -1,6 +1,6 @@
-// === Module 6800: metadata ===
+// === Module 6806: metadata ===
 
-// Module 6800 (metadata)
+// Module 6806 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWumpusFlightRight3dIllustration-2x.png.js");

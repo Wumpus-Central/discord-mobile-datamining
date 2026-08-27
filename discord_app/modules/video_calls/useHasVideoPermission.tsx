@@ -1,7 +1,7 @@
-// === Module 10980: useHasVideoPermission ===
+// === Module 9957: useHasVideoPermission ===
 
-// Module 10980 (useHasVideoPermission)
-import canStreamInChannel from "canStreamInChannel" /* 7396 */;
+// Module 9957 (useHasVideoPermission)
+import canStreamInChannel from "canStreamInChannel" /* 7404 */;
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
 

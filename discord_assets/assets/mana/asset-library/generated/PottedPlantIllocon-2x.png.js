@@ -1,6 +1,6 @@
-// === Module 6842: metadata ===
+// === Module 6848: metadata ===
 
-// Module 6842 (metadata)
+// Module 6848 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PottedPlantIllocon-2x.png.js");

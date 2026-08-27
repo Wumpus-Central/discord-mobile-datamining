@@ -1,10 +1,10 @@
-// === Module 8428: create ===
+// === Module 7569: create ===
 
-// Module 8428 (create)
+// Module 7569 (create)
 import _mod1307 from "module_1307" /* 1307 */;
 import now from "now" /* 1336 */;
 import defineProperty from "defineProperty" /* 1337 */;
-import defineProperty2 from "defineProperty" /* 8429 */;
+import defineProperty2 from "defineProperty" /* 7570 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5 } from "module_1307" /* 1307 */;
 
@@ -20,7 +20,7 @@ const obj5 = { EXPOSURE_POINT_ID_UNSPECIFIED: 0, [0]: "EXPOSURE_POINT_ID_UNSPECI
 const obj6 = { DEFAULT: 0, [0]: "DEFAULT", OFF: 1, [1]: "OFF", OVERRIDES_ONLY: 2, [2]: "OVERRIDES_ONLY" };
 const obj7 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", CONTROL: 1, [1]: "CONTROL", TREATMENT: 2, [2]: "TREATMENT", OVERRIDE: 3, [3]: "OVERRIDE" };
 const obj8 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", ACTIVE: 1, [1]: "ACTIVE", UNUSED: 2, [2]: "UNUSED", BURNED: 3, [3]: "BURNED", PRESERVED: 4, [4]: "PRESERVED" };
-const obj9 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", DRAFT: 1, [1]: "DRAFT", MEASUREMENT: 2, [2]: "MEASUREMENT", ROLLING_OUT: 4, [4]: "ROLLING_OUT", ARCHIVED: 6, [6]: "ARCHIVED", AA_MODE: 7, [7]: "AA_MODE" };
+const obj9 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", DRAFT: 1, [1]: "DRAFT", MEASUREMENT: 2, [2]: "MEASUREMENT", ROLLING_OUT: 4, [4]: "ROLLING_OUT", ARCHIVED: 6, [6]: "ARCHIVED", AA_MODE: 7, [7]: "AA_MODE", PAUSED: 8, [8]: "PAUSED" };
 class Experiment$Type extends MessageType {
   constructor() {
     items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
@@ -89,7 +89,7 @@ class Experiment$Type extends MessageType {
       kind: "message",
       repeat: 1,
       T() {
-            return callback(8429).Rule;
+            return callback(7570).Rule;
           }
     };
     items[16] = {
@@ -883,7 +883,7 @@ const items1 = [
 ];
 const obj11 = { no: 7, name: "owning_experiment_id", kind: "scalar", T: 6 };
 items1[6] = obj11;
-tmp2 = new tmp2("discord_protos.discord_experimentation.v1.Variation", items1, tmp5, tmp4, "create", Variation$Type, "internalBinaryRead", "internalBinaryWrite", tmp2, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, tmp8, items1, new.target, exports, obj11, undefined, 7, 6);
+tmp2 = new tmp2("discord_protos.discord_experimentation.v1.Variation", items1, tmp5, tmp4, "create", Variation$Type, "internalBinaryRead", "internalBinaryWrite", tmp2, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, tmp8, items1, new.target, exports, obj11, undefined, 8, 7);
 // ThrowIfThisInitialized (0x7c)
 let closure_16 = tmp2;
 class Bucket$Type extends MessageType4 {
@@ -1005,7 +1005,7 @@ const obj12 = {
   }
 };
 items2[2] = obj12;
-const variationType = new Variation$Type("discord_protos.discord_experimentation.v1.Bucket", items2, tmp5, Bucket$Type, "create", Variation$Type, "internalBinaryRead", "internalBinaryWrite", items2, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, tmp8, tmp2, new.target, exports, obj12, undefined, 7, 6, 4, 2);
+const variationType = new Variation$Type("discord_protos.discord_experimentation.v1.Bucket", items2, tmp5, Bucket$Type, "create", Variation$Type, "internalBinaryRead", "internalBinaryWrite", items2, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, tmp8, tmp2, new.target, exports, obj12, undefined, 8, 7, 6, 4);
 // ThrowIfThisInitialized (0x7c)
 class DebugConfig$Type extends MessageType5 {
   constructor() {
@@ -1131,7 +1131,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(enableDecisionL
 const items3 = [{ no: 1, name: "enable_decision_logging", kind: "scalar", T: 8 }, { no: 2, name: "metrics_sample_rate", kind: "scalar", T: 1 }, { no: 3, name: "log_context_on_failure", kind: "scalar", T: 8 }, { no: 4, name: "log_raw_headers", kind: "scalar", T: 8 }, { no: 5, name: "tag_filter_metrics", kind: "scalar", T: 8 }, ];
 const obj13 = { no: 6, name: "decision_log_sample_rate", kind: "scalar", T: 1 };
 items3[5] = obj13;
-let tmp11 = new "internalBinaryRead"("discord_protos.discord_experimentation.v1.DebugConfig", items3, tmp5, Bucket$Type, "create", DebugConfig$Type, "internalBinaryRead", items3, new.target, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, tmp8, tmp2, variationType, exports, obj13, undefined, 7, 6);
+let tmp11 = new "internalBinaryRead"("discord_protos.discord_experimentation.v1.DebugConfig", items3, tmp5, Bucket$Type, "create", DebugConfig$Type, "internalBinaryRead", items3, new.target, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, experimentType, tmp8, tmp2, variationType, exports, obj13, undefined, 8, 7);
 // ThrowIfThisInitialized (0x7c)
 let closure_18 = tmp11;
 let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx");

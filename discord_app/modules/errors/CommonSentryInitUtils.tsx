@@ -1,6 +1,6 @@
-// === Module 13734: IGNORE_ANALYTICS_BREADCRUMB_EVENTS ===
+// === Module 13761: IGNORE_ANALYTICS_BREADCRUMB_EVENTS ===
 
-// Module 13734 (IGNORE_ANALYTICS_BREADCRUMB_EVENTS)
+// Module 13761 (IGNORE_ANALYTICS_BREADCRUMB_EVENTS)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/errors/CommonSentryInitUtils.tsx");

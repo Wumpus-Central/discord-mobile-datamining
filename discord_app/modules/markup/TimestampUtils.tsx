@@ -1,6 +1,6 @@
-// === Module 4926: TIMESTAMP_FORMATS ===
+// === Module 4927: TIMESTAMP_FORMATS ===
 
-// Module 4926 (TIMESTAMP_FORMATS)
+// Module 4927 (TIMESTAMP_FORMATS)
 import set from "set" /* 2 */;
 import setDefault from "set" /* 687 */;
 import hooksDefault from "hooks" /* 4043 */;

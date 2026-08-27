@@ -1,16 +1,16 @@
-// === Module 8692: ClearButton ===
+// === Module 7645: ClearButton ===
 
-// Module 8692 (ClearButton)
+// Module 7645 (ClearButton)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import PressableBase from "PressableBase" /* 5015 */;
-import registerAssetDefault from "registerAsset" /* 8693 */;
+import PressableBase from "PressableBase" /* 5020 */;
+import registerAssetDefault from "registerAsset" /* 7646 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function ClearButton(onPress) {

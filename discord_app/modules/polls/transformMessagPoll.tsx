@@ -1,6 +1,6 @@
-// === Module 4801: transformMessagePoll ===
+// === Module 4802: transformMessagePoll ===
 
-// Module 4801 (transformMessagePoll)
+// Module 4802 (transformMessagePoll)
 import set from "set" /* 2 */;
 import hooksDefault from "hooks" /* 4043 */;
 

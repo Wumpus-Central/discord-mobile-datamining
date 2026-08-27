@@ -1,12 +1,12 @@
-// === Module 5506: _fetchVerificationForm ===
+// === Module 5511: _fetchVerificationForm ===
 
-// Module 5506 (_fetchVerificationForm)
+// Module 5511 (_fetchVerificationForm)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "initialize" /* 1984 */;
 import closure_5 from "trackCommunicationDisabled" /* 1992 */;
-import closure_6 from "updateInvite" /* 4428 */;
+import closure_6 from "updateInvite" /* 4429 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

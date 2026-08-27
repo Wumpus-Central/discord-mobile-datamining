@@ -1,6 +1,6 @@
-// === Module 16261: getGuildPermissionSpec ===
+// === Module 16326: getGuildPermissionSpec ===
 
-// Module 16261 (getGuildPermissionSpec)
+// Module 16326 (getGuildPermissionSpec)
 import set from "set" /* 2 */;
 import sum from "sum" /* 505 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;

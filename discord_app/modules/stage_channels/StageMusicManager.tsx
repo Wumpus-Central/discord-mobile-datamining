@@ -1,16 +1,16 @@
-// === Module 10943: checkVoiceStates ===
+// === Module 9912: checkVoiceStates ===
 
-// Module 10943 (checkVoiceStates)
-import sortKey from "sortKey" /* 5315 */;
-import initializeDefault from "initialize" /* 5433 */;
+// Module 9912 (checkVoiceStates)
+import sortKey from "sortKey" /* 5320 */;
+import initializeDefault from "initialize" /* 5438 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import importDefaultResult from "_detectH265HardwareDecode" /* 4495 */;
+import importDefaultResult from "_detectH265HardwareDecode" /* 4496 */;
 import closure_4 from "handleConnectionOpen" /* 1981 */;
-import closure_5 from "updateVoiceState" /* 4463 */;
-import closure_6 from "getActiveStageChannelIds" /* 5309 */;
+import closure_5 from "updateVoiceState" /* 4464 */;
+import closure_6 from "getActiveStageChannelIds" /* 5314 */;
 import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_8 from "initialize" /* 10941 */;
-import createSoundForPack from "createSoundForPack" /* 10002 */;
+import closure_8 from "initialize" /* 9910 */;
+import createSoundForPack from "createSoundForPack" /* 9913 */;
 
 require = arg1;
 function checkVoiceStates() {
@@ -139,8 +139,8 @@ export const useShowStageMusicMuteButton = function useShowStageMusicMuteButton(
   const items = [closure_4];
   let stateFromStores = _require(589).useStateFromStores(items, () => closure_1_4.getVoiceChannelId() === closure_0);
   const obj = _require(589);
-  const stageParticipants = _require(5321).useStageParticipants(channelId, _require(5315).StageChannelParticipantNamedIndex.SPEAKER);
-  const obj2 = _require(5321);
+  const stageParticipants = _require(5326).useStageParticipants(channelId, _require(5320).StageChannelParticipantNamedIndex.SPEAKER);
+  const obj2 = _require(5326);
   const tmp2 = null != stageParticipants.find((voiceState) => {
     voiceState = voiceState.voiceState;
     return !voiceState.isVoiceMuted();

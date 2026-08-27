@@ -1,14 +1,14 @@
-// === Module 8442: _executeMessageComponentInteraction ===
+// === Module 7957: _executeMessageComponentInteraction ===
 
-// Module 8442 (_executeMessageComponentInteraction)
+// Module 7957 (_executeMessageComponentInteraction)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import _fetchMessageInteractionData from "_fetchMessageInteractionData" /* 8443 */;
-import getFirstSkemaFieldError from "getFirstSkemaFieldError" /* 8444 */;
+import _fetchMessageInteractionData from "_fetchMessageInteractionData" /* 7958 */;
+import getFirstSkemaFieldError from "getFirstSkemaFieldError" /* 7959 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "deleteNonce" /* 8267 */;
+import closure_5 from "deleteNonce" /* 7783 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -79,7 +79,7 @@ function _executeMessageComponentInteraction() {
                 closure_9 = callback2(11).fromTimestamp(Date.now());
                 if (c5.canQueueInteraction(callback2, closure_9)) {
                   c3 = 1;
-                  let obj8 = callback2(7434);
+                  let obj8 = callback2(7442);
                   sessionId = 3;
                   c5 = 1;
                   const obj2 = { value: null, done: false };
@@ -122,9 +122,9 @@ function _executeMessageComponentInteraction() {
                     obj = _undefined(_undefined2[9]);
                   }
                 };
-                callback(8443).addQueued(closure_9, obj4);
+                callback(7958).addQueued(closure_9, obj4);
                 if (null != c8) {
-                  obj1 = callback(8443);
+                  obj1 = callback(7958);
                   const result = obj1.queueInteractionComponentState(callback2, closure_9, c8, sessionId);
                 }
                 obj6 = { type: null, nonce: null, guild_id: null, channel_id: null, message_flags: null, message_id: null, application_id: null, session_id: null, data: null };

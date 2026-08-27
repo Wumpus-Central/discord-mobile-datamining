@@ -1,6 +1,6 @@
-// === Module 11588: updateCustomTheme ===
+// === Module 11439: updateCustomTheme ===
 
-// Module 11588 (updateCustomTheme)
+// Module 11439 (updateCustomTheme)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

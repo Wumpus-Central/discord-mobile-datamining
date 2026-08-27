@@ -1,6 +1,6 @@
-// === Module 8694: Label ===
+// === Module 7647: Label ===
 
-// Module 8694 (Label)
+// Module 7647 (Label)
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -22,5 +22,5 @@ export default function Label(style) {
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);
-  return jsx(nodeText(4440).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
+  return jsx(nodeText(4441).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
 };

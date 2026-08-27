@@ -1,12 +1,12 @@
-// === Module 12055: ? ===
+// === Module 11901: ? ===
 
-// Module 12055
+// Module 11901
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import createSoundForPack from "createSoundForPack" /* 10002 */;
-import NativeModulesDefault from "NativeModules" /* 10933 */;
+import NativeModulesDefault from "NativeModules" /* 9578 */;
+import createSoundForPack from "createSoundForPack" /* 9913 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import { PermissionStateType } from "set" /* 12046 */;
+import { PermissionStateType } from "set" /* 11892 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;
@@ -27,8 +27,8 @@ export default {
   },
   requestPermission(arg0) {
     const _require = arg0;
-    let result = _require(12049).setPushPermissionState(PermissionStateType.REQUESTED);
-    let obj = _require(12049);
+    let result = _require(11895).setPushPermissionState(PermissionStateType.REQUESTED);
+    let obj = _require(11895);
     expandEventPropertiesDefault.track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
     const obj2 = expandEventPropertiesDefault;
     const permissions = NativeModulesDefault.requestPermissions();

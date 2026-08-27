@@ -1,23 +1,23 @@
-// === Module 11930: DoubleTapToReactChatInputBannerInner ===
+// === Module 11774: DoubleTapToReactChatInputBannerInner ===
 
-// Module 11930 (DoubleTapToReactChatInputBannerInner)
+// Module 11774 (DoubleTapToReactChatInputBannerInner)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import Text from "Text" /* 4440 */;
-import PressableBase from "PressableBase" /* 5015 */;
-import XSmallIcon from "XSmallIcon" /* 5498 */;
-import EmojiDefault from "Emoji" /* 5532 */;
-import renderChannelBadge from "renderChannelBadge" /* 11931 */;
+import Text from "Text" /* 4441 */;
+import PressableBase from "PressableBase" /* 5020 */;
+import XSmallIcon from "XSmallIcon" /* 5503 */;
+import EmojiDefault from "Emoji" /* 5537 */;
+import renderChannelBadge from "renderChannelBadge" /* 11775 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import set from "set" /* 500 */;
 
 require = arg1;
@@ -66,10 +66,10 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   obj6[2] = intl2.format(getSystemLocale.t["5/l2rR"], {
     emojiName: emoji.name,
     emojiNameHook(children) {
-      return callback2(callback(4440).Text, { variant: "text-xs/bold", color: "text-strong", children }, arg1);
+      return callback2(callback(4441).Text, { variant: "text-xs/bold", color: "text-strong", children }, arg1);
     },
     tapHereHook(children) {
-      return callback2(callback(4440).Text, { variant: "text-xs/medium", color: "text-brand", children }, arg1);
+      return callback2(callback(4441).Text, { variant: "text-xs/medium", color: "text-brand", children }, arg1);
     }
   });
   items4[1] = closure_9(Text.Text, obj6);

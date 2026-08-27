@@ -1,9 +1,9 @@
-// === Module 9435: trackRTCPanelViewed ===
+// === Module 9770: trackRTCPanelViewed ===
 
-// Module 9435 (trackRTCPanelViewed)
+// Module 9770 (trackRTCPanelViewed)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4652 */;
-import getProfileProperties from "getProfileProperties" /* 9004 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4653 */;
+import getProfileProperties from "getProfileProperties" /* 8491 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 

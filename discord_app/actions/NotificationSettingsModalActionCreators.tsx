@@ -1,14 +1,14 @@
-// === Module 5434: ? ===
+// === Module 5439: ? ===
 
-// Module 5434
+// Module 5439
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1363 */;
-import UserNotificationSettings from "UserNotificationSettings" /* 5429 */;
-import handleConnectionOpenDefault from "handleConnectionOpen" /* 5431 */;
+import UserNotificationSettings from "UserNotificationSettings" /* 5434 */;
+import handleConnectionOpenDefault from "handleConnectionOpen" /* 5436 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 4653 */;
+import closure_4 from "updateUserGuildSettingsInternal" /* 4654 */;
 import { Endpoints } from "ME" /* 676 */;
 import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags" /* 4101 */;
 import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 685 */;
@@ -42,17 +42,17 @@ export default {
     closure_3 = location;
     let obj = DISCORD_EPOCHDefault;
     const keys = obj.keys(channel_overrides.channel_overrides);
-    const currentGuildSettings = _require(5429).getCurrentGuildSettings(guildId);
-    const obj2 = _require(5429);
-    const manyCurrentChannelSettings = _require(5429).getManyCurrentChannelSettings(guildId, keys);
-    const obj3 = _require(5429);
+    const currentGuildSettings = _require(5434).getCurrentGuildSettings(guildId);
+    const obj2 = _require(5434);
+    const manyCurrentChannelSettings = _require(5434).getManyCurrentChannelSettings(guildId, keys);
+    const obj3 = _require(5434);
     let result = handleConnectionOpenDefault.saveUserGuildSettings(guildId, channel_overrides);
     const obj4 = handleConnectionOpenDefault;
     obj = { type: "USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE", guildId, settings: channel_overrides };
     dispatcherDefault.dispatch(obj);
     const obj5 = dispatcherDefault;
-    const result1 = _require(5429).trackGuildNotificationSettingsUpdate(guildId, channel_overrides, currentGuildSettings, OptedIn, location);
-    const obj7 = _require(5429);
+    const result1 = _require(5434).trackGuildNotificationSettingsUpdate(guildId, channel_overrides, currentGuildSettings, OptedIn, location);
+    const obj7 = _require(5434);
     const keys1 = DISCORD_EPOCHDefault.keys(channel_overrides.channel_overrides);
     const item = keys1.forEach((channelId) => {
       const value = closure_4.get(channelId);
@@ -83,8 +83,8 @@ export default {
     closure_3 = arg3;
     let obj = DISCORD_EPOCHDefault;
     const keys = obj.keys(channel_overrides);
-    const manyCurrentChannelSettings = _require(5429).getManyCurrentChannelSettings(guildId, keys);
-    const obj2 = _require(5429);
+    const manyCurrentChannelSettings = _require(5434).getManyCurrentChannelSettings(guildId, keys);
+    const obj2 = _require(5434);
     obj = { channel_overrides };
     const result = handleConnectionOpenDefault.saveUserGuildSettings(guildId, obj);
     const obj3 = handleConnectionOpenDefault;

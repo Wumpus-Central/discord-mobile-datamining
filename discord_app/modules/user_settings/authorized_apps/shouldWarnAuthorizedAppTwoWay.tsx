@@ -1,8 +1,8 @@
-// === Module 12229: isAuthorizedAppTwoWay ===
+// === Module 12077: isAuthorizedAppTwoWay ===
 
-// Module 12229 (isAuthorizedAppTwoWay)
+// Module 12077 (isAuthorizedAppTwoWay)
 import set from "set" /* 2 */;
-import set2 from "set" /* 10686 */;
+import set2 from "set" /* 9236 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/authorized_apps/shouldWarnAuthorizedAppTwoWay.tsx");
 

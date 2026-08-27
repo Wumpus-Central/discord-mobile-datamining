@@ -1,15 +1,15 @@
-// === Module 10685: Header ===
+// === Module 9298: Header ===
 
-// Module 10685 (Header)
+// Module 9298 (Header)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import Text from "Text" /* 4440 */;
+import Text from "Text" /* 4441 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { UserFlags } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;
@@ -58,7 +58,7 @@ export default function Header(accountScopes) {
     const obj10 = { style: null, verified: null };
     obj10[0] = tmp.botTag;
     let hasFlagResult = null != bot.public_flags;
-    tmp2Result = tmp2(9347);
+    tmp2Result = tmp2(8856);
     if (hasFlagResult) {
       hasFlagResult = tmp9(1403).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
       const tmp9Result = tmp9(1403);

@@ -1,6 +1,6 @@
-// === Module 11898: downsampleWaveform ===
+// === Module 11741: downsampleWaveform ===
 
-// Module 11898 (downsampleWaveform)
+// Module 11741 (downsampleWaveform)
 import set from "set" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
 

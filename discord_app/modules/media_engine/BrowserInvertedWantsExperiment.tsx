@@ -1,6 +1,6 @@
-// === Module 13347: getBrowserInvertedWantsConfig ===
+// === Module 13374: getBrowserInvertedWantsConfig ===
 
-// Module 13347 (getBrowserInvertedWantsConfig)
+// Module 13374 (getBrowserInvertedWantsConfig)
 import set from "set" /* 2 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;

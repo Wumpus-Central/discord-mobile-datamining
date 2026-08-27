@@ -1,6 +1,6 @@
-// === Module 4247: metadata ===
+// === Module 4248: metadata ===
 
-// Module 4247 (metadata)
+// Module 4248 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/CheckpointKnickKnacks.riv.js");

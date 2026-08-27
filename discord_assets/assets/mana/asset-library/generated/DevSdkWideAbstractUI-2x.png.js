@@ -1,6 +1,6 @@
-// === Module 6398: metadata ===
+// === Module 6404: metadata ===
 
-// Module 6398 (metadata)
+// Module 6404 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DevSdkWideAbstractUI-2x.png.js");

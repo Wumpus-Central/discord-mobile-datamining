@@ -1,6 +1,6 @@
-// === Module 9252: useCanCreateAnEvent ===
+// === Module 9563: useCanCreateAnEvent ===
 
-// Module 9252 (useCanCreateAnEvent)
+// Module 9563 (useCanCreateAnEvent)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "comparator" /* 1982 */;
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;

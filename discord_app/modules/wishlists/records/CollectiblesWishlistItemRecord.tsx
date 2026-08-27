@@ -1,14 +1,14 @@
-// === Module 9575: createCollectiblesItemFromServerResponse ===
+// === Module 10380: createCollectiblesItemFromServerResponse ===
 
-// Module 9575 (createCollectiblesItemFromServerResponse)
+// Module 10380 (createCollectiblesItemFromServerResponse)
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import fromServerDefault from "fromServer" /* 9574 */;
-import closure_2 from "fromServer" /* 7219 */;
-import { transformSKUToCollectiblesItem as closure_3 } from "createCollectiblesItemsFromServerResponse" /* 7218 */;
+import fromServerDefault from "fromServer" /* 10379 */;
+import closure_2 from "fromServer" /* 7225 */;
+import { transformSKUToCollectiblesItem as closure_3 } from "createCollectiblesItemsFromServerResponse" /* 7224 */;
 import closure_4 from "fromServer" /* 1948 */;
-import closure_5 from "fromServer" /* 7220 */;
-import closure_6 from "fromServer" /* 7221 */;
-import closure_7 from "createFromServer" /* 4487 */;
+import closure_5 from "fromServer" /* 7226 */;
+import closure_6 from "fromServer" /* 7227 */;
+import closure_7 from "createFromServer" /* 4488 */;
 import { SKUProductLines } from "ME" /* 676 */;
 
 require = arg1;

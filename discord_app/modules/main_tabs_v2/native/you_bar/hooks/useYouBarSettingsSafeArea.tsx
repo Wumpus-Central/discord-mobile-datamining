@@ -1,10 +1,10 @@
-// === Module 7851: useYouBarSettingsCustomHeaderPaddingTop ===
+// === Module 12925: useYouBarSettingsCustomHeaderPaddingTop ===
 
-// Module 7851 (useYouBarSettingsCustomHeaderPaddingTop)
+// Module 12925 (useYouBarSettingsCustomHeaderPaddingTop)
 import set from "set" /* 2 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7852 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7651 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx");
 

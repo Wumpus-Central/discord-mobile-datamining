@@ -5,17 +5,17 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
 import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4079 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7195 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 10543 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 10751 */;
-import getPlatformDefault from "getPlatform" /* 10763 */;
-import apexExperiment from "apexExperiment" /* 10801 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7201 */;
+import getPlatformDefault from "getPlatform" /* 8369 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 9388 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9409 */;
+import apexExperiment from "apexExperiment" /* 9414 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import closure_6 from "handleConnectionOpen" /* 1981 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 9982 */;
+import ActivityPanelModes from "ActivityPanelModes" /* 9387 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -249,7 +249,7 @@ function updateEmbeddedActivities(content_classification) {
                 obj5[5] = obj4;
                 obj5[6] = inviterUserId;
                 ComponentDispatch2.dispatch(constants.OPEN_EMBEDDED_ACTIVITY, obj5);
-                tmp79(10807);
+                tmp79(9372);
                 if (true === renderInFramePool) {
                   let ACTIVITY_POPOUT_WINDOW = ActivityPanelModes.DISCONNECTED;
                   const _HermesInternal2 = HermesInternal;
@@ -285,7 +285,7 @@ function updateEmbeddedActivities(content_classification) {
       const _HermesInternal3 = HermesInternal;
       obj5.delete("" + application_id + ":" + tmp59);
     }
-    const someResult1 = mapped.some((userId) => application_id(13611).isActivityParticipantCurrentUserCurrentSession(userId));
+    const someResult1 = mapped.some((userId) => application_id(13638).isActivityParticipantCurrentUserCurrentSession(userId));
   }
 }
 ActivityPanelModes = ActivityPanelModes.ActivityPanelModes;
@@ -340,7 +340,7 @@ prototype["getItems"] = function getItems(arg0) {
         let cachedVisible = self.cachedVisible;
         if (cachedVisible == null) {
           items = self.items;
-          const found = items.filter((contentClassification) => !callback(10802).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
+          const found = items.filter((contentClassification) => !callback(9415).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
           self.cachedVisible = found;
           cachedVisible = found;
         }
@@ -349,7 +349,7 @@ prototype["getItems"] = function getItems(arg0) {
         let cachedHidden = self.cachedHidden;
         if (cachedHidden == null) {
           items1 = self.items;
-          const found1 = items1.filter((contentClassification) => callback(10802).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
+          const found1 = items1.filter((contentClassification) => callback(9415).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
           self.cachedHidden = found1;
           cachedHidden = found1;
         }

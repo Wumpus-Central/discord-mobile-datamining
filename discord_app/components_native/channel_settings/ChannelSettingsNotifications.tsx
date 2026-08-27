@@ -1,28 +1,28 @@
-// === Module 10040: ChannelSettingsNotificationsGuard ===
+// === Module 10144: ChannelSettingsNotificationsGuard ===
 
-// Module 10040 (ChannelSettingsNotificationsGuard)
+// Module 10144 (ChannelSettingsNotificationsGuard)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4440 */;
-import computeChannelName from "computeChannelName" /* 4638 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4652 */;
-import Stack from "Stack" /* 4877 */;
-import TableRowInner from "TableRowInner" /* 5546 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5939 */;
-import TableSwitchRow from "TableSwitchRow" /* 5940 */;
-import Form from "Form" /* 8185 */;
-import MutedUntilTextDefault from "MutedUntilText" /* 10045 */;
-import NotificationSettingsChannelDefault from "NotificationSettingsChannel" /* 10047 */;
+import Text from "Text" /* 4441 */;
+import computeChannelName from "computeChannelName" /* 4639 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4653 */;
+import Stack from "Stack" /* 4878 */;
+import TableRowInner from "TableRowInner" /* 5551 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5944 */;
+import TableSwitchRow from "TableSwitchRow" /* 5945 */;
+import Form from "Form" /* 8295 */;
+import MutedUntilTextDefault from "MutedUntilText" /* 10149 */;
+import NotificationSettingsChannelDefault from "NotificationSettingsChannel" /* 10151 */;
 import importAllResult from "noop" /* 19 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "handleInviteData" /* 4364 */;
+import closure_7 from "handleInviteData" /* 4365 */;
 import closure_8 from "markAllUserIdListsStale" /* 4098 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4653 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4654 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function ChannelSettingsNotificationsGuard(onClose) {
@@ -212,10 +212,10 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     const obj4 = { muteConfig: null, type: null };
     obj4[0] = props.muteConfig;
     if (channel.type === constants3.GUILD_CATEGORY) {
-      MuteSettingType = tmp(10045).MuteSettingType;
+      MuteSettingType = tmp(10149).MuteSettingType;
       let CHANNEL = MuteSettingType.CATEGORY;
     } else {
-      CHANNEL = tmp(10045).MuteSettingType.CHANNEL;
+      CHANNEL = tmp(10149).MuteSettingType.CHANNEL;
     }
     obj4[1] = CHANNEL;
     tmp5(MutedUntilTextDefault, obj4);
@@ -255,11 +255,11 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     tmp5 = require;
     tmp7 = require;
   }
-  const TableRadioGroup = tmp7(8203).TableRadioGroup;
+  const TableRadioGroup = tmp7(7625).TableRadioGroup;
   let obj = { value: state.messageNotifications, onChange: self.handleTypeChange, groupRef: self.radioGroupRef, title: null, hasIcons: false, children: null };
   const intl3 = tmp7(1236).intl;
   obj[3] = intl3.string(tmp7(1236).t.h850Ss);
-  const TableRadioRow = tmp7(8202).TableRadioRow;
+  const TableRadioRow = tmp7(7626).TableRadioRow;
   if (isGuildStageVoiceResult) {
     let tmp22 = muted;
     if (!muted) {
@@ -290,7 +290,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     obj[1] = constants2.ONLY_MENTIONS;
     const intl12 = tmp7(1236).intl;
     obj[2] = intl12.string(tmp7(1236).t["BENn/6"]);
-    items[1] = tmp12(tmp7(8202).TableRadioRow, obj);
+    items[1] = tmp12(tmp7(7626).TableRadioRow, obj);
     if (!muted) {
       muted = guildMuted;
     }
@@ -299,7 +299,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     obj1[1] = constants2.NO_MESSAGES;
     const intl13 = tmp7(1236).intl;
     obj1[2] = intl13.string(tmp7(1236).t.CtVGyQ);
-    items[2] = tmp12(tmp7(8202).TableRadioRow, obj1);
+    items[2] = tmp12(tmp7(7626).TableRadioRow, obj1);
     obj[5] = items;
     let tmp11Result = tmp11(TableRadioGroup, obj);
   } else {
@@ -341,7 +341,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj3[2] = stringResult3;
     obj3[3] = constants2.ALL_MESSAGES;
-    items1[1] = tmp12(tmp7(8202).TableRadioRow, obj3);
+    items1[1] = tmp12(tmp7(7626).TableRadioRow, obj3);
     const obj4 = { label: null, disabled: null, value: null };
     const intl8 = tmp7(1236).intl;
     obj4[0] = intl8.format(tmp7(1236).t.L2hmYy, {});
@@ -351,7 +351,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj4[1] = tmp19;
     obj4[2] = constants2.ONLY_MENTIONS;
-    items1[2] = tmp12(tmp7(8202).TableRadioRow, obj4);
+    items1[2] = tmp12(tmp7(7626).TableRadioRow, obj4);
     const obj5 = { label: null, disabled: null, value: null };
     const intl9 = tmp7(1236).intl;
     obj5[0] = intl9.string(tmp7(1236).t.CtVGyQ);
@@ -361,7 +361,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj5[1] = tmp20;
     obj5[2] = constants2.NO_MESSAGES;
-    items1[3] = tmp12(tmp7(8202).TableRadioRow, obj5);
+    items1[3] = tmp12(tmp7(7626).TableRadioRow, obj5);
     obj[5] = items1;
     tmp11Result = tmp11(TableRadioGroup, obj);
   }
@@ -380,7 +380,7 @@ prototype["render"] = function render() {
       const intl = getSystemLocale.intl;
       obj = { mutedHook: null };
       obj[0] = function mutedHook(children) {
-        return callback2(callback(4440).Text, { variant: "text-sm/medium", color: "text-feedback-critical", children }, arg1);
+        return callback2(callback(4441).Text, { variant: "text-sm/medium", color: "text-feedback-critical", children }, arg1);
       };
       obj[2] = intl.format(getSystemLocale.t.O34r15, obj);
       let tmp5 = callback2(Text.Text, obj);
@@ -389,7 +389,7 @@ prototype["render"] = function render() {
       const intl3 = getSystemLocale.intl;
       obj1 = { notificationHook: null };
       obj1[0] = function notificationHook(children) {
-        return callback2(callback(4440).Text, { variant: "text-sm/medium", color: "text-feedback-warning", children }, arg1);
+        return callback2(callback(4441).Text, { variant: "text-sm/medium", color: "text-feedback-warning", children }, arg1);
       };
       obj[2] = intl3.format(getSystemLocale.t.nRwUIL, obj1);
       tmp5 = callback2(Text.Text, obj);
@@ -410,7 +410,7 @@ prototype["render"] = function render() {
       const intl2 = tmp10(1236).intl;
       obj4[0] = intl2.string(tmp10(1236).t.bK11jO);
       obj4[2] = self.renderForumSettings();
-      tmp9Result = tmp9(tmp10(5939).TableRowGroup, obj4);
+      tmp9Result = tmp9(tmp10(5944).TableRowGroup, obj4);
     }
     items[2] = tmp9Result;
     items[3] = tmp5;
@@ -431,7 +431,7 @@ export default function ChannelSettingsNotificationsSplit(arg0) {
   let obj = dependencyMap;
   const items = [closure_6];
   const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_6.getChannel(channelId.channelId));
-  _require(10046);
+  _require(10150);
   if (null == stateFromStores) {
     return null;
   } else {

@@ -1,6 +1,6 @@
-// === Module 5920: QUICK_SWITCHER ===
+// === Module 5925: QUICK_SWITCHER ===
 
-// Module 5920 (QUICK_SWITCHER)
+// Module 5925 (QUICK_SWITCHER)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/app_analytics/AnalyticsLocation.tsx");

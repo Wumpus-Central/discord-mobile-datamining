@@ -1,11 +1,11 @@
-// === Module 8880: TwinButtons ===
+// === Module 8908: TwinButtons ===
 
-// Module 8880 (TwinButtons)
+// Module 8908 (TwinButtons)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((arg0) => {
@@ -22,7 +22,7 @@ const result = require("set").fileFinishedImporting("design/components/experimen
 
 export const TwinButtons = function TwinButtons(children) {
   let _require;
-  let obj = _require(4886);
+  let obj = _require(4887);
   let tmp = callback(obj.useFontScale() > 1.2);
   _require = tmp;
   obj = {

@@ -1,6 +1,6 @@
-// === Module 5058: getMobileImageEncodingLadderConfig ===
+// === Module 5063: getMobileImageEncodingLadderConfig ===
 
-// Module 5058 (getMobileImageEncodingLadderConfig)
+// Module 5063 (getMobileImageEncodingLadderConfig)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

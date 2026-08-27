@@ -1,21 +1,21 @@
-// === Module 15617: shouldSkipSection ===
+// === Module 15682: shouldSkipSection ===
 
-// Module 15617 (shouldSkipSection)
-import getFontScale from "getFontScale" /* 4886 */;
-import computeSubtitle from "computeSubtitle" /* 7200 */;
-import renderDefaultEmpty from "renderDefaultEmpty" /* 8226 */;
+// Module 15682 (shouldSkipSection)
+import getFontScale from "getFontScale" /* 4887 */;
+import computeSubtitle from "computeSubtitle" /* 7206 */;
+import renderDefaultEmpty from "renderDefaultEmpty" /* 7728 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "updateGuildUnreadSentinel" /* 7308 */;
-import closure_9 from "generateOldThreadCutoff" /* 4459 */;
-import closure_10 from "updateUserGuildSettingsInternal" /* 4653 */;
-import { getScaledChannelRowHeight } from "hairlineWidth" /* 10017 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4654 */;
+import closure_8 from "updateGuildUnreadSentinel" /* 7314 */;
+import closure_9 from "generateOldThreadCutoff" /* 4460 */;
+import closure_10 from "updateUserGuildSettingsInternal" /* 4654 */;
+import { getScaledChannelRowHeight } from "hairlineWidth" /* 10121 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4655 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function shouldSkipSection(diff1) {
@@ -139,7 +139,7 @@ function findNearestUnreadItem(containerSize, id) {
             let tmp18 = item10031;
             let tmp19 = tmp70;
             let tmp20 = tmp72;
-            if (tmp12.type !== tmp71(8226).FastListItemTypes.ITEM) {
+            if (tmp12.type !== tmp71(7728).FastListItemTypes.ITEM) {
               tmp9 = item10031;
             } else {
               let tmp21 = shouldSkipSection;

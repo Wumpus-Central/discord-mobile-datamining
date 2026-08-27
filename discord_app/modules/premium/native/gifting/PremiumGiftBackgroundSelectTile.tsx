@@ -1,25 +1,25 @@
-// === Module 12419: PremiumGiftStyles ===
+// === Module 10680: PremiumGiftStyles ===
 
-// Module 12419 (PremiumGiftStyles)
+// Module 10680 (PremiumGiftStyles)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2433 */;
-import preloadDefault from "preload" /* 5440 */;
-import registerAssetDefault from "registerAsset" /* 12421 */;
-import registerAssetDefault2 from "registerAsset" /* 12422 */;
-import registerAssetDefault3 from "registerAsset" /* 12423 */;
-import registerAssetDefault4 from "registerAsset" /* 12424 */;
-import metadataDefault from "metadata" /* 12425 */;
-import metadataDefault2 from "metadata" /* 12426 */;
-import metadataDefault3 from "metadata" /* 12427 */;
-import metadataDefault4 from "metadata" /* 12428 */;
-import metadataDefault5 from "metadata" /* 12429 */;
+import preloadDefault from "preload" /* 5445 */;
+import registerAssetDefault from "registerAsset" /* 10682 */;
+import registerAssetDefault2 from "registerAsset" /* 10683 */;
+import registerAssetDefault3 from "registerAsset" /* 10684 */;
+import registerAssetDefault4 from "registerAsset" /* 10685 */;
+import metadataDefault from "metadata" /* 10686 */;
+import metadataDefault2 from "metadata" /* 10687 */;
+import metadataDefault3 from "metadata" /* 10688 */;
+import metadataDefault4 from "metadata" /* 10689 */;
+import metadataDefault5 from "metadata" /* 10690 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { PremiumGiftStyles } from "GuildFeatures" /* 1924 */;
-import { GIFT_STYLE_DESCRIPTIONS } from "GIFT_STYLE_DESCRIPTIONS" /* 12420 */;
+import { GIFT_STYLE_DESCRIPTIONS } from "GIFT_STYLE_DESCRIPTIONS" /* 10681 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;

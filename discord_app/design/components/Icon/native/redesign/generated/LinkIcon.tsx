@@ -1,10 +1,10 @@
-// === Module 4387: LinkIcon ===
+// === Module 4388: LinkIcon ===
 
-// Module 4387 (LinkIcon)
+// Module 4388 (LinkIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 4388 */;
+import registerAsset from "registerAsset" /* 4389 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

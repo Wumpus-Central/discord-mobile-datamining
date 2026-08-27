@@ -1,8 +1,8 @@
-// === Module 13648: PassthroughTouchView ===
+// === Module 13675: PassthroughTouchView ===
 
-// Module 13648 (PassthroughTouchView)
+// Module 13675 (PassthroughTouchView)
 import noopAll from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 13649 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 13676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;

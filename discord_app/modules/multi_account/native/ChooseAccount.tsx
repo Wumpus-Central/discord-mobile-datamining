@@ -1,15 +1,15 @@
-// === Module 15389: ChooseAccount ===
+// === Module 15454: ChooseAccount ===
 
-// Module 15389 (ChooseAccount)
+// Module 15454 (ChooseAccount)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MultiAccountTokenStatus } from "initialize" /* 12050 */;
-import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 12051 */;
+import { MultiAccountTokenStatus } from "initialize" /* 11896 */;
+import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11897 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 noopAll;
@@ -85,10 +85,10 @@ export default function ChooseAccount() {
                 intl2 = tmp31(1236).intl;
                 string = intl2.string;
                 obj1[4] = string(lib(1236).t["ETE/oC"]);
-                obj1 = closure_1_1(4809).confirm(obj1);
+                obj1 = closure_1_1(4810).confirm(obj1);
                 dependencyMap = 1;
                 c4 = 1;
-                const obj8 = closure_1_1(4809);
+                const obj8 = closure_1_1(4810);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -100,9 +100,9 @@ export default function ChooseAccount() {
               return obj3;
             } else {
               if (arg1) {
-                obj = closure_1_1(4411);
+                obj = closure_1_1(4412);
                 obj.hideActionSheet();
-                obj1 = closure_1_2(12054);
+                obj1 = closure_1_2(11900);
                 obj1.removeAccount(lib.id);
               }
               c4 = 3;
@@ -127,7 +127,7 @@ export default function ChooseAccount() {
   let tmp = callback3();
   let obj = _require(1500);
   _require = obj.useNavigation();
-  obj1 = _require(15390);
+  obj1 = _require(15455);
   const multiAccountUsers = obj1.useMultiAccountUsers().multiAccountUsers;
   obj = { headerText: null, subHeader: null, backgroundImageSource: null, backgroundImageCover: true, contentStyle: null, children: null };
   let intl = _require(1236).intl;
@@ -135,8 +135,8 @@ export default function ChooseAccount() {
   obj = { variant: "text-sm/medium", color: "text-default", children: null };
   let intl2 = _require(1236).intl;
   obj[2] = intl2.string(_require(1236).t["0M5fN7"]);
-  obj[1] = callback(_require(4440).Text, obj);
-  obj[2] = multiAccountUsers(13490);
+  obj[1] = callback(_require(4441).Text, obj);
+  obj[2] = multiAccountUsers(13517);
   obj[4] = tmp.container;
   obj1 = { style: tmp.mainCard, children: null };
   let items = [
@@ -207,8 +207,8 @@ export default function ChooseAccount() {
 
   ];
   let obj2 = { leading: null, label: null, labelStyle: null, onPress: null };
-  const tmp2 = multiAccountUsers(8722);
-  obj2[0] = callback(_require(8185).FormRow.Icon, { themedColor: multiAccountUsers(712).colors.TEXT_LINK, size: _require(1297).Icon.Sizes.SMALL_20, source: multiAccountUsers(15392) });
+  const tmp2 = multiAccountUsers(7678);
+  obj2[0] = callback(_require(8295).FormRow.Icon, { themedColor: multiAccountUsers(712).colors.TEXT_LINK, size: _require(1297).Icon.Sizes.SMALL_20, source: multiAccountUsers(15457) });
   let intl3 = _require(1236).intl;
   obj2[1] = intl3.string(_require(1236).t.bPP34Q);
   obj2[2] = tmp.addAccountLabel;
@@ -229,7 +229,7 @@ export default function ChooseAccount() {
       obj.track(closure_1_9.LOGIN_VIEWED, { source: "choose_account_add_account" });
     }
   };
-  items[1] = callback(_require(8185).FormRow, obj2);
+  items[1] = callback(_require(8295).FormRow, obj2);
   obj1[1] = items;
   obj[5] = callback2(View, obj1);
   return callback(tmp2, obj);

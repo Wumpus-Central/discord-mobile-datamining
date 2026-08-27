@@ -1,15 +1,15 @@
-// === Module 5413: fetchOnboardingPrompts ===
+// === Module 5418: fetchOnboardingPrompts ===
 
-// Module 5413 (fetchOnboardingPrompts)
+// Module 5418 (fetchOnboardingPrompts)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4652 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4653 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import closure_5 from "trackCommunicationDisabled" /* 1992 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleUpdate" /* 5414 */;
-import { serverApiResponseToClientState as closure_8 } from "serverPromptToClientPrompt" /* 5415 */;
+import closure_7 from "handleUpdate" /* 5419 */;
+import { serverApiResponseToClientState as closure_8 } from "serverPromptToClientPrompt" /* 5420 */;
 import ME from "ME" /* 676 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
 

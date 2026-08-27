@@ -1,6 +1,6 @@
-// === Module 12499: isVirtualCurrencyEnabled ===
+// === Module 12722: isVirtualCurrencyEnabled ===
 
-// Module 12499 (isVirtualCurrencyEnabled)
+// Module 12722 (isVirtualCurrencyEnabled)
 import set from "set" /* 2 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 

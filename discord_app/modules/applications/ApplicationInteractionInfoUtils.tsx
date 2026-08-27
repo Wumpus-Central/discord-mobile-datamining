@@ -1,6 +1,6 @@
-// === Module 8558: canViewInteractionInfo ===
+// === Module 8075: canViewInteractionInfo ===
 
-// Module 8558 (canViewInteractionInfo)
+// Module 8075 (canViewInteractionInfo)
 import set from "set" /* 2 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
 

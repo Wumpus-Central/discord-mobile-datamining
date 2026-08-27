@@ -1,7 +1,7 @@
-// === Module 8298: ? ===
+// === Module 7812: ? ===
 
-// Module 8298
-import closure_0 from "recomputeGuild" /* 5304 */;
+// Module 7812
+import closure_0 from "recomputeGuild" /* 5309 */;
 import closure_1 from "getUncachedChannelPermissions" /* 4089 */;
 import { Permissions } from "ME" /* 676 */;
 

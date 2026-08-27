@@ -1,9 +1,9 @@
-// === Module 8870: renderTooltipItem ===
+// === Module 8897: renderTooltipItem ===
 
-// Module 8870 (renderTooltipItem)
-import _modDef4184 from "module_4184" /* 4184 */;
-import Tooltip from "Tooltip" /* 8871 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8874 */;
+// Module 8897 (renderTooltipItem)
+import _modDef4185 from "module_4185" /* 4185 */;
+import Tooltip from "Tooltip" /* 8898 */;
+import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8901 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
@@ -20,7 +20,7 @@ function renderTooltipItem(arg0, arg1) {
     tmpResult = tmp(Tooltip.Tooltip, obj);
   }
   obj[2] = tmpResult;
-  return jsx(_modDef4184.View, { style: items, pointerEvents: "box-none", children: null });
+  return jsx(_modDef4185.View, { style: items, pointerEvents: "box-none", children: null });
 }
 let result = require("set").fileFinishedImporting("design/components/Tooltip/native/AnimatedTooltip.native.tsx");
 
@@ -28,7 +28,7 @@ export const AnimatedTooltip = function AnimatedTooltip(visible) {
   visible = visible.visible;
   const merged = Object.assign(visible, Object.create(null));
   importDefault = undefined;
-  let obj = visible(8873);
+  let obj = visible(8900);
   const result = obj.tooltipEnterExitAnimation(merged.position);
   const tmp3 = callback(React.useState(false), 2);
   importDefault = tmp3[1];

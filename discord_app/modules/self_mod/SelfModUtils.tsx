@@ -1,6 +1,6 @@
-// === Module 6081: isCurrentUserTeen ===
+// === Module 6089: isCurrentUserTeen ===
 
-// Module 6081 (isCurrentUserTeen)
+// Module 6089 (isCurrentUserTeen)
 import closure_0 from "mergeGuildAvatar" /* 1922 */;
 
 const result = require("set").fileFinishedImporting("modules/self_mod/SelfModUtils.tsx");

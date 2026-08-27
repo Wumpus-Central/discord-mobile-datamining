@@ -1,18 +1,18 @@
-// === Module 10210: getAutocompleteOptions ===
+// === Module 10334: getAutocompleteOptions ===
 
-// Module 10210 (getAutocompleteOptions)
+// Module 10334 (getAutocompleteOptions)
 import applyDefault from "apply" /* 12 */;
-import _executeCommandDefault from "_executeCommand" /* 10212 */;
-import closure_3 from "handleInit" /* 7448 */;
-import closure_4 from "handleInit" /* 7449 */;
-import closure_5 from "set" /* 5001 */;
-import closure_6 from "loadSavedGuildStickers" /* 5391 */;
+import _executeCommandDefault from "_executeCommand" /* 8370 */;
+import closure_3 from "handleInit" /* 7456 */;
+import closure_4 from "handleInit" /* 7457 */;
+import closure_5 from "set" /* 5006 */;
+import closure_6 from "loadSavedGuildStickers" /* 5396 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import closure_8 from "trackCommunicationDisabled" /* 1992 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
-import regExp from "regExp" /* 4904 */;
-import { AutocompleteTypes } from "AutocompleteTypes" /* 10211 */;
+import regExp from "regExp" /* 4905 */;
+import { AutocompleteTypes } from "AutocompleteTypes" /* 10335 */;
 import set from "set" /* 1925 */;
 
 const require = arg1;
@@ -37,7 +37,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
     stores: items,
     queryResults(query, canMentionEveryone) {
       let obj = flag(flag2[14]);
-      obj = { query, channel: _private, canMentionEveryone: null, canMentionHere: null, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: null, includeNonMentionableRoles: null, request: null };
+      obj = { query, channel: closure_0, canMentionEveryone: null, canMentionHere: null, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: null, includeNonMentionableRoles: null, request: null };
       canMentionEveryone = undefined;
       if (canMentionEveryone != null) {
         canMentionEveryone = canMentionEveryone.canMentionEveryone;
@@ -70,54 +70,25 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       obj[7] = prop1;
       obj[8] = arg2;
       ({ users, globals, roles } = obj.queryMentionResults(obj));
-      const GameMentionsMobileExperiment = _private(tmp2[15]).GameMentionsMobileExperiment;
-      const config = GameMentionsMobileExperiment.getConfig({ location: "mentions autocomplete" });
-      let enabled = config.enabled;
-      if (enabled) {
-        const IncludeGameMentionsInAutocomplete = tmp10(tmp2[16]).IncludeGameMentionsInAutocomplete;
-        enabled = IncludeGameMentionsInAutocomplete.getSetting();
-      }
-      let canMentionGames;
-      if (canMentionEveryone != null) {
-        canMentionGames = canMentionEveryone.canMentionGames;
-      }
-      if (true === canMentionGames) {
-        if (enabled) {
-          if (config.combineMentionAutocomplete) {
-            if (query.length > 0) {
-              let prop2;
-              if (canMentionEveryone != null) {
-                prop2 = canMentionEveryone.isActiveApplicationCommand;
-              }
-              if (!prop2) {
-                let result = tmp10(tmp2[17]).queryGamesAutocomplete(query);
-                if (result == null) {
-                  result = [];
-                }
-                const substr = result.slice(0, 1);
-                let mapped = substr.map((game) => ({ type: constants.GAME_MENTION, game }));
-                const tmp10Result = tmp10(tmp2[17]);
-              }
-              const items = [];
-              let arraySpreadResult = HermesBuiltin.arraySpread(users.map((arg0) => {
-                const merged = Object.assign(arg0);
-                return { type: constants.USER };
-              }), 0);
-              arraySpreadResult = HermesBuiltin.arraySpread(globals.map((arg0) => {
-                const merged = Object.assign(arg0);
-                return { type: constants.GLOBAL };
-              }), arraySpreadResult);
-              HermesBuiltin.arraySpread(mapped, HermesBuiltin.arraySpread(roles.map((arg0) => {
-                const merged = Object.assign(arg0);
-                return { type: constants.ROLE };
-              }), arraySpreadResult));
-              const tmpResult = flag(tmp2[12]);
-              return flag(tmp2[12])(items).value();
-            }
-          }
-        }
-      }
-      mapped = [];
+      const queryMentionResultsResult = obj.queryMentionResults(obj);
+      const tmp = flag;
+      const tmp2 = flag2;
+      const items = [
+        ...users.map((arg0) => {
+          const merged = Object.assign(arg0);
+          return { type: constants.USER };
+        }),
+        ...globals.map((arg0) => {
+          const merged = Object.assign(arg0);
+          return { type: constants.GLOBAL };
+        }),
+        ...roles.map((arg0) => {
+          const merged = Object.assign(arg0);
+          return { type: constants.ROLE };
+        })
+      ];
+      const tmpResult = flag(flag2[12]);
+      return flag(flag2[12])(items).value();
     },
     matches(arg0, arg1) {
       return flag(flag2[14]).matchSentinel(arg0, arg1, closure_12);
@@ -127,24 +98,18 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
   obj = {
     stores: items1,
     queryResults(query) {
-      const GameMentionsMobileExperiment = _private(flag2[15]).GameMentionsMobileExperiment;
-      const config = GameMentionsMobileExperiment.getConfig({ location: "game_mentions autocomplete" });
-      if (config.enabled) {
-        const IncludeGameMentionsInAutocomplete = tmp(tmp2[16]).IncludeGameMentionsInAutocomplete;
-        if (IncludeGameMentionsInAutocomplete.getSetting()) {
-          if (!config.combineMentionAutocomplete) {
-            if (0 !== query.length) {
-              let result = tmp(tmp2[17]).queryGamesAutocomplete(query);
-              if (result == null) {
-                result = [];
-              }
-              const substr = result.slice(0, closure_11);
-              const mapped = substr.map((game) => ({ type: constants.GAME_MENTION, game }));
-              const tmpResult = tmp(tmp2[17]);
-            }
-            return [];
+      const IncludeGameMentionsInAutocomplete = _private(flag2[15]).IncludeGameMentionsInAutocomplete;
+      if (IncludeGameMentionsInAutocomplete.getSetting()) {
+        if (0 !== query.length) {
+          let result = _private(flag2[16]).queryGamesAutocomplete(query);
+          if (result == null) {
+            result = [];
           }
+          const substr = result.slice(0, closure_11);
+          const mapped = substr.map((game) => ({ type: constants.GAME_MENTION, game }));
+          const tmpResult = _private(flag2[16]);
         }
+        return [];
       }
     },
     matches() {
@@ -222,11 +187,11 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
               }
               if (!hasLoadedStickerPacks) {
                 c20 = true;
-                const stickerPacks = _private(tmp3[18]).fetchStickerPacks();
-                const obj4 = _private(tmp3[18]);
+                const stickerPacks = _private(tmp3[17]).fetchStickerPacks();
+                const obj4 = _private(tmp3[17]);
               }
               const items2 = [query];
-              const items3 = [_private, (arg0, arg1) => arg1 === callback(6127).StickerSendability.SENDABLE];
+              const items3 = [_private, (arg0, arg1) => arg1 === callback(6133).StickerSendability.SENDABLE];
               items1 = flag(tmp3[14]).queryStickers(items2, true, items3);
               const tmp2Result = flag(tmp3[14]);
             }
@@ -355,8 +320,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
               } else if (0 === autocompleteChoices.length) {
                 const obj3 = { type: null, label: null };
                 obj3[0] = closure_1_10.LABEL;
-                const intl = _private(flag2[21]).intl;
-                obj3[1] = intl.string(_private(flag2[21]).t["41014u"]);
+                const intl = _private(flag2[20]).intl;
+                obj3[1] = intl.string(_private(flag2[20]).t["41014u"]);
                 const items = [obj3];
                 fillResult = items;
               } else {

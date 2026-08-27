@@ -1,9 +1,9 @@
-// === Module 12760: useCardGridLayout ===
+// === Module 12435: useCardGridLayout ===
 
-// Module 12760 (useCardGridLayout)
+// Module 12435 (useCardGridLayout)
 import set from "set" /* 2 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 5948 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 5953 */;
 
 const PROFILE_SIDE_PADDING = ARBITRARY_LARGE_OFFSET.PROFILE_SIDE_PADDING;
 let result = set.fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");
@@ -62,7 +62,7 @@ export default function useCardGridLayout() {
   const bound1 = Math.min(Math.max(tmp4, num), num2);
   const diff2 = num4 - 1;
   if (diff < bound1 * num4 + num3 * diff2) {
-    obj = { columns: 1, cardWidth: "Array", rowWidth: "call", gap: "dispatch" };
+    obj = { columns: 1, cardWidth: "Array", rowWidth: "context", gap: null };
     obj[3] = num3;
   } else {
     obj = { columns: null, cardWidth: null, rowWidth: null, gap: null };

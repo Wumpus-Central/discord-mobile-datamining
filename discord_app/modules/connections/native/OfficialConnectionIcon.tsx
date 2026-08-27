@@ -1,16 +1,16 @@
-// === Module 11198: OfficialConnectionIcon ===
+// === Module 11081: OfficialConnectionIcon ===
 
-// Module 11198 (OfficialConnectionIcon)
+// Module 11081 (OfficialConnectionIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import useRoleIcon from "useRoleIcon" /* 5924 */;
-import registerAssetDefault from "registerAsset" /* 11199 */;
-import registerAssetDefault2 from "registerAsset" /* 11200 */;
+import useRoleIcon from "useRoleIcon" /* 5929 */;
+import registerAssetDefault from "registerAsset" /* 11082 */;
+import registerAssetDefault2 from "registerAsset" /* 11083 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;

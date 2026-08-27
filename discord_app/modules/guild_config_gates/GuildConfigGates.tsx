@@ -1,7 +1,7 @@
-// === Module 17070: importDefaultResult1 ===
+// === Module 17136: importDefaultResult1 ===
 
-// Module 17070 (importDefaultResult1)
-import importDefaultResult1 from "hasLoaded" /* 17071 */;
+// Module 17136 (importDefaultResult1)
+import importDefaultResult1 from "hasLoaded" /* 17137 */;
 import { Endpoints } from "ME" /* 676 */;
 import initialize from "initialize" /* 589 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;

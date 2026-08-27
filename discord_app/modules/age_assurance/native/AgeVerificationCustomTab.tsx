@@ -1,8 +1,8 @@
-// === Module 8030: withTimeout ===
+// === Module 8626: withTimeout ===
 
-// Module 8030 (withTimeout)
+// Module 8626 (withTimeout)
 import timestampDefault from "timestamp" /* 3 */;
-import enforcingDefault from "enforcing" /* 4410 */;
+import enforcingDefault from "enforcing" /* 4411 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import keys from "keys" /* 644 */;
 

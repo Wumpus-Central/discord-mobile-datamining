@@ -1,7 +1,7 @@
-// === Module 12097: ? ===
+// === Module 11943: ? ===
 
-// Module 12097
-import ChatInputGuardDefault from "ChatInputGuard" /* 12081 */;
+// Module 11943
+import ChatInputGuardDefault from "ChatInputGuard" /* 11927 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import closure_5 from "trackCommunicationDisabled" /* 1992 */;
@@ -47,7 +47,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfil
   obj = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
   const obj2 = guildId(4095);
   tmp6 = GuildMemberFlags;
-  obj[3] = jsx(guildId(12098).ChatXIcon, {});
+  obj[3] = jsx(guildId(11944).ChatXIcon, {});
   obj[4] = stringResult1;
   return jsx(ChatInputGuardDefault, { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
 });

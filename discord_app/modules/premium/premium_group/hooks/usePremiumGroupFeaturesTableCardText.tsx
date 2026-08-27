@@ -1,9 +1,9 @@
-// === Module 13034: usePremiumGroupFeaturesTableCardText ===
+// === Module 13057: usePremiumGroupFeaturesTableCardText ===
 
-// Module 13034 (usePremiumGroupFeaturesTableCardText)
+// Module 13057 (usePremiumGroupFeaturesTableCardText)
 import initialize from "initialize" /* 589 */;
 import create from "create" /* 1938 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13035 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13058 */;
 import closure_3 from "reset" /* 4113 */;
 import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4121 */;
 
@@ -21,8 +21,8 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
     return null;
   } else {
     if (arg0 === tmp(1938).PremiumSubscriptionGroupRole.PRIMARY) {
-      let priceString = tmp(8376).getPriceString(stateFromStores, { withIntervals: true });
-      const tmpResult = tmp(8376);
+      let priceString = tmp(7890).getPriceString(stateFromStores, { withIntervals: true });
+      const tmpResult = tmp(7890);
     } else {
       priceString = null;
       if (null != tmp4) {

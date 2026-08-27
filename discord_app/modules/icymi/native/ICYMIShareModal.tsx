@@ -1,21 +1,21 @@
-// === Module 15938: Screenshot ===
+// === Module 16003: Screenshot ===
 
-// Module 15938 (Screenshot)
+// Module 16003 (Screenshot)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 9175 */;
+import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 9665 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import { DraftType } from "handleChanged" /* 4806 */;
-import closure_9 from "map" /* 4805 */;
+import { DraftType } from "handleChanged" /* 4807 */;
+import closure_9 from "map" /* 4806 */;
 import { AbortCodes } from "ME" /* 676 */;
-import { UserRowModes } from "UserRowModes" /* 9837 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4437 */;
+import { UserRowModes } from "UserRowModes" /* 10552 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4438 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function Screenshot(setUri) {
@@ -40,23 +40,23 @@ function Screenshot(setUri) {
       return nextPromise;
     }, 500);
   }, items);
-  let obj = setUri(8616);
+  let obj = setUri(7549);
   obj = { style: { position: "absolute", top: -1000, overflow: "hidden" }, children: null };
   obj = { style: items1, children: null };
   items1 = [tmp.preview, { width: ref(1494)().width }];
   const clientThemesOverride = obj.useClientThemesOverride();
   obj1 = { ref, options: { fileName: "icymi_content", format: "png", quality: 1 }, children: null };
   const obj2 = { style: tmp.base, children: null };
-  const tmp4 = ref(4294)();
+  const tmp4 = ref(4295)();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = ref(15940);
-  obj4[0] = setUri(4263).OverlayOpacity.LEVEL_7;
-  obj4[1] = setUri(4263).OverlayOpacity.LEVEL_8;
+  const tmp6 = ref(16005);
+  obj4[0] = setUri(4264).OverlayOpacity.LEVEL_7;
+  obj4[1] = setUri(4264).OverlayOpacity.LEVEL_8;
   obj3[4] = obj4;
-  const items2 = [callback3(ref(5017), obj3), ];
+  const items2 = [callback3(ref(5022), obj3), ];
   const obj5 = { gradient: tmp4, children: null };
-  const tmp7 = ref(5017);
+  const tmp7 = ref(5022);
   const items3 = [tmp.contentContainer, clientThemesOverride];
   obj5[1] = callback3(View, { style: items3, children: setUri.render() });
   items2[1] = callback3(setUri(4172).ThemeContextProvider, obj5);
@@ -197,7 +197,7 @@ class ICYMIShareModal {
                     closure_0 = arg0;
                     c2 = 0;
                     c1 = 0;
-                    return (/* F122522 */ function*() { ... })();
+                    return (/* F122796 */ function*() { ... })();
                   });
                   return function(arg0) {
                     const self = this;

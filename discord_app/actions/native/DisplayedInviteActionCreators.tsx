@@ -1,10 +1,10 @@
-// === Module 9548: showInvite ===
+// === Module 8787: showInvite ===
 
-// Module 9548 (showInvite)
+// Module 8787 (showInvite)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 7970 */;
-import getDisplayedInviteCode from "getDisplayedInviteCode" /* 9285 */;
+import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8580 */;
+import getDisplayedInviteCode from "getDisplayedInviteCode" /* 8788 */;
 
 const result = set.fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");
 

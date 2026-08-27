@@ -1,21 +1,21 @@
-// === Module 15094: DemoContextMenu ===
+// === Module 15158: DemoContextMenu ===
 
-// Module 15094 (DemoContextMenu)
+// Module 15158 (DemoContextMenu)
 import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 4408 */;
-import Text from "Text" /* 4440 */;
-import PressableCard from "PressableCard" /* 5548 */;
-import registerAssetDefault2 from "registerAsset" /* 8293 */;
-import registerAssetDefault3 from "registerAsset" /* 8660 */;
-import registerAssetDefault4 from "registerAsset" /* 8827 */;
-import registerAssetDefault5 from "registerAsset" /* 11196 */;
-import registerAssetDefault6 from "registerAsset" /* 12397 */;
-import registerAssetDefault7 from "registerAsset" /* 15095 */;
-import registerAssetDefault8 from "registerAsset" /* 15096 */;
+import registerAssetDefault from "registerAsset" /* 4409 */;
+import Text from "Text" /* 4441 */;
+import PressableCard from "PressableCard" /* 5553 */;
+import registerAssetDefault2 from "registerAsset" /* 7603 */;
+import registerAssetDefault3 from "registerAsset" /* 7807 */;
+import registerAssetDefault4 from "registerAsset" /* 10811 */;
+import registerAssetDefault5 from "registerAsset" /* 11079 */;
+import registerAssetDefault6 from "registerAsset" /* 12225 */;
+import registerAssetDefault7 from "registerAsset" /* 15159 */;
+import registerAssetDefault8 from "registerAsset" /* 15160 */;
 import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function DemoContextMenu(align) {
@@ -51,7 +51,7 @@ function DemoContextMenu(align) {
         obj = { length: dependencyMap };
         const obj2 = callback(12);
         return Array.from(obj).map((arg0, arg1) => {
-          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: true, variant: true, action: true };
+          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000140159758078922, variant: -0.000000011175878740889506, action: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012886619833379218 };
           obj[2] = length2[arg1 % length2.length];
           let str = "default";
           if (arg1 === closure_0 - 1) {
@@ -74,7 +74,7 @@ function DemoContextMenu(align) {
       obj[0] = closure_1;
       arr = Array.from(obj);
       mapped = arr.map((arg0, arg1) => {
-        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: true, variant: true, action: true };
+        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000140159758078922, variant: -0.000000011175878740889506, action: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012886619833379218 };
         obj[2] = length2[arg1 % length2.length];
         let str = "default";
         if (arg1 === closure_0 - 1) {
@@ -109,7 +109,7 @@ function DemoContextMenu(align) {
 }
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let items = [registerAssetDefault6, registerAssetDefault3, registerAssetDefault2, registerAssetDefault4, registerAssetDefault, registerAssetDefault7, registerAssetDefault8, registerAssetDefault5];
+let items = [registerAssetDefault6, registerAssetDefault2, registerAssetDefault3, registerAssetDefault4, registerAssetDefault, registerAssetDefault7, registerAssetDefault8, registerAssetDefault5];
 let closure_8 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
 createCacheKey = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: null };
 createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 12 };

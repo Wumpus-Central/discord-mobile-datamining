@@ -1,23 +1,23 @@
-// === Module 9154: openInviteModal ===
+// === Module 8579: openInviteModal ===
 
-// Module 9154 (openInviteModal)
+// Module 8579 (openInviteModal)
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 import createGuildRecordFromRustDefault from "createGuildRecordFromRust" /* 1910 */;
-import reinjectEphemeralsDefault from "reinjectEphemerals" /* 4687 */;
-import handleUserSettingsStoreUpdateDefault from "handleUserSettingsStoreUpdate" /* 6022 */;
-import scheduledEventSortDefault from "scheduledEventSort" /* 7198 */;
+import reinjectEphemeralsDefault from "reinjectEphemerals" /* 4688 */;
+import handleUserSettingsStoreUpdateDefault from "handleUserSettingsStoreUpdate" /* 6027 */;
+import scheduledEventSortDefault from "scheduledEventSort" /* 7204 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "addApplication" /* 4485 */;
+import closure_5 from "addApplication" /* 4486 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "trackCommunicationDisabled" /* 1992 */;
-import closure_8 from "updateInvite" /* 4428 */;
+import closure_8 from "updateInvite" /* 4429 */;
 import closure_9 from "handleConnectionOpen" /* 1981 */;
-import closure_10 from "handleConnectionOpen" /* 4266 */;
-import closure_11 from "insertUnsortedGuilds" /* 5328 */;
+import closure_10 from "handleConnectionOpen" /* 4267 */;
+import closure_11 from "insertUnsortedGuilds" /* 5333 */;
 import ME from "ME" /* 676 */;
 import items from "items" /* 678 */;
-import { isGameShopPath } from "STOREFRONT_MARKETING_GUILD_ID" /* 6023 */;
+import { isGameShopPath } from "STOREFRONT_MARKETING_GUILD_ID" /* 6028 */;
 
 const require = arg1;
 function openInviteModal() {
@@ -65,7 +65,7 @@ function _openInviteModal() {
               return obj;
             } else {
               obj1 = callback(table[16]);
-              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "paddingHorizontal", invite_instance_id: -452984278 };
+              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "accessibilityRole", invite_instance_id: "y" };
               obj1[1] = closure_0;
               obj1[4] = callback;
               c3 = 1;
@@ -297,7 +297,7 @@ export default function getOnClick(url) {
   c3 = undefined;
   pathname = undefined;
   obj = undefined;
-  obj = _require(4427);
+  obj = _require(4428);
   const findCodedLinkResult = obj.findCodedLink(url);
   c3 = findCodedLinkResult;
   if (null != findCodedLinkResult) {
@@ -345,11 +345,11 @@ export default function getOnClick(url) {
         closure_1_1(tmp4[27])(url);
         return true;
       }
-      result = { applicationId: code, skuId: "a" };
+      result = { applicationId: code, skuId: "r" };
     };
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.ACTIVITY_BOOKMARK) {
+    if (findCodedLinkResult.type === tmp2(4433).CodedLinkType.ACTIVITY_BOOKMARK) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -604,7 +604,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.GUILD_PRODUCT) {
+    if (findCodedLinkResult.type === tmp2(4433).CodedLinkType.GUILD_PRODUCT) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -620,7 +620,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
+    if (findCodedLinkResult.type === tmp2(4433).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -633,7 +633,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+    if (findCodedLinkResult.type === tmp2(4433).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -646,8 +646,8 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.QUESTS_EMBED) {
-      let tmp2Result = tmp2(10600);
+    if (findCodedLinkResult.type === tmp2(4433).CodedLinkType.QUESTS_EMBED) {
+      let tmp2Result = tmp2(11004);
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {
@@ -686,7 +686,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.COLLECTIBLES_SHOP) {
+    if (findCodedLinkResult.type === tmp2(4433).CodedLinkType.COLLECTIBLES_SHOP) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -773,7 +773,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(4432).CodedLinkType.APP_OAUTH2_LINK) {
+    if (findCodedLinkResult.type === tmp2(4433).CodedLinkType.APP_OAUTH2_LINK) {
       let fn = (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -787,7 +787,7 @@ export default function getOnClick(url) {
     }
     return fn;
   }
-  tmp2Result = tmp2(4639);
+  tmp2Result = tmp2(4640);
   let result = tmp2Result.tryParseEventDetailsPath(pathname);
   if (!tmp.skipExtensionCheck) {
     if (null != tmp2Result1.isSuspiciousDownload(url)) {
@@ -799,6 +799,6 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result1 = tmp2(8453);
+    tmp2Result1 = tmp2(7968);
   }
 };

@@ -1,18 +1,18 @@
-// === Module 14607: BountiesCtaDescription ===
+// === Module 14634: BountiesCtaDescription ===
 
-// Module 14607 (BountiesCtaDescription)
+// Module 14634 (BountiesCtaDescription)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 14589 */;
-import _modDef14609 from "module_14609" /* 14609 */;
-import metadataDefault from "metadata" /* 14610 */;
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 14616 */;
+import _modDef14636 from "module_14636" /* 14636 */;
+import metadataDefault from "metadata" /* 14637 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
-import closure_6 from "getOrCreateSet" /* 14608 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5334 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_6 from "getOrCreateSet" /* 14635 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5339 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function BountiesCtaDescription(isEmptyOrCompleted) {
@@ -28,7 +28,7 @@ function BountiesCtaDescription(isEmptyOrCompleted) {
   let obj = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl = tmp5(1236).intl;
   obj[2] = intl.string(AZGGo1);
-  const tmp7 = callback(tmp5(4440).Text, obj);
+  const tmp7 = callback(tmp5(4441).Text, obj);
   const intl2 = tmp5(1236).intl;
   obj = { onClick: openBountiesNuxPromoSheetDefault };
   const formatResult = intl2.format(tmp5(1236).t.fjSvsC, obj);
@@ -36,14 +36,14 @@ function BountiesCtaDescription(isEmptyOrCompleted) {
     obj = { variant: "text-sm/medium", children: null };
     const items = [tmp7, " ", formatResult];
     obj[1] = items;
-    let tmp9Result = tmp9(tmp5(4440).Text, obj);
+    let tmp9Result = tmp9(tmp5(4441).Text, obj);
   } else {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.description;
     const items1 = [tmp7, ];
     const obj2 = { variant: "text-sm/medium", children: null };
     obj2[1] = formatResult;
-    items1[1] = callback(tmp5(4440).Text, obj2);
+    items1[1] = callback(tmp5(4441).Text, obj2);
     obj1[1] = items1;
     tmp9Result = tmp9(closure_4, obj1);
   }
@@ -64,8 +64,8 @@ function BountiesCtaHeaderInner(bounties) {
   const items1 = [closure_6];
   const items2 = [bounties];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => bounties.some((id) => !closure_6.hasSeen(callback(table[12]).AdCreativeType.BOUNTY, id.id)), items2);
-  let obj2 = bounties(11140);
-  const QuestContent = bounties(5337).QuestContent;
+  let obj2 = bounties(11034);
+  const QuestContent = bounties(5342).QuestContent;
   const tmp6 = obj2.useBountiesExperience(constants2.QUEST_HOME_MOBILE).verticalScrollEnabled ? QuestContent.VIDEO_MODAL_MOBILE : QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
   importDefault = tmp6;
   const items3 = [bounties, tmp6];
@@ -91,20 +91,20 @@ function BountiesCtaHeaderInner(bounties) {
   const obj3 = { variant: "text-lg/semibold", color: "text-strong", children: null };
   const intl = tmp2(1236).intl;
   obj3[2] = intl.string(bounties(1236).t.qetVDw);
-  const items6 = [callback(bounties(4440).Text, obj3), callback(BountiesCtaDescription, { isEmptyOrCompleted: flag }), ];
+  const items6 = [callback(bounties(4441).Text, obj3), callback(BountiesCtaDescription, { isEmptyOrCompleted: flag }), ];
   let tmp13Result = !flag;
   if (!flag) {
     const obj4 = { grow: true, size: "md", variant: "primary-overlay", text: null, onPress: null };
     const intl2 = tmp2(1236).intl;
     obj4[3] = intl2.string(tmp2(1236).t["1kkbKw"]);
     obj4[4] = callback;
-    tmp13Result = callback(tmp2(4879).Button, obj4);
+    tmp13Result = callback(tmp2(4880).Button, obj4);
   }
   items6[2] = tmp13Result;
   obj2[1] = items6;
   items5[1] = closure_11(closure_4, obj2);
   obj[2] = items5;
-  const items7 = [closure_11(_modDef14609, obj), false];
+  const items7 = [closure_11(_modDef14636, obj), false];
   obj[2] = items7;
   return closure_11(closure_4, obj);
 }
@@ -136,7 +136,7 @@ let closure_12 = createCacheKey.createStyles(() => {
 });
 const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
   const _require = isEmptyOrCompleted;
-  const tmp2 = containerRef(14603)();
+  const tmp2 = containerRef(14630)();
   containerRef = tmp2.containerRef;
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
   let tmp3 = undefined !== isEmptyOrCompleted;
@@ -144,10 +144,10 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
     tmp3 = isEmptyOrCompleted;
   }
   if (!tmp3) {
-    let obj = _require(11404);
+    let obj = _require(11256);
     const bountyCarouselEmptyStateAnalytics = obj.useBountyCarouselEmptyStateAnalytics(null);
     obj = { theme: null, children: null };
-    obj[0] = _require(7959).ThemeTypes.DARKER;
+    obj[0] = _require(12971).ThemeTypes.DARKER;
     if (tmp3) {
       obj = {};
       let merged = Object.assign(isEmptyOrCompleted);
@@ -156,17 +156,17 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
     } else {
       obj1 = { adContentId: null, adCreativeType: null, questContent: null, questContentPosition: 0, overrideVisibility: null, sourceQuestContent: null, children: null };
       obj1[0] = closure_8;
-      obj1[1] = tmp7(7387).AdCreativeType.BOUNTY;
-      obj1[2] = tmp7(5337).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
+      obj1[1] = tmp7(7379).AdCreativeType.BOUNTY;
+      obj1[2] = tmp7(5342).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[4] = tmp2.isInView;
-      obj1[5] = tmp7(5337).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
+      obj1[5] = tmp7(5342).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
       obj1[6] = function children() {
         const obj = {};
         const merged = Object.assign(closure_0);
         obj.containerRef = containerRef;
         return closure_1_10(closure_1_14, obj);
       };
-      tmp9Result = tmp9(tmp7(11408).QuestContentImpressionTrackerNative, obj1);
+      tmp9Result = tmp9(tmp7(11260).QuestContentImpressionTrackerNative, obj1);
     }
     obj[1] = tmp9Result;
     return closure_10(_require(4172).ThemeContextProvider, obj);

@@ -1,8 +1,8 @@
-// === Module 16307: useMutualGuildsForMessageRequests ===
+// === Module 16372: useMutualGuildsForMessageRequests ===
 
-// Module 16307 (useMutualGuildsForMessageRequests)
+// Module 16372 (useMutualGuildsForMessageRequests)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 7293 */;
+import closure_4 from "createUserWidgetFromServer" /* 7299 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;

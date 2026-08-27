@@ -1,9 +1,9 @@
-// === Module 7524: queryGamesAutocomplete ===
+// === Module 9850: queryGamesAutocomplete ===
 
-// Module 7524 (queryGamesAutocomplete)
-import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH" /* 5002 */;
-import fetchStore from "fetchStore" /* 7525 */;
-import closure_2 from "set" /* 5001 */;
+// Module 9850 (queryGamesAutocomplete)
+import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH" /* 5007 */;
+import fetchStore from "fetchStore" /* 9851 */;
+import closure_2 from "set" /* 5006 */;
 import importDefaultResult from "debounce" /* 636 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// === Module 6471: ExperimentalGiftEnvelopeIllocon ===
+// === Module 6477: ExperimentalGiftEnvelopeIllocon ===
 
-// Module 6471 (ExperimentalGiftEnvelopeIllocon)
+// Module 6477 (ExperimentalGiftEnvelopeIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6472 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6478 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ExperimentalGiftEnvelopeIllocon.native.tsx");

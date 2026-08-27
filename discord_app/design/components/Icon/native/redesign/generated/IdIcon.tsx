@@ -1,10 +1,10 @@
-// === Module 9764: IdIcon ===
+// === Module 8969: IdIcon ===
 
-// Module 9764 (IdIcon)
+// Module 8969 (IdIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 9765 */;
+import registerAsset from "registerAsset" /* 8970 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

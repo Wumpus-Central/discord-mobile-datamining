@@ -1,19 +1,19 @@
-// === Module 11634: findGameMentionTokens ===
+// === Module 11485: findGameMentionTokens ===
 
-// Module 11634 (findGameMentionTokens)
+// Module 11485 (findGameMentionTokens)
 import set2 from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import set3 from "set" /* 1925 */;
 import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4106 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4477 */;
-import registerAssetDefault from "registerAsset" /* 8165 */;
-import addRule from "addRule" /* 11635 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
-import closure_5 from "getEmojiToGroupId" /* 5348 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4478 */;
+import registerAssetDefault from "registerAsset" /* 7972 */;
+import addRule from "addRule" /* 11486 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_5 from "getEmojiToGroupId" /* 5353 */;
 import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_7 from "getUncachedChannelPermissions" /* 4089 */;
-import regExp from "regExp" /* 4904 */;
+import regExp from "regExp" /* 4905 */;
 
 function findGameMentionTokens(text, name, items) {
   closure_0 = name;
@@ -295,7 +295,7 @@ export const getEmojiHighlightNodes = function getEmojiHighlightNodes(channel, a
 };
 export const getUsernameHighlightNodes = function getUsernameHighlightNodes(channel, arg1) {
   const items = [];
-  let obj = _require(11636);
+  let obj = _require(11487);
   const users = obj.getUsers(channel);
   _require = (arg0) => arg0;
   let match = regex3.exec(arg1);
@@ -428,33 +428,27 @@ export const getGameHighlightNodes = function getGameHighlightNodes(mentionGames
   return items1;
 };
 export const getGameMentionInputNodes = function getGameMentionInputNodes(arr) {
-  const GameMentionsMobileExperiment = _require(6124).GameMentionsMobileExperiment;
-  const config = GameMentionsMobileExperiment.getConfig({ location: "game mention input highlight" });
-  if (config.enabled) {
-    const IncludeGameMentionsInAutocomplete = _require(4134).IncludeGameMentionsInAutocomplete;
-    if (IncludeGameMentionsInAutocomplete.getSetting()) {
-      if (!tmp4) {
-        arr = closure_9;
-        _require = closure_9;
-        const items = [];
-        let index = arr.indexOf(closure_9);
-        if (-1 !== index) {
-          do {
-            let tmp7 = _require;
-            let tmp8 = dependencyMap;
-            let obj = _require(10133);
-            let tmp9 = index;
-            if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
-              arr = items.push(index);
-            }
-            index = arr.indexOf(arr, index + arr.length);
-          } while (-1 !== index);
+  const IncludeGameMentionsInAutocomplete = _require(4134).IncludeGameMentionsInAutocomplete;
+  const items = [];
+  if (IncludeGameMentionsInAutocomplete.getSetting()) {
+    _require = closure_9;
+    let index = arr.indexOf(closure_9);
+    if (-1 !== index) {
+      do {
+        let tmp3 = _require;
+        let tmp4 = dependencyMap;
+        let obj = _require(10258);
+        let tmp5 = index;
+        if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
+          arr = items.push(index);
         }
-        return items.map((location) => ({ location, length: length.length }));
-      }
+        index = arr.indexOf(arr2, index + arr2.length);
+      } while (-1 !== index);
     }
+    return items.map((location) => ({ location, length: length.length }));
+  } else {
+    return items;
   }
-  return [];
 };
 export const getRoleHighlightNodes = (getGuildId) => {
   const items = [];
@@ -486,7 +480,7 @@ export const getChannelHighlightNodes = function getChannelHighlightNodes(channe
   let _loop4Result;
   const _require = arg1;
   let items = [];
-  dependencyMap = _require(11636).getChannels(channel);
+  dependencyMap = _require(11487).getChannels(channel);
   c3 = 0;
   function _loop4() {
     let arr = lib;
@@ -522,7 +516,7 @@ export const getChannelHighlightNodes = function getChannelHighlightNodes(channe
             }
           }
         }
-        let obj = lib(closure_2[18]);
+        let obj = lib(closure_2[17]);
         lib = obj.unescapeChannelName(str2.substring(tmp2 + 2, closure_3));
         if (null != closure_2.find((text) => text.text === closure_0)) {
           obj = { location: null, length: null };

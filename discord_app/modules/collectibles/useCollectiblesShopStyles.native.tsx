@@ -1,9 +1,9 @@
-// === Module 10349: importDefaultResult1 ===
+// === Module 10746: importDefaultResult1 ===
 
-// Module 10349 (importDefaultResult1)
+// Module 10746 (importDefaultResult1)
 import ThemesDefault from "Themes" /* 712 */;
-import createUseCollectiblesShopStylesDefault from "createUseCollectiblesShopStyles" /* 10350 */;
-import importDefaultResult from "tinycolor" /* 7224 */;
+import createUseCollectiblesShopStylesDefault from "createUseCollectiblesShopStyles" /* 10747 */;
+import importDefaultResult from "tinycolor" /* 7230 */;
 import saturateResult from "module_1" /* 1 */;
 import saturateResult1 from "module_1" /* 1 */;
 

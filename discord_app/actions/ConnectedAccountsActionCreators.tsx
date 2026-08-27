@@ -1,13 +1,13 @@
-// === Module 5297: callback ===
+// === Module 5302: callback ===
 
-// Module 5297 (callback)
+// Module 5302 (callback)
 import timestampDefault from "timestamp" /* 3 */;
 import encodeProperties from "encodeProperties" /* 503 */;
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef4665 from "module_4665" /* 4665 */;
+import _modDef4666 from "module_4666" /* 4666 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5172 */;
+import closure_4 from "set" /* 5177 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -93,7 +93,7 @@ let obj = {
   },
   callback,
   connect(arg0, arg1, name, location, friend_sync) {
-    let obj = _modDef4665;
+    let obj = _modDef4666;
     obj = { url: closure_6.CONNECTION(arg0, arg1), body: null, context: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, friend_sync: null };
     friend_sync = undefined;
@@ -135,7 +135,7 @@ let obj = {
     return this.update(type, id, { show_activity: closure_0 });
   },
   update(arg0, arg1, body) {
-    let obj = _modDef4665;
+    let obj = _modDef4666;
     obj = { url: closure_6.CONNECTION(arg0, arg1), body, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
     const merged = Object.assign(body);

@@ -1,7 +1,7 @@
-// === Module 11298: useRedactableMediaAttachmentsForMessage ===
+// === Module 11177: useRedactableMediaAttachmentsForMessage ===
 
-// Module 11298 (useRedactableMediaAttachmentsForMessage)
-import closure_2 from "reinjectEphemerals" /* 4687 */;
+// Module 11177 (useRedactableMediaAttachmentsForMessage)
+import closure_2 from "reinjectEphemerals" /* 4688 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx");
@@ -13,7 +13,7 @@ export const useRedactableMediaAttachmentsForMessage = function useRedactableMed
   const items = [closure_2];
   const stateFromStores = _require(647).useStateFromStores(items, () => attachmentId.getMessage(closure_0, closure_1));
   let obj = _require(647);
-  closure_3 = _require(10074).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+  closure_3 = _require(10180).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
     return [];
   } else {
@@ -29,7 +29,7 @@ export const useRedactableMediaAttachmentsForMessage = function useRedactableMed
     }
     return found;
   }
-  const obj2 = _require(10074);
+  const obj2 = _require(10180);
 };
 export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmbedsForMessage(channelId, messageId, embedId) {
   const _require = channelId;
@@ -38,7 +38,7 @@ export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmb
   const items = [closure_2];
   const stateFromStores = _require(647).useStateFromStores(items, () => embedId.getMessage(closure_0, closure_1));
   let obj = _require(647);
-  closure_3 = _require(10074).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+  closure_3 = _require(10180).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
     return [];
   } else {
@@ -54,5 +54,5 @@ export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmb
     }
     return found;
   }
-  const obj2 = _require(10074);
+  const obj2 = _require(10180);
 };

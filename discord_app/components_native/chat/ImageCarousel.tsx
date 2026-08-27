@@ -1,14 +1,14 @@
-// === Module 10222: Tile ===
+// === Module 10343: Tile ===
 
-// Module 10222 (Tile)
+// Module 10343 (Tile)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { DraftType } from "handleChanged" /* 4806 */;
-import closure_7 from "map" /* 4805 */;
-import IMAGE_CAROUSEL_TILE_HEIGHT from "IMAGE_CAROUSEL_TILE_HEIGHT" /* 10223 */;
+import { DraftType } from "handleChanged" /* 4807 */;
+import closure_7 from "map" /* 4806 */;
+import IMAGE_CAROUSEL_TILE_HEIGHT from "IMAGE_CAROUSEL_TILE_HEIGHT" /* 10344 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function Tile(onEdit) {
@@ -379,7 +379,7 @@ let result = require("set").fileFinishedImporting("components_native/chat/ImageC
 
 export default memoResult;
 export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyle(arg0) {
-  let obj = sharedValue(4184);
+  let obj = sharedValue(4185);
   sharedValue = obj.useSharedValue(0);
   const items = [sharedValue, arg0];
   const effect = importAllResult.useEffect(() => {
@@ -398,9 +398,9 @@ export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyl
     obj[1] = items;
     return obj;
   };
-  obj = { withTiming: sharedValue(4445).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1297).STANDARD_EASING, withSpring: sharedValue(4878).withSpring };
+  obj = { withTiming: sharedValue(4446).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1297).STANDARD_EASING, withSpring: sharedValue(4879).withSpring };
   fn.__closure = obj;
   fn.__workletHash = 14458898683767;
   fn.__initData = closure_14;
-  return sharedValue(4184).useAnimatedStyle(fn);
+  return sharedValue(4185).useAnimatedStyle(fn);
 };

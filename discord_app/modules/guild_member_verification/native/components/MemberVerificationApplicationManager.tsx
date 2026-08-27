@@ -1,9 +1,9 @@
-// === Module 16803: prototype ===
+// === Module 16869: prototype ===
 
-// Module 16803 (prototype)
-import initializeDefault from "initialize" /* 5433 */;
-import closure_3 from "handleConnectionOpen" /* 4266 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4267 */;
+// Module 16869 (prototype)
+import initializeDefault from "initialize" /* 5438 */;
+import closure_3 from "handleConnectionOpen" /* 4267 */;
+import closure_4 from "handleGatewayJoinRequestUpdate" /* 4268 */;
 
 let require = arg1;
 initializeDefault;

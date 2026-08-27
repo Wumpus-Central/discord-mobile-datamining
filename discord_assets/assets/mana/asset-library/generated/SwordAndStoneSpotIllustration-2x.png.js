@@ -1,6 +1,6 @@
-// === Module 7016: metadata ===
+// === Module 7022: metadata ===
 
-// Module 7016 (metadata)
+// Module 7022 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SwordAndStoneSpotIllustration-2x.png.js");

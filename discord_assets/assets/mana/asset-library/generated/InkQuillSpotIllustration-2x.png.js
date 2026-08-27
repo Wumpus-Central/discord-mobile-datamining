@@ -1,6 +1,6 @@
-// === Module 6702: metadata ===
+// === Module 6708: metadata ===
 
-// Module 6702 (metadata)
+// Module 6708 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/InkQuillSpotIllustration-2x.png.js");

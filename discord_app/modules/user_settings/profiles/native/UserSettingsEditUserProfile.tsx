@@ -1,8 +1,8 @@
-// === Module 14177: UserSettingsEditUserProfile ===
+// === Module 14204: UserSettingsEditUserProfile ===
 
-// Module 14177 (UserSettingsEditUserProfile)
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5920 */;
-import EditUserProfileBannerDefault from "EditUserProfileBanner" /* 14178 */;
+// Module 14204 (UserSettingsEditUserProfile)
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5925 */;
+import EditUserProfileBannerDefault from "EditUserProfileBanner" /* 14205 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -29,7 +29,7 @@ export default function UserSettingsEditUserProfile(arg0) {
     obj[0] = stateFromStores;
     const merged = Object.assign(arg0);
     obj[1] = jsx(EditUserProfileBannerDefault, { currentUser: null });
-    tmp7 = jsx(stateFromStores(5900).AnalyticsLocationProvider, { currentUser: null });
+    tmp7 = jsx(stateFromStores(5905).AnalyticsLocationProvider, { currentUser: null });
     const tmpResult = EditUserProfileBannerDefault;
   }
   return tmp7;

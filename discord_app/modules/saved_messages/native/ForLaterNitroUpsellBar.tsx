@@ -1,9 +1,9 @@
-// === Module 12850: ForLaterNitroUpsellBar ===
+// === Module 12869: ForLaterNitroUpsellBar ===
 
-// Module 12850 (ForLaterNitroUpsellBar)
+// Module 12869 (ForLaterNitroUpsellBar)
 import closure_3 from "noop" /* 19 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 8595 */;
+import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 7529 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -14,7 +14,7 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   isReminder = isReminder.isReminder;
   const isAtLimit = isReminder.isAtLimit;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5900)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5905)().analyticsLocations;
   const items = [isReminder, analyticsLocations];
   const callback = React.useCallback(() => analyticsLocations(closure_1_2[5])(isReminder, analyticsLocations), items);
   let obj = isReminder(4107);

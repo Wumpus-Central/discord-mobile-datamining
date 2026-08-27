@@ -1,6 +1,6 @@
-// === Module 15592: GuildHeaderCoachmarks ===
+// === Module 15657: GuildHeaderCoachmarks ===
 
-// Module 15592 (GuildHeaderCoachmarks)
+// Module 15657 (GuildHeaderCoachmarks)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "getUncachedChannelPermissions" /* 4089 */;

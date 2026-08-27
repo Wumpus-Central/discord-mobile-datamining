@@ -1,17 +1,17 @@
-// === Module 15391: AccountStatusIcon ===
+// === Module 15456: AccountStatusIcon ===
 
-// Module 15391 (AccountStatusIcon)
+// Module 15456 (AccountStatusIcon)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import nameFromUserDefault from "nameFromUser" /* 4288 */;
+import nameFromUserDefault from "nameFromUser" /* 4289 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createdAt" /* 1930 */;
-import closure_6 from "initialize" /* 4289 */;
+import closure_6 from "initialize" /* 4290 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { MultiAccountTokenStatus } from "initialize" /* 12050 */;
+import { MultiAccountTokenStatus } from "initialize" /* 11896 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 class AccountStatusIcon {
@@ -77,12 +77,12 @@ export default function AccountSwitcherListItem(arg0) {
       obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
       const intl = tmp2(1236).intl;
       obj[2] = intl.string(tmp2(1236).t.seV8yt);
-      let tmp8 = callback(tmp2(4440).Text, obj);
+      let tmp8 = callback(tmp2(4441).Text, obj);
     }
     if (null == onPressUser) {
       let PressableOpacity = closure_3;
     } else {
-      PressableOpacity = tmp2(5015).PressableOpacity;
+      PressableOpacity = tmp2(5020).PressableOpacity;
     }
     obj = { selected: null };
     obj[0] = tmp7;
@@ -102,7 +102,7 @@ export default function AccountSwitcherListItem(arg0) {
     const items2 = [leading, , ];
     obj2 = { style: null, children: null };
     obj2[0] = tmp.accountInfo;
-    const obj3 = { user: null, guildId: "a" };
+    const obj3 = { user: null, guildId: "r" };
     obj3[0] = obj2;
     const items3 = [callback(tmp2(1297).Avatar, obj3), ];
     const obj4 = { style: null, children: null };
@@ -119,7 +119,7 @@ export default function AccountSwitcherListItem(arg0) {
     const obj7 = { mode: "username", identifiable: null };
     obj7[1] = str;
     obj6[4] = nameFromUserDefault.getUserTag(obj2, obj7);
-    const items4 = [callback(tmp2(4440).Text, obj6), ];
+    const items4 = [callback(tmp2(4441).Text, obj6), ];
     let tmp18Result = !stateFromStores;
     if (!stateFromStores) {
       tmp18Result = !obj2.hasUniqueUsername();
@@ -128,7 +128,7 @@ export default function AccountSwitcherListItem(arg0) {
       const obj8 = { variant: "text-md/normal", color: "text-muted", children: null };
       const _HermesInternal = HermesInternal;
       obj8[2] = "#" + obj2.discriminator;
-      tmp18Result = tmp18(tmp2(4440).Text, obj8);
+      tmp18Result = tmp18(tmp2(4441).Text, obj8);
     }
     items4[1] = tmp18Result;
     obj5[1] = items4;
@@ -151,7 +151,7 @@ export default function AccountSwitcherListItem(arg0) {
     const obj10 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
     const intl3 = tmp2(1236).intl;
     obj10[2] = intl3.string(tmp2(1236).t.tYX2ps);
-    tmp8 = callback(tmp2(4440).Text, obj10);
+    tmp8 = callback(tmp2(4441).Text, obj10);
   }
 };
 export { AccountStatusIcon };

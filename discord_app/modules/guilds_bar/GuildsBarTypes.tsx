@@ -1,6 +1,6 @@
-// === Module 15798: SpecialGuildsNodeIds ===
+// === Module 15862: SpecialGuildsNodeIds ===
 
-// Module 15798 (SpecialGuildsNodeIds)
+// Module 15862 (SpecialGuildsNodeIds)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guilds_bar/GuildsBarTypes.tsx");

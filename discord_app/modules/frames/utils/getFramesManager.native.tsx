@@ -1,10 +1,10 @@
-// === Module 11136: getFramesManager ===
+// === Module 9417: getFramesManager ===
 
-// Module 11136 (getFramesManager)
+// Module 9417 (getFramesManager)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/frames/utils/getFramesManager.native.tsx");
 
 export default function getFramesManager() {
-  return importDefault(11137);
+  return importDefault(9418);
 };

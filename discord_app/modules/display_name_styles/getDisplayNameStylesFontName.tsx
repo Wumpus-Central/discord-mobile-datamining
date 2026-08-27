@@ -1,6 +1,6 @@
-// === Module 14206: getDisplayNameStylesFontName ===
+// === Module 14233: getDisplayNameStylesFontName ===
 
-// Module 14206 (getDisplayNameStylesFontName)
+// Module 14233 (getDisplayNameStylesFontName)
 import messagesProxyDefault from "messagesProxy" /* 2727 */;
 
 const obj = {};

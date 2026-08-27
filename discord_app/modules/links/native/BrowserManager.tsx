@@ -1,11 +1,11 @@
-// === Module 4409: NativeModules ===
+// === Module 4410: NativeModules ===
 
-// Module 4409 (NativeModules)
+// Module 4410 (NativeModules)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 import keys2 from "keys" /* 691 */;
 import _modDef4158 from "module_4158" /* 4158 */;
-import enforcingDefault from "enforcing" /* 4410 */;
+import enforcingDefault from "enforcing" /* 4411 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import keys from "keys" /* 644 */;
 
@@ -149,13 +149,13 @@ export const browserManagerSelectBrowser = function browserManagerSelectBrowser(
   let obj = set2;
   if (obj.isAndroid()) {
     if (tmp(691).WebBrowserType.SAFARI === selectedBrowser) {
-      const browser = enforcingDefault.selectBrowser(tmp(4410).BrowserType.SAFARI);
+      const browser = enforcingDefault.selectBrowser(tmp(4411).BrowserType.SAFARI);
       const obj3 = enforcingDefault;
     } else if (tmp(691).WebBrowserType.IN_APP === selectedBrowser) {
-      const browser1 = enforcingDefault.selectBrowser(tmp(4410).BrowserType.IN_APP);
+      const browser1 = enforcingDefault.selectBrowser(tmp(4411).BrowserType.IN_APP);
       const obj2 = enforcingDefault;
     } else if (tmp(691).WebBrowserType.CHROME === selectedBrowser) {
-      const browser2 = enforcingDefault.selectBrowser(tmp(4410).BrowserType.CHROME);
+      const browser2 = enforcingDefault.selectBrowser(tmp(4411).BrowserType.CHROME);
       const obj5 = enforcingDefault;
     }
   } else {

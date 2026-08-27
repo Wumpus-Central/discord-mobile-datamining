@@ -1,7 +1,7 @@
-// === Module 5928: _copy ===
+// === Module 5933: _copy ===
 
-// Module 5928 (_copy)
-import useClipboardDefault from "useClipboard" /* 5929 */;
+// Module 5933 (_copy)
+import useClipboardDefault from "useClipboard" /* 5934 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function _copy() {

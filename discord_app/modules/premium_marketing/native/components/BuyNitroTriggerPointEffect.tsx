@@ -1,9 +1,9 @@
-// === Module 12961: BuyNitroTriggerPointEffect ===
+// === Module 12984: BuyNitroTriggerPointEffect ===
 
-// Module 12961 (BuyNitroTriggerPointEffect)
+// Module 12984 (BuyNitroTriggerPointEffect)
 import set from "set" /* 2 */;
-import useCommonTriggerPoint from "useCommonTriggerPoint" /* 12962 */;
-import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 12963 */;
+import useCommonTriggerPoint from "useCommonTriggerPoint" /* 12985 */;
+import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 12986 */;
 
 const result = set.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroTriggerPointEffect.tsx");
 

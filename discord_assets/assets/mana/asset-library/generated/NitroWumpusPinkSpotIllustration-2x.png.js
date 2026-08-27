@@ -1,6 +1,6 @@
-// === Module 6812: metadata ===
+// === Module 6818: metadata ===
 
-// Module 6812 (metadata)
+// Module 6818 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWumpusPinkSpotIllustration-2x.png.js");

@@ -1,6 +1,6 @@
-// === Module 16542: Permissions ===
+// === Module 16608: Permissions ===
 
-// Module 16542 (Permissions)
+// Module 16608 (Permissions)
 import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
 import { Permissions } from "sum" /* 505 */;
 

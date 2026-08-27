@@ -1,6 +1,6 @@
-// === Module 16908: fetchRTCLatencyTestRegions ===
+// === Module 16974: fetchRTCLatencyTestRegions ===
 
-// Module 16908 (fetchRTCLatencyTestRegions)
+// Module 16974 (fetchRTCLatencyTestRegions)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

@@ -1,8 +1,8 @@
-// === Module 7629: _discardDraftOrder ===
+// === Module 10506: _discardDraftOrder ===
 
-// Module 7629 (_discardDraftOrder)
+// Module 10506 (_discardDraftOrder)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { OrderStatus } from "CustomCheckoutFlow" /* 4426 */;
+import { OrderStatus } from "CustomCheckoutFlow" /* 4427 */;
 
 const require = arg1;
 function _discardDraftOrder() {

@@ -1,8 +1,8 @@
-// === Module 8377: getPriceString ===
+// === Module 7891: getPriceString ===
 
-// Module 8377 (getPriceString)
+// Module 7891 (getPriceString)
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6028 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6033 */;
 import closure_2 from "addSubscriptionPlan" /* 4112 */;
 
 require = arg1;
@@ -25,7 +25,7 @@ export const getPriceString = function getPriceString(hasAnyPremiumGroup) {
           const formatPriceResult = formatSingleCurrencyPrice.formatPrice(price.amount, price.currency);
           if (tmp) {
             ({ interval, intervalCount } = value);
-            return tmp2(6028).formatRate(formatPriceResult, interval, intervalCount);
+            return tmp2(6033).formatRate(formatPriceResult, interval, intervalCount);
           } else {
             return formatPriceResult;
           }

@@ -1,6 +1,6 @@
-// === Module 9081: lerpVarWidthThumbnailScrollBounds ===
+// === Module 8521: lerpVarWidthThumbnailScrollBounds ===
 
-// Module 9081 (lerpVarWidthThumbnailScrollBounds)
+// Module 8521 (lerpVarWidthThumbnailScrollBounds)
 import set from "set" /* 2 */;
 
 function lerpVarWidthThumbnailScrollBounds(closure_1, arg1) {

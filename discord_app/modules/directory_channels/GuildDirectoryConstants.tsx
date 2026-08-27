@@ -1,6 +1,6 @@
-// === Module 11945: DirectoryEntryTypes ===
+// === Module 11789: DirectoryEntryTypes ===
 
-// Module 11945 (DirectoryEntryTypes)
+// Module 11789 (DirectoryEntryTypes)
 import set from "set" /* 2 */;
 import fromStringAll from "fromString" /* 506 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;

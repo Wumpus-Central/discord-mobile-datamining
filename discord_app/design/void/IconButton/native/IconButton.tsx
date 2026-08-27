@@ -1,10 +1,10 @@
-// === Module 13014: SquareIconButton ===
+// === Module 13037: SquareIconButton ===
 
-// Module 13014 (SquareIconButton)
+// Module 13037 (SquareIconButton)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 class SquareIconButton {

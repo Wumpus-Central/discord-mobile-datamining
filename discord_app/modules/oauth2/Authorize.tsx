@@ -1,12 +1,12 @@
-// === Module 10651: filterScopes ===
+// === Module 9208: filterScopes ===
 
-// Module 10651 (filterScopes)
+// Module 9208 (filterScopes)
 import fromStringAll from "fromString" /* 506 */;
 import applyOverwritesAll from "applyOverwrites" /* 4094 */;
-import keysSorter from "keysSorter" /* 5345 */;
-import set from "set" /* 9117 */;
+import keysSorter from "keysSorter" /* 5350 */;
+import set from "set" /* 8541 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 4266 */;
+import closure_4 from "handleConnectionOpen" /* 4267 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -20,10 +20,10 @@ export const filterScopes = function filterScopes(items) {
   });
   let hasItem = found.includes(set.OAuth2Scopes.BOT);
   if (hasItem) {
-    hasItem = !found.includes(tmp(9117).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    hasItem = !found.includes(tmp(8541).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   if (hasItem) {
-    found.push(tmp(9117).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    found.push(tmp(8541).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   return found;
 };

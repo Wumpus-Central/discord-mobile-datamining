@@ -1,6 +1,6 @@
-// === Module 9007: LEGACY_BADGE_ID_MAP ===
+// === Module 8494: LEGACY_BADGE_ID_MAP ===
 
-// Module 9007 (LEGACY_BADGE_ID_MAP)
+// Module 8494 (LEGACY_BADGE_ID_MAP)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/LegacyBadgeIdMap.tsx");

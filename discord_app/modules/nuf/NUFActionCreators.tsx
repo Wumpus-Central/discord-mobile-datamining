@@ -1,6 +1,6 @@
-// === Module 12374: setNewUser ===
+// === Module 12198: setNewUser ===
 
-// Module 12374 (setNewUser)
+// Module 12198 (setNewUser)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

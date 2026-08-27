@@ -1,9 +1,9 @@
-// === Module 9757: isApplicationAgeRestricted ===
+// === Module 8363: isApplicationAgeRestricted ===
 
-// Module 9757 (isApplicationAgeRestricted)
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5005 */;
-import getUnitIdDefault from "getUnitId" /* 9758 */;
-import closure_3 from "addApplication" /* 4485 */;
+// Module 8363 (isApplicationAgeRestricted)
+import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5010 */;
+import getUnitIdDefault from "getUnitId" /* 8364 */;
+import closure_3 from "addApplication" /* 4486 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/applications/utils/isApplicationAgeRestricted.tsx");

@@ -1,13 +1,13 @@
-// === Module 11318: handleChannelDelete ===
+// === Module 10647: handleChannelDelete ===
 
-// Module 11318 (handleChannelDelete)
+// Module 10647 (handleChannelDelete)
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import apexExperimentDefault from "apexExperiment" /* 11319 */;
+import apexExperimentDefault from "apexExperiment" /* 10648 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "handleConnectionOpen" /* 1981 */;
-import closure_5 from "handleConnectionOpen" /* 4266 */;
+import closure_5 from "handleConnectionOpen" /* 4267 */;
 import { isStaticChannelRoute } from "set" /* 1398 */;
 
 require = arg1;

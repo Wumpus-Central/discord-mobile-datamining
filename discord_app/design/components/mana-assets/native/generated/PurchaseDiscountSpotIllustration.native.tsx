@@ -1,10 +1,10 @@
-// === Module 6857: PurchaseDiscountSpotIllustration ===
+// === Module 6863: PurchaseDiscountSpotIllustration ===
 
-// Module 6857 (PurchaseDiscountSpotIllustration)
+// Module 6863 (PurchaseDiscountSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6858 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6864 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PurchaseDiscountSpotIllustration.native.tsx");

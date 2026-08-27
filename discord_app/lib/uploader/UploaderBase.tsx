@@ -1,11 +1,11 @@
-// === Module 7509: _fileSize ===
+// === Module 7517: _fileSize ===
 
-// Module 7509 (_fileSize)
+// Module 7517 (_fileSize)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { AbortCodes } from "ME" /* 676 */;
-import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4437 */;
+import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4438 */;
 import { EventEmitter } from "EventEmitter" /* 652 */;
 
 const require = arg1;

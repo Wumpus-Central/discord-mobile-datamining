@@ -1,10 +1,10 @@
-// === Module 15619: isFavoritesSection ===
+// === Module 15684: isFavoritesSection ===
 
-// Module 15619 (isFavoritesSection)
+// Module 15684 (isFavoritesSection)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4652 */;
-import computeSubtitle from "computeSubtitle" /* 7200 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4653 */;
+import computeSubtitle from "computeSubtitle" /* 7206 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/channel_list_v2/native/ChannelListUtils.tsx");

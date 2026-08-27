@@ -1,11 +1,11 @@
-// === Module 9168: getGuildEventsForCurrentUser ===
+// === Module 9672: getGuildEventsForCurrentUser ===
 
-// Module 9168 (getGuildEventsForCurrentUser)
-import initializeDefault from "initialize" /* 5433 */;
-import _modDef9155 from "module_9155" /* 9155 */;
+// Module 9672 (getGuildEventsForCurrentUser)
+import initializeDefault from "initialize" /* 5438 */;
+import _modDef9594 from "module_9594" /* 9594 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "handleConnectionOpen" /* 4266 */;
-import closure_4 from "scheduledEventSort" /* 7198 */;
+import closure_3 from "handleConnectionOpen" /* 4267 */;
+import closure_4 from "scheduledEventSort" /* 7204 */;
 import set from "set" /* 2 */;
 
 function getGuildEventsForCurrentUser() {
@@ -182,7 +182,7 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
   })();
 };
 prototype["getGuildEventUsers"] = function getGuildEventUsers(id, arg1, guild_id) {
-  return _modDef9155.fetchUsersForGuildEvent(id, arg1, guild_id);
+  return _modDef9594.fetchUsersForGuildEvent(id, arg1, guild_id);
 };
 prototype["getGuildEventsForCurrentUser"] = function getGuildEventsForCurrentUser(arg0) {
   return getGuildEventsForCurrentUser(arg0);

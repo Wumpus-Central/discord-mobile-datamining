@@ -1,6 +1,6 @@
-// === Module 13303: isNotAutomodEmbed ===
+// === Module 13330: isNotAutomodEmbed ===
 
-// Module 13303 (isNotAutomodEmbed)
+// Module 13330 (isNotAutomodEmbed)
 import set from "set" /* 2 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 693 */;
 

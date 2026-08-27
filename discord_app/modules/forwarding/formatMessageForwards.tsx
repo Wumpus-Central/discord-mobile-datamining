@@ -1,10 +1,10 @@
-// === Module 8282: getForwardInfo ===
+// === Module 7796: getForwardInfo ===
 
-// Module 8282 (getForwardInfo)
+// Module 7796 (getForwardInfo)
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import resetCache from "resetCache" /* 4131 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6091 */;
-import closure_3 from "getGuild" /* 8283 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6099 */;
+import closure_3 from "getGuild" /* 7797 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
 import closure_6 from "getUncachedChannelPermissions" /* 4089 */;
@@ -90,7 +90,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
         if (obj1.can(channel1.accessPermissions, channel1)) {
           obj4 = { snapshotIndex: null, footerInfo: null };
           obj4[0] = snapshotIndex;
-          const tmp3Result = tmp3(4638);
+          const tmp3Result = tmp3(4639);
           const channelName = tmp3Result.computeChannelName(channel1, tmp, tmp2, true);
           const obj5 = { originLabel: null, timestampLabel: null, accessibilityLabel: null };
           obj5[0] = channelName;

@@ -1,9 +1,9 @@
-// === Module 15047: ? ===
+// === Module 15111: ? ===
 
-// Module 15047
+// Module 15111
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PressableBase from "PressableBase" /* 5015 */;
-import ShareIcon from "ShareIcon" /* 12510 */;
+import PressableBase from "PressableBase" /* 5020 */;
+import ShareIcon from "ShareIcon" /* 12692 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -13,7 +13,7 @@ const memoResult = importAllResult.memo(function ShareLogsButton() {
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["Aw+09z"]);
   obj[1] = function onPress() {
-    let obj = callback(9138);
+    let obj = callback(8563);
     obj = { message: callback(7).stringify() };
     return obj.showShareActionSheet(obj, "Debug Logs");
   };

@@ -1,7 +1,7 @@
-// === Module 16492: createSoundItems ===
+// === Module 16556: createSoundItems ===
 
-// Module 16492 (createSoundItems)
-import SoundButtonOverlay from "SoundButtonOverlay" /* 4924 */;
+// Module 16556 (createSoundItems)
+import SoundButtonOverlay from "SoundButtonOverlay" /* 4925 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
@@ -9,8 +9,8 @@ import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import closure_7 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_8 from "handleConnectionOpen" /* 1981 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "handleSoundCreateOrUpdate" /* 4916 */;
-import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 4918 */;
+import closure_10 from "handleSoundCreateOrUpdate" /* 4917 */;
+import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 4919 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
 require = arg1;
@@ -213,21 +213,23 @@ export default function useSoundGrid(guild_id) {
     }
     return guild;
   });
-  let obj12 = flag(flag2[17]);
-  const config = tmp4(flag2[18]).useConfig({ location: "useSoundGrid" });
+  const TopSoundboardSoundsMobileExperiment = tmp(tmp2[18]).TopSoundboardSoundsMobileExperiment;
+  const config = TopSoundboardSoundsMobileExperiment.getConfig({ location: "useSoundGrid" });
   enabled = config.enabled;
   topSoundsFirst = config.topSoundsFirst;
-  if (enabled) {
-    tmpResult = tmp(tmp2[19]);
-    let id;
-    if (stateFromStores3 != null) {
-      id = stateFromStores3.id;
+  tmp4(flag2[19])(() => {
+    if (enabled) {
+      let id;
+      if (stateFromStores3 != null) {
+        id = stateFromStores3.id;
+      }
+      const result = guild_id(flag2[20]).maybeFetchTopSoundboardSoundsByGuild(id);
+      const obj = guild_id(flag2[20]);
     }
-    let result1 = tmpResult.maybeFetchTopSoundboardSoundsByGuild(id);
-  }
-  const tmp4Result = tmp4(flag2[18]);
+  });
+  tmpResult = tmp(tmp2[13]);
   const items8 = [tmp6];
-  stateFromStoresArray1 = _require(flag2[13]).useStateFromStoresArray(items8, () => {
+  stateFromStoresArray1 = tmpResult.useStateFromStoresArray(items8, () => {
     let id;
     if (stateFromStores3 != null) {
       id = stateFromStores3.id;

@@ -1,6 +1,6 @@
-// === Module 8316: collectAst ===
+// === Module 7830: collectAst ===
 
-// Module 8316 (collectAst)
+// Module 7830 (collectAst)
 import set2 from "set" /* 2 */;
 
 function collectAst(arr) {

@@ -1,6 +1,6 @@
-// === Module 6048: _fetchSubscriptionsSettings ===
+// === Module 6054: _fetchSubscriptionsSettings ===
 
-// Module 6048 (_fetchSubscriptionsSettings)
+// Module 6054 (_fetchSubscriptionsSettings)
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 676 */;
@@ -42,7 +42,7 @@ function _fetchSubscriptionsSettings() {
               closure_2 = tmp5;
               const callback = tmp2;
               closure_0 = undefined;
-              let obj3 = closure_1_2(6049);
+              let obj3 = closure_1_2(6055);
               dependencyMap = 1;
               c4 = 1;
               obj1 = { value: null, done: false };
@@ -252,7 +252,7 @@ function _fetchAllSubscriptionListingsDataForGuild() {
               let _Promise = Promise;
               let tmp69 = lib;
               let tmp70 = dependencyMap;
-              let obj15 = lib(6049);
+              let obj15 = lib(6055);
               let tmp71 = callback;
               let obj4 = { includeSoftDeleted: null, countryCode: null };
               let tmp72 = flag;
@@ -261,16 +261,16 @@ function _fetchAllSubscriptionListingsDataForGuild() {
               obj4[1] = lib;
               let items = [obj15.getGuildRoleSubscriptionGroupListingsForGuild(callback, obj4), , , ];
               let tmp74 = dependencyMap;
-              let obj17 = lib(6049);
+              let obj17 = lib(6055);
               let tmp75 = callback;
               items[1] = obj17.getGuildRoleSubscriptionsSettings(callback);
               let tmp76 = dependencyMap;
-              let obj18 = lib(6049);
+              let obj18 = lib(6055);
               let tmp77 = callback;
               items[2] = obj18.getGuildRoleSubscriptionTrials(callback);
               let tmp78 = callback;
               let tmp79 = dependencyMap;
-              let obj19 = callback(4789);
+              let obj19 = callback(4790);
               items[3] = obj19.fetchSubscriptions();
               c11 = 3;
               let num17 = 1;
@@ -968,7 +968,7 @@ function _fetchGuildRoleSubscriptionGroupListing() {
               obj2[0] = arg1;
               return obj2;
             } else {
-              let obj4 = obj1(6049);
+              let obj4 = obj1(6055);
               c5 = 2;
               c6 = 1;
               const obj3 = { value: null, done: false };
@@ -1194,7 +1194,7 @@ function _updateSubscriptionListing() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj6 = callback2(6049);
+              let obj6 = callback2(6055);
               dependencyMap = 2;
               c4 = 1;
               let obj2 = { value: null, done: false };
@@ -1330,7 +1330,7 @@ function _fetchMonetizationRestrictions() {
               }
             } else if (2 === tmp7) {
               c6 = 0;
-              let obj4 = callback(4522);
+              let obj4 = callback(4523);
               c7 = 3;
               c8 = 1;
               obj4 = { value: null, done: false };
@@ -1390,7 +1390,7 @@ function _fetchMonetizationRestrictions() {
               const obj10 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS", guildId: null };
               obj10[1] = callback;
               dispatch(obj10);
-              obj9 = callback2(6049);
+              obj9 = callback2(6055);
               const obj11 = { signal: null };
               obj11[0] = signal;
               c7 = 4;

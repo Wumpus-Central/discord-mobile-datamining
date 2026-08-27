@@ -1,8 +1,8 @@
-// === Module 11149: getVoiceChannelListInviteExperiment ===
+// === Module 10863: getVoiceChannelListInviteExperiment ===
 
-// Module 11149 (getVoiceChannelListInviteExperiment)
+// Module 10863 (getVoiceChannelListInviteExperiment)
 import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4355 */;
+import createExperiment from "createExperiment" /* 4356 */;
 
 const items = [{ id: 1, label: "Enable channel-list-style voice invite embed", config: { enabled: true } }];
 let closure_0 = createExperiment.createExperiment({ kind: "guild", id: "2026-05_voice_channel_list_invite_embed", label: "Voice Channel List Invite Embed", defaultConfig: { enabled: false }, treatments: items });

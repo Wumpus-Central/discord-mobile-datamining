@@ -1,10 +1,10 @@
-// === Module 10256: useCreateOrReuseGiftOrder ===
+// === Module 10441: useCreateOrReuseGiftOrder ===
 
-// Module 10256 (useCreateOrReuseGiftOrder)
+// Module 10441 (useCreateOrReuseGiftOrder)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4426 */;
+import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4427 */;
 import { SubscriptionPlanInfo } from "GuildFeatures" /* 1924 */;
 import { PaymentGateways } from "sum" /* 505 */;
 
@@ -15,7 +15,7 @@ let result = require("set").fileFinishedImporting("modules/payments/native/utils
 
 export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
   let _require = GiftPurchaseButton;
-  let obj = _require(9650);
+  let obj = _require(10399);
   obj = { location: GiftPurchaseButton };
   const androidShopOrdersEnabled = obj.useAndroidShopOrdersEnabled(obj);
   _require = undefined;

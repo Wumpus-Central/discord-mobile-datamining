@@ -1,26 +1,26 @@
-// === Module 15935: AddEmojiButton ===
+// === Module 16000: AddEmojiButton ===
 
-// Module 15935 (AddEmojiButton)
+// Module 16000 (AddEmojiButton)
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import MAX_REACTIONS from "MAX_REACTIONS" /* 4100 */;
-import hexToRgba from "hexToRgba" /* 4292 */;
-import PressableBase from "PressableBase" /* 5015 */;
-import checkReactionResponse from "checkReactionResponse" /* 7433 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11309 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11365 */;
+import hexToRgba from "hexToRgba" /* 4293 */;
+import PressableBase from "PressableBase" /* 5020 */;
+import checkReactionResponse from "checkReactionResponse" /* 7441 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11187 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11227 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "updateState" /* 6095 */;
+import closure_8 from "updateState" /* 6103 */;
 import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "recomputeGuild" /* 5304 */;
+import closure_10 from "recomputeGuild" /* 5309 */;
 import closure_11 from "getUncachedChannelPermissions" /* 4089 */;
 import ME from "ME" /* 676 */;
 import { EmojiIntention } from "set" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function AddEmojiButton(channel) {

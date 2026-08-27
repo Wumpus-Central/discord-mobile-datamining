@@ -1,10 +1,10 @@
-// === Module 6497: GameCartridgeSpotIllustration ===
+// === Module 6503: GameCartridgeSpotIllustration ===
 
-// Module 6497 (GameCartridgeSpotIllustration)
+// Module 6503 (GameCartridgeSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6498 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6504 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GameCartridgeSpotIllustration.native.tsx");

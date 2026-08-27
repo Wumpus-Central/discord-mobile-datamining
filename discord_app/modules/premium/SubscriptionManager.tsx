@@ -1,12 +1,12 @@
-// === Module 16922: prototype ===
+// === Module 16988: prototype ===
 
-// Module 16922 (prototype)
-import initializeDefault from "initialize" /* 5433 */;
+// Module 16988 (prototype)
+import initializeDefault from "initialize" /* 5438 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import closure_4 from "handlePaymentSourceCreateEnd" /* 4109 */;
 import closure_5 from "reset" /* 4113 */;
-import closure_6 from "addEntitlement" /* 7070 */;
+import closure_6 from "addEntitlement" /* 7076 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 let require = arg1;
@@ -230,7 +230,7 @@ let prototype = function SubscriptionManager() {
             dependencyMap = 1;
             c2 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(4789).fetchIpCountryCode();
+            obj1[0] = closure_1_0(4790).fetchIpCountryCode();
             return obj1;
           }
         } else {
@@ -244,7 +244,7 @@ let prototype = function SubscriptionManager() {
               obj2[0] = arg1;
               return obj2;
             } else if (null != closure_1_4.ipCountryCode) {
-              obj1 = closure_1_0(4789);
+              obj1 = closure_1_0(4790);
               dependencyMap = 2;
               c2 = 1;
               const obj3 = { value: null, done: false };

@@ -1,7 +1,7 @@
-// === Module 16850: _initialize ===
+// === Module 16916: _initialize ===
 
-// Module 16850 (_initialize)
-import initializeDefault from "initialize" /* 5433 */;
+// Module 16916 (_initialize)
+import initializeDefault from "initialize" /* 5438 */;
 
 initializeDefault;
 class MetricKitManager extends tmp2 {

@@ -1,11 +1,11 @@
-// === Module 8734: trackUserAvatarUpdated ===
+// === Module 7693: trackUserAvatarUpdated ===
 
-// Module 8734 (trackUserAvatarUpdated)
+// Module 7693 (trackUserAvatarUpdated)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 8497 */;
+import AssetOriginTypes from "AssetOriginTypes" /* 7694 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/user_profile/utils/trackUserAvatarUpdated.tsx");

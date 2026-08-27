@@ -1,10 +1,10 @@
-// === Module 11323: ForwardMessageFooter ===
+// === Module 11190: ForwardMessageFooter ===
 
-// Module 11323 (ForwardMessageFooter)
+// Module 11190 (ForwardMessageFooter)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleChanged" /* 4806 */;
-import { DraftType } from "handleChanged" /* 4806 */;
+import closure_5 from "handleChanged" /* 4807 */;
+import { DraftType } from "handleChanged" /* 4807 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

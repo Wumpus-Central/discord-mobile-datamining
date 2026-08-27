@@ -1,6 +1,6 @@
-// === Module 8284: transformReactions ===
+// === Module 7798: transformReactions ===
 
-// Module 8284 (transformReactions)
+// Module 7798 (transformReactions)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");

@@ -1,8 +1,8 @@
-// === Module 12434: useVirtualCurrencyBalance ===
+// === Module 12477: useVirtualCurrencyBalance ===
 
-// Module 12434 (useVirtualCurrencyBalance)
+// Module 12477 (useVirtualCurrencyBalance)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "redeemError" /* 9638 */;
+import closure_2 from "redeemError" /* 10756 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/virtual_currency/hooks/useVirtualCurrencyBalance.tsx");

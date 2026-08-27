@@ -1,6 +1,6 @@
-// === Module 11023: handleKrispLinkPressed ===
+// === Module 10000: handleKrispLinkPressed ===
 
-// Module 11023 (handleKrispLinkPressed)
+// Module 10000 (handleKrispLinkPressed)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
@@ -8,7 +8,7 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 import combinedDefault from "combined" /* 1995 */;
 import _modDef4158 from "module_4158" /* 4158 */;
-import Text from "Text" /* 4440 */;
+import Text from "Text" /* 4441 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "handleThemeChange" /* 1302 */;
 import ME from "ME" /* 676 */;
@@ -41,9 +41,9 @@ export default function KrispLogo() {
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   obj1 = AccessibilityAnnouncer;
   if (obj1.isThemeLight(stateFromStores)) {
-    let tmp4Result = tmp4(11024);
+    let tmp4Result = tmp4(10001);
   } else {
-    tmp4Result = tmp4(11025);
+    tmp4Result = tmp4(10002);
   }
   obj = { style: closure_13.detailsView, children: null };
   obj = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };

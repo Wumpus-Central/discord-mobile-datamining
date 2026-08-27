@@ -1,6 +1,6 @@
-// === Module 12410: useFavoritesGuildChannelFilter ===
+// === Module 10636: useFavoritesGuildChannelFilter ===
 
-// Module 12410 (useFavoritesGuildChannelFilter)
+// Module 10636 (useFavoritesGuildChannelFilter)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4089 */;

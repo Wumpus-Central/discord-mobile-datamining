@@ -1,17 +1,17 @@
-// === Module 15768: useGuildsBarBadges ===
+// === Module 15832: useGuildsBarBadges ===
 
-// Module 15768 (useGuildsBarBadges)
+// Module 15832 (useGuildsBarBadges)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "computeAlertSettings" /* 9975 */;
-import closure_7 from "handleGatewayJoinRequestUpdate" /* 4267 */;
+import closure_6 from "computeAlertSettings" /* 10083 */;
+import closure_7 from "handleGatewayJoinRequestUpdate" /* 4268 */;
 import closure_8 from "trackCommunicationDisabled" /* 1992 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
 import closure_10 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 let closure_3 = ["guildActivityIndicatorSource"];

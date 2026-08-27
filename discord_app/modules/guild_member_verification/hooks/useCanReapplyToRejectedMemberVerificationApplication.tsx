@@ -1,11 +1,11 @@
-// === Module 8655: useCanReapplyToRejectedMemberVerificationApplication ===
+// === Module 7598: useCanReapplyToRejectedMemberVerificationApplication ===
 
-// Module 8655 (useCanReapplyToRejectedMemberVerificationApplication)
+// Module 7598 (useCanReapplyToRejectedMemberVerificationApplication)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "updateInvite" /* 4428 */;
-import closure_7 from "handleGatewayJoinRequestUpdate" /* 4267 */;
+import closure_6 from "updateInvite" /* 4429 */;
+import closure_7 from "handleGatewayJoinRequestUpdate" /* 4268 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 const require = arg1;

@@ -1,13 +1,13 @@
-// === Module 7138: isClickstreamEnabled ===
+// === Module 7144: isClickstreamEnabled ===
 
-// Module 7138 (isClickstreamEnabled)
+// Module 7144 (isClickstreamEnabled)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import clickstreamExperimentEnabled from "clickstreamExperimentEnabled" /* 7139 */;
-import getClickstreamDrainEvent from "getClickstreamDrainEvent" /* 7140 */;
+import clickstreamExperimentEnabled from "clickstreamExperimentEnabled" /* 7145 */;
+import getClickstreamDrainEvent from "getClickstreamDrainEvent" /* 7146 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "createRTCConnection" /* 4518 */;
+import closure_5 from "createRTCConnection" /* 4519 */;
 
 require = arg1;
 function isClickstreamEnabled(flag) {

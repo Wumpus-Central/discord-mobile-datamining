@@ -1,6 +1,6 @@
-// === Module 5511: openContextMenu ===
+// === Module 5516: openContextMenu ===
 
-// Module 5511 (openContextMenu)
+// Module 5516 (openContextMenu)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -101,7 +101,7 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
     const _DOMRect = DOMRect;
     const dOMRect = new DOMRect(tmp3, sum1, 0, 0);
     obj[3] = dOMRect;
-    let APP = obj(5512).getCurrentlyInteractingAppContext();
+    let APP = obj(5517).getCurrentlyInteractingAppContext();
     if (APP == null) {
       APP = AppContext.APP;
     }
@@ -121,7 +121,7 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
       let tmp16Result = tmp16(500);
       if (tmp16Result.isDesktop()) {
         if (nativeEvent.isTrusted) {
-          tmp16Result = tmp16(5515);
+          tmp16Result = tmp16(5520);
           importDefault = tmp16Result.addResultListener(() => {
             callback();
             obj = callback(closure_1_2[1]);
@@ -132,7 +132,7 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
       }
     }
     stopPropagation.preventDefault();
-    const obj3 = obj(5512);
+    const obj3 = obj(5517);
     obj1 = { type: "CONTEXT_MENU_OPEN", contextMenu: null };
     obj1[1] = obj;
     dispatcherDefault.dispatch(obj1);

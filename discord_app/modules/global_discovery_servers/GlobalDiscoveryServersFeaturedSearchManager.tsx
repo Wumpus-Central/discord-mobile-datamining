@@ -1,10 +1,10 @@
-// === Module 17258: prototype ===
+// === Module 17324: prototype ===
 
-// Module 17258 (prototype)
-import initializeDefault from "initialize" /* 5433 */;
+// Module 17324 (prototype)
+import initializeDefault from "initialize" /* 5438 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "map" /* 13244 */;
-import { DISCOVERY_ALL_CATEGORIES_ID as closure_6 } from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9238 */;
+import closure_5 from "map" /* 13270 */;
+import { DISCOVERY_ALL_CATEGORIES_ID as closure_6 } from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9651 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -83,7 +83,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
                 obj1 = { categoryId: null };
                 obj1[0] = c6;
                 if (!total) {
-                  let obj6 = lib(17259);
+                  let obj6 = lib(17325);
                 }
                 let obj7 = closure_1_1(709);
                 const obj2 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId: null, reset: true };
@@ -94,7 +94,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
                 let obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
                 obj3[0] = constants.GUILD_DISCOVERY;
                 const obj4 = { offset: 0, limit: null };
-                obj4[1] = lib(17260).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT;
+                obj4[1] = lib(17326).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT;
                 obj3[1] = closure_1_1(1484).stringify(obj4);
                 const obj11 = closure_1_1(1484);
                 obj3[3] = lib(530).rejectWithMigratedError();
@@ -117,7 +117,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               obj6[1] = c6;
               obj6[2] = dependencyMap;
               obj1.dispatch(obj6);
-              obj3 = closure_1_2(6131);
+              obj3 = closure_1_2(6137);
               obj7 = { categoryId: null };
               obj7[0] = c6;
               const result = obj3.trackGuildDiscoveryGetFeaturedGuildsFailed(obj7);
@@ -128,7 +128,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               lib = arg1;
               total = lib.body.total;
               const guilds = lib.body.guilds;
-              closure_2 = guilds.map(lib(17259).fromDiscoverableGuildServer);
+              closure_2 = guilds.map(lib(17325).fromDiscoverableGuildServer);
               const obj8 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId: null, guilds: null, total: null };
               obj8[1] = c6;
               obj8[2] = closure_2;

@@ -1,6 +1,6 @@
-// === Module 15343: __INTERNAL_VIEW_CONFIG ===
+// === Module 15407: __INTERNAL_VIEW_CONFIG ===
 
-// Module 15343 (__INTERNAL_VIEW_CONFIG)
+// Module 15407 (__INTERNAL_VIEW_CONFIG)
 import set from "set" /* 2 */;
 import weakSet from "weakSet" /* 106 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;

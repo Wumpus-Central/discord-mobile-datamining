@@ -1,20 +1,20 @@
-// === Module 11636: getUsers ===
+// === Module 11487: getUsers ===
 
-// Module 11636 (getUsers)
+// Module 11487 (getUsers)
 import applyDefault from "apply" /* 12 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import rebuild from "rebuild" /* 7353 */;
-import rebuildDefault from "rebuild" /* 7353 */;
+import rebuild from "rebuild" /* 7360 */;
+import rebuildDefault from "rebuild" /* 7360 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "rebuild" /* 5395 */;
+import closure_4 from "rebuild" /* 5400 */;
 import { isGuildSelectableChannelType as closure_5 } from "createChannelRecord" /* 1395 */;
 import closure_6 from "comparator" /* 1982 */;
 import closure_7 from "trackCommunicationDisabled" /* 1992 */;
 import closure_8 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_9 from "markAllUserIdListsStale" /* 4098 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import regExp from "regExp" /* 4904 */;
+import regExp from "regExp" /* 4905 */;
 
 require = arg1;
 function getUsers(getGuildId) {
@@ -43,14 +43,14 @@ function getChannels(getGuildId, arr) {
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
-      const obj = { id: id.id, text: arr(4638).computeChannelName(id, closure_10, closure_9) };
+      const obj = { id: id.id, text: arr(4639).computeChannelName(id, closure_10, closure_9) };
       return obj;
     });
   } else {
     dependencyMap = textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId);
     const tmp9 = guildId(12);
-    const tmp9Result = guildId(12)(_require(5332).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
-    const combined = guildId(12)(_require(5332).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((arg0) => closure_1_6.getChannels(guildId)[arg0].map((channel) => channel.channel)).concat(closure_4.computeAllActiveJoinedThreads(guildId));
+    const tmp9Result = guildId(12)(_require(5337).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
+    const combined = guildId(12)(_require(5337).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((arg0) => closure_1_6.getChannels(guildId)[arg0].map((channel) => channel.channel)).concat(closure_4.computeAllActiveJoinedThreads(guildId));
     const found = combined.filter((type) => {
       let hasItem = null == closure_0;
       if (!hasItem) {
@@ -66,13 +66,13 @@ function getChannels(getGuildId, arr) {
           name = tmp7.name;
         }
         if (name == null) {
-          name = arr(4638).computeChannelName(id, closure_1_10, closure_1_9);
-          const obj3 = arr(4638);
+          name = arr(4639).computeChannelName(id, closure_1_10, closure_1_9);
+          const obj3 = arr(4639);
         }
         let channelName = name;
       } else {
-        channelName = arr(4638).computeChannelName(id, closure_1_10, closure_1_9);
-        const obj2 = arr(4638);
+        channelName = arr(4639).computeChannelName(id, closure_1_10, closure_1_9);
+        const obj2 = arr(4639);
       }
       obj[1] = channelName;
       return obj;

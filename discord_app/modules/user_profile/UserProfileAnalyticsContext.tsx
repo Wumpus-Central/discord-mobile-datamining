@@ -1,7 +1,7 @@
-// === Module 9003: UserProfileAnalyticsProvider ===
+// === Module 8490: UserProfileAnalyticsProvider ===
 
-// Module 9003 (UserProfileAnalyticsProvider)
-import contextDefault from "context" /* 5900 */;
+// Module 8490 (UserProfileAnalyticsProvider)
+import contextDefault from "context" /* 5905 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -110,7 +110,7 @@ export const useCreateUserProfileAnalyticsContext = function useCreateUserProfil
 };
 export const useUserProfileAnalyticsContext = function useUserProfileAnalyticsContext() {
   const context = importAllResult.useContext(closure_5);
-  analyticsLocations = analyticsLocations(5900)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5905)().analyticsLocations;
   const items = [context, analyticsLocations];
   const items1 = [context, analyticsLocations];
   const items2 = [context, analyticsLocations];

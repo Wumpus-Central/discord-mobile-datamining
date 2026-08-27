@@ -1,6 +1,6 @@
-// === Module 6058: getContextForPermission ===
+// === Module 6064: getContextForPermission ===
 
-// Module 6058 (getContextForPermission)
+// Module 6064 (getContextForPermission)
 import fromStringAll from "fromString" /* 506 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;

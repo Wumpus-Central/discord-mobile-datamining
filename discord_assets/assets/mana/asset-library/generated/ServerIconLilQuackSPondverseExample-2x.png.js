@@ -1,6 +1,6 @@
-// === Module 6916: metadata ===
+// === Module 6922: metadata ===
 
-// Module 6916 (metadata)
+// Module 6922 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconLilQuackSPondverseExample-2x.png.js");

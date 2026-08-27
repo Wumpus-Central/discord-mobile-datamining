@@ -1,11 +1,11 @@
-// === Module 8892: trackOnEmojiPickerOpened ===
+// === Module 9049: trackOnEmojiPickerOpened ===
 
-// Module 8892 (trackOnEmojiPickerOpened)
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4652 */;
-import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 8860 */;
-import useEmojiHotrail from "useEmojiHotrail" /* 8861 */;
+// Module 9049 (trackOnEmojiPickerOpened)
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4653 */;
+import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9027 */;
+import useEmojiHotrail from "useEmojiHotrail" /* 9028 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getEmojiToGroupId" /* 5348 */;
+import closure_4 from "getEmojiToGroupId" /* 5353 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import closure_6 from "handleConnectionOpen" /* 1981 */;
 import { AnalyticEvents } from "ME" /* 676 */;

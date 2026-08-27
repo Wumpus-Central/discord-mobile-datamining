@@ -1,7 +1,7 @@
-// === Module 10765: NativeModules ===
+// === Module 9380: NativeModules ===
 
-// Module 10765 (NativeModules)
-import enforcingDefault from "enforcing" /* 10766 */;
+// Module 9380 (NativeModules)
+import enforcingDefault from "enforcing" /* 9381 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set from "set" /* 500 */;
 import keys from "keys" /* 644 */;
@@ -24,7 +24,7 @@ let closure_5 = keys.create((arg0) => {
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = _require(4423);
+    tmpResult = _require(4424);
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();

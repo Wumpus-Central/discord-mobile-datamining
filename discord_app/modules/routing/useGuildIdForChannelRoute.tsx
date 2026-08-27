@@ -1,9 +1,9 @@
-// === Module 4456: useGuildIdForChannelRoute ===
+// === Module 4457: useGuildIdForChannelRoute ===
 
-// Module 4456 (useGuildIdForChannelRoute)
+// Module 4457 (useGuildIdForChannelRoute)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "initializeFromUserSettings" /* 1394 */;
-import closure_3 from "handleConnectionOpen" /* 4266 */;
+import closure_3 from "handleConnectionOpen" /* 4267 */;
 import { FAVORITES } from "ME" /* 676 */;
 
 require = arg1;

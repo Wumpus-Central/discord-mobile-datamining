@@ -1,6 +1,6 @@
-// === Module 14594: BountiesShopCarouselExperimentVariation ===
+// === Module 14621: BountiesShopCarouselExperimentVariation ===
 
-// Module 14594 (BountiesShopCarouselExperimentVariation)
+// Module 14621 (BountiesShopCarouselExperimentVariation)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

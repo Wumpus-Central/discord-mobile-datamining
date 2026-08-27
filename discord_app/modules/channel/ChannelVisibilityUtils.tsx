@@ -1,9 +1,9 @@
-// === Module 9983: isChannelCurrentlyVisible ===
+// === Module 10090: isChannelCurrentlyVisible ===
 
-// Module 9983 (isChannelCurrentlyVisible)
-import closure_0 from "handlePermissionsChange" /* 6071 */;
+// Module 10090 (isChannelCurrentlyVisible)
+import closure_0 from "handlePermissionsChange" /* 6079 */;
 import closure_1 from "handleConnectionOpen" /* 1981 */;
-import closure_2 from "handleConnectionOpen" /* 4266 */;
+import closure_2 from "handleConnectionOpen" /* 4267 */;
 
 const result = require("set").fileFinishedImporting("modules/channel/ChannelVisibilityUtils.tsx");
 

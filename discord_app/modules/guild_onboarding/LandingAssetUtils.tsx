@@ -1,6 +1,6 @@
-// === Module 5417: replaceFlagIconAndFlagColor ===
+// === Module 5422: replaceFlagIconAndFlagColor ===
 
-// Module 5417 (replaceFlagIconAndFlagColor)
+// Module 5422 (replaceFlagIconAndFlagColor)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_onboarding/LandingAssetUtils.tsx");

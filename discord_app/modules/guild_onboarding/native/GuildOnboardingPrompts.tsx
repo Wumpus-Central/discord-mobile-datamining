@@ -1,26 +1,26 @@
-// === Module 5438: _getBackgroundGradientColor ===
+// === Module 5443: _getBackgroundGradientColor ===
 
-// Module 5438 (_getBackgroundGradientColor)
+// Module 5443 (_getBackgroundGradientColor)
 import keys from "keys" /* 691 */;
 import ThemesDefault from "Themes" /* 712 */;
-import hexToRgba from "hexToRgba" /* 4292 */;
-import LinearGradientDefault from "LinearGradient" /* 4891 */;
-import preloadDefault from "preload" /* 5440 */;
+import hexToRgba from "hexToRgba" /* 4293 */;
+import LinearGradientDefault from "LinearGradient" /* 4892 */;
+import preloadDefault from "preload" /* 5445 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
-import closure_9 from "get" /* 5437 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_9 from "get" /* 5442 */;
 import closure_10 from "ensureGuildLoaded" /* 1391 */;
 import closure_11 from "createGuildRecordFromRust" /* 1910 */;
 import closure_12 from "handleConnectionOpen" /* 1981 */;
-import closure_13 from "handleUpdate" /* 5414 */;
-import { OnboardingPromptType } from "serverPromptToClientPrompt" /* 5415 */;
-import { GuildOnboardingModalStates as closure_15 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5411 */;
+import closure_13 from "handleUpdate" /* 5419 */;
+import { OnboardingPromptType } from "serverPromptToClientPrompt" /* 5420 */;
+import { GuildOnboardingModalStates as closure_15 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5416 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function _getBackgroundGradientColor() {

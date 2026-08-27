@@ -1,6 +1,6 @@
-// === Module 9137: messages ===
+// === Module 8562: messages ===
 
-// Module 9137 (messages)
+// Module 8562 (messages)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

@@ -1,6 +1,6 @@
-// === Module 7951: BuyNitroPurchaseButtonLegalDisclaimer ===
+// === Module 12964: BuyNitroPurchaseButtonLegalDisclaimer ===
 
-// Module 7951 (BuyNitroPurchaseButtonLegalDisclaimer)
+// Module 12964 (BuyNitroPurchaseButtonLegalDisclaimer)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
@@ -10,7 +10,7 @@ import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4107 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;
@@ -61,7 +61,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       obj1 = { style: null, variant: "text-xxs/medium", children: null };
       obj1[0] = tmp.disclaimer;
       obj1[2] = formatResult;
-      jsx(tmp10(4440).Text, { style: null, variant: "text-xxs/medium", children: null });
+      jsx(tmp10(4441).Text, { style: null, variant: "text-xxs/medium", children: null });
     }
     const tmp3Result1 = set;
     t = tmp3(1236).t;

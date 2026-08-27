@@ -1,8 +1,8 @@
-// === Module 16562: VoicePanelModes ===
+// === Module 16628: VoicePanelModes ===
 
-// Module 16562 (VoicePanelModes)
+// Module 16628 (VoicePanelModes)
 import set from "set" /* 2 */;
-import VoicePanelModes from "VoicePanelModes" /* 11914 */;
+import VoicePanelModes from "VoicePanelModes" /* 11757 */;
 
 VoicePanelModes = VoicePanelModes.VoicePanelModes;
 const DEFAULT_BORDER_RADIUS_PIP = VoicePanelModes.DEFAULT_BORDER_RADIUS_PIP;

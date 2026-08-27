@@ -1,13 +1,13 @@
-// === Module 7802: getPaymentGateway ===
+// === Module 7903: getPaymentGateway ===
 
-// Module 7802 (getPaymentGateway)
+// Module 7903 (getPaymentGateway)
 import set from "set" /* 500 */;
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createFromServer" /* 7535 */;
-import closure_5 from "createFromServer" /* 7127 */;
-import closure_6 from "emitChanges" /* 7123 */;
+import closure_4 from "createFromServer" /* 7904 */;
+import closure_5 from "createFromServer" /* 7133 */;
+import closure_6 from "emitChanges" /* 7129 */;
 import { PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID as closure_7 } from "GuildFeatures" /* 1924 */;
 import ME from "ME" /* 676 */;
 
@@ -412,17 +412,17 @@ export const fetchChurnDiscountOffer = function fetchChurnDiscountOffer() {
   }
   return applyArgumentsResult;
 };
-export const acknowledgeUserOffer = function acknowledgeUserOffer(expiresAt, hasAcknowledged) {
+export const acknowledgeUserOffer = function acknowledgeUserOffer(hasAcknowledged, hasAcknowledged2) {
   let id;
-  if (null != expiresAt) {
-    if (null == expiresAt.expiresAt) {
-      id = expiresAt.id;
+  if (null != hasAcknowledged) {
+    if (!hasAcknowledged.hasAcknowledged) {
+      id = hasAcknowledged.id;
     }
   }
   let id1;
-  if (null != hasAcknowledged) {
-    if (!hasAcknowledged.hasAcknowledged()) {
-      id1 = hasAcknowledged.id;
+  if (null != hasAcknowledged2) {
+    if (!hasAcknowledged2.hasAcknowledged()) {
+      id1 = hasAcknowledged2.id;
     }
   }
   const HTTP = sendRequest.HTTP;

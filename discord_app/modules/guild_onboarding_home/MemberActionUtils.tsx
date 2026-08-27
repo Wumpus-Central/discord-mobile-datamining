@@ -1,10 +1,10 @@
-// === Module 11928: useMemberActionsForChannel ===
+// === Module 11772: useMemberActionsForChannel ===
 
-// Module 11928 (useMemberActionsForChannel)
-import useIsNewMemberDefault from "useIsNewMember" /* 6017 */;
+// Module 11772 (useMemberActionsForChannel)
+import useIsNewMemberDefault from "useIsNewMember" /* 6022 */;
 import closure_3 from "trackCommunicationDisabled" /* 1992 */;
-import closure_4 from "handleSettingsLoadSuccess" /* 4659 */;
-import closure_5 from "set" /* 4660 */;
+import closure_4 from "handleSettingsLoadSuccess" /* 4660 */;
+import closure_5 from "set" /* 4661 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
 
 const require = arg1;

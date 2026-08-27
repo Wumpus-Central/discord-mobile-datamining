@@ -1,8 +1,8 @@
-// === Module 9932: useTrackFavoritesGuildUpsellModalOpened ===
+// === Module 10231: useTrackFavoritesGuildUpsellModalOpened ===
 
-// Module 9932 (useTrackFavoritesGuildUpsellModalOpened)
-import contextDefault from "context" /* 5900 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5920 */;
+// Module 10231 (useTrackFavoritesGuildUpsellModalOpened)
+import contextDefault from "context" /* 5905 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5925 */;
 import closure_2 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 

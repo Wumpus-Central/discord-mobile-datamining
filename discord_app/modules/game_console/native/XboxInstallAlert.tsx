@@ -1,12 +1,12 @@
-// === Module 11051: XboxInstallAlert ===
+// === Module 9811: XboxInstallAlert ===
 
-// Module 11051 (XboxInstallAlert)
+// Module 9811 (XboxInstallAlert)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import componentDidMountDefault from "componentDidMount" /* 4898 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 10647 */;
+import componentDidMountDefault from "componentDidMount" /* 4899 */;
+import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9234 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 noopAll;

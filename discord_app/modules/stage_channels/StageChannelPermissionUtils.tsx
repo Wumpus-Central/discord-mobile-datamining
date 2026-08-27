@@ -1,6 +1,6 @@
-// === Module 5306: createModeratorOverwrite ===
+// === Module 5311: createModeratorOverwrite ===
 
-// Module 5306 (createModeratorOverwrite)
+// Module 5311 (createModeratorOverwrite)
 import fromStringAll from "fromString" /* 506 */;
 import Permissions from "Permissions" /* 1399 */;
 import applyOverwritesAll from "applyOverwrites" /* 4094 */;

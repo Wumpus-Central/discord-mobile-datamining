@@ -1,11 +1,11 @@
-// === Module 15737: computeGuildsBarCutout ===
+// === Module 15801: computeGuildsBarCutout ===
 
-// Module 15737 (computeGuildsBarCutout)
+// Module 15801 (computeGuildsBarCutout)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import Button from "Button" /* 1297 */;
-import SolidCutout from "SolidCutout" /* 8514 */;
-import GUILD_ITEM_SIZE2 from "GUILD_ITEM_SIZE" /* 15724 */;
+import SolidCutout from "SolidCutout" /* 8030 */;
+import GUILD_ITEM_SIZE2 from "GUILD_ITEM_SIZE" /* 15788 */;
 
 const PixelRatio = get_ActivityIndicator.PixelRatio;
 const GUILD_ITEM_SIZE = GUILD_ITEM_SIZE2.GUILD_ITEM_SIZE;

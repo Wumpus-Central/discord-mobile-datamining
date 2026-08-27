@@ -1,8 +1,8 @@
-// === Module 11172: start ===
+// === Module 11056: start ===
 
-// Module 11172 (start)
+// Module 11056 (start)
 import ME from "ME" /* 676 */;
-import isClickstreamEnabled from "isClickstreamEnabled" /* 7138 */;
+import isClickstreamEnabled from "isClickstreamEnabled" /* 7144 */;
 import set from "set" /* 2 */;
 
 const AnalyticEvents = ME.AnalyticEvents;

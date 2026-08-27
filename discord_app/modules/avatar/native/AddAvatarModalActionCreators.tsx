@@ -1,15 +1,15 @@
-// === Module 16858: handlePressNext ===
+// === Module 16924: handlePressNext ===
 
-// Module 16858 (handlePressNext)
+// Module 16924 (handlePressNext)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import _modDef4675 from "module_4675" /* 4675 */;
-import setDefault from "set" /* 4808 */;
-import saveProfileAndAccountRequest from "saveProfileAndAccountRequest" /* 8733 */;
-import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12332 */;
-import ADD_AVATAR_MODAL_KEY2 from "ADD_AVATAR_MODAL_KEY" /* 16859 */;
+import _modDef4676 from "module_4676" /* 4676 */;
+import setDefault from "set" /* 4809 */;
+import saveProfileAndAccountRequest from "saveProfileAndAccountRequest" /* 7689 */;
+import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12156 */;
+import ADD_AVATAR_MODAL_KEY2 from "ADD_AVATAR_MODAL_KEY" /* 16925 */;
 
 const ADD_AVATAR_MODAL_KEY = ADD_AVATAR_MODAL_KEY2.ADD_AVATAR_MODAL_KEY;
 const AnalyticEvents = ME.AnalyticEvents;
@@ -30,7 +30,7 @@ export const handlePressNext = function handlePressNext(pendingImage, first, fn)
   if (null != fn) {
     fn();
   } else {
-    obj = _modDef4675;
+    obj = _modDef4676;
     obj.popWithKey(ADD_AVATAR_MODAL_KEY);
     _startContactSyncForDiscoverability.nextOnboardingStep({ skip: false });
     const obj2 = _startContactSyncForDiscoverability;
@@ -66,5 +66,5 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   setDefault.show(obj);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  _modDef4675.pushLazy(asyncRequireImpl(16860, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  _modDef4676.pushLazy(asyncRequireImpl(16926, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

@@ -1,6 +1,6 @@
-// === Module 14877: CustomTypingIndicatorEditScreen ===
+// === Module 14904: CustomTypingIndicatorEditScreen ===
 
-// Module 14877 (CustomTypingIndicatorEditScreen)
+// Module 14904 (CustomTypingIndicatorEditScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -10,7 +10,7 @@ import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ ScrollView: closure_6, View: error } = get_ActivityIndicator);
@@ -19,8 +19,8 @@ const require = arg1;
 createCacheKey = { screen: { flex: 1 }, container: null, previewContainer: null, section: null, description: null };
 createCacheKey = { padding: ThemesDefault.space.PX_16, rowGap: ThemesDefault.space.PX_24 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { height: 200, display: "flex", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
-let obj1 = { height: 200, display: "flex", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
+createCacheKey[2] = { height: 140, display: "flex", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
+let obj1 = { height: 140, display: "flex", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { rowGap: ThemesDefault.space.PX_8 };
 let obj2 = { rowGap: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_4 };

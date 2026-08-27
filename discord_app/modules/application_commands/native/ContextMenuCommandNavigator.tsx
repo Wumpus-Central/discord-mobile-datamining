@@ -1,13 +1,13 @@
-// === Module 16294: ContextMenuCommandNavigator ===
+// === Module 16359: ContextMenuCommandNavigator ===
 
-// Module 16294 (ContextMenuCommandNavigator)
+// Module 16359 (ContextMenuCommandNavigator)
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 8785 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7755 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -21,8 +21,8 @@ const result = require("set").fileFinishedImporting("modules/application_command
 export default function ContextMenuCommandNavigator() {
   const tmp = callback3();
   const _require = tmp;
-  const layoutEffect = React.useLayoutEffect(() => lib(7147).trackAppUIViewed(), []);
-  let obj = _require(5955);
+  const layoutEffect = React.useLayoutEffect(() => lib(7153).trackAppUIViewed(), []);
+  let obj = _require(5960);
   importDefault = obj.useAccessibilityNativeStackOptions();
   const rect = useSafeAreaInsetsDefault();
   obj = { style: items, children: null };
@@ -61,7 +61,7 @@ export default function ContextMenuCommandNavigator() {
   obj2[0] = intl.string(_require(1236).t.PHjkRE);
   obj1[1] = obj2;
   obj1[2] = function getComponent() {
-    return lib(16295).default;
+    return lib(16360).default;
   };
   const items1 = [
     callback(Screen, obj1),
@@ -76,7 +76,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return lib(16297).default;
+        return lib(16362).default;
       }
     })
   ];

@@ -1,18 +1,18 @@
-// === Module 13296: retryFailedUsers ===
+// === Module 13323: retryFailedUsers ===
 
-// Module 13296 (retryFailedUsers)
+// Module 13323 (retryFailedUsers)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import keysDefault from "keys" /* 4481 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4543 */;
-import closure_3 from "isVoiceMuted" /* 4464 */;
+import keysDefault from "keys" /* 4482 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4544 */;
+import closure_3 from "isVoiceMuted" /* 4465 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createRTCConnection" /* 4518 */;
+import closure_5 from "createRTCConnection" /* 4519 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "updateVoiceState" /* 4463 */;
-import { makeSortedVoiceState } from "getVoiceStatesForGuild" /* 4519 */;
+import closure_7 from "updateVoiceState" /* 4464 */;
+import { makeSortedVoiceState } from "getVoiceStatesForGuild" /* 4520 */;
 import ME from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4465 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4466 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -47,12 +47,12 @@ function retryFailedUsers() {
           obj[1] = user;
           obj[2] = user.id;
           obj[4] = tmp23;
-          obj[10] = guildId(4637).getName(guildId, tmp, user);
-          const obj2 = guildId(4637);
+          obj[10] = guildId(4638).getName(guildId, tmp, user);
+          const obj2 = guildId(4638);
           const tmp24 = closure_1_8;
-          obj[11] = channelId(9028).getAvatarDecoration(user, guildId);
+          obj[11] = channelId(8827).getAvatarDecoration(user, guildId);
           const result1 = closure_1_13.set(user.id, obj);
-          const obj3 = channelId(9028);
+          const obj3 = channelId(8827);
         }
       } else {
         closure_1_14.delete(userId);

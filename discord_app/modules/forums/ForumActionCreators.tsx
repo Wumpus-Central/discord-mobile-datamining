@@ -1,11 +1,11 @@
-// === Module 8631: withErrorHandling ===
+// === Module 7573: withErrorHandling ===
 
-// Module 8631 (withErrorHandling)
+// Module 7573 (withErrorHandling)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import markAnalyticsFeedItemSeen from "markAnalyticsFeedItemSeen" /* 8632 */;
-import prototype from "prototype" /* 8633 */;
-import maybeMarkSeen from "maybeMarkSeen" /* 8634 */;
+import markAnalyticsFeedItemSeen from "markAnalyticsFeedItemSeen" /* 7574 */;
+import prototype from "prototype" /* 7575 */;
+import maybeMarkSeen from "maybeMarkSeen" /* 7576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 
@@ -199,7 +199,7 @@ export default {
     closure_1 = arg1;
     return callback(function*() {
       closure_0 = tmp4;
-      const obj2 = v0(7434);
+      const obj2 = v0(7442);
       yield obj2.unarchiveThreadIfNecessary(closure_1_0);
       const HTTP = closure_1_0(530).HTTP;
       const obj3 = { url: null, body: null, rejectWithError: null };
@@ -243,7 +243,7 @@ export default {
       obj1[1] = closure_1_1;
       closure_1_1(709).dispatch(obj1);
       dependencyMap = 1;
-      const obj13 = closure_1_1(7434);
+      const obj13 = closure_1_1(7442);
       yield obj13.searchThreads(closure_1_0, closure_1_1, dependencyMap, c3, c4);
       if (1 === tmp7) {
         dependencyMap = 0;
@@ -261,8 +261,8 @@ export default {
         obj4[0] = length;
         obj4[1] = closure_1;
         obj4[2] = length.length;
-        closure_1_0(7436).trackForumSearched(obj4);
-        const obj7 = closure_1_0(7436);
+        closure_1_0(7444).trackForumSearched(obj4);
+        const obj7 = closure_1_0(7444);
         const obj5 = { type: "FORUM_SEARCH_SUCCESS", channelId: null, threadIds: null };
         obj5[1] = closure_1;
         obj5[2] = length;

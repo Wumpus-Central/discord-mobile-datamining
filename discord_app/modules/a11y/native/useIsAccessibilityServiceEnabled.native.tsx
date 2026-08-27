@@ -1,9 +1,9 @@
-// === Module 8280: ACCESSIBILITY_SERVICE_ENABLED_GETTER ===
+// === Module 7794: ACCESSIBILITY_SERVICE_ENABLED_GETTER ===
 
-// Module 8280 (ACCESSIBILITY_SERVICE_ENABLED_GETTER)
+// Module 7794 (ACCESSIBILITY_SERVICE_ENABLED_GETTER)
 import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 4812 */;
-import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4866 */;
+import enforcingDefault from "enforcing" /* 4813 */;
+import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4867 */;
 import keys from "keys" /* 644 */;
 
 function ACCESSIBILITY_SERVICE_ENABLED_GETTER(accessibilityServiceEnabled) {

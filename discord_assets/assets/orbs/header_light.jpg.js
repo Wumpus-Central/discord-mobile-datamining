@@ -1,6 +1,6 @@
-// === Module 15138: metadata ===
+// === Module 15202: metadata ===
 
-// Module 15138 (metadata)
+// Module 15202 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/orbs/header_light.jpg.js");

@@ -1,10 +1,10 @@
-// === Module 8039: IdCardIcon ===
+// === Module 8635: IdCardIcon ===
 
-// Module 8039 (IdCardIcon)
+// Module 8635 (IdCardIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 8040 */;
+import registerAsset from "registerAsset" /* 8636 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

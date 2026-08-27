@@ -1,16 +1,16 @@
-// === Module 8965: ExpressionGuildDetails ===
+// === Module 9107: ExpressionGuildDetails ===
 
-// Module 8965 (ExpressionGuildDetails)
+// Module 9107 (ExpressionGuildDetails)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import preloadDefault from "preload" /* 5440 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5951 */;
-import getGuildBadgeSourceDefault from "getGuildBadgeSource" /* 8663 */;
+import preloadDefault from "preload" /* 5445 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5956 */;
+import getGuildBadgeSourceDefault from "getGuildBadgeSource" /* 7606 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { ExpressionSourceGuildRecord as closure_4 } from "getEmojiSourceData" /* 5952 */;
+import { ExpressionSourceGuildRecord as closure_4 } from "getEmojiSourceData" /* 5957 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 noopAll;

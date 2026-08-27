@@ -1,6 +1,6 @@
-// === Module 16359: onInitializeSync ===
+// === Module 16424: onInitializeSync ===
 
-// Module 16359 (onInitializeSync)
+// Module 16424 (onInitializeSync)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "reset" /* 4113 */;

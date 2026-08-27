@@ -1,10 +1,10 @@
-// === Module 17267: AVErrorStreamViewLowFPSDefinition ===
+// === Module 17333: AVErrorStreamViewLowFPSDefinition ===
 
-// Module 17267 (AVErrorStreamViewLowFPSDefinition)
-import closure_2 from "getParticipants" /* 4460 */;
-import closure_3 from "reset" /* 4466 */;
+// Module 17333 (AVErrorStreamViewLowFPSDefinition)
+import closure_2 from "getParticipants" /* 4461 */;
+import closure_3 from "reset" /* 4467 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "initialize" /* 4532 */;
+import closure_5 from "initialize" /* 4533 */;
 import { ApplicationStreamStates } from "ME" /* 676 */;
 
 const require = arg1;

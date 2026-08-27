@@ -1,6 +1,6 @@
-// === Module 14809: ActivityCardsItem ===
+// === Module 14836: ActivityCardsItem ===
 
-// Module 14809 (ActivityCardsItem)
+// Module 14836 (ActivityCardsItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -22,5 +22,5 @@ export default function ActivityCardsItem(animatedStyles) {
   obj[3] = function keyExtractor(title) {
     return title.title;
   };
-  return jsx(animatedStyles(7957).FlashList, { paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 });
+  return jsx(animatedStyles(8037).FlashList, { paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 });
 };

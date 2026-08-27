@@ -1,21 +1,21 @@
-// === Module 15832: ConnectionBannerIcon ===
+// === Module 15897: ConnectionBannerIcon ===
 
-// Module 15832 (ConnectionBannerIcon)
+// Module 15897 (ConnectionBannerIcon)
 import ThemesDefault from "Themes" /* 712 */;
 import map from "map" /* 4165 */;
-import _modDef4184 from "module_4184" /* 4184 */;
-import Text from "Text" /* 4440 */;
-import LinearGradientDefault from "LinearGradient" /* 4891 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5482 */;
+import _modDef4185 from "module_4185" /* 4185 */;
+import Text from "Text" /* 4441 */;
+import LinearGradientDefault from "LinearGradient" /* 4892 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5487 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "updateState" /* 13226 */;
-import { ConnectivityIndicatorState as closure_8 } from "updateState" /* 13226 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14621 */;
+import closure_7 from "updateState" /* 13252 */;
+import { ConnectivityIndicatorState as closure_8 } from "updateState" /* 13252 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14648 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function ConnectionBannerIcon(state) {
@@ -35,14 +35,14 @@ function ConnectionBannerIcon(state) {
     obj1[0] = tmp.leadingSlot;
     const obj2 = { size: "xs", color: null };
     obj2[1] = tmp5(712).colors.INTERACTIVE_ICON_DEFAULT;
-    obj1[1] = callback2(tmp2(15833).ConnectionUnknownIcon, obj2);
+    obj1[1] = callback2(tmp2(15898).ConnectionUnknownIcon, obj2);
     return callback2(closure_6, obj1);
   } else if (tmp7.BACK_ONLINE === state) {
     obj = { style: null, children: null };
     obj[0] = tmp.leadingSlot;
     const obj3 = { size: "xs", color: null };
     obj3[1] = tmp5(712).colors.ICON_FEEDBACK_POSITIVE;
-    obj[1] = callback2(tmp2(15835).ConnectionFineIcon, obj3);
+    obj[1] = callback2(tmp2(15900).ConnectionFineIcon, obj3);
     return callback2(closure_6, obj);
   }
 }
@@ -91,7 +91,7 @@ function BackOnlineGlow(opacity) {
   items1 = [tmp.glow, { opacity: opacity.progress }];
   obj = { style: tmp.glow, maskElement: callback2(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: closure_14, locations: closure_15, start: closure_16, end: closure_17 }), children: callback2(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: memo, locations: closure_18, start: closure_19, end: closure_20 }) };
   obj[2] = callback2(_isNativeReflectConstructDefault, obj);
-  return callback2(_modDef4184.View, obj);
+  return callback2(_modDef4185.View, obj);
 }
 function ConnectionBannerInner() {
   let obj = _require(sharedValue[20]);
@@ -203,11 +203,11 @@ let closure_26 = { code: "function ConnectionBannerTsx2(){const{progress,CONNECT
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(13227).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(13253).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
   dependencyMap = undefined;
-  let obj = stateFromStores(13227);
+  let obj = stateFromStores(13253);
   const items = [closure_7];
   stateFromStores = hidden(589).useStateFromStores(items, () => state.getState());
   dependencyMap = React.useRef(null);

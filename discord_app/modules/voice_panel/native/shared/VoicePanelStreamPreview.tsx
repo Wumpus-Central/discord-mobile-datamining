@@ -1,14 +1,14 @@
-// === Module 12591: VoicePanelStreamPreview ===
+// === Module 12383: VoicePanelStreamPreview ===
 
-// Module 12591 (VoicePanelStreamPreview)
+// Module 12383 (VoicePanelStreamPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "reset" /* 4466 */;
+import closure_4 from "reset" /* 4467 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
 import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4184" /* 4184 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import importDefaultResult from "module_4185" /* 4185 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 noopAll;
@@ -47,7 +47,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(11102)(guildId, channelId, ownerId).previewUrl;
+  const previewUrl = stream(10065)(guildId, channelId, ownerId).previewUrl;
   let obj = mode(589);
   const items = [closure_4, closure_5];
   const items1 = [stream];
@@ -62,7 +62,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     }
     return tmp2;
   }, items1);
-  obj1 = mode(4184);
+  obj1 = mode(4185);
   class T {
     constructor() {
       obj = mode;
@@ -84,7 +84,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
       return obj;
     }
   }
-  obj = { mode, withTiming: mode(4445).withTiming, OPACITY_TIMING: closure_10 };
+  obj = { mode, withTiming: mode(4446).withTiming, OPACITY_TIMING: closure_10 };
   T.__closure = obj;
   T.__workletHash = 15496474861955;
   T.__initData = closure_12;
@@ -103,13 +103,13 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     obj2[0] = previewUrl;
     obj1[1] = obj2;
     obj1[2] = tmp.streamPreviewImage;
-    tmp14 = callback(tmp2(4184).Image, obj1);
+    tmp14 = callback(tmp2(4185).Image, obj1);
   }
   const items2 = [tmp14, ];
   const obj3 = { style: animatedStyle, layout, children: null };
   const tmp11 = closure_7;
   const tmp12 = closure_8;
-  const tmp4 = stream(11102);
+  const tmp4 = stream(10065);
   if (stateFromStores) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.ownStreamTextContainer;
@@ -117,7 +117,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     obj5[2] = tmp.ownStreamText;
     const intl2 = tmp8(1236).intl;
     obj5[3] = intl2.string(tmp8(1236).t["ro/HN8"]);
-    obj4[1] = tmp16(tmp8(4440).Text, obj5);
+    obj4[1] = tmp16(tmp8(4441).Text, obj5);
     let tmp16Result = tmp16(closure_3, obj4);
   } else {
     const obj6 = { layout: null, disabled: null, text: null, size: "sm", variant: "primary-overlay", onPress: null };
@@ -129,7 +129,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     tmp16Result = tmp16(closure_9, obj6);
   }
   obj3[2] = tmp16Result;
-  items2[1] = callback(stream(8227), obj3);
+  items2[1] = callback(stream(7729), obj3);
   obj[5] = items2;
   return tmp11(tmp12, obj);
 };

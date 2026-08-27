@@ -1,10 +1,10 @@
-// === Module 7904: UserSquareIcon ===
+// === Module 8168: UserSquareIcon ===
 
-// Module 7904 (UserSquareIcon)
+// Module 8168 (UserSquareIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 7905 */;
+import registerAsset from "registerAsset" /* 8169 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

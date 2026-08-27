@@ -1,10 +1,10 @@
-// === Module 9270: _navigateToEvent ===
+// === Module 9821: _navigateToEvent ===
 
-// Module 9270 (_navigateToEvent)
+// Module 9821 (_navigateToEvent)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createRTCConnection" /* 4518 */;
-import closure_7 from "handleConnectionOpen" /* 4266 */;
+import closure_6 from "createRTCConnection" /* 4519 */;
+import closure_7 from "handleConnectionOpen" /* 4267 */;
 import { GuildScheduledEventEntityTypes as closure_8 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import { Routes } from "ME" /* 676 */;
 
@@ -105,7 +105,7 @@ function _navigateToEvent() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(7990);
+              obj1 = callback(8600);
               c4 = 3;
               store = 1;
               const obj4 = { value: null, done: false };
@@ -127,7 +127,7 @@ function _navigateToEvent() {
           c4 = 2;
           store = 1;
           obj5 = { value: null, done: false };
-          obj5[0] = callback3(7985).navigateToStage(channel, null);
+          obj5[0] = callback3(8595).navigateToStage(channel, null);
           return obj5;
         } catch (tmp47) {
           store = tmp;

@@ -1,21 +1,32 @@
-// === Module 6065: GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME ===
+// === Module 6071: GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME ===
 
-// Module 6065 (GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME)
+// Module 6071 (GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME)
 import _modDef38 from "module_38" /* 38 */;
-import loadForumPostData from "loadForumPostData" /* 6093 */;
-import hasFlagDefault from "hasFlag" /* 6103 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 6073 */;
+import loadForumPostData from "loadForumPostData" /* 6101 */;
+import hasFlagDefault from "hasFlag" /* 6110 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import { useMemo } from "noop" /* 19 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
+import { MAX_FORUM_POST_TAGS } from "FORUM_GUIDELINES_ACTION_SHEET" /* 6072 */;
 
 require = arg1;
 let closure_3 = ["data"];
-({ ActivityFlags: error, ActivityTypes: closure_8 } = ME);
-let c9 = "No Mic";
+({ ActivityFlags: error, ActivityTypes: closure_8, MAX_CHANNEL_NAME_LENGTH: c9 } = ME);
+let c11 = "No Mic";
 const result = require("set").fileFinishedImporting("modules/game_invite_channels/GameInvitesChannelUtils.tsx");
 
 export const GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME = "No Mic";
+export const GAME_INVITE_POST_MESSAGE_MAX_LENGTH = 120;
+export const deriveThreadName = function deriveThreadName(description) {
+  let str2 = description.trim().split("\n")[0];
+  if (str2 == null) {
+    str2 = "";
+  }
+  const str = description.trim();
+  return sanitizeThreadNameDefault(str2.slice(0, closure_9), true);
+};
 export const useIsGameInvitesPost = function useIsGameInvitesPost(channel) {
   const _require = channel;
   const items = [closure_6];
@@ -29,7 +40,7 @@ export const useIsGameInvitesPost = function useIsGameInvitesPost(channel) {
       }
       let tmp4 = !tmp3;
       if (!tmp3) {
-        const channel = closure_1_6.getChannel(obj.parent_id);
+        channel = closure_1_6.getChannel(obj.parent_id);
         let flag;
         if (channel != null) {
           flag = channel.isGameInvitesChannel();
@@ -44,10 +55,10 @@ export const useIsGameInvitesPost = function useIsGameInvitesPost(channel) {
     return tmp;
   });
 };
-export const useIsGameInvitePostVoiceEnabled = function useIsGameInvitePostVoiceEnabled(thread) {
-  const appliedTags = _require(6066).useAppliedTags(thread);
-  _require = thread;
-  const obj = _require(6066);
+export const useIsGameInvitePostVoiceEnabled = function useIsGameInvitePostVoiceEnabled(channel) {
+  const appliedTags = _require(6074).useAppliedTags(channel);
+  _require = channel;
+  const obj = _require(6074);
   const items = [closure_6];
   const obj3 = _require(589);
   return _require(589).useStateFromStores(items, () => {
@@ -60,7 +71,7 @@ export const useIsGameInvitePostVoiceEnabled = function useIsGameInvitePostVoice
       }
       let tmp4 = !tmp3;
       if (!tmp3) {
-        const channel = closure_1_6.getChannel(obj.parent_id);
+        channel = closure_1_6.getChannel(obj.parent_id);
         let flag;
         if (channel != null) {
           flag = channel.isGameInvitesChannel();
@@ -73,15 +84,15 @@ export const useIsGameInvitePostVoiceEnabled = function useIsGameInvitePostVoice
       tmp = tmp4;
     }
     return tmp;
-  }) && !appliedTags.some((name) => name.name === closure_9);
+  }) && !appliedTags.some((name) => name.name === closure_11);
 };
 export const useFirstMessage = function useFirstMessage(stateFromStores, enabled) {
   let obj = loadForumPostData;
   obj = { enabled, allowArchived: true };
   return obj.useFirstForumPostMessage(stateFromStores, obj);
 };
-export const useGameInvitesChannelOfficialApplication = function useGameInvitesChannelOfficialApplication(arg0) {
-  let application = arg0;
+export const useGameInvitesChannelOfficialApplication = function useGameInvitesChannelOfficialApplication(id) {
+  let application = id;
   const items = [closure_6];
   const stateFromStores = application(589).useStateFromStores(items, () => closure_1_6.getChannel(application));
   let isGameInvitesChannelResult = null == stateFromStores;
@@ -90,7 +101,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
     isGameInvitesChannelResult = stateFromStores.isGameInvitesChannel();
   }
   _modDef38(isGameInvitesChannelResult, "requires a game invites channel");
-  let tmpResult = tmp(6099);
+  let tmpResult = tmp(6106);
   let gameId;
   if (stateFromStores != null) {
     gameId = stateFromStores.gameId;
@@ -100,7 +111,7 @@ export const useGameInvitesChannelOfficialApplication = function useGameInvitesC
   if (data != null) {
     officialApplicationId = data.getOfficialApplicationId();
   }
-  tmpResult = tmp(5901);
+  tmpResult = tmp(5906);
   application = tmpResult.useApplication(officialApplicationId);
   const items1 = [application];
   return useMemo(() => {
@@ -158,7 +169,7 @@ export const useSubscribeToGameInvitePostAuthors = function useSubscribeToGameIn
     }
     return tmp;
   }, items2);
-  const subscribeGuildMembers = _require(6101).useSubscribeGuildMembers(tmp3, "GameInvitesChannelPostAuthors");
+  const subscribeGuildMembers = _require(6108).useSubscribeGuildMembers(tmp3, "GameInvitesChannelPostAuthors");
 };
 export const canInviteToActivity = function canInviteToActivity(type) {
   let tmp = type.type === constants2.PLAYING;
@@ -167,12 +178,34 @@ export const canInviteToActivity = function canInviteToActivity(type) {
   }
   return tmp;
 };
-export const useGameInvitesActiveAndArchivedThreads = function useGameInvitesActiveAndArchivedThreads(isGameInvitesChannel) {
-  closure_0 = arg1;
-  closure_1 = arg2;
-  const isGameInvitesChannelResult = isGameInvitesChannel.isGameInvitesChannel();
+export const maxedAppliedForumPostTags = function maxedAppliedForumPostTags(size) {
+  return size.size >= MAX_FORUM_POST_TAGS;
+};
+export const useGameInviteVoiceChatState = function useGameInviteVoiceChatState(availableTags, appliedTagIds) {
+  closure_0 = availableTags;
+  const items = [availableTags];
+  const tmp = useMemo(() => {
+    let found;
+    if (closure_0 != null) {
+      found = closure_0.find((name) => name.name === closure_11);
+    }
+    return found;
+  }, items);
+  const obj = { noMicTag: tmp, voiceChatEnabled: null == tmp || !appliedTagIds.has(tmp.id), voiceToggleDisabled: null };
+  let tmp3 = null == tmp;
+  if (!tmp3) {
+    tmp3 = appliedTagIds.size >= MAX_FORUM_POST_TAGS && !appliedTagIds.has(tmp.id);
+    const tmp5 = appliedTagIds.size >= MAX_FORUM_POST_TAGS && !appliedTagIds.has(tmp.id);
+  }
+  obj[2] = tmp3;
+  return obj;
+};
+export const useGameInvitesActiveAndArchivedThreads = function useGameInvitesActiveAndArchivedThreads(channel, forumActiveThreadIds, threadIds) {
+  closure_0 = forumActiveThreadIds;
+  closure_1 = threadIds;
+  const isGameInvitesChannelResult = channel.isGameInvitesChannel();
   dependencyMap = isGameInvitesChannelResult;
-  let items = [isGameInvitesChannelResult, arg1, arg2];
+  let items = [isGameInvitesChannelResult, forumActiveThreadIds, threadIds];
   return useMemo(() => {
     if (closure_2) {
       const _Date = Date;
@@ -186,10 +219,10 @@ export const useGameInvitesActiveAndArchivedThreads = function useGameInvitesAct
         let tmp12 = closure_1_6;
         let channel = closure_1_6.getChannel(nextResult);
         if (null != channel) {
-          let tmp15 = callback;
+          let tmp15 = threadIds;
           let tmp16 = isGameInvitesChannelResult;
           let tmp17 = channel;
-          if (callback(isGameInvitesChannelResult[12])(tmp14) <= timestamp) {
+          if (threadIds(isGameInvitesChannelResult[14])(tmp14) <= timestamp) {
             let tmp20 = nextResult;
             let arr = items1.push(tmp11);
             continue;
@@ -201,13 +234,13 @@ export const useGameInvitesActiveAndArchivedThreads = function useGameInvitesAct
       let obj = { activeThreadIds: null, archivedThreadIds: null };
       obj[0] = items;
       const items2 = [];
-      HermesBuiltin.arraySpread(callback, HermesBuiltin.arraySpread(items1, 0));
+      HermesBuiltin.arraySpread(threadIds, HermesBuiltin.arraySpread(items1, 0));
       obj[1] = items2;
       return obj;
     } else {
       obj = { activeThreadIds: null, archivedThreadIds: null };
       obj[0] = dependencyMap;
-      obj[1] = callback;
+      obj[1] = threadIds;
       return obj;
     }
   }, items);

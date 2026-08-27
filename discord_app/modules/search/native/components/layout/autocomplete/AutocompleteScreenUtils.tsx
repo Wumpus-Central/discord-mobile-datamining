@@ -1,15 +1,15 @@
-// === Module 16156: getSearchQueryChannelIds ===
+// === Module 16219: getSearchQueryChannelIds ===
 
-// Module 16156 (getSearchQueryChannelIds)
+// Module 16219 (getSearchQueryChannelIds)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import nameFromUserDefault from "nameFromUser" /* 4288 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11309 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11980 */;
+import nameFromUserDefault from "nameFromUser" /* 4289 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11187 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 11824 */;
 import closure_3 from "trackCommunicationDisabled" /* 1992 */;
 import closure_4 from "markAllUserIdListsStale" /* 4098 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "prototype" /* 11979 */;
-import { SearchListItemTypes } from "MessageEmbedTypes" /* 8622 */;
+import closure_6 from "prototype" /* 11823 */;
+import { SearchListItemTypes } from "MessageEmbedTypes" /* 7555 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 
 require = arg1;
@@ -38,35 +38,35 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
   } else {
     const intl3 = tmp(1236).intl;
     if (intl3.string(tmp(1236).t.ZNR2fi) === text) {
-      return tmp(4387).LinkIcon;
+      return tmp(4388).LinkIcon;
     } else {
       const intl4 = tmp(1236).intl;
       if (intl4.string(tmp(1236).t["20uQR3"]) === text) {
-        return tmp(10679).EmbedIcon;
+        return tmp(9292).EmbedIcon;
       } else {
         const intl5 = tmp(1236).intl;
         if (intl5.string(tmp(1236).t.L4lxyE) === text) {
-          return tmp(10229).PollsIcon;
+          return tmp(10350).PollsIcon;
         } else {
           const intl6 = tmp(1236).intl;
           if (intl6.string(tmp(1236).t["AV/v6i"]) === text) {
-            return tmp(10013).AttachmentIcon;
+            return tmp(10115).AttachmentIcon;
           } else {
             const intl7 = tmp(1236).intl;
             if (intl7.string(tmp(1236).t.XM9XGP) === text) {
-              return tmp(7926).VideoIcon;
+              return tmp(10113).VideoIcon;
             } else {
               const intl8 = tmp(1236).intl;
               if (intl8.string(tmp(1236).t.TNLcpx) === text) {
-                return tmp(4983).ImageIcon;
+                return tmp(4988).ImageIcon;
               } else {
                 const intl9 = tmp(1236).intl;
                 if (intl9.string(tmp(1236).t.F8Wf0e) === text) {
-                  return tmp(7921).SoundboardIcon;
+                  return tmp(12007).SoundboardIcon;
                 } else {
                   const intl2 = tmp(1236).intl;
                   if (intl2.string(tmp(1236).t.PJgX2h) === text) {
-                    return tmp(7918).StickerIcon;
+                    return tmp(10117).StickerIcon;
                   }
                 }
               }
@@ -80,15 +80,15 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
 export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeIcon(text) {
   const intl = getSystemLocale.intl;
   if (intl.string(getSystemLocale.t.tPZo4p) === text) {
-    return tmp(11457).UserIcon;
+    return tmp(11312).UserIcon;
   } else {
     const intl3 = tmp(1236).intl;
     if (intl3.string(tmp(1236).t.JL7sRS) === text) {
-      return tmp(10683).RobotIcon;
+      return tmp(9296).RobotIcon;
     } else {
       const intl2 = tmp(1236).intl;
       if (intl2.string(tmp(1236).t.WjkIKU) === text) {
-        return tmp(16157).WebhookIcon;
+        return tmp(16220).WebhookIcon;
       }
     }
   }

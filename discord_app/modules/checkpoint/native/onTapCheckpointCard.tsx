@@ -1,8 +1,8 @@
-// === Module 11579: onTapCheckpointCard ===
+// === Module 11430: onTapCheckpointCard ===
 
-// Module 11579 (onTapCheckpointCard)
+// Module 11430 (onTapCheckpointCard)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4652 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4653 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 

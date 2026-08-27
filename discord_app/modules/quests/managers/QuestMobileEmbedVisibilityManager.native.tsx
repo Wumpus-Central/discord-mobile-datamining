@@ -1,23 +1,23 @@
-// === Module 17246: log ===
+// === Module 17312: log ===
 
-// Module 17246 (log)
+// Module 17312 (log)
 import privDefault from "priv" /* 1405 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4299 */;
-import useAlertStore2 from "useAlertStore" /* 4810 */;
-import initializeDefault from "initialize" /* 5433 */;
-import getQuestLogger from "getQuestLogger" /* 7377 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4300 */;
+import useAlertStore2 from "useAlertStore" /* 4811 */;
+import initializeDefault from "initialize" /* 5438 */;
+import getQuestLogger from "getQuestLogger" /* 7387 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "setContent" /* 4154 */;
-import closure_6 from "getParticipants" /* 4460 */;
-import useChannelDetailsStore from "useChannelDetailsStore" /* 8620 */;
-import closure_9 from "withEqualityFn" /* 4680 */;
+import closure_6 from "getParticipants" /* 4461 */;
+import useChannelDetailsStore from "useChannelDetailsStore" /* 7553 */;
+import closure_9 from "withEqualityFn" /* 4681 */;
 import { isTextChannel } from "createChannelRecord" /* 1395 */;
 import closure_11 from "ensureGuildLoaded" /* 1391 */;
 import closure_12 from "handleConnectionOpen" /* 1981 */;
-import closure_13 from "getAlert" /* 11177 */;
-import closure_14 from "getState" /* 7085 */;
-import closure_15 from "initializeState" /* 7371 */;
-import { MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE as closure_16 } from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 9736 */;
+import closure_13 from "getAlert" /* 11060 */;
+import closure_14 from "getState" /* 7091 */;
+import closure_15 from "initializeState" /* 7381 */;
+import { MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE as closure_16 } from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 8924 */;
 import { MessageStates } from "ME" /* 676 */;
 
 require = arg1;
@@ -231,8 +231,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(9985).isChannelFocused();
-      applyArgumentsResult(4298);
+      let isChannelFocusedResult = applyArgumentsResult(10092).isChannelFocused();
+      applyArgumentsResult(4299);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }

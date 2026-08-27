@@ -1,6 +1,6 @@
-// === Module 16442: useActivityWebViewLockManager ===
+// === Module 16506: useActivityWebViewLockManager ===
 
-// Module 16442 (useActivityWebViewLockManager)
+// Module 16506 (useActivityWebViewLockManager)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 

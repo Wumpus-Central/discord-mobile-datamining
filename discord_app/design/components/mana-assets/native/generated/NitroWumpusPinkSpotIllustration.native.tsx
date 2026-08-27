@@ -1,10 +1,10 @@
-// === Module 6811: NitroWumpusPinkSpotIllustration ===
+// === Module 6817: NitroWumpusPinkSpotIllustration ===
 
-// Module 6811 (NitroWumpusPinkSpotIllustration)
+// Module 6817 (NitroWumpusPinkSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6812 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6818 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroWumpusPinkSpotIllustration.native.tsx");

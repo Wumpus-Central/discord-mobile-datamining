@@ -1,6 +1,6 @@
-// === Module 7358: canBypassSlowmodeHelper ===
+// === Module 7365: canBypassSlowmodeHelper ===
 
-// Module 7358 (canBypassSlowmodeHelper)
+// Module 7365 (canBypassSlowmodeHelper)
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4089 */;

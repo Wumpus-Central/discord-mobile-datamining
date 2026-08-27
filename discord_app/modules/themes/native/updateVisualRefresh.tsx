@@ -1,9 +1,9 @@
-// === Module 16386: updateVisualRefresh ===
+// === Module 16450: updateVisualRefresh ===
 
-// Module 16386 (updateVisualRefresh)
+// Module 16450 (updateVisualRefresh)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 13981 */;
+import enforcingDefault from "enforcing" /* 14008 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let result = set.fileFinishedImporting("modules/themes/native/updateVisualRefresh.tsx");

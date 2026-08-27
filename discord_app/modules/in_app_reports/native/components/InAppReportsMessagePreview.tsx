@@ -1,16 +1,16 @@
-// === Module 8258: MessagePreview ===
+// === Module 8703: MessagePreview ===
 
-// Module 8258 (MessagePreview)
+// Module 8703 (MessagePreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hexToRgba from "hexToRgba" /* 4292 */;
-import Text from "Text" /* 4440 */;
-import setOptionsDefault from "setOptions" /* 8259 */;
-import DCDChatItemDefault from "DCDChatItem" /* 8804 */;
+import hexToRgba from "hexToRgba" /* 4293 */;
+import Text from "Text" /* 4441 */;
+import setOptionsDefault from "setOptions" /* 7774 */;
+import DCDChatItemDefault from "DCDChatItem" /* 8704 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;
@@ -36,7 +36,7 @@ export default function MessagePreview(message) {
   const items = [callback(Text.Text, obj), ];
   const hexWithOpacityResult = obj.hexWithOpacity(tmp.borderColor.color, 0.08);
   const items1 = [tmp.chatItemContainer, { borderColor: hexWithOpacityResult }];
-  items[1] = callback(View, { style: items1, children: callback(DCDChatItemDefault, obj2) });
+  items[1] = callback(View, { accessible: true, style: items1, children: callback(DCDChatItemDefault, obj2) });
   obj[1] = items;
   return callback2(View, obj);
 };

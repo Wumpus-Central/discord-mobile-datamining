@@ -1,14 +1,14 @@
-// === Module 12316: NewUserPermissionsOnboarding ===
+// === Module 12140: NewUserPermissionsOnboarding ===
 
-// Module 12316 (NewUserPermissionsOnboarding)
+// Module 12140 (NewUserPermissionsOnboarding)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4440 */;
-import Button from "Button" /* 4879 */;
+import Text from "Text" /* 4441 */;
+import Button from "Button" /* 4880 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;
@@ -68,7 +68,7 @@ export default function NewUserPermissionsOnboarding(showSkip) {
     const intl2 = tmp6(1236).intl;
     obj8[1] = intl2.string(tmp6(1236).t["5Wxrcd"]);
     obj8[2] = onDontAllow;
-    obj7[1] = tmp4(tmp6(4879).Button, obj8);
+    obj7[1] = tmp4(tmp6(4880).Button, obj8);
     flag = tmp4(tmp5, obj7);
   }
   const obj9 = { children: null };

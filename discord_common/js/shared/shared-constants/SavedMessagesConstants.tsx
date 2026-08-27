@@ -1,6 +1,6 @@
-// === Module 8595: SAVED_BOOKMARKS_MAX ===
+// === Module 7529: SAVED_BOOKMARKS_MAX ===
 
-// Module 8595 (SAVED_BOOKMARKS_MAX)
+// Module 7529 (SAVED_BOOKMARKS_MAX)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/SavedMessagesConstants.tsx");

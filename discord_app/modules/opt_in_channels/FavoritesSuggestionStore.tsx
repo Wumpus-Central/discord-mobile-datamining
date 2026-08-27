@@ -1,11 +1,11 @@
-// === Module 7202: handleChange ===
+// === Module 7208: handleChange ===
 
-// Module 7202 (handleChange)
+// Module 7208 (handleChange)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "ensureGuildLoaded" /* 1391 */;
 import closure_1 from "handleConnectionOpen" /* 1981 */;
-import closure_2 from "updateUserGuildSettingsInternal" /* 4653 */;
+import closure_2 from "updateUserGuildSettingsInternal" /* 4654 */;
 
 function handleChange() {
   channelId = channelId.getChannelId();

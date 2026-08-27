@@ -1,7 +1,7 @@
-// === Module 16038: set ===
+// === Module 16103: set ===
 
-// Module 16038 (set)
-import _fetchProfileAll from "_fetchProfile" /* 8531 */;
+// Module 16103 (set)
+import _fetchProfileAll from "_fetchProfile" /* 8048 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import set from "set" /* 2 */;
 

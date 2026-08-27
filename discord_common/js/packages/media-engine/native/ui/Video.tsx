@@ -1,8 +1,8 @@
-// === Module 4547: Video ===
+// === Module 4548: Video ===
 
-// Module 4547 (Video)
+// Module 4548 (Video)
 import set from "set" /* 2 */;
-import loggerDefault from "logger" /* 4548 */;
+import loggerDefault from "logger" /* 4549 */;
 
 class Video {
   constructor(arg0) {

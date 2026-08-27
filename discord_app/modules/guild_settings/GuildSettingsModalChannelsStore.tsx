@@ -1,9 +1,9 @@
-// === Module 15579: sortCategoryList ===
+// === Module 15644: sortCategoryList ===
 
-// Module 15579 (sortCategoryList)
+// Module 15644 (sortCategoryList)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 5427 */;
+import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 5432 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import comparator from "comparator" /* 1982 */;

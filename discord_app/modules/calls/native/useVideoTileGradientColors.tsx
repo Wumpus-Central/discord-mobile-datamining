@@ -1,8 +1,8 @@
-// === Module 8534: rgbToHex ===
+// === Module 8051: rgbToHex ===
 
-// Module 8534 (rgbToHex)
+// Module 8051 (rgbToHex)
 import int2hslRaw from "int2hslRaw" /* 688 */;
-import getProfileTheme from "getProfileTheme" /* 8535 */;
+import getProfileTheme from "getProfileTheme" /* 8052 */;
 import closure_2 from "noop" /* 19 */;
 import { ThemeTypes } from "ME" /* 676 */;
 
@@ -26,7 +26,7 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
         DARK = ThemeTypes.DARK;
       }
       let tmp9Result = tmp9(688);
-      tmp9Result = tmp9(8535);
+      tmp9Result = tmp9(8052);
       const int2rgbArrayResult = tmp9Result.int2rgbArray(tmp9Result.calculateModalV2BackgroundColor(modalV2BackgroundColor, modalV2BackgroundColor, DARK));
       const obj7 = getProfileTheme;
       const tmp9Result1 = int2hslRaw;

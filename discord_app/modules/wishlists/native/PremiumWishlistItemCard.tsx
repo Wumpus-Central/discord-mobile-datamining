@@ -1,7 +1,7 @@
-// === Module 10329: PremiumWishlistItemCard ===
+// === Module 10703: PremiumWishlistItemCard ===
 
-// Module 10329 (PremiumWishlistItemCard)
-import SourceIconDefault from "SourceIcon" /* 9570 */;
+// Module 10703 (PremiumWishlistItemCard)
+import SourceIconDefault from "SourceIcon" /* 10701 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

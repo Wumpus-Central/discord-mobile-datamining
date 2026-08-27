@@ -1,8 +1,8 @@
-// === Module 5060: fromBlob ===
+// === Module 5065: fromBlob ===
 
-// Module 5060 (fromBlob)
-import fromBlobDefault from "fromBlob" /* 5048 */;
-import ORIGINAL_MD5_HEADER from "ORIGINAL_MD5_HEADER" /* 5061 */;
+// Module 5065 (fromBlob)
+import fromBlobDefault from "fromBlob" /* 5053 */;
+import ORIGINAL_MD5_HEADER from "ORIGINAL_MD5_HEADER" /* 5066 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 require = arg1;

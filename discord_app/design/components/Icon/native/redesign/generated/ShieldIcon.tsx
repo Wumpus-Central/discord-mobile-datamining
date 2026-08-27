@@ -1,10 +1,10 @@
-// === Module 10496: ShieldIcon ===
+// === Module 8359: ShieldIcon ===
 
-// Module 10496 (ShieldIcon)
+// Module 8359 (ShieldIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 10495 */;
+import registerAsset from "registerAsset" /* 8358 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

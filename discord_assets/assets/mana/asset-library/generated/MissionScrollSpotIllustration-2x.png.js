@@ -1,6 +1,6 @@
-// === Module 6732: metadata ===
+// === Module 6738: metadata ===
 
-// Module 6732 (metadata)
+// Module 6738 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MissionScrollSpotIllustration-2x.png.js");

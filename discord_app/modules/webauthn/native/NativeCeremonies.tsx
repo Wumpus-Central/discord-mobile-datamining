@@ -1,6 +1,6 @@
-// === Module 8701: _promptForRegisterCredential ===
+// === Module 7655: _promptForRegisterCredential ===
 
-// Module 8701 (_promptForRegisterCredential)
+// Module 7655 (_promptForRegisterCredential)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;

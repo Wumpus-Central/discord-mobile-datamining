@@ -1,18 +1,18 @@
-// === Module 15981: ContentHeader ===
+// === Module 16046: ContentHeader ===
 
-// Module 15981 (ContentHeader)
+// Module 16046 (ContentHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4440 */;
-import GappedList from "GappedList" /* 8969 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14744 */;
+import Text from "Text" /* 4441 */;
+import GappedList from "GappedList" /* 9111 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 14771 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function ContentHeader(arg0) {
@@ -83,14 +83,14 @@ function ChannelBenefitShowCase(description) {
     obj[0] = { flexDirection: "row", alignItems: "center" };
     obj = { size: null, source: null };
     obj[0] = tmp(1297).Icon.Sizes.REFRESH_SMALL_16;
-    obj[1] = tmp(4932).getChannelIcon(stateFromStores);
+    obj[1] = tmp(4933).getChannelIcon(stateFromStores);
     const items2 = [callback2(tmp(1297).Icon, obj), callback2(tmp(1297).Spacer, { size: 4 }), ];
     obj1 = { variant: "text-md/semibold", color: "text-default", children: null };
     obj1[2] = tmp4;
-    items2[2] = callback2(tmp(4440).Text, obj1);
+    items2[2] = callback2(tmp(4441).Text, obj1);
     obj[1] = items2;
     title = callback3(closure_6, obj);
-    const tmpResult = tmp(4932);
+    const tmpResult = tmp(4933);
   }
   return callback2(BenefitShowCase, { title, description: description.description });
 }
@@ -143,7 +143,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   const first1 = callback(obj3.useChannelBenefits(listingId), 1)[0];
   let obj4 = getRoleEmojisAll;
   const first2 = callback(obj4.useIntangibleBenefits(listingId), 1)[0];
-  let obj5 = listingId(15977);
+  let obj5 = listingId(16042);
   const first3 = first1[0];
   const first4 = first2[0];
   const size = first.size;
@@ -154,13 +154,13 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
     str = "";
   }
   obj1 = { source: { uri: str }, style: tmp.image };
-  const items = [closure_8(guildId(5440), obj1), closure_8(listingId(1297).Spacer, { size: 16 }), ];
+  const items = [closure_8(guildId(5445), obj1), closure_8(listingId(1297).Spacer, { size: 16 }), ];
   obj2 = { children: null };
-  const items1 = [closure_8(listingId(4440).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: callback(obj1.useName(listingId), 1)[0] }), closure_8(listingId(1297).Spacer, { size: 4 }), closure_8(listingId(4440).Text, { variant: "heading-md/medium", color: "text-default", children: formattedSubscriptionPlan })];
+  const items1 = [closure_8(listingId(4441).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: callback(obj1.useName(listingId), 1)[0] }), closure_8(listingId(1297).Spacer, { size: 4 }), closure_8(listingId(4441).Text, { variant: "heading-md/medium", color: "text-default", children: formattedSubscriptionPlan })];
   obj2[0] = items1;
   items[2] = closure_9(closure_6, obj2);
   obj[1] = items;
-  const items2 = [closure_9(closure_6, obj), closure_8(listingId(1297).Spacer, { size: 16 }), closure_8(guildId(15983), { listingId }), ];
+  const items2 = [closure_9(closure_6, obj), closure_8(listingId(1297).Spacer, { size: 16 }), closure_8(guildId(16048), { listingId }), ];
   let tmp8Result2 = length > 0 || size > 0 || length2 > 0;
   if (tmp8Result2) {
     const items3 = [tmp10(tmp4(1297).Spacer, { size: 24 }), , ];
@@ -227,7 +227,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
     const obj16 = { children: null };
     items6[2] = tmp8Result1;
     obj4[1] = items6;
-    obj3[1] = tmp8(tmp4(8969).GappedList, obj4);
+    obj3[1] = tmp8(tmp4(9111).GappedList, obj4);
     items3[1] = tmp10(tmp9, obj3);
     const obj17 = { onPress: null };
     obj17[0] = function onPress() {

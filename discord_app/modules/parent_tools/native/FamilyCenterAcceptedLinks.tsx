@@ -1,19 +1,19 @@
-// === Module 14443: FamilyCenterAcceptedLinkRow ===
+// === Module 14470: FamilyCenterAcceptedLinkRow ===
 
-// Module 14443 (FamilyCenterAcceptedLinkRow)
+// Module 14470 (FamilyCenterAcceptedLinkRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import messagesProxyDefault from "messagesProxy" /* 2369 */;
-import Text from "Text" /* 4440 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 7546 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7547 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11560 */;
-import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 14446 */;
-import registerAssetDefault from "registerAsset" /* 14451 */;
+import Text from "Text" /* 4441 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8697 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8698 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11411 */;
+import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 14473 */;
+import registerAssetDefault from "registerAsset" /* 14478 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 7210 */;
+import items from "items" /* 7216 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function FamilyCenterAcceptedLinkRow(otherUser) {
@@ -41,7 +41,7 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     obj1[0] = str(1297).Icon.Sizes.SMALL;
     obj1[2] = registerAssetDefault;
     obj[4] = closure_6(str(1297).Icon, obj1);
-    obj[1] = closure_6(str(5015).PressableOpacity, obj);
+    obj[1] = closure_6(str(5020).PressableOpacity, obj);
     tmp4Result = tmp4(FamilyCenterLinkRowDefault, obj);
     const tmp5 = importDefault;
     const tmp7 = FamilyCenterLinkRowDefault;
@@ -81,9 +81,9 @@ export default function FamilyCenterAcceptedLinks() {
     const obj4 = { text: null };
     const intl3 = tmp5(1236).intl;
     obj4[0] = intl3.string(tmp2(2369).C4ScLD);
-    obj3[1] = tmp10(tmp2(14444), obj4);
+    obj3[1] = tmp10(tmp2(14471), obj4);
     let mapped = tmp10(tmp9, obj3);
-    const tmp2Result = tmp2(14444);
+    const tmp2Result = tmp2(14471);
   } else {
     mapped = activeLinkUsers.map((id) => callback(closure_10, { otherUser: id }, "accepted-" + id.id));
   }

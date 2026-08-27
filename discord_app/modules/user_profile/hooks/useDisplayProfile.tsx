@@ -1,10 +1,10 @@
-// === Module 8529: useDisplayProfile ===
+// === Module 8046: useDisplayProfile ===
 
-// Module 8529 (useDisplayProfile)
-import premiumSinceDefault from "premiumSince" /* 8533 */;
+// Module 8046 (useDisplayProfile)
+import premiumSinceDefault from "premiumSince" /* 8050 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "createUserWidgetFromServer" /* 7293 */;
+import closure_5 from "createUserWidgetFromServer" /* 7299 */;
 import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1991 */;
 
 const require = arg1;

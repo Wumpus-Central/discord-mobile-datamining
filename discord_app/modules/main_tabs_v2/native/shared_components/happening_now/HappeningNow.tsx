@@ -1,33 +1,26 @@
-// === Module 15494: renderCard ===
+// === Module 15559: renderCard ===
 
-// Module 15494 (renderCard)
+// Module 15559 (renderCard)
 import ThemesDefault from "Themes" /* 712 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5599 */;
-import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 15505 */;
-import HappeningNowCardUnifiedVCDefault from "HappeningNowCardUnifiedVC" /* 15508 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5604 */;
+import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 15570 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14811 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14838 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 8228 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
-import { Gesture } from "LegacyBaseButton" /* 5599 */;
+import createFakeSharedValue from "createFakeSharedValue" /* 7730 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
+import { Gesture } from "LegacyBaseButton" /* 5604 */;
 
 require = arg1;
 function renderCard(kind, fullWidth) {
   if ("placeholder" !== kind.kind) {
     if (!fullWidth.loading) {
       kind = kind.kind;
-      let obj = {};
-      const merged = Object.assign(kind);
-      const merged1 = Object.assign(fullWidth);
-      obj.cardKey = keyExtractor(kind);
-      return jsx(HappeningNowCardUnifiedVCDefault, {});
     }
   }
-  obj = { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant };
   return jsx(HappeningNowCardPlaceholder.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
 }
 function keyExtractor(voiceState) {
@@ -74,7 +67,7 @@ const memoResult = importAllResult.memo((listRef) => {
   obj = obj(isFocused[14]);
   isFocused = obj.useIsFocused();
   ref = isFocused;
-  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: 3256618780241012600000000000000000000000000000, isFocused: 172158042798817300 };
+  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "ZA", isFocused: "+27" };
   obj[3] = isFocused;
   const tmp7 = callback(ref(isFocused[15])(listRef.cards, obj), 2);
   let first = tmp7[0];

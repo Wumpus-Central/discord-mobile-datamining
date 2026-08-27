@@ -1,26 +1,26 @@
-// === Module 16423: user ===
+// === Module 16487: user ===
 
-// Module 16423 (user)
+// Module 16487 (user)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import _isStreamingDefault from "_isStreaming" /* 8523 */;
-import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 15783 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16406 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16408 */;
-import _modDef16410 from "module_16410" /* 16410 */;
-import ChannelContentDefault from "ChannelContent" /* 16411 */;
-import renderChannelBadgeDefault from "renderChannelBadge" /* 16413 */;
+import _isStreamingDefault from "_isStreaming" /* 8040 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 15847 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16470 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16472 */;
+import _modDef16474 from "module_16474" /* 16474 */;
+import ChannelContentDefault from "ChannelContent" /* 16475 */;
+import renderChannelBadgeDefault from "renderChannelBadge" /* 16477 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import closure_5 from "_getSystemLocale" /* 1996 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "sortActivity" /* 4533 */;
-import closure_8 from "handleTypingStart" /* 11605 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4653 */;
+import closure_7 from "sortActivity" /* 4534 */;
+import closure_8 from "handleTypingStart" /* 11456 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4654 */;
 import { StatusTypes } from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4654 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4655 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function UserResult(user) {
@@ -48,7 +48,7 @@ function UserResult(user) {
     const items = [user.id];
     closure_1_1(closure_1_2[13]).openPrivateChannel({ recipientIds: items });
   }, items);
-  let obj = user(4886);
+  let obj = user(4887);
   const fontScale = obj.useFontScale();
   obj1 = user(589);
   const items1 = [closure_5];
@@ -68,8 +68,8 @@ function UserResult(user) {
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
-    relativeTimestamp = tmp6(7313).getRelativeTimestamp(extractTimestampResult);
-    const tmp6Result = tmp6(7313);
+    relativeTimestamp = tmp6(7319).getRelativeTimestamp(extractTimestampResult);
+    const tmp6Result = tmp6(7319);
   }
   let str = "text-muted";
   if (unread) {
@@ -78,11 +78,11 @@ function UserResult(user) {
       str = "text-default";
     }
   }
-  tmp2Result = tmp2(16407);
+  tmp2Result = tmp2(16471);
   obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items4, children: null };
   items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items5 = [callback(_modDef16410, obj), , ];
+  const items5 = [callback(_modDef16474, obj), , ];
   obj1 = { user, guildId: "e", isMobileOnline: true, isVROnline: null, status: false, streaming: false, style: null, size: null, animate: null, typing: null, autoStatusCutout: null };
   obj1[2] = isMobileOnline;
   obj1[3] = isVROnline;
@@ -113,8 +113,8 @@ function UserResult(user) {
   const tmp18 = UnreadSetting;
   const tmp2Result1 = renderChannelWrapperDefault;
   if (comparator == null) {
-    comparator = tmp2(4288).getUserTag(user);
-    const tmp2Result3 = tmp2(4288);
+    comparator = tmp2(4289).getUserTag(user);
+    const tmp2Result3 = tmp2(4289);
   }
   obj2 = { name: comparator, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, mentionCount: null, mentionBadge: null };
   let tmp14Result;
@@ -126,7 +126,7 @@ function UserResult(user) {
       obj3[2] = str;
       obj3[3] = flag;
       obj3[4] = tmp6(4139).ChannelListLayoutTypes.COMPACT;
-      tmp14Result = tmp14(tmp6(10012).ChannelRowPreview, obj3);
+      tmp14Result = tmp14(tmp6(10112).ChannelRowPreview, obj3);
     }
   }
   const obj4 = { children: null };
@@ -140,7 +140,7 @@ function UserResult(user) {
   items5[2] = ChannelContentDefault(obj2);
   obj4[0] = items5;
   obj[3] = tmp2Result1(tmp16(tmp17, obj4), { fontScale });
-  return tmp2Result(callback(user(5015).PressableHighlight, obj));
+  return tmp2Result(callback(user(5020).PressableHighlight, obj));
 }
 function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
@@ -156,7 +156,7 @@ function UserResultWithChannel(arg0) {
   const obj3 = initialize;
   const merged = Object.assign(arg0);
   obj.channel = channel;
-  obj.lastMessage = channel(14834)(channel, { unread });
+  obj.lastMessage = channel(14861)(channel, { unread });
   obj.unread = unread;
   obj.mentionCount = mentionCount;
   obj.muted = stateFromStores;

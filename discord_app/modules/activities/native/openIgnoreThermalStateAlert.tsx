@@ -1,8 +1,8 @@
-// === Module 10832: openIgnoreThermalStateAlert ===
+// === Module 9474: openIgnoreThermalStateAlert ===
 
-// Module 10832 (openIgnoreThermalStateAlert)
+// Module 9474 (openIgnoreThermalStateAlert)
 import noopAll from "noop" /* 19 */;
-import _modDef4809 from "module_4809" /* 4809 */;
+import _modDef4810 from "module_4810" /* 4810 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/activities/native/o
 
 export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(arg0) {
   closure_0 = arg0;
-  let obj = _modDef4809;
+  let obj = _modDef4810;
   obj = {
     importer() {
       return callback(closure_1_2[4])(closure_1_2[3], closure_1_2.paths).then((IgnoreThermalStateAlert) => {

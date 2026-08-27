@@ -1,29 +1,29 @@
-// === Module 8996: useReactors ===
+// === Module 10814: useReactors ===
 
-// Module 8996 (useReactors)
+// Module 10814 (useReactors)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4440 */;
-import EmojiDefault from "Emoji" /* 5532 */;
-import Background from "Background" /* 5569 */;
-import BottomSheetModal from "BottomSheetModal" /* 5571 */;
-import getNoResultsSource from "getNoResultsSource" /* 9042 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 10422 */;
+import Text from "Text" /* 4441 */;
+import EmojiDefault from "Emoji" /* 5537 */;
+import Background from "Background" /* 5574 */;
+import BottomSheetModal from "BottomSheetModal" /* 5576 */;
+import getNoResultsSource from "getNoResultsSource" /* 8833 */;
+import useEmojiColorPalette from "useEmojiColorPalette" /* 10817 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_10 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_10 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import closure_11 from "ensureGuildLoaded" /* 1391 */;
 import closure_12 from "trackCommunicationDisabled" /* 1992 */;
-import closure_13 from "reactionKey" /* 7431 */;
+import closure_13 from "reactionKey" /* 7439 */;
 import closure_14 from "getUncachedChannelPermissions" /* 4089 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
-import importDefaultResult from "module_4184" /* 4184 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
+import importDefaultResult from "module_4185" /* 4185 */;
 import { Storage } from "Storage" /* 595 */;
 
 require = arg1;
@@ -134,7 +134,7 @@ function ReactionTab(arg0) {
   let tmp8 = null;
   if (null != emojiColorPalette) {
     obj = { backgroundColor: null };
-    let tmp3Result = tmp3(4292);
+    let tmp3Result = tmp3(4293);
     obj[0] = tmp3Result.hexOpacityToRgba(emojiColorPalette.backgroundColor, emojiColorPalette.opacity);
     tmp8 = obj;
   }
@@ -312,7 +312,7 @@ function EmojiOptionsButton(channelId) {
   const items = [closure_11];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_11.getChannel(channelId), items1);
-  const tmp3 = messageId(12804)(stateFromStores);
+  const tmp3 = messageId(10818)(stateFromStores);
   closure_2 = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
@@ -328,9 +328,9 @@ function EmojiOptionsButton(channelId) {
   obj = { variant: "text-xs/semibold", color: "text-subtle", children: null };
   const intl = channelId(1236).intl;
   obj[2] = intl.string(channelId(1236).t.pCaYID);
-  const items3 = [callback2(channelId(4440).Text, obj), ];
+  const items3 = [callback2(channelId(4441).Text, obj), ];
   const tmp = callback4();
-  items3[1] = callback2(channelId(5950).ChevronSmallRightIcon, { color: messageId(712).colors.ICON_SUBTLE, size: "xs" });
+  items3[1] = callback2(channelId(5955).ChevronSmallRightIcon, { color: messageId(712).colors.ICON_SUBTLE, size: "xs" });
   obj[2] = items3;
   return callback3(closure_7, obj);
 }
@@ -338,7 +338,7 @@ function ReactionTabs(setReactionSelectedIndex) {
   const tmp = callback4();
   ({ reactions, reactionSelectedIndex } = setReactionSelectedIndex);
   setReactionSelectedIndex = setReactionSelectedIndex.setReactionSelectedIndex;
-  let obj = setReactionSelectedIndex(5927);
+  let obj = setReactionSelectedIndex(5932);
   obj = { style: tmp.reactionTab, children: null };
   obj = {
     tabs: reactions.map((emoji) => {
@@ -359,13 +359,13 @@ function ReactionTabs(setReactionSelectedIndex) {
     initialNumTabsToRender: reactionSelectedIndex(4100).MAX_REACTIONS
   };
   ({ tab: obj3[1], tabActive: obj3[2], tabSelected: obj3[3] } = tmp);
-  const items = [callback2(setReactionSelectedIndex(12806), obj), callback2(setReactionSelectedIndex(7618), { outer: true }), ];
+  const items = [callback2(setReactionSelectedIndex(10820), obj), callback2(setReactionSelectedIndex(8301), { outer: true }), ];
   obj1 = { style: tmp.removeButtonContainer, children: null };
   const obj2 = { style: tmp.emojiTextIdentifier, variant: "eyebrow", color: "text-default", children: null };
   const tmp4 = callback2;
-  const tmp5 = setReactionSelectedIndex(12806);
+  const tmp5 = setReactionSelectedIndex(10820);
   obj2[3] = reactionSelectedIndex(4100).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
-  const items1 = [callback2(reactionSelectedIndex(4440).Text, obj2), ];
+  const items1 = [callback2(reactionSelectedIndex(4441).Text, obj2), ];
   const obj3 = {};
   const obj6 = reactionSelectedIndex(4100);
   const merged = Object.assign(setReactionSelectedIndex);

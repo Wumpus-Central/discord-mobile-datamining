@@ -1,6 +1,6 @@
-// === Module 7322: getAsync ===
+// === Module 7328: getAsync ===
 
-// Module 7322 (getAsync)
+// Module 7328 (getAsync)
 import timestampDefault from "timestamp" /* 3 */;
 import fromGuildPropertiesWithAdditionalFieldsAll from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
 import fromServerArrayAll from "fromServerArray" /* 1987 */;

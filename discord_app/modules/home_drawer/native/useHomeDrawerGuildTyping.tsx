@@ -1,11 +1,11 @@
-// === Module 15760: areHomeDrawerGuildTypingStatesEqual ===
+// === Module 15824: areHomeDrawerGuildTypingStatesEqual ===
 
-// Module 15760 (areHomeDrawerGuildTypingStatesEqual)
+// Module 15824 (areHomeDrawerGuildTypingStatesEqual)
 import shallowEqual from "shallowEqual" /* 643 */;
 import closure_3 from "storeThread" /* 4091 */;
 import { isThread } from "createChannelRecord" /* 1395 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleTypingStart" /* 11605 */;
+import closure_6 from "handleTypingStart" /* 11456 */;
 
 require = arg1;
 function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) {

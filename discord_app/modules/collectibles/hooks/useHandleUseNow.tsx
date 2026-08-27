@@ -1,6 +1,6 @@
-// === Module 10354: useHandleUseNow ===
+// === Module 10752: useHandleUseNow ===
 
-// Module 10354 (useHandleUseNow)
+// Module 10752 (useHandleUseNow)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

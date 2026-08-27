@@ -1,6 +1,6 @@
-// === Module 14200: useUploadAvatar ===
+// === Module 14227: useUploadAvatar ===
 
-// Module 14200 (useUploadAvatar)
+// Module 14227 (useUploadAvatar)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
@@ -65,14 +65,14 @@ export default function useUploadAvatar(guildId) {
             originalMd5 = undefined;
             c3 = undefined;
             closure_4 = undefined;
-            closure_1_1(4411).hideActionSheet();
-            const obj13 = closure_1_1(4411);
+            closure_1_1(4412).hideActionSheet();
+            const obj13 = closure_1_1(4412);
             obj1 = { size: null };
             obj1[0] = closure_1_7;
             originalMd5 = 1;
             c3 = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = closure_1_1(5029).openImagePicker(obj1);
+            obj2[0] = closure_1_1(5034).openImagePicker(obj1);
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -105,24 +105,24 @@ export default function useUploadAvatar(guildId) {
               }
             }
           }
-          obj1 = closure_1_0(14183);
+          obj1 = closure_1_0(14210);
           const obj4 = { imageUri: null, description: null, originalMd5: null };
           obj4[0] = base64;
-          obj3 = closure_1_0(8496);
+          obj3 = closure_1_0(8011);
           obj4[1] = obj3.generateAvatarDescription();
           obj4[2] = originalMd5;
           closure_4 = obj1.createPendingImage(obj4);
           if (closure_1_1) {
-            let tmp28Result = tmp28(8491);
+            let tmp28Result = tmp28(8009);
             tmp28Result.setTryItOutAvatar(closure_1_4);
           } else {
-            tmp28Result = tmp28(8488);
+            tmp28Result = tmp28(8006);
             const obj5 = { guildId: null, avatar: null };
             obj5[0] = closure_0;
             obj5[1] = closure_1_4;
             tmp28Result.setPendingChanges(obj5);
-            const result = closure_1_0(8490).announcePendingAvatarChange("set");
-            const obj7 = closure_1_0(8490);
+            const result = closure_1_0(8008).announcePendingAvatarChange("set");
+            const obj7 = closure_1_0(8008);
           }
         }
       } catch (tmp38) {

@@ -1,6 +1,6 @@
-// === Module 5314: AgeGatedFeature ===
+// === Module 5319: AgeGatedFeature ===
 
-// Module 5314 (AgeGatedFeature)
+// Module 5319 (AgeGatedFeature)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx");

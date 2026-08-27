@@ -1,6 +1,6 @@
-// === Module 16104: useSearchMessageTimestamp ===
+// === Module 16167: useSearchMessageTimestamp ===
 
-// Module 16104 (useSearchMessageTimestamp)
+// Module 16167 (useSearchMessageTimestamp)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

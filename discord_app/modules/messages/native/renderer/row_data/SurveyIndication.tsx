@@ -1,9 +1,9 @@
-// === Module 8554: createSurveyIndication ===
+// === Module 8071: createSurveyIndication ===
 
-// Module 8554 (createSurveyIndication)
+// Module 8071 (createSurveyIndication)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import str2 from "str2" /* 6002 */;
+import str2 from "str2" /* 6007 */;
 
 const NotificationTypes = str2.NotificationTypes;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/SurveyIndication.tsx");
@@ -22,12 +22,12 @@ export const createSurveyIndication = function createSurveyIndication(message, f
   }
   obj = { content: intl.formatToParts(_46_Iqc, { handleMessage: obj }), feedbackIconUrl: null };
   obj[2] = TOP_MESSAGE_PUSH;
-  let tmp2Result = tmp2(8273);
+  let tmp2Result = tmp2(7788);
   tmp2Result = tmp2(1363);
   if (tmp2Result.isThemeDark(forcedTheme)) {
-    let tmp6Result = tmp6(8555);
+    let tmp6Result = tmp6(8072);
   } else {
-    tmp6Result = tmp6(8556);
+    tmp6Result = tmp6(8073);
   }
   obj[1] = tmp2Result.getAssetUriForEmbed(tmp6Result);
   return obj;

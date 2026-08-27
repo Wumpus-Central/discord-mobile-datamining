@@ -1,12 +1,12 @@
-// === Module 4483: setLibraryApplications ===
+// === Module 4484: setLibraryApplications ===
 
-// Module 4483 (setLibraryApplications)
+// Module 4484 (setLibraryApplications)
 import initializeDefault from "initialize" /* 589 */;
 import Storage6 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import hasFlagAll from "hasFlag" /* 1403 */;
-import getComboId from "getComboId" /* 4492 */;
-import closure_4 from "createFromServer" /* 4484 */;
+import getComboId from "getComboId" /* 4493 */;
+import closure_4 from "createFromServer" /* 4485 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
 import { LibraryApplicationFlags } from "ME" /* 676 */;
 import set from "set" /* 2 */;
@@ -167,7 +167,7 @@ prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(
       if (tmp2Result.isUserEntitledToLibraryApplication(obj2)) {
         return obj2;
       }
-      tmp2Result = tmp2(4492);
+      tmp2Result = tmp2(4493);
     }
     tmp2 = require;
   }

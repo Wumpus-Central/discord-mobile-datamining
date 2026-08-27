@@ -1,6 +1,6 @@
-// === Module 6902: metadata ===
+// === Module 6908: metadata ===
 
-// Module 6902 (metadata)
+// Module 6908 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerBannerUnderboxExample-2x.png.js");

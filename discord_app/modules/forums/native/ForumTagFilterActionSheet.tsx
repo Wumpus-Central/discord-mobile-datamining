@@ -1,16 +1,16 @@
-// === Module 12392: EmojiIcon ===
+// === Module 12216: EmojiIcon ===
 
-// Module 12392 (EmojiIcon)
+// Module 12216 (EmojiIcon)
 import initialize from "initialize" /* 589 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import EmojiDefault from "Emoji" /* 5532 */;
+import EmojiDefault from "Emoji" /* 5537 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getEmojiToGroupId" /* 5348 */;
-import set from "set" /* 11662 */;
+import closure_5 from "getEmojiToGroupId" /* 5353 */;
+import set from "set" /* 11494 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function EmojiIcon(arg0) {

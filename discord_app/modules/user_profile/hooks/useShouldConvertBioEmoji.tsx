@@ -1,6 +1,6 @@
-// === Module 8492: useShouldConvertBioEmoji ===
+// === Module 8010: useShouldConvertBioEmoji ===
 
-// Module 8492 (useShouldConvertBioEmoji)
+// Module 8010 (useShouldConvertBioEmoji)
 import set from "set" /* 2 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
 

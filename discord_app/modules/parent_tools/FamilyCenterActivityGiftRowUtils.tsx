@@ -1,11 +1,11 @@
-// === Module 14432: getGiftRowDisplayInfo ===
+// === Module 14459: getGiftRowDisplayInfo ===
 
-// Module 14432 (getGiftRowDisplayInfo)
+// Module 14459 (getGiftRowDisplayInfo)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2369 */;
 import _mod3686 from "module_3686" /* 3686 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6028 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6033 */;
 
 const result = set.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
 

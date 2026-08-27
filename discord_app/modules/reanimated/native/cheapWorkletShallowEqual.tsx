@@ -1,6 +1,6 @@
-// === Module 8991: cheapWorkletShallowEqual ===
+// === Module 9130: cheapWorkletShallowEqual ===
 
-// Module 8991 (cheapWorkletShallowEqual)
+// Module 9130 (cheapWorkletShallowEqual)
 import set from "set" /* 2 */;
 
 function cheapWorkletShallowEqual(safeAreaState, current) {

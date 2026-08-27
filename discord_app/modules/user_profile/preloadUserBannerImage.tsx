@@ -1,6 +1,6 @@
-// === Module 8532: preloadUserBannerImage ===
+// === Module 8049: preloadUserBannerImage ===
 
-// Module 8532 (preloadUserBannerImage)
+// Module 8049 (preloadUserBannerImage)
 import set from "set" /* 2 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;

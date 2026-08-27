@@ -1,10 +1,10 @@
-// === Module 11394: getShouldShowAppAuthPrompt ===
+// === Module 11246: getShouldShowAppAuthPrompt ===
 
-// Module 11394 (getShouldShowAppAuthPrompt)
-import getAuthorizationApp from "getAuthorizationApp" /* 5905 */;
-import tokensToAppTokensMapDefault from "tokensToAppTokensMap" /* 5908 */;
-import closure_3 from "recomputeFromAppTokens" /* 5422 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5422 */;
+// Module 11246 (getShouldShowAppAuthPrompt)
+import getAuthorizationApp from "getAuthorizationApp" /* 5910 */;
+import tokensToAppTokensMapDefault from "tokensToAppTokensMap" /* 5913 */;
+import closure_3 from "recomputeFromAppTokens" /* 5427 */;
+import { FetchState } from "recomputeFromAppTokens" /* 5427 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");

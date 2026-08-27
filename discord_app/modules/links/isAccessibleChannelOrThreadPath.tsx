@@ -1,9 +1,9 @@
-// === Module 6040: _isAccessibleChannelOrThreadPath ===
+// === Module 6045: _isAccessibleChannelOrThreadPath ===
 
-// Module 6040 (_isAccessibleChannelOrThreadPath)
+// Module 6045 (_isAccessibleChannelOrThreadPath)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "isSubscriptionGated" /* 1983 */;
-import closure_5 from "shouldShowOnboarding" /* 5410 */;
+import closure_5 from "shouldShowOnboarding" /* 5415 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
 import closure_7 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
@@ -109,7 +109,7 @@ function _isAccessibleChannelOrThreadPath() {
                           throwTypeErrorResult = callback;
                           throwTypeErrorResult = guild2;
                           throwTypeErrorResult = guild2;
-                          throwTypeErrorResult = callback(guild2[8]).canManageVibegrations(guild2, "isAccessibleChannelOrThreadPath");
+                          throwTypeErrorResult = callback(guild2[8]).canAccessVibegrations(guild2, "isAccessibleChannelOrThreadPath");
                           const obj34 = callback(guild2[8]);
                         }
                         c5 = 3;

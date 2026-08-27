@@ -1,6 +1,6 @@
-// === Module 10001: isInAppMessageSoundsEnabled ===
+// === Module 10107: isInAppMessageSoundsEnabled ===
 
-// Module 10001 (isInAppMessageSoundsEnabled)
+// Module 10107 (isInAppMessageSoundsEnabled)
 import set from "set" /* 2 */;
 import Storage2 from "Storage" /* 595 */;
 import isIterable from "isIterable" /* 4074 */;

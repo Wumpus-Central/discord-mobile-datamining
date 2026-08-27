@@ -4,7 +4,7 @@
 import set from "set" /* 2 */;
 import nDefault from "n" /* 689 */;
 import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 4171 */;
-import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4263 */;
+import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4264 */;
 
 const result = set.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 

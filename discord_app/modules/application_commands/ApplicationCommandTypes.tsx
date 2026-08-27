@@ -1,6 +1,6 @@
-// === Module 7195: ApplicationCommandSectionType ===
+// === Module 7201: ApplicationCommandSectionType ===
 
-// Module 7195 (ApplicationCommandSectionType)
+// Module 7201 (ApplicationCommandSectionType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandTypes.tsx");

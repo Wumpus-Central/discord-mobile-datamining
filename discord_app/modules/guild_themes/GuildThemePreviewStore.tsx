@@ -1,12 +1,12 @@
-// === Module 4326: handleEnd ===
+// === Module 4327: handleEnd ===
 
-// Module 4326 (handleEnd)
+// Module 4327 (handleEnd)
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1909 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
-import GuildThemePreviewOrigin from "GuildThemePreviewOrigin" /* 4327 */;
+import GuildThemePreviewOrigin from "GuildThemePreviewOrigin" /* 4328 */;
 
 require = arg1;
 function handleEnd() {
@@ -131,7 +131,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
     if (null == obj.guildId) {
       return false;
     } else {
-      obj = { presetId: null, customUserThemeSettings: "a" };
+      obj = { presetId: null, customUserThemeSettings: "r" };
       obj[0] = tmp;
       const isEqualResult = apply.isEqual(obj.draft, obj);
       let flag = !isEqualResult;

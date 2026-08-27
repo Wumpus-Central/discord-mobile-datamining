@@ -1,10 +1,10 @@
-// === Module 10529: showSafetyToast ===
+// === Module 10964: showSafetyToast ===
 
-// Module 10529 (showSafetyToast)
+// Module 10964 (showSafetyToast)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 4162 */;
-import registerAssetDefault from "registerAsset" /* 10495 */;
-import ShieldIcon from "ShieldIcon" /* 10496 */;
+import registerAssetDefault from "registerAsset" /* 8358 */;
+import ShieldIcon from "ShieldIcon" /* 8359 */;
 
 const result = set.fileFinishedImporting("modules/self_mod/shared/ShowSafetyToast.native.tsx");
 

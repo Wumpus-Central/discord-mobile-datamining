@@ -1,10 +1,10 @@
-// === Module 14335: route ===
+// === Module 14362: route ===
 
-// Module 14335 (route)
+// Module 14362 (route)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import closure_2 from "markAllUserIdListsStale" /* 4098 */;
-import createToggle from "createToggle" /* 10584 */;
+import createToggle from "createToggle" /* 10988 */;
 
 require = arg1;
 createToggle = {
@@ -27,7 +27,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.IGNORED_USERS,
   getComponent() {
-    return require(14336) /* IgnoredUsersList */.default;
+    return require(14363) /* IgnoredUsersList */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

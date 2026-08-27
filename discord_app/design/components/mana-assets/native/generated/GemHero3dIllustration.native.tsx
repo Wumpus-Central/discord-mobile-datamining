@@ -1,10 +1,10 @@
-// === Module 6587: GemHero3dIllustration ===
+// === Module 6593: GemHero3dIllustration ===
 
-// Module 6587 (GemHero3dIllustration)
+// Module 6593 (GemHero3dIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6588 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6594 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GemHero3dIllustration.native.tsx");

@@ -1,48 +1,33 @@
-// === Module 8002: TextInput ===
+// === Module 7638: TextInput ===
 
-// Module 8002 (TextInput)
-import TextField from "TextField" /* 6168 */;
-import Input from "Input" /* 8003 */;
-import importAllResult from "noop" /* 19 */;
+// Module 7638 (TextInput)
+import useFieldLabelA11yNative from "useFieldLabelA11yNative" /* 4174 */;
+import TextField from "TextField" /* 6174 */;
+import Input from "Input" /* 7639 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
 import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
 require = arg1;
-const forwardRefResult = importAllResult.forwardRef((errorMessage, ref) => {
-  ({ label, accessibilityLabel, status } = errorMessage);
-  const id = importAllResult.useId();
+let closure_2 = ["labelId"];
+const forwardRefResult = importAllResult.forwardRef((status, ref) => {
+  status = status.status;
+  let obj = useFieldLabelA11yNative;
+  const fieldLabelA11yNative = obj.useFieldLabelA11yNative(status);
   if (status == null) {
     let str;
-    if (null != errorMessage.errorMessage) {
+    if (null != status.errorMessage) {
       str = "error";
     }
     status = str;
   }
-  let obj = {};
-  const merged = Object.assign(errorMessage);
-  let tmp6;
-  if (null != label) {
-    tmp6 = id;
-  }
-  obj.labelId = tmp6;
+  obj = {};
+  const merged = Object.assign(status);
+  obj.labelId = fieldLabelA11yNative.labelId;
   obj = { ref };
-  const merged1 = Object.assign(errorMessage);
+  const merged1 = Object.assign(status);
   obj.status = status;
-  if (!tmp3Result.isAndroid()) {
-    if (accessibilityLabel == null) {
-      let tmp9;
-      if (typeof label === "string") {
-        tmp9 = label;
-      }
-      accessibilityLabel = tmp9;
-    }
-    const tmp8 = accessibilityLabel;
-  }
-  obj.accessibilityLabel = tmp8;
-  let tmp10;
-  if (null != label) {
-    tmp10 = id;
-  }
-  obj.accessibilityLabelledBy = tmp10;
+  const merged2 = Object.assign(callback(fieldLabelA11yNative, closure_2));
   obj.children = jsx(TextField.TextField, { ref });
   return jsx(Input.Input, { ref });
 });

@@ -1,14 +1,14 @@
-// === Module 7447: setActiveCommand ===
+// === Module 7455: setActiveCommand ===
 
-// Module 7447 (setActiveCommand)
+// Module 7455 (setActiveCommand)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7195 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7201 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "handleInit" /* 7448 */;
+import closure_4 from "handleInit" /* 7456 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;

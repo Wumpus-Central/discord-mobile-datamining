@@ -1,12 +1,12 @@
-// === Module 10694: XboxLinkDiscordError ===
+// === Module 9244: XboxLinkDiscordError ===
 
-// Module 10694 (XboxLinkDiscordError)
+// Module 9244 (XboxLinkDiscordError)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useNavigation from "useNavigation" /* 1500 */;
-import useConnectRetry from "useConnectRetry" /* 10695 */;
-import TwoWayLinkError from "TwoWayLinkError" /* 10696 */;
-import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 10636 */;
+import useConnectRetry from "useConnectRetry" /* 9245 */;
+import TwoWayLinkError from "TwoWayLinkError" /* 9246 */;
+import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 9223 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

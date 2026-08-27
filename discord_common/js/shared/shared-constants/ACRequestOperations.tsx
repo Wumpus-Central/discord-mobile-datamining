@@ -1,6 +1,6 @@
-// === Module 7793: ACRequestOperations ===
+// === Module 12879: ACRequestOperations ===
 
-// Module 7793 (ACRequestOperations)
+// Module 12879 (ACRequestOperations)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ACRequestOperations.tsx");

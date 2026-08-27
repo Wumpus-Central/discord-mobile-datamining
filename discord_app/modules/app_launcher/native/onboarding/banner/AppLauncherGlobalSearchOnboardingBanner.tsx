@@ -1,13 +1,13 @@
-// === Module 11773: GlobalSearchCoachmark ===
+// === Module 11605: GlobalSearchCoachmark ===
 
-// Module 11773 (GlobalSearchCoachmark)
+// Module 11605 (GlobalSearchCoachmark)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 createCacheKey = { appsIcon: null, appsIconImage: null };
@@ -56,7 +56,7 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
     obj[2] = diff;
     obj[3] = windowDimensions.height;
     obj[5] = obj;
-    tmp3 = jsx(markAsDismissed(8877).Coachmark, { x: -140, y: -40, width: null, height: null });
+    tmp3 = jsx(markAsDismissed(8904).Coachmark, { x: -140, y: -40, width: null, height: null });
   }
   return tmp3;
 };

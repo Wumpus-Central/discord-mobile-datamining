@@ -1,11 +1,11 @@
-// === Module 15674: transformParticipantToSortedVoiceState ===
+// === Module 15738: transformParticipantToSortedVoiceState ===
 
-// Module 15674 (transformParticipantToSortedVoiceState)
+// Module 15738 (transformParticipantToSortedVoiceState)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "initializeFromUserSettings" /* 1394 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import { getComparator } from "getVoiceStatesForGuild" /* 4519 */;
-import closure_7 from "getActiveStageChannelIds" /* 5309 */;
+import { getComparator } from "getVoiceStatesForGuild" /* 4520 */;
+import closure_7 from "getActiveStageChannelIds" /* 5314 */;
 
 const require = arg1;
 function transformParticipantToSortedVoiceState(user) {
@@ -38,6 +38,6 @@ export default function useStageChannelSpeakerVoiceStates(arg0) {
       found1.reduce((arg0, id) => arg0 + store.getParticipantsVersion(id.id), 0)
     ];
     return items;
-  }, items1, _require(5322).isVersionEqual), 1)[0];
+  }, items1, _require(5327).isVersionEqual), 1)[0];
 };
 export { transformParticipantToSortedVoiceState };

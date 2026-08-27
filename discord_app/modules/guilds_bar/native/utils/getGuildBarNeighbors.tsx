@@ -1,8 +1,8 @@
-// === Module 15779: getGuildBarNeighbors ===
+// === Module 15843: getGuildBarNeighbors ===
 
-// Module 15779 (getGuildBarNeighbors)
-import GuildsNodeType from "GuildsNodeType" /* 5330 */;
-import closure_2 from "insertUnsortedGuilds" /* 5328 */;
+// Module 15843 (getGuildBarNeighbors)
+import GuildsNodeType from "GuildsNodeType" /* 5335 */;
+import closure_2 from "insertUnsortedGuilds" /* 5333 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx");
@@ -26,7 +26,7 @@ export default function getGuildBarNeighbors(arg0) {
           return null;
         } else {
           let tmp2 = null;
-          if (root.type === tmp5(5330).GuildsNodeType.FOLDER) {
+          if (root.type === tmp5(5335).GuildsNodeType.FOLDER) {
             tmp2 = root;
           }
           let obj = { containingFolder: null, above: null, below: null };
@@ -35,7 +35,7 @@ export default function getGuildBarNeighbors(arg0) {
           if (null != root.children[index - 1]) {
             obj = { node: null, isFolder: null };
             obj[0] = tmp8;
-            obj[1] = tmp8.type === tmp5(5330).GuildsNodeType.FOLDER;
+            obj[1] = tmp8.type === tmp5(5335).GuildsNodeType.FOLDER;
             tmp3 = obj;
           }
           obj[1] = tmp3;
@@ -43,7 +43,7 @@ export default function getGuildBarNeighbors(arg0) {
           if (null != root.children[index + 1]) {
             obj1 = { node: null, isFolder: null };
             obj1[0] = tmp9;
-            obj1[1] = tmp9.type === tmp5(5330).GuildsNodeType.FOLDER;
+            obj1[1] = tmp9.type === tmp5(5335).GuildsNodeType.FOLDER;
             tmp4 = obj1;
           }
           obj[2] = tmp4;

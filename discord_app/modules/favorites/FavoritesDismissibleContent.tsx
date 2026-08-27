@@ -1,13 +1,13 @@
-// === Module 9938: items1 ===
+// === Module 10238: items1 ===
 
-// Module 9938 (items1)
+// Module 10238 (items1)
 import DismissibleContent from "DismissibleContent" /* 1377 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6197 */;
-import canShowTimeRecurringContent from "canShowTimeRecurringContent" /* 6198 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 9927 */;
-import useFavoritesGuildConfig from "useFavoritesGuildConfig" /* 9929 */;
-import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 9936 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 9937 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6203 */;
+import canShowTimeRecurringContent from "canShowTimeRecurringContent" /* 6204 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10226 */;
+import useFavoritesGuildConfig from "useFavoritesGuildConfig" /* 10228 */;
+import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 10236 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10237 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;

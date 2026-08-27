@@ -1,25 +1,25 @@
-// === Module 16634: VideoGuardNotice ===
+// === Module 16700: VideoGuardNotice ===
 
-// Module 16634 (VideoGuardNotice)
+// Module 16700 (VideoGuardNotice)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import Text from "Text" /* 4440 */;
-import Stack from "Stack" /* 4877 */;
-import setDefault from "set" /* 5953 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 10794 */;
-import apexExperimentDefault from "apexExperiment" /* 11008 */;
-import dismissPanelDefault from "dismissPanel" /* 11913 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13334 */;
-import VIDEO_GUARD_BLOG_POST_URL from "VIDEO_GUARD_BLOG_POST_URL" /* 13374 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16466 */;
-import apexExperimentDefault2 from "apexExperiment" /* 16529 */;
+import Text from "Text" /* 4441 */;
+import Stack from "Stack" /* 4878 */;
+import setDefault from "set" /* 5958 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9407 */;
+import apexExperimentDefault from "apexExperiment" /* 9985 */;
+import dismissPanelDefault from "dismissPanel" /* 11756 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13361 */;
+import VIDEO_GUARD_BLOG_POST_URL from "VIDEO_GUARD_BLOG_POST_URL" /* 13401 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16530 */;
+import apexExperimentDefault2 from "apexExperiment" /* 16595 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { CONTROLS_DRAWER_HEADER_EXPANDED_SIZE } from "VoicePanelControlsModes" /* 11912 */;
+import { CONTROLS_DRAWER_HEADER_EXPANDED_SIZE } from "VoicePanelControlsModes" /* 11755 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
-import importDefaultResult from "module_4184" /* 4184 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
+import importDefaultResult from "module_4185" /* 4185 */;
 
 require = arg1;
 function VideoGuardNotice() {
@@ -77,59 +77,59 @@ let closure_11 = importAllResult.memo((arg0) => {
     obj = { channel: null, connected: null };
     obj[0] = channel;
     obj[1] = tmp2;
-    items[2] = callback2(tmp3(16635).GameConsoles, obj);
+    items[2] = callback2(tmp3(16701).GameConsoles, obj);
     if (nonContextualStreamOutputPresent) {
-      nonContextualStreamOutputPresent = tmp14(tmp3(16635).StreamVolumeItem, {});
+      nonContextualStreamOutputPresent = tmp14(tmp3(16701).StreamVolumeItem, {});
     }
     items[3] = nonContextualStreamOutputPresent;
     obj = { title: null, hasIcons: true, children: null };
     const intl = tmp3(1236).intl;
     obj[0] = intl.string(tmp3(1236).t.NiTd0e);
-    const items1 = [callback2(tmp3(16635).DeafenSwitch, {}), , , , ];
+    const items1 = [callback2(tmp3(16701).DeafenSwitch, {}), , , , ];
     obj1 = { channel: null, connected: null };
     obj1[0] = channel;
     obj1[1] = tmp2;
-    items1[1] = callback2(tmp3(16635).AudioRouteButton, obj1);
+    items1[1] = callback2(tmp3(16701).AudioRouteButton, obj1);
     obj2 = { channelId: null };
     obj2[0] = channelId;
-    items1[2] = callback2(tmp3(16635).HideNonVideoParticipants, obj2);
-    items1[3] = callback2(tmp3(16635).HideSelfVideo, {});
+    items1[2] = callback2(tmp3(16701).HideNonVideoParticipants, obj2);
+    items1[3] = callback2(tmp3(16701).HideSelfVideo, {});
     let tmp14Result = tmp2;
     if (tmp2) {
       const obj3 = { channel: null, connected: null };
       obj3[0] = channel;
       obj3[1] = tmp2;
-      tmp14Result = tmp14(tmp3(16635).InviteButton, obj3);
+      tmp14Result = tmp14(tmp3(16701).InviteButton, obj3);
     }
     items1[4] = tmp14Result;
     obj[2] = items1;
-    items[4] = tmp7(tmp3(5939).TableRowGroup, obj);
-    items[5] = callback2(tmp3(11018).VoiceProcessingOptions, {});
+    items[4] = tmp7(tmp3(5944).TableRowGroup, obj);
+    items[5] = callback2(tmp3(9995).VoiceProcessingOptions, {});
     const obj4 = { guildId: null };
     obj4[0] = channel.guild_id;
-    const items2 = [callback2(tmp3(16635).VoiceSettingsButton, obj4), ];
+    const items2 = [callback2(tmp3(16701).VoiceSettingsButton, obj4), ];
     tmp14Result = null != tmp6;
     if (tmp14Result) {
       const obj5 = { stream: null };
       obj5[0] = tmp6;
-      tmp14Result = tmp14(tmp3(16635).ReportStreamIssueButton, obj5);
+      tmp14Result = tmp14(tmp3(16701).ReportStreamIssueButton, obj5);
     }
     const obj6 = { hasIcons: true, children: null };
     items2[1] = tmp14Result;
     obj6[1] = items2;
-    items[6] = tmp7(tmp3(5939).TableRowGroup, obj6);
+    items[6] = tmp7(tmp3(5944).TableRowGroup, obj6);
     let tmp7Result = null;
     if (tmp2) {
       tmp7Result = null;
       if (setting) {
         tmp7Result = null;
-        if (embeddedActivityLaunchability === tmp3(10794).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+        if (embeddedActivityLaunchability === tmp3(9407).EmbeddedActivityLaunchability.CAN_LAUNCH) {
           const obj7 = { title: null, hasIcons: true, children: null };
           const intl2 = tmp3(1236).intl;
           obj7[0] = intl2.string(tmp3(1236).t.J6rqB7);
-          const items3 = [tmp14(tmp3(16635).LeaveActivitiesButton, {}), tmp14(tmp3(16635).ShareActivityLogsButton, {}), tmp14(tmp3(16635).ToggleShowActivitiesDebugOverlay, {})];
+          const items3 = [tmp14(tmp3(16701).LeaveActivitiesButton, {}), tmp14(tmp3(16701).ShareActivityLogsButton, {}), tmp14(tmp3(16701).ToggleShowActivitiesDebugOverlay, {})];
           obj7[2] = items3;
-          tmp7Result = tmp7(tmp3(5939).TableRowGroup, obj7);
+          tmp7Result = tmp7(tmp3(5944).TableRowGroup, obj7);
         }
       }
     }
@@ -140,23 +140,23 @@ let closure_11 = importAllResult.memo((arg0) => {
   } else {
     const obj9 = { openTab: null };
     obj9[0] = openTab;
-    const items4 = [callback2(tmp3(16635).ActivitiesButton, obj9), ];
-    if (tmp3(16529).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
+    const items4 = [callback2(tmp3(16701).ActivitiesButton, obj9), ];
+    if (tmp3(16595).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
       const obj10 = { openTab: null };
       obj10[0] = openTab;
-      let tmp11Result = tmp11(tmp3(16635).ChatButton, obj10);
+      let tmp11Result = tmp11(tmp3(16701).ChatButton, obj10);
       const obj11 = { hasIcons: true, children: null };
       items4[1] = tmp11Result;
       obj11[1] = items4;
-      tmp7Result = tmp7(tmp3(5939).TableRowGroup, obj11);
-    } else if (tmp3(16529).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
+      tmp7Result = tmp7(tmp3(5944).TableRowGroup, obj11);
+    } else if (tmp3(16595).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
       const obj12 = { channel: null };
       obj12[0] = channel;
-      tmp11Result = tmp11(tmp3(16635).ScreenshareButton, obj12);
+      tmp11Result = tmp11(tmp3(16701).ScreenshareButton, obj12);
     }
     const obj13 = { channel: null };
     obj13[0] = channel;
-    tmp11Result = tmp11(tmp3(16635).SoundboardButton, obj13);
+    tmp11Result = tmp11(tmp3(16701).SoundboardButton, obj13);
   }
 });
 let closure_13 = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };

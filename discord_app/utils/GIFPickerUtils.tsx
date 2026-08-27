@@ -1,9 +1,9 @@
-// === Module 10154: isKlipyProvider ===
+// === Module 10279: isKlipyProvider ===
 
-// Module 10154 (isKlipyProvider)
+// Module 10279 (isKlipyProvider)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import GIF_PROVIDER from "GIF_PROVIDER" /* 10153 */;
+import GIF_PROVIDER from "GIF_PROVIDER" /* 10278 */;
 
 const SearchTypes = ME.SearchTypes;
 const result = set.fileFinishedImporting("utils/GIFPickerUtils.tsx");

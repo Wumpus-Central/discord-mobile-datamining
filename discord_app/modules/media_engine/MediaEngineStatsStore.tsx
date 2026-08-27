@@ -1,11 +1,11 @@
-// === Module 4531: updateAveragedStatsHelper ===
+// === Module 4532: updateAveragedStatsHelper ===
 
-// Module 4531 (updateAveragedStatsHelper)
+// Module 4532 (updateAveragedStatsHelper)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isStreamKey from "isStreamKey" /* 4510 */;
+import isStreamKey from "isStreamKey" /* 4511 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "initialize" /* 4532 */;
+import closure_3 from "initialize" /* 4533 */;
 
 require = arg1;
 function updateAveragedStatsHelper(arg0, arg1, arg2, arr, arr2) {

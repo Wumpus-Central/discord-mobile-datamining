@@ -1,10 +1,10 @@
-// === Module 12225: loadMessageRequestData ===
+// === Module 12073: loadMessageRequestData ===
 
-// Module 12225 (loadMessageRequestData)
+// Module 12073 (loadMessageRequestData)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "reinjectEphemerals" /* 4687 */;
-import closure_5 from "generateOldThreadCutoff" /* 4459 */;
-import closure_6 from "isMessagePreviewEnabledForChannel" /* 12226 */;
+import closure_4 from "reinjectEphemerals" /* 4688 */;
+import closure_5 from "generateOldThreadCutoff" /* 4460 */;
+import closure_6 from "isMessagePreviewEnabledForChannel" /* 12074 */;
 import { Endpoints } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 

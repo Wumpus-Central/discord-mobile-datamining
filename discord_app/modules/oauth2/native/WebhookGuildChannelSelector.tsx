@@ -1,6 +1,6 @@
-// === Module 10673: styles ===
+// === Module 9286: styles ===
 
-// Module 10673 (styles)
+// Module 9286 (styles)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -10,7 +10,7 @@ import { createChannelRecord } from "createChannelRecord" /* 1395 */;
 import closure_8 from "markAllUserIdListsStale" /* 4098 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
@@ -52,7 +52,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       obj[0] = intl.string(selectedGuildId(onChannelChange[13]).t["Re/64R"]);
       const channels = tmp.channels;
       obj[1] = channels.map((id) => {
-        const obj = { label: callback(4638).computeChannelName(callback2(id), closure_9, closure_8), value: id.id };
+        const obj = { label: callback(4639).computeChannelName(callback2(id), closure_9, closure_8), value: id.id };
         return obj;
       });
       obj[2] = function onItemSelect(arg0) {

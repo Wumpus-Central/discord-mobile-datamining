@@ -1,20 +1,20 @@
-// === Module 10664: ConnectAccountStep ===
+// === Module 9219: ConnectAccountStep ===
 
-// Module 10664 (ConnectAccountStep)
+// Module 9219 (ConnectAccountStep)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4395 */;
-import Text from "Text" /* 4440 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5174 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4396 */;
+import Text from "Text" /* 4441 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5179 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "addApplication" /* 4485 */;
+import closure_5 from "addApplication" /* 4486 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
@@ -53,7 +53,7 @@ export default function ConnectAccountStep(clientId) {
     }
     return currentUser;
   });
-  let obj2 = platformType(5174);
+  let obj2 = platformType(5179);
   const value = obj2.get(platformType);
   if (null == value) {
     let applicationIconSource;
@@ -91,7 +91,7 @@ export default function ConnectAccountStep(clientId) {
     const items4 = [callback(tmp5(1297).Avatar, obj3), , ];
     const obj4 = { color: null, size: "md" };
     obj4[0] = tmp2(712).colors.INTERACTIVE_TEXT_DEFAULT;
-    items4[1] = callback(tmp5(8819).MoreHorizontalIcon, obj4);
+    items4[1] = callback(tmp5(8723).MoreHorizontalIcon, obj4);
     const obj5 = { source: null, size: null };
     obj5[0] = userAvatarSource;
     obj5[1] = tmp5(1297).AvatarSizes.XLARGE;
@@ -101,10 +101,10 @@ export default function ConnectAccountStep(clientId) {
     const obj6 = { variant: "text-lg/normal", color: "text-default", children: null };
     const intl = tmp5(1236).intl;
     obj6[2] = intl.string(tmp5(1236).t.uT1CPa);
-    items5[1] = callback(tmp5(4440).Text, obj6);
+    items5[1] = callback(tmp5(4441).Text, obj6);
     const obj7 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
     obj7[2] = str;
-    items5[2] = callback(tmp5(4440).Text, obj7);
+    items5[2] = callback(tmp5(4441).Text, obj7);
     obj1[1] = items5;
     const items6 = [callback2(View, obj1), , , ];
     const obj8 = { variant: "text-sm/normal", color: "text-default", children: null };
@@ -113,7 +113,7 @@ export default function ConnectAccountStep(clientId) {
     obj9[0] = str;
     obj9[1] = platformName;
     obj8[2] = intl2.format(tmp5(1236).t["aJRE/Q"], obj9);
-    items6[1] = callback(tmp5(4440).Text, obj8);
+    items6[1] = callback(tmp5(4441).Text, obj8);
     const obj10 = { style: null, children: null };
     obj10[0] = tmp.card;
     let tmp16Result = null;
@@ -127,21 +127,21 @@ export default function ConnectAccountStep(clientId) {
     const obj12 = { variant: "text-md/medium", style: null, color: "text-default", children: null };
     obj12[1] = tmp.cardName;
     obj12[3] = platformName;
-    items7[1] = callback(tmp5(4440).Text, obj12);
+    items7[1] = callback(tmp5(4441).Text, obj12);
     const obj13 = { variant: "primary", size: "sm", onPress: null, text: null };
     obj13[2] = function onPress() {
       platformType(closure_1_2[19])({ platformType, location: "OAuth2 Connect Account Step" });
     };
     const intl3 = tmp5(1236).intl;
     obj13[3] = intl3.string(tmp5(1236).t.S0W8Z5);
-    items7[2] = callback(tmp5(4879).Button, obj13);
+    items7[2] = callback(tmp5(4880).Button, obj13);
     obj10[1] = items7;
     items6[2] = callback2(View, obj10);
     const obj14 = { style: null, children: null };
     obj14[0] = tmp.infoNotice;
     const obj15 = { color: null, size: "sm" };
     obj15[0] = tmp2(712).colors.ICON_FEEDBACK_INFO;
-    const items8 = [callback(tmp5(4399).CircleInformationIcon, obj15), ];
+    const items8 = [callback(tmp5(4400).CircleInformationIcon, obj15), ];
     const obj16 = { variant: "text-sm/normal", color: "text-default", style: null, children: null };
     obj16[2] = tmp.infoText;
     const intl4 = tmp5(1236).intl;
@@ -149,7 +149,7 @@ export default function ConnectAccountStep(clientId) {
     obj17[0] = platformName;
     obj17[1] = str;
     obj16[3] = intl4.format(tmp5(1236).t["8psEFX"], obj17);
-    items8[1] = callback(tmp5(4440).Text, obj16);
+    items8[1] = callback(tmp5(4441).Text, obj16);
     obj14[1] = items8;
     items6[3] = callback2(View, obj14);
     obj[1] = items6;

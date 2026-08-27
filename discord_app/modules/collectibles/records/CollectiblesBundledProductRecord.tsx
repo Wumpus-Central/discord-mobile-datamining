@@ -1,8 +1,8 @@
-// === Module 7217: fromServer ===
+// === Module 7223: fromServer ===
 
-// Module 7217 (fromServer)
+// Module 7223 (fromServer)
 import set from "set" /* 2 */;
-import getPricesFromServerDefault from "getPricesFromServer" /* 4489 */;
+import getPricesFromServerDefault from "getPricesFromServer" /* 4490 */;
 
 let prototype;
 prototype = function CollectiblesBundledProductRecord(arg0) {

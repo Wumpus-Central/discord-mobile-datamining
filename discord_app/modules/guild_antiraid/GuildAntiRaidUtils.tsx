@@ -1,11 +1,11 @@
-// === Module 8342: DATE_CONFIG ===
+// === Module 7856: DATE_CONFIG ===
 
-// Module 8342 (DATE_CONFIG)
+// Module 7856 (DATE_CONFIG)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import hooksDefault from "hooks" /* 4043 */;
-import GuildIncidentActionSources from "GuildIncidentActionSources" /* 8344 */;
-import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY" /* 8343 */;
+import GuildIncidentActionSources from "GuildIncidentActionSources" /* 7858 */;
+import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY" /* 7857 */;
 
 ({ NAGBAR_DISPLAY_MAX_HOURS: c3, DEFAULT_LOCKDOWN_DURATION: c4, getTimeframes: c5 } = GUILD_REPORT_RAID_MOBILE_KEY);
 let obj = { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" };

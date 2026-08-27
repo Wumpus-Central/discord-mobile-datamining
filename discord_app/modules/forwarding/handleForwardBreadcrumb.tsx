@@ -1,6 +1,6 @@
-// === Module 11571: _handleForwardBreadcrumb ===
+// === Module 11422: _handleForwardBreadcrumb ===
 
-// Module 11571 (_handleForwardBreadcrumb)
+// Module 11422 (_handleForwardBreadcrumb)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;

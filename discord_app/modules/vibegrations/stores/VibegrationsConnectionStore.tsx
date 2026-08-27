@@ -1,20 +1,20 @@
-// === Module 16025: rejectPendingPublish ===
+// === Module 16090: rejectPendingPublish ===
 
-// Module 16025 (rejectPendingPublish)
+// Module 16090 (rejectPendingPublish)
 import failsDefault from "fails" /* 584 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import snowflakeSequence from "snowflakeSequence" /* 7423 */;
-import _modDef16024 from "module_16024" /* 16024 */;
-import vibegrationLocation from "vibegrationLocation" /* 16026 */;
-import map10 from "map" /* 16027 */;
-import open2 from "open" /* 16030 */;
+import snowflakeSequence from "snowflakeSequence" /* 7431 */;
+import _modDef16089 from "module_16089" /* 16089 */;
+import vibegrationLocation from "vibegrationLocation" /* 16091 */;
+import map10 from "map" /* 16092 */;
+import open2 from "open" /* 16094 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "newMessage" /* 16022 */;
-import { getOlderHistoryCursor } from "newMessage" /* 16022 */;
-import closure_8 from "isProjectOwner" /* 16023 */;
+import closure_6 from "newMessage" /* 16087 */;
+import { getOlderHistoryCursor } from "newMessage" /* 16087 */;
+import closure_8 from "isProjectOwner" /* 16088 */;
 import { Endpoints } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -384,13 +384,19 @@ function handleEvent(projectId, pendingEvents, type) {
         hasItem = map.has(content.nonce);
       }
       if (hasItem) {
-        hasItem = map.get(content.nonce) === content.user_id;
+        if (null != content.nonce) {
+          const value = map.get(content.nonce);
+        }
       }
-      let tmp4 = hasItem;
       if (hasItem) {
-        tmp4 = null != content.nonce;
+        hasItem = null == value || null == content.user_id || value === content.user_id;
+        const tmp5 = null == value || null == content.user_id || value === content.user_id;
       }
-      if (tmp4) {
+      let tmp6 = hasItem;
+      if (hasItem) {
+        tmp6 = null != content.nonce;
+      }
+      if (tmp6) {
         map.delete(content.nonce);
       }
       attachment_id(709);
@@ -403,7 +409,7 @@ function handleEvent(projectId, pendingEvents, type) {
         }
         const merged = Object.assign(obj);
         ({ user_id: obj.userId, ts: obj.timestamp, attachments: obj.attachments } = content);
-        tmp8(obj);
+        tmp10(obj);
       }
       obj = {};
     })(projectId, type);
@@ -675,12 +681,12 @@ function handleEvent(projectId, pendingEvents, type) {
           tmp53 = "" !== trimmed;
         }
         if (tmp53) {
-          tmp53 = trimmed !== _require(16028).UNNAMED_PROJECT_NAME;
+          tmp53 = trimmed !== _require(6047).UNNAMED_PROJECT_NAME;
         }
         tmp52 = tmp53;
       }
       if (!tmp52) {
-        obj19 = _require(16029);
+        obj19 = _require(16093);
         obj19.renameProject(projectId, name).catch(() => {
 
         });
@@ -701,8 +707,8 @@ function handleEvent(projectId, pendingEvents, type) {
         if (str15 == null) {
           str15 = "publish_result not ok";
         }
-        _require(16029).trackPublishFailed(projectId, str15, false);
-        const obj64 = _require(16029);
+        _require(16093).trackPublishFailed(projectId, str15, false);
+        const obj64 = _require(16093);
       }
     } else if ("app_icon_set" === type.kind) {
       const icon = type.icon;
@@ -711,9 +717,9 @@ function handleEvent(projectId, pendingEvents, type) {
           attachment_id = type.attachment_id;
           deleteResult = _require;
           deleteResult = dependencyMap;
-          const obj63 = _require(16029);
-          const setProjectIconResult = _require(16029).setProjectIcon(projectId, icon);
-          deleteResult = _require(16029).setProjectIcon(projectId, icon).then((ok) => {
+          const obj63 = _require(16093);
+          const setProjectIconResult = _require(16093).setProjectIcon(projectId, icon);
+          deleteResult = _require(16093).setProjectIcon(projectId, icon).then((ok) => {
             let str = "failed";
             if (ok.ok) {
               str = "applied";
@@ -736,7 +742,7 @@ function handleEvent(projectId, pendingEvents, type) {
               ws.sendAppIconAck(tmp, "failed");
             }
           });
-          const nextPromise = _require(16029).setProjectIcon(projectId, icon).then((ok) => {
+          const nextPromise = _require(16093).setProjectIcon(projectId, icon).then((ok) => {
             let str = "failed";
             if (ok.ok) {
               str = "applied";
@@ -753,7 +759,7 @@ function handleEvent(projectId, pendingEvents, type) {
         }
       }
     } else if ("turn_result" === type.kind) {
-      obj12 = _require(16026);
+      obj12 = _require(16091);
       let result = obj12.trackVibegrationTurnResulted(projectId, type);
       if ("deployed" === type.result) {
         obj13 = attachment_id(709);
@@ -795,7 +801,7 @@ function handleEvent(projectId, pendingEvents, type) {
         tmp25 = "error" !== type.kind;
       }
       if (!tmp25) {
-        obj10 = _require(16026);
+        obj10 = _require(16091);
         obj35 = {};
         let merged = Object.assign(obj[type.kind]);
         obj35.message = type.message;
@@ -808,11 +814,11 @@ function handleEvent(projectId, pendingEvents, type) {
       }
       if ("preview_ready" === type.kind) {
         deleteResult = _require;
-        const result2 = _require(16029).refreshPublishedProject(projectId, { isPreview: true });
+        const result2 = _require(16093).refreshPublishedProject(projectId, { isPreview: true });
         deleteResult = result2.catch(() => {
 
         });
-        const obj62 = _require(16029);
+        const obj62 = _require(16093);
       }
       const obj60 = attachment_id(709);
     }
@@ -867,10 +873,10 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            obj8 = attachment_id(16024);
+            obj8 = attachment_id(16089);
             const result3 = obj8.beginPreviewOperation(projectId);
           } else {
-            obj7 = attachment_id(16024);
+            obj7 = attachment_id(16089);
             obj7.endPreviewOperation(projectId);
           }
         } else if ("model_settings" === type.type) {
@@ -918,9 +924,9 @@ function handleEvent(projectId, pendingEvents, type) {
                   value.add(combined);
                   ({ location: obj3[0], code: obj3[1] } = tmp2);
                   ({ message: obj3[2], source: obj3[3] } = level);
-                  const result1 = pendingEvents(16026).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
+                  const result1 = pendingEvents(16091).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
                   obj = { location: null, code: null, message: null, details: null };
-                  const obj2 = pendingEvents(16026);
+                  const obj2 = pendingEvents(16091);
                 }
                 obj4 = closure_29;
                 const str = level.message;
@@ -931,7 +937,7 @@ function handleEvent(projectId, pendingEvents, type) {
       }
     }
     let upload_token;
-    obj9 = _require(16027);
+    obj9 = _require(16092);
     if ("capture_claim" === type.type) {
       upload_token = type.upload_token;
     }
@@ -1148,8 +1154,8 @@ function teardown(closure_0) {
     ws.close();
     obj.delete(closure_0);
     map7.delete(closure_0);
-    const result = _modDef16024.releasePreviewControl(closure_0);
-    const obj2 = _modDef16024;
+    const result = _modDef16089.releasePreviewControl(closure_0);
+    const obj2 = _modDef16089;
     const result1 = map10.clearVibegrationsPreviewClaims(closure_0);
     const obj3 = map10;
     obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: null, connState: "closed" };
@@ -2761,6 +2767,7 @@ function closeAllConnections() {
     continue;
   }
   map2.clear();
+  map5.clear();
   map8.clear();
 }
 const map = new Map();

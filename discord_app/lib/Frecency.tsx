@@ -1,6 +1,6 @@
-// === Module 4530: DEFAULT_FRECENCY ===
+// === Module 4531: DEFAULT_FRECENCY ===
 
-// Module 4530 (DEFAULT_FRECENCY)
+// Module 4531 (DEFAULT_FRECENCY)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import hooksDefault from "hooks" /* 4043 */;

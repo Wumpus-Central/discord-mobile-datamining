@@ -1,14 +1,14 @@
-// === Module 16015: JoinRequestActionSheet ===
+// === Module 16080: JoinRequestActionSheet ===
 
-// Module 16015 (JoinRequestActionSheet)
+// Module 16080 (JoinRequestActionSheet)
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import closure_6 from "createdAt" /* 1930 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 class JoinRequestActionSheet {
@@ -54,7 +54,7 @@ class JoinRequestActionSheet {
     obj3 = guildId;
     ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
     ref = guildId.useRef(null);
-    tmp2Result1 = require("module_4184");
+    tmp2Result1 = require("module_4185");
     sharedValue = require("module_0");
     closure_5 = sharedValue;
     items2 = [];

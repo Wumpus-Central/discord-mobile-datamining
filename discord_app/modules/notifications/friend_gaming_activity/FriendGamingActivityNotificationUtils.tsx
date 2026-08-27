@@ -1,6 +1,6 @@
-// === Module 14986: onFriendGamingActivityNotificationSettingsChanged ===
+// === Module 15050: onFriendGamingActivityNotificationSettingsChanged ===
 
-// Module 14986 (onFriendGamingActivityNotificationSettingsChanged)
+// Module 15050 (onFriendGamingActivityNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;

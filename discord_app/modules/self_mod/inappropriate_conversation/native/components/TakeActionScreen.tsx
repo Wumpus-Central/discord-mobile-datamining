@@ -1,6 +1,6 @@
-// === Module 15349: TakeActionButtons ===
+// === Module 15414: TakeActionButtons ===
 
-// Module 15349 (TakeActionButtons)
+// Module 15414 (TakeActionButtons)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -9,9 +9,9 @@ import { useState } from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_8 from "markAllUserIdListsStale" /* 4098 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10474 */;
+import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10920 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ MODAL_LOCATION_CONTEXT_MOBILE: c10, NOFILTR_URL: unpackModuleId, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1, TOAST_CHECKMARK_ICON_COLOR: closure_14 } = LOCATION_CONTEXT_MOBILE);
@@ -100,7 +100,7 @@ export default function TakeActionButtons(senderId) {
             closure_0 = tmp4;
             if (null != closure_1_9.getUser(closure_1_0)) {
               closure_1_6(true);
-              let obj2 = closure_1_0(8238);
+              let obj2 = closure_1_0(8681);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -110,7 +110,7 @@ export default function TakeActionButtons(senderId) {
                 obj = { key: closure_1_13, content: null, IconComponent: null, iconColor: null, containerStyle: null };
                 const intl = tmp4(1236).intl;
                 obj[1] = intl.string(tmp4(1236).t.gn2c6X);
-                obj[2] = tmp4(4404).CircleCheckIcon;
+                obj[2] = tmp4(4405).CircleCheckIcon;
                 obj[3] = closure_1_14;
                 obj[4] = toastContainer.toastContainer;
                 obj.open(obj);
@@ -128,9 +128,9 @@ export default function TakeActionButtons(senderId) {
           throw arg1;
         } else if (arg0 !== 2) {
           callback2(false);
-          obj = v0(7996);
+          obj = v0(8606);
           const result = obj.showReportSuccessToast(closure_0, v0);
-          callback(closure_1_0(10487).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          callback(closure_1_0(10927).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
         }
         dependencyMap = 3;
         obj2 = { value: null, done: true };

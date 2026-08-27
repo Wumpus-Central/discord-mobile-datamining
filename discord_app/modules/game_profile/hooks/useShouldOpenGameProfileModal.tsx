@@ -1,12 +1,12 @@
-// === Module 9489: useShouldOpenGameProfileModal ===
+// === Module 8727: useShouldOpenGameProfileModal ===
 
-// Module 9489 (useShouldOpenGameProfileModal)
+// Module 8727 (useShouldOpenGameProfileModal)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import hasFlagAll from "hasFlag" /* 1403 */;
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5005 */;
-import GameFlags from "GameFlags" /* 9490 */;
+import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5010 */;
+import GameFlags from "GameFlags" /* 8728 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleLoadMessages" /* 4468 */;
+import closure_5 from "handleLoadMessages" /* 4469 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 8548: NativeShadowType ===
+// === Module 8065: NativeShadowType ===
 
-// Module 8548 (NativeShadowType)
+// Module 8065 (NativeShadowType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/polls/chat/PollMessageChatDataTypes.tsx");

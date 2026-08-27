@@ -1,10 +1,10 @@
-// === Module 17329: receiveLocalNotification ===
+// === Module 17395: receiveLocalNotification ===
 
-// Module 17329 (receiveLocalNotification)
+// Module 17395 (receiveLocalNotification)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import set2 from "set" /* 1398 */;
-import LocalNotificationTypes2 from "LocalNotificationTypes" /* 13256 */;
+import LocalNotificationTypes2 from "LocalNotificationTypes" /* 13282 */;
 import ME from "ME" /* 676 */;
 
 const LocalNotificationTypes = LocalNotificationTypes2.LocalNotificationTypes;
@@ -14,7 +14,7 @@ let result = set.fileFinishedImporting("modules/local_push_notification/native/L
 
 export const receiveLocalNotification = function receiveLocalNotification(getData) {
   if (null != getData.getData) {
-    data(7147).trackAppOpened("notification");
+    data(7153).trackAppOpened("notification");
     data = getData.getData();
     let type = data.type;
     function dispatch() {
@@ -52,7 +52,7 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         }
       }
     }
-    let obj2 = data(7147);
+    let obj2 = data(7153);
     if (obj.isDispatching()) {
       const _setImmediate = setImmediate;
       setImmediate(dispatch);

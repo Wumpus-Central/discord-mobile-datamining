@@ -1,12 +1,12 @@
-// === Module 12435: OrbBadgeCollectedRootScreen ===
+// === Module 12478: OrbBadgeCollectedRootScreen ===
 
-// Module 12435 (OrbBadgeCollectedRootScreen)
+// Module 12478 (OrbBadgeCollectedRootScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function OrbBadgeCollectedRootScreen(modalKey) {
@@ -28,21 +28,21 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   if (stateFromStores) {
     obj = { source: null, style: null };
     obj1 = { uri: null };
-    obj1[0] = onPressViewBadge(11410);
+    obj1[0] = onPressViewBadge(11262);
     obj[0] = obj1;
     obj[1] = tmp.background;
-    let tmp9Result = tmp9(onPressViewBadge(5440), obj);
+    let tmp9Result = tmp9(onPressViewBadge(5445), obj);
     let tmp12 = onPressViewBadge;
     let tmp13 = tmp9;
-    const tmp15 = onPressViewBadge(5440);
+    const tmp15 = onPressViewBadge(5445);
   } else {
     const obj2 = { source: null, poster: null, style: null, resizeMode: "contain", muted: true, pauseWhileAppInactive: true, paused: false };
     const obj3 = { uri: null };
-    obj3[0] = onPressViewBadge(11411);
+    obj3[0] = onPressViewBadge(11263);
     obj2[0] = obj3;
-    obj2[1] = onPressViewBadge(11410);
+    obj2[1] = onPressViewBadge(11262);
     obj2[2] = tmp.background;
-    tmp9Result = tmp9(tmp2(9085).VideoComponent, obj2);
+    tmp9Result = tmp9(tmp2(8533).VideoComponent, obj2);
     tmp12 = onPressViewBadge;
     tmp13 = tmp9;
   }
@@ -50,38 +50,38 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   const obj4 = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: null };
   const obj5 = { style: tmp.body, children: null };
   const obj6 = { source: null, style: null };
-  const obj7 = { uri: tmp12(9630) };
+  const obj7 = { uri: tmp12(10672) };
   obj6[0] = obj7;
   obj6[1] = tmp.orbBadge;
-  const items4 = [tmp13(tmp12(5440), obj6), ];
+  const items4 = [tmp13(tmp12(5445), obj6), ];
   const obj8 = { style: tmp.bottomContainer, children: null };
   const obj9 = { style: tmp.textContainer, children: null };
   const obj10 = { variant: "heading-xl/bold", color: "text-overlay-light", style: tmp.text, children: null };
   const intl = tmp2(1236).intl;
   obj10[3] = intl.string(modalKey(1236).t.Bal8Cv);
-  const items5 = [tmp13(modalKey(4440).Text, obj10), ];
+  const items5 = [tmp13(modalKey(4441).Text, obj10), ];
   const obj11 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.text, children: null };
   const intl2 = tmp2(1236).intl;
   obj11[3] = intl2.string(modalKey(1236).t.B25MUf);
-  items5[1] = tmp13(modalKey(4440).Text, obj11);
+  items5[1] = tmp13(modalKey(4441).Text, obj11);
   obj9[1] = items5;
   const items6 = [closure_7(closure_4, obj9), ];
   const obj12 = { style: tmp.buttonsContainer, children: null };
   const obj13 = { onPress: callback, variant: "primary", size: "lg", text: null };
   const intl3 = tmp2(1236).intl;
   obj13[3] = intl3.string(modalKey(1236).t.uYLGci);
-  const items7 = [tmp13(modalKey(4879).Button, obj13), ];
+  const items7 = [tmp13(modalKey(4880).Button, obj13), ];
   const obj14 = { onPress: callback1, variant: "secondary", size: "lg", text: null };
   const intl4 = tmp2(1236).intl;
   obj14[3] = intl4.string(modalKey(1236).t["6gF4aS"]);
-  items7[1] = tmp13(modalKey(4879).Button, obj14);
+  items7[1] = tmp13(modalKey(4880).Button, obj14);
   obj12[1] = items7;
   items6[1] = closure_7(closure_4, obj12);
   obj8[1] = items6;
   items4[1] = closure_7(closure_4, obj8);
   obj5[1] = items4;
   obj4[5] = closure_7(closure_4, obj5);
-  items3[1] = tmp13(modalKey(5500).SafeAreaPaddingView, obj4);
+  items3[1] = tmp13(modalKey(5505).SafeAreaPaddingView, obj4);
   obj[1] = items3;
   return closure_7(closure_4, obj);
 }

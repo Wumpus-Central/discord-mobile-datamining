@@ -1,10 +1,10 @@
-// === Module 6937: ShieldSpotIllustration ===
+// === Module 6943: ShieldSpotIllustration ===
 
-// Module 6937 (ShieldSpotIllustration)
+// Module 6943 (ShieldSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6938 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6944 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ShieldSpotIllustration.native.tsx");

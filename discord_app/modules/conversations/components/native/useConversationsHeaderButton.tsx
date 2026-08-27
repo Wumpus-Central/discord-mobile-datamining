@@ -1,10 +1,10 @@
-// === Module 8776: useConversationsHeaderButton ===
+// === Module 7746: useConversationsHeaderButton ===
 
-// Module 8776 (useConversationsHeaderButton)
+// Module 7746 (useConversationsHeaderButton)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "removePendingListFetch" /* 7268 */;
-import CONVERSATION_COLORS from "CONVERSATION_COLORS" /* 7270 */;
+import closure_4 from "removePendingListFetch" /* 7274 */;
+import CONVERSATION_COLORS from "CONVERSATION_COLORS" /* 7276 */;
 
 const require = arg1;
 ({ CONVERSATION_HAS_MORE_EXPIRATION_MS: c5, MOBILE_FETCH_LIMIT: closure_6, MOBILE_PREVIEW_MESSAGE_COUNT: error } = CONVERSATION_COLORS);

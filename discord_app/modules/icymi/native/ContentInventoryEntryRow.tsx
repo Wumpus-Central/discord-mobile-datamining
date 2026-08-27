@@ -1,9 +1,9 @@
-// === Module 15936: ContentInventoryEntryRow ===
+// === Module 16001: ContentInventoryEntryRow ===
 
-// Module 15936 (ContentInventoryEntryRow)
+// Module 16001 (ContentInventoryEntryRow)
 import noopAll from "noop" /* 19 */;
-import itemsDefault from "items" /* 15937 */;
-import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 15946 */;
+import itemsDefault from "items" /* 16002 */;
+import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 16011 */;
 import closure_3 from "markAllUserIdListsStale" /* 4098 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -24,9 +24,9 @@ export default function ContentInventoryEntryRow(content) {
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8456).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8456).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8456).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(7971).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(7971).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(7971).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           obj = { content: null, renderForScreenshot: null, visible: null };
           obj[0] = content;
           obj[1] = flag;

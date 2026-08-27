@@ -1,10 +1,10 @@
-// === Module 4385: UserMinusIcon ===
+// === Module 4386: UserMinusIcon ===
 
-// Module 4385 (UserMinusIcon)
+// Module 4386 (UserMinusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 4386 */;
+import registerAsset from "registerAsset" /* 4387 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

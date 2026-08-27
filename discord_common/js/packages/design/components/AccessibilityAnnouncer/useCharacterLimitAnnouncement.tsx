@@ -1,6 +1,6 @@
-// === Module 8196: useCharacterLimitAnnouncement ===
+// === Module 7743: useCharacterLimitAnnouncement ===
 
-// Module 8196 (useCharacterLimitAnnouncement)
+// Module 7743 (useCharacterLimitAnnouncement)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

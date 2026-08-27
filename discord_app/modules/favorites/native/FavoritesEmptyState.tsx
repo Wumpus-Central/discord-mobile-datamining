@@ -1,18 +1,18 @@
-// === Module 16165: FavoritesEmptyState ===
+// === Module 16228: FavoritesEmptyState ===
 
-// Module 16165 (FavoritesEmptyState)
+// Module 16228 (FavoritesEmptyState)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 3147 */;
-import Text from "Text" /* 4440 */;
-import Stack from "Stack" /* 4877 */;
-import Button from "Button" /* 4879 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6202 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 9927 */;
+import Text from "Text" /* 4441 */;
+import Stack from "Stack" /* 4878 */;
+import Button from "Button" /* 4880 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6208 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10226 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -50,7 +50,7 @@ export default function FavoritesEmptyState() {
     const obj3 = { variant: "primary", text: null, icon: null, onPress: null };
     const intl4 = tmp2(1236).intl;
     obj3[1] = intl4.string(tmp9(3147)["6kk0gM"]);
-    obj3[2] = tmp8(tmp2(12381).PlusMediumIcon, {});
+    obj3[2] = tmp8(tmp2(12205).PlusMediumIcon, {});
     obj3[3] = callback;
     let obj4 = obj3;
   } else {

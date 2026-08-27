@@ -1,8 +1,8 @@
-// === Module 10987: ? ===
+// === Module 9965: ? ===
 
-// Module 10987
+// Module 9965
 import set from "set" /* 2 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4503 */;
+import RESOLUTION_720 from "RESOLUTION_720" /* 4504 */;
 import importDefaultResult from "getUnitId" /* 1368 */;
 
 const ApplicationStreamResolutions = RESOLUTION_720.ApplicationStreamResolutions;

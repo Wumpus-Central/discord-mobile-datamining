@@ -1,12 +1,12 @@
-// === Module 8374: createPremiumGroupInviteEmbed ===
+// === Module 7888: createPremiumGroupInviteEmbed ===
 
-// Module 8374 (createPremiumGroupInviteEmbed)
+// Module 7888 (createPremiumGroupInviteEmbed)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
-import frozen from "frozen" /* 8273 */;
-import registerAssetDefault from "registerAsset" /* 8375 */;
-import getPremiumGroupInviteEmbedText from "getPremiumGroupInviteEmbedText" /* 8376 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
+import frozen from "frozen" /* 7788 */;
+import registerAssetDefault from "registerAsset" /* 7889 */;
+import getPremiumGroupInviteEmbedText from "getPremiumGroupInviteEmbedText" /* 7890 */;
 import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4121 */;
 
 ({ HELP_CENTER_LINK: c3, PremiumGroupInviteState: c4 } = SubscriptionStatusTypes);

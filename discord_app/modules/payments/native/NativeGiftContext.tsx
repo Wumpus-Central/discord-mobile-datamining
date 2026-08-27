@@ -1,17 +1,17 @@
-// === Module 9824: NativeGiftContextProvider ===
+// === Module 10396: NativeGiftContextProvider ===
 
-// Module 9824 (NativeGiftContextProvider)
+// Module 10396 (NativeGiftContextProvider)
 import timestampDefault from "timestamp" /* 3 */;
-import createDefinedContextDefault from "createDefinedContext" /* 7101 */;
+import createDefinedContextDefault from "createDefinedContext" /* 7107 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importDefaultResult from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "initialize" /* 9005 */;
-import closure_7 from "createEmptyPromotionsByType" /* 7553 */;
-import closure_8 from "frozen" /* 9825 */;
+import closure_6 from "initialize" /* 8492 */;
+import closure_7 from "createEmptyPromotionsByType" /* 10394 */;
+import closure_8 from "frozen" /* 8380 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { GPlayBillingResult as unpackModuleId } from "GPlayConnectionState" /* 6032 */;
+import { GPlayBillingResult as unpackModuleId } from "GPlayConnectionState" /* 6037 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -262,7 +262,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     constants = undefined;
     table = undefined;
     jsx = undefined;
-    obj = { orderId: "a", planId: "center", planSelection: "hidden", giftInfo: null };
+    obj = { orderId: "a", planId: "", planSelection: "apply", giftInfo: true };
     obj = { premiumType: null, planInterval: null };
     obj[0] = first;
     obj[1] = first1;

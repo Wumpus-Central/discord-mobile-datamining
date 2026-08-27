@@ -1,13 +1,13 @@
-// === Module 14054: RPC_LOCAL_SCOPE ===
+// === Module 14081: RPC_LOCAL_SCOPE ===
 
-// Module 14054 (RPC_LOCAL_SCOPE)
-import showInstantInviteActionSheet from "showInstantInviteActionSheet" /* 9280 */;
-import prototypeDefault from "prototype" /* 10896 */;
-import validateOpenInviteDialog from "validateOpenInviteDialog" /* 14021 */;
+// Module 14081 (RPC_LOCAL_SCOPE)
+import prototypeDefault from "prototype" /* 9424 */;
+import showInstantInviteActionSheet from "showInstantInviteActionSheet" /* 9829 */;
+import validateOpenInviteDialog from "validateOpenInviteDialog" /* 14048 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4346 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4347 */;
 import ME from "ME" /* 676 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4682 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4683 */;
 
 require = arg1;
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);

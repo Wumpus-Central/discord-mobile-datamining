@@ -1,17 +1,17 @@
-// === Module 11523: ClassificationEvidence ===
+// === Module 11377: ClassificationEvidence ===
 
-// Module 11523 (ClassificationEvidence)
-import setOptionsDefault from "setOptions" /* 8259 */;
+// Module 11377 (ClassificationEvidence)
+import setOptionsDefault from "setOptions" /* 7774 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "handleThemeChange" /* 1302 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11514 */;
-import SafetyHubView from "SafetyHubView" /* 8017 */;
+import closure_11 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11368 */;
+import SafetyHubView from "SafetyHubView" /* 8621 */;
 import { MessageTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ View: c5, findNodeHandle: closure_6, Image: error, ActivityIndicator: closure_8 } = get_ActivityIndicator);
@@ -39,10 +39,10 @@ export default function ClassificationEvidence(arg0) {
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
   if (obj2.useStateFromStores(items1, () => ref(1363).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(11524));
+    let assetSource = resolveAssetSource(tmp11(11378));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(11525));
+    assetSource = resolveAssetSource(tmp11(11379));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
@@ -152,7 +152,7 @@ export default function ClassificationEvidence(arg0) {
       obj[9] = uri.id;
       return obj;
     });
-    ref(9059).openMediaModal({ initialIndex: index, initialSources: mapped, disableDownload: true, disableMediaOverlayButton: true, shareable: false, originViewOrOriginLayout: layout });
+    ref(8498).openMediaModal({ initialIndex: index, initialSources: mapped, disableDownload: true, disableMediaOverlayButton: true, shareable: false, originViewOrOriginLayout: layout });
   }, items4);
   const items6 = [first2.attachments];
   const callback1 = obj1.useCallback((arg0) => {
@@ -198,7 +198,7 @@ export default function ClassificationEvidence(arg0) {
     obj = { style: null, children: null };
     obj[0] = attachments.dummyVideoAttachments;
     attachments = first2.attachments;
-    first2 = attachments.filter((filename) => ref(4635).isVideoFile(filename.filename));
+    first2 = attachments.filter((filename) => ref(4636).isVideoFile(filename.filename));
     obj[1] = first2.map((uri) => {
       closure_0 = uri;
       obj = {
@@ -219,7 +219,7 @@ export default function ClassificationEvidence(arg0) {
         }
       };
       obj = { uri: uri.url };
-      return closure_1_18(first(9086), obj, arg1);
+      return closure_1_18(first(8334), obj, arg1);
     });
     items8[1] = callback(tmp24, obj);
     obj[0] = items8;
@@ -228,11 +228,11 @@ export default function ClassificationEvidence(arg0) {
     obj1 = { ref: null, onTapImage: null, inverted: false };
     obj1[0] = ref;
     obj1[1] = callback;
-    const items9 = [callback(tmp13(11526), obj1), ];
+    const items9 = [callback(tmp13(11380), obj1), ];
     obj2 = { rowGenerator: null, message: null, modifyRow: null, pointerEvents: "none" };
     obj2[0] = closure_20;
-    let tmp13Result = tmp13(8804);
-    tmpResult = tmp(4689);
+    let tmp13Result = tmp13(8704);
+    tmpResult = tmp(4690);
     const obj3 = { id: null, timestamp: null, channel_id: "1", type: null, author: null, content: null, attachments: null };
     obj3[0] = first2.id;
     const _Date = Date;

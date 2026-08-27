@@ -1,6 +1,6 @@
-// === Module 16243: getSecondsSliderLabel ===
+// === Module 16308: getSecondsSliderLabel ===
 
-// Module 16243 (getSecondsSliderLabel)
+// Module 16308 (getSecondsSliderLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import hooksDefault from "hooks" /* 4043 */;

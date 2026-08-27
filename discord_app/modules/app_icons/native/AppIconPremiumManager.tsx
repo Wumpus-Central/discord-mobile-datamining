@@ -1,11 +1,11 @@
-// === Module 16739: handleAppStateUpdate ===
+// === Module 16805: handleAppStateUpdate ===
 
-// Module 16739 (handleAppStateUpdate)
+// Module 16805 (handleAppStateUpdate)
 import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 5433 */;
+import initializeDefault from "initialize" /* 5438 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import { getIconById } from "items" /* 7874 */;
+import { getIconById } from "items" /* 8110 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 let require = arg1;
@@ -143,9 +143,9 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
 prototype["resetIcon"] = function resetIcon(arg0, c0, ORPHANED) {
   const _require = arg0;
   closure_1 = ORPHANED;
-  let obj = _require(7873);
-  const setAppIconResult = _require(7873).setAppIcon(DEFAULT, c0);
-  _require(7873).setAppIcon(DEFAULT, c0).then(() => {
+  let obj = _require(12938);
+  const setAppIconResult = _require(12938).setAppIcon(DEFAULT, c0);
+  _require(12938).setAppIcon(DEFAULT, c0).then(() => {
     let obj = ORPHANED(closure_1_2[10]);
     obj = { previous_icon_id: closure_0, reset_to_icon_id: closure_1_8, reset_reason: ORPHANED };
     obj.track(closure_1_6.APP_ICON_AUTO_RESET, obj);

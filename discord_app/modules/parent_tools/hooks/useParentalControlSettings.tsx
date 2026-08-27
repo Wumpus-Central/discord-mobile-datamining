@@ -1,13 +1,13 @@
-// === Module 14352: useParentalControlledExplicitContentSettings ===
+// === Module 14379: useParentalControlledExplicitContentSettings ===
 
-// Module 14352 (useParentalControlledExplicitContentSettings)
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 7546 */;
-import useSelectedTeen from "useSelectedTeen" /* 7548 */;
-import result2 from "result" /* 14353 */;
+// Module 14379 (useParentalControlledExplicitContentSettings)
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8697 */;
+import useSelectedTeen from "useSelectedTeen" /* 8699 */;
+import result2 from "result" /* 14380 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getSettings" /* 7212 */;
-import { SafetyToastType } from "SafetyToastType" /* 7991 */;
+import closure_5 from "getSettings" /* 7218 */;
+import { SafetyToastType } from "SafetyToastType" /* 8601 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
@@ -23,7 +23,7 @@ export const useParentalControlledExplicitContentSettings = function useParental
   const controlledSetting = ParentalControlledExplicitContent.useControlledSetting(id);
   let tmp6 = null;
   if (null != selectedTeen) {
-    let tmpResult = tmp(14356);
+    let tmpResult = tmp(14383);
     let id1;
     if (selectedTeen != null) {
       id1 = selectedTeen.id;
@@ -37,7 +37,7 @@ export const useParentalControlledExplicitContentSettings = function useParental
     obj = { explicitContentNonFriendDm: null, explicitContentFriendDm: null, explicitContentGuilds: null };
     obj[1] = prop;
     obj[0] = tmpResult.resolveExplicitContentSettingWithDefaultsForTeen(obj);
-    tmpResult = tmp(14356);
+    tmpResult = tmp(14383);
     let id2;
     if (selectedTeen != null) {
       id2 = selectedTeen.id;
@@ -71,16 +71,16 @@ export const useParentalControlledGoreContentSettings = function useParentalCont
       controlledSetting = {};
     }
     ({ goreContentNonFriendDm, goreContentFriendDm } = controlledSetting);
-    let tmpResult = tmp(14356);
+    let tmpResult = tmp(14383);
     if (!tmpResult.isSetAndNotDefault(goreContentNonFriendDm)) {
-      tmpResult = tmp(6090);
+      tmpResult = tmp(6098);
       goreContentNonFriendDm = tmpResult.resolveGoreSettingWithDefaultsForTeen({ isDm: true });
     }
     obj = { goreContentNonFriendDm: null, goreContentFriendDm: null, goreContentGuilds: null };
     obj[0] = goreContentNonFriendDm;
     if (!tmpResult1.isSetAndNotDefault(goreContentFriendDm)) {
-      goreContentFriendDm = tmp(6090).resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
-      const tmpResult2 = tmp(6090);
+      goreContentFriendDm = tmp(6098).resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
+      const tmpResult2 = tmp(6098);
     }
     obj[1] = goreContentFriendDm;
     obj[2] = tmp(1306).ExplicitContentRedaction.BLUR;
@@ -108,8 +108,8 @@ export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() 
   return controlledSetting1;
 };
 export const useAllowFriendsFromMutualGuildsOnlyForTeen = function useAllowFriendsFromMutualGuildsOnlyForTeen() {
-  const selectedTeen = controlledSetting(7548).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(14353).ParentalControlledFriendSourceFlags;
+  const selectedTeen = controlledSetting(8699).useSelectedTeen();
+  const ParentalControlledFriendSourceFlags = controlledSetting(14380).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -124,14 +124,14 @@ export const useIsParentallyControlled = function useIsParentallyControlled() {
 };
 export const useParentalControlledConsent = function useParentalControlledConsent(PERSONALIZATION) {
   let _require = PERSONALIZATION;
-  let obj = _require(7548);
+  let obj = _require(8699);
   let selectedTeenId = obj.useSelectedTeenId();
   let items = [closure_5];
   _require = PERSONALIZATION;
   selectedTeenId = undefined;
   const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_5.hasConsented(selectedTeenId, closure_0));
   let obj2 = _require(589);
-  selectedTeenId = _require(7548).useSelectedTeenId();
+  selectedTeenId = _require(8699).useSelectedTeenId();
   _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;

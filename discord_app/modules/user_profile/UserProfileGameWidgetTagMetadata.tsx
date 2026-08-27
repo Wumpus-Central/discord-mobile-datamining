@@ -1,9 +1,9 @@
-// === Module 12620: WidgetGameTagIconRole ===
+// === Module 12569: WidgetGameTagIconRole ===
 
-// Module 12620 (WidgetGameTagIconRole)
+// Module 12569 (WidgetGameTagIconRole)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import WidgetGameTag from "WidgetGameTag" /* 7304 */;
+import WidgetGameTag from "WidgetGameTag" /* 7310 */;
 
 let obj = { RIBBON: "ribbon", THUMBS_UP: "thumbsUp", THUMBS_DOWN: "thumbsDown", FRIENDS: "friends" };
 obj = {

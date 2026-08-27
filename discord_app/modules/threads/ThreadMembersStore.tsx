@@ -1,6 +1,6 @@
-// === Module 7439: updateFromGuild ===
+// === Module 7447: updateFromGuild ===
 
-// Module 7439 (updateFromGuild)
+// Module 7447 (updateFromGuild)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

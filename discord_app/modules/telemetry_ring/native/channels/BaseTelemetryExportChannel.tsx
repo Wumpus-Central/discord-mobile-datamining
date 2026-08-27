@@ -1,9 +1,9 @@
-// === Module 13726: getIntervalMs ===
+// === Module 13753: getIntervalMs ===
 
-// Module 13726 (getIntervalMs)
+// Module 13753 (getIntervalMs)
 import timestampDefault from "timestamp" /* 3 */;
 import Storage2 from "Storage" /* 595 */;
-import appendDefault from "append" /* 13727 */;
+import appendDefault from "append" /* 13754 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 require = arg1;

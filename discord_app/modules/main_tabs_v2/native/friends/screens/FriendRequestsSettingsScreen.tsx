@@ -1,13 +1,13 @@
-// === Module 16205: FriendRequestsSettingsScreen ===
+// === Module 16270: FriendRequestsSettingsScreen ===
 
-// Module 16205 (FriendRequestsSettingsScreen)
+// Module 16270 (FriendRequestsSettingsScreen)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5017 */;
-import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 16206 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 5022 */;
+import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 16271 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 noopAll;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);

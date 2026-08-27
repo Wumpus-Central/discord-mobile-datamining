@@ -1,9 +1,9 @@
-// === Module 15765: TypingSubtitle ===
+// === Module 15829: TypingSubtitle ===
 
-// Module 15765 (TypingSubtitle)
+// Module 15829 (TypingSubtitle)
 import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4440 */;
-import styles from "styles" /* 15764 */;
+import Text from "Text" /* 4441 */;
+import styles from "styles" /* 15828 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -19,11 +19,11 @@ export default function TypingSubtitle(arg0) {
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(4932).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(4932);
+    channelIconComponentWithGuild = tmp(4933).getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = tmp(4933);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(4977).TextIcon;
+    channelIconComponentWithGuild = tmp(4981).TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   let tmp7 = null;
@@ -39,7 +39,7 @@ export default function TypingSubtitle(arg0) {
     const obj2 = { variant: "text-xs/medium", children: null };
     const items1 = [channelName, "  \u00B7  "];
     obj2[1] = items1;
-    tmp5Result = tmp5(tmp(4440).Text, obj2);
+    tmp5Result = tmp5(tmp(4441).Text, obj2);
   }
   const items2 = [tmp5Result, text];
   obj1[4] = items2;

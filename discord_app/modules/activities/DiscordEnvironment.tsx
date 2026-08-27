@@ -1,10 +1,10 @@
-// === Module 10880: frozen ===
+// === Module 9527: frozen ===
 
-// Module 10880 (frozen)
+// Module 9527 (frozen)
 import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import closure_3 from "handleThemeChange" /* 1302 */;
-import RESPONSIVE_DENSITY_MEDIA_QUERY from "RESPONSIVE_DENSITY_MEDIA_QUERY" /* 10881 */;
+import RESPONSIVE_DENSITY_MEDIA_QUERY from "RESPONSIVE_DENSITY_MEDIA_QUERY" /* 9528 */;
 
 require = arg1;
 ({ RESPONSIVE_DENSITY_FALLBACK: c4, RESPONSIVE_DENSITY_MEDIA_QUERY: c5, resolveUIDensity: closure_6 } = RESPONSIVE_DENSITY_MEDIA_QUERY);

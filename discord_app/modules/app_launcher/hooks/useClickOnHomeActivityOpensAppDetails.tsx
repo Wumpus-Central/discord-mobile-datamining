@@ -1,6 +1,6 @@
-// === Module 11746: useClickOnHomeActivityOpensAppDetails ===
+// === Module 11578: useClickOnHomeActivityOpensAppDetails ===
 
-// Module 11746 (useClickOnHomeActivityOpensAppDetails)
+// Module 11578 (useClickOnHomeActivityOpensAppDetails)
 import set from "set" /* 2 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
 

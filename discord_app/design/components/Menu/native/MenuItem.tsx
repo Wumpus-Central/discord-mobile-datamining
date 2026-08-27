@@ -1,9 +1,9 @@
-// === Module 13662: MenuItem ===
+// === Module 13689: MenuItem ===
 
-// Module 13662 (MenuItem)
+// Module 13689 (MenuItem)
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -20,7 +20,7 @@ const forwardRefResult = importAllResult.forwardRef((action, ref) => {
   action = action.action;
   let menuClose;
   const tmp = callback();
-  menuClose = importAllResult.useContext(action(13660).MenuContext).menuClose;
+  menuClose = importAllResult.useContext(action(13687).MenuContext).menuClose;
   if (null != IconComponent) {
     let tmp3 = <IconComponent size="sm" />;
   } else {
@@ -29,7 +29,7 @@ const forwardRefResult = importAllResult.forwardRef((action, ref) => {
       let obj = { source: null, style: null };
       obj[0] = iconSource;
       obj[1] = tmp.formIcon;
-      tmp3 = jsx(menuClose(4881), { source: null, style: null });
+      tmp3 = jsx(menuClose(4882), { source: null, style: null });
     }
   }
   obj = { ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null };
@@ -54,14 +54,14 @@ const forwardRefResult = importAllResult.forwardRef((action, ref) => {
     obj = { text: null, style: null };
     obj[0] = label;
     obj[1] = tmp.formLabel;
-    tmp7Result = tmp7(menuClose(5559), obj);
+    tmp7Result = tmp7(menuClose(5564), obj);
   }
   obj[6] = tmp7Result;
   obj[7] = function onPress() {
     action();
     menuClose();
   };
-  return jsx(menuClose(5539), { ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null });
+  return jsx(menuClose(5544), { ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null });
 });
 const result = require("set").fileFinishedImporting("design/components/Menu/native/MenuItem.tsx");
 

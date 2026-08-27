@@ -1,10 +1,10 @@
-// === Module 6257: AppsButtonSpotIllustration ===
+// === Module 6263: AppsButtonSpotIllustration ===
 
-// Module 6257 (AppsButtonSpotIllustration)
+// Module 6263 (AppsButtonSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6258 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6264 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AppsButtonSpotIllustration.native.tsx");

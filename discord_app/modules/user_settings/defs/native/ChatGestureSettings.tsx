@@ -1,14 +1,14 @@
-// === Module 10583: useSwipeToReplySettingValue ===
+// === Module 10987: useSwipeToReplySettingValue ===
 
-// Module 10583 (useSwipeToReplySettingValue)
+// Module 10987 (useSwipeToReplySettingValue)
 import set from "set" /* 2 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import create from "create" /* 1306 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import MobileUserSettings from "MobileUserSettings" /* 8302 */;
+import MobileUserSettings from "MobileUserSettings" /* 7816 */;
 import ME from "ME" /* 676 */;
-import createToggle from "createToggle" /* 10584 */;
+import createToggle from "createToggle" /* 10988 */;
 
 function useSwipeToReplySettingValue() {
   const SwipeRightToLeftModeSetting = explicitContentFromProto.SwipeRightToLeftModeSetting;

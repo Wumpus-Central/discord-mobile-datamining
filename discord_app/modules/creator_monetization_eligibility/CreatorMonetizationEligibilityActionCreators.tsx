@@ -1,10 +1,10 @@
-// === Module 17116: _createCreatorMonetizationEnableRequest ===
+// === Module 17182: _createCreatorMonetizationEnableRequest ===
 
-// Module 17116 (_createCreatorMonetizationEnableRequest)
+// Module 17182 (_createCreatorMonetizationEnableRequest)
 import sendRequest from "sendRequest" /* 530 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
-import { ApplicationTypes } from "ApplicationTypes" /* 4473 */;
+import { ApplicationTypes } from "ApplicationTypes" /* 4474 */;
 
 require = arg1;
 function _createCreatorMonetizationEnableRequest() {

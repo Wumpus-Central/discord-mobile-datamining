@@ -1,10 +1,10 @@
-// === Module 6791: NitroWishlistTileAbstractUI ===
+// === Module 6797: NitroWishlistTileAbstractUI ===
 
-// Module 6791 (NitroWishlistTileAbstractUI)
+// Module 6797 (NitroWishlistTileAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6792 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6798 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroWishlistTileAbstractUI.native.tsx");

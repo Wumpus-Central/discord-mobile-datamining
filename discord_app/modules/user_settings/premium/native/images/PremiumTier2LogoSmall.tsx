@@ -1,11 +1,11 @@
-// === Module 13028: PremiumTier2LogoSmall ===
+// === Module 13051: PremiumTier2LogoSmall ===
 
-// Module 13028 (PremiumTier2LogoSmall)
+// Module 13051 (PremiumTier2LogoSmall)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import map from "map" /* 4165 */;
-import inlineStyles from "inlineStyles" /* 8052 */;
-import inlineStylesDefault from "inlineStyles" /* 8052 */;
+import inlineStyles from "inlineStyles" /* 8173 */;
+import inlineStylesDefault from "inlineStyles" /* 8173 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 11180: maybeStartLurking ===
+// === Module 11063: maybeStartLurking ===
 
-// Module 11180 (maybeStartLurking)
+// Module 11063 (maybeStartLurking)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { isGuildVocalChannelType } from "createChannelRecord" /* 1395 */;
 import { isGuildLurker } from "GuildNSFWContentLevel" /* 1434 */;
@@ -11,8 +11,8 @@ import closure_10 from "createGuildRecordFromRust" /* 1910 */;
 import closure_11 from "getUncachedChannelPermissions" /* 4089 */;
 import ME from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
-import { GuildOnboardingTab } from "serverPromptToClientPrompt" /* 5415 */;
-import { CHANNELS_AND_ROLES_MODAL_KEY as closure_18 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5411 */;
+import { GuildOnboardingTab } from "serverPromptToClientPrompt" /* 5420 */;
+import { CHANNELS_AND_ROLES_MODAL_KEY as closure_18 } from "GUILD_ONBOARDING_MODAL_KEY" /* 5416 */;
 
 const require = arg1;
 function maybeStartLurking() {

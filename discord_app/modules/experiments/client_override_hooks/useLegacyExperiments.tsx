@@ -1,10 +1,10 @@
-// === Module 10596: parseRegisteredExperiments ===
+// === Module 11000: parseRegisteredExperiments ===
 
-// Module 10596 (parseRegisteredExperiments)
+// Module 11000 (parseRegisteredExperiments)
 import closure_3 from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
-import closure_5 from "getHash" /* 4357 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4358 */;
+import closure_5 from "getHash" /* 4358 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4359 */;
 
 const require = arg1;
 function parseRegisteredExperiments(registeredExperiments) {

@@ -1,12 +1,12 @@
-// === Module 15505: HappeningNowCardPlaceholder ===
+// === Module 15570: HappeningNowCardPlaceholder ===
 
-// Module 15505 (HappeningNowCardPlaceholder)
+// Module 15570 (HappeningNowCardPlaceholder)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { HAPPENING_NOW_CONTENT_HEIGHT } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14811 */;
+import { HAPPENING_NOW_CONTENT_HEIGHT } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14838 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

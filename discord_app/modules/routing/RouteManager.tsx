@@ -1,8 +1,8 @@
-// === Module 11127: initialize ===
+// === Module 12241: initialize ===
 
-// Module 11127 (initialize)
-import closure_2 from "_handleConnectionOpen" /* 5168 */;
-import closure_3 from "getMatchData" /* 11128 */;
+// Module 12241 (initialize)
+import closure_2 from "_handleConnectionOpen" /* 5173 */;
+import closure_3 from "getMatchData" /* 12242 */;
 import { Routes } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -100,7 +100,7 @@ prototype["executeRouteRewrites"] = function executeRouteRewrites(location, REPL
       let tmp9Result = tmp9(location, REPLACE);
       let tmp14 = tmp9Result;
       if (null != tmp9Result) {
-        let tmp11Result = tmp11(7658);
+        let tmp11Result = tmp11(12244);
         obj = { message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route", data: null };
         obj = { replacePath: null, previousPath: null };
         obj[0] = tmp9Result.path;

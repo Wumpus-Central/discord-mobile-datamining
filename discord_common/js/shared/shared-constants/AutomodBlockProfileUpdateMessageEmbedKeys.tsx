@@ -1,6 +1,6 @@
-// === Module 7183: AutomodBlockProfileUpdateMessageEmbedKeys ===
+// === Module 7189: AutomodBlockProfileUpdateMessageEmbedKeys ===
 
-// Module 7183 (AutomodBlockProfileUpdateMessageEmbedKeys)
+// Module 7189 (AutomodBlockProfileUpdateMessageEmbedKeys)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodBlockProfileUpdateMessageEmbedKeys.tsx");

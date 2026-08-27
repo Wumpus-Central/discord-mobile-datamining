@@ -1,6 +1,6 @@
-// === Module 12240: getMutualFriendsLabel ===
+// === Module 9182: getMutualFriendsLabel ===
 
-// Module 12240 (getMutualFriendsLabel)
+// Module 9182 (getMutualFriendsLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

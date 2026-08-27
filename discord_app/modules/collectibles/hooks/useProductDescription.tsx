@@ -1,6 +1,6 @@
-// === Module 9780: getBundleDescription ===
+// === Module 12465: getBundleDescription ===
 
-// Module 9780 (getBundleDescription)
+// Module 12465 (getBundleDescription)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;

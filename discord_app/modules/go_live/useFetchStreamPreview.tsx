@@ -1,8 +1,8 @@
-// === Module 11102: useFetchStreamPreview ===
+// === Module 10065: useFetchStreamPreview ===
 
-// Module 11102 (useFetchStreamPreview)
+// Module 10065 (useFetchStreamPreview)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "reset" /* 4629 */;
+import closure_3 from "reset" /* 4630 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_6 from "handleConnectionOpen" /* 1981 */;

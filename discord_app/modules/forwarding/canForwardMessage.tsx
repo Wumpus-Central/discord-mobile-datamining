@@ -1,6 +1,6 @@
-// === Module 11281: canForwardMessage ===
+// === Module 11160: canForwardMessage ===
 
-// Module 11281 (canForwardMessage)
+// Module 11160 (canForwardMessage)
 import hasFlag from "hasFlag" /* 1403 */;
 import closure_2 from "isSubscriptionGated" /* 1983 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;

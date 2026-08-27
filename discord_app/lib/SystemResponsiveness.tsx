@@ -1,8 +1,8 @@
-// === Module 13361: start ===
+// === Module 13388: start ===
 
-// Module 13361 (start)
+// Module 13388 (start)
 import set from "set" /* 2 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4543 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4544 */;
 
 const result = set.fileFinishedImporting("lib/SystemResponsiveness.tsx");
 class SystemResponsiveness {

@@ -1,12 +1,12 @@
-// === Module 8257: TextElement ===
+// === Module 8702: TextElement ===
 
-// Module 8257 (TextElement)
-import Text from "Text" /* 4440 */;
-import createRulesAll from "createRules" /* 4899 */;
+// Module 8702 (TextElement)
+import Text from "Text" /* 4441 */;
+import createRulesAll from "createRules" /* 4900 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

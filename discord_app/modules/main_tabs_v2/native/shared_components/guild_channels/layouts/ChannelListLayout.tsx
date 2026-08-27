@@ -1,6 +1,6 @@
-// === Module 10018: getLayoutStyles ===
+// === Module 10122: getLayoutStyles ===
 
-// Module 10018 (getLayoutStyles)
+// Module 10122 (getLayoutStyles)
 import set from "set" /* 2 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
 import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 4139 */;
@@ -11,17 +11,17 @@ function getLayoutStyles(layout, launchpad) {
     flag = false;
   }
   if (ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER === layout) {
-    return tmp(10019).CHANNEL_LIST_STYLES_COZY_DRAWER;
+    return tmp(10123).CHANNEL_LIST_STYLES_COZY_DRAWER;
   } else if (tmp(4139).ChannelListLayoutTypes.COZY_DRAWER_SMOL === layout) {
-    return tmp(10019).CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
+    return tmp(10123).CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
   } else if (tmp(4139).ChannelListLayoutTypes.COMPACT === layout) {
-    let tmpResult = tmp(10021);
+    let tmpResult = tmp(10125);
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COMPACT_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COMPACT;
   } else {
     if (tmp(4139).ChannelListLayoutTypes.MINIMAL !== layout) {
       const COZY = tmp(4139).ChannelListLayoutTypes.COZY;
     }
-    tmpResult = tmp(10022);
+    tmpResult = tmp(10126);
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COZY_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COZY;
   }
 }

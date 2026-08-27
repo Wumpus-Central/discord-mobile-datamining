@@ -1,6 +1,6 @@
-// === Module 12615: GameFriendApplicationRow ===
+// === Module 12407: GameFriendApplicationRow ===
 
-// Module 12615 (GameFriendApplicationRow)
+// Module 12407 (GameFriendApplicationRow)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -9,7 +9,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "markAllUserIdListsStale" /* 4098 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function GameFriendApplicationRow(application) {

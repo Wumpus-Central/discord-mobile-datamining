@@ -1,6 +1,6 @@
-// === Module 17004: BoostedGuildTiers ===
+// === Module 17070: BoostedGuildTiers ===
 
-// Module 17004 (BoostedGuildTiers)
+// Module 17070 (BoostedGuildTiers)
 import ThemesDefault from "Themes" /* 712 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
@@ -10,7 +10,7 @@ import ME from "ME" /* 676 */;
 import { MAX_STICKER_FILE_SIZE } from "STICKER_PICKER_TAB_PANEL_ID" /* 4137 */;
 import jsxProd from "jsxProd" /* 21 */;
 import { intl, intl as intl2, intl as intl3, intl as intl4 } from "getSystemLocale" /* 1236 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -18,7 +18,7 @@ const require = arg1;
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_8, BoostedGuildTiers } = ME);
 const GuildFeatures = ME.GuildFeatures;
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "Array" };
+let obj = { tier: BoostedGuildTiers.NONE, title: null, IconComponent: "r" };
 obj[1] = intl.string(require("getSystemLocale").t.tfVXhP);
 let items = [obj, , , ];
 obj = { tier: BoostedGuildTiers.TIER_1, title: null, IconComponent: null };

@@ -1,17 +1,17 @@
-// === Module 12202: GuildPowerupsPerkCard ===
+// === Module 12050: GuildPowerupsPerkCard ===
 
-// Module 12202 (GuildPowerupsPerkCard)
+// Module 12050 (GuildPowerupsPerkCard)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import useThemeDefault from "useTheme" /* 4379 */;
-import Text from "Text" /* 4440 */;
-import LinearGradientDefault from "LinearGradient" /* 4891 */;
-import apexExperiment from "apexExperiment" /* 8415 */;
-import GuildPowerupCardFooterActive from "GuildPowerupCardFooterActive" /* 12157 */;
+import useThemeDefault from "useTheme" /* 4380 */;
+import Text from "Text" /* 4441 */;
+import LinearGradientDefault from "LinearGradient" /* 4892 */;
+import apexExperiment from "apexExperiment" /* 7936 */;
+import GuildPowerupCardFooterActive from "GuildPowerupCardFooterActive" /* 12003 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;
@@ -49,9 +49,9 @@ export default function GuildPowerupsPerkCard(arg0) {
   obj = { containerStyle: items, style: tmp2.card, status, onPress, children: null };
   items = [tmp2.container, style];
   obj = { style: tmp2.imageContainer, children: null };
-  let tmp3Result = tmp3(12199);
+  let tmp3Result = tmp3(12047);
   if (riveComponent == null) {
-    tmp3Result = tmp3(12156);
+    tmp3Result = tmp3(12002);
     if (imageUrl == null) {
       imageUrl = "";
     }

@@ -1,6 +1,6 @@
-// === Module 9696: useIsPremiumSubscriber ===
+// === Module 8861: useIsPremiumSubscriber ===
 
-// Module 9696 (useIsPremiumSubscriber)
+// Module 8861 (useIsPremiumSubscriber)
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 

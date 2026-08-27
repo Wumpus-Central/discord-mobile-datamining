@@ -1,6 +1,6 @@
-// === Module 11827: useAnimationDelayedAutoFocus ===
+// === Module 11656: useAnimationDelayedAutoFocus ===
 
-// Module 11827 (useAnimationDelayedAutoFocus)
+// Module 11656 (useAnimationDelayedAutoFocus)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/app_launcher/native
 export const useAnimationDelayedAutoFocus = function useAnimationDelayedAutoFocus(autoFocus, onPress) {
   const _require = autoFocus;
   dependencyMap = onPress;
-  const awaitAnimationCompletion = _require(11820).useAwaitAnimationCompletion();
+  const awaitAnimationCompletion = _require(11649).useAwaitAnimationCompletion();
   closure_3 = awaitAnimationCompletion.useRef(false);
   const items = [autoFocus, onPress, awaitAnimationCompletion];
   const effect = awaitAnimationCompletion.useEffect(() => {

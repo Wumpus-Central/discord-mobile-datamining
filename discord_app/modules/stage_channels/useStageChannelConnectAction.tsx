@@ -1,9 +1,9 @@
-// === Module 10920: useStageChannelConnectAction ===
+// === Module 9564: useStageChannelConnectAction ===
 
-// Module 10920 (useStageChannelConnectAction)
+// Module 9564 (useStageChannelConnectAction)
 import set from "set" /* 2 */;
-import useStageChannelIsLiveDefault from "useStageChannelIsLive" /* 7988 */;
-import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 10919 */;
+import useStageChannelIsLiveDefault from "useStageChannelIsLive" /* 8598 */;
+import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 9560 */;
 
 const obj = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };
 const result = set.fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");

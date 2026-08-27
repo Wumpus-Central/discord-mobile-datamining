@@ -1,24 +1,24 @@
-// === Module 11004: VoiceSettingsActionSheet ===
+// === Module 9981: VoiceSettingsActionSheet ===
 
-// Module 11004 (VoiceSettingsActionSheet)
+// Module 9981 (VoiceSettingsActionSheet)
 import isMetaQuest from "isMetaQuest" /* 1625 */;
-import useThemeDefault from "useTheme" /* 4379 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4411 */;
-import Background from "Background" /* 5569 */;
-import BottomSheetModal from "BottomSheetModal" /* 5571 */;
-import UserSettingsVoiceDefault from "UserSettingsVoice" /* 11005 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 11028 */;
+import useThemeDefault from "useTheme" /* 4380 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4412 */;
+import Background from "Background" /* 5574 */;
+import BottomSheetModal from "BottomSheetModal" /* 5576 */;
+import UserSettingsVoiceDefault from "UserSettingsVoice" /* 9982 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 10005 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 4461 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_5 from "set" /* 4462 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4496 */;
 import closure_7 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_8 from "handleUpdate" /* 4462 */;
-import { resetFocus } from "VoiceChatDrawerState" /* 9962 */;
+import closure_8 from "handleUpdate" /* 4463 */;
+import { resetFocus } from "VoiceChatDrawerState" /* 9441 */;
 import { InstantInviteSources } from "ME" /* 676 */;
 import { Permissions } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function VoiceSettingsActionSheet() {
@@ -140,7 +140,7 @@ export const showVoiceSettingsActionSheet = function showVoiceSettingsActionShee
 export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(channel) {
   channel = channel.channel;
   const tmp = callback3();
-  let obj = channel(10974);
+  let obj = channel(9948);
   const isVoiceChannelLocked = obj.useIsVoiceChannelLocked(channel);
   let fn = null;
   if (closure_7.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
@@ -157,14 +157,14 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   let tmp9Result = null;
   if (null != fn) {
     obj = { source: null, onPress: null, accessibilityLabel: null };
-    obj[0] = tmp2(11027);
+    obj[0] = tmp2(10004);
     obj[1] = fn;
     const intl = tmp5(1236).intl;
     obj = { channelName: null };
     obj[0] = tmp4;
     obj[2] = intl.formatToPlainString(tmp5(1236).t["dHHb/2"], obj);
-    tmp9Result = tmp9(tmp2(11026), obj);
-    const tmp2Result = tmp2(11026);
+    tmp9Result = tmp9(tmp2(10003), obj);
+    const tmp2Result = tmp2(10003);
   }
   obj1 = { children: null };
   items[1] = tmp9Result;

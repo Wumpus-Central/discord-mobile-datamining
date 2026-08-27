@@ -1,10 +1,10 @@
-// === Module 9551: toAnnouncementMessages ===
+// === Module 8801: toAnnouncementMessages ===
 
-// Module 9551 (toAnnouncementMessages)
+// Module 8801 (toAnnouncementMessages)
 import set from "set" /* 2 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 import hasFlag from "hasFlag" /* 4099 */;
-import formatExpirationLabel from "formatExpirationLabel" /* 8544 */;
+import formatExpirationLabel from "formatExpirationLabel" /* 8061 */;
 
 const isMessageComponentsV2 = hasFlag.isMessageComponentsV2;
 const re4 = /^#{1,3}\s+(.+)$/;

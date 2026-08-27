@@ -1,9 +1,9 @@
-// === Module 5903: useStartAuthorize ===
+// === Module 5908: useStartAuthorize ===
 
-// Module 5903 (useStartAuthorize)
+// Module 5908 (useStartAuthorize)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { AuthorizeFlow } from "AuthorizeFlow" /* 5904 */;
+import { AuthorizeFlow } from "AuthorizeFlow" /* 5909 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
@@ -16,7 +16,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   }
   let _require;
   const debug = obj.debug;
-  const authorizationApp = _require(5905).useAuthorizationApp(getOfficialApplicationId);
+  const authorizationApp = _require(5910).useAuthorizationApp(getOfficialApplicationId);
   _require = authorizationApp;
   let prop;
   if (authorizationApp != null) {
@@ -26,7 +26,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   if (null != prop) {
     WEB = AuthorizeFlow.WEB;
   }
-  let obj2 = _require(5905);
+  let obj2 = _require(5910);
   const tmp = undefined !== debug && debug;
   const tmp2 = _require;
   let parentId;
@@ -40,7 +40,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     }
     parentId = id;
   }
-  const authorizedAppsToken = _require(5907).useAuthorizedAppsToken(parentId);
+  const authorizedAppsToken = _require(5912).useAuthorizedAppsToken(parentId);
   ({ token, fetched } = authorizedAppsToken);
   _require = undefined;
   _require = callback((arg0) => {

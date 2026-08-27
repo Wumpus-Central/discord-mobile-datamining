@@ -1,6 +1,6 @@
-// === Module 8044: initialize ===
+// === Module 8640: initialize ===
 
-// Module 8044 (initialize)
+// Module 8640 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

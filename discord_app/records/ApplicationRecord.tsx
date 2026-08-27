@@ -1,15 +1,15 @@
-// === Module 4470: createExecutable ===
+// === Module 4471: createExecutable ===
 
-// Module 4470 (createExecutable)
+// Module 4471 (createExecutable)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import fromStringAll from "fromString" /* 506 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import toJSDefault from "toJS" /* 1931 */;
-import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 4476 */;
-import closure_4 from "createFromServer" /* 4471 */;
+import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 4477 */;
+import closure_4 from "createFromServer" /* 4472 */;
 import closure_5 from "createdAt" /* 1930 */;
-import items3 from "items3" /* 4472 */;
-import { ApplicationTypes } from "ApplicationTypes" /* 4473 */;
+import items3 from "items3" /* 4473 */;
+import { ApplicationTypes } from "ApplicationTypes" /* 4474 */;
 
 require = arg1;
 function createExecutable(os) {
@@ -87,7 +87,7 @@ BasicApplicationRecord["createFromServer"] = function createFromServer(bot) {
 };
 Object.defineProperty(prototype, "connectionEntrypointUrl", {
   get: function connectionEntrypointUrl(arg0) {
-    const obj = require(4474) /* items */.APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS[this.id];
+    const obj = require(4475) /* items */.APPLICATION_IDENTITY_CONNECTIONS_WITH_OVERRIDE_ENTRYPOINT_URLS[this.id];
     let prop;
     if (obj != null) {
       prop = obj.connectionEntrypointUrlOverride;

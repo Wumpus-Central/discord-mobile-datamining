@@ -1,18 +1,18 @@
-// === Module 15412: PasswordStrength ===
+// === Module 15477: PasswordStrength ===
 
-// Module 15412 (PasswordStrength)
+// Module 15477 (PasswordStrength)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4440 */;
-import PasswordScore from "PasswordScore" /* 15409 */;
+import Text from "Text" /* 4441 */;
+import PasswordScore from "PasswordScore" /* 15474 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_7 from "handleSetLocationMetadata" /* 8696 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15385 */;
+import closure_7 from "handleSetLocationMetadata" /* 7649 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15450 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
-import { FadeIn, FadeOut, LinearTransition, Easing } from "module_4184" /* 4184 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
+import { FadeIn, FadeOut, LinearTransition, Easing } from "module_4185" /* 4185 */;
 
 require = arg1;
 function PasswordStrength(passwordScore) {
@@ -27,13 +27,13 @@ function PasswordStrength(passwordScore) {
             const intl2 = tmp9(1236).intl;
             let str = intl2.string(tmp9(1236).t["w/8TuV"]);
             let strong = tmp.weak;
-          } else if (passwordScore === tmp9(15409).PasswordScore.MEDIUM) {
+          } else if (passwordScore === tmp9(15474).PasswordScore.MEDIUM) {
             const intl = tmp9(1236).intl;
             str = intl.string(tmp9(1236).t["2fmTpT"]);
             strong = tmp.medium;
           } else {
             str = "";
-            if (passwordScore === tmp9(15409).PasswordScore.STRONG) {
+            if (passwordScore === tmp9(15474).PasswordScore.STRONG) {
               const intl4 = tmp9(1236).intl;
               str = intl4.string(tmp9(1236).t.Xraqqc);
               strong = tmp.strong;
@@ -74,7 +74,7 @@ obj3[1] = require("module_300");
 const obj4 = { layout: null };
 const obj2 = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
 obj4[0] = require("module_300");
-const easingResult = LinearTransition.easing(Easing.inOut(require("module_4184").Easing.quad));
+const easingResult = LinearTransition.easing(Easing.inOut(require("module_4185").Easing.quad));
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   ({ password, onPasswordChange } = arg0);
   ({ returnKeyType, autoFocus } = arg0);

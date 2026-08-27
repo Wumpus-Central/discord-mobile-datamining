@@ -1,12 +1,12 @@
-// === Module 14600: useBadBundleFilter ===
+// === Module 14627: useBadBundleFilter ===
 
-// Module 14600 (useBadBundleFilter)
+// Module 14627 (useBadBundleFilter)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4107 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "map" /* 7230 */;
+import closure_5 from "map" /* 7236 */;
 
 noop.useCallback;
 let result = set.fileFinishedImporting("modules/collectibles/hooks/useBadBundleFilter.tsx");

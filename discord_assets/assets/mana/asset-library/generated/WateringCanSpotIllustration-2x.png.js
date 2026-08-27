@@ -1,6 +1,6 @@
-// === Module 7048: metadata ===
+// === Module 7054: metadata ===
 
-// Module 7048 (metadata)
+// Module 7054 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WateringCanSpotIllustration-2x.png.js");

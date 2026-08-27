@@ -1,9 +1,9 @@
-// === Module 14005: activityInstanceConnectedParticipants ===
+// === Module 14032: activityInstanceConnectedParticipants ===
 
-// Module 14005 (activityInstanceConnectedParticipants)
+// Module 14032 (activityInstanceConnectedParticipants)
 import closure_3 from "participantFromServer" /* 1390 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4346 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4347 */;
 
 const require = arg1;
 let obj = { [RPC_SCOPE_CONFIG.RPC_SCOPE_CONFIG.ANY]: items };

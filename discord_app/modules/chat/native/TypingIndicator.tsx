@@ -1,17 +1,17 @@
-// === Module 11604: TypingIndicatorInner ===
+// === Module 11455: TypingIndicatorInner ===
 
-// Module 11604 (TypingIndicatorInner)
+// Module 11455 (TypingIndicatorInner)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useChatShowingAutoComplete as closure_5 } from "updateChatInputContainerHeight" /* 8826 */;
-import closure_6 from "getUserAgnosticState" /* 4443 */;
-import closure_7 from "fromServer" /* 5350 */;
-import { SlowmodeType } from "setCooldown" /* 7357 */;
-import closure_9 from "handleTypingStart" /* 11605 */;
+import { useChatShowingAutoComplete as closure_5 } from "updateChatInputContainerHeight" /* 9455 */;
+import closure_6 from "getUserAgnosticState" /* 4444 */;
+import closure_7 from "fromServer" /* 5355 */;
+import { SlowmodeType } from "setCooldown" /* 7364 */;
+import closure_9 from "handleTypingStart" /* 11456 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function TypingIndicatorInner(channel) {
@@ -173,13 +173,13 @@ function TypingIndicatorInner(channel) {
   const obj4 = { style: tmp13.wrapperHoriz, children: null };
   const obj5 = { style: tmp13.horiz, children: null };
   if (null != stateFromStoresObject.config) {
-    const obj6 = { config: null, username: null, emojiSize: 16, onPress: null };
+    const obj6 = { config: null, username: null, onPress: null };
     ({ config: obj20[0], name: obj20[1] } = stateFromStoresObject);
     let tmp27;
     if (customTypingIndicatorConfig.canSet) {
       tmp27 = callback;
     }
-    obj6[3] = tmp27;
+    obj6[2] = tmp27;
     let tmp21Result = tmp19(tmp6(tmp2[24]), obj6);
     const tmp6Result = tmp6(tmp2[24]);
   } else {

@@ -1,6 +1,6 @@
-// === Module 12989: useScrollToSection ===
+// === Module 13012: useScrollToSection ===
 
-// Module 12989 (useScrollToSection)
+// Module 13012 (useScrollToSection)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/useScrollToSection.tsx");

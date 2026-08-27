@@ -1,10 +1,10 @@
-// === Module 11044: trackVoiceCallTransfer ===
+// === Module 9804: trackVoiceCallTransfer ===
 
-// Module 11044 (trackVoiceCallTransfer)
+// Module 9804 (trackVoiceCallTransfer)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createRTCConnection" /* 4518 */;
-import closure_4 from "handleUpdate" /* 4462 */;
+import closure_3 from "createRTCConnection" /* 4519 */;
+import closure_4 from "handleUpdate" /* 4463 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");

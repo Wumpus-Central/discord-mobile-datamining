@@ -1,6 +1,6 @@
-// === Module 8254: useUserIsTeen ===
+// === Module 8696: useUserIsTeen ===
 
-// Module 8254 (useUserIsTeen)
+// Module 8696 (useUserIsTeen)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 

@@ -1,7 +1,7 @@
-// === Module 7327: handlePostConnectionOpen ===
+// === Module 7333: handlePostConnectionOpen ===
 
-// Module 7327 (handlePostConnectionOpen)
-import importDefaultResult from "result" /* 7151 */;
+// Module 7333 (handlePostConnectionOpen)
+import importDefaultResult from "result" /* 7157 */;
 
 let obj = importDefault;
 class LowDiskTrim {

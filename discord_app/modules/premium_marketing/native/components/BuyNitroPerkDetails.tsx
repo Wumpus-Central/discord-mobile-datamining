@@ -1,14 +1,14 @@
-// === Module 7944: openBuyNitroPerkDetails ===
+// === Module 12960: openBuyNitroPerkDetails ===
 
-// Module 7944 (openBuyNitroPerkDetails)
+// Module 12960 (openBuyNitroPerkDetails)
 import ThemesDefault from "Themes" /* 712 */;
-import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4411 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5920 */;
-import PremiumTypes from "PremiumTypes" /* 7861 */;
-import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 7949 */;
+import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4412 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5925 */;
+import PremiumTypes from "PremiumTypes" /* 12933 */;
+import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 12962 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -38,7 +38,7 @@ let closure_8 = importAllResult.memo((perk) => {
       const obj2 = { planSelection: null, item: null, centered: true };
       obj2[0] = buyNitroPlanSelection;
       obj2[1] = buyNitroPlanSelection.selection.item;
-      tmp6Result = tmp6(tmp9(7948), obj2);
+      tmp6Result = tmp6(tmp9(12961), obj2);
     }
     const items = [tmp6Result, ];
     const obj3 = { planSelection: null, location: null, sourceAnalyticsLocations: null, applicationId: null, onHostSheetClose: null, onPaymentSuccess: null, onPaymentDismiss: null };
@@ -53,8 +53,8 @@ let closure_8 = importAllResult.memo((perk) => {
     obj3[6] = onPaymentDismiss;
     items[1] = callback(BuyNitroPurchaseButtonDefault, obj3);
     obj1[1] = items;
-    obj[3] = closure_5(tmp2(4877).Stack, obj1);
-    tmp6Result = tmp6(tmp2(7945).PromoSheet, obj);
+    obj[3] = closure_5(tmp2(4878).Stack, obj1);
+    tmp6Result = tmp6(tmp2(10232).PromoSheet, obj);
     const tmp8 = closure_5;
     const tmp9Result = BuyNitroPurchaseButtonDefault;
   }

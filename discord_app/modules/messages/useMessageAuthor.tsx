@@ -1,8 +1,8 @@
-// === Module 4698: useNullableMessageAuthor ===
+// === Module 4699: useNullableMessageAuthor ===
 
-// Module 4698 (useNullableMessageAuthor)
+// Module 4699 (useNullableMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
-import nameFromUserDefault from "nameFromUser" /* 4288 */;
+import nameFromUserDefault from "nameFromUser" /* 4289 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import closure_4 from "trackCommunicationDisabled" /* 1992 */;
 import closure_5 from "createGuildRoleRecordFromRust" /* 1985 */;

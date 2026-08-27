@@ -1,11 +1,11 @@
-// === Module 15424: PromotionalEmailCheckBox ===
+// === Module 15489: PromotionalEmailCheckBox ===
 
-// Module 15424 (PromotionalEmailCheckBox)
+// Module 15489 (PromotionalEmailCheckBox)
 import noopAll from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import setPromoEmailConsentState from "setPromoEmailConsentState" /* 6000 */;
+import setPromoEmailConsentState from "setPromoEmailConsentState" /* 6005 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 noopAll;
@@ -37,12 +37,12 @@ export default function PromotionalEmailCheckBox(style) {
     obj[4] = tmp.checkboxRow;
     obj1 = { checked: null };
     obj1[0] = tmp3;
-    const items = [callback2(tmp4(8187).FormCheckbox, obj1), ];
+    const items = [callback2(tmp4(7617).FormCheckbox, obj1), ];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
     obj2[2] = tmp.checkboxLabel;
     const intl2 = tmp4(1236).intl;
     obj2[3] = intl2.string(tmp4(1236).t.ylFCLt);
-    items[1] = callback2(tmp4(4440).Text, obj2);
+    items[1] = callback2(tmp4(4441).Text, obj2);
     obj[5] = items;
     obj[1] = callback3(closure_3, obj);
     tmp9 = callback2(closure_2, obj);

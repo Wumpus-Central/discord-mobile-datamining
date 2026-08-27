@@ -1,8 +1,8 @@
-// === Module 9770: getNavigatorCurrentRoute ===
+// === Module 8974: getNavigatorCurrentRoute ===
 
-// Module 9770 (getNavigatorCurrentRoute)
+// Module 8974 (getNavigatorCurrentRoute)
 import set from "set" /* 2 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4299 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4300 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx");
 

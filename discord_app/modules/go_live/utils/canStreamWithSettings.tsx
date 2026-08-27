@@ -1,10 +1,10 @@
-// === Module 10988: canStreamWithSettings ===
+// === Module 9966: canStreamWithSettings ===
 
-// Module 10988 (canStreamWithSettings)
+// Module 9966 (canStreamWithSettings)
 import set from "set" /* 2 */;
-import getGoLiveAutoQualityExperimentConfig from "getGoLiveAutoQualityExperimentConfig" /* 10989 */;
-import canUseStreamSettingDefault from "canUseStreamSetting" /* 10990 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4503 */;
+import getGoLiveAutoQualityExperimentConfig from "getGoLiveAutoQualityExperimentConfig" /* 9967 */;
+import canUseStreamSettingDefault from "canUseStreamSetting" /* 9968 */;
+import RESOLUTION_720 from "RESOLUTION_720" /* 4504 */;
 
 ({ ApplicationStreamSettingRequirements: c3, ApplicationStreamPresets: c4 } = RESOLUTION_720);
 const result = set.fileFinishedImporting("modules/go_live/utils/canStreamWithSettings.tsx");

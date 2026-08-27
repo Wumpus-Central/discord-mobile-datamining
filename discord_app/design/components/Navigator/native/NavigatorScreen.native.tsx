@@ -1,8 +1,8 @@
-// === Module 5990: NavigatorScreen ===
+// === Module 5995: NavigatorScreen ===
 
-// Module 5990 (NavigatorScreen)
-import designConfig2 from "designConfig" /* 5991 */;
-import PostponeRender from "PostponeRender" /* 5992 */;
+// Module 5995 (NavigatorScreen)
+import designConfig2 from "designConfig" /* 5996 */;
+import PostponeRender from "PostponeRender" /* 5997 */;
 import { jsxs } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 

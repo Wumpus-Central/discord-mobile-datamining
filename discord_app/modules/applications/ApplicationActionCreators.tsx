@@ -1,10 +1,10 @@
-// === Module 5901: fetchApplication ===
+// === Module 5906: fetchApplication ===
 
-// Module 5901 (fetchApplication)
+// Module 5906 (fetchApplication)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5902 */;
-import closure_5 from "createExecutable" /* 4470 */;
-import importDefaultResult from "addApplication" /* 4485 */;
+import closure_4 from "set" /* 5907 */;
+import closure_5 from "createExecutable" /* 4471 */;
+import importDefaultResult from "addApplication" /* 4486 */;
 import ME from "ME" /* 676 */;
 import initialize from "initialize" /* 589 */;
 

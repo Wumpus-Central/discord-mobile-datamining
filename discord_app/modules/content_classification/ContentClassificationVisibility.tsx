@@ -1,9 +1,9 @@
-// === Module 11581: ContentClassificationVisibility ===
+// === Module 11432: ContentClassificationVisibility ===
 
-// Module 11581 (ContentClassificationVisibility)
+// Module 11432 (ContentClassificationVisibility)
 import initialize from "initialize" /* 589 */;
-import contentClassificationToAgeRestrictionConclusion from "contentClassificationToAgeRestrictionConclusion" /* 5006 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5008 */;
+import contentClassificationToAgeRestrictionConclusion from "contentClassificationToAgeRestrictionConclusion" /* 5011 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5013 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
@@ -39,10 +39,10 @@ export const useContentClassificationVisibility = function useContentClassificat
   [][0] = closure_2;
   if (null != arg0) {
     obj = { type: null, data: null };
-    obj[0] = tmp(5006).ContentClassificationVariant.MINIMAL;
+    obj[0] = tmp(5011).ContentClassificationVariant.MINIMAL;
     obj[1] = arg0;
-    const result = tmp(5006).contentClassificationToAgeRestriction(obj);
-    if (result === tmp(5008).AgeRestrictionStatus.ADULT) {
+    const result = tmp(5011).contentClassificationToAgeRestriction(obj);
+    if (result === tmp(5013).AgeRestrictionStatus.ADULT) {
       if (true !== tmp4) {
         let DISPLAY = obj.BLOCK_UNDERAGE;
       } else {

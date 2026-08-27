@@ -1,9 +1,9 @@
-// === Module 7090: useBlockedPaymentsConfig ===
+// === Module 7096: useBlockedPaymentsConfig ===
 
-// Module 7090 (useBlockedPaymentsConfig)
+// Module 7096 (useBlockedPaymentsConfig)
 import set from "set" /* 2 */;
-import useGeoForUserDefault from "useGeoForUser" /* 7091 */;
-import createExperiment from "createExperiment" /* 4355 */;
+import useGeoForUserDefault from "useGeoForUser" /* 7097 */;
+import createExperiment from "createExperiment" /* 4356 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const items = [{ id: 1, label: "Payments Blocked", config: { paymentsBlocked: true } }];

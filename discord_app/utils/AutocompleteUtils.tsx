@@ -1,48 +1,48 @@
-// === Module 5332: NOOP ===
+// === Module 5337: NOOP ===
 
-// Module 5332 (NOOP)
+// Module 5337 (NOOP)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import updateUserGuildSettings from "updateUserGuildSettings" /* 1374 */;
 import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
-import nameFromUserDefault from "nameFromUser" /* 4288 */;
-import setDefault from "set" /* 4431 */;
-import computeChannelName from "computeChannelName" /* 4638 */;
-import StickerFormat from "StickerFormat" /* 5159 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5401 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 5402 */;
-import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5403 */;
-import useCanSeeOnboardingHome from "useCanSeeOnboardingHome" /* 6016 */;
-import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 6125 */;
-import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 6126 */;
+import nameFromUserDefault from "nameFromUser" /* 4289 */;
+import setDefault from "set" /* 4432 */;
+import computeChannelName from "computeChannelName" /* 4639 */;
+import StickerFormat from "StickerFormat" /* 5164 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5406 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 5407 */;
+import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5408 */;
+import useCanSeeOnboardingHome from "useCanSeeOnboardingHome" /* 6021 */;
+import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 6131 */;
+import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 6132 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import fromType from "fromType" /* 5333 */;
-import closure_7 from "getEmojiToGroupId" /* 5348 */;
-import closure_8 from "handleSoundCreateOrUpdate" /* 4916 */;
-import closure_9 from "handleStickersStoreUpdate" /* 5390 */;
-import closure_10 from "loadSavedGuildStickers" /* 5391 */;
-import closure_11 from "rebuild" /* 5395 */;
+import fromType from "fromType" /* 5338 */;
+import closure_7 from "getEmojiToGroupId" /* 5353 */;
+import closure_8 from "handleSoundCreateOrUpdate" /* 4917 */;
+import closure_9 from "handleStickersStoreUpdate" /* 5395 */;
+import closure_10 from "loadSavedGuildStickers" /* 5396 */;
+import closure_11 from "rebuild" /* 5400 */;
 import closure_12 from "storeThread" /* 4091 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1986 */;
 import closure_21 from "createdAt" /* 1930 */;
 import closure_22 from "ensureGuildLoaded" /* 1391 */;
-import closure_23 from "handleChannelSelect" /* 5398 */;
+import closure_23 from "handleChannelSelect" /* 5403 */;
 import comparator from "comparator" /* 1982 */;
 import closure_26 from "comparator" /* 1982 */;
 import closure_27 from "trackCommunicationDisabled" /* 1992 */;
 import closure_28 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_29 from "createGuildRecordFromRust" /* 1910 */;
-import closure_30 from "reinjectEphemerals" /* 4687 */;
+import closure_30 from "reinjectEphemerals" /* 4688 */;
 import closure_31 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_32 from "sortActivity" /* 4533 */;
+import closure_32 from "sortActivity" /* 4534 */;
 import closure_33 from "markAllUserIdListsStale" /* 4098 */;
 import closure_34 from "handleConnectionOpen" /* 1981 */;
-import closure_35 from "handleConnectionOpen" /* 4266 */;
+import closure_35 from "handleConnectionOpen" /* 4267 */;
 import closure_36 from "mergeGuildAvatar" /* 1922 */;
-import closure_37 from "addSku" /* 4493 */;
+import closure_37 from "addSku" /* 4494 */;
 import ME from "ME" /* 676 */;
 import { StaticChannelId } from "set" /* 1398 */;
 import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1991 */;
@@ -215,21 +215,21 @@ function queryMemberList(arg0) {
                             if (substr5 !== normalizeResult) {
                               let tmp33 = num < 50;
                               if (num < 50) {
-                                let tmp28 = tmp12(5401)(toLocaleLowerCaseResult, str4) || tmp12(5401)(normalizeResult, str5);
+                                let tmp28 = tmp12(5406)(toLocaleLowerCaseResult, str4) || tmp12(5406)(normalizeResult, str5);
                                 if (!tmp28) {
-                                  let tmp29 = null != str6 && tmp12(5401)(toLocaleLowerCaseResult, str6);
+                                  let tmp29 = null != str6 && tmp12(5406)(toLocaleLowerCaseResult, str6);
                                   tmp28 = tmp29;
                                 }
                                 if (!tmp28) {
-                                  let tmp30 = null != str7 && tmp12(5401)(normalizeResult, str7);
+                                  let tmp30 = null != str7 && tmp12(5406)(normalizeResult, str7);
                                   tmp28 = tmp30;
                                 }
                                 if (!tmp28) {
-                                  let tmp31 = null != str8 && tmp12(5401)(toLocaleLowerCaseResult, str8);
+                                  let tmp31 = null != str8 && tmp12(5406)(toLocaleLowerCaseResult, str8);
                                   tmp28 = tmp31;
                                 }
                                 if (!tmp28) {
-                                  let tmp32 = null != str9 && tmp12(5401)(normalizeResult, str9);
+                                  let tmp32 = null != str9 && tmp12(5406)(normalizeResult, str9);
                                   tmp28 = tmp32;
                                 }
                                 tmp33 = tmp28;
@@ -363,13 +363,13 @@ function queryMemberList(arg0) {
 function getPriorityForStickerMetadataType(arg0) {
   if (StickerFormat.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
-  } else if (tmp(5159).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
+  } else if (tmp(5164).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
-  } else if (tmp(5159).StickerMetadataTypes.TAG === arg0) {
+  } else if (tmp(5164).StickerMetadataTypes.TAG === arg0) {
     return 1;
   } else {
-    if (tmp(5159).StickerMetadataTypes.GUILD_NAME !== arg0) {
-      if (tmp(5159).StickerMetadataTypes.PACK_NAME !== arg0) {
+    if (tmp(5164).StickerMetadataTypes.GUILD_NAME !== arg0) {
+      if (tmp(5164).StickerMetadataTypes.PACK_NAME !== arg0) {
         return 1;
       }
     }
@@ -889,10 +889,10 @@ areArraysShallowlyEqual = {
       const mapped = found.map((toLocaleLowerCase) => {
         const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
         const obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: false };
-        const regExp = new RegExp("^" + callback(4431).escape(toLocaleLowerCaseResult), "i");
+        const regExp = new RegExp("^" + callback(4432).escape(toLocaleLowerCaseResult), "i");
         obj[1] = regExp;
-        const obj2 = callback(4431);
-        const regExp1 = new RegExp(callback(4431).escape(toLocaleLowerCaseResult), "i");
+        const obj2 = callback(4432);
+        const regExp1 = new RegExp(callback(4432).escape(toLocaleLowerCaseResult), "i");
         obj[2] = regExp1;
         return obj;
       });
@@ -901,17 +901,17 @@ areArraysShallowlyEqual = {
         let obj = { queryLower: null, exactQuery: null, containQuery: null, isFullMatch: true };
         obj[0] = toLocaleLowerCaseResult;
         const _RegExp = RegExp;
-        let obj2 = callback(4431);
+        let obj2 = callback(4432);
         const _HermesInternal = HermesInternal;
-        let regExp = new RegExp("^" + callback(4431).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        let regExp = new RegExp("^" + callback(4432).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[1] = regExp;
         const _RegExp2 = RegExp;
-        const str = callback(4431).escape(toLocaleLowerCaseResult);
-        const obj3 = callback(4431);
-        let regExp1 = new RegExp(callback(4431).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        const str = callback(4432).escape(toLocaleLowerCaseResult);
+        const obj3 = callback(4432);
+        let regExp1 = new RegExp(callback(4432).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[2] = regExp1;
         mapped.unshift(obj);
-        const str6 = callback(4431).escape(toLocaleLowerCaseResult);
+        const str6 = callback(4432).escape(toLocaleLowerCaseResult);
       }
       return mapped;
     })(guildId.query, flag2);
@@ -1549,8 +1549,8 @@ areArraysShallowlyEqual = {
           const guild = store4.getGuild(guildId);
           tmp5 = items1;
           if (null != guild) {
-            const tmp42 = flag(flag7[37]);
-            const tmp42Result = flag(flag7[37])(store3.getSortedRoles(guild.id));
+            const tmp39 = flag(flag7[37]);
+            const tmp39Result = flag(flag7[37])(store3.getSortedRoles(guild.id));
             const iter = flag(flag7[37])(store3.getSortedRoles(guild.id)).filter((arg0) => {
               ({ mentionable, name, id } = arg0);
               if (!mentionable) {
@@ -1646,10 +1646,6 @@ areArraysShallowlyEqual = {
           closure_7 = closure_7 + 1;
         }
       }
-      const IncludeGameMentionsInAutocomplete = channel(flag7[46]).IncludeGameMentionsInAutocomplete;
-      const setting = IncludeGameMentionsInAutocomplete.getSetting();
-      const GameMentionsMobileExperiment = channel(flag7[47]).GameMentionsMobileExperiment;
-      const config = GameMentionsMobileExperiment.getConfig({ location: "mention autocomplete" });
       function maybePushOtherGlobal(test) {
         let tmp = flag5;
         if (flag5) {
@@ -1685,18 +1681,19 @@ areArraysShallowlyEqual = {
           tmp4 = limit;
         }
       }
-      if (tmp33) {
-        let tmp35;
+      const IncludeGameMentionsInAutocomplete = channel(flag7[46]).IncludeGameMentionsInAutocomplete;
+      if (IncludeGameMentionsInAutocomplete.getSetting()) {
+        let tmp32;
         if (MENTION_GAME != null) {
-          tmp35 = MENTION_GAME();
+          tmp32 = MENTION_GAME();
         }
-        maybePushOtherGlobal(tmp35);
+        maybePushOtherGlobal(tmp32);
       }
-      let tmp38;
+      let tmp35;
       if (MENTION_TIMESTAMP != null) {
-        tmp38 = MENTION_TIMESTAMP();
+        tmp35 = MENTION_TIMESTAMP();
       }
-      maybePushOtherGlobal(tmp38);
+      maybePushOtherGlobal(tmp35);
       obj1 = { users: null, globals: null, roles: null };
       obj1[0] = items;
       obj1[1] = items2;
@@ -2031,11 +2028,11 @@ areArraysShallowlyEqual = {
         const _RegExp = RegExp;
         let obj2 = toLocaleLowerCaseResult(1903);
         const _HermesInternal = HermesInternal;
-        const regExp = new RegExp("^" + nextResult(4431).escape(stripDiacriticsResult), "i");
+        const regExp = new RegExp("^" + nextResult(4432).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
-        const obj3 = nextResult(4431);
+        const obj3 = nextResult(4432);
         const _HermesInternal2 = HermesInternal;
-        const regExp1 = new RegExp("" + nextResult(4431).escape(stripDiacriticsResult), "i");
+        const regExp1 = new RegExp("" + nextResult(4432).escape(stripDiacriticsResult), "i");
         const stickerMetadataArrays = closure_1_10.getStickerMetadataArrays();
         let item = stickerMetadataArrays.forEach((arr) => {
           const item = arr.forEach((arg0, id) => {
@@ -2132,7 +2129,7 @@ areArraysShallowlyEqual = {
                   closure_1_5.push(obj);
                 }
               }
-              obj2 = toLocaleLowerCaseResult(closure_2_3[52]);
+              obj2 = toLocaleLowerCaseResult(closure_2_3[51]);
             }
           });
         });
@@ -2163,8 +2160,8 @@ areArraysShallowlyEqual = {
       tmp3 = !obj.hasFetchedAllSounds();
     }
     if (tmp3) {
-      const result = _require(6128).maybeFetchSoundboardSounds();
-      const obj2 = _require(6128);
+      const result = _require(6134).maybeFetchSoundboardSounds();
+      const obj2 = _require(6134);
     }
     const FrecencyUserSettingsActionCreators = _require(1374).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
@@ -2187,7 +2184,7 @@ areArraysShallowlyEqual = {
       return arg0;
     }, []);
     let arr = Array.from(sounds.values());
-    return _require(6133).searchSounds(arg0, reduced, currentUser, channel);
+    return _require(6139).searchSounds(arg0, reduced, currentUser, channel);
   },
   matchSentinel(arg0, arg1, closure_12) {
     const isMatch = regex.test(arg1);

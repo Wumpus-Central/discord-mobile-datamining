@@ -1,11 +1,11 @@
-// === Module 7863: notSupported ===
+// === Module 8153: notSupported ===
 
-// Module 7863 (notSupported)
+// Module 8153 (notSupported)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "updateProduct" /* 6031 */;
+import closure_6 from "updateProduct" /* 6036 */;
 
 const require = arg1;
 function notSupported() {

@@ -1,7 +1,7 @@
-// === Module 10156: useFavoriteGIFs ===
+// === Module 10281: useFavoriteGIFs ===
 
-// Module 10156 (useFavoriteGIFs)
-import useFrecencySettings from "useFrecencySettings" /* 10157 */;
+// Module 10281 (useFavoriteGIFs)
+import useFrecencySettings from "useFrecencySettings" /* 10282 */;
 import closure_3 from "noop" /* 19 */;
 
 require = arg1;
@@ -21,7 +21,7 @@ export const useFavoriteGIFs = function useFavoriteGIFs() {
 };
 export const useSortedFavoriteGIFs = function useSortedFavoriteGIFs(transformFavoriteGifUrl) {
   const _require = transformFavoriteGifUrl;
-  const favoriteGifs = _require(10157).useFrecencySettings().favoriteGifs;
+  const favoriteGifs = _require(10282).useFrecencySettings().favoriteGifs;
   let gifs;
   if (favoriteGifs != null) {
     gifs = favoriteGifs.gifs;

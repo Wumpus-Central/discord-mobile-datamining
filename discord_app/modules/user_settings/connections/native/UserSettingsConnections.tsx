@@ -1,20 +1,20 @@
-// === Module 14486: ADD_CONNECTIONS_SHEET_SENTINEL ===
+// === Module 14513: ADD_CONNECTIONS_SHEET_SENTINEL ===
 
-// Module 14486 (ADD_CONNECTIONS_SHEET_SENTINEL)
+// Module 14513 (ADD_CONNECTIONS_SHEET_SENTINEL)
 import ThemesDefault from "Themes" /* 712 */;
-import useThemeDefault from "useTheme" /* 4379 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 12755 */;
-import EmptyStateCardDefault from "EmptyStateCard" /* 14487 */;
+import useThemeDefault from "useTheme" /* 4380 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 12428 */;
+import EmptyStateCardDefault from "EmptyStateCard" /* 14514 */;
 import closure_3 from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "recomputeFromAppTokens" /* 5422 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5422 */;
+import closure_5 from "recomputeFromAppTokens" /* 5427 */;
+import { FetchState } from "recomputeFromAppTokens" /* 5427 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "set" /* 5172 */;
+import closure_8 from "set" /* 5177 */;
 import closure_9 from "_getSystemLocale" /* 1996 */;
 import { AnalyticsLocations } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
@@ -81,19 +81,18 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
       }
       obj = { style: null, children: null };
       obj[0] = tmp.form;
+      obj = { spacing: 16, children: null };
       const items5 = [
         prop.map((application_id) => {
               closure_0 = application_id;
               const obj = { identity: application_id, token: authorizedApps.find((application) => application.application.id === application_id.application_id) };
-              return closure_1_11(callback(paths[21]), obj, "" + application_id.application_id + "-" + application_id.provider_issued_user_id);
+              return closure_1_11(callback(paths[22]), obj, "" + application_id.application_id + "-" + application_id.provider_issued_user_id);
             }),
-
+        accounts.map((account) => closure_1_11(callback(paths[23]), { theme: callback, locale: paths, account }, account.id))
       ];
-      obj = { spacing: 16, children: null };
-      obj[1] = accounts.map((account) => closure_1_11(callback(paths[23]), { theme: callback, locale: paths, account }, account.id));
-      items5[1] = callback(tmp4(4877).Stack, obj);
       obj[1] = items5;
-      tmp14 = callback2(tmp4(8185).Form, obj);
+      obj[1] = callback2(tmp4(4878).Stack, obj);
+      tmp14 = callback(tmp4(8295).Form, obj);
     }
     return tmp14;
   }

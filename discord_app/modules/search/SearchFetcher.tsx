@@ -1,6 +1,6 @@
-// === Module 11990: fetch ===
+// === Module 11834: fetch ===
 
-// Module 11990 (fetch)
+// Module 11834 (fetch)
 import sendRequest from "sendRequest" /* 530 */;
 import parseDefault from "parse" /* 1484 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;

@@ -1,6 +1,6 @@
-// === Module 4680: withEqualityFn ===
+// === Module 4681: withEqualityFn ===
 
-// Module 4680 (withEqualityFn)
+// Module 4681 (withEqualityFn)
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
 import identity from "identity" /* 700 */;
 
@@ -37,7 +37,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj[6] = new Set();
   obj[7] = function openChannel(arg0) {
     const callback = arg0;
-    let result = callback(4681).isStageVoicePanelEnabled("voice_panel_store");
+    let result = callback(4682).isStageVoicePanelEnabled("voice_panel_store");
     if (!result) {
       const channel = closure_1_2.getChannel(arg0);
       let isGuildStageVoiceResult;

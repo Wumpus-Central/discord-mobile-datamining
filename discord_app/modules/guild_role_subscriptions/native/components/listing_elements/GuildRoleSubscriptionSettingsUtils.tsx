@@ -1,7 +1,7 @@
-// === Module 15976: getCoverImageURI ===
+// === Module 16041: getCoverImageURI ===
 
-// Module 15976 (getCoverImageURI)
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4707 */;
+// Module 16041 (getCoverImageURI)
+import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4708 */;
 import closure_2 from "makeGroupListingIndexSubscriptionListingTag" /* 4083 */;
 
 require = arg1;

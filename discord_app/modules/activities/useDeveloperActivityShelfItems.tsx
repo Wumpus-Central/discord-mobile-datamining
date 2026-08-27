@@ -1,9 +1,9 @@
-// === Module 11698: useDeveloperActivityShelfItems ===
+// === Module 11531: useDeveloperActivityShelfItems ===
 
-// Module 11698 (useDeveloperActivityShelfItems)
+// Module 11531 (useDeveloperActivityShelfItems)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "initialize" /* 7798 */;
-import { DEFAULT_EMBEDDED_ACTIVITY_CONFIG as closure_4 } from "items3" /* 4472 */;
+import closure_3 from "initialize" /* 8430 */;
+import { DEFAULT_EMBEDDED_ACTIVITY_CONFIG as closure_4 } from "items3" /* 4473 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");

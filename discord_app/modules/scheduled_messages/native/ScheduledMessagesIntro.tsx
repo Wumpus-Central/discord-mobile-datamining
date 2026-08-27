@@ -1,17 +1,17 @@
-// === Module 11655: MenuRow ===
+// === Module 11719: MenuRow ===
 
-// Module 11655 (MenuRow)
+// Module 11719 (MenuRow)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4440 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 9923 */;
-import AttachmentIcon from "AttachmentIcon" /* 10013 */;
-import HourglassIcon from "HourglassIcon" /* 11652 */;
-import registerAssetDefault from "registerAsset" /* 11656 */;
+import Text from "Text" /* 4441 */;
+import AttachmentIcon from "AttachmentIcon" /* 10115 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10608 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 11709 */;
+import registerAssetDefault from "registerAsset" /* 11720 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 function MenuRow(arg0) {
   ({ icon, label, highlighted } = arg0);
@@ -79,7 +79,7 @@ export default function ScheduledMessagesIntro() {
   const intl3 = getSystemLocale.intl;
   obj6[1] = intl3.string(getSystemLocale.t["8Hvr3+"]);
   const items2 = [callback(MenuRow, obj6), callback(closure_5, { style: tmp.menuDivider }), ];
-  const obj8 = { icon: HourglassIcon.HourglassIcon, label: null, highlighted: true };
+  const obj8 = { icon: CalendarPlusIcon.CalendarPlusIcon, label: null, highlighted: true };
   const intl4 = getSystemLocale.intl;
   obj8[1] = intl4.string(getSystemLocale.t["3+ii4F"]);
   items2[2] = callback(MenuRow, obj8);

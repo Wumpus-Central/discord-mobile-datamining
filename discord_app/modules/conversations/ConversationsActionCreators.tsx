@@ -1,15 +1,15 @@
-// === Module 8779: _fetchChannelConversations ===
+// === Module 7749: _fetchChannelConversations ===
 
-// Module 8779 (_fetchChannelConversations)
+// Module 7749 (_fetchChannelConversations)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import fetchSurveyDetailsDefault from "fetchSurveyDetails" /* 4662 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 4670 */;
-import trackInviteDefault from "trackInvite" /* 7129 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8781 */;
+import fetchSurveyDetailsDefault from "fetchSurveyDetails" /* 4663 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 4671 */;
+import trackInviteDefault from "trackInvite" /* 7135 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7751 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "removePendingListFetch" /* 7268 */;
-import closure_5 from "initialize" /* 8780 */;
-import { FETCH_LIMIT } from "CONVERSATION_COLORS" /* 7270 */;
+import closure_4 from "removePendingListFetch" /* 7274 */;
+import closure_5 from "initialize" /* 7750 */;
+import { FETCH_LIMIT } from "CONVERSATION_COLORS" /* 7276 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;
@@ -133,7 +133,7 @@ function _fetchChannelConversations() {
                     return obj5;
                   }
                 }
-                obj15 = callback(8777);
+                obj15 = callback(7747);
               }
             } else if (2 === tmp7) {
               c6 = 0;
@@ -306,7 +306,7 @@ function _fetchConversationMessages() {
                   }
                 }
               }
-              obj14 = callback(8777);
+              obj14 = callback(7747);
               tmp52 = callback;
             }
           } else {

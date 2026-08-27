@@ -1,6 +1,6 @@
-// === Module 7140: getClickstreamDrainEvent ===
+// === Module 7146: getClickstreamDrainEvent ===
 
-// Module 7140 (getClickstreamDrainEvent)
+// Module 7146 (getClickstreamDrainEvent)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

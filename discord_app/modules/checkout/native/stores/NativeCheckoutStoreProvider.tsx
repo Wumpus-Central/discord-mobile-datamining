@@ -1,14 +1,14 @@
-// === Module 7622: NativeCheckoutStoreProvider ===
+// === Module 10500: NativeCheckoutStoreProvider ===
 
-// Module 7622 (NativeCheckoutStoreProvider)
+// Module 10500 (NativeCheckoutStoreProvider)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import context from "context" /* 7097 */;
-import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4426 */;
+import context from "context" /* 7103 */;
+import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4427 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function NativeCheckoutStoreProvider(children) {
@@ -17,7 +17,7 @@ function NativeCheckoutStoreProvider(children) {
   closure_6 = undefined;
   let first;
   closure_8 = undefined;
-  closure_6 = order(5888)(() => {
+  closure_6 = order(5893)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -76,9 +76,13 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
   const onOrderRetryCancellation = orderRequired.onOrderRetryCancellation;
   const initialSubscriptionFacet = orderRequired.initialSubscriptionFacet;
   const initialExternalGatewayFacet = orderRequired.initialExternalGatewayFacet;
+  let flag = orderRequired.headless;
+  if (flag === undefined) {
+    flag = false;
+  }
   c9 = undefined;
   closure_10 = undefined;
-  closure_11 = undefined;
+  jsx = undefined;
   let callback2;
   let storeFront;
   let callback;
@@ -88,7 +92,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
   [tmp3, c9] = activeSubscription(defaultPlans.useState(null), 2);
   const tmp4 = activeSubscription(defaultPlans.useState(orderRequired), 2);
   closure_10 = tmp4[1];
-  closure_11 = defaultPlans.useRef(false);
+  jsx = defaultPlans.useRef(false);
   let first = null;
   const tmp2 = activeSubscription(defaultPlans.useState(null), 2);
   if (skuIds.length > 0) {
@@ -300,10 +304,14 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     }
   }, items2);
   if (tmp4[0]) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.loadingSpinnerContainer;
-    obj[1] = tmp13(_require(tmp5[12]).ActivityIndicator, { animating: true, size: "large" });
-    let tmp13Result = tmp13(onOrderRetryCancellation, obj);
+    let tmp16 = null;
+    if (!flag) {
+      obj = { style: null, children: null };
+      obj[0] = tmp.loadingSpinnerContainer;
+      obj[1] = jsx(_require(tmp5[12]).ActivityIndicator, { animating: true, size: "large" });
+      tmp16 = <onOrderRetryCancellation style={null}>{null}</onOrderRetryCancellation>;
+    }
+    let tmp15 = tmp16;
   } else {
     obj = { checkoutInitParameters: null, order: null, paymentGateway: null, onOrderRetryCancellation: null, orderRequired: null, initialSubscriptionFacet: null, children: null };
     obj1 = { skuIds: null, isGift: null, activeSubscription: null, referralTrialOfferId: null };
@@ -317,7 +325,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     obj[4] = orderRequired;
     obj[5] = initialSubscriptionFacet;
     obj[6] = orderRequired.children;
-    tmp13Result = tmp13(storeFront, obj);
+    tmp15 = <storeFront checkoutInitParameters={null} order={null} paymentGateway={null} onOrderRetryCancellation={null} orderRequired={null} initialSubscriptionFacet={null}>{null}</storeFront>;
   }
-  return tmp13Result;
+  return tmp15;
 };

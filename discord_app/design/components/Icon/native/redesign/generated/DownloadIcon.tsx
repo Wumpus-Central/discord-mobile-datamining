@@ -1,10 +1,10 @@
-// === Module 4393: DownloadIcon ===
+// === Module 4394: DownloadIcon ===
 
-// Module 4393 (DownloadIcon)
+// Module 4394 (DownloadIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 4394 */;
+import registerAsset from "registerAsset" /* 4395 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

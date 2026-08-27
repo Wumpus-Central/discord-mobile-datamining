@@ -1,10 +1,10 @@
-// === Module 12463: PlaystationNeutralIcon ===
+// === Module 12551: PlaystationNeutralIcon ===
 
-// Module 12463 (PlaystationNeutralIcon)
+// Module 12551 (PlaystationNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 12464 */;
+import registerAsset from "registerAsset" /* 12552 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

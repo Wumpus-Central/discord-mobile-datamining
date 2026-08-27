@@ -1,12 +1,12 @@
-// === Module 10513: useSafetyToolsButtonTooltipForChannel ===
+// === Module 10948: useSafetyToolsButtonTooltipForChannel ===
 
-// Module 10513 (useSafetyToolsButtonTooltipForChannel)
+// Module 10948 (useSafetyToolsButtonTooltipForChannel)
 import set from "set" /* 2 */;
 import setDefault from "set" /* 687 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 9885 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10479 */;
-import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 10514 */;
-import getSafetyAlertsSettingOrDefault from "getSafetyAlertsSettingOrDefault" /* 10516 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 10573 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10629 */;
+import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 10949 */;
+import getSafetyAlertsSettingOrDefault from "getSafetyAlertsSettingOrDefault" /* 10951 */;
 
 const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
 const HOUR = setDefault.Millis.HOUR;

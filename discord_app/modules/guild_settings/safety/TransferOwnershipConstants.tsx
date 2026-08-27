@@ -1,6 +1,6 @@
-// === Module 11479: TransferOwnershipModalScenes ===
+// === Module 11333: TransferOwnershipModalScenes ===
 
-// Module 11479 (TransferOwnershipModalScenes)
+// Module 11333 (TransferOwnershipModalScenes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_settings/safety/TransferOwnershipConstants.tsx");

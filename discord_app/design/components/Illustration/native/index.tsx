@@ -1,6 +1,6 @@
-// === Module 7834: getIllustrationSource ===
+// === Module 8834: getIllustrationSource ===
 
-// Module 7834 (getIllustrationSource)
+// Module 8834 (getIllustrationSource)
 import set from "set" /* 2 */;
 import ManaContext from "ManaContext" /* 4172 */;
 

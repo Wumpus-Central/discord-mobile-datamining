@@ -1,6 +1,6 @@
-// === Module 7069: calculateFractionalPremiumInfo ===
+// === Module 7075: calculateFractionalPremiumInfo ===
 
-// Module 7069 (calculateFractionalPremiumInfo)
+// Module 7075 (calculateFractionalPremiumInfo)
 import hooksDefault from "hooks" /* 4043 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
 import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4122 */;
@@ -8,7 +8,7 @@ import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import closure_6 from "reset" /* 4113 */;
-import closure_7 from "addEntitlement" /* 7070 */;
+import closure_7 from "addEntitlement" /* 7076 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 

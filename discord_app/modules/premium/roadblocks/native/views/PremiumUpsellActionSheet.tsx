@@ -1,26 +1,26 @@
-// === Module 8594: AlwaysCompressImagesSwitch ===
+// === Module 7528: AlwaysCompressImagesSwitch ===
 
-// Module 8594 (AlwaysCompressImagesSwitch)
+// Module 7528 (AlwaysCompressImagesSwitch)
 import set from "set" /* 500 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5440 */;
-import useAPNGPlayerControls from "useAPNGPlayerControls" /* 9601 */;
+import preloadDefault from "preload" /* 5445 */;
+import useAPNGPlayerControls from "useAPNGPlayerControls" /* 8449 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import closure_7 from "handleThemeChange" /* 1302 */;
 import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_9 from "handleConnectionOpen" /* 4266 */;
+import closure_9 from "handleConnectionOpen" /* 4267 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import ME from "ME" /* 676 */;
-import { ApplicationStreamFPS } from "RESOLUTION_720" /* 4503 */;
-import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 8595 */;
-import { MAX_SCHEDULED_MESSAGES_PER_USER as closure_21 } from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 8596 */;
+import { ApplicationStreamFPS } from "RESOLUTION_720" /* 4504 */;
+import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 7529 */;
+import { MAX_SCHEDULED_MESSAGES_PER_USER as closure_21 } from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 7523 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function AlwaysCompressImagesSwitch(isKestrelTreatment) {
@@ -48,8 +48,8 @@ function AlwaysCompressImagesSwitch(isKestrelTreatment) {
       obj1[0] = tmp.compressionHint;
       const intl2 = tmp2(1236).intl;
       obj1[2] = intl2.string(tmp2(1236).t["wC0+Ph"]);
-      obj[5] = callback2(tmp2(4440).Text, obj1);
-      obj[1] = callback2(tmp2(5940).TableSwitchRow, obj);
+      obj[5] = callback2(tmp2(4441).Text, obj1);
+      obj[1] = callback2(tmp2(5945).TableSwitchRow, obj);
       tmp6 = callback2(View, obj);
     }
   }
@@ -98,10 +98,10 @@ let closure_25 = createCacheKey.createStyles(createCacheKey);
 let obj6 = { marginTop: ThemesDefault.space.PX_32, marginBottom: ThemesDefault.space.PX_32 };
 let result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumUpsellActionSheet.tsx");
 
-export default function PremiumUpsellActionSheet(arg0) {
-  ({ featureName, legacyProps } = arg0);
+export default function PremiumUpsellActionSheet(onDismiss) {
+  ({ featureName, legacyProps } = onDismiss);
   let _require = legacyProps;
-  ({ subfeatureName, analyticsLocations } = arg0);
+  ({ subfeatureName, analyticsLocations } = onDismiss);
   if (analyticsLocations === undefined) {
     analyticsLocations = [];
   }
@@ -249,7 +249,7 @@ export default function PremiumUpsellActionSheet(arg0) {
     let stringResult = intl13.string(tmp2(stringResult3[23]).t.YXk6N7);
   } else {
     const intl12 = tmp2(stringResult3[23]).intl;
-    let t = tmp2(stringResult3[23]).t;
+    const t = tmp2(stringResult3[23]).t;
     const obj12 = { premiumMax: null };
     obj12[0] = tmp19;
     stringResult = intl12.formatToPlainString(tmp17 ? t["cpj9o/"] : t.Oxm3Sq, obj12);
@@ -347,101 +347,104 @@ export default function PremiumUpsellActionSheet(arg0) {
   [][0] = onViewAllPerks;
   if (null == obj[featureName]) {
     return null;
-  } else if (null == tmp29.image) {
-    const items6 = [tmp37, , , ];
-    const obj23 = { style: null, children: null };
-    obj23[0] = tmp.textContainer;
-    let tmp24Result = null;
-    if (true === tmp29.showBetaBadge) {
-      const obj24 = { size: null, gradient: true, style: null };
-      obj24[0] = tmp2(stringResult3[53]).BetaSizes.SMALL;
-      obj24[2] = tmp.betaTag;
-      tmp24Result = tmp24(string(stringResult3[53]), obj24);
-      const stringResult2 = string(stringResult3[53]);
-    }
-    const items7 = [tmp24Result, , ];
-    const obj25 = { style: null, variant: "heading-lg/extrabold", accessibilityRole: "header", children: null };
-    obj25[0] = tmp.text;
-    obj25[3] = tmp29.title;
-    items7[1] = tmp24(tmp2(stringResult3[41]).Text, obj25);
-    const obj26 = { style: null, variant: "text-sm/normal", children: null };
-    const items8 = [, ];
-    ({ text: arr10[0], description: arr10[1] } = tmp);
-    obj26[0] = items8;
-    obj26[2] = tmp29.description;
-    items7[2] = tmp24(tmp2(stringResult3[41]).Text, obj26);
-    obj23[1] = items7;
-    items6[1] = tmp35(tmp36, obj23);
-    tmp24Result = null;
-    if (featureName === tmp2(stringResult3[18]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
-      const obj27 = { isKestrelTreatment: null };
-      obj27[0] = true === tmp29.isKestrelRaisedCap;
-      tmp24Result = tmp24(AlwaysCompressImagesSwitch, obj27);
-    }
-    items6[2] = tmp24Result;
-    let obj28 = { style: null, children: null };
-    obj28[0] = tmp.buttonContainer;
-    let Button = tmp2(stringResult3[54]).Button;
-    let obj29 = { loading: null, onPress: null, text: null, icon: null };
-    obj29[0] = loading;
-    let onPress = null;
-    if (!loading) {
-      onPress = tmp32.onPress;
-    }
-    obj29[1] = onPress;
-    let intl20 = tmp2(stringResult3[23]).intl;
-    let string2 = intl20.string;
-    t = tmp2(stringResult3[23]).t;
-    if (useTier0UpsellContent) {
-      let string2Result = string2(t.cM8bbx);
-    } else {
-      string2Result = string2(t["8x0jKT"]);
-    }
-    t = { startExpanded: true, children: null };
-    const obj30 = { children: null };
-    obj29[2] = string2Result;
-    obj29[3] = string(stringResult3[55]);
-    obj29 = [, ];
-    obj29[0] = tmp24(Button, obj29);
-    const obj31 = { variant: "secondary", text: null, onPress: null };
-    intl20 = tmp2(stringResult3[23]).intl;
-    string = intl20.string;
-    stringResult3 = string(tmp2(stringResult3[23]).t.PcTCB7);
-    obj31[1] = stringResult3;
-    obj31[2] = tmp33;
-    Button = tmp24(tmp2(stringResult3[54]).Button, obj31);
-    obj29[1] = Button;
-    obj28[1] = obj29;
-    obj28 = tmp35(tmp36, obj28);
-    items6[3] = obj28;
-    obj30[0] = items6;
-    string2 = tmp35(tmp36, obj30);
-    t[1] = string2;
-    tmp24(tmp34, t);
-    const tmp24Result1 = tmp24(Button, obj29);
-  } else if (null != tmp29.imageGradientBackground) {
-    const obj32 = { style: null, children: null };
-    obj32[0] = tmp.imageGradientBackgroundContainer;
-    const obj33 = { colors: null, start: null, end: null, style: null, children: null };
-    obj33[0] = tmp29.imageGradientBackground.colors;
-    obj33[1] = tmp29.imageGradientBackground.start;
-    obj33[2] = tmp29.imageGradientBackground.end;
-    obj33[3] = tmp.imageGradientBackground;
-    const obj34 = { image: null, style: null, useReducedMotion: null };
-    obj34[0] = tmp29.image;
-    const items9 = [, ];
-    ({ image: arr7[0], imageInGradientBackground: arr7[1] } = tmp);
-    obj34[1] = items9;
-    obj34[2] = stateFromStores3;
-    obj33[4] = tmp24(PremiumUpsellImage, obj34);
-    obj32[1] = tmp24(string(stringResult3[52]), obj33);
-    let tmp24Result3 = tmp24(tmp36, obj32);
-    const stringResult4 = string(stringResult3[52]);
   } else {
-    const obj35 = { image: null, style: null, useReducedMotion: null };
-    obj35[0] = tmp29.image;
-    obj35[1] = tmp.image;
-    obj35[2] = stateFromStores3;
-    tmp24Result3 = tmp24(PremiumUpsellImage, obj35);
+    const obj23 = { startExpanded: true, onDismiss: null, children: null };
+    obj23[1] = onDismiss.onDismiss;
+    if (null == tmp29.image) {
+      const items6 = [tmp37, , , ];
+      const obj24 = { style: null, children: null };
+      obj24[0] = tmp.textContainer;
+      let tmp24Result = null;
+      if (true === tmp29.showBetaBadge) {
+        const obj25 = { size: null, gradient: true, style: null };
+        obj25[0] = tmp2(stringResult3[53]).BetaSizes.SMALL;
+        obj25[2] = tmp.betaTag;
+        tmp24Result = tmp24(string(stringResult3[53]), obj25);
+        const stringResult2 = string(stringResult3[53]);
+      }
+      const items7 = [tmp24Result, , ];
+      const obj26 = { style: null, variant: "heading-lg/extrabold", accessibilityRole: "header", children: null };
+      obj26[0] = tmp.text;
+      obj26[3] = tmp29.title;
+      items7[1] = tmp24(tmp2(stringResult3[41]).Text, obj26);
+      const obj27 = { style: null, variant: "text-sm/normal", children: null };
+      const items8 = [, ];
+      ({ text: arr10[0], description: arr10[1] } = tmp);
+      obj27[0] = items8;
+      obj27[2] = tmp29.description;
+      items7[2] = tmp24(tmp2(stringResult3[41]).Text, obj27);
+      obj24[1] = items7;
+      items6[1] = tmp35(tmp36, obj24);
+      tmp24Result = null;
+      if (featureName === tmp2(stringResult3[18]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
+        const obj28 = { isKestrelTreatment: null };
+        obj28[0] = true === tmp29.isKestrelRaisedCap;
+        tmp24Result = tmp24(AlwaysCompressImagesSwitch, obj28);
+      }
+      items6[2] = tmp24Result;
+      let obj29 = { style: null, children: null };
+      obj29[0] = tmp.buttonContainer;
+      let Button = tmp2(stringResult3[54]).Button;
+      let obj30 = { loading: null, onPress: null, text: null, icon: null };
+      obj30[0] = loading;
+      let onPress = null;
+      if (!loading) {
+        onPress = tmp32.onPress;
+      }
+      obj30[1] = onPress;
+      const intl20 = tmp2(stringResult3[23]).intl;
+      let intl21 = intl20.string;
+      let t3 = tmp2(stringResult3[23]).t;
+      if (useTier0UpsellContent) {
+        let intl21Result = intl21(t3.cM8bbx);
+      } else {
+        intl21Result = intl21(t3["8x0jKT"]);
+      }
+      const obj31 = { children: null };
+      obj30[2] = intl21Result;
+      obj30[3] = string(stringResult3[55]);
+      obj30 = [, ];
+      obj30[0] = tmp24(Button, obj30);
+      const obj32 = { variant: "secondary", text: null, onPress: null };
+      intl21 = tmp2(stringResult3[23]).intl;
+      string = intl21.string;
+      stringResult3 = string(tmp2(stringResult3[23]).t.PcTCB7);
+      obj32[1] = stringResult3;
+      obj32[2] = tmp33;
+      Button = tmp24(tmp2(stringResult3[54]).Button, obj32);
+      obj30[1] = Button;
+      obj29[1] = obj30;
+      obj29 = tmp35(tmp36, obj29);
+      items6[3] = obj29;
+      obj31[0] = items6;
+      t3 = tmp35(tmp36, obj31);
+      obj23[2] = t3;
+      tmp24(tmp34, obj23);
+      const tmp24Result1 = tmp24(Button, obj30);
+    } else if (null != tmp29.imageGradientBackground) {
+      const obj33 = { style: null, children: null };
+      obj33[0] = tmp.imageGradientBackgroundContainer;
+      const obj34 = { colors: null, start: null, end: null, style: null, children: null };
+      obj34[0] = tmp29.imageGradientBackground.colors;
+      obj34[1] = tmp29.imageGradientBackground.start;
+      obj34[2] = tmp29.imageGradientBackground.end;
+      obj34[3] = tmp.imageGradientBackground;
+      const obj35 = { image: null, style: null, useReducedMotion: null };
+      obj35[0] = tmp29.image;
+      const items9 = [, ];
+      ({ image: arr7[0], imageInGradientBackground: arr7[1] } = tmp);
+      obj35[1] = items9;
+      obj35[2] = stateFromStores3;
+      obj34[4] = tmp24(PremiumUpsellImage, obj35);
+      obj33[1] = tmp24(string(stringResult3[52]), obj34);
+      let tmp24Result3 = tmp24(tmp36, obj33);
+      const stringResult4 = string(stringResult3[52]);
+    } else {
+      const obj36 = { image: null, style: null, useReducedMotion: null };
+      obj36[0] = tmp29.image;
+      obj36[1] = tmp.image;
+      obj36[2] = stateFromStores3;
+      tmp24Result3 = tmp24(PremiumUpsellImage, obj36);
+    }
   }
 };

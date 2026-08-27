@@ -1,17 +1,17 @@
-// === Module 12416: CollectiblesShopGiftPurchaseSection ===
+// === Module 10677: CollectiblesShopGiftPurchaseSection ===
 
-// Module 12416 (CollectiblesShopGiftPurchaseSection)
+// Module 10677 (CollectiblesShopGiftPurchaseSection)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initialize" /* 9005 */;
-import { useNativeCheckoutStore } from "context" /* 7097 */;
+import closure_7 from "initialize" /* 8492 */;
+import { useNativeCheckoutStore } from "context" /* 7103 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 let require = arg1;
 ({ AnalyticEvents: c9, MarketingURLs: c10 } = ME);

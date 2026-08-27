@@ -1,6 +1,6 @@
-// === Module 5888: useInitialValue ===
+// === Module 5893: useInitialValue ===
 
-// Module 5888 (useInitialValue)
+// Module 5893 (useInitialValue)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("hooks/useInitialValue.tsx");

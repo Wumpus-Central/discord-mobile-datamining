@@ -1,6 +1,6 @@
-// === Module 12266: PortalAccessibilityWorkaroundView ===
+// === Module 12088: PortalAccessibilityWorkaroundView ===
 
-// Module 12266 (PortalAccessibilityWorkaroundView)
+// Module 12088 (PortalAccessibilityWorkaroundView)
 import noopAll from "noop" /* 19 */;
 import set2 from "set" /* 500 */;
 import { View as _default } from "get ActivityIndicator" /* 17 */;

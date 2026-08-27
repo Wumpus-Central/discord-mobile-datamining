@@ -1,10 +1,10 @@
-// === Module 11878: ThreadPlusIcon ===
+// === Module 11707: ThreadPlusIcon ===
 
-// Module 11878 (ThreadPlusIcon)
+// Module 11707 (ThreadPlusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 11879 */;
+import registerAsset from "registerAsset" /* 11708 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

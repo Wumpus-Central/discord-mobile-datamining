@@ -1,10 +1,10 @@
-// === Module 14816: getMaxColors ===
+// === Module 14843: getMaxColors ===
 
-// Module 14816 (getMaxColors)
+// Module 14843 (getMaxColors)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1339 */;
 import ClientThemeType from "ClientThemeType" /* 1349 */;
-import getCustomThemesName from "getCustomThemesName" /* 4376 */;
+import getCustomThemesName from "getCustomThemesName" /* 4377 */;
 import closure_3 from "noop" /* 19 */;
 import { ThemeTypes } from "sum" /* 505 */;
 

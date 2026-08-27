@@ -1,6 +1,6 @@
-// === Module 11246: FeedbackRating ===
+// === Module 11127: FeedbackRating ===
 
-// Module 11246 (FeedbackRating)
+// Module 11127 (FeedbackRating)
 import set from "set" /* 2 */;
 import create from "create" /* 1306 */;
 

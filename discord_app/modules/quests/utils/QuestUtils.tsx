@@ -1,18 +1,18 @@
-// === Module 7392: isSponsoredPlayQuest ===
+// === Module 7400: isSponsoredPlayQuest ===
 
-// Module 7392 (isSponsoredPlayQuest)
-import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7394 */;
-import QuestSharePolicy from "QuestSharePolicy" /* 7395 */;
-import canStreamInChannel from "canStreamInChannel" /* 7396 */;
-import QuestType2 from "QuestType" /* 7397 */;
-import getQuestContentName from "getQuestContentName" /* 7398 */;
+// Module 7400 (isSponsoredPlayQuest)
+import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7402 */;
+import QuestSharePolicy from "QuestSharePolicy" /* 7403 */;
+import canStreamInChannel from "canStreamInChannel" /* 7404 */;
+import QuestType2 from "QuestType" /* 7405 */;
+import getQuestContentName from "getQuestContentName" /* 7406 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "set" /* 4461 */;
+import closure_3 from "set" /* 4462 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import closure_5 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_6 from "updateVoiceState" /* 4463 */;
-import closure_7 from "keys" /* 7393 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5334 */;
+import closure_6 from "updateVoiceState" /* 4464 */;
+import closure_7 from "keys" /* 7401 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5339 */;
 
 require = arg1;
 function isSponsoredPlayQuest(quest) {
@@ -46,7 +46,7 @@ export const canLaunchActivity = function canLaunchActivity(quest) {
   }
   return hasPlayActivityTaskResult;
 };
-export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEntrypoints(stateFromStores, closure_1_15) {
+export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEntrypoints(stateFromStores, closure_1_16) {
   const map = new Map();
   while (tmp !== undefined) {
     let tmp3 = callback;

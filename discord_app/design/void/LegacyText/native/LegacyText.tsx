@@ -1,10 +1,10 @@
-// === Module 8217: ? ===
+// === Module 8323: ? ===
 
-// Module 8217
-import useLegacyTextMigrationHighlight from "useLegacyTextMigrationHighlight" /* 8218 */;
+// Module 8323
+import useLegacyTextMigrationHighlight from "useLegacyTextMigrationHighlight" /* 8324 */;
 import { Text } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;

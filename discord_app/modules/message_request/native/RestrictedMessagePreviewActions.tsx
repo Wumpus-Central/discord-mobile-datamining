@@ -1,14 +1,14 @@
-// === Module 16324: RestrictedMessagePreviewActions ===
+// === Module 16389: RestrictedMessagePreviewActions ===
 
-// Module 16324 (RestrictedMessagePreviewActions)
+// Module 16389 (RestrictedMessagePreviewActions)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "markAllUserIdListsStale" /* 4098 */;
 import ME from "ME" /* 676 */;
-import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_8 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10501 */;
+import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_8 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 8978 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ AnalyticsPages: closure_6, RelationshipTypes: error } = ME);
@@ -146,7 +146,7 @@ export default function RestrictedMessagePreviewActions(channel) {
     tmp18 = null;
     formatResult = null;
   } else if (tmp13.PENDING_OUTGOING === stateFromStores) {
-    const obj6 = { size: "sm", variant: "active", text: null, disabled: true, onPress: "Boolean" };
+    const obj6 = { size: "sm", variant: "active", text: null, disabled: true, onPress: "a" };
     const intl3 = tmp2(tmp3[20]).intl;
     obj6[2] = intl3.string(tmp2(tmp3[20]).t.xMH6vD);
     tmp19 = callback(tmp2(tmp3[19]).Button, obj6);

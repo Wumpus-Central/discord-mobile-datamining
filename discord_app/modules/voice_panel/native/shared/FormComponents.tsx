@@ -1,15 +1,15 @@
-// === Module 9393: VoiceBadges ===
+// === Module 9728: VoiceBadges ===
 
-// Module 9393 (VoiceBadges)
+// Module 9728 (VoiceBadges)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5939 */;
-import setDefault from "set" /* 5953 */;
-import VideoDisabledSvgIcon from "VideoDisabledSvgIcon" /* 9394 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5944 */;
+import setDefault from "set" /* 5958 */;
+import VideoDisabledSvgIcon from "VideoDisabledSvgIcon" /* 9729 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "sortActivity" /* 4533 */;
+import closure_4 from "sortActivity" /* 4534 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function VoiceBadges(arg0) {
@@ -20,7 +20,7 @@ function VoiceBadges(arg0) {
   if (null != muteDeafenIconState) {
     obj = { style: null, children: null };
     obj[0] = tmp.iconWrapper;
-    let tmp3Result = tmp3(5953);
+    let tmp3Result = tmp3(5958);
     obj = { state: null, size: null, style: null };
     obj[0] = muteDeafenIconState;
     obj[1] = Button.IconSizes.SMALL;
@@ -33,7 +33,7 @@ function VoiceBadges(arg0) {
   if (null != videoIconState) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.iconWrapper;
-    tmp3Result = tmp3(5953);
+    tmp3Result = tmp3(5958);
     const obj2 = { state: null, size: null, style: null };
     obj2[0] = videoIconState;
     obj2[1] = Button.IconSizes.SMALL;

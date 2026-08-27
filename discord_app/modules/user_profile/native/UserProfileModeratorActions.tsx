@@ -1,24 +1,24 @@
-// === Module 12601: ModeratorActionRow ===
+// === Module 12393: ModeratorActionRow ===
 
-// Module 12601 (ModeratorActionRow)
+// Module 12393 (ModeratorActionRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import Text from "Text" /* 4440 */;
-import TableRowInner from "TableRowInner" /* 5546 */;
-import Divider from "Divider" /* 5947 */;
-import closure_4 from "buildStageChannelUserRoles" /* 5312 */;
+import Text from "Text" /* 4441 */;
+import TableRowInner from "TableRowInner" /* 5551 */;
+import Divider from "Divider" /* 5952 */;
+import closure_4 from "buildStageChannelUserRoles" /* 5317 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import closure_6 from "comparator" /* 1982 */;
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;
 import closure_8 from "trackCommunicationDisabled" /* 1992 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
 import closure_10 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_11 from "updateVoiceState" /* 4463 */;
+import closure_11 from "updateVoiceState" /* 4464 */;
 import ME from "ME" /* 676 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function ModeratorActionRow(arg0) {
@@ -381,7 +381,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              let arr = callback(4675);
+              let arr = callback(4676);
               arr = arr.pop();
             }
           };

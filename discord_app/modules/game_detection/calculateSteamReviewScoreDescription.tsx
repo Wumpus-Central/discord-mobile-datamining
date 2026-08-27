@@ -1,8 +1,8 @@
-// === Module 9533: calculateSteamReviewScoreDescription ===
+// === Module 8772: calculateSteamReviewScoreDescription ===
 
-// Module 9533 (calculateSteamReviewScoreDescription)
+// Module 8772 (calculateSteamReviewScoreDescription)
 import set from "set" /* 2 */;
-import GameTheme from "GameTheme" /* 4482 */;
+import GameTheme from "GameTheme" /* 4483 */;
 
 const result = set.fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
 

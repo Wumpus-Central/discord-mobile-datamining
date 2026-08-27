@@ -1,19 +1,20 @@
-// === Module 13700: GhostInput ===
+// === Module 13727: GhostInput ===
 
-// Module 13700 (GhostInput)
+// Module 13727 (GhostInput)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4440 */;
-import useTextFieldState from "useTextFieldState" /* 6169 */;
-import useInputStyles from "useInputStyles" /* 6175 */;
-import useKeyboardBlurring from "useKeyboardBlurring" /* 6178 */;
-import Input from "Input" /* 8003 */;
+import Text from "Text" /* 4441 */;
+import useInputStyles from "useInputStyles" /* 6181 */;
+import useKeyboardBlurring from "useKeyboardBlurring" /* 6184 */;
+import Input from "Input" /* 7639 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
+let closure_3 = ["labelId"];
 noopAll;
-let closure_4 = createCacheKey.createStyles(() => {
+let closure_6 = createCacheKey.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
     str = "lg";
@@ -39,12 +40,16 @@ export const GhostInput = function GhostInput(size) {
   let obj = useInputStyles;
   obj = { size: size.size };
   const inputStyles = obj.useInputStyles(obj);
-  const tmp4 = callback(size.size, size.status);
+  const tmp4 = callback2(size.size, size.status);
   const isCentered = size.isCentered;
   const autoFocus = size.autoFocus;
-  const textField = useTextFieldState.useTextField(size, undefined);
+  let tmpResult = tmp(4174);
+  const fieldLabelA11yNative = tmpResult.useFieldLabelA11yNative(size);
+  tmpResult = tmp(6175);
+  const textField = tmpResult.useTextField(size, undefined);
   obj = {};
   const merged = Object.assign(size);
+  obj.labelId = fieldLabelA11yNative.labelId;
   const items = [size.containerStyle, ];
   let prop;
   if (tmp5) {
@@ -54,6 +59,7 @@ export const GhostInput = function GhostInput(size) {
   obj.containerStyle = items;
   obj1 = {};
   const merged1 = Object.assign(textField.inputProps);
+  const merged2 = Object.assign(callback(fieldLabelA11yNative, closure_3));
   obj1.ref = textField.innerRef;
   const items1 = [tmp4.input];
   obj1.style = items1;

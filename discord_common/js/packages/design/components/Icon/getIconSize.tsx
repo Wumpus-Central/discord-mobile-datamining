@@ -1,6 +1,6 @@
-// === Module 15841: getIconSize ===
+// === Module 15906: getIconSize ===
 
-// Module 15841 (getIconSize)
+// Module 15906 (getIconSize)
 import set from "set" /* 2 */;
 
 let obj = { xxs: 12, xs: 16, sm: 18, md: 24, lg: 32, custom: "disabled", refresh_sm: true };

@@ -1,6 +1,6 @@
-// === Module 7498: POLL_ATTACHMENT_FOLDER ===
+// === Module 7506: POLL_ATTACHMENT_FOLDER ===
 
-// Module 7498 (POLL_ATTACHMENT_FOLDER)
+// Module 7506 (POLL_ATTACHMENT_FOLDER)
 import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1338 */;
 import set from "set" /* 2 */;
 

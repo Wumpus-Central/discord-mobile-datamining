@@ -1,17 +1,17 @@
-// === Module 11206: LegacyUserProfileConnections ===
+// === Module 11089: LegacyUserProfileConnections ===
 
-// Module 11206 (LegacyUserProfileConnections)
+// Module 11089 (LegacyUserProfileConnections)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "_getSystemLocale" /* 1996 */;
 import closure_7 from "createdAt" /* 1930 */;
-import closure_8 from "initialize" /* 4289 */;
-import closure_9 from "createUserWidgetFromServer" /* 7293 */;
+import closure_8 from "initialize" /* 4290 */;
+import closure_9 from "createUserWidgetFromServer" /* 7299 */;
 import ME from "ME" /* 676 */;
-import { MetadataFields } from "OperatorTypes" /* 5299 */;
+import { MetadataFields } from "OperatorTypes" /* 5304 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 class ConnectedUserAccount {
@@ -354,7 +354,7 @@ class ConnectedApplicationUserRoleAccount {
             obj = { style: obj.connectedAccountPoweredByText, children: null };
             let tmp5 = null;
             if (null != applicationRoleConnection.application.bot) {
-              obj = { style: null, user: null, size: null, guildId: "a" };
+              obj = { style: null, user: null, size: null, guildId: "Array" };
               obj[0] = tmp3.connectedAccountPoweredByAvatar;
               const tmp12 = new closure_1_7(tmp4.application.bot);
               obj[1] = tmp12;

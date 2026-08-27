@@ -1,14 +1,14 @@
-// === Module 17161: pickImage ===
+// === Module 17227: pickImage ===
 
-// Module 17161 (pickImage)
+// Module 17227 (pickImage)
 import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5440 */;
-import renderDefault from "render" /* 9272 */;
+import preloadDefault from "preload" /* 5445 */;
+import renderDefault from "render" /* 8988 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function pickImage() {
@@ -235,8 +235,8 @@ export default function FormImagePicker(children) {
   obj = { style: tmp2.buttonColumn, children: null };
   obj = { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description };
   const items = [
-    callback2(tmp6(4440).Text, obj),
-    callback2(tmp6(4879).Button, {
+    callback2(tmp6(4441).Text, obj),
+    callback2(tmp6(4880).Button, {
       text: stringResult,
       variant: "secondary",
       onPress() {

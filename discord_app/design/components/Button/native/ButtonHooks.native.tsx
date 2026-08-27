@@ -1,10 +1,10 @@
-// === Module 4885: styleProperties ===
+// === Module 4886: styleProperties ===
 
-// Module 4885 (styleProperties)
+// Module 4886 (styleProperties)
 import ThemesDefault from "Themes" /* 712 */;
 import map from "map" /* 4165 */;
 import closure_3 from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 let c4 = "rgba(0,0,0,0.001)";
@@ -63,7 +63,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
+      obj1 = { backgroundColor: null, borderColor: null, color: "r" };
       items2[1] = setColorOpacity3Result;
       obj1[0] = items2;
       const items3 = [closure_1_4, closure_1_4];
@@ -88,7 +88,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
       } else {
         darkenColorResult1 = obj2.setColorOpacity("white", 0.2);
       }
-      obj2 = { backgroundColor: null, borderColor: null, color: "Array" };
+      obj2 = { backgroundColor: null, borderColor: null, color: "r" };
       items4[1] = darkenColorResult1;
       obj2[0] = items4;
       const items5 = [closure_1_4, closure_1_4];
@@ -147,7 +147,7 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
+      obj1 = { backgroundColor: null, borderColor: null, color: "r" };
       items2[1] = setColorOpacity3Result;
       obj1[0] = items2;
       const items3 = [closure_1_4, closure_1_4];
@@ -172,7 +172,7 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
       } else {
         darkenColorResult1 = obj2.setColorOpacity("white", 0.2);
       }
-      obj2 = { backgroundColor: null, borderColor: null, color: "Array" };
+      obj2 = { backgroundColor: null, borderColor: null, color: "r" };
       items4[1] = darkenColorResult1;
       obj2[0] = items4;
       const items5 = [closure_1_4, closure_1_4];
@@ -237,7 +237,7 @@ export const useIconTintStyles = function useIconTintStyles(arg0) {
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
+      obj1 = { backgroundColor: null, borderColor: null, color: "r" };
       items2[1] = setColorOpacity3Result;
       obj1[0] = items2;
       const items3 = [closure_1_4, closure_1_4];
@@ -262,7 +262,7 @@ export const useIconTintStyles = function useIconTintStyles(arg0) {
       } else {
         darkenColorResult1 = obj2.setColorOpacity("white", 0.2);
       }
-      obj2 = { backgroundColor: null, borderColor: null, color: "Array" };
+      obj2 = { backgroundColor: null, borderColor: null, color: "r" };
       items4[1] = darkenColorResult1;
       obj2[0] = items4;
       const items5 = [closure_1_4, closure_1_4];
@@ -333,7 +333,7 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
+      obj1 = { backgroundColor: null, borderColor: null, color: "r" };
       items2[1] = setColorOpacity3Result;
       obj1[0] = items2;
       const items3 = [closure_1_4, closure_1_4];
@@ -358,7 +358,7 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
       } else {
         darkenColorResult1 = obj2.setColorOpacity("white", 0.2);
       }
-      obj2 = { backgroundColor: null, borderColor: null, color: "Array" };
+      obj2 = { backgroundColor: null, borderColor: null, color: "r" };
       items4[1] = darkenColorResult1;
       obj2[0] = items4;
       const items5 = [closure_1_4, closure_1_4];
@@ -389,22 +389,22 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
       ({ borderInactive: arr2[0], borderPressed: arr2[1] } = dependencyMap);
       borderColor = items1;
     }
-    const obj = { backgroundColor: variant(4184).interpolateColor(variant.get(), [0, 1], backgroundColor), borderColor: null };
-    const obj2 = variant(4184);
-    obj[1] = variant(4184).interpolateColor(variant.get(), [0, 1], borderColor);
+    const obj = { backgroundColor: variant(4185).interpolateColor(variant.get(), [0, 1], backgroundColor), borderColor: null };
+    const obj2 = variant(4185);
+    obj[1] = variant(4185).interpolateColor(variant.get(), [0, 1], borderColor);
     return obj;
   };
-  obj = { themedStyles: memo, colors: tmp3, interpolateColor: _require(4184).interpolateColor, pressed };
+  obj = { themedStyles: memo, colors: tmp3, interpolateColor: _require(4185).interpolateColor, pressed };
   fn.__closure = obj;
   fn.__workletHash = 2383933325137;
   fn.__initData = closure_9;
-  return _require(4184).useAnimatedStyle(fn);
+  return _require(4185).useAnimatedStyle(fn);
 };
 export const useButtonScaleStyles = function useButtonScaleStyles(pressed, width, scaleAmountInPx) {
   const _require = pressed;
   closure_1 = width;
   dependencyMap = scaleAmountInPx;
-  let obj = _require(4184);
+  let obj = _require(4185);
   const fn = function n() {
     let obj = sharedValue1;
     num = 1;
@@ -422,7 +422,7 @@ export const useButtonScaleStyles = function useButtonScaleStyles(pressed, width
     obj[0] = items1;
     return obj;
   };
-  obj = { width, scaleAmountInPx, withSpring: _require(4878).withSpring, interpolate: _require(4184).interpolate, pressed, ON_PRESS_SPRING: _require(4882).ON_PRESS_SPRING };
+  obj = { width, scaleAmountInPx, withSpring: _require(4879).withSpring, interpolate: _require(4185).interpolate, pressed, ON_PRESS_SPRING: _require(4883).ON_PRESS_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 17256006845494;
   fn.__initData = closure_10;
@@ -438,9 +438,9 @@ export const useButtonPressAnimationProps = function useButtonPressAnimationProp
   num = onPressOut;
   sharedValue = undefined;
   sharedValue1 = undefined;
-  let obj = sharedValue(4184);
+  let obj = sharedValue(4185);
   sharedValue = obj.useSharedValue(0);
-  let tmpResult = tmp(4184);
+  let tmpResult = tmp(4185);
   sharedValue1 = tmpResult.useSharedValue(0);
   obj = {
     onPressIn: sharedValue.useCallback((arg0) => {
@@ -466,7 +466,7 @@ export const useButtonPressAnimationProps = function useButtonPressAnimationProp
   items = [sharedValue, onPressIn];
   items1 = [sharedValue, onPressOut];
   items2 = [sharedValue1, onLayout];
-  tmpResult = tmp(4184);
+  tmpResult = tmp(4185);
   const fn = function n() {
     let obj = sharedValue1;
     num = 1;
@@ -484,7 +484,7 @@ export const useButtonPressAnimationProps = function useButtonPressAnimationProp
     obj[0] = items1;
     return obj;
   };
-  obj = { width: sharedValue1, scaleAmountInPx: num, withSpring: tmp(4878).withSpring, interpolate: tmp(4184).interpolate, pressed: sharedValue, ON_PRESS_SPRING: tmp(4882).ON_PRESS_SPRING };
+  obj = { width: sharedValue1, scaleAmountInPx: num, withSpring: tmp(4879).withSpring, interpolate: tmp(4185).interpolate, pressed: sharedValue, ON_PRESS_SPRING: tmp(4883).ON_PRESS_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 17256006845494;
   fn.__initData = closure_10;

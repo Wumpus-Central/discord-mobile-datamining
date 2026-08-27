@@ -1,11 +1,11 @@
-// === Module 9547: map ===
+// === Module 8786: map ===
 
-// Module 9547 (map)
+// Module 8786 (map)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import _modDef4665 from "module_4665" /* 4665 */;
+import _modDef4666 from "module_4666" /* 4666 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import InviteSendStates from "InviteSendStates" /* 7406 */;
+import InviteSendStates from "InviteSendStates" /* 7414 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -18,7 +18,7 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
   const _require = inviteKey;
   importDefault = arg1;
   dependencyMap = inviteInstanceId;
-  let obj = _require(4429);
+  let obj = _require(4430);
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   const baseCode = result.baseCode;
   ({ targetChannelId, targetMessageId, guildScheduledEventId } = result);
@@ -156,8 +156,8 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
       return obj.exact(obj);
     };
     obj1[3] = obj2;
-    const value = _modDef4665.get(obj1);
-    const tmp4Result = _modDef4665;
+    const value = _modDef4666.get(obj1);
+    const tmp4Result = _modDef4666;
     const cleanupPromise = value.then((body) => {
       body = body.body;
       if (null != callback) {

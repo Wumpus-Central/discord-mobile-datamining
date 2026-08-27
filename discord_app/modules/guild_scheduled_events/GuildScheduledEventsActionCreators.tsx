@@ -1,14 +1,14 @@
-// === Module 9155: ? ===
+// === Module 9594: ? ===
 
-// Module 9155
+// Module 9594
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import sendRequest from "sendRequest" /* 530 */;
 import transitionTo from "transitionTo" /* 1222 */;
-import _modDef5302 from "module_5302" /* 5302 */;
-import EditGuildEventScreens from "EditGuildEventScreens" /* 9156 */;
+import _modDef5307 from "module_5307" /* 5307 */;
+import EditGuildEventScreens from "EditGuildEventScreens" /* 9595 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "scheduledEventSort" /* 7198 */;
+import closure_5 from "scheduledEventSort" /* 7204 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import ME from "ME" /* 676 */;
 
@@ -33,8 +33,8 @@ export default {
     return HTTP.patch(obj);
   },
   joinVoiceEvent(arg0, id) {
-    const voiceChannel = _modDef5302.selectVoiceChannel(id);
-    const obj = _modDef5302;
+    const voiceChannel = _modDef5307.selectVoiceChannel(id);
+    const obj = _modDef5307;
     transitionTo.transitionTo(closure_11.CHANNEL(arg0, id));
   },
   saveEvent(arg0, entityType) {
@@ -74,7 +74,7 @@ export default {
       let body = tmp5;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_10.GUILD_EVENT(closure_1_0, closure_1_1);
-      const obj8 = closure_1_0(4707);
+      const obj8 = closure_1_0(4708);
       obj1[1] = closure_1_0(530).rejectWithMigratedError();
       yield obj8.httpGetWithCountryCodeQuery(obj1);
       body = arg1.body;
@@ -94,7 +94,7 @@ export default {
       obj1[0] = closure_1_10.GUILD_EVENTS_FOR_GUILD(closure_1_0);
       obj1[1] = closure_1_0(530).rejectWithMigratedError();
       const obj9 = closure_1_0(530);
-      yield closure_1_0(4707).httpGetWithCountryCodeQuery(obj1);
+      yield closure_1_0(4708).httpGetWithCountryCodeQuery(obj1);
       body = arg1.body;
       const obj = closure_1_1(709);
       const obj4 = { type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: null, guildScheduledEvents: null };

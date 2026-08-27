@@ -1,9 +1,9 @@
-// === Module 4184: ? ===
+// === Module 4185: ? ===
 
-// Module 4184
+// Module 4185
 import set from "set" /* 2 */;
 import cancelAnimationDefault from "cancelAnimation" /* 1654 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4185 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4186 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 
 if (PlatformTypes.isAndroid()) {

@@ -1,8 +1,8 @@
-// === Module 12547: useShouldShowMutualInfo ===
+// === Module 9151: useShouldShowMutualInfo ===
 
-// Module 12547 (useShouldShowMutualInfo)
+// Module 9151 (useShouldShowMutualInfo)
 import initialize from "initialize" /* 589 */;
-import useIsUserProfileObfuscatedDefault from "useIsUserProfileObfuscated" /* 12548 */;
+import useIsUserProfileObfuscatedDefault from "useIsUserProfileObfuscated" /* 9152 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

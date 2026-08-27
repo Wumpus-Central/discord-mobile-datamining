@@ -1,13 +1,13 @@
-// === Module 12039: ApplicationCommandLoadingItem ===
+// === Module 11885: ApplicationCommandLoadingItem ===
 
-// Module 12039 (ApplicationCommandLoadingItem)
+// Module 11885 (ApplicationCommandLoadingItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import getFontScale from "getFontScale" /* 4886 */;
+import getFontScale from "getFontScale" /* 4887 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT" /* 10134 */;
+import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT" /* 10259 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;

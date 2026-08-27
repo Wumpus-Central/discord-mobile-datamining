@@ -1,10 +1,10 @@
-// === Module 9352: BellIcon ===
+// === Module 9667: BellIcon ===
 
-// Module 9352 (BellIcon)
+// Module 9667 (BellIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 8276 */;
+import registerAsset from "registerAsset" /* 7791 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

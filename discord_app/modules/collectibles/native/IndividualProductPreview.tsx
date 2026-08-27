@@ -1,19 +1,19 @@
-// === Module 9659: ProfilePreviewWrapper ===
+// === Module 12457: ProfilePreviewWrapper ===
 
-// Module 9659 (ProfilePreviewWrapper)
+// Module 12457 (ProfilePreviewWrapper)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import LinearGradientDefault from "LinearGradient" /* 4891 */;
-import useCurrentUser from "useCurrentUser" /* 9564 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 9660 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 9771 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 9772 */;
-import NameplateUserDefault from "NameplateUser" /* 9773 */;
+import LinearGradientDefault from "LinearGradient" /* 4892 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 8458 */;
+import useCurrentUser from "useCurrentUser" /* 8814 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 10777 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 12458 */;
+import NameplateUserDefault from "NameplateUser" /* 12459 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import items from "items" /* 678 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function ProfilePreviewWrapper(children) {
@@ -125,11 +125,11 @@ export const IndividualProductPreview = function IndividualProductPreview(arg0) 
   } else if (tmp(1950).CollectiblesItemType.EXTERNAL_SKU === type) {
     const ALL = tmp(679).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
-      let tmp5 = callback(tmp(9775).FractionalNitroPreview, {});
+      let tmp5 = callback(tmp(12460).FractionalNitroPreview, {});
     } else {
       tmp5 = null;
       if (product.skuId === constants.ORB_PROFILE_BADGE) {
-        tmp5 = callback(tmp(9778).OrbBadgePreview, {});
+        tmp5 = callback(tmp(12463).OrbBadgePreview, {});
       }
     }
     return tmp5;

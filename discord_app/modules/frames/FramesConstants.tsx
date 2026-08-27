@@ -1,6 +1,6 @@
-// === Module 10750: FrameLayoutModes ===
+// === Module 9386: FrameLayoutModes ===
 
-// Module 10750 (FrameLayoutModes)
+// Module 9386 (FrameLayoutModes)
 import set from "set" /* 2 */;
 
 let obj = { MAIN: 0, [0]: "MAIN", APP_CHANNEL: 1, [1]: "APP_CHANNEL" };

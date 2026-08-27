@@ -1,9 +1,9 @@
-// === Module 14015: ? ===
+// === Module 14042: ? ===
 
-// Module 14015
+// Module 14042
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import prototypeDefault from "prototype" /* 10896 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10899 */;
+import prototypeDefault from "prototype" /* 9424 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9427 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

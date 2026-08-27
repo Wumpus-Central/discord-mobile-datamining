@@ -1,11 +1,11 @@
-// === Module 16613: ConnectButton ===
+// === Module 16679: ConnectButton ===
 
-// Module 16613 (ConnectButton)
+// Module 16679 (ConnectButton)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 createCacheKey = { connectButton: null, connectText: null };

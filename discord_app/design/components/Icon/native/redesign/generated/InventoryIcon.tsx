@@ -1,10 +1,10 @@
-// === Module 14151: InventoryIcon ===
+// === Module 14178: InventoryIcon ===
 
-// Module 14151 (InventoryIcon)
+// Module 14178 (InventoryIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 14152 */;
+import registerAsset from "registerAsset" /* 14179 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

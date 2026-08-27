@@ -1,6 +1,6 @@
-// === Module 10304: handleUserSettingsStoreUpdate ===
+// === Module 10490: handleUserSettingsStoreUpdate ===
 
-// Module 10304 (handleUserSettingsStoreUpdate)
+// Module 10490 (handleUserSettingsStoreUpdate)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "_getSystemLocale" /* 1996 */;

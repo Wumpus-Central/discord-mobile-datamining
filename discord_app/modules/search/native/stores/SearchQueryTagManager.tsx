@@ -1,9 +1,9 @@
-// === Module 11992: isComplete ===
+// === Module 11836: isComplete ===
 
-// Module 11992 (isComplete)
+// Module 11836 (isComplete)
 import set2 from "set" /* 2 */;
-import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 8621 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8622 */;
+import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 7554 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7555 */;
 
 function isComplete(type) {
   return type.type === SearchQueryTagTypes.COMPLETE;

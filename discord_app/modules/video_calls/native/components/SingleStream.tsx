@@ -1,9 +1,9 @@
-// === Module 11067: SingleStream ===
+// === Module 10028: SingleStream ===
 
-// Module 11067 (SingleStream)
+// Module 10028 (SingleStream)
 import noopAll from "noop" /* 19 */;
-import StreamTextOverlayDefault from "StreamTextOverlay" /* 10840 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9962 */;
+import StreamTextOverlayDefault from "StreamTextOverlay" /* 9483 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9441 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -15,7 +15,7 @@ export default function SingleStream(channel) {
   channel = channel.channel;
   const obj = {
     gestureEnabled: true,
-    resizeMode: channel(10850).ResizeMode.CONTAIN,
+    resizeMode: channel(9494).ResizeMode.CONTAIN,
     onSingleTap() {
       callback();
     },
@@ -28,7 +28,7 @@ export default function SingleStream(channel) {
   };
   return jsx(StreamTextOverlayDefault, {
     gestureEnabled: true,
-    resizeMode: channel(10850).ResizeMode.CONTAIN,
+    resizeMode: channel(9494).ResizeMode.CONTAIN,
     onSingleTap() {
       callback();
     },

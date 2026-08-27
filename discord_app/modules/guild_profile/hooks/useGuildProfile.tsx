@@ -1,9 +1,9 @@
-// === Module 9217: useGuildProfile ===
+// === Module 8933: useGuildProfile ===
 
-// Module 9217 (useGuildProfile)
+// Module 8933 (useGuildProfile)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUpdateStart" /* 9216 */;
+import closure_4 from "handleUpdateStart" /* 8931 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfile.tsx");

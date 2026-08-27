@@ -1,8 +1,8 @@
-// === Module 9207: ChannelTypeRow ===
+// === Module 9623: ChannelTypeRow ===
 
-// Module 9207 (ChannelTypeRow)
+// Module 9623 (ChannelTypeRow)
 import ThemesDefault from "Themes" /* 712 */;
-import useInitialValueDefault from "useInitialValue" /* 5888 */;
+import useInitialValueDefault from "useInitialValue" /* 5893 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -14,9 +14,9 @@ import closure_12 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_13 from "markAllUserIdListsStale" /* 4098 */;
 import closure_14 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { RowType } from "RowType" /* 7993 */;
+import { RowType } from "RowType" /* 8603 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function ChannelTypeRow(selected) {
@@ -741,6 +741,6 @@ export default function CreateChannelModal(arg0) {
     obj[1] = items;
     return obj;
   }));
-  return callback(_require(5955).Navigator, { screens, initialRouteStack });
+  return callback(_require(5960).Navigator, { screens, initialRouteStack });
 };
 export { CreateChannel };

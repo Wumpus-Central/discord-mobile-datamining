@@ -1,6 +1,6 @@
-// === Module 9689: useDisplayNameStylesEffectDefaultColors ===
+// === Module 8852: useDisplayNameStylesEffectDefaultColors ===
 
-// Module 9689 (useDisplayNameStylesEffectDefaultColors)
+// Module 8852 (useDisplayNameStylesEffectDefaultColors)
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import ThemesDefault from "Themes" /* 712 */;
 import map from "map" /* 4165 */;

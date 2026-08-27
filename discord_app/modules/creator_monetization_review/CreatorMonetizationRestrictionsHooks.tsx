@@ -1,7 +1,7 @@
-// === Module 6046: useShouldHideGuildPurchaseEntryPoints ===
+// === Module 6052: useShouldHideGuildPurchaseEntryPoints ===
 
-// Module 6046 (useShouldHideGuildPurchaseEntryPoints)
-import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 6047 */;
+// Module 6052 (useShouldHideGuildPurchaseEntryPoints)
+import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 6053 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "makeGroupListingIndexSubscriptionListingTag" /* 4083 */;
 import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4083 */;

@@ -1,6 +1,6 @@
-// === Module 16032: externalConnectionOffer ===
+// === Module 16096: externalConnectionOffer ===
 
-// Module 16032 (externalConnectionOffer)
+// Module 16096 (externalConnectionOffer)
 import set from "set" /* 2 */;
 
 function externalConnectionOffer(nextResult) {

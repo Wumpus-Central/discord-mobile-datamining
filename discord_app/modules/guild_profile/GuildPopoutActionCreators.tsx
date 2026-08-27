@@ -1,6 +1,6 @@
-// === Module 13595: _fetchGuildForPopout ===
+// === Module 13622: _fetchGuildForPopout ===
 
-// Module 13595 (_fetchGuildForPopout)
+// Module 13622 (_fetchGuildForPopout)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 

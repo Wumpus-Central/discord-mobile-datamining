@@ -1,6 +1,6 @@
-// === Module 6288: metadata ===
+// === Module 6294: metadata ===
 
-// Module 6288 (metadata)
+// Module 6294 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BadgeCustomizeAbstractUI-2x.png.js");

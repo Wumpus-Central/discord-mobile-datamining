@@ -1,11 +1,11 @@
-// === Module 11144: fetchBountiesAndDispatch ===
+// === Module 11038: fetchBountiesAndDispatch ===
 
-// Module 11144 (fetchBountiesAndDispatch)
+// Module 11038 (fetchBountiesAndDispatch)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getOrRefreshAdSession from "getOrRefreshAdSession" /* 7391 */;
+import getOrRefreshAdSession from "getOrRefreshAdSession" /* 7399 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleConnectionInfoChange" /* 4538 */;
-import closure_5 from "set" /* 7370 */;
+import closure_4 from "handleConnectionInfoChange" /* 4539 */;
+import closure_5 from "set" /* 7380 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;
@@ -133,9 +133,9 @@ function _fetchQuestHomeBounties() {
               obj1 = { value: null, done: false };
               obj1[0] = closure_1_7(tmp5, closure_1_3(function*() {
                 let uuid = tmp2;
-                let obj5 = closure_1_0(7135);
+                let obj5 = closure_1_0(7141);
                 uuid = yield obj5.getSession();
-                const uuid2 = closure_1_0(7391).getOrRefreshAdSession();
+                const uuid2 = closure_1_0(7399).getOrRefreshAdSession();
                 const HTTP = closure_1_0(530).HTTP;
                 const obj3 = { url: null, query: null, rejectWithError: false, context: null };
                 obj3[0] = closure_1_6.QUESTS_GET_DECISIONS;

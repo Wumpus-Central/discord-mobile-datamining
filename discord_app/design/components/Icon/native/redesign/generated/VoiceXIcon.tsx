@@ -1,10 +1,10 @@
-// === Module 11013: VoiceXIcon ===
+// === Module 9990: VoiceXIcon ===
 
-// Module 11013 (VoiceXIcon)
+// Module 9990 (VoiceXIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 11014 */;
+import registerAsset from "registerAsset" /* 9991 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

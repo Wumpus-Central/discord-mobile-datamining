@@ -1,17 +1,17 @@
-// === Module 8603: showForLaterModal ===
+// === Module 7536: showForLaterModal ===
 
-// Module 8603 (showForLaterModal)
+// Module 7536 (showForLaterModal)
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import _modDef4675 from "module_4675" /* 4675 */;
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8604 */;
+import _modDef4676 from "module_4676" /* 4676 */;
+import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7537 */;
 
 const result = set.fileFinishedImporting("modules/saved_messages/native/showForLaterModal.tsx");
 
 export const showForLaterModal = function showForLaterModal(BOOKMARK) {
   if (BOOKMARK === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
-    tmp(8605).markRemindersSeen();
-    const tmpResult = tmp(8605);
+    tmp(7538).markRemindersSeen();
+    const tmpResult = tmp(7538);
   }
-  _modDef4675.pushLazy(asyncRequireImpl(8606, dependencyMap.paths), { type: BOOKMARK }, "for-later-modal", { presentation: "modal" });
+  _modDef4676.pushLazy(asyncRequireImpl(7539, dependencyMap.paths), { type: BOOKMARK }, "for-later-modal", { presentation: "modal" });
 };

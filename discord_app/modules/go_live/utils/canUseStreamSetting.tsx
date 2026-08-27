@@ -1,10 +1,10 @@
-// === Module 10990: canUseStreamSetting ===
+// === Module 9968: canUseStreamSetting ===
 
-// Module 10990 (canUseStreamSetting)
+// Module 9968 (canUseStreamSetting)
 import set from "set" /* 2 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4107 */;
-import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4335 */;
+import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4336 */;
 
 const StreamQualities = GuildFeatures.StreamQualities;
 let result = set.fileFinishedImporting("modules/go_live/utils/canUseStreamSetting.tsx");

@@ -1,6 +1,6 @@
-// === Module 7651: GeneratedPaymentCurrencies ===
+// === Module 10735: GeneratedPaymentCurrencies ===
 
-// Module 7651 (GeneratedPaymentCurrencies)
+// Module 10735 (GeneratedPaymentCurrencies)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx");

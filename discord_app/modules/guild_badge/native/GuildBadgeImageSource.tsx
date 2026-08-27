@@ -1,17 +1,17 @@
-// === Module 9480: badgeVariants ===
+// === Module 8790: badgeVariants ===
 
-// Module 9480 (badgeVariants)
+// Module 8790 (badgeVariants)
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import registerAssetDefault from "registerAsset" /* 8664 */;
-import registerAssetDefault2 from "registerAsset" /* 8665 */;
-import GuildVisibility from "GuildVisibility" /* 9477 */;
-import BadgeCategory from "BadgeCategory" /* 9478 */;
-import registerAssetDefault3 from "registerAsset" /* 9481 */;
-import registerAssetDefault4 from "registerAsset" /* 9482 */;
-import registerAssetDefault5 from "registerAsset" /* 9483 */;
-import registerAssetDefault6 from "registerAsset" /* 9484 */;
-import registerAssetDefault7 from "registerAsset" /* 9485 */;
-import registerAssetDefault8 from "registerAsset" /* 9486 */;
+import registerAssetDefault from "registerAsset" /* 7607 */;
+import registerAssetDefault2 from "registerAsset" /* 7608 */;
+import BadgeCategory from "BadgeCategory" /* 8791 */;
+import GuildVisibility from "GuildVisibility" /* 8792 */;
+import registerAssetDefault3 from "registerAsset" /* 8793 */;
+import registerAssetDefault4 from "registerAsset" /* 8794 */;
+import registerAssetDefault5 from "registerAsset" /* 8795 */;
+import registerAssetDefault6 from "registerAsset" /* 8796 */;
+import registerAssetDefault7 from "registerAsset" /* 8797 */;
+import registerAssetDefault8 from "registerAsset" /* 8798 */;
 
 require = arg1;
 let obj = {};

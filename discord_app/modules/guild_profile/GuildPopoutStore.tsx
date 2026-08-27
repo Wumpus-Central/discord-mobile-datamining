@@ -1,9 +1,9 @@
-// === Module 13594: initialize ===
+// === Module 13621: initialize ===
 
-// Module 13594 (initialize)
+// Module 13621 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _startLurking from "_startLurking" /* 6131 */;
+import _startLurking from "_startLurking" /* 6137 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
 
 require = arg1;

@@ -1,17 +1,17 @@
-// === Module 16741: handleAVAudioSessionMode ===
+// === Module 16807: handleAVAudioSessionMode ===
 
-// Module 16741 (handleAVAudioSessionMode)
-import initializeDefault from "initialize" /* 5433 */;
-import handleVoiceChannelSelect from "handleVoiceChannelSelect" /* 16742 */;
+// Module 16807 (handleAVAudioSessionMode)
+import initializeDefault from "initialize" /* 5438 */;
+import handleVoiceChannelSelect from "handleVoiceChannelSelect" /* 16808 */;
 import closure_2 from "participantFromServer" /* 1390 */;
-import closure_3 from "buildStageChannelUserRoles" /* 5312 */;
-import closure_4 from "reset" /* 4466 */;
+import closure_3 from "buildStageChannelUserRoles" /* 5317 */;
+import closure_4 from "reset" /* 4467 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4496 */;
 import closure_8 from "handleConnectionOpen" /* 1981 */;
-import closure_9 from "updateVoiceState" /* 4463 */;
-import closure_10 from "getState" /* 7085 */;
+import closure_9 from "updateVoiceState" /* 4464 */;
+import closure_10 from "getState" /* 7091 */;
 import { AppStates } from "ME" /* 676 */;
 import set from "set" /* 500 */;
 

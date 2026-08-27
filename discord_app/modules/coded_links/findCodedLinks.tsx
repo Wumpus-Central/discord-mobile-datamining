@@ -1,12 +1,12 @@
-// === Module 4427: getPathsFromURL ===
+// === Module 4428: getPathsFromURL ===
 
-// Module 4427 (getPathsFromURL)
+// Module 4428 (getPathsFromURL)
 import Url from "Url" /* 1489 */;
-import findCodedLinkUrlsDefault from "findCodedLinkUrls" /* 4433 */;
-import closure_3 from "updateInvite" /* 4428 */;
+import findCodedLinkUrlsDefault from "findCodedLinkUrls" /* 4434 */;
+import closure_3 from "updateInvite" /* 4429 */;
 import { PRIMARY_DOMAIN } from "ME" /* 676 */;
 import { CollectibleShopTab } from "items" /* 678 */;
-import importDefaultResult from "set" /* 4431 */;
+import importDefaultResult from "set" /* 4432 */;
 
 require = arg1;
 function getPathsFromURL(target) {
@@ -1056,7 +1056,7 @@ export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
           let flag;
           if (url.pathname != null) {
             const formatted = str2.toUpperCase();
-            flag = formatted.includes(url(4432).CodedLinkType.INVITE);
+            flag = formatted.includes(url(4433).CodedLinkType.INVITE);
           }
           if (flag == null) {
             flag = false;

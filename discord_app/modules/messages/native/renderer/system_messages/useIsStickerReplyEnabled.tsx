@@ -1,7 +1,7 @@
-// === Module 8324: computeIsStickerReplyEnabled ===
+// === Module 7838: computeIsStickerReplyEnabled ===
 
-// Module 8324 (computeIsStickerReplyEnabled)
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6062 */;
+// Module 7838 (computeIsStickerReplyEnabled)
+import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6068 */;
 import closure_2 from "trackCommunicationDisabled" /* 1992 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;

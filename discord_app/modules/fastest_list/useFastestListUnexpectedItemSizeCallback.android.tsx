@@ -1,6 +1,6 @@
-// === Module 8752: useFastestListUnexpectedItemSizeCallback ===
+// === Module 7714: useFastestListUnexpectedItemSizeCallback ===
 
-// Module 8752 (useFastestListUnexpectedItemSizeCallback)
+// Module 7714 (useFastestListUnexpectedItemSizeCallback)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

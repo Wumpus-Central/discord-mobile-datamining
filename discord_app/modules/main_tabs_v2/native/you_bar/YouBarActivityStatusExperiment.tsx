@@ -1,6 +1,6 @@
-// === Module 15806: YouBarActivityStatusExperiment ===
+// === Module 15871: YouBarActivityStatusExperiment ===
 
-// Module 15806 (YouBarActivityStatusExperiment)
+// Module 15871 (YouBarActivityStatusExperiment)
 import getUnitIdDefault from "getUnitId" /* 1368 */;
 
 const tmp2 = getUnitIdDefault({ name: "2026-05-you-bar-activity-status", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

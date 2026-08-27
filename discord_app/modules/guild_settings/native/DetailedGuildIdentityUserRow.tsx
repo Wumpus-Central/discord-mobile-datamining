@@ -1,16 +1,16 @@
-// === Module 9912: memoResult1 ===
+// === Module 10599: memoResult1 ===
 
-// Module 9912 (memoResult1)
+// Module 10599 (memoResult1)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import getNicknameDefault from "getNickname" /* 4637 */;
-import DiscordTagDefault from "DiscordTag" /* 9346 */;
+import getNicknameDefault from "getNickname" /* 4638 */;
+import DiscordTagDefault from "DiscordTag" /* 9692 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -26,8 +26,8 @@ const memoResult = importAllResult.memo((height) => {
   let obj = getNicknameDefault;
   let nickname = obj.getNickname(guildId, undefined, user);
   if (nickname == null) {
-    nickname = tmp2(4288).getGlobalName(user);
-    const tmp2Result = tmp2(4288);
+    nickname = tmp2(4289).getGlobalName(user);
+    const tmp2Result = tmp2(4289);
   }
   const hasAvatarForGuildResult = user.hasAvatarForGuild(guildId);
   obj = { style: { height: height.contentHeight }, children: null };
@@ -37,7 +37,7 @@ const memoResult = importAllResult.memo((height) => {
     obj[0] = tmp.mainIdentity;
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      obj1 = { size: null, style: null, user: null, guildId: "a" };
+      obj1 = { size: null, style: null, user: null, guildId: "Array" };
       obj1[0] = Button.AvatarSizes.SIZE_16;
       obj1[1] = tmp.primaryAvatar;
       obj1[2] = user;
@@ -47,7 +47,7 @@ const memoResult = importAllResult.memo((height) => {
     const obj2 = { user: null, usernameStyle: null, hideBotTag: true };
     obj2[0] = user;
     obj2[1] = tmp.mainTag;
-    items1[1] = tmp8(tmp2(9346), obj2);
+    items1[1] = tmp8(tmp2(9692), obj2);
     obj[1] = items1;
     let tmp6Result = tmp6(tmp7, obj);
   } else {
@@ -93,7 +93,7 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
     obj[6] = trailing;
     obj[7] = accessibilityRole;
     obj[8] = accessibilityState;
-    let tmp2Result = tmp2(tmp(8185).FormRow, obj);
+    let tmp2Result = tmp2(tmp(8295).FormRow, obj);
   } else {
     obj1 = { accessibilityLabel: null, arrow: null, disabled: null, end: null, icon: null, label: null, onPress: null, start: null, subLabel: null, trailing: null, accessibilityRole: null, accessibilityState: null };
     obj1[0] = accessibilityLabel;
@@ -119,7 +119,7 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
     obj1[9] = trailing;
     obj1[10] = accessibilityRole;
     obj1[11] = accessibilityState;
-    tmp2Result = tmp2(tmp(5546).TableRow, obj1);
+    tmp2Result = tmp2(tmp(5551).TableRow, obj1);
   }
 });
 const result = require("set").fileFinishedImporting("modules/guild_settings/native/DetailedGuildIdentityUserRow.tsx");

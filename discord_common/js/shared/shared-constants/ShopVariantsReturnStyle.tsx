@@ -1,6 +1,6 @@
-// === Module 7261: ShopVariantsReturnStyle ===
+// === Module 7267: ShopVariantsReturnStyle ===
 
-// Module 7261 (ShopVariantsReturnStyle)
+// Module 7267 (ShopVariantsReturnStyle)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ShopVariantsReturnStyle.tsx");

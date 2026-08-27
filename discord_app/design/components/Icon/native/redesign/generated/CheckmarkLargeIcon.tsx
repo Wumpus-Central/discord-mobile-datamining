@@ -1,10 +1,10 @@
-// === Module 4395: CheckmarkLargeIcon ===
+// === Module 4396: CheckmarkLargeIcon ===
 
-// Module 4395 (CheckmarkLargeIcon)
+// Module 4396 (CheckmarkLargeIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 4396 */;
+import registerAsset from "registerAsset" /* 4397 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

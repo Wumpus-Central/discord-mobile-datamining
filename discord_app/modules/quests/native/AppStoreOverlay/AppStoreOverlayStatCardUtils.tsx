@@ -1,6 +1,6 @@
-// === Module 10733: formatAppStoreRatingValue ===
+// === Module 11017: formatAppStoreRatingValue ===
 
-// Module 10733 (formatAppStoreRatingValue)
+// Module 11017 (formatAppStoreRatingValue)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatCardUtils.tsx");

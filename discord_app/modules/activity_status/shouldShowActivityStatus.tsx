@@ -1,6 +1,6 @@
-// === Module 15825: shouldShowActivityStatus ===
+// === Module 15890: shouldShowActivityStatus ===
 
-// Module 15825 (shouldShowActivityStatus)
+// Module 15890 (shouldShowActivityStatus)
 import set from "set" /* 2 */;
 import sum from "sum" /* 505 */;
 import ME from "ME" /* 676 */;

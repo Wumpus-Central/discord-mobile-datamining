@@ -1,6 +1,6 @@
-// === Module 15428: useAuthWebsocket ===
+// === Module 15493: useAuthWebsocket ===
 
-// Module 15428 (useAuthWebsocket)
+// Module 15493 (useAuthWebsocket)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;

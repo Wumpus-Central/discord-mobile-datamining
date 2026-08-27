@@ -1,6 +1,6 @@
-// === Module 12929: BlockUserElement ===
+// === Module 12693: BlockUserElement ===
 
-// Module 12929 (BlockUserElement)
+// Module 12693 (BlockUserElement)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "markAllUserIdListsStale" /* 4098 */;

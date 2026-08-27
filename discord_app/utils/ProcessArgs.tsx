@@ -1,6 +1,6 @@
-// === Module 5032: get ===
+// === Module 5037: get ===
 
-// Module 5032 (get)
+// Module 5037 (get)
 import set from "set" /* 2 */;
 import setDefault from "set" /* 4072 */;
 

@@ -1,6 +1,6 @@
-// === Module 5355: dedupeEmojisByNameOrId ===
+// === Module 5360: dedupeEmojisByNameOrId ===
 
-// Module 5355 (dedupeEmojisByNameOrId)
+// Module 5360 (dedupeEmojisByNameOrId)
 import set from "set" /* 2 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
 

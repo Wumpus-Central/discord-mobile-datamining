@@ -1,9 +1,9 @@
-// === Module 9379: _fetchVideoFilterAssets ===
+// === Module 9710: _fetchVideoFilterAssets ===
 
-// Module 9379 (_fetchVideoFilterAssets)
+// Module 9710 (_fetchVideoFilterAssets)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4496 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -160,7 +160,7 @@ function _uploadVideoFilterAsset() {
           } else if (1 === tmp7) {
             constants = 0;
             callback = closure_5;
-            const tmp24 = new callback(9380)(callback);
+            const tmp24 = new callback(9711)(callback);
             throw tmp24;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -258,9 +258,9 @@ function _deleteVideoFilterAsset() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            lib2 = lib(9381).getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
-            const obj7 = lib(9381);
-            let result = lib(9378).isCustomBackgroundOption(lib2);
+            lib2 = lib(9712).getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
+            const obj7 = lib(9712);
+            let result = lib(9709).isCustomBackgroundOption(lib2);
             if (result) {
               result = lib2.id === lib.id;
             }
@@ -338,7 +338,7 @@ function _saveLastUsedBackgroundOption() {
             obj3.dispatch(obj5);
             c4 = 3;
           }
-          obj12 = lib(9378);
+          obj12 = lib(9709);
         }
       } else if (arg0 === 1) {
         c4 = 3;

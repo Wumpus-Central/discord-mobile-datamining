@@ -1,9 +1,9 @@
-// === Module 10789: confirmActivityChangeModal ===
+// === Module 9402: confirmActivityChangeModal ===
 
-// Module 10789 (confirmActivityChangeModal)
+// Module 9402 (confirmActivityChangeModal)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeChannelName from "computeChannelName" /* 4638 */;
-import setDefault from "set" /* 4808 */;
+import computeChannelName from "computeChannelName" /* 4639 */;
+import setDefault from "set" /* 4809 */;
 import closure_3 from "markAllUserIdListsStale" /* 4098 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 

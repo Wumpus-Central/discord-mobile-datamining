@@ -1,13 +1,13 @@
-// === Module 10321: SocialLayerStorefrontGiftProductDetails ===
+// === Module 10657: SocialLayerStorefrontGiftProductDetails ===
 
-// Module 10321 (SocialLayerStorefrontGiftProductDetails)
+// Module 10657 (SocialLayerStorefrontGiftProductDetails)
 import ThemesDefault from "Themes" /* 712 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9612 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8435 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { PriceSetAssignmentPurchaseTypes as closure_6 } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
@@ -28,9 +28,9 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
   sku = sku.sku;
   let getOrFetchApplication;
   const tmp = callback2();
-  let obj = getOrFetchApplication(5906);
+  let obj = getOrFetchApplication(5911);
   getOrFetchApplication = obj.useGetOrFetchApplication(sku.applicationId);
-  obj1 = getOrFetchApplication(10312);
+  obj1 = getOrFetchApplication(10498);
   obj = { sku, priceSetAssignmentPurchaseType: constants.GIFT };
   const userPrice = obj1.useFormattedSKUPrice(obj).userPrice;
   const items = [getOrFetchApplication];
@@ -63,18 +63,18 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
     const items2 = [tmp8Result, ];
     const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj5[2] = getOrFetchApplication.name;
-    items2[1] = tmp8(tmp2(4440).Text, obj5);
+    items2[1] = tmp8(tmp2(4441).Text, obj5);
     obj2[1] = items2;
     tmp6Result = tmp6(tmp7, obj2);
   }
-  const items3 = [tmp6Result, callback(getOrFetchApplication(4440).Text, { variant: "text-md/semibold", children: sku.name })];
+  const items3 = [tmp6Result, callback(getOrFetchApplication(4441).Text, { variant: "text-md/semibold", children: sku.name })];
   obj1[1] = items3;
   items1[1] = closure_8(closure_5, obj1);
   tmp8Result = null != userPrice;
   if (tmp8Result) {
     const obj7 = { variant: "text-md/semibold", children: null };
     obj7[1] = userPrice;
-    tmp8Result = tmp8(tmp2(4440).Text, obj7);
+    tmp8Result = tmp8(tmp2(4441).Text, obj7);
   }
   items1[2] = tmp8Result;
   obj[1] = items1;

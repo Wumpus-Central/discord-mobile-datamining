@@ -1,17 +1,17 @@
-// === Module 13102: GiftingSectionTitle ===
+// === Module 13125: GiftingSectionTitle ===
 
-// Module 13102 (GiftingSectionTitle)
+// Module 13125 (GiftingSectionTitle)
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 9005 */;
-import closure_9 from "addEntitlement" /* 7070 */;
+import closure_8 from "initialize" /* 8492 */;
+import closure_9 from "addEntitlement" /* 7076 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function GiftingSectionTitle(title) {
@@ -19,12 +19,12 @@ function GiftingSectionTitle(title) {
   if (useIsMobileVisualRefreshExperimentEnabledDefault("UserSettingsPremiumGifting")) {
     let obj = { title: null };
     obj[0] = title;
-    let tmp3Result = tmp3(tmp4(5939).TableRowGroupTitle, obj);
+    let tmp3Result = tmp3(tmp4(5944).TableRowGroupTitle, obj);
   } else {
     obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null };
     obj[0] = tmp.title;
     obj[4] = title;
-    tmp3Result = tmp3(tmp4(4440).Text, obj);
+    tmp3Result = tmp3(tmp4(4441).Text, obj);
   }
   return tmp3Result;
 }

@@ -1,6 +1,6 @@
-// === Module 4553: STATS_INTERVAL ===
+// === Module 4554: STATS_INTERVAL ===
 
-// Module 4553 (STATS_INTERVAL)
+// Module 4554 (STATS_INTERVAL)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/Stats.tsx");

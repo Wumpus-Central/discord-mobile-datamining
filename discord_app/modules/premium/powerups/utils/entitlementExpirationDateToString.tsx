@@ -1,6 +1,6 @@
-// === Module 12158: entitlementExpirationDateToString ===
+// === Module 12004: entitlementExpirationDateToString ===
 
-// Module 12158 (entitlementExpirationDateToString)
+// Module 12004 (entitlementExpirationDateToString)
 import closure_0 from "_getSystemLocale" /* 1996 */;
 
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/entitlementExpirationDateToString.tsx");

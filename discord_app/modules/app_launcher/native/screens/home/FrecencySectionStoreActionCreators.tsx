@@ -1,6 +1,6 @@
-// === Module 11711: setFrecencySectionSelection ===
+// === Module 11544: setFrecencySectionSelection ===
 
-// Module 11711 (setFrecencySectionSelection)
+// Module 11544 (setFrecencySectionSelection)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

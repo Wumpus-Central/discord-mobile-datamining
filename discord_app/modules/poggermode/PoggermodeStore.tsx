@@ -1,13 +1,13 @@
-// === Module 7500: updateCombo ===
+// === Module 7508: updateCombo ===
 
-// Module 7500 (updateCombo)
+// Module 7508 (updateCombo)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getComboShakeIntensity from "getComboShakeIntensity" /* 7501 */;
+import getComboShakeIntensity from "getComboShakeIntensity" /* 7509 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
 import closure_3 from "handleConnectionOpen" /* 1981 */;
-import closure_4 from "initialize" /* 7349 */;
-import ConfettiLocation from "ConfettiLocation" /* 7350 */;
+import closure_4 from "initialize" /* 7356 */;
+import ConfettiLocation from "ConfettiLocation" /* 7357 */;
 import { ComponentActions } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -50,7 +50,7 @@ function updateCombo(userId) {
     decayInterval = iter.decayInterval;
   }
   if (decayInterval == null) {
-    decayInterval = new obj(4328).Interval();
+    decayInterval = new obj(4329).Interval();
   }
   obj.decayInterval = decayInterval;
   const result = obj.set("" + userId.userId + "-" + userId.channelId, obj);
@@ -116,11 +116,11 @@ prototype["getComboScore"] = function getComboScore(arg0, arg1) {
   }
   return num;
 };
-prototype["getUserCombo"] = function getUserCombo(id, throwTypeErrorResult) {
-  return secondaryIndexMap.get("" + id + "-" + throwTypeErrorResult);
+prototype["getUserCombo"] = function getUserCombo(id, closure_1_0) {
+  return secondaryIndexMap.get("" + id + "-" + closure_1_0);
 };
-prototype["isComboing"] = function isComboing(id, throwTypeErrorResult) {
-  const iter = this.getUserCombo(id, throwTypeErrorResult);
+prototype["isComboing"] = function isComboing(id, closure_1_0) {
+  const iter = this.getUserCombo(id, closure_1_0);
   let tmp = null != iter;
   if (tmp) {
     tmp = iter.value >= closure_4.combosRequiredCount;
@@ -154,8 +154,8 @@ prototype["getMostRecentMessageCombo"] = function getMostRecentMessageCombo(arg0
   const values = secondaryIndexMap1.values(arg0);
   return values[values.length - 1];
 };
-prototype["getUserComboShakeIntensity"] = function getUserComboShakeIntensity(id, throwTypeErrorResult, arg2, LEVEL_4) {
-  const userCombo = this.getUserCombo(id, throwTypeErrorResult);
+prototype["getUserComboShakeIntensity"] = function getUserComboShakeIntensity(id, closure_1_0, arg2, LEVEL_4) {
+  const userCombo = this.getUserCombo(id, closure_1_0);
   let num = 0;
   if (null != userCombo) {
     num = getComboShakeIntensity.getComboShakeIntensity(userCombo, LEVEL_4) * arg2;
@@ -215,12 +215,12 @@ const poggermodeStore = new PoggermodeStore(dispatcherDefault, {
             if (null != mentions) {
               if (null != mentions.find((id) => id.id === id)) {
                 if (null != value) {
-                  let num2 = id(7501).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
+                  let num2 = id(7509).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
                   if (num2 == null) {
                     num2 = 0.001;
                   }
                   let result = num2;
-                  const obj2 = id(7501);
+                  const obj2 = id(7509);
                 } else {
                   const _Math = Math;
                   result = 4 * Math.random();

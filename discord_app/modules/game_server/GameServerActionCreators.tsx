@@ -1,14 +1,14 @@
-// === Module 12115: fetchGameServerCatalog ===
+// === Module 11961: fetchGameServerCatalog ===
 
-// Module 12115 (fetchGameServerCatalog)
+// Module 11961 (fetchGameServerCatalog)
 import sendRequest from "sendRequest" /* 530 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4707 */;
+import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4708 */;
 import closure_3 from "_getSystemLocale" /* 1996 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "handleGameServerUpsert" /* 12116 */;
-import { GAME_SERVER_COLLECTION_ID } from "str11" /* 4332 */;
+import closure_5 from "handleGameServerUpsert" /* 11962 */;
+import { GAME_SERVER_COLLECTION_ID } from "str11" /* 4333 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -50,7 +50,7 @@ export const fetchGameServerCatalog = function fetchGameServerCatalog(closure_0)
     obj[2] = flag2;
     obj[3] = flag2;
     obj[1] = obj;
-    const obj2 = _require(4707);
+    const obj2 = _require(4708);
     obj[3] = _require(530).rejectWithMigratedError();
     let result = obj2.httpGetWithCountryCodeQuery(obj);
     return result.then((body) => {
@@ -135,7 +135,7 @@ export const fetchGameServerInstances = function fetchGameServerInstances(arg0) 
 export const fetchGameServerInstructions = function fetchGameServerInstructions(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
-  let obj = _require(4707);
+  let obj = _require(4708);
   obj = { url: closure_8.STOREFRONT_PRODUCT_BY_SKU_ID(arg1), query: obj, rejectWithError: true, retries: 3 };
   obj = { locale: closure_3.locale };
   const result = obj.httpGetWithCountryCodeQuery(obj);
@@ -211,7 +211,7 @@ export const fetchGameServerRegions = function fetchGameServerRegions(arg0) {
     let obj = callback(709);
     obj = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null };
     body = body.body;
-    const mapped = body.map(callback(12120));
+    const mapped = body.map(callback(11966));
     obj[1] = mapped.sort((name, name2) => {
       name = name.name;
       return name.localeCompare(name2.name);
@@ -226,7 +226,7 @@ export const fetchMyGameServerRegions = function fetchMyGameServerRegions() {
     let obj = callback(709);
     obj = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null, creationDisabled: null };
     const regions = body.body.regions;
-    const mapped = regions.map(callback(12120));
+    const mapped = regions.map(callback(11966));
     obj[1] = mapped.sort((name, name2) => {
       name = name.name;
       return name.localeCompare(name2.name);
@@ -255,10 +255,10 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
     let obj = dispatcherDefault;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "icymi-screen" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "xs" };
     obj = {};
     const merged = Object.assign(found);
-    obj.status = _require(12118).GameServerStatus.STARTING;
+    obj.status = _require(11964).GameServerStatus.STARTING;
     obj[2] = obj;
     obj.dispatch(obj);
   }
@@ -271,7 +271,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
     let resolved = Promise.resolve();
   } else {
     let obj = dispatcherDefault;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "icymi-screen" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "xs" };
     obj = {};
     const merged = Object.assign(found);
     obj.name = name;
@@ -341,10 +341,10 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
     let obj = dispatcherDefault;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "icymi-screen" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "xs" };
     obj = {};
     let merged = Object.assign(found);
-    obj.status = _require(12118).GameServerStatus.STARTING;
+    obj.status = _require(11964).GameServerStatus.STARTING;
     obj[2] = obj;
     obj.dispatch(obj);
   }
@@ -355,13 +355,13 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
     body = body.body;
     let obj = callback2(709);
     let tmp3 = body;
-    if (body.status === callback(12118).GameServerStatus.SLEEPING) {
+    if (body.status === callback(11964).GameServerStatus.SLEEPING) {
       obj = {};
       const merged = Object.assign(body);
-      obj.status = callback(12118).GameServerStatus.STARTING;
+      obj.status = callback(11964).GameServerStatus.STARTING;
       tmp3 = obj;
     }
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "icymi-screen" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "xs" };
     obj[2] = tmp3;
     obj.dispatch(obj);
   }).catch((arg0) => {

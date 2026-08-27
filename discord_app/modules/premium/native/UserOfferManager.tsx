@@ -1,9 +1,9 @@
-// === Module 16932: prototype ===
+// === Module 16998: prototype ===
 
-// Module 16932 (prototype)
-import initializeDefault from "initialize" /* 5433 */;
+// Module 16998 (prototype)
+import initializeDefault from "initialize" /* 5438 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "emitChanges" /* 7123 */;
+import closure_3 from "emitChanges" /* 7129 */;
 import { PaymentGateways } from "sum" /* 505 */;
 
 let require = arg1;

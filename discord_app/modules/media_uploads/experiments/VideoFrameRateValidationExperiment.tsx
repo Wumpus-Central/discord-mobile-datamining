@@ -1,6 +1,6 @@
-// === Module 5053: getVideoFrameRateValidationExperimentConfig ===
+// === Module 5058: getVideoFrameRateValidationExperimentConfig ===
 
-// Module 5053 (getVideoFrameRateValidationExperimentConfig)
+// Module 5058 (getVideoFrameRateValidationExperimentConfig)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

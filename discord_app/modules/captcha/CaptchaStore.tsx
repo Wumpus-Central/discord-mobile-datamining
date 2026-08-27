@@ -1,9 +1,9 @@
-// === Module 10603: useCaptchaStore ===
+// === Module 10835: useCaptchaStore ===
 
-// Module 10603 (useCaptchaStore)
+// Module 10835 (useCaptchaStore)
 import batchUpdates from "batchUpdates" /* 705 */;
-import setDefault from "set" /* 7274 */;
-import set from "set" /* 7279 */;
+import setDefault from "set" /* 7280 */;
+import set from "set" /* 7285 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import keys from "keys" /* 644 */;
 

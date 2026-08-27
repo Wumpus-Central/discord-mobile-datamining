@@ -1,7 +1,7 @@
-// === Module 13008: useMaybeFetchTieredTenureBadgeData ===
+// === Module 13031: useMaybeFetchTieredTenureBadgeData ===
 
-// Module 13008 (useMaybeFetchTieredTenureBadgeData)
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4896 */;
+// Module 13031 (useMaybeFetchTieredTenureBadgeData)
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4897 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
@@ -12,7 +12,7 @@ export const useMaybeFetchTieredTenureBadgeData = function useMaybeFetchTieredTe
   const items = [closure_3];
   _require = _require(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = _require(589);
-  importDefault = _require(9696).useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  importDefault = _require(8861).useIsPremiumSubscriber(PremiumTypes.TIER_2);
   useMountLayoutEffectDefault(() => {
     let id;
     if (closure_0 != null) {

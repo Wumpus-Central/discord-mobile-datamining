@@ -1,7 +1,7 @@
-// === Module 16795: prototype ===
+// === Module 16861: prototype ===
 
-// Module 16795 (prototype)
-import initializeDefault from "initialize" /* 5433 */;
+// Module 16861 (prototype)
+import initializeDefault from "initialize" /* 5438 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "initialize" /* 1984 */;
@@ -9,9 +9,9 @@ import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import closure_8 from "trackCommunicationDisabled" /* 1992 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "handleConnectionOpen" /* 4266 */;
-import closure_11 from "handleSettingsLoadSuccess" /* 4659 */;
-import closure_12 from "set" /* 4660 */;
+import closure_10 from "handleConnectionOpen" /* 4267 */;
+import closure_11 from "handleSettingsLoadSuccess" /* 4660 */;
+import closure_12 from "set" /* 4661 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
 
 const require = arg1;

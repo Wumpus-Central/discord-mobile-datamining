@@ -1,6 +1,6 @@
-// === Module 5522: language ===
+// === Module 5527: language ===
 
-// Module 5522 (language)
+// Module 5527 (language)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("lib/spellcheck/LanguageDetector.tsx");

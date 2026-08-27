@@ -1,9 +1,9 @@
-// === Module 5034: requestAuthorization ===
+// === Module 5039: requestAuthorization ===
 
-// Module 5034 (requestAuthorization)
+// Module 5039 (requestAuthorization)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 5035 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4682 */;
+import closure_4 from "initialize" /* 5040 */;
+import NativePermissionStatus from "NativePermissionStatus" /* 4683 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;

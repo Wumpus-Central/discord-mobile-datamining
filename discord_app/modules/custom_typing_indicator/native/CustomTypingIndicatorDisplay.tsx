@@ -1,16 +1,16 @@
-// === Module 11620: CustomTypingIndicatorDisplay ===
+// === Module 11471: CustomTypingIndicatorDisplay ===
 
-// Module 11620 (CustomTypingIndicatorDisplay)
+// Module 11471 (CustomTypingIndicatorDisplay)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4440 */;
-import Stack from "Stack" /* 4877 */;
-import PressableBase from "PressableBase" /* 5015 */;
-import items2 from "items" /* 11611 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11621 */;
+import Text from "Text" /* 4441 */;
+import Stack from "Stack" /* 4878 */;
+import PressableBase from "PressableBase" /* 5020 */;
+import items2 from "items" /* 11462 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11472 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 noopAll;
@@ -29,7 +29,7 @@ export default function CustomTypingIndicatorDisplay(showName) {
   }
   let num = showName.emojiSize;
   if (num === undefined) {
-    num = 16;
+    num = 14;
   }
   let flag2 = showName.justifyCenter;
   if (flag2 === undefined) {

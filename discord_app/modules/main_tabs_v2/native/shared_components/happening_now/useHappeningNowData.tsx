@@ -1,30 +1,30 @@
-// === Module 15496: importDefaultResult1 ===
+// === Module 15561: importDefaultResult1 ===
 
-// Module 15496 (importDefaultResult1)
+// Module 15561 (importDefaultResult1)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "participantFromServer" /* 1390 */;
-import closure_6 from "_handleConnectionOpen" /* 5168 */;
-import closure_7 from "truncateOldMessageData" /* 13245 */;
-import scheduledEventSort from "scheduledEventSort" /* 7198 */;
-import closure_11 from "scheduledEventSort" /* 7198 */;
+import closure_6 from "_handleConnectionOpen" /* 5173 */;
+import closure_7 from "truncateOldMessageData" /* 13271 */;
+import scheduledEventSort from "scheduledEventSort" /* 7204 */;
+import closure_11 from "scheduledEventSort" /* 7204 */;
 import closure_12 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_13 from "recomputeAffinities" /* 7331 */;
-import closure_14 from "reset" /* 4466 */;
+import closure_13 from "recomputeAffinities" /* 7337 */;
+import closure_14 from "reset" /* 4467 */;
 import closure_15 from "fetchFingerprint" /* 1218 */;
-import importDefaultResult from "getMemberListId" /* 6070 */;
-import { MemberListRowTypes } from "getMemberListId" /* 6070 */;
+import importDefaultResult from "getMemberListId" /* 6078 */;
+import { MemberListRowTypes } from "getMemberListId" /* 6078 */;
 import importDefaultResult1 from "ensureGuildLoaded" /* 1391 */;
 import closure_19 from "comparator" /* 1982 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_20 } from "comparator" /* 1982 */;
 import closure_21 from "createGuildRecordFromRust" /* 1910 */;
 import closure_22 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_23 from "sortActivity" /* 4533 */;
+import closure_23 from "sortActivity" /* 4534 */;
 import closure_24 from "markAllUserIdListsStale" /* 4098 */;
-import closure_25 from "updateUserGuildSettingsInternal" /* 4653 */;
+import closure_25 from "updateUserGuildSettingsInternal" /* 4654 */;
 import importDefaultResult2 from "mergeGuildAvatar" /* 1922 */;
-import importDefaultResult3 from "updateVoiceState" /* 4463 */;
-import { HappeningNowItem } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14811 */;
+import importDefaultResult3 from "updateVoiceState" /* 4464 */;
+import { HappeningNowItem } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14838 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

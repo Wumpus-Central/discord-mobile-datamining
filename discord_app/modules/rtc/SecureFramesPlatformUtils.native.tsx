@@ -1,15 +1,15 @@
-// === Module 9429: ? ===
+// === Module 9764: ? ===
 
-// Module 9429
+// Module 9764
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4411 */;
-import _modDef4675 from "module_4675" /* 4675 */;
-import _modDef4809 from "module_4809" /* 4809 */;
-import _safeTransitionToDefault from "_safeTransitionTo" /* 6038 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4412 */;
+import _modDef4676 from "module_4676" /* 4676 */;
+import _modDef4810 from "module_4810" /* 4810 */;
+import _safeTransitionToDefault from "_safeTransitionTo" /* 6043 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4518 */;
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9427 */;
+import closure_4 from "createRTCConnection" /* 4519 */;
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9762 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -21,15 +21,15 @@ export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
     let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { streamKey, channelId };
-    obj.openLazy(asyncRequireImpl(9440, dependencyMap.paths), closure_6, obj);
+    obj.openLazy(asyncRequireImpl(9775, dependencyMap.paths), closure_6, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, arg2) {
     if (arg2()) {
-      let obj = _modDef4675;
+      let obj = _modDef4676;
       obj = { userId: null, channelId: null };
       obj[0] = id;
       obj[1] = id2;
-      obj.pushLazy(asyncRequireImpl(9430, dependencyMap.paths), obj, closure_7);
+      obj.pushLazy(asyncRequireImpl(9765, dependencyMap.paths), obj, closure_7);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -40,7 +40,7 @@ export default {
       confirmText = intl.string(onConfirm(1236).t["cY+Oob"]);
     }
     onConfirm = confirmText.onConfirm;
-    let obj = _modDef4809;
+    let obj = _modDef4810;
     obj = { title, body: subtitle, confirmText, cancelText: null, confirmColor: null };
     const intl2 = onConfirm(1236).intl;
     obj[3] = intl2.string(onConfirm(1236).t["ETE/oC"]);
@@ -71,7 +71,7 @@ export default {
         obj[1] = channelId;
         obj[2] = guildId;
         obj[3] = fingerprint;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9443, dependencyMap.paths), closure_5, obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9778, dependencyMap.paths), closure_5, obj);
         const obj4 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }
@@ -80,6 +80,6 @@ export default {
     obj[0] = intl.string(getSystemLocale.t["5ICxE6"]);
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t["v1eXp/"]);
-    _modDef4809.show(obj);
+    _modDef4810.show(obj);
   }
 };

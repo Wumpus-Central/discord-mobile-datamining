@@ -1,6 +1,6 @@
-// === Module 7151: result ===
+// === Module 7157: result ===
 
-// Module 7151 (result)
+// Module 7157 (result)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;

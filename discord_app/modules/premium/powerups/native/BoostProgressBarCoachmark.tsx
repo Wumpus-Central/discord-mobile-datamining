@@ -1,11 +1,11 @@
-// === Module 15604: BoostProgressBarCoachmark ===
+// === Module 15669: BoostProgressBarCoachmark ===
 
-// Module 15604 (BoostProgressBarCoachmark)
+// Module 15669 (BoostProgressBarCoachmark)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
@@ -26,7 +26,7 @@ export default function BoostProgressBarCoachmark(guild) {
   const items1 = [guild.id, markAsDismissed];
   callback1 = callback.useCallback(() => {
     markAsDismissed(closure_1_5.TAKE_ACTION);
-    markAsDismissed(9236).saveGuild(guild.id, { premiumProgressBarEnabled: true });
+    markAsDismissed(9649).saveGuild(guild.id, { premiumProgressBarEnabled: true });
   }, items1);
   const items2 = [callback, callback1, tmp.riveContainer];
   const memo = callback.useMemo(() => {
@@ -44,6 +44,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj[9] = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(8868).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(8895).useCoachmark(guild.targetRef, memo);
   return null;
 };

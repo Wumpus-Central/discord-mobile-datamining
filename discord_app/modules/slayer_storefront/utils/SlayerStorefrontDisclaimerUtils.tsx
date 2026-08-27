@@ -1,14 +1,14 @@
-// === Module 10317: items ===
+// === Module 10512: items ===
 
-// Module 10317 (items)
+// Module 10512 (items)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 3339 */;
 import closure_3 from "_getSystemLocale" /* 1996 */;
-import closure_4 from "handleUserSettingsStoreUpdate" /* 6022 */;
+import closure_4 from "handleUserSettingsStoreUpdate" /* 6027 */;
 import { MarketingURLs } from "ME" /* 676 */;
 
 require = arg1;
-let closure_6 = { [arg1(10318).StorefrontPlatform.DESKTOP]: "PC", [arg1(10318).StorefrontPlatform.XBOX]: "Xbox", [arg1(10318).StorefrontPlatform.PLAYSTATION]: "PlayStation", [arg1(10318).StorefrontPlatform.SWITCH]: "Switch", [arg1(10318).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [arg1(10318).StorefrontPlatform.NETFLIX]: "Netflix", [arg1(10318).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };
+let closure_6 = { [arg1(10513).StorefrontPlatform.DESKTOP]: "PC", [arg1(10513).StorefrontPlatform.XBOX]: "Xbox", [arg1(10513).StorefrontPlatform.PLAYSTATION]: "PlayStation", [arg1(10513).StorefrontPlatform.SWITCH]: "Switch", [arg1(10513).StorefrontPlatform.APPLE_ARCADE]: "Apple Arcade", [arg1(10513).StorefrontPlatform.NETFLIX]: "Netflix", [arg1(10513).StorefrontPlatform.AMAZON_KIDS_PLUS]: "Amazon Kids+" };
 let items = [require("StorefrontPlatform").StorefrontPlatform.PLAYSTATION];
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontDisclaimerUtils.tsx");
 

@@ -1,12 +1,12 @@
-// === Module 9617: useCanPurchaseFrames ===
+// === Module 12443: useCanPurchaseFrames ===
 
-// Module 9617 (useCanPurchaseFrames)
+// Module 12443 (useCanPurchaseFrames)
 import initialize from "initialize" /* 589 */;
 import create from "create" /* 1938 */;
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1946 */;
-import apexExperiment from "apexExperiment" /* 9023 */;
-import apexExperiment2 from "apexExperiment" /* 9618 */;
-import apexExperimentDefault from "apexExperiment" /* 9618 */;
+import apexExperiment from "apexExperiment" /* 8476 */;
+import apexExperiment2 from "apexExperiment" /* 12444 */;
+import apexExperimentDefault from "apexExperiment" /* 12444 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
@@ -62,17 +62,17 @@ export const useIsProfileFramesEarlyAccessPhase = function useIsProfileFramesEar
   }
   return isProfileFramesEnabled;
 };
-export const isUserPaidTier2 = function isUserPaidTier2(currentUser) {
-  let isPremiumExactlyResult = isPremiumAtLeast.isPremiumExactly(currentUser, PremiumTypes.TIER_2);
+export const isUserPaidTier2 = function isUserPaidTier2(premiumState) {
+  let isPremiumExactlyResult = isPremiumAtLeast.isPremiumExactly(premiumState, PremiumTypes.TIER_2);
   if (isPremiumExactlyResult) {
-    let premiumState;
-    if (currentUser != null) {
-      premiumState = currentUser.premiumState;
+    premiumState = undefined;
+    if (premiumState != null) {
+      premiumState = premiumState.premiumState;
     }
     isPremiumExactlyResult = null != premiumState;
   }
   if (isPremiumExactlyResult) {
-    isPremiumExactlyResult = currentUser.premiumState.premiumSubscriptionType === create.PremiumSubscriptionType.TIER_2;
+    isPremiumExactlyResult = premiumState.premiumState.premiumSubscriptionType === create.PremiumSubscriptionType.TIER_2;
   }
   return isPremiumExactlyResult;
 };

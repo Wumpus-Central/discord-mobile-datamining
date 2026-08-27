@@ -1,9 +1,9 @@
-// === Module 12845: ForLaterCardReminderHeader ===
+// === Module 12864: ForLaterCardReminderHeader ===
 
-// Module 12845 (ForLaterCardReminderHeader)
+// Module 12864 (ForLaterCardReminderHeader)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import _savedMessageJumpToMessage from "_savedMessageJumpToMessage" /* 11348 */;
+import _savedMessageJumpToMessage from "_savedMessageJumpToMessage" /* 11210 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/saved_messages/native/ForLaterCardReminderHeader.tsx");
@@ -16,16 +16,16 @@ export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(sa
   if (savedMessage != null) {
     dueAt = savedMessage.saveData.dueAt;
   }
-  obj = { dueAt, now: throttledNow, type: tmp(11348).DueInStringTypes.SHORT };
+  obj = { dueAt, now: throttledNow, type: tmp(11210).DueInStringTypes.SHORT };
   const dueInString = obj.useDueInString(obj);
   let tmp7 = null;
   if (null != savedMessage.saveData.dueAt) {
     obj = { IconComponent: null, label: null, isCritical: null, actions: null };
-    obj[0] = tmp(4407).ClockIcon;
+    obj[0] = tmp(4408).ClockIcon;
     obj[1] = tmp5;
     obj[2] = tmp6;
     obj[3] = actions;
-    tmp7 = jsx(tmp(11651).ForLaterCardStatusHeader, { IconComponent: null, label: null, isCritical: null, actions: null });
+    tmp7 = jsx(tmp(11717).ForLaterCardStatusHeader, { IconComponent: null, label: null, isCritical: null, actions: null });
   }
   return tmp7;
 };

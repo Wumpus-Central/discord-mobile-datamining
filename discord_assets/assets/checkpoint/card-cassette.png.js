@@ -1,6 +1,6 @@
-// === Module 8477: metadata ===
+// === Module 7995: metadata ===
 
-// Module 8477 (metadata)
+// Module 7995 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/checkpoint/card-cassette.png.js");

@@ -1,18 +1,18 @@
-// === Module 12065: LeftSlot ===
+// === Module 11911: LeftSlot ===
 
-// Module 12065 (LeftSlot)
+// Module 11911 (LeftSlot)
 import ThemesDefault from "Themes" /* 712 */;
 import ManaContext from "ManaContext" /* 4172 */;
-import _modDef4184 from "module_4184" /* 4184 */;
-import renderChatInputActionButtonGiftAndThreadDefault from "renderChatInputActionButtonGiftAndThread" /* 11886 */;
-import FadeTransitionItem from "FadeTransitionItem" /* 11887 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 11888 */;
+import _modDef4185 from "module_4185" /* 4185 */;
+import renderChatInputActionButtonGiftAndThreadDefault from "renderChatInputActionButtonGiftAndThread" /* 11729 */;
+import FadeTransitionItem from "FadeTransitionItem" /* 11730 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 11731 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_6 } from "TextAreaCta" /* 11602 */;
+import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_6 } from "TextAreaCta" /* 11453 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function LeftSlot(state) {
@@ -24,8 +24,8 @@ function LeftSlot(state) {
   items = [wrapperStyle, { width: slotWidth }, animatedStyle];
   const tmp = useChatInputFloatingBounceDefault(obj);
   const merged = Object.assign(FadeTransitionItem.interactivityProps(isInteractive));
-  obj.children = callback2(renderChatInputActionButtonGiftAndThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "_updatePlayheadTime" });
-  return callback2(_modDef4184.View, obj);
+  obj.children = callback2(renderChatInputActionButtonGiftAndThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "suspicious-download" });
+  return callback2(_modDef4185.View, obj);
 }
 let c4 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -77,7 +77,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   }
   const items1 = [tmp14Result, ];
   obj1 = { active: keyboardType === channel(1627).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
-  items1[1] = callback2(onPressAction(11832), obj1);
+  items1[1] = callback2(onPressAction(11661), obj1);
   obj[1] = items1;
   return closure_8(View, obj);
 });

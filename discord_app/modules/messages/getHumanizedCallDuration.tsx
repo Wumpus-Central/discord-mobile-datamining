@@ -1,6 +1,6 @@
-// === Module 8307: getHumanizedCallDuration ===
+// === Module 7821: getHumanizedCallDuration ===
 
-// Module 8307 (getHumanizedCallDuration)
+// Module 7821 (getHumanizedCallDuration)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/getHumanizedCallDuration.tsx");

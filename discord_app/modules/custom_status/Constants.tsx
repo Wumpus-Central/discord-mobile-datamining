@@ -1,10 +1,10 @@
-// === Module 9670: StatusTypes ===
+// === Module 9013: StatusTypes ===
 
-// Module 9670 (StatusTypes)
+// Module 9013 (StatusTypes)
 import set from "set" /* 2 */;
 import sum from "sum" /* 505 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import nameFromUser from "nameFromUser" /* 4288 */;
+import nameFromUser from "nameFromUser" /* 4289 */;
 
 const StatusTypes = sum.StatusTypes;
 const frozen = Object.freeze({ MINUTES_30: 1800000, HOURS_1: 3600000, HOURS_4: 14400000, TODAY: "TODAY", DONT_CLEAR: "DONT_CLEAR" });

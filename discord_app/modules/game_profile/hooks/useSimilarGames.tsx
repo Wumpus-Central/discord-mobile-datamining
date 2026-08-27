@@ -1,9 +1,9 @@
-// === Module 12458: useSimilarGames ===
+// === Module 12546: useSimilarGames ===
 
-// Module 12458 (useSimilarGames)
-import closure_2 from "handleLoadMessages" /* 4468 */;
+// Module 12546 (useSimilarGames)
+import closure_2 from "handleLoadMessages" /* 4469 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_4 } from "set" /* 9557 */;
+import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_4 } from "set" /* 8807 */;
 
 const require = arg1;
 let closure_5 = [];
@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("modules/game_profile/hooks/
 
 export default function useSimilarGames(arg0) {
   const hasItem = set.has(arg0);
-  let obj = data(9556);
+  let obj = data(8806);
   const similarGameIds = obj.useSimilarGameIds(arg0, !hasItem);
   ({ data, isLoading, error } = similarGameIds);
   if (hasItem) {
@@ -21,7 +21,7 @@ export default function useSimilarGames(arg0) {
     tmp7 = data;
   }
   data = tmp7;
-  let tmp3Result = tmp3(6099);
+  let tmp3Result = tmp3(6106);
   const games = tmp3Result.useGames(tmp7);
   tmp3Result = tmp3(589);
   const items = [closure_2];

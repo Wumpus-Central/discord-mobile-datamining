@@ -1,6 +1,6 @@
-// === Module 14396: frozen ===
+// === Module 14423: frozen ===
 
-// Module 14396 (frozen)
+// Module 14423 (frozen)
 import set from "set" /* 2 */;
 
 const frozen = Object.freeze({ BANNER: "banner", MODAL: "modal" });

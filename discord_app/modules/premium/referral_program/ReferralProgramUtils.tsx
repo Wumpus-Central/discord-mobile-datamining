@@ -1,15 +1,15 @@
-// === Module 8381: getReferralTrialOfferExpirationCopy ===
+// === Module 7896: getReferralTrialOfferExpirationCopy ===
 
-// Module 8381 (getReferralTrialOfferExpirationCopy)
+// Module 7896 (getReferralTrialOfferExpirationCopy)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initialize from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import DismissibleContent from "DismissibleContent" /* 1377 */;
 import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1379 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4265 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8382 */;
-import closure_3 from "emitChanges" /* 7125 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4266 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 7897 */;
+import closure_3 from "emitChanges" /* 7131 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
 require = arg1;
@@ -56,19 +56,18 @@ export const useIsReferralProgramBadgeShowable = function useIsReferralProgramBa
   if (null == trialOffer) {
     return false;
   } else {
-    let tmp = null != trialOffer.referrerId;
+    let isReferralTrial = trialOffer.isReferralTrial;
     const _Date = Date;
-    const tmp2 = !trialOffer.isRedeemed();
     const date = new Date(DISCORD_EPOCHDefault.extractTimestamp(trialOffer.id));
     const _Date2 = Date;
     const date1 = new Date();
-    if (tmp) {
-      tmp = tmp2;
+    if (isReferralTrial) {
+      isReferralTrial = tmp;
     }
-    if (tmp) {
-      tmp = date1 >= date;
+    if (isReferralTrial) {
+      isReferralTrial = date1 >= date;
     }
-    return tmp;
+    return isReferralTrial;
   }
 };
 export const markReferralProgramPopoverSeen = function markReferralProgramPopoverSeen(promotionId) {
@@ -97,12 +96,12 @@ export const useIsReferralProgramPopoverShowable = function useIsReferralProgram
   if (obj4.useIsReferralReminderDCExperimentEnabled({ location: "ReferralProgramUtils" })) {
     let tmp8 = null != stateFromStores1;
     if (tmp8) {
-      let tmpResult = tmp(4265);
+      let tmpResult = tmp(4266);
       tmp8 = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1377).DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, stateFromStores1).isDismissed;
     }
     let tmp6 = tmp8;
   } else {
-    tmpResult = tmp(4265);
+    tmpResult = tmp(4266);
     tmp6 = !tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1377).DismissibleContent.REFERRAL_PROGRAM_POPOVER);
   }
   if (isEligibleSenderForReferralProgram) {

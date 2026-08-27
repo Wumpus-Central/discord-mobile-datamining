@@ -1,6 +1,6 @@
-// === Module 13293: initialize ===
+// === Module 13320: initialize ===
 
-// Module 13293 (initialize)
+// Module 13320 (initialize)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;

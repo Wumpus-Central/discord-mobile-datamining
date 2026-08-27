@@ -1,20 +1,20 @@
-// === Module 16881: haveNotSeenPromptSince ===
+// === Module 16947: haveNotSeenPromptSince ===
 
-// Module 16881 (haveNotSeenPromptSince)
+// Module 16947 (haveNotSeenPromptSince)
 import hooksDefault from "hooks" /* 4043 */;
-import initializeDefault from "initialize" /* 5433 */;
-import getOrRefreshPushSyncToken from "getOrRefreshPushSyncToken" /* 12049 */;
+import initializeDefault from "initialize" /* 5438 */;
+import getOrRefreshPushSyncToken from "getOrRefreshPushSyncToken" /* 11895 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "storeThread" /* 4091 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 4653 */;
-import closure_9 from "set" /* 12046 */;
-import { PermissionPromptType } from "set" /* 12046 */;
-import EventActionType from "EventActionType" /* 12047 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 4654 */;
+import closure_9 from "set" /* 11892 */;
+import { PermissionPromptType } from "set" /* 11892 */;
+import EventActionType from "EventActionType" /* 11893 */;
 import ME from "ME" /* 676 */;
-import { NotificationAuthorizationStatus as closure_16 } from "NativePermissionStatus" /* 4682 */;
+import { NotificationAuthorizationStatus as closure_16 } from "NativePermissionStatus" /* 4683 */;
 
 require = arg1;
 function haveNotSeenPromptSince(arg0, arg1) {
@@ -185,8 +185,8 @@ function _logNotificationPermissionStatus2() {
           return obj;
         } else {
           callback = arg1;
-          callback2 = callback(9980).allowInAppNotifications();
-          const obj5 = callback(9980);
+          callback2 = callback(10088).allowInAppNotifications();
+          const obj5 = callback(10088);
           const obj2 = { os_enabled: null, foreground_app_enabled: null, background_app_enabled: null, notification_authorization_status: null };
           obj2[0] = callback === constants2.AUTHORIZED;
           obj2[1] = callback2;

@@ -1,6 +1,6 @@
-// === Module 5062: set ===
+// === Module 5067: set ===
 
-// Module 5062 (set)
+// Module 5067 (set)
 import set from "set" /* 2 */;
 
 let set = new Set(["image/heic", "image/heif", "image/heic-sequence", "image/heif-sequence"]);
@@ -23,16 +23,16 @@ export const isHeicFile = function isHeicFile(type) {
     return hasItem;
   }
 };
-export const heicMimeType = function heicMimeType(c7) {
-  if ("" !== c7.type) {
-    let str3 = c7.type;
+export const heicMimeType = function heicMimeType(file) {
+  if ("" !== file.type) {
+    let str3 = file.type;
   } else {
-    const formatted = c7.name.toLowerCase();
+    const formatted = file.name.toLowerCase();
     str3 = "image/heif";
     if (formatted.endsWith(".heic")) {
       str3 = "image/heic";
     }
-    const str = c7.name;
+    const str = file.name;
   }
   return str3;
 };

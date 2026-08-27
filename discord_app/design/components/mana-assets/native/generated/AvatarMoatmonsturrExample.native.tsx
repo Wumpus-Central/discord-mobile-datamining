@@ -1,10 +1,10 @@
-// === Module 6277: AvatarMoatmonsturrExample ===
+// === Module 6283: AvatarMoatmonsturrExample ===
 
-// Module 6277 (AvatarMoatmonsturrExample)
+// Module 6283 (AvatarMoatmonsturrExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6278 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6284 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarMoatmonsturrExample.native.tsx");

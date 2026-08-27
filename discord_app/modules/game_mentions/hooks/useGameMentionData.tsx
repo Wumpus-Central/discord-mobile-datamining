@@ -1,10 +1,10 @@
-// === Module 5000: getGameMentionData ===
+// === Module 5005: getGameMentionData ===
 
-// Module 5000 (getGameMentionData)
+// Module 5005 (getGameMentionData)
 import shallowEqualDefault from "shallowEqual" /* 643 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 5004 */;
-import closure_3 from "handleLoadMessages" /* 4468 */;
-import closure_4 from "set" /* 5001 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 5009 */;
+import closure_3 from "handleLoadMessages" /* 4469 */;
+import closure_4 from "set" /* 5006 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

@@ -1,7 +1,7 @@
-// === Module 5924: useRoleIcon ===
+// === Module 5929: useRoleIcon ===
 
-// Module 5924 (useRoleIcon)
-import getRoleIconData from "getRoleIconData" /* 5925 */;
+// Module 5929 (useRoleIcon)
+import getRoleIconData from "getRoleIconData" /* 5930 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
@@ -40,34 +40,34 @@ export const useRoleIcon = function useRoleIcon(guildId) {
       if (null != roleId) {
         let obj = guildId(num[5]);
         if (obj.canGuildUseRoleIcons(tmp, role)) {
-          let roleIconData = tmp3(tmp4[5]).getRoleIconData(tmp5);
+          let roleIconData = tmp2(tmp3[5]).getRoleIconData(tmp4);
           if (roleIconData == null) {
             roleIconData = {};
           }
           ({ customIconSrc, unicodeEmoji } = roleIconData);
-          let tmp6;
+          let tmp5;
           if (null != customIconSrc) {
             obj = { uri: null };
             obj[0] = customIconSrc;
-            tmp6 = obj;
+            tmp5 = obj;
           }
           obj = { source: null, unicodeEmoji: null, name: null, size: null };
-          obj[0] = tmp6;
+          obj[0] = tmp5;
           obj[1] = unicodeEmoji;
           let str;
-          const tmp3Result = tmp3(tmp4[5]);
-          const tmp7 = closure_1_6;
-          if (tmp5 != null) {
-            str = tmp5.name;
+          const tmp2Result = tmp2(tmp3[5]);
+          const tmp6 = closure_1_6;
+          if (tmp4 != null) {
+            str = tmp4.name;
           }
           if (str == null) {
             str = "";
           }
           obj[2] = str;
           obj[3] = num;
-          return tmp7(roleId(tmp4[6]), obj);
+          return tmp6(roleId(tmp3[6]), obj);
         }
-        tmp3 = guildId;
+        tmp2 = guildId;
       }
     }
   }, items2);
@@ -81,7 +81,7 @@ export const getRoleIcon = function getRoleIcon(roleId) {
       if (null != role) {
         let obj = getRoleIconData;
         if (obj.canGuildUseRoleIcons(guild, role)) {
-          let roleIconData = tmp4(5925).getRoleIconData(role);
+          let roleIconData = tmp4(5930).getRoleIconData(role);
           if (roleIconData == null) {
             roleIconData = {};
           }

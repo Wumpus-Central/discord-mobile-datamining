@@ -1,6 +1,6 @@
-// === Module 10421: parseReactionPermissions ===
+// === Module 10872: parseReactionPermissions ===
 
-// Module 10421 (parseReactionPermissions)
+// Module 10872 (parseReactionPermissions)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/parseReactionPermissions.tsx");

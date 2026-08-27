@@ -1,17 +1,17 @@
-// === Module 5310: anyoneHasFlagInContext ===
+// === Module 5315: anyoneHasFlagInContext ===
 
-// Module 5310 (anyoneHasFlagInContext)
+// Module 5315 (anyoneHasFlagInContext)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import applyOverwritesAll from "applyOverwrites" /* 4094 */;
-import getUnitIdDefault from "getUnitId" /* 5311 */;
+import getUnitIdDefault from "getUnitId" /* 5316 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4495 */;
-import closure_6 from "createRTCConnection" /* 4518 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4496 */;
+import closure_6 from "createRTCConnection" /* 4519 */;
 import closure_7 from "handleConnectionOpen" /* 1981 */;
 import { Permissions } from "ME" /* 676 */;
-import DesktopSources from "DesktopSources" /* 4508 */;
+import DesktopSources from "DesktopSources" /* 4509 */;
 
 function anyoneHasFlagInContext(DEFAULT, VOICE, arg2) {
   let flag = arg2;

@@ -1,6 +1,6 @@
-// === Module 8578: getAutoArchiveOptions ===
+// === Module 8094: getAutoArchiveOptions ===
 
-// Module 8578 (getAutoArchiveOptions)
+// Module 8094 (getAutoArchiveOptions)
 import set from "set" /* 2 */;
 import setDefault from "set" /* 687 */;
 import memoizeDefault from "memoize" /* 731 */;

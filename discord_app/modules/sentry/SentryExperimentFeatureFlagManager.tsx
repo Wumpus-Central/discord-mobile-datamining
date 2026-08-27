@@ -1,11 +1,11 @@
-// === Module 17318: isLikelyControl ===
+// === Module 17384: isLikelyControl ===
 
-// Module 17318 (isLikelyControl)
+// Module 17384 (isLikelyControl)
 import _modDef1208 from "module_1208" /* 1208 */;
-import initializeDefault from "initialize" /* 5433 */;
-import closure_2 from "getHash" /* 4357 */;
+import initializeDefault from "initialize" /* 5438 */;
+import closure_2 from "getHash" /* 4358 */;
 import closure_3 from "initialize" /* 1212 */;
-import closure_4 from "handleConnectionOpen" /* 4266 */;
+import closure_4 from "handleConnectionOpen" /* 4267 */;
 import set from "set" /* 2 */;
 
 function isLikelyControl(defaultConfig, variantId2) {

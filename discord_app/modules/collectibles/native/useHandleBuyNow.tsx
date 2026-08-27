@@ -1,6 +1,6 @@
-// === Module 12438: useHandleBuyNow ===
+// === Module 12488: useHandleBuyNow ===
 
-// Module 12438 (useHandleBuyNow)
+// Module 12488 (useHandleBuyNow)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -12,12 +12,13 @@ function useHandleBuyNow(product) {
   product = product.product;
   require = product;
   const onBuy = product.onBuy;
+  const onBuySettled = product.onBuySettled;
   let first;
   let callback;
-  let callback2;
+  let React;
   function _onPurchaseComplete() {
     const self = this;
-    const tmp = callback(function*() {
+    const tmp = first(function*() {
       if (dependencyMap === 2) {
         dependencyMap = 3;
         HermesBuiltin.throwTypeError();
@@ -48,7 +49,7 @@ function useHandleBuyNow(product) {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(7213).fetchCollectiblesPurchases();
+              obj1[0] = closure_1_0(7219).fetchCollectiblesPurchases();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -61,9 +62,9 @@ function useHandleBuyNow(product) {
             return obj2;
           } else {
             callback(false);
-            obj = v0(4411);
+            obj = v0(4412);
             obj.hideActionSheet();
-            obj1 = v0(10347);
+            obj1 = v0(10744);
             const obj3 = { product: null, useCategoryImage: true };
             obj3[0] = closure_0;
             obj1.open(obj3);
@@ -76,7 +77,7 @@ function useHandleBuyNow(product) {
         }
       }
     });
-    closure_5 = tmp;
+    closure_6 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -86,7 +87,7 @@ function useHandleBuyNow(product) {
     return applyArgumentsResult;
   }
   ({ analyticsLocations, orderId } = product);
-  let tmp = callback2(_onPurchaseComplete.useState(false), 2);
+  let tmp = callback(React.useState(false), 2);
   first = tmp[0];
   callback = tmp[1];
   let obj = {
@@ -104,18 +105,21 @@ function useHandleBuyNow(product) {
     },
     onPurchaseError() {
       callback(false);
+      if (onBuySettled != null) {
+        onBuySettled();
+      }
     },
     onPurchasePending() {
 
     },
     orderId
   };
-  const tmp3 = onBuy(first[5])(obj);
-  callback2 = tmp3;
+  const tmp3 = onBuy(onBuySettled[5])(obj);
+  React = tmp3;
   obj = {
-    handleBuyNow: _onPurchaseComplete.useCallback(callback(function*() {
-      if (c5 === 2) {
-        c5 = 3;
+    handleBuyNow: React.useCallback(first(function*() {
+      if (v02 === 2) {
+        v02 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
@@ -129,13 +133,13 @@ function useHandleBuyNow(product) {
         }
       } else {
         try {
-          c5 = 2;
-          if (0 === v02) {
+          v02 = 2;
+          if (0 === v0) {
             if (arg0 === 1) {
-              c5 = 3;
+              v02 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              c5 = 3;
+              v02 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
@@ -143,22 +147,22 @@ function useHandleBuyNow(product) {
               let callback = tmp4;
               let lib = tmp8;
               if (obj17.isMetaQuest()) {
-                let v0 = 1;
+                c3 = 1;
                 const _HermesInternal3 = HermesInternal;
                 const combined = "" + closure_1_6.COLLECTIBLES_SHOP + "#itemSkuId=" + lib.skuId;
-                v02 = 3;
-                c5 = 1;
+                v0 = 3;
+                v02 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = callback(closure_1_2[10]).redirectWithHandoffToken(combined, { forceExternalBrowser: true });
+                obj1[0] = closure_1_1(closure_1_2[10]).redirectWithHandoffToken(combined, { forceExternalBrowser: true });
                 return obj1;
               } else {
-                v0 = 2;
-                if (closure_1_2) {
-                  v0 = 0;
+                c3 = 2;
+                if (c3) {
+                  c3 = 0;
                 } else {
                   v0(true);
-                  v02 = 4;
-                  c5 = 1;
+                  v0 = 4;
+                  v02 = 1;
                   const obj2 = { value: null, done: false };
                   obj2[0] = v02();
                   return obj2;
@@ -168,8 +172,8 @@ function useHandleBuyNow(product) {
             }
           } else {
             if (1 === tmp8) {
-              v0 = 0;
-              lib = closure_2;
+              c3 = 0;
+              lib = callback2;
               const _JSON2 = JSON;
               const _HermesInternal2 = HermesInternal;
               closure_1_7.error("Error performing web handoff: " + JSON.stringify(lib));
@@ -182,13 +186,19 @@ function useHandleBuyNow(product) {
               const obj5 = { key: "SHOP_ITEM_HANDOFF_ERROR", content: null };
               const intl = lib(closure_1_2[13]).intl;
               obj5[1] = intl.string(lib(closure_1_2[13]).t["rTU7/z"]);
-              callback(closure_1_2[12]).open(obj5);
-              const obj10 = callback(closure_1_2[12]);
+              closure_1_1(closure_1_2[12]).open(obj5);
+              if (callback2 != null) {
+                callback2();
+              }
+              const obj10 = closure_1_1(closure_1_2[12]);
             } else {
               if (2 === tmp8) {
-                v0 = 0;
-                callback = closure_2;
+                c3 = 0;
+                callback = callback2;
                 v0(false);
+                if (callback2 != null) {
+                  callback2();
+                }
                 const _JSON = JSON;
                 const _HermesInternal = HermesInternal;
                 closure_1_7.error("Error running purchase: " + JSON.stringify(callback));
@@ -200,50 +210,53 @@ function useHandleBuyNow(product) {
                 const result1 = obj3.captureBillingException(callback, obj6);
               } else if (3 === tmp8) {
                 if (arg0 === 1) {
-                  c5 = 3;
+                  v02 = 3;
                   throw arg1;
                 } else if (arg0 !== 2) {
-                  obj1 = callback(closure_1_2[7]);
+                  obj1 = closure_1_1(closure_1_2[7]);
                   obj1.hideActionSheet();
-                  v0 = 0;
+                  if (callback2 != null) {
+                    callback2();
+                  }
+                  c3 = 0;
                 }
               } else if (arg0 === 1) {
-                c5 = 3;
+                v02 = 3;
                 throw arg1;
               } else if (arg0 !== 2) {
                 if (null != callback) {
                   callback();
                 }
               }
-              v0 = 0;
-              c5 = 3;
+              c3 = 0;
+              v02 = 3;
               const obj8 = { value: null, done: true };
               obj8[0] = arg1;
               return obj8;
             }
-            c5 = 3;
+            v02 = 3;
           }
-          v0 = 0;
-          c5 = 3;
+          c3 = 0;
+          v02 = 3;
           obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
-        } catch (tmp57) {
-          closure_2 = tmp57;
-          if (tmp5 === v0) {
-            c5 = tmp3;
-            throw tmp57;
-          } else if (tmp2 === tmp59) {
-            v02 = tmp2;
+        } catch (tmp61) {
+          callback2 = tmp61;
+          if (tmp5 === c3) {
+            v02 = tmp3;
+            throw tmp61;
+          } else if (tmp2 === tmp63) {
+            v0 = tmp2;
           } else {
-            v02 = tmp;
+            v0 = tmp;
           }
         }
       }
     }), items),
     isBuying: first
   };
-  items = [tmp3, first, onBuy, product.skuId];
+  items = [tmp3, first, onBuy, product.skuId, onBuySettled];
   return obj;
 }
 let closure_7 = new timestampDefault("useHandleBuyNow");

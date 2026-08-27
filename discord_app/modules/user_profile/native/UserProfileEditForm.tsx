@@ -1,15 +1,15 @@
-// === Module 14178: EditUserProfileBanner ===
+// === Module 14205: EditUserProfileBanner ===
 
-// Module 14178 (EditUserProfileBanner)
-import registerAssetDefault from "registerAsset" /* 14180 */;
+// Module 14205 (EditUserProfileBanner)
+import registerAssetDefault from "registerAsset" /* 14207 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 9005 */;
-import closure_7 from "zustandStore" /* 10358 */;
-import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET" /* 5948 */;
+import closure_6 from "initialize" /* 8492 */;
+import closure_7 from "zustandStore" /* 8954 */;
+import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET" /* 5953 */;
 import ME from "ME" /* 676 */;
 import { ProfileCustomizationScrollPositions as closure_11 } from "MAX_FAVORITES" /* 685 */;
-import { UserProfileEditAutoFocusElement as closure_12 } from "UserProfileEditAutoFocusElement" /* 14179 */;
+import { UserProfileEditAutoFocusElement as closure_12 } from "UserProfileEditAutoFocusElement" /* 14206 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;

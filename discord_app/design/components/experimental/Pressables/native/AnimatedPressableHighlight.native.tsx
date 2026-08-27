@@ -1,12 +1,12 @@
-// === Module 5550: AnimatedPressableHighlight ===
+// === Module 5555: AnimatedPressableHighlight ===
 
-// Module 5550 (AnimatedPressableHighlight)
-import SPRING_CONFIG from "SPRING_CONFIG" /* 5551 */;
+// Module 5555 (AnimatedPressableHighlight)
+import SPRING_CONFIG from "SPRING_CONFIG" /* 5556 */;
 import closure_3 from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import set from "set" /* 500 */;
-import importDefaultResult from "module_4184" /* 4184 */;
+import importDefaultResult from "module_4185" /* 4185 */;
 
 require = arg1;
 let closure_6 = importDefaultResult.createAnimatedComponent(require("PressableBase").PressableHighlight);

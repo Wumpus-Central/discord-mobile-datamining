@@ -1,6 +1,6 @@
-// === Module 10043: getMuteSettings ===
+// === Module 10147: getMuteSettings ===
 
-// Module 10043 (getMuteSettings)
+// Module 10147 (getMuteSettings)
 import set from "set" /* 2 */;
 import hooksDefault from "hooks" /* 4043 */;
 

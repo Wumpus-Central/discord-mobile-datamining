@@ -1,13 +1,13 @@
-// === Module 14541: BountiesScrollVideoItemInner ===
+// === Module 14568: BountiesScrollVideoItemInner ===
 
-// Module 14541 (BountiesScrollVideoItemInner)
+// Module 14568 (BountiesScrollVideoItemInner)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "redeemError" /* 9638 */;
-import closure_8 from "set" /* 7370 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5334 */;
+import closure_7 from "redeemError" /* 10756 */;
+import closure_8 from "set" /* 7380 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5339 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -64,11 +64,11 @@ function BountiesScrollVideoItemInner(bounty) {
       tmp8(true);
     }
   }
-  let tmp2Result = tmp2(11140);
+  let tmp2Result = tmp2(11034);
   const bountiesExperience = tmp2Result.useBountiesExperience(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
   ({ loopingEnabled, ownedByVerticalScrollExperiment, orbAmount } = bountiesExperience);
   ({ stage1Enabled, rewardTimerSeconds } = bountiesExperience);
-  const BountyVideoEndMode = tmp2(14543).BountyVideoEndMode;
+  const BountyVideoEndMode = tmp2(14570).BountyVideoEndMode;
   if (loopingEnabled) {
     let LOOP = BountyVideoEndMode.LOOP;
   } else {
@@ -209,7 +209,7 @@ function BountiesScrollVideoItemInner(bounty) {
         }
       }
     }), items3);
-    tmp2Result = tmp2(14546);
+    tmp2Result = tmp2(14573);
     obj = { bountyId: null, endMode: null };
     obj[0] = bounty.id;
     obj[1] = LOOP;
@@ -231,7 +231,7 @@ function BountiesScrollVideoItemInner(bounty) {
     obj[7] = str;
     obj[8] = index;
     obj[9] = isActive;
-    const bountiesModalVideoAnalytics = tmp2(14547).useBountiesModalVideoAnalytics(obj);
+    const bountiesModalVideoAnalytics = tmp2(14574).useBountiesModalVideoAnalytics(obj);
     handleVideoProgressAnalytics = bountiesModalVideoAnalytics.handleVideoProgressAnalytics;
     onPlaybackTimeChange = undefined;
     ({ handleVideoEndAnalytics, handleVideoLoopedAnalytics, handleVideoPausedAnalytics, handleVideoResumedAnalytics, handleVideoErrorAnalytics, handleLoadStartAnalytics, handleVideoTracksAnalytics, handleReadyForDisplayAnalytics, handleBufferAnalytics } = bountiesModalVideoAnalytics);
@@ -262,7 +262,7 @@ function BountiesScrollVideoItemInner(bounty) {
         tmp3(arg2, arg1, tmp5, arg0, stateFromStores);
       }
     }, items5);
-    const tmp2Result1 = tmp2(14547);
+    const tmp2Result1 = tmp2(14574);
     obj1 = { endMode: null, rewardDurationMs: null, isCompleted: null, onRewardEarned: null, onVideoProgress: null, onVideoEnd: null, onVideoLooped: null, onVideoPaused: null, onVideoResumed: null, playerRef: null, initialProgressSec: null, initialMaxVideoProgressSec: null, initialVideoDurationSec: null };
     obj1[0] = LOOP;
     obj1[1] = result;
@@ -280,7 +280,7 @@ function BountiesScrollVideoItemInner(bounty) {
       duration = initialProgress.duration;
     }
     obj1[12] = duration;
-    const bountiesModalTiming = tmp2(14543).useBountiesModalTiming(obj1);
+    const bountiesModalTiming = tmp2(14570).useBountiesModalTiming(obj1);
     isEndCardVisible = bountiesModalTiming.isEndCardVisible;
     handleVideoPaused = bountiesModalTiming.handleVideoPaused;
     handleVideoResumed = bountiesModalTiming.handleVideoResumed;
@@ -366,7 +366,7 @@ function BountiesScrollVideoItemInner(bounty) {
         }
       });
     };
-    obj2[1] = handleProgress(tmp2(14549).BountyVideo, obj3);
+    obj2[1] = handleProgress(tmp2(14576).BountyVideo, obj3);
     return handleProgress(stateFromStores, obj2);
   }
   result = 1000 * rewardTimerSeconds;
@@ -400,10 +400,10 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
   if (softDownloadCapsEnabled === undefined) {
     softDownloadCapsEnabled = false;
   }
-  return flag3(bounty(11408).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(11260).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(7387).AdCreativeType.BOUNTY,
-    questContent: bounty(5339).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(7379).AdCreativeType.BOUNTY,
+    questContent: bounty(5344).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

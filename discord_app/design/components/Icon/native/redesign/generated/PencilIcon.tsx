@@ -1,10 +1,10 @@
-// === Module 9889: PencilIcon ===
+// === Module 10246: PencilIcon ===
 
-// Module 9889 (PencilIcon)
+// Module 10246 (PencilIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 8293 */;
+import registerAsset from "registerAsset" /* 7807 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

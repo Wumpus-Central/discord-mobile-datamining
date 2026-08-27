@@ -1,6 +1,6 @@
-// === Module 15288: DevToolsProfilingUseStateFromStores ===
+// === Module 15352: DevToolsProfilingUseStateFromStores ===
 
-// Module 15288 (DevToolsProfilingUseStateFromStores)
+// Module 15352 (DevToolsProfilingUseStateFromStores)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;

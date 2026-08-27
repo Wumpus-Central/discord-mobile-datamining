@@ -1,6 +1,6 @@
-// === Module 4235: metadata ===
+// === Module 4236: metadata ===
 
-// Module 4235 (metadata)
+// Module 4236 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/BountiesScrollGradient.riv.js");

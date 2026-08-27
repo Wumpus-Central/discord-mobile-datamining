@@ -1,22 +1,22 @@
-// === Module 12276: LockPill ===
+// === Module 12098: LockPill ===
 
-// Module 12276 (LockPill)
+// Module 12098 (LockPill)
 import ThemesDefault from "Themes" /* 712 */;
-import result2 from "result" /* 5331 */;
-import inlineStyles from "inlineStyles" /* 8052 */;
+import result2 from "result" /* 5336 */;
+import inlineStyles from "inlineStyles" /* 8173 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11600 */;
-import { VoiceMessageAnimationState } from "VoiceMessageAnimationState" /* 11601 */;
+import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11451 */;
+import { VoiceMessageAnimationState } from "VoiceMessageAnimationState" /* 11452 */;
 import { ComponentActionsKeyed } from "ME" /* 676 */;
 import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1301 */;
-import { CHAT_INPUT_HEIGHT } from "TextAreaCta" /* 11602 */;
+import { CHAT_INPUT_HEIGHT } from "TextAreaCta" /* 11453 */;
 import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4184" /* 4184 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import importDefaultResult from "module_4185" /* 4185 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import importDefaultResult3 from "apply" /* 12 */;
 
 require = arg1;

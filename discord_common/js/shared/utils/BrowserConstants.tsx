@@ -1,6 +1,6 @@
-// === Module 13343: parsed ===
+// === Module 13370: parsed ===
 
-// Module 13343 (parsed)
+// Module 13370 (parsed)
 import formatDefault from "format" /* 669 */;
 
 let str = formatDefault.version;

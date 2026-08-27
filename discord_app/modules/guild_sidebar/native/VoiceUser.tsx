@@ -1,14 +1,14 @@
-// === Module 15558: VoiceUserConnected ===
+// === Module 15623: VoiceUserConnected ===
 
-// Module 15558 (VoiceUserConnected)
+// Module 15623 (VoiceUserConnected)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "getParticipants" /* 4460 */;
-import closure_5 from "reset" /* 4466 */;
+import closure_4 from "getParticipants" /* 4461 */;
+import closure_5 from "reset" /* 4467 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4495 */;
-import closure_8 from "handleUpdate" /* 4462 */;
-import closure_9 from "updateVoiceState" /* 4463 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4496 */;
+import closure_8 from "handleUpdate" /* 4463 */;
+import closure_9 from "updateVoiceState" /* 4464 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

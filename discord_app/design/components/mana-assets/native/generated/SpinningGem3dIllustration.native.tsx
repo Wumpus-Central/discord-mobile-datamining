@@ -1,10 +1,10 @@
-// === Module 6965: SpinningGem3dIllustration ===
+// === Module 6971: SpinningGem3dIllustration ===
 
-// Module 6965 (SpinningGem3dIllustration)
+// Module 6971 (SpinningGem3dIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6966 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6972 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SpinningGem3dIllustration.native.tsx");

@@ -1,19 +1,19 @@
-// === Module 15539: GuildChannels ===
+// === Module 15604: GuildChannels ===
 
-// Module 15539 (GuildChannels)
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11528 */;
-import itemsDefault from "items" /* 15703 */;
-import handleJoinGuildDefault from "handleJoinGuild" /* 15708 */;
-import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 15718 */;
+// Module 15604 (GuildChannels)
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11382 */;
+import itemsDefault from "items" /* 15767 */;
+import handleJoinGuildDefault from "handleJoinGuild" /* 15772 */;
+import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 15782 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
-import closure_7 from "handleReset" /* 7197 */;
-import closure_8 from "withEqualityFn" /* 15462 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_7 from "handleReset" /* 7203 */;
+import closure_8 from "withEqualityFn" /* 15527 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
 import closure_10 from "handleConnectionOpen" /* 1981 */;
-import closure_11 from "getVoiceStatesForGuild" /* 4519 */;
+import closure_11 from "getVoiceStatesForGuild" /* 4520 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -66,9 +66,9 @@ function ChannelsWrapper(selectedGuildId) {
           obj.guild = stateFromStores;
           obj.selectedChannelId = selectedChannelId;
           obj.selectedVoiceChannelId = stateFromStores1;
-          return callback(tmp2(15710).default, obj);
+          return callback(tmp2(15774).default, obj);
         } else {
-          tmp2Result = tmp2(8894);
+          tmp2Result = tmp2(9051);
           if (tmp2Result.shouldNSFWGateGuild(selectedGuildId)) {
             obj1 = { style: null, guildId: null };
             obj1[0] = merged.style;

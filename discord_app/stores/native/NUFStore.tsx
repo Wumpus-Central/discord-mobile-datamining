@@ -1,6 +1,6 @@
-// === Module 7315: handleCacheOrSocketLoaded ===
+// === Module 7321: handleCacheOrSocketLoaded ===
 
-// Module 7315 (handleCacheOrSocketLoaded)
+// Module 7321 (handleCacheOrSocketLoaded)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "createGuildRecordFromRust" /* 1910 */;

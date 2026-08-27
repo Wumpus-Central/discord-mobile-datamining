@@ -1,10 +1,10 @@
-// === Module 6735: MoonIllocon ===
+// === Module 6741: MoonIllocon ===
 
-// Module 6735 (MoonIllocon)
+// Module 6741 (MoonIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6736 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6742 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/MoonIllocon.native.tsx");

@@ -1,10 +1,10 @@
-// === Module 13469: ChannelListMagnifyingGlassIcon ===
+// === Module 13496: ChannelListMagnifyingGlassIcon ===
 
-// Module 13469 (ChannelListMagnifyingGlassIcon)
+// Module 13496 (ChannelListMagnifyingGlassIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 13470 */;
+import registerAsset from "registerAsset" /* 13497 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

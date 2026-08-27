@@ -1,6 +1,6 @@
-// === Module 8228: createFakeSharedValue ===
+// === Module 7730: createFakeSharedValue ===
 
-// Module 8228 (createFakeSharedValue)
+// Module 7730 (createFakeSharedValue)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/reanimated/ReanimatedHelperTypes.tsx");

@@ -1,6 +1,6 @@
-// === Module 15455: useGuildsRouteGuildId ===
+// === Module 15520: useGuildsRouteGuildId ===
 
-// Module 15455 (useGuildsRouteGuildId)
+// Module 15520 (useGuildsRouteGuildId)
 import set from "set" /* 2 */;
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
 

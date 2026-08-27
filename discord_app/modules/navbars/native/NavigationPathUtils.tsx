@@ -1,9 +1,9 @@
-// === Module 12399: SpecialNavigationPath ===
+// === Module 12227: SpecialNavigationPath ===
 
-// Module 12399 (SpecialNavigationPath)
+// Module 12227 (SpecialNavigationPath)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import _extends from "_extends" /* 4277 */;
+import _extends from "_extends" /* 4278 */;
 
 const Routes = ME.Routes;
 let obj = { FRIENDS: 0, [0]: "FRIENDS" };

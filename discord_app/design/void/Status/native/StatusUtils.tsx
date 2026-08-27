@@ -1,8 +1,8 @@
-// === Module 13633: getAnimatedTypingTranslateX ===
+// === Module 13660: getAnimatedTypingTranslateX ===
 
-// Module 13633 (getAnimatedTypingTranslateX)
+// Module 13660 (getAnimatedTypingTranslateX)
 import set from "set" /* 2 */;
-import STATUS_PADDINGDefault from "STATUS_PADDING" /* 13634 */;
+import STATUS_PADDINGDefault from "STATUS_PADDING" /* 13661 */;
 import STATUS_PADDING from "STATUS_PADDING" /* 1298 */;
 
 ({ STATUS_PADDING: obj1, StatusSizes: c3 } = STATUS_PADDING);

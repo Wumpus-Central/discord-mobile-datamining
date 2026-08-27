@@ -1,21 +1,21 @@
-// === Module 14614: useDeliveredDockCreative ===
+// === Module 14641: useDeliveredDockCreative ===
 
-// Module 14614 (useDeliveredDockCreative)
+// Module 14641 (useDeliveredDockCreative)
 import initialize from "initialize" /* 589 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5337 */;
-import AdCreativeType from "AdCreativeType" /* 7387 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7852 */;
-import getIsEligibleForQuests from "getIsEligibleForQuests" /* 10600 */;
-import maybeRefreshAd from "maybeRefreshAd" /* 14638 */;
-import getDeliveredQuest from "getDeliveredQuest" /* 14640 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5342 */;
+import AdCreativeType from "AdCreativeType" /* 7379 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7651 */;
+import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11004 */;
+import maybeRefreshAd from "maybeRefreshAd" /* 14665 */;
+import getDeliveredQuest from "getDeliveredQuest" /* 14667 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "setContent" /* 4154 */;
-import closure_6 from "addApplication" /* 4485 */;
-import closure_7 from "initializeState" /* 7371 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5334 */;
-import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS" /* 10604 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 10750 */;
+import closure_6 from "addApplication" /* 4486 */;
+import closure_7 from "initializeState" /* 7381 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5339 */;
+import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS" /* 10836 */;
+import { MAIN_SURFACE } from "FrameLayoutModes" /* 9386 */;
 import { ThemeTypes } from "sum" /* 505 */;
 
 require = arg1;
@@ -92,8 +92,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7369);
-    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5337).QuestContent.QUEST_BAR_MOBILE);
+    let tmpResult = tmp(7376);
+    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5342).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -102,14 +102,14 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(10599);
+  tmpResult = tmp(11003);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = initialize;
   const type = mobileQuestDock.type;
   const isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (AdCreativeType.AdCreativeType.NO_FILL !== type) {
-    if (tmp(7387).AdCreativeType.BOUNTY !== type) {
-      if (tmp(7387).AdCreativeType.QUEST === type) {
+    if (tmp(7379).AdCreativeType.BOUNTY !== type) {
+      if (tmp(7379).AdCreativeType.QUEST === type) {
         if (stateFromStores) {
           if (!tmp9) {
             let tmp12 = null != deliveredQuest && !tmp4;
@@ -141,12 +141,12 @@ export const useMobileQuestDock = function useMobileQuestDock() {
 export const useIsMobileQuestDockVisibleToUser = function useIsMobileQuestDockVisibleToUser(mobileQuestDock, isMobileQuestDockRenderedBase) {
   const _require = mobileQuestDock;
   let tmp = isMobileQuestDockRenderedBase;
-  const isChannelFocused = _require(9985).useIsChannelFocused();
-  const obj = _require(9985);
-  const currentNavigationRouteName = _require(4298).useCurrentNavigationRouteName();
-  const obj2 = _require(4298);
-  let tmp4 = null != _require(4298).coerceGuildsRoute({ name: currentNavigationRouteName });
-  const obj3 = _require(4298);
+  const isChannelFocused = _require(10092).useIsChannelFocused();
+  const obj = _require(10092);
+  const currentNavigationRouteName = _require(4299).useCurrentNavigationRouteName();
+  const obj2 = _require(4299);
+  let tmp4 = null != _require(4299).coerceGuildsRoute({ name: currentNavigationRouteName });
+  const obj3 = _require(4299);
   const items = [closure_7];
   let stateFromStores = _require(589).useStateFromStores(items, () => {
     const type = mobileQuestDock.type;

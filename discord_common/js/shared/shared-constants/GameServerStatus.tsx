@@ -1,6 +1,6 @@
-// === Module 12118: GameServerStatus ===
+// === Module 11964: GameServerStatus ===
 
-// Module 12118 (GameServerStatus)
+// Module 11964 (GameServerStatus)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameServerStatus.tsx");

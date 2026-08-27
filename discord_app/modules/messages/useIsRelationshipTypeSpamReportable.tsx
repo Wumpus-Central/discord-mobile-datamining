@@ -1,6 +1,6 @@
-// === Module 12224: useIsRelationshipTypeSpamReportable ===
+// === Module 12072: useIsRelationshipTypeSpamReportable ===
 
-// Module 12224 (useIsRelationshipTypeSpamReportable)
+// Module 12072 (useIsRelationshipTypeSpamReportable)
 import closure_2 from "markAllUserIdListsStale" /* 4098 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 

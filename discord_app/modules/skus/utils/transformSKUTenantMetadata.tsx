@@ -1,6 +1,6 @@
-// === Module 4490: transformProfileEffectKeyFrameFromServer ===
+// === Module 4491: transformProfileEffectKeyFrameFromServer ===
 
-// Module 4490 (transformProfileEffectKeyFrameFromServer)
+// Module 4491 (transformProfileEffectKeyFrameFromServer)
 import set from "set" /* 2 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
 

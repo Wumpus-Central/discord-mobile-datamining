@@ -1,6 +1,6 @@
-// === Module 16789: newGetEnglishMessageText ===
+// === Module 16855: newGetEnglishMessageText ===
 
-// Module 16789 (newGetEnglishMessageText)
+// Module 16855 (newGetEnglishMessageText)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import _mod1274 from "module_1274" /* 1274 */;

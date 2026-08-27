@@ -1,6 +1,6 @@
-// === Module 12634: ApplicationWidgetFieldPresentationType ===
+// === Module 12586: ApplicationWidgetFieldPresentationType ===
 
-// Module 12634 (ApplicationWidgetFieldPresentationType)
+// Module 12586 (ApplicationWidgetFieldPresentationType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx");

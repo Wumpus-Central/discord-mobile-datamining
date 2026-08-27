@@ -1,9 +1,9 @@
-// === Module 13126: set ===
+// === Module 13149: set ===
 
-// Module 13126 (set)
+// Module 13149 (set)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "calculateAppliedBoosts" /* 4330 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4331 */;
+import closure_4 from "calculateAppliedBoosts" /* 4331 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4332 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -26,7 +26,7 @@ export default function useMarketablePowerupPerks(arg0) {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(12207)(arg0);
+  let tmp2 = stateFromStores(12055)(arg0);
   dependencyMap = tmp2;
   let items1 = [stateFromStores, tmp2];
   return React.useMemo(() => {

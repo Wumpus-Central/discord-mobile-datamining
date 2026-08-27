@@ -1,6 +1,6 @@
-// === Module 5527: usePromptHelpText ===
+// === Module 5532: usePromptHelpText ===
 
-// Module 5527 (usePromptHelpText)
+// Module 5532 (usePromptHelpText)
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
 import closure_3 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4089 */;

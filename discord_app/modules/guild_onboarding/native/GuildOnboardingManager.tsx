@@ -1,10 +1,10 @@
-// === Module 16797: prototype ===
+// === Module 16863: prototype ===
 
-// Module 16797 (prototype)
-import initializeDefault from "initialize" /* 5433 */;
+// Module 16863 (prototype)
+import initializeDefault from "initialize" /* 5438 */;
 import closure_3 from "trackCommunicationDisabled" /* 1992 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleConnectionOpen" /* 4266 */;
+import closure_5 from "handleConnectionOpen" /* 4267 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
 
@@ -56,7 +56,7 @@ let prototype = function GuildOnboardingManager() {
     }
   };
   applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
-    const result = applyArgumentsResult(5409).discardOnboardingPromise(guild.guild.id);
+    const result = applyArgumentsResult(5414).discardOnboardingPromise(guild.guild.id);
   };
   applyArgumentsResult._openOnboardingIfIncomplete = function _openOnboardingIfIncomplete(guildId) {
     guild = guild.getGuild(guildId);
@@ -84,7 +84,7 @@ let prototype = function GuildOnboardingManager() {
         if (hasFlagResult) {
           obj = { guildId: null };
           obj[0] = guildId;
-          callback(5409)(obj);
+          callback(5414)(obj);
         }
       }
     }

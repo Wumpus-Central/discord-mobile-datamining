@@ -1,10 +1,10 @@
-// === Module 9825: frozen ===
+// === Module 8380: frozen ===
 
-// Module 9825 (frozen)
+// Module 8380 (frozen)
 import toJSDefault from "toJS" /* 1931 */;
 import hooksDefault from "hooks" /* 4043 */;
-import closure_3 from "createFromServer" /* 7128 */;
-import closure_4 from "createFromServer" /* 7554 */;
+import closure_3 from "createFromServer" /* 7134 */;
+import closure_4 from "createFromServer" /* 8381 */;
 import closure_5 from "createFromServer" /* 4108 */;
 import { PremiumSubscriptionSKUToPremiumType as closure_6 } from "GuildFeatures" /* 1924 */;
 

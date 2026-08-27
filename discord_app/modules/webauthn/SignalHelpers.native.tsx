@@ -1,6 +1,6 @@
-// === Module 6004: signalAllAcceptedCredentials ===
+// === Module 6009: signalAllAcceptedCredentials ===
 
-// Module 6004 (signalAllAcceptedCredentials)
+// Module 6009 (signalAllAcceptedCredentials)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;

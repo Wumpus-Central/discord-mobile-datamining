@@ -1,10 +1,10 @@
-// === Module 6181: MagnifyingGlassIcon ===
+// === Module 6187: MagnifyingGlassIcon ===
 
-// Module 6181 (MagnifyingGlassIcon)
+// Module 6187 (MagnifyingGlassIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 6182 */;
+import registerAsset from "registerAsset" /* 6188 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

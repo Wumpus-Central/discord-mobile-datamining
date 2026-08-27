@@ -1,36 +1,36 @@
-// === Module 7200: computeSubtitle ===
+// === Module 7206: computeSubtitle ===
 
-// Module 7200 (computeSubtitle)
+// Module 7206 (computeSubtitle)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import hasStream from "hasStream" /* 4631 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 6059 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 6080 */;
+import hasStream from "hasStream" /* 4632 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 6065 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 6088 */;
 import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "addApplication" /* 4485 */;
-import closure_5 from "handleConnectionReset" /* 7201 */;
+import closure_4 from "addApplication" /* 4486 */;
+import closure_5 from "handleConnectionReset" /* 7207 */;
 import closure_6 from "isSubscriptionGated" /* 1983 */;
-import closure_7 from "scheduledEventSort" /* 7198 */;
+import closure_7 from "scheduledEventSort" /* 7204 */;
 import closure_8 from "initialize" /* 1984 */;
-import closure_9 from "handleChange" /* 7202 */;
-import closure_10 from "set" /* 7203 */;
-import closure_11 from "guildHasCommunity" /* 7204 */;
-import closure_12 from "rebuild" /* 5395 */;
+import closure_9 from "handleChange" /* 7208 */;
+import closure_10 from "set" /* 7209 */;
+import closure_11 from "guildHasCommunity" /* 7210 */;
+import closure_12 from "rebuild" /* 5400 */;
 import closure_13 from "storeThread" /* 4091 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_18 from "incrementVersion" /* 5432 */;
+import closure_18 from "incrementVersion" /* 5437 */;
 import closure_19 from "ensureGuildLoaded" /* 1391 */;
-import closure_20 from "handleConnectionOpen" /* 7199 */;
+import closure_20 from "handleConnectionOpen" /* 7205 */;
 import closure_21 from "createGuildRecordFromRust" /* 1910 */;
 import closure_22 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_23 from "generateOldThreadCutoff" /* 4459 */;
+import closure_23 from "generateOldThreadCutoff" /* 4460 */;
 import closure_24 from "handleConnectionOpen" /* 1981 */;
-import closure_25 from "updateUserGuildSettingsInternal" /* 4653 */;
-import closure_26 from "updateVoiceState" /* 4463 */;
-import closure_27 from "getVoiceStatesForGuild" /* 4519 */;
-import closure_28 from "handleChange" /* 7205 */;
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7206 */;
+import closure_25 from "updateUserGuildSettingsInternal" /* 4654 */;
+import closure_26 from "updateVoiceState" /* 4464 */;
+import closure_27 from "getVoiceStatesForGuild" /* 4520 */;
+import closure_28 from "handleChange" /* 7211 */;
+import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7212 */;
 import ME from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
 import { Permissions } from "sum" /* 505 */;
@@ -291,14 +291,14 @@ class ChannelListImpl {
     obj1 = {};
     obj2 = {};
     for (const key10068 in mutableGuildChannelsForGuild) {
-      tmp47 = key10068;
-      tmp48 = mutableGuildChannelsForGuild[key10068];
-      tmp49 = ChannelTypes;
-      if (tmp48.type !== ChannelTypes.GUILD_CATEGORY) {
+      tmp48 = key10068;
+      tmp49 = mutableGuildChannelsForGuild[key10068];
+      tmp50 = ChannelTypes;
+      if (tmp49.type !== ChannelTypes.GUILD_CATEGORY) {
         continue;
       } else {
-        obj1[tmp48.id] = tmp48;
-        obj2[tmp48.id] = [];
+        obj1[tmp49.id] = tmp49;
+        obj2[tmp49.id] = [];
         continue;
       }
       continue;
@@ -309,66 +309,60 @@ class ChannelListImpl {
     items3 = [];
     initializationData = obj.initializationData;
     for (const key10080 in mutableGuildChannelsForGuild) {
-      tmp50 = key10080;
-      obj7 = mutableGuildChannelsForGuild[key10080];
-      type = obj7.type;
+      tmp51 = key10080;
+      tmp32 = mutableGuildChannelsForGuild[key10080];
+      type = tmp32.type;
       arr3 = ChannelTypes;
       GUILD_CATEGORY = ChannelTypes.GUILD_CATEGORY;
       if (type === GUILD_CATEGORY) {
         continue;
       } else {
-        GUILD_CATEGORY = obj7.isGameInvitesChannel();
-        if (GUILD_CATEGORY) {
+        type = tmp32.type;
+        if (type !== arr3.GUILD_DIRECTORY) {
+          GUILD_CATEGORY = shouldShowInRecents;
+          if (shouldShowInRecents(obj, tmp32, initializationData)) {
+            arr = items1.push(tmp32);
+          } else {
+            GUILD_CATEGORY = arr3.GUILD_VOICE;
+            tmp13 = tmp32.type !== GUILD_CATEGORY;
+            if (!tmp13) {
+            } else {
+              tmp13 = tmp32.type !== arr3.GUILD_STAGE_VOICE;
+            }
+            if (tmp13) {
+            } else {
+              tmp14 = null != tmp32.parent_id;
+              if (!tmp14) {
+              } else {
+                tmp14 = null != obj1[tmp32.parent_id];
+              }
+              if (!tmp14) {
+              } else {
+                arr1 = items2.push(obj1[tmp32.parent_id]);
+              }
+              arr2 = items2.push(tmp32);
+            }
+          }
+          if (null == tmp32.parent_id) {
+          } else if (tmp32.parent_id in obj2) {
+            GUILD_CATEGORY = obj2[tmp32.parent_id];
+            arr3 = GUILD_CATEGORY.push(tmp32);
+            continue;
+          }
+          arr3 = items.push(tmp32);
           continue;
         } else {
-          type = obj7.type;
-          if (type !== arr3.GUILD_DIRECTORY) {
-            GUILD_CATEGORY = shouldShowInRecents;
-            if (shouldShowInRecents(obj, obj7, initializationData)) {
-              arr = items1.push(obj7);
-            } else {
-              GUILD_CATEGORY = arr3.GUILD_VOICE;
-              tmp13 = obj7.type !== GUILD_CATEGORY;
-              if (!tmp13) {
-              } else {
-                tmp13 = obj7.type !== arr3.GUILD_STAGE_VOICE;
-              }
-              if (tmp13) {
-              } else {
-                tmp14 = null != obj7.parent_id;
-                if (!tmp14) {
-                } else {
-                  tmp14 = null != obj1[obj7.parent_id];
-                }
-                if (!tmp14) {
-                } else {
-                  arr1 = items2.push(obj1[obj7.parent_id]);
-                }
-                arr2 = items2.push(obj7);
-              }
-            }
-            if (null == obj7.parent_id) {
-            } else if (obj7.parent_id in obj2) {
-              GUILD_CATEGORY = obj2[obj7.parent_id];
-              arr3 = GUILD_CATEGORY.push(obj7);
-              continue;
-            }
-            arr3 = items.push(obj7);
+          GUILD_CATEGORY = null == guild;
+          if (GUILD_CATEGORY) {
+          } else {
+            features = guild.features;
+            tmp12 = GuildFeatures;
+            GUILD_CATEGORY = features.has(GuildFeatures.HUB);
+          }
+          if (GUILD_CATEGORY) {
             continue;
           } else {
-            GUILD_CATEGORY = null == guild;
-            if (GUILD_CATEGORY) {
-            } else {
-              features = guild.features;
-              tmp12 = GuildFeatures;
-              GUILD_CATEGORY = features.has(GuildFeatures.HUB);
-            }
-            if (GUILD_CATEGORY) {
-              continue;
-            } else {
-              GUILD_CATEGORY = items3.push(obj7);
-              continue;
-            }
+            GUILD_CATEGORY = items3.push(tmp32);
             continue;
           }
           continue;
@@ -378,13 +372,13 @@ class ChannelListImpl {
       continue;
     }
     obj.categories = {};
-    for (const key10113 in obj2) {
-      GUILD_CATEGORY = key10113;
+    for (const key10112 in obj2) {
+      GUILD_CATEGORY = key10112;
       type = ChannelListCategoryWithParent;
       tmp11 = new.target;
-      tmp52 = obj;
-      tmp53 = initializationData;
-      obj.categories[key10113] = new ChannelListCategoryWithParent(obj, obj1[key10113], obj2[key10113], initializationData);
+      tmp53 = obj;
+      tmp54 = initializationData;
+      obj.categories[key10112] = new ChannelListCategoryWithParent(obj, obj1[key10112], obj2[key10112], initializationData);
       continue;
     }
     obj.recentsSectionNumber = RECENTS;
@@ -394,7 +388,7 @@ class ChannelListImpl {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     closure_1 = undefined;
-    tmp19 = new closure_66(obj, tmp51, tmp34, initializationData, features, tmp11, type, obj7, GUILD_CATEGORY, items1, items, arr3, mutableGuildChannelsForGuild);
+    tmp19 = new closure_66(obj, tmp52, tmp35, initializationData, features, tmp11, type, tmp32, GUILD_CATEGORY, items1, items, arr3, mutableGuildChannelsForGuild);
     // ThrowIfThisInitialized (0x7c)
     closure_1 = tmp19;
     tmp20 = closure_1;
@@ -408,11 +402,11 @@ class ChannelListImpl {
     obj.favoritesCategory = new ChannelListFavoritesCategory(obj, initializationData);
     obj6 = require("isRecentlyActiveChannelsEnabled");
     if (obj6.isRecentlyActiveChannelsEnabled()) {
-      tmp32 = ChannelListRecentlyActiveCategory;
+      tmp33 = ChannelListRecentlyActiveCategory;
       iter2 = new.target;
-      tmp33 = obj;
+      tmp34 = obj;
       tmp22 = mutableGuildChannelsForGuild;
-      tmp34 = initializationData;
+      tmp35 = initializationData;
       tmp31 = new ChannelListRecentlyActiveCategory(obj, mutableGuildChannelsForGuild, initializationData);
     } else {
       tmp24 = new.target;
@@ -426,14 +420,14 @@ class ChannelListImpl {
       tmp26 = new.target;
       tmp27 = new.target;
       tmp28 = obj;
-      tmp29 = new ChannelListRecentsCategory(obj, tmp22, tmp34, initializationData, features, tmp11, type, obj7, GUILD_CATEGORY, items1, tmp23, iter2, mutableGuildChannelsForGuild, new.target, undefined, items2, obj1, ChannelListRecentsCategory, items3, globalThis);
+      tmp29 = new ChannelListRecentsCategory(obj, tmp22, tmp35, initializationData, features, tmp11, type, tmp32, GUILD_CATEGORY, items1, tmp23, iter2, mutableGuildChannelsForGuild, new.target, undefined, items2, obj1, ChannelListRecentsCategory, items3, globalThis);
       tmp30 = tmp29;
       // ThrowIfThisInitialized (0x7c)
       closure_1 = tmp29;
       iter = obj.optInEnabled;
       tmp31 = tmp29;
       if (iter) {
-        obj7 = closure_8;
+        tmp32 = closure_8;
         iter = closure_8.isFullServerPreview(obj.id);
         tmp31 = tmp29;
         if (!iter) {
@@ -451,53 +445,53 @@ class ChannelListImpl {
     }
     obj.recentsCategory = tmp31;
     throwTypeErrorResult2 = new.target;
-    tmp35 = ChannelListVoiceChannelsCategory;
+    tmp36 = ChannelListVoiceChannelsCategory;
     if (typeof ChannelListVoiceChannelsCategory !== "function") {
       str3 = "Trying to call a non-function";
       throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
     }
     closure_1 = undefined;
-    tmp37 = new ChannelListVoiceChannelsCategory(obj, tmp22, tmp34, initializationData, features, tmp11, type, obj7, GUILD_CATEGORY, items1, iter, iter2, tmp35, new.target, undefined, items2, obj1, throwTypeErrorResult2);
+    tmp38 = new ChannelListVoiceChannelsCategory(obj, tmp22, tmp35, initializationData, features, tmp11, type, tmp32, GUILD_CATEGORY, items1, iter, iter2, tmp36, new.target, undefined, items2, obj1, throwTypeErrorResult2);
     // ThrowIfThisInitialized (0x7c)
-    closure_1 = tmp37;
-    tmp37.hiddenChannelIds = null;
-    tmp37.categoriesById = obj1;
+    closure_1 = tmp38;
+    tmp38.hiddenChannelIds = null;
+    tmp38.categoriesById = obj1;
     if (obj.optInEnabled) {
-      tmp38 = closure_28;
-      tmp37.isCollapsed = closure_28.isVoiceCategoryCollapsed(obj.id);
+      tmp39 = closure_28;
+      tmp38.isCollapsed = closure_28.isVoiceCategoryCollapsed(obj.id);
       flag2 = false;
-      tmp37.isMuted = false;
-      tmp37.categoriesById = obj1;
+      tmp38.isMuted = false;
+      tmp38.categoriesById = obj1;
       arr9 = require("apply")(items2);
       mapped = arr9.map((arg0) => new tmp(tmp2, arg0, closure_0));
       iter3 = mapped.keyBy((id) => id.id);
-      tmp37.channels = iter3.value();
+      tmp38.channels = iter3.value();
     }
-    obj.voiceChannelsCategory = tmp37;
-    tmp39 = ChannelListGuildActionSection;
-    tmp40 = items3.length > 0;
+    obj.voiceChannelsCategory = tmp38;
+    tmp40 = ChannelListGuildActionSection;
+    tmp41 = items3.length > 0;
     if (typeof ChannelListGuildActionSection !== "function") {
       str4 = "Trying to call a non-function";
       throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
     }
-    obj3 = Object.create(tmp39.prototype);
+    obj3 = Object.create(tmp40.prototype);
     obj3.guildActionRows = arg1.map(String);
-    if (tmp40) {
+    if (tmp41) {
       guildActionRows = obj3.guildActionRows;
       _String = String;
-      tmp42 = ChannelListGuildActionRow;
+      tmp43 = ChannelListGuildActionRow;
       arr4 = guildActionRows.push(String(ChannelListGuildActionRow.GUILD_DIRECTORY));
     }
     obj.guildActionSection = obj3;
-    tmp44 = ChannelListChannelNoticeSection;
+    tmp45 = ChannelListChannelNoticeSection;
     if (typeof ChannelListChannelNoticeSection !== "function") {
       str5 = "Trying to call a non-function";
       throwTypeErrorResult4 = HermesBuiltin.throwTypeError();
     }
-    obj4 = Object.create(tmp44.prototype);
+    obj4 = Object.create(tmp45.prototype);
     obj4.rows = importDefault;
     obj.channelNoticeSection = obj4;
-    tmp46 = require("module_38")(!("null" in obj.categories), "somehow a null got into categories");
+    tmp47 = require("module_38")(!("null" in obj.categories), "somehow a null got into categories");
     tmp20Result = require("apply");
     obj.voiceChannelsSectionNumber = FIRST_NAMED_CATEGORY + tmp20Result.size(obj.categories);
     return obj;

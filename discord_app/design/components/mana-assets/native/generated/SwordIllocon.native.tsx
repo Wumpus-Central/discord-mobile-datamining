@@ -1,10 +1,10 @@
-// === Module 7017: SwordIllocon ===
+// === Module 7023: SwordIllocon ===
 
-// Module 7017 (SwordIllocon)
+// Module 7023 (SwordIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 7018 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 7024 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SwordIllocon.native.tsx");

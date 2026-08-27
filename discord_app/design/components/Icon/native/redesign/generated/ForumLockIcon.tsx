@@ -1,10 +1,10 @@
-// === Module 4982: ForumLockIcon ===
+// === Module 4987: ForumLockIcon ===
 
-// Module 4982 (ForumLockIcon)
+// Module 4987 (ForumLockIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 4965 */;
+import registerAsset from "registerAsset" /* 4968 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

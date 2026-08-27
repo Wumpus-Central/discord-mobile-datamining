@@ -1,8 +1,8 @@
-// === Module 11860: _downloadPollGif ===
+// === Module 11689: _downloadPollGif ===
 
-// Module 11860 (_downloadPollGif)
+// Module 11689 (_downloadPollGif)
 import closure_0 from "asyncGeneratorStep" /* 5 */;
-import { POLL_ATTACHMENT_FOLDER } from "POLL_ATTACHMENT_FOLDER" /* 7498 */;
+import { POLL_ATTACHMENT_FOLDER } from "POLL_ATTACHMENT_FOLDER" /* 7506 */;
 
 function _downloadPollGif() {
   const self = this;

@@ -1,9 +1,9 @@
-// === Module 9871: isListeningOnSpotify ===
+// === Module 9177: isListeningOnSpotify ===
 
-// Module 9871 (isListeningOnSpotify)
+// Module 9177 (isListeningOnSpotify)
 import set from "set" /* 2 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5174 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 9118 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5179 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8542 */;
 import ME from "ME" /* 676 */;
 
 ({ ActivityTypes: obj1, PlatformTypes: c3 } = ME);

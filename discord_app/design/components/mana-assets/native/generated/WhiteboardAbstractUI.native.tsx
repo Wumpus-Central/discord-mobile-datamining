@@ -1,10 +1,10 @@
-// === Module 7049: WhiteboardAbstractUI ===
+// === Module 7055: WhiteboardAbstractUI ===
 
-// Module 7049 (WhiteboardAbstractUI)
+// Module 7055 (WhiteboardAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 7050 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 7056 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WhiteboardAbstractUI.native.tsx");

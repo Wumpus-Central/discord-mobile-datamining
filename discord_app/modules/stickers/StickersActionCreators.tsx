@@ -1,13 +1,13 @@
-// === Module 10175: _fetchStickerPack ===
+// === Module 10299: _fetchStickerPack ===
 
-// Module 10175 (_fetchStickerPack)
+// Module 10299 (_fetchStickerPack)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 5168 */;
+import closure_4 from "_handleConnectionOpen" /* 5173 */;
 import closure_5 from "_getSystemLocale" /* 1996 */;
-import closure_6 from "handleConnectionOpen" /* 4807 */;
+import closure_6 from "handleConnectionOpen" /* 4808 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "loadSavedGuildStickers" /* 5391 */;
+import closure_8 from "loadSavedGuildStickers" /* 5396 */;
 import { Endpoints } from "ME" /* 676 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 
@@ -224,7 +224,7 @@ function _fetchSticker() {
               obj4[1] = body;
               obj3.dispatch(obj4);
             } else {
-              obj = body(4804);
+              obj = body(4805);
               if (obj.isStandardSticker(body)) {
                 obj1 = callback2(709);
                 const obj5 = { type: "PACK_STICKER_FETCH_SUCCESS", sticker: null };
@@ -237,7 +237,7 @@ function _fetchSticker() {
               }
             }
             c4 = 3;
-            obj10 = body(4804);
+            obj10 = body(4805);
           }
         } catch (tmp24) {
           c4 = tmp;

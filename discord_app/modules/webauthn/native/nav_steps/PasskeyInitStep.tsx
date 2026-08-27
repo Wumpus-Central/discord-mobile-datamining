@@ -1,15 +1,15 @@
-// === Module 14259: CredentialList ===
+// === Module 14286: CredentialList ===
 
-// Module 14259 (CredentialList)
+// Module 14286 (CredentialList)
 import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 14249 */;
+import registerAssetDefault from "registerAsset" /* 14276 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "hasFetchedCredentials" /* 14247 */;
-import { WebAuthnScreens } from "WebAuthnScreens" /* 14248 */;
+import closure_7 from "hasFetchedCredentials" /* 14274 */;
+import { WebAuthnScreens } from "WebAuthnScreens" /* 14275 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function CredentialList(navigation) {
@@ -34,7 +34,7 @@ function CredentialList(navigation) {
     obj1[1] = tmp3.upsellText;
     let intl2 = tmp(1236).intl;
     obj1[2] = intl2.string(tmp(1236).t.FSNwFW);
-    items1[1] = callback2(tmp(4440).Text, obj1);
+    items1[1] = callback2(tmp(4441).Text, obj1);
     obj[1] = items1;
     return callback3(closure_6, obj);
   } else {
@@ -78,13 +78,13 @@ function CredentialList(navigation) {
       obj[2] = formatResult;
       return closure_1_9(navigation(_undefined[20]).TableRow, obj, label.id);
     });
-    return callback2(tmp(5939).TableRowGroup, obj2);
+    return callback2(tmp(5944).TableRowGroup, obj2);
   }
   const tmp4 = callback(React.useState(false), 2);
 }
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, upsellContainer: null, upsellText: null, iconButtonGroup: null, keychainImage: null };
+createCacheKey = { container: null, upsellContainer: null, upsellText: null, iconButtonGroup: null, keychainImage: null, headerAddButton: null };
 createCacheKey = { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: ThemesDefault.space.PX_16, marginRight: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16, alignItems: "center" };
@@ -93,7 +93,9 @@ createCacheKey[2] = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: Themes
 let obj2 = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: ThemesDefault.space.PX_16, textAlign: "center" };
 createCacheKey[3] = { flexDirection: "row", paddingVertical: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { height: 125, width: 161 };
+createCacheKey[5] = { alignSelf: "center" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
+let closure_12 = { top: 12, bottom: 12, left: 12, right: 12 };
 let obj3 = { flexDirection: "row", paddingVertical: ThemesDefault.space.PX_8 };
 const result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/PasskeyInitStep.tsx");
 
@@ -102,28 +104,33 @@ export default function PasskeyInitStep(arg0) {
     HermesBuiltin.throwTypeError();
   } else {
     let navigation;
+    closure_1 = undefined;
     let hasFetchedCredentials;
-    let obj = navigation(1500);
+    let obj = navigation(hasFetchedCredentials[22]);
     navigation = obj.useNavigation();
-    obj1 = navigation(589);
+    const tmp6 = callback4();
+    closure_1 = tmp6;
+    obj1 = navigation(hasFetchedCredentials[8]);
     const items = [closure_7];
     hasFetchedCredentials = obj1.useStateFromStoresObject(items, () => ({ hasFetchedCredentials: closure_7.hasFetchedCredentials() })).hasFetchedCredentials;
     const items1 = [hasFetchedCredentials];
     const effect = React.useEffect(() => {
       if (!hasFetchedCredentials) {
-        const webAuthnCredentials = navigation(closure_1_2[23]).fetchWebAuthnCredentials();
-        const obj = navigation(closure_1_2[23]);
+        const webAuthnCredentials = navigation(hasFetchedCredentials[23]).fetchWebAuthnCredentials();
+        const obj = navigation(hasFetchedCredentials[23]);
       }
     }, items1);
-    const items2 = [navigation];
+    const items2 = [navigation, tmp6.headerAddButton];
     const layoutEffect = React.useLayoutEffect(() => {
       navigation.setOptions({
         headerRight() {
           if (closure_1_0(closure_1_2[24]).hasWebAuthn) {
-            const obj = { text: null, onPress: null, foregroundRipple: true };
+            const obj = { text: null, style: null, hitSlop: null, onPress: null, foregroundRipple: true };
             const intl = tmp(tmp2[11]).intl;
             obj[0] = intl.string(tmp(tmp2[11]).t.OYkgVk);
-            obj[1] = function onPress() {
+            obj[1] = headerAddButton.headerAddButton;
+            obj[2] = closure_1_12;
+            obj[3] = function onPress() {
 
             };
             return closure_1_9(tmp(tmp2[25]).HeaderActionButton, obj);
@@ -133,11 +140,11 @@ export default function PasskeyInitStep(arg0) {
     }, items2);
     obj = { children: null };
     obj = { style: null, children: null };
-    obj[0] = callback4().container;
+    obj[0] = tmp6.container;
     obj1 = { navigation: null };
     obj1[0] = navigation;
     obj[1] = callback2(CredentialList, obj1);
     obj[0] = callback2(closure_6, obj);
-    return callback2(navigation(8185).Form, obj);
+    return callback2(navigation(hasFetchedCredentials[26]).Form, obj);
   }
 };

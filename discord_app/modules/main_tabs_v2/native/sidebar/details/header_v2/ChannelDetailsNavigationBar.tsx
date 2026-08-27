@@ -1,20 +1,20 @@
-// === Module 16159: MuteButton ===
+// === Module 16222: MuteButton ===
 
-// Module 16159 (MuteButton)
+// Module 16222 (MuteButton)
 import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 6182 */;
+import registerAssetDefault from "registerAsset" /* 6188 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "initialize" /* 4090 */;
 import closure_6 from "storeThread" /* 4091 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 4653 */;
-import useChannelDetailsStore from "useChannelDetailsStore" /* 8620 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9886 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 4654 */;
+import useChannelDetailsStore from "useChannelDetailsStore" /* 7553 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10574 */;
 import { ChannelSettingsSections } from "ME" /* 676 */;
-import { SearchEntrypointAnalyticsLocations as closure_14 } from "SearchEntrypointAnalyticsLocations" /* 8621 */;
+import { SearchEntrypointAnalyticsLocations as closure_14 } from "SearchEntrypointAnalyticsLocations" /* 7554 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function MuteButton(channelId) {
@@ -49,8 +49,8 @@ function MuteButton(channelId) {
   obj[1] = callback;
   obj[2] = token1;
   obj[3] = token;
-  obj[4] = tmp5(stateFromStores ? 9955 : 8276);
-  return closure_15(channelId(7963).IconButton, obj, constants.MUTE);
+  obj[4] = tmp5(stateFromStores ? 10159 : 7791);
+  return closure_15(channelId(7938).IconButton, obj, constants.MUTE);
 }
 function SearchButton(channelId) {
   channelId = channelId.channelId;
@@ -76,8 +76,8 @@ function SearchButton(channelId) {
   let obj = channelId(589);
   const items1 = [closure_7];
   const stateFromStores = obj.useStateFromStores(items1, () => closure_1_7.getChannel(channelId));
-  const shouldHideChannelContent = channelId(4683).useShouldHideChannelContent(stateFromStores);
-  let obj2 = channelId(4683);
+  const shouldHideChannelContent = channelId(4684).useShouldHideChannelContent(stateFromStores);
+  let obj2 = channelId(4684);
   const token = channelId(4165).useToken(ThemesDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
   const obj3 = channelId(4165);
   const token1 = channelId(4165).useToken(ThemesDefault.modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
@@ -89,7 +89,7 @@ function SearchButton(channelId) {
   obj[3] = token;
   obj[4] = registerAssetDefault;
   obj[5] = shouldHideChannelContent;
-  return callback2(channelId(7963).IconButton, obj, constants.SEARCH);
+  return callback2(channelId(7938).IconButton, obj, constants.SEARCH);
 }
 function SettingsButton(channel) {
   channel = channel.channel;
@@ -123,8 +123,8 @@ function SettingsButton(channel) {
   obj[1] = callback;
   obj[3] = token1;
   obj[4] = token;
-  obj[5] = navigation(6187);
-  return callback2(channel(7963).IconButton, obj, constants.SETTINGS);
+  obj[5] = navigation(6193);
+  return callback2(channel(7938).IconButton, obj, constants.SETTINGS);
 }
 function NavigationHeader(channel) {
   channel = channel.channel;
@@ -244,7 +244,7 @@ let closure_24 = importAllResult.forwardRef((cleanUp, ref) => {
   ({ onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed, transitionState } = cleanUp);
   const tmp2 = transitionState !== width(4172).TransitionStates.YEETED;
   dependencyMap = tmp2;
-  let obj = width(4184);
+  let obj = width(4185);
   class S {
     constructor() {
       str = "none";
@@ -273,14 +273,14 @@ let closure_24 = importAllResult.forwardRef((cleanUp, ref) => {
       return obj;
     }
   }
-  obj = { isActive: tmp2, withTiming: width(4445).withTiming, Easing: width(4184).Easing, runOnJS: width(4184).runOnJS, cleanUp, width };
+  obj = { isActive: tmp2, withTiming: width(4446).withTiming, Easing: width(4185).Easing, runOnJS: width(4185).runOnJS, cleanUp, width };
   S.__closure = obj;
   S.__workletHash = 1270940013897;
   S.__initData = closure_22;
   const animatedStyle = obj.useAnimatedStyle(S);
-  obj = { style: items, children: callback2(cleanUp(16058), obj1) };
+  obj = { style: items, children: callback2(cleanUp(16123), obj1) };
   items = [callback4().searchHeader, animatedStyle];
-  return callback2(cleanUp(4184).View, obj);
+  return callback2(cleanUp(4185).View, obj);
 });
 let closure_25 = { code: "function ChannelDetailsNavigationBarTsx3(){const{isActive,withTiming,timingFast,runOnJS,cleanUp,width}=this.__closure;return{pointerEvents:isActive?'auto':'none',opacity:withTiming(isActive?1:0,timingFast,'animate-always',function(finished){if(finished)runOnJS(cleanUp)();}),width:width};}" };
 let closure_26 = { code: "function ChannelDetailsNavigationBarTsx4(finished){const{runOnJS,cleanUp}=this.__closure;if(finished)runOnJS(cleanUp)();}" };

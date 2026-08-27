@@ -1,16 +1,16 @@
-// === Module 12184: GuildPowerupsBoostInfo ===
+// === Module 12032: GuildPowerupsBoostInfo ===
 
-// Module 12184 (GuildPowerupsBoostInfo)
+// Module 12032 (GuildPowerupsBoostInfo)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4331 */;
-import Text from "Text" /* 4440 */;
-import BoostGemIcon from "BoostGemIcon" /* 7907 */;
-import apexExperiment from "apexExperiment" /* 8415 */;
-import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 12185 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4332 */;
+import Text from "Text" /* 4441 */;
+import apexExperiment from "apexExperiment" /* 7936 */;
+import BoostGemIcon from "BoostGemIcon" /* 8166 */;
+import getGuildPowerupsBoostInfoText from "getGuildPowerupsBoostInfoText" /* 12033 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const View = get_ActivityIndicator.View;
 const BoostInfoType = BoostedGuildTiers.BoostInfoType;

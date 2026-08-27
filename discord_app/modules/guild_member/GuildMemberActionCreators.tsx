@@ -1,9 +1,9 @@
-// === Module 5435: updateGuildSelfMember ===
+// === Module 5440: updateGuildSelfMember ===
 
-// Module 5435 (updateGuildSelfMember)
+// Module 5440 (updateGuildSelfMember)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import updateImpersonating from "updateImpersonating" /* 5420 */;
+import updateImpersonating from "updateImpersonating" /* 5425 */;
 import closure_3 from "initialize" /* 1984 */;
 import { Endpoints } from "ME" /* 676 */;
 

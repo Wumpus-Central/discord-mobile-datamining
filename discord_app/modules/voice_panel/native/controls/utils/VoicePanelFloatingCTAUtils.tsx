@@ -1,16 +1,16 @@
-// === Module 16483: useFloatingCTAProps ===
+// === Module 16547: useFloatingCTAProps ===
 
-// Module 16483 (useFloatingCTAProps)
+// Module 16547 (useFloatingCTAProps)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import DismissibleContent from "DismissibleContent" /* 1377 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4265 */;
-import XSmallIcon from "XSmallIcon" /* 5498 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4266 */;
+import XSmallIcon from "XSmallIcon" /* 5503 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getParticipants" /* 4460 */;
-import closure_7 from "initialize" /* 16484 */;
-import { isGuildScheduledEventActive as closure_8 } from "scheduledEventSort" /* 7198 */;
+import closure_6 from "getParticipants" /* 4461 */;
+import closure_7 from "initialize" /* 16548 */;
+import { isGuildScheduledEventActive as closure_8 } from "scheduledEventSort" /* 7204 */;
 import closure_9 from "ensureGuildLoaded" /* 1391 */;
 import { GuildScheduledEventEntityTypes as closure_10 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -164,8 +164,8 @@ function getBadConnectionCTAProps(arg0) {
   obj[0] = intl.string(_require(1236).t.uv1tVh);
   const intl2 = _require(1236).intl;
   obj[1] = intl2.string(_require(1236).t["gQ14+g"]);
-  obj = { IconComponent: _require(8005).CircleErrorIcon, variant: "translucent" };
-  obj[2] = jsx(_require(8188).RowButton.Icon, { IconComponent: _require(8005).CircleErrorIcon, variant: "translucent" });
+  obj = { IconComponent: _require(7641).CircleErrorIcon, variant: "translucent" };
+  obj[2] = jsx(_require(8297).RowButton.Icon, { IconComponent: _require(7641).CircleErrorIcon, variant: "translucent" });
   obj[3] = function onPress() {
     let tmp;
     if (callback != null) {
@@ -182,7 +182,7 @@ function getBadConnectionCTAProps(arg0) {
       callback();
     }
   };
-  obj[4] = jsx(_require(5498).XSmallIcon, { color: "interactive-icon-default" });
+  obj[4] = jsx(_require(5503).XSmallIcon, { color: "interactive-icon-default" });
   obj[4] = <Pressable accessibilityRole="button" accessibilityLabel={null} hitSlop={4} onPress={null}>{null}</Pressable>;
   return obj;
 }
@@ -203,7 +203,7 @@ function getDismissableCTAProps(arg0) {
     return getBadConnectionCTAProps();
   } else if (tmp(1377).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA === dismissableContent) {
     obj = { icon: null, onPress: null, label: null, trailing: null };
-    obj[0] = jsx(tmp(7921).SoundboardIcon, { color: "interactive-icon-default" });
+    obj[0] = jsx(tmp(12007).SoundboardIcon, { color: "interactive-icon-default" });
     obj[1] = function onPress() {
       if (null != closure_0) {
         obj = closure_1_0(closure_1_2[33]);
@@ -215,7 +215,7 @@ function getDismissableCTAProps(arg0) {
     };
     obj = { quest: null };
     obj[0] = tmp(1236).t.XLlWUe;
-    obj[2] = tmp(7493).getDeviceSpecificString(obj, tmp(1236).t.IJgkPX);
+    obj[2] = tmp(7501).getDeviceSpecificString(obj, tmp(1236).t.IJgkPX);
     obj[3] = <CloseSoundboardMobileFloatingCtaIcon />;
     return obj;
   } else {

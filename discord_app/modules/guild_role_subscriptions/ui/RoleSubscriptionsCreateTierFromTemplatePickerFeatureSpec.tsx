@@ -1,9 +1,9 @@
-// === Module 13518: ? ===
+// === Module 13545: ? ===
 
-// Module 13518
+// Module 13545
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "getHash" /* 4357 */;
+import closure_2 from "getHash" /* 4358 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
 import ME from "ME" /* 676 */;
 

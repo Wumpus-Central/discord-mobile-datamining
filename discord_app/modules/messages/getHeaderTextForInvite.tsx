@@ -1,6 +1,6 @@
-// === Module 12877: getHeaderTextForInvite ===
+// === Module 12789: getHeaderTextForInvite ===
 
-// Module 12877 (getHeaderTextForInvite)
+// Module 12789 (getHeaderTextForInvite)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

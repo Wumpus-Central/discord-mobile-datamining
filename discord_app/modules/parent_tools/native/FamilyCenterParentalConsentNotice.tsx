@@ -1,11 +1,11 @@
-// === Module 14401: FamilyCenterParentalConsentNotice ===
+// === Module 14428: FamilyCenterParentalConsentNotice ===
 
-// Module 14401 (FamilyCenterParentalConsentNotice)
+// Module 14428 (FamilyCenterParentalConsentNotice)
 import ThemesDefault from "Themes" /* 712 */;
-import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 14402 */;
+import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 14429 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 createCacheKey = { container: null, link: null };
@@ -18,9 +18,9 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/native
 export default function FamilyCenterParentalConsentNotice() {
   const tmp = callback();
   const _require = tmp;
-  let obj = _require(14393);
+  let obj = _require(14420);
   const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-  obj1 = _require(14394);
+  obj1 = _require(14421);
   const parentalConsentWarning = obj1.useParentalConsentWarning();
   let daysRemaining;
   if (parentalConsentWarning != null) {

@@ -1,9 +1,9 @@
-// === Module 17256: _fetchBasicGuild ===
+// === Module 17322: _fetchBasicGuild ===
 
-// Module 17256 (_fetchBasicGuild)
+// Module 17322 (_fetchBasicGuild)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getGuild" /* 8283 */;
+import closure_5 from "getGuild" /* 7797 */;
 import { Endpoints } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 

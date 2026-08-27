@@ -1,19 +1,19 @@
-// === Module 8607: GenericHeaderTitle ===
+// === Module 7540: GenericHeaderTitle ===
 
-// Module 8607 (GenericHeaderTitle)
+// Module 7540 (GenericHeaderTitle)
 import shallowEqualDefault from "shallowEqual" /* 643 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import map from "map" /* 4165 */;
-import Text from "Text" /* 4440 */;
-import PressableBase from "PressableBase" /* 5015 */;
-import Background from "Background" /* 5449 */;
-import JoinCallButtonDefault from "JoinCallButton" /* 8619 */;
+import Text from "Text" /* 4441 */;
+import PressableBase from "PressableBase" /* 5020 */;
+import Background from "Background" /* 5454 */;
+import JoinCallIconDefault from "JoinCallIcon" /* 7552 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { MIN_HEADER_HEIGHT } from "MIN_HEADER_HEIGHT" /* 8608 */;
+import { MIN_HEADER_HEIGHT } from "MIN_HEADER_HEIGHT" /* 7541 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 class GenericHeaderTitle {
@@ -132,7 +132,7 @@ function HeaderChannelActions(arg0) {
   const tmp = callback2();
   const merged = Object.assign(route.params);
   obj.screenIndex = screenIndex;
-  return callback(JoinCallButtonDefault, obj);
+  return callback(JoinCallIconDefault, obj);
 }
 let c3 = importAllResult;
 ({ View: c4, Platform } = get_ActivityIndicator);

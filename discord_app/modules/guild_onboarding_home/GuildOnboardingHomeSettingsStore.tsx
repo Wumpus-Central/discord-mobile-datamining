@@ -1,6 +1,6 @@
-// === Module 4659: handleSettingsLoadSuccess ===
+// === Module 4660: handleSettingsLoadSuccess ===
 
-// Module 4659 (handleSettingsLoadSuccess)
+// Module 4660 (handleSettingsLoadSuccess)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import set from "set" /* 2 */;

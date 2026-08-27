@@ -1,6 +1,6 @@
-// === Module 9766: context ===
+// === Module 8971: context ===
 
-// Module 9766 (context)
+// Module 8971 (context)
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -50,12 +50,12 @@ export const useRequiredAppLauncherContext = function useRequiredAppLauncherCont
 export const useAppLauncherContext = function useAppLauncherContext() {
   let _require = sharedValue.useRef(sharedValue1.DISMISSED);
   dependencyMap = sharedValue.useRef(undefined);
-  obj = _require(4184);
+  obj = _require(4185);
   sharedValue = obj.useSharedValue(-1);
-  sharedValue1 = _require(4184).useSharedValue(0);
-  const TEXT = _require(9767).AppLauncherEntrypoint.TEXT;
-  const obj2 = _require(4184);
-  const defaultAppLauncherWidth = _require(9768).useDefaultAppLauncherWidth(TEXT);
+  sharedValue1 = _require(4185).useSharedValue(0);
+  const TEXT = _require(8367).AppLauncherEntrypoint.TEXT;
+  const obj2 = _require(4185);
+  const defaultAppLauncherWidth = _require(8972).useDefaultAppLauncherWidth(TEXT);
   _require = false;
   obj = {
     getApplicationCommandManager() {

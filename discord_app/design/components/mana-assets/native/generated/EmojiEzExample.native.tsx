@@ -1,10 +1,10 @@
-// === Module 6441: EmojiEzExample ===
+// === Module 6447: EmojiEzExample ===
 
-// Module 6441 (EmojiEzExample)
+// Module 6447 (EmojiEzExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5440 */;
-import metadataDefault from "metadata" /* 6442 */;
+import preloadDefault from "preload" /* 5445 */;
+import metadataDefault from "metadata" /* 6448 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiEzExample.native.tsx");

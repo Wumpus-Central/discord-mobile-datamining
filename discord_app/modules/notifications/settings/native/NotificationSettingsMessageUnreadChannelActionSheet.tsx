@@ -1,11 +1,11 @@
-// === Module 10067: NotificationSettingsMessageUnreadChannelActionSheet ===
+// === Module 10173: NotificationSettingsMessageUnreadChannelActionSheet ===
 
-// Module 10067 (NotificationSettingsMessageUnreadChannelActionSheet)
+// Module 10173 (NotificationSettingsMessageUnreadChannelActionSheet)
 import noopAll from "noop" /* 19 */;
-import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 10066 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4653 */;
+import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 10172 */;
+import closure_3 from "updateUserGuildSettingsInternal" /* 4654 */;
 import { UserNotificationSettings } from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4654 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4655 */;
 import { ChannelNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 685 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,7 +15,7 @@ let result = require("set").fileFinishedImporting("modules/notifications/setting
 
 export default function NotificationSettingsMessageUnreadChannelActionSheet(channel) {
   const _require = channel;
-  let obj = _require(10048);
+  let obj = _require(10152);
   const channelPresetSettings = obj.useChannelPresetSettings(channel.channel);
   ({ unread, notification } = channelPresetSettings);
   obj = { value: unread, disabledMentionOnlyWithReason: null, onChange: null };

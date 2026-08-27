@@ -1,6 +1,6 @@
-// === Module 4548: logger ===
+// === Module 4549: logger ===
 
-// Module 4548 (logger)
+// Module 4549 (logger)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

@@ -1,10 +1,10 @@
-// === Module 9544: ExperimentalGameControllerLinkIcon ===
+// === Module 8783: ExperimentalGameControllerLinkIcon ===
 
-// Module 9544 (ExperimentalGameControllerLinkIcon)
+// Module 8783 (ExperimentalGameControllerLinkIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 9545 */;
+import registerAsset from "registerAsset" /* 8784 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

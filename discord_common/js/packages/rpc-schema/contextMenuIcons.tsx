@@ -1,6 +1,6 @@
-// === Module 14020: CONTEXT_MENU_ICON_NAMES ===
+// === Module 14047: CONTEXT_MENU_ICON_NAMES ===
 
-// Module 14020 (CONTEXT_MENU_ICON_NAMES)
+// Module 14047 (CONTEXT_MENU_ICON_NAMES)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/contextMenuIcons.tsx");

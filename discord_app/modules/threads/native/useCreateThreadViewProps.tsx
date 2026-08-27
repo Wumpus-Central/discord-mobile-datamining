@@ -1,7 +1,7 @@
-// === Module 10469: useCreateThreadViewProps ===
+// === Module 10915: useCreateThreadViewProps ===
 
-// Module 10469 (useCreateThreadViewProps)
-import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10124 */;
+// Module 10915 (useCreateThreadViewProps)
+import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10249 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 
 const require = arg1;

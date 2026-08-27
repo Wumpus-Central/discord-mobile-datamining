@@ -1,6 +1,6 @@
-// === Module 6022: handleUserSettingsStoreUpdate ===
+// === Module 6027: handleUserSettingsStoreUpdate ===
 
-// Module 6022 (handleUserSettingsStoreUpdate)
+// Module 6027 (handleUserSettingsStoreUpdate)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_1 from "_getSystemLocale" /* 1996 */;
@@ -392,7 +392,7 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(dispatcherDefa
       const merged7 = Object.assign(obj9);
       obj9 = obj5;
     } else {
-      obj = { state: "error", fetchedAt: null, storefront: "Array" };
+      obj = { state: "error", fetchedAt: null, storefront: "r" };
       const _Date = Date;
       obj[1] = Date.now();
       if (null != guildId) {

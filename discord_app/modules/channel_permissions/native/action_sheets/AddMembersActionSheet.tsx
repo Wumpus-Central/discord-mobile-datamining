@@ -1,9 +1,9 @@
-// === Module 9219: _toPropertyKey ===
+// === Module 9632: _toPropertyKey ===
 
-// Module 9219 (_toPropertyKey)
+// Module 9632 (_toPropertyKey)
 import ThemesDefault from "Themes" /* 712 */;
 import applyOverwritesAll from "applyOverwrites" /* 4094 */;
-import getRoleRowDataAll from "getRoleRowData" /* 9212 */;
+import getRoleRowDataAll from "getRoleRowData" /* 9628 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_objectWithoutProperties" /* 109 */;
 import closure_6 from "_slicedToArray" /* 32 */;
@@ -13,10 +13,10 @@ import closure_10 from "trackCommunicationDisabled" /* 1992 */;
 import closure_11 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_12 from "createGuildRecordFromRust" /* 1910 */;
 import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import RowType from "RowType" /* 7993 */;
+import RowType from "RowType" /* 8603 */;
 import { Permissions } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 function _toPropertyKey(obj) {
@@ -208,7 +208,7 @@ class AddMembersBody {
     tmp33 = Fragment;
     tmp35 = closure_8;
     obj4 = { accessibilityLabel: null, placeholder: null, tags: null, onChangeText: null, onRemove: null };
-    tmp8Result = require("module_9224");
+    tmp8Result = require("module_9637");
     intl5 = require("getSystemLocale").intl;
     obj4[0] = intl5.string(require("getSystemLocale").t["5h0QOP"]);
     intl6 = require("getSystemLocale").intl;
@@ -399,17 +399,17 @@ export default function AddMembersActionSheet(channel) {
         if (tmp) {
           if (row.rowType === closure_2_14.ROLE) {
             closure_2 = closure_2 + 1;
-            items.push(closure_2_0(4630).permissionOverwriteForRole(row.id, items.type));
-            const obj = closure_2_0(4630);
+            items.push(closure_2_0(4631).permissionOverwriteForRole(row.id, items.type));
+            const obj = closure_2_0(4631);
           } else if (row.rowType === tmp2.MEMBER) {
             closure_1 = closure_1 + 1;
-            items.push(closure_2_0(4630).permissionOverwriteForUser(row.id, items.type));
-            const obj2 = closure_2_0(4630);
+            items.push(closure_2_0(4631).permissionOverwriteForUser(row.id, items.type));
+            const obj2 = closure_2_0(4631);
           }
         }
       });
       dependencyMap = 1;
-      yield closure_1_0(9213).savePermissionUpdates(closure_1_0.id, items);
+      yield closure_1_0(9629).savePermissionUpdates(closure_1_0.id, items);
       if (1 === tmp7) {
         dependencyMap = 0;
         c5 = 3;
@@ -419,7 +419,7 @@ export default function AddMembersActionSheet(channel) {
       } else if (arg0 !== 2) {
         let obj = closure_1_0(4161);
         const result = obj.memberOrRoleAddedToast(c2, c1);
-        obj1 = closure_1_1(4411);
+        obj1 = closure_1_1(4412);
         obj1.hideActionSheet();
         dependencyMap = 0;
       }
@@ -446,7 +446,7 @@ export default function AddMembersActionSheet(channel) {
     }
     return closure_1_12.getGuild(guildId);
   });
-  let str = first(4638)(channel, true);
+  let str = first(4639)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -471,7 +471,7 @@ export default function AddMembersActionSheet(channel) {
       }
       obj1 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj[2] = tmp11(tmp12, obj4);
-      obj1[1] = tmp11(tmp4(5568).BottomSheetTitleHeader, obj);
+      obj1[1] = tmp11(tmp4(5573).BottomSheetTitleHeader, obj);
       let obj2 = { style: null, children: null };
       obj2[0] = tmp.container;
       const obj3 = { channel: null, guild: null, permission: null, pendingAdditions: null, setPendingAdditions: null, inActionSheet: true };
@@ -482,7 +482,7 @@ export default function AddMembersActionSheet(channel) {
       obj3[4] = tmp2[1];
       obj2[1] = tmp11(AddMembersBody, obj3);
       obj1[3] = tmp11(closure_8, obj2);
-      return tmp11(tmp4(5569).BottomSheet, obj1);
+      return tmp11(tmp4(5574).BottomSheet, obj1);
     }
     obj4 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1236).intl;

@@ -1,19 +1,19 @@
-// === Module 14425: UserRow ===
+// === Module 14452: UserRow ===
 
-// Module 14425 (UserRow)
+// Module 14452 (UserRow)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import messagesProxyDefault from "messagesProxy" /* 2369 */;
-import nameFromUserDefault from "nameFromUser" /* 4288 */;
-import Text from "Text" /* 4440 */;
-import TableRowInner from "TableRowInner" /* 5546 */;
-import ActionSheet from "ActionSheet" /* 5936 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5939 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7265 */;
+import nameFromUserDefault from "nameFromUser" /* 4289 */;
+import Text from "Text" /* 4441 */;
+import TableRowInner from "TableRowInner" /* 5551 */;
+import ActionSheet from "ActionSheet" /* 5941 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5944 */;
+import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7271 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function UserRow(userActivity) {
@@ -27,7 +27,7 @@ function UserRow(userActivity) {
     obj = { label: null, subLabel: null, icon: null };
     obj[0] = nameFromUserDefault.getName(user);
     obj[1] = topUserOrGuildDescription;
-    obj = { size: null, user: null, guildId: "Array" };
+    obj = { size: null, user: null, guildId: "r" };
     obj[0] = Button.AvatarSizes.SMALL;
     obj[1] = user;
     obj[2] = callback(Button.Avatar, obj);

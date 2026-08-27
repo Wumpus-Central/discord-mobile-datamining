@@ -1,6 +1,6 @@
-// === Module 7036: metadata ===
+// === Module 7042: metadata ===
 
-// Module 7036 (metadata)
+// Module 7042 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/VendingMachineSpotIllustration-2x.png.js");

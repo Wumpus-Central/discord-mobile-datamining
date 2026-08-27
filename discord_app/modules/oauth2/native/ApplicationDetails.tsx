@@ -1,20 +1,20 @@
-// === Module 10676: ApplicationDetailsEntry ===
+// === Module 9289: ApplicationDetailsEntry ===
 
-// Module 10676 (ApplicationDetailsEntry)
+// Module 9289 (ApplicationDetailsEntry)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ClockIcon from "ClockIcon" /* 4407 */;
-import Text from "Text" /* 4440 */;
-import LockIcon from "LockIcon" /* 4991 */;
-import set from "set" /* 9117 */;
-import ShieldIcon from "ShieldIcon" /* 10496 */;
-import items2 from "items" /* 10652 */;
-import getApplicationDetailsText from "getApplicationDetailsText" /* 10656 */;
+import ClockIcon from "ClockIcon" /* 4408 */;
+import Text from "Text" /* 4441 */;
+import LockIcon from "LockIcon" /* 4996 */;
+import ShieldIcon from "ShieldIcon" /* 8359 */;
+import set from "set" /* 8541 */;
+import items2 from "items" /* 9209 */;
+import getApplicationDetailsText from "getApplicationDetailsText" /* 9213 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function ApplicationDetailsEntry(children) {
@@ -67,7 +67,7 @@ export default function ApplicationDetails(arg0) {
   let tmp15 = null;
   if (null != joined) {
     obj = { iconComponent: null, text: null };
-    obj[0] = tmp5(4387).LinkIcon;
+    obj[0] = tmp5(4388).LinkIcon;
     const intl = tmp5(1236).intl;
     obj1 = { origin: null };
     obj1[0] = joined;
@@ -84,7 +84,7 @@ export default function ApplicationDetails(arg0) {
   let tmp18Result = null;
   if (null != connectedAccount) {
     const obj3 = { iconComponent: null, text: null };
-    obj3[0] = tmp5(10681).HammerIcon;
+    obj3[0] = tmp5(9294).HammerIcon;
     const intl2 = tmp5(1236).intl;
     obj3[1] = intl2.string(tmp5(1236).t["8qui3M"]);
     tmp18Result = tmp18(tmp19, obj3);
@@ -99,7 +99,7 @@ export default function ApplicationDetails(arg0) {
     tmp18Result = null;
     if (null != approximateGuildCount) {
       const obj5 = { iconComponent: null, text: null };
-      obj5[0] = tmp5(10683).RobotIcon;
+      obj5[0] = tmp5(9296).RobotIcon;
       const intl4 = tmp5(1236).intl;
       const obj6 = { guildCount: null };
       obj6[0] = approximateGuildCount;
@@ -113,17 +113,17 @@ export default function ApplicationDetails(arg0) {
   let mapped = null;
   if (null != disclosures) {
     mapped = disclosures.map((toFixed) => {
-      let obj = callback(10654);
+      let obj = callback(9211);
       const textForDisclosure = obj.getTextForDisclosure(toFixed);
-      if (callback(10654).ApplicationDisclosure.IP_LOCATION === toFixed) {
+      if (callback(9211).ApplicationDisclosure.IP_LOCATION === toFixed) {
         obj = { iconComponent: null };
-        obj[0] = tmp(10677).GlobeEarthIcon;
+        obj[0] = tmp(9290).GlobeEarthIcon;
         let tmp4 = obj;
       } else {
         tmp4 = null;
-        if (tmp(10654).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
+        if (tmp(9211).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
           obj = { iconComponent: null };
-          obj[0] = tmp(10679).EmbedIcon;
+          obj[0] = tmp(9292).EmbedIcon;
           tmp4 = obj;
         }
       }

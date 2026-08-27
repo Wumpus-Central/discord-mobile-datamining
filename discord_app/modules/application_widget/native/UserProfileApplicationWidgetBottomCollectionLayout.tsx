@@ -1,12 +1,12 @@
-// === Module 12724: CollectionItem ===
+// === Module 12676: CollectionItem ===
 
-// Module 12724 (CollectionItem)
+// Module 12676 (CollectionItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12630 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12582 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function CollectionItem(arg0) {
@@ -34,7 +34,7 @@ function CollectionItem(arg0) {
   } else {
     const obj2 = { style: null };
     obj2[0] = tmp.itemImage;
-    tmp11 = callback(tmp3(12718).ImageSkeleton, obj2);
+    tmp11 = callback(tmp3(12670).ImageSkeleton, obj2);
     tmp12 = callback;
   }
   const items1 = [tmp11, ];
@@ -42,17 +42,17 @@ function CollectionItem(arg0) {
   if ("value" === singleStringOrSkeleton.status) {
     const obj4 = { variant: "text-xs/medium", lineClamp: 2, children: null };
     obj4[2] = singleStringOrSkeleton.text;
-    let tmp12Result = tmp12(tmp3(4440).Text, obj4);
+    let tmp12Result = tmp12(tmp3(4441).Text, obj4);
   } else {
-    tmp12Result = tmp12(tmp3(12718).TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
+    tmp12Result = tmp12(tmp3(12670).TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
   }
   const items2 = [tmp12Result, ];
   if ("value" === singleStringOrSkeleton1.status) {
     const obj5 = { variant: "text-xxs/medium", color: "text-subtle", lineClamp: 2, children: null };
     obj5[3] = singleStringOrSkeleton1.text;
-    tmp12Result = tmp12(tmp3(4440).Text, obj5);
+    tmp12Result = tmp12(tmp3(4441).Text, obj5);
   } else {
-    tmp12Result = tmp12(tmp3(12718).TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
+    tmp12Result = tmp12(tmp3(12670).TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
   }
   items2[1] = tmp12Result;
   obj3[1] = items2;

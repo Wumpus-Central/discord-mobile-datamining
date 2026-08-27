@@ -3,14 +3,14 @@
 // Module 1300 (getTextStyles)
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef8217 from "module_8217" /* 8217 */;
-import getClass from "getClass" /* 12290 */;
+import _modDef8323 from "module_8323" /* 8323 */;
+import getClass from "getClass" /* 12112 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { getThemedRippleConfig } from "semanticColor" /* 1301 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
-import hexToRgba from "hexToRgba" /* 4292 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
+import hexToRgba from "hexToRgba" /* 4293 */;
 
 require = arg1;
 function getTextStyles(disabled, text) {
@@ -98,7 +98,7 @@ class ButtonText {
       obj[2] = size;
       obj[3] = disabled;
       num = 0;
-      tmp5 = require("module_8217");
+      tmp5 = require("module_8323");
       items = [, ];
       items[0] = getTextStyles(obj, tmp);
       items[1] = style;

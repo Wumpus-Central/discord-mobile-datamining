@@ -1,6 +1,6 @@
-// === Module 16479: useTransitionToConnectedActivityInVoice ===
+// === Module 16543: useTransitionToConnectedActivityInVoice ===
 
-// Module 16479 (useTransitionToConnectedActivityInVoice)
+// Module 16543 (useTransitionToConnectedActivityInVoice)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;

@@ -1,6 +1,6 @@
-// === Module 4178: BaseRive ===
+// === Module 4179: BaseRive ===
 
-// Module 4178 (BaseRive)
+// Module 4179 (BaseRive)
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -163,7 +163,7 @@ export const BaseRive = forwardRefResult;
 export const useNumberBinding = function useNumberBinding(AnimationState, instance, AnimationState2, AnimationState1, playIfNeeded) {
   let _require = AnimationState2;
   dependencyMap = playIfNeeded;
-  const iter = _require(4179).useRiveNumber(AnimationState, instance);
+  const iter = _require(4180).useRiveNumber(AnimationState, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
@@ -210,7 +210,7 @@ export const useNumberBinding = function useNumberBinding(AnimationState, instan
 export const useStringBinding = function useStringBinding(LVL, instance, LVL2, LVL1, playIfNeeded) {
   let _require = LVL2;
   dependencyMap = playIfNeeded;
-  const iter = _require(4179).useRiveString(LVL, instance);
+  const iter = _require(4180).useRiveString(LVL, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
@@ -243,7 +243,7 @@ export const useStringBinding = function useStringBinding(LVL, instance, LVL2, L
 export const useBooleanBinding = function useBooleanBinding(reducedMotion, instance, reducedMotionEnabled, pressed1, playIfNeeded) {
   let _require = reducedMotionEnabled;
   dependencyMap = playIfNeeded;
-  const iter = _require(4179).useRiveBoolean(reducedMotion, instance);
+  const iter = _require(4180).useRiveBoolean(reducedMotion, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
@@ -277,7 +277,7 @@ export const useBooleanBinding = function useBooleanBinding(reducedMotion, insta
 export const useColorBinding = function useColorBinding(FillColor, instance, FillColor2, FillColor1, playIfNeeded) {
   const _require = FillColor2;
   dependencyMap = FillColor1;
-  const iter = _require(4179).useRiveColor(FillColor, instance);
+  const iter = _require(4180).useRiveColor(FillColor, instance);
   const setValue = iter.setValue;
   const value = iter.value;
   closure_4 = value;
@@ -308,7 +308,7 @@ export const useColorBinding = function useColorBinding(FillColor, instance, Fil
 export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2, stateFromStores) {
   let _require = arg2;
   dependencyMap = arg4;
-  const iter = _require(4179).useRiveEnum(FillColor, instance);
+  const iter = _require(4180).useRiveEnum(FillColor, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
@@ -341,7 +341,7 @@ export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2,
 export const useTriggerBinding = function useTriggerBinding(startAnimation, instance, startAnimation2, startAnimation1, playIfNeeded) {
   const _require = startAnimation2;
   dependencyMap = playIfNeeded;
-  let obj = _require(4179);
+  let obj = _require(4180);
   let tmp;
   if (null != startAnimation1) {
     obj = { onTrigger: null };

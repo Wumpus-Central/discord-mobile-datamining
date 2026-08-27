@@ -1,12 +1,11 @@
-// === Module 14840: toggle ===
+// === Module 14867: toggle ===
 
-// Module 14840 (toggle)
+// Module 14867 (toggle)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import apexExperiment from "apexExperiment" /* 6124 */;
-import MobileUserSettings from "MobileUserSettings" /* 8302 */;
-import createToggle from "createToggle" /* 10584 */;
+import MobileUserSettings from "MobileUserSettings" /* 7816 */;
+import createToggle from "createToggle" /* 10988 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
@@ -14,10 +13,6 @@ const toggle = createToggle.createToggle({
     return intl.string(getSystemLocale.t.c0oFDw);
   },
   parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  usePredicate() {
-    const GameMentionsMobileExperiment = apexExperiment.GameMentionsMobileExperiment;
-    return GameMentionsMobileExperiment.useConfig({ location: "GameMentionsInAutocomplete" }).enabled;
-  },
   useValue: explicitContentFromProto.IncludeGameMentionsInAutocomplete.useSetting,
   onValueChange: explicitContentFromProto.IncludeGameMentionsInAutocomplete.updateSetting
 });
@@ -27,10 +22,6 @@ const obj = {
     return intl.string(getSystemLocale.t.c0oFDw);
   },
   parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  usePredicate() {
-    const GameMentionsMobileExperiment = apexExperiment.GameMentionsMobileExperiment;
-    return GameMentionsMobileExperiment.useConfig({ location: "GameMentionsInAutocomplete" }).enabled;
-  },
   useValue: explicitContentFromProto.IncludeGameMentionsInAutocomplete.useSetting,
   onValueChange: explicitContentFromProto.IncludeGameMentionsInAutocomplete.updateSetting
 };

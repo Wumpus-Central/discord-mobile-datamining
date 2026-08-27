@@ -1,6 +1,6 @@
-// === Module 5342: DismissibleQuestContentFlags ===
+// === Module 5347: DismissibleQuestContentFlags ===
 
-// Module 5342 (DismissibleQuestContentFlags)
+// Module 5347 (DismissibleQuestContentFlags)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/DismissibleQuestContentFlags.tsx");

@@ -1,25 +1,25 @@
-// === Module 16560: SelfStreamCard ===
+// === Module 16626: SelfStreamCard ===
 
-// Module 16560 (SelfStreamCard)
+// Module 16626 (SelfStreamCard)
 import ThemesDefault from "Themes" /* 712 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4878 */;
-import LinearGradientDefault from "LinearGradient" /* 4891 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4879 */;
+import LinearGradientDefault from "LinearGradient" /* 4892 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 4466 */;
-import closure_7 from "createRTCConnection" /* 4518 */;
-import closure_8 from "anyoneHasFlagInContext" /* 5310 */;
-import VoicePanelModes from "VoicePanelModes" /* 11914 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11912 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16516 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 11917 */;
+import closure_6 from "reset" /* 4467 */;
+import closure_7 from "createRTCConnection" /* 4519 */;
+import closure_8 from "anyoneHasFlagInContext" /* 5315 */;
+import VoicePanelModes from "VoicePanelModes" /* 11757 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11755 */;
+import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16582 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 11760 */;
 import { ApplicationStreamStates } from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4465 */;
-import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 11915 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4466 */;
+import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 11758 */;
 import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4184" /* 4184 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import importDefaultResult from "module_4185" /* 4185 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function SelfStreamCard(sharedCoords) {
@@ -1175,13 +1175,13 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
     str2 = "animate-never";
   }
   obj = { originX: obj.withSpring(originX.targetOriginX, SUBTLE_SPRING, str2), originY: null, width: null, height: null };
-  let tmpResult = tmp(4878);
+  let tmpResult = tmp(4879);
   let str3 = str;
   if (flag) {
     str3 = "animate-never";
   }
   obj[1] = tmpResult.withSpring(originX.targetOriginY, SUBTLE_SPRING, str3);
-  tmpResult = tmp(4878);
+  tmpResult = tmp(4879);
   let str4 = str;
   if (flag) {
     str4 = "animate-never";
@@ -1447,7 +1447,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp25 = callback;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "call", layout: true, layoutPhysics: true };
+  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "accessibilityRole", layout: true, layoutPhysics: true };
   obj8[3] = layoutTransition;
   obj8[4] = physics;
   tmp26Result = callback(closure_37, obj8);

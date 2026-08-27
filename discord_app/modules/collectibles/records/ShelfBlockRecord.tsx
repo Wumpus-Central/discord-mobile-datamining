@@ -1,8 +1,8 @@
-// === Module 7254: fromServer ===
+// === Module 7260: fromServer ===
 
-// Module 7254 (fromServer)
+// Module 7260 (fromServer)
 import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 7245 */;
+import ShopBlockType from "ShopBlockType" /* 7251 */;
 
 let prototype;
 prototype = function ShelfBlockRecord(show_button) {

@@ -1,10 +1,10 @@
-// === Module 4996: VoiceNormalSpoilerIcon ===
+// === Module 5001: VoiceNormalSpoilerIcon ===
 
-// Module 4996 (VoiceNormalSpoilerIcon)
+// Module 5001 (VoiceNormalSpoilerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 4945 */;
+import registerAsset from "registerAsset" /* 4946 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

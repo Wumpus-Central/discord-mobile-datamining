@@ -1,6 +1,6 @@
-// === Module 7046: metadata ===
+// === Module 7052: metadata ===
 
-// Module 7046 (metadata)
+// Module 7052 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WaterIllocon-2x.png.js");

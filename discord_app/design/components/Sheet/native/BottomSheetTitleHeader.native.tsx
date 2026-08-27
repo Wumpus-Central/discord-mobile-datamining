@@ -1,16 +1,16 @@
-// === Module 5568: RedesignBottomSheetTitleHeaderBase ===
+// === Module 5573: RedesignBottomSheetTitleHeaderBase ===
 
-// Module 5568 (RedesignBottomSheetTitleHeaderBase)
+// Module 5573 (RedesignBottomSheetTitleHeaderBase)
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import Text from "Text" /* 4440 */;
-import useHeaderDebugOverlayDefault from "useHeaderDebugOverlay" /* 5443 */;
+import Text from "Text" /* 4441 */;
+import useHeaderDebugOverlayDefault from "useHeaderDebugOverlay" /* 5448 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function RedesignBottomSheetTitleHeaderBase(children) {

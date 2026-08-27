@@ -1,10 +1,10 @@
-// === Module 15680: NUFChannelsActionSheetImporter ===
+// === Module 15744: NUFChannelsActionSheetImporter ===
 
-// Module 15680 (NUFChannelsActionSheetImporter)
+// Module 15744 (NUFChannelsActionSheetImporter)
 import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10218 */;
-import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "useIsGuildEligibleForRoleSubscriptionsUpsell" /* 15691 */;
-import useIsEligibleForTierTemplateUpsellDefault from "useIsEligibleForTierTemplateUpsell" /* 15692 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10337 */;
+import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "useIsGuildEligibleForRoleSubscriptionsUpsell" /* 15755 */;
+import useIsEligibleForTierTemplateUpsellDefault from "useIsEligibleForTierTemplateUpsell" /* 15756 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { DismissibleContentGroupName as closure_5 } from "ContentDismissActionType" /* 1388 */;
@@ -12,19 +12,19 @@ import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
 function NUFChannelsActionSheetImporter() {
-  return asyncRequireImpl(13309, dependencyMap.paths);
+  return asyncRequireImpl(13336, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsUpsellActionSheetImporter() {
-  return asyncRequireImpl(15681, dependencyMap.paths);
+  return asyncRequireImpl(15745, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsIAPUpsellActionSheetImporter() {
-  return asyncRequireImpl(15683, dependencyMap.paths);
+  return asyncRequireImpl(15747, dependencyMap.paths);
 }
 function CreatorMonetizationOnboardingV2UpsellActionSheetImporter() {
-  return asyncRequireImpl(15686, dependencyMap.paths);
+  return asyncRequireImpl(15750, dependencyMap.paths);
 }
 function TierTemplatesUpsellActionSheetImporter() {
-  return asyncRequireImpl(15688, dependencyMap.paths);
+  return asyncRequireImpl(15752, dependencyMap.paths);
 }
 class GuildTooltipActionSheets {
   constructor(arg0) {

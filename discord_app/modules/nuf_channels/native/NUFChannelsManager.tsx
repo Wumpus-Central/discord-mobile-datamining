@@ -1,12 +1,12 @@
-// === Module 13308: _initialize ===
+// === Module 13335: _initialize ===
 
-// Module 13308 (_initialize)
+// Module 13335 (_initialize)
 import Storage3 from "Storage" /* 595 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4299 */;
-import initializeDefault from "initialize" /* 5433 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4300 */;
+import initializeDefault from "initialize" /* 5438 */;
 import closure_3 from "trackCommunicationDisabled" /* 1992 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleConnectionOpen" /* 4266 */;
+import closure_5 from "handleConnectionOpen" /* 4267 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
@@ -95,8 +95,8 @@ class NUFChannelsManager extends tmp2 {
       const value = Storage.get(closure_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(4288).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(4288);
+        isNewUserResult = applyArgumentsResult(4289).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(4289);
       }
       return isNewUserResult;
     };
@@ -119,11 +119,11 @@ prototype["_initialize"] = function _initialize() {
   const value = Storage.get(c9);
   let isNewUserResult = !value;
   if (!value) {
-    let tmpResult = tmp(4288);
+    let tmpResult = tmp(4289);
     isNewUserResult = tmpResult.isNewUser(currentUser.getCurrentUser());
   }
   if (isNewUserResult) {
-    tmpResult = tmp(4299);
+    tmpResult = tmp(4300);
     const rootNavigationRef = tmpResult.getRootNavigationRef();
     if (rootNavigationRef != null) {
       const self = this;

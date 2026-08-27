@@ -1,18 +1,18 @@
-// === Module 8737: handleOpenEmailVerification ===
+// === Module 7699: handleOpenEmailVerification ===
 
-// Module 8737 (handleOpenEmailVerification)
+// Module 7699 (handleOpenEmailVerification)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef8676 from "module_8676" /* 8676 */;
+import _modDef7620 from "module_7620" /* 7620 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function handleOpenEmailVerification() {
-  _modDef8676.open();
+  _modDef7620.open();
 }
 function getBannerText(currentUser) {
   if (null == currentUser) {
@@ -60,13 +60,13 @@ export default function UserSettingsAccountUnverifiedHeader() {
     obj = { style: null, variant: "text-xs/bold", color: "text-overlay-light", children: null };
     obj[0] = tmp.accountWarningText;
     obj[3] = tmp4.title;
-    const items1 = [callback(tmp2(4440).Text, obj), ];
+    const items1 = [callback(tmp2(4441).Text, obj), ];
     obj1 = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: null };
     obj1[0] = tmp.accountWarningButton;
     obj1[3] = tmp4.button;
-    items1[1] = callback(tmp2(4440).Text, obj1);
+    items1[1] = callback(tmp2(4441).Text, obj1);
     obj[3] = items1;
-    tmp5 = callback2(tmp2(5015).PressableOpacity, obj);
+    tmp5 = callback2(tmp2(5020).PressableOpacity, obj);
   }
   return tmp5;
 };

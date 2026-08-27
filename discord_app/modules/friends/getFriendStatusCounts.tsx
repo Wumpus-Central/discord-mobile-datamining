@@ -1,7 +1,7 @@
-// === Module 16180: getFriendStatusCounts ===
+// === Module 16243: getFriendStatusCounts ===
 
-// Module 16180 (getFriendStatusCounts)
-import closure_0 from "sortActivity" /* 4533 */;
+// Module 16243 (getFriendStatusCounts)
+import closure_0 from "sortActivity" /* 4534 */;
 import closure_1 from "markAllUserIdListsStale" /* 4098 */;
 import { StatusTypes } from "ME" /* 676 */;
 

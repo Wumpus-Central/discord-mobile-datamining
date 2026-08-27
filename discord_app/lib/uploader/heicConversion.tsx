@@ -1,6 +1,6 @@
-// === Module 5157: _preConvertHeicForUpload ===
+// === Module 5162: _preConvertHeicForUpload ===
 
-// Module 5157 (_preConvertHeicForUpload)
+// Module 5162 (_preConvertHeicForUpload)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
@@ -55,7 +55,7 @@ function _preConvertHeicForUpload() {
                 obj2[0] = tmp35;
                 return obj2;
               }
-              obj8 = lib(5062);
+              obj8 = lib(5067);
               tmp36 = closure_1;
               tmp37 = dependencyMap;
             }
@@ -75,7 +75,7 @@ function _preConvertHeicForUpload() {
               }
               const _File = File;
               const items = [closure_1.convertedBlob];
-              obj = lib(5062);
+              obj = lib(5067);
               const obj4 = { type: "image/jpeg", lastModified: null };
               obj4[1] = lib.lastModified;
               const file = new File(items, obj.renameToJpegExtension(lib.name), obj4);
@@ -202,7 +202,7 @@ function _maybeConvertHeicToJpeg() {
                 c8 = 3;
                 return { value: null, done: true };
               }
-              obj17 = lib(5062);
+              obj17 = lib(5067);
             }
           } else if (2 === tmp7) {
             if (arg0 === 1) {
@@ -330,7 +330,7 @@ const result = require("set").fileFinishedImporting("lib/uploader/heicConversion
 export const HeicConversionFailureReason = obj;
 export const isHeicFile = require("set").isHeicFile;
 export const renameToJpegExtension = require("set").renameToJpegExtension;
-export const preConvertHeicForUpload = function preConvertHeicForUpload(c7, quality, maxFileSizeBytes) {
+export const preConvertHeicForUpload = function preConvertHeicForUpload() {
   const self = this;
   const apply = _preConvertHeicForUpload.apply;
   if (typeof apply === "unknown") {

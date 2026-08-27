@@ -1,11 +1,11 @@
-// === Module 11065: SingleScreenshare ===
+// === Module 10026: SingleScreenshare ===
 
-// Module 11065 (SingleScreenshare)
+// Module 10026 (SingleScreenshare)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9962 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9441 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 noopAll;
 ({ resetFocus: obj1, toggleFocus: c3 } = VoiceChatDrawerState);
@@ -17,7 +17,7 @@ const result = require("set").fileFinishedImporting("modules/video_calls/native/
 
 export default function SingleScreenshare(channel) {
   channel = channel.channel;
-  channel(4896)(() => {
+  channel(4897)(() => {
     callback();
   });
   const obj = {
@@ -38,5 +38,5 @@ export default function SingleScreenshare(channel) {
     stageStreamContainer = tmp.stageStreamContainer;
   }
   obj[3] = stageStreamContainer;
-  return tmp3(channel(11066), obj);
+  return tmp3(channel(10027), obj);
 };

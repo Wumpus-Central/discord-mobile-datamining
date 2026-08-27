@@ -1,25 +1,25 @@
-// === Module 10867: UserTile ===
+// === Module 9513: UserTile ===
 
-// Module 10867 (UserTile)
+// Module 9513 (UserTile)
 import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 8219 */;
-import registerAssetDefault2 from "registerAsset" /* 10869 */;
-import registerAssetDefault3 from "registerAsset" /* 10870 */;
-import registerAssetDefault4 from "registerAsset" /* 10871 */;
+import registerAssetDefault from "registerAsset" /* 8666 */;
+import registerAssetDefault2 from "registerAsset" /* 9516 */;
+import registerAssetDefault3 from "registerAsset" /* 9517 */;
+import registerAssetDefault4 from "registerAsset" /* 9518 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "recentlyUsedEmojis" /* 10868 */;
-import { clearVoiceChannelEffectForUser as closure_7 } from "recentlyUsedEmojis" /* 10868 */;
+import closure_6 from "recentlyUsedEmojis" /* 9514 */;
+import { clearVoiceChannelEffectForUser as closure_7 } from "recentlyUsedEmojis" /* 9514 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
 import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "_detectH265HardwareDecode" /* 4495 */;
+import closure_10 from "_detectH265HardwareDecode" /* 4496 */;
 import { VideoToggleState } from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4465 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4508 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4466 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4509 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
-import hexToRgba from "hexToRgba" /* 4292 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
+import hexToRgba from "hexToRgba" /* 4293 */;
 
 const require = arg1;
 let c4 = importAllResult;

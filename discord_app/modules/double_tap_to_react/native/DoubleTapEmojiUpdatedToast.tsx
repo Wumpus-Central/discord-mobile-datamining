@@ -1,15 +1,15 @@
-// === Module 8865: ToastEmoji ===
+// === Module 9032: ToastEmoji ===
 
-// Module 8865 (ToastEmoji)
+// Module 9032 (ToastEmoji)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import dispatcherDefault from "dispatcher" /* 4162 */;
-import Text from "Text" /* 4440 */;
+import Text from "Text" /* 4441 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import set from "set" /* 500 */;
 
 require = arg1;
@@ -85,7 +85,7 @@ const result = set.fileFinishedImporting("modules/double_tap_to_react/native/Dou
 export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
-  let obj = emoji(4866);
+  let obj = emoji(4867);
   if (obj.getIsScreenReaderEnabled()) {
     const AccessibilityAnnouncer = tmp(1351).AccessibilityAnnouncer;
     const intl = tmp(1236).intl;

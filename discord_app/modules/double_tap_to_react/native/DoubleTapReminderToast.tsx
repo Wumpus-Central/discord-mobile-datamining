@@ -1,14 +1,14 @@
-// === Module 8864: DoubleTapReminderContent ===
+// === Module 9031: DoubleTapReminderContent ===
 
-// Module 8864 (DoubleTapReminderContent)
+// Module 9031 (DoubleTapReminderContent)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import dispatcherDefault from "dispatcher" /* 4162 */;
-import Text from "Text" /* 4440 */;
+import Text from "Text" /* 4441 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function DoubleTapReminderContent(emoji) {
@@ -37,7 +37,7 @@ let result = require("set").fileFinishedImporting("modules/double_tap_to_react/n
 
 export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapReminderToast(emoji) {
   const _require = emoji;
-  let obj = _require(4265);
+  let obj = _require(4266);
   if (!obj.UNSAFE_isDismissibleContentDismissed(_require(1377).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER)) {
     const DoubleTapReactionEmoji = tmp(4134).DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
@@ -45,14 +45,14 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
     if (flag == null) {
       flag = false;
     }
-    let tmpResult = tmp(8295);
+    let tmpResult = tmp(7809);
     const result = tmpResult.disambiguatedEmojiFromSettingsValue(setting);
     let areEmojisEqualResult = !flag;
     if (!flag) {
       areEmojisEqualResult = null != result;
     }
     if (areEmojisEqualResult) {
-      tmpResult = tmp(8295);
+      tmpResult = tmp(7809);
       areEmojisEqualResult = tmpResult.areEmojisEqual(result, emoji);
     }
     if (areEmojisEqualResult) {
@@ -67,8 +67,8 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       const obj4 = dispatcherDefault;
       obj = { dismissAction: null, forceTrack: true };
       obj[0] = ContentDismissActionType.AUTO_DISMISS;
-      const result1 = tmp(4265).UNSAFE_markDismissibleContentAsDismissed(tmp(1377).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj);
-      const tmpResult1 = tmp(4265);
+      const result1 = tmp(4266).UNSAFE_markDismissibleContentAsDismissed(tmp(1377).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj);
+      const tmpResult1 = tmp(4266);
     }
   }
 };

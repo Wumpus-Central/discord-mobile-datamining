@@ -1,6 +1,6 @@
-// === Module 4264: isSyncedModeThemesEnabled ===
+// === Module 4265: isSyncedModeThemesEnabled ===
 
-// Module 4264 (isSyncedModeThemesEnabled)
+// Module 4265 (isSyncedModeThemesEnabled)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getThemeForColor from "getThemeForColor" /* 1347 */;
@@ -8,7 +8,7 @@ import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshE
 import DismissibleContent from "DismissibleContent" /* 1377 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4107 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4265 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4266 */;
 import closure_5 from "initialize" /* 1303 */;
 import closure_6 from "handleThemeChange" /* 1302 */;
 import closure_7 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
@@ -73,7 +73,7 @@ function handleUserSettingsProtoStoreUpdate() {
     result = tmpResult.isPerModeThemingActive(isSyncedModeThemesEnabled);
   }
   if (!result) {
-    tmpResult = tmp(4291);
+    tmpResult = tmp(4292);
     tmpResult.setUseSystemTheme(SystemThemeState.OFF);
   }
   if (null != backgroundGradientPresetId) {
@@ -242,7 +242,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDe
               c15 = true;
             }
           }
-          tmp6Result = tmp6(4288);
+          tmp6Result = tmp6(4289);
         }
         obj2 = UNSAFE_isDismissibleContentDismissed;
         tmp6 = require;

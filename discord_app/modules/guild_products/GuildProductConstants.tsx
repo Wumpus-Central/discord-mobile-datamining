@@ -1,6 +1,6 @@
-// === Module 5067: GUILD_PRODUCT_EDIT_MODAL_KEY ===
+// === Module 5072: GUILD_PRODUCT_EDIT_MODAL_KEY ===
 
-// Module 5067 (GUILD_PRODUCT_EDIT_MODAL_KEY)
+// Module 5072 (GUILD_PRODUCT_EDIT_MODAL_KEY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_products/GuildProductConstants.tsx");

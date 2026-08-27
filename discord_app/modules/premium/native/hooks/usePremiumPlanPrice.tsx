@@ -1,10 +1,10 @@
-// === Module 7862: usePremiumPlanPrice ===
+// === Module 8151: usePremiumPlanPrice ===
 
-// Module 7862 (usePremiumPlanPrice)
+// Module 8151 (usePremiumPlanPrice)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "addSubscriptionPlan" /* 4112 */;
 import closure_5 from "reset" /* 4113 */;
-import closure_6 from "updateProduct" /* 6031 */;
+import closure_6 from "updateProduct" /* 6036 */;
 import { PaymentGateways } from "sum" /* 505 */;
 
 const require = arg1;

@@ -1,14 +1,14 @@
-// === Module 16029: reloadVibegrationsAppFrames ===
+// === Module 16093: reloadVibegrationsAppFrames ===
 
-// Module 16029 (reloadVibegrationsAppFrames)
+// Module 16093 (reloadVibegrationsAppFrames)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 10753 */;
-import vibegrationLocation from "vibegrationLocation" /* 16026 */;
+import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 9382 */;
+import vibegrationLocation from "vibegrationLocation" /* 16091 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 10749 */;
-import closure_5 from "isProjectOwner" /* 16023 */;
+import closure_4 from "map" /* 9385 */;
+import closure_5 from "isProjectOwner" /* 16088 */;
 import { Endpoints } from "ME" /* 676 */;
-import { isLaunched } from "FrameLayoutModes" /* 10750 */;
+import { isLaunched } from "FrameLayoutModes" /* 9386 */;
 
 require = arg1;
 function reloadVibegrationsAppFrames(application_id) {
@@ -279,7 +279,7 @@ function _createProject() {
   }
   return applyArgumentsResult;
 }
-function patchProject(projectId, arg1) {
+function patchProject(closure_1_0, arg1) {
   const self = this;
   const apply = _patchProject.apply;
   if (typeof apply === "unknown") {
@@ -422,7 +422,7 @@ function _setProjectIcon() {
       }
     })();
   });
-  closure_19 = tmp;
+  closure_18 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -451,7 +451,7 @@ function _deleteProject() {
       return callback2;
     })();
   });
-  closure_20 = tmp;
+  closure_19 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -608,7 +608,7 @@ function _refreshPublishedProject() {
     iter.next();
     return iter;
   });
-  closure_21 = tmp;
+  closure_20 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -619,7 +619,6 @@ function _refreshPublishedProject() {
 }
 let c9 = null;
 let c10 = null;
-const map = new Map();
 let result = require("set").fileFinishedImporting("modules/vibegrations/actions/VibegrationsActionCreators.tsx");
 
 export const trackPublishFailed = function trackPublishFailed(project_id, message, arg2) {
@@ -659,84 +658,11 @@ export const createProject = function createProject(arg0) {
   }
   return applyArgumentsResult;
 };
-export const renameProject = function renameProject(projectId, name) {
-  return patchProject(projectId, { name });
+export const renameProject = function renameProject(closure_1_0, name) {
+  return patchProject(closure_1_0, { name });
 };
-export const setProjectVisibility = function setProjectVisibility(projectId, arg1) {
-  closure_0 = projectId;
-  const f99530 = (arg0) => {
-    const PUBLIC = projectId(nextPromise1[9]).VibegrationsProjectFlags.PUBLIC;
-    if (projectId) {
-      let tmp = arg0 | PUBLIC;
-    } else {
-      tmp = arg0 & ~PUBLIC;
-    }
-    return tmp;
-  };
-  let resolved = map.get(projectId);
-  if (resolved == null) {
-    resolved = Promise.resolve();
-  }
-  const nextPromise = resolved.then(() => {
-    const project = closure_1_5.getProject(closure_0);
-    let num;
-    if (project != null) {
-      num = project.flags;
-    }
-    if (num == null) {
-      num = 0;
-    }
-    return closure_1_16(closure_0, { flags: f99531(num) });
-  });
-  const nextPromise1 = nextPromise.then(() => {
-    if (closure_1_18.get(closure_0) === nextPromise1) {
-      closure_1_18.delete(closure_0);
-    }
-  }, () => {
-    if (closure_1_18.get(closure_0) === nextPromise1) {
-      closure_1_18.delete(closure_0);
-    }
-  });
-  const result = map.set(projectId, nextPromise1);
-  return nextPromise;
-};
-export const setProjectSharing = function setProjectSharing(arg0, arg1) {
-  closure_0 = arg0;
-  const f99531 = (arg0) => {
-    const SHAREABLE = callback(nextPromise1[9]).VibegrationsProjectFlags.SHAREABLE;
-    if (callback) {
-      let tmp = arg0 | SHAREABLE;
-    } else {
-      tmp = arg0 & ~SHAREABLE;
-    }
-    return tmp;
-  };
-  let resolved = map.get(arg0);
-  if (resolved == null) {
-    resolved = Promise.resolve();
-  }
-  const nextPromise = resolved.then(() => {
-    const project = closure_1_5.getProject(closure_0);
-    let num;
-    if (project != null) {
-      num = project.flags;
-    }
-    if (num == null) {
-      num = 0;
-    }
-    return closure_1_16(closure_0, { flags: f99531(num) });
-  });
-  const nextPromise1 = nextPromise.then(() => {
-    if (closure_1_18.get(closure_0) === nextPromise1) {
-      closure_1_18.delete(closure_0);
-    }
-  }, () => {
-    if (closure_1_18.get(closure_0) === nextPromise1) {
-      closure_1_18.delete(closure_0);
-    }
-  });
-  const result = map.set(arg0, nextPromise1);
-  return nextPromise;
+export const updateProjectSettings = function updateProjectSettings(closure_1_0, arg1) {
+  return patchProject(closure_1_0, arg1);
 };
 export const setProjectIcon = function setProjectIcon(projectId, icon) {
   const self = this;
@@ -748,8 +674,8 @@ export const setProjectIcon = function setProjectIcon(projectId, icon) {
   }
   return applyArgumentsResult;
 };
-export const setGuildHints = function setGuildHints(projectId) {
-  return patchProject(projectId, arg1);
+export const setGuildHints = function setGuildHints(closure_1_0) {
+  return patchProject(closure_1_0, arg1);
 };
 export const deleteProject = function deleteProject() {
   const self = this;

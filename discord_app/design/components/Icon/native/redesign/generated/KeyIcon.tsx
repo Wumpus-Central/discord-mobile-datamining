@@ -1,10 +1,10 @@
-// === Module 8710: KeyIcon ===
+// === Module 7664: KeyIcon ===
 
-// Module 8710 (KeyIcon)
+// Module 7664 (KeyIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 8711 */;
+import registerAsset from "registerAsset" /* 7665 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

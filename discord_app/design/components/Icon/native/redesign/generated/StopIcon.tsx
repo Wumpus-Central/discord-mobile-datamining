@@ -1,10 +1,10 @@
-// === Module 15377: StopIcon ===
+// === Module 15442: StopIcon ===
 
-// Module 15377 (StopIcon)
+// Module 15442 (StopIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 15378 */;
+import registerAsset from "registerAsset" /* 15443 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

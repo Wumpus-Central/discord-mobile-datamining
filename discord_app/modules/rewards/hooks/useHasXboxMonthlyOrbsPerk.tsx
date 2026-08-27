@@ -1,6 +1,6 @@
-// === Module 13272: hasCrepeMonthlyOrbsPerk ===
+// === Module 13299: hasCrepeMonthlyOrbsPerk ===
 
-// Module 13272 (hasCrepeMonthlyOrbsPerk)
+// Module 13299 (hasCrepeMonthlyOrbsPerk)
 import initialize from "initialize" /* 589 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;

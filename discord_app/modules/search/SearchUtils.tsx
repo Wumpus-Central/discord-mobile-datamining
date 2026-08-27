@@ -1,23 +1,23 @@
-// === Module 11980: SearchTokenTypes ===
+// === Module 11824: SearchTokenTypes ===
 
-// Module 11980 (SearchTokenTypes)
+// Module 11824 (SearchTokenTypes)
 import applyDefault from "apply" /* 12 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import handleConnectionOpenDefault from "handleConnectionOpen" /* 1981 */;
 import hooksDefault from "hooks" /* 4043 */;
-import nameFromUserDefault from "nameFromUser" /* 4288 */;
-import computeChannelName from "computeChannelName" /* 4638 */;
-import getShortcuts from "getShortcuts" /* 11981 */;
-import getShortcutsDefault from "getShortcuts" /* 11981 */;
-import getMatchDefault from "getMatch" /* 11986 */;
-import _modDef11987 from "module_11987" /* 11987 */;
+import nameFromUserDefault from "nameFromUser" /* 4289 */;
+import computeChannelName from "computeChannelName" /* 4639 */;
+import getShortcuts from "getShortcuts" /* 11825 */;
+import getShortcutsDefault from "getShortcuts" /* 11825 */;
+import getMatchDefault from "getMatch" /* 11830 */;
+import _modDef11831 from "module_11831" /* 11831 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "comparator" /* 1982 */;
-import closure_6 from "initialize" /* 4684 */;
+import closure_6 from "initialize" /* 4685 */;
 import closure_7 from "markAllUserIdListsStale" /* 4098 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { SearchTabs } from "MessageEmbedTypes" /* 8622 */;
+import { SearchTabs } from "MessageEmbedTypes" /* 7555 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -502,7 +502,7 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
       }
     }
     let tmp4;
-    if (currentToken.type === tmp3(11986).NON_TOKEN_TYPE) {
+    if (currentToken.type === tmp3(11830).NON_TOKEN_TYPE) {
       tmp4 = currentToken;
     }
     obj4 = { type: null, filter: null, token: null };
@@ -625,7 +625,7 @@ export const refreshSearchTokens = function refreshSearchTokens() {
     return closure_20.addRule({ type });
   });
   const obj4 = applyDefault(crossDMSearchTokensConfig);
-  const result1 = _modDef11987.markSearchTokensRefreshed();
+  const result1 = _modDef11831.markSearchTokensRefreshed();
 };
 export const getChannelDisplayName = function getChannelDisplayName(isDM) {
   const channelName = computeChannelName.computeChannelName(isDM, closure_8, closure_7);

@@ -1,8 +1,8 @@
-// === Module 10215: toChoiceBooleanValue ===
+// === Module 8373: toChoiceBooleanValue ===
 
-// Module 10215 (toChoiceBooleanValue)
-import closure_0 from "handleInit" /* 7448 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4903 */;
+// Module 8373 (toChoiceBooleanValue)
+import closure_0 from "handleInit" /* 7456 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4904 */;
 
 ({ FALSE_OPTION_NAME: closure_1, TRUE_OPTION_NAME: obj1 } = TRUE_OPTION_NAME);
 const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandChoiceUtils.tsx");

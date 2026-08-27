@@ -1,9 +1,9 @@
-// === Module 10787: _getCachedOrFetchActivityApplicationForLaunch ===
+// === Module 9400: _getCachedOrFetchActivityApplicationForLaunch ===
 
-// Module 10787 (_getCachedOrFetchActivityApplicationForLaunch)
+// Module 9400 (_getCachedOrFetchActivityApplicationForLaunch)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4485 */;
-import closure_5 from "createExecutable" /* 4470 */;
+import closure_4 from "addApplication" /* 4486 */;
+import closure_5 from "createExecutable" /* 4471 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
 
 const require = arg1;

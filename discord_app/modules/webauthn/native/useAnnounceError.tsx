@@ -1,6 +1,6 @@
-// === Module 14266: useAnnounceError ===
+// === Module 14293: useAnnounceError ===
 
-// Module 14266 (useAnnounceError)
+// Module 14293 (useAnnounceError)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

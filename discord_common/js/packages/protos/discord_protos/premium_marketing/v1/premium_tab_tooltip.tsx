@@ -1,9 +1,9 @@
-// === Module 7574: create ===
+// === Module 8401: create ===
 
-// Module 7574 (create)
+// Module 8401 (create)
 import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 7558 */;
-import create2 from "create" /* 7568 */;
+import create from "create" /* 8385 */;
+import create2 from "create" /* 8395 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
@@ -18,7 +18,7 @@ class PremiumTabTooltip$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(7568).ThemeAwareAsset;
+            return callback(8395).ThemeAwareAsset;
           }
     };
     obj = { no: 4, name: "header_localized", kind: "message", T: null };
@@ -34,7 +34,7 @@ class PremiumTabTooltip$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(7558).LocalizedString;
+            return callback(8385).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PremiumTabTooltip", items, T);
@@ -175,7 +175,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(7568).ThemeAwareAsset;
+      return callback(8395).ThemeAwareAsset;
     }
   },
 ,
@@ -194,7 +194,7 @@ items[4] = {
   name: "body_localized",
   kind: "message",
   T() {
-    return callback(7558).LocalizedString;
+    return callback(8385).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.PremiumTabTooltip", items, tmp, T, PremiumTabTooltip$Type, prototype, items);

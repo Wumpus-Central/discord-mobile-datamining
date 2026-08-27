@@ -1,18 +1,18 @@
-// === Module 9680: UserProfileCustomStatusActionSheet ===
+// === Module 9138: UserProfileCustomStatusActionSheet ===
 
-// Module 9680 (UserProfileCustomStatusActionSheet)
+// Module 9138 (UserProfileCustomStatusActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import getNicknameDefault from "getNickname" /* 4637 */;
-import _modDef8521 from "module_8521" /* 8521 */;
-import EmojiImageDefault from "EmojiImage" /* 9664 */;
-import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 9681 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9682 */;
+import getNicknameDefault from "getNickname" /* 4638 */;
+import _modDef8038 from "module_8038" /* 8038 */;
+import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 8976 */;
+import EmojiImageDefault from "EmojiImage" /* 9007 */;
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9139 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 5948 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 5953 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 const require = arg1;
 noopAll;
@@ -58,7 +58,7 @@ export default function UserProfileCustomStatusActionSheet(user) {
   obj1 = { style: tmp.statusPreviewContainer, children: null };
   const obj2 = { style: tmp.avatarContainer, children: null };
   const tmp6 = useCustomStatusActivityForUserDefault(user.id);
-  obj2[1] = callback(_modDef8521, { user, statusStyle: tmp.avatarStatus });
+  obj2[1] = callback(_modDef8038, { user, statusStyle: tmp.avatarStatus });
   const items2 = [callback(View, obj2), callback(EmojiImageDefault, { customStatusActivity: tmp6, hasCustomProfileTheme: false, showFullStatus: true, style: tmp.customStatusBubble, previewEmoji, previewText })];
   obj1[1] = items2;
   obj[1] = callback2(View, obj1);

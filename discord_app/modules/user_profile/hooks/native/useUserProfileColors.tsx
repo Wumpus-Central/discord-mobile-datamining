@@ -1,13 +1,13 @@
-// === Module 9047: useUserProfileColors ===
+// === Module 8464: useUserProfileColors ===
 
-// Module 9047 (useUserProfileColors)
+// Module 8464 (useUserProfileColors)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import map from "map" /* 4165 */;
-import useThemeDefault from "useTheme" /* 4379 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 5922 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
+import useThemeDefault from "useTheme" /* 4380 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 5927 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
 import { ThemeTypes } from "sum" /* 505 */;
 
 require = arg1;
@@ -54,18 +54,18 @@ export const useUserProfileColors = function useUserProfileColors(arg0) {
         if (stateFromStores) {
           tmp8 = overlaySyncedWithUserTheme;
         }
-        const result = tmp4(8535).calculateOverlayedColor(primaryColor, tmp8);
+        const result = tmp4(8052).calculateOverlayedColor(primaryColor, tmp8);
         obj = {};
         const merged = Object.assign(obj);
         obj.containerBackground = containerBackground;
-        const tmp4Result3 = tmp4(8535);
+        const tmp4Result3 = tmp4(8052);
         const tmp4Result4 = tmp4(688);
-        obj.gradientSecondaryBackground = tmp4Result4.int2hex(tmp4(8535).calculateOverlayedColor(secondaryColor, overlay));
-        const tmp4Result5 = tmp4(8535);
+        obj.gradientSecondaryBackground = tmp4Result4.int2hex(tmp4(8052).calculateOverlayedColor(secondaryColor, overlay));
+        const tmp4Result5 = tmp4(8052);
         obj.avatarBackground = tmp4(688).int2hex(result);
         const tmp4Result6 = tmp4(688);
         const tmp4Result7 = tmp4(688);
-        obj.statusBackground = tmp4Result7.int2hex(tmp4(8535).calculateOverlayedColor(result, sectionBox));
+        obj.statusBackground = tmp4Result7.int2hex(tmp4(8052).calculateOverlayedColor(result, sectionBox));
         return obj;
       }
     }

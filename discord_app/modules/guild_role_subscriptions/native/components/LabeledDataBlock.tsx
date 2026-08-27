@@ -1,13 +1,13 @@
-// === Module 14737: LabeledDataBlock ===
+// === Module 14764: LabeledDataBlock ===
 
-// Module 14737 (LabeledDataBlock)
+// Module 14764 (LabeledDataBlock)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4440 */;
+import Text from "Text" /* 4441 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
-import importDefaultResult from "createTextStyle" /* 5408 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
+import importDefaultResult from "createTextStyle" /* 5413 */;
 
 require = arg1;
 noopAll;
@@ -40,7 +40,7 @@ export default function LabeledDataBlock(arg0) {
     obj2[0] = tmp5(1297).Icon.Sizes.SMALL;
     obj2[1] = icon;
     obj1[2] = tmp4(tmp5(1297).Icon, obj2);
-    tmp4Result = tmp4(tmp5(5015).PressableOpacity, obj1);
+    tmp4Result = tmp4(tmp5(5020).PressableOpacity, obj1);
   }
   items1[1] = tmp4Result;
   obj[1] = items1;

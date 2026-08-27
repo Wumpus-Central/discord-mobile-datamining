@@ -1,8 +1,8 @@
-// === Module 4505: isClipsEnabled ===
+// === Module 4506: isClipsEnabled ===
 
-// Module 4505 (isClipsEnabled)
-import apexExperiment from "apexExperiment" /* 4506 */;
-import closure_2 from "_migrateDefaultStorage" /* 4501 */;
+// Module 4506 (isClipsEnabled)
+import apexExperiment from "apexExperiment" /* 4507 */;
+import closure_2 from "_migrateDefaultStorage" /* 4502 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/clips/isClipsEnabled.tsx");

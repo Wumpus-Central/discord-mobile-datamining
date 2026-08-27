@@ -1,21 +1,21 @@
-// === Module 9847: UserRowSubLabel ===
+// === Module 10560: UserRowSubLabel ===
 
-// Module 9847 (UserRowSubLabel)
+// Module 10560 (UserRowSubLabel)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import ActivityStatusDefault from "ActivityStatus" /* 9855 */;
+import ActivityStatusDefault from "ActivityStatus" /* 9160 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4436 */;
-import closure_6 from "addApplication" /* 4485 */;
-import closure_7 from "initialize" /* 7334 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_6 from "addApplication" /* 4486 */;
+import closure_7 from "initialize" /* 7340 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "sortActivity" /* 4533 */;
+import closure_9 from "sortActivity" /* 4534 */;
 import closure_10 from "markAllUserIdListsStale" /* 4098 */;
-import { UserRowModes } from "UserRowModes" /* 9837 */;
+import { UserRowModes } from "UserRowModes" /* 10552 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 
 require = arg1;
 function UserRowSubLabel(arg0) {
@@ -39,9 +39,9 @@ function UserRowSubLabel(arg0) {
   }
   if (!isGameRelationship) {
     obj = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: null };
-    obj[3] = tmp(4288).getUserTag(user);
-    callback(tmp(4440).Text, obj);
-    const tmpResult = tmp(4288);
+    obj[3] = tmp(4289).getUserTag(user);
+    callback(tmp(4441).Text, obj);
+    const tmpResult = tmp(4289);
   }
   if (null == stateFromStores) {
     obj1 = { style: null };
@@ -63,7 +63,7 @@ function UserRowSubLabel(arg0) {
     const items1 = [callback(tmp(1297).Icon, obj3, stateFromStores.id), ];
     const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: null };
     obj5[3] = stateFromStores.name;
-    items1[1] = callback(tmp(4440).Text, obj5);
+    items1[1] = callback(tmp(4441).Text, obj5);
     obj2[1] = items1;
     closure_15(View, obj2);
     const tmp11 = closure_15;
@@ -188,7 +188,7 @@ const memoResult = importAllResult.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== guildId.ACTIONS) {
-      let obj = { accessibilityActions: null, actions: "a" };
+      let obj = { accessibilityActions: null, actions: "r" };
       obj[0] = items;
       return obj;
     } else {
@@ -368,17 +368,17 @@ const memoResult = importAllResult.memo(function UserRow(type) {
             const channel = closure_1_8.getChannel(arg0);
             if (null != channel) {
               closure_1_1(closure_1_2[14])(channel.isPrivate(), "must be a DM");
-              const obj2 = closure_1_1(closure_1_2[15])(channel, false);
-              if (!obj2.inCall) {
-                obj2.onPress();
+              const obj4 = closure_1_1(closure_1_2[15])(channel, false);
+              if (!obj4.inCall) {
+                obj4.onPress();
               }
-              const tmp = closure_1_1;
-              const tmp2 = closure_1_2;
-              const tmp3 = closure_1_1(closure_1_2[14]);
+              const tmp4 = closure_1_1;
+              const tmp5 = closure_1_2;
+              const tmp6 = closure_1_1(closure_1_2[14]);
               const obj = { recipientIds: null };
               obj[0] = current.id;
               closure_1_1(closure_1_2[13]).openPrivateChannel(obj);
-              const tmpResult = closure_1_1(closure_1_2[13]);
+              const tmp4Result = closure_1_1(closure_1_2[13]);
             }
           });
         };
@@ -427,17 +427,17 @@ const memoResult = importAllResult.memo(function UserRow(type) {
         const channel = closure_1_8.getChannel(arg0);
         if (null != channel) {
           closure_1_1(closure_1_2[14])(channel.isPrivate(), "must be a DM");
-          const obj2 = closure_1_1(closure_1_2[15])(channel, false);
-          if (!obj2.inCall) {
-            obj2.onPress();
+          const obj4 = closure_1_1(closure_1_2[15])(channel, false);
+          if (!obj4.inCall) {
+            obj4.onPress();
           }
-          const tmp = closure_1_1;
-          const tmp2 = closure_1_2;
-          const tmp3 = closure_1_1(closure_1_2[14]);
+          const tmp4 = closure_1_1;
+          const tmp5 = closure_1_2;
+          const tmp6 = closure_1_1(closure_1_2[14]);
           const obj = { recipientIds: null };
           obj[0] = current.id;
           closure_1_1(closure_1_2[13]).openPrivateChannel(obj);
-          const tmpResult = closure_1_1(closure_1_2[13]);
+          const tmp4Result = closure_1_1(closure_1_2[13]);
         }
       });
     } else if (tmp.MESSAGE === actionName) {

@@ -1,10 +1,10 @@
-// === Module 15917: PaintbrushThinIcon ===
+// === Module 15982: PaintbrushThinIcon ===
 
-// Module 15917 (PaintbrushThinIcon)
+// Module 15982 (PaintbrushThinIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 15918 */;
+import registerAsset from "registerAsset" /* 15983 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 9722: metadata ===
+// === Module 8887: metadata ===
 
-// Module 9722 (metadata)
+// Module 8887 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/tiered_tenure_badging/mobile_opal_badge_large.png.js");

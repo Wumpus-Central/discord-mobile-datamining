@@ -1,9 +1,9 @@
-// === Module 8566: computePermissions ===
+// === Module 8083: computePermissions ===
 
-// Module 8566 (computePermissions)
+// Module 8083 (computePermissions)
 import fromStringAll from "fromString" /* 506 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8567 */;
+import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8084 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "initialize" /* 1984 */;
 import { ChannelRecordBase } from "createChannelRecord" /* 1395 */;

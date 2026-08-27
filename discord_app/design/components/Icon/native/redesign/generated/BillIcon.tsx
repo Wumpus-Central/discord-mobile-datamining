@@ -1,10 +1,10 @@
-// === Module 11794: BillIcon ===
+// === Module 11624: BillIcon ===
 
-// Module 11794 (BillIcon)
+// Module 11624 (BillIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 11795 */;
+import registerAsset from "registerAsset" /* 11625 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

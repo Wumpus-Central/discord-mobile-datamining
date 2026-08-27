@@ -1,17 +1,17 @@
-// === Module 11430: renderIcon ===
+// === Module 11285: renderIcon ===
 
-// Module 11430 (renderIcon)
+// Module 11285 (renderIcon)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import Text from "Text" /* 4440 */;
-import PressableBase from "PressableBase" /* 5015 */;
-import registerAssetDefault from "registerAsset" /* 11433 */;
-import registerAssetDefault2 from "registerAsset" /* 11434 */;
+import Text from "Text" /* 4441 */;
+import PressableBase from "PressableBase" /* 5020 */;
+import registerAssetDefault from "registerAsset" /* 11288 */;
+import registerAssetDefault2 from "registerAsset" /* 11289 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "handleThemeChange" /* 1302 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4445 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -52,9 +52,9 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1[0] = items1;
     if (obj6.isThemeDark(theme.theme)) {
-      let tmp13Result = tmp13(11431);
+      let tmp13Result = tmp13(11286);
     } else {
-      tmp13Result = tmp13(11432);
+      tmp13Result = tmp13(11287);
     }
     obj = { source: null };
     obj[0] = tmp13Result;
