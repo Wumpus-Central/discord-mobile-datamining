@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 90, height: 90, scales: [2, 3], hash: "5decb69ef43f8e7b31fcaaf11b388fe1", name: "sticker_search_empty", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 32, scales: [1, 2, 3], hash: "317510f9e9255b233aed4b094f163966", name: "ic_file_small_document", type: "png" });

@@ -1,0 +1,7 @@
+// _runtime/05865_FlashList.js
+import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
+import FlashList from "05804_FlashList.js";
+
+const Animated = get_ActivityIndicator.Animated;
+
+export default Animated.createAnimatedComponent(FlashList.FlashList);

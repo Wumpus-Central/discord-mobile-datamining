@@ -1,12 +1,12 @@
 // _runtime/13891_all.js
-import all from "13864_all.js";
+import all from "13892_all.js";
 
 
-export default (arg0) => {
-  if (all(arg0)) {
-    return arg0;
+export default (obj) => {
+  if (typeof obj === "object") {
+    let tmp2 = null !== obj;
   } else {
-    const tmp5 = new TypeError(String(arg0) + " is not an object");
-    throw tmp5;
+    tmp2 = all(obj);
   }
+  return tmp2;
 };

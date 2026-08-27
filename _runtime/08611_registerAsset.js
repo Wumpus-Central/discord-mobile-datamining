@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/images", width: 24, height: 24, scales: [2, 3, 4], hash: "abb394aed71d149627aa4dc597482f89", name: "stack-nav-back", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 88, height: 80, scales: [2, 3], hash: "cdacc9b330d74f767eb28d253e6930f0", name: "stage-sparkles", type: "png" });

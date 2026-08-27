@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b0762f0f9ef3f22f62e92b1be981b656", name: "ChevronLargeUpIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 185, height: 32, scales: [2, 3], hash: "dba969ce1008f0b8964b0d6bd348ad3e", name: "img_logo_premium_tier_1_full", type: "png" });

@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 120, height: 96, scales: [2], hash: "e8874e4fc596af26bfde9d20b7f75908", name: "search_empty_state_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/seasonal", width: 144, height: 150, scales: [1], hash: "2428d071b75d8fac57234ccab81c5c37", name: "cake_idle", type: "png" });

@@ -1,3 +1,5 @@
 // _runtime/metro/05777__.js
-arg5.DEFAULT_STACK_BEHAVIOR = "switch";
-arg5.DEFAULT_ENABLE_DISMISS_ON_CLOSE = true;
+arg5.DEFAULT_ACCESSIBLE = true;
+arg5.DEFAULT_ACCESSIBILITY_ROLE = "adjustable";
+arg5.DEFAULT_ACCESSIBILITY_LABEL = "Bottom sheet handle";
+arg5.DEFAULT_ACCESSIBILITY_HINT = "Drag up or down to extend or minimize the bottom sheet";

@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "dcf38117e5a3cdcdf164b333d0b65b5d", name: "LinkExternalMediumIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 250, height: 175, scales: [2, 3], hash: "286d809a177e5dc702067fdd57e25871", name: "img_marketing_uploads_light_border", type: "png" });

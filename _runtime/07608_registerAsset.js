@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 302, height: 42, scales: [2, 3], hash: "2192040384b5c0bcacd48b43d2555bec", name: "img_plan_activated_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "fb8db2c451f0cd706524543233306348", name: "ic_partnered_guild_icon_blurple_24px", type: "png" });

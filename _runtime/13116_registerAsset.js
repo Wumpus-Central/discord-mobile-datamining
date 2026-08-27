@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 185, height: 32, scales: [2, 3], hash: "dba969ce1008f0b8964b0d6bd348ad3e", name: "img_logo_premium_tier_1_full", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/plan_selection", width: 80, height: 80, scales: [1], hash: "e64e51684091ac2de27992b084fed7fd", name: "img_wumpus_nitro_tier_0", type: "png" });

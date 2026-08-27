@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0b3282394dfcf9fe9a8a6e6a7e39fa15", name: "TagsIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 106, height: 80, scales: [2, 3], hash: "f9a535d371ee710b8f1909e45896c667", name: "img_wumpus_nitro_rev", type: "png" });

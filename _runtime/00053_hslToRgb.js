@@ -216,8 +216,12 @@ export default function normalizeColor(num) {
     match[3] = regExp3;
     _RegExp = hex6.RegExp;
     tmp13 = callModern("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%");
+    let str10 = "[-+]?\\d*\\.?\\d+";
+    let str12 = "[-+]?\\d*\\.?\\d+%";
+    str12 = tmp25(`[-+]?\\d*\\.?\\d+`, `[-+]?\\d*\\.?\\d+%`, `[-+]?\\d*\\.?\\d+%`, "[-+]?\\d*\\.?\\d+");
+    str10 = "hwb(" + tmp13 + "|" + str12 + ")";
     regExp1 = new.target;
-    _RegExp = new _RegExp("hwb(" + tmp13 + "|" + tmp25("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+") + ")");
+    _RegExp = new _RegExp(str10);
     match[4] = _RegExp;
     match[5] = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
     match[6] = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;

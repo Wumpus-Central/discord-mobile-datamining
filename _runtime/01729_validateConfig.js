@@ -77,8 +77,8 @@ let fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "sa",
       lastTimestamp: null,
-      startTimestamp: "UPDATE_CHANNEL_DIMENSIONS",
-      reduceMotion: null
+      startTimestamp: 72,
+      reduceMotion: 4
     };
     let num = obj.velocity;
     if (num == null) {

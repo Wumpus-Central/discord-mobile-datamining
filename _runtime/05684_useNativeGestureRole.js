@@ -1,0 +1,4 @@
+// _runtime/05684_useNativeGestureRole.js
+arg5.useNativeGestureRole = function useNativeGestureRole(arg0, children) {
+
+};

@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/referral_program/native/images", width: 180, height: 180, scales: [1], hash: "7d7d766e7ebb30cec66584e69b89634d", name: "Glow", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300, height: 175, scales: [2, 3], hash: "7e68c2960201e89a20761843ca26d40b", name: "super_reaction", type: "png" });

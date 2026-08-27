@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 256, height: 130, scales: [2, 3], hash: "5bbcc6438e9b5eafb60d2e7f478ed717", name: "img_invite_empty_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "6d9d454b0d30ca95b55c7977c96de9cb", name: "StickerPlusIcon", type: "png" });

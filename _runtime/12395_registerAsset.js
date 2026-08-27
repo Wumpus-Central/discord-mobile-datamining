@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/forums/native/images", width: 120, height: 80, scales: [2, 3], hash: "80a29bcae35fa62f1f957cb01201db17", name: "img_forum_empty_state_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ef42f58d92ae3022fbec5decb610cbf2", name: "ThreadMinusIcon", type: "png" });

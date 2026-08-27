@@ -1,6 +1,6 @@
 // _runtime/05725__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import LongPressGesture from "metro/00041__classCallCheck.js";
+import TapGesture from "metro/00041__classCallCheck.js";
 import closure_1 from "metro/00093__possibleConstructorReturn.js";
 import closure_2 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
@@ -24,12 +24,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class LongPressGesture {
+class TapGesture {
   constructor() {
     self = this;
-    tmp = LongPressGesture(this, LongPressGesture);
+    tmp = TapGesture(this, TapGesture);
     tmp2 = closure_2;
-    obj = closure_2(LongPressGesture);
+    obj = closure_2(TapGesture);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
@@ -40,17 +40,24 @@ class LongPressGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "LongPressGestureHandler";
+    tmp3Result.handlerName = "TapGestureHandler";
     result = tmp3Result.shouldCancelWhenOutside(true);
     return tmp3Result;
   }
 }
-_inheritsDefault(LongPressGesture, require("_isNativeReflectConstruct").BaseGesture);
+_inheritsDefault(TapGesture, require("_isNativeReflectConstruct").BaseGesture);
 const items = [
   {
-    key: "minDuration",
-    value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
-      this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+    key: "minPointers",
+    value: function minPointers(minPointers) {
+      this.config.minPointers = minPointers;
+      return this;
+    }
+  },
+  {
+    key: "numberOfTaps",
+    value: function numberOfTaps(numberOfTaps) {
+      this.config.numberOfTaps = numberOfTaps;
       return this;
     }
   },
@@ -62,12 +69,33 @@ const items = [
     }
   },
   {
-    key: "numberOfPointers",
-    value: function numberOfPointers(numberOfPointers) {
-      this.config.numberOfPointers = numberOfPointers;
+    key: "maxDuration",
+    value: function maxDuration(maxDurationMs) {
+      this.config.maxDurationMs = maxDurationMs;
+      return this;
+    }
+  },
+  {
+    key: "maxDelay",
+    value: function maxDelay(maxDelayMs) {
+      this.config.maxDelayMs = maxDelayMs;
+      return this;
+    }
+  },
+  {
+    key: "maxDeltaX",
+    value: function maxDeltaX(maxDeltaX) {
+      this.config.maxDeltaX = maxDeltaX;
+      return this;
+    }
+  },
+  {
+    key: "maxDeltaY",
+    value: function maxDeltaY(maxDeltaY) {
+      this.config.maxDeltaY = maxDeltaY;
       return this;
     }
   }
 ];
 
-export const LongPressGesture = importDefaultResult(LongPressGesture, items);
+export const TapGesture = importDefaultResult(TapGesture, items);

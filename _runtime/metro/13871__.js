@@ -1,9 +1,6 @@
 // _runtime/metro/13871__.js
+import _mod13872 from "13872__.js";
+import _mod13876 from "13876__.js";
 
-export default (arg0) => {
-  try {
-    return String(arg0);
-  } catch (err) {
-    return "Object";
-  }
-};
+
+export default (arg0) => _mod13872(_mod13876(arg0));

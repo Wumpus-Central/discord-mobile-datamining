@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/icymi/native/images", width: 77, height: 95.5, scales: [2, 3], hash: "ebbb7db0461de915440e3bdd6a8249c9", name: "flash", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/notifications/images", width: 24, height: 24, scales: [1], hash: "0ca8431ba26e114a3e93aa8dc5cdf521", name: "ic_bell_on", type: "png" });

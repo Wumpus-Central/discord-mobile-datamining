@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "b5850b914f9528f3de18a75020fab1b9", name: "img_account_sync_facebook_white", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "eee65ba7b1514e4ac5eb13df20b9cde9", name: "img_account_sync_reddit_light_and_dark", type: "svg" });

@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 20, height: 20, scales: [2, 3], hash: "680bf4fd0485a160338f41e352ddc0a6", name: "grid", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/opt_in_channels/native/images", width: 192, height: 108, scales: [2, 3], hash: "980015ffe7387bf43c649905ee978399", name: "nux", type: "png" });

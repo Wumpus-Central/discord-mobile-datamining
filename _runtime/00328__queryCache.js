@@ -65,7 +65,7 @@ function _queryCache() {
 }
 noopAll;
 let c6 = 1;
-let closure_8 = { uri: "ct", width: "accessibilityRole", height: "body" };
+let closure_8 = { uri: "IconComponent", width: "dispatch", height: "names" };
 function _BaseImage(arg0) {
   ({ alt, accessible, aria-labelledby: tmp, aria-busy: tmp2, aria-checked: tmp3, aria-disabled: tmp4, aria-expanded: tmp5, aria-label: tmp7, aria-selected: tmp8, accessibilityLabel, accessibilityLabelledBy, accessibilityState, defaultSource, loadingIndicatorSource, style, onLoadStart, onLoad, onLoadEnd, onError, width, height } = arg0);
   ({ ref, aria-hidden: tmp6, children, source, src, crossOrigin, referrerPolicy, srcSet, resizeMode } = arg0);
