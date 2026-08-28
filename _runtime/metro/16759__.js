@@ -1,37 +1,46 @@
 // _runtime/metro/16759__.js
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "hi",
+  locale: "hr",
   pluralRuleFunction(arg0, arg1) {
-    if (arg1) {
-      let str3 = "one";
-      if (1 != arg0) {
-        let str5 = "two";
-        if (2 != arg0) {
-          str5 = "two";
-          if (3 != arg0) {
-            let str6 = "few";
-            if (4 != arg0) {
-              let str7 = "other";
-              if (6 == arg0) {
-                str7 = "many";
+    const parts = String(arg0).split(".");
+    const first = parts[0];
+    const substr = first.slice(-1);
+    const substr1 = first.slice(-2);
+    const substr2 = arr2.slice(-1);
+    const substr3 = arr2.slice(-2);
+    let str2 = "other";
+    if (!arg1) {
+      if (!tmp2) {
+        if (1 == substr) {
+          let str3 = "one";
+        }
+        str2 = str3;
+      }
+      if (1 != substr2) {
+        if (!tmp2) {
+          if (substr >= 2) {
+            if (substr <= 4) {
+              if (substr1 >= 12) {
+                str3 = str4;
               }
-              str6 = str7;
             }
-            str5 = str6;
+            str4 = "few";
           }
         }
-        str3 = str5;
-      }
-      let str2 = str3;
-    } else {
-      str2 = "other";
-      if (arg0 >= 0) {
-        str2 = "other";
-        if (arg0 <= 1) {
-          str2 = "one";
+        str4 = "other";
+        if (substr2 >= 2) {
+          str4 = "other";
+          if (substr2 <= 4) {
+            if (substr3 >= 12) {
+              str4 = "other";
+            }
+          }
         }
+      } else {
+        str3 = "one";
       }
     }
     return str2;
   }
 });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "hr-BA", parentLocale: "hr" });

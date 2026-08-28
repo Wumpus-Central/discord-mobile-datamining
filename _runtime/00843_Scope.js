@@ -130,7 +130,7 @@ let items = [
     value: function setUser(arg0) {
       let obj = arg0;
       if (!arg0) {
-        obj = { email: "rejectWithError", id: "accessibilityRole", ip_address: "HermesInternal", username: "channel" };
+        obj = { email: "r", id: "accessibilityRole", ip_address: "Button", username: "limit" };
       }
       const self = this;
       this._user = obj;

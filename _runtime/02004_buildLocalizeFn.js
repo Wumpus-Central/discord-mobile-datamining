@@ -1,45 +1,34 @@
 // _runtime/02004_buildLocalizeFn.js
+import buildLocalizeFn from "02005_buildLocalizeFn.js";
 
-export default function buildLocalizeFn(arg0) {
-  closure_0 = arg0;
-  return (arg0, context) => {
-    let str = "standalone";
-    if (null != context) {
-      str = "standalone";
-      if (context.context) {
-        const _String = String;
-        str = String(context.context);
+if (!buildLocalizeFn) {
+  let obj = { default: null };
+  obj[0] = buildLocalizeFn;
+} else {
+  obj = buildLocalizeFn;
+}
+obj = {
+  ordinalNumber(arg0, arg1) {
+    const NumberResult = Number(arg0);
+    const result = NumberResult % 100;
+    if (20 < result) {
+      const result1 = result % 10;
+      if (1 === result1) {
+        return NumberResult + "st";
+      } else if (2 === result1) {
+        return NumberResult + "nd";
+      } else if (3 === result1) {
+        return NumberResult + "rd";
       }
     }
-    if ("formatting" === str) {
-      if (formattingValues.formattingValues) {
-        let StringResult = tmp6;
-        if (null != context) {
-          StringResult = tmp6;
-          if (context.width) {
-            const _String3 = String;
-            StringResult = String(context.width);
-          }
-        }
-        let tmp5 = tmp2.formattingValues[StringResult] || tmp2.formattingValues[tmp2.defaultFormattingWidth || tmp2.defaultWidth];
-        let obj = tmp2;
-        const tmp9 = tmp2.formattingValues[StringResult] || tmp2.formattingValues[tmp2.defaultFormattingWidth || tmp2.defaultWidth];
-      }
-      let argumentCallbackResult = arg0;
-      if (obj.argumentCallback) {
-        argumentCallbackResult = obj.argumentCallback(arg0);
-      }
-      return tmp5[argumentCallbackResult];
-    }
-    obj = formattingValues;
-    if (null != context) {
-      if (context.width) {
-        const _String2 = String;
-        let defaultWidth = String(context.width);
-      }
-      tmp5 = obj.values[defaultWidth] || obj.values[tmp3];
-    }
-    defaultWidth = obj.defaultWidth;
-  };
+    return NumberResult + "th";
+  },
+  era: obj.default({ values: { narrow: ["B", "A"], abbreviated: ["BC", "AD"], wide: ["Before Christ", "Anno Domini"] }, defaultWidth: "wide" }),
+  quarter: obj.default(obj1),
+  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], wide: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["S", "M", "T", "W", "T", "F", "S"], short: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"], abbreviated: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], wide: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "mi", noon: "n", morning: "morning", afternoon: "afternoon", evening: "evening", night: "night" }, abbreviated: { am: "AM", pm: "PM", midnight: "midnight", noon: "noon", morning: "morning", afternoon: "afternoon", evening: "evening", night: "night" }, wide: { am: "a.m.", pm: "p.m.", midnight: "midnight", noon: "noon", morning: "morning", afternoon: "afternoon", evening: "evening", night: "night" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "mi", noon: "n", morning: "in the morning", afternoon: "in the afternoon", evening: "in the evening", night: "at night" }, abbreviated: { am: "AM", pm: "PM", midnight: "midnight", noon: "noon", morning: "in the morning", afternoon: "in the afternoon", evening: "in the evening", night: "at night" }, wide: { am: "a.m.", pm: "p.m.", midnight: "midnight", noon: "noon", morning: "in the morning", afternoon: "in the afternoon", evening: "in the evening", night: "at night" } }, defaultFormattingWidth: "wide" })
 };
+
+export default obj;
 export default exports.default;

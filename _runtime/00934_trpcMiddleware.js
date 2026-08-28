@@ -115,7 +115,7 @@ export const trpcMiddleware = function trpcMiddleware() {
               c5 = 0;
               c6 = 0;
               c4 = 0;
-              return (/* F122806 */ function*() { ... })();
+              return (/* F122852 */ function*() { ... })();
             });
             return obj.startSpanManual(obj, function(arg0) {
               const self = this;

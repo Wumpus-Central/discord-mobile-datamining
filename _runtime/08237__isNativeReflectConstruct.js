@@ -1,11 +1,15 @@
 // _runtime/08237__isNativeReflectConstruct.js
+import noopDefault from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import _isNativeReflectConstructDefault from "08226__isNativeReflectConstruct.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/08238___INTERNAL_VIEW_CONFIG.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
+import { jsx } from "react/00021_jsxProd.js";
 
-const FeSpotLight = arg1;
+const FeGaussianBlur = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,13 +29,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeSpotLight {
+noopDefault;
+class FeGaussianBlur {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeSpotLight);
-    tmp2 = closure_4;
-    obj = closure_4(FeSpotLight);
-    tmp3 = closure_3;
+    tmp = closure_3(this, FeGaussianBlur);
+    tmp2 = closure_5;
+    obj = closure_5(FeGaussianBlur);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -45,18 +50,34 @@ class FeSpotLight {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeSpotLight, require("noop").Component);
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const result = FeSpotLight(8189).warnUnimplementedFilter();
-      return null;
-    }
+_inheritsDefault(FeGaussianBlur, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp = __INTERNAL_VIEW_CONFIGDefault;
+    const merged = Object.assign(self(8225).extractFilter(this.props));
+    const obj2 = self(8225);
+    const merged1 = Object.assign(self(8225).extractIn(this.props));
+    const obj3 = self(8225);
+    const merged2 = Object.assign(self(8225).extractFeGaussianBlur(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
-];
-const importDefaultResultResult = importDefaultResult(FeSpotLight, items);
-importDefaultResultResult.displayName = "FeSpotLight";
-importDefaultResultResult.defaultProps = {};
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeGaussianBlur, items);
+importDefaultResultResult.displayName = "FeGaussianBlur";
+obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.stdDeviation = 0;
+obj.edgeMode = "none";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

@@ -1,12 +1,12 @@
 // _runtime/08234__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08212__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault from "08226__isNativeReflectConstruct.js";
 import closure_2 from "metro/00041__classCallCheck.js";
 import closure_3 from "metro/00093__possibleConstructorReturn.js";
 import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
-const FeMorphology = arg1;
+const FeDisplacementMap = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,12 +26,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeMorphology {
+class FeDisplacementMap {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeMorphology);
+    tmp = closure_2(this, FeDisplacementMap);
     tmp2 = closure_4;
-    obj = closure_4(FeMorphology);
+    obj = closure_4(FeDisplacementMap);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -46,17 +46,17 @@ class FeMorphology {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeMorphology, _isNativeReflectConstructDefault);
+_inheritsDefault(FeDisplacementMap, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
-    const result = FeMorphology(8189).warnUnimplementedFilter();
+    const result = FeDisplacementMap(8203).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeMorphology, items);
-importDefaultResultResult.displayName = "FeMorphology";
+const importDefaultResultResult = importDefaultResult(FeDisplacementMap, items);
+importDefaultResultResult.displayName = "FeDisplacementMap";
 obj = {};
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = obj;

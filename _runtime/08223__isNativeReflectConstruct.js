@@ -1,15 +1,15 @@
 // _runtime/08223__isNativeReflectConstruct.js
 import noopDefault from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08212__isNativeReflectConstruct.js";
 import __INTERNAL_VIEW_CONFIGDefault from "metro/08224___INTERNAL_VIEW_CONFIG.js";
+import _isNativeReflectConstructDefault from "08226__isNativeReflectConstruct.js";
 import closure_3 from "metro/00041__classCallCheck.js";
 import closure_4 from "metro/00093__possibleConstructorReturn.js";
 import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const FeGaussianBlur = arg1;
+const FeBlend = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +30,12 @@ function _isNativeReflectConstruct() {
   }
 }
 noopDefault;
-class FeGaussianBlur {
+class FeBlend {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeGaussianBlur);
+    tmp = closure_3(this, FeBlend);
     tmp2 = closure_5;
-    obj = closure_5(FeGaussianBlur);
+    obj = closure_5(FeBlend);
     tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -50,7 +50,7 @@ class FeGaussianBlur {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeGaussianBlur, _isNativeReflectConstructDefault);
+_inheritsDefault(FeBlend, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
@@ -61,23 +61,22 @@ let obj = {
       }
     };
     const tmp = __INTERNAL_VIEW_CONFIGDefault;
-    const merged = Object.assign(self(8211).extractFilter(this.props));
-    const obj2 = self(8211);
-    const merged1 = Object.assign(self(8211).extractIn(this.props));
-    const obj3 = self(8211);
-    const merged2 = Object.assign(self(8211).extractFeGaussianBlur(this.props));
+    const merged = Object.assign(self(8225).extractFilter(this.props));
+    const obj2 = self(8225);
+    const merged1 = Object.assign(self(8225).extractIn(this.props));
+    const obj3 = self(8225);
+    const merged2 = Object.assign(self(8225).extractFeBlend(this.props));
     return <tmp ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeGaussianBlur, items);
-importDefaultResultResult.displayName = "FeGaussianBlur";
+const importDefaultResultResult = importDefaultResult(FeBlend, items);
+importDefaultResultResult.displayName = "FeBlend";
 obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.stdDeviation = 0;
-obj.edgeMode = "none";
+obj.mode = "normal";
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

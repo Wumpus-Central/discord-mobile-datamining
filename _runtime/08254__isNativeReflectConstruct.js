@@ -1,16 +1,14 @@
 // _runtime/08254__isNativeReflectConstruct.js
-import noopAll from "00019_noop.js";
+import noopDefault from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08197__isNativeReflectConstruct.js";
-import _modDef8251 from "metro/08251__.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/08256___INTERNAL_VIEW_CONFIG.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import _isNativeReflectConstructDefault from "08211__isNativeReflectConstruct.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const Mask = arg1;
+const Filter = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,14 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class Mask {
+noopDefault;
+class Filter {
   constructor() {
     self = this;
-    tmp = closure_3(this, Mask);
-    tmp2 = closure_5;
-    obj = closure_5(Mask);
-    tmp3 = closure_4;
+    tmp = closure_2(this, Filter);
+    tmp2 = closure_4;
+    obj = closure_4(Filter);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -51,58 +49,31 @@ class Mask {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Mask, _isNativeReflectConstructDefault);
+_inheritsDefault(Filter, _isNativeReflectConstructDefault);
 const items = [
   {
     key: "render",
     value: function render() {
       const self = this;
       const props = this.props;
-      ({ maskUnits, maskContentUnits, style } = props);
-      let obj = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
-      let num = 0;
-      if (undefined !== maskUnits) {
-        num = _modDef8251[maskUnits];
-      }
-      obj[4] = num;
-      let num2 = 1;
-      if (undefined !== maskContentUnits) {
-        num2 = _modDef8251[maskContentUnits];
-      }
-      obj[5] = num2;
-      let str;
-      if (props != null) {
-        str = props.maskType;
-      }
-      if (!str) {
-        let maskType;
-        if (style != null) {
-          maskType = style.maskType;
-        }
-        str = maskType;
-      }
-      if (!str) {
-        str = "luminance";
-      }
-      obj[6] = self(8255).maskType[str];
+      let obj = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }
       };
-      const tmp5 = self;
-      const tmp8 = __INTERNAL_VIEW_CONFIGDefault;
-      const merged = Object.assign(self(8188).withoutXY(this, props));
-      const merged1 = Object.assign(obj);
-      obj.children = props.children;
-      return <tmp8 ref={function ref(arg0) {
-        return self.refMethod(arg0);
-      }} />;
+      const merged = Object.assign(obj);
+      obj.children = this.props.children;
+      return jsx(self(8255), {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Mask, items);
-importDefaultResultResult.displayName = "Mask";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = importDefaultResult(Filter, items);
+importDefaultResultResult.displayName = "Filter";
+importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
 
 export default importDefaultResultResult;

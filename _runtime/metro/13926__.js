@@ -1,27 +1,18 @@
 // _runtime/metro/13926__.js
-import call from "../13889_call.js";
-import getOwnPropertyDescriptor from "../13869_getOwnPropertyDescriptor.js";
+import call from "../13892_call.js";
+import all from "../13913_all.js";
+import f2 from "../13927_f.js";
+import all2 from "../13937_all.js";
+import _mod13938 from "13938__.js";
 
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-}
-const tmp = call(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {
+let closure_2 = call([].concat);
 
-  }.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+export default all("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = f2.f(all2(arg0));
+  const f = _mod13938.f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = callback(fResult, f(arg0));
   }
-  tmp3 = tmp5;
-}
-
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+  return tmp2;
+});

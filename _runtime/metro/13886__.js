@@ -1,48 +1,14 @@
 // _runtime/metro/13886__.js
-import _mod13866 from "13866__.js";
-import _mod13887 from "13887__.js";
+import _mod13885 from "13885__.js";
 
-let tmp = _mod13866.process && _mod13866.process.versions;
-if (!tmp) {
-  tmp = _mod13866.Deno && _mod13866.Deno.version;
-  const tmp2 = _mod13866.Deno && _mod13866.Deno.version;
-}
-let str = tmp;
-if (tmp) {
-  str = tmp.v8;
-}
-let tmp3;
-if (str) {
-  const parts = str.split(".");
-  if (parts[0] <= 0) {
-    let num3 = +parts[0] + parts[1];
-  } else {
-    num3 = 1;
-  }
-  tmp3 = num3;
-  let tmp4 = parts;
-}
-let _module = !tmp3;
-if (!tmp3) {
-  _module = _mod13887;
-}
-if (_module) {
-  const match = _mod13887.match(/Edge\/(\d+)/);
-  let tmp8 = !match;
-  if (match) {
-    tmp8 = match[1] >= 74;
-  }
-  _module = tmp8;
-  tmp4 = match;
-  const str3 = _mod13887;
-}
-if (_module) {
-  _module = _mod13887.match(/Chrome\/(\d+)/);
-  tmp4 = _module;
-  const str4 = _mod13887;
-}
-if (_module) {
-  tmp3 = +tmp4[1];
-}
 
-export default tmp3;
+export default (arg0, arg1) => {
+  try {
+    const obj = { value: null, configurable: true, writable: true };
+    obj[0] = arg1;
+    defineProperty(_mod13885, arg0, obj);
+    return arg1;
+  } catch (err) {
+    _mod13885[tmp2] = tmp;
+  }
+};

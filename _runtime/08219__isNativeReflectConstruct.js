@@ -1,12 +1,13 @@
 // _runtime/08219__isNativeReflectConstruct.js
+import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08212__isNativeReflectConstruct.js";
 import closure_2 from "metro/00041__classCallCheck.js";
 import closure_3 from "metro/00093__possibleConstructorReturn.js";
 import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
+import { jsx } from "react/00021_jsxProd.js";
 
-const FeDiffuseLighting = arg1;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,12 +27,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeDiffuseLighting {
+noopAll;
+class Defs {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeDiffuseLighting);
+    tmp = closure_2(this, Defs);
     tmp2 = closure_4;
-    obj = closure_4(FeDiffuseLighting);
+    obj = closure_4(Defs);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -46,19 +48,16 @@ class FeDiffuseLighting {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeDiffuseLighting, _isNativeReflectConstructDefault);
-let obj = {
-  key: "render",
-  value: function render() {
-    const result = FeDiffuseLighting(8189).warnUnimplementedFilter();
-    return null;
+_inheritsDefault(Defs, require("noop").Component);
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      return jsx(Defs(8220), { children: this.props.children });
+    }
   }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeDiffuseLighting, items);
-importDefaultResultResult.displayName = "FeDiffuseLighting";
-obj = {};
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

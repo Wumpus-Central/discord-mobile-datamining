@@ -77,8 +77,8 @@ let fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "sa",
       lastTimestamp: null,
-      startTimestamp: "disjunction",
-      reduceMotion: "text-md/medium"
+      startTimestamp: "text-overlay-light",
+      reduceMotion: "text-sm/semibold"
     };
     let num = obj.velocity;
     if (num == null) {

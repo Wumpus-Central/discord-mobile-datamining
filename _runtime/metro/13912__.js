@@ -1,103 +1,16 @@
 // _runtime/metro/13912__.js
-let c0 = require;
-c0 = true;
-c0 = false;
+import prop from "../13903_prop.js";
+import all from "../13911_all.js";
+import all2 from "../13913_all.js";
+import call from "../13914_call.js";
 
-export default {
-  includes: (arg0, arg1, arg2) => {
-    const tmp3 = callback(13871)(arg0);
-    const tmp4 = callback(13913)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !callback;
-      if (!callback) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = callback(13917)(arg2, tmp4);
-      if (callback) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !callback;
-        if (!callback) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = callback;
-          let tmp6 = sum1;
-          if (callback) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
-    }
-  },
-  indexOf: (arg0, arg1, arg2) => {
-    const tmp3 = callback(13871)(arg0);
-    const tmp4 = callback(13913)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !callback;
-      if (!callback) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = callback(13917)(arg2, tmp4);
-      if (callback) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !callback;
-        if (!callback) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = callback;
-          let tmp6 = sum1;
-          if (callback) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
-    }
+
+export default prop ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
+  const tmp3 = all2("Symbol");
+  let tmpResultResult = all(tmp3);
+  if (tmpResultResult) {
+    tmpResultResult = call(tmp3.prototype, Object(arg0));
+    const tmpResult = call;
   }
-};
+  return tmpResultResult;
+});

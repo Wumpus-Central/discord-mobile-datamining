@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/PastelIcon", width: 60, height: 60, scales: [2, 3], hash: "3abe689118b6dfa647c87ebe65954c60", name: "PastelIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 49, height: 48.5, scales: [2, 3], hash: "6922badb2f007833b3becc6f00bcb5a4", name: "img_custom_app_icons", type: "png" });

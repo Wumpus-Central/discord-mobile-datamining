@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "9418ce18a45ac2ccf91c54293677973d", name: "ic_friend_wave_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/notifications/images", width: 24, height: 24, scales: [1], hash: "0ca8431ba26e114a3e93aa8dc5cdf521", name: "ic_bell_on", type: "png" });

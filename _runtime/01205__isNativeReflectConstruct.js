@@ -247,7 +247,7 @@ class FeedbackWidget {
                 fileName = undefined;
                 uri = undefined;
                 if (uri._hasScreenshot()) {
-                  debug.setState({ filename: "Boolean", attachment: "disabled", attachmentUri: "isArray" });
+                  debug.setState({ filename: "Array", attachment: "container", attachmentUri: "to" });
                 } else {
                   num2 = debug.props.imagePicker;
                   if (num2) {
@@ -484,7 +484,7 @@ class FeedbackWidget {
       lib._savedState = Object.assign({}, lib.state);
     };
     tmp4Result._clearFormState = () => {
-      closure_0._savedState = { name: "", email: "", description: "", filename: "Boolean", attachment: "disabled", attachmentUri: "isArray" };
+      closure_0._savedState = { name: "", email: "", description: "", filename: "disabled", attachment: "isArray", attachmentUri: "isArray" };
     };
     tmp4Result._hasScreenshot = () => undefined !== lib.state.filename && undefined !== lib.state.attachment && undefined !== lib.state.attachmentUri;
     tmp4Result._getUser = () => {
@@ -817,12 +817,12 @@ let items = [
 obj = {
   key: "reset",
   value: function reset() {
-    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "Boolean", attachment: "disabled", attachmentUri: "isArray" };
+    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "disabled", attachment: "isArray", attachmentUri: "isArray" };
   }
 };
 const items1 = [obj];
 const importDefaultResultResult = importDefaultResult(FeedbackWidget, items, items1);
 importDefaultResultResult.defaultProps = require("metro/01201__.js").defaultConfiguration;
-importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "Boolean", attachment: "disabled", attachmentUri: "isArray" };
+importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "disabled", attachment: "isArray", attachmentUri: "isArray" };
 
 export const FeedbackWidget = importDefaultResultResult;

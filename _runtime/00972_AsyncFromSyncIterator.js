@@ -476,14 +476,12 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
 export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
   closure_0 = arg1;
   closure_1 = flag;
-  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "View", cacheCreationInputTokens: "ddd", cacheReadInputTokens: "now", toolCalls: 1996232851, activeToolBlocks: 121701184 };
-  obj[8] = [];
-  obj[9] = {};
+  closure_2 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "disabled", cacheCreationInputTokens: "Number", cacheReadInputTokens: "isArray", toolCalls: [], activeToolBlocks: {} };
   applyResult.on("streamEvent", (arg0) => {
-    closure_1_5(arg0, obj, closure_1, closure_0);
+    closure_1_5(arg0, closure_2, closure_1, closure_0);
   });
   applyResult.on("message", () => {
-    obj = lib;
+    let obj = lib;
     let tmp2 = dependencyMap;
     if (lib.isRecording()) {
       if (tmp.responseId) {
@@ -530,7 +528,7 @@ export const instrumentMessageStream = function instrumentMessageStream(applyRes
     }
   });
   applyResult.on("error", (arg0) => {
-    obj = lib(869);
+    let obj = lib(869);
     obj.captureException(arg0, { mechanism: { handled: false, type: "auto.ai.anthropic.stream_error" } });
     if (lib.isRecording()) {
       obj = { code: null, message: "stream_error" };

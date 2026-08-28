@@ -1,92 +1,51 @@
 // _runtime/metro/05111__.js
-import getDataView from "../05109_getDataView.js";
+import _mod5112 from "05112__.js";
+import _mod5113 from "05113__.js";
+import _mod5114 from "05114__.js";
+import _mod5115 from "05115__.js";
 
-require = arg1;
-const module = arg2;
-const dependencyMap = arg6;
-arg5.default = {
-  parseAppMarkers(byteLength, flag2) {
-    if (module(5112).USE_TIFF) {
-      let tmpResult = tmp(5113);
-      if (tmpResult.isTiffFile(byteLength)) {
-        tmpResult = tmp(5113);
-        const findTiffOffsetsResult = tmpResult.findTiffOffsets();
-        let obj = { fileType: null };
-        obj[0] = { value: "tiff", description: "TIFF" };
-        return getDataView.objectAssign({}, findTiffOffsetsResult, obj);
-      }
-    }
-    if (module(5112).USE_JPEG) {
-      if (tmpResult1.isJpegFile(byteLength)) {
-        const tmpResult2 = tmp(5115);
-        const findJpegOffsetsResult = tmp(5115).findJpegOffsets(byteLength);
-        obj = { fileType: null };
-        obj[0] = { value: "jpeg", description: "JPEG" };
-        return getDataView.objectAssign({}, findJpegOffsetsResult, obj);
-      }
-      tmpResult1 = tmp(5115);
-    }
-    if (module(5112).USE_PNG) {
-      if (tmpResult3.isPngFile(byteLength)) {
-        const tmpResult4 = tmp(5116);
-        const findPngOffsetsResult = tmp(5116).findPngOffsets(byteLength, flag2);
-        obj1 = { fileType: null };
-        obj1[0] = { value: "png", description: "PNG" };
-        return getDataView.objectAssign({}, findPngOffsetsResult, obj1);
-      }
-      tmpResult3 = tmp(5116);
-    }
-    if (module(5112).USE_HEIC) {
-      if (tmpResult5.isHeicFile(byteLength)) {
-        const tmpResult6 = tmp(5117);
-        const findHeicOffsetsResult = tmp(5117).findHeicOffsets(byteLength);
-        const obj2 = { fileType: null };
-        obj2[0] = { value: "heic", description: "HEIC" };
-        return getDataView.objectAssign({}, findHeicOffsetsResult, obj2);
-      }
-      tmpResult5 = tmp(5117);
-    }
-    if (module(5112).USE_AVIF) {
-      if (tmpResult7.isAvifFile(byteLength)) {
-        const tmpResult8 = tmp(5121);
-        const findAvifOffsetsResult = tmp(5121).findAvifOffsets(byteLength);
-        const obj3 = { fileType: null };
-        obj3[0] = { value: "avif", description: "AVIF" };
-        return getDataView.objectAssign({}, findAvifOffsetsResult, obj3);
-      }
-      tmpResult7 = tmp(5121);
-    }
-    if (module(5112).USE_WEBP) {
-      if (tmpResult9.isWebpFile(byteLength)) {
-        const tmpResult10 = tmp(5122);
-        const findOffsetsResult = tmp(5122).findOffsets(byteLength);
-        const obj4 = { fileType: null };
-        obj4[0] = { value: "webp", description: "WebP" };
-        return getDataView.objectAssign({}, findOffsetsResult, obj4);
-      }
-      tmpResult9 = tmp(5122);
-    }
-    if (module(5112).USE_GIF) {
-      if (tmpResult11.isGifFile(byteLength)) {
-        const tmpResult12 = tmp(5123);
-        const findOffsetsResult1 = tmp(5123).findOffsets(byteLength);
-        const obj5 = { fileType: null };
-        obj5[0] = { value: "gif", description: "GIF" };
-        return getDataView.objectAssign({}, findOffsetsResult1, obj5);
-      }
-      tmpResult11 = tmp(5123);
-    }
-    if (module(5112).USE_XMP) {
-      if (tmpResult13.isXMLFile(byteLength)) {
-        const tmpResult14 = tmp(5124);
-        const findOffsetsResult2 = tmp(5124).findOffsets(byteLength);
-        const obj6 = { fileType: null };
-        obj6[0] = { value: "xml", description: "XML" };
-        return getDataView.objectAssign({}, findOffsetsResult2, obj6);
-      }
-      tmpResult13 = tmp(5124);
-    }
-    error = new Error("Invalid image format");
-    throw error;
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
   }
-};
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp5 = key10007;
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
+          } else {
+            let tmp3 = self2;
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
+          }
+          continue;
+        } else {
+          let _Object = Object;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+          let tmp2 = hasOwnPropertyResult;
+        }
+      }
+    };
+  }
+  const _Object2 = Object;
+  fn(_mod5112, exports);
+  fn(_mod5113, exports);
+  fn(_mod5114, exports);
+  fn(_mod5115, exports);
+} else {
+  let _Object = Object;
+}

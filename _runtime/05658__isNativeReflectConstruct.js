@@ -1,13 +1,11 @@
 // _runtime/05658__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import HoverGesture from "metro/00041__classCallCheck.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import importDefaultResult2 from "00019_noop.js";
-import { Reanimated } from "metro/05647__.js";
 
-const Wrap = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,54 +25,68 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Wrap {
+function changeEventCalculator(arg0, arg1) {
+  if (undefined === arg1) {
+    let obj = { changeX: null, changeY: null };
+    ({ x: obj2[0], y: obj2[1] } = arg0);
+  } else {
+    obj = { changeX: null, changeY: null };
+    obj[0] = arg0.x - arg1.x;
+    obj[1] = arg0.y - arg1.y;
+  }
+  obj = {};
+  const merged = Object.assign(arg0);
+  const merged1 = Object.assign(obj);
+  return obj;
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 2074844346342;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}" };
+class HoverGesture {
   constructor() {
     self = this;
-    tmp = closure_2(this, Wrap);
-    tmp2 = closure_4;
-    obj = closure_4(Wrap);
-    tmp3 = closure_3;
+    tmp = HoverGesture(this, HoverGesture);
+    tmp2 = closure_2;
+    obj = closure_2(HoverGesture);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "HoverGestureHandler";
+    return tmp3Result;
   }
 }
-_inheritsDefault(Wrap, importDefaultResult2.Component);
-const items = [
+_inheritsDefault(HoverGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
+let items = [
   {
-    key: "render",
-    value: function render() {
-      try {
-        const self = this;
-        const Children = importDefaultResult2.Children;
-        const onlyResult = Children.only(this.props.children);
-        return importDefaultResult2.cloneElement(onlyResult, { collapsable: false }, onlyResult.props.children);
-      } catch (err) {
-        const _Error = Error;
-        error = new Error(Wrap(5609).tagMessage("GestureDetector got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view."));
-        throw error;
+    key: "effect",
+    value: function effect(hoverEffect) {
+      this.config.hoverEffect = hoverEffect;
+      return this;
+    }
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = changeEventCalculator;
+      const self = this;
+      let fn;
+      fn = callback2(callback(self.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
       }
+      const items = [arg0];
+      return fn(items);
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Wrap, items);
-let animatedComponent;
-if (Reanimated != null) {
-  if (Reanimated.default != null) {
-    animatedComponent = _default.createAnimatedComponent(importDefaultResultResult);
-  }
-}
-if (animatedComponent == null) {
-  animatedComponent = importDefaultResultResult;
-}
 
-export const Wrap = importDefaultResultResult;
-export const AnimatedWrap = animatedComponent;
+export const HoverEffect = { NONE: 0, [0]: "NONE", LIFT: 1, [1]: "LIFT", HIGHLIGHT: 2, [2]: "HIGHLIGHT" };
+export const hoverGestureHandlerProps = ["hoverEffect"];
+export const HoverGesture = importDefaultResult(HoverGesture, items);
