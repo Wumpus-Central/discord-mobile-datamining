@@ -1,17 +1,17 @@
-// === Module 14888: EffectTile ===
+// === Module 14873: EffectTile ===
 
-// Module 14888 (EffectTile)
+// Module 14873 (EffectTile)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2727 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8846 */;
-import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 8847 */;
-import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 8851 */;
+import messagesProxyDefault from "messagesProxy" /* 2728 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8863 */;
+import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 8864 */;
+import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 8868 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function EffectTile(arg0) {
@@ -76,10 +76,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   closure_6 = undefined;
   let callback2;
   let tmp = callback3();
-  let obj = userId(8012);
-  obj1 = userId(14883);
+  let obj = userId(8026);
+  obj1 = userId(14868);
   const visibleEffectOrder = obj1.useVisibleEffectOrder();
-  let obj2 = userId(14884);
+  let obj2 = userId(14869);
   const displayNameStylesNewEffects = obj2.useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   const tmp5 = callback(first.useState(selectedEffectId), 2);
@@ -98,16 +98,16 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     obj[0] = tmp.header;
     obj1 = { title: null, trailing: null };
     const intl = tmp2(1236).intl;
-    obj1[0] = intl.string(onSelectEffect(2727).RVtMxT);
+    obj1[0] = intl.string(onSelectEffect(2728).RVtMxT);
     obj2 = { style: null, children: null };
     obj2[0] = tmp.headerTrailing;
     const obj3 = { text: null, onPress: null, variant: "primary", size: "sm" };
     const intl2 = tmp2(1236).intl;
     obj3[0] = intl2.string(tmp2(1236).t.XqMe3N);
     obj3[1] = tmp8;
-    obj2[1] = callback2(tmp2(4880).Button, obj3);
+    obj2[1] = callback2(tmp2(4893).Button, obj3);
     obj1[1] = callback2(closure_5, obj2);
-    obj[1] = callback2(tmp2(5573).BottomSheetTitleHeader, obj1);
+    obj[1] = callback2(tmp2(5586).BottomSheetTitleHeader, obj1);
     obj[1] = callback2(closure_5, obj);
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.container;
@@ -130,10 +130,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
         }
       }, effectId);
     });
-    obj5[1] = callback2(tmp2(4878).Stack, obj6);
+    obj5[1] = callback2(tmp2(4891).Stack, obj6);
     obj4[1] = callback2(closure_5, obj5);
     obj[2] = callback2(closure_5, obj4);
-    tmp9 = callback2(tmp2(5574).BottomSheet, obj);
+    tmp9 = callback2(tmp2(5587).BottomSheet, obj);
   }
   return tmp9;
 };

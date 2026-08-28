@@ -1,6 +1,6 @@
-// === Module 7570: defineProperty ===
+// === Module 7584: defineProperty ===
 
-// Module 7570 (defineProperty)
+// Module 7584 (defineProperty)
 import _mod1307 from "module_1307" /* 1307 */;
 import defineProperty2 from "defineProperty" /* 1337 */;
 import closure_2 from "_slicedToArray" /* 32 */;

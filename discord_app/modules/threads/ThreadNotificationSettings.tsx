@@ -1,10 +1,10 @@
-// === Module 10091: computeThreadNotificationSetting ===
+// === Module 10109: computeThreadNotificationSetting ===
 
-// Module 10091 (computeThreadNotificationSetting)
+// Module 10109 (computeThreadNotificationSetting)
 import hasFlag from "hasFlag" /* 1403 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4654 */;
-import closure_4 from "storeThread" /* 4091 */;
+import closure_3 from "updateUserGuildSettingsInternal" /* 4667 */;
+import closure_4 from "storeThread" /* 4092 */;
 import { ThreadMemberFlags } from "AbortCodes" /* 1235 */;
 import { UserNotificationSettings } from "ME" /* 676 */;
 

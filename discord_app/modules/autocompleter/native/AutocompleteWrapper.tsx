@@ -1,24 +1,24 @@
-// === Module 11873: getStickersItemLayout ===
+// === Module 11892: getStickersItemLayout ===
 
-// Module 11873 (getStickersItemLayout)
+// Module 11892 (getStickersItemLayout)
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
-import AutocompleteLabel from "AutocompleteLabel" /* 11874 */;
+import AutocompleteLabel from "AutocompleteLabel" /* 11893 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleInit" /* 7457 */;
-import closure_8 from "getEmojiToGroupId" /* 5353 */;
-import closure_9 from "_handleConnectionOpen" /* 5173 */;
-import closure_10 from "loadSavedGuildStickers" /* 5396 */;
+import closure_7 from "handleInit" /* 7471 */;
+import closure_8 from "getEmojiToGroupId" /* 5366 */;
+import closure_9 from "_handleConnectionOpen" /* 5186 */;
+import closure_10 from "loadSavedGuildStickers" /* 5409 */;
 import ME from "ME" /* 676 */;
-import { BOOLEAN_CHOICES } from "TRUE_OPTION_NAME" /* 4904 */;
-import AUTOCOMPLETE_ROW_HEIGHT from "AUTOCOMPLETE_ROW_HEIGHT" /* 10259 */;
-import regExp from "regExp" /* 4905 */;
-import { AutocompleteTypes } from "AutocompleteTypes" /* 10335 */;
-import { EmojiInteractionPoint } from "set" /* 1925 */;
+import { BOOLEAN_CHOICES } from "TRUE_OPTION_NAME" /* 4917 */;
+import AUTOCOMPLETE_ROW_HEIGHT from "AUTOCOMPLETE_ROW_HEIGHT" /* 10277 */;
+import regExp from "regExp" /* 4918 */;
+import { AutocompleteTypes } from "AutocompleteTypes" /* 10353 */;
+import { EmojiInteractionPoint } from "set" /* 1926 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function getStickersItemLayout(arg0, arg1) {

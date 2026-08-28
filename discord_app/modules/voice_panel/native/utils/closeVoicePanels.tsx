@@ -1,6 +1,6 @@
-// === Module 9383: closeVoicePanels ===
+// === Module 9401: closeVoicePanels ===
 
-// Module 9383 (closeVoicePanels)
+// Module 9401 (closeVoicePanels)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;

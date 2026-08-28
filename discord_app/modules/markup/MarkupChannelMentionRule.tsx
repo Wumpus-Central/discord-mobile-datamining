@@ -1,27 +1,27 @@
-// === Module 4911: getChannel ===
+// === Module 4924: getChannel ===
 
-// Module 4911 (getChannel)
+// Module 4924 (getChannel)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
-import tDefault from "t" /* 4160 */;
-import ME2 from "ME" /* 4640 */;
-import textRegexpDefault from "textRegexp" /* 4910 */;
-import closure_3 from "isSubscriptionGated" /* 1983 */;
+import tDefault from "t" /* 4161 */;
+import ME2 from "ME" /* 4641 */;
+import textRegexpDefault from "textRegexp" /* 4923 */;
+import closure_3 from "isSubscriptionGated" /* 1984 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_7 from "markAllUserIdListsStale" /* 4098 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_7 from "markAllUserIdListsStale" /* 4099 */;
+import closure_8 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
 function getChannel(id, arr) {
   const _require = id;
   const channel = store.getChannel(id);
-  const isSubscriptionGated = _require(4912).getChannelRoleSubscriptionStatus(id, store, closure_3, closure_6).isSubscriptionGated;
-  const obj2 = _require(4912);
-  let str = _require(4631).getMentionIconType(channel);
+  const isSubscriptionGated = _require(4925).getChannelRoleSubscriptionStatus(id, store, closure_3, closure_6).isSubscriptionGated;
+  const obj2 = _require(4925);
+  let str = _require(4632).getMentionIconType(channel);
   if (str == null) {
     str = "text";
   }
@@ -47,18 +47,18 @@ function getChannel(id, arr) {
   if (null != channel) {
     obj = { type: null, id: null, guildId: null, name: null, isDm: null, isForumPost: null, isMentionable: null, canViewChannel: null, roleSubscriptionGated: null, iconType: null, parentId: null };
     ({ type: obj4[0], id: obj4[1], guild_id: obj4[2] } = channel);
-    let tmpResult = tmp(4639);
+    let tmpResult = tmp(4640);
     obj[3] = tmpResult.computeChannelName(channel, closure_8, closure_7);
     obj[4] = channel.isPrivate();
     obj[5] = channel.isForumPost();
-    tmpResult = tmp(4913);
+    tmpResult = tmp(4926);
     obj[6] = tmpResult.isChannelTypeMentionable(channel.type);
-    obj[7] = tmp(4640).canViewChannel(channel);
+    obj[7] = tmp(4641).canViewChannel(channel);
     obj[8] = isSubscriptionGated;
     obj[9] = str;
     obj[10] = channel.parent_id;
     tmp4 = obj;
-    const tmpResult1 = tmp(4640);
+    const tmpResult1 = tmp(4641);
   }
   return tmp4;
 }
@@ -126,7 +126,7 @@ function parseChannel(canViewChannel) {
           obj.content = items3;
           let obj6 = obj;
         } else if (null != arg3) {
-          const obj4 = { type: "link", content: null, target: null, title: "call" };
+          const obj4 = { type: "link", content: null, target: null, title: "container" };
           const obj5 = { type: "text", content: null };
           obj5[1] = arg3;
           const items4 = [obj5];
@@ -170,9 +170,9 @@ function parseChannel(canViewChannel) {
             if (canViewChannel.isForumPost) {
               const channel = store.getChannel(canViewChannel.parentId);
               if (null != channel) {
-                let tmp35Result = tmp35(4639);
+                let tmp35Result = tmp35(4640);
                 const channelName = tmp35Result.computeChannelName(channel, closure_8, closure_7);
-                tmp35Result = tmp35(4631);
+                tmp35Result = tmp35(4632);
                 let str3 = tmp35Result.getMentionIconType(channel);
                 if (str3 == null) {
                   str3 = "forum";
@@ -331,7 +331,7 @@ obj = {
   parse(arg0, arg1, channelId) {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     if (null == tmp3) {
-      let obj = { type: "link", content: null, target: null, title: "call" };
+      let obj = { type: "link", content: null, target: null, title: "container" };
       obj = { type: "text", content: null };
       obj[1] = tmp;
       const items = [obj];
@@ -406,7 +406,7 @@ obj[2] = {
       }
     }
     const content = [{ type: "text", content: target }];
-    return { type: "link", content, target, title: "call" };
+    return { type: "link", content, target, title: "container" };
   }
 };
 let obj1 = {
@@ -453,7 +453,7 @@ let obj1 = {
       }
     }
     const content = [{ type: "text", content: target }];
-    return { type: "link", content, target, title: "call" };
+    return { type: "link", content, target, title: "container" };
   }
 };
 const result = require("set").fileFinishedImporting("modules/markup/MarkupChannelMentionRule.tsx");

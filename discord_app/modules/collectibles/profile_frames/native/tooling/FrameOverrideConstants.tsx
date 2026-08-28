@@ -1,6 +1,6 @@
-// === Module 8468: OVERRIDE_DIR ===
+// === Module 8482: OVERRIDE_DIR ===
 
-// Module 8468 (OVERRIDE_DIR)
+// Module 8482 (OVERRIDE_DIR)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/profile_frames/native/tooling/FrameOverrideConstants.tsx");

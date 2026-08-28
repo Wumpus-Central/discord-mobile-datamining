@@ -1,12 +1,12 @@
-// === Module 8005: useTrackCollectiblesItemTryOut ===
+// === Module 8019: useTrackCollectiblesItemTryOut ===
 
-// Module 8005 (useTrackCollectiblesItemTryOut)
+// Module 8019 (useTrackCollectiblesItemTryOut)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import ME from "ME" /* 676 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7220 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1951 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7234 */;
+import GuildFeatures from "GuildFeatures" /* 1925 */;
 
 noop.useCallback;
 const AnalyticEvents = ME.AnalyticEvents;

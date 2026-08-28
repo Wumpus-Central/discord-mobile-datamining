@@ -1,8 +1,8 @@
-// === Module 15551: useMessagesScrollToTop ===
+// === Module 15569: useMessagesScrollToTop ===
 
-// Module 15551 (useMessagesScrollToTop)
+// Module 15569 (useMessagesScrollToTop)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesScrollToTop.tsx");

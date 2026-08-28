@@ -1,22 +1,22 @@
-// === Module 4441: Text ===
+// === Module 4442: Text ===
 
-// Module 4441 (Text)
+// Module 4442 (Text)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 712 */;
-import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 4443 */;
-import PlainTextExperimentProvider from "PlainTextExperimentProvider" /* 4450 */;
-import useTypographyVariantRemap from "useTypographyVariantRemap" /* 4451 */;
-import set from "set" /* 4454 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4455 */;
+import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 4444 */;
+import PlainTextExperimentProvider from "PlainTextExperimentProvider" /* 4451 */;
+import useTypographyVariantRemap from "useTypographyVariantRemap" /* 4452 */;
+import set from "set" /* 4455 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4456 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { Fonts } from "sum" /* 505 */;
 import { jsx } from "jsxProd" /* 21 */;
-import { TextVariantsFlat } from "TEXT_VARIANT" /* 4442 */;
-import useManaTextMigrationHighlight from "useManaTextMigrationHighlight" /* 4443 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import importDefaultResult from "module_4185" /* 4185 */;
+import { TextVariantsFlat } from "TEXT_VARIANT" /* 4443 */;
+import useManaTextMigrationHighlight from "useManaTextMigrationHighlight" /* 4444 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import importDefaultResult from "module_4186" /* 4186 */;
 
 require = arg1;
 let closure_3 = ["color", "fontSize", "fontFamily", "fontWeight", "fontStyle", "textAlign", "textAlignVertical", "verticalAlign", "textDecorationLine", "lineHeight", "letterSpacing"];
@@ -115,7 +115,7 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
   const arraySpreadResult = HermesBuiltin.arraySpread(includeFontPadding ? items : closure_11, 2);
   items[arraySpreadResult] = style;
   items[arraySpreadResult + 1] = manaTextMigrationHighlight;
-  let tmp4Result = tmp4(4454);
+  let tmp4Result = tmp4(4455);
   obj = { animated: flag, children, enabled: plainTextExperimentEnabled, experimentalUseNativeText: flag2, hasRef: null != arg1, hasTextAncestor: context, isIOS: null, props: null, style: null };
   tmp4Result = tmp4(501);
   obj[6] = tmp4Result.isIOS();

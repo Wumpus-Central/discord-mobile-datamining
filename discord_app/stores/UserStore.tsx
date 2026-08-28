@@ -1,17 +1,17 @@
-// === Module 1922: mergeGuildAvatar ===
+// === Module 1923: mergeGuildAvatar ===
 
-// Module 1922 (mergeGuildAvatar)
+// Module 1923 (mergeGuildAvatar)
 import clearAllDefault from "clearAll" /* 1220 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import hasFlagAll from "hasFlag" /* 1403 */;
-import validatePremiumType from "validatePremiumType" /* 1928 */;
-import isUserPrimaryGuildEqual from "isUserPrimaryGuildEqual" /* 1932 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import closure_4 from "setPremiumTypeActual" /* 1923 */;
-import closure_5 from "createdAt" /* 1930 */;
+import validatePremiumType from "validatePremiumType" /* 1929 */;
+import isUserPrimaryGuildEqual from "isUserPrimaryGuildEqual" /* 1933 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1956 */;
+import closure_4 from "setPremiumTypeActual" /* 1924 */;
+import closure_5 from "createdAt" /* 1931 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import ME from "ME" /* 676 */;
-import { UNSELECTED_PREMIUM_TYPE_OVERRIDE as closure_10 } from "GuildFeatures" /* 1924 */;
+import { UNSELECTED_PREMIUM_TYPE_OVERRIDE as closure_10 } from "GuildFeatures" /* 1925 */;
 
 require = arg1;
 function mergeGuildAvatar(id, guildId, avatar) {
@@ -39,11 +39,11 @@ function mergeUserPrimaryGuild(id, primary_guild) {
     if (!result) {
       let flag = null == tmp2.primaryGuild || null != primary_guild.primary_guild;
       if (flag) {
-        tmp2.primaryGuild = tmp5(1932).ensureUserPrimaryGuild(primary_guild.primary_guild);
+        tmp2.primaryGuild = tmp5(1933).ensureUserPrimaryGuild(primary_guild.primary_guild);
         tmp[tmp2.id] = tmp2;
         closure_12 = closure_12 + 1;
         flag = true;
-        const tmp5Result = tmp5(1932);
+        const tmp5Result = tmp5(1933);
       }
       tmp8 = flag;
     }
@@ -110,30 +110,30 @@ function transformUser(mfa_enabled) {
   }
   const primary_guild = mfa_enabled.primary_guild;
   if (undefined !== primary_guild) {
-    mfa_enabled.primary_guild = tmp4(1932).ensureUserPrimaryGuild(primary_guild);
-    const tmp4Result1 = tmp4(1932);
+    mfa_enabled.primary_guild = tmp4(1933).ensureUserPrimaryGuild(primary_guild);
+    const tmp4Result1 = tmp4(1933);
   }
   const display_name_styles = mfa_enabled.display_name_styles;
   if (undefined !== display_name_styles) {
-    mfa_enabled.displayNameStyles = tmp4(1933).parseServerDisplayNameStyles(display_name_styles);
+    mfa_enabled.displayNameStyles = tmp4(1934).parseServerDisplayNameStyles(display_name_styles);
     delete tmp[tmp3];
-    const tmp4Result2 = tmp4(1933);
+    const tmp4Result2 = tmp4(1934);
   }
   const typing_indicator_style = mfa_enabled.typing_indicator_style;
   if (undefined !== typing_indicator_style) {
-    mfa_enabled.typingIndicatorStyle = tmp4(1937).parseServerTypingIndicatorStyle(typing_indicator_style);
+    mfa_enabled.typingIndicatorStyle = tmp4(1938).parseServerTypingIndicatorStyle(typing_indicator_style);
     delete tmp[tmp3];
-    const tmp4Result3 = tmp4(1937);
+    const tmp4Result3 = tmp4(1938);
   }
   const premium_state = mfa_enabled.premium_state;
   if (undefined !== premium_state) {
-    mfa_enabled.premiumState = tmp4(1941).parseServerPremiumState(premium_state);
+    mfa_enabled.premiumState = tmp4(1942).parseServerPremiumState(premium_state);
     delete tmp[tmp3];
-    const tmp4Result4 = tmp4(1941);
+    const tmp4Result4 = tmp4(1942);
   }
   const restricted_schedule = mfa_enabled.restricted_schedule;
   if (undefined !== restricted_schedule) {
-    const RestrictedScheduleRecord = tmp4(1944).RestrictedScheduleRecord;
+    const RestrictedScheduleRecord = tmp4(1945).RestrictedScheduleRecord;
     let fromServerResult = RestrictedScheduleRecord.fromServer(restricted_schedule);
     if (fromServerResult == null) {
       fromServerResult = null;
@@ -213,8 +213,8 @@ function mergeUser(user, arg1) {
       if (tmp14 !== true) {
         if (tmp15 !== true) {
           if (obj4.isUserPrimaryGuildEqual(obj.primaryGuild, user.primary_guild) !== true) {
-            user.primary_guild = tmp16(1932).ensureUserPrimaryGuild(user.primary_guild);
-            const tmp16Result = tmp16(1932);
+            user.primary_guild = tmp16(1933).ensureUserPrimaryGuild(user.primary_guild);
+            const tmp16Result = tmp16(1933);
           }
           obj4 = isUserPrimaryGuildEqual;
           tmp16 = require;

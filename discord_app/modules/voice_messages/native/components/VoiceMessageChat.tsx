@@ -1,17 +1,17 @@
-// === Module 12099: WaveformBar ===
+// === Module 12118: WaveformBar ===
 
-// Module 12099 (WaveformBar)
+// Module 12118 (WaveformBar)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
-import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11451 */;
-import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11452 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11470 */;
+import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11471 */;
 import { ThemeTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import importDefaultResult from "module_4185" /* 4185 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import importDefaultResult from "module_4186" /* 4186 */;
 import set from "set" /* 500 */;
 
 let require = arg1;

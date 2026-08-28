@@ -1,14 +1,14 @@
-// === Module 4267: handleConnectionOpen ===
+// === Module 4268: handleConnectionOpen ===
 
-// Module 4267 (handleConnectionOpen)
+// Module 4268 (handleConnectionOpen)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import transitionTo from "transitionTo" /* 1222 */;
-import matchPath from "matchPath" /* 4272 */;
-import RouteParam2 from "RouteParam" /* 4285 */;
-import closure_2 from "handleGatewayJoinRequestUpdate" /* 4268 */;
+import matchPath from "matchPath" /* 4273 */;
+import RouteParam2 from "RouteParam" /* 4286 */;
+import closure_2 from "handleGatewayJoinRequestUpdate" /* 4269 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "initialize" /* 4271 */;
+import closure_4 from "initialize" /* 4272 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 

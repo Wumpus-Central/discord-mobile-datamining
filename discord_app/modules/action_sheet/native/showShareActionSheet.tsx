@@ -1,10 +1,10 @@
-// === Module 8563: showShareActionSheet ===
+// === Module 8578: showShareActionSheet ===
 
-// Module 8563 (showShareActionSheet)
+// Module 8578 (showShareActionSheet)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 8564 */;
-import trackAppClickInNativeShareSheet from "trackAppClickInNativeShareSheet" /* 8565 */;
+import enforcingDefault from "enforcing" /* 8579 */;
+import trackAppClickInNativeShareSheet from "trackAppClickInNativeShareSheet" /* 8580 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 
 if (PlatformTypes.isAndroid()) {

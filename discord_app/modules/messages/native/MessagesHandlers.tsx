@@ -1,42 +1,42 @@
-// === Module 11058: items ===
+// === Module 11076: items ===
 
-// Module 11058 (items)
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5925 */;
+// Module 11076 (items)
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5938 */;
 import closure_6 from "_objectWithoutProperties" /* 109 */;
 import closure_7 from "asyncGeneratorStep" /* 5 */;
 import closure_8 from "_slicedToArray" /* 32 */;
-import closure_9 from "initialize" /* 8640 */;
-import closure_10 from "addApplication" /* 4486 */;
-import closure_11 from "set" /* 5907 */;
-import closure_12 from "computeAlertSettings" /* 10083 */;
-import closure_13 from "scheduledEventSort" /* 7204 */;
-import { isGuildScheduledEventActive as closure_14 } from "scheduledEventSort" /* 7204 */;
-import closure_15 from "getCurrentTime" /* 7919 */;
-import closure_16 from "initializeState" /* 7381 */;
-import closure_17 from "processMessage" /* 7273 */;
-import closure_18 from "handleQuickSwitcherUpdate" /* 10902 */;
-import closure_19 from "storeThread" /* 4091 */;
-import closure_20 from "recomputeAffinities" /* 7337 */;
+import closure_9 from "initialize" /* 8656 */;
+import closure_10 from "addApplication" /* 4487 */;
+import closure_11 from "set" /* 5920 */;
+import closure_12 from "computeAlertSettings" /* 10101 */;
+import closure_13 from "scheduledEventSort" /* 7218 */;
+import { isGuildScheduledEventActive as closure_14 } from "scheduledEventSort" /* 7218 */;
+import closure_15 from "getCurrentTime" /* 7933 */;
+import closure_16 from "initializeState" /* 7395 */;
+import closure_17 from "processMessage" /* 7287 */;
+import closure_18 from "handleQuickSwitcherUpdate" /* 10920 */;
+import closure_19 from "storeThread" /* 4092 */;
+import closure_20 from "recomputeAffinities" /* 7351 */;
 import closure_21 from "fetchFingerprint" /* 1218 */;
 import closure_22 from "ensureGuildLoaded" /* 1391 */;
-import closure_23 from "updateGiftCode" /* 8379 */;
-import closure_24 from "trackCommunicationDisabled" /* 1992 */;
+import closure_23 from "updateGiftCode" /* 8393 */;
+import closure_24 from "trackCommunicationDisabled" /* 1993 */;
 import closure_25 from "createGuildRecordFromRust" /* 1910 */;
-import closure_26 from "updateInvite" /* 4429 */;
-import closure_27 from "updateActivities" /* 9354 */;
-import closure_28 from "reinjectEphemerals" /* 4688 */;
-import closure_29 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_30 from "sortActivity" /* 4534 */;
-import closure_31 from "handleConnectionOpen" /* 1981 */;
-import closure_32 from "handleConnectionOpen" /* 4267 */;
-import closure_33 from "filterPlayingActivities" /* 5175 */;
-import closure_34 from "initialize" /* 7515 */;
-import closure_35 from "mergeGuildAvatar" /* 1922 */;
-import { SeparatorAction } from "Changeset" /* 7775 */;
+import closure_26 from "updateInvite" /* 4430 */;
+import closure_27 from "updateActivities" /* 9372 */;
+import closure_28 from "reinjectEphemerals" /* 4701 */;
+import closure_29 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_30 from "sortActivity" /* 4535 */;
+import closure_31 from "handleConnectionOpen" /* 1982 */;
+import closure_32 from "handleConnectionOpen" /* 4268 */;
+import closure_33 from "filterPlayingActivities" /* 5188 */;
+import closure_34 from "initialize" /* 7529 */;
+import closure_35 from "mergeGuildAvatar" /* 1923 */;
+import { SeparatorAction } from "Changeset" /* 7789 */;
 import ME from "ME" /* 676 */;
-import { InviteTypes } from "InviteSendStates" /* 7414 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { SafetySystemNotificationCtaType as closure_61 } from "SafetyHubView" /* 8621 */;
+import { InviteTypes } from "InviteSendStates" /* 7428 */;
+import GuildFeatures from "GuildFeatures" /* 1925 */;
+import { SafetySystemNotificationCtaType as closure_61 } from "SafetyHubView" /* 8636 */;
 import { OpenThreadAnalyticsLocations as closure_62 } from "AbortCodes" /* 1235 */;
 
 const require = arg1;
@@ -2286,25 +2286,25 @@ class MessagesHandlers {
                 closure_1 = tmp2;
                 isReveal = undefined;
                 closure_1 = undefined;
-                const nativeSyntheticEventData = callback(11062).getNativeSyntheticEventData(isReveal);
+                const nativeSyntheticEventData = callback(11080).getNativeSyntheticEventData(isReveal);
                 ({ messageId, channelId, isReveal } = nativeSyntheticEventData);
                 ({ attachmentId, embedId } = nativeSyntheticEventData);
-                const obj10 = callback(11062);
+                const obj10 = callback(11080);
                 if (isReveal) {
                   if (obj11.shouldAgeVerifyForExplicitMedia()) {
                     dependencyMap = 1;
                     c4 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = callback(4686).maybePerformReactiveCheck();
+                    obj1[0] = callback(4699).maybePerformReactiveCheck();
                     return obj1;
                   }
                 }
-                let obj3 = callback(7278);
+                let obj3 = callback(7292);
                 const obj2 = { obscure: null };
                 obj2[0] = isReveal;
                 const result = obj3.trackToggleMediaObscurityV2(obj2);
                 c4 = 3;
-                obj11 = callback(7278);
+                obj11 = callback(7292);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -2317,9 +2317,9 @@ class MessagesHandlers {
                 reactiveCheckPassed = closure_1_9.getReactiveCheckPassed();
               }
               if (!reactiveCheckPassed) {
-                obj = closure_1_1(8613);
+                obj = closure_1_1(8628);
                 obj3 = { entryPoint: null };
-                obj3[0] = callback(8615).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
+                obj3[0] = callback(8630).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
                 const result1 = obj.showAgeVerificationGetStartedModal(obj3);
               }
             }

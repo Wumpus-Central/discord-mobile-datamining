@@ -1,9 +1,9 @@
-// === Module 17221: useRoleSubscriptionSettingsDisabled ===
+// === Module 17239: useRoleSubscriptionSettingsDisabled ===
 
-// Module 17221 (useRoleSubscriptionSettingsDisabled)
+// Module 17239 (useRoleSubscriptionSettingsDisabled)
 import set from "set" /* 2 */;
-import context from "context" /* 17222 */;
-import contextDefault from "context" /* 17222 */;
+import context from "context" /* 17240 */;
+import contextDefault from "context" /* 17240 */;
 
 const result = set.fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionSettingsDisabledContext.tsx");
 

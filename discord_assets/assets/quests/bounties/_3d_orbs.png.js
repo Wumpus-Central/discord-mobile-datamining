@@ -1,6 +1,6 @@
-// === Module 14602: metadata ===
+// === Module 14586: metadata ===
 
-// Module 14602 (metadata)
+// Module 14586 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/quests/bounties/_3d_orbs.png.js");

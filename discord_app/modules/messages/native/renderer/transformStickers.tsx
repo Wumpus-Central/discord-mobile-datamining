@@ -1,8 +1,8 @@
-// === Module 12820: transformStickers ===
+// === Module 12839: transformStickers ===
 
-// Module 12820 (transformStickers)
+// Module 12839 (transformStickers)
 import set from "set" /* 2 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4805 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4818 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/transformStickers.tsx");
 

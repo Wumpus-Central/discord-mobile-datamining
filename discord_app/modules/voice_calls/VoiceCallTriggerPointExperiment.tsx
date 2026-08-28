@@ -1,9 +1,9 @@
-// === Module 16828: experiment ===
+// === Module 16846: experiment ===
 
-// Module 16828 (experiment)
+// Module 16846 (experiment)
 import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4359 */;
-import createExperiment from "createExperiment" /* 4356 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4360 */;
+import createExperiment from "createExperiment" /* 4357 */;
 
 const items = [{ id: 1, label: "Treatment", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-04_voice_call_trigger_point", label: "Voice Call Trigger Point Experiment", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: items });

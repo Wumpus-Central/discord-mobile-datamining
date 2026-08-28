@@ -1,11 +1,11 @@
-// === Module 6098: resolveGoreSettingWithDefaults ===
+// === Module 6111: resolveGoreSettingWithDefaults ===
 
-// Module 6098 (resolveGoreSettingWithDefaults)
+// Module 6111 (resolveGoreSettingWithDefaults)
 import create from "create" /* 1306 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4147 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4148 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1923 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 
 require = arg1;

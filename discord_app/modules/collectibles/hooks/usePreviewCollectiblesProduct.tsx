@@ -1,9 +1,9 @@
-// === Module 10758: usePreviewCollectibleProduct ===
+// === Module 10776: usePreviewCollectibleProduct ===
 
-// Module 10758 (usePreviewCollectibleProduct)
+// Module 10776 (usePreviewCollectibleProduct)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "fromServer" /* 7225 */;
+import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "fromServer" /* 7239 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx");
@@ -12,7 +12,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
   const _require = product;
   dependencyMap = arg1;
   closure_2 = arg2;
-  const shopProductItems = _require(8425).useShopProductItems(product);
+  const shopProductItems = _require(8439).useShopProductItems(product);
   const firstProfileEffect = shopProductItems.firstProfileEffect;
   const firstAvatarDecoration = shopProductItems.firstAvatarDecoration;
   const firstNameplate = shopProductItems.firstNameplate;
@@ -76,7 +76,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
       }
       return () => {
         if (closure_1) {
-          closure_1_0(closure_1_1[8]).setPendingChanges({ avatarDecoration: "rejectWithError", profileEffect: "accessibilityRole", nameplate: "HermesInternal", profileFrame: "channel" });
+          closure_1_0(closure_1_1[8]).setPendingChanges({ avatarDecoration: "r", profileEffect: "accessibilityRole", nameplate: "Button", profileFrame: "limit" });
           const obj = closure_1_0(closure_1_1[8]);
         }
       };

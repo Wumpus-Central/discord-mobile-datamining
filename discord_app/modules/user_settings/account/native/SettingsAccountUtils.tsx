@@ -1,9 +1,9 @@
-// === Module 14300: useIs2FAEnabled ===
+// === Module 14269: useIs2FAEnabled ===
 
-// Module 14300 (useIs2FAEnabled)
+// Module 14269 (useIs2FAEnabled)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1923 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");

@@ -6,9 +6,9 @@ import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import itemsDefault from "items" /* 1956 */;
-import deserializeChannels from "deserializeChannels" /* 1978 */;
-import deserializeChannelsDefault from "deserializeChannels" /* 1978 */;
+import itemsDefault from "items" /* 1957 */;
+import deserializeChannels from "deserializeChannels" /* 1979 */;
+import deserializeChannelsDefault from "deserializeChannels" /* 1979 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "hasChannel" /* 1392 */;
@@ -16,7 +16,7 @@ import closure_6 from "initializeFromUserSettings" /* 1394 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_13 from "fetchFingerprint" /* 1218 */;
 import closure_14 from "createGuildRecordFromRust" /* 1910 */;
-import closure_15 from "mergeGuildAvatar" /* 1922 */;
+import closure_15 from "mergeGuildAvatar" /* 1923 */;
 import { ChannelTypes } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -33,7 +33,7 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
             const _HermesInternal4 = HermesInternal;
             closure_17.verbose("hydrating guild (guild: " + guild_id + ", trace: " + getBasicChannel + ")");
             const _HermesInternal5 = HermesInternal;
-            const result = _require(1976).tryLoadOrResetCacheGateway("ensureGuildLoaded(" + guild_id + ")", () => databaseResult(closure_1_2[13]).getSync(closure_1, closure_0), "ensureGuildLoaded");
+            const result = _require(1977).tryLoadOrResetCacheGateway("ensureGuildLoaded(" + guild_id + ")", () => databaseResult(closure_1_2[13]).getSync(closure_1, closure_0), "ensureGuildLoaded");
             if (null == result) {
               set.add(guild_id);
               store.restored(guild_id);
@@ -41,7 +41,7 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
               obj3.log("load returned null; early returning (guild: " + guild_id + ", database: " + databaseResult + ")");
             } else {
               [arr, tmp41] = callback(result, 2);
-              tmp4(1978)(arr);
+              tmp4(1979)(arr);
               if (Basic !== tmp2.Basic) {
                 closure_34 = closure_34 + 1;
               }
@@ -67,7 +67,7 @@ function ensureGuildLoaded(guild_id, Basic, getBasicChannel) {
               const tmp4Result = tmp4(10);
             }
             obj3 = closure_17;
-            const obj4 = _require(1976);
+            const obj4 = _require(1977);
           }
           const obj = itemsDefault;
         }
@@ -584,7 +584,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((arg0) => !set.has(arg0))) {
       dependencyMap = c31;
-      return tmp(1976).tryLoadOrResetCacheGatewayAsync("loadChannels", callback2(function*() {
+      return tmp(1977).tryLoadOrResetCacheGatewayAsync("loadChannels", callback2(function*() {
         if (c7 === 2) {
           c7 = 3;
           HermesBuiltin.throwTypeError();

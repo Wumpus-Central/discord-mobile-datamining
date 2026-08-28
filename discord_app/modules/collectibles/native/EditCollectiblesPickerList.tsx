@@ -1,12 +1,12 @@
-// === Module 8036: EditCollectiblesPickerList ===
+// === Module 8050: EditCollectiblesPickerList ===
 
-// Module 8036 (EditCollectiblesPickerList)
-import Text from "Text" /* 4441 */;
+// Module 8050 (EditCollectiblesPickerList)
+import Text from "Text" /* 4442 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 let c3 = importAllResult;

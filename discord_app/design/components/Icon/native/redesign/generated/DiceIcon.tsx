@@ -1,10 +1,10 @@
-// === Module 11871: DiceIcon ===
+// === Module 11890: DiceIcon ===
 
-// Module 11871 (DiceIcon)
+// Module 11890 (DiceIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 11872 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 11891 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

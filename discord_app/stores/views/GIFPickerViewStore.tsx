@@ -1,6 +1,6 @@
-// === Module 10276: getFormatFromUrl ===
+// === Module 10294: getFormatFromUrl ===
 
-// Module 10276 (getFormatFromUrl)
+// Module 10294 (getFormatFromUrl)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;

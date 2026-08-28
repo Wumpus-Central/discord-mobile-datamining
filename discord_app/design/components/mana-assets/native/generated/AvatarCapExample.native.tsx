@@ -1,10 +1,10 @@
-// === Module 6265: AvatarCapExample ===
+// === Module 6278: AvatarCapExample ===
 
-// Module 6265 (AvatarCapExample)
+// Module 6278 (AvatarCapExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6266 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6279 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarCapExample.native.tsx");

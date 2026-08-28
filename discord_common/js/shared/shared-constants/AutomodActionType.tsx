@@ -1,6 +1,6 @@
-// === Module 11352: AutomodActionType ===
+// === Module 11371: AutomodActionType ===
 
-// Module 11352 (AutomodActionType)
+// Module 11371 (AutomodActionType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodActionType.tsx");

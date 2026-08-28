@@ -1,10 +1,10 @@
-// === Module 11237: BookmarkOutlineIcon ===
+// === Module 11255: BookmarkOutlineIcon ===
 
-// Module 11237 (BookmarkOutlineIcon)
+// Module 11255 (BookmarkOutlineIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 11238 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 11256 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

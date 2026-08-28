@@ -1,9 +1,9 @@
-// === Module 5536: _fetchMemberCountsFromBackend ===
+// === Module 5549: _fetchMemberCountsFromBackend ===
 
-// Module 5536 (_fetchMemberCountsFromBackend)
+// Module 5549 (_fetchMemberCountsFromBackend)
 import privDefault from "priv" /* 1405 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getRoleMemberCount" /* 5535 */;
+import closure_4 from "getRoleMemberCount" /* 5548 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;

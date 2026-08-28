@@ -1,6 +1,6 @@
-// === Module 7461: _generateAnimationSource ===
+// === Module 7475: _generateAnimationSource ===
 
-// Module 7461 (_generateAnimationSource)
+// Module 7475 (_generateAnimationSource)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -62,13 +62,13 @@ function _generateAnimationSource() {
               obj1 = {};
               const merged = Object.assign(closure_2);
               obj1.animated = false;
-              const emojiUrl = lib(4106).getEmojiUrl(obj1, 128);
+              const emojiUrl = lib(4107).getEmojiUrl(obj1, 128);
               closure_4 = emojiUrl;
               if (emojiUrl == null) {
                 closure_4 = "";
               }
               closure_2 = closure_4;
-              const obj12 = lib(7462);
+              const obj12 = lib(7476);
               c9 = 2;
               c10 = 1;
               let obj2 = { value: null, done: false };
@@ -161,7 +161,7 @@ function _generateAnimationSource() {
               obj9[0] = c9;
               obj9[1] = c10;
               obj9[2] = closure_11;
-              closure_6 = lib(7499).replaceAnimationColors(closure_6, obj9);
+              closure_6 = lib(7513).replaceAnimationColors(closure_6, obj9);
               const _JSON2 = JSON;
               dependencyMap2 = 0;
               c10 = 3;
@@ -324,7 +324,7 @@ function _generateAnimationSourceFromLocalImage() {
             obj6[0] = closure_8;
             obj6[1] = closure_9;
             obj6[2] = closure_10;
-            c5 = lib(7499).replaceAnimationColors(c5, obj6);
+            c5 = lib(7513).replaceAnimationColors(c5, obj6);
             const _JSON = JSON;
             c4 = 0;
             c6 = 3;

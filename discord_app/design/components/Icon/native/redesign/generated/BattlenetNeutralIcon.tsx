@@ -1,10 +1,10 @@
-// === Module 8751: BattlenetNeutralIcon ===
+// === Module 8767: BattlenetNeutralIcon ===
 
-// Module 8751 (BattlenetNeutralIcon)
+// Module 8767 (BattlenetNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 8752 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 8768 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

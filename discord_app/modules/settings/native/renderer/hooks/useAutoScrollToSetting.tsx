@@ -1,9 +1,9 @@
-// === Module 15299: useAutoScrollToSearchResultSetting ===
+// === Module 14281: useAutoScrollToSearchResultSetting ===
 
-// Module 15299 (useAutoScrollToSearchResultSetting)
+// Module 14281 (useAutoScrollToSearchResultSetting)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "zustandStore" /* 14196 */;
-import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10989 */;
+import closure_3 from "zustandStore" /* 14275 */;
+import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11007 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
@@ -20,14 +20,14 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   let flag = false;
   if (null != current) {
     flag = false;
-    if (tmp(14201).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
-      let initialScrollIndex = tmp(14199).getInitialScrollIndex(current, memo);
+    if (tmp(14171).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(14277).getInitialScrollIndex(current, memo);
       let tmp7 = 0 !== initialScrollIndex;
       if (tmp7) {
         tmp7 = 1 !== initialScrollIndex;
       }
       flag = tmp7;
-      const tmpResult = tmp(14199);
+      const tmpResult = tmp(14277);
     }
   }
   const items = [memo, flag, ref, navigation, current];

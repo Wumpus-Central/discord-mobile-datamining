@@ -1,12 +1,12 @@
-// === Module 15122: useBugReporterExperimentSettingPredicate ===
+// === Module 15270: useBugReporterExperimentSettingPredicate ===
 
-// Module 15122 (useBugReporterExperimentSettingPredicate)
+// Module 15270 (useBugReporterExperimentSettingPredicate)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import _modDef4676 from "module_4676" /* 4676 */;
-import apexExperimentDefault from "apexExperiment" /* 10217 */;
-import closure_3 from "zustandStore" /* 10187 */;
-import createToggle from "createToggle" /* 10988 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
+import _modDef4689 from "module_4689" /* 4689 */;
+import apexExperimentDefault from "apexExperiment" /* 10235 */;
+import closure_3 from "zustandStore" /* 10205 */;
+import createToggle from "createToggle" /* 11006 */;
 
 require = arg1;
 function useBugReporterExperimentSettingPredicate() {
@@ -22,8 +22,8 @@ createToggle = {
   onPress: function handleBugReporterSettingPress() {
     if (!field.getField("isReportOpen")) {
       field.setState({ isReportOpen: true });
-      _modDef4676.pushLazy(asyncRequireImpl(10188, dependencyMap.paths));
-      const obj2 = _modDef4676;
+      _modDef4689.pushLazy(asyncRequireImpl(10206, dependencyMap.paths));
+      const obj2 = _modDef4689;
     }
   },
   withArrow: true,

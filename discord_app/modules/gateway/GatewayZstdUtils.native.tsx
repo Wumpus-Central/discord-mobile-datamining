@@ -1,9 +1,9 @@
-// === Module 13218: supportsZstd ===
+// === Module 13237: supportsZstd ===
 
-// Module 13218 (supportsZstd)
+// Module 13237 (supportsZstd)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 13219 */;
+import enforcingDefault from "enforcing" /* 13238 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const result = set.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");

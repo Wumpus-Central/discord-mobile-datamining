@@ -1,6 +1,6 @@
-// === Module 5505: SafeAreaPaddingView ===
+// === Module 5518: SafeAreaPaddingView ===
 
-// Module 5505 (SafeAreaPaddingView)
+// Module 5518 (SafeAreaPaddingView)
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -65,7 +65,7 @@ export const SafeAreaPaddingView = function SafeAreaPaddingView(top) {
   }
   items[4] = tmp12;
   dependencyMap = items;
-  const tmp13 = ref(5506)(ref);
+  const tmp13 = ref(5519)(ref);
   const tmp14 = ref(659)(items, tmp13);
   React = tmp14;
   if (tmp14) {

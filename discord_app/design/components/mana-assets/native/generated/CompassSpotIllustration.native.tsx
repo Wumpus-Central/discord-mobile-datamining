@@ -1,10 +1,10 @@
-// === Module 6371: CompassSpotIllustration ===
+// === Module 6384: CompassSpotIllustration ===
 
-// Module 6371 (CompassSpotIllustration)
+// Module 6384 (CompassSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6372 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6385 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CompassSpotIllustration.native.tsx");

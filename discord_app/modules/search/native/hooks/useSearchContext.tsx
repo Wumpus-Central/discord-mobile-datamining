@@ -1,6 +1,6 @@
-// === Module 11783: useGuildSearchContext ===
+// === Module 11802: useGuildSearchContext ===
 
-// Module 11783 (useGuildSearchContext)
+// Module 11802 (useGuildSearchContext)
 import _modDef38 from "module_38" /* 38 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;

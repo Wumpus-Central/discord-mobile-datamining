@@ -1,6 +1,6 @@
-// === Module 15562: _fetchActiveChannels ===
+// === Module 15580: _fetchActiveChannels ===
 
-// Module 15562 (_fetchActiveChannels)
+// Module 15580 (_fetchActiveChannels)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 

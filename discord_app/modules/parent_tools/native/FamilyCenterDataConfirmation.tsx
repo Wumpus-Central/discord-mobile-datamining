@@ -1,24 +1,24 @@
-// === Module 11410: RowGroup ===
+// === Module 11429: RowGroup ===
 
-// Module 11410 (RowGroup)
+// Module 11429 (RowGroup)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2369 */;
-import UserPlusIcon from "UserPlusIcon" /* 4382 */;
-import ClockIcon from "ClockIcon" /* 4408 */;
-import Text from "Text" /* 4441 */;
-import Stack from "Stack" /* 4878 */;
-import ForumIcon from "ForumIcon" /* 4989 */;
-import XSmallIcon from "XSmallIcon" /* 5503 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5944 */;
-import SettingsIcon from "SettingsIcon" /* 6192 */;
-import FlagIcon from "FlagIcon" /* 8715 */;
-import ServerIcon from "ServerIcon" /* 9276 */;
-import GiftIcon from "GiftIcon" /* 10694 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11411 */;
-import PhoneIcon from "PhoneIcon" /* 11412 */;
-import CreditCardIcon from "CreditCardIcon" /* 11414 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 11416 */;
+import messagesProxyDefault from "messagesProxy" /* 2370 */;
+import UserPlusIcon from "UserPlusIcon" /* 4383 */;
+import ClockIcon from "ClockIcon" /* 4409 */;
+import Text from "Text" /* 4442 */;
+import Stack from "Stack" /* 4891 */;
+import ForumIcon from "ForumIcon" /* 5002 */;
+import XSmallIcon from "XSmallIcon" /* 5516 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5957 */;
+import SettingsIcon from "SettingsIcon" /* 6205 */;
+import FlagIcon from "FlagIcon" /* 8731 */;
+import ServerIcon from "ServerIcon" /* 9294 */;
+import GiftIcon from "GiftIcon" /* 10712 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11430 */;
+import PhoneIcon from "PhoneIcon" /* 11431 */;
+import CreditCardIcon from "CreditCardIcon" /* 11433 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 11435 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -36,8 +36,8 @@ function RowGroup(children) {
       if (true === negative) {
         str = "text-status-dnd";
       }
-      obj[2] = closure_3(callback(5551).TableRow.Icon, { variant: str, IconComponent });
-      return closure_3(callback(5551).TableRow, obj, header);
+      obj[2] = closure_3(callback(5564).TableRow.Icon, { variant: str, IconComponent });
+      return closure_3(callback(5564).TableRow, obj, header);
     })
   };
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);

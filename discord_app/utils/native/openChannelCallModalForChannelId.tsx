@@ -1,8 +1,8 @@
-// === Module 12379: openChannelCallModalForChannelId ===
+// === Module 12398: openChannelCallModalForChannelId ===
 
-// Module 12379 (openChannelCallModalForChannelId)
-import openChannelCallModal from "openChannelCallModal" /* 4680 */;
-import connectToStage from "connectToStage" /* 8595 */;
+// Module 12398 (openChannelCallModalForChannelId)
+import openChannelCallModal from "openChannelCallModal" /* 4693 */;
+import connectToStage from "connectToStage" /* 8610 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
 
 require = arg1;

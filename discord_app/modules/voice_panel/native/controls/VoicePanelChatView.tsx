@@ -1,17 +1,17 @@
-// === Module 11754: memoResult1 ===
+// === Module 11773: memoResult1 ===
 
-// Module 11754 (memoResult1)
+// Module 11773 (memoResult1)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5022 */;
-import setDefault from "set" /* 7729 */;
-import IconButton from "IconButton" /* 7938 */;
-import dismissPanelDefault from "dismissPanel" /* 11756 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 5035 */;
+import setDefault from "set" /* 7743 */;
+import IconButton from "IconButton" /* 7952 */;
+import dismissPanelDefault from "dismissPanel" /* 11775 */;
 import importAllResult from "noop" /* 19 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
-import { CONTROLS_DRAWER_HEADER_SIZE } from "VoicePanelControlsModes" /* 11755 */;
+import { CONTROLS_DRAWER_HEADER_SIZE } from "VoicePanelControlsModes" /* 11774 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 let c3 = importAllResult;
@@ -21,7 +21,7 @@ let closure_8 = createCacheKey.createStyles({ container: { flex: 1, overflow: "h
 let closure_9 = { code: "function VoicePanelChatViewTsx1(){const{windowDimensions}=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};}" };
 let closure_10 = importAllResult.memo(() => {
   const windowDimensions = importAllResult.useContext(dismissPanelDefault).windowDimensions;
-  let obj = windowDimensions(4185);
+  let obj = windowDimensions(4186);
   const fn = function n() {
     return { width: windowDimensions.get().width, height: windowDimensions.get().height };
   };
@@ -44,15 +44,15 @@ const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
     let obj = { accessibilityLabel: null, icon: null, onPress: null };
     const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(getSystemLocale.t["5MstTl"]);
-    obj[1] = tmp(4399);
+    obj[1] = tmp(4400);
     obj[2] = callback;
-    let tmp5Result = tmp5(tmp(11752), obj);
-    const tmpResult = tmp(11752);
+    let tmp5Result = tmp5(tmp(11771), obj);
+    const tmpResult = tmp(11771);
   } else {
     obj = { accessibilityLabel: null, icon: null, onPress: null, variant: "primary-overlay" };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t["5MstTl"]);
-    obj[1] = tmp(4399);
+    obj[1] = tmp(4400);
     obj[2] = callback;
     tmp5Result = tmp5(IconButton.IconButton, obj);
   }

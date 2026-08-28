@@ -1,7 +1,7 @@
-// === Module 9197: useIsAppDM ===
+// === Module 9215: useIsAppDM ===
 
-// Module 9197 (useIsAppDM)
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+// Module 9215 (useIsAppDM)
+import closure_2 from "mergeGuildAvatar" /* 1923 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_dms/useIsAppDM.tsx");

@@ -1,6 +1,6 @@
-// === Module 8678: normalizeChannelPropertyForCompare ===
+// === Module 8694: normalizeChannelPropertyForCompare ===
 
-// Module 8678 (normalizeChannelPropertyForCompare)
+// Module 8694 (normalizeChannelPropertyForCompare)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import initializeDefault from "initialize" /* 589 */;
@@ -10,11 +10,11 @@ import createChannelRecord from "createChannelRecord" /* 1395 */;
 import set2 from "set" /* 1400 */;
 import set3 from "set" /* 1401 */;
 import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import hooksDefault from "hooks" /* 4043 */;
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4100 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
-import closure_10 from "createFromServer" /* 8582 */;
-import closure_11 from "createdAt" /* 1930 */;
+import hooksDefault from "hooks" /* 4044 */;
+import MAX_REACTIONS from "MAX_REACTIONS" /* 4101 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4103 */;
+import closure_10 from "createFromServer" /* 8597 */;
+import closure_11 from "createdAt" /* 1931 */;
 import closure_12 from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
 import importDefaultResult from "apply" /* 12 */;

@@ -1,6 +1,6 @@
-// === Module 7718: FastestListPropsPlaceholderType ===
+// === Module 7732: FastestListPropsPlaceholderType ===
 
-// Module 7718 (FastestListPropsPlaceholderType)
+// Module 7732 (FastestListPropsPlaceholderType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/fastest_list/props/FastestListPropsPlaceholder.tsx");

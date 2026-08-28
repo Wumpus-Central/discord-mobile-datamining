@@ -1,16 +1,16 @@
-// === Module 16867: GUILD_ROOM_SPATIAL_AUDIO_ENABLED ===
+// === Module 16885: GUILD_ROOM_SPATIAL_AUDIO_ENABLED ===
 
-// Module 16867 (GUILD_ROOM_SPATIAL_AUDIO_ENABLED)
+// Module 16885 (GUILD_ROOM_SPATIAL_AUDIO_ENABLED)
 import initialize from "initialize" /* 589 */;
-import experimentDefault from "experiment" /* 4673 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "resolveCreatingNotes" /* 4644 */;
-import items from "items" /* 4647 */;
+import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4686 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "resolveCreatingNotes" /* 4645 */;
+import items from "items" /* 4649 */;
 
 require = arg1;
-({ GUILD_ROOM_BACKGROUND_CONFIG: c5, GUILD_ROOM_SPATIAL_AUDIO_MODE } = items);
-let c6 = false;
-let closure_7 = { x: 50, y: 50 };
+({ GUILD_ROOM_BACKGROUND_CONFIG: c4, GUILD_ROOM_SPATIAL_AUDIO_MODE } = items);
+let c5 = false;
+let closure_6 = { x: 50, y: 50 };
 const result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomSpatialAudio.tsx");
 
 export const GUILD_ROOM_SPATIAL_AUDIO_ENABLED = false;
@@ -32,7 +32,7 @@ export const computeLivingRoomWorldPoints = function computeLivingRoomWorldPoint
     background = room.background;
   }
   if (background == null) {
-    background = currentUserId(aspectRatio[3]).GuildRoomBackgrounds.DEFAULT;
+    background = currentUserId(position[3]).GuildRoomBackgrounds.DEFAULT;
   }
   aspectRatio = table[background].aspectRatio;
   let items = [...users.values()];
@@ -42,7 +42,7 @@ export const computeLivingRoomWorldPoints = function computeLivingRoomWorldPoint
     const items = [position.userId, ];
     let point = position;
     if (position == null) {
-      point = closure_1_7;
+      point = closure_1_6;
     }
     items[1] = { worldX: (position.x - point.x) / 100 * aspectRatio * 8, worldY: 0, worldZ: 8 * ((position.y - point.y) / 100) };
     return items;
@@ -54,12 +54,12 @@ export const livingRoomWorldPointToMediaEnginePoint = function livingRoomWorldPo
 export const useGuildRoomSpatialAudio = function useGuildRoomSpatialAudio(arg0) {
   ({ channelId, guildId } = arg0);
   let obj = initialize;
-  const items = [closure_3];
+  const items = [closure_2];
   const stateFromStores = obj.useStateFromStores(items, () => id.getId());
-  const interactionsEnabled = experimentDefault.useExperiment({ guildId, location: "SpatialAudioPanel" }).interactionsEnabled;
-  obj = { available: c6, worldPoints: null };
-  const obj2 = experimentDefault;
-  const items1 = [closure_4];
+  const interactionsEnabled = GUILD_ROOMS_EXPERIMENT_ID.useGuildRoomsExperiment({ guildId, location: "SpatialAudioPanel" }).interactionsEnabled;
+  obj = { available: c5, worldPoints: null };
+  const obj2 = GUILD_ROOMS_EXPERIMENT_ID;
+  const items1 = [closure_3];
   const items2 = [false, channelId, stateFromStores];
   obj[1] = initialize.useStateFromStores(items1, () => ({}), items2);
   return obj;

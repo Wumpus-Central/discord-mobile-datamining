@@ -1,10 +1,10 @@
-// === Module 7043: VibingWumpusSpotIllustration ===
+// === Module 7056: VibingWumpusSpotIllustration ===
 
-// Module 7043 (VibingWumpusSpotIllustration)
+// Module 7056 (VibingWumpusSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 7044 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 7057 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/VibingWumpusSpotIllustration.native.tsx");

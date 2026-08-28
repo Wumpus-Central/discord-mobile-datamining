@@ -1,11 +1,11 @@
-// === Module 7100: usePremiumPlanPurchasedStore ===
+// === Module 7113: usePremiumPlanPurchasedStore ===
 
-// Module 7100 (usePremiumPlanPurchasedStore)
+// Module 7113 (usePremiumPlanPurchasedStore)
 import batchUpdates from "batchUpdates" /* 705 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5925 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7101 */;
-import closure_3 from "setContent" /* 4154 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5938 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7114 */;
+import closure_3 from "setContent" /* 4155 */;
+import GuildFeatures from "GuildFeatures" /* 1925 */;
 import keys from "keys" /* 644 */;
 
 require = arg1;
@@ -83,6 +83,6 @@ export const reset = function reset() {
         str = "dismissed";
       }
     }
-    closure_1_6.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "call", onPaymentDismiss: "sa" });
+    closure_1_6.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "r", onPaymentDismiss: "container" });
   });
 };

@@ -1,15 +1,15 @@
-// === Module 5403: handleChannelSelect ===
+// === Module 5416: handleChannelSelect ===
 
-// Module 5403 (handleChannelSelect)
+// Module 5416 (handleChannelSelect)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4531 */;
+import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4532 */;
 import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleConnectionOpen" /* 1981 */;
-import closure_6 from "handleConnectionOpen" /* 4267 */;
+import closure_5 from "handleConnectionOpen" /* 1982 */;
+import closure_6 from "handleConnectionOpen" /* 4268 */;
 import { ID_REGEX } from "ME" /* 676 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 

@@ -1,12 +1,12 @@
-// === Module 15269: route ===
+// === Module 15421: route ===
 
-// Module 15269 (route)
+// Module 15421 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 4982 */;
-import MobileUserSettings from "MobileUserSettings" /* 7816 */;
-import createToggle from "createToggle" /* 10988 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 4995 */;
+import MobileUserSettings from "MobileUserSettings" /* 7830 */;
+import createToggle from "createToggle" /* 11006 */;
 
 obj = {
   useTitle() {
@@ -21,7 +21,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   getComponent() {
-    return require(15270) /* UserSettingsSensitiveContentFilters */.default;
+    return require(15422) /* UserSettingsSensitiveContentFilters */.default;
   }
 };
 const route = createToggle.createRoute(obj);

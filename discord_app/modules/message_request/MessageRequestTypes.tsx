@@ -1,6 +1,6 @@
-// === Module 10617: MessageRequestConsentStatusTypes ===
+// === Module 10635: MessageRequestConsentStatusTypes ===
 
-// Module 10617 (MessageRequestConsentStatusTypes)
+// Module 10635 (MessageRequestConsentStatusTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/message_request/MessageRequestTypes.tsx");

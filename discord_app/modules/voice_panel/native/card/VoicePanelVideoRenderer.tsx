@@ -1,17 +1,17 @@
-// === Module 16627: VoicePanelModes ===
+// === Module 16645: VoicePanelModes ===
 
-// Module 16627 (VoicePanelModes)
-import _modDef9506 from "module_9506" /* 9506 */;
+// Module 16645 (VoicePanelModes)
+import _modDef9524 from "module_9524" /* 9524 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { PixelRatio } from "get ActivityIndicator" /* 17 */;
-import VoicePanelModes from "VoicePanelModes" /* 11757 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11755 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16582 */;
-import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 11758 */;
+import VoicePanelModes from "VoicePanelModes" /* 11776 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11774 */;
+import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16600 */;
+import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 11777 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import importDefaultResult from "module_4185" /* 4185 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import importDefaultResult from "module_4186" /* 4186 */;
 
 const require = arg1;
 let c4 = importAllResult;
@@ -21,7 +21,7 @@ const MODE_CHANGE_PHYSICS = VoicePanelModes.MODE_CHANGE_PHYSICS;
 let c13 = 25;
 let c14 = 0.05;
 let c15 = 0.0075;
-let closure_16 = importDefaultResult.createAnimatedComponent(_modDef9506);
+let closure_16 = importDefaultResult.createAnimatedComponent(_modDef9524);
 function getScaleChangeWithOverscroll(arg0, arg1, arg2) {
   if (arg0 >= arg2) {
     return arg1;

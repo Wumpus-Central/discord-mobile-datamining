@@ -1,8 +1,8 @@
-// === Module 10388: useDisplayProfileSocialLayerStorefrontApplicationIds ===
+// === Module 10406: useDisplayProfileSocialLayerStorefrontApplicationIds ===
 
-// Module 10388 (useDisplayProfileSocialLayerStorefrontApplicationIds)
+// Module 10406 (useDisplayProfileSocialLayerStorefrontApplicationIds)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUserSettingsStoreUpdate" /* 6027 */;
+import closure_4 from "handleUserSettingsStoreUpdate" /* 6040 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx");

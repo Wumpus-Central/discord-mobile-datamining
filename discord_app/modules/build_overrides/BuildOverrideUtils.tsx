@@ -1,12 +1,12 @@
-// === Module 4360: Version ===
+// === Module 4361: Version ===
 
-// Module 4360 (Version)
+// Module 4361 (Version)
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 import UrlAll from "Url" /* 1489 */;
-import BUILD_OVERRIDE_TARGET_NAMES from "BUILD_OVERRIDE_TARGET_NAMES" /* 4361 */;
-import parseDefault from "parse" /* 4362 */;
+import BUILD_OVERRIDE_TARGET_NAMES from "BUILD_OVERRIDE_TARGET_NAMES" /* 4362 */;
+import parseDefault from "parse" /* 4363 */;
 import getConstants from "getConstants" /* 1626 */;
 import set from "set" /* 500 */;
 
@@ -50,7 +50,7 @@ function manualOverrideLinkMeta(str) {
   }
   return null;
 }
-const regExp = new RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$", "i");
+const regExp = new RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link/?\\?[\\S]+$", "i");
 const regExp1 = new RegExp("^dev://branch/([\\w-./]+)$", "i");
 set = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]);
 const set1 = new Set(["/__development/link", "/__development/link/"]);

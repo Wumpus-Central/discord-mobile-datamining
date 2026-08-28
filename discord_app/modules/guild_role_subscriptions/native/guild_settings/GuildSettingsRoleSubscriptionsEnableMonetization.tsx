@@ -1,9 +1,9 @@
-// === Module 17215: GuildSubscriptionEnableMonetization ===
+// === Module 17233: GuildSubscriptionEnableMonetization ===
 
-// Module 17215 (GuildSubscriptionEnableMonetization)
+// Module 17233 (GuildSubscriptionEnableMonetization)
 import noopAll from "noop" /* 19 */;
-import UnavailableNoticeDefault from "UnavailableNotice" /* 16035 */;
-import PlaceholderDefault from "Placeholder" /* 17177 */;
+import UnavailableNoticeDefault from "UnavailableNotice" /* 16053 */;
+import PlaceholderDefault from "Placeholder" /* 17195 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 import { jsx } from "jsxProd" /* 21 */;
 

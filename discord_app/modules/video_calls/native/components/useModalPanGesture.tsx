@@ -1,6 +1,6 @@
-// === Module 12378: useModalPanGesture ===
+// === Module 12397: useModalPanGesture ===
 
-// Module 12378 (useModalPanGesture)
+// Module 12397 (useModalPanGesture)
 import set from "set" /* 2 */;
 
 let closure_3 = { code: "function useModalPanGestureTsx1({velocityY:velocityY}){const{translateY,thresholdTranslate,thresholdVelocity,withSpring,height,runOnJS,ModalActionCreators,onClose,onEnd}=this.__closure;const config={damping:15,mass:1,stiffness:250,overshootClamping:true,restSpeedThreshold:0.001,restDisplacementThreshold:0.001,velocity:velocityY};if(translateY.get()>=thresholdTranslate||velocityY>=thresholdVelocity){translateY.set(withSpring(height,config,'respect-motion-settings',function(){runOnJS(ModalActionCreators.pop)();}));if(onClose!=null){runOnJS(onClose)();}}else{translateY.set(withSpring(0,config));}if(onEnd!=null){runOnJS(onEnd)();}}" };
@@ -80,7 +80,7 @@ export default function useModalPanGesture(thresholdVelocity) {
       }
       obj4 = c0(thresholdTranslate[2]);
       fn = function n() {
-        callback(4185).runOnJS(callback2(4676).pop)();
+        callback(4186).runOnJS(callback2(4689).pop)();
       };
       obj = { runOnJS: c0(thresholdTranslate[0]).runOnJS, ModalActionCreators: maxTranslate(thresholdTranslate[3]) };
       fn.__closure = obj;

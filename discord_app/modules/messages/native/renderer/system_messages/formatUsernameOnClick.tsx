@@ -1,6 +1,6 @@
-// === Module 7804: formatUsernameOnClick ===
+// === Module 7818: formatUsernameOnClick ===
 
-// Module 7804 (formatUsernameOnClick)
+// Module 7818 (formatUsernameOnClick)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");

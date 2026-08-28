@@ -1,10 +1,10 @@
-// === Module 6087: canReportUser ===
+// === Module 6100: canReportUser ===
 
-// Module 6087 (canReportUser)
+// Module 6100 (canReportUser)
 import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import closure_1 from "handleInviteData" /* 4365 */;
-import closure_2 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_1 from "handleInviteData" /* 4366 */;
+import closure_2 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_3 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
 
 ({ ChannelTypes: c4, Permissions: c5, MessageTypesSets: closure_6 } = ME);

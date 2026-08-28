@@ -1,10 +1,10 @@
-// === Module 12399: PaperPlusIcon ===
+// === Module 12418: PaperPlusIcon ===
 
-// Module 12399 (PaperPlusIcon)
+// Module 12418 (PaperPlusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 12400 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 12419 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

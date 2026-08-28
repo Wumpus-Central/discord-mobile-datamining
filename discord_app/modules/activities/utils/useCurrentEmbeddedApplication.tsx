@@ -1,8 +1,8 @@
-// === Module 9522: useCurrentEmbeddedApplication ===
+// === Module 9540: useCurrentEmbeddedApplication ===
 
-// Module 9522 (useCurrentEmbeddedApplication)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 5911 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9523 */;
+// Module 9540 (useCurrentEmbeddedApplication)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 5924 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9541 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");

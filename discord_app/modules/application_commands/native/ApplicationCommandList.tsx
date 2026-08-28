@@ -1,6 +1,6 @@
-// === Module 11887: ApplicationCommandList ===
+// === Module 11906: ApplicationCommandList ===
 
-// Module 11887 (ApplicationCommandList)
+// Module 11906 (ApplicationCommandList)
 import closure_4 from "noop" /* 19 */;
 import { FlatList } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

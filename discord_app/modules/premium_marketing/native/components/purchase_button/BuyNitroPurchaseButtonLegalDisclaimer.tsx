@@ -1,16 +1,16 @@
-// === Module 12964: BuyNitroPurchaseButtonLegalDisclaimer ===
+// === Module 12983: BuyNitroPurchaseButtonLegalDisclaimer ===
 
-// Module 12964 (BuyNitroPurchaseButtonLegalDisclaimer)
+// Module 12983 (BuyNitroPurchaseButtonLegalDisclaimer)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1995 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4107 */;
+import combinedDefault from "combined" /* 1996 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4108 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4108 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 noopAll;
@@ -51,7 +51,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
         obj = { paidURL: null, interval: null, ctaText: null };
         obj[0] = constants2.PAID_TERMS;
         const isAndroidResult = tmp3Result.isAndroid();
-        tmp3Result = tmp3(4107);
+        tmp3Result = tmp3(4108);
         obj[1] = tmp3Result.getIntervalStringAsNoun(item.interval);
         obj[2] = ctaText;
         formatResult = format(tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"], obj);
@@ -61,7 +61,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       obj1 = { style: null, variant: "text-xxs/medium", children: null };
       obj1[0] = tmp.disclaimer;
       obj1[2] = formatResult;
-      jsx(tmp10(4441).Text, { style: null, variant: "text-xxs/medium", children: null });
+      jsx(tmp10(4442).Text, { style: null, variant: "text-xxs/medium", children: null });
     }
     const tmp3Result1 = set;
     t = tmp3(1236).t;

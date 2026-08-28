@@ -1,6 +1,6 @@
-// === Module 6500: metadata ===
+// === Module 6513: metadata ===
 
-// Module 6500 (metadata)
+// Module 6513 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ForceIllocon-2x.png.js");

@@ -1,8 +1,8 @@
-// === Module 9069: View ===
+// === Module 9087: View ===
 
-// Module 9069 (View)
+// Module 9087 (View)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 9070 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 9088 */;
 import set from "set" /* 500 */;
 
 let View = get_ActivityIndicator.View;

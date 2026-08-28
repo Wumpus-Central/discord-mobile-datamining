@@ -1,24 +1,24 @@
-// === Module 7153: getDeviceMetadata ===
+// === Module 7167: getDeviceMetadata ===
 
-// Module 7153 (getDeviceMetadata)
+// Module 7167 (getDeviceMetadata)
 import isTracingDefault from "isTracing" /* 10 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import getConstantsAll from "getConstants" /* 1626 */;
-import coerceMainRoute from "coerceMainRoute" /* 4299 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4300 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4424 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7348 */;
-import AppStartInfo2 from "AppStartInfo" /* 7349 */;
+import coerceMainRoute from "coerceMainRoute" /* 4300 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4301 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4425 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7362 */;
+import AppStartInfo2 from "AppStartInfo" /* 7363 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleClearCaches" /* 7154 */;
-import closure_5 from "getHash" /* 4358 */;
+import closure_4 from "handleClearCaches" /* 7168 */;
+import closure_5 from "getHash" /* 4359 */;
 import closure_6 from "handleThemeChange" /* 1302 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
 import closure_9 from "refreshSourceMapCookie" /* 706 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 7347 */;
+import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 7361 */;
 import { StaticChannelRoutes } from "set" /* 1398 */;
 import { jsx } from "jsxProd" /* 21 */;
 import v1 from "v1" /* 514 */;
@@ -162,7 +162,7 @@ function _trackAppUIViewedAsync() {
               closure_5 = 1;
               c6 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback2(4306).getAppFirstVisibleTimestamp();
+              obj1[0] = callback2(4307).getAppFirstVisibleTimestamp();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -176,15 +176,15 @@ function _trackAppUIViewedAsync() {
           } else {
             closure_4 = arg1;
             closure_5 = closure_3 - closure_4;
-            callback2(4306).reportFullyDrawn();
-            const obj5 = callback2(4306);
+            callback2(4307).reportFullyDrawn();
+            const obj5 = callback2(4307);
             callback2(10).mark("\u2757", "Track app_ui_viewed");
             const obj6 = callback2(10);
             callback2(10).addDetail("TTI", closure_5);
             const obj7 = callback2(10);
             callback2(10).markAt("\u{1F3C3}", "app_opened", closure_4);
             const obj8 = callback2(10);
-            callback(7351).ttiRecorded(closure_5);
+            callback(7365).ttiRecorded(closure_5);
             let _setTimeout = setTimeout;
             let timerId = setTimeout(() => {
               let str = closure_0;
@@ -206,7 +206,7 @@ function _trackAppUIViewedAsync() {
               if (null == timeout) {
                 let _setTimeout = setTimeout;
                 timeout = setTimeout(() => {
-                  callback(9).setTTICallback(/* F122478 */ function() { ... });
+                  callback(9).setTTICallback(/* F122525 */ function() { ... });
                   callback3();
                   c25 = null;
                 }, 15 * callback(687).Millis.SECOND);
@@ -316,7 +316,7 @@ function _logLegacyAppUiViewed() {
               c7 = 1;
               c8 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback(4306).getJSBundleTimestamps();
+              obj1[0] = callback(4307).getJSBundleTimestamps();
               return obj1;
             }
           } else if (arg0 === 1) {

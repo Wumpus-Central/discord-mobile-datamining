@@ -1,6 +1,6 @@
-// === Module 15423: useFrameMonitor ===
+// === Module 15265: useFrameMonitor ===
 
-// Module 15423 (useFrameMonitor)
+// Module 15265 (useFrameMonitor)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 
@@ -22,7 +22,7 @@ export default function useFrameMonitor(stateFromStores) {
     if (current != null) {
       current.stop();
     }
-    ref.current = stateFromStores(15421).startFrameMonitor();
+    ref.current = stateFromStores(15263).startFrameMonitor();
     dependencyMap(true);
   }, []);
   const stop = React.useCallback(() => {

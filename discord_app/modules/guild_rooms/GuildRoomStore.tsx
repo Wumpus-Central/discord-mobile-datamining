@@ -1,13 +1,13 @@
-// === Module 4644: resolveCreatingNotes ===
+// === Module 4645: resolveCreatingNotes ===
 
-// Module 4644 (resolveCreatingNotes)
+// Module 4645 (resolveCreatingNotes)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import GuildRoomObjectTypes from "GuildRoomObjectTypes" /* 4645 */;
+import GuildRoomObjectTypes from "GuildRoomObjectTypes" /* 4646 */;
 import closure_5 from "_objectWithoutProperties" /* 109 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "createRTCConnection" /* 4519 */;
-import closure_8 from "handleConnectionOpen" /* 1981 */;
+import closure_7 from "createRTCConnection" /* 4520 */;
+import closure_8 from "handleConnectionOpen" /* 1982 */;
 
 require = arg1;
 function resolveCreatingNotes(roomId, objects) {
@@ -62,14 +62,15 @@ let closure_13 = {};
 let closure_14 = {};
 let closure_15 = {};
 let c16 = null;
-let closure_17 = {};
+let c17 = null;
+let closure_18 = {};
 const map2 = new Map();
-let c19 = false;
 let c20 = false;
 let c21 = false;
-let closure_22 = {};
+let c22 = false;
 let closure_23 = {};
-let closure_24 = [];
+let closure_24 = {};
+let closure_25 = [];
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildRoomStore extends PersistedStore {
 }
@@ -97,7 +98,7 @@ prototype["initialize"] = function initialize(rememberVideoOverlayVisibility) {
   }
 };
 prototype["getState"] = function getState() {
-  return { videoOverlayVisibility: c19, rememberVideoOverlayVisibility: c20 };
+  return { videoOverlayVisibility: c20, rememberVideoOverlayVisibility: c21 };
 };
 prototype["getRoom"] = function getRoom(channelId) {
   let tmp = dependencyMap[channelId];
@@ -123,6 +124,9 @@ prototype["getRoomObjects"] = function getRoomObjects(closure_1) {
 prototype["getPendingPosition"] = function getPendingPosition() {
   return c16;
 };
+prototype["getPendingSeat"] = function getPendingSeat() {
+  return c17;
+};
 prototype["getMediaSessionId"] = function getMediaSessionId(arg0) {
   return map2.get(arg0);
 };
@@ -143,7 +147,7 @@ prototype["getPendingNote"] = function getPendingNote(arg0) {
 prototype["getCreatingNotes"] = function getCreatingNotes(arg0) {
   let tmp = dependencyMap5[arg0];
   if (tmp == null) {
-    tmp = closure_24;
+    tmp = closure_25;
   }
   return tmp;
 };
@@ -156,10 +160,10 @@ prototype["getNotes"] = function getNotes(closure_1) {
   return value;
 };
 prototype["getVideoOverlayVisibility"] = function getVideoOverlayVisibility() {
-  return c19;
+  return c20;
 };
 prototype["getRememberVideoOverlayVisibility"] = function getRememberVideoOverlayVisibility() {
-  return c20;
+  return c21;
 };
 GuildRoomStore.displayName = "GuildRoomStore";
 GuildRoomStore.persistKey = "GuildRoomStore";
@@ -171,12 +175,13 @@ obj = {
     closure_14[room.roomId] = room.users;
     closure_15[room.roomId] = objects;
     resolveCreatingNotes(room.roomId, objects);
-    let tmp2 = null != room.guildId;
-    if (tmp2) {
-      tmp2 = null != c16;
-    }
-    if (tmp2) {
-      c16 = null;
+    if (null != room.guildId) {
+      if (null != c16) {
+        c16 = null;
+      }
+      if (null != c17) {
+        c17 = null;
+      }
     }
   },
   GUILD_ROOM_CONNECT_FAILURE: function handleConnectFailure(roomId) {
@@ -200,19 +205,19 @@ obj = {
       map = new Map(dependencyMap2[roomId]);
       map.delete(userId);
       dependencyMap2[roomId] = map;
-      let tmp4 = c21;
-      if (c21) {
+      let tmp4 = c22;
+      if (c22) {
         tmp4 = userId === store.getId();
       }
       if (tmp4) {
-        closure_17[roomId] = true;
-        c21 = false;
+        closure_18[roomId] = true;
+        c22 = false;
       }
       if (userId === store.getId()) {
         delete tmp[tmp2];
         delete tmp[tmp2];
-        if (!c20) {
-          c19 = false;
+        if (!c21) {
+          c20 = false;
         }
       }
     }
@@ -264,21 +269,22 @@ obj = {
     closure_13[room.roomId] = callback(room, closure_4);
     closure_14[room.roomId] = room.users;
   },
-  GUILD_ROOM_LOCAL_POSITION_REQUESTED: function handleLocalPositionRequested(position) {
-    position = position.position;
+  GUILD_ROOM_LOCAL_POSITION_REQUESTED: function handleLocalPositionRequested(arg0) {
+    ({ position: c16, seat: c17 } = arg0);
   },
   GUILD_ROOM_LOCAL_POSITION_CLEARED: function handleLocalPositionCleared() {
     c16 = null;
+    c17 = null;
   },
   GUILD_ROOM_TOGGLE_LAYOUT: function handleToggleLayout(roomId) {
     roomId = roomId.roomId;
     dependencyMap3[roomId] = !dependencyMap3[roomId];
     if (roomId.clearLayout) {
-      c21 = true;
+      c22 = true;
     }
   },
   GUILD_ROOM_LOCAL_UPDATE: function handleLocalUpdate(arg0) {
-    ({ roomId, background, position, statusId, statusText } = arg0);
+    ({ roomId, background, position, seat, statusId, statusText } = arg0);
     if (null == dependencyMap[roomId]) {
       return false;
     } else {
@@ -289,30 +295,32 @@ obj = {
         obj.background = background;
         tmp[roomId] = obj;
       }
-      if (null != position) {
-        const value = dependencyMap2[roomId].get(id);
-        if (null != value) {
-          const _Map = Map;
-          map = new Map(tmp4[roomId]);
-          obj = {};
-          const merged1 = Object.assign(value);
-          if (position == null) {
-            position = value.position;
-          }
-          obj.position = position;
-          if (statusId == null) {
-            statusId = value.statusId;
-          }
-          obj.statusId = statusId;
-          if (statusText == null) {
-            statusText = value.statusText;
-          }
-          obj.statusText = statusText;
-          const result = map.set(id, obj);
-          tmp4[roomId] = map;
+      const value = dependencyMap2[roomId].get(id);
+      if (null != value) {
+        const _Map = Map;
+        map = new Map(tmp4[roomId]);
+        obj = {};
+        const merged1 = Object.assign(value);
+        if (position == null) {
+          position = value.position;
         }
-        const obj2 = dependencyMap2[roomId];
+        obj.position = position;
+        if (seat == null) {
+          seat = value.seat;
+        }
+        obj.seat = seat;
+        if (statusId == null) {
+          statusId = value.statusId;
+        }
+        obj.statusId = statusId;
+        if (statusText == null) {
+          statusText = value.statusText;
+        }
+        obj.statusText = statusText;
+        const result = map.set(id, obj);
+        tmp4[roomId] = map;
       }
+      const obj2 = dependencyMap2[roomId];
     }
   },
   MEDIA_SESSION_JOINED: function handleMediaSessionJoined() {
@@ -323,7 +331,7 @@ obj = {
     }
   },
   GUILD_ROOM_PENDING_NOTE_START: function handlePendingNoteStart(roomId) {
-    closure_22[roomId.roomId] = { position: null };
+    closure_23[roomId.roomId] = { position: null };
   },
   GUILD_ROOM_PENDING_NOTE_PLACE: function handlePendingNotePlace(roomId) {
     roomId = roomId.roomId;
@@ -369,7 +377,7 @@ obj = {
     value = value.value;
   },
   GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY: function handleSetRememberVideoOverlayVisibility(rememberVideoOverlayVisibility) {
-    closure_20 = rememberVideoOverlayVisibility.rememberVideoOverlayVisibility;
+    closure_21 = rememberVideoOverlayVisibility.rememberVideoOverlayVisibility;
   }
 };
 const guildRoomStore = new GuildRoomStore(dispatcherDefault, obj);

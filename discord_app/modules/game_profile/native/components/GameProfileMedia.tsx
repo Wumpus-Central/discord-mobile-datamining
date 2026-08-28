@@ -1,13 +1,13 @@
-// === Module 8769: ImageItem ===
+// === Module 8785: ImageItem ===
 
-// Module 8769 (ImageItem)
+// Module 8785 (ImageItem)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { NOOP } from "sum" /* 505 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 function ImageItem(index) {
@@ -25,9 +25,9 @@ function ImageItem(index) {
     ref,
     style: items1,
     onPress: setMediaModalOpen.useCallback(() => {
-      trackAction(index(trackAction[7]).GameProfileTrackActionActions.ClickImage);
+      trackAction(index(trackAction[8]).GameProfileTrackActionActions.ClickImage);
       setMediaModalOpen(true);
-      let obj = index(trackAction[8]);
+      let obj = index(trackAction[9]);
       obj = {
         initialSources: sources,
         initialIndex: index,
@@ -68,7 +68,7 @@ function TrailerItem(active) {
   callback = onScrollToIndex.useCallback((current) => {
     closure_7.current = current;
   }, []);
-  let obj = active(sources[9]);
+  let obj = active(sources[10]);
   ref1 = onScrollToIndex.useRef(obj.createVideoControls(ref1));
   let current = ref1.current;
   const subscribe = current.useSubscribe(callback, ref1, ref1);
@@ -87,9 +87,9 @@ function TrailerItem(active) {
     ref,
     style: items2,
     onPress: onScrollToIndex.useCallback(() => {
-      trackAction(active(sources[7]).GameProfileTrackActionActions.ClickTrailer);
+      trackAction(active(sources[8]).GameProfileTrackActionActions.ClickTrailer);
       setMediaModalOpen(true);
-      let obj = active(sources[8]);
+      let obj = active(sources[9]);
       obj = {
         initialSources: sources,
         initialIndex: index,
@@ -117,11 +117,10 @@ function TrailerItem(active) {
     const _HermesInternal = HermesInternal;
     combined = "render-" + tmp4;
   }
-  obj[3] = jsx(active(sources[9]).VideoComponent, { style: tmp.mediaVideo, source: { uri: url }, poster: posterUrl, paused: !active, muted: true, resizeMode: "cover", pauseWhileAppInactive: true, controls: ref1.current }, combined);
+  obj[3] = jsx(active(sources[10]).VideoComponent, { style: tmp.mediaVideo, source: { uri: url }, poster: posterUrl, paused: !active, muted: true, resizeMode: "cover", pauseWhileAppInactive: true, controls: ref1.current }, combined);
   return <tmp10 style={tmp.mediaVideo} source={{ uri: url }} poster={posterUrl} paused={!active} muted resizeMode="cover" pauseWhileAppInactive controls={ref1.current} />;
 }
 ({ View: c5, ScrollView: closure_6, Image: error, Pressable: closure_8 } = get_ActivityIndicator);
-let c11 = 1920;
 createCacheKey = { container: null, scrollView: null, scrollViewContent: null, mediaItem: null, mediaImage: null, mediaVideo: null };
 createCacheKey = { gap: ThemesDefault.space.PX_12, marginHorizontal: -ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
@@ -129,116 +128,69 @@ createCacheKey[1] = { flexDirection: "row", overflow: "visible" };
 createCacheKey[2] = { gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
 const obj1 = { gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
-createCacheKey[3] = { maxWidth: 366, maxHeight: 200, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
+createCacheKey[3] = { maxWidth: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_WIDTH, maxHeight: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_HEIGHT, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
 createCacheKey[4] = { width: "100%", height: "100%", resizeMode: "cover" };
-let obj2 = { maxWidth: 366, maxHeight: 200, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
+const obj2 = { maxWidth: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_WIDTH, maxHeight: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_HEIGHT, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
 createCacheKey[5] = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BLACK };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
+let closure_11 = createCacheKey.createStyles(createCacheKey);
 const obj3 = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BLACK };
 const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileMedia.tsx");
 
 export default function GameProfileMedia(game) {
   game = game.game;
   const trackAction = game.trackAction;
-  let width;
   let obscured;
   let first;
-  closure_5 = undefined;
+  let React;
+  c5 = undefined;
   c6 = undefined;
   c7 = undefined;
   c8 = undefined;
-  c9 = undefined;
   let ref;
-  let first1;
-  let callback;
   let memo;
   let memo1;
-  closure_15 = undefined;
-  closure_16 = undefined;
   let memo2;
-  closure_18 = undefined;
-  let tmp = callback();
-  width = trackAction(width[11])().width;
-  let obj = game(width[12]);
+  closure_13 = undefined;
+  closure_14 = undefined;
+  let memo3;
+  closure_16 = undefined;
+  let tmp = memo1();
+  let obj = game(obscured[12]);
   obscured = obj.useObscuredSurface().obscured;
-  let tmp2 = obscured(first.useState(0), 2);
+  let tmp2 = first(React.useState(0), 2);
   first = tmp2[0];
-  closure_5 = tmp2[1];
-  [c6, c7] = obscured(first.useState(0), 2);
-  let tmp4 = obscured(first.useState(0), 2);
-  [c8, c9] = obscured(first.useState(false), 2);
-  ref = first.useRef(null);
-  let items = [width];
-  const tmp7 = obscured(first.useMemo(() => {
-    const bound = Math.min(width, first1);
-    const obj = game(width[13]);
-    const bestMediaProxySize = obj.getBestMediaProxySize(bound * game(width[13]).getDevicePixelRatio());
-    const items = [bestMediaProxySize, bestMediaProxySize / 1.83];
-    return items;
-  }, items), 2);
-  first1 = tmp7[0];
-  callback = tmp9;
-  const items1 = [game, first1, width];
-  callback = first.useCallback((nativeEvent) => {
+  React = tmp2[1];
+  [c5, c6] = first(React.useState(0), 2);
+  let tmp4 = first(React.useState(0), 2);
+  [c7, c8] = first(React.useState(false), 2);
+  ref = React.useRef(null);
+  memo = React.useMemo(() => game(obscured[7]).getCarouselPreviewPixelSize(), []);
+  const items = [game];
+  const callback = React.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.width);
   }, []);
-  memo = first.useMemo(() => {
-    if (null == game) {
-      let items = [];
-    } else {
-      let trailers = tmp.trailers;
-      if (trailers == null) {
-        trailers = [];
-      }
-      items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(trailers.map((application_id) => {
-        const obj = { type: "trailer", url: closure_1_0(closure_1_2[14]).getAssetURL(application_id.application_id, application_id.id, 1920, "mp4"), thumbnailUrl: null };
-        const obj2 = closure_1_0(closure_1_2[14]);
-        ({ application_id, id } = application_id);
-        obj[2] = closure_1_0(closure_1_2[14]).getAssetURL(application_id, id, Math.min(closure_2, closure_1_11), "webp");
-        return obj;
-      }), 0);
-      let screenshotUrls = tmp.screenshotUrls;
-      if (screenshotUrls == null) {
-        screenshotUrls = [];
-      }
-      arraySpreadResult = HermesBuiltin.arraySpread(screenshotUrls.map((url) => ({ type: "image", url, thumbnailUrl: url.replace(/size=\d+/g, "size=" + closure_11) })), arraySpreadResult);
-    }
-    return items;
+  memo1 = React.useMemo(() => game(obscured[7]).buildMediaEntries(game), items);
+  const items1 = [first];
+  memo2 = React.useMemo(() => {
+    const diff = first - trackAction(obscured[6]).space.PX_12;
+    return Math.max(0, Math.min(game(obscured[7]).MEDIA_ITEM_MAX_WIDTH, diff - 2 * trackAction(obscured[6]).space.PX_16));
   }, items1);
-  const items2 = [first];
-  memo1 = first.useMemo(() => {
-    const diff = first - trackAction(width[6]).space.PX_12;
-    return Math.max(0, Math.min(366, diff - 2 * trackAction(width[6]).space.PX_16));
-  }, items2);
-  const items3 = [memo1];
-  closure_15 = first.useMemo(() => Math.min(200, memo1 / 1.83), items3);
-  const items4 = [memo, first1, tmp7[1]];
-  closure_16 = first.useMemo(() => memo.map((uri) => {
-    let obj = { uri: uri.url, videoURI: null, mediaIndex: null, width: null, height: 1080, thumbnail: null, accessoryType: "embed", disableDownload: true };
-    let url;
-    if ("trailer" === uri.type) {
-      url = uri.url;
-    }
-    obj[1] = url;
-    obj[2] = arg1;
-    obj[3] = closure_1_11;
-    obj = { width: closure_11, height: closure_12, uri: uri.thumbnailUrl };
-    obj[5] = obj;
-    return obj;
-  }), items4);
-  const items5 = [memo, first, memo1];
-  memo2 = first.useMemo(() => {
-    const diff = first - memo1;
-    closure_0 = (diff - 2 * trackAction(width[6]).space.PX_16) / 2;
-    closure_1 = memo1 + trackAction(width[6]).space.PX_12;
-    return memo.map((arg0, arg1) => Math.max(0, arg1 * closure_1 - closure_0));
-  }, items5);
-  const items6 = [memo2];
-  const items7 = [memo2];
-  const callback1 = first.useCallback((nativeEvent) => {
+  const items2 = [memo2];
+  closure_13 = React.useMemo(() => Math.min(game(obscured[7]).MEDIA_ITEM_MAX_HEIGHT, memo2 / game(obscured[7]).MEDIA_ITEM_ASPECT_RATIO), items2);
+  const items3 = [memo1, memo];
+  closure_14 = React.useMemo(() => game(obscured[7]).buildMediaViewerSources(memo1, memo), items3);
+  const items4 = [memo1, first, memo2];
+  memo3 = React.useMemo(() => {
+    const diff = first - memo2;
+    closure_0 = (diff - 2 * trackAction(obscured[6]).space.PX_16) / 2;
+    closure_1 = memo2 + trackAction(obscured[6]).space.PX_12;
+    return memo1.map((arg0, arg1) => Math.max(0, arg1 * closure_1 - closure_0));
+  }, items4);
+  const items5 = [memo3];
+  const items6 = [memo3];
+  const callback1 = React.useCallback((nativeEvent) => {
     let arr2;
-    if (0 !== memo2.length) {
+    if (0 !== memo3.length) {
       const x = nativeEvent.nativeEvent.contentOffset.x;
       const _Math2 = Math;
       let num = 1;
@@ -248,8 +200,8 @@ export default function GameProfileMedia(game) {
       if (1 < arr.length) {
         do {
           let _Math = Math;
-          arr2 = memo2;
-          let absolute1 = Math.abs(memo2[num] - x);
+          arr2 = memo3;
+          let absolute1 = Math.abs(memo3[num] - x);
           let tmp2 = num;
           let tmp3 = absolute;
           let tmp4 = num2;
@@ -265,66 +217,66 @@ export default function GameProfileMedia(game) {
       }
       _undefined(num3);
     }
-  }, items6);
-  closure_18 = first.useCallback((arg0) => {
+  }, items5);
+  closure_16 = React.useCallback((arg0) => {
     const current = ref.current;
     if (current != null) {
       const obj = { x: null, y: 0, animated: false };
-      obj[0] = memo2[arg0];
+      obj[0] = memo3[arg0];
       current.scrollTo(obj);
     }
     _undefined(arg0);
-  }, items7);
-  let tmp14 = null;
-  if (0 !== memo.length) {
+  }, items6);
+  let tmp12 = null;
+  if (0 !== memo1.length) {
     obj = { style: null, onLayout: null, children: null };
     obj[0] = tmp.container;
     obj[1] = callback;
     obj = { ref: null, horizontal: true, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, decelerationRate: "fast", snapToOffsets: null, snapToStart: false, snapToEnd: false, onMomentumScrollEnd: null, children: null };
     obj[0] = ref;
     ({ scrollView: obj3[3], scrollViewContent: obj3[4] } = tmp);
-    obj[6] = memo2;
+    obj[6] = memo3;
     obj[9] = callback1;
-    obj[10] = memo.map((type) => {
+    obj[10] = memo1.map((type) => {
       if ("trailer" === type.type) {
         let obj = { url: null, posterUrl: null, active: null, index: null, sources: null, trackAction: null, width: null, height: null, onScrollToIndex: null, setMediaModalOpen: null };
-        ({ url: obj[0], thumbnailUrl: obj[1] } = type);
+        ({ originalUrl: obj[0], previewUrl: obj[1] } = type);
         let tmp4 = !obscured;
         if (!obscured) {
-          tmp4 = !c8;
+          tmp4 = !c7;
         }
         if (tmp4) {
-          tmp4 = c6 === arg1;
+          tmp4 = c5 === arg1;
         }
         obj[2] = tmp4;
         obj[3] = arg1;
-        obj[4] = closure_16;
+        obj[4] = closure_14;
         obj[5] = trackAction;
-        obj[6] = memo1;
-        obj[7] = closure_15;
-        obj[8] = closure_18;
-        obj[9] = c9;
+        obj[6] = memo2;
+        obj[7] = closure_13;
+        obj[8] = closure_16;
+        obj[9] = c8;
         const _HermesInternal = HermesInternal;
-        let tmpResult = ref(memo1, obj, "" + type.url + "-" + arg1);
-        const tmp = ref;
-        const tmp2 = memo1;
+        let tmpResult = memo(closure_13, obj, "" + type.originalUrl + "-" + arg1);
+        const tmp = memo;
+        const tmp2 = closure_13;
       } else {
         obj = { url: null, index: null, sources: null, trackAction: null, width: null, height: null, onScrollToIndex: null, setMediaModalOpen: null };
-        obj[0] = type.url;
+        obj[0] = type.previewUrl;
         obj[1] = arg1;
-        obj[2] = closure_16;
+        obj[2] = closure_14;
         obj[3] = trackAction;
-        obj[4] = memo1;
-        obj[5] = closure_15;
-        obj[6] = closure_18;
-        obj[7] = c9;
+        obj[4] = memo2;
+        obj[5] = closure_13;
+        obj[6] = closure_16;
+        obj[7] = c8;
         const _HermesInternal2 = HermesInternal;
-        tmpResult = ref(memo, obj, "" + type.url + "-" + arg1);
+        tmpResult = memo(memo2, obj, "" + type.originalUrl + "-" + arg1);
       }
       return tmpResult;
     });
-    obj[2] = ref(c6, obj);
-    tmp14 = ref(closure_5, obj);
+    obj[2] = memo(c6, obj);
+    tmp12 = memo(c5, obj);
   }
-  return tmp14;
+  return tmp12;
 };

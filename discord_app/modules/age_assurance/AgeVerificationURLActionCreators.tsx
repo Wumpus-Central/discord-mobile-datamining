@@ -1,10 +1,10 @@
-// === Module 8619: requestAgeVerification ===
+// === Module 8634: requestAgeVerification ===
 
-// Module 8619 (requestAgeVerification)
+// Module 8634 (requestAgeVerification)
 import sendRequest from "sendRequest" /* 530 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import { VerificationVendorName } from "set" /* 8614 */;
+import { VerificationVendorName } from "set" /* 8629 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;

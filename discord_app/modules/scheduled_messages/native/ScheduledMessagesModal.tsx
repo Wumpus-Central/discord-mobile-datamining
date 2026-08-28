@@ -1,28 +1,28 @@
-// === Module 11712: keyExtractor ===
+// === Module 11715: keyExtractor ===
 
-// Module 11712 (keyExtractor)
+// Module 11715 (keyExtractor)
 import set from "set" /* 500 */;
 import keys from "keys" /* 691 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
-import _mod4185 from "module_4185" /* 4185 */;
-import HeaderBackImage from "HeaderBackImage" /* 5447 */;
-import Background from "Background" /* 5454 */;
-import contextDefault from "context" /* 5905 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5925 */;
-import usePremiumUpsellConfig from "usePremiumUpsellConfig" /* 8101 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 8891 */;
-import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 11721 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4108 */;
+import _mod4186 from "module_4186" /* 4186 */;
+import HeaderBackImage from "HeaderBackImage" /* 5460 */;
+import Background from "Background" /* 5467 */;
+import contextDefault from "context" /* 5918 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5938 */;
+import usePremiumUpsellConfig from "usePremiumUpsellConfig" /* 8115 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 8909 */;
+import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 11724 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 11713 */;
+import closure_6 from "handleScheduledMessageRemovalStart" /* 11716 */;
 import { AnalyticsPages } from "ME" /* 676 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
-import { MAX_SCHEDULED_MESSAGES_PER_USER as closure_9 } from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 7523 */;
+import { PremiumTypes } from "GuildFeatures" /* 1925 */;
+import { MAX_SCHEDULED_MESSAGES_PER_USER as closure_9 } from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 7537 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function keyExtractor(scheduledMessageId) {
@@ -47,7 +47,7 @@ function ScheduledMessagesPage(handleScroll) {
   const stateFromStores1 = obj2.useStateFromStores(items1, () => store.loading);
   let obj3 = _require(stateFromStores2[21]);
   const items2 = [closure_6];
-  stateFromStores2 = obj3.useStateFromStores(items2, () => store.getMessagesPendingDeletion());
+  stateFromStores2 = obj3.useStateFromStores(items2, () => store.getMessagesPendingRemoval());
   const items3 = [stateFromStores];
   const memo = React.useMemo(() => {
     const values = Object.values(stateFromStores);
@@ -60,7 +60,7 @@ function ScheduledMessagesPage(handleScroll) {
   const items4 = [stateFromStores2];
   callback = React.useCallback((item) => {
     item = item.item;
-    const obj = { scheduledMessage: item, isPendingDeletion: stateFromStores2.has(item.scheduledMessageId) };
+    const obj = { scheduledMessage: item, isPendingRemoval: stateFromStores2.has(item.scheduledMessageId) };
     return closure_1_10(stateFromStores(stateFromStores2[22]), obj);
   }, items4);
   const tmp2 = callback(React.useState(false), 2);
@@ -163,7 +163,7 @@ export default function ScheduledMessagesModal() {
   const intl = getSystemLocale.intl;
   const stringResult = intl.string(getSystemLocale.t.SZVs3K);
   require = stringResult;
-  let obj = _mod4185;
+  let obj = _mod4186;
   const sharedValue = obj.useSharedValue(0);
   items = [sharedValue];
   const callback = React.useCallback((nativeEvent) => {
@@ -180,7 +180,7 @@ export default function ScheduledMessagesModal() {
   fn.__workletHash = 2142182513871;
   fn.__initData = closure_15;
   obj = { style: tmp.modal, children: null };
-  const animatedStyle = _mod4185.useAnimatedStyle(fn);
+  const animatedStyle = _mod4186.useAnimatedStyle(fn);
   obj = {
     title: stringResult,
     headerTitle() {
@@ -192,7 +192,7 @@ export default function ScheduledMessagesModal() {
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null
   };
-  const obj2 = _mod4185;
+  const obj2 = _mod4186;
   const tmp10 = View;
   const tmp4 = require;
   const tmp9 = closure_11;
@@ -202,11 +202,11 @@ export default function ScheduledMessagesModal() {
   }
   obj[3] = num + sharedValue(712).space.PX_8;
   obj5 = set;
-  obj[4] = HeaderBackImage.getHeaderCloseButton(sharedValue(4676).pop);
+  obj[4] = HeaderBackImage.getHeaderCloseButton(sharedValue(4689).pop);
   ({ headerLeftContainer: obj4[5], headerRightContainer: obj4[6] } = tmp);
   const items1 = [closure_10(Background.Header, obj), , ];
   const items2 = [tmp.headerBorder, animatedStyle];
-  items1[1] = closure_10(sharedValue(4185).View, { style: items2 });
+  items1[1] = closure_10(sharedValue(4186).View, { style: items2 });
   items1[2] = closure_10(ScheduledMessagesPage, { handleScroll: callback });
   obj[1] = items1;
   return tmp9(tmp10, obj);

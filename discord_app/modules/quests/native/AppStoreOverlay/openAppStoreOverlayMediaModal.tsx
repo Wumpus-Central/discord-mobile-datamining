@@ -1,9 +1,9 @@
-// === Module 11021: _openAppStoreOverlayMediaModal ===
+// === Module 11039: _openAppStoreOverlayMediaModal ===
 
-// Module 11021 (_openAppStoreOverlayMediaModal)
+// Module 11039 (_openAppStoreOverlayMediaModal)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "setContent" /* 4154 */;
+import closure_5 from "setContent" /* 4155 */;
 import { MEDIA_MODAL_KEY } from "ME" /* 676 */;
 
 const require = arg1;
@@ -95,7 +95,7 @@ function _openAppStoreOverlayMediaModal() {
             dependencyMap = v0(closure_8, 3);
             setMediaViewerSources = 32.setMediaViewerSources;
             MediaViewerAnalytics = 5.MediaViewerAnalytics;
-            initVideoStateStore = 4154.initVideoStateStore;
+            initVideoStateStore = 4155.initVideoStateStore;
             const obj4 = { text: null, onPress: null };
             const intl = callback(c2[10]).intl;
             obj4[0] = intl.string(callback(c2[10]).t.lwQdjB);

@@ -1,21 +1,21 @@
-// === Module 15752: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
+// === Module 15770: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
-// Module 15752 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 15770 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4441 */;
-import Button from "Button" /* 4880 */;
-import getIsScreenLandscape from "getIsScreenLandscape" /* 5023 */;
-import Background from "Background" /* 5574 */;
+import Text from "Text" /* 4442 */;
+import Button from "Button" /* 4893 */;
+import getIsScreenLandscape from "getIsScreenLandscape" /* 5036 */;
+import Background from "Background" /* 5587 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import ME from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 ({ GuildSettingsSections: error, GuildSettingsSubsections: closure_8 } = ME);
@@ -63,7 +63,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   obj1 = { accessibilityRole: "image", accessibilityLabel: null, children: null };
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.gCgirr);
-  obj1[2] = callback2(markAsDismissed(8533), { style: tmp.videoContainer, src: closure_12, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true });
+  obj1[2] = callback2(markAsDismissed(8548), { style: tmp.videoContainer, src: closure_12, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true });
   const items2 = [callback2(View, obj1), , ];
   const obj3 = { style: tmp.info, children: null };
   const obj4 = { variant: "heading-lg/semibold", style: tmp.title, color: "mobile-text-heading-primary", children: null };

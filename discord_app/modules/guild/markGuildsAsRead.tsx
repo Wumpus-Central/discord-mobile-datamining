@@ -1,15 +1,15 @@
-// === Module 13613: markGuildsAsRead ===
+// === Module 13632: markGuildsAsRead ===
 
-// Module 13613 (markGuildsAsRead)
+// Module 13632 (markGuildsAsRead)
 import applyDefault from "apply" /* 12 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "handleUpdate" /* 5419 */;
-import closure_4 from "rebuild" /* 5400 */;
+import closure_3 from "handleUpdate" /* 5432 */;
+import closure_4 from "rebuild" /* 5413 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "comparator" /* 1982 */;
-import closure_7 from "generateOldThreadCutoff" /* 4460 */;
+import closure_6 from "comparator" /* 1983 */;
+import closure_7 from "generateOldThreadCutoff" /* 4461 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 4655 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 4668 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
@@ -87,5 +87,5 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   obj = { source, type: "guild" };
   expandEventPropertiesDefault.track(AnalyticEvents.MARK_AS_READ, obj);
   let obj2 = expandEventPropertiesDefault;
-  return mapped(5430).bulkAck(mapped, onFinished);
+  return mapped(5443).bulkAck(mapped, onFinished);
 };

@@ -1,24 +1,24 @@
-// === Module 10040: Text ===
+// === Module 10058: Text ===
 
-// Module 10040 (Text)
+// Module 10058 (Text)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Button2 from "Button" /* 4880 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5505 */;
+import Button2 from "Button" /* 4893 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5518 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "createRTCConnection" /* 4519 */;
-import closure_10 from "updateStats" /* 10041 */;
-import closure_11 from "initialize" /* 4533 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4509 */;
+import closure_9 from "createRTCConnection" /* 4520 */;
+import closure_10 from "updateStats" /* 10059 */;
+import closure_11 from "initialize" /* 4534 */;
+import closure_12 from "mergeGuildAvatar" /* 1923 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4510 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import hexToRgba from "hexToRgba" /* 4293 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import hexToRgba from "hexToRgba" /* 4294 */;
 
 require = arg1;
 function Text(arg0) {
@@ -95,7 +95,7 @@ function RTCDebugGeneral() {
   if (null != stateFromStores) {
     name = stateFromStores.name;
   }
-  obj = { title: "general", children: tmp5(ObjectKV, { obj: { guild: obj, channel: { id: channelId, name: channelId(4639)(stateFromStores1) } } }) };
+  obj = { title: "general", children: tmp5(ObjectKV, { obj: { guild: obj, channel: { id: channelId, name: channelId(4640)(stateFromStores1) } } }) };
   obj[1] = name;
   return closure_14(Section, obj);
 }
@@ -210,7 +210,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = callback3();
   const effect = importAllResult.useEffect(() => {
     callback(table[17]).open();
-    return () => callback(709).wait(callback2(10042).close);
+    return () => callback(709).wait(callback2(10060).close);
   }, []);
   let obj = { top: true, left: true, right: true, bottom: true, style: items, children: null };
   items = [tmp.container, style];

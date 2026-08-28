@@ -1,21 +1,21 @@
-// === Module 12494: exitingAnimation ===
+// === Module 12514: exitingAnimation ===
 
-// Module 12494 (exitingAnimation)
+// Module 12514 (exitingAnimation)
 import ThemesDefault from "Themes" /* 712 */;
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4446 */;
+import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4447 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
-import closure_8 from "get" /* 10377 */;
-import { getWishlistProductLines } from "fromServer" /* 10378 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "createUserWidgetFromServer" /* 7299 */;
-import { TrackUserProfileWishlistActions as closure_12 } from "USER_PROFILE_TOOLTIP_DELAY" /* 8488 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5575 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import closure_8 from "get" /* 10395 */;
+import { getWishlistProductLines } from "fromServer" /* 10396 */;
+import closure_10 from "mergeGuildAvatar" /* 1923 */;
+import closure_11 from "createUserWidgetFromServer" /* 7313 */;
+import { TrackUserProfileWishlistActions as closure_12 } from "USER_PROFILE_TOOLTIP_DELAY" /* 8502 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5588 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import { LinearTransition } from "module_4185" /* 4185 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import { LinearTransition } from "module_4186" /* 4186 */;
 import closure_17 from "module_300" /* 300 */;
 import dampingResult from "module_100" /* 100 */;
 
@@ -76,10 +76,10 @@ export default function EditWishlistActionSheet(wishlistId) {
   if (analyticsLocations == null) {
     analyticsLocations = [];
   }
-  analyticsLocations = analyticsContext(5905)(analyticsLocations, tmp4(5925).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET).analyticsLocations;
+  analyticsLocations = analyticsContext(5918)(analyticsLocations, tmp4(5938).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET).analyticsLocations;
   obj = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  let tmp5 = analyticsContext(5905);
-  ({ cardWidth: c5, rowWidth } = analyticsContext(12435)(obj));
+  let tmp5 = analyticsContext(5918);
+  ({ cardWidth: c5, rowWidth } = analyticsContext(12455)(obj));
   if (null != rowWidth) {
     obj = { width: null };
     obj[0] = rowWidth;
@@ -91,7 +91,7 @@ export default function EditWishlistActionSheet(wishlistId) {
   tmp2Result = tmp2(589);
   const items2 = [first];
   const stateFromStores1 = tmp2Result.useStateFromStores(items2, () => first.isFetching(wishlistId));
-  let tmp6 = analyticsContext(12435)(obj);
+  let tmp6 = analyticsContext(12455)(obj);
   const items3 = [closure_10, closure_11];
   stateFromStores2 = wishlistId(589).useStateFromStores(items3, () => {
     currentUser = currentUser.getCurrentUser();
@@ -168,8 +168,8 @@ export default function EditWishlistActionSheet(wishlistId) {
   obj6[1] = intl3.string(wishlistId(1236).t.dw58pE);
   obj6[2] = first;
   obj6[3] = callback;
-  obj5[1] = callback2(wishlistId(5945).TableSwitchRow, obj6);
-  obj4[1] = callback2(wishlistId(5944).TableRowGroup, obj5);
+  obj5[1] = callback2(wishlistId(5958).TableSwitchRow, obj6);
+  obj4[1] = callback2(wishlistId(5957).TableRowGroup, obj5);
   const items8 = [callback2(stateFromStores, obj4), ];
   if (stateFromStores1) {
     if (null == stateFromStores) {
@@ -181,7 +181,7 @@ export default function EditWishlistActionSheet(wishlistId) {
     items8[1] = tmp16Result;
     obj3[1] = items8;
     obj2[1] = closure_15(tmp19, obj3);
-    obj1[3] = tmp16(tmp2(5576).BottomSheetScrollView, obj2);
+    obj1[3] = tmp16(tmp2(5589).BottomSheetScrollView, obj2);
     return tmp16(tmp4Result, obj1);
   }
   tmp16Result = null;

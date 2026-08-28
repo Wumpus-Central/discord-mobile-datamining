@@ -1,12 +1,12 @@
-// === Module 16541: VoicePanel ===
+// === Module 16559: VoicePanel ===
 
-// Module 16541 (VoicePanel)
-import isIterable from "isIterable" /* 4074 */;
-import ManaContext from "ManaContext" /* 4172 */;
-import VoicePanelControllerDefault from "VoicePanelController" /* 16542 */;
+// Module 16559 (VoicePanel)
+import isIterable from "isIterable" /* 4075 */;
+import ManaContext from "ManaContext" /* 4173 */;
+import VoicePanelControllerDefault from "VoicePanelController" /* 16560 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "withEqualityFn" /* 4681 */;
+import closure_5 from "withEqualityFn" /* 4694 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

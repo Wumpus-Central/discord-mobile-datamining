@@ -1,16 +1,16 @@
-// === Module 16417: AppIconsCoachmarkActionSheet ===
+// === Module 16435: AppIconsCoachmarkActionSheet ===
 
-// Module 16417 (AppIconsCoachmarkActionSheet)
+// Module 16435 (AppIconsCoachmarkActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4107 */;
-import registerAssetDefault from "registerAsset" /* 9088 */;
-import registerAssetDefault2 from "registerAsset" /* 16418 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4108 */;
+import registerAssetDefault from "registerAsset" /* 9106 */;
+import registerAssetDefault2 from "registerAsset" /* 16436 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "mergeGuildAvatar" /* 1923 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
@@ -58,7 +58,7 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   const obj4 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1236).intl;
   obj4[2] = intl.string(markAsDismissed(1236).t.EfA4Cq);
-  items3[1] = callback(markAsDismissed(4441).Text, obj4);
+  items3[1] = callback(markAsDismissed(4442).Text, obj4);
   obj2[1] = items3;
   items2[1] = callback2(closure_5, obj2);
   const obj5 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
@@ -71,7 +71,7 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
     stringResult = string(t.D0XzaS);
   }
   obj5[3] = stringResult;
-  items2[2] = callback(markAsDismissed(4441).Text, obj5);
+  items2[2] = callback(markAsDismissed(4442).Text, obj5);
   obj[1] = items2;
   const items4 = [callback2(closure_5, obj), ];
   const obj6 = { style: tmp.footer, children: null };
@@ -87,14 +87,14 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
     const tmp = closure_1_2;
     const result = markAsDismissed(closure_1_2[17]).navigateToAppIconSettings();
   };
-  const items5 = [callback(markAsDismissed(4880).Button, obj7), ];
+  const items5 = [callback(markAsDismissed(4893).Button, obj7), ];
   const obj8 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1236).intl;
   obj8[1] = intl4.string(markAsDismissed(1236).t.iSrIIZ);
   obj8[2] = callback;
-  items5[1] = callback(markAsDismissed(4880).Button, obj8);
+  items5[1] = callback(markAsDismissed(4893).Button, obj8);
   obj6[1] = items5;
   items4[1] = callback2(closure_5, obj6);
   obj[2] = items4;
-  return callback2(markAsDismissed(5574).BottomSheet, obj);
+  return callback2(markAsDismissed(5587).BottomSheet, obj);
 };

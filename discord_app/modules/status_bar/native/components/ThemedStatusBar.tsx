@@ -1,11 +1,11 @@
-// === Module 14145: ThemedStatusBar ===
+// === Module 14164: ThemedStatusBar ===
 
-// Module 14145 (ThemedStatusBar)
+// Module 14164 (ThemedStatusBar)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
-import coerceMainRoute from "coerceMainRoute" /* 4299 */;
-import componentDidMountDefault from "componentDidMount" /* 9451 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9569 */;
+import coerceMainRoute from "coerceMainRoute" /* 4300 */;
+import componentDidMountDefault from "componentDidMount" /* 9469 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9587 */;
 import closure_3 from "handleThemeChange" /* 1302 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import { jsx } from "jsxProd" /* 21 */;

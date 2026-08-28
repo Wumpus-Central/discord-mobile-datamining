@@ -1,13 +1,13 @@
-// === Module 15762: useChannelNoticeRows ===
+// === Module 15780: useChannelNoticeRows ===
 
-// Module 15762 (useChannelNoticeRows)
+// Module 15780 (useChannelNoticeRows)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "completeStep" /* 11954 */;
-import closure_6 from "comparator" /* 1982 */;
+import closure_5 from "completeStep" /* 11973 */;
+import closure_6 from "comparator" /* 1983 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { ChannelListChannelNoticeRow as closure_9 } from "ChannelListGuildActionRow" /* 7212 */;
+import closure_8 from "mergeGuildAvatar" /* 1923 */;
+import { ChannelListChannelNoticeRow as closure_9 } from "ChannelListGuildActionRow" /* 7226 */;
 import { MFALevels } from "ME" /* 676 */;
 import ContentDismissActionType from "ContentDismissActionType" /* 1388 */;
 

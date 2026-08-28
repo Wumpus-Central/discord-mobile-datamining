@@ -1,16 +1,16 @@
-// === Module 7443: listKey ===
+// === Module 7457: listKey ===
 
-// Module 7443 (listKey)
+// Module 7457 (listKey)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import set from "set" /* 1400 */;
-import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7444 */;
+import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7458 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { ALL_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "generateOldThreadCutoff" /* 4460 */;
-import closure_7 from "storeThread" /* 4091 */;
+import closure_6 from "generateOldThreadCutoff" /* 4461 */;
+import closure_7 from "storeThread" /* 4092 */;
 
 require = arg1;
 function listKey(channelId, sortOrder, tagFilter, tagSetting) {
@@ -293,7 +293,7 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
     } else {
       return false;
     }
-    obj = channel(6104);
+    obj = channel(6117);
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     let flag = false;

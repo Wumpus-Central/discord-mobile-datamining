@@ -1,15 +1,15 @@
-// === Module 9699: nativeEventEmitter ===
+// === Module 9717: nativeEventEmitter ===
 
-// Module 9699 (nativeEventEmitter)
+// Module 9717 (nativeEventEmitter)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import DesktopSources from "DesktopSources" /* 4509 */;
-import enforcingDefault from "enforcing" /* 9700 */;
-import enforcing from "enforcing" /* 9700 */;
+import DesktopSources from "DesktopSources" /* 4510 */;
+import enforcingDefault from "enforcing" /* 9718 */;
+import enforcing from "enforcing" /* 9718 */;
 
 const RTCConnectionStates = ME.RTCConnectionStates;
 const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
@@ -79,8 +79,8 @@ const audioManagerStore = new AudioManagerStore(dispatcherDefault, {
             obj[0] = obj;
             tmp4Result.captureMessage("AudioManagerStore received a string for an android audio device", obj);
           } else {
-            tmp4(9700).setActiveAudioDevice(tmp10);
-            const tmp4Result1 = tmp4(9700);
+            tmp4(9718).setActiveAudioDevice(tmp10);
+            const tmp4Result1 = tmp4(9718);
           }
         }
         const obj2 = enforcingDefault;
@@ -105,7 +105,7 @@ const audioManagerStore = new AudioManagerStore(dispatcherDefault, {
         obj[0] = obj;
         tmpResult.captureMessage("AudioManagerStore received a string for an android audio device", obj);
       } else {
-        tmpResult = tmp(9700);
+        tmpResult = tmp(9718);
         tmpResult.setActiveAudioDevice(device);
       }
     }

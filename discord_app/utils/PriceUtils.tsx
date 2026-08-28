@@ -1,13 +1,13 @@
-// === Module 6033: formatSingleCurrencyPrice ===
+// === Module 6046: formatSingleCurrencyPrice ===
 
-// Module 6033 (formatSingleCurrencyPrice)
+// Module 6046 (formatSingleCurrencyPrice)
 import set from "set" /* 500 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
-import CurrencyCodes2 from "CurrencyCodes" /* 6034 */;
-import closure_2 from "_getSystemLocale" /* 1996 */;
-import closure_3 from "handlePaymentSourceCreateEnd" /* 4109 */;
-import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4108 */;
+import CurrencyCodes2 from "CurrencyCodes" /* 6047 */;
+import closure_2 from "_getSystemLocale" /* 1997 */;
+import closure_3 from "handlePaymentSourceCreateEnd" /* 4110 */;
+import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1925 */;
 import { CurrencyCodes } from "sum" /* 505 */;
 
 require = arg1;
@@ -54,16 +54,16 @@ function formatPrice(amount, currency, localeOverride, localeOverride) {
   if (timestamp < date.getTime()) {
     const platformName = set.getPlatformName();
     if ("android" === platformName) {
-      let ipCountryCode = tmp2(6036).default.getUserCountry();
-      const _default2 = tmp2(6036).default;
+      let ipCountryCode = tmp2(6049).default.getUserCountry();
+      const _default2 = tmp2(6049).default;
     } else if ("ios" === platformName) {
-      const storeFront = tmp2(6038).default.getStoreFront();
+      const storeFront = tmp2(6051).default.getStoreFront();
       let country;
       if (storeFront != null) {
         country = storeFront.country;
       }
       ipCountryCode = country;
-      const _default = tmp2(6038).default;
+      const _default = tmp2(6051).default;
     } else {
       ipCountryCode = ipCountryCode.ipCountryCode;
     }

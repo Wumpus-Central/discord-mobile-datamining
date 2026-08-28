@@ -1,12 +1,12 @@
-// === Module 11488: tryUpdateSubscriptionForHereMention ===
+// === Module 11507: tryUpdateSubscriptionForHereMention ===
 
-// Module 11488 (tryUpdateSubscriptionForHereMention)
-import reset from "reset" /* 6084 */;
-import subscribeMembers from "subscribeMembers" /* 6109 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 8092 */;
+// Module 11507 (tryUpdateSubscriptionForHereMention)
+import reset from "reset" /* 6097 */;
+import subscribeMembers from "subscribeMembers" /* 6122 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 8106 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getMemberListId" /* 6078 */;
+import closure_5 from "getMemberListId" /* 6091 */;
 
 require = arg1;
 let c6 = "@here";

@@ -1,11 +1,11 @@
-// === Module 15460: useIdentityRegistrationStep ===
+// === Module 15478: useIdentityRegistrationStep ===
 
-// Module 15460 (useIdentityRegistrationStep)
+// Module 15478 (useIdentityRegistrationStep)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15450 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15451 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15468 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15469 */;
 import { AbortCodes } from "ME" /* 676 */;
 
 const require = arg1;

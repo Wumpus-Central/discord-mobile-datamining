@@ -1,9 +1,9 @@
-// === Module 17306: fadeIn ===
+// === Module 17324: fadeIn ===
 
-// Module 17306 (fadeIn)
+// Module 17324 (fadeIn)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 5438 */;
-import createSoundForPack from "createSoundForPack" /* 9913 */;
+import initializeDefault from "initialize" /* 5451 */;
+import createSoundForPack from "createSoundForPack" /* 9931 */;
 
 function fadeIn() {
   if (null != interval) {

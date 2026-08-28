@@ -1,11 +1,11 @@
-// === Module 4470: getOfficialApplicationId ===
+// === Module 4471: getOfficialApplicationId ===
 
-// Module 4470 (getOfficialApplicationId)
+// Module 4471 (getOfficialApplicationId)
 import getAvatarURL from "getAvatarURL" /* 1435 */;
-import toJSDefault from "toJS" /* 1931 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4478 */;
-import closure_3 from "createExecutable" /* 4471 */;
-import { createExecutable } from "createExecutable" /* 4471 */;
+import toJSDefault from "toJS" /* 1932 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4479 */;
+import closure_3 from "createExecutable" /* 4472 */;
+import { createExecutable } from "createExecutable" /* 4472 */;
 
 require = arg1;
 toJSDefault;

@@ -1,16 +1,16 @@
-// === Module 12833: ButtonBadge ===
+// === Module 12852: ButtonBadge ===
 
-// Module 12833 (ButtonBadge)
+// Module 12852 (ButtonBadge)
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import getFontScale from "getFontScale" /* 4887 */;
-import PressableBase from "PressableBase" /* 5020 */;
-import DEFAULT_BADGE_SIZE from "DEFAULT_BADGE_SIZE" /* 7546 */;
-import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7546 */;
+import getFontScale from "getFontScale" /* 4900 */;
+import PressableBase from "PressableBase" /* 5033 */;
+import DEFAULT_BADGE_SIZE from "DEFAULT_BADGE_SIZE" /* 7560 */;
+import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7560 */;
 import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 class ButtonBadge {
@@ -122,7 +122,7 @@ export default function IconActionButton(variant) {
     obj[1] = buttonTextColor;
     obj[2] = tmp3.actionText;
     obj[3] = buttonText;
-    tmp11Result = tmp11(tmp4(4441).Text, obj);
+    tmp11Result = tmp11(tmp4(4442).Text, obj);
   }
   items1[1] = tmp11Result;
   tmp11Result = null;

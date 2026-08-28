@@ -1,10 +1,10 @@
-// === Module 11878: iOSTrackAutocompleteOpen ===
+// === Module 11897: iOSTrackAutocompleteOpen ===
 
-// Module 11878 (iOSTrackAutocompleteOpen)
+// Module 11897 (iOSTrackAutocompleteOpen)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4653 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4666 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteAnalytics.tsx");

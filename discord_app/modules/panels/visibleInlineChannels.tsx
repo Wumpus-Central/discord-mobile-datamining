@@ -1,6 +1,6 @@
-// === Module 13492: map ===
+// === Module 13511: map ===
 
-// Module 13492 (map)
+// Module 13511 (map)
 import set2 from "set" /* 2 */;
 
 const map = new Map();

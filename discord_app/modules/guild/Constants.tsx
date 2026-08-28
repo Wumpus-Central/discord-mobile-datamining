@@ -1,6 +1,6 @@
-// === Module 12103: GuildPrompts ===
+// === Module 12122: GuildPrompts ===
 
-// Module 12103 (GuildPrompts)
+// Module 12122 (GuildPrompts)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild/Constants.tsx");

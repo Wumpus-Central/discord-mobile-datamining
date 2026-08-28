@@ -1,9 +1,9 @@
-// === Module 9678: EditGuildScheduledEventResetWarningAlert ===
+// === Module 9696: EditGuildScheduledEventResetWarningAlert ===
 
-// Module 9678 (EditGuildScheduledEventResetWarningAlert)
+// Module 9696 (EditGuildScheduledEventResetWarningAlert)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import componentDidMountDefault from "componentDidMount" /* 4899 */;
+import componentDidMountDefault from "componentDidMount" /* 4912 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

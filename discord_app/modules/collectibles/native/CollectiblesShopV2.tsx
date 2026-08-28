@@ -1,19 +1,19 @@
-// === Module 15188: CollectiblesShopInternal ===
+// === Module 15340: CollectiblesShopInternal ===
 
-// Module 15188 (CollectiblesShopInternal)
+// Module 15340 (CollectiblesShopInternal)
 import _modDef1208 from "module_1208" /* 1208 */;
-import notSupportedDefault from "notSupported" /* 8153 */;
+import notSupportedDefault from "notSupported" /* 8167 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "getUserAgnosticState" /* 4444 */;
+import closure_7 from "getUserAgnosticState" /* 4445 */;
 import closure_8 from "handleThemeChange" /* 1302 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "updateCategoriesAndProducts" /* 7220 */;
+import closure_9 from "mergeGuildAvatar" /* 1923 */;
+import closure_10 from "updateCategoriesAndProducts" /* 7234 */;
 import items from "items" /* 678 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 class CollectiblesShopV2 {

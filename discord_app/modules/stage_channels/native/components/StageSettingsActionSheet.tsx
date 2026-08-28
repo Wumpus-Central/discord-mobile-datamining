@@ -1,17 +1,17 @@
-// === Module 8673: StageSettingsActionSheet ===
+// === Module 8689: StageSettingsActionSheet ===
 
-// Module 8673 (StageSettingsActionSheet)
+// Module 8689 (StageSettingsActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getParticipants" /* 4461 */;
+import closure_5 from "getParticipants" /* 4462 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4090 */;
 import closure_8 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import { STAGE_SETTINGS_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5310 */;
+import { STAGE_SETTINGS_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5323 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 ({ ChannelSettingsSections: c10, UserSettingsSections: unpackModuleId } = ME);

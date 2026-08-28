@@ -1,11 +1,11 @@
-// === Module 4638: getNickname ===
+// === Module 4639: getNickname ===
 
-// Module 4638 (getNickname)
+// Module 4639 (getNickname)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import nameFromUserDefault from "nameFromUser" /* 4289 */;
+import nameFromUserDefault from "nameFromUser" /* 4290 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "trackCommunicationDisabled" /* 1992 */;
-import closure_5 from "markAllUserIdListsStale" /* 4098 */;
+import closure_4 from "trackCommunicationDisabled" /* 1993 */;
+import closure_5 from "markAllUserIdListsStale" /* 4099 */;
 
 require = arg1;
 function getNickname(id, arg1, id) {

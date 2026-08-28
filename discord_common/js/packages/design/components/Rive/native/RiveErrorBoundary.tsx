@@ -1,6 +1,6 @@
-// === Module 4234: getDerivedStateFromError ===
+// === Module 4235: getDerivedStateFromError ===
 
-// Module 4234 (getDerivedStateFromError)
+// Module 4235 (getDerivedStateFromError)
 import noopAll from "noop" /* 19 */;
 
 const Component = noopAll.Component;

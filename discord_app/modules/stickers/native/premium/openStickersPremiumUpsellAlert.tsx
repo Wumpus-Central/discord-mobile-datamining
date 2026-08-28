@@ -1,6 +1,6 @@
-// === Module 10318: _openStickersPremiumUpsellAlert ===
+// === Module 10336: _openStickersPremiumUpsellAlert ===
 
-// Module 10318 (_openStickersPremiumUpsellAlert)
+// Module 10336 (_openStickersPremiumUpsellAlert)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;

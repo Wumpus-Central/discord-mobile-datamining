@@ -1,14 +1,14 @@
-// === Module 7460: getURL ===
+// === Module 7474: getURL ===
 
-// Module 7460 (getURL)
+// Module 7474 (getURL)
 import applyDefault from "apply" /* 12 */;
 import set from "set" /* 500 */;
-import onDismiss from "onDismiss" /* 7500 */;
+import onDismiss from "onDismiss" /* 7514 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "defaultImageSrcGenerator" /* 4103 */;
-import importDefaultResult from "set" /* 7505 */;
+import closure_7 from "defaultImageSrcGenerator" /* 4104 */;
+import importDefaultResult from "set" /* 7519 */;
 
 require = arg1;
 function getURL(name) {
@@ -142,9 +142,9 @@ let obj = {
     if (!obj.isAndroid()) {
       found = applyDefault.filter(emojis, (unicodeVersion) => {
         unicodeVersion = unicodeVersion.unicodeVersion;
-        const systemVersionMajor = callback(4424).getSystemVersionMajor();
-        const obj = callback(4424);
-        const systemVersionMinor = callback(4424).getSystemVersionMinor();
+        const systemVersionMajor = callback(4425).getSystemVersionMajor();
+        const obj = callback(4425);
+        const systemVersionMinor = callback(4425).getSystemVersionMinor();
         let flag = true;
         if (unicodeVersion > 8) {
           if (9 === unicodeVersion) {

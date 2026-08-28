@@ -1,6 +1,6 @@
-// === Module 6008: _fetchWebAuthnConditionalChallenge ===
+// === Module 6021: _fetchWebAuthnConditionalChallenge ===
 
-// Module 6008 (_fetchWebAuthnConditionalChallenge)
+// Module 6021 (_fetchWebAuthnConditionalChallenge)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -252,7 +252,7 @@ function _finishRegisterWebAuthnCredential() {
               c5 = 1;
               c6 = 1;
               let obj4 = { value: null, done: false };
-              obj4[0] = callback(4666).post(obj1);
+              obj4[0] = callback(4679).post(obj1);
               return obj4;
             }
           } else if (arg0 === 1) {

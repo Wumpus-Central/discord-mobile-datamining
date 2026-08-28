@@ -1,16 +1,16 @@
-// === Module 16578: useControllerPIPState ===
+// === Module 16596: useControllerPIPState ===
 
-// Module 16578 (useControllerPIPState)
+// Module 16596 (useControllerPIPState)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "participantFromServer" /* 1390 */;
-import closure_6 from "getParticipants" /* 4461 */;
-import closure_7 from "map" /* 9385 */;
+import closure_6 from "getParticipants" /* 4462 */;
+import closure_7 from "map" /* 9403 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "anyoneHasFlagInContext" /* 5315 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 11757 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9387 */;
-import { asLaunched } from "FrameLayoutModes" /* 9386 */;
+import closure_9 from "anyoneHasFlagInContext" /* 5328 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 11776 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9405 */;
+import { asLaunched } from "FrameLayoutModes" /* 9404 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
@@ -29,7 +29,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   let first1;
   c7 = undefined;
   obj = React;
-  ref = React.useRef({ id: "dispatch", mode: "isArray", width: false, height: "earth_americas", containerHeight: "earth_africa", showSecondaryPIP: "earth_asia" });
+  ref = React.useRef({ id: "dispatch", mode: "isArray", width: false, height: 3072, containerHeight: 3073, showSecondaryPIP: 3074 });
   const tmp2 = first(React.useState(undefined), 2);
   first = tmp2[0];
   React = tmp2[1];
@@ -40,7 +40,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   obj = channelId;
   ref = mode;
   dependencyMap = undefined;
-  const tmp7 = ref(16530)(channelId);
+  const tmp7 = ref(16548)(channelId);
   dependencyMap = tmp7;
   let items = [closure_5, c7, closure_8];
   const items1 = [channelId, tmp7, mode];
@@ -88,7 +88,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     }
     obj3 = connectedActivityLocation;
   }, items1);
-  let tmp10 = ref(16579)(channelId);
+  let tmp10 = ref(16597)(channelId);
   first1 = first(React.useState(() => ref(closure_2[16])((arg0) => arg0(), 1000, { leading: true })), 1)[0];
   const items2 = [first1];
   const layoutEffect = React.useLayoutEffect(() => () => closure_6.cancel(), items2);
@@ -97,7 +97,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   [tmp14, c7] = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
   obj = { connected, mode, focusedId, participantTargetDimensions: tmp14, selfHasVideo: tmp10, showSecondaryPIP: stateFromStores };
   let tmp13 = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
-  ({ participant, dimensions } = ref(16580)(channelId, layoutManager, focusedId, first, obj));
+  ({ participant, dimensions } = ref(16598)(channelId, layoutManager, focusedId, first, obj));
   obj = {};
   const merged = Object.assign(ref.current);
   const merged1 = Object.assign(dimensions);
@@ -107,10 +107,10 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   }
   obj.id = id;
   obj.showSecondaryPIP = stateFromStores;
-  let tmp8Result = tmp8(16581);
+  let tmp8Result = tmp8(16599);
   obj.mode = tmp8Result.getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp10 });
   dependencyMap = undefined;
-  tmp8Result = tmp8(9130);
+  tmp8Result = tmp8(9148);
   let result = tmp8Result.cheapWorkletShallowEqual(obj, ref.current);
   dependencyMap = !result;
   const effect = obj.useEffect(() => {
@@ -175,6 +175,6 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       });
     });
   }, items4);
-  tmp5(16583)(channelId, layoutManager, focusedId);
+  tmp5(16601)(channelId, layoutManager, focusedId);
   return obj;
 };

@@ -1,9 +1,9 @@
-// === Module 9488: getStreamEndedSource ===
+// === Module 9506: getStreamEndedSource ===
 
-// Module 9488 (getStreamEndedSource)
+// Module 9506 (getStreamEndedSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getIllustrationSource from "getIllustrationSource" /* 8834 */;
+import getIllustrationSource from "getIllustrationSource" /* 8851 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,10 +15,10 @@ export const getStreamEndedSource = function getStreamEndedSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(9489);
+      return callback(9507);
     },
     darker() {
-      return callback(9490);
+      return callback(9508);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -27,10 +27,10 @@ export const useStreamEndedSource = function useStreamEndedSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9489);
+      return callback(9507);
     },
     darker() {
-      return callback(9490);
+      return callback(9508);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -39,10 +39,10 @@ export const StreamEnded = function StreamEnded(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9489);
+      return callback(9507);
     },
     darker() {
-      return callback(9490);
+      return callback(9508);
     }
   };
   obj = {};

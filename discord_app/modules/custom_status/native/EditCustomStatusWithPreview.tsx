@@ -1,20 +1,20 @@
-// === Module 9012: ClearInputButton ===
+// === Module 9030: ClearInputButton ===
 
-// Module 9012 (ClearInputButton)
+// Module 9030 (ClearInputButton)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import PressableBase from "PressableBase" /* 5020 */;
-import registerAssetDefault from "registerAsset" /* 7646 */;
+import PressableBase from "PressableBase" /* 5033 */;
+import registerAssetDefault from "registerAsset" /* 7660 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { STATUS_MAX_LENGTH } from "StatusTypes" /* 9013 */;
+import closure_7 from "mergeGuildAvatar" /* 1923 */;
+import { STATUS_MAX_LENGTH } from "StatusTypes" /* 9031 */;
 import ME from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import { EmojiIntention } from "set" /* 1926 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function ClearInputButton(onPress) {
@@ -361,7 +361,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
       const obj = { title: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.Iuzg8R);
-      return callback3(callback(7540).GenericHeaderTitle, obj);
+      return callback3(callback(7554).GenericHeaderTitle, obj);
     };
     obj[2] = analyticsLocations(closure_1_2[30]).getHeaderCloseButton(_prompt(closure_1_2[43]).pop);
     obj[4] = function render(arg0, navigation) {
@@ -379,5 +379,5 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj = { height: 56 };
   }
   obj[3] = obj;
-  return tmp2(analyticsLocations(5960).Navigator, obj);
+  return tmp2(analyticsLocations(5973).Navigator, obj);
 };

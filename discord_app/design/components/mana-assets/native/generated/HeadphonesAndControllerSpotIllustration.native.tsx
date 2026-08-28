@@ -1,10 +1,10 @@
-// === Module 6683: HeadphonesAndControllerSpotIllustration ===
+// === Module 6696: HeadphonesAndControllerSpotIllustration ===
 
-// Module 6683 (HeadphonesAndControllerSpotIllustration)
+// Module 6696 (HeadphonesAndControllerSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6684 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6697 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/HeadphonesAndControllerSpotIllustration.native.tsx");

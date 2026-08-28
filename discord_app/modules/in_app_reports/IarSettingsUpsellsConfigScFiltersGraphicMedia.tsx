@@ -1,11 +1,11 @@
-// === Module 8695: items ===
+// === Module 8711: items ===
 
-// Module 8695 (items)
+// Module 8711 (items)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import create from "create" /* 1306 */;
-import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 6098 */;
-import ReportNames from "ReportNames" /* 8682 */;
+import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 6111 */;
+import ReportNames from "ReportNames" /* 8698 */;
 
 let obj = {
   getTitle() {

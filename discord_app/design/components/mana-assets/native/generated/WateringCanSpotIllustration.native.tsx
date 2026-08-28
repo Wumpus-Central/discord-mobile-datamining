@@ -1,10 +1,10 @@
-// === Module 7053: WateringCanSpotIllustration ===
+// === Module 7066: WateringCanSpotIllustration ===
 
-// Module 7053 (WateringCanSpotIllustration)
+// Module 7066 (WateringCanSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 7054 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 7067 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WateringCanSpotIllustration.native.tsx");

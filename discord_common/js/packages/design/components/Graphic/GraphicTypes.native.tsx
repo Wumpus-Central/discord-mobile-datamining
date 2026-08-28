@@ -1,6 +1,6 @@
-// === Module 4263: isImage ===
+// === Module 4264: isImage ===
 
-// Module 4263 (isImage)
+// Module 4264 (isImage)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Graphic/GraphicTypes.native.tsx");

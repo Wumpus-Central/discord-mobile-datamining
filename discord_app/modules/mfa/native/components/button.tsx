@@ -1,8 +1,8 @@
-// === Module 15364: MFAButton ===
+// === Module 15206: MFAButton ===
 
-// Module 15364 (MFAButton)
+// Module 15206 (MFAButton)
 import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 4880 */;
+import Button from "Button" /* 4893 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

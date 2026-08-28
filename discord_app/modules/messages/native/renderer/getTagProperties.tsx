@@ -1,11 +1,11 @@
-// === Module 7874: getTagProperties ===
+// === Module 7888: getTagProperties ===
 
-// Module 7874 (getTagProperties)
+// Module 7888 (getTagProperties)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4438 */;
-import isPublicSystemMessage from "isPublicSystemMessage" /* 7875 */;
-import isCrosspostDefault from "isCrosspost" /* 7877 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4439 */;
+import isPublicSystemMessage from "isPublicSystemMessage" /* 7889 */;
+import isCrosspostDefault from "isCrosspost" /* 7891 */;
 
 const Image = get_ActivityIndicator.Image;
 const MessageTagTypes = MESSAGE_GROUP_SPACING.MessageTagTypes;
@@ -34,7 +34,7 @@ export default function getTagProperties(arg0) {
           const intl = tmp2(1236).intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(tmp4(7879)).uri;
+            uri = Image.resolveAssetSource(tmp4(7893)).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(tmp2(1236).t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = tmp2(1236).intl;
         stringResult2 = intl6.string(tmp2(1236).t.fyE8sH);
       }
-      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "padding", tagType: "<string:2399993859>", tagIconUrl: "<string:1186791426>", opTagText: "<string:3477274627>", opTagTextColor: "<string:218104680>", opTagBackgroundColor: "<string:3456107151>" };
+      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "paddingHorizontal", tagType: "set", tagIconUrl: "r", opTagText: "isArray", opTagTextColor: "bm", opTagBackgroundColor: "body" };
       obj[0] = stringResult;
       obj[1] = null;
       obj[2] = flag;
@@ -89,7 +89,7 @@ export default function getTagProperties(arg0) {
       }
       const intl5 = tmp2(1236).intl;
       stringResult3 = intl5.string(tmp2(1236).t["7s687k"]);
-      tmp2Result = tmp2(7875);
+      tmp2Result = tmp2(7889);
     }
   }
   const intl3 = tmp2(1236).intl;

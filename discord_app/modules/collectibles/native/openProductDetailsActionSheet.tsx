@@ -1,11 +1,11 @@
-// === Module 12440: PRODUCT_DETAILS_ACTION_SHEET_KEY ===
+// === Module 12460: PRODUCT_DETAILS_ACTION_SHEET_KEY ===
 
-// Module 12440 (PRODUCT_DETAILS_ACTION_SHEET_KEY)
+// Module 12460 (PRODUCT_DETAILS_ACTION_SHEET_KEY)
 import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4412 */;
-import openCollectiblesShop from "openCollectiblesShop" /* 7219 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 7231 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4413 */;
+import openCollectiblesShop from "openCollectiblesShop" /* 7233 */;
+import getProductOrbPrice from "getProductOrbPrice" /* 7245 */;
 
 let c3 = "Shop Product Preview";
 const result = set.fileFinishedImporting("modules/collectibles/native/openProductDetailsActionSheet.tsx");
@@ -35,7 +35,7 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   const tmp2 = dependencyMap;
   const tmpResult = openCollectiblesShop;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12441, tmp2.paths), c3, obj, stack);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12461, tmp2.paths), c3, obj, stack);
 };
 export const openProductDetailsActionSheetForSku = function openProductDetailsActionSheetForSku(skuId, stack) {
   skuId = skuId.skuId;
@@ -43,5 +43,5 @@ export const openProductDetailsActionSheetForSku = function openProductDetailsAc
   let obj = openCollectiblesShop;
   obj.productDetailsOpened(skuId);
   obj = { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext };
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12441, dependencyMap.paths), c3, obj, stack);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12461, dependencyMap.paths), c3, obj, stack);
 };

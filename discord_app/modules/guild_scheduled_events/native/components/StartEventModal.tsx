@@ -1,11 +1,11 @@
-// === Module 9818: NavigationBar ===
+// === Module 9836: NavigationBar ===
 
-// Module 9818 (NavigationBar)
+// Module 9836 (NavigationBar)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4441 */;
-import registerAssetDefault from "registerAsset" /* 7745 */;
-import GuildEventCardControlsDefault from "GuildEventCardControls" /* 9817 */;
+import Text from "Text" /* 4442 */;
+import registerAssetDefault from "registerAsset" /* 7759 */;
+import GuildEventCardControlsDefault from "GuildEventCardControls" /* 9835 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -13,9 +13,9 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 9590 */;
+import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 9608 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function NavigationBar(onClose) {
@@ -29,7 +29,7 @@ function NavigationBar(onClose) {
   };
   obj = { source: registerAssetDefault };
   obj[3] = callback(onClose(1297).Icon, obj);
-  obj[0] = callback(onClose(5020).PressableOpacity, obj);
+  obj[0] = callback(onClose(5033).PressableOpacity, obj);
   return callback(View, obj);
 }
 function StartEventHeader(children) {

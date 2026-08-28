@@ -1,10 +1,10 @@
-// === Module 15161: route ===
+// === Module 15313: route ===
 
-// Module 15161 (route)
+// Module 15313 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import MobileUserSettings from "MobileUserSettings" /* 7816 */;
-import createToggle from "createToggle" /* 10988 */;
+import MobileUserSettings from "MobileUserSettings" /* 7830 */;
+import createToggle from "createToggle" /* 11006 */;
 
 obj = {
   useTitle() {
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_TOAST,
   getComponent() {
-    return require(15162) /* UserSettingsDesignSystemToast */.default;
+    return require(15314) /* UserSettingsDesignSystemToast */.default;
   }
 };
 const route = createToggle.createRoute(obj);

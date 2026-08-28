@@ -1,6 +1,6 @@
-// === Module 9820: createStageChannelForEvent ===
+// === Module 9838: createStageChannelForEvent ===
 
-// Module 9820 (createStageChannelForEvent)
+// Module 9838 (createStageChannelForEvent)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1395 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;

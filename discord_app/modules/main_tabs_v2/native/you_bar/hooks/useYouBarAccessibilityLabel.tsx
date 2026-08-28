@@ -1,13 +1,13 @@
-// === Module 15870: useYouBarAccessibilityLabel ===
+// === Module 15888: useYouBarAccessibilityLabel ===
 
-// Module 15870 (useYouBarAccessibilityLabel)
-import closure_3 from "reset" /* 4467 */;
+// Module 15888 (useYouBarAccessibilityLabel)
+import closure_3 from "reset" /* 4468 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_6 from "sortActivity" /* 4534 */;
-import closure_7 from "markAllUserIdListsStale" /* 4098 */;
-import closure_8 from "filterPlayingActivities" /* 5175 */;
-import closure_9 from "updateVoiceState" /* 4464 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_6 from "sortActivity" /* 4535 */;
+import closure_7 from "markAllUserIdListsStale" /* 4099 */;
+import closure_8 from "filterPlayingActivities" /* 5188 */;
+import closure_9 from "updateVoiceState" /* 4465 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -15,22 +15,22 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarAccessibilityLabel.tsx");
 
 export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(stateFromStores) {
-  const _require = id(4289).useName(stateFromStores);
+  const _require = id(4290).useName(stateFromStores);
   id = undefined;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let obj = id(4289);
-  dependencyMap = _require(15871).useYouBarActivityStatusEnabled("YouBar");
-  const obj2 = _require(15871);
-  const isYouBarGuildTagEnabled = _require(15872).useIsYouBarGuildTagEnabled("YouBar");
-  const CustomStatusSetting = _require(4134).CustomStatusSetting;
+  let obj = id(4290);
+  dependencyMap = _require(15889).useYouBarActivityStatusEnabled("YouBar");
+  const obj2 = _require(15889);
+  const isYouBarGuildTagEnabled = _require(15890).useIsYouBarGuildTagEnabled("YouBar");
+  const CustomStatusSetting = _require(4135).CustomStatusSetting;
   const setting = CustomStatusSetting.useSetting();
   let text;
   if (setting != null) {
     text = setting.text;
   }
-  let tmp3Result = tmp3(9008);
+  let tmp3Result = tmp3(9026);
   let tmp7 = null;
   if ("" !== text) {
     tmp7 = text;
@@ -38,7 +38,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
   closure_3 = tmp3Result.useGameMentionsAsPlainText(tmp7);
   let tmp8;
   if (isYouBarGuildTagEnabled) {
-    tmp3Result = tmp3(8007);
+    tmp3Result = tmp3(8021);
     let primaryGuild;
     if (stateFromStores != null) {
       primaryGuild = stateFromStores.primaryGuild;
@@ -51,15 +51,15 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
     tmp8 = tag;
   }
   tag = tmp8;
-  const obj3 = _require(15872);
+  const obj3 = _require(15890);
   let items = [closure_8, closure_3, closure_7, tag, closure_5, closure_9, closure_6];
   return _require(589).useStateFromStores(items, () => {
     if (null != callback) {
       const status = closure_1_8.getStatus();
-      let obj = callback(9162);
+      let obj = callback(9180);
       const items = [closure_3, closure_1_7];
       const discoverableApplicationStream = obj.getDiscoverableApplicationStream(id, items);
-      obj1 = callback(9163);
+      obj1 = callback(9181);
       obj = { userId: null };
       obj[0] = id;
       obj = { ChannelStore: null, PermissionStore: null, VoiceStateStore: null };
@@ -79,7 +79,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
               if (null != discoverableApplicationStream) {
                 let name;
                 if (activities != null) {
-                  const found = activities.find(id(9169));
+                  const found = activities.find(id(9187));
                   if (found != null) {
                     name = found.name;
                   }
@@ -101,7 +101,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                   });
                 }
                 if (null != found1) {
-                  text = id(9174)(found1, true).text;
+                  text = id(9192)(found1, true).text;
                 } else {
                   text = null;
                   if (null != voiceChannel) {
@@ -132,8 +132,8 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
         text = closure_3;
       }
       if (text == null) {
-        text = tmp4(4289).humanizeStatus(status);
-        const tmp4Result = tmp4(4289);
+        text = tmp4(4290).humanizeStatus(status);
+        const tmp4Result = tmp4(4290);
       }
       const items1 = [tmp, tag, text];
       const found2 = items1.filter((arg0) => null != arg0);

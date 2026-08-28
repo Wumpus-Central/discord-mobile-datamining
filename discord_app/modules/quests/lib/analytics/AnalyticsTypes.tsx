@@ -1,8 +1,8 @@
-// === Module 7406: getQuestContentName ===
+// === Module 7420: getQuestContentName ===
 
-// Module 7406 (getQuestContentName)
+// Module 7420 (getQuestContentName)
 import set from "set" /* 2 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5342 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5355 */;
 
 let closure_2 = Object.keys(QuestsVisibleMessagesChangedSource.QuestContent);
 const result = set.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsTypes.tsx");

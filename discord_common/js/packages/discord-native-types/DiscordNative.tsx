@@ -1,6 +1,6 @@
-// === Module 4510: SystemServiceNotAvailableError ===
+// === Module 4511: SystemServiceNotAvailableError ===
 
-// Module 4510 (SystemServiceNotAvailableError)
+// Module 4511 (SystemServiceNotAvailableError)
 import set from "set" /* 2 */;
 
 class SystemServiceNotAvailableError extends Error {

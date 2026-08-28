@@ -1,6 +1,6 @@
-// === Module 10444: GiftingBadgeIcon ===
+// === Module 10460: GiftingBadgeIcon ===
 
-// Module 10444 (GiftingBadgeIcon)
+// Module 10460 (GiftingBadgeIcon)
 import noopAll from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

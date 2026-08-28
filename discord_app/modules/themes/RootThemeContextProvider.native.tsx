@@ -1,8 +1,8 @@
-// === Module 14137: RootThemeContextProvider ===
+// === Module 14156: RootThemeContextProvider ===
 
-// Module 14137 (RootThemeContextProvider)
+// Module 14156 (RootThemeContextProvider)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import closure_5 from "handleThemeChange" /* 1302 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,9 +1,9 @@
-// === Module 8018: useMaybeFetchCollectiblesCategories ===
+// === Module 8032: useMaybeFetchCollectiblesCategories ===
 
-// Module 8018 (useMaybeFetchCollectiblesCategories)
+// Module 8032 (useMaybeFetchCollectiblesCategories)
 import initialize from "initialize" /* 589 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 8019 */;
-import closure_2 from "getUserAgnosticState" /* 4444 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 8033 */;
+import closure_2 from "getUserAgnosticState" /* 4445 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");

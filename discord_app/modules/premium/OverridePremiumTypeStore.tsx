@@ -1,11 +1,11 @@
-// === Module 1923: setPremiumTypeActual ===
+// === Module 1924: setPremiumTypeActual ===
 
-// Module 1923 (setPremiumTypeActual)
+// Module 1924 (setPremiumTypeActual)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import validatePremiumType from "validatePremiumType" /* 1928 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import validatePremiumType from "validatePremiumType" /* 1929 */;
+import GuildFeatures from "GuildFeatures" /* 1925 */;
 
 function setPremiumTypeActual(user) {
   user = user.user;

@@ -1,6 +1,6 @@
-// === Module 6694: metadata ===
+// === Module 6707: metadata ===
 
-// Module 6694 (metadata)
+// Module 6707 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HeartJarSpotIllustration-2x.png.js");

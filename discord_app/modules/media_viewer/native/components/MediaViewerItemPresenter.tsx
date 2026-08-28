@@ -1,6 +1,6 @@
-// === Module 12761: MediaViewerItemPresenter ===
+// === Module 12780: MediaViewerItemPresenter ===
 
-// Module 12761 (MediaViewerItemPresenter)
+// Module 12780 (MediaViewerItemPresenter)
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

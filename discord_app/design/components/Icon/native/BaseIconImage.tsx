@@ -1,8 +1,8 @@
-// === Module 4164: BaseIconImage ===
+// === Module 4165: BaseIconImage ===
 
-// Module 4164 (BaseIconImage)
+// Module 4165 (BaseIconImage)
 import noopAll from "noop" /* 19 */;
-import map from "map" /* 4165 */;
+import map from "map" /* 4166 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 

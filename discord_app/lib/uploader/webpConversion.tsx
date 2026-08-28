@@ -1,6 +1,6 @@
-// === Module 5077: _shouldConvertToWebP ===
+// === Module 5090: _shouldConvertToWebP ===
 
-// Module 5077 (_shouldConvertToWebP)
+// Module 5090 (_shouldConvertToWebP)
 import timestampDefault from "timestamp" /* 3 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;

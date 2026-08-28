@@ -1,6 +1,6 @@
-// === Module 6410: metadata ===
+// === Module 6423: metadata ===
 
-// Module 6410 (metadata)
+// Module 6423 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordNitroLockupLogo-2x.png.js");

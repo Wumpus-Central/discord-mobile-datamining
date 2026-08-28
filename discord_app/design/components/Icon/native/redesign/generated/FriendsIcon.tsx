@@ -1,10 +1,10 @@
-// === Module 4163: FriendsIcon ===
+// === Module 4164: FriendsIcon ===
 
-// Module 4163 (FriendsIcon)
+// Module 4164 (FriendsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 4381 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 4382 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

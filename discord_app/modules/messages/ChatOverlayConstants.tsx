@@ -1,6 +1,6 @@
-// === Module 10975: ChatOverlays ===
+// === Module 10993: ChatOverlays ===
 
-// Module 10975 (ChatOverlays)
+// Module 10993 (ChatOverlays)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/ChatOverlayConstants.tsx");

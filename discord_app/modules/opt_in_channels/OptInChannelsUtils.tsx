@@ -1,23 +1,23 @@
-// === Module 11074: setIndex ===
+// === Module 11092: setIndex ===
 
-// Module 11074 (setIndex)
+// Module 11092 (setIndex)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import transitionTo from "transitionTo" /* 1222 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hooksDefault from "hooks" /* 4043 */;
-import ack from "ack" /* 5430 */;
-import computeSubtitle from "computeSubtitle" /* 7206 */;
-import _bulkClearRecents from "_bulkClearRecents" /* 11075 */;
+import hooksDefault from "hooks" /* 4044 */;
+import ack from "ack" /* 5443 */;
+import computeSubtitle from "computeSubtitle" /* 7220 */;
+import _bulkClearRecents from "_bulkClearRecents" /* 11093 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "setIndex" /* 5431 */;
-import closure_6 from "generateOldThreadCutoff" /* 4460 */;
-import closure_7 from "markAllUserIdListsStale" /* 4098 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "setIndex" /* 5444 */;
+import closure_6 from "generateOldThreadCutoff" /* 4461 */;
+import closure_7 from "markAllUserIdListsStale" /* 4099 */;
+import closure_8 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 1398 */;
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7212 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 4655 */;
+import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7226 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 4668 */;
 
 require = arg1;
 function setIndex(arg0, index) {
@@ -140,7 +140,7 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
   const _require = guildId;
   closure_1 = filterCategoriesByQuery;
   dependencyMap = arg2;
-  let obj = _require(4266);
+  let obj = _require(4267);
   let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require(1377).DismissibleContent.CHANNEL_BROWSER_NUX);
   const items = [closure_4];
   const items1 = [guildId];

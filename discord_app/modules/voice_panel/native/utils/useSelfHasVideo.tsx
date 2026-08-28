@@ -1,9 +1,9 @@
-// === Module 16579: useSelfHasVideo ===
+// === Module 16597: useSelfHasVideo ===
 
-// Module 16579 (useSelfHasVideo)
-import closure_2 from "getParticipants" /* 4461 */;
+// Module 16597 (useSelfHasVideo)
+import closure_2 from "getParticipants" /* 4462 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4496 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/useSelfHasVideo.tsx");

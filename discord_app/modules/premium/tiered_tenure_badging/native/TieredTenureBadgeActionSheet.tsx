@@ -1,16 +1,16 @@
-// === Module 8862: TieredTenureBadgeItem ===
+// === Module 8879: TieredTenureBadgeItem ===
 
-// Module 8862 (TieredTenureBadgeItem)
+// Module 8879 (TieredTenureBadgeItem)
 import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5445 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 8863 */;
+import preloadDefault from "preload" /* 5458 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 8880 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import closure_5 from "mergeGuildAvatar" /* 1923 */;
+import GuildFeatures from "GuildFeatures" /* 1925 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function TieredTenureBadgeItem(arg0) {
@@ -21,9 +21,9 @@ function TieredTenureBadgeItem(arg0) {
   if (mobileTenureBadgeImages != null) {
     const small = mobileTenureBadgeImages.small;
   }
-  let tmp2Result = tmp2(7312);
+  let tmp2Result = tmp2(7326);
   const tieredTenureBadgeData = tmp2Result.getTieredTenureBadgeData(badge);
-  tmp2Result = tmp2(8888);
+  tmp2Result = tmp2(8905);
   if (tieredTenureBadgeData != null) {
     const tenureReqNumMonths = tieredTenureBadgeData.tenureReqNumMonths;
   }
@@ -44,11 +44,11 @@ function TieredTenureBadgeItem(arg0) {
     obj1[0] = tmp.badgeName;
     const intl = tmp2(1236).intl;
     obj1[3] = intl.string(tieredTenureBadgeData.nameUnformatted);
-    items1[1] = callback(tmp2(4441).Text, obj1);
+    items1[1] = callback(tmp2(4442).Text, obj1);
     const obj2 = { style: null, variant: "text-xs/normal", color: "mobile-text-heading-primary", children: null };
     obj2[0] = tmp.badgeRequirement;
     obj2[3] = tmp7;
-    items1[2] = callback(tmp2(4441).Text, obj2);
+    items1[2] = callback(tmp2(4442).Text, obj2);
     if (isUsersBadge) {
       isUsersBadge = null != premiumSince;
     }
@@ -61,7 +61,7 @@ function TieredTenureBadgeItem(arg0) {
       const date = new Date(premiumSince);
       obj4[0] = date;
       obj3[3] = intl2.formatToPlainString(tmp2(1236).t.Hu4jfi, obj4);
-      isUsersBadge = tmp11(tmp2(4441).Text, obj3);
+      isUsersBadge = tmp11(tmp2(4442).Text, obj3);
     }
     items1[3] = isUsersBadge;
     obj[1] = items1;

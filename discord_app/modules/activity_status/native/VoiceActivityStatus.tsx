@@ -1,12 +1,12 @@
-// === Module 9179: VoiceActivityStatus ===
+// === Module 9197: VoiceActivityStatus ===
 
-// Module 9179 (VoiceActivityStatus)
+// Module 9197 (VoiceActivityStatus)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 9168 */;
-import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 9180 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 9186 */;
+import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 9198 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 noopAll;

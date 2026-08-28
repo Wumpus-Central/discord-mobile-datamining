@@ -1,13 +1,13 @@
-// === Module 8934: _fetchGuildTopGames ===
+// === Module 8952: _fetchGuildTopGames ===
 
-// Module 8934 (_fetchGuildTopGames)
+// Module 8952 (_fetchGuildTopGames)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4268 */;
-import closure_5 from "trackCommunicationDisabled" /* 1992 */;
-import closure_6 from "handleUpdateStart" /* 8931 */;
-import { GuildProfileFetchStatus } from "handleUpdateStart" /* 8931 */;
+import closure_4 from "handleGatewayJoinRequestUpdate" /* 4269 */;
+import closure_5 from "trackCommunicationDisabled" /* 1993 */;
+import closure_6 from "handleUpdateStart" /* 8949 */;
+import { GuildProfileFetchStatus } from "handleUpdateStart" /* 8949 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -131,8 +131,8 @@ export const saveGuildProfile = function saveGuildProfile(closure_1_0, name) {
     const HTTP = _require(530).HTTP;
     obj = { url: null, body: null, rejectWithError: null };
     obj[0] = closure_9.GUILD_PROFILE(closure_1_0);
-    obj[1] = _require(5512).buildGuildProfileUpdateForServer(name);
-    const obj4 = _require(5512);
+    obj[1] = _require(5525).buildGuildProfileUpdateForServer(name);
+    const obj4 = _require(5525);
     obj[2] = _require(530).rejectWithMigratedError();
     const obj5 = _require(530);
     const patchResult = HTTP.patch(obj);

@@ -1,10 +1,10 @@
-// === Module 6745: MushroomSpotIllustration ===
+// === Module 6758: MushroomSpotIllustration ===
 
-// Module 6745 (MushroomSpotIllustration)
+// Module 6758 (MushroomSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6746 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6759 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/MushroomSpotIllustration.native.tsx");

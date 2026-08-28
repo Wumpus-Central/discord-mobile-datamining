@@ -1,6 +1,6 @@
-// === Module 9471: useIsPrivateChannelWithEnabledActivities ===
+// === Module 9489: useIsPrivateChannelWithEnabledActivities ===
 
-// Module 9471 (useIsPrivateChannelWithEnabledActivities)
+// Module 9489 (useIsPrivateChannelWithEnabledActivities)
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
 
 const require = arg1;

@@ -1,8 +1,8 @@
-// === Module 9445: useIsConnectedToVoiceChannel ===
+// === Module 9463: useIsConnectedToVoiceChannel ===
 
-// Module 9445 (useIsConnectedToVoiceChannel)
+// Module 9463 (useIsConnectedToVoiceChannel)
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "updateVoiceState" /* 4464 */;
+import closure_3 from "updateVoiceState" /* 4465 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_chat/VoiceChatHooks.tsx");

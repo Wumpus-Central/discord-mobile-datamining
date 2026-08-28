@@ -1,13 +1,13 @@
-// === Module 16354: ? ===
+// === Module 16372: ? ===
 
-// Module 16354
+// Module 16372
 import ThemesDefault from "Themes" /* 712 */;
-import InitialPinsScreenDefault from "InitialPinsScreen" /* 16210 */;
+import InitialPinsScreenDefault from "InitialPinsScreen" /* 16228 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { SearchTabs } from "MessageEmbedTypes" /* 7555 */;
+import { SearchTabs } from "MessageEmbedTypes" /* 7569 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -28,7 +28,7 @@ const memoResult = importAllResult.memo(() => {
     return guild_id;
   });
   const obj2 = channelId(589);
-  const channelDetailsSearchContext = channelId(11783).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(11802).useChannelDetailsSearchContext(channelId, stateFromStores);
   obj = { style: callback().container, children: jsx(InitialPinsScreenDefault, obj) };
   obj = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
   return <View searchContext={channelDetailsSearchContext} isFocused tab={SearchTabs.PINS} />;

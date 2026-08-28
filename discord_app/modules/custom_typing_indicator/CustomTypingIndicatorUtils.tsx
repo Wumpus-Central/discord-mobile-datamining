@@ -1,16 +1,16 @@
-// === Module 11462: items ===
+// === Module 11481: items ===
 
-// Module 11462 (items)
+// Module 11481 (items)
 import fromStringAll from "fromString" /* 506 */;
-import messagesProxyDefault from "messagesProxy" /* 3471 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
-import closure_4 from "getEmojiToGroupId" /* 5353 */;
-import closure_5 from "handleFormOpen" /* 8002 */;
+import messagesProxyDefault from "messagesProxy" /* 3472 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4103 */;
+import closure_4 from "getEmojiToGroupId" /* 5366 */;
+import closure_5 from "handleFormOpen" /* 8016 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "insertUnsortedGuilds" /* 5333 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "insertUnsortedGuilds" /* 5346 */;
+import closure_8 from "mergeGuildAvatar" /* 1923 */;
 import { Permissions } from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import { EmojiIntention } from "set" /* 1926 */;
 
 const require = arg1;
 let obj = {};
@@ -55,7 +55,7 @@ export const getSurpriseMeEmojiPool = function getSurpriseMeEmojiPool() {
     usableGuildEmoji = usableGuildEmoji.getUsableGuildEmoji(arg0);
     const found = usableGuildEmoji.filter((emoji) => {
       obj = callback(table[10]);
-      obj = { emoji, channel: null, guildId: "Array", intention: true, bypassPremiumEmojiEntitlement: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl" };
+      obj = { emoji, channel: null, guildId: "Array", intention: true, bypassPremiumEmojiEntitlement: "/assets/modules/go_live/web/modal" };
       obj[3] = constants.TYPING_INDICATOR;
       return null == obj.getEmojiUnavailableReason(obj);
     });
@@ -66,7 +66,7 @@ export const getSurpriseMeEmojiPool = function getSurpriseMeEmojiPool() {
 export const pickRandomCustomTypingIndicatorEmojis = function pickRandomCustomTypingIndicatorEmojis(current) {
   let size;
   const _require = current;
-  const bound = Math.min(_require(1937).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT, current.length);
+  const bound = Math.min(_require(1938).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT, current.length);
   const set = new Set();
   if (set.size < bound) {
     do {

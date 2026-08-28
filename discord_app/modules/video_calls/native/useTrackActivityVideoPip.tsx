@@ -1,8 +1,8 @@
-// === Module 9545: useTrackActivityPip ===
+// === Module 9563: useTrackActivityPip ===
 
-// Module 9545 (useTrackActivityPip)
+// Module 9563 (useTrackActivityPip)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 9456 */;
+import closure_4 from "initialize" /* 9474 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
@@ -12,9 +12,9 @@ export default function useTrackActivityPip(arg0) {
   const _require = arg0;
   const items = [closure_4];
   const stateFromStores = _require(647).useStateFromStores(items, () => pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream());
-  let tmp2 = stateFromStores(8508)(stateFromStores);
+  let tmp2 = stateFromStores(8522)(stateFromStores);
   dependencyMap = tmp2;
-  const tmp3 = stateFromStores(9523)();
+  const tmp3 = stateFromStores(9541)();
   const React = tmp3;
   const items1 = [stateFromStores, tmp2, arg0, tmp3];
   const effect = React.useEffect(() => {

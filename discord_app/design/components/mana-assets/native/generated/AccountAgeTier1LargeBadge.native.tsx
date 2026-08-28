@@ -1,10 +1,10 @@
-// === Module 6213: AccountAgeTier1LargeBadge ===
+// === Module 6226: AccountAgeTier1LargeBadge ===
 
-// Module 6213 (AccountAgeTier1LargeBadge)
+// Module 6226 (AccountAgeTier1LargeBadge)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import vanityUrlDefault from "vanityUrl" /* 6214 */;
+import preloadDefault from "preload" /* 5458 */;
+import vanityUrlDefault from "vanityUrl" /* 6227 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AccountAgeTier1LargeBadge.native.tsx");

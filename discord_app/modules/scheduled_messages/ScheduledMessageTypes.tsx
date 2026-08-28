@@ -1,6 +1,6 @@
-// === Module 7524: ScheduledMessageSendState ===
+// === Module 7538: ScheduledMessageSendState ===
 
-// Module 7524 (ScheduledMessageSendState)
+// Module 7538 (ScheduledMessageSendState)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageTypes.tsx");

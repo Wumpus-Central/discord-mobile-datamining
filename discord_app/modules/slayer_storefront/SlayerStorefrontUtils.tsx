@@ -1,18 +1,18 @@
-// === Module 6025: getPrice ===
+// === Module 6038: getPrice ===
 
-// Module 6025 (getPrice)
+// Module 6038 (getPrice)
 import applyDefault from "apply" /* 12 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4708 */;
-import keysSorter from "keysSorter" /* 5350 */;
-import RewardRequirementType from "RewardRequirementType" /* 6029 */;
-import useSKUPrice from "useSKUPrice" /* 6030 */;
-import closure_3 from "addApplication" /* 4486 */;
-import { WishlistRecommendationReason as closure_4 } from "fromServer" /* 6026 */;
-import closure_5 from "createExecutable" /* 4471 */;
+import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4721 */;
+import keysSorter from "keysSorter" /* 5363 */;
+import RewardRequirementType from "RewardRequirementType" /* 6042 */;
+import useSKUPrice from "useSKUPrice" /* 6043 */;
+import closure_3 from "addApplication" /* 4487 */;
+import { WishlistRecommendationReason as closure_4 } from "fromServer" /* 6039 */;
+import closure_5 from "createExecutable" /* 4472 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleUserSettingsStoreUpdate" /* 6027 */;
-import STOREFRONT_MARKETING_GUILD_ID from "STOREFRONT_MARKETING_GUILD_ID" /* 6028 */;
+import closure_7 from "handleUserSettingsStoreUpdate" /* 6040 */;
+import STOREFRONT_MARKETING_GUILD_ID from "STOREFRONT_MARKETING_GUILD_ID" /* 6041 */;
 import ME from "ME" /* 676 */;
 import { CollectibleShopTab } from "items" /* 678 */;
 import { CurrencyCodes } from "sum" /* 505 */;
@@ -661,7 +661,7 @@ export const useGetSocialLayerStorefrontGuildIdAndApplication = function useGetS
   const items = [closure_7];
   const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_7.getGuildIdFromApplicationId(closure_0));
   const obj = _require(589);
-  const application = _require(5911).useGetOrFetchApplication(applicationId);
+  const application = _require(5924).useGetOrFetchApplication(applicationId);
   let guildId = stateFromStores;
   if (stateFromStores == null) {
     guildId = undefined;

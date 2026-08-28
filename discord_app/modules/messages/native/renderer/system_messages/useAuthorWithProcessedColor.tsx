@@ -1,10 +1,10 @@
-// === Module 7802: getMessageAuthorWithProcessedColor ===
+// === Module 7816: getMessageAuthorWithProcessedColor ===
 
-// Module 7802 (getMessageAuthorWithProcessedColor)
+// Module 7816 (getMessageAuthorWithProcessedColor)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4699 */;
-import processColorStrings from "processColorStrings" /* 7803 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4712 */;
+import processColorStrings from "processColorStrings" /* 7817 */;
 
 const processColor = get_ActivityIndicator.processColor;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx");

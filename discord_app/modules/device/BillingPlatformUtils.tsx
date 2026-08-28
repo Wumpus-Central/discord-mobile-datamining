@@ -1,6 +1,6 @@
-// === Module 4120: isPremiumGiftingSupported ===
+// === Module 4121: isPremiumGiftingSupported ===
 
-// Module 4120 (isPremiumGiftingSupported)
+// Module 4121 (isPremiumGiftingSupported)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;

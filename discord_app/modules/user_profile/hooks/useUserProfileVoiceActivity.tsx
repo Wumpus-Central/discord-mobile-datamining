@@ -1,9 +1,9 @@
-// === Module 12387: useUserProfileVoiceActivity ===
+// === Module 12406: useUserProfileVoiceActivity ===
 
-// Module 12387 (useUserProfileVoiceActivity)
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7417 */;
-import closure_3 from "sortActivity" /* 4534 */;
-import closure_4 from "updateVoiceState" /* 4464 */;
+// Module 12406 (useUserProfileVoiceActivity)
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7431 */;
+import closure_3 from "sortActivity" /* 4535 */;
+import closure_4 from "updateVoiceState" /* 4465 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useUserProfileVoiceActivity.tsx");
@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/user_profile/hooks/
 export default function useUserProfileVoiceActivity(guildId) {
   const userId = guildId.userId;
   let id;
-  const tmp2 = id(9163)({ userId, guildId: guildId.guildId });
+  const tmp2 = id(9181)({ userId, guildId: guildId.guildId });
   const voiceChannel = tmp2.voiceChannel;
   id = undefined;
   if (voiceChannel != null) {

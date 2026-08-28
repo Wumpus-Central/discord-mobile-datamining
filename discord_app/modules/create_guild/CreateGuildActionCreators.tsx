@@ -1,6 +1,6 @@
-// === Module 11804: _createGuildFromTemplate ===
+// === Module 11823: _createGuildFromTemplate ===
 
-// Module 11804 (_createGuildFromTemplate)
+// Module 11823 (_createGuildFromTemplate)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -64,13 +64,13 @@ function _createGuildFromTemplate() {
               c9 = 2;
               c10 = 1;
               const obj5 = { value: null, done: false };
-              obj5[0] = callback2(4666).post(obj1);
+              obj5[0] = callback2(4679).post(obj1);
               return obj5;
             }
           } else if (1 === tmp7) {
             c8 = 0;
             callback = closure_7;
-            const aPIError = new callback(4343).APIError(callback);
+            const aPIError = new callback(4344).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
             c10 = 3;

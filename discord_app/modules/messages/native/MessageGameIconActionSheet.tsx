@@ -1,14 +1,14 @@
-// === Module 11305: MessageGameIconActionSheet ===
+// === Module 11324: MessageGameIconActionSheet ===
 
-// Module 11305 (MessageGameIconActionSheet)
+// Module 11324 (MessageGameIconActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import combinedDefault from "combined" /* 1995 */;
+import combinedDefault from "combined" /* 1996 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "addApplication" /* 4486 */;
+import closure_4 from "addApplication" /* 4487 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 import set from "set" /* 500 */;
 
 const require = arg1;
@@ -57,7 +57,7 @@ export default function MessageGameIconActionSheet(applicationId) {
     const obj5 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
     obj5[0] = tmp.timestamp;
     obj5[3] = applicationId.messageTimestamp;
-    const items2 = [closure_6(tmp2(4441).Text, obj5), ];
+    const items2 = [closure_6(tmp2(4442).Text, obj5), ];
     const obj6 = { variant: "text-sm/medium", children: null };
     const intl = tmp2(1236).intl;
     const obj7 = { applicationName: null };
@@ -68,13 +68,13 @@ export default function MessageGameIconActionSheet(applicationId) {
     obj8[0] = combinedDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
     items3[2] = intl2.format(tmp2(1236).t.BPDKoA, obj8);
     obj6[1] = items3;
-    items2[1] = closure_7(tmp2(4441).Text, obj6);
+    items2[1] = closure_7(tmp2(4442).Text, obj6);
     obj4[1] = items2;
     items1[1] = closure_7(View, obj4);
     obj[1] = items1;
     obj[1] = closure_7(View, obj);
     obj2[1] = closure_6(View, obj);
-    tmp5Result = tmp5(tmp2(5574).BottomSheet, obj2);
+    tmp5Result = tmp5(tmp2(5587).BottomSheet, obj2);
     const obj13 = combinedDefault;
   }
   return tmp5Result;

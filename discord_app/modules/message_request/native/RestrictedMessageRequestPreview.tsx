@@ -1,15 +1,15 @@
-// === Module 16387: RestrictedMessageRequestPreview ===
+// === Module 16405: RestrictedMessageRequestPreview ===
 
-// Module 16387 (RestrictedMessageRequestPreview)
+// Module 16405 (RestrictedMessageRequestPreview)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "reinjectEphemerals" /* 4688 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "reinjectEphemerals" /* 4701 */;
+import closure_9 from "mergeGuildAvatar" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
@@ -111,10 +111,10 @@ export default function RestrictedMessageRequestPreview(channelId) {
       obj1 = { channel: null, user: null };
       obj1[0] = stateFromStores;
       obj1[1] = stateFromStores1;
-      const items8 = [callback(tmp2(16388), obj1), ];
+      const items8 = [callback(tmp2(16406), obj1), ];
       obj2 = { channelId: null };
       obj2[0] = channelId;
-      items8[1] = callback(tmp2(16390), obj2);
+      items8[1] = callback(tmp2(16408), obj2);
       obj[5] = items8;
       const items9 = [closure_11(closure_5, obj), ];
       const obj3 = { style: null, children: null };
@@ -125,7 +125,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
       obj3[0] = items10;
       const obj5 = { channel: null };
       obj5[0] = stateFromStores;
-      obj3[1] = callback(tmp2(11918), obj5);
+      obj3[1] = callback(tmp2(11937), obj5);
       items9[1] = callback(first1, obj3);
       obj[1] = items9;
       tmp13Result = tmp13(tmp14, obj);

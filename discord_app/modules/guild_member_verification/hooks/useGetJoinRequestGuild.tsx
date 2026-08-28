@@ -1,8 +1,8 @@
-// === Module 8957: useGetGuildJoinRequest ===
+// === Module 8975: useGetGuildJoinRequest ===
 
-// Module 8957 (useGetGuildJoinRequest)
+// Module 8975 (useGetGuildJoinRequest)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4268 */;
+import closure_4 from "handleGatewayJoinRequestUpdate" /* 4269 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestGuild.tsx");

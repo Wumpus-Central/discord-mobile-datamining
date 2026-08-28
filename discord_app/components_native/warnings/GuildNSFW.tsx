@@ -1,7 +1,7 @@
-// === Module 12117: GuildNSFW ===
+// === Module 12136: GuildNSFW ===
 
-// Module 12117 (GuildNSFW)
-import GatedContentDefault from "GatedContent" /* 12118 */;
+// Module 12136 (GuildNSFW)
+import GatedContentDefault from "GatedContent" /* 12137 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "noop" /* 19 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
@@ -17,15 +17,15 @@ export default function GuildNSFW(channelId) {
   let obj = _require(589);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(channelId.guildId));
-  obj1 = _require(4684);
+  obj1 = _require(4697);
   const ageGateVerifyContentForGuild = obj1.useAgeGateVerifyContentForGuild(stateFromStores);
   const modalType = ageGateVerifyContentForGuild.modalType;
-  let obj2 = _require(4686);
+  let obj2 = _require(4699);
   const maybePerformReactiveCheckForSource = obj2.useMaybePerformReactiveCheckForSource(AgeGateSource.NSFW_SERVER);
   obj = {};
   const callback = React.useCallback(() => {
-    let obj = callback(8613);
-    obj = { entryPoint: channelId(8615).AgeVerificationModalEntryPoint.NSFW_GUILD };
+    let obj = callback(8628);
+    obj = { entryPoint: channelId(8630).AgeVerificationModalEntryPoint.NSFW_GUILD };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   }, []);
   const merged = Object.assign(callback(ageGateVerifyContentForGuild, closure_3));
@@ -43,9 +43,9 @@ export default function GuildNSFW(channelId) {
   obj.channelId = channelId.channelId;
   const intl = tmp(1236).intl;
   obj.disagreement = intl.string(_require(1236).t["/g10LC"]);
-  if (_require(8615).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY !== modalType) {
-    if (tmp(8615).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
-      if (tmp(8615).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
+  if (_require(8630).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY !== modalType) {
+    if (tmp(8630).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
+      if (tmp(8630).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
         obj = { modalType: null, disagreementButtonVariant: "primary", onDisagree: null };
         obj[0] = modalType;
         obj[2] = handleDisagree;

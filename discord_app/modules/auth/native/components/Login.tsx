@@ -1,19 +1,19 @@
-// === Module 7648: LinkButton ===
+// === Module 7662: LinkButton ===
 
-// Module 7648 (LinkButton)
+// Module 7662 (LinkButton)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4441 */;
-import _modDef4810 from "module_4810" /* 4810 */;
-import PressableBase from "PressableBase" /* 5020 */;
+import Text from "Text" /* 4442 */;
+import _modDef4823 from "module_4823" /* 4823 */;
+import PressableBase from "PressableBase" /* 5033 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleSetLocationMetadata" /* 7649 */;
+import closure_7 from "handleSetLocationMetadata" /* 7663 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
 import { AuthStates } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 class LinkButton {
@@ -34,7 +34,7 @@ class LinkButton {
   }
 }
 function handlePressPasswordManagerHint() {
-  let obj = _modDef4810;
+  let obj = _modDef4823;
   obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.lzsy7t);
@@ -160,7 +160,7 @@ export default function Login(isMultiAccount) {
             v0(true);
             v02({});
             c3 = 2;
-            let obj3 = callback(6004);
+            let obj3 = callback(6017);
             v0 = 3;
             v02 = 1;
             obj1 = { value: null, done: false };
@@ -174,7 +174,7 @@ export default function Login(isMultiAccount) {
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            let obj2 = closure_1_0(7654);
+            let obj2 = closure_1_0(7668);
             callback = obj2.getAuthenticationErrorsFromV6OrEarlierAPIError(dependencyMap);
             callback2(callback);
             c3 = 0;
@@ -193,9 +193,9 @@ export default function Login(isMultiAccount) {
           } else {
             closure_0 = arg1;
             if (false !== closure_0) {
-              if (closure_0 === closure_1_0(7652).PasswordResetMethods.ONE_TIME_LOGIN) {
-                obj = closure_1_0(4811);
-                obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(7653), {}));
+              if (closure_0 === closure_1_0(7666).PasswordResetMethods.ONE_TIME_LOGIN) {
+                obj = closure_1_0(4824);
+                obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(7667), {}));
               } else {
                 obj3 = { title: null, body: null };
                 const intl = closure_1_0(1236).intl;
@@ -204,8 +204,8 @@ export default function Login(isMultiAccount) {
                 const obj4 = { email: null };
                 obj4[0] = closure_6;
                 obj3[1] = intl2.format(closure_1_0(1236).t["6u5hQ9"], obj4);
-                callback(4810).show(obj3);
-                const obj8 = callback(4810);
+                callback(4823).show(obj3);
+                const obj8 = callback(4823);
               }
               c3 = 1;
             }

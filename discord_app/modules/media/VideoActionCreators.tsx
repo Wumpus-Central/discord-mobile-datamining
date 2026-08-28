@@ -1,6 +1,6 @@
-// === Module 16497: updateVideoSize ===
+// === Module 16515: updateVideoSize ===
 
-// Module 16497 (updateVideoSize)
+// Module 16515 (updateVideoSize)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

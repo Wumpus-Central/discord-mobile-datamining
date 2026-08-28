@@ -1,8 +1,8 @@
-// === Module 4355: experiment ===
+// === Module 4356: experiment ===
 
-// Module 4355 (experiment)
+// Module 4356 (experiment)
 import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4356 */;
+import createExperiment from "createExperiment" /* 4357 */;
 
 const items = [{ id: 1, label: "Enable GameServer", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2025-08_portkey_enabled", label: "GameServer Enabled", defaultConfig: { enabled: false }, treatments: items });

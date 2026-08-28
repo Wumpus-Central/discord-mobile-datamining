@@ -1,13 +1,13 @@
-// === Module 7525: showScheduleMessageSuccessToast ===
+// === Module 7539: showScheduleMessageSuccessToast ===
 
-// Module 7525 (showScheduleMessageSuccessToast)
+// Module 7539 (showScheduleMessageSuccessToast)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4162 */;
-import ClockIcon from "ClockIcon" /* 4408 */;
-import CircleXIcon from "CircleXIcon" /* 6177 */;
-import ScheduledMessagesConfig from "ScheduledMessagesConfig" /* 7522 */;
+import dispatcherDefault from "dispatcher" /* 4163 */;
+import ClockIcon from "ClockIcon" /* 4409 */;
+import CircleXIcon from "CircleXIcon" /* 6190 */;
+import ScheduledMessagesConfig from "ScheduledMessagesConfig" /* 7536 */;
 
 const AbortCodes = ME.AbortCodes;
 const result = set.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageNotifications.native.tsx");
@@ -39,11 +39,11 @@ export const handleScheduleMessageError = function handleScheduleMessageError(cl
   if (code === AbortCodes.TOO_MANY_SCHEDULED_MESSAGES) {
     const scheduledMessagesLimit = ScheduledMessagesConfig.getScheduledMessagesLimit("ScheduledMessagesCreateRoadblock");
     if (scheduledMessagesLimit.isUpgradable) {
-      let tmp11Result = tmp11(7526);
-      const items = [tmp11(5925).SCHEDULED_MESSAGES_ROADBLOCK];
+      let tmp11Result = tmp11(7540);
+      const items = [tmp11(5938).SCHEDULED_MESSAGES_ROADBLOCK];
       tmp11Result(items);
     } else {
-      tmp11Result = tmp11(4809);
+      tmp11Result = tmp11(4822);
       let obj = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null };
       const intl2 = tmp7(1236).intl;
       obj[0] = intl2.string(tmp7(1236).t.RLdUVh);
@@ -111,6 +111,23 @@ export const showScheduleMessageDeleteFailureToast = function showScheduleMessag
   const intl = getSystemLocale.intl;
   obj = { error: message };
   obj[1] = intl.formatToPlainString(getSystemLocale.t.sUvyW3, obj);
+  obj[2] = CircleXIcon.CircleXIcon;
+  obj.open(obj);
+};
+export const showScheduleMessageSentNowSuccessToast = function showScheduleMessageSentNowSuccessToast() {
+  let obj = dispatcherDefault;
+  obj = { key: "SCHEDULED_MESSAGE_SEND_NOW_SUCCESS", content: null, IconComponent: null, iconColor: "status-positive" };
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t["BHCm/d"]);
+  obj[2] = ClockIcon.ClockIcon;
+  obj.open(obj);
+};
+export const showScheduleMessageSentNowFailureToast = function showScheduleMessageSentNowFailureToast(message) {
+  let obj = dispatcherDefault;
+  obj = { key: "SCHEDULED_MESSAGE_SEND_NOW_FAILURE", content: null, IconComponent: null, iconColor: "icon-feedback-critical" };
+  const intl = getSystemLocale.intl;
+  obj = { error: message };
+  obj[1] = intl.formatToPlainString(getSystemLocale.t["uy++C+"], obj);
   obj[2] = CircleXIcon.CircleXIcon;
   obj.open(obj);
 };

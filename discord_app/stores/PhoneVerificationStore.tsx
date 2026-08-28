@@ -1,6 +1,6 @@
-// === Module 17006: getCountrySelectorOpened ===
+// === Module 17024: getCountrySelectorOpened ===
 
-// Module 17006 (getCountrySelectorOpened)
+// Module 17024 (getCountrySelectorOpened)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

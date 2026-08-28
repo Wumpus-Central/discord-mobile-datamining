@@ -1,6 +1,6 @@
-// === Module 7877: isCrosspost ===
+// === Module 7891: isCrosspost ===
 
-// Module 7877 (isCrosspost)
+// Module 7891 (isCrosspost)
 import set from "set" /* 2 */;
 import hasFlag from "hasFlag" /* 1403 */;
 import ME from "ME" /* 676 */;

@@ -1,11 +1,11 @@
-// === Module 14492: route ===
+// === Module 14476: route ===
 
-// Module 14492 (route)
+// Module 14476 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import KeyIcon from "KeyIcon" /* 7664 */;
-import createToggle from "createToggle" /* 10988 */;
+import KeyIcon from "KeyIcon" /* 7678 */;
+import createToggle from "createToggle" /* 11006 */;
 
 obj = {
   useTitle() {
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.AUTHORIZED_APPS,
   getComponent() {
-    return require(14493) /* UserSettingsAuthedApps */.default;
+    return require(14477) /* UserSettingsAuthedApps */.default;
   }
 };
 const route = createToggle.createRoute(obj);

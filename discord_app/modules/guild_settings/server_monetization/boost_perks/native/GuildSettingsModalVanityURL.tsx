@@ -1,21 +1,21 @@
-// === Module 17139: componentDidMount ===
+// === Module 17157: componentDidMount ===
 
-// Module 17139 (componentDidMount)
+// Module 17157 (componentDidMount)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4441 */;
-import getInviteURLDefault from "getInviteURL" /* 7436 */;
-import TextInput from "TextInput" /* 7638 */;
-import getErrorMessageFromErrorCode from "getErrorMessageFromErrorCode" /* 17020 */;
-import _modDef17141 from "module_17141" /* 17141 */;
-import registerAssetDefault from "registerAsset" /* 17142 */;
+import Text from "Text" /* 4442 */;
+import getInviteURLDefault from "getInviteURL" /* 7450 */;
+import TextInput from "TextInput" /* 7652 */;
+import getErrorMessageFromErrorCode from "getErrorMessageFromErrorCode" /* 17038 */;
+import _modDef17159 from "module_17159" /* 17159 */;
+import registerAssetDefault from "registerAsset" /* 17160 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "FormStates" /* 17140 */;
+import closure_5 from "FormStates" /* 17158 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleFormInit" /* 9650 */;
+import closure_7 from "handleFormInit" /* 9668 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -93,7 +93,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     if (submitting) {
       let fn = () => null;
     } else if (isEditing) {
-      let setOptionsResult = self(5447);
+      let setOptionsResult = self(5460);
       fn = setOptionsResult.getHeaderConditionalBackButton(this.handleCancel);
     }
     setOptionsResult = { headerLeft: null, headerRight: null };
@@ -118,7 +118,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
   }
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  _modDef17141.closeModal();
+  _modDef17159.closeModal();
 };
 prototype["render"] = function render() {
   const self = this;
@@ -185,7 +185,7 @@ prototype["render"] = function render() {
       const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl5 = tmp18(1236).intl;
       obj8[2] = intl5.string(tmp18(1236).t.o3kmm3);
-      tmp17Result = tmp17(tmp18(4441).Text, obj8);
+      tmp17Result = tmp17(tmp18(4442).Text, obj8);
     }
     items2[3] = tmp17Result;
     items2[4] = tmp;
@@ -241,7 +241,7 @@ export default function ConnectedGuildSettingsModalVanityURL(guildId) {
     obj[4] = navigation;
     obj[5] = tmp;
     obj[6] = guildId.contentContainerStyle;
-    const items3 = [callback(GuildSettingsModalVanityURL, obj), callback(tmp2(5891).NavScrim, {})];
+    const items3 = [callback(GuildSettingsModalVanityURL, obj), callback(tmp2(5904).NavScrim, {})];
     obj[0] = items3;
     tmp10 = callback2(closure_11, obj);
   }

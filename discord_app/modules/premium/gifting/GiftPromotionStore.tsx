@@ -1,6 +1,6 @@
-// === Module 7099: initialize ===
+// === Module 7112: initialize ===
 
-// Module 7099 (initialize)
+// Module 7112 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
@@ -19,8 +19,8 @@ prototype["initialize"] = function initialize(giftOptionsReceiptMap) {
 prototype["getState"] = function getState() {
   return closure_0;
 };
-prototype["getGiftOptionsForKey"] = function getGiftOptionsForKey(closure_3) {
-  return closure_0.giftOptionsReceiptMap[closure_3];
+prototype["getGiftOptionsForKey"] = function getGiftOptionsForKey(v3Result) {
+  return closure_0.giftOptionsReceiptMap[v3Result];
 };
 GiftPromotionStore.displayName = "GiftPromotionStore";
 GiftPromotionStore.persistKey = "GiftPromotionStore";

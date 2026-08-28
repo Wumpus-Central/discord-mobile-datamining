@@ -1,10 +1,10 @@
-// === Module 12055: useGameServerPerk ===
+// === Module 12074: useGameServerPerk ===
 
-// Module 12055 (useGameServerPerk)
+// Module 12074 (useGameServerPerk)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleGameServerInstanceCreated" /* 4352 */;
-import { GAME_SERVER_POWERUP_SKU_ID as closure_5 } from "str11" /* 4333 */;
-import { GuildPowerupType } from "BoostedGuildTiers" /* 4332 */;
+import closure_4 from "handleGameServerInstanceCreated" /* 4353 */;
+import { GAME_SERVER_POWERUP_SKU_ID as closure_5 } from "str11" /* 4334 */;
+import { GuildPowerupType } from "BoostedGuildTiers" /* 4333 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");

@@ -1,8 +1,8 @@
-// === Module 15688: useActiveEventOrStageInstanceChannel ===
+// === Module 15706: useActiveEventOrStageInstanceChannel ===
 
-// Module 15688 (useActiveEventOrStageInstanceChannel)
-import useGuildEvents from "useGuildEvents" /* 9552 */;
-import useLiveStageChannelsDefault from "useLiveStageChannels" /* 15687 */;
+// Module 15706 (useActiveEventOrStageInstanceChannel)
+import useGuildEvents from "useGuildEvents" /* 9570 */;
+import useLiveStageChannelsDefault from "useLiveStageChannels" /* 15705 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 
 require = arg1;

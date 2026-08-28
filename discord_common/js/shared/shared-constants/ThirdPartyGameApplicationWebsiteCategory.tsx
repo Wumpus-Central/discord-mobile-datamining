@@ -1,6 +1,6 @@
-// === Module 8740: ThirdPartyGameApplicationWebsiteCategory ===
+// === Module 8756: ThirdPartyGameApplicationWebsiteCategory ===
 
-// Module 8740 (ThirdPartyGameApplicationWebsiteCategory)
+// Module 8756 (ThirdPartyGameApplicationWebsiteCategory)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx");

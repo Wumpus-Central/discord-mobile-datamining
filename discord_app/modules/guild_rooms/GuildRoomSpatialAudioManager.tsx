@@ -1,17 +1,17 @@
-// === Module 16866: _initialize ===
+// === Module 16884: _initialize ===
 
-// Module 16866 (_initialize)
-import experimentDefault from "experiment" /* 4673 */;
-import initializeDefault from "initialize" /* 5438 */;
-import GUILD_ROOM_SPATIAL_AUDIO_ENABLED from "GUILD_ROOM_SPATIAL_AUDIO_ENABLED" /* 16867 */;
+// Module 16884 (_initialize)
+import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4686 */;
+import initializeDefault from "initialize" /* 5451 */;
+import GUILD_ROOM_SPATIAL_AUDIO_ENABLED from "GUILD_ROOM_SPATIAL_AUDIO_ENABLED" /* 16885 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getHash" /* 4358 */;
+import closure_4 from "getHash" /* 4359 */;
 import closure_5 from "initialize" /* 1212 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4496 */;
-import closure_9 from "createRTCConnection" /* 4519 */;
-import closure_10 from "resolveCreatingNotes" /* 4644 */;
+import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_9 from "createRTCConnection" /* 4520 */;
+import closure_10 from "resolveCreatingNotes" /* 4645 */;
 
 require = arg1;
 initializeDefault;
@@ -69,15 +69,16 @@ prototype["isLivingRoomAvailable"] = function isLivingRoomAvailable() {
     const guildId = store.getGuildId();
     let interactionsEnabled = null != guildId;
     if (interactionsEnabled) {
-      let obj = experimentDefault;
-      obj = { guildId: null, location: "GuildRoomSpatialAudioManager" };
+      const obj = { guildId: null, location: "GuildRoomSpatialAudioManager" };
       obj[0] = guildId;
-      interactionsEnabled = obj.getCurrentConfig(obj, { autoTrackExposure: false }).interactionsEnabled;
+      interactionsEnabled = GUILD_ROOMS_EXPERIMENT_ID.getGuildRoomsConfig(obj, { autoTrackExposure: false }).interactionsEnabled;
+      const tmpResult = GUILD_ROOMS_EXPERIMENT_ID;
     }
     return interactionsEnabled;
   } else {
     return false;
   }
+  const tmp = require;
 };
 prototype["apply"] = function apply() {
   let obj = audioMixerSettings;
@@ -96,7 +97,7 @@ prototype["apply"] = function apply() {
           obj[0] = roomUsers.getRoomUsers(channelId);
           obj[1] = id.getId();
           obj[2] = channelId;
-          _require = _require(16867).computeLivingRoomWorldPoints(obj);
+          _require = _require(16885).computeLivingRoomWorldPoints(obj);
           const mediaEngine = obj.getMediaEngine();
           mediaEngine.eachConnection((setUserPosition) => {
             const entries = Object.entries(callback);
@@ -111,7 +112,7 @@ prototype["apply"] = function apply() {
               continue;
             }
           });
-          const obj3 = _require(16867);
+          const obj3 = _require(16885);
         }
       }
     }

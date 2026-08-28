@@ -1,6 +1,6 @@
-// === Module 11258: createGameSheetHook ===
+// === Module 11276: createGameSheetHook ===
 
-// Module 11258 (createGameSheetHook)
+// Module 11276 (createGameSheetHook)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/quests/SponsoredQuestUtils.native.tsx");

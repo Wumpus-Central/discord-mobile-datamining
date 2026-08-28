@@ -1,15 +1,15 @@
-// === Module 7076: addEntitlement ===
+// === Module 7089: addEntitlement ===
 
-// Module 7076 (addEntitlement)
+// Module 7089 (addEntitlement)
 import applyDefault from "apply" /* 12 */;
 import initializeAll from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getComboId from "getComboId" /* 4493 */;
-import closure_3 from "createFromServer" /* 4487 */;
-import closure_4 from "setLibraryApplications" /* 4484 */;
-import closure_5 from "addSku" /* 4494 */;
+import getComboId from "getComboId" /* 4494 */;
+import closure_3 from "createFromServer" /* 4488 */;
+import closure_4 from "setLibraryApplications" /* 4485 */;
+import closure_5 from "addSku" /* 4495 */;
 import ME from "ME" /* 676 */;
-import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "GuildFeatures" /* 1924 */;
+import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "GuildFeatures" /* 1925 */;
 import set from "set" /* 2 */;
 
 require = arg1;

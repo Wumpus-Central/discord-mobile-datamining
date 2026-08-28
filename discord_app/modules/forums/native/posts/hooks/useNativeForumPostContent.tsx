@@ -1,12 +1,12 @@
-// === Module 11517: useNativeForumPostContent ===
+// === Module 11536: useNativeForumPostContent ===
 
-// Module 11517 (useNativeForumPostContent)
+// Module 11536 (useNativeForumPostContent)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4805 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6069 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4818 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6082 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const MessageFlags = ME.MessageFlags;
 let closure_4 = createCacheKey.createStyles({ italics: { fontStyle: "italic" } });

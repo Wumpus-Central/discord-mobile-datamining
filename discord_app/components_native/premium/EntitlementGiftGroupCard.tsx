@@ -1,36 +1,36 @@
-// === Module 13133: importDefaultResult1 ===
+// === Module 13152: importDefaultResult1 ===
 
-// Module 13133 (importDefaultResult1)
+// Module 13152 (importDefaultResult1)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4441 */;
-import Button from "Button" /* 4880 */;
-import GameIconDefault from "GameIcon" /* 5915 */;
-import getPrice from "getPrice" /* 6025 */;
-import getSubscriptionPlans from "getSubscriptionPlans" /* 8420 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8435 */;
-import metadataDefault from "metadata" /* 10686 */;
-import registerAssetDefault from "registerAsset" /* 12772 */;
-import registerAssetDefault2 from "registerAsset" /* 12773 */;
-import registerAssetDefault3 from "registerAsset" /* 12774 */;
-import registerAssetDefault4 from "registerAsset" /* 12775 */;
-import registerAssetDefault5 from "registerAsset" /* 12776 */;
-import registerAssetDefault6 from "registerAsset" /* 12777 */;
-import registerAssetDefault7 from "registerAsset" /* 12778 */;
-import registerAssetDefault8 from "registerAsset" /* 12779 */;
-import registerAssetDefault9 from "registerAsset" /* 12780 */;
-import registerAssetDefault10 from "registerAsset" /* 12783 */;
-import registerAssetDefault11 from "registerAsset" /* 12784 */;
+import Text from "Text" /* 4442 */;
+import Button from "Button" /* 4893 */;
+import GameIconDefault from "GameIcon" /* 5928 */;
+import getPrice from "getPrice" /* 6038 */;
+import getSubscriptionPlans from "getSubscriptionPlans" /* 8434 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8449 */;
+import metadataDefault from "metadata" /* 10704 */;
+import registerAssetDefault from "registerAsset" /* 12791 */;
+import registerAssetDefault2 from "registerAsset" /* 12792 */;
+import registerAssetDefault3 from "registerAsset" /* 12793 */;
+import registerAssetDefault4 from "registerAsset" /* 12794 */;
+import registerAssetDefault5 from "registerAsset" /* 12795 */;
+import registerAssetDefault6 from "registerAsset" /* 12796 */;
+import registerAssetDefault7 from "registerAsset" /* 12797 */;
+import registerAssetDefault8 from "registerAsset" /* 12798 */;
+import registerAssetDefault9 from "registerAsset" /* 12799 */;
+import registerAssetDefault10 from "registerAsset" /* 12802 */;
+import registerAssetDefault11 from "registerAsset" /* 12803 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import importDefaultResult from "addApplication" /* 4486 */;
+import importDefaultResult from "addApplication" /* 4487 */;
 import importDefaultResult1 from "fetchFingerprint" /* 1218 */;
-import importDefaultResult2 from "updateGiftCode" /* 8379 */;
-import importDefaultResult4 from "addSku" /* 4494 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import importDefaultResult2 from "updateGiftCode" /* 8393 */;
+import importDefaultResult4 from "addSku" /* 4495 */;
+import GuildFeatures from "GuildFeatures" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import importDefaultResult3 from "addSubscriptionPlan" /* 4112 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import importDefaultResult3 from "addSubscriptionPlan" /* 4113 */;
 import importDefaultResult5 from "initialize" /* 589 */;
 
 require = arg1;
@@ -208,9 +208,9 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   items1[1] = closure_15(closure_4, obj3);
   if (isRefreshEnabled) {
     if (isOpen) {
-      let ChevronSmallRightIcon = tmp2(8858).ChevronSmallDownIcon;
+      let ChevronSmallRightIcon = tmp2(8875).ChevronSmallDownIcon;
     } else {
-      ChevronSmallRightIcon = tmp2(5955).ChevronSmallRightIcon;
+      ChevronSmallRightIcon = tmp2(5968).ChevronSmallRightIcon;
     }
     obj = {};
     tmp6(ChevronSmallRightIcon, obj);
@@ -218,7 +218,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
     const obj10 = { style: null, size: null, source: null, color: null };
     obj10[0] = tmp.rowArrow;
     obj10[1] = tmp2(1297).Icon.Sizes.LARGE;
-    obj10[2] = importDefault(isOpen ? 13134 : 13135);
+    obj10[2] = importDefault(isOpen ? 13153 : 13154);
     obj10[3] = tmp.arrow.color;
     items1[2] = tmp6(tmp2(1297).Icon, obj10);
     obj[1] = items1;

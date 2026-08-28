@@ -1,6 +1,6 @@
-// === Module 11755: VoicePanelControlsModes ===
+// === Module 11774: VoicePanelControlsModes ===
 
-// Module 11755 (VoicePanelControlsModes)
+// Module 11774 (VoicePanelControlsModes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsConstants.tsx");

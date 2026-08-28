@@ -1,9 +1,9 @@
-// === Module 9472: useCanCurrentUserSpeakInChannel ===
+// === Module 9490: useCanCurrentUserSpeakInChannel ===
 
-// Module 9472 (useCanCurrentUserSpeakInChannel)
+// Module 9490 (useCanCurrentUserSpeakInChannel)
 import initialize from "initialize" /* 589 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4633 */;
-import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4633 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4634 */;
+import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4634 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 
 require = arg1;

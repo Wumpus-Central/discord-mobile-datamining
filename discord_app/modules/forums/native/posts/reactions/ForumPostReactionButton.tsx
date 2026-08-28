@@ -1,23 +1,23 @@
-// === Module 10220: BurstReactionButton ===
+// === Module 10238: BurstReactionButton ===
 
-// Module 10220 (BurstReactionButton)
+// Module 10238 (BurstReactionButton)
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4100 */;
-import Text from "Text" /* 4441 */;
-import PressableBase from "PressableBase" /* 5020 */;
-import EmojiDefault from "Emoji" /* 5537 */;
-import ReactionTypes from "ReactionTypes" /* 7440 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10221 */;
-import handleOutOfSuperReactions from "handleOutOfSuperReactions" /* 10812 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 10817 */;
-import AnimatedCountDefault from "AnimatedCount" /* 10873 */;
+import MAX_REACTIONS from "MAX_REACTIONS" /* 4101 */;
+import Text from "Text" /* 4442 */;
+import PressableBase from "PressableBase" /* 5033 */;
+import EmojiDefault from "Emoji" /* 5550 */;
+import ReactionTypes from "ReactionTypes" /* 7454 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10239 */;
+import handleOutOfSuperReactions from "handleOutOfSuperReactions" /* 10830 */;
+import useEmojiColorPalette from "useEmojiColorPalette" /* 10835 */;
+import AnimatedCountDefault from "AnimatedCount" /* 10891 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 class BurstReactionButton {

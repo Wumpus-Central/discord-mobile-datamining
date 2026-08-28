@@ -1,19 +1,19 @@
-// === Module 15267: SettingsEmoji ===
+// === Module 15419: SettingsEmoji ===
 
-// Module 15267 (SettingsEmoji)
+// Module 15419 (SettingsEmoji)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import EmojiDefault from "Emoji" /* 5537 */;
-import getFallbackDoubleTapDisambiguatedEmoji from "getFallbackDoubleTapDisambiguatedEmoji" /* 7809 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
+import EmojiDefault from "Emoji" /* 5550 */;
+import getFallbackDoubleTapDisambiguatedEmoji from "getFallbackDoubleTapDisambiguatedEmoji" /* 7823 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import { EmojiIntention } from "set" /* 1926 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import createToggle from "createToggle" /* 10988 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import createToggle from "createToggle" /* 11006 */;
 
 require = arg1;
 function SettingsEmoji(emoji) {
@@ -70,7 +70,7 @@ const pressable = createToggle.createPressable({
     }
   },
   onPress: function onPressSetting() {
-    let obj = _require(9019);
+    let obj = _require(9037);
     obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
       closure_0 = arg0;
@@ -209,7 +209,7 @@ let obj1 = {
     }
   },
   onPress: function onPressSetting() {
-    let obj = _require(9019);
+    let obj = _require(9037);
     obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
       closure_0 = arg0;

@@ -1,23 +1,23 @@
-// === Module 15797: MiniGuildIcon ===
+// === Module 15815: MiniGuildIcon ===
 
-// Module 15797 (MiniGuildIcon)
+// Module 15815 (MiniGuildIcon)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4165 */;
-import preloadDefault from "preload" /* 5445 */;
-import GuildIconSizes from "GuildIconSizes" /* 5956 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5956 */;
+import map from "map" /* 4166 */;
+import preloadDefault from "preload" /* 5458 */;
+import GuildIconSizes from "GuildIconSizes" /* 5969 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5969 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "updateGuildUnreadSentinel" /* 7314 */;
+import closure_4 from "updateGuildUnreadSentinel" /* 7328 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleConnectionOpen" /* 4267 */;
-import closure_7 from "insertUnsortedGuilds" /* 5333 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5333 */;
-import withEqualityFn from "withEqualityFn" /* 15787 */;
-import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 15793 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15788 */;
+import closure_6 from "handleConnectionOpen" /* 4268 */;
+import closure_7 from "insertUnsortedGuilds" /* 5346 */;
+import { GuildsNodeType } from "insertUnsortedGuilds" /* 5346 */;
+import withEqualityFn from "withEqualityFn" /* 15805 */;
+import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 15811 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15806 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function MiniGuildIcon(arg0) {

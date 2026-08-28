@@ -1,14 +1,14 @@
-// === Module 8602: fillChunk ===
+// === Module 8617: fillChunk ===
 
-// Module 8602 (fillChunk)
+// Module 8617 (fillChunk)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import applyOverwritesAll from "applyOverwrites" /* 4094 */;
-import getNicknameDefault from "getNickname" /* 4638 */;
-import closure_4 from "createRTCConnection" /* 4519 */;
+import applyOverwritesAll from "applyOverwrites" /* 4095 */;
+import getNicknameDefault from "getNickname" /* 4639 */;
+import closure_4 from "createRTCConnection" /* 4520 */;
 import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import { RequestToSpeakPermissionStates as closure_6 } from "MAX_STAGE_TOPIC_LENGTH" /* 5310 */;
+import { RequestToSpeakPermissionStates as closure_6 } from "MAX_STAGE_TOPIC_LENGTH" /* 5323 */;
 import { Permissions } from "ME" /* 676 */;
-import { RowType } from "RowType" /* 8603 */;
+import { RowType } from "RowType" /* 8618 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");

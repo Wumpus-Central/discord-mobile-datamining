@@ -1,6 +1,6 @@
-// === Module 4176: wrapChildrenDefault ===
+// === Module 4177: wrapChildrenDefault ===
 
-// Module 4176 (wrapChildrenDefault)
+// Module 4177 (wrapChildrenDefault)
 import closure_0 from "_slicedToArray" /* 32 */;
 import closure_1 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

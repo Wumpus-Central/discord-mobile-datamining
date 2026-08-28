@@ -1,6 +1,6 @@
-// === Module 17093: IntegrationExpireGracePeriodTypes ===
+// === Module 17111: IntegrationExpireGracePeriodTypes ===
 
-// Module 17093 (IntegrationExpireGracePeriodTypes)
+// Module 17111 (IntegrationExpireGracePeriodTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/IntegrationExpireGracePeriodTypes.tsx");

@@ -1,39 +1,53 @@
-// === Module 11718: ScheduledMessageCardActionButtons ===
+// === Module 11721: ScheduledMessageCardActionButtons ===
 
-// Module 11718 (ScheduledMessageCardActionButtons)
+// Module 11721 (ScheduledMessageCardActionButtons)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import SendMessageIcon from "SendMessageIcon" /* 4391 */;
+import ClockIcon from "ClockIcon" /* 4409 */;
+import CircleXIcon from "CircleXIcon" /* 6190 */;
+import ContextMenu from "ContextMenu" /* 8733 */;
+import PencilIcon from "PencilIcon" /* 10264 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageCardActionButtons.tsx");
 
-export default function ScheduledMessageCardActionButtons(scheduledMessage) {
-  scheduledMessage = scheduledMessage.scheduledMessage;
+export default function ScheduledMessageCardActionButtons(arg0) {
+  ({ scheduledMessage: require, isPendingRemoval: importDefault } = arg0);
   let obj = { label: null, IconComponent: null, action: null };
-  let intl = scheduledMessage(1236).intl;
-  obj[0] = intl.string(scheduledMessage(1236).t.ZXE1s4);
-  obj[1] = scheduledMessage(10246).PencilIcon;
+  let intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.JLba51);
+  obj[1] = SendMessageIcon.SendMessageIcon;
   obj[2] = function action() {
-    return scheduledMessage(closure_1_2[3]).openScheduledMessageEditContentModal(scheduledMessage);
+    return closure_1_0(closure_1_2[3]).sendScheduledMessageNow(closure_0.scheduledMessageId);
   };
-  const items = [obj, , ];
+  const items = [obj, , , ];
   obj = { label: null, IconComponent: null, action: null };
-  const intl2 = scheduledMessage(1236).intl;
-  obj[0] = intl2.string(scheduledMessage(1236).t.SBcdAN);
-  obj[1] = scheduledMessage(4408).ClockIcon;
+  const intl2 = getSystemLocale.intl;
+  obj[0] = intl2.string(getSystemLocale.t.ZXE1s4);
+  obj[1] = PencilIcon.PencilIcon;
   obj[2] = function action() {
-    return scheduledMessage(closure_1_2[3]).openRescheduleMessageActionSheet(scheduledMessage.scheduledMessageId, scheduledMessage.sendAtTimestamp);
+    return closure_1_0(closure_1_2[3]).openScheduledMessageEditContentModal(closure_0);
   };
   items[1] = obj;
-  obj = { label: null, IconComponent: null, action: null, variant: "destructive" };
-  const intl3 = scheduledMessage(1236).intl;
-  obj[0] = intl3.string(scheduledMessage(1236).t.O3sL8F);
-  obj[1] = scheduledMessage(6177).CircleXIcon;
+  obj = { label: null, IconComponent: null, action: null };
+  const intl3 = getSystemLocale.intl;
+  obj[0] = intl3.string(getSystemLocale.t.SBcdAN);
+  obj[1] = ClockIcon.ClockIcon;
   obj[2] = function action() {
-    return scheduledMessage(closure_1_2[3]).cancelScheduledMessage(scheduledMessage.scheduledMessageId);
+    return closure_1_0(closure_1_2[3]).openRescheduleMessageActionSheet(closure_0.scheduledMessageId, closure_0.sendAtTimestamp);
   };
   items[2] = obj;
-  return jsx(scheduledMessage(8717).ContextMenu, {
+  obj1 = { label: null, IconComponent: null, action: null, variant: "destructive" };
+  const intl4 = getSystemLocale.intl;
+  obj1[0] = intl4.string(getSystemLocale.t.O3sL8F);
+  obj1[1] = CircleXIcon.CircleXIcon;
+  obj1[2] = function action() {
+    return closure_1_0(closure_1_2[3]).cancelScheduledMessage(closure_0.scheduledMessageId);
+  };
+  items[3] = obj1;
+  return jsx(ContextMenu.ContextMenu, {
     items,
     keyboardShouldPersistTaps: "handled",
     triggerOnTap: true,
@@ -42,11 +56,12 @@ export default function ScheduledMessageCardActionButtons(scheduledMessage) {
       const obj = { ref: ref.ref };
       const merged1 = Object.assign(merged);
       obj.variant = "secondary";
-      const intl = scheduledMessage(1236).intl;
-      obj.accessibilityLabel = intl.string(scheduledMessage(1236).t.sHmiIC);
+      const intl = closure_1_0(closure_1_2[1]).intl;
+      obj.accessibilityLabel = intl.string(closure_1_0(closure_1_2[1]).t.sHmiIC);
       obj.size = "sm";
-      obj.icon = callback(8724);
-      return callback2(scheduledMessage(7938).IconButton, obj);
+      obj.disabled = closure_1;
+      obj.icon = closure_1_1(closure_1_2[9]);
+      return closure_1_3(closure_1_0(closure_1_2[8]).IconButton, obj);
     }
   });
 };

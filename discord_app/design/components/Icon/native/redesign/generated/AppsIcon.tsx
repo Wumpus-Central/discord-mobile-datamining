@@ -1,10 +1,10 @@
-// === Module 9171: AppsIcon ===
+// === Module 9189: AppsIcon ===
 
-// Module 9171 (AppsIcon)
+// Module 9189 (AppsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 7980 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 7994 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,19 +1,19 @@
-// === Module 15385: BalanceWidgetMenuSection ===
+// === Module 15227: BalanceWidgetMenuSection ===
 
-// Module 15385 (BalanceWidgetMenuSection)
+// Module 15227 (BalanceWidgetMenuSection)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4441 */;
-import Stack from "Stack" /* 4878 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5546 */;
-import Layer from "Layer" /* 5892 */;
-import BalanceWidgetDefault from "BalanceWidget" /* 15386 */;
-import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15388 */;
+import Text from "Text" /* 4442 */;
+import Stack from "Stack" /* 4891 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5559 */;
+import Layer from "Layer" /* 5905 */;
+import BalanceWidgetDefault from "BalanceWidget" /* 15228 */;
+import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15230 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7755 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7769 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function BalanceWidgetMenuSection() {
@@ -101,7 +101,7 @@ createCacheKey = { flexDirection: "row", justifyContent: "center", marginBottom:
 obj[3] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function OrbsFlowTestModal() {
-  let obj = _require(5960);
+  let obj = _require(5973);
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions(navigation) {

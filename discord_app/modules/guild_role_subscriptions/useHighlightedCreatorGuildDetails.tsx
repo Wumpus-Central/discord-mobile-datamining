@@ -1,6 +1,6 @@
-// === Module 17205: useHighlightedCreatorGuildDetails ===
+// === Module 17223: useHighlightedCreatorGuildDetails ===
 
-// Module 17205 (useHighlightedCreatorGuildDetails)
+// Module 17223 (useHighlightedCreatorGuildDetails)
 import closure_2 from "noop" /* 19 */;
 import { MarketingURLs } from "ME" /* 676 */;
 

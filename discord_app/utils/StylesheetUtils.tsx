@@ -1,6 +1,6 @@
-// === Module 12112: getClass ===
+// === Module 12131: getClass ===
 
-// Module 12112 (getClass)
+// Module 12131 (getClass)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("utils/StylesheetUtils.tsx");

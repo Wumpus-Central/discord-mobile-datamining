@@ -1,6 +1,6 @@
-// === Module 4541: traceEvent ===
+// === Module 4542: traceEvent ===
 
-// Module 4541 (traceEvent)
+// Module 4542 (traceEvent)
 import set2 from "set" /* 2 */;
 
 const result = set2.fileFinishedImporting("lib/SoundshareStatsAggregator.tsx");

@@ -1,10 +1,10 @@
-// === Module 6673: GoatIllocon ===
+// === Module 6686: GoatIllocon ===
 
-// Module 6673 (GoatIllocon)
+// Module 6686 (GoatIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6674 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6687 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GoatIllocon.native.tsx");

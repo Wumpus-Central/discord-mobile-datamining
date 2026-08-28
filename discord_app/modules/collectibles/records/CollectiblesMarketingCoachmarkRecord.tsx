@@ -1,8 +1,8 @@
-// === Module 7246: fromServer ===
+// === Module 7260: fromServer ===
 
-// Module 7246 (fromServer)
+// Module 7260 (fromServer)
 import set from "set" /* 2 */;
-import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7244 */;
+import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7258 */;
 
 let prototype;
 prototype = function CollectiblesMarketingCoachmarkRecord(arg0) {

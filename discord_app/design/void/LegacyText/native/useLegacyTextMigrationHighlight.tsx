@@ -1,9 +1,9 @@
-// === Module 8324: useLegacyTextMigrationHighlight ===
+// === Module 8338: useLegacyTextMigrationHighlight ===
 
-// Module 8324 (useLegacyTextMigrationHighlight)
+// Module 8338 (useLegacyTextMigrationHighlight)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "getUserAgnosticState" /* 4444 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import closure_2 from "getUserAgnosticState" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 createCacheKey = { highlight: null };

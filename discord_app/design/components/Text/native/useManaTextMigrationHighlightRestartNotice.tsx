@@ -1,8 +1,8 @@
-// === Module 15398: useManaTextMigrationHighlightRestartNotice ===
+// === Module 15240: useManaTextMigrationHighlightRestartNotice ===
 
-// Module 15398 (useManaTextMigrationHighlightRestartNotice)
+// Module 15240 (useManaTextMigrationHighlightRestartNotice)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getUserAgnosticState" /* 4444 */;
+import closure_4 from "getUserAgnosticState" /* 4445 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx");

@@ -1,31 +1,32 @@
-// === Module 4642: _guildRoomConnect ===
+// === Module 4643: _guildRoomConnect ===
 
-// Module 4642 (_guildRoomConnect)
+// Module 4643 (_guildRoomConnect)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function _guildRoomConnect() {
   const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
+  const tmp = callback((arg0, arg1, arg2, arg3) => {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
+    closure_3 = arg3;
+    c5 = 0;
     c4 = 0;
-    c3 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      c6 = 1;
+    c7 = 0;
+    return (function*(arg0, arg1, arg2, arg3) {
+      c7 = 1;
       obj1 = callback(table[1]);
-      yield obj1.guildRoomConnect(callback, table, closure_2);
+      yield obj1.guildRoomConnect(callback, table, closure_2, closure_3);
       if (1 === tmp6) {
-        c6 = 0;
-        c3 = 3;
+        c7 = 0;
+        c4 = 3;
       } else if (arg0 === 1) {
-        c3 = 3;
+        c4 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        c6 = 0;
+        c7 = 0;
       }
-      c6 = 0;
+      c7 = 0;
       return arg1;
     })();
   });

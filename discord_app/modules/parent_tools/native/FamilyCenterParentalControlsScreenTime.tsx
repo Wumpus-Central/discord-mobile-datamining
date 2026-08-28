@@ -1,13 +1,13 @@
-// === Module 14487: ScheduleRuleRow ===
+// === Module 14471: ScheduleRuleRow ===
 
-// Module 14487 (ScheduleRuleRow)
+// Module 14471 (ScheduleRuleRow)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2369 */;
+import messagesProxyDefault from "messagesProxy" /* 2370 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 function ScheduleRuleRow(rule) {
   rule = rule.rule;
@@ -15,10 +15,10 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  let obj = rule(10086);
+  let obj = rule(10104);
   const scheduleRuleDateRange = obj.getScheduleRuleDateRange(rule);
-  const obj2 = rule(10086);
-  obj = { label: scheduleRuleDateRange, subLabel: rule(10086).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const obj2 = rule(10104);
+  obj = { label: scheduleRuleDateRange, subLabel: rule(10104).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1236).intl;
   const string = intl.string;
   const tmp4 = messagesProxyDefault;
@@ -27,7 +27,7 @@ function ScheduleRuleRow(rule) {
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj[2] = closure_5(rule(4441).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
+  obj[2] = closure_5(rule(4442).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
   obj[3] = !readOnly;
   let fn;
   if (!readOnly) {
@@ -40,7 +40,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj[4] = fn;
-  return closure_5(rule(5551).TableRow, obj);
+  return closure_5(rule(5564).TableRow, obj);
 }
 const View = get_ActivityIndicator.View;
 const UserSettingsSections = ME.UserSettingsSections;

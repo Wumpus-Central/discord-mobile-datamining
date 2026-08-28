@@ -1,15 +1,15 @@
-// === Module 5069: getUploadPayload ===
+// === Module 5082: getUploadPayload ===
 
-// Module 5069 (getUploadPayload)
+// Module 5082 (getUploadPayload)
 import applyDefault from "apply" /* 12 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "_getSystemLocale" /* 1996 */;
+import closure_3 from "_getSystemLocale" /* 1997 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import closure_5 from "refreshSourceMapCookie" /* 706 */;
 
 const require = arg1;
 function getUploadPayload(c0) {
-  const obj = { filename: c0.filename, file_size: c0.currentSize, id: applyDefault.uniqueId(), original_content_type: "a" };
+  const obj = { filename: c0.filename, file_size: c0.currentSize, id: applyDefault.uniqueId(), original_content_type: "Array" };
   return obj;
 }
 let result = require("set").fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.tsx");

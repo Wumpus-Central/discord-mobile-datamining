@@ -1,11 +1,11 @@
-// === Module 10713: GiftingRewardPreviewAvatar ===
+// === Module 10731: GiftingRewardPreviewAvatar ===
 
-// Module 10713 (GiftingRewardPreviewAvatar)
+// Module 10731 (GiftingRewardPreviewAvatar)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import Button from "Button" /* 1297 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import closure_3 from "mergeGuildAvatar" /* 1923 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -24,9 +24,9 @@ export default function GiftingRewardPreviewAvatar(asset) {
     obj[0] = asset.asset;
     tmp5 = obj;
   }
-  obj = { user: stateFromStores, guildId: "r", avatarDecoration: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009464427057833978, animate: 5168188345740660000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+  obj = { user: stateFromStores, guildId: "r", avatarDecoration: "r", animate: "quests" };
   obj[2] = tmp5;
   obj[3] = !stateFromStores1;
   const merged = Object.assign(asset);
-  return jsx(Button.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009464427057833978, animate: 5168188345740660000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 });
+  return jsx(Button.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: "r", animate: "quests" });
 };

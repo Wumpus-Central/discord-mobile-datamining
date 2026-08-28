@@ -1,19 +1,19 @@
-// === Module 9007: EmojiImage ===
+// === Module 9025: EmojiImage ===
 
-// Module 9007 (EmojiImage)
+// Module 9025 (EmojiImage)
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import Text from "Text" /* 4441 */;
-import preloadDefault from "preload" /* 5445 */;
-import EmojiDefault from "Emoji" /* 5537 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
+import Text from "Text" /* 4442 */;
+import preloadDefault from "preload" /* 5458 */;
+import EmojiDefault from "Emoji" /* 5550 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1926 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function EmojiImage(id) {
@@ -169,7 +169,7 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
   return obj;
 });
 let closure_12 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-let closure_13 = { [arg1(5953).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+let closure_13 = { [arg1(5966).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
 let closure_16 = createCacheKey.createStyles(() => ({ container: { alignItems: "center" } }));
 const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   ({ customStatusActivity, themeType, editEnabled } = showFullStatus);

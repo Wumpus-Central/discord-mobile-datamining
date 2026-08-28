@@ -1,16 +1,16 @@
-// === Module 15712: HubItem ===
+// === Module 15730: HubItem ===
 
-// Module 15712 (HubItem)
+// Module 15730 (HubItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseChannelSubtitle from "BaseChannelSubtitle" /* 11865 */;
-import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 11865 */;
+import BaseChannelSubtitle from "BaseChannelSubtitle" /* 11884 */;
+import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 11884 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "comparator" /* 1982 */;
-import closure_5 from "handleConnectionOpen" /* 1981 */;
+import closure_4 from "comparator" /* 1983 */;
+import closure_5 from "handleConnectionOpen" /* 1982 */;
 import { InstantInviteSources } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function HubItem(arg0) {
@@ -26,8 +26,8 @@ function HubItem(arg0) {
   }
   let obj = { style: callback2().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
   const tmp = callback2();
-  obj[6] = callback(tmp5(11865).BaseChannelName, { name: label, mode: DEFAULT });
-  obj[7] = callback(tmp5(11865).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj[6] = callback(tmp5(11884).BaseChannelName, { name: label, mode: DEFAULT });
+  obj[7] = callback(tmp5(11884).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     obj = { value: null };
@@ -66,7 +66,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(15713);
+  guild(15731);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -77,33 +77,33 @@ export default function HubSidebar(guild) {
     obj[0] = row;
     obj = { guild: null };
     obj[0] = guild;
-    const items4 = [callback(stateFromStores(15714), obj), , , ];
+    const items4 = [callback(stateFromStores(15732), obj), , , ];
     obj1 = { active: null, IconComponent: null, label: null, handleItemClick: null, unreadCount: null };
     obj1[0] = stateFromStores1;
-    obj1[1] = tmp(14170).CompassIcon;
+    obj1[1] = tmp(15126).CompassIcon;
     const intl = tmp(1236).intl;
     obj1[2] = intl.string(tmp(1236).t.K50GHd);
     obj1[3] = function handleItemClick() {
-      guild(4456).transitionToChannel(stateFromStores.id);
+      guild(4457).transitionToChannel(stateFromStores.id);
     };
     obj1[4] = tmp7;
     items4[1] = callback(HubItem, obj1);
     obj2 = { IconComponent: null, label: null, handleItemClick: null };
-    obj2[0] = tmp(12205).PlusMediumIcon;
+    obj2[0] = tmp(12224).PlusMediumIcon;
     const intl2 = tmp(1236).intl;
     obj2[1] = intl2.string(tmp(1236).t.emRpdS);
     obj2[2] = function handleItemClick() {
-      let obj = stateFromStores(11792);
+      let obj = stateFromStores(11811);
       obj = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: stateFromStores.id };
       return obj.open(obj);
     };
     items4[2] = callback(HubItem, obj2);
     const obj3 = { IconComponent: null, label: null, handleItemClick: null };
-    obj3[0] = tmp(4382).UserPlusIcon;
+    obj3[0] = tmp(4383).UserPlusIcon;
     const intl3 = tmp(1236).intl;
     obj3[1] = intl3.string(tmp(1236).t.MJQOuJ);
     obj3[2] = function handleItemClick() {
-      const result = guild(9829).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, closure_1_6.GUILD_HEADER);
+      const result = guild(9847).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, closure_1_6.GUILD_HEADER);
     };
     items4[3] = callback(HubItem, obj3);
     obj[1] = items4;

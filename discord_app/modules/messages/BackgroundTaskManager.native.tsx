@@ -1,8 +1,8 @@
-// === Module 7433: startBackgroundTask ===
+// === Module 7447: startBackgroundTask ===
 
-// Module 7433 (startBackgroundTask)
+// Module 7447 (startBackgroundTask)
 import set2 from "set" /* 500 */;
-import initializeDefault from "initialize" /* 7434 */;
+import initializeDefault from "initialize" /* 7448 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import set from "set" /* 500 */;
@@ -19,8 +19,8 @@ function startBackgroundTask(arg0) {
       obj = { title: null, content: null, priority: null, type: null, usesGateway: false };
       obj[0] = title;
       obj[1] = content;
-      obj[2] = tmp(7435).ServiceNotificationPriority.MEDIUM;
-      obj[3] = tmp(7435).ServiceNotificationType.FILE_UPLOAD;
+      obj[2] = tmp(7449).ServiceNotificationPriority.MEDIUM;
+      obj[3] = tmp(7449).ServiceNotificationType.FILE_UPLOAD;
       return initializeDefault.addServiceHandler(obj);
     }
   } else {

@@ -1,12 +1,12 @@
-// === Module 11696: useRenderPollAnswerImage ===
+// === Module 11729: useRenderPollAnswerImage ===
 
-// Module 11696 (useRenderPollAnswerImage)
+// Module 11729 (useRenderPollAnswerImage)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import { DraftType } from "handleChanged" /* 4807 */;
-import closure_7 from "map" /* 4806 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
+import { DraftType } from "handleChanged" /* 4820 */;
+import closure_7 from "map" /* 4819 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1926 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -30,7 +30,7 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
       status = mediaAttachmentState.status;
     }
   }
-  const tmp7 = status === _require(11690).PollMediaUploadAttachmentStatus.PREPARING;
+  const tmp7 = status === _require(11709).PollMediaUploadAttachmentStatus.PREPARING;
   closure_7 = tmp7;
   obj = {
     renderImage: React.useMemo(() => {

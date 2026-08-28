@@ -1,10 +1,10 @@
-// === Module 14944: EmojiWoozyFaceIcon ===
+// === Module 14929: EmojiWoozyFaceIcon ===
 
-// Module 14944 (EmojiWoozyFaceIcon)
+// Module 14929 (EmojiWoozyFaceIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 14945 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 14930 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

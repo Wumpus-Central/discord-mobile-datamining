@@ -1,11 +1,11 @@
-// === Module 11508: ForumPostNewTag ===
+// === Module 11527: ForumPostNewTag ===
 
-// Module 11508 (ForumPostNewTag)
+// Module 11527 (ForumPostNewTag)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 noopAll;

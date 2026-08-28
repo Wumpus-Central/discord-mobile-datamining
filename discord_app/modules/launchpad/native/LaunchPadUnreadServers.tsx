@@ -1,15 +1,15 @@
-// === Module 16462: HistorySeparator ===
+// === Module 16480: HistorySeparator ===
 
-// Module 16462 (HistorySeparator)
+// Module 16480 (HistorySeparator)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "generateOldThreadCutoff" /* 4460 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "generateOldThreadCutoff" /* 4461 */;
+import closure_8 from "mergeGuildAvatar" /* 1923 */;
 import { ChannelTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 function HistorySeparator() {
@@ -49,7 +49,7 @@ let closure_13 = importAllResult.memo(function GuildItemInner(guildId) {
     guildId(closure_1_2[9]).transitionToGuild(guildId);
   }, items1);
   obj = { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor };
-  obj[1] = callback(onGuildSelect(16463), obj);
+  obj[1] = callback(onGuildSelect(16481), obj);
   return callback(closure_5, obj);
 });
 let closure_14 = importAllResult.memo(function PrivateChannelItemInner(channelId) {
@@ -88,7 +88,7 @@ let closure_14 = importAllResult.memo(function PrivateChannelItemInner(channelId
   }
   if (type === ChannelTypes.DM) {
     if (null != stateFromStores1) {
-      obj = { style: null, user: null, guildId: "Array", size: true };
+      obj = { style: null, user: null, guildId: "Array", size: null };
       obj[0] = tmp.privateChannelIcon;
       obj[1] = stateFromStores1;
       obj[3] = tmp2(tmp3[12]).AvatarSizes.LARGE_48;

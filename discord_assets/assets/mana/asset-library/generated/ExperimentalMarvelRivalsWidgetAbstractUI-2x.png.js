@@ -1,6 +1,6 @@
-// === Module 6480: metadata ===
+// === Module 6493: metadata ===
 
-// Module 6480 (metadata)
+// Module 6493 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ExperimentalMarvelRivalsWidgetAbstractUI-2x.png.js");

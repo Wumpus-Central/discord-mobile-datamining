@@ -1,11 +1,11 @@
-// === Module 4098: markAllUserIdListsStale ===
+// === Module 4099: markAllUserIdListsStale ===
 
-// Module 4098 (markAllUserIdListsStale)
+// Module 4099 (markAllUserIdListsStale)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "hasFlag" /* 4099 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "hasFlag" /* 4100 */;
+import closure_4 from "mergeGuildAvatar" /* 1923 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -103,7 +103,7 @@ let closure_15 = {};
 let c16 = 0;
 let c17 = 0;
 let c18 = 0;
-let closure_19 = { friends: "rejectWithError", blocked: "accessibilityRole", ignored: "HermesInternal", blockedOrIgnored: "channel" };
+let closure_19 = { friends: "r", blocked: "accessibilityRole", ignored: "Button", blockedOrIgnored: "limit" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;

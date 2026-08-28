@@ -1,8 +1,8 @@
-// === Module 9027: useTopAndNewlyAddedEmojis ===
+// === Module 9045: useTopAndNewlyAddedEmojis ===
 
-// Module 9027 (useTopAndNewlyAddedEmojis)
-import closure_2 from "getEmojiToGroupId" /* 5353 */;
-import { EmojiIntention } from "set" /* 1925 */;
+// Module 9045 (useTopAndNewlyAddedEmojis)
+import closure_2 from "getEmojiToGroupId" /* 5366 */;
+import { EmojiIntention } from "set" /* 1926 */;
 
 const require = arg1;
 let closure_4 = [];

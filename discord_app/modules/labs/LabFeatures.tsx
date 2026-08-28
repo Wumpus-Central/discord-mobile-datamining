@@ -1,6 +1,6 @@
-// === Module 8556: hide_icymi_tab ===
+// === Module 8571: hide_icymi_tab ===
 
-// Module 8556 (hide_icymi_tab)
+// Module 8571 (hide_icymi_tab)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/labs/LabFeatures.tsx");

@@ -1,9 +1,9 @@
-// === Module 9671: useGuildScheduledEventUserCount ===
+// === Module 9689: useGuildScheduledEventUserCount ===
 
-// Module 9671 (useGuildScheduledEventUserCount)
+// Module 9689 (useGuildScheduledEventUserCount)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "scheduledEventSort" /* 7204 */;
+import closure_4 from "scheduledEventSort" /* 7218 */;
 
 const useEffect = noop.useEffect;
 const result = set.fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEventUserCount.tsx");

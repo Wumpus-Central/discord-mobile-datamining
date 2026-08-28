@@ -1,9 +1,9 @@
-// === Module 9163: getVisibleUserVoiceActivity ===
+// === Module 9181: getVisibleUserVoiceActivity ===
 
-// Module 9163 (getVisibleUserVoiceActivity)
+// Module 9181 (getVisibleUserVoiceActivity)
 import importDefaultResult from "ensureGuildLoaded" /* 1391 */;
-import importDefaultResult1 from "getUncachedChannelPermissions" /* 4089 */;
-import importDefaultResult2 from "updateVoiceState" /* 4464 */;
+import importDefaultResult1 from "getUncachedChannelPermissions" /* 4090 */;
+import importDefaultResult2 from "updateVoiceState" /* 4465 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;

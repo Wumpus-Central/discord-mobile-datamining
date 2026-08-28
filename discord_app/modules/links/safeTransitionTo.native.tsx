@@ -1,6 +1,6 @@
-// === Module 6043: _safeTransitionTo ===
+// === Module 6056: _safeTransitionTo ===
 
-// Module 6043 (_safeTransitionTo)
+// Module 6056 (_safeTransitionTo)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import { Routes } from "ME" /* 676 */;

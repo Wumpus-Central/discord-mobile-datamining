@@ -1,22 +1,22 @@
-// === Module 11215: PollEmoji ===
+// === Module 11233: PollEmoji ===
 
-// Module 11215 (PollEmoji)
+// Module 11233 (PollEmoji)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4380 */;
-import Text from "Text" /* 4441 */;
-import EmojiDefault from "Emoji" /* 5537 */;
+import useThemeDefault from "useTheme" /* 4381 */;
+import Text from "Text" /* 4442 */;
+import EmojiDefault from "Emoji" /* 5550 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
-import closure_10 from "getEmojiToGroupId" /* 5353 */;
+import closure_9 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import closure_10 from "getEmojiToGroupId" /* 5366 */;
 import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "reinjectEphemerals" /* 4688 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import closure_12 from "reinjectEphemerals" /* 4701 */;
+import closure_13 from "mergeGuildAvatar" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function PollEmoji(emoji) {
@@ -334,9 +334,9 @@ function NoResults() {
   const tmp6 = closure_7;
   const tmp8 = closure_6;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(11217);
+    let tmp2Result = tmp2(11235);
   } else {
-    tmp2Result = tmp2(11218);
+    tmp2Result = tmp2(11236);
   }
   obj[1] = tmp2Result;
   const items = [closure_14(tmp8, obj), , ];
@@ -416,15 +416,15 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
     obj1[0] = tmp.answerText;
     obj1[2] = str;
     obj1[4] = answer.poll_media.text;
-    tmp11 = callback(tmp3(4441).Text, obj1);
+    tmp11 = callback(tmp3(4442).Text, obj1);
   }
   items2[1] = tmp11;
   const obj2 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
   const items3 = [" ", "(", num.toLocaleString(), ")"];
   obj2[3] = items3;
-  items2[2] = closure_15(answer(4441).Text, obj2);
+  items2[2] = closure_15(answer(4442).Text, obj2);
   obj[6] = items2;
-  return closure_15(answer(5020).PressableHighlight, obj);
+  return closure_15(answer(5033).PressableHighlight, obj);
 });
 let closure_20 = { code: "function PollVotesActionSheetTsx1(){const{opacity}=this.__closure;return{flex:1,opacity:opacity.get(),marginBottom:32};}" };
 let result = require("set").fileFinishedImporting("modules/polls/native/PollVotesActionSheet.tsx");

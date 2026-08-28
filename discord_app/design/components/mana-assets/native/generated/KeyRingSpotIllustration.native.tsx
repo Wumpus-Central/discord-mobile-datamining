@@ -1,10 +1,10 @@
-// === Module 6709: KeyRingSpotIllustration ===
+// === Module 6722: KeyRingSpotIllustration ===
 
-// Module 6709 (KeyRingSpotIllustration)
+// Module 6722 (KeyRingSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6710 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6723 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/KeyRingSpotIllustration.native.tsx");

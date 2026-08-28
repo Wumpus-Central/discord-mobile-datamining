@@ -1,16 +1,16 @@
-// === Module 15808: Wrapper ===
+// === Module 15826: Wrapper ===
 
-// Module 15808 (Wrapper)
+// Module 15826 (Wrapper)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateGuildUnreadSentinel" /* 7314 */;
+import closure_5 from "updateGuildUnreadSentinel" /* 7328 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "insertUnsortedGuilds" /* 5333 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 4654 */;
-import closure_9 from "updateVoiceState" /* 4464 */;
+import closure_7 from "insertUnsortedGuilds" /* 5346 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 4667 */;
+import closure_9 from "updateVoiceState" /* 4465 */;
 import { NOOP } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 function Wrapper(folder) {
@@ -231,7 +231,7 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(4305).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(4306).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

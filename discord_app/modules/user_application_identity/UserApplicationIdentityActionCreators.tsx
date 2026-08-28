@@ -1,8 +1,8 @@
-// === Module 12429: fetchStore ===
+// === Module 12449: fetchStore ===
 
-// Module 12429 (fetchStore)
+// Module 12449 (fetchStore)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importDefaultResult from "map" /* 12430 */;
+import importDefaultResult from "map" /* 12450 */;
 import ME from "ME" /* 676 */;
 import initialize from "initialize" /* 589 */;
 

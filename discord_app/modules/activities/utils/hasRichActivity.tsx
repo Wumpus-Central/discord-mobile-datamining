@@ -1,6 +1,6 @@
-// === Module 4535: hasRichActivity ===
+// === Module 4536: hasRichActivity ===
 
-// Module 4535 (hasRichActivity)
+// Module 4536 (hasRichActivity)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

@@ -1,10 +1,10 @@
-// === Module 15970: _maybeFetchGuildDiscoveryCategories ===
+// === Module 15988: _maybeFetchGuildDiscoveryCategories ===
 
-// Module 15970 (_maybeFetchGuildDiscoveryCategories)
+// Module 15988 (_maybeFetchGuildDiscoveryCategories)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_getSystemLocale" /* 1996 */;
-import closure_5 from "getPrimaryCategories" /* 15971 */;
+import closure_4 from "_getSystemLocale" /* 1997 */;
+import closure_5 from "getPrimaryCategories" /* 15989 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;

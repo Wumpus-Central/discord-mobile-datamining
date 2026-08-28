@@ -1,12 +1,12 @@
-// === Module 14806: ? ===
+// === Module 14791: ? ===
 
-// Module 14806
+// Module 14791
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "isSyncedModeThemesEnabled" /* 4265 */;
+import closure_4 from "isSyncedModeThemesEnabled" /* 4266 */;
 import closure_5 from "initialize" /* 1303 */;
 import closure_6 from "handleThemeChange" /* 1302 */;
-import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE" /* 14807 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7816 */;
+import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE" /* 14792 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7830 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -14,10 +14,10 @@ const require = arg1;
 let c3 = importAllResult;
 ({ DEFAULT_FONT_SCALE_STORE_STATE: error, useFontScaleStore: closure_8 } = DEFAULT_FONT_SCALE_STORE_STATE);
 const memoResult = importAllResult.memo(() => {
-  nativeStackNavigation(4897)(() => {
+  nativeStackNavigation(4910)(() => {
     if (closure_5.shouldSync("appearance")) {
-      const userCustomThemes = lib(14808).fetchUserCustomThemes();
-      const obj = lib(14808);
+      const userCustomThemes = lib(14793).fetchUserCustomThemes();
+      const obj = lib(14793);
     }
   });
   let items = [closure_6, closure_4];
@@ -62,7 +62,7 @@ const memoResult = importAllResult.memo(() => {
     callback(table[13]).batchUpdates(() => state.setState(closure_7));
   }, []);
   const node = importAllResult.useMemo(() => {
-    let obj = lib(10988);
+    let obj = lib(11006);
     obj = { sections: null };
     const items = [constants.MOBILE_VISUAL_REFRESH];
     const items1 = [{ settings: items }, , , , , , , , , ];
@@ -89,8 +89,8 @@ const memoResult = importAllResult.memo(() => {
     const obj2 = { settings: items7, subLabel: null };
     items7 = [constants.FAVORITES_GUILD_TOGGLE];
     const intl3 = lib(1236).intl;
-    const obj3 = { helpCenterLink: nativeStackNavigation(1995).getArticleURL(constants2.FAVORITES_GUILD) };
-    obj2[1] = intl3.format(nativeStackNavigation(3147).GR2KOG, obj3);
+    const obj3 = { helpCenterLink: nativeStackNavigation(1996).getArticleURL(constants2.FAVORITES_GUILD) };
+    obj2[1] = intl3.format(nativeStackNavigation(3148).GR2KOG, obj3);
     items1[6] = obj2;
     const obj4 = { label: null, settings: null };
     const intl4 = lib(1236).intl;
@@ -110,7 +110,7 @@ const memoResult = importAllResult.memo(() => {
     return obj.createList(obj);
   }, []);
   let obj2 = _require(1500);
-  return jsx(nativeStackNavigation(14194), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(14273), { node }, "" + theme + "-" + gradientPresetId);
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 

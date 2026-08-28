@@ -1,6 +1,6 @@
-// === Module 7835: getGuildProductPurchaseSystemMessageContentMobile ===
+// === Module 7849: getGuildProductPurchaseSystemMessageContentMobile ===
 
-// Module 7835 (getGuildProductPurchaseSystemMessageContentMobile)
+// Module 7849 (getGuildProductPurchaseSystemMessageContentMobile)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;

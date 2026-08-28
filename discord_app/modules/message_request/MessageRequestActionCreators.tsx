@@ -1,9 +1,9 @@
-// === Module 10616: _acceptMessageRequest ===
+// === Module 10634: _acceptMessageRequest ===
 
-// Module 10616 (_acceptMessageRequest)
+// Module 10634 (_acceptMessageRequest)
 import sendRequest from "sendRequest" /* 530 */;
-import handleLogoutDefault from "handleLogout" /* 6004 */;
-import MessageRequestConsentStatusTypes from "MessageRequestConsentStatusTypes" /* 10617 */;
+import handleLogoutDefault from "handleLogout" /* 6017 */;
+import MessageRequestConsentStatusTypes from "MessageRequestConsentStatusTypes" /* 10635 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 

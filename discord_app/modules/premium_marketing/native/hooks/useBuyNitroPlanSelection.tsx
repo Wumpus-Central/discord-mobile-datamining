@@ -1,9 +1,9 @@
-// === Module 12933: PremiumTypes ===
+// === Module 12952: PremiumTypes ===
 
-// Module 12933 (PremiumTypes)
+// Module 12952 (PremiumTypes)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import GuildFeatures from "GuildFeatures" /* 1925 */;
 
 const require = arg1;
 const PremiumTypes = GuildFeatures.PremiumTypes;

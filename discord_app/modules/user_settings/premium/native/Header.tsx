@@ -1,14 +1,14 @@
-// === Module 13043: Header ===
+// === Module 13062: Header ===
 
-// Module 13043 (Header)
+// Module 13062 (Header)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4380 */;
-import Text from "Text" /* 4441 */;
-import preloadDefault from "preload" /* 5445 */;
+import useThemeDefault from "useTheme" /* 4381 */;
+import Text from "Text" /* 4442 */;
+import preloadDefault from "preload" /* 5458 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 noopAll;
@@ -28,9 +28,9 @@ export default function Header(style) {
   obj[1] = intl.string(getSystemLocale.t.lpNrPu);
   const tmp8 = preloadDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(12972);
+    let tmp2Result = tmp2(12991);
   } else {
-    tmp2Result = tmp2(13044);
+    tmp2Result = tmp2(13063);
   }
   obj[3] = tmp2Result;
   const items1 = [closure_4(tmp8, obj), ];

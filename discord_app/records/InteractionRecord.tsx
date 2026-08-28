@@ -1,8 +1,8 @@
-// === Module 4691: createFromServer ===
+// === Module 4704: createFromServer ===
 
-// Module 4691 (createFromServer)
-import toJSDefault from "toJS" /* 1931 */;
-import closure_0 from "createdAt" /* 1930 */;
+// Module 4704 (createFromServer)
+import toJSDefault from "toJS" /* 1932 */;
+import closure_0 from "createdAt" /* 1931 */;
 
 toJSDefault;
 let prototype;

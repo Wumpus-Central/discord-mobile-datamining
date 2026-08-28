@@ -1,7 +1,7 @@
-// === Module 16643: useActivityUsers ===
+// === Module 16661: useActivityUsers ===
 
-// Module 16643 (useActivityUsers)
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+// Module 16661 (useActivityUsers)
+import closure_2 from "mergeGuildAvatar" /* 1923 */;
 import closure_3 from "participantFromServer" /* 1390 */;
 
 const require = arg1;

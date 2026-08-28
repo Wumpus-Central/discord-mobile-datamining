@@ -1,19 +1,19 @@
-// === Module 16012: UploadPlaceholder ===
+// === Module 16030: UploadPlaceholder ===
 
-// Module 16012 (UploadPlaceholder)
+// Module 16030 (UploadPlaceholder)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4441 */;
-import registerAssetDefault from "registerAsset" /* 10803 */;
+import Text from "Text" /* 4442 */;
+import registerAssetDefault from "registerAsset" /* 10821 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "filterStaffGuild" /* 8537 */;
+import closure_6 from "mergeGuildAvatar" /* 1923 */;
+import closure_7 from "filterStaffGuild" /* 8552 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import createICYMIStyles from "createICYMIStyles" /* 15953 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import createICYMIStyles from "createICYMIStyles" /* 15971 */;
 
 require = arg1;
 function UploadPlaceholder() {

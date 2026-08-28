@@ -1,25 +1,25 @@
-// === Module 6077: handleConnectionOpenOrResumed ===
+// === Module 6090: handleConnectionOpenOrResumed ===
 
-// Module 6077 (handleConnectionOpenOrResumed)
+// Module 6090 (handleConnectionOpenOrResumed)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import _enqueueDefault from "_enqueue" /* 6082 */;
+import _enqueueDefault from "_enqueue" /* 6095 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "getHash" /* 4358 */;
-import closure_6 from "initialize" /* 4090 */;
-import closure_7 from "upsertAccount" /* 5176 */;
+import closure_5 from "getHash" /* 4359 */;
+import closure_6 from "initialize" /* 4091 */;
+import closure_7 from "upsertAccount" /* 5189 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
-import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 6078 */;
-import closure_10 from "handlePermissionsChange" /* 6079 */;
+import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 6091 */;
+import closure_10 from "handlePermissionsChange" /* 6092 */;
 import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "handleConnectionOpen" /* 4808 */;
-import closure_13 from "trackCommunicationDisabled" /* 1992 */;
+import closure_12 from "handleConnectionOpen" /* 4821 */;
+import closure_13 from "trackCommunicationDisabled" /* 1993 */;
 import closure_14 from "createGuildRecordFromRust" /* 1910 */;
-import closure_15 from "createRTCConnection" /* 4519 */;
-import closure_16 from "markAllUserIdListsStale" /* 4098 */;
-import closure_17 from "handleConnectionOpen" /* 1981 */;
-import closure_18 from "handleConnectionOpen" /* 4267 */;
+import closure_15 from "createRTCConnection" /* 4520 */;
+import closure_16 from "markAllUserIdListsStale" /* 4099 */;
+import closure_17 from "handleConnectionOpen" /* 1982 */;
+import closure_18 from "handleConnectionOpen" /* 4268 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

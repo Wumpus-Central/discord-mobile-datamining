@@ -1,6 +1,6 @@
-// === Module 6870: metadata ===
+// === Module 6883: metadata ===
 
-// Module 6870 (metadata)
+// Module 6883 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-2x.png.js");

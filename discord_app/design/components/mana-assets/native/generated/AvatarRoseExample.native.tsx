@@ -1,10 +1,10 @@
-// === Module 6287: AvatarRoseExample ===
+// === Module 6300: AvatarRoseExample ===
 
-// Module 6287 (AvatarRoseExample)
+// Module 6300 (AvatarRoseExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6288 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6301 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarRoseExample.native.tsx");

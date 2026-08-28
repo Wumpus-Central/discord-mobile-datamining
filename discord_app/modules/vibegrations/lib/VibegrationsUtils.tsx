@@ -1,13 +1,13 @@
-// === Module 6046: vibegrationsAppIdFromTopic ===
+// === Module 6059: vibegrationsAppIdFromTopic ===
 
-// Module 6046 (vibegrationsAppIdFromTopic)
-import frozen from "frozen" /* 6047 */;
-import isVibegrationsGuildEnabled2 from "isVibegrationsGuildEnabled" /* 6048 */;
-import closure_2 from "comparator" /* 1982 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator" /* 1982 */;
+// Module 6059 (vibegrationsAppIdFromTopic)
+import frozen from "frozen" /* 6060 */;
+import isVibegrationsGuildEnabled2 from "isVibegrationsGuildEnabled" /* 6061 */;
+import closure_2 from "comparator" /* 1983 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator" /* 1983 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_6 from "handleConnectionOpen" /* 4267 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_6 from "handleConnectionOpen" /* 4268 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -106,7 +106,7 @@ export const resolveVibegrationsWorkspaceGuildId = function resolveVibegrationsW
     guild = store.getGuild(guildId);
   }
   if (null != guild) {
-    let obj = _require(6048);
+    let obj = _require(6061);
     obj = { guildId: null, location: null };
     obj[0] = guild.id;
     obj[1] = arg0;
@@ -254,7 +254,7 @@ export const useIsVibegrationsChannelCandidate = function useIsVibegrationsChann
   }
   obj = { guildId: guild_id, location: ChannelActions };
   let tmp4 = null != channel;
-  const isVibegrationsGuildEnabled = _require(6048).useIsVibegrationsGuildEnabled(obj);
+  const isVibegrationsGuildEnabled = _require(6061).useIsVibegrationsGuildEnabled(obj);
   if (tmp4) {
     tmp4 = channel.type === constants2.GUILD_TEXT;
   }

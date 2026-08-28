@@ -1,6 +1,6 @@
-// === Module 7518: enqueue ===
+// === Module 7532: enqueue ===
 
-// Module 7518 (enqueue)
+// Module 7532 (enqueue)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_0 from "asyncGeneratorStep" /* 5 */;
 import set from "set" /* 2 */;

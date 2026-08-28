@@ -1,6 +1,6 @@
-// === Module 6185: useKeyboardIsOpen ===
+// === Module 6198: useKeyboardIsOpen ===
 
-// Module 6185 (useKeyboardIsOpen)
+// Module 6198 (useKeyboardIsOpen)
 import context from "context" /* 1497 */;
 import computeEntryStateDefault from "computeEntryState" /* 1498 */;
 import KeyboardTypes from "KeyboardTypes" /* 1627 */;

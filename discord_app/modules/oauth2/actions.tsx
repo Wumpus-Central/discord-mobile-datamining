@@ -1,12 +1,12 @@
-// === Module 9215: getLocationContextServer ===
+// === Module 9233: getLocationContextServer ===
 
-// Module 9215 (getLocationContextServer)
+// Module 9233 (getLocationContextServer)
 import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
 import sendRequest from "sendRequest" /* 530 */;
-import handleLogoutDefault from "handleLogout" /* 6004 */;
+import handleLogoutDefault from "handleLogout" /* 6017 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1981 */;
+import closure_5 from "handleConnectionOpen" /* 1982 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

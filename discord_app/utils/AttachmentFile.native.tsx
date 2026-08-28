@@ -1,8 +1,8 @@
-// === Module 5033: _getAttachmentFile ===
+// === Module 5046: _getAttachmentFile ===
 
-// Module 5033 (_getAttachmentFile)
+// Module 5046 (_getAttachmentFile)
 import timestampDefault from "timestamp" /* 3 */;
-import openImagePickerUnhandled from "openImagePickerUnhandled" /* 5034 */;
+import openImagePickerUnhandled from "openImagePickerUnhandled" /* 5047 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 require = arg1;
@@ -74,13 +74,13 @@ function _getAttachmentFile() {
               return obj3;
             } else {
               closure_3 = arg1;
-              logger = lib(5026).getAttachmentPayload(lib, callback, closure_3.name);
+              logger = lib(5039).getAttachmentPayload(lib, callback, closure_3.name);
               c6 = 2;
-              const obj10 = lib(5026);
+              const obj10 = lib(5039);
               c7 = 4;
               c8 = 1;
               const obj4 = { value: null, done: false };
-              obj4[0] = lib(5034).getFileSize(closure_3.uri);
+              obj4[0] = lib(5047).getFileSize(closure_3.uri);
               return obj4;
             }
           } else {

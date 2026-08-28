@@ -1,8 +1,8 @@
-// === Module 8096: itemNeedsHeicPreConversion ===
+// === Module 8110: itemNeedsHeicPreConversion ===
 
-// Module 8096 (itemNeedsHeicPreConversion)
-import cancel from "cancel" /* 5025 */;
-import set from "set" /* 5067 */;
+// Module 8110 (itemNeedsHeicPreConversion)
+import cancel from "cancel" /* 5038 */;
+import set from "set" /* 5080 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 

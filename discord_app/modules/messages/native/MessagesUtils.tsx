@@ -1,43 +1,43 @@
-// === Module 10810: getVisibleMessages ===
+// === Module 10828: getVisibleMessages ===
 
-// Module 10810 (getVisibleMessages)
+// Module 10828 (getVisibleMessages)
 import serializeDefault from "serialize" /* 9 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import set2 from "set" /* 500 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import KeyboardTypes from "KeyboardTypes" /* 1627 */;
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4078 */;
-import presentAddedFriendToast from "presentAddedFriendToast" /* 4161 */;
-import dispatcherDefault from "dispatcher" /* 4162 */;
-import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4413 */;
-import IMPACT_LIGHTDefault from "IMPACT_LIGHT" /* 4414 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4636 */;
-import flattenComponents from "flattenComponents" /* 4692 */;
-import shouldShowMembershipVerificationGate from "shouldShowMembershipVerificationGate" /* 4959 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5342 */;
-import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 6095 */;
-import trackInviteDefault from "trackInvite" /* 7135 */;
-import checkReactionResponse from "checkReactionResponse" /* 7441 */;
-import patchThreadDefault from "patchThread" /* 7442 */;
-import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7444 */;
-import computeScrollData from "computeScrollData" /* 10828 */;
-import ChatScrollPositionDefault from "ChatScrollPosition" /* 10829 */;
-import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 10833 */;
-import getVoiceInviteEmbedRenderInfo from "getVoiceInviteEmbedRenderInfo" /* 10861 */;
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4079 */;
+import presentAddedFriendToast from "presentAddedFriendToast" /* 4162 */;
+import dispatcherDefault from "dispatcher" /* 4163 */;
+import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4414 */;
+import IMPACT_LIGHTDefault from "IMPACT_LIGHT" /* 4415 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4637 */;
+import flattenComponents from "flattenComponents" /* 4705 */;
+import shouldShowMembershipVerificationGate from "shouldShowMembershipVerificationGate" /* 4972 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5355 */;
+import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 6108 */;
+import trackInviteDefault from "trackInvite" /* 7148 */;
+import checkReactionResponse from "checkReactionResponse" /* 7455 */;
+import patchThreadDefault from "patchThread" /* 7456 */;
+import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7458 */;
+import computeScrollData from "computeScrollData" /* 10846 */;
+import ChatScrollPositionDefault from "ChatScrollPosition" /* 10847 */;
+import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 10851 */;
+import getVoiceInviteEmbedRenderInfo from "getVoiceInviteEmbedRenderInfo" /* 10879 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { updateShouldShowJumpToPresentButton as closure_5 } from "updateChatInputContainerHeight" /* 9455 */;
-import closure_6 from "processMessage" /* 7273 */;
+import { updateShouldShowJumpToPresentButton as closure_5 } from "updateChatInputContainerHeight" /* 9473 */;
+import closure_6 from "processMessage" /* 7287 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1992 */;
-import closure_9 from "recomputeGuild" /* 5309 */;
-import closure_10 from "reinjectEphemerals" /* 4688 */;
-import closure_11 from "handleConnectionInfoChange" /* 4539 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_13 from "generateOldThreadCutoff" /* 4460 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import Changeset from "Changeset" /* 7775 */;
+import closure_8 from "trackCommunicationDisabled" /* 1993 */;
+import closure_9 from "recomputeGuild" /* 5322 */;
+import closure_10 from "reinjectEphemerals" /* 4701 */;
+import closure_11 from "handleConnectionInfoChange" /* 4540 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_13 from "generateOldThreadCutoff" /* 4461 */;
+import closure_14 from "mergeGuildAvatar" /* 1923 */;
+import Changeset from "Changeset" /* 7789 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -258,10 +258,10 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       obj[1] = tmp13;
       let str3 = "video";
       if (!obj9.isVideoFile(tmp13.filename)) {
-        let tmp18Result = tmp18(4636);
+        let tmp18Result = tmp18(4637);
         let str4 = "audio";
         if (!tmp18Result.isAudioFile(tmp13.filename)) {
-          tmp18Result = tmp18(4636);
+          tmp18Result = tmp18(4637);
           let str5 = "file";
           if (tmp18Result.isImageFile(tmp13.filename)) {
             str5 = "image";
@@ -346,7 +346,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       const value = flattenComponents.flattenComponents(obj.components).get(tmpResult);
       if (null == value) {
         return null;
-      } else if (value.type === tmp20(1955).ComponentType.MEDIA_GALLERY) {
+      } else if (value.type === tmp20(1956).ComponentType.MEDIA_GALLERY) {
         if (null == componentMediaIndex) {
           return null;
         } else if (null == value.items[componentMediaIndex]) {
@@ -434,24 +434,24 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: null, icon: null };
     obj[1] = stringResult;
-    tmp36Result = tmp36(10811);
+    tmp36Result = tmp36(10829);
     obj[2] = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();
   } else if (null != reaction) {
     if (flag) {
       if (true === !reaction.me_burst) {
-        let tmp12Result = tmp12(1946);
+        let tmp12Result = tmp12(1947);
         if (!tmp12Result.isPremium(currentUser)) {
-          tmp12Result = tmp12(10812);
+          tmp12Result = tmp12(10830);
           return tmp12Result.handleOutOfSuperReactions();
         }
       }
     }
-    const ReactionTypes = tmp12(7440).ReactionTypes;
+    const ReactionTypes = tmp12(7454).ReactionTypes;
     if (tmp12Result1.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
-      const result2 = tmp12(4413).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
-      const tmp12Result2 = tmp12(4413);
+      const result2 = tmp12(4414).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
+      const tmp12Result2 = tmp12(4414);
       obj = { channelId: null, messageId: null, emoji: null, location: null, options: null };
       obj[0] = channel.id;
       obj[1] = messageId;
@@ -460,18 +460,18 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       obj1 = { burst: null };
       obj1[0] = flag;
       obj[4] = obj1;
-      tmp12(7441).removeReaction(obj);
+      tmp12(7455).removeReaction(obj);
     } else {
       if (!result) {
         if (channel.isPrivate()) {
           if (!result1) {
-            const tmp12Result4 = tmp12(7441);
+            const tmp12Result4 = tmp12(7455);
             const obj2 = { burst: null };
             obj2[0] = flag;
             tmp12Result4.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj2);
             if (!flag) {
-              const result3 = tmp12(4413).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
-              const tmp12Result5 = tmp12(4413);
+              const result3 = tmp12(4414).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
+              const tmp12Result5 = tmp12(4414);
             }
           }
         }
@@ -479,14 +479,14 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (result) {
         const guildId1 = channel.getGuildId();
         if (null != guildId1) {
-          return tmp12(7579).openMemberVerificationModal(guildId1);
+          return tmp12(7593).openMemberVerificationModal(guildId1);
         }
       }
     }
-    tmp12Result1 = tmp12(4100);
+    tmp12Result1 = tmp12(4101);
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result7 = tmp12(10812);
+    const tmp12Result7 = tmp12(10830);
     const obj3 = { burst: null };
     obj3[0] = flag;
     const result4 = tmp12Result7.handleAddNewReactions(channel, messageId, MESSAGE, obj3);
@@ -518,26 +518,26 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   let obj = { postId: id, location };
   const result = trackForumChannelSeenBatch.trackForumPostLinkCopied(obj);
   if (flag) {
-    let tmp4Result = tmp4(4653);
+    let tmp4Result = tmp4(4666);
     obj = { media_post_id: null };
     obj[0] = id;
     tmp4Result.trackWithMetadata(constants3.MEDIA_POST_SHARE_PROMPT_CLICKED, obj);
   }
-  tmp4Result = tmp4(4413);
+  tmp4Result = tmp4(4414);
   const result1 = tmp4Result.triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
   if (null == channel) {
-    const tmp4Result1 = tmp4(5933);
+    const tmp4Result1 = tmp4(5946);
     let result2;
     if (true === flag) {
       result2 = DISCORD_EPOCHDefault.castChannelIdAsMessageId(id);
       const tmp9Result = DISCORD_EPOCHDefault;
     }
-    tmp4Result1.copy(tmp4(4631).getChannelPermalink(guildId, id, result2));
-    const tmp4Result2 = tmp4(4631);
+    tmp4Result1.copy(tmp4(4632).getChannelPermalink(guildId, id, result2));
+    const tmp4Result2 = tmp4(4632);
   } else {
-    const tmp4Result3 = tmp4(5933);
-    tmp4Result3.copy(tmp4(4631).getChannelLinkToCopy(channel, channel1));
-    const tmp4Result4 = tmp4(4631);
+    const tmp4Result3 = tmp4(5946);
+    tmp4Result3.copy(tmp4(4632).getChannelLinkToCopy(channel, channel1));
+    const tmp4Result4 = tmp4(4632);
   }
   const obj2 = trackForumChannelSeenBatch;
   const tmp9 = importDefault;
@@ -828,7 +828,7 @@ export const maybeRescrollToMessageId = function maybeRescrollToMessageId(arg0, 
   closure_4 = undefined !== updateRowsEnabled && updateRowsEnabled;
   let INSTANT = jumpType.jumpType;
   if (undefined === INSTANT) {
-    INSTANT = _require(4376).JumpType.INSTANT;
+    INSTANT = _require(4377).JumpType.INSTANT;
   }
   if (null != arg0) {
     const _setTimeout = setTimeout;

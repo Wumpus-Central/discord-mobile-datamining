@@ -1,6 +1,6 @@
-// === Module 7072: metadata ===
+// === Module 7085: metadata ===
 
-// Module 7072 (metadata)
+// Module 7085 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WumpusMahjongSpotIllustration-2x.png.js");

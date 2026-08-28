@@ -1,15 +1,15 @@
-// === Module 15641: useFavoritesGuildAutoAddedThreadsAction ===
+// === Module 15659: useFavoritesGuildAutoAddedThreadsAction ===
 
-// Module 15641 (useFavoritesGuildAutoAddedThreadsAction)
+// Module 15659 (useFavoritesGuildAutoAddedThreadsAction)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "mergeGuildAvatar" /* 1923 */;
 import closure_5 from "initializeFromUserSettings" /* 1394 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
-  let obj = hasAccess(10226);
+  let obj = hasAccess(10244);
   hasAccess = obj.useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
   const items = [closure_4];
   if (hasAccess) {
@@ -37,9 +37,9 @@ export default function useFavoritesGuildAutoAddedThreadsAction() {
     }
   }, items2);
   const intl = tmp(1236).intl;
-  obj[2] = intl.string(stateFromStores(3147).DIyQIF);
+  obj[2] = intl.string(stateFromStores(3148).DIyQIF);
   const intl2 = tmp(1236).intl;
-  obj[3] = intl2.string(stateFromStores(3147).g2vHYJ);
+  obj[3] = intl2.string(stateFromStores(3148).g2vHYJ);
   obj[4] = callback;
   return obj;
 };

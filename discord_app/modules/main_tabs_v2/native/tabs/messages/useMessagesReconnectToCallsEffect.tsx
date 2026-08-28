@@ -1,11 +1,11 @@
-// === Module 15552: useMessagesReconnectToCallsEffect ===
+// === Module 15570: useMessagesReconnectToCallsEffect ===
 
-// Module 15552 (useMessagesReconnectToCallsEffect)
+// Module 15570 (useMessagesReconnectToCallsEffect)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 5173 */;
+import closure_4 from "_handleConnectionOpen" /* 5186 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "makeSortedChannel" /* 6017 */;
+import closure_6 from "makeSortedChannel" /* 6030 */;
 
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");
 

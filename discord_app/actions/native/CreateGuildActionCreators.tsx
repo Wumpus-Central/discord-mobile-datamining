@@ -1,7 +1,7 @@
-// === Module 12196: showInstantInviteModal ===
+// === Module 12215: showInstantInviteModal ===
 
-// Module 12196 (showInstantInviteModal)
-import closure_2 from "comparator" /* 1982 */;
+// Module 12215 (showInstantInviteModal)
+import closure_2 from "comparator" /* 1983 */;
 import { InstantInviteSources } from "ME" /* 676 */;
 
 const require = arg1;

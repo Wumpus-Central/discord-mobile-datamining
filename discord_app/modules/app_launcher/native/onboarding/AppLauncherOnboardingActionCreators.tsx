@@ -1,6 +1,6 @@
-// === Module 11588: setLastSeenTimeMs ===
+// === Module 11607: setLastSeenTimeMs ===
 
-// Module 11588 (setLastSeenTimeMs)
+// Module 11607 (setLastSeenTimeMs)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

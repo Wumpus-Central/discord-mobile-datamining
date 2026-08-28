@@ -1,8 +1,8 @@
-// === Module 8553: ? ===
+// === Module 8568: ? ===
 
-// Module 8553
+// Module 8568
 import dispatcherDefault from "dispatcher" /* 709 */;
-import generateHydrationId from "generateHydrationId" /* 8552 */;
+import generateHydrationId from "generateHydrationId" /* 8567 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -154,7 +154,7 @@ export default {
                 obj3[0] = HTTP.get(obj1);
                 return obj3;
               }
-              obj13 = closure_1_0(8552);
+              obj13 = closure_1_0(8567);
               tmp42 = closure_1_0;
             }
           } else {

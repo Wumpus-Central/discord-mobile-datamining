@@ -1,6 +1,6 @@
-// === Module 16094: open ===
+// === Module 16112: open ===
 
-// Module 16094 (open)
+// Module 16112 (open)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/vibegrations/lib/VibegrationsWebSocket.tsx");

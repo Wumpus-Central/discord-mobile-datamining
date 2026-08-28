@@ -1,9 +1,9 @@
-// === Module 6120: ? ===
+// === Module 6133: ? ===
 
-// Module 6120
+// Module 6133
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4090 */;
 import { Permissions } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");

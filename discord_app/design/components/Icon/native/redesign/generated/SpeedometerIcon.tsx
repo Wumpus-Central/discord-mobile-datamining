@@ -1,10 +1,10 @@
-// === Module 9970: SpeedometerIcon ===
+// === Module 9988: SpeedometerIcon ===
 
-// Module 9970 (SpeedometerIcon)
+// Module 9988 (SpeedometerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 9971 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 9989 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

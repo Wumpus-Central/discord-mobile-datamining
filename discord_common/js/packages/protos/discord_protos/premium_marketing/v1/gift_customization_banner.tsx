@@ -1,10 +1,10 @@
-// === Module 8397: create ===
+// === Module 8411: create ===
 
-// Module 8397 (create)
+// Module 8411 (create)
 import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 8385 */;
-import create2 from "create" /* 8393 */;
-import create3 from "create" /* 8395 */;
+import create from "create" /* 8399 */;
+import create2 from "create" /* 8407 */;
+import create3 from "create" /* 8409 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
@@ -21,7 +21,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "gradient",
       kind: "message",
       T() {
-            return callback(8393).Gradient;
+            return callback(8407).Gradient;
           }
     };
     items[4] = { no: 5, name: "background_asset_url", kind: "scalar", T: 9 };
@@ -30,7 +30,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(8395).ThemeAwareAsset;
+            return callback(8409).ThemeAwareAsset;
           }
     };
     items[6] = {
@@ -38,7 +38,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "background_asset",
       kind: "message",
       T() {
-            return callback(8395).ThemeAwareAsset;
+            return callback(8409).ThemeAwareAsset;
           }
     };
     items[7] = {
@@ -46,7 +46,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "mobile_background_asset",
       kind: "message",
       T() {
-            return callback(8395).ThemeAwareAsset;
+            return callback(8409).ThemeAwareAsset;
           }
     };
     items[8] = {
@@ -71,7 +71,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "mobile_body_localized",
       kind: "message",
       T() {
-            return callback(8385).LocalizedString;
+            return callback(8399).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.GiftCustomizationBanner", items, T);
@@ -180,7 +180,7 @@ let items = [
     name: "gradient",
     kind: "message",
     T() {
-      return callback(8393).Gradient;
+      return callback(8407).Gradient;
     }
   },
   { no: 5, name: "background_asset_url", kind: "scalar", T: 9 },
@@ -189,7 +189,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(8395).ThemeAwareAsset;
+      return callback(8409).ThemeAwareAsset;
     }
   },
   {
@@ -197,7 +197,7 @@ let items = [
     name: "background_asset",
     kind: "message",
     T() {
-      return callback(8395).ThemeAwareAsset;
+      return callback(8409).ThemeAwareAsset;
     }
   },
   {
@@ -205,7 +205,7 @@ let items = [
     name: "mobile_background_asset",
     kind: "message",
     T() {
-      return callback(8395).ThemeAwareAsset;
+      return callback(8409).ThemeAwareAsset;
     }
   },
   {
@@ -233,7 +233,7 @@ items[10] = {
   name: "mobile_body_localized",
   kind: "message",
   T() {
-    return callback(8385).LocalizedString;
+    return callback(8399).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.GiftCustomizationBanner", items, tmp, T, GiftCustomizationBanner$Type, prototype, items, arg1, dependencyMap);

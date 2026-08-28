@@ -1,21 +1,21 @@
-// === Module 11015: AppStoreOverlayFooter ===
+// === Module 11033: AppStoreOverlayFooter ===
 
-// Module 11015 (AppStoreOverlayFooter)
+// Module 11033 (AppStoreOverlayFooter)
 import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4892 */;
+import LinearGradientDefault from "LinearGradient" /* 4905 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 function AppStoreOverlayFooter(arg0) {
   let token;
   ({ onInstallPress, onLayout } = arg0);
   const tmp = callback3();
-  let obj = token(4165);
+  let obj = token(4166);
   token = obj.useToken(ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let items = [token];
   obj = { style: tmp.footer, onLayout, children: null };
@@ -31,8 +31,8 @@ function AppStoreOverlayFooter(arg0) {
   const intl = token(1236).intl;
   obj2[1] = intl.string(token(1236).t.lwQdjB);
   obj2[2] = onInstallPress;
-  obj1[1] = callback(token(4880).Button, obj2);
-  items1[1] = callback(token(5505).SafeAreaPaddingView, obj1);
+  obj1[1] = callback(token(4893).Button, obj2);
+  items1[1] = callback(token(5518).SafeAreaPaddingView, obj1);
   obj[2] = items1;
   return callback2(View, obj);
 }

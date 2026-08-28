@@ -1,6 +1,6 @@
-// === Module 12868: set ===
+// === Module 12887: set ===
 
-// Module 12868 (set)
+// Module 12887 (set)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/wumpus-avatar.png.js");

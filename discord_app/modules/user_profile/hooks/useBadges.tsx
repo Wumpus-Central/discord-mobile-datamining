@@ -1,9 +1,9 @@
-// === Module 8478: useBadges ===
+// === Module 8492: useBadges ===
 
-// Module 8478 (useBadges)
-import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import closure_2 from "initialize" /* 4290 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+// Module 8492 (useBadges)
+import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
+import closure_2 from "initialize" /* 4291 */;
+import closure_3 from "mergeGuildAvatar" /* 1923 */;
 
 require = arg1;
 const legacy_username = "legacy_username";

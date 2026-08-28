@@ -1,6 +1,6 @@
-// === Module 4907: safelyPartiallyDecodeURIComponent ===
+// === Module 4920: safelyPartiallyDecodeURIComponent ===
 
-// Module 4907 (safelyPartiallyDecodeURIComponent)
+// Module 4920 (safelyPartiallyDecodeURIComponent)
 import set from "set" /* 2 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 

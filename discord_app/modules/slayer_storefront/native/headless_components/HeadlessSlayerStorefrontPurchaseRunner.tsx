@@ -1,53 +1,81 @@
-// === Module 10507: HeadlessSlayerStorefrontPurchaseRunner ===
+// === Module 10525: HeadlessSlayerStorefrontPurchaseRunner ===
 
-// Module 10507 (HeadlessSlayerStorefrontPurchaseRunner)
-import closure_2 from "noop" /* 19 */;
-import { useNativeCheckoutStore } from "context" /* 7103 */;
+// Module 10525 (HeadlessSlayerStorefrontPurchaseRunner)
+import closure_3 from "noop" /* 19 */;
+import { useNativeCheckoutStore } from "context" /* 7116 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
+const require = arg1;
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/headless_components/HeadlessSlayerStorefrontPurchaseRunner.tsx");
 
 export const HeadlessSlayerStorefrontPurchaseRunner = function HeadlessSlayerStorefrontPurchaseRunner(attempt) {
   attempt = attempt.attempt;
-  const onPurchaseError = attempt.onPurchaseError;
+  ({ onPurchaseComplete: importDefault, onPurchaseError } = attempt);
   let React;
   useNativeCheckoutStore = undefined;
-  closure_4 = undefined;
   closure_5 = undefined;
-  ({ skuId, sku, analyticsLoadId, analyticsLocations, analyticsData, onPurchaseComplete } = attempt);
-  const tmp = useNativeCheckoutStore((orderRecord) => orderRecord.orderRecord);
+  closure_6 = undefined;
+  closure_7 = undefined;
+  let callback;
+  closure_9 = undefined;
+  closure_10 = undefined;
+  ({ skuId, sku, analyticsLocations } = attempt);
+  const tmp = useNativeCheckoutStore((analyticsFields) => analyticsFields.analyticsFields);
   React = tmp;
-  const tmp2 = useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
+  const tmp2 = useNativeCheckoutStore((setCheckoutFailed) => setCheckoutFailed.setCheckoutFailed);
   useNativeCheckoutStore = tmp2;
-  const obj = { skuId, sku, analyticsLoadId, analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null };
+  let tmp3 = useNativeCheckoutStore((orderRecord) => orderRecord.orderRecord);
+  closure_5 = tmp3;
+  const tmp4 = useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
+  closure_6 = tmp4;
+  let obj = React;
+  closure_7 = React.useRef(false);
+  const items = [tmp, tmp2, onPurchaseError];
+  callback = React.useCallback(() => {
+    if (!ref.current) {
+      tmp.current = true;
+      closure_1_1(onPurchaseError[3]).track(constants.PAYMENT_FLOW_FAILED, closure_3);
+      callback2();
+      const obj = closure_1_1(onPurchaseError[3]);
+    }
+    onPurchaseError();
+  }, items);
+  obj = { skuId, sku, analyticsLoadId: tmp.load_id, analyticsLocations, orderId: null, analyticsData: null, onPurchaseComplete: null, onPurchaseError: null, onPurchasePending: null };
   let id;
-  if (tmp != null) {
-    id = tmp.id;
+  if (tmp3 != null) {
+    id = tmp3.id;
   }
   obj[4] = id;
-  obj[5] = analyticsData;
-  obj[6] = onPurchaseComplete;
-  obj[7] = function onPurchaseError() {
-    return onPurchaseError(null);
+  obj[5] = tmp;
+  obj[6] = function onPurchaseComplete() {
+    closure_7.current = true;
+    if (obj.isIOS()) {
+      closure_1_1(onPurchaseError[3]).track(constants.PAYMENT_FLOW_SUCCEEDED, closure_3);
+      const obj2 = closure_1_1(onPurchaseError[3]);
+    }
+    callback();
   };
+  obj[7] = callback;
   obj[8] = function onPurchasePending() {
 
   };
-  const tmp3Result = attempt(onPurchaseError[2])(obj);
-  closure_4 = tmp3Result;
-  closure_5 = React.useRef(0);
-  const items = [attempt, tmp3Result, onPurchaseError, tmp, tmp2];
-  const effect = React.useEffect(() => {
-    if (ref.current !== attempt) {
-      let tmp3 = closure_3;
-      if (closure_3) {
-        tmp3 = null == closure_2;
+  const tmp6Result = importDefault(onPurchaseError[4])(obj);
+  closure_9 = tmp6Result;
+  closure_10 = obj.useRef(0);
+  const items1 = [attempt, tmp6Result, callback, tmp3, tmp4];
+  const effect = obj.useEffect(() => {
+    if (ref2.current !== attempt) {
+      let tmp3 = closure_6;
+      if (closure_6) {
+        tmp3 = null == closure_5;
       }
       if (!tmp3) {
         tmp.current = tmp2;
-        callback().catch(onPurchaseError);
-        const promise = callback();
+        closure_7.current = false;
+        callback3().catch(callback);
+        const promise = callback3();
       }
     }
-  }, items);
+  }, items1);
   return null;
 };

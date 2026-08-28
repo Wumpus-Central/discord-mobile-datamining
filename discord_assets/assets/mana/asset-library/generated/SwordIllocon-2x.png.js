@@ -1,6 +1,6 @@
-// === Module 7024: metadata ===
+// === Module 7037: metadata ===
 
-// Module 7024 (metadata)
+// Module 7037 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SwordIllocon-2x.png.js");

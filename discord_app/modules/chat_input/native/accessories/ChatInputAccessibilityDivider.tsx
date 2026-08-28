@@ -1,7 +1,7 @@
-// === Module 11746: ChatInputAccessibilityDivider ===
+// === Module 11765: ChatInputAccessibilityDivider ===
 
-// Module 11746 (ChatInputAccessibilityDivider)
-import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4867 */;
+// Module 11765 (ChatInputAccessibilityDivider)
+import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4880 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;

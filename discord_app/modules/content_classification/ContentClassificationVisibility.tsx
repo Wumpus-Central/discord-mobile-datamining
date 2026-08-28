@@ -1,10 +1,10 @@
-// === Module 11432: ContentClassificationVisibility ===
+// === Module 11451: ContentClassificationVisibility ===
 
-// Module 11432 (ContentClassificationVisibility)
+// Module 11451 (ContentClassificationVisibility)
 import initialize from "initialize" /* 589 */;
-import contentClassificationToAgeRestrictionConclusion from "contentClassificationToAgeRestrictionConclusion" /* 5011 */;
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5013 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import contentClassificationToAgeRestrictionConclusion from "contentClassificationToAgeRestrictionConclusion" /* 5024 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5026 */;
+import closure_2 from "mergeGuildAvatar" /* 1923 */;
 
 require = arg1;
 let obj = { DISPLAY: "display", BLOCK_UNDERAGE: "block_underage", BLOCK_CHANNEL_RESTRICTION: "block_channel_restriction" };
@@ -39,10 +39,10 @@ export const useContentClassificationVisibility = function useContentClassificat
   [][0] = closure_2;
   if (null != arg0) {
     obj = { type: null, data: null };
-    obj[0] = tmp(5011).ContentClassificationVariant.MINIMAL;
+    obj[0] = tmp(5024).ContentClassificationVariant.MINIMAL;
     obj[1] = arg0;
-    const result = tmp(5011).contentClassificationToAgeRestriction(obj);
-    if (result === tmp(5013).AgeRestrictionStatus.ADULT) {
+    const result = tmp(5024).contentClassificationToAgeRestriction(obj);
+    if (result === tmp(5026).AgeRestrictionStatus.ADULT) {
       if (true !== tmp4) {
         let DISPLAY = obj.BLOCK_UNDERAGE;
       } else {

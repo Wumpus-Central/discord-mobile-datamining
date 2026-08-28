@@ -1,10 +1,10 @@
-// === Module 14910: EmojiColdFaceIcon ===
+// === Module 14895: EmojiColdFaceIcon ===
 
-// Module 14910 (EmojiColdFaceIcon)
+// Module 14895 (EmojiColdFaceIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 14911 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 14896 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

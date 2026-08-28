@@ -1,7 +1,7 @@
-// === Module 8426: useSocialLayerStorefrontMobileAccountLinkingDisabled ===
+// === Module 8440: useSocialLayerStorefrontMobileAccountLinkingDisabled ===
 
-// Module 8426 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
-import closure_2 from "handleUserSettingsStoreUpdate" /* 6027 */;
+// Module 8440 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
+import closure_2 from "handleUserSettingsStoreUpdate" /* 6040 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/hooks/useSocialLayerStorefrontMobileAccountLinkingDisabled.tsx");

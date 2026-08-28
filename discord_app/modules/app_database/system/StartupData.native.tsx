@@ -1,10 +1,10 @@
-// === Module 1974: getUserId ===
+// === Module 1975: getUserId ===
 
-// Module 1974 (getUserId)
+// Module 1975 (getUserId)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 500 */;
-import enforcingDefault from "enforcing" /* 1975 */;
+import enforcingDefault from "enforcing" /* 1976 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const result = set.fileFinishedImporting("modules/app_database/system/StartupData.native.tsx");

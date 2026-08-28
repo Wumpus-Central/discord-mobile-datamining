@@ -1,11 +1,11 @@
-// === Module 16106: VibegrationsSecretRequestCard ===
+// === Module 16124: VibegrationsSecretRequestCard ===
 
-// Module 16106 (VibegrationsSecretRequestCard)
+// Module 16124 (VibegrationsSecretRequestCard)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -35,8 +35,8 @@ export default function VibegrationsSecretRequestCard(projectId) {
   }, items);
   obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = projectId(1236).intl;
-  obj[2] = intl.string(request(3469)["/e28TK"]);
-  const items1 = [callback(projectId(4441).Text, obj), , , ];
+  obj[2] = intl.string(request(3470)["/e28TK"]);
+  const items1 = [callback(projectId(4442).Text, obj), , , ];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -56,11 +56,11 @@ export default function VibegrationsSecretRequestCard(projectId) {
     const obj2 = { variant: "secondary", size: "sm", onPress: null, text: null };
     obj2[2] = callback;
     const intl3 = tmp6(1236).intl;
-    obj2[3] = intl3.string(tmp8(3469)["gVV+HX"]);
-    items1[3] = tmp5(tmp6(4880).Button, obj2);
+    obj2[3] = intl3.string(tmp8(3470)["gVV+HX"]);
+    items1[3] = tmp5(tmp6(4893).Button, obj2);
     obj[1] = items1;
     return closure_6(tmp4, obj);
   }
   const intl2 = tmp6(1236).intl;
-  note = intl2.string(tmp8(3469).jxvtin);
+  note = intl2.string(tmp8(3470).jxvtin);
 };

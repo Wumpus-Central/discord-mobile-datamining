@@ -1,6 +1,6 @@
-// === Module 9716: metadata ===
+// === Module 9734: metadata ===
 
-// Module 9716 (metadata)
+// Module 9734 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/video-backgrounds/backgrounds/tropical.png.js");

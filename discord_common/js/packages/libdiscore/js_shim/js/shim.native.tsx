@@ -3,7 +3,7 @@
 // Module 1917 (isBlockedDomain)
 import set from "set" /* 2 */;
 import LIBDISCORE_JSI from "LIBDISCORE_JSI" /* 1918 */;
-import _initLibdiscore from "_initLibdiscore" /* 1920 */;
+import _initLibdiscore from "_initLibdiscore" /* 1921 */;
 
 let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
 

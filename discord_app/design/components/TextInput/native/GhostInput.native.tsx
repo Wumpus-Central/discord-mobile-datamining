@@ -1,15 +1,15 @@
-// === Module 13727: GhostInput ===
+// === Module 13746: GhostInput ===
 
-// Module 13727 (GhostInput)
+// Module 13746 (GhostInput)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4441 */;
-import useInputStyles from "useInputStyles" /* 6181 */;
-import useKeyboardBlurring from "useKeyboardBlurring" /* 6184 */;
-import Input from "Input" /* 7639 */;
+import Text from "Text" /* 4442 */;
+import useInputStyles from "useInputStyles" /* 6194 */;
+import useKeyboardBlurring from "useKeyboardBlurring" /* 6197 */;
+import Input from "Input" /* 7653 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 let closure_3 = ["labelId"];
@@ -43,9 +43,9 @@ export const GhostInput = function GhostInput(size) {
   const tmp4 = callback2(size.size, size.status);
   const isCentered = size.isCentered;
   const autoFocus = size.autoFocus;
-  let tmpResult = tmp(4174);
+  let tmpResult = tmp(4175);
   const fieldLabelA11yNative = tmpResult.useFieldLabelA11yNative(size);
-  tmpResult = tmp(6175);
+  tmpResult = tmp(6188);
   const textField = tmpResult.useTextField(size, undefined);
   obj = {};
   const merged = Object.assign(size);

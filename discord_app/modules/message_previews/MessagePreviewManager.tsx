@@ -1,17 +1,17 @@
-// === Module 14863: addWant ===
+// === Module 14848: addWant ===
 
-// Module 14863 (addWant)
+// Module 14848 (addWant)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import initializeDefault from "initialize" /* 5438 */;
-import FetchStatus from "FetchStatus" /* 14864 */;
+import initializeDefault from "initialize" /* 5451 */;
+import FetchStatus from "FetchStatus" /* 14849 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_handleConnectionOpen" /* 5173 */;
+import closure_5 from "_handleConnectionOpen" /* 5186 */;
 import { isThread } from "createChannelRecord" /* 1395 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "initialize" /* 13284 */;
+import closure_9 from "initialize" /* 13303 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;
@@ -312,7 +312,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
                 const localFetching5 = closure_1_1.localFetching;
                 localFetching5.add(closure_1_0);
                 id = closure_1_7.getId();
-                let obj3 = closure_1_1(1956);
+                let obj3 = closure_1_1(1957);
                 const messagesResult = obj3.messages();
                 let mostRecents;
                 if (messagesResult != null) {

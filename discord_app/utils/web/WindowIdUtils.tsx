@@ -1,6 +1,6 @@
-// === Module 5518: getWindowId ===
+// === Module 5531: getWindowId ===
 
-// Module 5518 (getWindowId)
+// Module 5531 (getWindowId)
 import set from "set" /* 2 */;
 import apply from "apply" /* 12 */;
 

@@ -1,8 +1,8 @@
-// === Module 14540: PremiumPlanSelectSettingScreen ===
+// === Module 14524: PremiumPlanSelectSettingScreen ===
 
-// Module 14540 (PremiumPlanSelectSettingScreen)
+// Module 14524 (PremiumPlanSelectSettingScreen)
 import noopAll from "noop" /* 19 */;
-import ManagePlanHeaderDefault from "ManagePlanHeader" /* 13068 */;
+import ManagePlanHeaderDefault from "ManagePlanHeader" /* 13087 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;

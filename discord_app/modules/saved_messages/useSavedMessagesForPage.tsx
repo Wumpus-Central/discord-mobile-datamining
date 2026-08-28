@@ -1,11 +1,11 @@
-// === Module 12857: getSavedMessagesForType ===
+// === Module 12876: getSavedMessagesForType ===
 
-// Module 12857 (getSavedMessagesForType)
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7537 */;
-import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 12858 */;
+// Module 12876 (getSavedMessagesForType)
+import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7551 */;
+import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 12877 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getTimeSafe" /* 11159 */;
+import closure_5 from "getTimeSafe" /* 11177 */;
 
 require = arg1;
 function getSavedMessagesForType(arg0) {
@@ -23,7 +23,7 @@ const result = require("set").fileFinishedImporting("modules/saved_messages/useS
 export default function useSavedMessagesForPage() {
   let ALL = arg0;
   if (arg0 === undefined) {
-    ALL = ALL(7537).SavedMessageSortTypes.ALL;
+    ALL = ALL(7551).SavedMessageSortTypes.ALL;
   }
   importDefault = undefined;
   dependencyMap = undefined;

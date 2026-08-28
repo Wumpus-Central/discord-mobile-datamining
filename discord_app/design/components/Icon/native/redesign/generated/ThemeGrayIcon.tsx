@@ -1,10 +1,10 @@
-// === Module 15876: ThemeGrayIcon ===
+// === Module 15894: ThemeGrayIcon ===
 
-// Module 15876 (ThemeGrayIcon)
+// Module 15894 (ThemeGrayIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 15877 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 15895 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

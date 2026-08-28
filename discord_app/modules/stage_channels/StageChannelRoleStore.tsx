@@ -1,18 +1,18 @@
-// === Module 5317: buildStageChannelUserRoles ===
+// === Module 5330: buildStageChannelUserRoles ===
 
-// Module 5317 (buildStageChannelUserRoles)
+// Module 5330 (buildStageChannelUserRoles)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4094 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4633 */;
-import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5318 */;
+import applyOverwritesAll from "applyOverwrites" /* 4095 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4634 */;
+import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5331 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "trackCommunicationDisabled" /* 1992 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_5 from "trackCommunicationDisabled" /* 1993 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1986 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "updateVoiceState" /* 4464 */;
+import closure_8 from "mergeGuildAvatar" /* 1923 */;
+import closure_9 from "updateVoiceState" /* 4465 */;
 
 require = arg1;
 function buildStageChannelUserRoles(id, closure_0, flag) {

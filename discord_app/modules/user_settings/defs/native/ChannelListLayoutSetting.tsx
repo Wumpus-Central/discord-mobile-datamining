@@ -1,12 +1,12 @@
-// === Module 15078: useChannelListLayoutPredicate ===
+// === Module 15064: useChannelListLayoutPredicate ===
 
-// Module 15078 (useChannelListLayoutPredicate)
+// Module 15064 (useChannelListLayoutPredicate)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4139 */;
-import MobileUserSettings from "MobileUserSettings" /* 7816 */;
-import createToggle from "createToggle" /* 10988 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4140 */;
+import MobileUserSettings from "MobileUserSettings" /* 7830 */;
+import createToggle from "createToggle" /* 11006 */;
 
 function useChannelListLayoutPredicate() {
   return false;

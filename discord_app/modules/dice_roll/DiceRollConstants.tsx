@@ -1,6 +1,6 @@
-// === Module 8089: ROLL_DURATION_MS ===
+// === Module 8103: ROLL_DURATION_MS ===
 
-// Module 8089 (ROLL_DURATION_MS)
+// Module 8103 (ROLL_DURATION_MS)
 import set from "set" /* 2 */;
 
 const items = [4, 6, 8, 10, 12, 20];

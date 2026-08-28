@@ -1,8 +1,8 @@
-// === Module 9366: useIsActivitiesEnabledForCurrentPlatform ===
+// === Module 9384: useIsActivitiesEnabledForCurrentPlatform ===
 
-// Module 9366 (useIsActivitiesEnabledForCurrentPlatform)
+// Module 9384 (useIsActivitiesEnabledForCurrentPlatform)
 import set from "set" /* 2 */;
-import isTablet from "isTablet" /* 4707 */;
+import isTablet from "isTablet" /* 4720 */;
 
 const result = set.fileFinishedImporting("modules/activities/useIsActivitiesEnabledForCurrentPlatform.tsx");
 

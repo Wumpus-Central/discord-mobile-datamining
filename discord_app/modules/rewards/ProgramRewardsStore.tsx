@@ -1,12 +1,12 @@
-// === Module 13292: updateTtl ===
+// === Module 13311: updateTtl ===
 
-// Module 13292 (updateTtl)
+// Module 13311 (updateTtl)
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import canFetchNitroProgramReward from "canFetchNitroProgramReward" /* 13294 */;
+import canFetchNitroProgramReward from "canFetchNitroProgramReward" /* 13313 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "mergeGuildAvatar" /* 1923 */;
 
 require = arg1;
 function updateTtl() {

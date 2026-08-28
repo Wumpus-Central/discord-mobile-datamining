@@ -1,9 +1,9 @@
-// === Module 8087: useTopCommands ===
+// === Module 8101: useTopCommands ===
 
-// Module 8087 (useTopCommands)
+// Module 8101 (useTopCommands)
 import closure_2 from "noop" /* 19 */;
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange" /* 8080 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 8080 */;
+import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange" /* 8094 */;
+import closure_5 from "handleUserSettingsProtoStoreChange" /* 8094 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
 const require = arg1;

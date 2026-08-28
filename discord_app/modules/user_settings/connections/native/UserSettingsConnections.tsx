@@ -1,20 +1,20 @@
-// === Module 14513: ADD_CONNECTIONS_SHEET_SENTINEL ===
+// === Module 14497: ADD_CONNECTIONS_SHEET_SENTINEL ===
 
-// Module 14513 (ADD_CONNECTIONS_SHEET_SENTINEL)
+// Module 14497 (ADD_CONNECTIONS_SHEET_SENTINEL)
 import ThemesDefault from "Themes" /* 712 */;
-import useThemeDefault from "useTheme" /* 4380 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 12428 */;
-import EmptyStateCardDefault from "EmptyStateCard" /* 14514 */;
+import useThemeDefault from "useTheme" /* 4381 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 12448 */;
+import EmptyStateCardDefault from "EmptyStateCard" /* 14498 */;
 import closure_3 from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "recomputeFromAppTokens" /* 5427 */;
-import { FetchState } from "recomputeFromAppTokens" /* 5427 */;
+import closure_5 from "recomputeFromAppTokens" /* 5440 */;
+import { FetchState } from "recomputeFromAppTokens" /* 5440 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "set" /* 5177 */;
-import closure_9 from "_getSystemLocale" /* 1996 */;
+import closure_8 from "set" /* 5190 */;
+import closure_9 from "_getSystemLocale" /* 1997 */;
 import { AnalyticsLocations } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
@@ -91,8 +91,8 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
         accounts.map((account) => closure_1_11(callback(paths[23]), { theme: callback, locale: paths, account }, account.id))
       ];
       obj[1] = items5;
-      obj[1] = callback2(tmp4(4878).Stack, obj);
-      tmp14 = callback(tmp4(8295).Form, obj);
+      obj[1] = callback2(tmp4(4891).Stack, obj);
+      tmp14 = callback(tmp4(8309).Form, obj);
     }
     return tmp14;
   }

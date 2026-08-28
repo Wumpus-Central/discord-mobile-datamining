@@ -1,15 +1,15 @@
-// === Module 7896: getReferralTrialOfferExpirationCopy ===
+// === Module 7910: getReferralTrialOfferExpirationCopy ===
 
-// Module 7896 (getReferralTrialOfferExpirationCopy)
+// Module 7910 (getReferralTrialOfferExpirationCopy)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initialize from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import DismissibleContent from "DismissibleContent" /* 1377 */;
 import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1379 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4266 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 7897 */;
-import closure_3 from "emitChanges" /* 7131 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4267 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 7911 */;
+import closure_3 from "emitChanges" /* 7144 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
 require = arg1;
@@ -96,12 +96,12 @@ export const useIsReferralProgramPopoverShowable = function useIsReferralProgram
   if (obj4.useIsReferralReminderDCExperimentEnabled({ location: "ReferralProgramUtils" })) {
     let tmp8 = null != stateFromStores1;
     if (tmp8) {
-      let tmpResult = tmp(4266);
+      let tmpResult = tmp(4267);
       tmp8 = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1377).DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, stateFromStores1).isDismissed;
     }
     let tmp6 = tmp8;
   } else {
-    tmpResult = tmp(4266);
+    tmpResult = tmp(4267);
     tmp6 = !tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1377).DismissibleContent.REFERRAL_PROGRAM_POPOVER);
   }
   if (isEligibleSenderForReferralProgram) {

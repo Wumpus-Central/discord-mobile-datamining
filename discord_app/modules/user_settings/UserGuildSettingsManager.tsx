@@ -1,10 +1,10 @@
-// === Module 5436: handleConnectionOpen ===
+// === Module 5449: handleConnectionOpen ===
 
-// Module 5436 (handleConnectionOpen)
+// Module 5449 (handleConnectionOpen)
 import setDefault from "set" /* 687 */;
-import initializeDefault from "initialize" /* 5438 */;
+import initializeDefault from "initialize" /* 5451 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "incrementVersion" /* 5437 */;
+import closure_3 from "incrementVersion" /* 5450 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
 

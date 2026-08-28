@@ -1,9 +1,9 @@
-// === Module 17080: showGuildSettingsModalStickerInfoActionSheet ===
+// === Module 17098: showGuildSettingsModalStickerInfoActionSheet ===
 
-// Module 17080 (showGuildSettingsModalStickerInfoActionSheet)
+// Module 17098 (showGuildSettingsModalStickerInfoActionSheet)
 import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4412 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4413 */;
 
 const GuildSettingsModalStickerInfoActionSheet = "GuildSettingsModalStickerInfoActionSheet";
 const result = set.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/showGuildSettingsModalStickerInfoActionSheet.tsx");
@@ -18,5 +18,5 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
       callback(table[0]).hideActionSheet(closure_3);
     }
   };
-  obj.openLazy(asyncRequireImpl(17081, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(17099, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
 };

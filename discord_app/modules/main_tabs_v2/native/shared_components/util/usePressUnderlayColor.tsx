@@ -1,12 +1,12 @@
-// === Module 16479: usePressUnderlayColor ===
+// === Module 16497: usePressUnderlayColor ===
 
-// Module 16479 (usePressUnderlayColor)
+// Module 16497 (usePressUnderlayColor)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4165 */;
-import hexToRgba from "hexToRgba" /* 4293 */;
-import useThemeDefault from "useTheme" /* 4380 */;
-import CHANNEL_THEME_COLOR_PALETTE from "CHANNEL_THEME_COLOR_PALETTE" /* 16480 */;
+import map from "map" /* 4166 */;
+import hexToRgba from "hexToRgba" /* 4294 */;
+import useThemeDefault from "useTheme" /* 4381 */;
+import CHANNEL_THEME_COLOR_PALETTE from "CHANNEL_THEME_COLOR_PALETTE" /* 16498 */;
 
 let closure_3 = CHANNEL_THEME_COLOR_PALETTE.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx");

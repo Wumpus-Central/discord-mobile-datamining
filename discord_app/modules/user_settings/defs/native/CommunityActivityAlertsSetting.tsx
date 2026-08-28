@@ -1,10 +1,10 @@
-// === Module 15064: route ===
+// === Module 15050: route ===
 
-// Module 15064 (route)
+// Module 15050 (route)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "computeAlertSettings" /* 10083 */;
-import createToggle from "createToggle" /* 10988 */;
+import closure_2 from "computeAlertSettings" /* 10101 */;
+import createToggle from "createToggle" /* 11006 */;
 
 require = arg1;
 createToggle = {
@@ -26,7 +26,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.COMMUNITY_ALERTS,
   getComponent() {
-    return require(15065) /* UserSettingsCommunityNotifications */.default;
+    return require(15051) /* UserSettingsCommunityNotifications */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

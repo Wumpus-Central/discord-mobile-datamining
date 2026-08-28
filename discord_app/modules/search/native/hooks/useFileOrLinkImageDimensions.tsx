@@ -1,8 +1,8 @@
-// === Module 16195: useFileOrLinkImageDimensions ===
+// === Module 16213: useFileOrLinkImageDimensions ===
 
-// Module 16195 (useFileOrLinkImageDimensions)
+// Module 16213 (useFileOrLinkImageDimensions)
 import closure_0 from "noop" /* 19 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7555 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7569 */;
 
 ({ FILES_OR_LINKS_GAP_WIDTH: closure_1, FILES_OR_LINKS_NUM_COLUMNS: obj1, FILE_OR_LINK_IMAGE_RATIO: c3, SEARCH_LIST_HORIZONTAL_PADDING: c4 } = MessageEmbedTypes);
 let result = require("set").fileFinishedImporting("modules/search/native/hooks/useFileOrLinkImageDimensions.tsx");

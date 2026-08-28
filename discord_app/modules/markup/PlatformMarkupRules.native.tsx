@@ -1,17 +1,17 @@
-// === Module 4932: match ===
+// === Module 4945: match ===
 
-// Module 4932 (match)
+// Module 4945 (match)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
-import tDefault from "t" /* 4160 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4478 */;
-import textRegexpDefault from "textRegexp" /* 4910 */;
-import getChannelDefault from "getChannel" /* 4911 */;
-import regExpDefault from "regExp" /* 4914 */;
-import INVISIBLE_CHAR_REGEX2 from "INVISIBLE_CHAR_REGEX" /* 5004 */;
-import getGameMentionData from "getGameMentionData" /* 5005 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4103 */;
+import tDefault from "t" /* 4161 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4479 */;
+import textRegexpDefault from "textRegexp" /* 4923 */;
+import getChannelDefault from "getChannel" /* 4924 */;
+import regExpDefault from "regExp" /* 4927 */;
+import INVISIBLE_CHAR_REGEX2 from "INVISIBLE_CHAR_REGEX" /* 5017 */;
+import getGameMentionData from "getGameMentionData" /* 5018 */;
 
 const Image = get_ActivityIndicator.Image;
 obj = { escape: obj, invisibleUnicode: null, text: null, emoji: null, customEmoji: null, channelMention: null, gameMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, silentPrefix: null };

@@ -1,8 +1,8 @@
-// === Module 11224: useEmojisForReactionRow ===
+// === Module 11242: useEmojisForReactionRow ===
 
-// Module 11224 (useEmojisForReactionRow)
+// Module 11242 (useEmojisForReactionRow)
 import closure_3 from "noop" /* 19 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import { EmojiIntention } from "set" /* 1926 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");

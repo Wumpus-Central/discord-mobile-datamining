@@ -1,21 +1,21 @@
-// === Module 15796: findGuildSectionIndex ===
+// === Module 15814: findGuildSectionIndex ===
 
-// Module 15796 (findGuildSectionIndex)
+// Module 15814 (findGuildSectionIndex)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 5173 */;
-import closure_5 from "initialize" /* 4090 */;
-import closure_6 from "processChannel" /* 6018 */;
-import closure_7 from "processChannel" /* 6019 */;
-import closure_8 from "getGeoRestrictedGuilds" /* 13313 */;
-import closure_9 from "handleConnectionOpen" /* 4808 */;
-import closure_10 from "trackCommunicationDisabled" /* 1992 */;
+import closure_4 from "_handleConnectionOpen" /* 5186 */;
+import closure_5 from "initialize" /* 4091 */;
+import closure_6 from "processChannel" /* 6031 */;
+import closure_7 from "processChannel" /* 6032 */;
+import closure_8 from "getGeoRestrictedGuilds" /* 13332 */;
+import closure_9 from "handleConnectionOpen" /* 4821 */;
+import closure_10 from "trackCommunicationDisabled" /* 1993 */;
 import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "rebuildUnreads" /* 13321 */;
-import closure_13 from "handleConnectionOpen" /* 4267 */;
-import closure_14 from "insertUnsortedGuilds" /* 5333 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5333 */;
-import closure_16 from "withEqualityFn" /* 15787 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15788 */;
+import closure_12 from "rebuildUnreads" /* 13340 */;
+import closure_13 from "handleConnectionOpen" /* 4268 */;
+import closure_14 from "insertUnsortedGuilds" /* 5346 */;
+import { GuildsNodeType } from "insertUnsortedGuilds" /* 5346 */;
+import closure_16 from "withEqualityFn" /* 15805 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15806 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -143,7 +143,7 @@ export default function useGuildsBarProps(arg0) {
   const items5 = [stateFromStoresArray1, stateFromStores];
   const stateFromStoresArray2 = _require(token[35]).useStateFromStoresArray(items5, () => {
     const guildIds = stateFromStoresArray1.getGuildIds();
-    return guildIds.filter((guild_id) => currentUserGuest.isCurrentUserGuest(guild_id));
+    return guildIds.filter((guildId) => currentUserGuest.isCurrentUserGuest(guildId));
   });
   const tmp2Result3 = _require(token[35]);
   const items6 = [guildsNFolders];
@@ -466,11 +466,11 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((arg0) => {
             if ("unavailable-guilds" === arg0) {
-              return callback2(callback(15853), {}, arg0);
+              return callback2(callback(15871), {}, arg0);
             } else if ("empty-nux" === arg0) {
-              return callback2(callback(15854), {}, arg0);
+              return callback2(callback(15872), {}, arg0);
             } else if ("create-join-guild" === arg0) {
-              return callback2(callback(15856), {}, arg0);
+              return callback2(callback(15874), {}, arg0);
             }
           })
         };

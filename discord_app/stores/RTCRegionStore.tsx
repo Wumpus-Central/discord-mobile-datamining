@@ -1,6 +1,6 @@
-// === Module 4540: initialize ===
+// === Module 4541: initialize ===
 
-// Module 4540 (initialize)
+// Module 4541 (initialize)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;

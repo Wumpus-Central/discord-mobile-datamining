@@ -1,19 +1,19 @@
-// === Module 8083: computePermissions ===
+// === Module 8097: computePermissions ===
 
-// Module 8083 (computePermissions)
+// Module 8097 (computePermissions)
 import fromStringAll from "fromString" /* 506 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8084 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1956 */;
+import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8098 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 1984 */;
+import closure_4 from "initialize" /* 1985 */;
 import { ChannelRecordBase } from "createChannelRecord" /* 1395 */;
 import { isGuildNSFW } from "GuildNSFWContentLevel" /* 1434 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "trackCommunicationDisabled" /* 1992 */;
+import closure_9 from "trackCommunicationDisabled" /* 1993 */;
 import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_12 from "mergeGuildAvatar" /* 1922 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_12 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

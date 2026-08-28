@@ -1,10 +1,10 @@
-// === Module 7626: TableRadioRow ===
+// === Module 7640: TableRadioRow ===
 
-// Module 7626 (TableRadioRow)
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4173 */;
-import TableRowInner from "TableRowInner" /* 5551 */;
-import context2 from "context" /* 7625 */;
-import FormRadio from "FormRadio" /* 7627 */;
+// Module 7640 (TableRadioRow)
+import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4174 */;
+import TableRowInner from "TableRowInner" /* 5564 */;
+import context2 from "context" /* 7639 */;
+import FormRadio from "FormRadio" /* 7641 */;
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -26,9 +26,9 @@ export const TableRadioRow = function TableRadioRow(value) {
   if (legacyCompat_selected == null) {
     legacyCompat_selected = context.selectedValue === value;
   }
-  let tmp2Result = tmp2(4167);
+  let tmp2Result = tmp2(4168);
   const nodeText = tmp2Result.getNodeText(label);
-  tmp2Result = tmp2(4167);
+  tmp2Result = tmp2(4168);
   const nodeText1 = tmp2Result.getNodeText(subLabel);
   const radioA11yNative = useCheckboxA11yNative.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);

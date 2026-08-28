@@ -1,13 +1,13 @@
-// === Module 1944: frozen ===
+// === Module 1945: frozen ===
 
-// Module 1944 (frozen)
-import toJSDefault from "toJS" /* 1931 */;
-import create from "create" /* 1938 */;
+// Module 1945 (frozen)
+import toJSDefault from "toJS" /* 1932 */;
+import create from "create" /* 1939 */;
 
 require = arg1;
 toJSDefault;
 const frozen = Object.freeze({ 0: require("create").DayOfWeek.SUNDAY, 1: require("create").DayOfWeek.MONDAY, 2: require("create").DayOfWeek.TUESDAY, 3: require("create").DayOfWeek.WEDNESDAY, 4: require("create").DayOfWeek.THURSDAY, 5: require("create").DayOfWeek.FRIDAY, 6: require("create").DayOfWeek.SATURDAY });
-let closure_3 = Object.freeze({ [arg1(1938).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0, [arg1(1938).DayOfWeek.MONDAY]: 1, [arg1(1938).DayOfWeek.TUESDAY]: 2, [arg1(1938).DayOfWeek.WEDNESDAY]: 3, [arg1(1938).DayOfWeek.THURSDAY]: 4, [arg1(1938).DayOfWeek.FRIDAY]: 5, [arg1(1938).DayOfWeek.SATURDAY]: 6, [arg1(1938).DayOfWeek.SUNDAY]: 0 });
+let closure_3 = Object.freeze({ [arg1(1939).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0, [arg1(1939).DayOfWeek.MONDAY]: 1, [arg1(1939).DayOfWeek.TUESDAY]: 2, [arg1(1939).DayOfWeek.WEDNESDAY]: 3, [arg1(1939).DayOfWeek.THURSDAY]: 4, [arg1(1939).DayOfWeek.FRIDAY]: 5, [arg1(1939).DayOfWeek.SATURDAY]: 6, [arg1(1939).DayOfWeek.SUNDAY]: 0 });
 let ScheduleRuleRecord;
 class ScheduleRuleRecord extends tmp2 {
   constructor(arg0) {
@@ -68,7 +68,7 @@ prototype["isActiveAt"] = function isActiveAt(closure_0, c1) {
           }
           if (sum > sum1) {
             if (closure_0 === create.DayOfWeek.MONDAY) {
-              let SUNDAY = tmp6(1938).DayOfWeek.SUNDAY;
+              let SUNDAY = tmp6(1939).DayOfWeek.SUNDAY;
             } else {
               SUNDAY = closure_0 - 1;
             }

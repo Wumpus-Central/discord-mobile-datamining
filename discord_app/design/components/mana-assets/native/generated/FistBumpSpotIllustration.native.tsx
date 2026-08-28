@@ -1,10 +1,10 @@
-// === Module 6495: FistBumpSpotIllustration ===
+// === Module 6508: FistBumpSpotIllustration ===
 
-// Module 6495 (FistBumpSpotIllustration)
+// Module 6508 (FistBumpSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6496 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6509 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/FistBumpSpotIllustration.native.tsx");

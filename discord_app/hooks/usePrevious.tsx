@@ -1,6 +1,6 @@
-// === Module 8508: usePrevious ===
+// === Module 8522: usePrevious ===
 
-// Module 8508 (usePrevious)
+// Module 8522 (usePrevious)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 

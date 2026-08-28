@@ -1,8 +1,8 @@
-// === Module 9540: allowPopups ===
+// === Module 9558: allowPopups ===
 
-// Module 9540 (allowPopups)
+// Module 9558 (allowPopups)
 import set from "set" /* 2 */;
-import items3 from "items3" /* 4473 */;
+import items3 from "items3" /* 4474 */;
 
 let closure_0 = items3.APPLICATIONS_WITH_ALLOWED_POPUPS;
 const result = set.fileFinishedImporting("modules/activities/utils/allowPopups.tsx");

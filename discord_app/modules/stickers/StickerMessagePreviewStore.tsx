@@ -1,10 +1,10 @@
-// === Module 5163: getStickerPreview ===
+// === Module 5176: getStickerPreview ===
 
-// Module 5163 (getStickerPreview)
+// Module 5176 (getStickerPreview)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import handleChanged from "handleChanged" /* 4807 */;
+import handleChanged from "handleChanged" /* 4820 */;
 
 const DraftType = handleChanged.DraftType;
 let closure_1 = {};

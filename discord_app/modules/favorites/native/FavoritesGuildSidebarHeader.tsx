@@ -1,19 +1,19 @@
-// === Module 15781: EmptyBody ===
+// === Module 15799: EmptyBody ===
 
-// Module 15781 (EmptyBody)
+// Module 15799 (EmptyBody)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3147 */;
-import Text from "Text" /* 4441 */;
-import Stack from "Stack" /* 4878 */;
-import ChatIcon from "ChatIcon" /* 4972 */;
-import TextIcon from "TextIcon" /* 4981 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5002 */;
+import messagesProxyDefault from "messagesProxy" /* 3148 */;
+import Text from "Text" /* 4442 */;
+import Stack from "Stack" /* 4891 */;
+import ChatIcon from "ChatIcon" /* 4985 */;
+import TextIcon from "TextIcon" /* 4994 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5015 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useHasFavoritesGuildSuggestions as closure_5 } from "items" /* 15703 */;
+import { useHasFavoritesGuildSuggestions as closure_5 } from "items" /* 15721 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function EmptyBody() {

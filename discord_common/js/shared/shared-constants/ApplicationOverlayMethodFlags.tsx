@@ -1,6 +1,6 @@
-// === Module 4477: ApplicationOverlayMethodFlags ===
+// === Module 4478: ApplicationOverlayMethodFlags ===
 
-// Module 4477 (ApplicationOverlayMethodFlags)
+// Module 4478 (ApplicationOverlayMethodFlags)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationOverlayMethodFlags.tsx");

@@ -1,7 +1,7 @@
-// === Module 9559: useEventException ===
+// === Module 9577: useEventException ===
 
-// Module 9559 (useEventException)
-import closure_2 from "scheduledEventSort" /* 7204 */;
+// Module 9577 (useEventException)
+import closure_2 from "scheduledEventSort" /* 7218 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useEventException.tsx");

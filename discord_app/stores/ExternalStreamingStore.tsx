@@ -1,15 +1,15 @@
-// === Module 9357: makeTwitchRequest ===
+// === Module 9375: makeTwitchRequest ===
 
-// Module 9357 (makeTwitchRequest)
+// Module 9375 (makeTwitchRequest)
 import sendRequest from "sendRequest" /* 530 */;
 import initializeDefault from "initialize" /* 589 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import callbackDefault from "callback" /* 5302 */;
+import callbackDefault from "callback" /* 5315 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5177 */;
-import closure_5 from "initialize" /* 4290 */;
+import closure_4 from "set" /* 5190 */;
+import closure_5 from "initialize" /* 4291 */;
 import { PlatformTypes } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 

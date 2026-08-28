@@ -1,6 +1,6 @@
-// === Module 13414: getKrispCpuDisablementConfig ===
+// === Module 13433: getKrispCpuDisablementConfig ===
 
-// Module 13414 (getKrispCpuDisablementConfig)
+// Module 13433 (getKrispCpuDisablementConfig)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

@@ -1,10 +1,10 @@
-// === Module 15825: StreamingSubtitle ===
+// === Module 15843: StreamingSubtitle ===
 
-// Module 15825 (StreamingSubtitle)
+// Module 15843 (StreamingSubtitle)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4441 */;
-import getNicknameDefault from "getNickname" /* 4638 */;
+import Text from "Text" /* 4442 */;
+import getNicknameDefault from "getNickname" /* 4639 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -285,7 +285,7 @@ export const loadImage = function loadImage(arg0, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_1_4(/* F105472 */ function() { ... });
+                            image.onerror = closure_1_4(/* F105513 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = tmp2.url;
                           });

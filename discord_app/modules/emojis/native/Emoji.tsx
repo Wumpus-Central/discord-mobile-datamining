@@ -1,10 +1,10 @@
-// === Module 5537: Emoji ===
+// === Module 5550: Emoji ===
 
-// Module 5537 (Emoji)
+// Module 5550 (Emoji)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 500 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4106 */;
-import preloadDefault from "preload" /* 5445 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4107 */;
+import preloadDefault from "preload" /* 5458 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "handleThemeChange" /* 1302 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -33,9 +33,9 @@ export default function Emoji(arg0) {
         obj[1] = fastImageStyle;
         const tmp10 = preloadDefault;
         if (tmpResult.isThemeDark(theme.theme)) {
-          let tmp9Result = tmp9(5538);
+          let tmp9Result = tmp9(5551);
         } else {
-          tmp9Result = tmp9(5539);
+          tmp9Result = tmp9(5552);
         }
         obj[2] = tmp9Result;
         obj1 = { uri: null };

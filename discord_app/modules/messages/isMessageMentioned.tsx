@@ -1,8 +1,8 @@
-// === Module 4704: isMentioned ===
+// === Module 4717: isMentioned ===
 
-// Module 4704 (isMentioned)
+// Module 4717 (isMentioned)
 import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import closure_1 from "trackCommunicationDisabled" /* 1992 */;
+import closure_1 from "trackCommunicationDisabled" /* 1993 */;
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 
 function isMentioned(suppressRoles) {

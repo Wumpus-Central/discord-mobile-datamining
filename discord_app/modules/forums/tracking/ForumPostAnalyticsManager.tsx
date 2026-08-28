@@ -1,8 +1,8 @@
-// === Module 7450: handleThreadCreate ===
+// === Module 7464: handleThreadCreate ===
 
-// Module 7450 (handleThreadCreate)
-import initializeDefault from "initialize" /* 5438 */;
-import closure_3 from "handleThreadCreateOrUpdate" /* 5401 */;
+// Module 7464 (handleThreadCreate)
+import initializeDefault from "initialize" /* 5451 */;
+import closure_3 from "handleThreadCreateOrUpdate" /* 5414 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 

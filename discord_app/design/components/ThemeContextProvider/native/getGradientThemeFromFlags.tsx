@@ -1,8 +1,8 @@
-// === Module 4171: getGradientThemeFromFlags ===
+// === Module 4172: getGradientThemeFromFlags ===
 
-// Module 4171 (getGradientThemeFromFlags)
+// Module 4172 (getGradientThemeFromFlags)
 import set from "set" /* 2 */;
-import ManaContext from "ManaContext" /* 4172 */;
+import ManaContext from "ManaContext" /* 4173 */;
 
 const result = set.fileFinishedImporting("design/components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx");
 

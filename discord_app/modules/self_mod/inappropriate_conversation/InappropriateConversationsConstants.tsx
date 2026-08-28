@@ -1,6 +1,6 @@
-// === Module 10957: VibingWumpusAction ===
+// === Module 10975: VibingWumpusAction ===
 
-// Module 10957 (VibingWumpusAction)
+// Module 10975 (VibingWumpusAction)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsConstants.tsx");

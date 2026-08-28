@@ -1,13 +1,13 @@
-// === Module 8008: useAvatarsWithGuilds ===
+// === Module 8022: useAvatarsWithGuilds ===
 
-// Module 8008 (useAvatarsWithGuilds)
+// Module 8022 (useAvatarsWithGuilds)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer4 from "AccessibilityAnnouncer" /* 1363 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleFormOpen" /* 8002 */;
-import closure_4 from "createUserWidgetFromServer" /* 7299 */;
-import closure_5 from "trackCommunicationDisabled" /* 1992 */;
+import closure_3 from "handleFormOpen" /* 8016 */;
+import closure_4 from "createUserWidgetFromServer" /* 7313 */;
+import closure_5 from "trackCommunicationDisabled" /* 1993 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/profile_customization/ProfileCustomizationUtils.tsx");

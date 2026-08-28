@@ -1,13 +1,13 @@
-// === Module 11869: DiceRollBar ===
+// === Module 11888: DiceRollBar ===
 
-// Module 11869 (DiceRollBar)
+// Module 11888 (DiceRollBar)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
-import { useDiceRollState } from "INITIAL_STATE" /* 11450 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import { useDiceRollState } from "INITIAL_STATE" /* 11469 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);

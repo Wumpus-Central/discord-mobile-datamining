@@ -1,11 +1,11 @@
-// === Module 8697: useUserIdsForLinkStatus ===
+// === Module 8713: useUserIdsForLinkStatus ===
 
-// Module 8697 (useUserIdsForLinkStatus)
+// Module 8713 (useUserIdsForLinkStatus)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "freshTeenActivityWithMap" /* 7215 */;
-import items from "items" /* 7216 */;
+import closure_4 from "mergeGuildAvatar" /* 1923 */;
+import closure_5 from "freshTeenActivityWithMap" /* 7229 */;
+import items from "items" /* 7230 */;
 
 require = arg1;
 ({ ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER: closure_6, FAMILY_CENTER_REQUEST_QR_CODE_URL: error, MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_8, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: c9, PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER: c10, UserLinkStatus: unpackModuleId, UserLinkType: closure_12 } = items);
@@ -191,7 +191,7 @@ export const useUserQRLinkUrl = function useUserQRLinkUrl() {
 export const useHasMaxConnections = function useHasMaxConnections() {
   const ACTIVE = constants.ACTIVE;
   let stateFromStores;
-  const tmp = stateFromStores(8698)();
+  const tmp = stateFromStores(8714)();
   const items = [closure_5];
   stateFromStores = ACTIVE(647).useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, ACTIVE];
@@ -277,8 +277,8 @@ export const useAcceptedRequestsCount = function useAcceptedRequestsCount() {
 };
 export const useActivityWindowTimeStamp = function useActivityWindowTimeStamp(activityWindowTimestampFormatter) {
   const _require = activityWindowTimestampFormatter;
-  closure_1 = _require(8699).useSelectedTeenId();
-  const obj = _require(8699);
+  closure_1 = _require(8715).useSelectedTeenId();
+  const obj = _require(8715);
   const tmp = _require;
   const items = [closure_5];
   const stateFromStores = _require(647).useStateFromStores(items, () => {
@@ -292,8 +292,8 @@ export const useActivityWindowTimeStamp = function useActivityWindowTimeStamp(ac
   if (null != stateFromStores) {
     const _Date = Date;
     const date = new Date(stateFromStores);
-    result = tmp(7271).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
-    const tmpResult = tmp(7271);
+    result = tmp(7285).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
+    const tmpResult = tmp(7285);
   }
   return result;
 };
@@ -305,7 +305,7 @@ export const useLinkTimestampText = function useLinkTimestampText(id, status) {
     return null;
   } else {
     const _Date = Date;
-    _require(7271).formatLinkTimestamp(Date.parse(stateFromStores), status === constants.PENDING ? closure_10 : closure_6);
-    const tmpResult = _require(7271);
+    _require(7285).formatLinkTimestamp(Date.parse(stateFromStores), status === constants.PENDING ? closure_10 : closure_6);
+    const tmpResult = _require(7285);
   }
 };

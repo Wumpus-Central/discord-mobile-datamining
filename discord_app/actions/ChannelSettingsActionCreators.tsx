@@ -1,11 +1,11 @@
-// === Module 8677: init ===
+// === Module 8693: init ===
 
-// Module 8677 (init)
+// Module 8693 (init)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4300 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4301 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "normalizeChannelPropertyForCompare" /* 8678 */;
+import closure_4 from "normalizeChannelPropertyForCompare" /* 8694 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
 

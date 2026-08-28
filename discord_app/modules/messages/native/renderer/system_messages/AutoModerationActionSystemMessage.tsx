@@ -1,6 +1,6 @@
-// === Module 7854: createAutoModerationActionSystemMessage ===
+// === Module 7868: createAutoModerationActionSystemMessage ===
 
-// Module 7854 (createAutoModerationActionSystemMessage)
+// Module 7868 (createAutoModerationActionSystemMessage)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import ThemesDefault from "Themes" /* 712 */;
@@ -8,26 +8,26 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
 import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
-import hooksDefault from "hooks" /* 4043 */;
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4078 */;
-import resetCache from "resetCache" /* 4131 */;
-import computeChannelName from "computeChannelName" /* 4639 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4699 */;
-import useRoleIcon from "useRoleIcon" /* 5929 */;
-import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 7186 */;
-import registerAssetDefault from "registerAsset" /* 7643 */;
-import processColorOrThrow from "processColorOrThrow" /* 7778 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7805 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7832 */;
-import AutomodRaidAlertTypes from "AutomodRaidAlertTypes" /* 7855 */;
-import DATE_CONFIG from "DATE_CONFIG" /* 7856 */;
-import registerAssetDefault2 from "registerAsset" /* 7860 */;
+import hooksDefault from "hooks" /* 4044 */;
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4079 */;
+import resetCache from "resetCache" /* 4132 */;
+import computeChannelName from "computeChannelName" /* 4640 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4712 */;
+import useRoleIcon from "useRoleIcon" /* 5942 */;
+import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 7200 */;
+import registerAssetDefault from "registerAsset" /* 7657 */;
+import processColorOrThrow from "processColorOrThrow" /* 7792 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7819 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7846 */;
+import AutomodRaidAlertTypes from "AutomodRaidAlertTypes" /* 7869 */;
+import DATE_CONFIG from "DATE_CONFIG" /* 7870 */;
+import registerAssetDefault2 from "registerAsset" /* 7874 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1992 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_8 from "markAllUserIdListsStale" /* 4098 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "trackCommunicationDisabled" /* 1993 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_8 from "markAllUserIdListsStale" /* 4099 */;
+import closure_9 from "mergeGuildAvatar" /* 1923 */;
 import apply from "apply" /* 12 */;
 
 ({ processColor: c3, Image: c4 } = get_ActivityIndicator);
@@ -238,7 +238,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       let getRaidAlertResolveCTAText = closure_4.resolveAssetSource;
       let internal6 = getAvatarURL;
       let intl9 = internal6.makeSource;
-      obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 7859 : 7643))).uri;
+      obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 7873 : 7657))).uri;
       const tmpResult16 = processColorOrThrow;
       internal6 = tmp45(712).internal;
       obj5[7] = processColorOrThrow.processColorOrThrow(internal6.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL));
@@ -362,7 +362,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       obj9[6] = formatToPlainStringResult1;
       const tmpResult25 = resetCache;
-      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 7861 : 7862))).uri;
+      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 7875 : 7876))).uri;
       const intl16 = getSystemLocale.intl;
       const string2 = intl16.string;
       const t3 = getSystemLocale.t;

@@ -1,6 +1,6 @@
-// === Module 4884: SUBTLE_SPRING ===
+// === Module 4897: SUBTLE_SPRING ===
 
-// Module 4884 (SUBTLE_SPRING)
+// Module 4897 (SUBTLE_SPRING)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/motion/generated/generated-definitions.tsx");

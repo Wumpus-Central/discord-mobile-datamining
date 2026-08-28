@@ -1,9 +1,9 @@
-// === Module 13202: pack ===
+// === Module 13221: pack ===
 
-// Module 13202 (pack)
+// Module 13221 (pack)
 import set from "set" /* 2 */;
-import get from "get" /* 5037 */;
-import getErlpackEncoding from "getErlpackEncoding" /* 13203 */;
+import get from "get" /* 5050 */;
+import getErlpackEncoding from "getErlpackEncoding" /* 13222 */;
 
 getErlpackEncoding = getErlpackEncoding.getErlpackEncoding();
 class JSONEncoding {

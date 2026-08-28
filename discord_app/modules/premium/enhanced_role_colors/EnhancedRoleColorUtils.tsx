@@ -1,6 +1,6 @@
-// === Module 1988: extractColorStringsFromServerColors ===
+// === Module 1989: extractColorStringsFromServerColors ===
 
-// Module 1988 (extractColorStringsFromServerColors)
+// Module 1989 (extractColorStringsFromServerColors)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import int2hslRaw from "int2hslRaw" /* 688 */;

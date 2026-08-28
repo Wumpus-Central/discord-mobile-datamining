@@ -1,8 +1,8 @@
-// === Module 12497: useAddToWishlistGridItems ===
+// === Module 12517: useAddToWishlistGridItems ===
 
-// Module 12497 (useAddToWishlistGridItems)
+// Module 12517 (useAddToWishlistGridItems)
 import closure_2 from "noop" /* 19 */;
-import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
+import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1925 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
@@ -20,7 +20,6 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
   const recommendationsForSingleUser = obj.useRecommendationsForSingleUser({ userId: userId.userId, numItems: numWishlistItemsToRecommend, source: userId.source });
   recommendations = recommendationsForSingleUser.recommendations;
   const status = recommendationsForSingleUser.status;
-  const isNitroWishlistingEnabled = wishlist(maxWishlistItemsToShow[3]).useIsNitroWishlistingEnabled("add_to_wishlist_grid_suggested_nitro");
   let items = [wishlist];
   memo = recommendations.useMemo(() => {
     let mapped;
@@ -33,28 +32,25 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
     }
     return new Set(mapped);
   }, items);
-  let tmp3 = isNitroWishlistingEnabled;
-  if (isNitroWishlistingEnabled) {
-    tmp3 = "success" === status;
+  let tmp2 = "success" === status;
+  if (tmp2) {
+    tmp2 = !memo.has(memo.TIER_2);
   }
-  if (tmp3) {
-    tmp3 = !memo.has(memo.TIER_2);
-  }
-  closure_4 = tmp3;
+  closure_4 = tmp2;
   obj = {
     items: recommendations.useMemo(() => {
       const found = recommendations.filter((id) => !set.has(id.id));
       const mapped = found.map((sku) => ({ sku, itemSource: "recommendation" }));
       if (closure_4) {
         const obj = { sku: null, itemSource: "takeover" };
-        obj[0] = wishlist(maxWishlistItemsToShow[4]).createNitroSuggestedSku();
+        obj[0] = wishlist(maxWishlistItemsToShow[3]).createNitroSuggestedSku();
         mapped.unshift(obj);
-        const obj2 = wishlist(maxWishlistItemsToShow[4]);
+        const obj2 = wishlist(maxWishlistItemsToShow[3]);
       }
       return mapped.slice(0, maxWishlistItemsToShow);
     }, items1),
     status
   };
-  items1 = [recommendations, memo, tmp3, maxWishlistItemsToShow];
+  items1 = [recommendations, memo, tmp2, maxWishlistItemsToShow];
   return obj;
 };

@@ -1,16 +1,16 @@
-// === Module 10312: STICKER_SIZE ===
+// === Module 10330: STICKER_SIZE ===
 
-// Module 10312 (STICKER_SIZE)
+// Module 10330 (STICKER_SIZE)
 import noopAll from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 10313 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 10331 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4137 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10269 */;
+import closure_5 from "mergeGuildAvatar" /* 1923 */;
+import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4138 */;
+import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10287 */;
 import { PADDING_VERTICAL } from "ExpressionPickerViewType" /* 1338 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 noopAll;
@@ -63,7 +63,7 @@ export default function StickerPickerListRow(stickers) {
   }
   const tmp6 = callback2();
   closure_6 = tmp6;
-  let AnimateStickers = stickers(4134).AnimateStickers;
+  let AnimateStickers = stickers(4135).AnimateStickers;
   closure_7 = AnimateStickers.useSetting();
   items = [];
   if (nativeRow) {
@@ -80,7 +80,7 @@ export default function StickerPickerListRow(stickers) {
           ({ id: obj4[0], name: obj4[1], format_type: obj4[2] } = tmp12);
           let tmp20 = stickers;
           let tmp21 = dependencyMap;
-          let obj4 = stickers(10181);
+          let obj4 = stickers(10199);
           let tmp22 = closure_7;
           obj[3] = obj4.getStickerAssetUrl(tmp12, closure_7, first);
           obj[4] = first;
@@ -92,7 +92,7 @@ export default function StickerPickerListRow(stickers) {
           obj = { stickerId: null, stickerName: "", stickerType: null, stickerUrl: "", stickerAnimated: false, stickerDisabled: true, stickerOpaque: false };
           let tmp14 = stickers;
           tmp15 = dependencyMap;
-          obj[2] = stickers(5164).StickerFormat.PNG;
+          obj[2] = stickers(5177).StickerFormat.PNG;
           arr = items.push(obj);
         }
         num5 = num5 + 1;

@@ -1,8 +1,8 @@
-// === Module 12807: getIconURL ===
+// === Module 12826: getIconURL ===
 
-// Module 12807 (getIconURL)
-import createExecutableDefault from "createExecutable" /* 4471 */;
-import importDefaultResult1 from "getPlatformUserUrl" /* 5179 */;
+// Module 12826 (getIconURL)
+import createExecutableDefault from "createExecutable" /* 4472 */;
+import importDefaultResult1 from "getPlatformUserUrl" /* 5192 */;
 
 createExecutableDefault;
 const spotify = "spotify";

@@ -1,23 +1,23 @@
-// === Module 14104: _initialize ===
+// === Module 14123: _initialize ===
 
-// Module 14104 (_initialize)
+// Module 14123 (_initialize)
 import set2 from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import sum from "sum" /* 505 */;
 import ME from "ME" /* 676 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4300 */;
-import initializeDefault from "initialize" /* 4627 */;
-import ActivityPanelModes2 from "ActivityPanelModes" /* 9387 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4301 */;
+import initializeDefault from "initialize" /* 4628 */;
+import ActivityPanelModes2 from "ActivityPanelModes" /* 9405 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "participantFromServer" /* 1390 */;
-import closure_6 from "withEqualityFn" /* 4681 */;
+import closure_6 from "withEqualityFn" /* 4694 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "reinjectEphemerals" /* 4688 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_10 from "getState" /* 7091 */;
-import MediaPlaybackPanelModes from "MediaPlaybackPanelModes" /* 14105 */;
+import closure_8 from "reinjectEphemerals" /* 4701 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_10 from "getState" /* 7104 */;
+import MediaPlaybackPanelModes from "MediaPlaybackPanelModes" /* 14124 */;
 import keys from "keys" /* 644 */;
 
 ({ NativeEventEmitter: c3, NativeModules: c4 } = get_ActivityIndicator);
@@ -28,9 +28,20 @@ const Permissions = sum.Permissions;
 let closure_16 = new timestampDefault("MediaPlayerManager");
 let obj = keys.create((arg0) => {
   closure_0 = arg0;
-  obj = { activeMediaPlayerSource: "HermesInternal", mediaSourceMessage: "PX_16", canAccessMedia: "disabled", isPlaying: false, wasPipClosedByUser: null, progress: null, rate: "ct", showPip: "japonsk\u00FD", closePip: "j\u00EDdlo", displayedMediaItemIdsPerChannel: "kebab", currentlyDisplayedChannelId: "mo\u0159sk\u00E9 plody" };
-  obj[8] = function closePip() {
-    callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
+  obj = {
+    activeMediaPlayerSource: "HermesInternal",
+    mediaSourceMessage: "PX_16",
+    canAccessMedia: "disabled",
+    isPlaying: false,
+    wasPipClosedByUser: null,
+    progress: null,
+    rate: "ct",
+    showPip: "SAVE_LAST_ROUTE",
+    closePip() {
+      callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
+    },
+    displayedMediaItemIdsPerChannel: "off",
+    currentlyDisplayedChannelId: null
   };
   obj[9] = {};
   return obj;
@@ -330,13 +341,13 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
         obj = { channelId: null, messageId: null };
         obj[0] = channelId;
         obj[1] = messageId;
-        const message1 = self(7135).fetchMessage(obj);
+        const message1 = self(7148).fetchMessage(obj);
         message1.then((arg0) => {
           if (null != arg0) {
             const result = self.handleMediaSourceMessageUpdated(arg0);
           }
         });
-        const obj2 = self(7135);
+        const obj2 = self(7148);
       }
       obj4 = message;
     }

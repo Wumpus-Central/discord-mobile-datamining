@@ -1,10 +1,10 @@
-// === Module 11930: ? ===
+// === Module 11949: ? ===
 
-// Module 11930
+// Module 11949
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 11927 */;
-import ChatWarningIcon from "ChatWarningIcon" /* 11932 */;
-import { QUARANTINE_APPEAL_LINK } from "QUARANTINE_APPEAL_LINK" /* 11931 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 11946 */;
+import ChatWarningIcon from "ChatWarningIcon" /* 11951 */;
+import { QUARANTINE_APPEAL_LINK } from "QUARANTINE_APPEAL_LINK" /* 11950 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 

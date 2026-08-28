@@ -1,11 +1,11 @@
-// === Module 9953: isRefreshableAttachmentUrl ===
+// === Module 9971: isRefreshableAttachmentUrl ===
 
-// Module 9953 (isRefreshableAttachmentUrl)
+// Module 9971 (isRefreshableAttachmentUrl)
 import setDefault from "set" /* 687 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import getSizedImageProxyURL from "getSizedImageProxyURL" /* 4479 */;
+import getSizedImageProxyURL from "getSizedImageProxyURL" /* 4480 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { ATTACHMENT_PATH_PREFIXES } from "set" /* 4915 */;
+import { ATTACHMENT_PATH_PREFIXES } from "set" /* 4928 */;
 import { Endpoints } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 

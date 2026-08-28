@@ -1,7 +1,7 @@
-// === Module 9211: _getDisclosures ===
+// === Module 9229: _getDisclosures ===
 
-// Module 9211 (_getDisclosures)
-import create from "create" /* 9212 */;
+// Module 9229 (_getDisclosures)
+import create from "create" /* 9230 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -139,7 +139,7 @@ export const getTextForDisclosure = function getTextForDisclosure(toFixed) {
   if (create.ApplicationDisclosureType.IP_LOCATION === toFixed) {
     const intl2 = tmp(1236).intl;
     return intl2.string(tmp(1236).t["6wPmjo"]);
-  } else if (tmp(9212).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === toFixed) {
+  } else if (tmp(9230).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === toFixed) {
     const intl = tmp(1236).intl;
     return intl.string(tmp(1236).t["/uOMKZ"]);
   } else {

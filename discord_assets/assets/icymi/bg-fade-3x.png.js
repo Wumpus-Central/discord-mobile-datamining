@@ -1,6 +1,6 @@
-// === Module 15972: metadata ===
+// === Module 15990: metadata ===
 
-// Module 15972 (metadata)
+// Module 15990 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/icymi/bg-fade-3x.png.js");

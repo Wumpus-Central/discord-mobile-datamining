@@ -1,13 +1,13 @@
-// === Module 8409: resolveGiftCode ===
+// === Module 8423: resolveGiftCode ===
 
-// Module 8409 (resolveGiftCode)
-import _modDef8410 from "module_8410" /* 8410 */;
+// Module 8423 (resolveGiftCode)
+import _modDef8424 from "module_8424" /* 8424 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4486 */;
-import closure_5 from "updateCategoriesAndProducts" /* 7220 */;
-import { isUnknownCollectiblesItemRecord as closure_6 } from "fromServer" /* 7228 */;
+import closure_4 from "addApplication" /* 4487 */;
+import closure_5 from "updateCategoriesAndProducts" /* 7234 */;
+import { isUnknownCollectiblesItemRecord as closure_6 } from "fromServer" /* 7242 */;
 import ME from "ME" /* 676 */;
-import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "GuildFeatures" /* 1924 */;
+import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "GuildFeatures" /* 1925 */;
 
 const require = arg1;
 function resolveGiftCode() {
@@ -341,7 +341,7 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    _modDef8410.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    _modDef8424.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   }
 };
 export { resolveGiftCode };

@@ -1,6 +1,6 @@
-// === Module 6950: metadata ===
+// === Module 6963: metadata ===
 
-// Module 6950 (metadata)
+// Module 6963 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SkullIllocon-2x.png.js");

@@ -1,19 +1,19 @@
-// === Module 10598: InstantInviteDetails ===
+// === Module 10616: InstantInviteDetails ===
 
-// Module 10598 (InstantInviteDetails)
+// Module 10616 (InstantInviteDetails)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4441 */;
-import computeChannelName from "computeChannelName" /* 4639 */;
-import Stack from "Stack" /* 4878 */;
-import getChannelIcon from "getChannelIcon" /* 4933 */;
-import componentDidMountDefault from "componentDidMount" /* 10587 */;
+import Text from "Text" /* 4442 */;
+import computeChannelName from "computeChannelName" /* 4640 */;
+import Stack from "Stack" /* 4891 */;
+import getChannelIcon from "getChannelIcon" /* 4946 */;
+import componentDidMountDefault from "componentDidMount" /* 10605 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord" /* 1395 */;
-import closure_6 from "markAllUserIdListsStale" /* 4098 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "markAllUserIdListsStale" /* 4099 */;
+import closure_7 from "mergeGuildAvatar" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 class InstantInviteDetails {
@@ -74,11 +74,11 @@ export default function InstantInviteCode(invite) {
   const memo = React.useMemo(() => closure_1_5(invite.channel), items);
   obj = { children: null };
   obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
-  const items1 = [callback(invite(4441).Text, obj), ];
+  const items1 = [callback(invite(4442).Text, obj), ];
   const tmp = callback3();
   items1[1] = callback(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj[0] = items1;
-  obj[1] = callback2(invite(4878).Stack, obj);
+  obj[1] = callback2(invite(4891).Stack, obj);
   return callback(View, obj);
 };
 export { InstantInviteDetails };

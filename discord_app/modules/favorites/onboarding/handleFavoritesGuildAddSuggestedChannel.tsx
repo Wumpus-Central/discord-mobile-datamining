@@ -1,6 +1,6 @@
-// === Module 15705: _handleFavoritesGuildAddSuggestedChannel ===
+// === Module 15723: _handleFavoritesGuildAddSuggestedChannel ===
 
-// Module 15705 (_handleFavoritesGuildAddSuggestedChannel)
+// Module 15723 (_handleFavoritesGuildAddSuggestedChannel)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -59,7 +59,7 @@ function _handleFavoritesGuildAddSuggestedChannel() {
               } else {
                 callback = arg1;
                 if (null != callback) {
-                  obj1 = callback(10225);
+                  obj1 = callback(10243);
                   const obj3 = { channelIds: null, categoryName: null, source: "suggestions" };
                   const items = [callback];
                   obj3[0] = items;

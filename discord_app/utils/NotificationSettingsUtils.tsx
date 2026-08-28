@@ -1,16 +1,16 @@
-// === Module 5434: UserNotificationSettings ===
+// === Module 5447: UserNotificationSettings ===
 
-// Module 5434 (UserNotificationSettings)
+// Module 5447 (UserNotificationSettings)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import hasFlag from "hasFlag" /* 1403 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4653 */;
-import closure_3 from "initialize" /* 5435 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4666 */;
+import closure_3 from "initialize" /* 5448 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "reinjectEphemerals" /* 4688 */;
-import closure_6 from "updateUserGuildSettingsInternal" /* 4654 */;
+import closure_5 from "reinjectEphemerals" /* 4701 */;
+import closure_6 from "updateUserGuildSettingsInternal" /* 4667 */;
 import ME from "ME" /* 676 */;
-import { NotificationSettingsUpdateType as closure_9 } from "AccountNotificationFlags" /* 4101 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4655 */;
+import { NotificationSettingsUpdateType as closure_9 } from "AccountNotificationFlags" /* 4102 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4668 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 
 require = arg1;

@@ -1,11 +1,11 @@
-// === Module 16831: handleDmSettingsUpsellShow ===
+// === Module 16849: handleDmSettingsUpsellShow ===
 
-// Module 16831 (handleDmSettingsUpsellShow)
+// Module 16849 (handleDmSettingsUpsellShow)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;
-import initializeDefault from "initialize" /* 5438 */;
-import _modDef16832 from "module_16832" /* 16832 */;
+import initializeDefault from "initialize" /* 5451 */;
+import _modDef16850 from "module_16850" /* 16850 */;
 
 const Endpoints = ME.Endpoints;
 initializeDefault;
@@ -17,7 +17,7 @@ class DmSettingsUpsellManager extends tmp2 {
   }
 }
 DmSettingsUpsellManager.prototype["handleDmSettingsUpsellShow"] = function handleDmSettingsUpsellShow(guildId) {
-  const result = _modDef16832.openDmSettingsUpsellModal(guildId.guildId);
+  const result = _modDef16850.openDmSettingsUpsellModal(guildId.guildId);
 };
 const dmSettingsUpsellManager = new DmSettingsUpsellManager();
 let result = set.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellManager.tsx");

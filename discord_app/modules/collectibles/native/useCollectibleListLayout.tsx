@@ -1,6 +1,6 @@
-// === Module 8022: useCollectibleListLayout ===
+// === Module 8036: useCollectibleListLayout ===
 
-// Module 8022 (useCollectibleListLayout)
+// Module 8036 (useCollectibleListLayout)
 import closure_0 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 

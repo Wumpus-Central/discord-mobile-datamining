@@ -1,13 +1,13 @@
-// === Module 5511: _fetchVerificationForm ===
+// === Module 5524: _fetchVerificationForm ===
 
-// Module 5511 (_fetchVerificationForm)
+// Module 5524 (_fetchVerificationForm)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 1984 */;
-import closure_5 from "trackCommunicationDisabled" /* 1992 */;
-import closure_6 from "updateInvite" /* 4429 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "initialize" /* 1985 */;
+import closure_5 from "trackCommunicationDisabled" /* 1993 */;
+import closure_6 from "updateInvite" /* 4430 */;
+import closure_7 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

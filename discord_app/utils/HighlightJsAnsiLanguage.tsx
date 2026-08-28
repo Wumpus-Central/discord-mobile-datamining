@@ -1,6 +1,6 @@
-// === Module 4440: regExp ===
+// === Module 4441: regExp ===
 
-// Module 4440 (regExp)
+// Module 4441 (regExp)
 import set from "set" /* 2 */;
 
 let closure_0 = { 1: "bold", 4: "underline" };

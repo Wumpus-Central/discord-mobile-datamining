@@ -1,6 +1,6 @@
-// === Module 6048: isVibegrationsGuildEnabled ===
+// === Module 6061: isVibegrationsGuildEnabled ===
 
-// Module 6048 (isVibegrationsGuildEnabled)
+// Module 6061 (isVibegrationsGuildEnabled)
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;

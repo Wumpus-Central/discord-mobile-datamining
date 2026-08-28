@@ -1,10 +1,10 @@
-// === Module 11374: _getSafetyHubData ===
+// === Module 11393: _getSafetyHubData ===
 
-// Module 11374 (_getSafetyHubData)
+// Module 11393 (_getSafetyHubData)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11368 */;
-import SafetyHubView from "SafetyHubView" /* 8621 */;
+import closure_5 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11387 */;
+import SafetyHubView from "SafetyHubView" /* 8636 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -267,7 +267,7 @@ function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = callback(8620);
+                      obj3 = callback(8635);
                     }
                   }
                   let obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: null, accountStanding: null, isDsaEligible: null, username: null, isAppealEligible: null };
@@ -324,7 +324,7 @@ function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = callback(8620);
+                      obj3 = callback(8635);
                     }
                   }
                   let obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: null, accountStanding: null, isDsaEligible: null, username: null, isAppealEligible: null };

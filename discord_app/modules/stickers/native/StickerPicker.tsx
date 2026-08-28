@@ -1,15 +1,15 @@
-// === Module 10297: ? ===
+// === Module 10315: ? ===
 
-// Module 10297
+// Module 10315
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "loadSavedGuildStickers" /* 5396 */;
+import closure_7 from "mergeGuildAvatar" /* 1923 */;
+import closure_8 from "loadSavedGuildStickers" /* 5409 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 let c4 = importAllResult;
@@ -29,20 +29,20 @@ const memoResult = importAllResult.memo(function StickerPicker(channel) {
   let analyticsLocations;
   ({ bottomSheetRef, bottomSheetIndex, paddingTop, stickerFormats, inPortalKeyboard } = channel);
   let tmp = callback();
-  let obj = channel(10298);
+  let obj = channel(10316);
   const fetchStickerPacks = obj.useFetchStickerPacks();
-  obj1 = channel(10300);
+  obj1 = channel(10318);
   const stickerCategories = obj1.useStickerCategories(channel);
   let obj2 = channel(589);
   const items = [closure_8];
   const stateFromStores = obj2.useStateFromStores(items, () => obj.hasLoadedStickerPacks);
   const tmp6 = analyticsLocations(undefined.useState(0), 2);
   dependencyMap = tmp7;
-  analyticsLocations = onPressSticker(5905)(onPressSticker(5925).STICKER_PICKER).analyticsLocations;
-  const tmp9 = onPressSticker(5905);
+  analyticsLocations = onPressSticker(5918)(onPressSticker(5938).STICKER_PICKER).analyticsLocations;
+  const tmp9 = onPressSticker(5918);
   [tmp11, c4] = analyticsLocations(undefined.useState(null), 2);
   const tmp10 = analyticsLocations(undefined.useState(null), 2);
-  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10273)({ hasCategories: true }));
+  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10291)({ hasCategories: true }));
   const items1 = [, ];
   ({ id: arr3[0], guild_id: arr3[1] } = channel);
   callback = importAllResult.useCallback((arg0) => {
@@ -53,8 +53,8 @@ const memoResult = importAllResult.memo(function StickerPicker(channel) {
       });
       const obj2 = channel(705);
     } else {
-      _undefined(channel(10304).searchAllStickers(arg0));
-      const obj = channel(10304);
+      _undefined(channel(10322).searchAllStickers(arg0));
+      const obj = channel(10322);
     }
   }, []);
   const effect = importAllResult.useEffect(() => {
@@ -65,12 +65,12 @@ const memoResult = importAllResult.memo(function StickerPicker(channel) {
   const items2 = [channel, onPressSticker, analyticsLocations];
   const items3 = [channel];
   const callback1 = importAllResult.useCallback((pack_id) => {
-    let obj = channel(6133);
+    let obj = channel(6146);
     const stickerSendability = obj.getStickerSendability(pack_id, closure_1_7.getCurrentUser(), channel);
-    if (stickerSendability === channel(6133).StickerSendability.SENDABLE) {
+    if (stickerSendability === channel(6146).StickerSendability.SENDABLE) {
       onPressSticker(pack_id);
-    } else if (stickerSendability === tmp(6133).StickerSendability.SENDABLE_WITH_PREMIUM) {
-      let tmpResult = tmp(4805);
+    } else if (stickerSendability === tmp(6146).StickerSendability.SENDABLE_WITH_PREMIUM) {
+      let tmpResult = tmp(4818);
       if (tmpResult.isStandardSticker(pack_id)) {
         const stickerPack = closure_1_8.getStickerPack(pack_id.pack_id);
         if (null != stickerPack) {
@@ -83,15 +83,15 @@ const memoResult = importAllResult.memo(function StickerPicker(channel) {
           obj = { page: null };
           obj[0] = DM_CHANNEL2;
           obj[0] = obj;
-          obj[1] = tmp(10305).AnalyticsPopoutType.STICKER_PACK_DETAIL;
+          obj[1] = tmp(10323).AnalyticsPopoutType.STICKER_PACK_DETAIL;
           obj[2] = stickerPack;
-          onPressSticker(10305)(obj);
-          const tmp17 = onPressSticker(10305);
+          onPressSticker(10323)(obj);
+          const tmp17 = onPressSticker(10323);
         }
       } else {
-        tmpResult = tmp(4805);
+        tmpResult = tmp(4818);
         if (tmpResult.isGuildSticker(pack_id)) {
-          let obj2 = onPressSticker(8101);
+          let obj2 = onPressSticker(8115);
           obj1 = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null };
           obj1[0] = closure_1_12.GLOBAL_STICKER;
           if (null != tmp3.guild_id) {
@@ -114,10 +114,10 @@ const memoResult = importAllResult.memo(function StickerPicker(channel) {
     obj = { type: closure_1_13.STICKER_SEARCH, channel_id: channel.id, guild_id: channel.guild_id };
     obj.track(closure_1_9.CHAT_INPUT_COMPONENT_VIEWED, obj);
   }, items3);
-  let obj3 = onPressSticker(5932);
+  let obj3 = onPressSticker(5945);
   const items4 = [channel];
   const callback3 = importAllResult.useCallback((renderableSticker) => {
-    let obj = channel(10314);
+    let obj = channel(10332);
     obj = { renderableSticker, channel };
     const result = obj.showStickerDetailActionSheet(obj);
   }, items4);
@@ -132,7 +132,7 @@ const memoResult = importAllResult.memo(function StickerPicker(channel) {
     obj2[1] = intl.string(tmp2(1236).t.dt5h1C);
     obj2[2] = callback;
     obj2[3] = callback2;
-    obj1[1] = tmp18(tmp2(6173).SearchField, obj2);
+    obj1[1] = tmp18(tmp2(6186).SearchField, obj2);
     tmp18Result = tmp18(tmp20, obj1);
   }
   const items5 = [tmp18Result, , ];
@@ -140,7 +140,7 @@ const memoResult = importAllResult.memo(function StickerPicker(channel) {
     if (0 === stickerCategories.length) {
       obj3 = { style: null, children: null };
       obj3[0] = tmp.emptyState;
-      tmp = tmp18(tmp8(10324), {});
+      tmp = tmp18(tmp8(10342), {});
       obj3[1] = tmp;
       tmp18Result = tmp18(tmp20, obj3);
     } else {
@@ -160,8 +160,8 @@ const memoResult = importAllResult.memo(function StickerPicker(channel) {
       obj4[8] = stickerFormats;
       obj4[9] = tmp11;
       obj4[10] = inPortalKeyboard;
-      tmp18Result = tmp18(tmp8(10325), obj4);
-      const tmp8Result = tmp8(10325);
+      tmp18Result = tmp18(tmp8(10343), obj4);
+      const tmp8Result = tmp8(10343);
     }
   } else {
     const obj5 = { animating: true, size: "large", style: null };
@@ -171,10 +171,10 @@ const memoResult = importAllResult.memo(function StickerPicker(channel) {
     obj6[0] = stickerCategories;
     obj6[1] = tmp6[0];
     obj6[2] = safeAreaStyle;
-    items5[2] = tmp18(tmp8(10330), obj6);
+    items5[2] = tmp18(tmp8(10348), obj6);
     obj[1] = items5;
     obj[1] = closure_15(tmp20, obj);
-    return tmp18(channel(5905).AnalyticsLocationProvider, obj);
+    return tmp18(channel(5918).AnalyticsLocationProvider, obj);
   }
 });
 let result = require("set").fileFinishedImporting("modules/stickers/native/StickerPicker.tsx");

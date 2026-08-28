@@ -1,6 +1,6 @@
-// === Module 16618: activityPlatformToConnectedAccountType ===
+// === Module 16636: activityPlatformToConnectedAccountType ===
 
-// Module 16618 (activityPlatformToConnectedAccountType)
+// Module 16636 (activityPlatformToConnectedAccountType)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

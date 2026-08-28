@@ -1,11 +1,11 @@
-// === Module 4487: createFromServer ===
+// === Module 4488: createFromServer ===
 
-// Module 4487 (createFromServer)
-import toJSDefault from "toJS" /* 1931 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4107 */;
-import set from "set" /* 4492 */;
-import closure_3 from "createFromServer" /* 4488 */;
-import closure_4 from "createdAt" /* 1930 */;
+// Module 4488 (createFromServer)
+import toJSDefault from "toJS" /* 1932 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4108 */;
+import set from "set" /* 4493 */;
+import closure_3 from "createFromServer" /* 4489 */;
+import closure_4 from "createdAt" /* 1931 */;
 import { EntitlementTypes } from "ME" /* 676 */;
 
 require = arg1;
@@ -158,6 +158,9 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
 };
 prototype["isFulfilled"] = function isFulfilled() {
   return this.fulfillmentStatus === set.EntitlementTenantFulfillmentStatus.FULFILLED;
+};
+prototype["isFulfillmentFailed"] = function isFulfillmentFailed() {
+  return this.fulfillmentStatus === set.EntitlementTenantFulfillmentStatus.FULFILLMENT_FAILED;
 };
 const result = require("set").fileFinishedImporting("records/EntitlementRecord.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 8041: useUserProfileBannerBackgroundColor ===
+// === Module 8055: useUserProfileBannerBackgroundColor ===
 
-// Module 8041 (useUserProfileBannerBackgroundColor)
+// Module 8055 (useUserProfileBannerBackgroundColor)
 import set from "set" /* 2 */;
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import getAvatarURL2 from "getAvatarURL" /* 1435 */;
-import useDominantRGBFromImage from "useDominantRGBFromImage" /* 8042 */;
+import useDominantRGBFromImage from "useDominantRGBFromImage" /* 8056 */;
 
 const result = set.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
 

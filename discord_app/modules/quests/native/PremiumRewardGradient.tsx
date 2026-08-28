@@ -1,12 +1,12 @@
-// === Module 14713: PremiumRewardFillGradient ===
+// === Module 14698: PremiumRewardFillGradient ===
 
-// Module 14713 (PremiumRewardFillGradient)
+// Module 14698 (PremiumRewardFillGradient)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import hexToRgba from "hexToRgba" /* 4293 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import hexToRgba from "hexToRgba" /* 4294 */;
 
 const require = arg1;
 function PremiumRewardFillGradient(arg0) {
@@ -63,9 +63,9 @@ function PremiumRewardGlowGradient(arg0) {
   const tmp = callback3();
   let token;
   let token1;
-  let obj = token(4165);
+  let obj = token(4166);
   token = obj.useToken(token1(712).colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
-  obj1 = token(4165);
+  obj1 = token(4166);
   token1 = obj1.useToken(token1(712).colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
   let items = [token, token1];
   const memo = React.useMemo(() => {
@@ -73,22 +73,22 @@ function PremiumRewardGlowGradient(arg0) {
     return items;
   }, items);
   let obj2 = token(1350);
-  const isThemeDarkResult = obj2.isThemeDark(token1(4380)());
+  const isThemeDarkResult = obj2.isThemeDark(token1(4381)());
   obj = { style: items1, children: null };
   items1 = [tmp.wrapper, style];
   const items2 = [tmp.glow, ];
   let glowLight = !isThemeDarkResult;
   const tmp10 = closure_5;
-  const tmp7 = token1(4380)();
+  const tmp7 = token1(4381)();
   const tmp9 = closure_7;
   if (!isThemeDarkResult) {
     glowLight = tmp.glowLight;
   }
-  obj = { style: items2, maskElement: tmp11(tmp3(4892), obj1), children: tmp11(tmp3(4892), obj2) };
+  obj = { style: items2, maskElement: tmp11(tmp3(4905), obj1), children: tmp11(tmp3(4905), obj2) };
   items2[1] = glowLight;
   obj1 = { style: closure_4.absoluteFill, colors: ["transparent", "black"], start: closure_11, end: closure_12 };
   obj2 = { style: closure_4.absoluteFill, colors: memo, start: closure_9, end: closure_10 };
-  const items3 = [closure_6(token1(5487), obj), children];
+  const items3 = [closure_6(token1(5500), obj), children];
   obj[1] = items3;
   return tmp9(tmp10, obj);
 }

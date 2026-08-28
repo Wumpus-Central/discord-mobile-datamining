@@ -1,6 +1,6 @@
-// === Module 15678: metadata ===
+// === Module 15696: metadata ===
 
-// Module 15678 (metadata)
+// Module 15696 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/powerups/file-upload-static-2x.png.js");

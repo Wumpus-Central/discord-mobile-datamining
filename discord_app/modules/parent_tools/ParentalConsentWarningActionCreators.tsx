@@ -1,10 +1,10 @@
-// === Module 16961: clearPendingRetry ===
+// === Module 16979: clearPendingRetry ===
 
-// Module 16961 (clearPendingRetry)
+// Module 16979 (clearPendingRetry)
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 14422 */;
+import closure_4 from "initialize" /* 14406 */;
 import importDefaultResult from "fails" /* 584 */;
 
 const require = arg1;
@@ -159,7 +159,7 @@ function fetchWarning() {
   } else {
     return Promise.resolve();
   }
-  obj = _require(16962);
+  obj = _require(16980);
 }
 function maybeFetchWarning() {
   const self = this;

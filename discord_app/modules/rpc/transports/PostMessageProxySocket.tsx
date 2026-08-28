@@ -1,11 +1,11 @@
-// === Module 9433: send ===
+// === Module 9451: send ===
 
-// Module 9433 (send)
+// Module 9451 (send)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import HANDSHAKEDefault from "HANDSHAKE" /* 9423 */;
-import prototypeDefault from "prototype" /* 9424 */;
-import checkRpcVersionDefault from "checkRpcVersion" /* 9434 */;
+import HANDSHAKEDefault from "HANDSHAKE" /* 9441 */;
+import prototypeDefault from "prototype" /* 9442 */;
+import checkRpcVersionDefault from "checkRpcVersion" /* 9452 */;
 
 const RPCCloseCodes = ME.RPCCloseCodes;
 checkRpcVersionDefault;

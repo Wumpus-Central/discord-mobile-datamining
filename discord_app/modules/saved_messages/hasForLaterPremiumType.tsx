@@ -1,10 +1,10 @@
-// === Module 7533: hasForLaterPremiumType ===
+// === Module 7547: hasForLaterPremiumType ===
 
-// Module 7533 (hasForLaterPremiumType)
+// Module 7547 (hasForLaterPremiumType)
 import initialize from "initialize" /* 589 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1946 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import isPremiumAtLeast from "isPremiumAtLeast" /* 1947 */;
+import closure_2 from "mergeGuildAvatar" /* 1923 */;
+import { PremiumTypes } from "GuildFeatures" /* 1925 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/saved_messages/hasForLaterPremiumType.tsx");

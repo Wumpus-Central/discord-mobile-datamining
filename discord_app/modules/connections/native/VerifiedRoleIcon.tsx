@@ -1,15 +1,15 @@
-// === Module 5949: VerifiedRoleIcon ===
+// === Module 5962: VerifiedRoleIcon ===
 
-// Module 5949 (VerifiedRoleIcon)
+// Module 5962 (VerifiedRoleIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import LinkIcon from "LinkIcon" /* 4388 */;
-import useRoleIcon from "useRoleIcon" /* 5929 */;
-import getHigherContrastColor from "getHigherContrastColor" /* 5950 */;
+import LinkIcon from "LinkIcon" /* 4389 */;
+import useRoleIcon from "useRoleIcon" /* 5942 */;
+import getHigherContrastColor from "getHigherContrastColor" /* 5963 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 noopAll;

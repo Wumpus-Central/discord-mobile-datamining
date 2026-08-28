@@ -1,20 +1,20 @@
-// === Module 15114: handleCacheActionPress ===
+// === Module 15102: handleCacheActionPress ===
 
-// Module 15114 (handleCacheActionPress)
+// Module 15102 (handleCacheActionPress)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import dispatcherDefault from "dispatcher" /* 4162 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4412 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5573 */;
-import ActionSheet from "ActionSheet" /* 5941 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 5943 */;
-import FileUpIcon from "FileUpIcon" /* 14190 */;
-import FileWarningIcon from "FileWarningIcon" /* 15116 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
+import dispatcherDefault from "dispatcher" /* 4163 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4413 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5586 */;
+import ActionSheet from "ActionSheet" /* 5954 */;
+import ActionSheetRowIcon from "ActionSheetRowIcon" /* 5956 */;
+import FileUpIcon from "FileUpIcon" /* 15071 */;
+import FileWarningIcon from "FileWarningIcon" /* 15104 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 5173 */;
+import closure_4 from "_handleConnectionOpen" /* 5186 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10988 */;
+import createToggle from "createToggle" /* 11006 */;
 
 require = arg1;
 function handleCacheActionPress(key) {
@@ -67,7 +67,7 @@ function CacheActionsActionSheet() {
             return obj;
           } else {
             const callback = tmp2;
-            obj1 = closure_1_0(15115);
+            obj1 = closure_1_0(15103);
             c1 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };
@@ -99,7 +99,7 @@ function CacheActionsActionSheet() {
   const intl3 = getSystemLocale.intl;
   obj2[2] = intl3.string(getSystemLocale.t.tgwiMO);
   obj2[3] = function onPress() {
-    let obj = callback(15115);
+    let obj = callback(15103);
     obj.clearCaches();
     const intl = callback(1236).intl;
     const stringResult = intl.string(callback(1236).t["23xR5w"]);
@@ -110,9 +110,9 @@ function CacheActionsActionSheet() {
       },
       content: stringResult
     };
-    callback2(4162).open(obj);
-    const obj2 = callback2(4162);
-    callback2(4412).hideActionSheet(closure_7);
+    callback2(4163).open(obj);
+    const obj2 = callback2(4163);
+    callback2(4413).hideActionSheet(closure_7);
   };
   items[1] = callback2(ActionSheetRowIcon.ActionSheetRow, obj2);
   obj[1] = items;

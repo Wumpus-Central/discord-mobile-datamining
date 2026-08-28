@@ -1,10 +1,10 @@
-// === Module 6823: OrbMultiplierSpotIllustration ===
+// === Module 6836: OrbMultiplierSpotIllustration ===
 
-// Module 6823 (OrbMultiplierSpotIllustration)
+// Module 6836 (OrbMultiplierSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6824 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6837 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/OrbMultiplierSpotIllustration.native.tsx");

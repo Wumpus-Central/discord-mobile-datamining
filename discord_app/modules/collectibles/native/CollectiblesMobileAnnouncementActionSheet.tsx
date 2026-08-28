@@ -1,28 +1,28 @@
-// === Module 16436: CatEarsBackdrop ===
+// === Module 16454: CatEarsBackdrop ===
 
-// Module 16436 (CatEarsBackdrop)
+// Module 16454 (CatEarsBackdrop)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4441 */;
-import metadataDefault from "metadata" /* 16439 */;
+import Text from "Text" /* 4442 */;
+import metadataDefault from "metadata" /* 16457 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5575 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5588 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function CatEarsBackdrop() {
   const tmp = callback3();
   const width = top(1494)().width;
-  let obj = animatedPosition(5576);
+  let obj = animatedPosition(5589);
   animatedPosition = obj.useBottomSheet().animatedPosition;
   top = top(1629)().top;
   const bound = Math.min(width, ACTION_SHEET_MAX_WIDTH);
   const result = (width - bound) / 2;
   const result1 = bound / 1200;
-  obj1 = animatedPosition(4185);
+  obj1 = animatedPosition(4186);
   const fn = function t() {
     let obj = { transform: null };
     obj = { translateY: animatedPosition.get() + top - 60 };
@@ -40,10 +40,10 @@ function CatEarsBackdrop() {
   items1 = [tmp.mascotLayer, ];
   obj1 = { top: -138 * result1, left: tmp6, right: tmp6 };
   items1[1] = obj1;
-  const obj2 = { source: { uri: top(16437) }, style: tmp.mascotImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+  const obj2 = { source: { uri: top(16455) }, style: tmp.mascotImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   obj[1] = callback(closure_4, obj2);
   obj[1] = callback(closure_5, obj);
-  return callback(top(4185).View, obj);
+  return callback(top(4186).View, obj);
 }
 function FeatureRow(arg0) {
   ({ icon, text } = arg0);
@@ -84,7 +84,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   importDefault = undefined;
   dependencyMap = undefined;
   const tmp = callback3();
-  let obj = markAsDismissed(16438);
+  let obj = markAsDismissed(16456);
   const intl = markAsDismissed(1236).intl;
   const string = intl.string;
   const t = markAsDismissed(1236).t;
@@ -109,8 +109,8 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const callback = React.useCallback(() => {
     callback.current = true;
     markAsDismissed(closure_1_8.PRIMARY);
-    let obj = markAsDismissed(7219);
-    obj = { screen: closure_1_6.FEATURED_PAGE, analyticsLocations: [], analyticsSource: callback(5925).ACTION_SHEET };
+    let obj = markAsDismissed(7233);
+    obj = { screen: closure_1_6.FEATURED_PAGE, analyticsLocations: [], analyticsSource: callback(5938).ACTION_SHEET };
     const result = obj.openCollectiblesShopMobile(obj);
   }, items1);
   const callback1 = React.useCallback(() => {
@@ -125,26 +125,26 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const obj3 = { variant: "heading-xl/bold", color: "text-strong", accessibilityRole: "header", style: tmp.headerText, children: null };
   const intl2 = tmp2(1236).intl;
   obj3[4] = intl2.string(markAsDismissed(1236).t.vRCvqo);
-  items3[1] = callback(markAsDismissed(4441).Text, obj3);
+  items3[1] = callback(markAsDismissed(4442).Text, obj3);
   const obj4 = { style: tmp.featureRows, children: null };
-  const obj5 = { icon: callback(markAsDismissed(6208).PaintIllocon, { size: 32 }), text: null };
+  const obj5 = { icon: callback(markAsDismissed(6221).PaintIllocon, { size: 32 }), text: null };
   const intl3 = tmp2(1236).intl;
   obj5[1] = intl3.string(markAsDismissed(1236).t["6ZWB0C"]);
   const items4 = [callback(FeatureRow, obj5), , ];
-  const obj6 = { icon: callback(markAsDismissed(6208).HeartIllocon, { size: 32 }), text: null };
+  const obj6 = { icon: callback(markAsDismissed(6221).HeartIllocon, { size: 32 }), text: null };
   const intl4 = tmp2(1236).intl;
   obj6[1] = intl4.string(markAsDismissed(1236).t.MkVbBY);
   items4[1] = callback(FeatureRow, obj6);
   const obj2 = { uri: metadataDefault };
-  items4[2] = callback(FeatureRow, { icon: callback(markAsDismissed(6208).ShopIllocon, { size: 32 }), text: stringResult });
+  items4[2] = callback(FeatureRow, { icon: callback(markAsDismissed(6221).ShopIllocon, { size: 32 }), text: stringResult });
   obj4[1] = items4;
   items3[2] = callback2(closure_5, obj4);
   const obj8 = { size: "lg", text: null, onPress: null };
   const intl5 = tmp2(1236).intl;
   obj8[1] = intl5.string(markAsDismissed(1236).t.S9hXPI);
   obj8[2] = callback;
-  items3[3] = callback(markAsDismissed(4880).Button, obj8);
+  items3[3] = callback(markAsDismissed(4893).Button, obj8);
   obj[1] = items3;
   obj[2] = callback2(closure_5, obj);
-  return callback(markAsDismissed(5574).BottomSheet, obj);
+  return callback(markAsDismissed(5587).BottomSheet, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 7218: getSettings ===
+// === Module 7232: getSettings ===
 
-// Module 7218 (getSettings)
+// Module 7232 (getSettings)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import create from "create" /* 1306 */;

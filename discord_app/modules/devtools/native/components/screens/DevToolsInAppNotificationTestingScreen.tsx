@@ -1,24 +1,24 @@
-// === Module 15417: getSelectedGuildChannel ===
+// === Module 15259: getSelectedGuildChannel ===
 
-// Module 15417 (getSelectedGuildChannel)
+// Module 15259 (getSelectedGuildChannel)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import dispatcherDefault from "dispatcher" /* 4162 */;
-import StickerFormat from "StickerFormat" /* 5164 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10097 */;
+import dispatcherDefault from "dispatcher" /* 4163 */;
+import StickerFormat from "StickerFormat" /* 5177 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10115 */;
 import closure_3 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "loadSavedGuildStickers" /* 5396 */;
+import closure_5 from "loadSavedGuildStickers" /* 5409 */;
 import { createChannelRecord } from "createChannelRecord" /* 1395 */;
-import closure_7 from "hasFlag" /* 4099 */;
+import closure_7 from "hasFlag" /* 4100 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "handleConnectionOpen" /* 1981 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import closure_10 from "handleConnectionOpen" /* 1982 */;
+import closure_11 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function getSelectedGuildChannel() {
@@ -688,7 +688,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
       }, label.label);
     })
   };
-  items1[2] = callback(_require(5944).TableRowGroup, obj);
+  items1[2] = callback(_require(5957).TableRowGroup, obj);
   obj[2] = items1;
   return callback2(ScrollView, obj);
 };

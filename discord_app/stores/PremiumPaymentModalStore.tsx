@@ -1,9 +1,9 @@
-// === Module 4706: handleSubscribeFailure ===
+// === Module 4719: handleSubscribeFailure ===
 
-// Module 4706 (handleSubscribeFailure)
+// Module 4719 (handleSubscribeFailure)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4343 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4344 */;
 
 require = arg1;
 function handleSubscribeFailure(error) {

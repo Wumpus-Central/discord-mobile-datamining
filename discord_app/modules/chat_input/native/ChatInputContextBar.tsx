@@ -1,22 +1,23 @@
-// === Module 11904: ChatInputReplyBarNoAuthor ===
+// === Module 11923: ChatInputReplyBarNoAuthor ===
 
-// Module 11904 (ChatInputReplyBarNoAuthor)
+// Module 11923 (ChatInputReplyBarNoAuthor)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4165 */;
-import Text from "Text" /* 4441 */;
-import registerAssetDefault from "registerAsset" /* 7646 */;
+import map from "map" /* 4166 */;
+import Text from "Text" /* 4442 */;
+import PressableBase from "PressableBase" /* 5033 */;
+import registerAssetDefault from "registerAsset" /* 7660 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
-import closure_7 from "handleChanged" /* 4807 */;
-import { DraftType } from "handleChanged" /* 4807 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import closure_7 from "handleChanged" /* 4820 */;
+import { DraftType } from "handleChanged" /* 4820 */;
+import closure_9 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function ChatInputReplyBarNoAuthor(onCancelReplying) {
@@ -34,7 +35,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     obj[3] = tmp3.floatingReplyTextWrapper;
     const intl3 = tmp(1236).intl;
     obj[4] = intl3.string(tmp(1236).t["5IEsGx"]);
-    const items = [callback(tmp(4441).Text, obj), ];
+    const items = [callback(tmp(4442).Text, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp3.floatingRightActions;
     obj2 = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
@@ -47,11 +48,11 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     obj2[3] = tmp13;
     obj2[4] = onCancelReplying;
     const obj3 = { source: null, size: null, style: null };
-    obj3[0] = tmp4(7646);
+    obj3[0] = tmp4(7660);
     obj3[1] = tmp(1297).Icon.Sizes.CUSTOM;
     obj3[2] = tmp3.floatingCloseIcon;
     obj2[5] = callback(tmp(1297).Icon, obj3);
-    obj1[1] = callback(tmp(5020).PressableOpacity, obj2);
+    obj1[1] = callback(tmp(5033).PressableOpacity, obj2);
     items[1] = callback(closure_5, obj1);
     obj[1] = items;
     let tmp7Result = tmp7(tmp11, obj);
@@ -64,7 +65,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp3.contextCancelIconWrapper;
     const obj6 = { source: null, size: null };
-    obj6[0] = tmp4(7646);
+    obj6[0] = tmp4(7660);
     obj6[1] = tmp(1297).Icon.Sizes.SMALL_20;
     obj5[1] = callback(tmp(1297).Icon, obj6);
     const items1 = [callback(closure_5, obj5), ];
@@ -72,9 +73,9 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     obj7[3] = tmp3.contextButtonText;
     const intl2 = tmp(1236).intl;
     obj7[4] = intl2.string(tmp(1236).t["5IEsGx"]);
-    items1[1] = callback(tmp(4441).Text, obj7);
+    items1[1] = callback(tmp(4442).Text, obj7);
     obj4[5] = items1;
-    tmp7Result = tmp7(tmp(5020).PressableOpacity, obj4);
+    tmp7Result = tmp7(tmp(5033).PressableOpacity, obj4);
   }
   return tmp7Result;
 }
@@ -454,7 +455,7 @@ function ChatInputEditBar(onCancelEditing) {
   }
   obj1[2] = floatingCloseIcon;
   obj[6] = closure_12(Button.Icon, obj1);
-  tmp7Result = tmp7(tmp(5020).PressableOpacity, obj);
+  tmp7Result = tmp7(tmp(5033).PressableOpacity, obj);
   obj2 = { style: tmp3.contextBarRow, children: null };
   const obj3 = { children: null };
   const items = [, ];
@@ -476,6 +477,7 @@ function ChatInputEditBar(onCancelEditing) {
   return closure_12(closure_5, obj2);
 }
 function ChatInputScheduledMessageBar(scheduledTimestamp) {
+  ({ onCancelScheduling, onEditSchedule } = scheduledTimestamp);
   obj = useIsMobileVisualRefreshExperimentEnabled;
   const chatInputFloating = obj.useMobileVisualRefreshConfig({ location: "ChatInputContextBar" }).chatInputFloating;
   const tmp3 = callback3();
@@ -483,66 +485,70 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   const token = obj1.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   let obj2 = map;
   const bound = Math.max(0, (token - obj2.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE)) / 2);
+  obj = { style: chatInputFloating ? tmp3.floatingReplyTextWrapper : tmp3.contextButtonText, accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.5, onPress: null, children: null };
+  const intl = tmp(1236).intl;
+  obj[2] = intl.string(getSystemLocale.t.SBcdAN);
+  obj[4] = onEditSchedule;
   let str = "text-sm/medium";
   if (chatInputFloating) {
     str = "text-sm/normal";
   }
-  obj = { lineClamp: 1, variant: str, color: null, style: null, children: null };
+  obj = { lineClamp: 1, variant: str, color: null, children: null };
   let str2 = "text-default";
   if (chatInputFloating) {
     str2 = "text-strong";
   }
   obj[2] = str2;
-  obj[3] = chatInputFloating ? tmp3.floatingReplyTextWrapper : tmp3.contextButtonText;
-  const intl = tmp(1236).intl;
-  obj = { timestamp: new Date(scheduledTimestamp.scheduledTimestamp).valueOf() };
-  obj[4] = intl.formatToPlainString(getSystemLocale.t.ZN3tIx, obj);
-  let tmp7Result = tmp7(Text.Text, obj);
-  obj1 = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.5, hitSlop: null, style: null, onPress: null, children: null };
   const intl2 = tmp(1236).intl;
-  obj1[1] = intl2.string(getSystemLocale.t.cpT0Cq);
+  obj1 = { timestamp: new Date(scheduledTimestamp.scheduledTimestamp).valueOf() };
+  obj[3] = intl2.formatToPlainString(getSystemLocale.t.ZN3tIx, obj1);
+  obj[5] = closure_12(Text.Text, obj);
+  let tmp7Result = tmp7(PressableBase.PressableOpacity, obj);
+  obj2 = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.5, hitSlop: null, style: null, onPress: null, children: null };
+  const intl3 = tmp(1236).intl;
+  obj2[1] = intl3.string(getSystemLocale.t.cpT0Cq);
   let tmp9;
   if (chatInputFloating) {
     if (bound > 0) {
       tmp9 = bound;
     }
   }
-  obj1[3] = tmp9;
+  obj2[3] = tmp9;
   let prop;
   if (!chatInputFloating) {
     prop = tmp3.contextCancelIconWrapper;
   }
-  obj1[4] = prop;
-  obj1[5] = scheduledTimestamp.onCancelScheduling;
-  obj2 = { source: registerAssetDefault, size: null, style: null };
+  obj2[4] = prop;
+  obj2[5] = onCancelScheduling;
+  const obj3 = { source: registerAssetDefault, size: null, style: null };
   const Sizes = tmp(1297).Icon.Sizes;
-  obj2[1] = chatInputFloating ? Sizes.CUSTOM : Sizes.SMALL_20;
+  obj3[1] = chatInputFloating ? Sizes.CUSTOM : Sizes.SMALL_20;
   let floatingCloseIcon;
   if (chatInputFloating) {
     floatingCloseIcon = tmp3.floatingCloseIcon;
   }
-  obj2[2] = floatingCloseIcon;
-  obj1[6] = closure_12(Button.Icon, obj2);
-  tmp7Result = tmp7(tmp(5020).PressableOpacity, obj1);
-  const obj3 = { style: tmp3.contextBarRow, children: null };
-  const obj4 = { children: null };
+  obj3[2] = floatingCloseIcon;
+  obj2[6] = closure_12(Button.Icon, obj3);
+  tmp7Result = tmp7(tmp(5033).PressableOpacity, obj2);
+  const obj4 = { style: tmp3.contextBarRow, children: null };
+  const obj5 = { children: null };
   const items = [, ];
   if (chatInputFloating) {
     items[0] = tmp7Result;
-    const obj5 = { style: null, children: null };
-    obj5[0] = tmp3.floatingRightActions;
-    obj5[1] = tmp7Result;
-    items[1] = tmp7(tmp13, obj5);
-    obj4[0] = items;
-    let tmp16 = obj4;
+    const obj6 = { style: null, children: null };
+    obj6[0] = tmp3.floatingRightActions;
+    obj6[1] = tmp7Result;
+    items[1] = tmp7(tmp13, obj6);
+    obj5[0] = items;
+    let tmp16 = obj5;
   } else {
     items[0] = tmp7Result;
     items[1] = tmp7Result;
-    obj4[0] = items;
-    tmp16 = obj4;
+    obj5[0] = items;
+    tmp16 = obj5;
   }
-  obj3[1] = closure_13(closure_14, tmp16);
-  return closure_12(closure_5, obj3);
+  obj4[1] = closure_13(closure_14, tmp16);
+  return closure_12(closure_5, obj4);
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
@@ -658,8 +664,9 @@ const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
   channel = channel.channel;
   const chatInputRef = channel.chatInputRef;
   const pendingReply = channel.pendingReply;
+  let stateFromStores;
   const items = [channel, chatInputRef, pendingReply];
-  const memo = importAllResult.useMemo(() => ({
+  const memo = stateFromStores.useMemo(() => ({
     onCancelEditing() {
       const current = ref.current;
       if (current != null) {
@@ -719,7 +726,7 @@ const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
   }
   const nullableMessageAuthor = obj.useNullableMessageAuthor(message);
   const items1 = [closure_7];
-  const stateFromStores = channel(pendingReply[16]).useStateFromStores(items1, () => closure_1_7.getScheduledMessage(channel.id));
+  stateFromStores = channel(pendingReply[16]).useStateFromStores(items1, () => closure_1_7.getScheduledMessage(channel.id));
   obj = { component: closure_5, children: null };
   let tmp8 = null != pendingReply;
   if (tmp8) {
@@ -758,10 +765,13 @@ const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
   let tmp20 = null != stateFromStores;
   if (tmp20) {
     const obj6 = { children: null };
-    const obj7 = { scheduledTimestamp: null, onCancelScheduling: null };
+    const obj7 = { scheduledTimestamp: null, onCancelScheduling: null, onEditSchedule: null };
     obj7[0] = stateFromStores.scheduledTimestamp;
     obj7[1] = function onCancelScheduling() {
       return chatInputRef(pendingReply[31]).clearDraft(channel.id, closure_1_8.ScheduledMessage);
+    };
+    obj7[2] = function onEditSchedule() {
+      return channel(pendingReply[32]).openScheduleMessageActionSheet(channel.id, stateFromStores.scheduledTimestamp);
     };
     obj6[0] = callback(ChatInputScheduledMessageBar, obj7);
     tmp20 = callback(closure_24, obj6);

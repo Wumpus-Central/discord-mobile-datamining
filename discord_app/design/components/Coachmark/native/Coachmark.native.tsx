@@ -1,15 +1,15 @@
-// === Module 8904: Coachmark ===
+// === Module 8922: Coachmark ===
 
-// Module 8904 (Coachmark)
+// Module 8922 (Coachmark)
 import ThemesDefault from "Themes" /* 712 */;
-import ManaContext from "ManaContext" /* 4172 */;
+import ManaContext from "ManaContext" /* 4173 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import importDefaultResult from "module_4185" /* 4185 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import importDefaultResult from "module_4186" /* 4186 */;
 
 require = arg1;
 class Coachmark {
@@ -36,7 +36,7 @@ class Coachmark {
     adjustmentX = tmp7.adjustmentX;
     tmp8 = graphic;
     ({ tooltipX, tooltipY } = tmp7);
-    obj = require("module_4185");
+    obj = require("module_4186");
     sharedValue = require("module_0");
     closure_6 = sharedValue;
     items = [];

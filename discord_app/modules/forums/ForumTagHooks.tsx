@@ -1,9 +1,9 @@
-// === Module 6074: useAvailableTags ===
+// === Module 6087: useAvailableTags ===
 
-// Module 6074 (useAvailableTags)
+// Module 6087 (useAvailableTags)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4090 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;

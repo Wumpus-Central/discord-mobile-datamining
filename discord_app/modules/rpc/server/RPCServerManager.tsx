@@ -1,26 +1,26 @@
-// === Module 14026: loadServer ===
+// === Module 14045: loadServer ===
 
-// Module 14026 (loadServer)
+// Module 14045 (loadServer)
 import set2 from "set" /* 500 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "map" /* 9385 */;
-import closure_5 from "initializeState" /* 7381 */;
+import closure_4 from "map" /* 9403 */;
+import closure_5 from "initializeState" /* 7395 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "trackCommunicationDisabled" /* 1992 */;
+import closure_7 from "trackCommunicationDisabled" /* 1993 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "_detectH265HardwareDecode" /* 4496 */;
-import closure_10 from "sortActivity" /* 4534 */;
-import closure_11 from "createRTCConnection" /* 4519 */;
-import closure_12 from "markAllUserIdListsStale" /* 4098 */;
-import closure_13 from "handleConnectionOpen" /* 1981 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import closure_15 from "updateVoiceState" /* 4464 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4347 */;
+import closure_9 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_10 from "sortActivity" /* 4535 */;
+import closure_11 from "createRTCConnection" /* 4520 */;
+import closure_12 from "markAllUserIdListsStale" /* 4099 */;
+import closure_13 from "handleConnectionOpen" /* 1982 */;
+import closure_14 from "mergeGuildAvatar" /* 1923 */;
+import closure_15 from "updateVoiceState" /* 4465 */;
+import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4348 */;
 import ME from "ME" /* 676 */;
-import { ActivityLayoutMode } from "items3" /* 4473 */;
-import { FrameLayoutModes } from "FrameLayoutModes" /* 9386 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4509 */;
+import { ActivityLayoutMode } from "items3" /* 4474 */;
+import { FrameLayoutModes } from "FrameLayoutModes" /* 9404 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4510 */;
 
 require = arg1;
 ({ ActivityActionTypes: closure_17, RelationshipTypes: closure_18, AnalyticEvents: closure_19, RPCEvents: closure_20, RPCCloseCodes: closure_21 } = ME);
@@ -555,7 +555,7 @@ prototype["init"] = function init() {
     callback(698).track(constants.AUTHORIZED_APP_CONNECTED, obj);
   };
   this.rpcServer.onDisconnect = (id, reason) => {
-    let obj = callback(14027);
+    let obj = callback(14046);
     obj.releaseSocket(id.id);
     obj = { type: "RPC_APP_DISCONNECTED", socketId: id.id, application: id.application, source: id.source, reason };
     callback(709).dispatch(obj);

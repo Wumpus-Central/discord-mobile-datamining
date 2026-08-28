@@ -1,10 +1,10 @@
-// === Module 7213: useOptInEnabledForGuild ===
+// === Module 7227: useOptInEnabledForGuild ===
 
-// Module 7213 (useOptInEnabledForGuild)
+// Module 7227 (useOptInEnabledForGuild)
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 4654 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_4 from "updateUserGuildSettingsInternal" /* 4667 */;
+import closure_5 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

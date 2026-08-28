@@ -1,9 +1,9 @@
-// === Module 8814: useCurrentUser ===
+// === Module 8831: useCurrentUser ===
 
-// Module 8814 (useCurrentUser)
+// Module 8831 (useCurrentUser)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 589 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1923 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCurrentUser.tsx");

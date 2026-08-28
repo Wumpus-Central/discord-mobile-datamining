@@ -1,7 +1,7 @@
-// === Module 7342: maybeDispatchDevOnlyDummyFriendSuggestions ===
+// === Module 7356: maybeDispatchDevOnlyDummyFriendSuggestions ===
 
-// Module 7342 (maybeDispatchDevOnlyDummyFriendSuggestions)
-import closure_0 from "mergeGuildAvatar" /* 1922 */;
+// Module 7356 (maybeDispatchDevOnlyDummyFriendSuggestions)
+import closure_0 from "mergeGuildAvatar" /* 1923 */;
 
 const result = require("set").fileFinishedImporting("modules/friend_suggestions/maybeDispatchDevOnlyDummyFriendSuggestions.tsx");
 

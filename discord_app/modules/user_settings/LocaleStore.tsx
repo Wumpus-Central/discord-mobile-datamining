@@ -1,10 +1,10 @@
-// === Module 1996: _getSystemLocale ===
+// === Module 1997: _getSystemLocale ===
 
-// Module 1996 (_getSystemLocale)
+// Module 1997 (_getSystemLocale)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { setAppLocale } from "_setAppLocale" /* 1997 */;
+import { setAppLocale } from "_setAppLocale" /* 1998 */;
 import closure_5 from "handleConnectionClosedOrResumed" /* 1340 */;
 import { systemLocale } from "getSystemLocale" /* 1236 */;
 
@@ -41,7 +41,7 @@ function _getSystemLocale() {
             closure_1 = tmp2;
             let callback = tmp3;
             callback = undefined;
-            const tmp25 = closure_1_1(4072);
+            const tmp25 = closure_1_1(4073);
             let prop;
             if (tmp25 != null) {
               const app = tmp25.app;
@@ -50,7 +50,7 @@ function _getSystemLocale() {
               }
             }
             if (null != prop) {
-              const app2 = tmp23(4072).app;
+              const app2 = tmp23(4073).app;
               const preferredSystemLanguages = app2.getPreferredSystemLanguages();
               dependencyMap = 1;
               c3 = 1;

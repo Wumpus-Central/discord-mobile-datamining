@@ -1,23 +1,23 @@
-// === Module 14087: messageEventsValidation ===
+// === Module 14106: messageEventsValidation ===
 
-// Module 14087 (messageEventsValidation)
+// Module 14106 (messageEventsValidation)
 import fromStringAll from "fromString" /* 506 */;
-import prototypeDefault from "prototype" /* 9424 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9427 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9429 */;
-import getCapabilitiesForSocketDefault from "getCapabilitiesForSocket" /* 14027 */;
-import closure_4 from "addApplication" /* 4486 */;
-import closure_5 from "initialize" /* 4468 */;
+import prototypeDefault from "prototype" /* 9442 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9445 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9447 */;
+import getCapabilitiesForSocketDefault from "getCapabilitiesForSocket" /* 14046 */;
+import closure_4 from "addApplication" /* 4487 */;
+import closure_5 from "initialize" /* 4469 */;
 import { getGuildIconURL } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_7 from "reset" /* 4467 */;
+import closure_7 from "reset" /* 4468 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "trackCommunicationDisabled" /* 1992 */;
+import closure_9 from "trackCommunicationDisabled" /* 1993 */;
 import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "_detectH265HardwareDecode" /* 4496 */;
-import closure_12 from "createRTCConnection" /* 4519 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import closure_14 from "updateVoiceState" /* 4464 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4347 */;
+import closure_11 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_12 from "createRTCConnection" /* 4520 */;
+import closure_13 from "mergeGuildAvatar" /* 1923 */;
+import closure_14 from "updateVoiceState" /* 4465 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4348 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -42,7 +42,7 @@ function messageEvents(args) {
         tmp3 = new tmp3(obj, "Invalid nsfw channel id: " + channel.id);
         throw tmp3;
       }
-      tmp13Result = tmp13(4684);
+      tmp13Result = tmp13(4697);
     }
     obj4 = recurseReplaceContentTree;
     tmp13 = require;
@@ -255,9 +255,9 @@ obj8[RPC_SCOPE_CONFIG.ANY] = items4;
 obj7[0] = obj8;
 obj7[1] = function handler() {
   return (arg0) => {
-    const obj = { state: callback(9429).getVoiceConnectionState(store.getState()), hostname: store.getHostname(), pings: store.getPings(), average_ping: store.getAveragePing(), last_ping: store.getLastPing() };
+    const obj = { state: callback(9447).getVoiceConnectionState(store.getState()), hostname: store.getHostname(), pings: store.getPings(), average_ping: store.getAveragePing(), last_ping: store.getLastPing() };
     ({ prevState, dispatch } = arg0);
-    const obj2 = callback(9429);
+    const obj2 = callback(9447);
     if (!obj3.isEqual(obj, prevState)) {
       dispatch(obj);
     }
@@ -292,7 +292,7 @@ obj[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    const result = socket(14027).validateEventSubscription(socket, session_id);
+    const result = socket(14046).validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;
       let obj = socket(closure_1_3[17]);
@@ -499,7 +499,7 @@ obj39[1] = function handler() {
       tmp = tmp2;
     }
     if (!tmp) {
-      prevState.dispatch(callback(9430)(obj.currentUser));
+      prevState.dispatch(callback(9448)(obj.currentUser));
     }
     return obj;
   };
@@ -571,7 +571,7 @@ obj45[1] = function handler() {
     }
     let tmp8 = null;
     if (null != application) {
-      tmp8 = callback(14089)(application);
+      tmp8 = callback(14108)(application);
     }
     if (streamerActiveStreamMetadata != null) {
       const sourceName = streamerActiveStreamMetadata.sourceName;

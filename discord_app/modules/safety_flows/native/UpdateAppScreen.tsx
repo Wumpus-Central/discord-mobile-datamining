@@ -1,15 +1,15 @@
-// === Module 17372: UpdateAppScreen ===
+// === Module 17390: UpdateAppScreen ===
 
-// Module 17372 (UpdateAppScreen)
+// Module 17390 (UpdateAppScreen)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2631 */;
-import Text from "Text" /* 4441 */;
-import Button from "Button" /* 4880 */;
+import messagesProxyDefault from "messagesProxy" /* 2632 */;
+import Text from "Text" /* 4442 */;
+import Button from "Button" /* 4893 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 ({ NativeModules: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

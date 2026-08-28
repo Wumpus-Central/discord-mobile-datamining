@@ -1,11 +1,11 @@
-// === Module 4864: AccessibilityView ===
+// === Module 4877: AccessibilityView ===
 
-// Module 4864 (AccessibilityView)
-import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle" /* 4865 */;
+// Module 4877 (AccessibilityView)
+import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle" /* 4878 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
-import importDefaultResult from "module_4185" /* 4185 */;
+import importDefaultResult from "module_4186" /* 4186 */;
 
 const forwardRefResult = importAllResult.forwardRef((accessibilityViewIsModal, ref) => {
   let flag = accessibilityViewIsModal.accessibilityViewIsModal;

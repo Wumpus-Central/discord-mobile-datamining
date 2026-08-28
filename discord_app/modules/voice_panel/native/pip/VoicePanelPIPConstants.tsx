@@ -1,6 +1,6 @@
-// === Module 16582: VoicePanelPIPModes ===
+// === Module 16600: VoicePanelPIPModes ===
 
-// Module 16582 (VoicePanelPIPModes)
+// Module 16600 (VoicePanelPIPModes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPConstants.tsx");

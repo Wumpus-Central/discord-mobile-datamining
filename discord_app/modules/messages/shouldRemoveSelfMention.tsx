@@ -1,6 +1,6 @@
-// === Module 7316: shouldRemoveSelfMention ===
+// === Module 7330: shouldRemoveSelfMention ===
 
-// Module 7316 (shouldRemoveSelfMention)
+// Module 7330 (shouldRemoveSelfMention)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

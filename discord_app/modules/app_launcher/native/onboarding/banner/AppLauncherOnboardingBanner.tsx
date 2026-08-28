@@ -1,11 +1,11 @@
-// === Module 11537: AppLauncherOnboardingBanner ===
+// === Module 11556: AppLauncherOnboardingBanner ===
 
-// Module 11537 (AppLauncherOnboardingBanner)
+// Module 11556 (AppLauncherOnboardingBanner)
 import noopAll from "noop" /* 19 */;
 import DismissibleContent from "DismissibleContent" /* 1377 */;
-import ActivitiesBannerDefault from "ActivitiesBanner" /* 11538 */;
-import AppsBanerDefault from "AppsBaner" /* 11552 */;
-import BotsBannerDefault from "BotsBanner" /* 11554 */;
+import ActivitiesBannerDefault from "ActivitiesBanner" /* 11557 */;
+import AppsBanerDefault from "AppsBaner" /* 11571 */;
+import BotsBannerDefault from "BotsBanner" /* 11573 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

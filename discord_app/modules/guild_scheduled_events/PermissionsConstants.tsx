@@ -1,6 +1,6 @@
-// === Module 9562: VIEW_CHANNEL ===
+// === Module 9580: VIEW_CHANNEL ===
 
-// Module 9562 (VIEW_CHANNEL)
+// Module 9580 (VIEW_CHANNEL)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import Permissions2 from "Permissions" /* 1399 */;

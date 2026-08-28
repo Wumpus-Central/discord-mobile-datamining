@@ -1,6 +1,6 @@
-// === Module 8444: PROFILE_EFFECT_INTRO_MINIMUM_DELAY ===
+// === Module 8458: PROFILE_EFFECT_INTRO_MINIMUM_DELAY ===
 
-// Module 8444 (PROFILE_EFFECT_INTRO_MINIMUM_DELAY)
+// Module 8458 (PROFILE_EFFECT_INTRO_MINIMUM_DELAY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/profile_effects/constants.tsx");

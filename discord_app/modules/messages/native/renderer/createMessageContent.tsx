@@ -1,36 +1,36 @@
-// === Module 7782: createThreadEmbed ===
+// === Module 7796: createThreadEmbed ===
 
-// Module 7782 (createThreadEmbed)
+// Module 7796 (createThreadEmbed)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeChannelName from "computeChannelName" /* 4639 */;
-import processMessage from "processMessage" /* 7273 */;
-import _formatMessageCountLabel from "_formatMessageCountLabel" /* 7563 */;
-import Changeset from "Changeset" /* 7775 */;
-import items6 from "items" /* 7786 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7787 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
-import closure_5 from "addApplication" /* 4486 */;
-import closure_6 from "isSyncedModeThemesEnabled" /* 4265 */;
-import closure_7 from "getEmojiToGroupId" /* 5353 */;
-import closure_8 from "handleMessageSendFailedAutomod" /* 7780 */;
-import closure_9 from "deleteNonce" /* 7783 */;
-import closure_10 from "initialize" /* 4090 */;
-import closure_11 from "set" /* 7784 */;
-import closure_12 from "processMessage" /* 7273 */;
-import closure_14 from "storeThread" /* 4091 */;
-import closure_15 from "updateState" /* 6103 */;
+import computeChannelName from "computeChannelName" /* 4640 */;
+import processMessage from "processMessage" /* 7287 */;
+import _formatMessageCountLabel from "_formatMessageCountLabel" /* 7577 */;
+import Changeset from "Changeset" /* 7789 */;
+import items6 from "items" /* 7800 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7801 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import closure_5 from "addApplication" /* 4487 */;
+import closure_6 from "isSyncedModeThemesEnabled" /* 4266 */;
+import closure_7 from "getEmojiToGroupId" /* 5366 */;
+import closure_8 from "handleMessageSendFailedAutomod" /* 7794 */;
+import closure_9 from "deleteNonce" /* 7797 */;
+import closure_10 from "initialize" /* 4091 */;
+import closure_11 from "set" /* 7798 */;
+import closure_12 from "processMessage" /* 7287 */;
+import closure_14 from "storeThread" /* 4092 */;
+import closure_15 from "updateState" /* 6116 */;
 import closure_16 from "handleThemeChange" /* 1302 */;
 import closure_17 from "fetchFingerprint" /* 1218 */;
 import closure_18 from "ensureGuildLoaded" /* 1391 */;
-import closure_19 from "trackCommunicationDisabled" /* 1992 */;
+import closure_19 from "trackCommunicationDisabled" /* 1993 */;
 import closure_20 from "createGuildRecordFromRust" /* 1910 */;
-import closure_21 from "markAllUserIdListsStale" /* 4098 */;
-import closure_22 from "initialize" /* 7515 */;
-import closure_23 from "mergeGuildAvatar" /* 1922 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4438 */;
+import closure_21 from "markAllUserIdListsStale" /* 4099 */;
+import closure_22 from "initialize" /* 7529 */;
+import closure_23 from "mergeGuildAvatar" /* 1923 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4439 */;
 import ME from "ME" /* 676 */;
 
 function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, options, arg5) {
@@ -51,7 +51,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
         let string2 = _formatMessageCountLabel.formatMessageCountLabel(count, channel1.id);
         if (null != count) {
           if (count > 0) {
-            let tmp15Result = tmp15(6126);
+            let tmp15Result = tmp15(6139);
             if (tmp15Result.isChannelSpoilerGated(channel1)) {
               let obj = { title: null, messageCountLabel: null, messageCountAccessibilityLabel: null, messagePreviewString: null, archived: false, backgroundColor: null };
               obj[0] = channelName;
@@ -76,8 +76,8 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 obj[2] = string2;
                 const intl4 = tmp15(1236).intl;
                 obj[3] = intl4.string(tmp15(1236).t.ZTo4HS);
-                tmp15Result = tmp15(7788);
-                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(7789));
+                tmp15Result = tmp15(7802);
+                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(7803));
                 obj[6] = backgroundColor;
                 obj1 = obj;
               } else {

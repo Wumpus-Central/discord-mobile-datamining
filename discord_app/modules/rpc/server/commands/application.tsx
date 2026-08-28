@@ -1,13 +1,13 @@
-// === Module 14035: ? ===
+// === Module 14054: ? ===
 
-// Module 14035
+// Module 14054
 import sendRequest from "sendRequest" /* 530 */;
-import isTestModeForApplication from "isTestModeForApplication" /* 8429 */;
-import prototypeDefault from "prototype" /* 9424 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9427 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9429 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14036 */;
-import closure_3 from "addApplication" /* 4486 */;
+import isTestModeForApplication from "isTestModeForApplication" /* 8443 */;
+import prototypeDefault from "prototype" /* 9442 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9445 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9447 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14055 */;
+import closure_3 from "addApplication" /* 4487 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -35,9 +35,9 @@ let obj = {
       const guildId = obj3.getGuildId();
     }
     application = application.getApplication(id);
-    let tmpResult = tmp(8368);
+    let tmpResult = tmp(8382);
     if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
-      tmpResult = tmp(9377);
+      tmpResult = tmp(9395);
       const activeAnalyticsSessionIDs = tmpResult.getActiveAnalyticsSessionIDs(id);
       obj = { activity_application_id: null, activity_channel_type: null, activity_guild_id: null, activity_user_session_id: null };
       obj[0] = id;
@@ -59,7 +59,7 @@ let obj = {
     } else {
       obj1 = { errorCode: null };
       obj1[0] = constants2.INVALID_COMMAND;
-      const tmp12 = new tmp5(9424)(obj1, "This application cannot access this API");
+      const tmp12 = new tmp5(9442)(obj1, "This application cannot access this API");
       throw tmp12;
     }
   }

@@ -1,21 +1,21 @@
-// === Module 9633: RemoveIcon ===
+// === Module 9651: RemoveIcon ===
 
-// Module 9633 (RemoveIcon)
+// Module 9651 (RemoveIcon)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1297 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4173 */;
-import Text from "Text" /* 4441 */;
-import TableRowInner from "TableRowInner" /* 5551 */;
-import FormCheckbox from "FormCheckbox" /* 7617 */;
-import getRoleRowDataAll from "getRoleRowData" /* 9628 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9634 */;
-import registerAssetDefault from "registerAsset" /* 9635 */;
-import registerAssetDefault2 from "registerAsset" /* 9636 */;
+import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4174 */;
+import Text from "Text" /* 4442 */;
+import TableRowInner from "TableRowInner" /* 5564 */;
+import FormCheckbox from "FormCheckbox" /* 7631 */;
+import getRoleRowDataAll from "getRoleRowData" /* 9646 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9652 */;
+import registerAssetDefault from "registerAsset" /* 9653 */;
+import registerAssetDefault2 from "registerAsset" /* 9654 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { RowType } from "RowType" /* 8603 */;
+import closure_5 from "mergeGuildAvatar" /* 1923 */;
+import { RowType } from "RowType" /* 8618 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function RemoveIcon(item) {
@@ -61,8 +61,8 @@ function RemoveIcon(item) {
     }
     obj = { style: null };
     obj[0] = prop;
-    obj[4] = closure_7(item(6177).CircleXIcon, obj);
-    tmp3Result = tmp3(item(5020).PressableOpacity, obj);
+    obj[4] = closure_7(item(6190).CircleXIcon, obj);
+    tmp3Result = tmp3(item(5033).PressableOpacity, obj);
   }
   return tmp3Result;
 }

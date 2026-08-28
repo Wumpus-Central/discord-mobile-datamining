@@ -1,10 +1,10 @@
-// === Module 11661: ? ===
+// === Module 11680: ? ===
 
-// Module 11661
+// Module 11680
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -46,17 +46,17 @@ const memoResult = importAllResult.memo((active) => {
   let obj = onPress(1367);
   const mobileVisualRefreshConfig = obj.useMobileVisualRefreshConfig({ location: "ChatInputExpressionButton" });
   ({ enabled, chatInputFloating } = mobileVisualRefreshConfig);
-  const token = onPress(4165).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  const obj2 = onPress(4165);
+  const token = onPress(4166).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const obj2 = onPress(4166);
   const tmp4 = importDefault;
-  const token1 = onPress(4165).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_PILL_PADDING);
-  const obj3 = onPress(4165);
-  const token2 = onPress(4165).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH);
-  const obj4 = onPress(4165);
-  const token3 = onPress(4165).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ICON_SIZE);
-  const obj5 = onPress(4165);
+  const token1 = onPress(4166).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_PILL_PADDING);
+  const obj3 = onPress(4166);
+  const token2 = onPress(4166).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH);
+  const obj4 = onPress(4166);
+  const token3 = onPress(4166).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ICON_SIZE);
+  const obj5 = onPress(4166);
   let diff = token;
-  const token4 = onPress(4165).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  const token4 = onPress(4166).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   if (!enabled) {
     diff = token - 2 * (token1 + token2);
   }
@@ -66,7 +66,7 @@ const memoResult = importAllResult.memo((active) => {
   callback = importAllResult.useCallback(() => {
     onPress(undefined);
   }, items);
-  const obj6 = onPress(4165);
+  const obj6 = onPress(4166);
   obj = { ref: importAllResult.useRef(null), style: items1, hitSlop: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null };
   items1 = [tmp11.expressionButton, active.style];
   let tmp16;
@@ -85,9 +85,9 @@ const memoResult = importAllResult.memo((active) => {
   }
   const items2 = [expressionButtonIconPosition, tmp11.expressionButtonIconTint];
   obj[1] = items2;
-  obj[2] = tmp4(showKeyboardIcon ? 10805 : 8161);
+  obj[2] = tmp4(showKeyboardIcon ? 10823 : 8175);
   obj[7] = jsx(onPress(1297).Icon, { size: token3, style: null, source: null });
-  return jsx(onPress(5020).PressableOpacity, { size: token3, style: null, source: null });
+  return jsx(onPress(5033).PressableOpacity, { size: token3, style: null, source: null });
 });
 const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputExpressionButton.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 8090: get untranslatedDescription ===
+// === Module 8104: get untranslatedDescription ===
 
-// Module 8090 (get untranslatedDescription)
-import setDefault from "set" /* 4809 */;
-import closure_3 from "markAllUserIdListsStale" /* 4098 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+// Module 8104 (get untranslatedDescription)
+import setDefault from "set" /* 4822 */;
+import closure_3 from "markAllUserIdListsStale" /* 4099 */;
+import closure_4 from "mergeGuildAvatar" /* 1923 */;
 
 const require = arg1;
 let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN, applicationId: require("TRUE_OPTION_NAME").BuiltInSectionId.BUILT_IN };
@@ -28,11 +28,11 @@ obj.predicate = function predicate(channel) {
 obj.execute = function execute(arg0, channel) {
   channel = channel.channel;
   if (null != channel) {
-    const channelName = channel(4639).computeChannelName(channel, closure_4, closure_3);
+    const channelName = channel(4640).computeChannelName(channel, closure_4, closure_3);
     const intl5 = channel(1236).intl;
     let obj = { name: null };
     obj[0] = channelName;
-    const obj5 = channel(4639);
+    const obj5 = channel(4640);
     const intl6 = channel(1236).intl;
     obj = { name: null };
     obj[0] = channelName;

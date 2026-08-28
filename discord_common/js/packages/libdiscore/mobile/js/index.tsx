@@ -4,6 +4,7 @@
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import typedGlobal from "typedGlobal" /* 1919 */;
+import monotonicNowMs from "monotonicNowMs" /* 1920 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 if (NativeModules.LibDiscoreModule) {
@@ -37,6 +38,7 @@ export const rustMultiply = function rustMultiply(arg0, arg1) {
 export const consumeLogs = function consumeLogs() {
   return LIBDISCORE_JSI.consumeLogs();
 };
+export const monotonicNowMs = monotonicNowMs.monotonicNowMs;
 export const BlockedDomainsStore = prototype;
 export const getFluxApi = function getFluxApi() {
   return LIBDISCORE_JSI.fluxApi;

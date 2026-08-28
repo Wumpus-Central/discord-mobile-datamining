@@ -1,14 +1,14 @@
-// === Module 9508: StreamQualityLiveIndicator ===
+// === Module 9526: StreamQualityLiveIndicator ===
 
-// Module 9508 (StreamQualityLiveIndicator)
+// Module 9526 (StreamQualityLiveIndicator)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { ResolutionTypes } from "DesktopSources" /* 4509 */;
+import GuildFeatures from "GuildFeatures" /* 1925 */;
+import { ResolutionTypes } from "DesktopSources" /* 4510 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 ({ PremiumTypes: closure_6, PremiumUpsellTypes: error } = GuildFeatures);

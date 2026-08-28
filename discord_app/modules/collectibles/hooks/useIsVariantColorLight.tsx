@@ -1,6 +1,6 @@
-// === Module 12472: useIsVariantColorLight ===
+// === Module 12492: useIsVariantColorLight ===
 
-// Module 12472 (useIsVariantColorLight)
+// Module 12492 (useIsVariantColorLight)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

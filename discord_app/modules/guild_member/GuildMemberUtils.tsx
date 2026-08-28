@@ -1,11 +1,11 @@
-// === Module 11322: getGuildMemberAgeInRange ===
+// === Module 11341: getGuildMemberAgeInRange ===
 
-// Module 11322 (getGuildMemberAgeInRange)
-import closure_3 from "trackCommunicationDisabled" /* 1992 */;
+// Module 11341 (getGuildMemberAgeInRange)
+import closure_3 from "trackCommunicationDisabled" /* 1993 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_6 from "mergeGuildAvatar" /* 1923 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4078 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;

@@ -1,9 +1,9 @@
-// === Module 10777: ProfileFrameUserPreview ===
+// === Module 10795: ProfileFrameUserPreview ===
 
-// Module 10777 (ProfileFrameUserPreview)
+// Module 10795 (ProfileFrameUserPreview)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import filterLayerDefault from "filterLayer" /* 8459 */;
+import filterLayerDefault from "filterLayer" /* 8473 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

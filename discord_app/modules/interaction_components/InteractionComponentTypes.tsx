@@ -1,6 +1,6 @@
-// === Module 4698: ActionComponentState ===
+// === Module 4711: ActionComponentState ===
 
-// Module 4698 (ActionComponentState)
+// Module 4711 (ActionComponentState)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/interaction_components/InteractionComponentTypes.tsx");

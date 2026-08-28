@@ -1,6 +1,6 @@
-// === Module 13485: GUILD_LIMITED_ACCESS_HC_LINK ===
+// === Module 13504: GUILD_LIMITED_ACCESS_HC_LINK ===
 
-// Module 13485 (GUILD_LIMITED_ACCESS_HC_LINK)
+// Module 13504 (GUILD_LIMITED_ACCESS_HC_LINK)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_limited_access/GuildLimitedAccessConstants.tsx");

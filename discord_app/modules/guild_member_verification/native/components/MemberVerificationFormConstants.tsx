@@ -1,6 +1,6 @@
-// === Module 7582: BANNER_RATIO_HEIGHT_16_9 ===
+// === Module 7596: BANNER_RATIO_HEIGHT_16_9 ===
 
-// Module 7582 (BANNER_RATIO_HEIGHT_16_9)
+// Module 7596 (BANNER_RATIO_HEIGHT_16_9)
 import set from "set" /* 2 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 

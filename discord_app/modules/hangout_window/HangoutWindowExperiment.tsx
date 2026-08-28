@@ -1,9 +1,9 @@
-// === Module 16324: experiment ===
+// === Module 16342: experiment ===
 
-// Module 16324 (experiment)
+// Module 16342 (experiment)
 import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4359 */;
-import createExperiment from "createExperiment" /* 4356 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4360 */;
+import createExperiment from "createExperiment" /* 4357 */;
 
 const items = [{ id: 1, label: "Enable Hangout Window", config: { enableHangoutWindow: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-02_hangout_window", label: "Hangout Window", defaultConfig: { enableHangoutWindow: false }, commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, treatments: items });

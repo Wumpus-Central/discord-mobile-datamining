@@ -1,10 +1,10 @@
-// === Module 15744: NUFChannelsActionSheetImporter ===
+// === Module 15762: NUFChannelsActionSheetImporter ===
 
-// Module 15744 (NUFChannelsActionSheetImporter)
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10337 */;
-import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "useIsGuildEligibleForRoleSubscriptionsUpsell" /* 15755 */;
-import useIsEligibleForTierTemplateUpsellDefault from "useIsEligibleForTierTemplateUpsell" /* 15756 */;
+// Module 15762 (NUFChannelsActionSheetImporter)
+import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10355 */;
+import useIsGuildEligibleForRoleSubscriptionsUpsellDefault from "useIsGuildEligibleForRoleSubscriptionsUpsell" /* 15773 */;
+import useIsEligibleForTierTemplateUpsellDefault from "useIsEligibleForTierTemplateUpsell" /* 15774 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { DismissibleContentGroupName as closure_5 } from "ContentDismissActionType" /* 1388 */;
@@ -12,19 +12,19 @@ import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
 function NUFChannelsActionSheetImporter() {
-  return asyncRequireImpl(13336, dependencyMap.paths);
+  return asyncRequireImpl(13355, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsUpsellActionSheetImporter() {
-  return asyncRequireImpl(15745, dependencyMap.paths);
+  return asyncRequireImpl(15763, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsIAPUpsellActionSheetImporter() {
-  return asyncRequireImpl(15747, dependencyMap.paths);
+  return asyncRequireImpl(15765, dependencyMap.paths);
 }
 function CreatorMonetizationOnboardingV2UpsellActionSheetImporter() {
-  return asyncRequireImpl(15750, dependencyMap.paths);
+  return asyncRequireImpl(15768, dependencyMap.paths);
 }
 function TierTemplatesUpsellActionSheetImporter() {
-  return asyncRequireImpl(15752, dependencyMap.paths);
+  return asyncRequireImpl(15770, dependencyMap.paths);
 }
 class GuildTooltipActionSheets {
   constructor(arg0) {

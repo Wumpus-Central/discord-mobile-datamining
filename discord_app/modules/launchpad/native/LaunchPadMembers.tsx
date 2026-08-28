@@ -1,15 +1,15 @@
-// === Module 16488: ? ===
+// === Module 16506: ? ===
 
-// Module 16488
+// Module 16506
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import _modDef11103 from "module_11103" /* 11103 */;
-import _modDef11673 from "module_11673" /* 11673 */;
-import _modDef16183 from "module_16183" /* 16183 */;
+import _modDef11121 from "module_11121" /* 11121 */;
+import _modDef11692 from "module_11692" /* 11692 */;
+import _modDef16201 from "module_16201" /* 16201 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1981 */;
+import closure_5 from "handleConnectionOpen" /* 1982 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -43,7 +43,7 @@ const memoResult = importAllResult.memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "call", type: "OPEN_APP_DM" };
+    return { channelId: "container", type: false };
   });
   if ("private" === stateFromStoresObject.type) {
     obj = { style: null, children: null };
@@ -51,7 +51,7 @@ const memoResult = importAllResult.memo(function LaunchPadMembers() {
     obj = { channelId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
     obj[0] = stateFromStoresObject.channelId;
     obj[1] = tmp.listStyle;
-    obj[1] = jsx(_modDef11673, { channelId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
+    obj[1] = jsx(_modDef11692, { channelId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
     let tmp8 = <View channelId={null} listStyleOverride={null} disableBottomSafeZone insetEnd={20} />;
   } else if ("thread" === stateFromStoresObject.type) {
     obj1 = { style: null, children: null };
@@ -59,7 +59,7 @@ const memoResult = importAllResult.memo(function LaunchPadMembers() {
     const obj2 = { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
     ({ channelId: obj5[0], guildId: obj5[1] } = stateFromStoresObject);
     obj2[2] = tmp.listStyle;
-    obj1[1] = jsx(_modDef16183, { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
+    obj1[1] = jsx(_modDef16201, { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
     tmp8 = <View style={null}>{null}</View>;
   } else if ("guild" === stateFromStoresObject.type) {
     const obj3 = { style: null, children: null };
@@ -67,7 +67,7 @@ const memoResult = importAllResult.memo(function LaunchPadMembers() {
     const obj4 = { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
     ({ channelId: obj3[0], guildId: obj3[1] } = stateFromStoresObject);
     obj4[2] = tmp.listStyle;
-    obj3[1] = jsx(_modDef11103, { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
+    obj3[1] = jsx(_modDef11121, { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
     tmp8 = <View style={null}>{null}</View>;
   } else {
     const obj5 = { style: null, children: null };
@@ -76,7 +76,7 @@ const memoResult = importAllResult.memo(function LaunchPadMembers() {
     obj6[0] = tmp.emptyText;
     const intl = tmp2(1236).intl;
     obj6[2] = intl.string(tmp2(1236).t["+7wtJq"]);
-    obj5[1] = jsx(tmp2(4441).Text, { style: null, variant: "text-md/semibold", children: null });
+    obj5[1] = jsx(tmp2(4442).Text, { style: null, variant: "text-md/semibold", children: null });
     tmp8 = <View style={null}>{null}</View>;
   }
   return tmp8;

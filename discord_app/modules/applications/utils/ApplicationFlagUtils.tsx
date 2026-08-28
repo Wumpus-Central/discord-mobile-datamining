@@ -1,8 +1,8 @@
-// === Module 8368: getApplicationFlags ===
+// === Module 8382: getApplicationFlags ===
 
-// Module 8368 (getApplicationFlags)
+// Module 8382 (getApplicationFlags)
 import fromStringAll from "fromString" /* 506 */;
-import closure_2 from "createExecutable" /* 4471 */;
+import closure_2 from "createExecutable" /* 4472 */;
 
 function getApplicationFlags(application) {
   if (null == application) {

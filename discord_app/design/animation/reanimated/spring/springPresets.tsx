@@ -1,8 +1,8 @@
-// === Module 4883: SUBTLE_SPRING ===
+// === Module 4896: SUBTLE_SPRING ===
 
-// Module 4883 (SUBTLE_SPRING)
+// Module 4896 (SUBTLE_SPRING)
 import set from "set" /* 2 */;
-import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4884 */;
+import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4897 */;
 
 const result = set.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
 

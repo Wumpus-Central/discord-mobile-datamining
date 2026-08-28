@@ -1,6 +1,6 @@
-// === Module 7089: PremiumModal ===
+// === Module 7102: PremiumModal ===
 
-// Module 7089 (PremiumModal)
+// Module 7102 (PremiumModal)
 import noopAll from "noop" /* 19 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;

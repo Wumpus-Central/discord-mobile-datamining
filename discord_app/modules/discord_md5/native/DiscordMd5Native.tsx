@@ -1,10 +1,10 @@
-// === Module 5052: fromFileUri ===
+// === Module 5065: fromFileUri ===
 
-// Module 5052 (fromFileUri)
+// Module 5065 (fromFileUri)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import enforcingDefault from "enforcing" /* 1271 */;
-import fromBlobDefault from "fromBlob" /* 5053 */;
+import fromBlobDefault from "fromBlob" /* 5066 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 fromBlobDefault;

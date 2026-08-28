@@ -1,15 +1,15 @@
-// === Module 12034: Tier3OverrideNotice ===
+// === Module 12053: Tier3OverrideNotice ===
 
-// Module 12034 (Tier3OverrideNotice)
+// Module 12053 (Tier3OverrideNotice)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4441 */;
-import apexExperiment from "apexExperiment" /* 7936 */;
-import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12035 */;
-import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12036 */;
+import Text from "Text" /* 4442 */;
+import apexExperiment from "apexExperiment" /* 7950 */;
+import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12054 */;
+import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12055 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 function Tier3OverrideNotice(children) {
   let obj = apexExperiment;
@@ -53,8 +53,8 @@ export default function GuildPowerupsNotificationContainer(guildId) {
     }
     obj[1] = str2;
     const intl = tmp6(1236).intl;
-    obj[2] = intl.string(tmp2(2401)["3FRirU"]);
-    const items = [closure_4(tmp6(4441).Text, obj), , ];
+    obj[2] = intl.string(tmp2(2402)["3FRirU"]);
+    const items = [closure_4(tmp6(4442).Text, obj), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {
       obj1 = { text: null };
@@ -67,7 +67,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
       const obj2 = { guildId: null, powerupNames: null, warnings: null };
       obj2[0] = guildId;
       ({ expiringPowerupNames: obj5[1], warnings: obj5[2] } = tmp5);
-      shouldShow2 = tmp11(tmp2(12039), obj2);
+      shouldShow2 = tmp11(tmp2(12058), obj2);
     }
     items[2] = shouldShow2;
     obj[1] = items;

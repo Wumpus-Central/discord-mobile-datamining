@@ -1,23 +1,23 @@
-// === Module 16086: ProjectList ===
+// === Module 16104: ProjectList ===
 
-// Module 16086 (ProjectList)
+// Module 16104 (ProjectList)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "trackCommunicationDisabled" /* 1992 */;
+import closure_9 from "trackCommunicationDisabled" /* 1993 */;
 import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_12 from "newMessage" /* 16087 */;
-import rejectPendingPublish from "rejectPendingPublish" /* 16090 */;
-import closure_16 from "rejectPendingPublish" /* 16090 */;
-import closure_17 from "isProjectOwner" /* 16088 */;
-import { isProjectOwner } from "isProjectOwner" /* 16088 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_12 from "newMessage" /* 16105 */;
+import rejectPendingPublish from "rejectPendingPublish" /* 16108 */;
+import closure_16 from "rejectPendingPublish" /* 16108 */;
+import closure_17 from "isProjectOwner" /* 16106 */;
+import { isProjectOwner } from "isProjectOwner" /* 16106 */;
 import { Permissions } from "ME" /* 676 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 9386 */;
+import { MAIN_SURFACE } from "FrameLayoutModes" /* 9404 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 function ProjectList(guildId) {
@@ -650,12 +650,12 @@ function ChatScene(guildId) {
           align: "below",
           children(arg0) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-            const obj = { ref, IconComponent: callback(8723).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
+            const obj = { ref, IconComponent: callback(8739).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
             const intl = callback(1236).intl;
             obj[3] = intl.string(callback(1236).t["UKOtz+"]);
             obj[4] = accessibilityActions;
             obj[5] = onAccessibilityAction;
-            return callback2(callback(6189).HeaderActionButton, obj);
+            return callback2(callback(6202).HeaderActionButton, obj);
           }
         };
         items[1] = closure_1_21(stringResult(closure_1_2[43]).ContextMenu, obj);

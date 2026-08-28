@@ -1,14 +1,14 @@
-// === Module 15685: useGuildHasLiveChannelNotice ===
+// === Module 15703: useGuildHasLiveChannelNotice ===
 
-// Module 15685 (useGuildHasLiveChannelNotice)
+// Module 15703 (useGuildHasLiveChannelNotice)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getActiveStageChannelIds" /* 5314 */;
+import closure_4 from "getActiveStageChannelIds" /* 5327 */;
 import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_6 from "reset" /* 4467 */;
+import closure_6 from "reset" /* 4468 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_9 from "getVoiceStatesForGuild" /* 4520 */;
-import closure_10 from "initialize" /* 15686 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_9 from "getVoiceStatesForGuild" /* 4521 */;
+import closure_10 from "initialize" /* 15704 */;
 import { GuildScheduledEventEntityTypes as closure_11 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import { Permissions } from "sum" /* 505 */;
 

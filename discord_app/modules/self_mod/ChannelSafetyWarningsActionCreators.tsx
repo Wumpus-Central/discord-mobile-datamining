@@ -1,11 +1,11 @@
-// === Module 10928: dismissChannelSafetyWarnings ===
+// === Module 10946: dismissChannelSafetyWarnings ===
 
-// Module 10928 (dismissChannelSafetyWarnings)
+// Module 10946 (dismissChannelSafetyWarnings)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 10573 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 10591 */;
 
 const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
 const Endpoints = ME.Endpoints;

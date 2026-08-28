@@ -1,6 +1,6 @@
-// === Module 10995: subscribe ===
+// === Module 11013: subscribe ===
 
-// Module 10995 (subscribe)
+// Module 11013 (subscribe)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

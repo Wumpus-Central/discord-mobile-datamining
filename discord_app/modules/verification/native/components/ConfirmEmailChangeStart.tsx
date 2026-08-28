@@ -1,13 +1,13 @@
-// === Module 7632: ConfirmEmailChangeStart ===
+// === Module 7646: ConfirmEmailChangeStart ===
 
-// Module 7632 (ConfirmEmailChangeStart)
+// Module 7646 (ConfirmEmailChangeStart)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "mergeGuildAvatar" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 ({ View: closure_6, Image: error, ScrollView: closure_8 } = get_ActivityIndicator);
@@ -37,13 +37,13 @@ export default function ConfirmEmailChangeStart() {
     obj1[0] = tmp.container;
     let obj2 = { style: null, source: null };
     obj2[0] = tmp.image;
-    obj2[1] = navigation(7634);
+    obj2[1] = navigation(7648);
     const items1 = [callback2(closure_7, obj2), , , ];
     const obj3 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj3[0] = tmp.title;
     const intl2 = tmp2(1236).intl;
     obj3[4] = intl2.string(tmp2(1236).t.dQ71Wa);
-    items1[1] = callback2(tmp2(4441).Text, obj3);
+    items1[1] = callback2(tmp2(4442).Text, obj3);
     items1[2] = intl.format(tmp2(1236).t.oMFSgi, obj).map((children) => closure_1_10(lib(table[15]).Text, { style: lib.body, variant: "text-sm/medium", color: "text-default", children }, arg1));
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.button;
@@ -52,7 +52,7 @@ export default function ConfirmEmailChangeStart() {
     obj5[0] = intl3.string(tmp2(1236).t.rXV81H);
     obj5[1] = tmp7;
     obj5[2] = tmp6[0];
-    obj4[1] = callback2(tmp2(4880).Button, obj5);
+    obj4[1] = callback2(tmp2(4893).Button, obj5);
     items1[3] = callback2(closure_6, obj4);
     obj1[1] = items1;
     obj[2] = callback3(closure_6, obj1);

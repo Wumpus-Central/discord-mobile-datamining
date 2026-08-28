@@ -1,10 +1,10 @@
-// === Module 15300: useSettingSearchResults ===
+// === Module 14282: useSettingSearchResults ===
 
-// Module 15300 (useSettingSearchResults)
+// Module 14282 (useSettingSearchResults)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "zustandStore" /* 14196 */;
-import closure_6 from "zustandStore" /* 14197 */;
+import closure_5 from "zustandStore" /* 14275 */;
+import closure_6 from "zustandStore" /* 14170 */;
 
 const require = arg1;
 let closure_7 = [];
@@ -12,8 +12,8 @@ const result = require("set").fileFinishedImporting("modules/settings/native/sea
 
 export const useSettingSearchResults = function useSettingSearchResults() {
   const memo = memo1.useMemo(() => {
-    let tmp = callback(15301);
-    tmp = new tmp(memo(14199).getSettingSearchableTitles());
+    let tmp = callback(14283);
+    tmp = new tmp(memo(14277).getSettingSearchableTitles());
     return tmp;
   }, []);
   const settings = callback(memo1.useState(closure_7), 2);

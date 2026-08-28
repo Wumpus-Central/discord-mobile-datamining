@@ -1,10 +1,10 @@
-// === Module 12570: RibbonIcon ===
+// === Module 12589: RibbonIcon ===
 
-// Module 12570 (RibbonIcon)
+// Module 12589 (RibbonIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 12571 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 12590 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

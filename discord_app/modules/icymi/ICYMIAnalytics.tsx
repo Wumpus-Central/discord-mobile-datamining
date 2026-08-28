@@ -1,8 +1,8 @@
-// === Module 8561: DEFAULT_UX_VARIATION ===
+// === Module 8576: DEFAULT_UX_VARIATION ===
 
-// Module 8561 (DEFAULT_UX_VARIATION)
+// Module 8576 (DEFAULT_UX_VARIATION)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "filterStaffGuild" /* 8537 */;
+import closure_3 from "filterStaffGuild" /* 8552 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

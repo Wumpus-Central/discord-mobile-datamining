@@ -1,8 +1,8 @@
-// === Module 12988: zustandStore ===
+// === Module 13007: zustandStore ===
 
-// Module 12988 (zustandStore)
+// Module 13007 (zustandStore)
 import set from "set" /* 2 */;
-import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4311 */;
+import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4312 */;
 
 const zustandStore = defaultStatesAreEqual.createZustandStore(() => ({ scrollToSectionId: "r" }));
 const result = set.fileFinishedImporting("modules/user_settings/premium/native/PremiumNitroNavigationStore.tsx");

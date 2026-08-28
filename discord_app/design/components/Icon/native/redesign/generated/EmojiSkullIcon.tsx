@@ -1,10 +1,10 @@
-// === Module 14934: EmojiSkullIcon ===
+// === Module 14919: EmojiSkullIcon ===
 
-// Module 14934 (EmojiSkullIcon)
+// Module 14919 (EmojiSkullIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 14935 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 14920 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

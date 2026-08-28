@@ -1,13 +1,13 @@
-// === Module 7981: updateAssets ===
+// === Module 7995: updateAssets ===
 
-// Module 7981 (updateAssets)
+// Module 7995 (updateAssets)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import sendRequest from "sendRequest" /* 530 */;
 import handleImageLoad from "handleImageLoad" /* 1469 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "handleFetchEmbeddedActivityShelfSuccess" /* 7982 */;
+import closure_5 from "handleFetchEmbeddedActivityShelfSuccess" /* 7996 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

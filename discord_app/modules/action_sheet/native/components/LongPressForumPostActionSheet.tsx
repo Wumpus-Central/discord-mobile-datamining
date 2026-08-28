@@ -1,13 +1,13 @@
-// === Module 10223: ForumPostLongPressActionSheet ===
+// === Module 10241: ForumPostLongPressActionSheet ===
 
-// Module 10223 (ForumPostLongPressActionSheet)
+// Module 10241 (ForumPostLongPressActionSheet)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "initialize" /* 4090 */;
-import closure_4 from "storeThread" /* 4091 */;
-import closure_5 from "updateState" /* 6103 */;
+import closure_3 from "initialize" /* 4091 */;
+import closure_4 from "storeThread" /* 4092 */;
+import closure_5 from "updateState" /* 6116 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "generateOldThreadCutoff" /* 4460 */;
+import closure_8 from "generateOldThreadCutoff" /* 4461 */;
 import ME from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,9 +1,9 @@
-// === Module 7165: fromMessage ===
+// === Module 7179: fromMessage ===
 
-// Module 7165 (fromMessage)
+// Module 7179 (fromMessage)
 import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "trackCommunicationDisabled" /* 1992 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import closure_1 from "trackCommunicationDisabled" /* 1993 */;
+import closure_2 from "mergeGuildAvatar" /* 1923 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 
 let prototype;

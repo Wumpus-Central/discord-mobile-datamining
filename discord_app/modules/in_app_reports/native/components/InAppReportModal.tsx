@@ -1,12 +1,12 @@
-// === Module 8686: InAppReportModal ===
+// === Module 8702: InAppReportModal ===
 
-// Module 8686 (InAppReportModal)
+// Module 8702 (InAppReportModal)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NavigationStack from "NavigationStack" /* 5960 */;
+import NavigationStack from "NavigationStack" /* 5973 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8687 */;
+import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8703 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -58,7 +58,7 @@ export default function InAppReportModal(arg0) {
   [c12, c13] = callback(React.useState([]), 2);
   let tmp4 = callback(React.useState([]), 2);
   [c14, c15] = callback(React.useState([]), 2);
-  menu(4897)(() => {
+  menu(4910)(() => {
     const orFetchLinkedUsers = callback(table[10]).getOrFetchLinkedUsers();
   });
   let items = [closeModal, first];
@@ -202,10 +202,10 @@ export default function InAppReportModal(arg0) {
       const obj2 = {};
       const obj3 = { headerRight: null, headerTitle: null, fullscreen: true, render: null };
       obj3[0] = function headerRight() {
-        const obj = { source: callback(7697), onPress: closure_6, accessibilityLabel: null };
+        const obj = { source: callback(7711), onPress: closure_6, accessibilityLabel: null };
         const intl = _onSubmit(1236).intl;
         obj[2] = intl.string(_onSubmit(1236).t.cpT0Cq);
-        return callback2(_onSubmit(6189).HeaderActionButton, obj);
+        return callback2(_onSubmit(6202).HeaderActionButton, obj);
       };
       obj3[1] = function headerTitle() {
         return null;
@@ -228,7 +228,7 @@ export default function InAppReportModal(arg0) {
         obj.addOnCloseCallback = callback2;
         obj.reportId = closure_5;
         obj.onNavigate = onNavigate;
-        return callback2(callback(8688), obj);
+        return callback2(callback(8704), obj);
       };
       obj2[c6] = obj3;
       obj[1] = obj2;

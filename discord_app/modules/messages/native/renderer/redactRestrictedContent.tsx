@@ -1,6 +1,6 @@
-// === Module 7946: nodeToText ===
+// === Module 7960: nodeToText ===
 
-// Module 7946 (nodeToText)
+// Module 7960 (nodeToText)
 import set from "set" /* 2 */;
 
 function nodeToText(content) {

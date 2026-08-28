@@ -1,18 +1,18 @@
-// === Module 13137: textLogoTier2 ===
+// === Module 13156: textLogoTier2 ===
 
-// Module 13137 (textLogoTier2)
+// Module 13156 (textLogoTier2)
 import noopAll from "noop" /* 19 */;
 import keys from "keys" /* 691 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
-import LinearGradientDefault from "LinearGradient" /* 4892 */;
-import PressableCard from "PressableCard" /* 5553 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4108 */;
+import LinearGradientDefault from "LinearGradient" /* 4905 */;
+import PressableCard from "PressableCard" /* 5566 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { getPremiumGradientColor } from "items" /* 7111 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { getPremiumGradientColor } from "items" /* 7124 */;
+import { PremiumTypes } from "GuildFeatures" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 noopAll;
@@ -43,11 +43,11 @@ export default function _default(children) {
   }
   obj[3] = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp2Result = tmp2(13138);
+    let tmp2Result = tmp2(13157);
   } else if (tmp11.TIER_1 === premiumType) {
-    tmp2Result = tmp2(13139);
+    tmp2Result = tmp2(13158);
   } else if (tmp11.TIER_2 === premiumType) {
-    tmp2Result = tmp2(7909);
+    tmp2Result = tmp2(7923);
   }
   obj[4] = tmp2Result;
   obj[4] = closure_7(closure_4, obj);
@@ -63,11 +63,11 @@ export default function _default(children) {
   obj = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    tmp2Result = tmp2(8288);
+    tmp2Result = tmp2(8302);
   } else if (tmp11.TIER_1 === premiumType) {
-    tmp2Result = tmp2(10414);
+    tmp2Result = tmp2(10430);
   } else if (tmp11.TIER_2 === premiumType) {
-    tmp2Result = tmp2(10415);
+    tmp2Result = tmp2(10431);
   }
   obj[3] = tmp2Result;
   items[1] = closure_7(closure_4, obj);

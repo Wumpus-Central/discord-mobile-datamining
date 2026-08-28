@@ -1,15 +1,15 @@
-// === Module 16002: items ===
+// === Module 16020: items ===
 
-// Module 16002 (items)
+// Module 16020 (items)
 import ThemesDefault from "Themes" /* 712 */;
-import calculateTimestampDurations from "calculateTimestampDurations" /* 7976 */;
-import ActiveTimestampAll from "ActiveTimestamp" /* 9321 */;
-import TrendingType from "TrendingType" /* 9328 */;
+import calculateTimestampDurations from "calculateTimestampDurations" /* 7990 */;
+import ActiveTimestampAll from "ActiveTimestamp" /* 9339 */;
+import TrendingType from "TrendingType" /* 9346 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "mergeGuildAvatar" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 15953 */;
+import createICYMIStyles from "createICYMIStyles" /* 15971 */;
 
 require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);

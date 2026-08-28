@@ -1,15 +1,15 @@
-// === Module 7328: getAsync ===
+// === Module 7342: getAsync ===
 
-// Module 7328 (getAsync)
+// Module 7342 (getAsync)
 import timestampDefault from "timestamp" /* 3 */;
 import fromGuildPropertiesWithAdditionalFieldsAll from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import fromServerArrayAll from "fromServerArray" /* 1987 */;
-import compareGuildRolesAll from "compareGuildRoles" /* 1989 */;
+import fromServerArrayAll from "fromServerArray" /* 1988 */;
+import compareGuildRolesAll from "compareGuildRoles" /* 1990 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { updateJoinedAt } from "GuildNSFWContentLevel" /* 1434 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "trackCommunicationDisabled" /* 1992 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_6 from "trackCommunicationDisabled" /* 1993 */;
+import closure_7 from "createGuildRoleRecordFromRust" /* 1986 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 import set from "set" /* 2 */;
 
@@ -115,7 +115,7 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
         let tmp13 = nextResult;
         let tmp14 = guild;
         let fromBackgroundSyncResult = tmp7Result.fromBackgroundSync(tmp2, tmp22);
-        let tmp7Result1 = tmp7(1987);
+        let tmp7Result1 = tmp7(1988);
         let tmp17 = store2;
         let result = tmp7Result1.toSerializedPartition(filterRoleDeletesResult);
         let putResult = self.put(tmp7Result.attachSerializedData(fromBackgroundSyncResult, result, store2.getSelfMember(tmp2.id)), arg1);
@@ -127,8 +127,8 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds, database) {
   const self = this;
   const items = [...unavailableGuilds.unavailableGuilds];
-  const obj = set(1956);
-  set(1956).guildsTransaction(database).deleteAllExcept(items);
+  const obj = set(1957);
+  set(1957).guildsTransaction(database).deleteAllExcept(items);
   for (const item10027 of tmp2) {
     let putOneResult = self.putOne(item10027, arg1);
     continue;
@@ -244,12 +244,12 @@ prototype["putOne"] = function putOne(members) {
   }
 };
 prototype["put"] = function put(arg0, database) {
-  const obj = set(1956);
-  set(1956).guildsTransaction(database).put(arg0);
+  const obj = set(1957);
+  set(1957).guildsTransaction(database).put(arg0);
 };
 prototype["delete"] = function delete(arg0, database) {
-  const obj = set(1956);
-  set(1956).guildsTransaction(database).delete(arg0);
+  const obj = set(1957);
+  set(1957).guildsTransaction(database).delete(arg0);
 };
 set = Object.create(Guilds.prototype);
 set.actions = {

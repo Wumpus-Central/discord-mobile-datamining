@@ -1,9 +1,9 @@
-// === Module 16824: handleVoiceChannelSelect ===
+// === Module 16842: handleVoiceChannelSelect ===
 
-// Module 16824 (handleVoiceChannelSelect)
-import initializeDefault from "initialize" /* 5438 */;
-import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 16396 */;
-import commonTriggerPointConfiguration2 from "commonTriggerPointConfiguration" /* 16825 */;
+// Module 16842 (handleVoiceChannelSelect)
+import initializeDefault from "initialize" /* 5451 */;
+import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 16414 */;
+import commonTriggerPointConfiguration2 from "commonTriggerPointConfiguration" /* 16843 */;
 
 require = arg1;
 initializeDefault;

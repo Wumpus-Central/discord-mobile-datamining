@@ -1,19 +1,19 @@
-// === Module 9848: getTransformedUser ===
+// === Module 9866: getTransformedUser ===
 
-// Module 9848 (getTransformedUser)
+// Module 9866 (getTransformedUser)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import hasFlagAll from "hasFlag" /* 1403 */;
-import initializeDefault from "initialize" /* 5438 */;
-import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9849 */;
-import closure_5 from "createdAt" /* 1930 */;
+import initializeDefault from "initialize" /* 5451 */;
+import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9867 */;
+import closure_5 from "createdAt" /* 1931 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "trackCommunicationDisabled" /* 1992 */;
-import closure_8 from "markAllUserIdListsStale" /* 4098 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "trackCommunicationDisabled" /* 1993 */;
+import closure_8 from "markAllUserIdListsStale" /* 4099 */;
+import closure_9 from "mergeGuildAvatar" /* 1923 */;
 
 function getTransformedUser(author) {
   if (null != author) {

@@ -1,6 +1,6 @@
-// === Module 10628: InappropriateConversationsDefaultOn ===
+// === Module 10646: InappropriateConversationsDefaultOn ===
 
-// Module 10628 (InappropriateConversationsDefaultOn)
+// Module 10646 (InappropriateConversationsDefaultOn)
 import getUnitIdDefault from "getUnitId" /* 1368 */;
 
 const tmp2 = getUnitIdDefault({ name: "2026-04-inappropriate-conversations-default-on", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

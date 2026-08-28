@@ -1,6 +1,6 @@
-// === Module 8792: GuildVisibility ===
+// === Module 8809: GuildVisibility ===
 
-// Module 8792 (GuildVisibility)
+// Module 8809 (GuildVisibility)
 import set2 from "set" /* 2 */;
 import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
 import ME from "ME" /* 676 */;

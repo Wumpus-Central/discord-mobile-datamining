@@ -1,12 +1,12 @@
-// === Module 7930: parseEmbedTitleMarkup ===
+// === Module 7944: parseEmbedTitleMarkup ===
 
-// Module 7930 (parseEmbedTitleMarkup)
+// Module 7944 (parseEmbedTitleMarkup)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import setDefault from "set" /* 687 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4435 */;
-import getInitialParserState from "getInitialParserState" /* 7564 */;
-import LHeading from "LHeading" /* 7931 */;
+import get_defaultRulesDefault from "get defaultRules" /* 4436 */;
+import getInitialParserState from "getInitialParserState" /* 7578 */;
+import LHeading from "LHeading" /* 7945 */;
 import importDefaultResult from "priv" /* 1405 */;
 
 const MessageTypes = ME.MessageTypes;

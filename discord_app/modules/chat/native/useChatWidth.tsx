@@ -1,12 +1,12 @@
-// === Module 11041: useChatWidth ===
+// === Module 11059: useChatWidth ===
 
-// Module 11041 (useChatWidth)
-import useChatLayout from "useChatLayout" /* 4302 */;
-import useChatLayoutDefault from "useChatLayout" /* 4302 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4304 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4304 */;
-import sum from "sum" /* 11042 */;
-import contextDefault from "context" /* 11043 */;
+// Module 11059 (useChatWidth)
+import useChatLayout from "useChatLayout" /* 4303 */;
+import useChatLayoutDefault from "useChatLayout" /* 4303 */;
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4305 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4305 */;
+import sum from "sum" /* 11060 */;
+import contextDefault from "context" /* 11061 */;
 import closure_3 from "noop" /* 19 */;
 
 require = arg1;

@@ -1,12 +1,12 @@
-// === Module 11851: teardown ===
+// === Module 11870: teardown ===
 
-// Module 11851 (teardown)
+// Module 11870 (teardown)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _toPropertyKey from "_toPropertyKey" /* 10554 */;
+import _toPropertyKey from "_toPropertyKey" /* 10572 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleChannelSelect" /* 5403 */;
+import closure_4 from "handleChannelSelect" /* 5416 */;
 
 require = arg1;
 let closure_5 = [];
@@ -49,7 +49,7 @@ prototype["search"] = function search(str) {
     } else {
       const obj2 = applyDefault;
       const values = applyDefault.chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
-      const found = values.filter(trimmed1(11852).filterGroupDMs);
+      const found = values.filter(trimmed1(11871).filterGroupDMs);
       const mapped = found.map((id) => {
         const items = [id, trimmed1(closure_1_2[3]).matchGroupDM(id, trimmed1), closure_1_4.getScoreWithoutFetchingLatest(id.id)];
         return items;
@@ -171,7 +171,7 @@ const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(dispatcherDefault,
       obj.groupDMs = [];
       obj.userIndexes = {};
       obj.results = [];
-      let userSearch = new obj(10554).UserSearch(() => obj.processResults());
+      let userSearch = new obj(10572).UserSearch(() => obj.processResults());
       obj.userSearch = userSearch;
       userSearch = obj.userSearch;
       const subscription = userSearch.subscribe(() => obj.processResults(), true);

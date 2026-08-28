@@ -1,6 +1,6 @@
-// === Module 11530: useActivityShelfItemsSorting ===
+// === Module 11549: useActivityShelfItemsSorting ===
 
-// Module 11530 (useActivityShelfItemsSorting)
+// Module 11549 (useActivityShelfItemsSorting)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
@@ -51,16 +51,16 @@ export default function useActivityShelfItemsSorting(arg0) {
       let label_type;
       if (embeddedActivityConfig != null) {
         const obj = items2(500);
-        const tmp7 = embeddedActivityConfig.client_platform_config[v0(8369)(undefined, obj.getOS(obj))];
+        const tmp7 = embeddedActivityConfig.client_platform_config[v0(8383)(undefined, obj.getOS(obj))];
         if (tmp7 != null) {
           label_type = tmp7.label_type;
         }
-        const tmp5 = v0(8369);
+        const tmp5 = v0(8383);
       }
       let tmp8 = null != label_type;
       if (tmp8) {
-        tmp8 = label_type === items2(1955).EmbeddedActivityLabelTypes.NEW || label_type === items2(1955).EmbeddedActivityLabelTypes.UPDATED;
-        const tmp11 = label_type === items2(1955).EmbeddedActivityLabelTypes.NEW || label_type === items2(1955).EmbeddedActivityLabelTypes.UPDATED;
+        tmp8 = label_type === items2(1956).EmbeddedActivityLabelTypes.NEW || label_type === items2(1956).EmbeddedActivityLabelTypes.UPDATED;
+        const tmp11 = label_type === items2(1956).EmbeddedActivityLabelTypes.NEW || label_type === items2(1956).EmbeddedActivityLabelTypes.UPDATED;
         const tmp9 = items2;
       }
       return tmp8;

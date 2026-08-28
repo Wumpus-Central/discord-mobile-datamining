@@ -1,10 +1,10 @@
-// === Module 8640: initialize ===
+// === Module 8656: initialize ===
 
-// Module 8640 (initialize)
+// Module 8656 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "mergeGuildAvatar" /* 1923 */;
 
 require = arg1;
 let c3 = 86400000;

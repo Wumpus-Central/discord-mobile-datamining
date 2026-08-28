@@ -1,9 +1,9 @@
-// === Module 8014: useCollectiblesData ===
+// === Module 8028: useCollectiblesData ===
 
-// Module 8014 (useCollectiblesData)
+// Module 8028 (useCollectiblesData)
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "updateCategoriesAndProducts" /* 7220 */;
-import closure_4 from "map" /* 7236 */;
+import closure_3 from "updateCategoriesAndProducts" /* 7234 */;
+import closure_4 from "map" /* 7250 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCollectiblesData.tsx");

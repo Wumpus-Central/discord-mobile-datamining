@@ -1,9 +1,9 @@
-// === Module 7231: getProductOrbPrice ===
+// === Module 7245: getProductOrbPrice ===
 
-// Module 7231 (getProductOrbPrice)
-import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
+// Module 7245 (getProductOrbPrice)
+import CollectiblesItemType from "CollectiblesItemType" /* 1951 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { isProfileEffectRecord } from "fromServer" /* 7226 */;
+import { isProfileEffectRecord } from "fromServer" /* 7240 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

@@ -1,11 +1,11 @@
-// === Module 6111: initialize ===
+// === Module 6124: initialize ===
 
-// Module 6111 (initialize)
+// Module 6124 (initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_handleConnectionOpen" /* 5173 */;
+import closure_3 from "_handleConnectionOpen" /* 5186 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "handleConnectionOpen" /* 1981 */;
+import closure_7 from "handleConnectionOpen" /* 1982 */;
 import ME from "ME" /* 676 */;
 import { isStaticChannelRoute } from "set" /* 1398 */;
 
@@ -31,7 +31,7 @@ function loadThread(channelId) {
   const _require = channelId;
   if (null == channelId) {
     return Promise.resolve();
-  } else if (channelId === _require(6020).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+  } else if (channelId === _require(6033).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
     return Promise.resolve();
   } else if (isStaticChannelRoute(channelId)) {
     return Promise.resolve();
@@ -58,11 +58,11 @@ function loadThread(channelId) {
         }
         return resolved;
       } else {
-        let tmp13Result = tmp13(4272);
+        let tmp13Result = tmp13(4273);
         const _location = location;
         obj = { path: null, exact: true };
-        const RouteParam = tmp13(4285).RouteParam;
-        const RouteParam2 = tmp13(4285).RouteParam;
+        const RouteParam = tmp13(4286).RouteParam;
+        const RouteParam2 = tmp13(4286).RouteParam;
         obj[0] = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj);
         const HTTP = tmp13(530).HTTP;
@@ -140,7 +140,7 @@ export default {
         let tmp9 = nextResult;
         let tmp10 = items1;
         let tmp11 = dependencyMap;
-        if (nextResult !== items1(6020).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(6033).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           let tmp12 = isStaticChannelRoute;
           let tmp13 = nextResult;
           if (!isStaticChannelRoute(tmp9)) {

@@ -1,9 +1,9 @@
-// === Module 14123: DiscordGestureHandlerRootView ===
+// === Module 14142: DiscordGestureHandlerRootView ===
 
-// Module 14123 (DiscordGestureHandlerRootView)
+// Module 14142 (DiscordGestureHandlerRootView)
 import noopAll from "noop" /* 19 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5604 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 14124 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5617 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 14143 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 

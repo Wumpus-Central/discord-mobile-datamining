@@ -1,13 +1,13 @@
-// === Module 8951: useGuildProfileCTA ===
+// === Module 8969: useGuildProfileCTA ===
 
-// Module 8951 (useGuildProfileCTA)
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 8952 */;
+// Module 8969 (useGuildProfileCTA)
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 8970 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1992 */;
+import closure_5 from "trackCommunicationDisabled" /* 1993 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "updateInvite" /* 4429 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "updateInvite" /* 4430 */;
+import closure_8 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -66,7 +66,7 @@ export default function useGuildProfileCTA(id) {
           if (num == null) {
             num = 0;
           }
-          obj[1] = id(1403).hasFlag(num, id(8594).GuildInviteFlags.IS_APPLICATION_BYPASS);
+          obj[1] = id(1403).hasFlag(num, id(8609).GuildInviteFlags.IS_APPLICATION_BYPASS);
           obj[2] = invite.roles;
           const obj2 = id(1403);
           const tmp6 = id;
@@ -220,13 +220,13 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
         if (num == null) {
           num = 0;
         }
-        flag = obj.hasFlag(num, set(8594).GuildInviteFlags.IS_APPLICATION_BYPASS);
+        flag = obj.hasFlag(num, set(8609).GuildInviteFlags.IS_APPLICATION_BYPASS);
         tmp11 = inviteKeyForGuildId;
         const tmp13 = set;
       }
     }
   }
-  const pendingFolderGuildIds = set(8952).getPendingFolderGuildIds();
+  const pendingFolderGuildIds = set(8970).getPendingFolderGuildIds();
   if (tmp7) {
     let roles;
     if (invite != null) {
@@ -288,7 +288,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
     }
     return APPLY_TO_JOIN;
   }
-  const obj2 = set(8952);
+  const obj2 = set(8970);
   const tmp15 = set;
   tmp7 = null != joinedAt;
 };

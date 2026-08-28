@@ -1,6 +1,6 @@
-// === Module 10256: usePressEmojiHandler ===
+// === Module 10274: usePressEmojiHandler ===
 
-// Module 10256 (usePressEmojiHandler)
+// Module 10274 (usePressEmojiHandler)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx");

@@ -1,6 +1,6 @@
-// === Module 7593: MemberVerificationAlertCancelPending ===
+// === Module 7607: MemberVerificationAlertCancelPending ===
 
-// Module 7593 (MemberVerificationAlertCancelPending)
+// Module 7607 (MemberVerificationAlertCancelPending)
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -33,13 +33,13 @@ export default function MemberVerificationAlertCancelPending(guildId) {
     confirmText = intl3.string(tmp7(1236).t.OzHPde);
   }
   obj = { children: null };
-  const items1 = [closure_4(guildId(4880).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
+  const items1 = [closure_4(guildId(4893).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
   obj = { text: null, variant: "secondary", onPress: null };
   const intl4 = tmp7(1236).intl;
   obj[0] = intl4.string(guildId(1236).t.bANR0R);
   obj[2] = onClose;
-  items1[1] = closure_4(guildId(4880).Button, obj);
+  items1[1] = closure_4(guildId(4893).Button, obj);
   obj[0] = items1;
   obj.buttons = closure_6(closure_5, obj);
-  return closure_4(onClose(7590), obj);
+  return closure_4(onClose(7604), obj);
 };

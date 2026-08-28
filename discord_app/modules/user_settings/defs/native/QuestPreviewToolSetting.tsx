@@ -1,12 +1,12 @@
-// === Module 14719: route ===
+// === Module 14704: route ===
 
-// Module 14719 (route)
+// Module 14704 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useQuests from "useQuests" /* 11003 */;
-import QuestsIcon from "QuestsIcon" /* 14549 */;
-import createToggle from "createToggle" /* 10988 */;
+import useQuests from "useQuests" /* 11021 */;
+import QuestsIcon from "QuestsIcon" /* 14533 */;
+import createToggle from "createToggle" /* 11006 */;
 
 obj = {
   useTitle() {
@@ -23,7 +23,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.QUEST_PREVIEW_TOOL_2,
   getComponent() {
-    return require(14720) /* SettingsQuestPreviewScreen */.default;
+    return require(14705) /* SettingsQuestPreviewScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

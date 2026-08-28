@@ -1,26 +1,26 @@
-// === Module 11306: PopoutCheck ===
+// === Module 11325: PopoutCheck ===
 
-// Module 11306 (PopoutCheck)
+// Module 11325 (PopoutCheck)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4380 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4396 */;
-import Text from "Text" /* 4441 */;
-import officialApplicationIds2 from "officialApplicationIds" /* 5303 */;
+import useThemeDefault from "useTheme" /* 4381 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4397 */;
+import Text from "Text" /* 4442 */;
+import officialApplicationIds2 from "officialApplicationIds" /* 5316 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "createdAt" /* 1930 */;
+import closure_7 from "createdAt" /* 1931 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "trackCommunicationDisabled" /* 1992 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_9 from "trackCommunicationDisabled" /* 1993 */;
+import closure_10 from "createGuildRoleRecordFromRust" /* 1986 */;
 import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "map" /* 11307 */;
-import { OperatorTypes } from "OperatorTypes" /* 5304 */;
+import closure_12 from "map" /* 11326 */;
+import { OperatorTypes } from "OperatorTypes" /* 5317 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function PopoutCheck(arg0) {
@@ -145,7 +145,7 @@ class PopoutChecks {
               const items1 = [null, , , ];
               let tmp26 = null;
               if (null != tmp7) {
-                const obj3 = { style: null, user: null, size: null, guildId: "a" };
+                const obj3 = { style: null, user: null, size: null, guildId: "Array" };
                 obj3[0] = tmp21.popoutCheckGroupPlatformIcon;
                 obj3[1] = tmp7;
                 obj3[2] = tmp11(tmp3[24]).AvatarSizes.XSMALL;

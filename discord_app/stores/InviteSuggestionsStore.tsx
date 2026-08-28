@@ -1,16 +1,16 @@
-// === Module 9842: _computeRows ===
+// === Module 9860: _computeRows ===
 
-// Module 9842 (_computeRows)
+// Module 9860 (_computeRows)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isGuildMember from "isGuildMember" /* 9831 */;
-import closure_8 from "handleConnectionOpen" /* 9843 */;
-import closure_9 from "recomputeAffinities" /* 7337 */;
+import isGuildMember from "isGuildMember" /* 9849 */;
+import closure_8 from "handleConnectionOpen" /* 9861 */;
+import closure_9 from "recomputeAffinities" /* 7351 */;
 import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_12 from "markAllUserIdListsStale" /* 4098 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_12 from "markAllUserIdListsStale" /* 4099 */;
 import ME from "ME" /* 676 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 7414 */;
+import { InviteTargetTypes } from "InviteSendStates" /* 7428 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -30,7 +30,7 @@ function _computeRows(query) {
   if (!tmp) {
     id = id.id;
   }
-  const mostRecentDMedUser = set1(9831).getMostRecentDMedUser(set, id);
+  const mostRecentDMedUser = set1(9849).getMostRecentDMedUser(set, id);
   let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
   if (!isBlockedOrIgnoredResult) {
     isBlockedOrIgnoredResult = closure_12.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -53,8 +53,8 @@ function _computeRows(query) {
     const substr = found2.slice(0, 3);
     const item = substr.forEach((id) => set1.add(id.id));
   }
-  const obj2 = set1(9831);
-  return set1(9831).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_7 });
+  const obj2 = set1(9849);
+  return set1(9849).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_7 });
 }
 ({ ChannelTypes: map1, Permissions: closure_14 } = ME);
 let set = new Set();

@@ -1,14 +1,14 @@
-// === Module 8480: ProfileFrameLayer ===
+// === Module 8494: ProfileFrameLayer ===
 
-// Module 8480 (ProfileFrameLayer)
-import OverrideProfileFrameLayerDefault from "OverrideProfileFrameLayer" /* 8483 */;
+// Module 8494 (ProfileFrameLayer)
+import OverrideProfileFrameLayerDefault from "OverrideProfileFrameLayer" /* 8497 */;
 import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { useFramePreviewOverrideStore as closure_4 } from "measure" /* 8467 */;
-import PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8481 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 5953 */;
+import { useFramePreviewOverrideStore as closure_4 } from "measure" /* 8481 */;
+import PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8495 */;
+import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 5966 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 function ProfileFrameLayer(skuId) {
   const layer = skuId.layer;

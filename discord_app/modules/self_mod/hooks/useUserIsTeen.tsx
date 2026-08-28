@@ -1,8 +1,8 @@
-// === Module 8696: useUserIsTeen ===
+// === Module 8712: useUserIsTeen ===
 
-// Module 8696 (useUserIsTeen)
+// Module 8712 (useUserIsTeen)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "mergeGuildAvatar" /* 1923 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/hooks/useUserIsTeen.tsx");

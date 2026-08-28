@@ -1,16 +1,16 @@
-// === Module 7873: nativeStyleProperties ===
+// === Module 7887: nativeStyleProperties ===
 
-// Module 7873 (nativeStyleProperties)
+// Module 7887 (nativeStyleProperties)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
-import resultDefault from "result" /* 7795 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7802 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7804 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7805 */;
-import getTagPropertiesDefault from "getTagProperties" /* 7874 */;
+import resultDefault from "result" /* 7809 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7816 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7818 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7819 */;
+import getTagPropertiesDefault from "getTagProperties" /* 7888 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 createCacheKey = { automodUsernameColor: ThemesDefault.colors.TEXT_BRAND };
@@ -34,7 +34,7 @@ export const createGuildAlertModeEnabledSystemMessage = function createGuildAler
   obj[2] = str;
   const tmp3 = resultDefault(theme);
   obj = {};
-  const merged = Object.assign(tmp(7805)(roleStyle));
+  const merged = Object.assign(tmp(7819)(roleStyle));
   const intl = tmp5(1236).intl;
   obj.content = intl.formatToParts(getSystemLocale.t.ig55n6, obj);
   const intl2 = tmp5(1236).intl;

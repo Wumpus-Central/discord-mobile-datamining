@@ -1,14 +1,14 @@
-// === Module 10996: useMessageAuthorActivities ===
+// === Module 11014: useMessageAuthorActivities ===
 
-// Module 10996 (useMessageAuthorActivities)
+// Module 11014 (useMessageAuthorActivities)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { findNodeHandle } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_toTimestampMs" /* 10865 */;
-import { updateShouldShowJumpToPresentButton as closure_7 } from "updateChatInputContainerHeight" /* 9455 */;
-import closure_8 from "handleConnectionOpen" /* 4808 */;
+import closure_6 from "_toTimestampMs" /* 10883 */;
+import { updateShouldShowJumpToPresentButton as closure_7 } from "updateChatInputContainerHeight" /* 9473 */;
+import closure_8 from "handleConnectionOpen" /* 4821 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "sortActivity" /* 4534 */;
+import closure_10 from "sortActivity" /* 4535 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");

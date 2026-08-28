@@ -1,6 +1,6 @@
-// === Module 4096: doesThreadMembersActionAffectMe ===
+// === Module 4097: doesThreadMembersActionAffectMe ===
 
-// Module 4096 (doesThreadMembersActionAffectMe)
+// Module 4097 (doesThreadMembersActionAffectMe)
 import closure_0 from "fetchFingerprint" /* 1218 */;
 
 const result = require("set").fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");

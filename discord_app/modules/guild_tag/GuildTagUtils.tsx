@@ -1,11 +1,11 @@
-// === Module 8007: guildHasTag ===
+// === Module 8021: guildHasTag ===
 
-// Module 8007 (guildHasTag)
-import GuildMemberFlags from "GuildMemberFlags" /* 4095 */;
-import closure_2 from "trackCommunicationDisabled" /* 1992 */;
+// Module 8021 (guildHasTag)
+import GuildMemberFlags from "GuildMemberFlags" /* 4096 */;
+import closure_2 from "trackCommunicationDisabled" /* 1993 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import items from "items" /* 7786 */;
+import closure_4 from "mergeGuildAvatar" /* 1923 */;
+import items from "items" /* 7800 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 require = arg1;

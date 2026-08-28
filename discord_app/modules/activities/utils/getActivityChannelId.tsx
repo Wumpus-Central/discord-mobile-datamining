@@ -1,10 +1,10 @@
-// === Module 9360: getActivityChannelId ===
+// === Module 9378: getActivityChannelId ===
 
-// Module 9360 (getActivityChannelId)
+// Module 9378 (getActivityChannelId)
 import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_1 from "ensureGuildLoaded" /* 1391 */;
-import closure_2 from "updateVoiceState" /* 4464 */;
+import closure_2 from "updateVoiceState" /* 4465 */;
 
 const isTextChannel = createChannelRecord.isTextChannel;
 const result = set.fileFinishedImporting("modules/activities/utils/getActivityChannelId.tsx");

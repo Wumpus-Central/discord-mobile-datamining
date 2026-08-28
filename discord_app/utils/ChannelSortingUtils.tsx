@@ -1,9 +1,9 @@
-// === Module 15648: getFirstChannelOfType ===
+// === Module 15666: getFirstChannelOfType ===
 
-// Module 15648 (getFirstChannelOfType)
+// Module 15666 (getFirstChannelOfType)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 5432 */;
+import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 5445 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 
 function getFirstChannelOfType(arg0, arg1, arg2, arr) {
@@ -550,7 +550,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
           tmp4 = null != substr[tmp2];
         }
         if (tmp4) {
-          let obj = localChannel2(11899);
+          let obj = localChannel2(11918);
           let moveItemFromToResult = obj.moveItemFromTo(substr, tmp, tmp2);
         }
         obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null };
@@ -562,7 +562,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
         obj[3] = function existingPositionGetter(channel) {
           return channel.channel.position;
         };
-        closure_4 = closure_4.concat(localChannel2(11899).calculatePositionDeltas(obj));
+        closure_4 = closure_4.concat(localChannel2(11918).calculatePositionDeltas(obj));
         return moveItemFromToResult;
       }
     }

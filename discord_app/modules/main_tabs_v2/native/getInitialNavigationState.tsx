@@ -1,16 +1,16 @@
-// === Module 4301: getInitialGuildState ===
+// === Module 4302: getInitialGuildState ===
 
-// Module 4301 (getInitialGuildState)
+// Module 4302 (getInitialGuildState)
 import timestampDefault from "timestamp" /* 3 */;
 import transitionTo from "transitionTo" /* 1222 */;
-import matchPath from "matchPath" /* 4272 */;
-import RouteParam5 from "RouteParam" /* 4285 */;
-import useChatLayout from "useChatLayout" /* 4302 */;
-import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4305 */;
+import matchPath from "matchPath" /* 4273 */;
+import RouteParam5 from "RouteParam" /* 4286 */;
+import useChatLayout from "useChatLayout" /* 4303 */;
+import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4306 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "initialize" /* 4271 */;
-import closure_5 from "handleConnectionOpen" /* 1981 */;
+import closure_4 from "initialize" /* 4272 */;
+import closure_5 from "handleConnectionOpen" /* 1982 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -81,9 +81,9 @@ function computeInitialNavigationStateWithoutLogging() {
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
     if (null == matchPathResult) {
       obj = { path: null };
-      const RouteParam3 = tmp(4285).RouteParam;
-      const tmpResult = tmp(4272);
-      const RouteParam4 = tmp(4285).RouteParam;
+      const RouteParam3 = tmp(4286).RouteParam;
+      const tmpResult = tmp(4273);
+      const RouteParam4 = tmp(4286).RouteParam;
       obj[0] = obj5.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
       let matchPathResult1 = tmpResult.matchPath(lastNonVoiceRoute.lastNonVoiceRoute, obj);
       let flag = false;

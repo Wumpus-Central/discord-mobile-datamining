@@ -1,21 +1,21 @@
-// === Module 15998: MediaMosaicVideo ===
+// === Module 16016: MediaMosaicVideo ===
 
-// Module 15998 (MediaMosaicVideo)
+// Module 16016 (MediaMosaicVideo)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import VideoComponentDefault from "VideoComponent" /* 8533 */;
-import context2 from "context" /* 15954 */;
+import VideoComponentDefault from "VideoComponent" /* 8548 */;
+import context2 from "context" /* 15972 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "markAllUserIdListsStale" /* 4098 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "filterStaffGuild" /* 8537 */;
+import closure_9 from "markAllUserIdListsStale" /* 4099 */;
+import closure_10 from "mergeGuildAvatar" /* 1923 */;
+import closure_11 from "filterStaffGuild" /* 8552 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function MediaMosaicVideo(source) {
@@ -49,9 +49,9 @@ function MediaMosaicImage(source) {
   const tmp2 = callback(React.useState(false), 2);
   first = tmp2[0];
   dependencyMap = tmp2[1];
-  let obj = source(4185);
+  let obj = source(4186);
   const fn = function c() {
-    let obj = source(4446);
+    let obj = source(4447);
     let num = 1;
     if (first) {
       num = 0;
@@ -59,7 +59,7 @@ function MediaMosaicImage(source) {
     obj = { opacity: obj.withTiming(num, { duration: 150 }) };
     return obj;
   };
-  obj = { withTiming: source(4446).withTiming, imageFinishedLoading: first };
+  obj = { withTiming: source(4447).withTiming, imageFinishedLoading: first };
   fn.__closure = obj;
   fn.__workletHash = 7803531897566;
   fn.__initData = closure_20;
@@ -69,15 +69,15 @@ function MediaMosaicImage(source) {
   const memo = React.useMemo(() => {
     if (null != source.placeholder) {
       const obj = { uri: null, width: null, height: null };
-      obj[0] = source(15999).createThumbhashImageFromPlaceholder(tmp.placeholder);
+      obj[0] = source(16017).createThumbhashImageFromPlaceholder(tmp.placeholder);
       ({ width: obj[1], height: obj[2] } = tmp);
       return obj;
     }
   }, items);
-  obj = { style: items1, children: callback2(first(5445), { source: memo, style: items2 }) };
+  obj = { style: items1, children: callback2(first(5458), { source: memo, style: items2 }) };
   items1 = [animatedStyle, tmp.thumbhashMedia];
   items2 = [style, tmp.media, dimensions];
-  const items3 = [callback2(first(4185).View, obj), ];
+  const items3 = [callback2(first(4186).View, obj), ];
   obj1 = {
     source,
     style: items4,
@@ -93,7 +93,7 @@ function MediaMosaicImage(source) {
   }
   const obj2 = { children: null };
   obj1[3] = num;
-  items3[1] = callback2(first(4185).Image, obj1, source.uri);
+  items3[1] = callback2(first(4186).Image, obj1, source.uri);
   obj2[0] = items3;
   return closure_17(closure_16, obj2);
 }
@@ -363,7 +363,7 @@ function SingleImage(source) {
   ({ initialIndex, handlePressMedia, visible } = source);
   const tmp = callback4();
   let obj = React;
-  const context = React.useContext(source(15954).ICYMIContext);
+  const context = React.useContext(source(15972).ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {

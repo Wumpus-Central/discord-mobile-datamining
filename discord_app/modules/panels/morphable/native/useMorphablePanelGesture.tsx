@@ -1,8 +1,8 @@
-// === Module 16514: MorphablePanelModes ===
+// === Module 16532: MorphablePanelModes ===
 
-// Module 16514 (MorphablePanelModes)
+// Module 16532 (MorphablePanelModes)
 import closure_3 from "noop" /* 19 */;
-import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 11758 */;
+import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 11777 */;
 
 const require = arg1;
 ({ IS_IOS: c4, MIN_PAN_GESTURE_MOVE: c5, MorphablePanelModes } = MIN_PAN_GESTURE_MOVE);

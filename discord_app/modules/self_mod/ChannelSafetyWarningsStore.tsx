@@ -1,6 +1,6 @@
-// === Module 10573: handleConnectionOpen ===
+// === Module 10591: handleConnectionOpen ===
 
-// Module 10573 (handleConnectionOpen)
+// Module 10591 (handleConnectionOpen)
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

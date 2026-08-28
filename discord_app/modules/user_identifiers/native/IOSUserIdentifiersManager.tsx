@@ -1,12 +1,12 @@
-// === Module 16895: onPostConnectionOpen ===
+// === Module 16913: onPostConnectionOpen ===
 
-// Module 16895 (onPostConnectionOpen)
+// Module 16913 (onPostConnectionOpen)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import _modDef1208 from "module_1208" /* 1208 */;
-import initializeDefault from "initialize" /* 5438 */;
+import initializeDefault from "initialize" /* 5451 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1923 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 let require = arg1;

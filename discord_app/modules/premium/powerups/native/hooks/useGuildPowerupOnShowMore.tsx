@@ -1,6 +1,6 @@
-// === Module 12046: useGuildPowerupOnShowMore ===
+// === Module 12065: useGuildPowerupOnShowMore ===
 
-// Module 12046 (useGuildPowerupOnShowMore)
+// Module 12065 (useGuildPowerupOnShowMore)
 import closure_2 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx");

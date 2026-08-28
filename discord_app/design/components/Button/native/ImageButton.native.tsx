@@ -1,12 +1,12 @@
-// === Module 9901: ImageButton ===
+// === Module 9919: ImageButton ===
 
-// Module 9901 (ImageButton)
+// Module 9919 (ImageButton)
 import ThemesDefault from "Themes" /* 712 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4885 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4898 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 let c3 = importAllResult;
@@ -15,9 +15,9 @@ let c3 = importAllResult;
 let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   let MEDIUM_BUTTON_PADDING = MINIMUM_HIT_AREA.LARGE_BUTTON_PADDING;
   if ("sm" === arg0) {
-    MEDIUM_BUTTON_PADDING = tmp(4885).SMALL_BUTTON_PADDING;
+    MEDIUM_BUTTON_PADDING = tmp(4898).SMALL_BUTTON_PADDING;
   } else if ("md" === arg0) {
-    MEDIUM_BUTTON_PADDING = tmp(4885).MEDIUM_BUTTON_PADDING;
+    MEDIUM_BUTTON_PADDING = tmp(4898).MEDIUM_BUTTON_PADDING;
   }
   const sum = arg1 + 2 * MEDIUM_BUTTON_PADDING;
   const buttonBorderRadius = MINIMUM_HIT_AREA.getButtonBorderRadius(arg0);

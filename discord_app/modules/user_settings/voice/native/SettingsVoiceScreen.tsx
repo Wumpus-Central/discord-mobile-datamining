@@ -1,30 +1,30 @@
-// === Module 14791: KrispLogo ===
+// === Module 14776: KrispLogo ===
 
-// Module 14791 (KrispLogo)
+// Module 14776 (KrispLogo)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import Text from "Text" /* 4441 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5604 */;
-import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 9997 */;
-import handleKrispLinkPressed from "handleKrispLinkPressed" /* 10000 */;
-import _modDef14194 from "module_14194" /* 14194 */;
+import Text from "Text" /* 4442 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5617 */;
+import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 10015 */;
+import handleKrispLinkPressed from "handleKrispLinkPressed" /* 10018 */;
+import _modDef14273 from "module_14273" /* 14273 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4496 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7816 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7830 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import importDefaultResult from "combined" /* 1995 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import importDefaultResult from "combined" /* 1996 */;
 
 require = arg1;
 function KrispLogo() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = tmp2(10001);
+    let tmp2Result = tmp2(10019);
   } else {
-    tmp2Result = tmp2(10002);
+    tmp2Result = tmp2(10020);
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -55,7 +55,7 @@ function SystemProcessingSubLabel() {
       const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
     };
     obj[1] = intl.format(tmp(1236).t.EUNgko, obj);
-    tmp3 = callback(tmp(4441).Text, obj);
+    tmp3 = callback(tmp(4442).Text, obj);
   }
   return tmp3;
 }
@@ -67,7 +67,7 @@ let result = require("set").fileFinishedImporting("modules/user_settings/voice/n
 
 export default function SettingsVoiceScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(10988);
+    let obj = callback(11006);
     obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = callback(1236).intl;
@@ -92,7 +92,7 @@ export default function SettingsVoiceScreen() {
     obj3[1] = items3;
     const intl5 = callback(1236).intl;
     const obj4 = { helpCenterArticle: null };
-    let obj7 = callback2(1995);
+    let obj7 = callback2(1996);
     obj4[0] = obj7.getArticleURL(constants2.SOUNDBOARD);
     obj3[2] = intl5.format(callback(1236).t.BPbGq7, obj4);
     items1[2] = obj3;
@@ -131,5 +131,5 @@ export default function SettingsVoiceScreen() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return callback(_modDef14194, { node });
+  return callback(_modDef14273, { node });
 };

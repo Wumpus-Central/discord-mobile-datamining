@@ -1,12 +1,12 @@
-// === Module 8006: setPendingChanges ===
+// === Module 8020: setPendingChanges ===
 
-// Module 8006 (setPendingChanges)
+// Module 8020 (setPendingChanges)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isEqualDefault from "isEqual" /* 4608 */;
-import guildHasTag from "guildHasTag" /* 8007 */;
-import closure_3 from "trackCommunicationDisabled" /* 1992 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "createUserWidgetFromServer" /* 7299 */;
+import isEqualDefault from "isEqual" /* 4609 */;
+import guildHasTag from "guildHasTag" /* 8021 */;
+import closure_3 from "trackCommunicationDisabled" /* 1993 */;
+import closure_4 from "mergeGuildAvatar" /* 1923 */;
+import closure_5 from "createUserWidgetFromServer" /* 7313 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");

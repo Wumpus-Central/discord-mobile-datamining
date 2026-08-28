@@ -1,15 +1,15 @@
-// === Module 7138: trackRoundtrip ===
+// === Module 7151: trackRoundtrip ===
 
-// Module 7138 (trackRoundtrip)
+// Module 7151 (trackRoundtrip)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 7139 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7355 */;
+import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 7152 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7369 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleInviteData" /* 4365 */;
-import closure_5 from "handleConnectionInfoChange" /* 4539 */;
+import closure_4 from "handleInviteData" /* 4366 */;
+import closure_5 from "handleConnectionInfoChange" /* 4540 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;

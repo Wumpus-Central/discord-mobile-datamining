@@ -1,18 +1,18 @@
-// === Module 6103: updateState ===
+// === Module 6116: updateState ===
 
-// Module 6103 (updateState)
+// Module 6116 (updateState)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import AbortCodes from "AbortCodes" /* 1235 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4690 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4703 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_5 from "hasFlag" /* 4099 */;
-import closure_6 from "createdAt" /* 1930 */;
+import closure_5 from "hasFlag" /* 4100 */;
+import closure_6 from "createdAt" /* 1931 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "reinjectEphemerals" /* 4688 */;
+import closure_8 from "reinjectEphemerals" /* 4701 */;
 import set from "set" /* 2 */;
 
 function updateState(type) {

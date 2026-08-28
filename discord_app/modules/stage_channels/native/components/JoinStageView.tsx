@@ -1,13 +1,13 @@
-// === Module 9951: JoinStageView ===
+// === Module 9969: JoinStageView ===
 
-// Module 9951 (JoinStageView)
+// Module 9969 (JoinStageView)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import sortKey from "sortKey" /* 5320 */;
-import useStageParticipants from "useStageParticipants" /* 5326 */;
-import fillChunk from "fillChunk" /* 8602 */;
-import stylesDefault from "styles" /* 9565 */;
-import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 9909 */;
+import sortKey from "sortKey" /* 5333 */;
+import useStageParticipants from "useStageParticipants" /* 5339 */;
+import fillChunk from "fillChunk" /* 8617 */;
+import stylesDefault from "styles" /* 9583 */;
+import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 9927 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

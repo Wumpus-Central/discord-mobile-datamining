@@ -1,10 +1,10 @@
-// === Module 5027: getClipCreatedAt ===
+// === Module 5040: getClipCreatedAt ===
 
-// Module 5027 (getClipCreatedAt)
+// Module 5040 (getClipCreatedAt)
 import closure_3 from "_slicedToArray" /* 32 */;
-import result from "result" /* 4503 */;
+import result from "result" /* 4504 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { SpeakingFlags } from "DesktopSources" /* 4509 */;
+import { SpeakingFlags } from "DesktopSources" /* 4510 */;
 
 const require = arg1;
 ({ CLIPS_MAX_PARTICIPANTS: c4, CLIPS_MAX_TIMELINE_EVENTS: c5, ClipSignalTypes: closure_6, GameEventType: error } = result);
@@ -13,6 +13,23 @@ result = require("set").fileFinishedImporting("modules/clips/clipPayloadUtils.ts
 
 export const getClipCreatedAt = function getClipCreatedAt(createdAt) {
   return new Date(createdAt).toISOString();
+};
+export const getClipSyncTimestamp = function getClipSyncTimestamp(clip) {
+  if (null != clip.syncTimestamp) {
+    const editMetadata = clip.editMetadata;
+    let end;
+    if (editMetadata != null) {
+      end = editMetadata.end;
+    }
+    if (null != end) {
+      let length = 1000 * clip.editMetadata.end;
+    } else {
+      length = clip.length;
+    }
+    const _Date = Date;
+    const date = new Date(clip.syncTimestamp - (clip.length - length));
+    return date.toISOString();
+  }
 };
 export const getClipParticipantIds = function getClipParticipantIds(users) {
   return users.slice(0, closure_4);
@@ -44,7 +61,7 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
       const diff = clip.decision.timestamp - clip.length;
       const sum = diff + 1000 * editMetadata.end;
       const sum1 = diff + 1000 * editMetadata.start;
-      closure_1 = _require(5028).isGameEventsOnPlayerEnabled("getClipEventsTimeline");
+      closure_1 = _require(5041).isGameEventsOnPlayerEnabled("getClipEventsTimeline");
       const timeline1 = clip.timeline;
       const found = timeline1.filter((signal) => {
         editMetadata = editMetadata.editMetadata;
@@ -99,7 +116,7 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
         }
         const tmp10 = map;
       }
-      const obj2 = _require(5028);
+      const obj2 = _require(5041);
     }
   }
 };

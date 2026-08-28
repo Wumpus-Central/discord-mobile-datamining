@@ -1,10 +1,10 @@
-// === Module 6353: ClydeAngledSpotIllustration ===
+// === Module 6366: ClydeAngledSpotIllustration ===
 
-// Module 6353 (ClydeAngledSpotIllustration)
+// Module 6366 (ClydeAngledSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6354 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6367 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ClydeAngledSpotIllustration.native.tsx");

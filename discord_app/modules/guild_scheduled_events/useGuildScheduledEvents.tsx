@@ -1,15 +1,15 @@
-// === Module 9552: useGuildEvents ===
+// === Module 9570: useGuildEvents ===
 
-// Module 9552 (useGuildEvents)
+// Module 9570 (useGuildEvents)
 import setDefault from "set" /* 687 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4089 */;
-import scheduledEventSort from "scheduledEventSort" /* 7204 */;
-import closure_9 from "scheduledEventSort" /* 7204 */;
-import closure_10 from "initialize" /* 9553 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4090 */;
+import scheduledEventSort from "scheduledEventSort" /* 7218 */;
+import closure_9 from "scheduledEventSort" /* 7218 */;
+import closure_10 from "initialize" /* 9571 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import ME from "ME" /* 676 */;
 
@@ -331,11 +331,11 @@ export const useImminentUpcomingGuildEvents = function useImminentUpcomingGuildE
   }, items1);
   const items2 = [stateFromStores];
   return React.useMemo(() => stateFromStores.filter((status) => {
-    const eventSchedule = callback(9558).getEventSchedule(status);
+    const eventSchedule = callback(9576).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
-    const obj = callback(9558);
+    const obj = callback(9576);
     let toISOStringResult1;
-    const obj2 = callback(9555);
+    const obj2 = callback(9573);
     if (endTime != null) {
       toISOStringResult1 = endTime.toISOString();
     }

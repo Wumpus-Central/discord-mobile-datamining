@@ -1,14 +1,14 @@
-// === Module 8655: GetStartedScreen ===
+// === Module 8671: GetStartedScreen ===
 
-// Module 8655 (GetStartedScreen)
+// Module 8671 (GetStartedScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
-import { SafetyHubLinks } from "SafetyHubView" /* 8621 */;
+import { SafetyHubLinks } from "SafetyHubView" /* 8636 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 ({ ActivityIndicator: c5, ScrollView: closure_6, View: error } = get_ActivityIndicator);

@@ -1,17 +1,17 @@
-// === Module 10447: usePremiumProductPricingString ===
+// === Module 10463: usePremiumProductPricingString ===
 
-// Module 10447 (usePremiumProductPricingString)
-import closure_2 from "updateProduct" /* 6036 */;
-import { PRICE_PLACEHOLDER } from "GuildFeatures" /* 1924 */;
+// Module 10463 (usePremiumProductPricingString)
+import closure_2 from "updateProduct" /* 6049 */;
+import { PRICE_PLACEHOLDER } from "GuildFeatures" /* 1925 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
 
 export default function usePremiumProductPricingString(closure_0, YEAR) {
-  const planIdForPremiumType = _require(4107).getPlanIdForPremiumType(closure_0, YEAR);
-  const obj = _require(4107);
-  _require = _require(6039).getProductIdForGift(planIdForPremiumType);
-  const obj2 = _require(6039);
+  const planIdForPremiumType = _require(4108).getPlanIdForPremiumType(closure_0, YEAR);
+  const obj = _require(4108);
+  _require = _require(6052).getProductIdForGift(planIdForPremiumType);
+  const obj2 = _require(6052);
   const items = [closure_2];
   const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_2.getProduct(closure_0));
   let priceString;

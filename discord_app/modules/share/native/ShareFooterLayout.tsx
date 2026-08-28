@@ -1,13 +1,13 @@
-// === Module 11192: ShareFooterLayout ===
+// === Module 11210: ShareFooterLayout ===
 
-// Module 11192 (ShareFooterLayout)
+// Module 11210 (ShareFooterLayout)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4185 from "module_4185" /* 4185 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5546 */;
+import _modDef4186 from "module_4186" /* 4186 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5559 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 noopAll;
@@ -31,12 +31,12 @@ export default function ShareFooterLayout(arg0) {
   const tmp = callback2();
   const sum = tmp.footer.paddingVertical + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: avoidKeyboard, includeCustomKeyboardHeight: false }).insets.bottom;
   _require = sum;
-  let obj = _require(4185);
+  let obj = _require(4186);
   const fn = function f() {
     const obj = { paddingBottom: _undefined(closure_1_2[7]).withSpring(_undefined, _undefined(closure_1_2[8]).ON_PRESS_SPRING, "respect-motion-settings") };
     return obj;
   };
-  obj = { withSpring: _require(4879).withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: _require(4883).ON_PRESS_SPRING };
+  obj = { withSpring: _require(4892).withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: _require(4896).ON_PRESS_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 2871405301293;
   fn.__initData = closure_8;
@@ -61,11 +61,11 @@ export default function ShareFooterLayout(arg0) {
   if (tmp12) {
     const obj5 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
     obj5[2] = warningText;
-    tmp12 = callback(_require(4441).Text, obj5);
+    tmp12 = callback(_require(4442).Text, obj5);
   }
   items4[1] = tmp12;
   obj3[1] = items4;
   items2[1] = closure_6(View, obj3);
   obj[1] = items2;
-  return closure_6(_modDef4185.View, obj);
+  return closure_6(_modDef4186.View, obj);
 };

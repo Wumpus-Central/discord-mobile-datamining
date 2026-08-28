@@ -1,11 +1,11 @@
-// === Module 13144: getGiftingBadgeProgressPercent ===
+// === Module 13163: getGiftingBadgeProgressPercent ===
 
-// Module 13144 (getGiftingBadgeProgressPercent)
+// Module 13163 (getGiftingBadgeProgressPercent)
 import set from "set" /* 2 */;
-import initialize from "initialize" /* 8492 */;
-import apexExperiment from "apexExperiment" /* 10438 */;
-import apexExperiment2 from "apexExperiment" /* 13145 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import initialize from "initialize" /* 8506 */;
+import apexExperiment from "apexExperiment" /* 10454 */;
+import apexExperiment2 from "apexExperiment" /* 13164 */;
+import closure_3 from "mergeGuildAvatar" /* 1923 */;
 
 let closure_2 = initialize.getSingleRequirementThreshold;
 let result = set.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
@@ -82,7 +82,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     return flag;
   });
-  tmpResult = tmp(4266);
+  tmpResult = tmp(4267);
   const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1377).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
   if (tmp4) {
     tmp4 = stateFromStores;

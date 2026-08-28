@@ -1,6 +1,6 @@
-// === Module 16323: isGuildEligibleForStageChannels ===
+// === Module 16341: isGuildEligibleForStageChannels ===
 
-// Module 16323 (isGuildEligibleForStageChannels)
+// Module 16341 (isGuildEligibleForStageChannels)
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 

@@ -1,11 +1,11 @@
-// === Module 9261: CloseButton ===
+// === Module 9279: CloseButton ===
 
-// Module 9261 (CloseButton)
+// Module 9279 (CloseButton)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import HeaderActionButton from "HeaderActionButton" /* 6189 */;
-import registerAssetDefault from "registerAsset" /* 7697 */;
+import HeaderActionButton from "HeaderActionButton" /* 6202 */;
+import registerAssetDefault from "registerAsset" /* 7711 */;
 import closure_3 from "noop" /* 19 */;
-import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes" /* 9262 */;
+import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes" /* 9280 */;
 import { PlatformTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -32,12 +32,12 @@ const result = require("set").fileFinishedImporting("modules/user_settings/conne
 
 export default function CrunchyrollLinkModal(locationStack) {
   let twoWayLinkStyles;
-  let obj = twoWayLinkStyles(9227);
+  let obj = twoWayLinkStyles(9245);
   twoWayLinkStyles = obj.useTwoWayLinkStyles();
   const items = [twoWayLinkStyles];
   const memo = React.useMemo(() => {
     function onClose() {
-      return callback(9260).hideModal();
+      return callback(9278).hideModal();
     }
     function blank() {
       return null;
@@ -48,7 +48,7 @@ export default function CrunchyrollLinkModal(locationStack) {
       headerTitle: blank,
       headerStyle: onClose.navHeader,
       render() {
-        return callback2(callback(9263), {});
+        return callback2(callback(9281), {});
       }
     };
     obj = {
@@ -56,10 +56,10 @@ export default function CrunchyrollLinkModal(locationStack) {
       headerRight: closure_1_7,
       headerStyle: onClose.navHeader,
       headerTitle() {
-        return callback2(onClose(9228).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+        return callback2(onClose(9246).TwoWayLinkStepHeader, { idx: 1, total: 2 });
       },
       render() {
-        return callback2(callback(9265), {});
+        return callback2(callback(9283), {});
       }
     };
     obj = {
@@ -67,11 +67,11 @@ export default function CrunchyrollLinkModal(locationStack) {
       headerRight: closure_1_7,
       headerStyle: onClose.navHeader,
       headerTitle() {
-        return callback2(onClose(9228).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+        return callback2(onClose(9246).TwoWayLinkStepHeader, { idx: 2, total: 2 });
       },
       render(arg0) {
         ({ callbackCode, callbackState } = arg0);
-        return callback2(callback(9267), { callbackCode, callbackState });
+        return callback2(callback(9285), { callbackCode, callbackState });
       }
     };
     return {
@@ -98,9 +98,9 @@ export default function CrunchyrollLinkModal(locationStack) {
       }
     };
   }, items);
-  const accountLinkStepTracking = twoWayLinkStyles(9248).useAccountLinkStepTracking(PlatformTypes.CRUNCHYROLL, locationStack.locationStack);
+  const accountLinkStepTracking = twoWayLinkStyles(9266).useAccountLinkStepTracking(PlatformTypes.CRUNCHYROLL, locationStack.locationStack);
   obj = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null };
   const intl = twoWayLinkStyles(1236).intl;
   obj[3] = intl.string(twoWayLinkStyles(1236).t["13/7kX"]);
-  return jsx(twoWayLinkStyles(5960).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null });
+  return jsx(twoWayLinkStyles(5973).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null });
 };

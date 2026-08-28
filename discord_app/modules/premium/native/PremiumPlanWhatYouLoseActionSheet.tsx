@@ -1,14 +1,14 @@
-// === Module 12909: WhatYouLoseItem ===
+// === Module 12928: WhatYouLoseItem ===
 
-// Module 12909 (WhatYouLoseItem)
+// Module 12928 (WhatYouLoseItem)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4441 */;
-import preloadDefault from "preload" /* 5445 */;
+import Text from "Text" /* 4442 */;
+import preloadDefault from "preload" /* 5458 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { PremiumTypes } from "GuildFeatures" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function WhatYouLoseItem(arg0) {

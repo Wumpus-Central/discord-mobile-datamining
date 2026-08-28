@@ -1,6 +1,6 @@
-// === Module 4233: metadata ===
+// === Module 4234: metadata ===
 
-// Module 4233 (metadata)
+// Module 4234 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/BoostThisServer.riv.js");

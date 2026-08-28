@@ -1,6 +1,6 @@
-// === Module 8548: fetchGuildAffinities ===
+// === Module 8563: fetchGuildAffinities ===
 
-// Module 8548 (fetchGuildAffinities)
+// Module 8563 (fetchGuildAffinities)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;

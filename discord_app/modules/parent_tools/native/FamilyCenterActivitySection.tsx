@@ -1,16 +1,16 @@
-// === Module 14454: FamilyCenterActivitySectionHeader ===
+// === Module 14438: FamilyCenterActivitySectionHeader ===
 
-// Module 14454 (FamilyCenterActivitySectionHeader)
+// Module 14438 (FamilyCenterActivitySectionHeader)
 import ThemesDefault from "Themes" /* 712 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7271 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8698 */;
-import useActionsForDisplayType from "useActionsForDisplayType" /* 14449 */;
+import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7285 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8714 */;
+import useActionsForDisplayType from "useActionsForDisplayType" /* 14433 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 7216 */;
+import items from "items" /* 7230 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function FamilyCenterActivitySectionHeader(displayType) {
@@ -47,13 +47,13 @@ function FamilyCenterActivitySectionHeader(displayType) {
     obj = { variant: "text-sm/semibold", style: null, children: null };
     obj[1] = tmp.header;
     obj[2] = sectionHeaderResult;
-    const items = [callback2(tmp3(4441).Text, obj), ];
+    const items = [callback2(tmp3(4442).Text, obj), ];
     let tmp14Result = null;
     if (null !== tmp10) {
       obj = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
       obj[2] = tmp.description;
       obj[3] = tmp10;
-      tmp14Result = callback2(tmp3(4441).Text, obj);
+      tmp14Result = callback2(tmp3(4442).Text, obj);
     }
     obj1 = { children: null };
     items[1] = tmp14Result;
@@ -83,11 +83,11 @@ export default function FamilyCenterActivitySection(displayType) {
   let loadMore;
   dependencyMap = undefined;
   let loadMoreButton = callback4();
-  let obj = displayType(14449);
+  let obj = displayType(14433);
   const actionsForDisplayType = obj.useActionsForDisplayType(displayType);
-  obj1 = displayType(14449);
+  obj1 = displayType(14433);
   const actionTotalsForDisplayType = obj1.useActionTotalsForDisplayType(displayType);
-  let obj2 = displayType(11408);
+  let obj2 = displayType(11427);
   const familyCenterActions = obj2.useFamilyCenterActions({});
   loadMore = familyCenterActions.loadMore;
   const tmp6 = callback(React.useState(closure_7), 2);
@@ -101,12 +101,12 @@ export default function FamilyCenterActivitySection(displayType) {
     obj = { pageSize: null };
     const _Math = Math;
     obj[0] = Math.min(actionTotalsForDisplayType - substr.length, closure_7);
-    const formatToPlainStringResult = intl.formatToPlainString(loadMore(2369)["7dMmJY"], obj);
+    const formatToPlainStringResult = intl.formatToPlainString(loadMore(2370)["7dMmJY"], obj);
     obj = { style: null, children: null };
     obj[0] = loadMoreButton.container;
     obj1 = { displayType: null };
     obj1[0] = displayType;
-    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => callback(loadMore(14455), { action }, action.event_id)), ];
+    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => callback(loadMore(14439), { action }, action.event_id)), ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
       obj[1] = items1;
@@ -130,8 +130,8 @@ export default function FamilyCenterActivitySection(displayType) {
         const obj6 = { style: null, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
         obj6[0] = loadMoreButton.loadMoreButton;
         obj6[3] = formatToPlainStringResult;
-        obj5[4] = tmp17(tmp(4441).Text, obj6);
-        tmp17Result = tmp17(tmp(5020).PressableOpacity, obj5);
+        obj5[4] = tmp17(tmp(4442).Text, obj6);
+        tmp17Result = tmp17(tmp(5033).PressableOpacity, obj5);
       }
       obj2[1] = tmp17Result;
       tmp17Result = tmp17(tmp16, obj2);

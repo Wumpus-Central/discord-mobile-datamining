@@ -1,6 +1,6 @@
-// === Module 15730: MentionsBadge ===
+// === Module 15748: MentionsBadge ===
 
-// Module 15730 (MentionsBadge)
+// Module 15748 (MentionsBadge)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1297 */;
 import { jsx } from "jsxProd" /* 21 */;

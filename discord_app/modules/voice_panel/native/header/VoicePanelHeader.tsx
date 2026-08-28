@@ -1,27 +1,27 @@
-// === Module 16594: MusicMuteButton ===
+// === Module 16612: MusicMuteButton ===
 
-// Module 16594 (MusicMuteButton)
+// Module 16612 (MusicMuteButton)
 import ThemesDefault from "Themes" /* 712 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10036 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10054 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getParticipants" /* 4461 */;
-import closure_7 from "getHash" /* 4358 */;
-import closure_8 from "initialize" /* 9910 */;
+import closure_6 from "getParticipants" /* 4462 */;
+import closure_7 from "getHash" /* 4359 */;
+import closure_8 from "initialize" /* 9928 */;
 import closure_9 from "fetchFingerprint" /* 1218 */;
 import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "_detectH265HardwareDecode" /* 4496 */;
-import closure_12 from "markAllUserIdListsStale" /* 4098 */;
-import closure_13 from "anyoneHasFlagInContext" /* 5315 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
-import VoicePanelModes from "VoicePanelModes" /* 11757 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 11760 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11755 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4466 */;
+import closure_11 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_12 from "markAllUserIdListsStale" /* 4099 */;
+import closure_13 from "anyoneHasFlagInContext" /* 5328 */;
+import closure_14 from "mergeGuildAvatar" /* 1923 */;
+import VoicePanelModes from "VoicePanelModes" /* 11776 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 11779 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11774 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4467 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 function MusicMuteButton(channelId) {
@@ -48,13 +48,13 @@ function MusicMuteButton(channelId) {
       }
       obj = { accessibilityLabel: null, icon: null, onPress: null };
       obj[0] = stringResult;
-      obj[1] = tmp(stateFromStores ? 9921 : 9173);
+      obj[1] = tmp(stateFromStores ? 9939 : 9191);
       obj[2] = function onPress() {
         return stateFromStores(closure_1_2[33]).updateStageMusicMuted(!stateFromStores);
       };
-      closure_23(tmp(16528), obj);
+      closure_23(tmp(16546), obj);
       const tmp7 = closure_23;
-      const tmpResult = tmp(16528);
+      const tmpResult = tmp(16546);
     }
   }
   return tmp6;

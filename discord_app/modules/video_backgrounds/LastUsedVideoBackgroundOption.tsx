@@ -1,11 +1,11 @@
-// === Module 9712: getLastUsedVideoBackgroundOption ===
+// === Module 9730: getLastUsedVideoBackgroundOption ===
 
-// Module 9712 (getLastUsedVideoBackgroundOption)
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4107 */;
-import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9709 */;
+// Module 9730 (getLastUsedVideoBackgroundOption)
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4108 */;
+import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9727 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1923 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx");

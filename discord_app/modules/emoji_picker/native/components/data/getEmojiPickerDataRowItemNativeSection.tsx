@@ -1,8 +1,8 @@
-// === Module 9062: getEmojiPickerDataRowItemNativeSection ===
+// === Module 9080: getEmojiPickerDataRowItemNativeSection ===
 
-// Module 9062 (getEmojiPickerDataRowItemNativeSection)
+// Module 9080 (getEmojiPickerDataRowItemNativeSection)
 import set from "set" /* 2 */;
-import useEmojiPickerData from "useEmojiPickerData" /* 9061 */;
+import useEmojiPickerData from "useEmojiPickerData" /* 9079 */;
 
 const result = set.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx");
 

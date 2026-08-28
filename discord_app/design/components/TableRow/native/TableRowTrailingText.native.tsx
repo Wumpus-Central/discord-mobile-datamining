@@ -1,8 +1,8 @@
-// === Module 5561: TableRowTrailingText ===
+// === Module 5574: TableRowTrailingText ===
 
-// Module 5561 (TableRowTrailingText)
+// Module 5574 (TableRowTrailingText)
 import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4441 */;
+import Text from "Text" /* 4442 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

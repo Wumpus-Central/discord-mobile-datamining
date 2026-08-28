@@ -1,10 +1,10 @@
-// === Module 6031: resetStoreState ===
+// === Module 6044: resetStoreState ===
 
-// Module 6031 (resetStoreState)
+// Module 6044 (resetStoreState)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_2 from "_getSystemLocale" /* 1996 */;
+import closure_2 from "_getSystemLocale" /* 1997 */;
 
 require = arg1;
 function resetStoreState() {

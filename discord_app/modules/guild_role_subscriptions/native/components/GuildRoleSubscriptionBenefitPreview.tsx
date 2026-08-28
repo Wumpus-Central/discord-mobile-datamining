@@ -1,17 +1,17 @@
-// === Module 17257: BaseBenefitRow ===
+// === Module 17275: BaseBenefitRow ===
 
-// Module 17257 (BaseBenefitRow)
+// Module 17275 (BaseBenefitRow)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1297 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
-import Text from "Text" /* 4441 */;
-import registerAssetDefault from "registerAsset" /* 9950 */;
-import getUsedTemplateChannelsForGuild from "getUsedTemplateChannelsForGuild" /* 14777 */;
-import EmojiIconDefault from "EmojiIcon" /* 14784 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4103 */;
+import Text from "Text" /* 4442 */;
+import registerAssetDefault from "registerAsset" /* 9968 */;
+import getUsedTemplateChannelsForGuild from "getUsedTemplateChannelsForGuild" /* 14762 */;
+import EmojiIconDefault from "EmojiIcon" /* 14769 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { GuildRoleSubscriptionBenefitTypes as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 14749 */;
+import { GuildRoleSubscriptionBenefitTypes as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 14734 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function BaseBenefitRow(isInteractive) {
@@ -68,15 +68,15 @@ function ChannelBenefitRow(benefit) {
   const channelWithTemplateFallback = obj.useChannelWithTemplateFallback(benefit.ref_id);
   let channelIcon = null;
   if (null != channelWithTemplateFallback) {
-    channelIcon = tmp2(4933).getChannelIcon(channelWithTemplateFallback);
-    const tmp2Result = tmp2(4933);
+    channelIcon = tmp2(4946).getChannelIcon(channelWithTemplateFallback);
+    const tmp2Result = tmp2(4946);
   }
   if (null == channelWithTemplateFallback) {
     obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1236).intl;
     const _HermesInternal = HermesInternal;
     obj[2] = "[" + intl.string(tmp2(1236).t.bz1PZX) + "]";
-    let tmp9 = callback(tmp2(4441).Text, obj);
+    let tmp9 = callback(tmp2(4442).Text, obj);
   } else {
     obj = { benefit: null, guildId: null, isInteractive: null, children: null };
     obj[0] = benefit;
@@ -91,7 +91,7 @@ function ChannelBenefitRow(benefit) {
     const items = [callback(tmp2(1297).Icon, obj2), ];
     const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj3[2] = tmp5;
-    items[1] = callback(tmp2(4441).Text, obj3);
+    items[1] = callback(tmp2(4442).Text, obj3);
     obj1[1] = items;
     obj[3] = callback2(View, obj1);
     tmp9 = callback(DescriptiveBenefitRow, obj);

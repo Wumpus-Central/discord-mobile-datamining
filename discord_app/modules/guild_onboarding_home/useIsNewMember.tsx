@@ -1,11 +1,11 @@
-// === Module 6022: useIsNewMember ===
+// === Module 6035: useIsNewMember ===
 
-// Module 6022 (useIsNewMember)
+// Module 6035 (useIsNewMember)
 import setDefault from "set" /* 687 */;
 import hasFlag from "hasFlag" /* 1403 */;
-import closure_3 from "initialize" /* 1984 */;
-import closure_4 from "trackCommunicationDisabled" /* 1992 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
+import closure_3 from "initialize" /* 1985 */;
+import closure_4 from "trackCommunicationDisabled" /* 1993 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4078 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");

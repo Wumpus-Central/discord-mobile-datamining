@@ -1,19 +1,19 @@
-// === Module 10812: handleOutOfSuperReactions ===
+// === Module 10830: handleOutOfSuperReactions ===
 
-// Module 10812 (handleOutOfSuperReactions)
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4412 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4653 */;
-import setDefault from "set" /* 4809 */;
-import registerAssetDefault from "registerAsset" /* 10826 */;
-import registerAssetDefault2 from "registerAsset" /* 10827 */;
+// Module 10830 (handleOutOfSuperReactions)
+import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4108 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4413 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4666 */;
+import setDefault from "set" /* 4822 */;
+import registerAssetDefault from "registerAsset" /* 10844 */;
+import registerAssetDefault2 from "registerAsset" /* 10845 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reinjectEphemerals" /* 4688 */;
-import closure_5 from "handleConnectionOpen" /* 4267 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "reinjectEphemerals" /* 4701 */;
+import closure_5 from "handleConnectionOpen" /* 4268 */;
+import closure_6 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import { EmojiIntention } from "set" /* 1926 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -34,7 +34,7 @@ export const handleOutOfSuperReactions = function handleOutOfSuperReactions(arg0
     if (!obj.isPremium(currentUser)) {
       obj = { onDismiss: null };
       obj[0] = arg0;
-      openLazyResult = ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9035, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
+      openLazyResult = ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9053, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
       const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     }
     return openLazyResult;
@@ -152,14 +152,14 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
     obj1[2] = isPoll.emoji;
     const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
     const merged2 = Object.assign(merged);
-    obj6.openLazy(asyncRequireImpl(10813, dependencyMap.paths), "MessageReactions", obj1);
+    obj6.openLazy(asyncRequireImpl(10831, dependencyMap.paths), "MessageReactions", obj1);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
 };
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { messageId: id2, channelId: id, emoji };
-  obj.openLazy(asyncRequireImpl(10825, dependencyMap.paths), "MessagePreviewReactions", obj);
+  obj.openLazy(asyncRequireImpl(10843, dependencyMap.paths), "MessagePreviewReactions", obj);
 };
 export const ADD_REACTION_ICONS = obj;
 export const ADD_REACTION_ICON_COMPONENTS = obj;
@@ -173,7 +173,7 @@ export const handleRemoveAllReactions = function handleRemoveAllReactions(arg0, 
   obj = { variant: "text-md/normal", children: null };
   const intl2 = _require(1236).intl;
   obj[1] = intl2.string(_require(1236).t.VpjOCo);
-  obj[1] = jsx(_require(4441).Text, { variant: "text-md/normal", children: null });
+  obj[1] = jsx(_require(4442).Text, { variant: "text-md/normal", children: null });
   const intl3 = _require(1236).intl;
   obj[2] = intl3.string(_require(1236).t["ETE/oC"]);
   const intl4 = _require(1236).intl;

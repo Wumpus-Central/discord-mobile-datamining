@@ -1,6 +1,6 @@
-// === Module 15831: isGuildsBarGuildDataEqual ===
+// === Module 15849: isGuildsBarGuildDataEqual ===
 
-// Module 15831 (isGuildsBarGuildDataEqual)
+// Module 15849 (isGuildsBarGuildDataEqual)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guilds_bar/native/utils/isGuildsBarGuildDataEqual.tsx");

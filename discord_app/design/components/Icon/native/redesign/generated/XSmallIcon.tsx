@@ -1,10 +1,10 @@
-// === Module 5503: XSmallIcon ===
+// === Module 5516: XSmallIcon ===
 
-// Module 5503 (XSmallIcon)
+// Module 5516 (XSmallIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 5504 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 5517 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

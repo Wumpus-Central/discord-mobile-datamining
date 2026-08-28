@@ -1,11 +1,11 @@
-// === Module 15753: useCanSeeNUFChannelsForGuild ===
+// === Module 15771: useCanSeeNUFChannelsForGuild ===
 
-// Module 15753 (useCanSeeNUFChannelsForGuild)
-import closure_2 from "trackCommunicationDisabled" /* 1992 */;
+// Module 15771 (useCanSeeNUFChannelsForGuild)
+import closure_2 from "trackCommunicationDisabled" /* 1993 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "mergeGuildAvatar" /* 1923 */;
 import { GuildFeatures } from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4078 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx");

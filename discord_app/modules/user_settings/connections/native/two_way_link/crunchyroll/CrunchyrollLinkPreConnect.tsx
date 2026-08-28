@@ -1,13 +1,13 @@
-// === Module 9265: CrunchyrollLinkPreConnect ===
+// === Module 9283: CrunchyrollLinkPreConnect ===
 
-// Module 9265 (CrunchyrollLinkPreConnect)
-import registerAssetDefault from "registerAsset" /* 9266 */;
+// Module 9283 (CrunchyrollLinkPreConnect)
+import registerAssetDefault from "registerAsset" /* 9284 */;
 import closure_3 from "noop" /* 19 */;
-import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes" /* 9262 */;
+import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes" /* 9280 */;
 import { PlatformTypes } from "ME" /* 676 */;
-import { CRUNCHYROLL_LINK_DEST_ORIGIN as closure_6 } from "CRUNCHYROLL_LINK_DEST_ORIGIN" /* 8540 */;
+import { CRUNCHYROLL_LINK_DEST_ORIGIN as closure_6 } from "CRUNCHYROLL_LINK_DEST_ORIGIN" /* 8555 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ image: { width: 152, height: 123 } });
@@ -30,5 +30,5 @@ export default function CrunchyrollLinkPreConnect() {
   const intl2 = navigation(1236).intl;
   obj[6] = intl2.string(navigation(1236).t.oS4NEH);
   obj[7] = closure_6;
-  return jsx(navigation(9231).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: registerAssetDefault, imgStyle: callback().image, title: null, body: null, redirectDestination: null });
+  return jsx(navigation(9249).TwoWayLinkPreConnect, { platformType: PlatformTypes.CRUNCHYROLL, onError: callback1, onNext: callback, img: registerAssetDefault, imgStyle: callback().image, title: null, body: null, redirectDestination: null });
 };

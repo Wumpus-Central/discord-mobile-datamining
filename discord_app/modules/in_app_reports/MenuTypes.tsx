@@ -1,6 +1,6 @@
-// === Module 8682: ReportNames ===
+// === Module 8698: ReportNames ===
 
-// Module 8682 (ReportNames)
+// Module 8698 (ReportNames)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/in_app_reports/MenuTypes.tsx");

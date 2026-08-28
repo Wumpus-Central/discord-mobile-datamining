@@ -1,10 +1,10 @@
-// === Module 6407: DiamondSpotIllustration ===
+// === Module 6420: DiamondSpotIllustration ===
 
-// Module 6407 (DiamondSpotIllustration)
+// Module 6420 (DiamondSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6408 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6421 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DiamondSpotIllustration.native.tsx");

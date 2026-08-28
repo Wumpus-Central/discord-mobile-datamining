@@ -1,12 +1,12 @@
-// === Module 8427: _fetchSocialLayerStorefront ===
+// === Module 8441: _fetchSocialLayerStorefront ===
 
-// Module 8427 (_fetchSocialLayerStorefront)
+// Module 8441 (_fetchSocialLayerStorefront)
 import failsDefault from "fails" /* 584 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getPromotionIdOverride" /* 8428 */;
-import closure_5 from "handleUserSettingsStoreUpdate" /* 6027 */;
+import closure_4 from "getPromotionIdOverride" /* 8442 */;
+import closure_5 from "handleUserSettingsStoreUpdate" /* 6040 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;

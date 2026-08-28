@@ -1,9 +1,9 @@
-// === Module 10087: canViewPotentiallyNSFWChannel ===
+// === Module 10105: canViewPotentiallyNSFWChannel ===
 
-// Module 10087 (canViewPotentiallyNSFWChannel)
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4684 */;
+// Module 10105 (canViewPotentiallyNSFWChannel)
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4697 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1923 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/MessageUtils.tsx");

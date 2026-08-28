@@ -1,8 +1,8 @@
-// === Module 7331: getCommittedVersions ===
+// === Module 7345: getCommittedVersions ===
 
-// Module 7331 (getCommittedVersions)
+// Module 7345 (getCommittedVersions)
 import timestampDefault from "timestamp" /* 3 */;
-import itemsDefault from "items" /* 1956 */;
+import itemsDefault from "items" /* 1957 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;

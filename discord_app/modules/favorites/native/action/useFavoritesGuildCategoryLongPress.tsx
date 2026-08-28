@@ -1,6 +1,6 @@
-// === Module 15609: useFavoritesGuildCategoryLongPress ===
+// === Module 15627: useFavoritesGuildCategoryLongPress ===
 
-// Module 15609 (useFavoritesGuildCategoryLongPress)
+// Module 15627 (useFavoritesGuildCategoryLongPress)
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
 import closure_3 from "noop" /* 19 */;
 import { ChannelTypes } from "ME" /* 676 */;

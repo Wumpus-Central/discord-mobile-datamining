@@ -1,10 +1,10 @@
-// === Module 9652: canUseMobileServerTagSettings ===
+// === Module 9670: canUseMobileServerTagSettings ===
 
-// Module 9652 (canUseMobileServerTagSettings)
-import guildHasTag from "guildHasTag" /* 8007 */;
-import apexExperimentDefault from "apexExperiment" /* 9653 */;
+// Module 9670 (canUseMobileServerTagSettings)
+import guildHasTag from "guildHasTag" /* 8021 */;
+import apexExperimentDefault from "apexExperiment" /* 9671 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4089 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4090 */;
 import { Permissions } from "ME" /* 676 */;
 
 require = arg1;

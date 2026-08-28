@@ -1,11 +1,11 @@
-// === Module 16051: GuildOnboardingHomePage ===
+// === Module 16069: GuildOnboardingHomePage ===
 
-// Module 16051 (GuildOnboardingHomePage)
+// Module 16069 (GuildOnboardingHomePage)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getHash" /* 4358 */;
-import closure_5 from "handleSettingsLoadSuccess" /* 4660 */;
-import { NO_SETTINGS } from "handleSettingsLoadSuccess" /* 4660 */;
-import closure_7 from "set" /* 4661 */;
+import closure_4 from "getHash" /* 4359 */;
+import closure_5 from "handleSettingsLoadSuccess" /* 4673 */;
+import { NO_SETTINGS } from "handleSettingsLoadSuccess" /* 4673 */;
+import closure_7 from "set" /* 4674 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ function GuildOnboardingHomePage(guildId) {
   let stateFromStores;
   dependencyMap = undefined;
   let tmp = dependencyMap;
-  let obj = guildId(4185);
+  let obj = guildId(4186);
   const sharedValue = obj.useSharedValue(-999);
   obj1 = guildId(589);
   const items = [closure_5];
   stateFromStores = obj1.useStateFromStores(items, () => closure_1_5.getSettings(guildId));
   let tmp4 = stateFromStores;
-  const tmp5 = stateFromStores(6022)(guildId);
+  const tmp5 = stateFromStores(6035)(guildId);
   let tmp6 = !tmp5;
   if (!tmp5) {
     let num;
@@ -40,12 +40,12 @@ function GuildOnboardingHomePage(guildId) {
   const items1 = [guildId, stateFromStores, tmp6];
   const effect = React.useEffect(() => {
     if (stateFromStores === closure_1_6) {
-      const guildHomeSettings = guildId(11768).fetchGuildHomeSettings(guildId);
-      const obj2 = guildId(11768);
+      const guildHomeSettings = guildId(11787).fetchGuildHomeSettings(guildId);
+      const obj2 = guildId(11787);
     } else if (null != tmp) {
       const obj = {};
       const obj3 = stateFromStores(698);
-      const merged = Object.assign(guildId(4653).collectGuildAnalyticsMetadata(guildId));
+      const merged = Object.assign(guildId(4666).collectGuildAnalyticsMetadata(guildId));
       const newMemberActions = tmp.newMemberActions;
       let num;
       if (newMemberActions != null) {
@@ -70,7 +70,7 @@ function GuildOnboardingHomePage(guildId) {
       }
       obj.num_resource_channels = num2;
       obj3.track(closure_1_8.SERVER_GUIDE_VIEWED, obj);
-      const obj5 = guildId(4653);
+      const obj5 = guildId(4666);
       const tmp14 = guildId;
     }
   }, items1);
@@ -81,8 +81,8 @@ function GuildOnboardingHomePage(guildId) {
       tmp = stateFromStores !== closure_1_6;
     }
     if (tmp) {
-      const result = stateFromStores(5409).escapeToDefaultChannel(guildId);
-      const obj = stateFromStores(5409);
+      const result = stateFromStores(5422).escapeToDefaultChannel(guildId);
+      const obj = stateFromStores(5422);
     }
   }, items2);
   if (tmp6) {
@@ -94,16 +94,16 @@ function GuildOnboardingHomePage(guildId) {
     obj = { guildId: null, hideDescription: null };
     obj[0] = guildId;
     obj[1] = tmp5;
-    const items3 = [callback(tmp4(16053), obj), ];
+    const items3 = [callback(tmp4(16071), obj), ];
     if (tmp5) {
       obj1 = { children: null };
       let obj2 = { guildId: null };
       obj2[0] = guildId;
-      const items4 = [tmp12(tmp4(16058), obj2), , ];
+      const items4 = [tmp12(tmp4(16076), obj2), , ];
       let obj3 = { guildId: null };
       obj3[0] = guildId;
-      items4[1] = tmp12(tmp4(16062), obj3);
-      tmp4 = tmp4(16063);
+      items4[1] = tmp12(tmp4(16080), obj3);
+      tmp4 = tmp4(16081);
       const obj4 = { guildId: null };
       obj4[0] = guildId;
       tmp = tmp12(tmp4, obj4);
@@ -113,12 +113,12 @@ function GuildOnboardingHomePage(guildId) {
     } else {
       let obj5 = { guildId: null };
       obj5[0] = guildId;
-      tmp12Result = tmp12(tmp4(16066), obj5);
+      tmp12Result = tmp12(tmp4(16084), obj5);
     }
     items3[1] = tmp12Result;
     obj[2] = items3;
-    closure_11(tmp4(16052), obj);
-    const tmp4Result = tmp4(16052);
+    closure_11(tmp4(16070), obj);
+    const tmp4Result = tmp4(16070);
   }
 }
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);

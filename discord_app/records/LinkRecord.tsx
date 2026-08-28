@@ -1,7 +1,7 @@
-// === Module 9847: fromPath ===
+// === Module 9865: fromPath ===
 
-// Module 9847 (fromPath)
-import toJSDefault from "toJS" /* 1931 */;
+// Module 9865 (fromPath)
+import toJSDefault from "toJS" /* 1932 */;
 import { Routes } from "ME" /* 676 */;
 
 toJSDefault;

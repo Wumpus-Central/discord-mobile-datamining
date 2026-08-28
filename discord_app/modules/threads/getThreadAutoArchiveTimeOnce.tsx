@@ -1,9 +1,9 @@
-// === Module 5402: getThreadAutoArchiveTimeOnce ===
+// === Module 5415: getThreadAutoArchiveTimeOnce ===
 
-// Module 5402 (getThreadAutoArchiveTimeOnce)
+// Module 5415 (getThreadAutoArchiveTimeOnce)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import setDefault from "set" /* 687 */;
-import closure_2 from "generateOldThreadCutoff" /* 4460 */;
+import closure_2 from "generateOldThreadCutoff" /* 4461 */;
 
 let result = require("set").fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 15424: useBenchmarkResults ===
+// === Module 15266: useBenchmarkResults ===
 
-// Module 15424 (useBenchmarkResults)
+// Module 15266 (useBenchmarkResults)
 import closure_0 from "_slicedToArray" /* 32 */;
 import closure_1 from "noop" /* 19 */;
 

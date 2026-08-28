@@ -1,6 +1,6 @@
-// === Module 4498: inject ===
+// === Module 4499: inject ===
 
-// Module 4498 (inject)
+// Module 4499 (inject)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/inject.tsx");

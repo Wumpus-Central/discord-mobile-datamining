@@ -1,9 +1,9 @@
-// === Module 10794: useSetMediaPostThumbnail ===
+// === Module 10812: useSetMediaPostThumbnail ===
 
-// Module 10794 (useSetMediaPostThumbnail)
+// Module 10812 (useSetMediaPostThumbnail)
 import closure_3 from "noop" /* 19 */;
-import { DraftType } from "handleChanged" /* 4807 */;
-import closure_5 from "map" /* 4806 */;
+import { DraftType } from "handleChanged" /* 4820 */;
+import closure_5 from "map" /* 4819 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/media_channel/native/useSetMediaPostThumbnail.tsx");

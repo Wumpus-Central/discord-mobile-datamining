@@ -1,12 +1,12 @@
-// === Module 11405: FAMILY_CENTER_REQUEST_MODAL_KEY ===
+// === Module 11424: FAMILY_CENTER_REQUEST_MODAL_KEY ===
 
-// Module 11405 (FAMILY_CENTER_REQUEST_MODAL_KEY)
+// Module 11424 (FAMILY_CENTER_REQUEST_MODAL_KEY)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import _modDef4676 from "module_4676" /* 4676 */;
-import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 7217 */;
-import closure_3 from "initialize" /* 4687 */;
-import items from "items" /* 7216 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
+import _modDef4689 from "module_4689" /* 4689 */;
+import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 7231 */;
+import closure_3 from "initialize" /* 4700 */;
+import items from "items" /* 7230 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;
@@ -31,20 +31,20 @@ export const handleFamilyCenterQRCodeScan = function handleFamilyCenterQRCodeSca
     obj = { userId: null, linkCode: null };
     obj[0] = match[1];
     obj[1] = match[2];
-    _modDef4676.pushLazy(asyncRequireImpl(11406, dependencyMap.paths), obj, c7);
+    _modDef4689.pushLazy(asyncRequireImpl(11425, dependencyMap.paths), obj, c7);
   }
 };
 export const resumeFamilyCenterConnection = function resumeFamilyCenterConnection() {
   pendingConnection = pendingConnection.getPendingConnection();
   let flag = null != pendingConnection;
   if (flag) {
-    let obj = _modDef4676;
+    let obj = _modDef4689;
     obj.popWithKey(c7);
     obj = { userId: null, linkCode: null };
     ({ teenId: obj3[0], linkCode: obj3[1] } = pendingConnection);
-    _modDef4676.pushLazy(asyncRequireImpl(11406, dependencyMap.paths), obj, c7);
+    _modDef4689.pushLazy(asyncRequireImpl(11425, dependencyMap.paths), obj, c7);
     flag = true;
-    const obj2 = _modDef4676;
+    const obj2 = _modDef4689;
   }
   return flag;
 };

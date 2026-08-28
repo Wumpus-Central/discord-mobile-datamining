@@ -1,9 +1,9 @@
-// === Module 11858: useCanSeeEventsInChannelList ===
+// === Module 11877: useCanSeeEventsInChannelList ===
 
-// Module 11858 (useCanSeeEventsInChannelList)
+// Module 11877 (useCanSeeEventsInChannelList)
 import set from "set" /* 2 */;
-import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 9563 */;
-import useIsHubForGuildDefault from "useIsHubForGuild" /* 11859 */;
+import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 9581 */;
+import useIsHubForGuildDefault from "useIsHubForGuild" /* 11878 */;
 
 const result = set.fileFinishedImporting("modules/guild_scheduled_events/useCanSeeEventsInChannelList.tsx");
 

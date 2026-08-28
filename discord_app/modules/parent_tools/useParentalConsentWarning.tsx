@@ -1,8 +1,8 @@
-// === Module 14421: useParentalConsentWarning ===
+// === Module 14405: useParentalConsentWarning ===
 
-// Module 14421 (useParentalConsentWarning)
+// Module 14405 (useParentalConsentWarning)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "initialize" /* 14422 */;
+import closure_2 from "initialize" /* 14406 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/parent_tools/useParentalConsentWarning.tsx");

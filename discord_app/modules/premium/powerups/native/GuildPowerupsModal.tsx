@@ -1,12 +1,12 @@
-// === Module 11959: GuildPowerupsModal ===
+// === Module 11978: GuildPowerupsModal ===
 
-// Module 11959 (GuildPowerupsModal)
+// Module 11978 (GuildPowerupsModal)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4332 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4333 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);

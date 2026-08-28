@@ -1,18 +1,18 @@
-// === Module 13552: onClose ===
+// === Module 13571: onClose ===
 
-// Module 13552 (onClose)
+// Module 13571 (onClose)
 import timestampDefault from "timestamp" /* 3 */;
-import _modDef4676 from "module_4676" /* 4676 */;
+import _modDef4689 from "module_4689" /* 4689 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13504 */;
+import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13523 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 let require = arg1;
 function onClose() {
-  _modDef4676.popWithKey(SHARE_SCREEN_MODAL_KEY);
+  _modDef4689.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
 let closure_9 = new timestampDefault("ShareScreenModal");
 const tmp2 = new timestampDefault("ShareScreenModal");

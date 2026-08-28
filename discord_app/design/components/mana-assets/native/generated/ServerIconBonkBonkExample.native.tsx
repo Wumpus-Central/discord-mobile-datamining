@@ -1,10 +1,10 @@
-// === Module 6909: ServerIconBonkBonkExample ===
+// === Module 6922: ServerIconBonkBonkExample ===
 
-// Module 6909 (ServerIconBonkBonkExample)
+// Module 6922 (ServerIconBonkBonkExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6910 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6923 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconBonkBonkExample.native.tsx");

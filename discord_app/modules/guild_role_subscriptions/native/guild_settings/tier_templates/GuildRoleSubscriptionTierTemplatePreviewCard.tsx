@@ -1,17 +1,17 @@
-// === Module 17280: ContentHeader ===
+// === Module 17298: ContentHeader ===
 
-// Module 17280 (ContentHeader)
+// Module 17298 (ContentHeader)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4441 */;
-import registerAssetDefault from "registerAsset" /* 5895 */;
-import getPrivateChannelIconComponent from "getPrivateChannelIconComponent" /* 17284 */;
+import Text from "Text" /* 4442 */;
+import registerAssetDefault from "registerAsset" /* 5908 */;
+import getPrivateChannelIconComponent from "getPrivateChannelIconComponent" /* 17302 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function ContentHeader(arg0) {

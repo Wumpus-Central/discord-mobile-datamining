@@ -1,13 +1,13 @@
-// === Module 7377: map ===
+// === Module 7391: map ===
 
-// Module 7377 (map)
+// Module 7391 (map)
 import failsDefault from "fails" /* 584 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import AdPlacement from "AdPlacement" /* 5345 */;
-import result3 from "result" /* 7378 */;
-import AdCreativeType from "AdCreativeType" /* 7379 */;
+import AdPlacement from "AdPlacement" /* 5358 */;
+import result3 from "result" /* 7392 */;
+import AdCreativeType from "AdCreativeType" /* 7393 */;
 
 require = arg1;
 let closure_8 = 30 * setDefault.Millis.SECOND;
@@ -98,7 +98,7 @@ const adDeliveryStore = new AdDeliveryStore(dispatcherDefault, {
   },
   QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function handleFetchQuestToDeliverSuccess(arg0) {
     ({ creative, placement } = arg0);
-    ({ adDecisionData, adContext, responseTtlSeconds, metadataSealed, trafficMetadataSealed, fetchedAt } = arg0);
+    ({ adDecisionData, adContext, responseTtlSeconds, metadataSealed, trafficMetadataSealed, provenanceMetadataSealed, fetchedAt } = arg0);
     closure_4 = Date.now();
     map = new Map(map);
     const result = map.set(placement, false);
@@ -110,7 +110,7 @@ const adDeliveryStore = new AdDeliveryStore(dispatcherDefault, {
     if (creative == null) {
       creative = null;
     }
-    const obj = { creative, fetchedAt, ttlMillis: result3.resolveResponseTtl(responseTtlSeconds), adDecisionData, adContext, metadataSealed, trafficMetadataSealed };
+    const obj = { creative, fetchedAt, ttlMillis: result3.resolveResponseTtl(responseTtlSeconds), adDecisionData, adContext, metadataSealed, trafficMetadataSealed, provenanceMetadataSealed };
     map1 = new Map(map1);
     const result1 = map1.set(placement, obj);
   },
@@ -154,8 +154,8 @@ const adDeliveryStore = new AdDeliveryStore(dispatcherDefault, {
       obj[1] = fetchedAt.questHomeHero;
       tmp2 = obj;
     }
-    obj = { creative: tmp2, fetchedAt: fetchedAt.fetchedAt, ttlMillis: result3.resolveResponseTtl(fetchedAt.responseTtlSeconds), adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-    ({ adDecisionData: obj3[3], adContext: obj3[4], metadataSealed: obj3[5], trafficMetadataSealed: obj3[6] } = fetchedAt);
+    obj = { creative: tmp2, fetchedAt: fetchedAt.fetchedAt, ttlMillis: result3.resolveResponseTtl(fetchedAt.responseTtlSeconds), adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
+    ({ adDecisionData: obj3[3], adContext: obj3[4], metadataSealed: obj3[5], trafficMetadataSealed: obj3[6], provenanceMetadataSealed: obj3[7] } = fetchedAt);
     map1 = new Map(map1);
     const result1 = map1.set(fetchedAt.placement, obj);
   },

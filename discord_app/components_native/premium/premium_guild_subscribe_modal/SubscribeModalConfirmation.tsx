@@ -1,27 +1,27 @@
-// === Module 13178: PendingCancellationWarning ===
+// === Module 13197: PendingCancellationWarning ===
 
-// Module 13178 (PendingCancellationWarning)
+// Module 13197 (PendingCancellationWarning)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4441 */;
-import Button from "Button" /* 4880 */;
-import registerAssetDefault from "registerAsset" /* 7613 */;
-import registerAssetDefault2 from "registerAsset" /* 13179 */;
-import PremiumGuildTierPillDefault from "PremiumGuildTierPill" /* 13180 */;
+import Text from "Text" /* 4442 */;
+import Button from "Button" /* 4893 */;
+import registerAssetDefault from "registerAsset" /* 7627 */;
+import registerAssetDefault2 from "registerAsset" /* 13198 */;
+import PremiumGuildTierPillDefault from "PremiumGuildTierPill" /* 13199 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "handleModifyingAppliedBoostStart" /* 12041 */;
+import closure_9 from "handleModifyingAppliedBoostStart" /* 12060 */;
 import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "handleGuildBoostsUpdate" /* 4337 */;
-import closure_12 from "reset" /* 4113 */;
+import closure_11 from "handleGuildBoostsUpdate" /* 4338 */;
+import closure_12 from "reset" /* 4114 */;
 import ME from "ME" /* 676 */;
-import { Gradients } from "items" /* 7111 */;
-import { BoostPurchaseIntent } from "BoostedGuildTiers" /* 4332 */;
+import { Gradients } from "items" /* 7124 */;
+import { BoostPurchaseIntent } from "BoostedGuildTiers" /* 4333 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import hexToRgba from "hexToRgba" /* 4293 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import hexToRgba from "hexToRgba" /* 4294 */;
 
 require = arg1;
 function PendingCancellationWarning(slots) {
@@ -48,7 +48,7 @@ function PendingCancellationWarning(slots) {
       obj2[0] = stateFromStores.currentPeriodEnd;
       obj2[1] = found.length;
       obj1[2] = intl.format(tmp2(1236).t.SFpsCH, obj2);
-      items1[1] = callback(tmp2(4441).Text, obj1);
+      items1[1] = callback(tmp2(4442).Text, obj1);
       obj[1] = items1;
       tmp5 = callback2(closure_7, obj);
     }
@@ -92,7 +92,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
   ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
   const tmp = callback3();
-  let obj = prop(13189);
+  let obj = prop(13208);
   const guildSubscriptionRemovalSource = obj.useGuildSubscriptionRemovalSource();
   obj1 = prop(589);
   const items = [closure_10];
@@ -121,32 +121,32 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj2[0] = tmp.header;
     const intl = tmp2(1236).intl;
     obj2[3] = intl.string(tmp2(1236).t.h92jfS);
-    items1[1] = callback(tmp2(4441).Text, obj2);
+    items1[1] = callback(tmp2(4442).Text, obj2);
     const obj3 = { style: null, variant: "text-sm/medium", children: null };
     obj3[0] = tmp.blurb;
     const intl2 = tmp2(1236).intl;
     const obj4 = { slotCount: null, guildCount: 1 };
     obj4[0] = prop.length;
     obj3[2] = intl2.format(tmp2(1236).t.SSA2lu, obj4);
-    items1[2] = callback(tmp2(4441).Text, obj3);
+    items1[2] = callback(tmp2(4442).Text, obj3);
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.transferPreviews;
     const obj6 = { style: null, variant: "eyebrow", color: "text-default", children: null };
     obj6[0] = tmp.previewHeader;
     const intl3 = tmp2(1236).intl;
     obj6[3] = intl3.format(tmp2(1236).t["5zQYEz"], { guildCount: 1 });
-    const items2 = [callback(tmp2(4441).Text, obj6), , , ];
+    const items2 = [callback(tmp2(4442).Text, obj6), , , ];
     const obj7 = { style: null, guild: null };
     obj7[0] = tmp.guildPreview;
     obj7[1] = stateFromStores;
-    items2[1] = callback(onPremiumGuildSubscribe(13180), obj7);
+    items2[1] = callback(onPremiumGuildSubscribe(13199), obj7);
     const obj8 = { style: null, variant: "eyebrow", color: "text-default", children: null };
     obj8[0] = tmp.previewHeader;
     const intl4 = tmp2(1236).intl;
     const obj9 = { slotCount: null };
     obj9[0] = prop.length;
     obj8[3] = intl4.format(tmp2(1236).t.ct6oxD, obj9);
-    items2[2] = callback(tmp2(4441).Text, obj8);
+    items2[2] = callback(tmp2(4442).Text, obj8);
     const obj10 = { style: null, start: null, end: null, colors: null, children: null };
     const items3 = [, ];
     ({ guildPreview: arr5[0], activeTransferGuildCardBorder: arr5[1] } = tmp);
@@ -156,8 +156,8 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj10[3] = Gradients.PREMIUM_GUILD;
     const obj11 = { guild: null };
     obj11[0] = guild;
-    obj10[4] = callback(onPremiumGuildSubscribe(13180), obj11);
-    items2[3] = callback(onPremiumGuildSubscribe(4892), obj10);
+    obj10[4] = callback(onPremiumGuildSubscribe(13199), obj11);
+    items2[3] = callback(onPremiumGuildSubscribe(4905), obj10);
     obj5[1] = items2;
     items1[3] = callback2(closure_7, obj5);
     const obj12 = { slots: null };
@@ -174,11 +174,11 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
       return onPremiumGuildSubscribe(true);
     };
     obj14[3] = isModifyingSubscription;
-    obj13[1] = callback(tmp2(4880).Button, obj14);
+    obj13[1] = callback(tmp2(4893).Button, obj14);
     items1[5] = callback(closure_7, obj13);
     obj[0] = items1;
     tmp8 = callback2(closure_21, obj);
-    const tmp15 = onPremiumGuildSubscribe(4892);
+    const tmp15 = onPremiumGuildSubscribe(4905);
   }
   return tmp8;
 }

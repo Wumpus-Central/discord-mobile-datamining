@@ -1,8 +1,8 @@
-// === Module 5324: getHighestHoistedRole ===
+// === Module 5337: getHighestHoistedRole ===
 
-// Module 5324 (getHighestHoistedRole)
-import applyOverwritesAll from "applyOverwrites" /* 4094 */;
-import closure_3 from "trackCommunicationDisabled" /* 1992 */;
+// Module 5337 (getHighestHoistedRole)
+import applyOverwritesAll from "applyOverwrites" /* 4095 */;
+import closure_3 from "trackCommunicationDisabled" /* 1993 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 
 const require = arg1;

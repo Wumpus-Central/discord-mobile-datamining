@@ -1,6 +1,6 @@
-// === Module 7237: items ===
+// === Module 7251: items ===
 
-// Module 7237 (items)
+// Module 7251 (items)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import set from "set" /* 2 */;
@@ -21,7 +21,7 @@ Object.defineProperty(prototype, "analyticsLocations", {
   set: undefined
 });
 Object.defineProperty(prototype, "analyticsSource", {
-  get: function analyticsSource(arg0) {
+  get: function analyticsSource(id, arg1) {
     return c3;
   },
   set: undefined

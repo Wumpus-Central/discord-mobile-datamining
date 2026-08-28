@@ -1,6 +1,6 @@
-// === Module 10189: uriScheme ===
+// === Module 10207: uriScheme ===
 
-// Module 10189 (uriScheme)
+// Module 10207 (uriScheme)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
@@ -184,7 +184,7 @@ function _getAttachments() {
             let obj6 = arr(514);
             dependencyMap = obj6.v4();
             let tmp55 = dependencyMap;
-            let obj8 = arr(5034);
+            let obj8 = arr(5047);
             let tmp56 = lib;
             c7 = 3;
             let num5 = 1;

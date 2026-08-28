@@ -1,17 +1,17 @@
-// === Module 8026: NewBadge ===
+// === Module 8040: NewBadge ===
 
-// Module 8026 (NewBadge)
+// Module 8040 (NewBadge)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4441 */;
-import LockIcon from "LockIcon" /* 4996 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8027 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8028 */;
+import Text from "Text" /* 4442 */;
+import LockIcon from "LockIcon" /* 5009 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8041 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8042 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { PremiumTypes } from "GuildFeatures" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 noopAll;

@@ -1,19 +1,19 @@
-// === Module 14452: UserRow ===
+// === Module 14436: UserRow ===
 
-// Module 14452 (UserRow)
+// Module 14436 (UserRow)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import messagesProxyDefault from "messagesProxy" /* 2369 */;
-import nameFromUserDefault from "nameFromUser" /* 4289 */;
-import Text from "Text" /* 4441 */;
-import TableRowInner from "TableRowInner" /* 5551 */;
-import ActionSheet from "ActionSheet" /* 5941 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5944 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7271 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import messagesProxyDefault from "messagesProxy" /* 2370 */;
+import nameFromUserDefault from "nameFromUser" /* 4290 */;
+import Text from "Text" /* 4442 */;
+import TableRowInner from "TableRowInner" /* 5564 */;
+import ActionSheet from "ActionSheet" /* 5954 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5957 */;
+import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7285 */;
+import closure_3 from "mergeGuildAvatar" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function UserRow(userActivity) {

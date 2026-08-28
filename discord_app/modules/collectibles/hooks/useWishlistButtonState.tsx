@@ -1,10 +1,10 @@
-// === Module 12451: useWishlistButtonState ===
+// === Module 12471: useWishlistButtonState ===
 
-// Module 12451 (useWishlistButtonState)
+// Module 12471 (useWishlistButtonState)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "createUserWidgetFromServer" /* 7299 */;
+import closure_6 from "createUserWidgetFromServer" /* 7313 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useWishlistButtonState.tsx");

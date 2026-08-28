@@ -1,6 +1,6 @@
-// === Module 7235: useCollectiblesDebugStore ===
+// === Module 7249: useCollectiblesDebugStore ===
 
-// Module 7235 (useCollectiblesDebugStore)
+// Module 7249 (useCollectiblesDebugStore)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 

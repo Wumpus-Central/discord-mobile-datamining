@@ -1,18 +1,18 @@
-// === Module 7949: nativeStyleProperties ===
+// === Module 7963: nativeStyleProperties ===
 
-// Module 7949 (nativeStyleProperties)
+// Module 7963 (nativeStyleProperties)
 import ThemesDefault from "Themes" /* 712 */;
 import getSrcWithWidthAndHeightDefault from "getSrcWithWidthAndHeight" /* 1493 */;
-import hexToRgba from "hexToRgba" /* 4293 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4690 */;
-import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 6066 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import hexToRgba from "hexToRgba" /* 4294 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4703 */;
+import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 6079 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4438 */;
-import { SwipeActionsType } from "Changeset" /* 7775 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4439 */;
+import { SwipeActionsType } from "Changeset" /* 7789 */;
 import ME from "ME" /* 676 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -65,7 +65,7 @@ createCacheKey = {
             guild_id = channel.guild_id;
           }
           guild = guild.getGuild(guild_id);
-          let tmp3Result = tmp3(6066);
+          let tmp3Result = tmp3(6079);
           if (tmp3Result.isGuildOfficialMessagesEnabled(guild, "RowGeneratorUtils")) {
             let officialMessageColor;
             if (guild != null) {
@@ -77,7 +77,7 @@ createCacheKey = {
             if (message.mentioned) {
               let ephemeralGutterColor = tmp.mentionedGutterColor;
             } else {
-              tmp3Result = tmp3(4690);
+              tmp3Result = tmp3(4703);
               if (tmp3Result.hasEphemeralAppearance(message)) {
                 ephemeralGutterColor = tmp.ephemeralGutterColor;
               }

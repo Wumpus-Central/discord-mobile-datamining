@@ -1,6 +1,6 @@
-// === Module 15393: items ===
+// === Module 15235: items ===
 
-// Module 15393 (items)
+// Module 15235 (items)
 import set from "set" /* 2 */;
 import DismissibleContent from "DismissibleContent" /* 1377 */;
 

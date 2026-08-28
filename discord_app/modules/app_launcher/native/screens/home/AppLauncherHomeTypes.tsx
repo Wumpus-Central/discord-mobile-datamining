@@ -1,6 +1,6 @@
-// === Module 11577: AppLauncherHomeListItemType ===
+// === Module 11596: AppLauncherHomeListItemType ===
 
-// Module 11577 (AppLauncherHomeListItemType)
+// Module 11596 (AppLauncherHomeListItemType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/app_launcher/native/screens/home/AppLauncherHomeTypes.tsx");

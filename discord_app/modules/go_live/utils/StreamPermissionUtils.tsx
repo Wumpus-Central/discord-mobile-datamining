@@ -1,15 +1,15 @@
-// === Module 7404: canStreamInChannel ===
+// === Module 7418: canStreamInChannel ===
 
-// Module 7404 (canStreamInChannel)
-import allowChannelAccess from "allowChannelAccess" /* 4631 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4684 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5312 */;
-import closure_3 from "set" /* 4462 */;
+// Module 7418 (canStreamInChannel)
+import allowChannelAccess from "allowChannelAccess" /* 4632 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4697 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5325 */;
+import closure_3 from "set" /* 4463 */;
 import { ChannelRecordBase } from "createChannelRecord" /* 1395 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1983 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_8 from "updateVoiceState" /* 4464 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_8 from "updateVoiceState" /* 4465 */;
 import { Permissions } from "ME" /* 676 */;
 
 require = arg1;

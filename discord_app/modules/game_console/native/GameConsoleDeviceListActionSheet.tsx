@@ -1,21 +1,21 @@
-// === Module 9806: TransferFooter ===
+// === Module 9824: TransferFooter ===
 
-// Module 9806 (TransferFooter)
+// Module 9824 (TransferFooter)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4441 */;
-import Button from "Button" /* 4880 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5505 */;
-import registerAssetDefault from "registerAsset" /* 9807 */;
-import registerAssetDefault2 from "registerAsset" /* 9808 */;
+import Text from "Text" /* 4442 */;
+import Button from "Button" /* 4893 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5518 */;
+import registerAssetDefault from "registerAsset" /* 9825 */;
+import registerAssetDefault2 from "registerAsset" /* 9826 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_10 from "set" /* 4462 */;
+import closure_10 from "set" /* 4463 */;
 import { ComponentActions } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function TransferFooter(arg0) {
@@ -119,7 +119,7 @@ export default function GameConsoleListActionSheet(arg0) {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(9805).transferToPlaystationWithAlert(closure_1_0, dependencyMap[closure_1_4], v0);
+              obj1[0] = closure_1_0(9823).transferToPlaystationWithAlert(closure_1_0, dependencyMap[closure_1_4], v0);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -131,7 +131,7 @@ export default function GameConsoleListActionSheet(arg0) {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = v0(4412);
+            obj = v0(4413);
             obj.hideActionSheet();
             const ComponentDispatch = closure_1_0(1231).ComponentDispatch;
             ComponentDispatch.dispatch(closure_1_11.TOGGLE_CALL_CONTROL_DRAWER);

@@ -1,8 +1,8 @@
-// === Module 8497: openUserProfileAvatarMediaViewer ===
+// === Module 8511: openUserProfileAvatarMediaViewer ===
 
-// Module 8497 (openUserProfileAvatarMediaViewer)
-import _openMediaModal from "_openMediaModal" /* 8498 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+// Module 8511 (openUserProfileAvatarMediaViewer)
+import _openMediaModal from "_openMediaModal" /* 8512 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import { AVATAR_MAX_SIZE } from "ME" /* 676 */;
 
 require = arg1;

@@ -1,11 +1,11 @@
-// === Module 15754: items ===
+// === Module 15772: items ===
 
-// Module 15754 (items)
+// Module 15772 (items)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "mergeGuildAvatar" /* 1923 */;
 
 const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
 let items = [, , , , ];
@@ -45,9 +45,9 @@ export const canSeeCreatorMonetizationOnboardingV2Upsell = function canSeeCreato
     if (null == currentUser) {
       return false;
     } else {
-      const guildRoleSubscriptionSettingsVisibility = guild(6059).getGuildRoleSubscriptionSettingsVisibility(guild);
-      let tmp5 = guildRoleSubscriptionSettingsVisibility === guild(6059).GuildRoleSubscriptionSettingsVisibility.VISIBLE;
-      const obj = guild(6059);
+      const guildRoleSubscriptionSettingsVisibility = guild(6072).getGuildRoleSubscriptionSettingsVisibility(guild);
+      let tmp5 = guildRoleSubscriptionSettingsVisibility === guild(6072).GuildRoleSubscriptionSettingsVisibility.VISIBLE;
+      const obj = guild(6072);
       const tmp7 = isGuildOwner(guild, currentUser);
       if (tmp5) {
         tmp5 = tmp7;

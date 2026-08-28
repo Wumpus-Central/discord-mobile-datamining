@@ -1,22 +1,22 @@
-// === Module 15889: Username ===
+// === Module 15907: Username ===
 
-// Module 15889 (Username)
+// Module 15907 (Username)
 import ThemesDefault from "Themes" /* 712 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8846 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 8858 */;
-import memoResult1Default from "memoResult1" /* 8929 */;
-import apexExperiment from "apexExperiment" /* 15872 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8863 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 8875 */;
+import memoResult1Default from "memoResult1" /* 8947 */;
+import apexExperiment from "apexExperiment" /* 15890 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "reset" /* 4467 */;
+import closure_4 from "reset" /* 4468 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_7 from "sortActivity" /* 4534 */;
-import closure_8 from "markAllUserIdListsStale" /* 4098 */;
-import closure_9 from "filterPlayingActivities" /* 5175 */;
-import closure_10 from "updateVoiceState" /* 4464 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_7 from "sortActivity" /* 4535 */;
+import closure_8 from "markAllUserIdListsStale" /* 4099 */;
+import closure_9 from "filterPlayingActivities" /* 5188 */;
+import closure_10 from "updateVoiceState" /* 4465 */;
 import { ActivityTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;

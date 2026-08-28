@@ -1,11 +1,11 @@
-// === Module 15022: useWebBrowserSettingOptions ===
+// === Module 15008: useWebBrowserSettingOptions ===
 
-// Module 15022 (useWebBrowserSettingOptions)
+// Module 15008 (useWebBrowserSettingOptions)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NativeModules from "NativeModules" /* 4410 */;
-import MobileUserSettings from "MobileUserSettings" /* 7816 */;
-import createToggle from "createToggle" /* 10988 */;
+import NativeModules from "NativeModules" /* 4411 */;
+import MobileUserSettings from "MobileUserSettings" /* 7830 */;
+import createToggle from "createToggle" /* 11006 */;
 
 function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;

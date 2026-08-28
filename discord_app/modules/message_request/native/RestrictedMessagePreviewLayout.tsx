@@ -1,6 +1,6 @@
-// === Module 16391: RESTRICTED_AVATAR_SIZE ===
+// === Module 16409: RESTRICTED_AVATAR_SIZE ===
 
-// Module 16391 (RESTRICTED_AVATAR_SIZE)
+// Module 16409 (RESTRICTED_AVATAR_SIZE)
 import set from "set" /* 2 */;
 import Button from "Button" /* 1297 */;
 

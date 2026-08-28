@@ -1,10 +1,10 @@
-// === Module 6379: CouchSpotIllustration ===
+// === Module 6392: CouchSpotIllustration ===
 
-// Module 6379 (CouchSpotIllustration)
+// Module 6392 (CouchSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5445 */;
-import metadataDefault from "metadata" /* 6380 */;
+import preloadDefault from "preload" /* 5458 */;
+import metadataDefault from "metadata" /* 6393 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CouchSpotIllustration.native.tsx");

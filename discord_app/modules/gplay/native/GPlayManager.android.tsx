@@ -1,23 +1,23 @@
-// === Module 10407: handleConnectionStateUpdated ===
+// === Module 10423: handleConnectionStateUpdated ===
 
-// Module 10407 (handleConnectionStateUpdated)
+// Module 10423 (handleConnectionStateUpdated)
 import timestampDefault from "timestamp" /* 3 */;
 import noopAll from "noop" /* 19 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getPlanIdForProduct from "getPlanIdForProduct" /* 8154 */;
+import getPlanIdForProduct from "getPlanIdForProduct" /* 8168 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 7099 */;
-import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore" /* 7100 */;
+import closure_6 from "initialize" /* 7112 */;
+import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore" /* 7113 */;
 import closure_9 from "fetchFingerprint" /* 1218 */;
-import closure_10 from "reset" /* 4113 */;
-import closure_11 from "updateProduct" /* 6036 */;
-import { useGPlayAnalyticsStore } from "setGPlayAnalytics" /* 8155 */;
-import GPlayConnectionState from "GPlayConnectionState" /* 6037 */;
+import closure_10 from "reset" /* 4114 */;
+import closure_11 from "updateProduct" /* 6049 */;
+import { useGPlayAnalyticsStore } from "setGPlayAnalytics" /* 8169 */;
+import GPlayConnectionState from "GPlayConnectionState" /* 6050 */;
 import ME from "ME" /* 676 */;
-import { OrderStatus } from "CustomCheckoutFlow" /* 4427 */;
-import { SubscriptionPlanInfo } from "GuildFeatures" /* 1924 */;
+import { OrderStatus } from "CustomCheckoutFlow" /* 4428 */;
+import { SubscriptionPlanInfo } from "GuildFeatures" /* 1925 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -55,522 +55,101 @@ function _handlePurchaseUpdated() {
     c7 = 0;
     c5 = 0;
     const iter = (function*(arg0) {
-      if (length === 2) {
-        length = 3;
-        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      if (c7 === 2) {
+        c7 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        throwTypeErrorResult = arg1;
-        throwTypeErrorResult = arg0;
-        throwTypeErrorResult = tmp9;
-        throwTypeErrorResult = null;
-        throwTypeErrorResult = globalThis;
-        if (tmp10 === 3) {
+        try {
           if (arg0 === 1) {
+            c7 = 3;
             throw arg1;
-          } else if (arg0 === 2) {
+          } else if (arg0 !== 2) {
+            c5 = 1;
+            while (true) {
+              let tmp8 = dependencyMap;
+              let tmp9 = closure_9;
+              if (null == closure_9) {
+                break;
+              } else {
+                let tmp10 = dependencyMap;
+                let tmp11 = closure_9;
+                if (null == closure_9.pendingDowngrade) {
+                  break;
+                } else {
+                  let tmp18 = dependencyMap;
+                  let tmp19 = closure_3;
+                  let tmp20 = callback;
+                  let tmp21 = dependencyMap;
+                  let obj4 = callback(709);
+                  obj = { type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: null };
+                  let tmp22 = closure_9;
+                  obj[1] = closure_9.pendingDowngrade;
+                  let dispatchResult = obj4.dispatch(obj);
+                  let tmp24 = lib;
+                  let tmp25 = dependencyMap;
+                  let obj7 = lib(4803);
+                  c6 = 8;
+                  let num4 = 1;
+                  c7 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = obj7.fetchSubscriptions();
+                  return obj1;
+                }
+              }
+              let tmp12 = dependencyMap;
+              let tmp13 = lib;
+              let tmp14 = closure_3;
+              if (lib.isActive) {
+                let tmp17 = callback2;
+                c6 = 10;
+                let num3 = 1;
+                c7 = 1;
+                let obj2 = { value: null, done: false };
+                obj2[0] = callback2();
+                return obj2;
+              } else {
+                let tmp15 = lib;
+                let tmp16 = dependencyMap;
+                obj1 = lib(4803);
+                c6 = 9;
+                let num2 = 1;
+                c7 = 1;
+                let obj3 = { value: null, done: false };
+                obj3[0] = obj1.fetchSubscriptions();
+                return obj3;
+              }
+            }
+          } else {
+            c5 = 0;
+            obj4 = { type: "GPLAY_VERIFICATION_END", productId: null };
+            obj4[1] = lib.productId;
+            callback(709).dispatch(obj4);
+            c7 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
           }
-        } else {
-          try {
-            length = 2;
-            switch (giftOptionsForKey) {
-              case 0:
-                if (arg0 === 1) {
-                  length = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  length = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  closure_3 = tmp4;
-                  dependencyMap = tmp11;
-                  let purchase;
-                  throwTypeErrorResult = purchase;
-                  purchase = purchase.purchase;
-                  let callback;
-                  dependencyMap = undefined;
-                  closure_3 = undefined;
-                  let callback2;
-                  let planIdForGift;
-                  giftOptionsForKey = undefined;
-                  length = undefined;
-                  let id;
-                  closure_9 = undefined;
-                  let succeededOnlyFields;
-                  let purchasingProduct;
-                  giftOptionsForKey = 1;
-                  length = 1;
-                  return { value: "ct", done: true };
-                }
-              break;
-              case 1:
-                if (arg0 === 1) {
-                  length = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  length = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = arg1;
-                  return obj1;
-                } else {
-                  throwTypeErrorResult = dependencyMap;
-                  throwTypeErrorResult = closure_3;
-                  throwTypeErrorResult = purchasingProduct;
-                  throwTypeErrorResult = purchase;
-                  if (purchasingProduct.isPurchasingProduct(purchase.productId)) {
-                    length = 3;
-                    return { value: "HermesInternal", done: null };
-                  } else {
-                    throwTypeErrorResult = dependencyMap;
-                    throwTypeErrorResult = closure_3;
-                    throwTypeErrorResult = state;
-                    throwTypeErrorResult = purchase;
-                    callback = state.getState().analyticsByProductId[purchase.productId];
-                    throwTypeErrorResult = table2;
-                    throwTypeErrorResult = purchase;
-                    dependencyMap = table2[purchase.productId];
-                    throwTypeErrorResult = callback;
-                    throwTypeErrorResult = dependencyMap;
-                    throwTypeErrorResult = purchase;
-                    closure_3 = callback(1217).v3(purchase.purchaseToken);
-                    throwTypeErrorResult = dependencyMap;
-                    if (null != dependencyMap) {
-                      throwTypeErrorResult = dependencyMap;
-                      throwTypeErrorResult = closure_3;
-                      throwTypeErrorResult = callback;
-                      throwTypeErrorResult = dependencyMap;
-                      let obj2 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CACHE_ACTION", key: null, giftOptions: null };
-                      throwTypeErrorResult = closure_3;
-                      obj2[1] = closure_3;
-                      const obj3 = {};
-                      throwTypeErrorResult = dependencyMap;
-                      throwTypeErrorResult = obj3;
-                      throwTypeErrorResult = Object.assign(dependencyMap);
-                      obj2[2] = obj3;
-                      throwTypeErrorResult = callback(709).dispatch(obj2);
-                      const obj39 = callback(709);
-                    } else {
-                      throwTypeErrorResult = dependencyMap;
-                      throwTypeErrorResult = closure_3;
-                      throwTypeErrorResult = giftOptionsForKey;
-                      throwTypeErrorResult = closure_3;
-                      dependencyMap = giftOptionsForKey.getGiftOptionsForKey(closure_3);
-                    }
-                    throwTypeErrorResult = dependencyMap;
-                    throwTypeErrorResult = closure_3;
-                    planIdForGift = 2;
-                    throwTypeErrorResult = callback;
-                    throwTypeErrorResult = dependencyMap;
-                    const obj38 = callback(1217);
-                    let obj4 = { type: "GPLAY_VERIFICATION_START", productId: null };
-                    throwTypeErrorResult = purchase;
-                    obj4[1] = purchase.productId;
-                    throwTypeErrorResult = callback(709).dispatch(obj4);
-                    throwTypeErrorResult = purchase;
-                    throwTypeErrorResult = dependencyMap;
-                    const IAPProductIds = purchase(6039).IAPProductIds;
-                    throwTypeErrorResult = purchase;
-                    if (IAPProductIds.includes(purchase.productId)) {
-                      throwTypeErrorResult = dependencyMap;
-                      throwTypeErrorResult = closure_3;
-                      planIdForGift = 3;
-                      throwTypeErrorResult = callback;
-                      throwTypeErrorResult = dependencyMap;
-                      throwTypeErrorResult = purchase;
-                      throwTypeErrorResult = dependencyMap;
-                      const obj48 = callback(4043)();
-                      callback2 = callback(4043)().subtract(purchase(7108).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
-                      throwTypeErrorResult = purchase;
-                      throwTypeErrorResult = dependencyMap;
-                      const subtractResult = callback(4043)().subtract(purchase(7108).DRAFT_ORDER_LOOKBACK_DAYS, "days");
-                      throwTypeErrorResult = purchase;
-                      planIdForGift = purchase(6039).getPlanIdForGift(purchase.productId);
-                      throwTypeErrorResult = planIdForGift;
-                      throwTypeErrorResult = undefined;
-                      if (null != planIdForGift) {
-                        throwTypeErrorResult = dependencyMap;
-                        throwTypeErrorResult = closure_3;
-                        throwTypeErrorResult = table;
-                        throwTypeErrorResult = planIdForGift;
-                        throwTypeErrorResult = table[planIdForGift];
-                        throwTypeErrorResult = undefined;
-                        if (throwTypeErrorResult != null) {
-                          throwTypeErrorResult = throwTypeErrorResult.skuId;
-                        }
-                      }
-                      throwTypeErrorResult = dependencyMap;
-                      throwTypeErrorResult = closure_3;
-                      giftOptionsForKey = throwTypeErrorResult;
-                      throwTypeErrorResult = purchase;
-                      throwTypeErrorResult = dependencyMap;
-                      const obj50 = purchase(6039);
-                      const obj5 = { status: null, createdAfter: null, skuId: null, paymentGateway: null, isGift: true };
-                      throwTypeErrorResult = constants4;
-                      obj5[0] = constants4.DRAFT;
-                      throwTypeErrorResult = callback2;
-                      obj5[1] = callback2;
-                      throwTypeErrorResult = giftOptionsForKey;
-                      obj5[2] = giftOptionsForKey;
-                      throwTypeErrorResult = constants3;
-                      obj5[3] = constants3.GOOGLE;
-                      giftOptionsForKey = 5;
-                      length = 1;
-                      let obj6 = { value: null, done: false };
-                      obj6[0] = purchase(7108).getOrders(obj5);
-                      return obj6;
-                    } else {
-                      throwTypeErrorResult = dependencyMap;
-                      throwTypeErrorResult = closure_3;
-                      throwTypeErrorResult = purchase;
-                      throwTypeErrorResult = constants;
-                      if (purchase.purchaseState === constants.PENDING) {
-                        planIdForGift = 0;
-                        throwTypeErrorResult = dependencyMap;
-                        throwTypeErrorResult = closure_3;
-                        throwTypeErrorResult = callback;
-                        throwTypeErrorResult = dependencyMap;
-                        let obj7 = { type: "GPLAY_VERIFICATION_END", productId: null };
-                        throwTypeErrorResult = purchase;
-                        obj7[1] = purchase.productId;
-                        throwTypeErrorResult = callback(709).dispatch(obj7);
-                        length = 3;
-                        return { value: "HermesInternal", done: null };
-                      } else {
-                        throwTypeErrorResult = dependencyMap;
-                        throwTypeErrorResult = closure_3;
-                        throwTypeErrorResult = purchase;
-                        throwTypeErrorResult = dependencyMap;
-                        throwTypeErrorResult = purchase;
-                        throwTypeErrorResult = dependencyMap;
-                        giftOptionsForKey = 7;
-                        length = 1;
-                        const obj8 = { value: null, done: false };
-                        obj8[0] = purchase(8154).verifyPurchase(purchase, dependencyMap);
-                        return obj8;
-                      }
-                    }
-                    const obj42 = callback(709);
-                  }
-                }
-              break;
-              case 2:
-                throwTypeErrorResult = dependencyMap;
-                throwTypeErrorResult = closure_3;
-                throwTypeErrorResult = callback2;
-                throwTypeErrorResult = callback2;
-                planIdForGift = 0;
-                throwTypeErrorResult = callback;
-                throwTypeErrorResult = dependencyMap;
-                let obj35 = callback(709);
-                const obj9 = { type: "GPLAY_VERIFICATION_END", productId: null };
-                throwTypeErrorResult = purchase;
-                obj9[1] = purchase.productId;
-                throwTypeErrorResult = obj35.dispatch(obj9);
-                throw callback2;
-              case 3:
-                throwTypeErrorResult = dependencyMap;
-                throwTypeErrorResult = closure_3;
-                throwTypeErrorResult = callback2;
-                throwTypeErrorResult = callback2;
-                planIdForGift = 1;
-                closure_13 = callback2;
-                throwTypeErrorResult = purchase;
-                throwTypeErrorResult = dependencyMap;
-                let obj28 = purchase(4122);
-                throwTypeErrorResult = closure_13;
-                let obj10 = { tags: null };
-                const obj11 = { productId: null };
-                throwTypeErrorResult = purchase;
-                obj11[0] = purchase.productId;
-                obj10[0] = obj11;
-                throwTypeErrorResult = obj28.captureBillingException(closure_13, obj10);
-                throwTypeErrorResult = logger;
-                throwTypeErrorResult = purchase;
-                throwTypeErrorResult = closure_13;
-                const _HermesInternal3 = HermesInternal;
-                throwTypeErrorResult = logger.error("[handlePurchaseUpdated] Error verifying purchase " + purchase.productId + ": " + closure_13.message);
-                throwTypeErrorResult = callback;
-                throwTypeErrorResult = dependencyMap;
-                let obj31 = callback(709);
-                let obj12 = { type: "GPLAY_PURCHASE_VERIFICATION_FAILED", productId: null };
-                throwTypeErrorResult = purchase;
-                obj12[1] = purchase.productId;
-                throwTypeErrorResult = obj31.dispatch(obj12);
-                throwTypeErrorResult = callback;
-                if (callback == null) {
-                  callback = {};
-                }
-                throwTypeErrorResult = dependencyMap;
-                throwTypeErrorResult = closure_3;
-                throwTypeErrorResult = callback;
-                succeededOnlyFields = callback;
-                throwTypeErrorResult = succeededOnlyFields;
-                succeededOnlyFields = succeededOnlyFields.succeededOnlyFields;
-                throwTypeErrorResult = callback2;
-                throwTypeErrorResult = succeededOnlyFields;
-                throwTypeErrorResult = closure_3;
-                purchasingProduct = callback2(succeededOnlyFields, closure_3);
-                throwTypeErrorResult = callback;
-                throwTypeErrorResult = dependencyMap;
-                let obj33 = callback(698);
-                throwTypeErrorResult = constants2;
-                const obj13 = {};
-                throwTypeErrorResult = purchasingProduct;
-                throwTypeErrorResult = obj13;
-                throwTypeErrorResult = Object.assign(purchasingProduct);
-                obj13.location = "handlePurchaseUpdated";
-                throwTypeErrorResult = purchase;
-                obj13.product_id = purchase.productId;
-                throwTypeErrorResult = purchase;
-                obj13.purchase_token = purchase.purchaseToken;
-                throwTypeErrorResult = closure_13;
-                obj13.error = closure_13.message;
-                throwTypeErrorResult = obj33.track(constants2.GPLAY_PURCHASE_FAILED, obj13);
-                planIdForGift = 0;
-                throwTypeErrorResult = dependencyMap;
-                throwTypeErrorResult = closure_3;
-                throwTypeErrorResult = callback;
-                throwTypeErrorResult = dependencyMap;
-                let obj14 = { type: "GPLAY_VERIFICATION_END", productId: null };
-                throwTypeErrorResult = purchase;
-                obj14[1] = purchase.productId;
-                throwTypeErrorResult = callback(709).dispatch(obj14);
-                const obj56 = callback(709);
-              break;
-              case 4:
-                planIdForGift = 2;
-                state = callback2;
-                let obj25 = purchase(4122);
-                const obj15 = { tags: null, extra: null };
-                obj15[0] = { source: "GPlayManager_handlePurchaseUpdated_sign" };
-                const obj16 = { productId: null };
-                obj16[0] = purchase.productId;
-                obj15[1] = obj16;
-                const result = obj25.captureBillingException(state, obj15);
-                const _HermesInternal2 = HermesInternal;
-                throwTypeErrorResult = logger.error("[handlePurchaseUpdated] Failed to find or sign order: " + state.message);
-              break;
-              case 5:
-                if (arg0 === 1) {
-                  length = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  planIdForGift = 0;
-                  let obj22 = callback(709);
-                  const obj17 = { type: "GPLAY_VERIFICATION_END", productId: null };
-                  obj17[1] = purchase.productId;
-                  obj22.dispatch(obj17);
-                  length = 3;
-                  const obj18 = { value: null, done: true };
-                  obj18[0] = arg1;
-                  return obj18;
-                } else {
-                  throwTypeErrorResult = dependencyMap;
-                  length = arg1;
-                  throwTypeErrorResult = length;
-                  if (length.length > 0) {
-                    id = length[0].id;
-                    const obj19 = { orderId: null, productId: null, skuId: null };
-                    obj19[0] = id;
-                    obj19[1] = purchase.productId;
-                    obj19[2] = giftOptionsForKey;
-                    logger.info("[handlePurchaseUpdated] Signing order from backend query", obj19);
-                    let obj20 = purchase(7108);
-                    giftOptionsForKey = 6;
-                    length = 1;
-                    obj20 = { value: null, done: false };
-                    obj20[0] = obj20.markOrderAsSigningInProgress(id);
-                    return obj20;
-                  } else {
-                    const obj21 = { productId: null, skuId: null };
-                    obj21[0] = purchase.productId;
-                    obj21[1] = giftOptionsForKey;
-                    logger.warn("[handlePurchaseUpdated] No draft order found for signing", obj21);
-                    planIdForGift = 2;
-                  }
-                }
-              break;
-              case 6:
-                if (arg0 === 1) {
-                  length = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  planIdForGift = 0;
-                  throwTypeErrorResult = dependencyMap;
-                  throwTypeErrorResult = closure_3;
-                  throwTypeErrorResult = callback;
-                  throwTypeErrorResult = dependencyMap;
-                  obj22 = { type: "GPLAY_VERIFICATION_END", productId: null };
-                  throwTypeErrorResult = purchase;
-                  obj22[1] = purchase.productId;
-                  throwTypeErrorResult = callback(709).dispatch(obj22);
-                  length = 3;
-                  const obj23 = { value: null, done: true };
-                  obj23[0] = arg1;
-                  return obj23;
-                }
-              break;
-              case 7:
-                if (arg0 === 1) {
-                  length = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  planIdForGift = 0;
-                  obj14 = callback(709);
-                  const obj24 = { type: "GPLAY_VERIFICATION_END", productId: null };
-                  obj24[1] = purchase.productId;
-                  obj14.dispatch(obj24);
-                  length = 3;
-                  obj25 = { value: null, done: true };
-                  obj25[0] = arg1;
-                  return obj25;
-                } else {
-                  throwTypeErrorResult = dependencyMap;
-                  closure_9 = arg1;
-                  throwTypeErrorResult = closure_9;
-                  let tmp14 = null != closure_9;
-                  if (tmp14) {
-                    tmp14 = null != dependencyMap;
-                  }
-                  if (tmp14) {
-                    obj2 = callback(709);
-                    const obj26 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION", key: null };
-                    obj26[1] = closure_3;
-                    obj2.dispatch(obj26);
-                    const productId = purchase.productId;
-                    delete tmp8[tmp7];
-                  }
-                  if (null != closure_9) {
-                    obj4 = callback(709);
-                    const obj27 = { type: "GPLAY_PURCHASE_VERIFIED", productId: null };
-                    obj27[1] = purchase.productId;
-                    obj4.dispatch(obj27);
-                  }
-                  if (null != closure_9) {
-                    throwTypeErrorResult = dependencyMap;
-                    throwTypeErrorResult = closure_3;
-                    throwTypeErrorResult = purchase;
-                    throwTypeErrorResult = dependencyMap;
-                    const SubscriptionProductIds = purchase(6039).SubscriptionProductIds;
-                    throwTypeErrorResult = purchase;
-                    if (!SubscriptionProductIds.includes(purchase.productId)) {
-                      obj6 = purchase(8154);
-                      const result1 = obj6.sendPaymentCompleteAnalytics(purchase);
-                      const _HermesInternal = HermesInternal;
-                      logger.info("[handlePurchaseUpdated] One Time Purchase verified and consumed: " + purchase.productId);
-                      planIdForGift = 1;
-                    }
-                  }
-                  if (null != closure_9) {
-                    if (null != closure_9.pendingDowngrade) {
-                      obj10 = callback(709);
-                      obj28 = { type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: null };
-                      obj28[1] = closure_9.pendingDowngrade;
-                      obj10.dispatch(obj28);
-                      obj12 = purchase(4790);
-                      giftOptionsForKey = 8;
-                      length = 1;
-                      const obj29 = { value: null, done: false };
-                      obj29[0] = obj12.fetchSubscriptions();
-                      return obj29;
-                    }
-                  }
-                  if (purchase.isActive) {
-                    giftOptionsForKey = 10;
-                    length = 1;
-                    const obj30 = { value: null, done: false };
-                    obj30[0] = callback3();
-                    return obj30;
-                  } else {
-                    obj7 = purchase(4790);
-                    giftOptionsForKey = 9;
-                    length = 1;
-                    obj31 = { value: null, done: false };
-                    obj31[0] = obj7.fetchSubscriptions();
-                    return obj31;
-                  }
-                }
-              break;
-              case 8:
-                if (arg0 === 1) {
-                  length = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  planIdForGift = 0;
-                  throwTypeErrorResult = dependencyMap;
-                  throwTypeErrorResult = closure_3;
-                  throwTypeErrorResult = callback;
-                  throwTypeErrorResult = dependencyMap;
-                  const obj32 = { type: "GPLAY_VERIFICATION_END", productId: null };
-                  throwTypeErrorResult = purchase;
-                  obj32[1] = purchase.productId;
-                  throwTypeErrorResult = callback(709).dispatch(obj32);
-                  length = 3;
-                  obj33 = { value: null, done: true };
-                  obj33[0] = arg1;
-                  return obj33;
-                }
-              break;
-              case 9:
-                if (arg0 === 1) {
-                  length = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  planIdForGift = 0;
-                  throwTypeErrorResult = dependencyMap;
-                  throwTypeErrorResult = closure_3;
-                  throwTypeErrorResult = callback;
-                  throwTypeErrorResult = dependencyMap;
-                  const obj34 = { type: "GPLAY_VERIFICATION_END", productId: null };
-                  throwTypeErrorResult = purchase;
-                  obj34[1] = purchase.productId;
-                  throwTypeErrorResult = callback(709).dispatch(obj34);
-                  length = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                }
-              break;
-              default:
-                if (arg0 === 1) {
-                  length = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  planIdForGift = 0;
-                  throwTypeErrorResult = dependencyMap;
-                  throwTypeErrorResult = closure_3;
-                  throwTypeErrorResult = callback;
-                  throwTypeErrorResult = dependencyMap;
-                  obj35 = { type: "GPLAY_VERIFICATION_END", productId: null };
-                  throwTypeErrorResult = purchase;
-                  obj35[1] = purchase.productId;
-                  throwTypeErrorResult = callback(709).dispatch(obj35);
-                  length = 3;
-                  const obj36 = { value: null, done: true };
-                  obj36[0] = arg1;
-                  return obj36;
-                }
-            }
-          } catch (throwTypeErrorResult) {
-            callback2 = throwTypeErrorResult;
-            throwTypeErrorResult = planIdForGift;
-            if (tmp5 === planIdForGift) {
-              throwTypeErrorResult = tmp3;
-              length = tmp3;
-              throw throwTypeErrorResult;
-            } else if (tmp2 === throwTypeErrorResult) {
-              giftOptionsForKey = throwTypeErrorResult;
-            } else if (throwTypeErrorResult === throwTypeErrorResult) {
-              giftOptionsForKey = tmp3;
-            } else {
-              giftOptionsForKey = tmp6;
-            }
+        } catch (tmp26) {
+          closure_4 = tmp26;
+          if (tmp4 === c5) {
+            c7 = tmp3;
+            throw tmp26;
+          } else if (tmp2 === tmp28) {
+            c6 = tmp;
+          } else if (tmp === tmp28) {
+            c6 = tmp3;
+          } else {
+            c6 = tmp5;
           }
         }
       }
@@ -751,9 +330,9 @@ function _executePendingDowngrade() {
           if (2 === tmp8) {
             c3 = 1;
             lib = dependencyMap;
-            let obj5 = pendingDowngrade(4122);
+            let obj5 = pendingDowngrade(4123);
             const result = obj5.captureBillingException(lib);
-            let obj6 = lib(4810);
+            let obj6 = lib(4823);
             const obj2 = { title: null, body: null };
             const intl = pendingDowngrade(1236).intl;
             obj2[0] = intl.string(pendingDowngrade(1236).t["U+H+kd"]);
@@ -882,7 +461,7 @@ function _fetchAndAlertActiveSubscription() {
             closure_1 = tmp5;
             let callback = tmp2;
             callback = undefined;
-            obj1 = closure_1_0(4790);
+            obj1 = closure_1_0(4803);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };

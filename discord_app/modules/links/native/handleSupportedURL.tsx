@@ -1,22 +1,22 @@
-// === Module 13503: handleSupportedURL ===
+// === Module 13522: handleSupportedURL ===
 
-// Module 13503 (handleSupportedURL)
+// Module 13522 (handleSupportedURL)
 import closure_5 from "_objectWithoutProperties" /* 109 */;
 import closure_6 from "asyncGeneratorStep" /* 5 */;
-import closure_8 from "scheduledEventSort" /* 7204 */;
-import { handleMobileWebCheckoutStatus as closure_9 } from "usePremiumPlanPurchasedStore" /* 7100 */;
-import closure_10 from "zustandStore" /* 12988 */;
+import closure_8 from "scheduledEventSort" /* 7218 */;
+import { handleMobileWebCheckoutStatus as closure_9 } from "usePremiumPlanPurchasedStore" /* 7113 */;
+import closure_10 from "zustandStore" /* 13007 */;
 import closure_11 from "fetchFingerprint" /* 1218 */;
 import ME from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
-import { StreamTypes } from "StreamIssueReportReasons" /* 4512 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4683 */;
-import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_20 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 9199 */;
-import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_21 } from "items" /* 7216 */;
-import { MobileWebRedirectCheckoutDeepLinkActions as closure_22 } from "CustomCheckoutFlow" /* 4427 */;
-import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13504 */;
-import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11366 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7816 */;
+import { StreamTypes } from "StreamIssueReportReasons" /* 4513 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4696 */;
+import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_20 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 9217 */;
+import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_21 } from "items" /* 7230 */;
+import { MobileWebRedirectCheckoutDeepLinkActions as closure_22 } from "CustomCheckoutFlow" /* 4428 */;
+import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13523 */;
+import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11385 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7830 */;
 
 const require = arg1;
 let closure_4 = ["code", "state"];
@@ -202,7 +202,7 @@ export default function handleSupportedURL(payload) {
       result = inviteCode;
       result = payload(inviteCode[29]).startDiceRoll(channelId2, diceCount, diceSides);
       result = rootNavigationRef1;
-      let obj3 = { guildId: null, channelId: null, messageId: "Array", navigationSettings: true };
+      let obj3 = { guildId: null, channelId: null, messageId: "Array", navigationSettings: null };
       obj3[0] = guildId2;
       obj3[1] = channelId2;
       let obj4 = { safe: null, navigationReplace: null, waitForConnection: null, skipMessageFetch: null };

@@ -1,11 +1,11 @@
-// === Module 6045: _isAccessibleChannelOrThreadPath ===
+// === Module 6058: _isAccessibleChannelOrThreadPath ===
 
-// Module 6045 (_isAccessibleChannelOrThreadPath)
+// Module 6058 (_isAccessibleChannelOrThreadPath)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "isSubscriptionGated" /* 1983 */;
-import closure_5 from "shouldShowOnboarding" /* 5415 */;
+import closure_4 from "isSubscriptionGated" /* 1984 */;
+import closure_5 from "shouldShowOnboarding" /* 5428 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_7 from "createGuildRoleRecordFromRust" /* 1986 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 1398 */;

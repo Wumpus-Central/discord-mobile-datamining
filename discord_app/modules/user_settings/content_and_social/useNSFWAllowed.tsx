@@ -1,8 +1,8 @@
-// === Module 8085: useNSFWAllowed ===
+// === Module 8099: useNSFWAllowed ===
 
-// Module 8085 (useNSFWAllowed)
+// Module 8099 (useNSFWAllowed)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import closure_2 from "mergeGuildAvatar" /* 1923 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/useNSFWAllowed.tsx");

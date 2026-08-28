@@ -1,13 +1,13 @@
-// === Module 4090: initialize ===
+// === Module 4091: initialize ===
 
-// Module 4090 (initialize)
+// Module 4091 (initialize)
 import set2 from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import closure_1 from "trackCommunicationDisabled" /* 1992 */;
+import closure_1 from "trackCommunicationDisabled" /* 1993 */;
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
 
 const isGuildLurker = GuildNSFWContentLevel.isGuildLurker;

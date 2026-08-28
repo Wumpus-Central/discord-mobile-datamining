@@ -1,17 +1,17 @@
-// === Module 10226: useFavoritesAccess ===
+// === Module 10244: useFavoritesAccess ===
 
-// Module 10226 (useFavoritesAccess)
+// Module 10244 (useFavoritesAccess)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initialize from "initialize" /* 589 */;
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import isPremiumAtLeastDefault from "isPremiumAtLeast" /* 1946 */;
-import FREE_FAVORITE_LIMIT from "FREE_FAVORITE_LIMIT" /* 10227 */;
-import useFavoritesGuildConfig from "useFavoritesGuildConfig" /* 10228 */;
-import closure_3 from "handleConnectionOpen" /* 4267 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import isPremiumAtLeastDefault from "isPremiumAtLeast" /* 1947 */;
+import FREE_FAVORITE_LIMIT from "FREE_FAVORITE_LIMIT" /* 10245 */;
+import useFavoritesGuildConfig from "useFavoritesGuildConfig" /* 10246 */;
+import closure_3 from "handleConnectionOpen" /* 4268 */;
+import closure_4 from "mergeGuildAvatar" /* 1923 */;
 import closure_5 from "initializeFromUserSettings" /* 1394 */;
 import { MAX_FAVORITE_CHANNELS } from "date" /* 1429 */;
-import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { PremiumTypes } from "GuildFeatures" /* 1925 */;
 
 require = arg1;
 function useFavoritesAccess(FavoritesGuildActionSheet) {

@@ -1,8 +1,8 @@
-// === Module 4802: transformMessagePoll ===
+// === Module 4815: transformMessagePoll ===
 
-// Module 4802 (transformMessagePoll)
+// Module 4815 (transformMessagePoll)
 import set from "set" /* 2 */;
-import hooksDefault from "hooks" /* 4043 */;
+import hooksDefault from "hooks" /* 4044 */;
 
 const result = set.fileFinishedImporting("modules/polls/transformMessagPoll.tsx");
 

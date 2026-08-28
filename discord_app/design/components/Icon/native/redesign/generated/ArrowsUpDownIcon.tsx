@@ -1,10 +1,10 @@
-// === Module 11638: ArrowsUpDownIcon ===
+// === Module 11657: ArrowsUpDownIcon ===
 
-// Module 11638 (ArrowsUpDownIcon)
+// Module 11657 (ArrowsUpDownIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 11639 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 11658 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

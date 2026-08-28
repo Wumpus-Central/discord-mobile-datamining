@@ -1,15 +1,15 @@
-// === Module 11925: openAcceptMessageRequestConfirmModal ===
+// === Module 11944: openAcceptMessageRequestConfirmModal ===
 
-// Module 11925 (openAcceptMessageRequestConfirmModal)
+// Module 11944 (openAcceptMessageRequestConfirmModal)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4412 */;
-import _modDef4810 from "module_4810" /* 4810 */;
-import componentDidMountDefault from "componentDidMount" /* 4899 */;
-import MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL" /* 11922 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4413 */;
+import _modDef4823 from "module_4823" /* 4823 */;
+import componentDidMountDefault from "componentDidMount" /* 4912 */;
+import MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL" /* 11941 */;
 
 let closure_3 = MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL.MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL;
 const AnalyticEvents = ME.AnalyticEvents;
@@ -32,9 +32,9 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
   obj[4] = onConfirm;
   obj[5] = onCancel;
   obj[6] = componentDidMountDefault.Colors.BRAND;
-  _modDef4810.show(obj);
+  _modDef4823.show(obj);
 };
 export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirmationModal(arg0) {
   ({ onConfirm, onCancel, channel } = arg0);
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11926, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11945, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
 };

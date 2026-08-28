@@ -1,8 +1,8 @@
-// === Module 4426: UPDATE_CHECK_INTERVAL ===
+// === Module 4427: UPDATE_CHECK_INTERVAL ===
 
-// Module 4426 (UPDATE_CHECK_INTERVAL)
+// Module 4427 (UPDATE_CHECK_INTERVAL)
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import importDefaultResult from "hooks" /* 4043 */;
+import importDefaultResult from "hooks" /* 4044 */;
 import getConstants from "getConstants" /* 1626 */;
 import durationResult from "module_6" /* 6 */;
 

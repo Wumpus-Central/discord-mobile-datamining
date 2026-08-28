@@ -1,10 +1,10 @@
-// === Module 16088: isProjectOwner ===
+// === Module 16106: isProjectOwner ===
 
-// Module 16088 (isProjectOwner)
+// Module 16106 (isProjectOwner)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "mergeGuildAvatar" /* 1922 */;
+import closure_1 from "mergeGuildAvatar" /* 1923 */;
 import set from "set" /* 2 */;
 
 function isProjectOwner(item10010) {

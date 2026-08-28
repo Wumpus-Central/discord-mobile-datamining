@@ -1,6 +1,6 @@
-// === Module 15676: metadata ===
+// === Module 15694: metadata ===
 
-// Module 15676 (metadata)
+// Module 15694 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/powerups/vanity_url_powerup_2x.gif.js");

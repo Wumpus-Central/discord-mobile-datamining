@@ -1,13 +1,13 @@
-// === Module 10550: GiftCustomMessage ===
+// === Module 10568: GiftCustomMessage ===
 
-// Module 10550 (GiftCustomMessage)
+// Module 10568 (GiftCustomMessage)
 import ThemesDefault from "Themes" /* 712 */;
-import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10396 */;
+import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10414 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { CUSTOM_GIFT_MESSAGE_MAX_LENGTH as closure_4 } from "GuildFeatures" /* 1924 */;
+import { CUSTOM_GIFT_MESSAGE_MAX_LENGTH as closure_4 } from "GuildFeatures" /* 1925 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 class GiftCustomMessage {

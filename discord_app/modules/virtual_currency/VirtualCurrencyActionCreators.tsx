@@ -1,10 +1,10 @@
-// === Module 10757: fetchVirtualCurrencyBalance ===
+// === Module 10775: fetchVirtualCurrencyBalance ===
 
-// Module 10757 (fetchVirtualCurrencyBalance)
+// Module 10775 (fetchVirtualCurrencyBalance)
 import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addSku" /* 4494 */;
+import closure_4 from "addSku" /* 4495 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -216,7 +216,7 @@ function _redeemVirtualCurrencyForSKU() {
                 }
                 let result = null != applicationId;
                 if (result) {
-                  let obj8 = callback(8429);
+                  let obj8 = callback(8443);
                   result = obj8.isTestModeForApplication(applicationId);
                 }
                 c8 = result;
@@ -238,10 +238,10 @@ function _redeemVirtualCurrencyForSKU() {
             } else if (2 === tmp7) {
               c4 = 0;
               closure_14 = c3;
-              if (closure_14 instanceof callback(4343).BillingError) {
+              if (closure_14 instanceof callback(4344).BillingError) {
                 billingError = closure_14;
               } else {
-                billingError = new callback(4343).BillingError(closure_14);
+                billingError = new callback(4344).BillingError(closure_14);
               }
               let obj6 = callback2(709);
               const obj5 = { type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: null, error: null };

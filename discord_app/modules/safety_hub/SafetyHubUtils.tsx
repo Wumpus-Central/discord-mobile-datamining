@@ -1,13 +1,13 @@
-// === Module 8620: parseMessageEmbedForProps ===
+// === Module 8635: parseMessageEmbedForProps ===
 
-// Module 8620 (parseMessageEmbedForProps)
+// Module 8635 (parseMessageEmbedForProps)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hooksDefault from "hooks" /* 4043 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4636 */;
-import ContentIdType from "ContentIdType" /* 8622 */;
+import hooksDefault from "hooks" /* 4044 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4637 */;
+import ContentIdType from "ContentIdType" /* 8637 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
-import SafetyHubView from "SafetyHubView" /* 8621 */;
+import SafetyHubView from "SafetyHubView" /* 8636 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

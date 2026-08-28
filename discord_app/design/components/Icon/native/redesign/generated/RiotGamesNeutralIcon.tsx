@@ -1,10 +1,10 @@
-// === Module 8753: RiotGamesNeutralIcon ===
+// === Module 8769: RiotGamesNeutralIcon ===
 
-// Module 8753 (RiotGamesNeutralIcon)
+// Module 8769 (RiotGamesNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 8754 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 8770 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

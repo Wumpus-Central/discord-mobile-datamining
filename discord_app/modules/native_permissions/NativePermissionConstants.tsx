@@ -1,6 +1,6 @@
-// === Module 4683: NativePermissionStatus ===
+// === Module 4696: NativePermissionStatus ===
 
-// Module 4683 (NativePermissionStatus)
+// Module 4696 (NativePermissionStatus)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionConstants.tsx");

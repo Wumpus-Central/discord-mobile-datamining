@@ -1,16 +1,16 @@
-// === Module 16317: ViewModerators ===
+// === Module 16335: ViewModerators ===
 
-// Module 16317 (ViewModerators)
+// Module 16335 (ViewModerators)
 import noopAll from "noop" /* 19 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4412 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4413 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "trackCommunicationDisabled" /* 1992 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_5 from "trackCommunicationDisabled" /* 1993 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1986 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { RowType } from "RowType" /* 8603 */;
+import { RowType } from "RowType" /* 8618 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -220,5 +220,5 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel, canSkip: flag };
-  obj2.openLazy(asyncRequireImpl(16318, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
+  obj2.openLazy(asyncRequireImpl(16336, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
 };

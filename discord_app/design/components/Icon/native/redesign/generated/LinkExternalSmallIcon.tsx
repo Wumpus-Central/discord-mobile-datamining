@@ -1,10 +1,10 @@
-// === Module 8653: LinkExternalSmallIcon ===
+// === Module 8669: LinkExternalSmallIcon ===
 
-// Module 8653 (LinkExternalSmallIcon)
+// Module 8669 (LinkExternalSmallIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 8654 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 8670 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

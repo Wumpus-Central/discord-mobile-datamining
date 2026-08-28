@@ -1,10 +1,10 @@
-// === Module 15349: ClipboardCheckIcon ===
+// === Module 15191: ClipboardCheckIcon ===
 
-// Module 15349 (ClipboardCheckIcon)
+// Module 15191 (ClipboardCheckIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 15350 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 15192 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

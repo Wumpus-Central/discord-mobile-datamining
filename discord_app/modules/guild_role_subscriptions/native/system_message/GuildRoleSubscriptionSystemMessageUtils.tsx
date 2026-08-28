@@ -1,11 +1,11 @@
-// === Module 11315: handleRoleSubscriptionPurchaseSystemMessageCtaClicked ===
+// === Module 11334: handleRoleSubscriptionPurchaseSystemMessageCtaClicked ===
 
-// Module 11315 (handleRoleSubscriptionPurchaseSystemMessageCtaClicked)
+// Module 11334 (handleRoleSubscriptionPurchaseSystemMessageCtaClicked)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4653 */;
-import trackInviteDefault from "trackInvite" /* 7135 */;
-import identityHook from "identityHook" /* 7833 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4666 */;
+import trackInviteDefault from "trackInvite" /* 7148 */;
+import identityHook from "identityHook" /* 7847 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/guild_role_subscriptions/native/system_message/GuildRoleSubscriptionSystemMessageUtils.tsx");

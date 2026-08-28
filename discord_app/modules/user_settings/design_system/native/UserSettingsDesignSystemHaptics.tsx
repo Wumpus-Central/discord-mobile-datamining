@@ -1,19 +1,19 @@
-// === Module 15182: HapticButton ===
+// === Module 15334: HapticButton ===
 
-// Module 15182 (HapticButton)
+// Module 15334 (HapticButton)
 import noopAll from "noop" /* 19 */;
-import IMPACT_LIGHTDefault from "IMPACT_LIGHT" /* 4414 */;
-import Text from "Text" /* 4441 */;
-import Stack from "Stack" /* 4878 */;
-import PressableCard from "PressableCard" /* 5553 */;
+import IMPACT_LIGHTDefault from "IMPACT_LIGHT" /* 4415 */;
+import Text from "Text" /* 4442 */;
+import Stack from "Stack" /* 4891 */;
+import PressableCard from "PressableCard" /* 5566 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function HapticButton(text) {
   const type = text.type;
-  return callback(type(4880).Button, {
+  return callback(type(4893).Button, {
     variant: "secondary",
     onPress() {
       return type(closure_1_1[5]).triggerHapticFeedback(type);

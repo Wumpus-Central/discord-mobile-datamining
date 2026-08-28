@@ -1,22 +1,22 @@
-// === Module 6140: hasPermissionToPlaySound ===
+// === Module 6153: hasPermissionToPlaySound ===
 
-// Module 6140 (hasPermissionToPlaySound)
+// Module 6153 (hasPermissionToPlaySound)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4107 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4653 */;
-import _fetchDefaultSoundsFromApi2 from "_fetchDefaultSoundsFromApi2" /* 6134 */;
-import getMuteStates from "getMuteStates" /* 6141 */;
-import VoiceChannelEffectSentLocation from "VoiceChannelEffectSentLocation" /* 6142 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4108 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4666 */;
+import _fetchDefaultSoundsFromApi2 from "_fetchDefaultSoundsFromApi2" /* 6147 */;
+import getMuteStates from "getMuteStates" /* 6154 */;
+import VoiceChannelEffectSentLocation from "VoiceChannelEffectSentLocation" /* 6155 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
 import { SILENT_JOIN_LEAVE_CHANNEL_TYPES as closure_5 } from "createChannelRecord" /* 1395 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "handleSoundCreateOrUpdate" /* 4917 */;
-import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 4919 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_7 from "mergeGuildAvatar" /* 1923 */;
+import closure_8 from "handleSoundCreateOrUpdate" /* 4930 */;
+import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 4932 */;
 import ME from "ME" /* 676 */;
 import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1338 */;
 
@@ -237,10 +237,10 @@ export const getAmplitudinalSoundboardVolume = function getAmplitudinalSoundboar
 export { hasPermissionToPlaySound };
 export { canUseSoundboardSound };
 export { canMakeSound };
-export const playSound = function playSound(soundId, id) {
+export const playSound = function playSound(soundId, channelId) {
   let obj = _fetchDefaultSoundsFromApi2;
-  obj.playSoundLocally(id, soundId);
-  const result = VoiceChannelEffectSentLocation.sendVoiceChannelSoundboardEffect(id, soundId, false, arg2, arg3);
+  obj.playSoundLocally(channelId, soundId);
+  const result = VoiceChannelEffectSentLocation.sendVoiceChannelSoundboardEffect(channelId, soundId, false, arg2, arg3);
   const obj2 = VoiceChannelEffectSentLocation;
   obj = { type: "SOUNDBOARD_TRACK_USAGE", soundId: soundId.soundId };
   dispatcherDefault.dispatch(obj);
@@ -287,8 +287,8 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
     const _Object = Object;
     const values = Object.values(guilds);
     if (!values.some((joinSound) => null != joinSound.joinSound)) {
-      const result = tmp(4289).ageEligibleForPremiumUpsell(stateFromStores);
-      const tmpResult = tmp(4289);
+      const result = tmp(4290).ageEligibleForPremiumUpsell(stateFromStores);
+      const tmpResult = tmp(4290);
       const obj5 = getPremiumPlanItemDefault;
       if (tmp9) {
         items1.push(tmp(1377).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);

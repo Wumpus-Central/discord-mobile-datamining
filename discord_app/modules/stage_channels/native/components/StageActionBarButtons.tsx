@@ -1,28 +1,28 @@
-// === Module 9909: AgeVerificationSpeakerActionSheet ===
+// === Module 9927: AgeVerificationSpeakerActionSheet ===
 
-// Module 9909 (AgeVerificationSpeakerActionSheet)
+// Module 9927 (AgeVerificationSpeakerActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _modDef4185 from "module_4185" /* 4185 */;
-import PressableBase from "PressableBase" /* 5020 */;
-import Form from "Form" /* 8295 */;
-import registerAssetDefault from "registerAsset" /* 8610 */;
-import registerAssetDefault2 from "registerAsset" /* 8667 */;
-import ActionButtonAll from "ActionButton" /* 9466 */;
-import registerAssetDefault3 from "registerAsset" /* 9911 */;
-import registerAssetDefault4 from "registerAsset" /* 9950 */;
+import _modDef4186 from "module_4186" /* 4186 */;
+import PressableBase from "PressableBase" /* 5033 */;
+import Form from "Form" /* 8309 */;
+import registerAssetDefault from "registerAsset" /* 8625 */;
+import registerAssetDefault2 from "registerAsset" /* 8683 */;
+import ActionButtonAll from "ActionButton" /* 9484 */;
+import registerAssetDefault3 from "registerAsset" /* 9929 */;
+import registerAssetDefault4 from "registerAsset" /* 9968 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
-import closure_8 from "generateOldThreadCutoff" /* 4460 */;
-import closure_9 from "initialize" /* 9910 */;
-import { REQUEST_TO_SPEAK_SHEET_KEY as closure_10 } from "MAX_STAGE_TOPIC_LENGTH" /* 5310 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import closure_8 from "generateOldThreadCutoff" /* 4461 */;
+import closure_9 from "initialize" /* 9928 */;
+import { REQUEST_TO_SPEAK_SHEET_KEY as closure_10 } from "MAX_STAGE_TOPIC_LENGTH" /* 5323 */;
 import { NOOP } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 class AgeVerificationSpeakerActionSheet {
@@ -86,7 +86,7 @@ class AnimatedPrompt {
     items = [];
     items[0] = closure_7;
     stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-    obj2 = require("module_4185");
+    obj2 = require("module_4186");
     fn = function c() {
       let obj = show(closure_1_3[54]);
       let num = 20;
@@ -115,7 +115,7 @@ class AnimatedPrompt {
       tmp5 = animatedStyle;
     }
     items1[2] = tmp5;
-    return tmp4(require("module_4185").View, { style: items1, children });
+    return tmp4(require("module_4186").View, { style: items1, children });
   }
 }
 class StartStagePrompt {
@@ -207,12 +207,12 @@ export const MusicMuteButton = function MusicMuteButton(arg0) {
     }
     obj = { accessibilityLabel: null, source: null, IconComponent: null, imageStyle: null, onPress: null, isSmallSize: null };
     obj[0] = stringResult;
-    obj[1] = importDefault(stateFromStores ? 9918 : 9919);
+    obj[1] = importDefault(stateFromStores ? 9936 : 9937);
     if (stateFromStores) {
-      tmpResult = tmp(9920);
+      tmpResult = tmp(9938);
       let MusicIcon = tmpResult.MusicSlashIcon;
     } else {
-      MusicIcon = tmp(9172).MusicIcon;
+      MusicIcon = tmp(9190).MusicIcon;
     }
     obj[2] = MusicIcon;
     imageStyle = imageStyle.imageStyle;
@@ -231,7 +231,7 @@ export const DisconnectStageButton = function DisconnectStageButton(channel) {
   const intl = channel(1236).intl;
   obj[0] = intl.string(channel(1236).t.SMKyih);
   obj[1] = registerAssetDefault2;
-  obj[2] = channel(9923).DoorExitIcon;
+  obj[2] = channel(9941).DoorExitIcon;
   obj[3] = function onPress() {
     if (closure_1_1(closure_1_3[24])(channel)) {
       let tmp3Result = tmp3(tmp[25]);
@@ -253,20 +253,20 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
     obj = { channelId: channel.id, analyticsLocations };
     obj.openLazy(channel(closure_1_3[32])(closure_1_3[31], closure_1_3.paths), closure_1_10, obj);
   }
-  analyticsLocations = analyticsLocations(5905)().analyticsLocations;
-  let obj = channel(5326);
-  const stageParticipantsCount = obj.useStageParticipantsCount(channel.id, channel(5320).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY);
+  analyticsLocations = analyticsLocations(5918)().analyticsLocations;
+  let obj = channel(5339);
+  const stageParticipantsCount = obj.useStageParticipantsCount(channel.id, channel(5333).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY);
   if (stageParticipantsCount > 0) {
     obj = { accessibilityLabel: null, source: null, imageStyle: null, IconComponent: null, onPress: null, notifications: null, isSmallSize: null };
     const intl = tmp3(1236).intl;
     obj = { count: null };
     obj[0] = stageParticipantsCount;
     obj[0] = intl.formatToPlainString(tmp3(1236).t.OhK58v, obj);
-    obj[1] = tmp(9938);
+    obj[1] = tmp(9956);
     obj1 = { tintColor: null };
     obj1[0] = tmp(712).unsafe_rawColors.WHITE;
     obj[2] = obj1;
-    obj[3] = tmp3(9939).HandRequestSpeakListIcon;
+    obj[3] = tmp3(9957).HandRequestSpeakListIcon;
     obj[4] = handleOpenAudienceList;
     obj[5] = stageParticipantsCount;
     obj[6] = isSmallSize;
@@ -275,11 +275,11 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
     const obj2 = { accessibilityLabel: null, source: null, imageStyle: null, IconComponent: null, onPress: null, isSmallSize: null };
     const intl2 = tmp3(1236).intl;
     obj2[0] = intl2.string(tmp3(1236).t.KJnyvh);
-    obj2[1] = tmp(9938);
+    obj2[1] = tmp(9956);
     const obj3 = { tintColor: null };
     obj3[0] = tmp(712).unsafe_rawColors.WHITE;
     obj2[2] = obj3;
-    obj2[3] = tmp3(9939).HandRequestSpeakListIcon;
+    obj2[3] = tmp3(9957).HandRequestSpeakListIcon;
     obj2[4] = handleOpenAudienceList;
     obj2[5] = isSmallSize;
     tmp7 = callback2(ActionButtonAll.ActionButton, obj2);
@@ -366,9 +366,9 @@ export const ChatButton = function ChatButton(channel) {
   const items1 = [channel.id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ unreadCount: closure_1_8.getUnreadCount(channel.id), mentionCount: closure_1_8.getMentionCount(channel.id) }), items1);
   ({ unreadCount, mentionCount } = stateFromStoresObject);
-  obj1 = channel(9948);
+  obj1 = channel(9966);
   isVoiceChannelLocked = obj1.useIsVoiceChannelLocked(channel);
-  let obj2 = channel(9478);
+  let obj2 = channel(9496);
   const voiceChatNavigationContext = obj2.useVoiceChatNavigationContext();
   openChat = undefined;
   if (voiceChatNavigationContext != null) {
@@ -389,12 +389,12 @@ export const ChatButton = function ChatButton(channel) {
       obj[0] = obj;
       const intl2 = tmp(1236).intl;
       obj[1] = intl2.string(tmp(1236).t.ZXxLQg);
-      obj[2] = tmp(4972).ChatIcon;
-      obj[3] = isVoiceChannelLocked(9949);
+      obj[2] = tmp(4985).ChatIcon;
+      obj[3] = isVoiceChannelLocked(9967);
       obj[4] = onPress;
       obj[5] = isVoiceChannelLocked;
       obj[6] = isSmallSize;
-      let tmp7Result = callback2(openChat(9466).ActionButton, obj);
+      let tmp7Result = callback2(openChat(9484).ActionButton, obj);
     }
     return tmp7Result;
   }
@@ -406,12 +406,12 @@ export const ChatButton = function ChatButton(channel) {
   obj1[2] = obj2;
   const intl = tmp(1236).intl;
   obj1[3] = intl.string(channel(1236).t.ZXxLQg);
-  obj1[4] = channel(4972).ChatIcon;
-  obj1[5] = isVoiceChannelLocked(9949);
+  obj1[4] = channel(4985).ChatIcon;
+  obj1[5] = isVoiceChannelLocked(9967);
   obj1[6] = onPress;
   obj1[7] = isVoiceChannelLocked;
   obj1[8] = isSmallSize;
-  tmp7Result = callback2(openChat(9466).NotifiedActionButton, obj1);
+  tmp7Result = callback2(openChat(9484).NotifiedActionButton, obj1);
 };
 export { AnimatedPrompt };
 export const AnimatedStartStagePrompt = function AnimatedStartStagePrompt(channel) {
@@ -507,7 +507,7 @@ export const JoinStagePrompt = function JoinStagePrompt(channel) {
   obj[5] = intl.string(channel(1236).t["7vb2cc"]);
   const intl2 = channel(1236).intl;
   obj[6] = intl2.string(channel(1236).t.lyCW4E);
-  return callback2(channel(8295).FormCTA, obj);
+  return callback2(channel(8309).FormCTA, obj);
 };
 export const ContinueToStagePrompt = function ContinueToStagePrompt(onContinue) {
   const tmp = callback4();

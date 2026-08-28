@@ -1,9 +1,9 @@
-// === Module 10859: questHomeHeroFromServer ===
+// === Module 10877: questHomeHeroFromServer ===
 
-// Module 10859 (questHomeHeroFromServer)
+// Module 10877 (questHomeHeroFromServer)
 import set from "set" /* 2 */;
-import resolveAsset from "resolveAsset" /* 10842 */;
-import questHomeHeroCtaFromServer from "questHomeHeroCtaFromServer" /* 10860 */;
+import resolveAsset from "resolveAsset" /* 10860 */;
+import questHomeHeroCtaFromServer from "questHomeHeroCtaFromServer" /* 10878 */;
 
 const result = set.fileFinishedImporting("modules/quests/QuestHomeHeroTypes.tsx");
 
@@ -22,9 +22,9 @@ export const questHomeHeroFromServer = function questHomeHeroFromServer(c7) {
     const quest_home_entrypoint = creative_content.quest_home_entrypoint;
     obj = { linearGradient: null, radialGradient: null, gradientPreset: null, image: null, tooltipImage: null, tooltipTitle: null, tooltipSubtitle: null };
     ({ linear_gradient: obj6[0], radial_gradient: obj6[1], gradient_preset: obj6[2] } = quest_home_entrypoint);
-    let tmpResult = tmp(10842);
+    let tmpResult = tmp(10860);
     obj[3] = tmpResult.resolveOptionalAdCreativeCdnUrl(quest_home_entrypoint.image);
-    tmpResult = tmp(10842);
+    tmpResult = tmp(10860);
     obj[4] = tmpResult.resolveOptionalAdCreativeCdnUrl(quest_home_entrypoint.tooltip_image);
     ({ tooltip_title: obj6[5], tooltip_subtitle: obj6[6] } = quest_home_entrypoint);
     tmp3 = obj;

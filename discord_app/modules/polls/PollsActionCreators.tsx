@@ -1,18 +1,18 @@
-// === Module 11213: getPollVoteEventProperties ===
+// === Module 11231: getPollVoteEventProperties ===
 
-// Module 11213 (getPollVoteEventProperties)
-import setDefault from "set" /* 4809 */;
-import showVotesForAnswerAll from "showVotesForAnswer" /* 11214 */;
+// Module 11231 (getPollVoteEventProperties)
+import setDefault from "set" /* 4822 */;
+import showVotesForAnswerAll from "showVotesForAnswer" /* 11232 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 4090 */;
-import closure_6 from "processMessage" /* 7273 */;
+import closure_5 from "initialize" /* 4091 */;
+import closure_6 from "processMessage" /* 7287 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import { DraftType } from "handleChanged" /* 4807 */;
-import closure_10 from "recomputeGuild" /* 5309 */;
-import closure_11 from "reinjectEphemerals" /* 4688 */;
-import closure_12 from "map" /* 4806 */;
-import useMessagePollInteractions from "useMessagePollInteractions" /* 8060 */;
+import { DraftType } from "handleChanged" /* 4820 */;
+import closure_10 from "recomputeGuild" /* 5322 */;
+import closure_11 from "reinjectEphemerals" /* 4701 */;
+import closure_12 from "map" /* 4819 */;
+import useMessagePollInteractions from "useMessagePollInteractions" /* 8074 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -246,7 +246,7 @@ function _optimisticallySetAnswers() {
                     let tmp6 = closure_6;
                     obj[4] = closure_6;
                     let tmp7 = _undefined;
-                    obj[6] = _undefined(7440).ReactionTypes.VOTE;
+                    obj[6] = _undefined(7454).ReactionTypes.VOTE;
                     dispatchResult = obj.dispatch(obj);
                     continue;
                   }
@@ -867,8 +867,8 @@ function _createPoll() {
     c6 = 0;
     c4 = 0;
     const iter = (function*(arg0) {
-      if (v0 === 2) {
-        v0 = 3;
+      if (c6 === 2) {
+        c6 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
@@ -882,13 +882,13 @@ function _createPoll() {
         }
       } else {
         try {
-          v0 = 2;
+          c6 = 2;
           if (0 === c5) {
             if (arg0 === 1) {
-              v0 = 3;
+              c6 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              v0 = 3;
+              c6 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
@@ -901,31 +901,32 @@ function _createPoll() {
               dependencyMap = undefined;
               c4 = undefined;
               c5 = undefined;
-              v0 = undefined;
-              ({ channel: c0, question: c1, answers: c2, allowMultiSelect: c3, duration: c4, layout: c5, onClose: c6 } = lib);
+              c6 = undefined;
+              c7 = undefined;
+              ({ channel: c0, question: c1, answers: c2, allowMultiSelect: c3, duration: c4, layout: c5, onClose: c6, scheduledTimestamp: c7 } = lib);
               let uploads2;
-              closure_8 = undefined;
+              let Poll;
               let obj2;
               c5 = 1;
-              v0 = 1;
+              c6 = 1;
               return { value: "ct", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
-              v0 = 3;
+              c6 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              v0 = 3;
+              c6 = 3;
               obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
-              uploads2 = uploads.getUploads(lib.id, obj2.Poll);
-              closure_8 = c2.map((text) => {
+              uploads2 = uploads.getUploads(lib.id, Poll.Poll);
+              Poll = c2.map((text) => {
                 closure_0 = text;
-                let poll_media = closure_7;
+                let poll_media = closure_8;
                 let findIndexResult;
-                if (closure_7 != null) {
+                if (closure_8 != null) {
                   findIndexResult = poll_media.findIndex((id) => id.id === text.localCreationAnswerId);
                 }
                 let tmp2;
@@ -964,65 +965,68 @@ function _createPoll() {
               const obj3 = { text: null };
               obj3[0] = lib2.trim();
               obj2[0] = obj3;
-              obj2[1] = closure_8;
+              obj2[1] = Poll;
               obj2[2] = dependencyMap;
               obj2[3] = c4;
               obj2[4] = c5;
               c4 = 1;
-              const obj4 = { attachmentsToUpload: null, onAttachmentUploadError: null };
+              const obj4 = { attachmentsToUpload: null, scheduledTimestamp: null, onAttachmentUploadError: null };
               obj4[0] = uploads2;
-              obj4[1] = function onAttachmentUploadError(file, code, reason) {
+              obj4[1] = c7;
+              obj4[2] = function onAttachmentUploadError(file, code, reason) {
                 let obj = _undefined(_undefined2[26]);
                 obj = { file, guildId: _undefined.getGuildId(), analyticsLocations: [], code, reason };
                 const result = obj.handleUploadMessageAttachmentsErrors(obj);
               };
               c5 = 3;
-              v0 = 1;
+              c6 = 1;
               const obj5 = { value: null, done: false };
-              obj5[0] = lib2(7135).sendPollMessage(lib.id, obj2, obj4);
+              obj5[0] = lib2(7148).sendPollMessage(lib.id, obj2, obj4);
               return obj5;
             }
-          } else if (2 === tmp7) {
-            c4 = 0;
-            closure_10 = dependencyMap;
-            if (closure_10 instanceof lib(4343).APIError) {
-              let aPIError = closure_10;
-            } else {
-              aPIError = new lib(4343).APIError(closure_10);
-            }
-            if ("poll" === aPIError.getAnyErrorMessage()) {
-              if (null != closure_10.text) {
-                const obj6 = {};
-                const merged = Object.assign(closure_10);
-                const _JSON = JSON;
-                obj6.body = JSON.parse(closure_10.text);
-                let tmp27 = obj6;
+          } else {
+            if (2 === tmp7) {
+              c4 = 0;
+              closure_11 = dependencyMap;
+              if (closure_11 instanceof lib(4344).APIError) {
+                let aPIError = closure_11;
+              } else {
+                aPIError = new lib(4344).APIError(closure_11);
               }
-              throw tmp27;
+              if ("poll" === aPIError.getAnyErrorMessage()) {
+                if (null != closure_11.text) {
+                  const obj6 = {};
+                  const merged = Object.assign(closure_11);
+                  const _JSON = JSON;
+                  obj6.body = JSON.parse(closure_11.text);
+                  throw obj6;
+                }
+              }
+              if (null == c7) {
+                throw closure_11;
+              } else {
+                c6 = 3;
+              }
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              if (c6 != null) {
+                tmp9(c7);
+              }
+              c4 = 0;
             }
-            tmp27 = closure_10;
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
             c4 = 0;
-            v0 = 3;
+            c6 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
-          } else {
-            if (v0 != null) {
-              v0();
-            }
-            c4 = 0;
-            v0 = 3;
-            return { value: "HermesInternal", done: null };
           }
-        } catch (tmp33) {
-          dependencyMap = tmp33;
+        } catch (tmp38) {
+          dependencyMap = tmp38;
           if (tmp4 === c4) {
-            v0 = tmp2;
-            throw tmp33;
+            c6 = tmp2;
+            throw tmp38;
           } else {
             c5 = tmp;
           }
@@ -1101,7 +1105,7 @@ function _endPollEarly() {
               dependencyMap = 2;
               c4 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = callback2(4809).confirm(obj2);
+              obj3[0] = callback2(4822).confirm(obj2);
               return obj3;
             }
           } else {
@@ -1115,7 +1119,7 @@ function _endPollEarly() {
                 obj4[0] = arg1;
                 return obj4;
               } else if (arg1) {
-                obj1 = callback3(11219);
+                obj1 = callback3(11237);
                 const obj5 = { channelId: null, messageId: null };
                 obj5[0] = callback;
                 obj5[1] = callback2;

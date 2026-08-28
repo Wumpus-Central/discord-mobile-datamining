@@ -1,12 +1,12 @@
-// === Module 13672: SpeakerPulse ===
+// === Module 13691: SpeakerPulse ===
 
-// Module 13672 (SpeakerPulse)
+// Module 13691 (SpeakerPulse)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);

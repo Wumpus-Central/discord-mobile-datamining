@@ -1,15 +1,15 @@
-// === Module 11016: AppStoreOverlayStatCardItem ===
+// === Module 11034: AppStoreOverlayStatCardItem ===
 
-// Module 11016 (AppStoreOverlayStatCardItem)
+// Module 11034 (AppStoreOverlayStatCardItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4441 */;
-import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 11017 */;
-import FractionalStarDefault from "FractionalStar" /* 11018 */;
+import Text from "Text" /* 4442 */;
+import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 11035 */;
+import FractionalStarDefault from "FractionalStar" /* 11036 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function AppStoreOverlayStatCardItem(stat) {
@@ -25,10 +25,10 @@ function AppStoreOverlayStatCardItem(stat) {
     const result = obj2.formatAppStoreRatingValue(stat.rating, getSystemLocale.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      let tmp9Result = tmp9(11017);
+      let tmp9Result = tmp9(11035);
       result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1236).intl.currentLocale);
     }
-    tmp9Result = tmp9(11017);
+    tmp9Result = tmp9(11035);
     const appStoreStarFillAmounts = tmp9Result.getAppStoreStarFillAmounts(stat.rating, num);
     const intl = tmp9(1236).intl;
     let obj = { label: null, rating: null, maxRating: null, ratingCount: null };
@@ -87,7 +87,7 @@ function AppStoreOverlayStatCardItem(stat) {
     if (null == secondaryContent) {
       const obj5 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
       obj5[3] = secondaryText;
-      secondaryContent = tmp21(tmp18(4441).Text, obj5);
+      secondaryContent = tmp21(tmp18(4442).Text, obj5);
     }
     obj4[1] = secondaryContent;
     tmp21Result = tmp21(tmp17, obj4);

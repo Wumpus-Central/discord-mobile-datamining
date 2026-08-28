@@ -1,8 +1,8 @@
-// === Module 13583: items ===
+// === Module 13602: items ===
 
-// Module 13583 (items)
-import inlineStyles from "inlineStyles" /* 8173 */;
-import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13570 */;
+// Module 13602 (items)
+import inlineStyles from "inlineStyles" /* 8187 */;
+import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13589 */;
 import closure_2 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -67,13 +67,13 @@ export const GuildBadgeForce = function GuildBadgeForce(width) {
     obj15[0] = memo;
     const obj16 = { stopColor: null, offset: "30%" };
     obj16[0] = primaryColorsTransformed[1];
-    items1 = [tmp9(tmp3(8173).Stop, obj16), ];
+    items1 = [tmp9(tmp3(8187).Stop, obj16), ];
     const obj17 = { stopColor: null, offset: "70%" };
     obj17[0] = secondaryColorsTransformed[1];
-    items1[1] = tmp9(tmp3(8173).Stop, obj17);
+    items1[1] = tmp9(tmp3(8187).Stop, obj17);
     obj15[6] = items1;
-    obj14[0] = tmp7(tmp3(8173).RadialGradient, obj15);
-    tmp9Result = tmp9(tmp3(8173).Defs, obj14);
+    obj14[0] = tmp7(tmp3(8187).RadialGradient, obj15);
+    tmp9Result = tmp9(tmp3(8187).Defs, obj14);
   }
   items[20] = tmp9Result;
   obj.children = items;

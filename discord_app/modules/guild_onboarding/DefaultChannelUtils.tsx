@@ -1,9 +1,9 @@
-// === Module 5421: useCanChannelBeDefault ===
+// === Module 5434: useCanChannelBeDefault ===
 
-// Module 5421 (useCanChannelBeDefault)
+// Module 5434 (useCanChannelBeDefault)
 import fromStringAll from "fromString" /* 506 */;
-import applyOverwritesAll from "applyOverwrites" /* 4094 */;
-import closure_3 from "isSubscriptionGated" /* 1983 */;
+import applyOverwritesAll from "applyOverwrites" /* 4095 */;
+import closure_3 from "isSubscriptionGated" /* 1984 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
 

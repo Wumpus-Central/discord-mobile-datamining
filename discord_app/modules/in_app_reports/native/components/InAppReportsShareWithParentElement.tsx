@@ -1,7 +1,7 @@
-// === Module 12691: parents ===
+// === Module 12710: parents ===
 
-// Module 12691 (parents)
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 12690 */;
+// Module 12710 (parents)
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 12709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -50,7 +50,7 @@ export default function _default(parents) {
     }
     obj[3] = username3;
     obj[1] = intl.formatToPlainString(parents(1236).t.BlAMme, obj);
-    obj[2] = jsx(parents(12692).ShareIcon, {});
+    obj[2] = jsx(parents(12711).ShareIcon, {});
     const intl2 = tmp15(1236).intl;
     obj[3] = intl2.string(parents(1236).t["5l/hlt"]);
     obj[4] = tmp[0];

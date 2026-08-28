@@ -1,13 +1,13 @@
-// === Module 5307: ? ===
+// === Module 5320: ? ===
 
-// Module 5307
+// Module 5320
 import dispatcherDefault from "dispatcher" /* 709 */;
 import transitionTo from "transitionTo" /* 1222 */;
-import selectVoiceChannelAdditional from "selectVoiceChannelAdditional" /* 5308 */;
-import disconnectRemoteAll from "disconnectRemote" /* 9798 */;
-import closure_4 from "set" /* 4462 */;
+import selectVoiceChannelAdditional from "selectVoiceChannelAdditional" /* 5321 */;
+import disconnectRemoteAll from "disconnectRemote" /* 9816 */;
+import closure_4 from "set" /* 4463 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4496 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

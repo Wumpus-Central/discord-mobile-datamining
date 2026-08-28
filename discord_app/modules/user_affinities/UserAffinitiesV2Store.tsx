@@ -1,10 +1,10 @@
-// === Module 7337: recomputeAffinities ===
+// === Module 7351: recomputeAffinities ===
 
-// Module 7337 (recomputeAffinities)
+// Module 7351 (recomputeAffinities)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "markAllUserIdListsStale" /* 4098 */;
-import { USER_AFFINITY_TTL } from "result" /* 7338 */;
+import closure_0 from "markAllUserIdListsStale" /* 4099 */;
+import { USER_AFFINITY_TTL } from "result" /* 7352 */;
 
 function recomputeAffinities() {
   const userAffinities = obj.userAffinities;
@@ -26,12 +26,16 @@ const prototype = UserAffinitiesV2Store.prototype;
 prototype["initialize"] = function initialize(userAffinities) {
   const self = this;
   this.waitFor(closure_0);
+  userAffinities = undefined;
+  if (userAffinities != null) {
+    userAffinities = userAffinities.userAffinities;
+  }
   if (null != userAffinities) {
     obj.userAffinities = userAffinities.userAffinities;
     obj.lastFetched = userAffinities.lastFetched;
     const _Map = Map;
-    userAffinities = obj.userAffinities;
-    const found = userAffinities.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
+    const userAffinities1 = obj.userAffinities;
+    const found = userAffinities1.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
     map = new Map(found.map((otherUserId) => {
       const items = [otherUserId.otherUserId, otherUserId];
       return items;

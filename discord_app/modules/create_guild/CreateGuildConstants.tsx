@@ -1,10 +1,10 @@
-// === Module 12159: GuildTemplateId ===
+// === Module 12178: GuildTemplateId ===
 
-// Module 12159 (GuildTemplateId)
+// Module 12178 (GuildTemplateId)
 import set from "set" /* 2 */;
 import fromStringAll from "fromString" /* 506 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import applyOverwritesAll from "applyOverwrites" /* 4094 */;
+import applyOverwritesAll from "applyOverwrites" /* 4095 */;
 import ME from "ME" /* 676 */;
 
 ({ ChannelTypes: c3, Permissions: c4 } = ME);

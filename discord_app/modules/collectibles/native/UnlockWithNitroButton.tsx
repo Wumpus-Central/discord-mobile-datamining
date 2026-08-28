@@ -1,13 +1,13 @@
-// === Module 12485: UnlockWithNitroButton ===
+// === Module 12505: UnlockWithNitroButton ===
 
-// Module 12485 (UnlockWithNitroButton)
+// Module 12505 (UnlockWithNitroButton)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
-import CollapsingText from "CollapsingText" /* 4881 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8028 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 12467 */;
-import closure_3 from "updateProduct" /* 6036 */;
-import closure_4 from "map" /* 7236 */;
+import CollapsingText from "CollapsingText" /* 4894 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8042 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 12487 */;
+import closure_3 from "updateProduct" /* 6049 */;
+import closure_4 from "map" /* 7250 */;
 import { ShopCtaEnum } from "items" /* 678 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -40,7 +40,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   if (flag) {
     obj = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: null };
     obj[3] = text;
-    tmp4Result = tmp4(tmp(4441).Text, obj);
+    tmp4Result = tmp4(tmp(4442).Text, obj);
   }
   obj = { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null };
   let tmp6;

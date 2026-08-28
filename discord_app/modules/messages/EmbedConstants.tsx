@@ -1,6 +1,6 @@
-// === Module 4804: MessageEmbedTypes ===
+// === Module 4817: MessageEmbedTypes ===
 
-// Module 4804 (MessageEmbedTypes)
+// Module 4817 (MessageEmbedTypes)
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 

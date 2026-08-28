@@ -1,8 +1,8 @@
-// === Module 10629: useInappropriateConversationWarningsForChannel ===
+// === Module 10647: useInappropriateConversationWarningsForChannel ===
 
-// Module 10629 (useInappropriateConversationWarningsForChannel)
-import closure_2 from "handleConnectionOpen" /* 10573 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 10573 */;
+// Module 10647 (useInappropriateConversationWarningsForChannel)
+import closure_2 from "handleConnectionOpen" /* 10591 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 10591 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx");

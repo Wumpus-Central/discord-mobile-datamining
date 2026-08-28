@@ -1,16 +1,16 @@
-// === Module 7075: calculateFractionalPremiumInfo ===
+// === Module 7088: calculateFractionalPremiumInfo ===
 
-// Module 7075 (calculateFractionalPremiumInfo)
-import hooksDefault from "hooks" /* 4043 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4107 */;
-import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4122 */;
+// Module 7088 (calculateFractionalPremiumInfo)
+import hooksDefault from "hooks" /* 4044 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4108 */;
+import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4123 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "reset" /* 4113 */;
-import closure_7 from "addEntitlement" /* 7076 */;
+import closure_5 from "mergeGuildAvatar" /* 1923 */;
+import closure_6 from "reset" /* 4114 */;
+import closure_7 from "addEntitlement" /* 7089 */;
 import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import GuildFeatures from "GuildFeatures" /* 1925 */;
 
 require = arg1;
 function calculateFractionalPremiumInfo(isFetching) {
@@ -74,17 +74,17 @@ function calculateFractionalPremiumInfo(isFetching) {
         obj2[0] = null != first;
         obj2[1] = tmp7;
         if (null != first) {
-          let tmp11 = tmp2(4043)(first.startsAt);
+          let tmp11 = tmp2(4044)(first.startsAt);
         } else {
-          tmp11 = tmp2(4043)(0);
+          tmp11 = tmp2(4044)(0);
         }
         obj2[2] = tmp11;
         if (null != first) {
           const obj4 = getPremiumPlanItem;
-          let tmp2ResultResult = tmp2(4043)(obj4.extendDateWithUnconsumedFractionalPremium(first.endsAt, unactivatedFractionalPremiumUnits, undefined, excludeReverseTrialFromCountdown));
-          const tmp2Result = tmp2(4043);
+          let tmp2ResultResult = tmp2(4044)(obj4.extendDateWithUnconsumedFractionalPremium(first.endsAt, unactivatedFractionalPremiumUnits, undefined, excludeReverseTrialFromCountdown));
+          const tmp2Result = tmp2(4044);
         } else {
-          tmp2ResultResult = tmp2(4043)(0);
+          tmp2ResultResult = tmp2(4044)(0);
         }
         obj2[3] = tmp2ResultResult;
         let str = "";
@@ -93,9 +93,9 @@ function calculateFractionalPremiumInfo(isFetching) {
         }
         obj2[4] = str;
         if (null != first) {
-          let tmp18 = tmp2(4043)(first.endsAt);
+          let tmp18 = tmp2(4044)(first.endsAt);
         } else {
-          tmp18 = tmp2(4043)(0);
+          tmp18 = tmp2(4044)(0);
         }
         obj2[5] = tmp18;
         obj2[6] = unactivatedFractionalPremiumUnits;

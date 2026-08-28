@@ -1,6 +1,6 @@
-// === Module 10437: MarketingComponentType ===
+// === Module 10453: MarketingComponentType ===
 
-// Module 10437 (MarketingComponentType)
+// Module 10453 (MarketingComponentType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/MarketingComponentType.tsx");

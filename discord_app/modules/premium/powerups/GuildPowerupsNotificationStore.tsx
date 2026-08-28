@@ -1,12 +1,12 @@
-// === Module 11971: getState ===
+// === Module 11990: getState ===
 
-// Module 11971 (getState)
+// Module 11990 (getState)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 11972 */;
-import closure_2 from "handleGameServerInstanceCreated" /* 4352 */;
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 11991 */;
+import closure_2 from "handleGameServerInstanceCreated" /* 4353 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "calculateAppliedBoosts" /* 4331 */;
+import closure_4 from "calculateAppliedBoosts" /* 4332 */;
 
 require = arg1;
 let closure_5 = {};

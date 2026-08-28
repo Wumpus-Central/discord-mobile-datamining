@@ -1,19 +1,19 @@
-// === Module 9845: getAutocompleterBoosterMap ===
+// === Module 9863: getAutocompleterBoosterMap ===
 
-// Module 9845 (getAutocompleterBoosterMap)
+// Module 9863 (getAutocompleterBoosterMap)
 import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
-import tDefault from "t" /* 4160 */;
-import getPathsFromURL from "getPathsFromURL" /* 4428 */;
-import CodedLinkType from "CodedLinkType" /* 4433 */;
-import NOOP from "NOOP" /* 5337 */;
-import NOOPDefault from "NOOP" /* 5337 */;
-import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5408 */;
-import getTransformedUserDefault from "getTransformedUser" /* 9848 */;
-import closure_3 from "handleUserUpdate" /* 9846 */;
-import closure_4 from "fromPath" /* 9847 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;
-import closure_6 from "markAllUserIdListsStale" /* 4098 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import tDefault from "t" /* 4161 */;
+import getPathsFromURL from "getPathsFromURL" /* 4429 */;
+import CodedLinkType from "CodedLinkType" /* 4434 */;
+import NOOP from "NOOP" /* 5350 */;
+import NOOPDefault from "NOOP" /* 5350 */;
+import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5421 */;
+import getTransformedUserDefault from "getTransformedUser" /* 9866 */;
+import closure_3 from "handleUserUpdate" /* 9864 */;
+import closure_4 from "fromPath" /* 9865 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1983 */;
+import closure_6 from "markAllUserIdListsStale" /* 4099 */;
+import closure_7 from "mergeGuildAvatar" /* 1923 */;
 
 require = arg1;
 function getAutocompleterBoosterMap(USER, options) {
@@ -370,8 +370,8 @@ prototype["queryTextChannels"] = function queryTextChannels(closure_1, _limit) {
   const self = this;
   if (this._include(AutocompleterResultTypes.TEXT_CHANNEL)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(5337).getBoosterMap(tmp);
-      const obj2 = blacklist(5337);
+      let boosterMap = blacklist(5350).getBoosterMap(tmp);
+      const obj2 = blacklist(5350);
     } else {
       boosterMap = {};
     }
@@ -418,8 +418,8 @@ prototype["queryGuilds"] = function queryGuilds(arg0, arg1) {
   const self = this;
   if (this._include(AutocompleterResultTypes.GUILD)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(5337).getBoosterMap(tmp);
-      const obj2 = blacklist(5337);
+      let boosterMap = blacklist(5350).getBoosterMap(tmp);
+      const obj2 = blacklist(5350);
     } else {
       boosterMap = {};
     }
@@ -526,8 +526,8 @@ prototype["queryGroupDMs"] = function queryGroupDMs(arg0, arg1) {
   if (this._include(AutocompleterResultTypes.GROUP_DM)) {
     const blacklist = self.options.blacklist;
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(5337).getBoosterMap(tmp);
-      const obj2 = blacklist(5337);
+      let boosterMap = blacklist(5350).getBoosterMap(tmp);
+      const obj2 = blacklist(5350);
     } else {
       boosterMap = {};
     }
@@ -559,7 +559,7 @@ prototype["queryApplications"] = function queryApplications(arg0, arg1) {
 };
 prototype["queryGameProfiles"] = function queryGameProfiles(query, _limit) {
   if (this._include(AutocompleterResultTypes.GAME_PROFILE)) {
-    let result = _require(9850).queryGamesAutocomplete(query);
+    let result = _require(9868).queryGamesAutocomplete(query);
     if (result == null) {
       result = [];
     }
@@ -601,7 +601,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
       obj = { type: null, record: null, score: null };
       obj[0] = tmp.LINK;
       obj[1] = closure_4.fromInviteCode(findCodedLinkResult.code);
-      let tmp3Result = tmp3(5337);
+      let tmp3Result = tmp3(5350);
       obj[2] = tmp3Result.calculateScore(11);
       const items = [obj];
       return items;
@@ -628,7 +628,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
               obj = { type: null, record: null, score: null };
               obj[0] = tmp.LINK;
               obj[1] = closure_4.fromPath(pathname);
-              tmp3Result = tmp3(5337);
+              tmp3Result = tmp3(5350);
               obj[2] = tmp3Result.calculateScore(11);
               const items1 = [obj];
               let items2 = items1;

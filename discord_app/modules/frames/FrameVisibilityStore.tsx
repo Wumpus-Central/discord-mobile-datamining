@@ -1,6 +1,6 @@
-// === Module 14028: isFramePooled ===
+// === Module 14047: isFramePooled ===
 
-// Module 14028 (isFramePooled)
+// Module 14047 (isFramePooled)
 import set from "set" /* 2 */;
 
 class FrameVisibilityStore {

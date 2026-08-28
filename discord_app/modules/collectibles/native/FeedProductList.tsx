@@ -1,20 +1,20 @@
-// === Module 15203: SkeletonGrid ===
+// === Module 15355: SkeletonGrid ===
 
-// Module 15203 (SkeletonGrid)
+// Module 15355 (SkeletonGrid)
 import noopAll from "noop" /* 19 */;
-import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 8810 */;
-import sharedValueDefault from "sharedValue" /* 14632 */;
-import ShopCardGridItemDefault from "ShopCardGridItem" /* 15205 */;
+import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 8827 */;
+import sharedValueDefault from "sharedValue" /* 14616 */;
+import ShopCardGridItemDefault from "ShopCardGridItem" /* 15357 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
   const tmp = callback();
-  let obj = num(15204);
+  let obj = num(15356);
   const cardLayout = obj.useCardLayout();
   ({ columns, cardWidth: num } = cardLayout);
   const items = [];

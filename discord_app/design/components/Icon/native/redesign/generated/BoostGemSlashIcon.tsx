@@ -1,10 +1,10 @@
-// === Module 12063: BoostGemSlashIcon ===
+// === Module 12082: BoostGemSlashIcon ===
 
-// Module 12063 (BoostGemSlashIcon)
+// Module 12082 (BoostGemSlashIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 12064 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 12083 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

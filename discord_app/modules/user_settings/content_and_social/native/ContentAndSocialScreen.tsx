@@ -1,17 +1,17 @@
-// === Module 15246: ContentAndSocialSettings ===
+// === Module 15398: ContentAndSocialSettings ===
 
-// Module 15246 (ContentAndSocialSettings)
+// Module 15398 (ContentAndSocialSettings)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4441 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15251 */;
+import Text from "Text" /* 4442 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15403 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7816 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7830 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
@@ -199,16 +199,16 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
     let obj2 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl2 = getSystemLocale.intl;
     const obj3 = { helpdeskArticle: null };
-    obj3[0] = tmp2(1995).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
+    obj3[0] = tmp2(1996).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
     obj2[2] = intl2.format(getSystemLocale.t.V8wClM, obj3);
     items[1] = callback2(Text.Text, obj2);
     obj[1] = items;
     tmp7 = callback3(closure_6, obj);
-    const tmp2Result = tmp2(1995);
+    const tmp2Result = tmp2(1996);
   } else {
     obj = { node: null };
     obj[0] = tmp5;
-    tmp7 = callback2(tmp2(14194), obj);
+    tmp7 = callback2(tmp2(14273), obj);
   }
   return tmp7;
 };

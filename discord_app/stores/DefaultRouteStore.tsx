@@ -1,6 +1,6 @@
-// === Module 4271: initialize ===
+// === Module 4272: initialize ===
 
-// Module 4271 (initialize)
+// Module 4272 (initialize)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import Storage3 from "Storage" /* 595 */;

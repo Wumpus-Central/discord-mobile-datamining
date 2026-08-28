@@ -1,9 +1,9 @@
-// === Module 14884: useDisplayNameStylesNewFonts ===
+// === Module 14869: useDisplayNameStylesNewFonts ===
 
-// Module 14884 (useDisplayNameStylesNewFonts)
+// Module 14869 (useDisplayNameStylesNewFonts)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "set" /* 14885 */;
-import items3 from "items3" /* 1934 */;
+import closure_3 from "set" /* 14870 */;
+import items3 from "items3" /* 1935 */;
 
 const require = arg1;
 ({ FLYWHEEL_EFFECTS: c4, FLYWHEEL_FONTS: c5 } = items3);

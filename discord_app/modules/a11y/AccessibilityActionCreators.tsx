@@ -1,11 +1,11 @@
-// === Module 14006: setFontSize ===
+// === Module 14025: setFontSize ===
 
-// Module 14006 (setFontSize)
+// Module 14025 (setFontSize)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4137 */;
+import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4138 */;
 import { SettingsOverrideReasonKeys as closure_5 } from "MAX_FAVORITES" /* 685 */;
 
 let result = require("set").fileFinishedImporting("modules/a11y/AccessibilityActionCreators.tsx");
@@ -80,7 +80,7 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(prefersR
   const useReducedMotion2 = closure_2.useReducedMotion;
   if (!useReducedMotion) {
     if (useReducedMotion2) {
-      let tmpResult = tmp(8145);
+      let tmpResult = tmp(8159);
       obj = { gifAutoPlay: null, animateEmoji: null, animateStickers: null };
       obj1 = { value: false, reasonKey: null };
       obj1[1] = constants.REDUCED_MOTION;
@@ -99,7 +99,7 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(prefersR
     useReducedMotion = !useReducedMotion2;
   }
   if (useReducedMotion) {
-    tmpResult = tmp(8145);
+    tmpResult = tmp(8159);
     const result1 = tmpResult.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers");
   }
 };

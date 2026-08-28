@@ -1,12 +1,12 @@
-// === Module 13267: initialize ===
+// === Module 13286: initialize ===
 
-// Module 13267 (initialize)
+// Module 13286 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "recomputeAffinities" /* 7337 */;
-import closure_1 from "hasConsented" /* 6006 */;
-import closure_2 from "markAllUserIdListsStale" /* 4098 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_0 from "recomputeAffinities" /* 7351 */;
+import closure_1 from "hasConsented" /* 6019 */;
+import closure_2 from "markAllUserIdListsStale" /* 4099 */;
+import closure_3 from "mergeGuildAvatar" /* 1923 */;
 
 let closure_4 = [];
 let c5 = false;

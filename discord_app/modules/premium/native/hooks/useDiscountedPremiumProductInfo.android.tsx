@@ -1,6 +1,6 @@
-// === Module 8170: useDiscountedPremiumProductInfo ===
+// === Module 8184: useDiscountedPremiumProductInfo ===
 
-// Module 8170 (useDiscountedPremiumProductInfo)
+// Module 8184 (useDiscountedPremiumProductInfo)
 import closure_2 from "noop" /* 19 */;
 import { CurrencyCodes } from "sum" /* 505 */;
 

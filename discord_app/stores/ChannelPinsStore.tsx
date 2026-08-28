@@ -1,16 +1,16 @@
-// === Module 11174: handleChannelDelete ===
+// === Module 11192: handleChannelDelete ===
 
-// Module 11174 (handleChannelDelete)
+// Module 11192 (handleChannelDelete)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_getSystemLocale" /* 1996 */;
+import closure_3 from "_getSystemLocale" /* 1997 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "trackCommunicationDisabled" /* 1992 */;
+import closure_5 from "trackCommunicationDisabled" /* 1993 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "reinjectEphemerals" /* 4688 */;
-import closure_8 from "markAllUserIdListsStale" /* 4098 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "reinjectEphemerals" /* 4701 */;
+import closure_8 from "markAllUserIdListsStale" /* 4099 */;
+import closure_9 from "mergeGuildAvatar" /* 1923 */;
 
 const require = arg1;
 function handleChannelDelete(arg0) {
@@ -131,15 +131,15 @@ obj = {
         if (-1 === findIndexResult) {
           const items1 = tmp20.items;
           obj = { message: null, pinnedAt: null };
-          obj[0] = id(4690).createMessageRecord(message.message);
+          obj[0] = id(4703).createMessageRecord(message.message);
           const _Date = Date;
           const date = new Date();
           obj[1] = date;
           items1.unshift(obj);
-          const obj6 = id(4690);
+          const obj6 = id(4703);
         } else {
-          tmp20.items[findIndexResult].message = id(4690).updateMessageRecord(tmp20.items[findIndexResult].message, message.message);
-          const obj4 = id(4690);
+          tmp20.items[findIndexResult].message = id(4703).updateMessageRecord(tmp20.items[findIndexResult].message, message.message);
+          const obj4 = id(4703);
         }
         const obj3 = applyDefault;
       } else {
@@ -158,7 +158,7 @@ obj = {
       const findIndexResult2 = applyDefault.findIndex(tmp20.items, (message) => message.message.id === id);
       if (-1 !== findIndexResult2) {
         message = tmp.message;
-        obj = id(4690);
+        obj = id(4703);
         const updateMessageRecordResult = obj.updateMessageRecord(message, message.message);
         if (updateMessageRecordResult !== message) {
           const items4 = tmp20.items;
@@ -187,7 +187,7 @@ obj = {
       } else {
         const items = tmp.items;
         tmp.items = items.slice();
-        tmp.items[findIndexResult].message = messageId(7278).handleExplicitMediaScanTimeoutForMessage(tmp.items[findIndexResult].message);
+        tmp.items[findIndexResult].message = messageId(7292).handleExplicitMediaScanTimeoutForMessage(tmp.items[findIndexResult].message);
       }
       const obj2 = applyDefault;
     }

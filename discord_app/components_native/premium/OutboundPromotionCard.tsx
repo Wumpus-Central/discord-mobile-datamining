@@ -1,17 +1,17 @@
-// === Module 13127: TermsAndConditionsActionSheet ===
+// === Module 13146: TermsAndConditionsActionSheet ===
 
-// Module 13127 (TermsAndConditionsActionSheet)
+// Module 13146 (TermsAndConditionsActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4435 */;
-import Text from "Text" /* 4441 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5573 */;
-import Background from "Background" /* 5574 */;
+import get_defaultRulesDefault from "get defaultRules" /* 4436 */;
+import Text from "Text" /* 4442 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5586 */;
+import Background from "Background" /* 5587 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function TermsAndConditionsActionSheet(termsAndConditions) {

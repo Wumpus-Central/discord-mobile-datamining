@@ -1,8 +1,8 @@
-// === Module 9015: ClearAfterValues ===
+// === Module 9033: ClearAfterValues ===
 
-// Module 9015 (ClearAfterValues)
+// Module 9033 (ClearAfterValues)
 import set from "set" /* 2 */;
-import StatusTypes from "StatusTypes" /* 9013 */;
+import StatusTypes from "StatusTypes" /* 9031 */;
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
 const items = [, , ];
@@ -10,7 +10,7 @@ const items = [, , ];
 const result = set.fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
 
 export default function computeInitialClearAfter() {
-  const CustomStatusSetting = _require(4134).CustomStatusSetting;
+  const CustomStatusSetting = _require(4135).CustomStatusSetting;
   const setting = CustomStatusSetting.getSetting();
   if (null != setting) {
     if ("" !== setting.expiresAtMs) {

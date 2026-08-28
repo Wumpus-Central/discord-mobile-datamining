@@ -1,6 +1,6 @@
-// === Module 7366: LinkType ===
+// === Module 7380: LinkType ===
 
-// Module 7366 (LinkType)
+// Module 7380 (LinkType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/applications/message_embed/MessageEmbedConstants.tsx");

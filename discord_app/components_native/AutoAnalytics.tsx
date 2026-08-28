@@ -1,30 +1,30 @@
-// === Module 16229: componentDidMount ===
+// === Module 16247: componentDidMount ===
 
-// Module 16229 (componentDidMount)
+// Module 16247 (componentDidMount)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4653 */;
-import isClickstreamEnabled from "isClickstreamEnabled" /* 7144 */;
-import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7452 */;
-import collectGuildThemeAnalyticsMetadata from "collectGuildThemeAnalyticsMetadata" /* 16230 */;
-import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 16231 */;
-import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 16232 */;
-import closure_3 from "getParticipants" /* 4461 */;
-import closure_4 from "_handleConnectionOpen" /* 5173 */;
-import closure_5 from "scheduledEventSort" /* 7204 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4666 */;
+import isClickstreamEnabled from "isClickstreamEnabled" /* 7158 */;
+import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7466 */;
+import collectGuildThemeAnalyticsMetadata from "collectGuildThemeAnalyticsMetadata" /* 16248 */;
+import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 16249 */;
+import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 16250 */;
+import closure_3 from "getParticipants" /* 4462 */;
+import closure_4 from "_handleConnectionOpen" /* 5186 */;
+import closure_5 from "scheduledEventSort" /* 7218 */;
 import closure_6 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1992 */;
+import closure_8 from "trackCommunicationDisabled" /* 1993 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "_detectH265HardwareDecode" /* 4496 */;
-import closure_11 from "handleConnectionInfoChange" /* 4539 */;
-import closure_12 from "createRTCConnection" /* 4519 */;
-import closure_13 from "handleConnectionOpen" /* 1981 */;
-import closure_14 from "handleConnectionOpen" /* 4267 */;
-import closure_15 from "filterPlayingActivities" /* 5175 */;
-import closure_16 from "updateUserGuildSettingsInternal" /* 4654 */;
-import closure_17 from "mergeGuildAvatar" /* 1922 */;
+import closure_10 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_11 from "handleConnectionInfoChange" /* 4540 */;
+import closure_12 from "createRTCConnection" /* 4520 */;
+import closure_13 from "handleConnectionOpen" /* 1982 */;
+import closure_14 from "handleConnectionOpen" /* 4268 */;
+import closure_15 from "filterPlayingActivities" /* 5188 */;
+import closure_16 from "updateUserGuildSettingsInternal" /* 4667 */;
+import closure_17 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
 import { isStaticChannelRoute } from "set" /* 1398 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -52,8 +52,8 @@ prototype["componentDidMount"] = function componentDidMount() {
     if (tmp) {
       obj1 = { channel_is_nsfw: null };
       obj1[0] = tmp2;
-      tmp18(4653).trackWithMetadata(tmp17.TEXT_IN_VOICE_OPENED, obj1);
-      const tmp18Result = tmp18(4653);
+      tmp18(4666).trackWithMetadata(tmp17.TEXT_IN_VOICE_OPENED, obj1);
+      const tmp18Result = tmp18(4666);
     }
     const obj11 = collectGuildAnalyticsMetadata;
     tmp17 = constants;
@@ -226,8 +226,8 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
     if (isTextInVoice) {
       obj4 = { channel_is_nsfw: null };
       obj4[0] = isNSFWChannel;
-      tmp44(4653).trackWithMetadata(tmp43.TEXT_IN_VOICE_OPENED, obj4);
-      const tmp44Result = tmp44(4653);
+      tmp44(4666).trackWithMetadata(tmp43.TEXT_IN_VOICE_OPENED, obj4);
+      const tmp44Result = tmp44(4666);
     }
     tmp43 = constants;
     tmp44 = require;

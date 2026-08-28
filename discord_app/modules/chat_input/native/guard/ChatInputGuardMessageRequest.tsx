@@ -1,9 +1,9 @@
-// === Module 11918: ? ===
+// === Module 11937: ? ===
 
-// Module 11918
-import ChatInputGuardDefault from "ChatInputGuard" /* 11927 */;
+// Module 11937
+import ChatInputGuardDefault from "ChatInputGuard" /* 11946 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "mergeGuildAvatar" /* 1923 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -63,7 +63,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
               obj2[0] = arg1;
               return obj2;
             } else {
-              obj = lib(4456);
+              obj = lib(4457);
               obj.transitionToChannel(lib.id, { navigationReplace: true });
               c3 = 3;
               return { value: "HermesInternal", done: null };
@@ -154,8 +154,8 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
   }
   let obj = channel(1500);
   importDefault = obj.useNavigation();
-  const isMessageRequestRestrictedViewer = channel(11919).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
-  let obj2 = channel(11919);
+  const isMessageRequestRestrictedViewer = channel(11938).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
+  let obj2 = channel(11938);
   const items = [_onAcceptClick];
   const stateFromStores = channel(589).useStateFromStores(items, () => _onAcceptClick.getUser(channel.getRecipientId()));
   const obj3 = channel(589);
@@ -173,7 +173,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
 
     }
   };
-  const messageRequestActions = channel(11921).useMessageRequestActions(obj);
+  const messageRequestActions = channel(11940).useMessageRequestActions(obj);
   ({ acceptMessageRequest: c2, rejectMessageRequest: c3, isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected } = messageRequestActions);
   let tmp6 = isAcceptLoading;
   if (!isAcceptLoading) {
@@ -189,7 +189,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
     tmp6 = isOptimisticRejected;
   }
   obj = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  const obj4 = channel(11921);
+  const obj4 = channel(11940);
   const tmp7 = _onRejectClick;
   let intl = tmp(1236).intl;
   obj[1] = intl.string(channel(1236).t["e/eQVB"]);

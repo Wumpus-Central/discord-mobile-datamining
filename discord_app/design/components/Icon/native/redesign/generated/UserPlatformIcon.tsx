@@ -1,10 +1,10 @@
-// === Module 4384: UserPlatformIcon ===
+// === Module 4385: UserPlatformIcon ===
 
-// Module 4384 (UserPlatformIcon)
+// Module 4385 (UserPlatformIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 4385 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 4386 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

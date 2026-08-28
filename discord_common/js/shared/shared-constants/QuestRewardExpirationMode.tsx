@@ -1,6 +1,6 @@
-// === Module 10848: QuestRewardExpirationMode ===
+// === Module 10866: QuestRewardExpirationMode ===
 
-// Module 10848 (QuestRewardExpirationMode)
+// Module 10866 (QuestRewardExpirationMode)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestRewardExpirationMode.tsx");

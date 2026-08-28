@@ -1,16 +1,16 @@
-// === Module 13148: PerkText ===
+// === Module 13167: PerkText ===
 
-// Module 13148 (PerkText)
+// Module 13167 (PerkText)
 import nDefault from "n" /* 689 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4441 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 11992 */;
-import setDefault from "set" /* 13149 */;
+import Text from "Text" /* 4442 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12011 */;
+import setDefault from "set" /* 13168 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "calculateAppliedBoosts" /* 4331 */;
+import closure_5 from "calculateAppliedBoosts" /* 4332 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function PerkText(children) {
@@ -59,7 +59,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       if (null != arr) {
         str2 = "";
         if (0 !== arr.length) {
-          let first = tmp2(13150)(arr);
+          let first = tmp2(13169)(arr);
           if (1 === first.length) {
             obj = { powerup: null };
             first = first[0];
@@ -74,14 +74,14 @@ export default function GuildPowerupsMarketingHeader(guild) {
             const obj3 = { powerup: null };
             obj3[0] = first[1];
             obj1[1] = tmp6(PerkText, obj3);
-            formatResult = intl2.format(tmp2(2401).MNO3sG, obj1);
+            formatResult = intl2.format(tmp2(2402).MNO3sG, obj1);
           }
         }
       }
       const obj4 = { perks: null };
       obj4[0] = str2;
-      obj[2] = intl.format(tmp2(2401)["7lwpzR"], obj4);
-      obj[1] = jsx(guild(4441).Text, { style: null, variant: "text-sm/semibold", children: null });
+      obj[2] = intl.format(tmp2(2402)["7lwpzR"], obj4);
+      obj[1] = jsx(guild(4442).Text, { style: null, variant: "text-sm/semibold", children: null });
       return <View style={null} variant="text-sm/semibold">{null}</View>;
     }
   }

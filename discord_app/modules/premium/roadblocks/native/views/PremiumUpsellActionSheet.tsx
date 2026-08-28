@@ -1,26 +1,26 @@
-// === Module 7528: AlwaysCompressImagesSwitch ===
+// === Module 7542: AlwaysCompressImagesSwitch ===
 
-// Module 7528 (AlwaysCompressImagesSwitch)
+// Module 7542 (AlwaysCompressImagesSwitch)
 import set from "set" /* 500 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5445 */;
-import useAPNGPlayerControls from "useAPNGPlayerControls" /* 8449 */;
+import preloadDefault from "preload" /* 5458 */;
+import useAPNGPlayerControls from "useAPNGPlayerControls" /* 8463 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import closure_7 from "handleThemeChange" /* 1302 */;
 import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_9 from "handleConnectionOpen" /* 4267 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import GuildFeatures from "GuildFeatures" /* 1924 */;
+import closure_9 from "handleConnectionOpen" /* 4268 */;
+import closure_10 from "mergeGuildAvatar" /* 1923 */;
+import GuildFeatures from "GuildFeatures" /* 1925 */;
 import ME from "ME" /* 676 */;
-import { ApplicationStreamFPS } from "RESOLUTION_720" /* 4504 */;
-import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 7529 */;
-import { MAX_SCHEDULED_MESSAGES_PER_USER as closure_21 } from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 7523 */;
+import { ApplicationStreamFPS } from "RESOLUTION_720" /* 4505 */;
+import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 7543 */;
+import { MAX_SCHEDULED_MESSAGES_PER_USER as closure_21 } from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 7537 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function AlwaysCompressImagesSwitch(isKestrelTreatment) {
@@ -48,8 +48,8 @@ function AlwaysCompressImagesSwitch(isKestrelTreatment) {
       obj1[0] = tmp.compressionHint;
       const intl2 = tmp2(1236).intl;
       obj1[2] = intl2.string(tmp2(1236).t["wC0+Ph"]);
-      obj[5] = callback2(tmp2(4441).Text, obj1);
-      obj[1] = callback2(tmp2(5945).TableSwitchRow, obj);
+      obj[5] = callback2(tmp2(4442).Text, obj1);
+      obj[1] = callback2(tmp2(5958).TableSwitchRow, obj);
       tmp6 = callback2(View, obj);
     }
   }

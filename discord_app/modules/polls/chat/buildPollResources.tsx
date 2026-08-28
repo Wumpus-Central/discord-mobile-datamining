@@ -1,8 +1,8 @@
-// === Module 8066: ? ===
+// === Module 8080: ? ===
 
-// Module 8066
+// Module 8080
 import set from "set" /* 2 */;
-import buildPlatformPollResources from "buildPlatformPollResources" /* 8062 */;
+import buildPlatformPollResources from "buildPlatformPollResources" /* 8076 */;
 import apply from "apply" /* 12 */;
 
 const memoizeResult = apply.memoize(function buildPollResources(arg0) {

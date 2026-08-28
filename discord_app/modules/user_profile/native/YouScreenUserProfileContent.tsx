@@ -1,28 +1,28 @@
-// === Module 16295: YouAvatar ===
+// === Module 16313: YouAvatar ===
 
-// Module 16295 (YouAvatar)
+// Module 16313 (YouAvatar)
 import set from "set" /* 500 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8462 */;
-import OpenableUserProfileAvatarDefault from "OpenableUserProfileAvatar" /* 8487 */;
-import WidgetRendererDefault from "WidgetRenderer" /* 8725 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12409 */;
+import useSharedStylesDefault from "useSharedStyles" /* 8476 */;
+import OpenableUserProfileAvatarDefault from "OpenableUserProfileAvatar" /* 8501 */;
+import WidgetRendererDefault from "WidgetRenderer" /* 8741 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12428 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { useIsContentShown } from "withContent" /* 1383 */;
-import closure_8 from "filterPlayingActivities" /* 5175 */;
-import closure_9 from "createUserWidgetFromServer" /* 7299 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8488 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 5953 */;
+import closure_8 from "filterPlayingActivities" /* 5188 */;
+import closure_9 from "createUserWidgetFromServer" /* 7313 */;
+import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8502 */;
+import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 5966 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(16288).trackYouTabAvatarPress();
-    const obj = callback(16288);
-    const result1 = callback(15873).showYouAccountActionSheet();
+    const result = callback(16306).trackYouTabAvatarPress();
+    const obj = callback(16306);
+    const result1 = callback(15891).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();

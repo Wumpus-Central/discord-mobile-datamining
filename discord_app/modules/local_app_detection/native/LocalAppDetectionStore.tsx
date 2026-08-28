@@ -1,10 +1,10 @@
-// === Module 13277: initialize ===
+// === Module 13296: initialize ===
 
-// Module 13277 (initialize)
+// Module 13296 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "hasConsented" /* 6006 */;
+import closure_4 from "hasConsented" /* 6019 */;
 import { Consents } from "ME" /* 676 */;
 
 let object = arg1;
@@ -58,7 +58,7 @@ prototype["isAppInstalled"] = function isAppInstalled(nextResult) {
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   const self = this;
   const items = [];
-  const iter = object(13278).ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
+  const iter = object(13297).ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
@@ -76,8 +76,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
     continue;
   }
   if (items.length > 0) {
-    object(13279).detectLocalApps(items);
-    const obj = object(13279);
+    object(13298).detectLocalApps(items);
+    const obj = object(13298);
   }
 };
 prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionComplete(result) {

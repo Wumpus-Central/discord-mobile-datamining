@@ -1,25 +1,25 @@
-// === Module 4161: presentAddedFriendToast ===
+// === Module 4162: presentAddedFriendToast ===
 
-// Module 4161 (presentAddedFriendToast)
+// Module 4162 (presentAddedFriendToast)
 import set from "set" /* 2 */;
 import v1 from "v1" /* 514 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import dispatcherDefault from "dispatcher" /* 4162 */;
-import FriendsIcon from "FriendsIcon" /* 4163 */;
-import UserPlatformIcon from "UserPlatformIcon" /* 4384 */;
-import UserMinusIcon from "UserMinusIcon" /* 4386 */;
-import LinkIcon from "LinkIcon" /* 4388 */;
-import SendMessageIcon from "SendMessageIcon" /* 4390 */;
-import CopyIcon from "CopyIcon" /* 4392 */;
-import DownloadIcon from "DownloadIcon" /* 4394 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4396 */;
-import XLargeIcon2 from "XLargeIcon" /* 4398 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4400 */;
-import TrashIcon from "TrashIcon" /* 4403 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4405 */;
-import ClockIcon from "ClockIcon" /* 4408 */;
+import dispatcherDefault from "dispatcher" /* 4163 */;
+import FriendsIcon from "FriendsIcon" /* 4164 */;
+import UserPlatformIcon from "UserPlatformIcon" /* 4385 */;
+import UserMinusIcon from "UserMinusIcon" /* 4387 */;
+import LinkIcon from "LinkIcon" /* 4389 */;
+import SendMessageIcon from "SendMessageIcon" /* 4391 */;
+import CopyIcon from "CopyIcon" /* 4393 */;
+import DownloadIcon from "DownloadIcon" /* 4395 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4397 */;
+import XLargeIcon2 from "XLargeIcon" /* 4399 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4401 */;
+import TrashIcon from "TrashIcon" /* 4404 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4406 */;
+import ClockIcon from "ClockIcon" /* 4409 */;
 
 const VerificationCriteria = ME.VerificationCriteria;
 const result = set.fileFinishedImporting("modules/toast/native/ToastUtils.tsx");
@@ -45,7 +45,7 @@ export const presentFriendRequestAcceptedToast = function presentFriendRequestAc
     obj[0] = username.username;
     stringResult = intl.formatToPlainString(getSystemLocale.t.b3eoD4, obj);
   }
-  obj = { key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4382).UserPlusIcon, iconColor: "status-positive" };
+  obj = { key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4383).UserPlusIcon, iconColor: "status-positive" };
   obj.open(obj);
 };
 export const presentGameFriendRequestAcceptedToast = function presentGameFriendRequestAcceptedToast() {
@@ -181,9 +181,9 @@ export const presentNoiseCancellation = function presentNoiseCancellation(arg0) 
   }
   obj = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: null, iconColor: null };
   if (arg0) {
-    let XLargeIcon = tmp4(4396).CheckmarkLargeIcon;
+    let XLargeIcon = tmp4(4397).CheckmarkLargeIcon;
   } else {
-    XLargeIcon = tmp4(4398).XLargeIcon;
+    XLargeIcon = tmp4(4399).XLargeIcon;
   }
   obj[2] = XLargeIcon;
   let str = "icon-feedback-critical";

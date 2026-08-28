@@ -1,10 +1,10 @@
-// === Module 7779: generateMessageRowData ===
+// === Module 7793: generateMessageRowData ===
 
-// Module 7779 (generateMessageRowData)
+// Module 7793 (generateMessageRowData)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createThreadEmbedDefault from "createThreadEmbed" /* 7782 */;
-import closure_3 from "handleMessageSendFailedAutomod" /* 7780 */;
-import { RowType } from "Changeset" /* 7775 */;
+import createThreadEmbedDefault from "createThreadEmbed" /* 7796 */;
+import closure_3 from "handleMessageSendFailedAutomod" /* 7794 */;
+import { RowType } from "Changeset" /* 7789 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
@@ -37,7 +37,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
   obj[9] = truncation;
   obj[10] = tmp3;
   if (overrideBackgroundHighlight == null) {
-    let tmp4Result = tmp4(7949);
+    let tmp4Result = tmp4(7963);
     obj = { message: null, theme: null, isEditing: null, isAutomodBlockedMessage: null };
     obj[0] = message;
     obj[1] = theme;
@@ -46,7 +46,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     overrideBackgroundHighlight = tmp4Result.createBackgroundHighlight(obj);
   }
   obj[11] = overrideBackgroundHighlight;
-  tmp4Result = tmp4(7949);
+  tmp4Result = tmp4(7963);
   let canReply = options.enableSwipeActions;
   if (canReply) {
     canReply = canShowImages.canReply;

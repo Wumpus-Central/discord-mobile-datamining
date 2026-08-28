@@ -1,11 +1,11 @@
-// === Module 13140: GiftPurchaseButton ===
+// === Module 13159: GiftPurchaseButton ===
 
-// Module 13140 (GiftPurchaseButton)
+// Module 13159 (GiftPurchaseButton)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 4113 */;
-import closure_7 from "updateProduct" /* 6036 */;
+import closure_6 from "reset" /* 4114 */;
+import closure_7 from "updateProduct" /* 6049 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -97,7 +97,7 @@ export default function GiftPurchaseButton(style) {
           }
         } else if (1 === tmp7) {
           premiumType = 0;
-          obj1 = closure_1_1(4810);
+          obj1 = closure_1_1(4823);
           const obj3 = { title: null, body: null };
           const intl = closure_1_0(1236).intl;
           obj3[0] = intl.string(closure_1_0(1236).t.R0RpRX);
@@ -120,10 +120,10 @@ export default function GiftPurchaseButton(style) {
         } else {
           closure_0 = arg1;
           premiumType = 0;
-          premiumTypeFromPlanId = closure_1_0(4107).getPremiumTypeFromPlanId(closure_0);
+          premiumTypeFromPlanId = closure_1_0(4108).getPremiumTypeFromPlanId(closure_0);
           premiumType = premiumTypeFromPlanId.premiumType;
           planInterval = premiumTypeFromPlanId.planInterval;
-          const obj9 = closure_1_0(4107);
+          const obj9 = closure_1_0(4108);
           const obj5 = { recipientUserId: null, premiumType: null, planInterval: null, analyticsLocation: null, analyticsLocations: null, order: null };
           obj5[0] = premiumType;
           obj5[1] = premiumType;
@@ -131,7 +131,7 @@ export default function GiftPurchaseButton(style) {
           obj5[3] = premiumTypeFromPlanId;
           obj5[4] = c4;
           obj5[5] = closure_0;
-          closure_1_0(10373).openGiftModal(obj5);
+          closure_1_0(10391).openGiftModal(obj5);
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }

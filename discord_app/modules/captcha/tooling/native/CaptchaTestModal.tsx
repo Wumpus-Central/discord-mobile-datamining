@@ -1,14 +1,14 @@
-// === Module 15374: CaptchaTestScreen ===
+// === Module 15216: CaptchaTestScreen ===
 
-// Module 15374 (CaptchaTestScreen)
+// Module 15216 (CaptchaTestScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import { HCAPTCHA_DIFFICULTY_OPTIONS as prop, CAPTCHA_DECIDER_TYPE_OPTIONS as prop1 } from "found" /* 15375 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import { HCAPTCHA_DIFFICULTY_OPTIONS as prop, CAPTCHA_DECIDER_TYPE_OPTIONS as prop1 } from "found" /* 15217 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -227,5 +227,5 @@ export default function CaptchaTestModal() {
   let obj = { screens: memo, initialRouteName: constants.TEST_CAPTCHA, headerBackTitle: null };
   const intl = _require(1236).intl;
   obj[2] = intl.string(_require(1236).t["13/7kX"]);
-  return callback(_require(5960).Navigator, obj);
+  return callback(_require(5973).Navigator, obj);
 };

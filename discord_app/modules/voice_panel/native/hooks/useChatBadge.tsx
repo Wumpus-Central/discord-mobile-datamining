@@ -1,7 +1,7 @@
-// === Module 16624: useChatBadge ===
+// === Module 16642: useChatBadge ===
 
-// Module 16624 (useChatBadge)
-import closure_2 from "generateOldThreadCutoff" /* 4460 */;
+// Module 16642 (useChatBadge)
+import closure_2 from "generateOldThreadCutoff" /* 4461 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useChatBadge.tsx");

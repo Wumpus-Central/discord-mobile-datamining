@@ -1,12 +1,12 @@
-// === Module 17302: getDeliveredNotifications ===
+// === Module 17320: getDeliveredNotifications ===
 
-// Module 17302 (getDeliveredNotifications)
+// Module 17320 (getDeliveredNotifications)
 import timestampDefault from "timestamp" /* 3 */;
-import initializeDefault from "initialize" /* 5438 */;
+import initializeDefault from "initialize" /* 5451 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateGuildUnreadSentinel" /* 7314 */;
-import closure_6 from "generateOldThreadCutoff" /* 4460 */;
+import closure_5 from "updateGuildUnreadSentinel" /* 7328 */;
+import closure_6 from "generateOldThreadCutoff" /* 4461 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 let require = arg1;
@@ -215,8 +215,8 @@ let prototype = function NativeNotificationsManager() {
   applyArgumentsResult.handleAck = function handleAck(channelId) {
     channelId = channelId.channelId;
     if (obj.isIOS()) {
-      const result = callback(9578).setApplicationIconBadgeNumber(totalMentionCount.getTotalMentionCount());
-      const obj2 = callback(9578);
+      const result = callback(9596).setApplicationIconBadgeNumber(totalMentionCount.getTotalMentionCount());
+      const obj2 = callback(9596);
     }
     if (null != channelId) {
       const DCDNotificationManager = closure_4.DCDNotificationManager;

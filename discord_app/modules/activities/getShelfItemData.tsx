@@ -1,7 +1,7 @@
-// === Module 9379: getShelfItemData ===
+// === Module 9397: getShelfItemData ===
 
-// Module 9379 (getShelfItemData)
-import closure_0 from "addApplication" /* 4486 */;
+// Module 9397 (getShelfItemData)
+import closure_0 from "addApplication" /* 4487 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/getShelfItemData.tsx");
 

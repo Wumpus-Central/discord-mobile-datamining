@@ -1,20 +1,20 @@
-// === Module 17233: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
+// === Module 17251: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
 
-// Module 17233 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
+// Module 17251 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
 import noopAll from "noop" /* 19 */;
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4441 */;
-import Button2 from "Button" /* 4880 */;
-import Background from "Background" /* 5574 */;
-import BottomSheetModal from "BottomSheetModal" /* 5576 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17234 */;
+import Text from "Text" /* 4442 */;
+import Button2 from "Button" /* 4893 */;
+import Background from "Background" /* 5587 */;
+import BottomSheetModal from "BottomSheetModal" /* 5589 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17252 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 noopAll;

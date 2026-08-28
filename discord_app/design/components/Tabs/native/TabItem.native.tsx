@@ -1,11 +1,11 @@
-// === Module 9188: TabItemCount ===
+// === Module 9206: TabItemCount ===
 
-// Module 9188 (TabItemCount)
+// Module 9206 (TabItemCount)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import importDefaultResult from "module_4185" /* 4185 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import importDefaultResult from "module_4186" /* 4186 */;
 
 const require = arg1;
 function TabItemCount(arg0) {

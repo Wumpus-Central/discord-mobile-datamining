@@ -1,10 +1,10 @@
-// === Module 16996: handleChannelDelete ===
+// === Module 17014: handleChannelDelete ===
 
-// Module 16996 (handleChannelDelete)
-import initializeDefault from "initialize" /* 5438 */;
-import getNextPositionFromChannels from "getNextPositionFromChannels" /* 10225 */;
+// Module 17014 (handleChannelDelete)
+import initializeDefault from "initialize" /* 5451 */;
+import getNextPositionFromChannels from "getNextPositionFromChannels" /* 10243 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import items from "items" /* 15703 */;
+import items from "items" /* 15721 */;
 import { NOOP } from "ME" /* 676 */;
 
 require = arg1;
@@ -37,9 +37,9 @@ function handleThreadMembersUpdate(addedMembers) {
   let id;
   id = store.getId();
   if (tmp2) {
-    const result = id(10225).autoAddJoinedThreadToFavorites(addedMembers.id);
+    const result = id(10243).autoAddJoinedThreadToFavorites(addedMembers.id);
     result.catch(NOOP);
-    const obj = id(10225);
+    const obj = id(10243);
   }
 }
 function handleThreadCreate(channel) {

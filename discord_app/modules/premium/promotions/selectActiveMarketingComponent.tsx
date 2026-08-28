@@ -1,6 +1,6 @@
-// === Module 10395: comparePriorityDescending ===
+// === Module 10413: comparePriorityDescending ===
 
-// Module 10395 (comparePriorityDescending)
+// Module 10413 (comparePriorityDescending)
 import set from "set" /* 2 */;
 
 function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {

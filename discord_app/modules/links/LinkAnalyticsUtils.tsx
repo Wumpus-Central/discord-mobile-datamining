@@ -1,11 +1,11 @@
-// === Module 8577: SERVER_INVITE ===
+// === Module 8592: SERVER_INVITE ===
 
-// Module 8577 (SERVER_INVITE)
+// Module 8592 (SERVER_INVITE)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import ME2 from "ME" /* 4640 */;
+import ME2 from "ME" /* 4641 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = { MESSAGE: "Discord Message Link", CHANNEL: "Discord Channel Link", SERVER_INVITE: "Discord Server Invite", GIFT: "Discord Gift Link", UNKNOWN: "Unknown", DISCOVERY: "Discord Discovery Link" };

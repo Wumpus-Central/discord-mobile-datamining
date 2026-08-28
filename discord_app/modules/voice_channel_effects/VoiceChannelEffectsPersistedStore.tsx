@@ -1,10 +1,10 @@
-// === Module 6143: initialize ===
+// === Module 6156: initialize ===
 
-// Module 6143 (initialize)
+// Module 6156 (initialize)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 6144 */;
+import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 6157 */;
 
 let closure_1 = VoiceChannelEffectAnimationType.VoiceChannelEffectAnimationType;
 const PersistedStore = initializeDefault.PersistedStore;

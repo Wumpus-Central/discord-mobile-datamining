@@ -1,8 +1,8 @@
-// === Module 5521: processCallbacks ===
+// === Module 5534: processCallbacks ===
 
-// Module 5521 (processCallbacks)
-import closure_0 from "initialize" /* 5522 */;
-import closure_1 from "_handleConnectionOpen" /* 5173 */;
+// Module 5534 (processCallbacks)
+import closure_0 from "initialize" /* 5535 */;
+import closure_1 from "_handleConnectionOpen" /* 5186 */;
 import importDefaultResult from "dispatcher" /* 709 */;
 
 function processCallbacks() {

@@ -1,11 +1,11 @@
-// === Module 14728: enableSameAsDeviceTheme ===
+// === Module 14713: enableSameAsDeviceTheme ===
 
-// Module 14728 (enableSameAsDeviceTheme)
+// Module 14713 (enableSameAsDeviceTheme)
 import getThemeForColor from "getThemeForColor" /* 1347 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import setSystemTheme from "setSystemTheme" /* 4292 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 8145 */;
-import closure_3 from "isSyncedModeThemesEnabled" /* 4265 */;
+import setSystemTheme from "setSystemTheme" /* 4293 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 8159 */;
+import closure_3 from "isSyncedModeThemesEnabled" /* 4266 */;
 import closure_4 from "handleThemeChange" /* 1302 */;
 import SystemThemeState from "SystemThemeState" /* 1305 */;
 
@@ -33,25 +33,25 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(arg0) {
           id = gradientPreset.id;
         }
       }
-      let tmp6Result = tmp6(4292);
+      let tmp6Result = tmp6(4293);
       obj = {};
       obj[tmp8] = customThemeBaseTheme;
       const result1 = tmp6Result.updateThemePreferences(obj);
       if (null != arg0) {
-        tmp6Result = tmp6(4292);
+        tmp6Result = tmp6(4293);
         obj = { customUserThemeSettings: null };
         obj[0] = arg0;
         const result2 = tmp6Result.updateSyncedClientTheme(tmp8, obj);
       } else if (null != tmp9) {
         obj1 = { backgroundGradientPresetId: null };
         obj1[0] = tmp9;
-        const result3 = tmp6(4292).updateSyncedClientTheme(tmp8, obj1);
-        const tmp6Result1 = tmp6(4292);
+        const result3 = tmp6(4293).updateSyncedClientTheme(tmp8, obj1);
+        const tmp6Result1 = tmp6(4293);
       } else {
         obj2 = { theme: null };
         obj2[0] = customThemeBaseTheme;
-        const result4 = tmp6(4292).updateSyncedClientTheme(tmp8, obj2);
-        const tmp6Result2 = tmp6(4292);
+        const result4 = tmp6(4293).updateSyncedClientTheme(tmp8, obj2);
+        const tmp6Result2 = tmp6(4293);
       }
       const obj4 = AccessibilityAnnouncer;
     }

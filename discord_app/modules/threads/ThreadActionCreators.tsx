@@ -1,20 +1,20 @@
-// === Module 7442: patchThread ===
+// === Module 7456: patchThread ===
 
-// Module 7442 (patchThread)
+// Module 7456 (patchThread)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4653 */;
-import dispatcherDefault2 from "dispatcher" /* 7454 */;
-import setActiveCommand from "setActiveCommand" /* 7455 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4666 */;
+import dispatcherDefault2 from "dispatcher" /* 7468 */;
+import setActiveCommand from "setActiveCommand" /* 7469 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1395 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_8 from "listKey" /* 7443 */;
-import { PAGE_SIZE } from "listKey" /* 7443 */;
-import closure_10 from "storeThread" /* 4091 */;
-import closure_11 from "handleSummarizeThreadFinish" /* 7453 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_8 from "listKey" /* 7457 */;
+import { PAGE_SIZE } from "listKey" /* 7457 */;
+import closure_10 from "storeThread" /* 4092 */;
+import closure_11 from "handleSummarizeThreadFinish" /* 7467 */;
 import ME from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
 

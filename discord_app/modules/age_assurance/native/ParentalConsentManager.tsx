@@ -1,9 +1,9 @@
-// === Module 16950: onPostConnectionOpen ===
+// === Module 16968: onPostConnectionOpen ===
 
-// Module 16950 (onPostConnectionOpen)
-import initializeDefault from "initialize" /* 5438 */;
+// Module 16968 (onPostConnectionOpen)
+import initializeDefault from "initialize" /* 5451 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "mergeGuildAvatar" /* 1923 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 let require = arg1;

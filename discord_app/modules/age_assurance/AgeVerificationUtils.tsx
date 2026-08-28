@@ -1,28 +1,28 @@
-// === Module 4686: useAgeVerificationRunner ===
+// === Module 4699: useAgeVerificationRunner ===
 
-// Module 4686 (useAgeVerificationRunner)
+// Module 4699 (useAgeVerificationRunner)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import messagesProxyDefault from "messagesProxy" /* 2887 */;
-import isFeatureAgeGated2 from "isFeatureAgeGated" /* 4140 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5319 */;
-import usePreviousDefault from "usePrevious" /* 8508 */;
-import apexExperiment from "apexExperiment" /* 11419 */;
-import isManualAgeAssuranceFallbackEnabled from "isManualAgeAssuranceFallbackEnabled" /* 13331 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1956 */;
+import messagesProxyDefault from "messagesProxy" /* 2888 */;
+import isFeatureAgeGated2 from "isFeatureAgeGated" /* 4141 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5332 */;
+import usePreviousDefault from "usePrevious" /* 8522 */;
+import apexExperiment from "apexExperiment" /* 11438 */;
+import isManualAgeAssuranceFallbackEnabled from "isManualAgeAssuranceFallbackEnabled" /* 13350 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "initialize" /* 4687 */;
-import closure_7 from "getRegionalFeatureConfig" /* 4141 */;
+import closure_6 from "initialize" /* 4700 */;
+import closure_7 from "getRegionalFeatureConfig" /* 4142 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "reinjectEphemerals" /* 4688 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "initialize" /* 8640 */;
-import { FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS as closure_12 } from "set" /* 8614 */;
+import closure_9 from "reinjectEphemerals" /* 4701 */;
+import closure_10 from "mergeGuildAvatar" /* 1923 */;
+import closure_11 from "initialize" /* 8656 */;
+import { FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS as closure_12 } from "set" /* 8629 */;
 import ME from "ME" /* 676 */;
 import result from "result" /* 1221 */;
-import { SafetyToastType } from "SafetyToastType" /* 8601 */;
+import { SafetyToastType } from "SafetyToastType" /* 8616 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -206,17 +206,17 @@ function useShouldCallReactiveCheck() {
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
   }
-  let tmp5 = prop !== tmp(1955).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
+  let tmp5 = prop !== tmp(1956).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
   if (tmp5) {
     let prop1;
     if (stateFromStores != null) {
       prop1 = stateFromStores.ageVerificationStatus;
     }
-    tmp5 = prop1 !== tmp(1955).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp5 = prop1 !== tmp(1956).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   _require = tmp5;
-  let tmpResult = tmp(4140);
-  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5319).AgeGatedFeature.REACTIVE_CHECK);
+  let tmpResult = tmp(4141);
+  const isFeatureAgeGated = tmpResult.useIsFeatureAgeGated(tmp(5332).AgeGatedFeature.REACTIVE_CHECK);
   tmpResult = tmp(589);
   const items1 = [closure_11];
   const items2 = [tmp5, isFeatureAgeGated];
@@ -244,11 +244,11 @@ function shouldCallReactiveCheck() {
     if (currentUser != null) {
       prop1 = currentUser.ageVerificationStatus;
     }
-    tmp5 = prop1 !== tmp3(1955).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp5 = prop1 !== tmp3(1956).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   let tmp7 = !tmp5;
   if (!tmp5) {
-    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5319).AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5332).AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
       isFeatureAgeGatedResult = closure_11.shouldCallReactiveCheck();
     }
@@ -348,10 +348,10 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
   }
   let tmp5 = prop !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (tmp5) {
-    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5319).AgeGatedFeature.REACTIVE_CHECK);
+    const isFeatureAgeGatedResult = closure_7.isFeatureAgeGated(tmp3(5332).AgeGatedFeature.REACTIVE_CHECK);
     let tmp8 = !isFeatureAgeGatedResult;
     if (isFeatureAgeGatedResult) {
-      tmp8 = prop !== tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+      tmp8 = prop !== tmp3(1956).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
     }
     tmp5 = tmp8;
   }
@@ -367,7 +367,7 @@ export const useShouldShowTiggerPawtect = function useShouldShowTiggerPawtect() 
     if (stateFromStores != null) {
       prop = stateFromStores.ageVerificationStatus;
     }
-    isFeatureAgeGated = prop === tmp(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    isFeatureAgeGated = prop === tmp(1956).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   let prop1;
   if (stateFromStores != null) {
@@ -401,8 +401,8 @@ export const isVerifiedAdult = function isVerifiedAdult() {
   }
   let tmp5 = prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (!tmp5) {
-    tmp5 = closure_7.isFeatureAgeGated(tmp3(5319).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
-    const tmp7 = closure_7.isFeatureAgeGated(tmp3(5319).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    tmp5 = closure_7.isFeatureAgeGated(tmp3(5332).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1956).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    const tmp7 = closure_7.isFeatureAgeGated(tmp3(5332).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1956).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   return tmp5;
 };
@@ -416,7 +416,7 @@ export const useIsVerifiedAdult = function useIsVerifiedAdult() {
     if (stateFromStores != null) {
       prop = stateFromStores.ageVerificationStatus;
     }
-    isFeatureAgeGated = prop === tmp(1955).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+    isFeatureAgeGated = prop === tmp(1956).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   }
   let prop1;
   if (stateFromStores != null) {
@@ -576,13 +576,13 @@ export const useIsAgeVerified = function useIsAgeVerified() {
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
   }
-  let tmp5 = prop !== tmp(1955).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
+  let tmp5 = prop !== tmp(1956).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
   if (tmp5) {
     let prop1;
     if (stateFromStores != null) {
       prop1 = stateFromStores.ageVerificationStatus;
     }
-    tmp5 = prop1 !== tmp(1955).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp5 = prop1 !== tmp(1956).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   return tmp5;
 };
@@ -694,25 +694,39 @@ export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetS
   }
   return stringResult;
 };
-export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationGetStartedSubtitle(entryPoint, arg1, isSuspendedUser, arg3) {
+export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationGetStartedSubtitle(entryPoint, arg1, isSuspendedUser, fn, arg4) {
   let flag = isSuspendedUser;
   if (isSuspendedUser === undefined) {
     flag = false;
   }
+  let flag2 = arg4;
+  if (arg4 === undefined) {
+    flag2 = false;
+  }
   if (set.has(entryPoint)) {
-    const intl5 = getSystemLocale.intl;
-    let stringResult = intl5.string(getSystemLocale.t["S/xS/w"]);
+    const intl6 = getSystemLocale.intl;
+    let stringResult = intl6.string(getSystemLocale.t["S/xS/w"]);
   } else if (flag) {
-    const intl4 = getSystemLocale.intl;
-    stringResult = intl4.string(messagesProxyDefault.h7qzoa);
+    const intl5 = getSystemLocale.intl;
+    stringResult = intl5.string(messagesProxyDefault.h7qzoa);
   } else {
-    if (null != arg1) {
-      if (null != arg3) {
+    if (flag2) {
+      if (null != arg1) {
+        if (null != fn) {
+          const intl4 = getSystemLocale.intl;
+          obj = { handleOnHelpUrlHook: null, handleOnTrustedProvidersHook: null };
+          obj[0] = arg1;
+          obj[1] = fn;
+          stringResult = intl4.format(messagesProxyDefault["+Ft5ch"], obj);
+        }
+      }
+    }
+    if (flag2) {
+      if (null != arg1) {
         const intl3 = getSystemLocale.intl;
-        obj = { handleOnHelpUrlHook: null, handleOnTrustedProvidersHook: null };
+        obj = { handleOnHelpUrlHook: null };
         obj[0] = arg1;
-        obj[1] = arg3;
-        stringResult = intl3.format(messagesProxyDefault["+Ft5ch"], obj);
+        stringResult = intl3.format(messagesProxyDefault["22HSSI"], obj);
       }
     }
     if (null != arg1) {

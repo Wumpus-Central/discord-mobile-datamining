@@ -1,19 +1,19 @@
-// === Module 10745: CancelButton ===
+// === Module 10763: CancelButton ===
 
-// Module 10745 (CancelButton)
+// Module 10763 (CancelButton)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
-import Background from "Background" /* 5454 */;
-import tinycolorDefault from "tinycolor" /* 7230 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1951 */;
+import Background from "Background" /* 5467 */;
+import tinycolorDefault from "tinycolor" /* 7244 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "_toArray" /* 853 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_9 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function CancelButton(arg0) {
@@ -125,7 +125,7 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
   }
   obj2[5] = PX_32;
   if (flag) {
-    if (arg0 === tmp3(1950).CollectiblesItemType.AVATAR_DECORATION) {
+    if (arg0 === tmp3(1951).CollectiblesItemType.AVATAR_DECORATION) {
       const obj3 = { shadowColor: null, shadowOffset: null, shadowOpacity: 1, shadowRadius: 60, elevation: 24 };
       obj3[0] = tmp(712).unsafe_rawColors.PRIMARY_630;
       obj3[1] = { width: 0, height: 0 };
@@ -137,7 +137,7 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
     const obj4 = { paddingTop: null, minHeight: null, flexDirection: "column", alignItems: "center", justifyContent: "flex-start", gap: null };
     obj4[0] = tmp(712).space.PX_24;
     let str2;
-    if (arg0 === tmp3(1950).CollectiblesItemType.AVATAR_DECORATION) {
+    if (arg0 === tmp3(1951).CollectiblesItemType.AVATAR_DECORATION) {
       str2 = "32%";
     }
     obj4[1] = str2;

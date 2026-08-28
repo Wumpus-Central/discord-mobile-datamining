@@ -1,19 +1,19 @@
-// === Module 6017: makeSortedChannel ===
+// === Module 6030: makeSortedChannel ===
 
-// Module 6017 (makeSortedChannel)
+// Module 6030 (makeSortedChannel)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import hooksDefault from "hooks" /* 4043 */;
-import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID" /* 6020 */;
-import closure_3 from "processChannel" /* 6018 */;
-import closure_4 from "processChannel" /* 6019 */;
+import hooksDefault from "hooks" /* 4044 */;
+import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID" /* 6033 */;
+import closure_3 from "processChannel" /* 6031 */;
+import closure_4 from "processChannel" /* 6032 */;
 import { isPrivate } from "createChannelRecord" /* 1395 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "generateOldThreadCutoff" /* 4460 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4654 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "generateOldThreadCutoff" /* 4461 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4667 */;
+import closure_10 from "mergeGuildAvatar" /* 1923 */;
 
 require = arg1;
 function makeSortedChannel(channel, id) {
@@ -80,7 +80,7 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap(function inde
 let closure_15 = [];
 let closure_16 = [];
 let closure_17 = [];
-const f37091 = () => {
+const f37118 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -93,7 +93,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f37091 !== "function") {
+  if (typeof f37118 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let values = secondaryIndexMap.values(constants.FAVORITE);

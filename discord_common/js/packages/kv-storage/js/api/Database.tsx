@@ -1,9 +1,9 @@
-// === Module 1964: open ===
+// === Module 1965: open ===
 
-// Module 1964 (open)
-import TableId from "TableId" /* 1963 */;
-import open from "open" /* 1965 */;
-import logger from "logger" /* 1966 */;
+// Module 1965 (open)
+import TableId from "TableId" /* 1964 */;
+import open from "open" /* 1966 */;
+import logger from "logger" /* 1967 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 require = arg1;
@@ -37,7 +37,7 @@ Database["open"] = function open(arg0, arg1) {
   })();
 };
 Database["openSyncUnsafe"] = function openSyncUnsafe(arg0, arg1) {
-  const Host = obj(1965).Host;
+  const Host = obj(1966).Host;
   const openSyncUnsafeResult = Host.openSyncUnsafe(arg0, arg1);
   if (typeof Database !== "function") {
     HermesBuiltin.throwTypeError();
@@ -45,9 +45,9 @@ Database["openSyncUnsafe"] = function openSyncUnsafe(arg0, arg1) {
   obj = Object.create(Database.prototype);
   obj.raw = openSyncUnsafeResult;
   obj.name = openSyncUnsafeResult.name;
-  obj.lastState = obj(1963).DatabaseState.Open;
+  obj.lastState = obj(1964).DatabaseState.Open;
   obj.handle = openSyncUnsafeResult.handle;
-  const Runtime = tmp2(1966).Runtime;
+  const Runtime = tmp2(1967).Runtime;
   obj.databaseStateCallback = Runtime.addDatabaseStateCallback((arg0, lastState) => {
     if (obj.handle === arg0) {
       tmp.lastState = lastState;

@@ -1,13 +1,13 @@
-// === Module 8506: useVideoControls ===
+// === Module 8520: useVideoControls ===
 
-// Module 8506 (useVideoControls)
+// Module 8520 (useVideoControls)
 import batchUpdates from "batchUpdates" /* 705 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import { jsx } from "jsxProd" /* 21 */;
 import keys from "keys" /* 644 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 keys = keys.create(() => ({ controls: "ct", paused: true }));

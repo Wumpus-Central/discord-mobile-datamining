@@ -1,6 +1,6 @@
-// === Module 9455: updateChatInputContainerHeight ===
+// === Module 9473: updateChatInputContainerHeight ===
 
-// Module 9455 (updateChatInputContainerHeight)
+// Module 9473 (updateChatInputContainerHeight)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 

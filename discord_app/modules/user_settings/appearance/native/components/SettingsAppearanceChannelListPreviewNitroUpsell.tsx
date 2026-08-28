@@ -1,26 +1,26 @@
-// === Module 14845: SettingsAppearanceChannelListPreviewNitroUpsellComponent ===
+// === Module 14830: SettingsAppearanceChannelListPreviewNitroUpsellComponent ===
 
-// Module 14845 (SettingsAppearanceChannelListPreviewNitroUpsellComponent)
+// Module 14830 (SettingsAppearanceChannelListPreviewNitroUpsellComponent)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4879 */;
-import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4883 */;
-import LinearGradientDefault from "LinearGradient" /* 4892 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8901 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4892 */;
+import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4896 */;
+import LinearGradientDefault from "LinearGradient" /* 4905 */;
+import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 8919 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import importDefaultResult from "module_4185" /* 4185 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import importDefaultResult from "module_4186" /* 4186 */;
 
 require = arg1;
 function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   theme = theme.theme;
   let analyticsLocations;
   const tmp = callback3();
-  let obj = theme(4185);
+  let obj = theme(4186);
   const fn = function l() {
     let num = 1;
     if (theme.theme === closure_1_9.LIGHT) {
@@ -31,12 +31,12 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
     obj.opacity = theme(closure_1_2[7]).withSpring(num, theme(closure_1_2[8]).springStandard);
     return obj;
   };
-  obj = { theme, ThemeTypes: closure_9, StyleSheet, withSpring: theme(4879).withSpring, springStandard: theme(4883).springStandard };
+  obj = { theme, ThemeTypes: closure_9, StyleSheet, withSpring: theme(4892).withSpring, springStandard: theme(4896).springStandard };
   fn.__closure = obj;
   fn.__workletHash = 16911565077998;
   fn.__initData = closure_18;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  analyticsLocations = analyticsLocations(5905)(analyticsLocations(5925).CLIENT_THEMES_EDITOR).analyticsLocations;
+  analyticsLocations = analyticsLocations(5918)(analyticsLocations(5938).CLIENT_THEMES_EDITOR).analyticsLocations;
   const items = [analyticsLocations];
   obj = { style: tmp.nitroUpsell, children: null };
   const callback = importAllResult.useCallback(() => {
@@ -52,7 +52,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   obj2[0] = intl.string(theme(1236).t.pj0XBN);
   obj2[1] = callback(theme(1297).NitroWheel, { style: tmp.nitroWheelIcon });
   obj2[3] = callback;
-  items1[1] = callback(theme(4880).Button, obj2);
+  items1[1] = callback(theme(4893).Button, obj2);
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -74,7 +74,7 @@ animationEntering.__initData = { code: "function animationEntering_SettingsAppea
 let closure_15 = { code: "function SettingsAppearanceChannelListPreviewNitroUpsellTsx3(finished){const{cleanUp}=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);}" };
 function animationExiting(value, cleanUp) {
   const _require = cleanUp;
-  const obj = { opacity: _require(4879).withSpring(value, _require(4883).springStandard, "respect-motion-settings", fn) };
+  const obj = { opacity: _require(4892).withSpring(value, _require(4896).springStandard, "respect-motion-settings", fn) };
   fn = function s(arg0) {
     if (closure_0 != null) {
       tmp(arg0);

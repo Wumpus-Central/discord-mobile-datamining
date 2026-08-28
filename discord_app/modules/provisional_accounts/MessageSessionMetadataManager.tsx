@@ -1,10 +1,10 @@
-// === Module 16870: handleMessageCreate ===
+// === Module 16888: handleMessageCreate ===
 
-// Module 16870 (handleMessageCreate)
+// Module 16888 (handleMessageCreate)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5438 */;
+import initializeDefault from "initialize" /* 5451 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 initializeDefault;

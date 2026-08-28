@@ -1,6 +1,6 @@
-// === Module 13313: getGeoRestrictedGuilds ===
+// === Module 13332: getGeoRestrictedGuilds ===
 
-// Module 13313 (getGeoRestrictedGuilds)
+// Module 13332 (getGeoRestrictedGuilds)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

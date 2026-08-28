@@ -1,6 +1,6 @@
-// === Module 9711: prototype ===
+// === Module 9729: prototype ===
 
-// Module 9711 (prototype)
+// Module 9729 (prototype)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;

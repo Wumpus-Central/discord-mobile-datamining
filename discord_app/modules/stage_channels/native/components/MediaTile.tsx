@@ -1,12 +1,12 @@
-// === Module 10059: ? ===
+// === Module 10077: ? ===
 
-// Module 10059
+// Module 10077
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getParticipants" /* 4461 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4466 */;
+import closure_4 from "getParticipants" /* 4462 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4467 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -19,10 +19,10 @@ const memoResult = importAllResult.memo((channel) => {
   const participant = channel.participant;
   const size = channel.size;
   const tmp = callback();
-  let obj = channel(10049);
+  let obj = channel(10067);
   const speakerTileStyles = obj.useSpeakerTileStyles();
-  const isScreenLandscape = channel(5023).useIsScreenLandscape();
-  const obj2 = channel(5023);
+  const isScreenLandscape = channel(5036).useIsScreenLandscape();
+  const obj2 = channel(5036);
   const tmp5 = participant;
   const items = [closure_4];
   const items1 = [channel.id, participant.id];
@@ -33,9 +33,9 @@ const memoResult = importAllResult.memo((channel) => {
     if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
       obj = { style: null, children: null };
       const items2 = [tmp.container, , ];
-      let tmp2Result = tmp2(10049);
+      let tmp2Result = tmp2(10067);
       items2[1] = tmp2Result.getSizeStyle(size, speakerTileStyles);
-      tmp2Result = tmp2(10049);
+      tmp2Result = tmp2(10067);
       items2[2] = tmp2Result.getTileWidthStyle(size, participant(1494)().width, isScreenLandscape);
       obj[0] = items2;
       obj = { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: null, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null };
@@ -43,9 +43,9 @@ const memoResult = importAllResult.memo((channel) => {
       obj[5] = tmp2(1297).AvatarSizes.XLARGE;
       obj[6] = channel;
       obj[8] = tmp.media;
-      obj[1] = jsx(tmp5(10060), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: null, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null });
+      obj[1] = jsx(tmp5(10078), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: null, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null });
       tmp8 = <View hasBottomSafeArea={false} hasLeftSafeArea={false} hasRightSafeArea={false} hasTopSafeArea={false} participant={null} avatarSize={null} channel={null} shrinkStreamEmptyState={false} contentStyle={null} />;
-      const tmp5Result = tmp5(10060);
+      const tmp5Result = tmp5(10078);
     }
   }
   return tmp8;

@@ -1,17 +1,17 @@
-// === Module 15254: toggle ===
+// === Module 15406: toggle ===
 
-// Module 15254 (toggle)
+// Module 15406 (toggle)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4134 */;
-import setDefault from "set" /* 4809 */;
-import componentDidMountDefault from "componentDidMount" /* 4899 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14379 */;
-import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15255 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15256 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
+import setDefault from "set" /* 4822 */;
+import componentDidMountDefault from "componentDidMount" /* 4912 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14363 */;
+import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15407 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15408 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15248 */;
-import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10989 */;
-import createToggle from "createToggle" /* 10988 */;
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15400 */;
+import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11007 */;
+import createToggle from "createToggle" /* 11006 */;
 
 require = arg1;
 ({ getSelectedGuildId: c4, useUserSafetySettingsSelectedGuildStore: c5 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
@@ -96,14 +96,14 @@ createToggle = {
       setDefault.show(obj);
       const obj3 = setDefault;
     } else {
-      obj = _require(6194);
+      obj = _require(6207);
       const sanitizedRestrictedGuilds = obj.getSanitizedRestrictedGuilds();
       if (arg0) {
         sanitizedRestrictedGuilds.delete(tmp);
       } else {
         sanitizedRestrictedGuilds.add(tmp);
       }
-      let RestrictedGuildIds = _require(4134).RestrictedGuildIds;
+      let RestrictedGuildIds = _require(4135).RestrictedGuildIds;
       const _Array = Array;
       RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds));
       const tmp2 = _require;

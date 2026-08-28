@@ -1,6 +1,6 @@
-// === Module 9029: getSoundmojiSendExperiment ===
+// === Module 9047: getSoundmojiSendExperiment ===
 
-// Module 9029 (getSoundmojiSendExperiment)
+// Module 9047 (getSoundmojiSendExperiment)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

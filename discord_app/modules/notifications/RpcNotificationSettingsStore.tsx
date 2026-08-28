@@ -1,6 +1,6 @@
-// === Module 10089: initialize ===
+// === Module 10107: initialize ===
 
-// Module 10089 (initialize)
+// Module 10107 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "fetchFingerprint" /* 1218 */;

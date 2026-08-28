@@ -1,8 +1,8 @@
-// === Module 8738: useInAppBrowserReturn ===
+// === Module 8754: useInAppBrowserReturn ===
 
-// Module 8738 (useInAppBrowserReturn)
+// Module 8754 (useInAppBrowserReturn)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getSimilarGames" /* 8733 */;
+import closure_4 from "getSimilarGames" /* 8749 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/game_profile/native/hooks/useInAppBrowserReturn.tsx");

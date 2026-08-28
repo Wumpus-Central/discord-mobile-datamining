@@ -1,19 +1,19 @@
-// === Module 9577: StageChannelRaiseHandAck ===
+// === Module 9595: StageChannelRaiseHandAck ===
 
-// Module 9577 (StageChannelRaiseHandAck)
+// Module 9595 (StageChannelRaiseHandAck)
 import ThemesDefault from "Themes" /* 712 */;
-import computeChannelNameDefault from "computeChannelName" /* 4639 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4897 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9568 */;
+import computeChannelNameDefault from "computeChannelName" /* 4640 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4910 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9586 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "setContent" /* 4154 */;
+import closure_8 from "setContent" /* 4155 */;
 import closure_9 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 import { Fonts } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 class StageChannelRaiseHandAck {
@@ -56,19 +56,19 @@ class StageChannelRaiseHandAck {
                 if (null != lib) {
                   if (obj9.shouldAgeVerifyToSpeakForCurrentUser(lib.id)) {
                     obj1 = { entryPoint: null };
-                    obj1[0] = tmp42(8615).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
-                    const result = closure_1_1(8613).showAgeVerificationGetStartedModal(obj1);
-                    const obj4 = closure_1_1(8613);
+                    obj1[0] = tmp42(8630).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
+                    const result = closure_1_1(8628).showAgeVerificationGetStartedModal(obj1);
+                    const obj4 = closure_1_1(8628);
                   } else {
                     dependencyMap(true);
                     dependencyMap = 1;
                     c4 = 2;
                     c5 = 1;
                     const obj2 = { value: null, done: false };
-                    obj2[0] = tmp42(8600).audienceAckRequestToSpeak(lib, false);
+                    obj2[0] = tmp42(8615).audienceAckRequestToSpeak(lib, false);
                     return obj2;
                   }
-                  obj9 = lib(5318);
+                  obj9 = lib(5331);
                 }
                 c5 = 3;
               }
@@ -84,8 +84,8 @@ class StageChannelRaiseHandAck {
               dependencyMap = 0;
               dependencyMap(false);
               if (null == closure_1_8.getKey()) {
-                closure_1_2(8596).openStageChannel(lib);
-                const obj8 = closure_1_2(8596);
+                closure_1_2(8611).openStageChannel(lib);
+                const obj8 = closure_1_2(8611);
               }
             }
             dependencyMap = 0;
@@ -298,7 +298,7 @@ export default function GlobalStageChannelStatus(arg0) {
     stringResult = intl.string(id(1236).t["/YzI63"]);
   }
   const tmp7 = useIsInvitedToSpeakDefault();
-  let invitedHeaderText = tmp3(9472)(id);
+  let invitedHeaderText = tmp3(9490)(id);
   let obj = id(589);
   const items = [closure_9];
   const items1 = [id];
@@ -334,11 +334,11 @@ export default function GlobalStageChannelStatus(arg0) {
           obj[0] = tmp.noticeContainer;
           obj1 = { animated: true, barStyle: null };
           obj1[1] = str;
-          const items2 = [callback2(tmp3(9451), obj1), , ];
+          const items2 = [callback2(tmp3(9469), obj1), , ];
           const obj2 = { style: null, size: null, source: null };
           obj2[0] = activeSpeakerIcon;
           obj2[1] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-          tmp8Result = tmp8(4933);
+          tmp8Result = tmp8(4946);
           obj2[2] = tmp8Result.getChannelIconWithGuild(channel, guild);
           items2[1] = callback2(tmp8(1297).Icon, obj2);
           tmp13Result = "" !== str2;

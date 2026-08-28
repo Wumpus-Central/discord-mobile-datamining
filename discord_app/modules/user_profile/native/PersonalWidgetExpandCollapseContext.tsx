@@ -1,6 +1,6 @@
-// === Module 8711: PersonalWidgetExpandCollapseProvider ===
+// === Module 8727: PersonalWidgetExpandCollapseProvider ===
 
-// Module 8711 (PersonalWidgetExpandCollapseProvider)
+// Module 8727 (PersonalWidgetExpandCollapseProvider)
 import closure_0 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

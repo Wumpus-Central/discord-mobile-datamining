@@ -1,10 +1,10 @@
-// === Module 17211: getCreatorMonetizationAcceptTermsCheckboxText ===
+// === Module 17229: getCreatorMonetizationAcceptTermsCheckboxText ===
 
-// Module 17211 (getCreatorMonetizationAcceptTermsCheckboxText)
+// Module 17229 (getCreatorMonetizationAcceptTermsCheckboxText)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1995 */;
+import combinedDefault from "combined" /* 1996 */;
 
 const HelpdeskArticles = ME.HelpdeskArticles;
 const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/CreatorMonetizationAcceptTermCheckboxText.tsx");

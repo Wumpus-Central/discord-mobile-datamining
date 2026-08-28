@@ -1,16 +1,16 @@
-// === Module 15476: UsernameStatusMessage ===
+// === Module 15494: UsernameStatusMessage ===
 
-// Module 15476 (UsernameStatusMessage)
+// Module 15494 (UsernameStatusMessage)
 import ThemesDefault from "Themes" /* 712 */;
-import NameValidationState from "NameValidationState" /* 14314 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15468 */;
+import NameValidationState from "NameValidationState" /* 14298 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15486 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15450 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15468 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import { FadeIn, FadeOut, LinearTransition, Easing } from "module_4185" /* 4185 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import { FadeIn, FadeOut, LinearTransition, Easing } from "module_4186" /* 4186 */;
 
 require = arg1;
 function UsernameStatusMessage(arg0) {
@@ -24,23 +24,23 @@ function UsernameStatusMessage(arg0) {
     let obj = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
     obj = { size: "xs", color: null };
     obj[1] = ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL;
-    const items = [callback3(tmp3(7641).CircleErrorIcon, obj), ];
+    const items = [callback3(tmp3(7655).CircleErrorIcon, obj), ];
     obj1 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null };
     obj1[2] = tmp.status;
     const merged = Object.assign(createCacheKey);
     const merged1 = Object.assign(createCacheKey);
     obj1.animated = true;
     obj1.children = usernameStatus.message;
-    items[1] = callback3(tmp3(4441).Text, obj1);
+    items[1] = callback3(tmp3(4442).Text, obj1);
     obj[3] = items;
-    let tmp6 = callback4(tmp3(4878).Stack, obj);
+    let tmp6 = callback4(tmp3(4891).Stack, obj);
   } else {
     if (isUsernameFocused) {
       let type1;
       if (usernameStatus != null) {
         type1 = usernameStatus.type;
       }
-      if (type1 === tmp3(14314).NameValidationState.AVAILABLE) {
+      if (type1 === tmp3(14298).NameValidationState.AVAILABLE) {
         const obj2 = {};
         const merged2 = Object.assign(createCacheKey);
         const merged3 = Object.assign(createCacheKey);
@@ -49,8 +49,8 @@ function UsernameStatusMessage(arg0) {
         obj2.animated = true;
         const obj3 = { variant: "text-xs/medium", color: "text-feedback-positive", children: null };
         obj3[2] = usernameStatus.message;
-        obj2.children = callback3(tmp3(4441).Text, obj3);
-        tmp6 = callback3(tmp3(4441).Text, obj2);
+        obj2.children = callback3(tmp3(4442).Text, obj3);
+        tmp6 = callback3(tmp3(4442).Text, obj2);
       }
     }
     tmp6 = null;
@@ -64,7 +64,7 @@ function UsernameStatusMessage(arg0) {
       obj.animated = true;
       const intl = tmp3(1236).intl;
       obj.children = intl.string(tmp3(1236).t.y7LSyU);
-      tmp6 = callback3(tmp3(4441).Text, obj);
+      tmp6 = callback3(tmp3(4442).Text, obj);
     }
   }
   return tmp6;
@@ -78,7 +78,7 @@ createCacheKey[0] = require("module_300");
 createCacheKey[1] = require("module_300");
 createCacheKey = { layout: null };
 createCacheKey[0] = require("module_300");
-const easingResult = LinearTransition.easing(Easing.inOut(require("module_4185").Easing.quad));
+const easingResult = LinearTransition.easing(Easing.inOut(require("module_4186").Easing.quad));
 const result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
 export const RegisterUsernameInput = function RegisterUsernameInput(setUsername) {
@@ -141,13 +141,13 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14314).NameValidationState.ERROR) {
+  if (type === tmp14(14298).NameValidationState.ERROR) {
     str2 = "error";
   }
   obj1 = { children: null };
   obj[16] = str2;
   obj[17] = submitBehavior;
-  const items3 = [closure_9(setUsername(7638).TextInput, obj), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
+  const items3 = [closure_9(setUsername(7652).TextInput, obj), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
   obj1[0] = items3;
   return tmp11(tmp12, obj1);
 };

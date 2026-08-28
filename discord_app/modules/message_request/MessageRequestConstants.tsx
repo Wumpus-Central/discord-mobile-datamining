@@ -1,6 +1,6 @@
-// === Module 11922: MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL ===
+// === Module 11941: MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL ===
 
-// Module 11922 (MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL)
+// Module 11941 (MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/message_request/MessageRequestConstants.tsx");

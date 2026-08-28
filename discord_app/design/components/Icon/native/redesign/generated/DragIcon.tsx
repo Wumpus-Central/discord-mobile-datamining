@@ -1,10 +1,10 @@
-// === Module 5562: DragIcon ===
+// === Module 5575: DragIcon ===
 
-// Module 5562 (DragIcon)
+// Module 5575 (DragIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 5563 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 5576 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

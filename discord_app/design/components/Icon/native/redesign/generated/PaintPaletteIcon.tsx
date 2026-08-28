@@ -1,10 +1,10 @@
-// === Module 12953: PaintPaletteIcon ===
+// === Module 12972: PaintPaletteIcon ===
 
-// Module 12953 (PaintPaletteIcon)
+// Module 12972 (PaintPaletteIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 12954 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 12973 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

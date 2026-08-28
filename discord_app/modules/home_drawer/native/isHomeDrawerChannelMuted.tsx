@@ -1,10 +1,10 @@
-// === Module 15821: useIsHomeDrawerChannelMuted ===
+// === Module 15839: useIsHomeDrawerChannelMuted ===
 
-// Module 15821 (useIsHomeDrawerChannelMuted)
+// Module 15839 (useIsHomeDrawerChannelMuted)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "storeThread" /* 4091 */;
+import closure_2 from "storeThread" /* 4092 */;
 import { isThread } from "createChannelRecord" /* 1395 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 4654 */;
+import closure_4 from "updateUserGuildSettingsInternal" /* 4667 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");

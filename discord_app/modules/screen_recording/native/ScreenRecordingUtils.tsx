@@ -1,9 +1,9 @@
-// === Module 15438: _getLatestVideo ===
+// === Module 15456: _getLatestVideo ===
 
-// Module 15438 (_getLatestVideo)
+// Module 15456 (_getLatestVideo)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { useScreenRecordingStore } from "useScreenRecordingStore" /* 15437 */;
+import { useScreenRecordingStore } from "useScreenRecordingStore" /* 15455 */;
 
 const require = arg1;
 function _getLatestVideo() {
@@ -146,7 +146,7 @@ function _checkAndRequestPermissions() {
         } else if (1 === tmp7) {
           c3 = 0;
           callback = dependencyMap;
-          let obj3 = callback(4809);
+          let obj3 = callback(4822);
           const obj2 = { title: "Error", body: null };
           const _HermesInternal = HermesInternal;
           obj2[1] = "Failed to check permissions, error: " + callback;
@@ -167,12 +167,12 @@ function _checkAndRequestPermissions() {
           if (closure_0.photosGranted) {
             let flag2 = closure_0.microphoneGranted;
             if (!flag2) {
-              obj1 = callback(4809);
+              obj1 = callback(4822);
               obj1.show({ title: "Error", body: "Microphone permission is required to record audio" });
               flag2 = false;
             }
           } else {
-            obj = callback(4809);
+            obj = callback(4822);
             obj.show({ title: "Error", body: "Photos permission is required to save recordings" });
           }
           c3 = 0;
@@ -357,7 +357,7 @@ function _stopRecordingProcess() {
         } else if (1 === tmp7) {
           c3 = 0;
           closure_0 = dependencyMap;
-          let obj3 = callback(4809);
+          let obj3 = callback(4822);
           const obj2 = { title: "Error", body: null };
           const _HermesInternal = HermesInternal;
           obj2[1] = "Failed to stop screen recording, error: " + closure_0;
@@ -378,7 +378,7 @@ function _stopRecordingProcess() {
         } else {
           let flag = arg1.success;
           if (!flag) {
-            obj = callback(4809);
+            obj = callback(4822);
             obj.show({ title: "Error", body: "Failed to stop screen recording, but not error" });
             flag = false;
           }

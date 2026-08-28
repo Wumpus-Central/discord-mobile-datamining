@@ -1,15 +1,15 @@
-// === Module 9742: computeCallVerification ===
+// === Module 9760: computeCallVerification ===
 
-// Module 9742 (computeCallVerification)
+// Module 9760 (computeCallVerification)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4544 */;
-import getCurrentUserSigningKey from "getCurrentUserSigningKey" /* 9760 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4545 */;
+import getCurrentUserSigningKey from "getCurrentUserSigningKey" /* 9778 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "createRTCConnection" /* 4519 */;
-import closure_4 from "initialize" /* 4533 */;
-import closure_5 from "map" /* 9743 */;
-import closure_6 from "initialize" /* 9744 */;
+import closure_3 from "createRTCConnection" /* 4520 */;
+import closure_4 from "initialize" /* 4534 */;
+import closure_5 from "map" /* 9761 */;
+import closure_6 from "initialize" /* 9762 */;
 import { RTCConnectionStates } from "ME" /* 676 */;
 
 require = arg1;
@@ -124,7 +124,7 @@ const secureFramesVerifiedStore = new SecureFramesVerifiedStore(dispatcherDefaul
           tmp6 = computeCallVerification();
         }
         return tmp6;
-      } else if (tmp10(4544).MediaEngineContextTypes.DEFAULT === context) {
+      } else if (tmp10(4545).MediaEngineContextTypes.DEFAULT === context) {
         map.clear();
         map1.clear();
         c10 = false;

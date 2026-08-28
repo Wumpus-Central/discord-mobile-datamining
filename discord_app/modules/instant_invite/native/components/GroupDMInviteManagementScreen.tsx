@@ -1,15 +1,15 @@
-// === Module 10588: GroupDMInviteManagement ===
+// === Module 10606: GroupDMInviteManagement ===
 
-// Module 10588 (GroupDMInviteManagement)
+// Module 10606 (GroupDMInviteManagement)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "createFromServer" /* 8582 */;
-import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare" /* 8678 */;
+import closure_8 from "createFromServer" /* 8597 */;
+import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare" /* 8694 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 function GroupDMInviteManagement(channelId) {
@@ -23,7 +23,7 @@ function GroupDMInviteManagement(channelId) {
   dependencyMap = tmp2[1];
   const tmp3 = callback(importAllResult.useState(true), 2);
   closure_3 = tmp3[1];
-  first(4897)(() => {
+  first(4910)(() => {
     function _fetchInvites() {
       const self = this;
       const tmp = callback(function*() {
@@ -136,11 +136,11 @@ function GroupDMInviteManagement(channelId) {
   [][0] = first;
   callback = importAllResult.useCallback((code) => code.code, []);
   if (tmp3[0]) {
-    let tmp14 = jsx(channelId(5999).SceneLoadingIndicator, {});
+    let tmp14 = jsx(channelId(6012).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
     let obj = { lightSource: null, darkSource: null, title: null, body: null };
-    obj[0] = tmp4(10606);
-    obj[1] = tmp4(10607);
+    obj[0] = tmp4(10624);
+    obj[1] = tmp4(10625);
     const intl = channelId(1236).intl;
     obj[2] = intl.string(channelId(1236).t["+nLJkZ"]);
     const intl2 = channelId(1236).intl;
@@ -178,7 +178,7 @@ const memoResult = importAllResult.memo(function GroupDMInviteManagementScreen(c
     obj[closure_1_9.INSTANT_INVITES_MANAGEMENT] = obj;
     return obj;
   }, items);
-  return jsx(channelId(5960).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+  return jsx(channelId(5973).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 });
 const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/GroupDMInviteManagementScreen.tsx");
 

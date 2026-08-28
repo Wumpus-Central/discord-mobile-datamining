@@ -1,11 +1,11 @@
-// === Module 10046: StageChannelBackground ===
+// === Module 10064: StageChannelBackground ===
 
-// Module 10046 (StageChannelBackground)
+// Module 10064 (StageChannelBackground)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 noopAll;
 createCacheKey = { container: null };

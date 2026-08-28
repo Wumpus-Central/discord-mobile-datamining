@@ -1,8 +1,8 @@
-// === Module 10813: MessageReactions ===
+// === Module 10831: MessageReactions ===
 
-// Module 10813 (MessageReactions)
+// Module 10831 (MessageReactions)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "reinjectEphemerals" /* 4688 */;
+import closure_4 from "reinjectEphemerals" /* 4701 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

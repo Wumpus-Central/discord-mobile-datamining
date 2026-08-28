@@ -1,16 +1,16 @@
-// === Module 11495: ForumPostGridHeader ===
+// === Module 11514: ForumPostGridHeader ===
 
-// Module 11495 (ForumPostGridHeader)
+// Module 11514 (ForumPostGridHeader)
 import noopAll from "noop" /* 19 */;
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11496 */;
-import ForumPostUsername from "ForumPostUsername" /* 11498 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11507 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 11509 */;
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11515 */;
+import ForumPostUsername from "ForumPostUsername" /* 11517 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11526 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 11528 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 6072 */;
+import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 6085 */;
 import { ChannelFlags } from "set" /* 1398 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 noopAll;
@@ -31,7 +31,7 @@ export default function ForumPostGridHeader(arg0) {
   }
   const items = [hasFlagResult, callback(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }), callback(ForumPostTimestampDefault, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO, textStyle: tmp.timestampText }), ];
   if (isNew) {
-    isNew = tmp8(tmp10(11508), {});
+    isNew = tmp8(tmp10(11527), {});
   }
   items[3] = isNew;
   obj[1] = items;

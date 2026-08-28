@@ -1,6 +1,6 @@
-// === Module 12531: metadata ===
+// === Module 12550: metadata ===
 
-// Module 12531 (metadata)
+// Module 12550 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js");

@@ -1,10 +1,10 @@
-// === Module 14226: EditUserProfileAvatar ===
+// === Module 14195: EditUserProfileAvatar ===
 
-// Module 14226 (EditUserProfileAvatar)
+// Module 14195 (EditUserProfileAvatar)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

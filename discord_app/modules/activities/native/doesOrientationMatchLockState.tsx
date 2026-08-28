@@ -1,8 +1,8 @@
-// === Module 9526: doesOrientationMatchLockState ===
+// === Module 9544: doesOrientationMatchLockState ===
 
-// Module 9526 (doesOrientationMatchLockState)
+// Module 9544 (doesOrientationMatchLockState)
 import set from "set" /* 2 */;
-import items3 from "items3" /* 4473 */;
+import items3 from "items3" /* 4474 */;
 
 const OrientationLockState = items3.OrientationLockState;
 const result = set.fileFinishedImporting("modules/activities/native/doesOrientationMatchLockState.tsx");

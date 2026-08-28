@@ -1,17 +1,17 @@
-// === Module 16496: ExternalPipViewVideoUnavailable ===
+// === Module 16514: ExternalPipViewVideoUnavailable ===
 
-// Module 16496 (ExternalPipViewVideoUnavailable)
+// Module 16514 (ExternalPipViewVideoUnavailable)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 16498 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 16516 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4466 */;
+import closure_9 from "mergeGuildAvatar" /* 1923 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4467 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function ExternalPipViewVideoUnavailable(wasStream) {
@@ -21,11 +21,11 @@ function ExternalPipViewVideoUnavailable(wasStream) {
   if (wasStream) {
     obj = { style: null };
     obj[0] = tmp.unavaiableImage;
-    let tmp4Result = tmp4(tmp5(9488).StreamEnded, obj);
+    let tmp4Result = tmp4(tmp5(9506).StreamEnded, obj);
     let tmp8 = tmp4;
     let tmp10 = tmp5;
   } else {
-    tmp4Result = tmp4(tmp5(4400).CircleInformationIcon, {});
+    tmp4Result = tmp4(tmp5(4401).CircleInformationIcon, {});
     tmp8 = tmp4;
     tmp10 = tmp5;
   }
@@ -38,7 +38,7 @@ function ExternalPipViewVideoUnavailable(wasStream) {
     result = intl.string(tmp10(1236).t.Nzo5nz);
   }
   obj[3] = result;
-  items[1] = tmp8(tmp10(4441).Text, obj);
+  items[1] = tmp8(tmp10(4442).Text, obj);
   obj[1] = items;
   return closure_12(closure_6, obj);
 }
@@ -69,7 +69,7 @@ function ExternalPipViewVideoStream(streamId) {
   let first;
   dependencyMap = undefined;
   let callback;
-  let obj = streamId(9495);
+  let obj = streamId(9513);
   first = 300;
   dependencyMap = undefined;
   callback = undefined;
@@ -109,7 +109,7 @@ function ExternalPipViewVideoStream(streamId) {
     items[1] = { opacity: num };
     return items;
   }, items2);
-  const token = streamId(4165).useToken(first(712).colors.TEXT_FEEDBACK_INFO);
+  const token = streamId(4166).useToken(first(712).colors.TEXT_FEEDBACK_INFO);
   const value = closure_7.get();
   callback = value;
   const items3 = [streamId, value];
@@ -123,7 +123,7 @@ function ExternalPipViewVideoStream(streamId) {
       obj.updateVideoSize(tmp, obj, 1);
     }
   }, items3);
-  const children = [callback2(first(9506), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
+  const children = [callback2(first(9524), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
   let tmp14Result = null;
   if (null == first) {
     tmp14Result = null;

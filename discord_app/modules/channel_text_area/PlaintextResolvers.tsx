@@ -1,23 +1,23 @@
-// === Module 8374: resolvePlaintextInlineVoid ===
+// === Module 8388: resolvePlaintextInlineVoid ===
 
-// Module 8374 (resolvePlaintextInlineVoid)
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4106 */;
-import createEmptyState from "createEmptyState" /* 7363 */;
+// Module 8388 (resolvePlaintextInlineVoid)
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4103 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4107 */;
+import createEmptyState from "createEmptyState" /* 7377 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getEmojiToGroupId" /* 5353 */;
-import closure_5 from "rebuild" /* 5400 */;
+import closure_4 from "getEmojiToGroupId" /* 5366 */;
+import closure_5 from "rebuild" /* 5413 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "comparator" /* 1982 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "comparator" /* 1982 */;
-import closure_9 from "trackCommunicationDisabled" /* 1992 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_7 from "comparator" /* 1983 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "comparator" /* 1983 */;
+import closure_9 from "trackCommunicationDisabled" /* 1993 */;
+import closure_10 from "createGuildRoleRecordFromRust" /* 1986 */;
 import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_13 from "markAllUserIdListsStale" /* 4098 */;
-import closure_14 from "mergeGuildAvatar" /* 1922 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_13 from "markAllUserIdListsStale" /* 4099 */;
+import closure_14 from "mergeGuildAvatar" /* 1923 */;
 import { Permissions } from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import { EmojiIntention } from "set" /* 1926 */;
 
 require = arg1;
 function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceIncludeExternalGuilds) {
@@ -165,8 +165,8 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceInclude
             num[Symbol.iterator]();
             const obj2 = callback2(11);
           }
-          callback(4639).unescapeChannelName(arr.slice(2, arr.length - num));
-          const obj = callback(4639);
+          callback(4640).unescapeChannelName(arr.slice(2, arr.length - num));
+          const obj = callback(4640);
         }
         const substr = arr.slice(1);
       }

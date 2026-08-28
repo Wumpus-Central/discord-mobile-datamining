@@ -1,10 +1,10 @@
-// === Module 4974: ThreadIcon ===
+// === Module 4987: ThreadIcon ===
 
-// Module 4974 (ThreadIcon)
+// Module 4987 (ThreadIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 4935 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 4948 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,23 +1,23 @@
-// === Module 14739: ? ===
+// === Module 14724: ? ===
 
-// Module 14739
-import Text from "Text" /* 4441 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5342 */;
-import useQuests from "useQuests" /* 11003 */;
-import _getQuestsInstructionsToWinReward from "_getQuestsInstructionsToWinReward" /* 11257 */;
-import getDeliveredQuest from "getDeliveredQuest" /* 14667 */;
-import COMPLETION_GLOW_SHADOW_RADIUSDefault from "COMPLETION_GLOW_SHADOW_RADIUS" /* 14681 */;
+// Module 14724
+import Text from "Text" /* 4442 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5355 */;
+import useQuests from "useQuests" /* 11021 */;
+import _getQuestsInstructionsToWinReward from "_getQuestsInstructionsToWinReward" /* 11275 */;
+import getQuestDockMenuAdCreative from "getQuestDockMenuAdCreative" /* 14636 */;
+import COMPLETION_GLOW_SHADOW_RADIUSDefault from "COMPLETION_GLOW_SHADOW_RADIUS" /* 14665 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ wrapper: { alignItems: "center", display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1, gap: 8, justifyContent: "center", padding: 8 }, progressIndicatorWrapper: { flexGrow: 0, flexShrink: 0 }, copy: { flexGrow: 1, flexShrink: 1 } });
 const memoResult = importAllResult.memo(function QuestDockEnrolledHeader() {
-  let obj = getDeliveredQuest;
+  let obj = getQuestDockMenuAdCreative;
   const questCreative = obj.useQuestCreative();
   const tmp2 = callback4();
   obj1 = useQuests;

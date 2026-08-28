@@ -1,6 +1,6 @@
-// === Module 4898: useMountEffect ===
+// === Module 4911: useMountEffect ===
 
-// Module 4898 (useMountEffect)
+// Module 4911 (useMountEffect)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/hooks/useMountEffect.tsx");

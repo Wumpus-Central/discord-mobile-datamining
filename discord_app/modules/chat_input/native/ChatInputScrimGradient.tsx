@@ -1,11 +1,11 @@
-// === Module 11745: ChatInputScrimGradient ===
+// === Module 11764: ChatInputScrimGradient ===
 
-// Module 11745 (ChatInputScrimGradient)
+// Module 11764 (ChatInputScrimGradient)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4165 */;
-import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4264 */;
-import LinearGradientDefault from "LinearGradient" /* 4892 */;
+import map from "map" /* 4166 */;
+import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4265 */;
+import LinearGradientDefault from "LinearGradient" /* 4905 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

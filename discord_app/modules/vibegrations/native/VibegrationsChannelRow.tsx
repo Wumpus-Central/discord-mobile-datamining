@@ -1,14 +1,14 @@
-// === Module 15717: VibegrationsChannelRow ===
+// === Module 15735: VibegrationsChannelRow ===
 
-// Module 15717 (VibegrationsChannelRow)
+// Module 15735 (VibegrationsChannelRow)
 import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 3469 */;
-import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 11865 */;
+import messagesProxyDefault from "messagesProxy" /* 3470 */;
+import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 11884 */;
 import closure_3 from "noop" /* 19 */;
 import { Routes } from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 createCacheKey = { container: null };
@@ -26,10 +26,10 @@ export default function VibegrationsChannelRow(selected) {
     id(closure_1_2[7]).transitionTo(closure_1_4.CHANNEL(id, closure_1_5.VIBEGRATIONS));
   }, items);
   if (true === selected) {
-    let DEFAULT = id(11865).ChannelModes.SELECTED;
+    let DEFAULT = id(11884).ChannelModes.SELECTED;
     let tmp5 = id;
   } else {
-    DEFAULT = id(11865).ChannelModes.DEFAULT;
+    DEFAULT = id(11884).ChannelModes.DEFAULT;
     tmp5 = id;
   }
   let obj = { onPress: callback, style: callback().container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null };
@@ -42,8 +42,8 @@ export default function VibegrationsChannelRow(selected) {
   const intl2 = tmp5(1236).intl;
   obj[0] = intl2.string(messagesProxyDefault.Xmvb23);
   obj[1] = DEFAULT;
-  obj[6] = jsx(tmp5(11865).BaseChannelName, { name: null, mode: null });
-  obj = { mode: DEFAULT, IconComponent: tmp5(10156).MagicWandIcon };
-  obj[7] = jsx(tmp5(11865).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10156).MagicWandIcon });
-  return jsx(BaseChannelSubtitleDefault, { mode: DEFAULT, IconComponent: tmp5(10156).MagicWandIcon });
+  obj[6] = jsx(tmp5(11884).BaseChannelName, { name: null, mode: null });
+  obj = { mode: DEFAULT, IconComponent: tmp5(10174).MagicWandIcon };
+  obj[7] = jsx(tmp5(11884).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10174).MagicWandIcon });
+  return jsx(BaseChannelSubtitleDefault, { mode: DEFAULT, IconComponent: tmp5(10174).MagicWandIcon });
 };

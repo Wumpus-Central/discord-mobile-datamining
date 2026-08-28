@@ -1,10 +1,10 @@
-// === Module 11916: useChangelogRenderedAnalytics ===
+// === Module 11935: useChangelogRenderedAnalytics ===
 
-// Module 11916 (useChangelogRenderedAnalytics)
+// Module 11935 (useChangelogRenderedAnalytics)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_getSystemLocale" /* 1996 */;
-import closure_5 from "generateOldThreadCutoff" /* 4460 */;
-import closure_6 from "handleUserSettingsProtoStoreChange" /* 4459 */;
+import closure_4 from "_getSystemLocale" /* 1997 */;
+import closure_5 from "generateOldThreadCutoff" /* 4461 */;
+import closure_6 from "handleUserSettingsProtoStoreChange" /* 4460 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;

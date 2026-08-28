@@ -1,6 +1,6 @@
-// === Module 4553: pollConnectionStats ===
+// === Module 4554: pollConnectionStats ===
 
-// Module 4553 (pollConnectionStats)
+// Module 4554 (pollConnectionStats)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -144,9 +144,9 @@ export default function pollConnectionStats(on) {
     return applyArgumentsResult;
   }
   dependencyMap = false;
-  on.on(_require(4544).MediaEngineEvent.Destroy, () => {
+  on.on(_require(4545).MediaEngineEvent.Destroy, () => {
     c1 = true;
     return true;
   });
-  let timerId = setTimeout(pollStats, _require(4554).STATS_INTERVAL);
+  let timerId = setTimeout(pollStats, _require(4555).STATS_INTERVAL);
 };

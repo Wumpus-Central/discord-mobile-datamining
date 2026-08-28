@@ -1,16 +1,16 @@
-// === Module 15856: _handleCreateJoinGuildPress ===
+// === Module 15874: _handleCreateJoinGuildPress ===
 
-// Module 15856 (_handleCreateJoinGuildPress)
+// Module 15874 (_handleCreateJoinGuildPress)
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import UnreadIndicatorDefault from "UnreadIndicator" /* 15798 */;
+import UnreadIndicatorDefault from "UnreadIndicator" /* 15816 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 4267 */;
+import closure_6 from "handleConnectionOpen" /* 4268 */;
 import ME from "ME" /* 676 */;
-import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
+import { PremiumUpsellTypes } from "GuildFeatures" /* 1925 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 function _handleCreateJoinGuildPress() {
@@ -119,9 +119,9 @@ let c4 = importAllResult;
 let closure_13 = createCacheKey.createStyles({ stretch: { alignSelf: "stretch" } });
 const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
   const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("GuildsBarCreateJoinButton");
-  let obj = enabled(15798);
+  let obj = enabled(15816);
   const tmp4 = callback2();
-  const GameCommunityAddServerEntryExperiment = enabled(13280).GameCommunityAddServerEntryExperiment;
+  const GameCommunityAddServerEntryExperiment = enabled(13299).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
   obj1 = enabled(589);
   const items = [closure_6];
@@ -150,7 +150,7 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
       })();
     }
   }), items1);
-  obj = { selected: stateFromStores, circle: null, unread: false, styles: null, overState: "y", config: "CALL_CONNECT", label: null, expandedChildren: "Steam", children: null };
+  obj = { selected: stateFromStores, circle: null, unread: false, styles: null, overState: "y", config: "silentPrefix", label: null, expandedChildren: "League of Legends", children: null };
   let tmp12 = !tmp3;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const tmp10 = View;
@@ -162,12 +162,12 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
   obj[5] = memo;
   const intl = tmp5(1236).intl;
   obj[6] = intl.string(enabled(1236).t.l5WIbf);
-  obj[7] = jsx(enabled(15857).HomeDrawerAddServerRowExpandedChildren, {});
+  obj[7] = jsx(enabled(15875).HomeDrawerAddServerRowExpandedChildren, {});
   const colors = tmp(712).colors;
   obj1 = { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj[8] = jsx(enabled(9145).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  obj[1] = jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: null, unread: false, styles: null, overState: "y", config: "CALL_CONNECT", label: null, expandedChildren: "Steam", children: null });
-  return <tmp10 selected={stateFromStores} circle={null} unread={false} styles={null} overState="y" config="CALL_CONNECT" label={null} expandedChildren="Steam">{null}</tmp10>;
+  obj[8] = jsx(enabled(9163).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
+  obj[1] = jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: null, unread: false, styles: null, overState: "y", config: "silentPrefix", label: null, expandedChildren: "League of Legends", children: null });
+  return <tmp10 selected={stateFromStores} circle={null} unread={false} styles={null} overState="y" config="silentPrefix" label={null} expandedChildren="League of Legends">{null}</tmp10>;
 });
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 8647: GoogleWalletVerificationScreen ===
+// === Module 8663: GoogleWalletVerificationScreen ===
 
-// Module 8647 (GoogleWalletVerificationScreen)
+// Module 8663 (GoogleWalletVerificationScreen)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -22,7 +22,7 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
   let obj = modalSessionId(1500);
   navigation = obj.useNavigation();
   [tmp5, c2] = callback1(React.useState({ type: "loading" }), 2);
-  obj1 = modalSessionId(4686);
+  obj1 = modalSessionId(4699);
   const watchAgeVerificationStatusChange = obj1.useWatchAgeVerificationStatusChange(modalSessionId.onClose);
   let items = [navigation];
   callback = React.useCallback(() => {
@@ -187,33 +187,33 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
     const items3 = [callback(ActivityIndicator, { size: "large" }), ];
     let obj2 = { variant: "text-md/medium", color: "text-strong", children: null };
     let intl = tmp(1236).intl;
-    obj2[2] = intl.string(navigation(2887).MlFuBI);
-    items3[1] = callback(tmp(4441).Text, obj2);
+    obj2[2] = intl.string(navigation(2888).MlFuBI);
+    items3[1] = callback(tmp(4442).Text, obj2);
     obj1[3] = items3;
-    obj[0] = callback2(tmp(4878).Stack, obj1);
-    obj[0] = callback(tmp(8624).ModalContent, obj);
-    let tmp14 = callback(tmp(8623).ModalScreen, obj);
+    obj[0] = callback2(tmp(4891).Stack, obj1);
+    obj[0] = callback(tmp(8639).ModalContent, obj);
+    let tmp14 = callback(tmp(8638).ModalScreen, obj);
   } else {
     let obj3 = { children: null };
     let obj4 = { children: null };
     let obj5 = { align: "center", justify: "center", spacing: 16, children: null };
     let obj6 = { variant: "text-md/medium", color: "text-strong", children: null };
     obj6[2] = tmp5.message;
-    const items4 = [callback(tmp(4441).Text, obj6), ];
+    const items4 = [callback(tmp(4442).Text, obj6), ];
     let obj7 = { children: null };
     let obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
     let intl2 = tmp(1236).intl;
-    obj8[2] = intl2.string(navigation(2887).fEUKEv);
+    obj8[2] = intl2.string(navigation(2888).fEUKEv);
     obj8[3] = function onPress() {
       const result = modalSessionId(_undefined[18]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(_undefined[18]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, modalSessionId(_undefined[18]).AgeVerificationModalCta.METHOD_SELECT);
       callback();
     };
-    obj7[0] = callback(tmp(4880).Button, obj8);
-    items4[1] = callback(tmp(5328).ButtonGroup, obj7);
+    obj7[0] = callback(tmp(4893).Button, obj8);
+    items4[1] = callback(tmp(5341).ButtonGroup, obj7);
     obj5[3] = items4;
-    obj4[0] = callback2(tmp(4878).Stack, obj5);
-    obj3[0] = callback(tmp(8624).ModalContent, obj4);
-    tmp14 = callback(tmp(8623).ModalScreen, obj3);
+    obj4[0] = callback2(tmp(4891).Stack, obj5);
+    obj3[0] = callback(tmp(8639).ModalContent, obj4);
+    tmp14 = callback(tmp(8638).ModalScreen, obj3);
   }
   return tmp14;
 };

@@ -1,6 +1,6 @@
-// === Module 6037: GPlayConnectionState ===
+// === Module 6050: GPlayConnectionState ===
 
-// Module 6037 (GPlayConnectionState)
+// Module 6050 (GPlayConnectionState)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/gplay/native/Constants.tsx");

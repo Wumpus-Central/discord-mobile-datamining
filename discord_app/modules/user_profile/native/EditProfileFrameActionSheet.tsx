@@ -1,15 +1,15 @@
-// === Module 14249: EditProfileFrameInner ===
+// === Module 14218: EditProfileFrameInner ===
 
-// Module 14249 (EditProfileFrameInner)
+// Module 14218 (EditProfileFrameInner)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "map" /* 7236 */;
-import { isProfileFrameRecord } from "fromServer" /* 7227 */;
+import closure_6 from "map" /* 7250 */;
+import { isProfileFrameRecord } from "fromServer" /* 7241 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 function EditProfileFrameInner(user) {
@@ -93,7 +93,7 @@ function ProfileFrameSectionPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = callback3();
-  const tmp2 = purchase(8014)(previewSkuId);
+  const tmp2 = purchase(8028)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
@@ -117,11 +117,11 @@ function ProfileFrameSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [callback(purchase(10777), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
+  const items1 = [callback(purchase(10795), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
   obj = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj[3] = items2;
-  items1[1] = callback(purchase(4892), obj);
+  items1[1] = callback(purchase(4905), obj);
   obj[1] = items1;
   return callback2(closure_5, obj);
 }

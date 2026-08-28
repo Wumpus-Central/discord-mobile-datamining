@@ -1,9 +1,9 @@
-// === Module 12184: ? ===
+// === Module 12203: ? ===
 
-// Module 12184
+// Module 12203
 import encodeProperties from "encodeProperties" /* 503 */;
 import sendRequest from "sendRequest" /* 530 */;
-import _modDef4666 from "module_4666" /* 4666 */;
+import _modDef4679 from "module_4679" /* 4679 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("actions/HubActionCreators.t
 
 export default {
   signup(email, school) {
-    let obj = _modDef4666;
+    let obj = _modDef4679;
     obj = { url: Endpoints.HUB_WAITLIST_SIGNUP, body: obj, trackedActionData: null, rejectWithError: null };
     obj = { email, school };
     obj[2] = {

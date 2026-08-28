@@ -1,15 +1,15 @@
-// === Module 13335: _initialize ===
+// === Module 13354: _initialize ===
 
-// Module 13335 (_initialize)
+// Module 13354 (_initialize)
 import Storage3 from "Storage" /* 595 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4300 */;
-import initializeDefault from "initialize" /* 5438 */;
-import closure_3 from "trackCommunicationDisabled" /* 1992 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4301 */;
+import initializeDefault from "initialize" /* 5451 */;
+import closure_3 from "trackCommunicationDisabled" /* 1993 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleConnectionOpen" /* 4267 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "handleConnectionOpen" /* 4268 */;
+import closure_6 from "mergeGuildAvatar" /* 1923 */;
 import { GuildFeatures } from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4077 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4078 */;
 
 require = arg1;
 let c9 = "2020_02_nuf_channels";
@@ -95,8 +95,8 @@ class NUFChannelsManager extends tmp2 {
       const value = Storage.get(closure_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(4289).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(4289);
+        isNewUserResult = applyArgumentsResult(4290).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(4290);
       }
       return isNewUserResult;
     };
@@ -119,11 +119,11 @@ prototype["_initialize"] = function _initialize() {
   const value = Storage.get(c9);
   let isNewUserResult = !value;
   if (!value) {
-    let tmpResult = tmp(4289);
+    let tmpResult = tmp(4290);
     isNewUserResult = tmpResult.isNewUser(currentUser.getCurrentUser());
   }
   if (isNewUserResult) {
-    tmpResult = tmp(4300);
+    tmpResult = tmp(4301);
     const rootNavigationRef = tmpResult.getRootNavigationRef();
     if (rootNavigationRef != null) {
       const self = this;

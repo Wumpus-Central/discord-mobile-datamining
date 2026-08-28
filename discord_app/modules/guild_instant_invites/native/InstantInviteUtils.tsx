@@ -1,9 +1,9 @@
-// === Module 10600: useInviteActions ===
+// === Module 10618: useInviteActions ===
 
-// Module 10600 (useInviteActions)
+// Module 10618 (useInviteActions)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "mergeGuildAvatar" /* 1923 */;
 import { InstantInviteSources } from "ME" /* 676 */;
 
 const require = arg1;
@@ -23,9 +23,9 @@ export const useInviteActions = function useInviteActions(invite) {
   let obj = { label: null, iconSource: null, action: null };
   let intl = invite(1236).intl;
   obj[0] = intl.string(invite(1236).t.RDE0Sc);
-  obj[1] = onInviteRevoked(10594).share;
+  obj[1] = onInviteRevoked(10612).share;
   obj[2] = function action() {
-    onInviteRevoked(10601)(() => {
+    onInviteRevoked(10619)(() => {
       let obj = closure_1_0(closure_1_2[7]);
       let tmp4;
       if (!closure_3) {
@@ -60,23 +60,23 @@ export const useInviteActions = function useInviteActions(invite) {
   obj = { label: null, iconSource: null, action: null };
   const intl2 = invite(1236).intl;
   obj[0] = intl2.string(invite(1236).t.OpuAlK);
-  obj[1] = onInviteRevoked(10594).copy;
+  obj[1] = onInviteRevoked(10612).copy;
   obj[2] = function action() {
     if (c3) {
-      let tmpResult = tmp(9829);
+      let tmpResult = tmp(9847);
       tmpResult.handleCopy(invite.code, invite.channel, closure_1_6.GROUP_DM, false);
     } else {
-      tmpResult = tmp(5933);
-      tmpResult.copy(onInviteRevoked(7436)(invite.code));
-      const result = invite(4161).presentCopiedToClipboard();
-      const obj2 = invite(4161);
+      tmpResult = tmp(5946);
+      tmpResult.copy(onInviteRevoked(7450)(invite.code));
+      const result = invite(4162).presentCopiedToClipboard();
+      const obj2 = invite(4162);
     }
   };
   items[1] = obj;
   obj1 = { label: null, iconSource: null, variant: "destructive", action: null };
   const intl3 = invite(1236).intl;
   obj1[0] = intl3.string(invite(1236).t.v6Yazx);
-  obj1[1] = onInviteRevoked(10594).revoke;
+  obj1[1] = onInviteRevoked(10612).revoke;
   dependencyMap = callback(function*() {
     closure_0 = tmp3;
     c3 = 1;

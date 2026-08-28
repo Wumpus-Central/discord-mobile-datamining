@@ -1,7 +1,7 @@
-// === Module 8542: SPOTIFY_APP_PROTOCOL ===
+// === Module 8557: SPOTIFY_APP_PROTOCOL ===
 
-// Module 8542 (SPOTIFY_APP_PROTOCOL)
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5179 */;
+// Module 8557 (SPOTIFY_APP_PROTOCOL)
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5192 */;
 import set from "set" /* 500 */;
 
 const spotify = "spotify";

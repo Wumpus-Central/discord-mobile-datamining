@@ -1,9 +1,9 @@
-// === Module 7323: set ===
+// === Module 7337: set ===
 
-// Module 7323 (set)
+// Module 7337 (set)
 import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import databaseNameDefault from "databaseName" /* 1973 */;
+import databaseNameDefault from "databaseName" /* 1974 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import set from "set" /* 2 */;
@@ -69,7 +69,7 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
   if (null != value) {
     if (0 !== value.length) {
       if (null != databaseResult) {
-        if (stateResult === _require(1957).DatabaseState.Open) {
+        if (stateResult === _require(1958).DatabaseState.Open) {
           let combined = null;
           if (!set.has(type.type)) {
             const _HermesInternal2 = HermesInternal;

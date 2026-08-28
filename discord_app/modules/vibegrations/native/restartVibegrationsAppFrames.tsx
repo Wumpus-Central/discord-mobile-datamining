@@ -1,9 +1,9 @@
-// === Module 12834: restartVibegrationsAppFrames ===
+// === Module 12853: restartVibegrationsAppFrames ===
 
-// Module 12834 (restartVibegrationsAppFrames)
-import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 9382 */;
-import postMessageToWebViewDefault from "postMessageToWebView" /* 9418 */;
-import closure_2 from "map" /* 9385 */;
+// Module 12853 (restartVibegrationsAppFrames)
+import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 9400 */;
+import postMessageToWebViewDefault from "postMessageToWebView" /* 9436 */;
+import closure_2 from "map" /* 9403 */;
 
 const result = require("set").fileFinishedImporting("modules/vibegrations/native/restartVibegrationsAppFrames.tsx");
 

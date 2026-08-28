@@ -1,10 +1,10 @@
-// === Module 14950: EmojiSmilingFaceWithHeartsIcon ===
+// === Module 14935: EmojiSmilingFaceWithHeartsIcon ===
 
-// Module 14950 (EmojiSmilingFaceWithHeartsIcon)
+// Module 14935 (EmojiSmilingFaceWithHeartsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 14951 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 14936 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

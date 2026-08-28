@@ -1,17 +1,17 @@
-// === Module 16802: AgeGateVerify ===
+// === Module 16820: AgeGateVerify ===
 
-// Module 16802 (AgeGateVerify)
+// Module 16820 (AgeGateVerify)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4441 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4684 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4686 */;
-import Button from "Button" /* 4880 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5505 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6208 */;
+import Text from "Text" /* 4442 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4697 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4699 */;
+import Button from "Button" /* 4893 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5518 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6221 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 noopAll;
@@ -46,8 +46,8 @@ export default function AgeGateVerify(source) {
     const obj3 = { text: null, onPress: null, grow: true };
     obj3[0] = verifyAgreementButtonText;
     obj3[1] = function onPress() {
-      let obj = callback2(8613);
-      obj = { entryPoint: callback(8615).AgeVerificationModalEntryPoint.NSFW_AGE_GATE };
+      let obj = callback2(8628);
+      obj = { entryPoint: callback(8630).AgeVerificationModalEntryPoint.NSFW_AGE_GATE };
       const result = obj.showAgeVerificationGetStartedModal(obj);
     };
     obj2[1] = tmp7(Button.Button, obj3);

@@ -1,6 +1,6 @@
-// === Module 17286: _getTemplates ===
+// === Module 17304: _getTemplates ===
 
-// Module 17286 (_getTemplates)
+// Module 17304 (_getTemplates)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;

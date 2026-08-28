@@ -1,19 +1,19 @@
-// === Module 9846: handleUserUpdate ===
+// === Module 9864: handleUserUpdate ===
 
-// Module 9846 (handleUserUpdate)
+// Module 9864 (handleUserUpdate)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import applyOverwritesAll from "applyOverwrites" /* 4094 */;
-import nameFromUserDefault from "nameFromUser" /* 4289 */;
+import applyOverwritesAll from "applyOverwrites" /* 4095 */;
+import nameFromUserDefault from "nameFromUser" /* 4290 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1992 */;
-import closure_7 from "handleConnectionOpenOrResumed" /* 6077 */;
-import closure_8 from "sortActivity" /* 4534 */;
-import closure_9 from "filterPlayingActivities" /* 5175 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "trackCommunicationDisabled" /* 1993 */;
+import closure_7 from "handleConnectionOpenOrResumed" /* 6090 */;
+import closure_8 from "sortActivity" /* 4535 */;
+import closure_9 from "filterPlayingActivities" /* 5188 */;
+import closure_10 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

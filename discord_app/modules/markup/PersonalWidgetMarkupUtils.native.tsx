@@ -1,11 +1,11 @@
-// === Module 8712: parsePersonalWidgetReact ===
+// === Module 8728: parsePersonalWidgetReact ===
 
-// Module 8712 (parsePersonalWidgetReact)
-import MarkupTextDefault from "MarkupText" /* 4436 */;
-import parseLinkDefault from "parseLink" /* 4903 */;
-import importDefaultResult from "combineMarkupRules" /* 4902 */;
+// Module 8728 (parsePersonalWidgetReact)
+import MarkupTextDefault from "MarkupText" /* 4437 */;
+import parseLinkDefault from "parseLink" /* 4916 */;
+import importDefaultResult from "combineMarkupRules" /* 4915 */;
 import importDefaultResult1 from "apply" /* 12 */;
-import importAllResult from "reactParserFor" /* 7828 */;
+import importAllResult from "reactParserFor" /* 7842 */;
 
 const items = [importDefaultResult1.pick(parseLinkDefault.RULES, ["escape", "text", "strong", "em", "u", "url", "autolink", "emoji", "invisibleUnicode"]), MarkupTextDefault()];
 const importDefaultResultResult = importDefaultResult(items);

@@ -1,10 +1,10 @@
-// === Module 6137: _startLurking ===
+// === Module 6150: _startLurking ===
 
-// Module 6137 (_startLurking)
+// Module 6150 (_startLurking)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4090 */;
-import closure_5 from "handleInviteData" /* 4365 */;
+import closure_4 from "initialize" /* 4091 */;
+import closure_5 from "handleInviteData" /* 4366 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 

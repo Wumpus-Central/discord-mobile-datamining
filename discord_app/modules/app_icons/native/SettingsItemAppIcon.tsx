@@ -1,15 +1,15 @@
-// === Module 15069: SettingsItemAppIcon ===
+// === Module 15055: SettingsItemAppIcon ===
 
-// Module 15069 (SettingsItemAppIcon)
+// Module 15055 (SettingsItemAppIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import FreemiumAppIconIds from "FreemiumAppIconIds" /* 8111 */;
-import ClydeIcon from "ClydeIcon" /* 8961 */;
-import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 12938 */;
-import AppIconDefault from "AppIcon" /* 15070 */;
-import { getIconById } from "items" /* 8110 */;
+import FreemiumAppIconIds from "FreemiumAppIconIds" /* 8125 */;
+import ClydeIcon from "ClydeIcon" /* 8979 */;
+import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 12957 */;
+import AppIconDefault from "AppIcon" /* 15056 */;
+import { getIconById } from "items" /* 8124 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 noopAll;

@@ -1,10 +1,10 @@
-// === Module 10365: CameraIcon ===
+// === Module 10383: CameraIcon ===
 
-// Module 10365 (CameraIcon)
+// Module 10383 (CameraIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 10366 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 10384 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

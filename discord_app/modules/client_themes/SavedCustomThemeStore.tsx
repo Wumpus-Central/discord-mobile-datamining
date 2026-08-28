@@ -1,6 +1,6 @@
-// === Module 4378: validateSavedTheme ===
+// === Module 4379: validateSavedTheme ===
 
-// Module 4378 (validateSavedTheme)
+// Module 4379 (validateSavedTheme)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

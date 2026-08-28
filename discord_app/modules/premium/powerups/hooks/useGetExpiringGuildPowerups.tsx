@@ -1,8 +1,8 @@
-// === Module 12037: useGetExpiringGuildPowerups ===
+// === Module 12056: useGetExpiringGuildPowerups ===
 
-// Module 12037 (useGetExpiringGuildPowerups)
+// Module 12056 (useGetExpiringGuildPowerups)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "calculateAppliedBoosts" /* 4331 */;
+import closure_3 from "calculateAppliedBoosts" /* 4332 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGetExpiringGuildPowerups.tsx");

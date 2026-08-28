@@ -1,15 +1,15 @@
-// === Module 9049: trackOnEmojiPickerOpened ===
+// === Module 9067: trackOnEmojiPickerOpened ===
 
-// Module 9049 (trackOnEmojiPickerOpened)
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4653 */;
-import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9027 */;
-import useEmojiHotrail from "useEmojiHotrail" /* 9028 */;
+// Module 9067 (trackOnEmojiPickerOpened)
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4666 */;
+import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9045 */;
+import useEmojiHotrail from "useEmojiHotrail" /* 9046 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getEmojiToGroupId" /* 5353 */;
+import closure_4 from "getEmojiToGroupId" /* 5366 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 1981 */;
+import closure_6 from "handleConnectionOpen" /* 1982 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1925 */;
+import { EmojiIntention } from "set" /* 1926 */;
 import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1338 */;
 
 require = arg1;
@@ -80,7 +80,7 @@ function trackOnEmojiPickerOpened(arg0) {
       }
       return animated;
     }).length,
-    num_custom_expressions_favorites: prop.filter(tmp11(4106).isCustomEmoji).length,
+    num_custom_expressions_favorites: prop.filter(tmp11(4107).isCustomEmoji).length,
     num_standard_expressions_favorites: prop.filter((id) => null == id.id).length,
     num_expressions_frecent: substr1.length,
     num_animated_expressions_frecent: substr1.filter((animated) => {
@@ -90,7 +90,7 @@ function trackOnEmojiPickerOpened(arg0) {
       }
       return animated;
     }).length,
-    num_custom_expressions_frecent: substr1.filter(tmp11(4106).isCustomEmoji).length,
+    num_custom_expressions_frecent: substr1.filter(tmp11(4107).isCustomEmoji).length,
     num_standard_expressions_frecent: substr1.filter((id) => null == id.id).length,
     num_current_guild_expressions: guildEmoji.length,
     num_custom_expressions_total: customEmoji.size,

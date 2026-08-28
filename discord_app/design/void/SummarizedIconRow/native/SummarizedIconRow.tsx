@@ -1,12 +1,12 @@
-// === Module 13654: OverflowSquircle ===
+// === Module 13673: OverflowSquircle ===
 
-// Module 13654 (OverflowSquircle)
+// Module 13673 (OverflowSquircle)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4441 */;
+import Text from "Text" /* 4442 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function OverflowSquircle(arg0) {

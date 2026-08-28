@@ -1,8 +1,8 @@
-// === Module 16857: handleChannelPreload ===
+// === Module 16875: handleChannelPreload ===
 
-// Module 16857 (handleChannelPreload)
-import initializeDefault from "initialize" /* 5438 */;
-import loadForumPostData from "loadForumPostData" /* 6101 */;
+// Module 16875 (handleChannelPreload)
+import initializeDefault from "initialize" /* 5451 */;
+import loadForumPostData from "loadForumPostData" /* 6114 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
 import { isStaticChannelRoute } from "set" /* 1398 */;
 

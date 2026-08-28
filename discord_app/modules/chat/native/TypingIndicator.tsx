@@ -1,17 +1,17 @@
-// === Module 11455: TypingIndicatorInner ===
+// === Module 11474: TypingIndicatorInner ===
 
-// Module 11455 (TypingIndicatorInner)
+// Module 11474 (TypingIndicatorInner)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useChatShowingAutoComplete as closure_5 } from "updateChatInputContainerHeight" /* 9455 */;
-import closure_6 from "getUserAgnosticState" /* 4444 */;
-import closure_7 from "fromServer" /* 5355 */;
-import { SlowmodeType } from "setCooldown" /* 7364 */;
-import closure_9 from "handleTypingStart" /* 11456 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import { useChatShowingAutoComplete as closure_5 } from "updateChatInputContainerHeight" /* 9473 */;
+import closure_6 from "getUserAgnosticState" /* 4445 */;
+import closure_7 from "fromServer" /* 5368 */;
+import { SlowmodeType } from "setCooldown" /* 7378 */;
+import closure_9 from "handleTypingStart" /* 11475 */;
+import closure_10 from "mergeGuildAvatar" /* 1923 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const require = arg1;
 function TypingIndicatorInner(channel) {

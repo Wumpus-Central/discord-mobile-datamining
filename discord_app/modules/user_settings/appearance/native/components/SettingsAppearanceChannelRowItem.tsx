@@ -1,14 +1,14 @@
-// === Module 14834: ChannelRowItem ===
+// === Module 14819: ChannelRowItem ===
 
-// Module 14834 (ChannelRowItem)
+// Module 14819 (ChannelRowItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button2 from "Button" /* 1297 */;
-import FacepileGroupDMAvatar from "FacepileGroupDMAvatar" /* 10568 */;
+import FacepileGroupDMAvatar from "FacepileGroupDMAvatar" /* 10586 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { StatusTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 import Button from "Button" /* 1297 */;
 
 require = arg1;
@@ -77,7 +77,7 @@ export default function ChannelRowItem(isUnread) {
   items1[1] = closure_4(View, obj);
   const obj3 = { style: tmp2.channelItemContent, children: null };
   obj4 = { style: tmp2.channelItemTop, children: null };
-  const items3 = [closure_4(tmp6(4441).Text, { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title }), closure_4(tmp6(4441).Text, { animated: true, style: animatedStyles.textMuted, variant: "text-xs/medium", children: timestamp })];
+  const items3 = [closure_4(tmp6(4442).Text, { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title }), closure_4(tmp6(4442).Text, { animated: true, style: animatedStyles.textMuted, variant: "text-xs/medium", children: timestamp })];
   obj4[1] = items3;
   const items4 = [closure_5(View, obj4), ];
   if (null == preview) {
@@ -90,7 +90,7 @@ export default function ChannelRowItem(isUnread) {
     animatedStyles = { animated: true, style: null, variant: "redesign/message-preview/medium", lineClamp: 1, children: null };
     animatedStyles[1] = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
     animatedStyles[4] = preview;
-    tmp5Result = tmp5(tmp6(4441).Text, animatedStyles);
+    tmp5Result = tmp5(tmp6(4442).Text, animatedStyles);
     const tmp12 = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
   }
 };

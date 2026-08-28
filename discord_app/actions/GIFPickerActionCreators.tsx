@@ -1,15 +1,15 @@
-// === Module 10277: doSearchRequest ===
+// === Module 10295: doSearchRequest ===
 
-// Module 10277 (doSearchRequest)
+// Module 10295 (doSearchRequest)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4653 */;
-import isRefreshableAttachmentUrlAll from "isRefreshableAttachmentUrl" /* 9953 */;
-import GIF_PROVIDER from "GIF_PROVIDER" /* 10278 */;
-import isKlipyProvider from "isKlipyProvider" /* 10279 */;
-import closure_4 from "_getSystemLocale" /* 1996 */;
-import closure_5 from "getFormatFromUrl" /* 10276 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4666 */;
+import isRefreshableAttachmentUrlAll from "isRefreshableAttachmentUrl" /* 9971 */;
+import GIF_PROVIDER from "GIF_PROVIDER" /* 10296 */;
+import isKlipyProvider from "isKlipyProvider" /* 10297 */;
+import closure_4 from "_getSystemLocale" /* 1997 */;
+import closure_5 from "getFormatFromUrl" /* 10294 */;
 import ME from "ME" /* 676 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 import importDefaultResult from "apply" /* 12 */;
@@ -27,7 +27,7 @@ function doSearchRequest(q, arg1, limit) {
     obj = {};
   }
   let obj2 = collectGuildAnalyticsMetadataDefault;
-  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: _require(10278).GIF_PROVIDER };
+  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: _require(10296).GIF_PROVIDER };
   obj2.trackWithMetadata(constants.SEARCH_STARTED, obj);
   const HTTP = _require(530).HTTP;
   obj1 = { url: constants2.GIFS_SEARCH, query: null, oldFormErrors: true, rejectWithError: true };
@@ -40,7 +40,7 @@ function doSearchRequest(q, arg1, limit) {
     const startTime = obj.startTime;
     const merged = Object.assign(obj, Object.create(null));
     obj = { offset: 0, limit: null, totalResults: body.length };
-    let obj2 = q(10279);
+    let obj2 = q(10297);
     obj = {};
     const analyticsID = closure_1_5.getAnalyticsID();
     const merged1 = Object.assign(obj);
@@ -57,9 +57,9 @@ function doSearchRequest(q, arg1, limit) {
     obj2 = {};
     const merged3 = Object.assign(result);
     const merged4 = Object.assign(obj1);
-    obj2.gif_provider = q(10278).GIF_PROVIDER;
-    callback(4653).trackWithMetadata(closure_1_6.SEARCH_RESULT_VIEWED, obj2);
-    const obj6 = callback(4653);
+    obj2.gif_provider = q(10296).GIF_PROVIDER;
+    callback(4666).trackWithMetadata(closure_1_6.SEARCH_RESULT_VIEWED, obj2);
+    const obj6 = callback(4666);
     const tmp2 = q;
     callback(709).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: q, items: body });
   }, () => {
@@ -218,7 +218,7 @@ export const fetchTrendingGIFs = function fetchTrendingGIFs(closure_10) {
     obj = {};
   }
   let obj2 = collectGuildAnalyticsMetadataDefault;
-  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: _require(10278).GIF_PROVIDER };
+  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: _require(10296).GIF_PROVIDER };
   obj2.trackWithMetadata(constants.SEARCH_STARTED, obj);
   const HTTP = _require(530).HTTP;
   obj1 = { url: constants2.GIFS_TRENDING_GIFS, query: null, oldFormErrors: true, rejectWithError: true };
@@ -263,9 +263,9 @@ export const gifUrlKey = function gifUrlKey(uri) {
   let tmp4 = uri;
   if (null != toURLSafeResult) {
     if (obj2.isAttachmentPathUrl(toURLSafeResult)) {
-      str = tmp5(9953).removeSignedUrlParameters(toURLSafeResult);
+      str = tmp5(9971).removeSignedUrlParameters(toURLSafeResult);
       str = str.toString();
-      const tmp5Result = tmp5(9953);
+      const tmp5Result = tmp5(9971);
     }
     tmp4 = str;
     obj2 = isRefreshableAttachmentUrlAll;

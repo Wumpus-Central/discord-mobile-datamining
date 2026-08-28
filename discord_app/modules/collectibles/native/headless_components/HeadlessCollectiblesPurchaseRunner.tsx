@@ -1,8 +1,8 @@
-// === Module 12487: HeadlessCollectiblesPurchaseRunner ===
+// === Module 12507: HeadlessCollectiblesPurchaseRunner ===
 
-// Module 12487 (HeadlessCollectiblesPurchaseRunner)
+// Module 12507 (HeadlessCollectiblesPurchaseRunner)
 import closure_2 from "noop" /* 19 */;
-import { useNativeCheckoutStore } from "context" /* 7103 */;
+import { useNativeCheckoutStore } from "context" /* 7116 */;
 
 const result = require("set").fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseRunner.tsx");
 
@@ -24,7 +24,7 @@ export const HeadlessCollectiblesPurchaseRunner = function HeadlessCollectiblesP
   }
   obj[3] = id;
   obj[4] = onBuySettled;
-  handleBuyNow = attempt(12488)(obj).handleBuyNow;
+  handleBuyNow = attempt(12508)(obj).handleBuyNow;
   closure_4 = React.useRef(0);
   const items = [attempt, handleBuyNow, tmp, tmp2];
   const effect = React.useEffect(() => {

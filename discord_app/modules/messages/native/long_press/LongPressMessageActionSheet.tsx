@@ -1,16 +1,16 @@
-// === Module 11157: LongPressMessageActionSheet ===
+// === Module 11175: LongPressMessageActionSheet ===
 
-// Module 11157 (LongPressMessageActionSheet)
+// Module 11175 (LongPressMessageActionSheet)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleMessageSendFailedAutomod" /* 7780 */;
-import closure_6 from "handleSelectedGuildChange" /* 11158 */;
-import closure_7 from "getTimeSafe" /* 11159 */;
-import { isMessageComponentsV2 } from "hasFlag" /* 4099 */;
+import closure_5 from "handleMessageSendFailedAutomod" /* 7794 */;
+import closure_6 from "handleSelectedGuildChange" /* 11176 */;
+import closure_7 from "getTimeSafe" /* 11177 */;
+import { isMessageComponentsV2 } from "hasFlag" /* 4100 */;
 import closure_9 from "fetchFingerprint" /* 1218 */;
 import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4089 */;
-import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4438 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4090 */;
+import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4439 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 

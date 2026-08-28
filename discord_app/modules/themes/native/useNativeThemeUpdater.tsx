@@ -1,6 +1,6 @@
-// === Module 16449: useNativeThemeUpdater ===
+// === Module 16467: useNativeThemeUpdater ===
 
-// Module 16449 (useNativeThemeUpdater)
+// Module 16467 (useNativeThemeUpdater)
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleThemeChange" /* 1302 */;

@@ -1,9 +1,9 @@
-// === Module 7248: fromServer ===
+// === Module 7262: fromServer ===
 
-// Module 7248 (fromServer)
-import closure_2 from "fromServer" /* 7223 */;
-import { createCollectiblesItemsFromServerResponse as closure_3 } from "createCollectiblesItemsFromServerResponse" /* 7224 */;
-import { CollectiblesVariantProductRecord as closure_4 } from "fromServer" /* 7222 */;
+// Module 7262 (fromServer)
+import closure_2 from "fromServer" /* 7237 */;
+import { createCollectiblesItemsFromServerResponse as closure_3 } from "createCollectiblesItemsFromServerResponse" /* 7238 */;
+import { CollectiblesVariantProductRecord as closure_4 } from "fromServer" /* 7236 */;
 import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_5 } from "items" /* 678 */;
 import { PREMIUM_TYPE_NONE } from "ME" /* 676 */;
 
@@ -23,7 +23,7 @@ prototype["fromServer"] = function fromServer(sku_id) {
   }
   const someResult = closure_5.some((rewardSkuId) => rewardSkuId.rewardSkuId === sku_id);
   let mapped;
-  const tmp5 = sku_id(4490)(prices);
+  const tmp5 = sku_id(4491)(prices);
   if (bundled_products != null) {
     mapped = bundled_products.map(fromServer.fromServer);
   }

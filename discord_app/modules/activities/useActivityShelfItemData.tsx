@@ -1,7 +1,7 @@
-// === Module 16637: useActivityShelfItemData ===
+// === Module 16655: useActivityShelfItemData ===
 
-// Module 16637 (useActivityShelfItemData)
-import useActivityShelfItemsDefault from "useActivityShelfItems" /* 11528 */;
+// Module 16655 (useActivityShelfItemData)
+import useActivityShelfItemsDefault from "useActivityShelfItems" /* 11547 */;
 import closure_2 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");

@@ -1,14 +1,14 @@
-// === Module 13281: set ===
+// === Module 13300: set ===
 
-// Module 13281 (set)
+// Module 13300 (set)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hooksDefault from "hooks" /* 4043 */;
-import NativeModulesDefault from "NativeModules" /* 9578 */;
+import hooksDefault from "hooks" /* 4044 */;
+import NativeModulesDefault from "NativeModules" /* 9596 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "recomputeGuild" /* 5309 */;
-import LocalNotificationTypes from "LocalNotificationTypes" /* 13282 */;
+import closure_4 from "recomputeGuild" /* 5322 */;
+import LocalNotificationTypes from "LocalNotificationTypes" /* 13301 */;
 import { VerificationLevels } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -44,9 +44,9 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
             set.add(userInfo);
           }
         }
-        const result = callback(9578).cancelLocalNotifications(userInfo);
-        const obj = callback(9578);
-        const result1 = callback(9578).cancelLocalNotifications(userInfo);
+        const result = callback(9596).cancelLocalNotifications(userInfo);
+        const obj = callback(9596);
+        const result1 = callback(9596).cancelLocalNotifications(userInfo);
         set.delete(userInfo);
       });
     });
@@ -78,8 +78,8 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
               obj[2] = guild.name;
               const intl = getSystemLocale.intl;
               obj[3] = intl.string(getSystemLocale.t["hrDBa+"]);
-              const result = tmp15(9578).scheduleLocalNotification(obj);
-              const tmp15Result = tmp15(9578);
+              const result = tmp15(9596).scheduleLocalNotification(obj);
+              const tmp15Result = tmp15(9596);
             }
             tmp15 = importDefault;
           }

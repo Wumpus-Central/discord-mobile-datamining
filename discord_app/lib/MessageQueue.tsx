@@ -1,16 +1,16 @@
-// === Module 7511: items ===
+// === Module 7525: items ===
 
-// Module 7511 (items)
+// Module 7525 (items)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 687 */;
-import enqueueDefault from "enqueue" /* 7512 */;
-import getOverlayMessageAnalyticsLocationDefault from "getOverlayMessageAnalyticsLocation" /* 7513 */;
+import enqueueDefault from "enqueue" /* 7526 */;
+import getOverlayMessageAnalyticsLocationDefault from "getOverlayMessageAnalyticsLocation" /* 7527 */;
 import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "getUserAgnosticState" /* 4444 */;
+import closure_6 from "getUserAgnosticState" /* 4445 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "handleConnectionInfoChange" /* 4539 */;
+import closure_8 from "handleConnectionInfoChange" /* 4540 */;
 import ME from "ME" /* 676 */;
-import { MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS as closure_12 } from "MESSAGE_GROUP_SPACING" /* 4438 */;
+import { MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS as closure_12 } from "MESSAGE_GROUP_SPACING" /* 4439 */;
 
 let handleCommand = arg1;
 let closure_3 = ["channelId", "analyticsLocation"];
@@ -204,7 +204,7 @@ prototype["handleSend"] = function handleSend(nonce) {
     obj[0] = tmp3;
     const tmp4 = obj;
   }
-  obj1 = handleCommand(7139);
+  obj1 = handleCommand(7152);
   const signalStrength = obj1.getSignalStrength();
   obj = { mobile_network_type: store2.getType() };
   const merged = Object.assign(callback(nonce, closure_3));
@@ -254,7 +254,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, a
     obj[0] = tmp3;
     const tmp4 = obj;
   }
-  obj1 = handleCommand(7139);
+  obj1 = handleCommand(7152);
   const signalStrength = obj1.getSignalStrength();
   obj = { mobile_network_type: store2.getType() };
   const merged = Object.assign(callback(message, closure_4));

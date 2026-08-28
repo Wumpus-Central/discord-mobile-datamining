@@ -1,23 +1,23 @@
-// === Module 17287: MessagePreview ===
+// === Module 17305: MessagePreview ===
 
-// Module 17287 (MessagePreview)
+// Module 17305 (MessagePreview)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import _modDef4185 from "module_4185" /* 4185 */;
-import Text from "Text" /* 4441 */;
-import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 6066 */;
-import registerAssetDefault from "registerAsset" /* 14826 */;
+import _modDef4186 from "module_4186" /* 4186 */;
+import Text from "Text" /* 4442 */;
+import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 6079 */;
+import registerAssetDefault from "registerAsset" /* 14811 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4437 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "handleFormInit" /* 9650 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4438 */;
+import closure_8 from "handleFormInit" /* 9668 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4439 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function MessagePreview(theme) {
@@ -63,7 +63,7 @@ function MessagePreview(theme) {
   items2[1] = callback2(closure_5, obj2);
   obj[1] = items2;
   obj[2] = callback2(closure_5, obj);
-  return callback(_modDef4185.View, obj);
+  return callback(_modDef4186.View, obj);
 }
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: c9, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: c10 } = MESSAGE_GROUP_SPACING);

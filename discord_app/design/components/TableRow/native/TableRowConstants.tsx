@@ -1,6 +1,6 @@
-// === Module 5510: TABLE_ROW_HEIGHT ===
+// === Module 5523: TABLE_ROW_HEIGHT ===
 
-// Module 5510 (TABLE_ROW_HEIGHT)
+// Module 5523 (TABLE_ROW_HEIGHT)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

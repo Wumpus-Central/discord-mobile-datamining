@@ -1,6 +1,6 @@
-// === Module 17340: AVErrorStreamFailedToStartDefinition ===
+// === Module 17358: AVErrorStreamFailedToStartDefinition ===
 
-// Module 17340 (AVErrorStreamFailedToStartDefinition)
+// Module 17358 (AVErrorStreamFailedToStartDefinition)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 
@@ -18,9 +18,9 @@ export const AVErrorStreamFailedToStartDefinition = {
       return tmp;
     });
     return found.map((currentUserActiveStream) => {
-      const obj = { type: callback(9486).AVError.STREAM_FAILED_TO_START };
-      const obj2 = callback(17331);
-      const merged = Object.assign(obj2.getStreamErrorContext(callback(4511).encodeStreamKey(currentUserActiveStream)));
+      const obj = { type: callback(9504).AVError.STREAM_FAILED_TO_START };
+      const obj2 = callback(17349);
+      const merged = Object.assign(obj2.getStreamErrorContext(callback(4512).encodeStreamKey(currentUserActiveStream)));
       return obj;
     });
   },

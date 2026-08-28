@@ -1,12 +1,12 @@
-// === Module 16970: handleRelationshipAdd ===
+// === Module 16988: handleRelationshipAdd ===
 
-// Module 16970 (handleRelationshipAdd)
+// Module 16988 (handleRelationshipAdd)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1363 */;
-import initializeDefault from "initialize" /* 5438 */;
-import showPendingNotificationAll from "showPendingNotification" /* 16971 */;
+import initializeDefault from "initialize" /* 5451 */;
+import showPendingNotificationAll from "showPendingNotification" /* 16989 */;
 
 function handleRelationshipAdd(relationship) {
   relationship = relationship.relationship;

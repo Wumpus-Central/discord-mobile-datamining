@@ -1,6 +1,6 @@
-// === Module 11242: result ===
+// === Module 11260: result ===
 
-// Module 11242 (result)
+// Module 11260 (result)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import setDefault from "set" /* 687 */;
 

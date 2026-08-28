@@ -1,9 +1,9 @@
-// === Module 14966: route ===
+// === Module 14952: route ===
 
-// Module 14966 (route)
+// Module 14952 (route)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "_getSystemLocale" /* 1996 */;
-import createToggle from "createToggle" /* 10988 */;
+import closure_2 from "_getSystemLocale" /* 1997 */;
+import createToggle from "createToggle" /* 11006 */;
 
 require = arg1;
 createToggle = {
@@ -32,7 +32,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.LANGUAGE,
   getComponent() {
-    return require(14969) /* handleLanguageChange */.default;
+    return require(14955) /* handleLanguageChange */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

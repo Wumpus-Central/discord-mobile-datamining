@@ -1,6 +1,6 @@
-// === Module 7836: getApplicationSubscriptionSystemMessageASTContent ===
+// === Module 7850: getApplicationSubscriptionSystemMessageASTContent ===
 
-// Module 7836 (getApplicationSubscriptionSystemMessageASTContent)
+// Module 7850 (getApplicationSubscriptionSystemMessageASTContent)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

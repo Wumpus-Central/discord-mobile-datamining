@@ -1,35 +1,35 @@
-// === Module 4903: parseLink ===
+// === Module 4916: parseLink ===
 
-// Module 4903 (parseLink)
+// Module 4916 (parseLink)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1988 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4102 */;
-import getNicknameDefault from "getNickname" /* 4638 */;
-import validateContentTypes from "validateContentTypes" /* 4906 */;
-import validateContentTypesDefault from "validateContentTypes" /* 4906 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 4909 */;
-import textRegexpDefault from "textRegexp" /* 4910 */;
-import getChannelDefault from "getChannel" /* 4911 */;
-import regExpDefault from "regExp" /* 4914 */;
-import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 4916 */;
-import getSoundmojiASTFromStringDefault from "getSoundmojiASTFromString" /* 4916 */;
-import TIMESTAMP_FORMATS from "TIMESTAMP_FORMATS" /* 4927 */;
-import staticRouteToTranslation from "staticRouteToTranslation" /* 4928 */;
-import matchDefault from "match" /* 4929 */;
-import regExpDefault2 from "regExp" /* 4930 */;
-import _modDef4931 from "module_4931" /* 4931 */;
-import matchDefault2 from "match" /* 4932 */;
+import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1989 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4103 */;
+import getNicknameDefault from "getNickname" /* 4639 */;
+import validateContentTypes from "validateContentTypes" /* 4919 */;
+import validateContentTypesDefault from "validateContentTypes" /* 4919 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 4922 */;
+import textRegexpDefault from "textRegexp" /* 4923 */;
+import getChannelDefault from "getChannel" /* 4924 */;
+import regExpDefault from "regExp" /* 4927 */;
+import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 4929 */;
+import getSoundmojiASTFromStringDefault from "getSoundmojiASTFromString" /* 4929 */;
+import TIMESTAMP_FORMATS from "TIMESTAMP_FORMATS" /* 4940 */;
+import staticRouteToTranslation from "staticRouteToTranslation" /* 4941 */;
+import matchDefault from "match" /* 4942 */;
+import regExpDefault2 from "regExp" /* 4943 */;
+import _modDef4944 from "module_4944" /* 4944 */;
+import matchDefault2 from "match" /* 4945 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "_toArray" /* 853 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1986 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "mergeGuildAvatar" /* 1923 */;
 import ME from "ME" /* 676 */;
-import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 4904 */;
-import { GAME_MENTION_RAW_RE } from "regExp" /* 4905 */;
-import importDefaultResult from "t" /* 4160 */;
-import importDefaultResult3 from "combineMarkupRules" /* 4902 */;
+import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 4917 */;
+import { GAME_MENTION_RAW_RE } from "regExp" /* 4918 */;
+import importDefaultResult from "t" /* 4161 */;
+import importDefaultResult3 from "combineMarkupRules" /* 4915 */;
 import importDefaultResult4 from "apply" /* 12 */;
 
 require = arg1;
@@ -40,7 +40,7 @@ function parseLink(arg0) {
     obj = { type: "text", content: null };
     obj[1] = arg0[1];
   } else {
-    obj = { type: "link", content: null, target: null, title: "call" };
+    obj = { type: "link", content: null, target: null, title: "container" };
     obj1 = { type: "text", content: null };
     obj1[1] = punycodeLinkResult.displayTarget;
     const items = [obj1];
@@ -138,8 +138,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     if (null != channel) {
       let nickname = getNicknameDefault.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
-        nickname = tmp4(4289).getName(str);
-        const tmp4Result = tmp4(4289);
+        nickname = tmp4(4290).getName(str);
+        const tmp4Result = tmp4(4290);
       }
       str = nickname;
       const obj2 = getNicknameDefault;
@@ -875,7 +875,7 @@ obj[33] = {
 };
 obj[34] = matchDefault;
 obj[35] = regExpDefault2;
-obj[36] = _modDef4931;
+obj[36] = _modDef4944;
 let items = [obj, ];
 const obj20 = {
   order: textRegexpDefault.order,

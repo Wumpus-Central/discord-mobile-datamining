@@ -1,21 +1,21 @@
-// === Module 14209: ChangeBannerColorRow ===
+// === Module 14179: ChangeBannerColorRow ===
 
-// Module 14209 (ChangeBannerColorRow)
+// Module 14179 (ChangeBannerColorRow)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import TableRowInner from "TableRowInner" /* 5551 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5573 */;
-import context from "context" /* 5905 */;
-import ActionSheet from "ActionSheet" /* 5941 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5944 */;
-import Form from "Form" /* 8295 */;
+import TableRowInner from "TableRowInner" /* 5564 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5586 */;
+import context from "context" /* 5918 */;
+import ActionSheet from "ActionSheet" /* 5954 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5957 */;
+import Form from "Form" /* 8309 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleFormOpen" /* 8002 */;
+import closure_6 from "handleFormOpen" /* 8016 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 require = arg1;
 function ChangeBannerColorRow(user) {
@@ -28,17 +28,17 @@ function ChangeBannerColorRow(user) {
   const items = [closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => pendingChanges.getPendingChanges());
   ({ pendingAccentColor, pendingAvatar } = stateFromStoresObject);
-  obj1 = _require(8011);
+  obj1 = _require(8025);
   obj = { userId: user.id, image: pendingAvatar };
   let pendingAvatarSrc = obj1.getPendingAvatarSrc(obj);
-  const tmp7 = pendingAccentColor(8046)(user.id);
+  const tmp7 = pendingAccentColor(8060)(user.id);
   if (pendingAvatarSrc == null) {
     pendingAvatarSrc = user.getAvatarURL(undefined, 80);
   }
-  let tmp2Result = tmp2(8042);
+  let tmp2Result = tmp2(8056);
   tmp2Result = tmp2(688);
   const memoizedImageSourceResult = tmp2Result.memoizedImageSource(pendingAvatarSrc);
-  const rgb2intResult = tmp2Result.rgb2int(_require(8042).useDominantColorFromImage(pendingAvatarSrc, memoizedImageSourceResult));
+  const rgb2intResult = tmp2Result.rgb2int(_require(8056).useDominantColorFromImage(pendingAvatarSrc, memoizedImageSourceResult));
   _require = rgb2intResult;
   if (undefined === pendingAccentColor) {
     let primaryColor;
@@ -59,28 +59,28 @@ function ChangeBannerColorRow(user) {
     if (arg0 === _undefined) {
       tmp = null;
     }
-    _undefined(8006).setPendingChanges({ accentColor: tmp });
+    _undefined(8020).setPendingChanges({ accentColor: tmp });
   }, items1);
   obj = { label: null, trailing: null, onPress: null };
   obj1 = { style: tmp.label, text: null };
   const intl = tmp2(1236).intl;
   obj1[1] = intl.string(_require(1236).t.xzNfPz);
-  obj[0] = callback(_require(8295).FormLabel, obj1);
+  obj[0] = callback(_require(8309).FormLabel, obj1);
   const obj2 = { style: tmp.selectedColor, children: null };
-  const items2 = [callback(pendingAccentColor(14214), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
+  const items2 = [callback(pendingAccentColor(14184), { style: tmp.bannerColor, color: pendingAccentColor }), , ];
   const obj4 = { style: tmp.selectedColorHex, variant: "text-md/medium", color: "interactive-text-default", children: null };
   const obj3 = { style: tmp.bannerColor, color: pendingAccentColor };
-  const tmp2Result1 = _require(8042);
+  const tmp2Result1 = _require(8056);
   obj4[3] = _require(688).int2hex(pendingAccentColor);
-  items2[1] = callback(_require(4441).Text, obj4);
+  items2[1] = callback(_require(4442).Text, obj4);
   const tmp2Result2 = _require(688);
-  items2[2] = callback(_require(1297).Icon, { style: tmp.rowArrow, size: _require(1297).Icon.Sizes.CUSTOM, source: pendingAccentColor(14219) });
+  items2[2] = callback(_require(1297).Icon, { style: tmp.rowArrow, size: _require(1297).Icon.Sizes.CUSTOM, source: pendingAccentColor(14189) });
   obj2[1] = items2;
   obj[1] = callback2(View, obj2);
   obj[2] = function handleChangeColor() {
-    pendingAccentColor(14212)({ color: pendingAccentColor, onSelect: dependencyMap });
+    pendingAccentColor(14182)({ color: pendingAccentColor, onSelect: dependencyMap });
   };
-  return callback(_require(5551).TableRow, obj);
+  return callback(_require(5564).TableRow, obj);
 }
 ({ AnalyticsObjects: error, UPLOAD_BANNER_SIZE: closure_8 } = ME);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
@@ -148,12 +148,12 @@ export default function ChangeBannerActionSheet(isTryItOut) {
               lib = undefined;
               base64 = undefined;
               originalMd5 = undefined;
-              let obj3 = closure_1_1(4412);
+              let obj3 = closure_1_1(4413);
               obj3.hideActionSheet();
               originalMd5 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_1(5034).openImagePicker(closure_1_8);
+              obj1[0] = closure_1_1(5047).openImagePicker(closure_1_8);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -169,9 +169,9 @@ export default function ChangeBannerActionSheet(isTryItOut) {
             base64 = lib.base64;
             originalMd5 = lib.originalMd5;
             if (null != base64) {
-              obj = closure_1_0(14210);
-              obj3 = { assetOrigin: null, imageUri: null, description: "", originalAsset: "Array", originalMd5: 13 };
-              obj3[0] = closure_1_0(7694).AssetOriginTypes.NEW_ASSET;
+              obj = closure_1_0(14180);
+              obj3 = { assetOrigin: null, imageUri: null, description: "", originalAsset: "Array", originalMd5: "emerald" };
+              obj3[0] = closure_1_0(7708).AssetOriginTypes.NEW_ASSET;
               obj3[1] = base64;
               obj3[4] = originalMd5;
               lib(obj.createPendingImage(obj3));
@@ -196,16 +196,16 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   }
   let tmp = callback3();
   if (!flag) {
-    flag = tmp2(4107).canUsePremiumProfileCustomization(user);
-    const tmp2Result = tmp2(4107);
+    flag = tmp2(4108).canUsePremiumProfileCustomization(user);
+    const tmp2Result = tmp2(4108);
   }
-  let obj = { value: _handleBannerUploadSelect(5905)(isTryItOut.analyticsLocations).analyticsLocations, children: null };
+  let obj = { value: _handleBannerUploadSelect(5918)(isTryItOut.analyticsLocations).analyticsLocations, children: null };
   obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.Vgdusv);
   let tmp4Result = flag;
   if (flag) {
-    tmp4Result = tmp4(tmp5(8028).NitroWheelIcon, {});
+    tmp4Result = tmp4(tmp5(8042).NitroWheelIcon, {});
   }
   obj[1] = tmp4Result;
   ({ titleWrapper: obj3[2], titleContainer: obj3[3] } = tmp);
@@ -231,7 +231,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (!flag) {
     let obj3 = { style: null, size: "sm" };
     obj3[0] = tmp.nitroWheel;
-    tmp4Result1 = tmp4(tmp5(8028).NitroWheelIcon, obj3);
+    tmp4Result1 = tmp4(tmp5(8042).NitroWheelIcon, obj3);
   }
   const obj4 = { label: closure_10(View, obj2), subLabel: null, onPress: null };
   items2[1] = tmp4Result1;
@@ -253,7 +253,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
     obj6[0] = tmp.upsellButton;
     const obj7 = { analyticsObject: null };
     obj7[0] = constants.EDIT_PROFILE_BANNER;
-    obj6[1] = tmp4(tmp2(14211), obj7);
+    obj6[1] = tmp4(tmp2(14181), obj7);
     tmp4Result2 = tmp4(tmp10, obj6);
   }
   items3[1] = tmp4Result2;
@@ -284,12 +284,12 @@ export default function ChangeBannerActionSheet(isTryItOut) {
     }
     const obj9 = { label: null, onPress: null };
     obj8[1] = removeText;
-    obj9[0] = tmp4(tmp5(8295).FormLabel, obj8);
+    obj9[0] = tmp4(tmp5(8309).FormLabel, obj8);
     obj9[1] = function handleBannerDelete() {
       callback(null);
       _handleBannerUploadSelect(closure_1_2[10]).hideActionSheet();
     };
-    showRemoveBanner = tmp4(tmp5(5551).TableRow, obj9);
+    showRemoveBanner = tmp4(tmp5(5564).TableRow, obj9);
   }
   const obj10 = { children: null };
   items1[2] = showRemoveBanner;

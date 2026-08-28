@@ -1,6 +1,6 @@
-// === Module 12922: getBillingInformationStringNative ===
+// === Module 12941: getBillingInformationStringNative ===
 
-// Module 12922 (getBillingInformationStringNative)
+// Module 12941 (getBillingInformationStringNative)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { SubscriptionStatusTypes } from "ME" /* 676 */;
 
@@ -16,7 +16,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
     flag = false;
   }
   let _require;
-  let obj = _require(4107);
+  let obj = _require(4108);
   let billingInformationString = obj.getBillingInformationString(subscription, first, tmp, flag, fractionalPremiumInfo);
   let tmp5 = _require(501).isIOS() && subscription.isPurchasedViaApple;
   if (tmp5) {

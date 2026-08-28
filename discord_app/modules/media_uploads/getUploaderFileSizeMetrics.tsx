@@ -1,6 +1,6 @@
-// === Module 8100: getUploaderChannelId ===
+// === Module 8114: getUploaderChannelId ===
 
-// Module 8100 (getUploaderChannelId)
+// Module 8114 (getUploaderChannelId)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/media_uploads/getUploaderFileSizeMetrics.tsx");

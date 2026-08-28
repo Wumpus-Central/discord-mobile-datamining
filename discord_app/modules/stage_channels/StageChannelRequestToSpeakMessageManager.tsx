@@ -1,13 +1,13 @@
-// === Module 16983: handleVoiceStateUpdates ===
+// === Module 17001: handleVoiceStateUpdates ===
 
-// Module 16983 (handleVoiceStateUpdates)
-import initializeDefault from "initialize" /* 5438 */;
+// Module 17001 (handleVoiceStateUpdates)
+import initializeDefault from "initialize" /* 5451 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "reinjectEphemerals" /* 4688 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4089 */;
-import closure_7 from "handleConnectionOpen" /* 1981 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "reinjectEphemerals" /* 4701 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_7 from "handleConnectionOpen" /* 1982 */;
+import closure_8 from "mergeGuildAvatar" /* 1923 */;
 import { MessageFlags } from "ME" /* 676 */;
 
 const require = arg1;

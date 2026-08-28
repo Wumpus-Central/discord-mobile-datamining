@@ -1,6 +1,6 @@
-// === Module 11521: getCommandContext ===
+// === Module 11540: getCommandContext ===
 
-// Module 11521 (getCommandContext)
+// Module 11540 (getCommandContext)
 import closure_0 from "noop" /* 19 */;
 import closure_1 from "createGuildRecordFromRust" /* 1910 */;
 

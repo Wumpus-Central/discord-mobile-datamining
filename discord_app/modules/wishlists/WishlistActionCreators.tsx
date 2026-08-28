@@ -1,17 +1,17 @@
-// === Module 10383: extraWishlistParams ===
+// === Module 10401: extraWishlistParams ===
 
-// Module 10383 (extraWishlistParams)
+// Module 10401 (extraWishlistParams)
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import useSKUPrice from "useSKUPrice" /* 6030 */;
+import useSKUPrice from "useSKUPrice" /* 6043 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createUserWidgetFromServer" /* 7299 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "handlePaymentSourceCreateEnd" /* 4109 */;
-import closure_7 from "fromServer" /* 6026 */;
-import closure_8 from "fromServer" /* 10378 */;
-import { getWishlistSkuIds } from "fromServer" /* 10378 */;
+import closure_4 from "createUserWidgetFromServer" /* 7313 */;
+import closure_5 from "mergeGuildAvatar" /* 1923 */;
+import closure_6 from "handlePaymentSourceCreateEnd" /* 4110 */;
+import closure_7 from "fromServer" /* 6039 */;
+import closure_8 from "fromServer" /* 10396 */;
+import { getWishlistSkuIds } from "fromServer" /* 10396 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 14223: _updateBadgeSettings ===
+// === Module 14193: _updateBadgeSettings ===
 
-// Module 14223 (_updateBadgeSettings)
+// Module 14193 (_updateBadgeSettings)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 

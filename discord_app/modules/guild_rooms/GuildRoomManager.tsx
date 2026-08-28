@@ -1,15 +1,15 @@
-// === Module 16865: isExperimentEnabled ===
+// === Module 16883: isExperimentEnabled ===
 
-// Module 16865 (isExperimentEnabled)
-import _guildRoomConnect from "_guildRoomConnect" /* 4642 */;
-import experimentDefault from "experiment" /* 4673 */;
-import initializeDefault from "initialize" /* 5438 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "resolveCreatingNotes" /* 4644 */;
+// Module 16883 (isExperimentEnabled)
+import _guildRoomConnect from "_guildRoomConnect" /* 4643 */;
+import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4686 */;
+import initializeDefault from "initialize" /* 5451 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "resolveCreatingNotes" /* 4645 */;
 
 require = arg1;
+let c4 = null;
 let c5 = null;
-let c6 = null;
 initializeDefault;
 class GuildRoomManager extends tmp2 {
   constructor() {
@@ -28,9 +28,9 @@ class GuildRoomManager extends tmp2 {
 }
 const prototype = GuildRoomManager.prototype;
 prototype["isExperimentEnabled"] = function isExperimentEnabled(guildId, VOICE_STATE_UPDATE) {
-  let obj = experimentDefault;
+  let obj = GUILD_ROOMS_EXPERIMENT_ID;
   obj = { guildId, location: VOICE_STATE_UPDATE };
-  return obj.getCurrentConfig(obj).enabled;
+  return obj.getGuildRoomsConfig(obj).enabled;
 };
 prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
   const self = this;
@@ -42,7 +42,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
     if (userId === id.getId()) {
       let tmp12 = sessionId;
       if (sessionId === obj.getSessionId()) {
-        let tmp34 = channelId;
+        let tmp37 = channelId;
         if (channelId !== channelId) {
           let isExperimentEnabledResult = null != channelId;
           if (isExperimentEnabledResult) {
@@ -65,22 +65,25 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
           if (null != channelId) {
             let tmp22 = guildId;
             if (null != guildId) {
-              let tmp23 = pendingPosition;
-              pendingPosition = pendingPosition.getPendingPosition();
-              let tmp25 = guildId;
+              let tmp23 = store;
+              let pendingPosition = store.getPendingPosition();
+              let pendingSeat = store.getPendingSeat();
+              let tmp26 = guildId;
               if (self.isExperimentEnabled(guildId, "VOICE_STATE_UPDATE")) {
-                let tmp26 = require;
-                let tmp27 = dependencyMap;
+                let tmp27 = require;
+                let tmp28 = dependencyMap;
                 let obj4 = _guildRoomConnect;
-                let tmp28 = guildId;
-                let tmp29 = channelId;
-                let tmp30 = pendingPosition;
-                let guildRoomConnectResult = obj4.guildRoomConnect(guildId, channelId, pendingPosition);
+                let tmp29 = guildId;
+                let tmp30 = channelId;
+                let tmp31 = pendingPosition;
+                let tmp32 = pendingSeat;
+                let tmp33 = obj4;
+                let guildRoomConnectResult = obj4.guildRoomConnect(guildId, channelId, pendingPosition, pendingSeat);
               }
             }
           }
-          let tmp32 = channelId;
-          let tmp33 = guildId;
+          let tmp35 = channelId;
+          let tmp36 = guildId;
         }
       }
     } else {
@@ -104,16 +107,16 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
   }
 };
 prototype["handleConnectionResumed"] = function handleConnectionResumed() {
-  let isExperimentEnabledResult = null != c5;
+  let isExperimentEnabledResult = null != c4;
   if (isExperimentEnabledResult) {
-    isExperimentEnabledResult = null != c6;
+    isExperimentEnabledResult = null != c5;
   }
   if (isExperimentEnabledResult) {
     const self = this;
-    isExperimentEnabledResult = this.isExperimentEnabled(c6, "CONNECTION_RESUMED");
+    isExperimentEnabledResult = this.isExperimentEnabled(c5, "CONNECTION_RESUMED");
   }
   if (isExperimentEnabledResult) {
-    const guildRoom = _guildRoomConnect.fetchGuildRoom(c6, c5);
+    const guildRoom = _guildRoomConnect.fetchGuildRoom(c5, c4);
     const obj = _guildRoomConnect;
   }
 };

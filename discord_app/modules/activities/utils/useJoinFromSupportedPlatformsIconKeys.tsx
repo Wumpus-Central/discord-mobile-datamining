@@ -1,6 +1,6 @@
-// === Module 12815: getJoinFromSupportedPlatformsIconKeys ===
+// === Module 12834: getJoinFromSupportedPlatformsIconKeys ===
 
-// Module 12815 (getJoinFromSupportedPlatformsIconKeys)
+// Module 12834 (getJoinFromSupportedPlatformsIconKeys)
 import closure_0 from "noop" /* 19 */;
 import { ActivityGamePlatforms } from "ME" /* 676 */;
 

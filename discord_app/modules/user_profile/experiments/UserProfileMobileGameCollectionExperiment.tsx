@@ -1,6 +1,6 @@
-// === Module 12414: useIsMobileGameCollectionExperimentEnabled ===
+// === Module 12434: useIsMobileGameCollectionExperimentEnabled ===
 
-// Module 12414 (useIsMobileGameCollectionExperimentEnabled)
+// Module 12434 (useIsMobileGameCollectionExperimentEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

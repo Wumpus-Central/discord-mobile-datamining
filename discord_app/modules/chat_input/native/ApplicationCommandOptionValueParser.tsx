@@ -1,20 +1,21 @@
-// === Module 11487: getUsers ===
+// === Module 11506: getUsers ===
 
-// Module 11487 (getUsers)
+// Module 11506 (getUsers)
 import applyDefault from "apply" /* 12 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
-import rebuild from "rebuild" /* 7360 */;
-import rebuildDefault from "rebuild" /* 7360 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "rebuild" /* 5400 */;
-import { isGuildSelectableChannelType as closure_5 } from "createChannelRecord" /* 1395 */;
-import closure_6 from "comparator" /* 1982 */;
-import closure_7 from "trackCommunicationDisabled" /* 1992 */;
-import closure_8 from "createGuildRoleRecordFromRust" /* 1985 */;
-import closure_9 from "markAllUserIdListsStale" /* 4098 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import regExp from "regExp" /* 4905 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1956 */;
+import rebuild from "rebuild" /* 7374 */;
+import rebuildDefault from "rebuild" /* 7374 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "rebuild" /* 5413 */;
+import { isGuildSelectableChannelType as closure_6 } from "createChannelRecord" /* 1395 */;
+import closure_7 from "comparator" /* 1983 */;
+import closure_8 from "trackCommunicationDisabled" /* 1993 */;
+import closure_9 from "createGuildRoleRecordFromRust" /* 1986 */;
+import closure_10 from "markAllUserIdListsStale" /* 4099 */;
+import closure_11 from "mergeGuildAvatar" /* 1923 */;
+import regExp from "regExp" /* 4918 */;
 
 require = arg1;
 function getUsers(getGuildId) {
@@ -43,14 +44,14 @@ function getChannels(getGuildId, arr) {
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
-      const obj = { id: id.id, text: arr(4639).computeChannelName(id, closure_10, closure_9) };
+      const obj = { id: id.id, text: arr(4640).computeChannelName(id, closure_11, closure_10) };
       return obj;
     });
   } else {
     dependencyMap = textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId);
     const tmp9 = guildId(12);
-    const tmp9Result = guildId(12)(_require(5337).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
-    const combined = guildId(12)(_require(5337).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((arg0) => closure_1_6.getChannels(guildId)[arg0].map((channel) => channel.channel)).concat(closure_4.computeAllActiveJoinedThreads(guildId));
+    const tmp9Result = guildId(12)(_require(5350).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
+    const combined = guildId(12)(_require(5350).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((arg0) => closure_1_7.getChannels(guildId)[arg0].map((channel) => channel.channel)).concat(closure_5.computeAllActiveJoinedThreads(guildId));
     const found = combined.filter((type) => {
       let hasItem = null == closure_0;
       if (!hasItem) {
@@ -60,52 +61,51 @@ function getChannels(getGuildId, arr) {
     });
     return found.map((id) => {
       const obj = { id: id.id, text: null };
-      if (closure_1_5(id.type)) {
+      if (closure_1_6(id.type)) {
         let name;
         if (dependencyMap[id.id] != null) {
           name = tmp7.name;
         }
         if (name == null) {
-          name = arr(4639).computeChannelName(id, closure_1_10, closure_1_9);
-          const obj3 = arr(4639);
+          name = arr(4640).computeChannelName(id, closure_1_11, closure_1_10);
+          const obj3 = arr(4640);
         }
         let channelName = name;
       } else {
-        channelName = arr(4639).computeChannelName(id, closure_1_10, closure_1_9);
-        const obj2 = arr(4639);
+        channelName = arr(4640).computeChannelName(id, closure_1_11, closure_1_10);
+        const obj2 = arr(4640);
       }
       obj[1] = channelName;
       return obj;
     });
   }
 }
-({ MENTION_SENTINEL: unpackModuleId, CHANNEL_SENTINEL: closure_12 } = regExp);
-const re13 = /^@(([^@#:]+)#([0-9]{4}))$/i;
+({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = regExp);
 function matchPrefix(arg0, arg1, arg2) {
 
 }
 const prototype = function ApplicationCommandOptionValueParser(channel) {
   const obj = Object.create(new.target.prototype);
   obj.parse = function parse(text, type) {
-    const str = text.trim();
-    let arr6 = str;
-    let arr = closure_1_15(arr6.channel);
-    closure_1 = arr;
-    const guild_id = arr6.channel.guild_id;
+    const trimmed = text.trim();
+    let arr7 = trimmed;
+    const arr2 = closure_1_15(arr7.channel);
+    closure_1 = arr2;
+    const guild_id = arr7.channel.guild_id;
     if (null != guild_id) {
-      let sortedRoles = closure_1_8.getSortedRoles(guild_id);
+      let sortedRoles = closure_1_9.getSortedRoles(guild_id);
     } else {
       sortedRoles = [];
     }
-    closure_2 = closure_1_1(closure_1_2[9])(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
-    closure_3 = arr.map((text) => {
+    closure_2 = closure_1_1(closure_1_2[10])(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
+    closure_3 = arr2.map((text) => {
       obj = {};
       const merged = Object.assign(text);
       obj.text = text.text.split("#")[0];
       return obj;
     });
     function matchUser() {
-      const arr = closure_1_11;
+      const arr = closure_1_12;
       obj = closure_1;
       if (typeof closure_1_14 !== "function") {
         HermesBuiltin.throwTypeError();
@@ -157,25 +157,35 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       }
       return tmp6;
     }
-    if (type.type === obj(closure_1_2[13]).ApplicationCommandOptionType.USER) {
+    if (type.type === obj(closure_1_2[14]).ApplicationCommandOptionType.USER) {
       const matchUserResult = matchUser();
       if (null != matchUserResult) {
         return matchUserResult;
       } else {
-        closure_1_13.lastIndex = 0;
-        const match = closure_1_13.exec(str);
-        if (null != match) {
-          const findByTagResult = closure_1_10.findByTag(match[2], match[3]);
+        let str = trimmed;
+        if (trimmed[0] === closure_1_12) {
+          str = trimmed.slice(1);
+        }
+        [tmp7, tmp8] = closure_1_3(str.split("#", 2), 2);
+        if (null != tmp8) {
+          if ("0000" !== tmp8) {
+            obj = /^[0-9]{4}$/;
+            if (obj.test(tmp8)) {
+              let findByTagResult = closure_1_11.findByTag(tmp7, tmp8);
+            }
+          }
           if (null != findByTagResult) {
             obj = { type: "userMention", userId: null };
             obj[1] = findByTagResult.id;
             return obj;
           }
         }
+        findByTagResult = closure_1_11.findByTag(tmp7);
+        let tmp6 = closure_1_3(str.split("#", 2), 2);
       }
     }
     function matchRole() {
-      const arr = closure_1_11;
+      const arr = closure_1_12;
       obj = closure_2;
       if (typeof closure_1_14 !== "function") {
         HermesBuiltin.throwTypeError();
@@ -203,27 +213,27 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       }
       return obj;
     }
-    if (type.type === obj(closure_1_2[13]).ApplicationCommandOptionType.ROLE) {
+    if (type.type === obj(closure_1_2[14]).ApplicationCommandOptionType.ROLE) {
       const matchRoleResult = matchRole();
       if (null != matchRoleResult) {
         return matchRoleResult;
       }
     }
-    if (type.type === obj(closure_1_2[13]).ApplicationCommandOptionType.CHANNEL) {
-      arr6 = closure_1_12;
+    if (type.type === obj(closure_1_2[14]).ApplicationCommandOptionType.CHANNEL) {
+      arr7 = closure_1_13;
       if (typeof closure_1_14 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let firstResult = null;
-      if (str[0] === arr6) {
-        closure_1 = str.substr(arr6.length);
-        let found = obj6.sortBy((text) => -text.text.length).filter((text) => {
+      if (trimmed[0] === arr7) {
+        closure_1 = trimmed.substr(arr7.length);
+        let found = obj8.sortBy((text) => -text.text.length).filter((text) => {
           const formatted = closure_1.toLowerCase();
           return formatted === text.text.toLowerCase();
         });
         let mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
         firstResult = mapped.first();
-        let sortByResult = obj6.sortBy((text) => -text.text.length);
+        let sortByResult = obj8.sortBy((text) => -text.text.length);
       }
       if (null != firstResult) {
         if (null != firstResult.id) {
@@ -232,9 +242,9 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
           return obj;
         }
       }
-      obj6 = closure_1_16(arr6.channel, type.channelTypes);
+      obj8 = closure_1_16(arr7.channel, type.channelTypes);
     }
-    if (type.type === obj(closure_1_2[13]).ApplicationCommandOptionType.MENTIONABLE) {
+    if (type.type === obj(closure_1_2[14]).ApplicationCommandOptionType.MENTIONABLE) {
       const matchRoleResult1 = matchRole();
       if (null != matchRoleResult1) {
         return matchRoleResult1;
@@ -243,20 +253,31 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
         if (null != matchUserResult1) {
           return matchUserResult1;
         } else {
-          closure_1_13.lastIndex = 0;
-          const match1 = closure_1_13.exec(str);
-          if (null != match1) {
-            const findByTagResult1 = closure_1_10.findByTag(match1[2], match1[3]);
+          let str4 = trimmed;
+          if (trimmed[0] === closure_1_12) {
+            str4 = trimmed.slice(1);
+          }
+          [tmp16, tmp17] = closure_1_3(str4.split("#", 2), 2);
+          if (null != tmp17) {
+            if ("0000" !== tmp17) {
+              let obj2 = /^[0-9]{4}$/;
+              if (obj2.test(tmp17)) {
+                let findByTagResult1 = closure_1_11.findByTag(tmp16, tmp17);
+              }
+            }
             if (null != findByTagResult1) {
               obj1 = { type: "userMention", userId: null };
               obj1[1] = findByTagResult1.id;
               return obj1;
             }
           }
+          findByTagResult1 = closure_1_11.findByTag(tmp16);
+          const tmp15 = closure_1_3(str4.split("#", 2), 2);
         }
       }
     }
-    return { type: "text", text };
+    obj2 = { type: "text", text };
+    return obj2;
   };
   obj.channel = channel;
   return obj;
@@ -331,25 +352,25 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
     }
     let obj = Object.create(closure_1_17.prototype);
     obj.parse = function parse(text, type) {
-      const str = text.trim();
-      let arr6 = str;
-      let arr = closure_1_15(arr6.channel);
-      closure_1 = arr;
-      const guild_id = arr6.channel.guild_id;
+      const trimmed = text.trim();
+      let arr7 = trimmed;
+      const arr2 = closure_1_15(arr7.channel);
+      closure_1 = arr2;
+      const guild_id = arr7.channel.guild_id;
       if (null != guild_id) {
-        let sortedRoles = closure_1_8.getSortedRoles(guild_id);
+        let sortedRoles = closure_1_9.getSortedRoles(guild_id);
       } else {
         sortedRoles = [];
       }
-      closure_2 = closure_1_1(closure_1_2[9])(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
-      closure_3 = arr.map((text) => {
+      closure_2 = closure_1_1(closure_1_2[10])(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
+      closure_3 = arr2.map((text) => {
         obj = {};
         const merged = Object.assign(text);
         obj.text = text.text.split("#")[0];
         return obj;
       });
       function matchUser() {
-        const arr = closure_1_11;
+        const arr = closure_1_12;
         obj = closure_1;
         if (typeof closure_1_14 !== "function") {
           HermesBuiltin.throwTypeError();
@@ -401,25 +422,35 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
         }
         return tmp6;
       }
-      if (type.type === obj(closure_1_2[13]).ApplicationCommandOptionType.USER) {
+      if (type.type === obj(closure_1_2[14]).ApplicationCommandOptionType.USER) {
         const matchUserResult = matchUser();
         if (null != matchUserResult) {
           return matchUserResult;
         } else {
-          closure_1_13.lastIndex = 0;
-          const match = closure_1_13.exec(str);
-          if (null != match) {
-            const findByTagResult = closure_1_10.findByTag(match[2], match[3]);
+          let str = trimmed;
+          if (trimmed[0] === closure_1_12) {
+            str = trimmed.slice(1);
+          }
+          [tmp7, tmp8] = closure_1_3(str.split("#", 2), 2);
+          if (null != tmp8) {
+            if ("0000" !== tmp8) {
+              obj = /^[0-9]{4}$/;
+              if (obj.test(tmp8)) {
+                let findByTagResult = closure_1_11.findByTag(tmp7, tmp8);
+              }
+            }
             if (null != findByTagResult) {
               obj = { type: "userMention", userId: null };
               obj[1] = findByTagResult.id;
               return obj;
             }
           }
+          findByTagResult = closure_1_11.findByTag(tmp7);
+          let tmp6 = closure_1_3(str.split("#", 2), 2);
         }
       }
       function matchRole() {
-        const arr = closure_1_11;
+        const arr = closure_1_12;
         obj = closure_2;
         if (typeof closure_1_14 !== "function") {
           HermesBuiltin.throwTypeError();
@@ -447,27 +478,27 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
         }
         return obj;
       }
-      if (type.type === obj(closure_1_2[13]).ApplicationCommandOptionType.ROLE) {
+      if (type.type === obj(closure_1_2[14]).ApplicationCommandOptionType.ROLE) {
         const matchRoleResult = matchRole();
         if (null != matchRoleResult) {
           return matchRoleResult;
         }
       }
-      if (type.type === obj(closure_1_2[13]).ApplicationCommandOptionType.CHANNEL) {
-        arr6 = closure_1_12;
+      if (type.type === obj(closure_1_2[14]).ApplicationCommandOptionType.CHANNEL) {
+        arr7 = closure_1_13;
         if (typeof closure_1_14 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let firstResult = null;
-        if (str[0] === arr6) {
-          closure_1 = str.substr(arr6.length);
-          let found = obj6.sortBy((text) => -text.text.length).filter((text) => {
+        if (trimmed[0] === arr7) {
+          closure_1 = trimmed.substr(arr7.length);
+          let found = obj8.sortBy((text) => -text.text.length).filter((text) => {
             const formatted = closure_1.toLowerCase();
             return formatted === text.text.toLowerCase();
           });
           let mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
           firstResult = mapped.first();
-          let sortByResult = obj6.sortBy((text) => -text.text.length);
+          let sortByResult = obj8.sortBy((text) => -text.text.length);
         }
         if (null != firstResult) {
           if (null != firstResult.id) {
@@ -476,9 +507,9 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
             return obj;
           }
         }
-        obj6 = closure_1_16(arr6.channel, type.channelTypes);
+        obj8 = closure_1_16(arr7.channel, type.channelTypes);
       }
-      if (type.type === obj(closure_1_2[13]).ApplicationCommandOptionType.MENTIONABLE) {
+      if (type.type === obj(closure_1_2[14]).ApplicationCommandOptionType.MENTIONABLE) {
         const matchRoleResult1 = matchRole();
         if (null != matchRoleResult1) {
           return matchRoleResult1;
@@ -487,20 +518,31 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
           if (null != matchUserResult1) {
             return matchUserResult1;
           } else {
-            closure_1_13.lastIndex = 0;
-            const match1 = closure_1_13.exec(str);
-            if (null != match1) {
-              const findByTagResult1 = closure_1_10.findByTag(match1[2], match1[3]);
+            let str4 = trimmed;
+            if (trimmed[0] === closure_1_12) {
+              str4 = trimmed.slice(1);
+            }
+            [tmp16, tmp17] = closure_1_3(str4.split("#", 2), 2);
+            if (null != tmp17) {
+              if ("0000" !== tmp17) {
+                let obj2 = /^[0-9]{4}$/;
+                if (obj2.test(tmp17)) {
+                  let findByTagResult1 = closure_1_11.findByTag(tmp16, tmp17);
+                }
+              }
               if (null != findByTagResult1) {
                 obj1 = { type: "userMention", userId: null };
                 obj1[1] = findByTagResult1.id;
                 return obj1;
               }
             }
+            findByTagResult1 = closure_1_11.findByTag(tmp16);
+            const tmp15 = closure_1_3(str4.split("#", 2), 2);
           }
         }
       }
-      return { type: "text", text };
+      obj2 = { type: "text", text };
+      return obj2;
     };
     obj.channel = obj;
     return obj;

@@ -1,16 +1,16 @@
-// === Module 13027: ProgressWheel ===
+// === Module 13046: ProgressWheel ===
 
-// Module 13027 (ProgressWheel)
+// Module 13046 (ProgressWheel)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4165 */;
-import preloadDefault from "preload" /* 5445 */;
-import inlineStyles from "inlineStyles" /* 8173 */;
-import MAX_REFERRALS_SENT from "MAX_REFERRALS_SENT" /* 13019 */;
-import metadataDefault from "metadata" /* 13029 */;
+import map from "map" /* 4166 */;
+import preloadDefault from "preload" /* 5458 */;
+import inlineStyles from "inlineStyles" /* 8187 */;
+import MAX_REFERRALS_SENT from "MAX_REFERRALS_SENT" /* 13038 */;
+import metadataDefault from "metadata" /* 13048 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
@@ -30,14 +30,14 @@ export default function ProgressWheel(nReferralsSent) {
   let tmp9 = nReferralsSent === MAX_REFERRALS_SENT.MAX_REFERRALS_SENT;
   if (tmp9) {
     obj = { source: null, style: null };
-    let tmp4Result = tmp4(5445);
-    obj[0] = tmp4(13028);
+    let tmp4Result = tmp4(5458);
+    obj[0] = tmp4(13047);
     obj[1] = tmp.glowImage;
     tmp9 = callback(tmp4Result, obj);
   }
   const items = [tmp9, , ];
   obj1 = { width: c6, height: c6, children: null };
-  tmp4Result = tmp4(8173);
+  tmp4Result = tmp4(8187);
   const items1 = [callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }), callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: "#53ac66", strokeWidth: 6, fill: "transparent", strokeDasharray: closure_7, strokeDashoffset: closure_7 * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" })];
   obj1[2] = items1;
   items[1] = closure_5(tmp4Result, obj1);

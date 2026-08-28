@@ -1,8 +1,8 @@
-// === Module 15865: NonCollapsableGestureDetector ===
+// === Module 15883: NonCollapsableGestureDetector ===
 
-// Module 15865 (NonCollapsableGestureDetector)
+// Module 15883 (NonCollapsableGestureDetector)
 import noopAll from "noop" /* 19 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5604 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5617 */;
 import closure_3 from "_objectWithoutProperties" /* 109 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

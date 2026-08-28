@@ -1,6 +1,6 @@
-// === Module 12028: usePowerupGroupConfig ===
+// === Module 12047: usePowerupGroupConfig ===
 
-// Module 12028 (usePowerupGroupConfig)
+// Module 12047 (usePowerupGroupConfig)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 

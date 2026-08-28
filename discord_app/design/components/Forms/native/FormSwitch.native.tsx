@@ -1,15 +1,15 @@
-// === Module 5946: FormSwitch ===
+// === Module 5959: FormSwitch ===
 
-// Module 5946 (FormSwitch)
+// Module 5959 (FormSwitch)
 import ThemesDefault from "Themes" /* 712 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4879 */;
-import IconSizesDefault from "IconSizes" /* 4882 */;
-import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4883 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4892 */;
+import IconSizesDefault from "IconSizes" /* 4895 */;
+import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4896 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4445 */;
-import importDefaultResult from "module_4185" /* 4185 */;
+import createCacheKey from "createCacheKey" /* 4446 */;
+import importDefaultResult from "module_4186" /* 4186 */;
 
 require = arg1;
 let closure_6 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").Pressable);

@@ -1,6 +1,6 @@
-// === Module 1921: setTimeout ===
+// === Module 1922: setTimeout ===
 
-// Module 1921 (setTimeout)
+// Module 1922 (setTimeout)
 import set from "set" /* 2 */;
 import typedGlobal from "typedGlobal" /* 1919 */;
 

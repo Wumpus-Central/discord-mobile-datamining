@@ -1,6 +1,6 @@
-// === Module 12809: getRemoteJoinFooterLabel ===
+// === Module 12828: getRemoteJoinFooterLabel ===
 
-// Module 12809 (getRemoteJoinFooterLabel)
+// Module 12828 (getRemoteJoinFooterLabel)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;

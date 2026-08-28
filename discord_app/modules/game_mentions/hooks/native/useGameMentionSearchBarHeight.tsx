@@ -1,9 +1,9 @@
-// === Module 11876: useGameMentionSearchBarHeight ===
+// === Module 11895: useGameMentionSearchBarHeight ===
 
-// Module 11876 (useGameMentionSearchBarHeight)
+// Module 11895 (useGameMentionSearchBarHeight)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import map from "map" /* 9009 */;
+import map from "map" /* 9027 */;
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 let c3 = "text-sm/semibold";

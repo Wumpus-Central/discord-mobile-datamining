@@ -1,15 +1,15 @@
-// === Module 8375: findCommandInSection ===
+// === Module 8389: findCommandInSection ===
 
-// Module 8375 (findCommandInSection)
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7201 */;
-import ScoreMethod from "ScoreMethod" /* 8086 */;
-import getOptionValue from "getOptionValue" /* 8088 */;
+// Module 8389 (findCommandInSection)
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7215 */;
+import ScoreMethod from "ScoreMethod" /* 8100 */;
+import getOptionValue from "getOptionValue" /* 8102 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import getIndexKey from "getIndexKey" /* 8078 */;
-import closure_10 from "getIndexKey" /* 8078 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4904 */;
+import getIndexKey from "getIndexKey" /* 8092 */;
+import closure_10 from "getIndexKey" /* 8092 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4917 */;
 import { NOOP } from "ME" /* 676 */;
 
 require = arg1;
@@ -35,7 +35,7 @@ function findCommandInSection(found, commandKey) {
       }
       let command;
       if (null != rootCommand) {
-        obj = _require(7199);
+        obj = _require(7213);
         obj = { rootCommand: null, command: null, applicationId: null };
         obj[0] = rootCommand;
         obj[1] = rootCommand;
@@ -193,7 +193,7 @@ export const useCachedResults = function useCachedResults(arg0, CHAT, text) {
     }, items),
     text
   };
-  obj = { scoreMethod: _require(8086).ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
+  obj = { scoreMethod: _require(8100).ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
   const tmp = callback2(arg0, obj, obj);
   obj = { commands: tmp.commands, sections: tmp.descriptors };
   return obj;

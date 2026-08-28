@@ -1,10 +1,10 @@
-// === Module 4973: ThreadLockIcon ===
+// === Module 4986: ThreadLockIcon ===
 
-// Module 4973 (ThreadLockIcon)
+// Module 4986 (ThreadLockIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4164 */;
-import registerAsset from "registerAsset" /* 4934 */;
+import BaseIconImage from "BaseIconImage" /* 4165 */;
+import registerAsset from "registerAsset" /* 4947 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

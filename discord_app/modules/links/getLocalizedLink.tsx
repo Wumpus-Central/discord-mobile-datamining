@@ -1,6 +1,6 @@
-// === Module 4073: getLocalizedLink ===
+// === Module 4074: getLocalizedLink ===
 
-// Module 4073 (getLocalizedLink)
+// Module 4074 (getLocalizedLink)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
