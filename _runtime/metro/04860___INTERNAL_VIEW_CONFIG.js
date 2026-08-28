@@ -5,7 +5,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
 const codegenNativeComponent = get_ActivityIndicator.codegenNativeComponent;
-const obj = { uiViewClassName: "RNSTabsBottomAccessoryContent", validAttributes: { environment: true } };
+const obj = { uiViewClassName: "RNSScreenContentWrapper", validAttributes: {} };
 
-export default setRuntimeConfigProvider.get("RNSTabsBottomAccessoryContent", () => obj);
+export default setRuntimeConfigProvider.get("RNSScreenContentWrapper", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

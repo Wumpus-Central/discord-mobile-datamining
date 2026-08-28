@@ -1,18 +1,16 @@
 // === Module 8254: _isNativeReflectConstruct ===
 
 // Module 8254 (_isNativeReflectConstruct)
-import noopAll from "noop" /* 19 */;
+import noopDefault from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8197 */;
-import _modDef8251 from "module_8251" /* 8251 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8256 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8211 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const Mask = arg1;
+const Filter = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,14 +30,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class Mask {
+noopDefault;
+class Filter {
   constructor() {
     self = this;
-    tmp = closure_3(this, Mask);
-    tmp2 = closure_5;
-    obj = closure_5(Mask);
-    tmp3 = closure_4;
+    tmp = closure_2(this, Filter);
+    tmp2 = closure_4;
+    obj = closure_4(Filter);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -53,58 +51,31 @@ class Mask {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Mask, _isNativeReflectConstructDefault);
+_inheritsDefault(Filter, _isNativeReflectConstructDefault);
 const items = [
   {
     key: "render",
     value: function render() {
       const self = this;
       const props = this.props;
-      ({ maskUnits, maskContentUnits, style } = props);
-      let obj = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
-      let num = 0;
-      if (undefined !== maskUnits) {
-        num = _modDef8251[maskUnits];
-      }
-      obj[4] = num;
-      let num2 = 1;
-      if (undefined !== maskContentUnits) {
-        num2 = _modDef8251[maskContentUnits];
-      }
-      obj[5] = num2;
-      let str;
-      if (props != null) {
-        str = props.maskType;
-      }
-      if (!str) {
-        let maskType;
-        if (style != null) {
-          maskType = style.maskType;
-        }
-        str = maskType;
-      }
-      if (!str) {
-        str = "luminance";
-      }
-      obj[6] = self(8255).maskType[str];
+      let obj = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }
       };
-      const tmp5 = self;
-      const tmp8 = __INTERNAL_VIEW_CONFIGDefault;
-      const merged = Object.assign(self(8188).withoutXY(this, props));
-      const merged1 = Object.assign(obj);
-      obj.children = props.children;
-      return <tmp8 ref={function ref(arg0) {
-        return self.refMethod(arg0);
-      }} />;
+      const merged = Object.assign(obj);
+      obj.children = this.props.children;
+      return jsx(self(8255), {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Mask, items);
-importDefaultResultResult.displayName = "Mask";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = importDefaultResult(Filter, items);
+importDefaultResultResult.displayName = "Filter";
+importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
 
 export default importDefaultResultResult;

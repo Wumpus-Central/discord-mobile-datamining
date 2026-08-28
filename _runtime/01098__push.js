@@ -126,16 +126,16 @@ function _shift(arg0) {
 function createIndexedDbStore(arg0) {
   closure_0 = arg0;
   function getStore() {
-    if (null == f70209) {
+    if (null == f70263) {
       let str = dbName.dbName;
       if (!str) {
         str = "sentry-offline";
       }
       dbName = dbName.storeName || "queue";
       const openResult = globalThis.indexedDB.open(str);
-      f70209 = openResult;
+      f70263 = openResult;
       openResult.onupgradeneeded = () => {
-        const result = f70209.result;
+        const result = f70263.result;
         return result.createObjectStore(closure_0);
       };
       dbName = openResult;
@@ -149,13 +149,13 @@ function createIndexedDbStore(arg0) {
         closure_0.onerror = fn2;
         closure_0.onabort = fn2;
       });
-      f70209 = (arg0) => {
+      f70263 = (arg0) => {
         closure_0 = arg0;
         return promise.then((transaction) => callback(transaction.transaction(callback, "readwrite").objectStore(callback)));
       };
       const tmp7 = dbName;
     }
-    return f70209;
+    return f70263;
   }
   let obj = { push: null, unshift: null, shift: null };
   closure_4 = callback((arg0) => {
@@ -313,7 +313,7 @@ export const createStore = function createStore(arg0, arg1) {
   const openResult = globalThis.indexedDB.open(arg0);
   dependencyMap = openResult;
   openResult.onupgradeneeded = () => {
-    const result = f70209.result;
+    const result = f70263.result;
     return result.createObjectStore(closure_0);
   };
   closure_0 = openResult;

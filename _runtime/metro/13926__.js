@@ -1,29 +1,20 @@
 // === Module 13926: ? ===
 
 // Module 13926
-import call from "call" /* 13889 */;
-import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 13869 */;
+import call from "call" /* 13892 */;
+import all from "all" /* 13913 */;
+import f2 from "f" /* 13927 */;
+import all2 from "all" /* 13937 */;
+import _mod13938 from "module_13938" /* 13938 */;
 
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-}
-const tmp = call(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {
+let closure_2 = call([].concat);
 
-  }.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+export default all("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = f2.f(all2(arg0));
+  const f = _mod13938.f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = callback(fResult, f(arg0));
   }
-  tmp3 = tmp5;
-}
-
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+  return tmp2;
+});

@@ -3,7 +3,7 @@
 // Module 8228 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-const obj = { uiViewClassName: "RNSVGFeFlood", validAttributes: { x: true, y: true, width: true, height: true, result: true, floodColor: true, floodOpacity: true } };
+const obj = { uiViewClassName: "RNSVGFeColorMatrix", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, type: true, values: true } };
 
-export default setRuntimeConfigProvider.get("RNSVGFeFlood", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGFeColorMatrix", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

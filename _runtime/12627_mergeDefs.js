@@ -1,7 +1,7 @@
 // === Module 12627: mergeDefs ===
 
 // Module 12627 (mergeDefs)
-import mergeDefs from "mergeDefs" /* 12595 */;
+import mergeDefs from "mergeDefs" /* 12614 */;
 
 const self = this;
 let self2 = this;
@@ -60,13 +60,14 @@ if (self2) {
       if (typeof error !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      closure_0 = { string: { unit: "\uBB38\uC790", verb: "to have" }, file: { unit: "\uBC14\uC774\uD2B8", verb: "to have" }, array: { unit: "\uAC1C", verb: "to have" }, set: { unit: "\uAC1C", verb: "to have" } };
-      closure_1 = { regex: "\uC785\uB825", email: "\uC774\uBA54\uC77C \uC8FC\uC18C", url: "URL", emoji: "\uC774\uBAA8\uC9C0", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO \uB0A0\uC9DC\uC2DC\uAC04", date: "ISO \uB0A0\uC9DC", time: "ISO \uC2DC\uAC04", duration: "ISO \uAE30\uAC04", ipv4: "IPv4 \uC8FC\uC18C", ipv6: "IPv6 \uC8FC\uC18C", cidrv4: "IPv4 \uBC94\uC704", cidrv6: "IPv6 \uBC94\uC704", base64: "base64 \uC778\uCF54\uB529 \uBB38\uC790\uC5F4", base64url: "base64url \uC778\uCF54\uB529 \uBB38\uC790\uC5F4", json_string: "JSON \uBB38\uC790\uC5F4", e164: "E.164 \uBC88\uD638", jwt: "JWT", template_literal: "\uC785\uB825" };
-      closure_2 = { nan: "NaN" };
+      closure_0 = { string: { unit: "tegn", verb: "havde" }, file: { unit: "bytes", verb: "havde" }, array: { unit: "elementer", verb: "indeholdt" }, set: { unit: "elementer", verb: "indeholdt" } };
+      closure_1 = { regex: "input", email: "e-mailadresse", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO dato- og klokkesl\u00E6t", date: "ISO-dato", time: "ISO-klokkesl\u00E6t", duration: "ISO-varighed", ipv4: "IPv4-omr\u00E5de", ipv6: "IPv6-omr\u00E5de", cidrv4: "IPv4-spektrum", cidrv6: "IPv6-spektrum", base64: "base64-kodet streng", base64url: "base64url-kodet streng", json_string: "JSON-streng", e164: "E.164-nummer", jwt: "JWT", template_literal: "input" };
+      closure_2 = { nan: "NaN", string: "streng", number: "tal", boolean: "boolean", array: "liste", object: "objekt", set: "s\u00E6t", file: "fil" };
       return {
-        localeError: (code) => {
-          code = code.code;
-          switch (code) {
+        localeError: (arg0) => {
+          const origin = tmp.origin;
+          const combined = "Ugyldig v\u00E6rdi i " + origin;
+          switch (combined) {
             case "t":
             break;
             case "to":
@@ -209,6 +210,8 @@ if (self2) {
             break;
             case "bottom":
             break;
+            case "container":
+            break;
             case "call":
             break;
             case "channel":
@@ -236,8 +239,6 @@ if (self2) {
             case "concat":
             break;
             case "constructor":
-            break;
-            case "container":
             break;
             case "content":
             break;
@@ -565,11 +566,13 @@ if (self2) {
             break;
             case "ay":
             break;
-            case "guildGameIds":
+            case "guildIconText":
             break;
-            case "frameX":
+            case "IconTextBadge":
             break;
-            case "user.id":
+            case "TextBadge":
+            break;
+            case "useTraitHiddenOnAndroid":
             break;
             case "dragOffsetFromRight":
             break;
@@ -611,11 +614,19 @@ if (self2) {
             break;
             case "serializeEnd":
             break;
-            case "controlEdgeToEdgeValues":
+            case "discovery_splash":
             break;
-            case "supportsReferrerPolicy":
+            case "splash":
             break;
-            case "icymiDesktopEnabled":
+            case "hash_mask":
+            break;
+            case "maskContentUnits":
+            break;
+            case "captureBillingException":
+            break;
+            case "stateDataTranslator":
+            break;
+            case "LanternSpotIllustration":
             break;
             case "MarkupParserNodeTypeError":
             break;
@@ -651,6 +662,8 @@ if (self2) {
             break;
             case "INVITE_EMBED_ACTIONED":
             break;
+            case "MarketingPageBanner":
+            break;
             case "rm":
             break;
             case "m":
@@ -673,16 +686,6 @@ if (self2) {
             break;
             case "perGuildMaxCount":
             break;
-            case "isContentClassificationRestricted":
-            break;
-            case "getNextBatch":
-            break;
-            case "SDK_PACKAGE_NAME":
-            break;
-            case "MEMBER_REQUEST_COUNT":
-            break;
-            case "TOO_MANY_USER_GUILDS":
-            break;
             case "getChannelIcon":
             break;
             case "getChannelIconComponent":
@@ -698,7 +701,8 @@ if (self2) {
             case "om":
             break;
             case "mp":
-            break;
+              let combined1 = "Ugyldigt input: forventede instanceof " + tmp.expected + ", fik " + tmp2;
+              return combined1;
             case "po":
             break;
             case "pon":
@@ -719,7 +723,9 @@ if (self2) {
             break;
             case "SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS":
             break;
-            case "MESSAGE_REACTIONS":
+            case "earlyCacheInfo":
+            break;
+            case "footerSuggestionsContainer":
             break;
             case "$ZodCheckMaxLength":
             break;
@@ -743,21 +749,9 @@ if (self2) {
             break;
             case "mit":
             break;
-            case "with_application":
+            case "with_bundled_skus":
             break;
-            case "_applicationResults":
-              let _HermesInternal = HermesInternal;
-              let combined = "\uC798\uBABB\uB41C \uAC12: " + code.origin;
-              return combined;
-            case "applicationResults":
-            break;
-            case "onResult":
-            break;
-            case "getGlobalScope":
-            break;
-            case "openGiftCodeRedeemModal":
-            break;
-            case "getChildNodes":
+            case "purchaseUpdatedListener":
             break;
             case "$ZodMap":
             break;
@@ -769,17 +763,9 @@ if (self2) {
             break;
             case "$ZodCheckGreaterThan":
             break;
-            case "millisecondsInSecond":
+            case "renderExecutedCommands":
             break;
-            case "revealMessage":
-            break;
-            case "getAvatarDecoration":
-            break;
-            case "getAvatarDecorationURL":
-            break;
-            case "getCanUseMultiAccountMobile":
-            break;
-            case "MobileGoLiveEntrypointTreatment":
+            case "totalTokens":
             break;
             case "ToIntlMathematicalValue":
             break;
@@ -799,7 +785,7 @@ if (self2) {
             break;
             case "be":
             break;
-            case "breadcrumbType":
+            case "benefitType":
             break;
             case "$ZodObject":
             break;
@@ -823,25 +809,21 @@ if (self2) {
             break;
             case "rect":
             break;
-            case "PAYMENT_REQUEST_GOOGLE_PAYMENT_FAILED_TO_TOKENIZE":
-            break;
-            case "EXP_TABLE":
-            break;
-            case "TABLEROW_BACKGROUND_DEFAULT":
-            break;
-            case "DEFAULT_STATE":
+            case "SETTINGS_DESKTOP_APP":
             break;
             case "PX_80":
             break;
             case "_":
             break;
-            case "connectionType":
+            case "XFU":
             break;
-            case "connectionTypeBuckets":
+            case "computeEntries":
             break;
-            case "suggested_user":
+            case "subscription_trial":
             break;
-            case "suggested_user_id":
+            case "subscription_trial_id":
+            break;
+            case "trial_id":
             break;
             case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
             break;
@@ -863,9 +845,19 @@ if (self2) {
             break;
             case "perUserFpsWindow":
             break;
-            case "woman_and_man_holding_hands_tone1_tone5":
+            case "woman_and_man_holding_hands_tone2":
             break;
-            case "contentContainerHorizontal":
+            case "woman_and_man_holding_hands_tone2_tone1":
+            break;
+            case "_parsedMessages":
+            break;
+            case "parsed":
+            break;
+            case "parsedMessage":
+            break;
+            case "view_watch_time":
+            break;
+            case "timeToInteractiveMs":
             break;
             case "QUEST_DECISION_RECEIVED":
             break;
@@ -884,44 +876,6 @@ if (self2) {
             case "fgClip":
             break;
             case "ClipViewAnimated":
-              while (true) {
-                if (code === tmp10) {
-                  let tmp9 = globalThis;
-                  let _HermesInternal5 = HermesInternal;
-                  let str8 = "\"(\uC73C)\uB85C \uB05D\uB098\uC57C \uD569\uB2C8\uB2E4";
-                  let str9 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \"";
-                  let combined1 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \"" + code.suffix + "\"(\uC73C)\uB85C \uB05D\uB098\uC57C \uD569\uB2C8\uB2E4";
-                } else {
-                  let str11 = "includes";
-                  if ("includes" === code.format) {
-                    let tmp8 = globalThis;
-                    let _HermesInternal4 = HermesInternal;
-                    let str6 = "\"\uC744(\uB97C) \uD3EC\uD568\uD574\uC57C \uD569\uB2C8\uB2E4";
-                    let str7 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \"";
-                    combined1 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \"" + code.includes + "\"\uC744(\uB97C) \uD3EC\uD568\uD574\uC57C \uD569\uB2C8\uB2E4";
-                  } else {
-                    let str2 = "regex";
-                    if ("regex" === code.format) {
-                      let tmp7 = globalThis;
-                      let _HermesInternal3 = HermesInternal;
-                      let str4 = " \uD328\uD134\uACFC \uC77C\uCE58\uD574\uC57C \uD569\uB2C8\uB2E4";
-                      let str5 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \uC815\uADDC\uC2DD ";
-                      combined1 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \uC815\uADDC\uC2DD " + code.pattern + " \uD328\uD134\uACFC \uC77C\uCE58\uD574\uC57C \uD569\uB2C8\uB2E4";
-                    } else {
-                      let tmp3 = dependencyMap;
-                      let format = dependencyMap[code.format];
-                      let tmp4 = null;
-                      if (format == null) {
-                        format = code.format;
-                      }
-                      let tmp5 = globalThis;
-                      let _HermesInternal2 = HermesInternal;
-                      let str3 = "\uC798\uBABB\uB41C ";
-                      combined1 = "\uC798\uBABB\uB41C " + format;
-                    }
-                  }
-                }
-              }
             break;
             case "AnimatedFlashList":
             break;
@@ -948,10 +902,6 @@ if (self2) {
             case "S":
             break;
             case "et":
-            break;
-            case "getGuildsTree":
-            break;
-            case "GuildsTree":
             break;
             case "postformat":
             break;
@@ -997,13 +947,11 @@ if (self2) {
             break;
             case "RTC_CONNECTION_FLAGS":
             break;
-            case "updateRsvp":
+            case "cacheDisabled":
             break;
-            case "gzindex":
+            case "ideograph_advantage":
             break;
-            case "indexChange":
-            break;
-            case "getAppIdForBotUserId":
+            case "getAppHardwareAccelerationEnabled":
             break;
             case "ActionSheetHeaderPressableText":
             break;
@@ -1013,7 +961,7 @@ if (self2) {
             break;
             case "ext":
             break;
-            case "isReduceTransparencyEnabled":
+            case "isReduceMotionEnabled":
             break;
             case "AccessibilityFocusView":
             break;
@@ -1096,8 +1044,6 @@ if (self2) {
             case "ModuleNotFoundError":
             break;
             case "du":
-            break;
-            case "KeyRingSpotIllustration":
             break;
             case "__i":
             break;
@@ -1185,17 +1131,7 @@ if (self2) {
             break;
             case "redBoxV2Android":
             break;
-            case "cancelBubble":
-            break;
-            case "Teal":
-            break;
-            case "allowed_mentions":
-              _HermesInternal = HermesInternal;
-              combined = "\uC798\uBABB\uB41C \uAC12: " + code.origin;
-              return combined;
-            case "mentions":
-            break;
-            case "mentionsCount":
+            case "createPublicInstance":
             break;
             case "dist":
             break;
@@ -1208,6 +1144,10 @@ if (self2) {
             case "tan":
             break;
             case "ce":
+            break;
+            case "SETTINGS_SENSITIVE_MEDIA_FILTERS":
+            break;
+            case "SENSITIVE_MEDIA_FILTERS":
             break;
             case "access":
             break;
@@ -1229,17 +1169,27 @@ if (self2) {
             break;
             case "bel":
             break;
-            case "isCreatingThread":
+            case "NOTIF_CENTER_ITEMS":
             break;
-            case "QUEST_BAR_V2":
+            case "NOTIF_CENTER_ITEMS_ACK":
+            break;
+            case "ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON":
+            break;
+            case "NER":
+            break;
+            case "FEED":
+            break;
+            case "BUTTON_CORNER_RADIUS":
+            break;
+            case "USER_CONTACTS_SYNC":
+            break;
+            case "PROFILE_THEMES_SETTINGS_VIEWED_V2":
             break;
             case "Role":
             break;
             case "RoleFlags":
             break;
             case "scrollToQuestId":
-            break;
-            case "leadingText":
             break;
             case "accessibleDismiss":
             break;
@@ -1287,31 +1237,35 @@ if (self2) {
             break;
             case "ms":
             break;
-            case "available_regions":
+            case "useThenable":
             break;
-            case "_regions":
+            case "enableAccessibilityFocusLock":
             break;
-            case "region":
+            case "TWITTER_VERIFIED":
             break;
-            case "regions":
+            case "VERIFIED_TEEN":
             break;
-            case "showLocalTime":
+            case "TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_NON_FRIEND_DM":
             break;
-            case "woman_in_motorized_wheelchair_facing_right_tone1":
+            case "NON_FRIEND_DM":
             break;
-            case "man_in_motorized_wheelchair_facing_right_tone1":
+            case "DM_FRIEND_NUDGE":
             break;
-            case "family_adult_child":
+            case "STICKER_AUTOCOMPLETE":
             break;
-            case "family_adult_child_child":
+            case "AUTOCOMPLETE_OPTION_DEBOUNCE_TIME":
             break;
-            case "childButton":
+            case "TIME_OVER_DEADLINE":
             break;
-            case "childButtonText":
+            case "DEAD":
             break;
-            case "externalLinkIcon":
+            case "DEADLINE_INITIAL_TIME_REMAINING":
             break;
-            case "containerSelected":
+            case "GDPR_REQUEST_DATA":
+            break;
+            case "REQUEST_DATA":
+            break;
+            case "REQUEST_DATA_LIMIT_DAYS":
             break;
             case "GuildEntityDao":
             break;
@@ -1319,7 +1273,7 @@ if (self2) {
             break;
             case "Dao":
             break;
-            case "replaceExports":
+            case "renderThreadEmbeds":
             break;
             case "app":
             break;
@@ -1337,13 +1291,17 @@ if (self2) {
             break;
             case "io":
             break;
-            case "showGuildTag":
-            break;
-            case "GuildTagBadgeSize":
+            case "showHidden":
             break;
             case "_applyCombination":
             break;
             case "ly":
+            break;
+            case "trequest":
+            break;
+            case "requestActivityItems":
+            break;
+            case "black_nib":
             break;
             case "ios_backgroundColor":
             break;
@@ -1370,12 +1328,10 @@ if (self2) {
             case "UNKNOWN_CHANNEL":
             break;
             case "DISCORD_CONSENT":
-            break;
+              return combined;
             case "FormSubmitErrorType":
             break;
             case "person_walking_facing_right_tone4":
-            break;
-            case "isMap":
             break;
             case "guildIconBorder":
             break;
@@ -1417,15 +1373,23 @@ if (self2) {
             break;
             case "shiftLeft":
             break;
-            case "StreamingTier2LargeBadge":
+            case "_container":
             break;
-            case "PREMIUM_UPSELL_FILE_UPLOAD":
+            case "contain":
             break;
-            case "FILE_UPLOAD_250_MB":
+            case "containerBorderColor":
             break;
-            case "channelInfo":
+            case "ai":
             break;
-            case "channelInfoContainer":
+            case "ner":
+            break;
+            case "hasAction":
+            break;
+            case "hasActionSheetOpen":
+            break;
+            case "numFinished":
+            break;
+            case "channelContainer":
             break;
             case "DynamicallyInjectedByGestureHandler":
             break;
@@ -1481,7 +1445,11 @@ if (self2) {
             break;
             case "ix8XIj":
             break;
-            case "navigationBarColor":
+            case "browserLinkedErrorsIntegration":
+            break;
+            case "onHasEdits":
+            break;
+            case "getSendMessageOptionsForReply":
             break;
             case "uni":
             break;
@@ -1495,7 +1463,7 @@ if (self2) {
             break;
             case "rs":
             break;
-            case "addUserId":
+            case "adRequestId":
             break;
             case "disableGuildSelect":
             break;
@@ -1503,17 +1471,11 @@ if (self2) {
             break;
             case "concatSettings":
             break;
-            case "subtitleWrapper":
+            case "subtractOrZero":
             break;
-            case "titleWrapper":
+            case "ROBOT_VOICE":
             break;
-            case "titleWrapperLegacy":
-            break;
-            case "LegacyFlatList":
-            break;
-            case "ReactionsSpotIllustration":
-            break;
-            case "friend_anniversary_notifications":
+            case "VOICE_ACTION_SHEET":
             break;
             case "$constructor":
             break;
@@ -1533,22 +1495,6 @@ if (self2) {
             break;
             case "windowLength":
             break;
-            case "_container":
-            break;
-            case "contain":
-            break;
-            case "containerBorderColor":
-            break;
-            case "ai":
-            break;
-            case "ner":
-            break;
-            case "toy":
-            break;
-            case "getDefaultEnvironment":
-            break;
-            case "trackMobileForumComposerDismissed":
-            break;
             case "creative_content":
             break;
             case "_contentAvailable":
@@ -1565,27 +1511,15 @@ if (self2) {
             break;
             case "contextBarRow":
             break;
-            case "withAffinitySuggestions":
-            break;
-            case "AffinitySuggestions":
-            break;
-            case "ffi":
-            break;
-            case "ug":
+            case "withAlphabeticalSections":
             break;
             case "AccountAgeTier10LargeBadge":
             break;
             case "cou":
-              _HermesInternal = HermesInternal;
-              combined = "\uC798\uBABB\uB41C \uAC12: " + code.origin;
-              return combined;
+            break;
             case "Badge":
             break;
-            case "safeRe":
-            break;
-            case "cardType":
-            break;
-            case "getComboId":
+            case "getColorLightnessAdjusted":
             break;
             case "cr":
             break;
@@ -1607,19 +1541,13 @@ if (self2) {
             break;
             case "CTALabel":
             break;
-            case "getUTCMilliseconds":
-            break;
-            case "secondsInQuarter":
+            case "selectionHandleColor":
             break;
             case "_$esjava$cursor":
             break;
             case "cursorColor":
             break;
             case "so":
-            break;
-            case "handleRedeemVirtualCurrencyFail":
-            break;
-            case "NitroRubyBadgeLargeBadge":
             break;
             case "_clientSdkMetadata":
             break;
@@ -1630,8 +1558,6 @@ if (self2) {
             case "da":
             break;
             case "dddd":
-            break;
-            case "HIDE_TOOLTIP":
             break;
             case "__defaultLocale":
             break;
@@ -1669,13 +1595,9 @@ if (self2) {
             break;
             case "startMs":
             break;
-            case "shouldUseAnimatedObjectForTransform":
+            case "shouldUseDMWishlistGiftingDesign":
             break;
-            case "formTitle":
-            break;
-            case "getTryItOutChanges":
-            break;
-            case "GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS":
+            case "connectOrLurkStage":
             break;
             case "avatar_description":
             break;
@@ -1698,6 +1620,14 @@ if (self2) {
             case "cri":
             break;
             case "pt":
+            break;
+            case "breast_feeding_medium_light_skin_tone":
+            break;
+            case "one_thirty":
+            break;
+            case "eP8yWU":
+            break;
+            case "WUTHERING_WAVES":
             break;
             case "inputHint":
             break;
@@ -1735,11 +1665,11 @@ if (self2) {
             break;
             case "debounce":
             break;
-            case "RewardsMouseSpotIllustration":
+            case "PrivacyShieldLaptopSpotIllustration":
             break;
-            case "templatePair":
+            case "LaptopSpotIllustration":
             break;
-            case "scalars":
+            case "parent_span_id":
             break;
             case "renderActivityInstanceEmbed":
             break;
@@ -1761,23 +1691,7 @@ if (self2) {
             break;
             case "interestedIcon":
             break;
-            case "contentStyle":
-            break;
-            case "contentStyles":
-            break;
-            case "supportsHookSoundshare":
-            break;
-            case "SoundshareTrace":
-            break;
-            case "race":
-            break;
-            case "character":
-            break;
-            case "characterOrders":
-            break;
-            case "showStatus":
-            break;
-            case "useCanUseGuildSpace":
+            case "contentSelectPlan":
             break;
             case "english":
             break;
@@ -1831,9 +1745,7 @@ if (self2) {
             break;
             case "enable":
             break;
-            case "shouldShowBlurredThumbnailImage":
-            break;
-            case "getBadgeName":
+            case "shouldShowBountiesGivenFilters":
             break;
             case "@braintree/extended-promise":
             break;
@@ -1849,7 +1761,7 @@ if (self2) {
             break;
             case "promiseProcessor":
             break;
-            case "handleTextMessageFailed":
+            case "checkoutFailed":
             break;
             case "enum":
             break;
@@ -1862,6 +1774,8 @@ if (self2) {
             case "era":
             break;
             case "referrerPolicy":
+            break;
+            case "safeRe":
             break;
             case "beforeAddRecordingEvent":
             break;
@@ -1915,27 +1829,9 @@ if (self2) {
             break;
             case "he":
             break;
-            case "SocialMediaSpotIllustration":
+            case "SeverHubAbstractUI":
             break;
-            case "sanitizeTags":
-            break;
-            case "onPressMutualGuild":
-            break;
-            case "MutualGuildRow":
-            break;
-            case "person_in_bed_tone5":
-            break;
-            case "APP_LAUNCH_COMPLETED":
-            break;
-            case "COMPLETED":
-            break;
-            case "COMPLETED_HOME_ACTIONS":
-            break;
-            case "NSUserDefaultsBridge":
-            break;
-            case "[[calendar]]":
-            break;
-            case "calendar":
+            case "[object Date]":
             break;
             case "EntitlementTenantFulfillmentStatus":
             break;
@@ -1943,9 +1839,9 @@ if (self2) {
             break;
             case "__findAnimatedPropsNodes":
             break;
-            case "flag_bs":
+            case "formatActiveA11yTimestamp":
             break;
-            case "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS":
+            case "MILLIMETERS":
             break;
             case "system_channel_flags":
             break;
@@ -1958,44 +1854,6 @@ if (self2) {
             case "flags_":
             break;
             case "lag":
-              while (true) {
-                if (code === tmp10) {
-                  tmp9 = globalThis;
-                  _HermesInternal5 = HermesInternal;
-                  str8 = "\"(\uC73C)\uB85C \uB05D\uB098\uC57C \uD569\uB2C8\uB2E4";
-                  str9 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \"";
-                  combined1 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \"" + code.suffix + "\"(\uC73C)\uB85C \uB05D\uB098\uC57C \uD569\uB2C8\uB2E4";
-                } else {
-                  str11 = "includes";
-                  if ("includes" === code.format) {
-                    tmp8 = globalThis;
-                    _HermesInternal4 = HermesInternal;
-                    str6 = "\"\uC744(\uB97C) \uD3EC\uD568\uD574\uC57C \uD569\uB2C8\uB2E4";
-                    str7 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \"";
-                    combined1 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \"" + code.includes + "\"\uC744(\uB97C) \uD3EC\uD568\uD574\uC57C \uD569\uB2C8\uB2E4";
-                  } else {
-                    str2 = "regex";
-                    if ("regex" === code.format) {
-                      tmp7 = globalThis;
-                      _HermesInternal3 = HermesInternal;
-                      str4 = " \uD328\uD134\uACFC \uC77C\uCE58\uD574\uC57C \uD569\uB2C8\uB2E4";
-                      str5 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \uC815\uADDC\uC2DD ";
-                      combined1 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \uC815\uADDC\uC2DD " + code.pattern + " \uD328\uD134\uACFC \uC77C\uCE58\uD574\uC57C \uD569\uB2C8\uB2E4";
-                    } else {
-                      tmp3 = dependencyMap;
-                      format = dependencyMap[code.format];
-                      tmp4 = null;
-                      if (format == null) {
-                        format = code.format;
-                      }
-                      tmp5 = globalThis;
-                      _HermesInternal2 = HermesInternal;
-                      str3 = "\uC798\uBABB\uB41C ";
-                      combined1 = "\uC798\uBABB\uB41C " + format;
-                    }
-                  }
-                }
-              }
             break;
             case "gs":
             break;
@@ -2019,7 +1877,11 @@ if (self2) {
             break;
             case "ILLO_PURPLE_40":
             break;
-            case "getEntitlementsForGuild":
+            case "overrideQuestForPlacement":
+            break;
+            case "iconBorderRadius":
+            break;
+            case "useCanManageGuildRoleSubscriptions":
             break;
             case "fo":
             break;
@@ -2027,25 +1889,28 @@ if (self2) {
             break;
             case "forEachChannel":
             break;
-            case "8SuVoE":
+            case "useAnimatedValue":
             break;
-            case "oEAioF":
-            break;
-            case "woman_in_motorized_wheelchair_medium_skin_tone":
-            break;
-            case "man_in_motorized_wheelchair_medium_skin_tone":
+            case "ValueXY":
             break;
             case "DiscountsMegaphoneSpotIllustration":
             break;
             case "counts":
             break;
             case "ga":
+              combined1 = origin(tmp3, ", fik ", tmp2);
             break;
             case "pho":
             break;
             case "phone":
             break;
-            case "__reanimatedModuleProxy":
+            case "checkoutSdk":
+            break;
+            case "BILLING_PAYMENT":
+            break;
+            case "BILLING_PAYMENTS":
+            break;
+            case "BILLING_PAYMENTS_VOID":
             break;
             case "getChannelA11yHint":
             break;
@@ -2085,19 +1950,11 @@ if (self2) {
             break;
             case "current_guild_id":
             break;
-            case "getContextState":
+            case "getCopy":
             break;
-            case "getDismissedGuildIds":
+            case "FAMILY_CENTER_CONNECTION":
             break;
-            case "METHOD_CALLED_AFTER_TEARDOWN":
-            break;
-            case "NO_SETTINGS":
-            break;
-            case "SETTINGS_CLIENT_THEMES":
-            break;
-            case "CLIENT_THEMES_SPARKLE_PREVIEW":
-            break;
-            case "PREVIEW_SPAM_MESSAGE":
+            case "FAMILY_CENTER_CONNECTION_PREREQUISITES":
             break;
             case "hasDiversity":
             break;
@@ -2111,19 +1968,21 @@ if (self2) {
             break;
             case "DefaultGuildsRestrictedV2":
             break;
-            case "resolutionHeight":
+            case "indicatorSpace":
             break;
-            case "getRestrictedScheduleNotificationTitle":
+            case "mediaMention":
             break;
-            case "skipLocalFetch":
+            case "getGiftCode":
             break;
-            case "anchorScroll":
+            case "getGiftCodeRedeemError":
             break;
             case "avatar_hash":
             break;
             case "_hash":
             break;
             case "hashKey":
+            break;
+            case "propsAndStyles":
             break;
             case "bhd":
             break;
@@ -2171,9 +2030,9 @@ if (self2) {
             break;
             case "XBOX_URL_BASE":
             break;
-            case "usePrivateThreadMode":
+            case "_touchState":
             break;
-            case "PrivateThreadMode":
+            case "touchState":
             break;
             case "optInChannels":
             break;
@@ -2189,17 +2048,7 @@ if (self2) {
             break;
             case "ht":
             break;
-            case "withMutualFriends":
-            break;
-            case "withMutualFriendsCount":
-            break;
-            case "setFingerprint":
-            break;
-            case "getActiveLibraryApplication":
-            break;
-            case "LibraryApplicationFlags":
-            break;
-            case "ApplicationFlags":
+            case "withMutualGuilds":
             break;
             case "FadeOutRight":
             break;
@@ -2219,7 +2068,15 @@ if (self2) {
             break;
             case "icons":
             break;
-            case "parseUnicodeLanguageId":
+            case "parseUrl":
+            break;
+            case "parseUrlencoded":
+            break;
+            case "encodedBodySize":
+            break;
+            case "presentTimestamp":
+            break;
+            case "parseLinks":
             break;
             case "_include":
             break;
@@ -2237,7 +2094,15 @@ if (self2) {
             break;
             case "origin_pane":
             break;
-            case "registerTimerPolyfills":
+            case "registerTransportsForEmbeddedPlatform":
+            break;
+            case "formQuestion":
+            break;
+            case "QuestionSelectorEnum":
+            break;
+            case "onSelect":
+            break;
+            case "numAvailableGuildBoostSlots":
             break;
             case "__internalInstanceHandle":
             break;
@@ -2277,7 +2142,7 @@ if (self2) {
             break;
             case "isAnyVoicePanelOpen":
             break;
-            case "nativePhoneIntegrationEnabled":
+            case "lkr":
             break;
             case "activity_items":
             break;
@@ -2295,11 +2160,7 @@ if (self2) {
             break;
             case "xs":
             break;
-            case "GUILD_SOUNDBOARD":
-            break;
-            case "GUILD_SOUNDBOARD_SOUND":
-            break;
-            case "GUILD_SOUNDBOARD_SOUNDS":
+            case "REQUIRES_PAYMENT_METHOD":
             break;
             case "isRendered":
             break;
@@ -2321,13 +2182,11 @@ if (self2) {
             break;
             case "Content":
             break;
-            case "setCurrentAnalyticsStep":
-            break;
             case "PasskeysSpotIllustration":
             break;
             case "ke":
             break;
-            case "isPrioritySpeaker":
+            case "isNestedNavigator":
             break;
             case "toSearchListUserItem":
             break;
@@ -2351,7 +2210,9 @@ if (self2) {
             break;
             case "tryItOutAvatarDecoration":
             break;
-            case "frameY":
+            case "SELF_PRESENCE_STORE_UPDATE":
+            break;
+            case "skuIDs":
             break;
             case "Buf8":
             break;
@@ -2361,13 +2222,9 @@ if (self2) {
             break;
             case "lcq":
             break;
-            case "trialOffer":
-            break;
             case "arrow_left":
             break;
             case "leftActions":
-            break;
-            case "topUserActivities":
             break;
             case "_$esjava$I_length":
             break;
@@ -2381,33 +2238,27 @@ if (self2) {
             break;
             case "lengthComputable":
             break;
-            case "analyticsLoadId":
+            case "lockdown_duration_hours":
+            break;
+            case "hours":
+            break;
+            case "hoursAgo":
+            break;
+            case "goLiveModalDurationMs":
+            break;
+            case "analyticsId":
             break;
             case "disableIntegration":
             break;
-            case "onReject":
-            break;
-            case "onRejectSuccess":
-            break;
-            case "getChannelPermalink":
-            break;
-            case "linkCode":
-            break;
-            case "dependentSkuId":
-            break;
-            case "drawerStatusBar":
-            break;
-            case "StatusBar":
+            case "onRedeemVirtualCurrency":
             break;
             case "load":
             break;
             case "J":
             break;
-            case "setCurrentGuild":
+            case "setCurrentUser":
             break;
-            case "POLL_EXPIRE":
-            break;
-            case "EXPIRE_BEHAVIOR":
+            case "setCurrentUserOnConnectionOpen":
             break;
             case "upgradeTransaction":
             break;
@@ -2439,7 +2290,7 @@ if (self2) {
             break;
             case "maxListeners":
             break;
-            case "shouldShowRoleOnName":
+            case "shouldShowStep":
             break;
             case "__memo":
             break;
@@ -2483,6 +2334,8 @@ if (self2) {
             break;
             case "ml-Mlym":
             break;
+            case "linkTextLocalized":
+            break;
             case "Omnibutton":
             break;
             case "OmnibuttonCoachmarkRive":
@@ -2492,12 +2345,6 @@ if (self2) {
             case "nib":
             break;
             case "button":
-            break;
-            case "PLAY_SOUNDBOARD_SOUND":
-            break;
-            case "SOUNDBOARD_SOUND_GUILD_DATA":
-            break;
-            case "showCaptcha":
             break;
             case "Ambient":
             break;
@@ -2511,8 +2358,6 @@ if (self2) {
             break;
             case "modeOptions":
             break;
-            case "sled":
-            break;
             case "contact_names":
             break;
             case "nam":
@@ -2523,17 +2368,11 @@ if (self2) {
             break;
             case "BaseButton":
             break;
-            case "getEmojiPopoutData":
+            case "getEmojiUnavailableReason":
             break;
-            case "fullRestore":
+            case "getEmojiUnavailableReasons":
             break;
-            case "storeCountry":
-            break;
-            case "couple_with_heart_woman_woman_tone3_tone2":
-            break;
-            case "getMentionChannelIds":
-            break;
-            case "giftCount":
+            case "glowMaskGradient":
             break;
             case "track_next":
             break;
@@ -2579,17 +2418,7 @@ if (self2) {
             break;
             case "res":
             break;
-            case "setTermsAccepted":
-            break;
-            case "appliedTags":
-            break;
-            case "imageEmoji":
-            break;
-            case "fetchGuildProfile":
-            break;
-            case "GuildProfileCTAContext":
-            break;
-            case "textBreakStrategy":
+            case "setTextValue":
             break;
             case "_opacityActive":
             break;
@@ -2655,14 +2484,14 @@ if (self2) {
             break;
             case "outerRow":
             break;
-            case "woman_and_man_holding_hands_tone1":
-            break;
-            case "woman_and_man_holding_hands_tone1_tone2":
+            case "woman_and_man_holding_hands_tone1_tone3":
             break;
             case "webpBlob":
             break;
+            case "FePointLight":
+            break;
             default:
-              return "\uC798\uBABB\uB41C \uC785\uB825";
+              return "Ugyldigt input";
           }
         }
       };

@@ -7,7 +7,7 @@ import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
-const FePointLight = arg1;
+const FeDistantLight = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FePointLight {
+class FeDistantLight {
   constructor() {
     self = this;
-    tmp = closure_2(this, FePointLight);
+    tmp = closure_2(this, FeDistantLight);
     tmp2 = closure_4;
-    obj = closure_4(FePointLight);
+    obj = closure_4(FeDistantLight);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,18 +47,18 @@ class FePointLight {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FePointLight, require("noop").Component);
+_inheritsDefault(FeDistantLight, require("noop").Component);
 const items = [
   {
     key: "render",
     value: function render() {
-      const result = FePointLight(8189).warnUnimplementedFilter();
+      const result = FeDistantLight(8203).warnUnimplementedFilter();
       return null;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(FePointLight, items);
-importDefaultResultResult.displayName = "FePointLight";
+const importDefaultResultResult = importDefaultResult(FeDistantLight, items);
+importDefaultResultResult.displayName = "FeDistantLight";
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

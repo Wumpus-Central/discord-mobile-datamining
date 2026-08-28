@@ -3,7 +3,7 @@
 // Module 8224 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-const obj = { uiViewClassName: "RNSVGFeGaussianBlur", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, stdDeviationX: true, stdDeviationY: true, edgeMode: true } };
+const obj = { uiViewClassName: "RNSVGFeBlend", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, in2: true, mode: true } };
 
-export default setRuntimeConfigProvider.get("RNSVGFeGaussianBlur", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGFeBlend", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

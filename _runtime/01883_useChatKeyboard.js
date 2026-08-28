@@ -311,7 +311,7 @@ arg5.useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
   obj[2] = fn4;
   const items = [inverted, keyboardLiftBehavior, offset];
   _require(keyboardLiftBehavior[2]).useKeyboardHandler(obj, items);
-  obj4 = { padding: sharedValue, currentHeight: sharedValue1, contentOffsetY: "Boolean", scroll: true, layout: "done", size: true, onLayout: null, onContentSizeChange: null };
+  obj4 = { padding: sharedValue, currentHeight: sharedValue1, contentOffsetY: "Boolean", scroll: true, layout: false, size: "done", onLayout: "flowing", onContentSizeChange: "hourglass" };
   obj4[3] = offset2;
   obj4[4] = layout;
   obj4[5] = size;

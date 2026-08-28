@@ -3,18 +3,15 @@
 // Module 8271 (_isNativeReflectConstruct)
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import extractPropsDefault from "extractProps" /* 8188 */;
-import extractFontDefault from "extractFont" /* 8195 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8197 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8274 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8211 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8272 */;
 import closure_3 from "_classCallCheck" /* 41 */;
 import closure_4 from "_possibleConstructorReturn" /* 93 */;
 import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 8272 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const Text = arg1;
+const Path = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -35,69 +32,52 @@ function _isNativeReflectConstruct() {
   }
 }
 noopAll;
-class Text {
+class Path {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, closure_0);
-    items1 = [...items];
+    tmp = closure_3(this, Path);
     tmp2 = closure_5;
-    obj = closure_5(closure_0);
+    obj = closure_5(Path);
     tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      let tmp = matrix;
-      if (matrix) {
-        tmp = !matrix.matrix;
-      }
-      if (tmp) {
-        tmp = closure_1_1(closure_1_2[8])(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = lib(closure_1_2[9]).propsAndStyles(matrix);
-      const obj = lib(closure_1_2[9]);
-      const merged = Object.assign(propsAndStylesResult, lib(closure_1_2[10]).pickNotNil(closure_1_1(closure_1_2[11])(propsAndStylesResult, true)));
-      if (lib.root) {
-        const root = lib.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Text, _isNativeReflectConstructDefault);
-let items = [
+_inheritsDefault(Path, _isNativeReflectConstructDefault);
+const items = [
   {
     key: "render",
     value: function render() {
-      let obj = Text(8188);
-      const propsAndStylesResult = obj.propsAndStyles(this.props);
-      obj = {};
-      const merged = Object.assign(propsAndStylesResult);
-      obj.x = null;
-      obj.y = null;
-      const tmp2Result = extractPropsDefault(obj, this);
-      const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
-      tmp2Result.ref = this.refMethod;
-      obj = {};
-      const tmp2 = extractPropsDefault;
-      const merged2 = Object.assign(tmp2Result);
-      return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
+      const self = this;
+      const props = this.props;
+      let obj = {};
+      const merged = Object.assign(self(8202).extract(this, props));
+      obj.d = props.d;
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const obj2 = self(8202);
+      const merged1 = Object.assign(obj);
+      return jsx(__INTERNAL_VIEW_CONFIGDefault, {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Text, items);
-importDefaultResultResult.displayName = "Text";
+const importDefaultResultResult = importDefaultResult(Path, items);
+importDefaultResultResult.displayName = "Path";
 
 export default importDefaultResultResult;

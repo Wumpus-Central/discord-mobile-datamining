@@ -53,8 +53,8 @@ export const adjustTransactionDuration = (on, activeSpan) => {
 };
 export const ignoreEmptyBackNavigation = (on, c4) => {
   closure_0 = c4;
-  const f70399 = (arg0) => {
-    const data = c4(f70399[2]).spanToJSON(arg0).data;
+  const f70453 = (arg0) => {
+    const data = c4(f70453[2]).spanToJSON(arg0).data;
     let prop;
     if (null !== data) {
       if (undefined !== data) {
@@ -63,8 +63,8 @@ export const ignoreEmptyBackNavigation = (on, c4) => {
     }
     return true === prop;
   };
-  const f70400 = () => {
-    const debug = c4(f70399[2]).debug;
+  const f70454 = () => {
+    const debug = c4(f70453[2]).debug;
     debug.log("Not sampling transaction as route has been seen before. Pass ignoreEmptyBackNavigationTransactions = false to disable this feature.");
   };
   if (on) {
@@ -75,9 +75,9 @@ export const ignoreEmptyBackNavigation = (on, c4) => {
         if (tmpResult.isSentrySpan(c4)) {
           on.on("spanEnd", (arg0) => {
             if (arg0 === c4) {
-              if (f70401(tmp)) {
+              if (f70455(tmp)) {
                 c4 = tmp;
-                const spanDescendants = c4(f70401[2]).getSpanDescendants(tmp);
+                const spanDescendants = c4(f70455[2]).getSpanDescendants(tmp);
                 if (spanDescendants.filter((spanContext) => {
                   let tmp = spanContext.spanContext().spanId !== lib.spanContext().spanId;
                   if (tmp) {
@@ -90,10 +90,10 @@ export const ignoreEmptyBackNavigation = (on, c4) => {
                   }
                   return tmp;
                 }).length <= 0) {
-                  f70402(tmp);
+                  f70456(tmp);
                   tmp._sampled = false;
                 }
-                let obj = c4(f70401[2]);
+                let obj = c4(f70455[2]);
               }
             }
           });
@@ -112,12 +112,12 @@ export const ignoreEmptyBackNavigation = (on, c4) => {
 };
 export const ignoreEmptyRouteChangeTransactions = (on, c4) => {
   closure_0 = on;
-  let f70401 = arg2;
-  let f70402 = arg3;
+  let f70455 = arg2;
+  let f70456 = arg3;
   closure_0 = c4;
-  f70401 = (arg0) => {
-    const spanToJSONResult = c4(f70401[2]).spanToJSON(arg0);
-    let tmp2 = spanToJSONResult.description === f70401;
+  f70455 = (arg0) => {
+    const spanToJSONResult = c4(f70455[2]).spanToJSON(arg0);
+    let tmp2 = spanToJSONResult.description === f70455;
     if (tmp2) {
       const data = spanToJSONResult.data;
       let prop;
@@ -129,13 +129,13 @@ export const ignoreEmptyRouteChangeTransactions = (on, c4) => {
       tmp2 = !prop;
     }
     if (tmp2) {
-      tmp2 = f70402();
+      tmp2 = f70456();
     }
     return tmp2;
   };
-  f70402 = (arg0) => {
-    const debug = c4(f70401[2]).debug;
-    debug.log("Discarding empty \"" + f70401 + "\" transaction that never received route information.");
+  f70456 = (arg0) => {
+    const debug = c4(f70455[2]).debug;
+    debug.log("Discarding empty \"" + f70455 + "\" transaction that never received route information.");
     if (null != c4) {
       c4.recordDroppedEvent("sample_rate", "transaction");
     }
@@ -148,9 +148,9 @@ export const ignoreEmptyRouteChangeTransactions = (on, c4) => {
         if (tmpResult.isSentrySpan(c4)) {
           on.on("spanEnd", (arg0) => {
             if (arg0 === c4) {
-              if (f70401(tmp)) {
+              if (f70455(tmp)) {
                 c4 = tmp;
-                const spanDescendants = c4(f70401[2]).getSpanDescendants(tmp);
+                const spanDescendants = c4(f70455[2]).getSpanDescendants(tmp);
                 if (spanDescendants.filter((spanContext) => {
                   let tmp = spanContext.spanContext().spanId !== lib.spanContext().spanId;
                   if (tmp) {
@@ -163,10 +163,10 @@ export const ignoreEmptyRouteChangeTransactions = (on, c4) => {
                   }
                   return tmp;
                 }).length <= 0) {
-                  f70402(tmp);
+                  f70456(tmp);
                   tmp._sampled = false;
                 }
-                let obj = c4(f70401[2]);
+                let obj = c4(f70455[2]);
               }
             }
           });

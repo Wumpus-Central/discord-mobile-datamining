@@ -2,38 +2,29 @@
 
 // Module 16751
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "ro",
+  locale: "cs",
   pluralRuleFunction(arg0, arg1) {
     const parts = String(arg0).split(".");
-    let substr = Number(parts[0]) == arg0;
-    if (substr) {
-      const first = parts[0];
-      substr = first.slice(-2);
-    }
-    if (arg1) {
-      let str5 = "other";
-      if (1 == arg0) {
-        str5 = "one";
-      }
-      let str2 = str5;
-    } else if (1 != arg0) {
-      if (!tmp2) {
-        if (0 != arg0) {
-          let str4 = "other";
-          if (1 != arg0) {
-            str4 = "other";
-            if (substr >= 1) {
-              str4 = "other";
-            }
+    [tmp2, tmp3] = parts;
+    let str2 = "other";
+    if (!arg1) {
+      if (1 != arg0) {
+        if (tmp2 >= 2) {
+          if (tmp2 <= 4) {
+            let str4 = "few";
           }
+          let str3 = str4;
         }
-        str2 = str4;
+        let str5 = "many";
+        if (!tmp3) {
+          str5 = "other";
+        }
+        str4 = str5;
+      } else {
+        str3 = "one";
       }
-      str4 = "few";
-    } else {
-      str2 = "one";
+      str2 = str3;
     }
     return str2;
   }
 });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "ro-MD", parentLocale: "ro" });

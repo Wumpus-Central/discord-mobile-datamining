@@ -1,344 +1,207 @@
 // === Module 5781: memo ===
 
 // Module 5781 (memo)
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
+import noopDefault from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 import noop from "noop" /* 19 */;
-import closure_12 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-let closure_3 = ["name", "stackBehavior", "enableDismissOnClose", "onDismiss", "onAnimate", "index", "snapPoints", "enablePanDownToClose", "animateOnMount", "containerComponent", "onChange", "children"];
-({ useCallback: closure_6, useImperativeHandle: error, useMemo: closure_8, useRef: c9, useState: c10, createElement: unpackModuleId, forwardRef, memo } = noop);
-let closure_14 = { mount: false, data: "r" };
-const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
-  const _require = arg1;
-  name = name.name;
-  let DEFAULT_STACK_BEHAVIOR = name.stackBehavior;
-  if (undefined === DEFAULT_STACK_BEHAVIOR) {
-    DEFAULT_STACK_BEHAVIOR = _require(DEFAULT_STACK_BEHAVIOR[4]).DEFAULT_STACK_BEHAVIOR;
-  }
-  let DEFAULT_ENABLE_DISMISS_ON_CLOSE = name.enableDismissOnClose;
-  if (undefined === DEFAULT_ENABLE_DISMISS_ON_CLOSE) {
-    DEFAULT_ENABLE_DISMISS_ON_CLOSE = _require(DEFAULT_STACK_BEHAVIOR[4]).DEFAULT_ENABLE_DISMISS_ON_CLOSE;
-  }
-  const onDismiss = name.onDismiss;
-  const onAnimate = name.onAnimate;
-  const index = name.index;
-  let num = 0;
-  if (undefined !== index) {
-    num = index;
-  }
-  let enablePanDownToClose = name.enablePanDownToClose;
-  let tmp5 = undefined === enablePanDownToClose;
-  if (!tmp5) {
-    tmp5 = enablePanDownToClose;
-  }
-  enablePanDownToClose = tmp5;
-  const animateOnMount = name.animateOnMount;
-  let Fragment = name.containerComponent;
-  if (undefined === Fragment) {
-    Fragment = willUnmountSheet.Fragment;
-  }
-  const onChange = name.onChange;
-  const children = name.children;
-  const tmp8 = onAnimate(name, DEFAULT_ENABLE_DISMISS_ON_CLOSE);
-  const tmp9 = onDismiss(mountSheet(closure_14), 2);
-  const first = tmp9[0];
-  const mount = first.mount;
-  const callback = tmp9[1];
-  let obj = _require(DEFAULT_STACK_BEHAVIOR[5]);
-  const bottomSheetModalInternal = obj.useBottomSheetModalInternal();
-  ({ hostName, mountSheet } = bottomSheetModalInternal);
-  const unmountSheet = bottomSheetModalInternal.unmountSheet;
-  willUnmountSheet = bottomSheetModalInternal.willUnmountSheet;
-  ({ containerHeight, containerOffset } = bottomSheetModalInternal);
-  obj1 = _require(DEFAULT_STACK_BEHAVIOR[6]);
-  const removePortal = obj1.usePortal(hostName).removePortal;
-  const tmp15 = callback(null);
-  closure_14 = tmp15;
-  let num2 = -1;
-  if (!(undefined === animateOnMount || animateOnMount)) {
-    num2 = num;
-  }
-  closure_15 = tmp14(num2);
-  closure_16 = tmp14(null);
-  closure_17 = tmp14(-1);
-  closure_18 = tmp14(false);
-  closure_19 = tmp14(false);
-  const tmp14Result = callback(false);
-  closure_20 = tmp14Result;
-  tmp14Result.current = mount;
-  let items = [name];
-  const tmp17 = onChange(() => {
-    let combined = name;
-    if (!name) {
-      const _HermesInternal = HermesInternal;
-      combined = "bottom-sheet-modal-" + callback(DEFAULT_STACK_BEHAVIOR[7]).id();
-      const obj = callback(DEFAULT_STACK_BEHAVIOR[7]);
-    }
-    return combined;
-  }, items);
-  closure_21 = tmp17;
-  function resetVariables() {
-    let obj = callback(DEFAULT_STACK_BEHAVIOR[8]);
-    obj = { component: closure_15.name, method: resetVariables.name };
-    obj.print(obj);
-    closure_15.current = -1;
-    closure_17.current = -1;
-    closure_18.current = false;
-    closure_20.current = false;
-    closure_19.current = false;
-  }
-  const tmp18 = num(resetVariables, []);
-  closure_22 = tmp18;
-  let items1 = [tmp17, tmp18, unmountSheet, removePortal, onDismiss];
-  const tmp19 = num(function unmount(ref) {
-    callback3();
-    unmountSheet(closure_21);
-    removePortal(closure_21);
-    if (ref4.current) {
-      callback2(closure_14);
-    }
-    if (onDismiss) {
-      onDismiss();
-    }
-  }, items1);
-  closure_23 = tmp19;
-  closure_24 = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        const snapToIndex = current.snapToIndex;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  closure_25 = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        const snapToPosition = current.snapToPosition;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  closure_26 = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        const setToIndex = current.setToIndex;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  closure_27 = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        const setToPosition = current.setToPosition;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  closure_28 = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        const expand = current.expand;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  closure_29 = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        const collapse = current.collapse;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  closure_30 = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        const close = current.close;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  closure_31 = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        const forceClose = current.forceClose;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  const items2 = [tmp17, DEFAULT_STACK_BEHAVIOR, mountSheet];
-  closure_32 = num(function handlePresent(arg0) {
-    closure_0 = arg0;
-    const animationFrame = requestAnimationFrame(() => {
-      closure_1_9({ mount: true, data: closure_0 });
-      closure_1_10(closure_1_21, closure_0, closure_1_2);
-    });
-  }, items2);
-  const items3 = [willUnmountSheet, tmp19, tmp17, tmp5];
-  closure_33 = num(function handleDismiss(arg0) {
-    let tmp3 = -1 !== closure_15.current;
-    if (!tmp3) {
-      tmp3 = false !== closure_18.current;
-    }
-    if (!tmp3) {
-      tmp3 = tmp;
-    }
-    if (tmp3) {
-      if (tmp) {
-        willUnmountSheet(closure_21);
-        closure_19.current = true;
-        const current = closure_14.current;
-        if (current != null) {
-          current.forceClose(arg0);
+({ useMemo: c3, memo } = noop);
+noopDefault;
+const jsx = jsxProd.jsx;
+let closure_5 = { code: "function pnpm_BottomSheetContentTsx1(){const{animatedContainerHeight,INITIAL_CONTAINER_HEIGHT,animatedKeyboardState,animatedKeyboardHeightInContainer,animatedHandleHeight,animatedSheetHeight,keyboardBehavior,KEYBOARD_BEHAVIOR,KEYBOARD_STATE,isInTemporaryPosition}=this.__closure;if(animatedContainerHeight.get()===INITIAL_CONTAINER_HEIGHT){return 0;}const keyboardState=animatedKeyboardState.get();const keyboardHeightInContainer=animatedKeyboardHeightInContainer.get();const handleHeight=Math.max(0,animatedHandleHeight.get());const containerHeight=animatedContainerHeight.get();let contentHeight=animatedSheetHeight.get()-handleHeight;switch(keyboardBehavior){case KEYBOARD_BEHAVIOR.extend:if(keyboardState===KEYBOARD_STATE.SHOWN){contentHeight=contentHeight-keyboardHeightInContainer;}break;case KEYBOARD_BEHAVIOR.fillParent:if(!isInTemporaryPosition.get()){break;}if(keyboardState===KEYBOARD_STATE.SHOWN){contentHeight=containerHeight-handleHeight-keyboardHeightInContainer;}else{contentHeight=containerHeight-handleHeight;}break;case KEYBOARD_BEHAVIOR.interactive:{if(!isInTemporaryPosition.get()){break;}const contentWithKeyboardHeight=contentHeight+keyboardHeightInContainer;if(keyboardState===KEYBOARD_STATE.SHOWN){if(keyboardHeightInContainer+animatedSheetHeight.get()>containerHeight){contentHeight=containerHeight-keyboardHeightInContainer-handleHeight;}}else if(contentWithKeyboardHeight+handleHeight>containerHeight){contentHeight=containerHeight-handleHeight;}else{contentHeight=contentWithKeyboardHeight;}break;}}return Math.max(contentHeight,0);}" };
+let closure_6 = { code: "function pnpm_BottomSheetContentTsx2(){const{animatedContainerHeight,INITIAL_CONTAINER_HEIGHT,animatedHighestSnapPoint,animatedPosition,overDragResistanceFactor,animatedKeyboardState,KEYBOARD_STATE,animatedKeyboardHeightInContainer}=this.__closure;const containerHeight=animatedContainerHeight.get();if(containerHeight===INITIAL_CONTAINER_HEIGHT){return 0;}const highestSnapPoint=Math.max(animatedHighestSnapPoint.get(),animatedPosition.get());const overDragSafePaddingBottom=Math.sqrt(highestSnapPoint-containerHeight*-1)*overDragResistanceFactor;let paddingBottom=overDragSafePaddingBottom;if(animatedKeyboardState.get()===KEYBOARD_STATE.SHOWN){paddingBottom=overDragSafePaddingBottom+animatedKeyboardHeightInContainer.get();}return paddingBottom;}" };
+let closure_7 = { code: "function pnpm_BottomSheetContentTsx3(){const{animatedContainerHeight,INITIAL_CONTAINER_HEIGHT,enableDynamicSizing,animatedContentHeight,detached,animatedPaddingBottom,animate,animationConfigs,overrideReduceMotion,animatedContentHeightMax}=this.__closure;if(animatedContainerHeight.get()===INITIAL_CONTAINER_HEIGHT){return{};}if(enableDynamicSizing&&animatedContentHeight.get()===INITIAL_CONTAINER_HEIGHT){return{};}const paddingBottom=detached?0:animatedPaddingBottom.get();return{paddingBottom:animate({point:paddingBottom,configs:animationConfigs,overrideReduceMotion:overrideReduceMotion}),height:animate({point:animatedContentHeightMax.get()+paddingBottom,configs:animationConfigs,overrideReduceMotion:overrideReduceMotion})};}" };
+const memoResult = memo(function BottomSheetContentComponent(detached) {
+  detached = detached.detached;
+  const animationConfigs = detached.animationConfigs;
+  const overrideReduceMotion = detached.overrideReduceMotion;
+  const keyboardBehavior = detached.keyboardBehavior;
+  let enableDynamicSizing;
+  let overDragResistanceFactor;
+  let animatedPosition;
+  let animatedHandleHeight;
+  let animatedHighestSnapPoint;
+  let animatedContainerHeight;
+  let animatedContentHeight;
+  let animatedSheetHeight;
+  let animatedKeyboardState;
+  let animatedKeyboardHeightInContainer;
+  let isInTemporaryPosition;
+  let derivedValue;
+  let derivedValue1;
+  let animatedStyle;
+  ({ accessible, accessibilityLabel, accessibilityHint, accessibilityRole, children } = detached);
+  let obj = detached(overrideReduceMotion[2]);
+  const bottomSheetInternal = obj.useBottomSheetInternal();
+  enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  overDragResistanceFactor = bottomSheetInternal.overDragResistanceFactor;
+  animatedPosition = bottomSheetInternal.animatedPosition;
+  animatedHandleHeight = bottomSheetInternal.animatedHandleHeight;
+  animatedHighestSnapPoint = bottomSheetInternal.animatedHighestSnapPoint;
+  animatedContainerHeight = bottomSheetInternal.animatedContainerHeight;
+  animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  animatedSheetHeight = bottomSheetInternal.animatedSheetHeight;
+  animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
+  animatedKeyboardHeightInContainer = bottomSheetInternal.animatedKeyboardHeightInContainer;
+  isInTemporaryPosition = bottomSheetInternal.isInTemporaryPosition;
+  obj1 = detached(overrideReduceMotion[3]);
+  class N {
+    constructor() {
+      obj = animatedContainerHeight;
+      tmp2 = detached;
+      tmp3 = overrideReduceMotion;
+      value = animatedContainerHeight.get();
+      if (value === detached(overrideReduceMotion[4]).INITIAL_CONTAINER_HEIGHT) {
+        num = 0;
+        return 0;
+      } else {
+        tmp8 = animatedKeyboardState;
+        value1 = animatedKeyboardState.get();
+        tmp10 = closure_13;
+        value2 = closure_13.get();
+        tmp12 = globalThis;
+        _Math2 = Math;
+        tmp13 = animatedHandleHeight;
+        num2 = 0;
+        bound = Math.max(0, animatedHandleHeight.get());
+        value3 = obj.get();
+        obj2 = animatedSheetHeight;
+        diff = animatedSheetHeight.get() - bound;
+        tmp17 = keyboardBehavior;
+        if (tmp2(tmp3[5]).KEYBOARD_BEHAVIOR.extend === keyboardBehavior) {
+          diff1 = diff;
+          if (value1 === tmp2(tmp3[5]).KEYBOARD_STATE.SHOWN) {
+            diff1 = diff - value2;
+          }
+        } else if (tmp2(tmp3[5]).KEYBOARD_BEHAVIOR.fillParent === tmp17) {
+          tmp6 = isInTemporaryPosition;
+          diff1 = diff;
+          if (isInTemporaryPosition.get()) {
+            if (value1 === tmp2(tmp3[5]).KEYBOARD_STATE.SHOWN) {
+              diff2 = value3 - bound - value2;
+            } else {
+              diff2 = value3 - bound;
+            }
+            diff1 = diff2;
+          }
+        } else {
+          diff1 = diff;
+          if (tmp2(tmp3[5]).KEYBOARD_BEHAVIOR.interactive === tmp17) {
+            tmp18 = isInTemporaryPosition;
+            diff1 = diff;
+            if (isInTemporaryPosition.get()) {
+              sum = diff + value2;
+              if (value1 === tmp2(tmp3[5]).KEYBOARD_STATE.SHOWN) {
+                diff1 = diff;
+                if (value2 + obj2.get() > value3) {
+                  diff1 = value3 - value2 - bound;
+                }
+              } else {
+                if (sum + bound > value3) {
+                  sum = value3 - bound;
+                }
+                diff1 = sum;
+              }
+            }
+          }
         }
-      } else if (closure_18.current) {
-        callback4();
+        _Math = Math;
+        return Math.max(diff1, 0);
       }
     }
+  }
+  obj = { animatedContainerHeight, INITIAL_CONTAINER_HEIGHT: detached(overrideReduceMotion[4]).INITIAL_CONTAINER_HEIGHT, animatedKeyboardState, animatedKeyboardHeightInContainer, animatedHandleHeight, animatedSheetHeight, keyboardBehavior, KEYBOARD_BEHAVIOR: detached(overrideReduceMotion[5]).KEYBOARD_BEHAVIOR, KEYBOARD_STATE: detached(overrideReduceMotion[5]).KEYBOARD_STATE, isInTemporaryPosition };
+  N.__closure = obj;
+  N.__workletHash = 2170474579366;
+  N.__initData = overDragResistanceFactor;
+  let items = [animatedContainerHeight, animatedHandleHeight, animatedKeyboardHeightInContainer, animatedKeyboardState, animatedSheetHeight, isInTemporaryPosition, keyboardBehavior];
+  derivedValue = obj1.useDerivedValue(N, items);
+  const fn = function l() {
+    let value = animatedContainerHeight.get();
+    if (value === detached(overrideReduceMotion[4]).INITIAL_CONTAINER_HEIGHT) {
+      return 0;
+    } else {
+      const _Math = Math;
+      value = animatedHighestSnapPoint.get();
+      const _Math2 = Math;
+      const result = Math.sqrt(Math.max(value, animatedPosition.get()) - -1 * value) * overDragResistanceFactor;
+      const value1 = animatedKeyboardState.get();
+      let sum = result;
+      if (value1 === tmp2(tmp3[5]).KEYBOARD_STATE.SHOWN) {
+        sum = result + animatedKeyboardHeightInContainer.get();
+      }
+      return sum;
+    }
+    tmp2 = detached;
+    tmp3 = overrideReduceMotion;
+  };
+  obj = { animatedContainerHeight, INITIAL_CONTAINER_HEIGHT: detached(overrideReduceMotion[4]).INITIAL_CONTAINER_HEIGHT, animatedHighestSnapPoint, animatedPosition, overDragResistanceFactor, animatedKeyboardState, KEYBOARD_STATE: detached(overrideReduceMotion[5]).KEYBOARD_STATE, animatedKeyboardHeightInContainer };
+  fn.__closure = obj;
+  fn.__workletHash = 3484699588399;
+  fn.__initData = animatedPosition;
+  const items1 = [overDragResistanceFactor, animatedPosition, animatedContainerHeight, animatedHighestSnapPoint, animatedKeyboardState, animatedKeyboardHeightInContainer];
+  derivedValue1 = detached(overrideReduceMotion[3]).useDerivedValue(fn, items1);
+  const obj4 = detached(overrideReduceMotion[3]);
+  class S {
+    constructor() {
+      tmp2 = detached;
+      tmp3 = overrideReduceMotion;
+      value = animatedContainerHeight.get();
+      if (value === detached(overrideReduceMotion[4]).INITIAL_CONTAINER_HEIGHT) {
+        return {};
+      } else {
+        tmp11 = enableDynamicSizing;
+        if (enableDynamicSizing) {
+          tmp4 = animatedContentHeight;
+          value1 = animatedContentHeight.get();
+          if (value1 === tmp2(tmp3[4]).INITIAL_CONTAINER_HEIGHT) {
+            return {};
+          }
+        }
+        tmp6 = detached;
+        num = 0;
+        if (!detached) {
+          tmp7 = closure_16;
+          num = closure_16.get();
+        }
+        obj = { paddingBottom: null, height: null };
+        tmp2Result = tmp2(tmp3[6]);
+        obj = { point: null, configs: null, overrideReduceMotion: null };
+        obj[0] = num;
+        tmp8 = animationConfigs;
+        obj[1] = animationConfigs;
+        tmp9 = overrideReduceMotion;
+        obj[2] = overrideReduceMotion;
+        obj[0] = tmp2Result.animate(obj);
+        tmp2Result1 = tmp2(tmp3[6]);
+        obj1 = { point: null, configs: null, overrideReduceMotion: null };
+        tmp10 = closure_15;
+        obj1[0] = closure_15.get() + num;
+        obj1[1] = animationConfigs;
+        obj1[2] = overrideReduceMotion;
+        obj[1] = tmp2Result1.animate(obj1);
+        return obj;
+      }
+    }
+  }
+  obj1 = { animatedContainerHeight, INITIAL_CONTAINER_HEIGHT: detached(overrideReduceMotion[4]).INITIAL_CONTAINER_HEIGHT, enableDynamicSizing, animatedContentHeight, detached, animatedPaddingBottom: derivedValue1, animate: detached(overrideReduceMotion[6]).animate, animationConfigs, overrideReduceMotion, animatedContentHeightMax: derivedValue };
+  S.__closure = obj1;
+  S.__workletHash = 8203943631786;
+  S.__initData = animatedHandleHeight;
+  const items2 = [overDragResistanceFactor, enableDynamicSizing, detached, animationConfigs, overrideReduceMotion, animatedContentHeight, derivedValue, animatedContainerHeight];
+  animatedStyle = detached(overrideReduceMotion[3]).useAnimatedStyle(S, items2);
+  const items3 = [animatedStyle, detached];
+  const style = keyboardBehavior(() => {
+    const items = [detached ? { overflow: "visible" } : { overflow: "hidden" }, animatedStyle];
+    return items;
   }, items3);
-  const items4 = [num];
-  closure_34 = num(function handleMinimize() {
-    if (!closure_18.current) {
-      tmp.current = true;
-      if (-1 === closure_15.current) {
-        closure_17.current = num;
-      } else {
-        closure_17.current = tmp2.current;
-      }
-      const current = closure_14.current;
-      if (current != null) {
-        current.close();
-      }
-    }
-  }, items4);
-  closure_35 = num(function handleRestore() {
-    let current = closure_18.current;
-    if (current) {
-      current = !ref3.current;
-    }
-    if (current) {
-      closure_18.current = false;
-      const current2 = closure_14.current;
-      if (current2 != null) {
-        current2.snapToIndex(ref2.current);
-      }
-    }
-  }, []);
-  const items5 = [tmp17, tmp19, willUnmountSheet];
-  const tmp21 = num(function handlePortalRender(arg0) {
-    if (ref4.current) {
-      arg0();
-    }
-  }, []);
-  const items6 = [onChange];
-  const items7 = [onAnimate];
-  const tmp11 = _require;
-  const tmp20 = num(function handlePortalOnUnmount() {
-    let tmp = -1 === closure_15.current;
-    if (tmp) {
-      tmp = false === closure_18.current;
-    }
-    if (!tmp) {
-      closure_20.current = false;
-      closure_19.current = true;
-      if (closure_18.current) {
-        callback4();
-      } else {
-        willUnmountSheet(closure_21);
-        const current = closure_14.current;
-        if (current != null) {
-          current.close();
-        }
-      }
-    }
-  }, items5);
-  const items8 = [DEFAULT_ENABLE_DISMISS_ON_CLOSE, tmp19];
-  const tmp22 = num(function handleBottomSheetOnChange(current) {
-    closure_15.current = current;
-    closure_16.current = null;
-    if (onChange) {
-      tmp(current, arg1, arg2);
-    }
-  }, items6);
-  const tmp23 = num((arg0, current) => {
-    closure_16.current = current;
-    if (onAnimate) {
-      tmp(arg0, current, arg2, arg3, arg4);
-    }
-  }, items7);
-  enablePanDownToClose(arg1, () => ({ snapToIndex: closure_24, snapToPosition: closure_25, setToIndex: closure_26, setToPosition: closure_27, expand: closure_28, collapse: closure_29, close: closure_30, forceClose: closure_31, dismiss: closure_33, present: closure_32, minimize: closure_34, restore: closure_35 }));
-  let tmp27Result = null;
-  if (mount) {
-    obj = { name: null, hostName: null, handleOnMount: null, handleOnUpdate: null, handleOnUnmount: null, children: null };
-    obj[0] = tmp17;
-    obj[1] = hostName;
-    obj[2] = tmp21;
-    obj[3] = tmp21;
-    obj[4] = tmp20;
-    obj = {};
-    const merged = Object.assign(tmp8);
-    obj.ref = tmp15;
-    obj.key = tmp17;
-    obj.index = num;
-    obj.snapPoints = name.snapPoints;
-    obj.enablePanDownToClose = tmp5;
-    obj.animateOnMount = tmp6;
-    obj.containerHeight = containerHeight;
-    obj.containerOffset = containerOffset;
-    obj.onChange = tmp22;
-    obj.onClose = tmp24;
-    obj.onAnimate = tmp23;
-    obj.$modal = true;
-    tmp27Result = children;
-    if (typeof children === "function") {
-      obj1 = { data: null };
-      obj1[0] = first.data;
-      tmp27Result = tmp27(children, obj1);
-    }
-    const obj2 = { children: null };
-    obj2[0] = unmountSheet(name(tmp12[9]), obj, tmp27Result);
-    obj[5] = removePortal(Fragment, obj2, tmp17);
-    tmp27Result = tmp27(tmp11(tmp12[6]).Portal, obj, tmp17);
-    const tmp28 = unmountSheet;
-    const tmp30 = name(tmp12[9]);
+  if (bottomSheetInternal.enableContentPanningGesture) {
+    let View = tmp7(tmp[7]);
+  } else {
+    View = tmp7(tmp[3]).View;
   }
-  return tmp27Result;
-}));
-memoResult.displayName = "BottomSheetModal";
+  return enableDynamicSizing(View, { accessible, accessibilityLabel, accessibilityHint, accessibilityRole, style, children });
+});
+memoResult.displayName = "BottomSheetContent";
 
-export default memoResult;
+export const BottomSheetContent = memoResult;

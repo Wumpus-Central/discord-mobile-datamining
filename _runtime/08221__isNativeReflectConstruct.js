@@ -1,13 +1,17 @@
 // === Module 8221: _isNativeReflectConstruct ===
 
 // Module 8221 (_isNativeReflectConstruct)
+import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8211 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8222 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const FeDistantLight = arg1;
+const Ellipse = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,13 +31,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeDistantLight {
+noopAll;
+class Ellipse {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeDistantLight);
-    tmp2 = closure_4;
-    obj = closure_4(FeDistantLight);
-    tmp3 = closure_3;
+    tmp = closure_3(this, Ellipse);
+    tmp2 = closure_5;
+    obj = closure_5(Ellipse);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -47,18 +52,37 @@ class FeDistantLight {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeDistantLight, require("noop").Component);
+_inheritsDefault(Ellipse, _isNativeReflectConstructDefault);
 const items = [
   {
     key: "render",
     value: function render() {
-      const result = FeDistantLight(8189).warnUnimplementedFilter();
-      return null;
+      const self = this;
+      const props = this.props;
+      let obj = {};
+      ({ cx, cy, rx, ry } = props);
+      const merged = Object.assign(self(8202).extract(this, props));
+      obj.cx = cx;
+      obj.cy = cy;
+      obj.rx = rx;
+      obj.ry = ry;
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const obj2 = self(8202);
+      const merged1 = Object.assign(obj);
+      return jsx(__INTERNAL_VIEW_CONFIGDefault, {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(FeDistantLight, items);
-importDefaultResultResult.displayName = "FeDistantLight";
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = importDefaultResult(Ellipse, items);
+importDefaultResultResult.displayName = "Ellipse";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
 
 export default importDefaultResultResult;

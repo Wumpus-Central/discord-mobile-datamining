@@ -1,17 +1,14 @@
 // === Module 8229: _isNativeReflectConstruct ===
 
 // Module 8229 (_isNativeReflectConstruct)
-import noopDefault from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8212 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8230 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8226 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import { jsx } from "jsxProd" /* 21 */;
 
-const FeMerge = arg1;
+const FeComponentTransfer = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,14 +28,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopDefault;
-class FeMerge {
+class FeComponentTransfer {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeMerge);
-    tmp2 = closure_5;
-    obj = closure_5(FeMerge);
-    tmp3 = closure_4;
+    tmp = closure_2(this, FeComponentTransfer);
+    tmp2 = closure_4;
+    obj = closure_4(FeComponentTransfer);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -52,30 +48,19 @@ class FeMerge {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeMerge, _isNativeReflectConstructDefault);
+_inheritsDefault(FeComponentTransfer, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp = __INTERNAL_VIEW_CONFIGDefault;
-    const merged = Object.assign(self(8211).extractFilter(this.props));
-    const obj2 = self(8211);
-    const merged1 = Object.assign(self(8211).extractFeMerge(this.props, this));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const result = FeComponentTransfer(8203).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeMerge, items);
-importDefaultResultResult.displayName = "FeMerge";
+const importDefaultResultResult = importDefaultResult(FeComponentTransfer, items);
+importDefaultResultResult.displayName = "FeComponentTransfer";
 obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

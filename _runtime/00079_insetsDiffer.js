@@ -1,7 +1,7 @@
 // === Module 79: insetsDiffer ===
 
 // Module 79 (insetsDiffer)
-let closure_0 = { top: "rejectWithError", left: "accessibilityRole", right: "HermesInternal", bottom: "channel" };
+let closure_0 = { top: "r", left: "accessibilityRole", right: "Button", bottom: "limit" };
 arg5.default = function insetsDiffer(arg0, arg1) {
   let rect = arg0;
   if (!arg0) {
