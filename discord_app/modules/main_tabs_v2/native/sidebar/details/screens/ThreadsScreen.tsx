@@ -13,7 +13,7 @@ import createCacheKey from "../../../../../../design/components/Styles/native/cr
 const require = arg1;
 function ThreadsScreen(channel) {
   channel = channel.channel;
-  let obj = channel(6068);
+  let obj = channel(6081);
   const canStartThread = obj.useCanStartThread(channel);
   const items = [channel];
   const callback = importAllResult.useCallback(() => {

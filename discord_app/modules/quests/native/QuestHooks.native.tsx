@@ -4,8 +4,8 @@ import QuestsVisibleMessagesChangedSource from "../QuestTypes.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import useIsWindowLargeDefault from "../../screen/native/useIsWindowLarge.tsx";
 import getIsEligibleForQuests from "../lib/QuestsEligibility.tsx";
+import getQuestDockMenuAdCreative from "QuestDock/QuestDockCreativeContext.tsx";
 import maybeRefreshAd from "../useQuestForPlacement.tsx";
-import getDeliveredQuest from "QuestDock/QuestDockCreativeContext.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import closure_5 from "../../action_sheet/native/ActionSheetStore.tsx";
@@ -82,9 +82,9 @@ function useDeliveredDockCreative() {
   }, items3);
 }
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
-  const deliveredQuest = getDeliveredQuest.getDeliveredQuest(mobileQuestDock);
+  const deliveredQuest = getQuestDockMenuAdCreative.getDeliveredQuest(mobileQuestDock);
   const tmp4 = useIsWindowLargeDefault();
-  const obj = getDeliveredQuest;
+  const obj = getQuestDockMenuAdCreative;
   const items = [closure_7];
   let userStatus;
   const stateFromStores = initialize.useStateFromStores(items, () => null != questPreviewOverride.getQuestPreviewOverride(callback(table[11]).QuestContent.QUEST_BAR_MOBILE), []);
@@ -93,8 +93,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7376);
-    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5342).QuestContent.QUEST_BAR_MOBILE);
+    let tmpResult = tmp(7390);
+    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5355).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -103,14 +103,14 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(11003);
+  tmpResult = tmp(11021);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = initialize;
   const type = mobileQuestDock.type;
   const isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (AdCreativeType.AdCreativeType.NO_FILL !== type) {
-    if (tmp(7379).AdCreativeType.BOUNTY !== type) {
-      if (tmp(7379).AdCreativeType.QUEST === type) {
+    if (tmp(7393).AdCreativeType.BOUNTY !== type) {
+      if (tmp(7393).AdCreativeType.QUEST === type) {
         if (stateFromStores) {
           if (!tmp9) {
             let tmp12 = null != deliveredQuest && !tmp4;

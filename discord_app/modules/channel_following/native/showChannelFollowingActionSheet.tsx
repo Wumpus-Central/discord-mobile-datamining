@@ -2,7 +2,7 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import { asyncRequireImpl } from "../../../../_runtime/02009_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02010_asyncRequireImpl.js";
 
 const require = arg1;
 noopAll;
@@ -109,5 +109,5 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
       return callback(dependencyMap[2]).hideActionSheet();
     }
   };
-  obj.openLazy(asyncRequireImpl(10883, dependencyMap.paths), "NewChannelFollower." + id, obj);
+  obj.openLazy(asyncRequireImpl(10901, dependencyMap.paths), "NewChannelFollower." + id, obj);
 };

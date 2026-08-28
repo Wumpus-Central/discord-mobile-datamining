@@ -1154,6 +1154,7 @@ obj = {
   ORDER_ENTITLEMENTS(closure_0) {
     return "/billing/orders/" + closure_0 + "/entitlements";
   },
+  DEBUG_TEMPORAL_INFRA_PROOF_OF_CONCEPT: "/debug/temporal/infra-proof-of-concept",
   APPLICATION_SKUS(closure_0) {
     return "/applications/" + closure_0 + "/skus";
   },
@@ -1621,8 +1622,8 @@ obj = {
     return "/soundboard-sounds/" + closure_0 + "/guild/" + closure_1;
   },
   SOUNDBOARD_DEFAULT_SOUNDS: "/soundboard-default-sounds",
-  SEND_SOUNDBOARD_SOUND(id) {
-    return "/channels/" + id + "/send-soundboard-sound";
+  SEND_SOUNDBOARD_SOUND(channelId) {
+    return "/channels/" + channelId + "/send-soundboard-sound";
   },
   SEND_CLIPS_REMOTE_TRIGGER(arg0) {
     return "/channels/" + arg0 + "/clips-remote-trigger";
@@ -1925,12 +1926,19 @@ obj = {
     return "/virtual-currency/skus/" + c0 + "/redeem";
   },
   VIRTUAL_CURRENCY_USER_BALANCE: "/users/@me/virtual-currency/balance",
+  ORB_USER_CHALLENGES_LIST: "/users/@me/achievements/list?reward_type=orbs",
+  ORB_USER_CHALLENGE_CLAIM(arg0) {
+    return "/users/@me/achievements/" + arg0 + "/claim";
+  },
   IGNORE_USER(id) {
     return "/users/@me/relationships/" + id + "/ignore";
   },
   SCHEDULED_MESSAGES: "/users/@me/scheduled-messages",
   SCHEDULED_MESSAGE(c0) {
     return "/users/@me/scheduled-messages/" + c0;
+  },
+  SCHEDULED_MESSAGE_SEND(closure_0) {
+    return "/users/@me/scheduled-messages/" + closure_0 + "/send";
   },
   HOLIDAY_REDEEM_PRIZE: "/holidays/redeem-prize",
   APPLIED_BOOST_MODIFY_END_DATE: "/debug/applied-boosts/ends-at",

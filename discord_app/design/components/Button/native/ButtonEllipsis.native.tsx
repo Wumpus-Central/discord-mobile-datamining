@@ -1,8 +1,8 @@
 // discord_app/design/components/Button/native/ButtonEllipsis.native.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod4185 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import _modDef4185 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod4186 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _modDef4186 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import CONFIG_NEVER_ANIMATE_TIMING from "../../../animation/reanimated/timing/timing.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import { Easing } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
@@ -90,9 +90,9 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   return { circle };
 });
 function withEllipsisAnimation(arg0, value) {
-  obj = _mod4185;
+  obj = _mod4186;
   const result = 166.66666666666666 * arg0;
-  const obj2 = _mod4185;
+  const obj2 = _mod4186;
   return obj.withDelay(result, obj2.withRepeat(CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, obj, "animate-always"), -1, true));
 }
 obj = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: require("../../../../modules/reanimated/ReanimatedRexport.tsx").withDelay, withRepeat: require("../../../../modules/reanimated/ReanimatedRexport.tsx").withRepeat, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, ELLIPSIS_APPEAR_TIMING: obj };
@@ -113,5 +113,5 @@ export const Ellipsis = function Ellipsis(arg0) {
   const merged2 = Object.assign(arg0);
   items[2] = callback(EllipsisCircle, { offset: 2 });
   obj[1] = items;
-  return callback2(_modDef4185.View, obj);
+  return callback2(_modDef4186.View, obj);
 };

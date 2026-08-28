@@ -17,12 +17,12 @@ function GiftingSectionTitle(title) {
   if (useIsMobileVisualRefreshExperimentEnabledDefault("UserSettingsPremiumGifting")) {
     let obj = { title: null };
     obj[0] = title;
-    let tmp3Result = tmp3(tmp4(5944).TableRowGroupTitle, obj);
+    let tmp3Result = tmp3(tmp4(5957).TableRowGroupTitle, obj);
   } else {
     obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null };
     obj[0] = tmp.title;
     obj[4] = title;
-    tmp3Result = tmp3(tmp4(4441).Text, obj);
+    tmp3Result = tmp3(tmp4(4442).Text, obj);
   }
   return tmp3Result;
 }

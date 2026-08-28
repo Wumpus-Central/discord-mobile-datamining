@@ -16,15 +16,15 @@ require = arg1;
 function isInteractionComponent(type) {
   type = type.type;
   if (PermissionOverwriteType.ComponentType.BUTTON === type) {
-    return type.style !== tmp(1955).ButtonStyle.LINK;
+    return type.style !== tmp(1956).ButtonStyle.LINK;
   } else {
-    if (tmp(1955).ComponentType.STRING_SELECT !== type) {
-      if (tmp(1955).ComponentType.USER_SELECT !== type) {
-        if (tmp(1955).ComponentType.ROLE_SELECT !== type) {
-          if (tmp(1955).ComponentType.MENTIONABLE_SELECT !== type) {
-            if (tmp(1955).ComponentType.CHANNEL_SELECT !== type) {
-              if (tmp(1955).ComponentType.ACTION_ROW !== type) {
-                const TEXT_INPUT = tmp(1955).ComponentType.TEXT_INPUT;
+    if (tmp(1956).ComponentType.STRING_SELECT !== type) {
+      if (tmp(1956).ComponentType.USER_SELECT !== type) {
+        if (tmp(1956).ComponentType.ROLE_SELECT !== type) {
+          if (tmp(1956).ComponentType.MENTIONABLE_SELECT !== type) {
+            if (tmp(1956).ComponentType.CHANNEL_SELECT !== type) {
+              if (tmp(1956).ComponentType.ACTION_ROW !== type) {
+                const TEXT_INPUT = tmp(1956).ComponentType.TEXT_INPUT;
               }
               return false;
             }
@@ -43,7 +43,7 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
   let LOADING = ActionComponentState.ActionComponentState.NORMAL;
   let tmp3 = null != interaction;
   if (tmp3) {
-    tmp3 = interaction.state !== tmp(4696).InteractionState.FAILED;
+    tmp3 = interaction.state !== tmp(4709).InteractionState.FAILED;
   }
   let DISABLED = LOADING;
   if (!tmp3) {
@@ -51,16 +51,16 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
       flag = isInteractionComponent(id);
     }
     if (flag) {
-      DISABLED = tmp(4698).ActionComponentState.DISABLED;
+      DISABLED = tmp(4711).ActionComponentState.DISABLED;
     }
     return DISABLED;
   } else {
-    if (interaction.data.interactionType !== tmp(1955).InteractionTypes.MESSAGE_COMPONENT) {
+    if (interaction.data.interactionType !== tmp(1956).InteractionTypes.MESSAGE_COMPONENT) {
       if (isInteractionComponent(id)) {
-        LOADING = tmp(4698).ActionComponentState.DISABLED;
+        LOADING = tmp(4711).ActionComponentState.DISABLED;
       }
     }
-    LOADING = tmp(4698).ActionComponentState.LOADING;
+    LOADING = tmp(4711).ActionComponentState.LOADING;
   }
 }
 function useShouldDisableInteractiveComponents(channel_id) {
@@ -126,9 +126,9 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  let tmpResult = tmp(6068);
+  let tmpResult = tmp(6081);
   const isThreadModerator = tmpResult.useIsThreadModerator(channel);
-  tmpResult = tmp(6068);
+  tmpResult = tmp(6081);
   let tmp9 = !stateFromStores;
   const canUnarchiveThread = tmpResult.useCanUnarchiveThread(channel);
   if (stateFromStores) {

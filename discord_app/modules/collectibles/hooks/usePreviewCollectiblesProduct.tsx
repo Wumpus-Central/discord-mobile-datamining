@@ -74,7 +74,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
       }
       return () => {
         if (closure_1) {
-          closure_1_0(closure_1_1[8]).setPendingChanges({ avatarDecoration: "rejectWithError", profileEffect: "accessibilityRole", nameplate: "HermesInternal", profileFrame: "channel" });
+          closure_1_0(closure_1_1[8]).setPendingChanges({ avatarDecoration: "r", profileEffect: "accessibilityRole", nameplate: "Button", profileFrame: "limit" });
           const obj = closure_1_0(closure_1_1[8]);
         }
       };

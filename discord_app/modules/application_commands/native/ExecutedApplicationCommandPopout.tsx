@@ -40,8 +40,8 @@ function getCommandOptionComponents(option) {
     const _HermesInternal = HermesInternal;
     combined = " " + name_localized;
   }
-  if (iter.type !== iter(1955).ApplicationCommandOptionType.SUB_COMMAND) {
-    if (iter.type !== tmp6(1955).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+  if (iter.type !== iter(1956).ApplicationCommandOptionType.SUB_COMMAND) {
+    if (iter.type !== tmp6(1956).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
       if (null != iter.value) {
         function getUserComponent(user, styles) {
           let obj = {
@@ -67,24 +67,24 @@ function getCommandOptionComponents(option) {
           return closure_1_21(iter(closure_1_3[21]).Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: intl }, "optionValue-" + iter.name);
         }
         const type = iter.type;
-        if (tmp6(1955).ApplicationCommandOptionType.USER === type) {
+        if (tmp6(1956).ApplicationCommandOptionType.USER === type) {
           const user = authStore.getUser(iter.value.toString());
           let userComponent = null;
           if (null != user) {
             userComponent = getUserComponent(user, styles);
           }
           const str5 = iter.value;
-        } else if (tmp6(1955).ApplicationCommandOptionType.CHANNEL === type) {
+        } else if (tmp6(1956).ApplicationCommandOptionType.CHANNEL === type) {
           channel = store.getChannel(iter.value.toString());
           userComponent = null;
           if (null != channel) {
             let obj = { style: null, children: null };
             obj[0] = styles.commandOptionMentionText;
-            const items1 = [closure_18, tmp6(4639).computeChannelName(channel, authStore, closure_11)];
+            const items1 = [closure_18, tmp6(4640).computeChannelName(channel, authStore, closure_11)];
             obj[1] = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = callback2(tmp6(1297).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(4639);
+            const tmp6Result = tmp6(4640);
           }
           const str3 = iter.value;
         } else {
@@ -92,7 +92,7 @@ function getCommandOptionComponents(option) {
             const items = [closure_1_20, role.name];
             return closure_1_22(iter(closure_1_3[17]).LegacyText, { style: styles.commandOptionMentionText, children: items }, "optionValue-" + iter.name);
           }
-          if (tmp6(1955).ApplicationCommandOptionType.ROLE === type) {
+          if (tmp6(1956).ApplicationCommandOptionType.ROLE === type) {
             const value = iter.value;
             let role;
             if (null != guild) {
@@ -102,7 +102,7 @@ function getCommandOptionComponents(option) {
             if (null != role) {
               userComponent = getRoleComponent(role);
             }
-          } else if (tmp6(1955).ApplicationCommandOptionType.MENTIONABLE === type) {
+          } else if (tmp6(1956).ApplicationCommandOptionType.MENTIONABLE === type) {
             str = iter.value.toString();
             let role1;
             if (null != guild) {
@@ -120,7 +120,7 @@ function getCommandOptionComponents(option) {
             const str2 = iter.value;
           } else {
             userComponent = null;
-            if (tmp6(1955).ApplicationCommandOptionType.ATTACHMENT === type) {
+            if (tmp6(1956).ApplicationCommandOptionType.ATTACHMENT === type) {
               const intl = tmp6(1236).intl;
               userComponent = getCommandValueText(intl.string(tmp6(1236).t.nONJVc));
             }
@@ -220,11 +220,11 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
     combined = "" + name_localized;
   }
   if (item10118.type !== require("../../../flow/Server.tsx").ApplicationCommandOptionType.SUB_COMMAND) {
-    if (item10118.type !== tmp5(1955).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+    if (item10118.type !== tmp5(1956).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
       let sum = null;
       if (null != item10118.value) {
         const type = item10118.type;
-        if (tmp5(1955).ApplicationCommandOptionType.USER === type) {
+        if (tmp5(1956).ApplicationCommandOptionType.USER === type) {
           const user = authStore.getUser(item10118.value.toString());
           sum = null;
           if (null != user) {
@@ -232,15 +232,15 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
             const obj3 = nameFromUserDefault;
           }
           const str5 = item10118.value;
-        } else if (tmp5(1955).ApplicationCommandOptionType.CHANNEL === type) {
+        } else if (tmp5(1956).ApplicationCommandOptionType.CHANNEL === type) {
           const channel = store.getChannel(item10118.value.toString());
           sum = null;
           if (null != channel) {
-            sum = closure_18 + tmp5(4639).computeChannelName(channel, authStore, closure_11);
-            const tmp5Result = tmp5(4639);
+            sum = closure_18 + tmp5(4640).computeChannelName(channel, authStore, closure_11);
+            const tmp5Result = tmp5(4640);
           }
           const str4 = item10118.value;
-        } else if (tmp5(1955).ApplicationCommandOptionType.ROLE === type) {
+        } else if (tmp5(1956).ApplicationCommandOptionType.ROLE === type) {
           const value = item10118.value;
           let role;
           if (null != id) {
@@ -252,7 +252,7 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
           }
         } else {
           sum = null;
-          if (tmp5(1955).ApplicationCommandOptionType.MENTIONABLE === type) {
+          if (tmp5(1956).ApplicationCommandOptionType.MENTIONABLE === type) {
             str = item10118.value.toString();
             let role1;
             if (null != id) {
@@ -665,7 +665,7 @@ export default function ExecutedCommandPopout(channelId) {
       const obj = stateFromStores(closure_1_3[38]);
     }
   }, items1);
-  obj = { value: messageId(5905)(messageId(5925).EXECUTED_COMMAND).analyticsLocations, children: null };
+  obj = { value: messageId(5918)(messageId(5938).EXECUTED_COMMAND).analyticsLocations, children: null };
   obj = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -708,6 +708,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = tmp9(closure_5, obj4);
   }
   obj[2] = tmp9Result;
-  obj[1] = closure_21(channelId(5574).BottomSheet, obj);
-  return closure_21(channelId(5905).AnalyticsLocationProvider, obj);
+  obj[1] = closure_21(channelId(5587).BottomSheet, obj);
+  return closure_21(channelId(5918).AnalyticsLocationProvider, obj);
 };

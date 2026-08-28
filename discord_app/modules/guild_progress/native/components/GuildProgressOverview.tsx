@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Button from "../../../../design/void/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
-import registerAssetDefault from "../../../../../_runtime/09950_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09968_registerAsset.js";
 import GuildProgressBarDefault from "GuildProgressBar.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";

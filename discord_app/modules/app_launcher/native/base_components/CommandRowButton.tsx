@@ -9,15 +9,15 @@ const result = require("set").fileFinishedImporting("modules/app_launcher/native
 
 export default function CommandRowIcon(hasOptions) {
   if (hasOptions.hasOptions) {
-    let tmp3Result = tmp3(tmp4(5558).TableRowArrow, {});
+    let tmp3Result = tmp3(tmp4(5571).TableRowArrow, {});
   } else {
     const obj = { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null };
     const intl = tmp4(1236).intl;
     obj[1] = intl.string(tmp4(1236).t.TXNS7S);
     obj[2] = tmp2;
-    obj[3] = tmp3(tmp4(4390).SendMessageIcon, { size: "sm" });
+    obj[3] = tmp3(tmp4(4391).SendMessageIcon, { size: "sm" });
     obj[7] = tmp;
-    tmp3Result = tmp3(tmp4(4880).Button, obj);
+    tmp3Result = tmp3(tmp4(4893).Button, obj);
   }
   return tmp3Result;
 };
@@ -72,13 +72,13 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               dependencyMap();
             }
             c3 = 1;
-            obj1 = closure_1_0(8077);
+            obj1 = closure_1_0(8091);
             obj1 = { command: null, optionValues: null, context: null, sectionName: null, commandOrigin: null };
             obj1[0] = closure_1_0;
-            obj1[1] = closure_1_0(11487).parseOptionValuesForSend(closure_1_6.channel, closure_1_0, {});
+            obj1[1] = closure_1_0(11506).parseOptionValuesForSend(closure_1_6.channel, closure_1_0, {});
             obj1[2] = closure_1_6;
             obj1[3] = c4;
-            obj1[4] = closure_1_0(7201).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+            obj1[4] = closure_1_0(7215).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
             dependencyMap = 2;
             c4 = 1;
             const obj2 = { value: null, done: false };

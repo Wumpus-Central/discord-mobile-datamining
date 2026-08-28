@@ -112,7 +112,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   tmp6 = throwTypeErrorResult;
                 }
                 if (tmp6) {
-                  obj1 = fromCreate(4094);
+                  obj1 = fromCreate(4095);
                   everyoneOverwrite = obj1.makeEveryoneOverwrite(throwTypeErrorResult);
                   tmp10 = everyoneOverwrite;
                 }
@@ -122,20 +122,20 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                 obj1.deny = obj3.remove(obj1.deny, throwTypeErrorResult);
                 let obj4 = fromCreate(506);
                 obj1.allow = obj4.remove(obj1.allow, throwTypeErrorResult);
-                if (throwTypeErrorResult === callback(4094).ALLOW) {
+                if (throwTypeErrorResult === callback(4095).ALLOW) {
                   obj1.allow = fromCreate(506).add(obj1.allow, throwTypeErrorResult);
                   const obj9 = fromCreate(506);
                 } else {
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  if (throwTypeErrorResult === callback(4094).DENY) {
+                  if (throwTypeErrorResult === callback(4095).DENY) {
                     throwTypeErrorResult = c5;
                     if (null != c5.guild_id) {
                       if (throwTypeErrorResult) {
                         c4 = 1;
                         c5 = 1;
                         const obj2 = { value: null, done: false };
-                        obj2[0] = callback(9630).checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, throwTypeErrorResult);
+                        obj2[0] = callback(9648).checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, throwTypeErrorResult);
                         return obj2;
                       }
                     }
@@ -148,14 +148,14 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   throwTypeErrorResult = dependencyMap;
                   throwTypeErrorResult = c5;
                   throwTypeErrorResult = closure_1_3;
-                  throwTypeErrorResult = id(4458).updatePermissionOverwrite(c5.id, closure_1_3);
+                  throwTypeErrorResult = id(4459).updatePermissionOverwrite(c5.id, closure_1_3);
                   c5 = 3;
-                  const obj17 = id(4458);
+                  const obj17 = id(4459);
                 } else if (closure_2_13.can(callback, c5)) {
                   if (!closure_1) {
                     if (!obj11.has(closure_1_2.allow, callback)) {
                       if (!obj12.has(closure_1_2.deny, callback)) {
-                        closure_1_6(callback, callback(4094).ALLOW);
+                        closure_1_6(callback, callback(4095).ALLOW);
                       }
                       obj12 = fromCreate(506);
                     }
@@ -163,17 +163,17 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   }
                 }
                 const type = fromCreate.type;
-                if (callback(1955).PermissionOverwriteType.MEMBER === type) {
+                if (callback(1956).PermissionOverwriteType.MEMBER === type) {
                   const user = closure_2_15.getUser(fromCreate.id);
                   if (null != user) {
-                    const name2 = id(4289).getName(user);
-                    const obj13 = id(4289);
+                    const name2 = id(4290).getName(user);
+                    const obj13 = id(4290);
                   }
                 } else {
                   throwTypeErrorResult = obj1;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  if (callback(1955).PermissionOverwriteType.ROLE === type) {
+                  if (callback(1956).PermissionOverwriteType.ROLE === type) {
                     id = closure_2_12.getGuild(c5.guild_id);
                     if (null != id) {
                       throwTypeErrorResult = everyoneOverwrite;
@@ -217,8 +217,8 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                   const obj = _undefined(obj1[26]);
                   obj.openURL(_undefined(obj1[27]).getArticleURL(constants.PERMISSIONS_LOCKOUT));
                 };
-                throwTypeErrorResult = id(4809).show(obj4);
-                const obj14 = id(4809);
+                throwTypeErrorResult = id(4822).show(obj4);
+                const obj14 = id(4822);
               }
             } else if (guild_id === 1) {
               c5 = 3;
@@ -341,7 +341,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     obj[0] = id;
     obj[1] = stateFromStores.guild_id;
     obj[4] = tmp10;
-    let tmp9Result = tmp9(id(10599), obj);
+    let tmp9Result = tmp9(id(10617), obj);
   } else {
     role = role.getRole(stateFromStores.guild_id, id);
     let str;

@@ -9,7 +9,7 @@ import nameFromUserDefault from "UserUtils.tsx";
 import setDefault from "RegexUtils.tsx";
 import computeChannelName from "../modules/channel/useChannelName.tsx";
 import StickerFormat from "../modules/stickers/StickersTypes.tsx";
-import fuzzysearchDefault from "../../_runtime/05406_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/05419_fuzzysearch.js";
 import sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import getGuildNameSuggestionDefault from "GuildUtils.tsx";
 import useCanSeeOnboardingHome from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
@@ -214,21 +214,21 @@ function queryMemberList(arg0) {
                             if (substr5 !== normalizeResult) {
                               let tmp33 = num < 50;
                               if (num < 50) {
-                                let tmp28 = tmp12(5406)(toLocaleLowerCaseResult, str4) || tmp12(5406)(normalizeResult, str5);
+                                let tmp28 = tmp12(5419)(toLocaleLowerCaseResult, str4) || tmp12(5419)(normalizeResult, str5);
                                 if (!tmp28) {
-                                  let tmp29 = null != str6 && tmp12(5406)(toLocaleLowerCaseResult, str6);
+                                  let tmp29 = null != str6 && tmp12(5419)(toLocaleLowerCaseResult, str6);
                                   tmp28 = tmp29;
                                 }
                                 if (!tmp28) {
-                                  let tmp30 = null != str7 && tmp12(5406)(normalizeResult, str7);
+                                  let tmp30 = null != str7 && tmp12(5419)(normalizeResult, str7);
                                   tmp28 = tmp30;
                                 }
                                 if (!tmp28) {
-                                  let tmp31 = null != str8 && tmp12(5406)(toLocaleLowerCaseResult, str8);
+                                  let tmp31 = null != str8 && tmp12(5419)(toLocaleLowerCaseResult, str8);
                                   tmp28 = tmp31;
                                 }
                                 if (!tmp28) {
-                                  let tmp32 = null != str9 && tmp12(5406)(normalizeResult, str9);
+                                  let tmp32 = null != str9 && tmp12(5419)(normalizeResult, str9);
                                   tmp28 = tmp32;
                                 }
                                 tmp33 = tmp28;
@@ -362,13 +362,13 @@ function queryMemberList(arg0) {
 function getPriorityForStickerMetadataType(arg0) {
   if (StickerFormat.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
-  } else if (tmp(5164).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
+  } else if (tmp(5177).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
-  } else if (tmp(5164).StickerMetadataTypes.TAG === arg0) {
+  } else if (tmp(5177).StickerMetadataTypes.TAG === arg0) {
     return 1;
   } else {
-    if (tmp(5164).StickerMetadataTypes.GUILD_NAME !== arg0) {
-      if (tmp(5164).StickerMetadataTypes.PACK_NAME !== arg0) {
+    if (tmp(5177).StickerMetadataTypes.GUILD_NAME !== arg0) {
+      if (tmp(5177).StickerMetadataTypes.PACK_NAME !== arg0) {
         return 1;
       }
     }
@@ -888,10 +888,10 @@ areArraysShallowlyEqual = {
       const mapped = found.map((toLocaleLowerCase) => {
         const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
         const obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: false };
-        const regExp = new RegExp("^" + callback(4432).escape(toLocaleLowerCaseResult), "i");
+        const regExp = new RegExp("^" + callback(4433).escape(toLocaleLowerCaseResult), "i");
         obj[1] = regExp;
-        const obj2 = callback(4432);
-        const regExp1 = new RegExp(callback(4432).escape(toLocaleLowerCaseResult), "i");
+        const obj2 = callback(4433);
+        const regExp1 = new RegExp(callback(4433).escape(toLocaleLowerCaseResult), "i");
         obj[2] = regExp1;
         return obj;
       });
@@ -900,17 +900,17 @@ areArraysShallowlyEqual = {
         let obj = { queryLower: null, exactQuery: null, containQuery: null, isFullMatch: true };
         obj[0] = toLocaleLowerCaseResult;
         const _RegExp = RegExp;
-        let obj2 = callback(4432);
+        let obj2 = callback(4433);
         const _HermesInternal = HermesInternal;
-        let regExp = new RegExp("^" + callback(4432).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        let regExp = new RegExp("^" + callback(4433).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[1] = regExp;
         const _RegExp2 = RegExp;
-        const str = callback(4432).escape(toLocaleLowerCaseResult);
-        const obj3 = callback(4432);
-        let regExp1 = new RegExp(callback(4432).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        const str = callback(4433).escape(toLocaleLowerCaseResult);
+        const obj3 = callback(4433);
+        let regExp1 = new RegExp(callback(4433).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[2] = regExp1;
         mapped.unshift(obj);
-        const str6 = callback(4432).escape(toLocaleLowerCaseResult);
+        const str6 = callback(4433).escape(toLocaleLowerCaseResult);
       }
       return mapped;
     })(guildId.query, flag2);
@@ -2027,11 +2027,11 @@ areArraysShallowlyEqual = {
         const _RegExp = RegExp;
         let obj2 = toLocaleLowerCaseResult(1903);
         const _HermesInternal = HermesInternal;
-        const regExp = new RegExp("^" + nextResult(4432).escape(stripDiacriticsResult), "i");
+        const regExp = new RegExp("^" + nextResult(4433).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
-        const obj3 = nextResult(4432);
+        const obj3 = nextResult(4433);
         const _HermesInternal2 = HermesInternal;
-        const regExp1 = new RegExp("" + nextResult(4432).escape(stripDiacriticsResult), "i");
+        const regExp1 = new RegExp("" + nextResult(4433).escape(stripDiacriticsResult), "i");
         const stickerMetadataArrays = closure_1_10.getStickerMetadataArrays();
         let item = stickerMetadataArrays.forEach((arr) => {
           const item = arr.forEach((arg0, id) => {

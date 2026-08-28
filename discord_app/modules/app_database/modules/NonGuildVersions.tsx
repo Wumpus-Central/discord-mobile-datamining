@@ -38,14 +38,14 @@ class NonGuildVersions {
               const _isNaN = isNaN;
               const _Number = Number;
               if (!isNaN(Number(guildId))) {
-                obj = callback(1956);
+                obj = callback(1957);
                 const result = obj.nonGuildVersionsTransaction(database);
                 obj = { id: "initial_guild_id", versionString: null };
                 obj[1] = guildId;
                 result.put(obj);
               }
             }
-            const result1 = callback(1956).nonGuildVersionsTransaction(database);
+            const result1 = callback(1957).nonGuildVersionsTransaction(database);
             result1.delete("initial_guild_id");
           });
         }
@@ -177,14 +177,14 @@ if (isCacheEnabled.isCacheEnabled()) {
           const _isNaN = isNaN;
           const _Number = Number;
           if (!isNaN(Number(guildId))) {
-            obj = callback(1956);
+            obj = callback(1957);
             const result = obj.nonGuildVersionsTransaction(database);
             obj = { id: "initial_guild_id", versionString: null };
             obj[1] = guildId;
             result.put(obj);
           }
         }
-        const result1 = callback(1956).nonGuildVersionsTransaction(database);
+        const result1 = callback(1957).nonGuildVersionsTransaction(database);
         result1.delete("initial_guild_id");
       });
     }

@@ -49,7 +49,7 @@ ApexExperiment = {
     const callback = promise;
     const _default = callback(1218).default;
     const _default2 = callback(706).default;
-    const _default3 = callback(1922).default;
+    const _default3 = callback(1923).default;
     importDefault = performance.now();
     if ("/" === promise.url[0]) {
       let tmpResult = tmp(530);
@@ -61,7 +61,7 @@ ApexExperiment = {
       if (!tmp3) {
         const result = promise.set("Authorization", _default.getToken());
       }
-      tmpResult = tmp(16772);
+      tmpResult = tmp(16790);
       const result1 = tmpResult.updateDynamicSuperProperties();
       const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
@@ -114,7 +114,7 @@ ApexExperiment = {
         })(items));
         tmpResult2 = tmp(500);
       }
-      const result6 = promise.set("X-Discord-Locale", callback(1996).default.locale);
+      const result6 = promise.set("X-Discord-Locale", callback(1997).default.locale);
       const tmp19 = getTimeZoneDefault();
       if (null != tmp19) {
         const result7 = promise.set("X-Discord-Timezone", tmp19);
@@ -273,7 +273,7 @@ ApexExperiment = {
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        const items = [callback(2009)(16777, dependencyMap.paths), callback(2009)(10834, dependencyMap.paths)];
+        const items = [callback(2010)(16795, dependencyMap.paths), callback(2010)(10852, dependencyMap.paths)];
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then((arg0) => {
           const iter = arg0[Symbol.iterator]();
@@ -372,12 +372,12 @@ ApexExperiment = {
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = callback(2009)(15355, dependencyMap.paths);
-          callback(2009)(15355, dependencyMap.paths).then((openMFAModal) => {
+          const promise4 = callback(2010)(15197, dependencyMap.paths);
+          callback(2010)(15197, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           }).catch(arg2);
           flag = true;
-          const nextPromise2 = callback(2009)(15355, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = callback(2010)(15197, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -389,11 +389,11 @@ ApexExperiment = {
       code1 = body4.code;
     }
     if (obj.isLimitedAccessErrorCode(statusCode.statusCode, code1)) {
-      tmp7(2009)(5411, tmp8.paths).then((arg0) => {
+      tmp7(2010)(5424, tmp8.paths).then((arg0) => {
         arg0.default();
       });
       flag = false;
-      const promise3 = tmp7(2009)(5411, tmp8.paths);
+      const promise3 = tmp7(2010)(5424, tmp8.paths);
     } else {
       const body5 = statusCode.body;
       let code2;
@@ -401,7 +401,7 @@ ApexExperiment = {
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(2009)(13483, tmp8.paths).then((arg0) => {
+        tmp7(2010)(13502, tmp8.paths).then((arg0) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
@@ -410,7 +410,7 @@ ApexExperiment = {
           arg0.default(guild_id);
         });
         flag = false;
-        const promise2 = tmp7(2009)(13483, tmp8.paths);
+        const promise2 = tmp7(2010)(13502, tmp8.paths);
       } else {
         flag = 403 === statusCode.statusCode;
         if (flag) {
@@ -422,14 +422,14 @@ ApexExperiment = {
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(2009)(16784, tmp8.paths).then((openRestrictedHoursModal) => {
+          tmp7(2010)(16802, tmp8.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(2009)(16784, tmp8.paths);
+          const promise = tmp7(2010)(16802, tmp8.paths);
         }
       }
-      tmp7Result = tmp7(16783);
+      tmp7Result = tmp7(16801);
     }
   }
 };

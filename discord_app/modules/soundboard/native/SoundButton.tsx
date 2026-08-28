@@ -14,7 +14,7 @@ function SoundButtonEmoji(arg0) {
   ({ sound, sharedValues } = arg0);
   const tmp = callback();
   let obj = { sharedValues, scaleFactors: { pressed: 0.8, playing: 1.2 } };
-  obj1 = obj(4185);
+  obj1 = obj(4186);
   const fn = function o() {
     const pressed = obj.sharedValues.pressed;
     const playing = obj.sharedValues.playing;
@@ -56,13 +56,13 @@ function SoundButtonEmoji(arg0) {
     obj[0] = items2;
     return obj;
   };
-  obj = { animationConfig: obj, withDelay: obj(4185).withDelay, withSpring: obj(4879).withSpring, interpolate: obj(4185).interpolate, SPRING_CONFIG: closure_8 };
+  obj = { animationConfig: obj, withDelay: obj(4186).withDelay, withSpring: obj(4892).withSpring, interpolate: obj(4186).interpolate, SPRING_CONFIG: closure_8 };
   fn.__closure = obj;
   fn.__workletHash = 13932429225740;
   fn.__initData = closure_11;
   obj = { sharedValues, scaleFactors: { pressed: 0.7200000000000001, playing: 1.08 }, playingAnimationDelay: 100, pressedRotationDegrees: -15 };
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  let obj4 = obj(4185);
+  let obj4 = obj(4186);
   const fn2 = function o() {
     const pressed = obj.sharedValues.pressed;
     const playing = obj.sharedValues.playing;
@@ -104,7 +104,7 @@ function SoundButtonEmoji(arg0) {
     obj[0] = items2;
     return obj;
   };
-  obj1 = { animationConfig: obj, withDelay: obj(4185).withDelay, withSpring: obj(4879).withSpring, interpolate: obj(4185).interpolate, SPRING_CONFIG: closure_8 };
+  obj1 = { animationConfig: obj, withDelay: obj(4186).withDelay, withSpring: obj(4892).withSpring, interpolate: obj(4186).interpolate, SPRING_CONFIG: closure_8 };
   fn2.__closure = obj1;
   fn2.__workletHash = 13932429225740;
   fn2.__initData = closure_11;
@@ -267,12 +267,12 @@ export const SoundButton = importAllResult.memo(function SoundButtonComponent(so
   fn.__initData = closure_11;
   let pressed = obj.pressed;
   const animatedStyle = tmpResult2.useAnimatedStyle(fn);
-  const items4 = [channel, sound, soundGridLocation];
+  const items4 = [channel, sound, soundGridLocation, analyticsLocations];
   obj1 = { animationConfig: obj, withDelay: obj(sharedValue1[4]).withDelay, withSpring: obj(sharedValue1[9]).withSpring, interpolate: obj(sharedValue1[4]).interpolate, SPRING_CONFIG: closure_8 };
   const items5 = [tmp4.button, { width: obj.useSoundButtonStyleConfig().buttonWidth }, , , , , ];
   let buttonPressed = null;
   const callback3 = playSoundboardSound.useCallback(() => {
-    sharedValue(sharedValue1[18])(sharedValue, obj, sharedValue1);
+    sharedValue(sharedValue1[18])(sharedValue, obj, analyticsLocations[analyticsLocations.length - 1], sharedValue1);
   }, items4);
   if (tmp15) {
     buttonPressed = tmp4.buttonPressed;

@@ -1,5 +1,5 @@
 // discord_app/actions/GiftCodeActionCreators.tsx
-import _modDef8410 from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
+import _modDef8424 from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../modules/applications/ApplicationStore.tsx";
 import closure_5 from "../modules/collectibles/CollectiblesCategoryStore.tsx";
@@ -339,7 +339,7 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    _modDef8410.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    _modDef8424.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   }
 };
 export { resolveGiftCode };

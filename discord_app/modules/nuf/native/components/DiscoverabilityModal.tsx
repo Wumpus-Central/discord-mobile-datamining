@@ -61,9 +61,9 @@ function DiscoverabilityNameScene() {
   }, items);
   let obj = { style: tmp.container, children: null };
   callback = React.useCallback((arg0) => {
-    const result = allowPhone(12156).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(12156);
-    const result1 = allowPhone(12156).closeDiscoverabilityModal(false);
+    const result = allowPhone(12175).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(12175);
+    const result1 = allowPhone(12175).closeDiscoverabilityModal(false);
   }, []);
   obj = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();

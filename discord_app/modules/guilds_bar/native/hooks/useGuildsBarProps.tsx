@@ -141,7 +141,7 @@ export default function useGuildsBarProps(arg0) {
   const items5 = [stateFromStoresArray1, stateFromStores];
   const stateFromStoresArray2 = _require(token[35]).useStateFromStoresArray(items5, () => {
     const guildIds = stateFromStoresArray1.getGuildIds();
-    return guildIds.filter((guild_id) => currentUserGuest.isCurrentUserGuest(guild_id));
+    return guildIds.filter((guildId) => currentUserGuest.isCurrentUserGuest(guildId));
   });
   const tmp2Result3 = _require(token[35]);
   const items6 = [guildsNFolders];
@@ -464,11 +464,11 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((arg0) => {
             if ("unavailable-guilds" === arg0) {
-              return callback2(callback(15853), {}, arg0);
+              return callback2(callback(15871), {}, arg0);
             } else if ("empty-nux" === arg0) {
-              return callback2(callback(15854), {}, arg0);
+              return callback2(callback(15872), {}, arg0);
             } else if ("create-join-guild" === arg0) {
-              return callback2(callback(15856), {}, arg0);
+              return callback2(callback(15874), {}, arg0);
             }
           })
         };

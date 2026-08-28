@@ -4,7 +4,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import PhoneCallIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
 import PhoneHangUpIcon from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
-import _modDef12839 from "header/PrivateChannelButtons.tsx";
+import _modDef12858 from "header/PrivateChannelButtons.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../threads/ActiveThreadsStore.tsx";
 import { THREADED_CHANNEL_TYPES } from "../../../../records/ChannelRecord.tsx";
@@ -277,7 +277,7 @@ function WrappedChannelNavButtons(channelId) {
   let obj = channelId(589);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
-  channelId(4684);
+  channelId(4697);
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = null;
@@ -327,12 +327,12 @@ export default function ChannelActions(channelId) {
     return obj;
   });
   ({ isMultiUserDM, isDM } = stateFromStoresObject);
-  obj1 = channelId(7561);
+  obj1 = channelId(7575);
   obj = { style: containerStyle, children: null };
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp4Result = tmp4(channelId(12837).ForumChannelCloseSearchButton, obj);
+    let tmp4Result = tmp4(channelId(12856).ForumChannelCloseSearchButton, obj);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {
@@ -346,7 +346,7 @@ export default function ChannelActions(channelId) {
     const obj2 = { channelId: null, screenIndex: null };
     obj2[0] = channelId;
     obj2[1] = screenIndex;
-    tmp4Result = tmp4(_modDef12839, obj2);
+    tmp4Result = tmp4(_modDef12858, obj2);
   }
   obj[1] = tmp4Result;
   return <View style={containerStyle}>{null}</View>;

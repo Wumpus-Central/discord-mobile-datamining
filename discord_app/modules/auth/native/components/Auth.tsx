@@ -1,11 +1,11 @@
 // discord_app/modules/auth/native/components/Auth.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import KeyboardChatScrollView from "../../../../../_runtime/01643_KeyboardChatScrollView.js";
-import createStackNavigator from "../../../../../_runtime/05962_createStackNavigator.js";
+import createStackNavigator from "../../../../../_runtime/05975_createStackNavigator.js";
 import useWideAuthViewDefault from "../useWideAuthView.tsx";
 import BackgroundImageDefault from "atoms/BackgroundImage.tsx";
 import useIsHCaptchaModalOpenTracking from "utils/useIsHCaptchaModalOpenTracking.tsx";
-import registerAsset from "../../../../../_runtime/15500_registerAsset.js";
+import registerAsset from "../../../../../_runtime/15518_registerAsset.js";
 import usePortraitOrientationOnlyDefault from "../useOrientationLock.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -98,10 +98,10 @@ function NavigatorWithCaptchaHook() {
     obj7[1] = tmp4(712).space.PX_24;
     obj7[2] = tmp4(712).space.PX_16;
     obj6[10] = obj7;
-    obj5[1] = tmp17(tmp(5960).Navigator, obj6);
+    obj5[1] = tmp17(tmp(5973).Navigator, obj6);
     obj2[1] = tmp17(closure_6, obj5);
     obj[1] = tmp17(closure_6, obj2);
-    let tmp17Result = tmp17(tmp(7679).WideAuthScrollContext.Provider, obj);
+    let tmp17Result = tmp17(tmp(7693).WideAuthScrollContext.Provider, obj);
     tmpResult = tmp(501);
   } else {
     const obj8 = { screens: null, viewStyle: null, containerStyle: null, headerBackTitle: null, initialRouteName: null, onWillFocus: null, headerStyle: null };
@@ -112,7 +112,7 @@ function NavigatorWithCaptchaHook() {
     obj8[4] = tmp7.WELCOME;
     obj8[5] = closure_5.dismiss;
     obj8[6] = { borderBottomWidth: 0 };
-    tmp17Result = tmp17(tmp(5960).Navigator, obj8);
+    tmp17Result = tmp17(tmp(5973).Navigator, obj8);
   }
   children[1] = tmp17Result;
   return tmp15(tmp16, { children });
@@ -192,10 +192,10 @@ const context = importAllResult.createContext(() => {
 let obj2 = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function Auth() {
   const effect = importAllResult.useEffect(() => {
-    callback2(15501).initialize();
+    callback2(15519).initialize();
     return () => callback(table[21]).terminate();
   }, []);
-  const layoutEffect = importAllResult.useLayoutEffect(() => callback(7153).trackAppUIViewed(), []);
+  const layoutEffect = importAllResult.useLayoutEffect(() => callback(7167).trackAppUIViewed(), []);
   usePortraitOrientationOnlyDefault();
   closure_0 = importAllResult.useRef(undefined);
   return callback2(context.Provider, { value: importAllResult.useCallback(() => callback(closure_1_2[7]).getTrackRegTransition(callback), [])(), children: callback2(NavigatorWithCaptchaHook, {}) });

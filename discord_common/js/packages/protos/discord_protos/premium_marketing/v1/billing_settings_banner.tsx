@@ -18,7 +18,7 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(8395).ThemeAwareAsset;
+            return callback(8409).ThemeAwareAsset;
           }
     };
     items[3] = {
@@ -26,7 +26,7 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "button",
       kind: "message",
       T() {
-            return callback(8387).CTAButton;
+            return callback(8401).CTAButton;
           }
     };
     items[4] = {
@@ -34,7 +34,7 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(8385).LocalizedString;
+            return callback(8399).LocalizedString;
           }
     };
     obj = { no: 6, name: "body_localized", kind: "message", T: null };
@@ -50,7 +50,7 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(8386).HelpArticle;
+            return callback(8400).HelpArticle;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.BillingSettingsBanner", items, T);
@@ -219,7 +219,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(8395).ThemeAwareAsset;
+      return callback(8409).ThemeAwareAsset;
     }
   },
   {
@@ -227,7 +227,7 @@ let items = [
     name: "button",
     kind: "message",
     T() {
-      return callback(8387).CTAButton;
+      return callback(8401).CTAButton;
     }
   },
   {
@@ -235,7 +235,7 @@ let items = [
     name: "header_localized",
     kind: "message",
     T() {
-      return callback(8385).LocalizedString;
+      return callback(8399).LocalizedString;
     }
   },
 ,
@@ -254,7 +254,7 @@ items[6] = {
   name: "help_article",
   kind: "message",
   T() {
-    return callback(8386).HelpArticle;
+    return callback(8400).HelpArticle;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.BillingSettingsBanner", items, tmp, T, BillingSettingsBanner$Type, prototype, items);

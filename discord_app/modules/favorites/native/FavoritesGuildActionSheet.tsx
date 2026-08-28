@@ -20,7 +20,7 @@ export default function FavoritesGuildActionSheet(onClose) {
   const tmp3 = useFavoritesGuildResetActionDefault();
   dependencyMap = tmp3;
   const tmp4 = useFavoritesGuildAutoAddedThreadsActionDefault();
-  let obj = onClose(10226);
+  let obj = onClose(10244);
   obj1 = onClose(589);
   const items = [closure_3];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_3.hasStoredFavorites());
@@ -28,18 +28,18 @@ export default function FavoritesGuildActionSheet(onClose) {
   obj = { title: null };
   const intl = onClose(1236).intl;
   obj[0] = intl.string(onClose(1236).t.wMWyci);
-  obj[0] = callback(onClose(5573).BottomSheetTitleHeader, obj);
+  obj[0] = callback(onClose(5586).BottomSheetTitleHeader, obj);
   let tmp8Result = null;
   if (tmp4.isAvailable) {
     obj1 = { hasIcons: true, children: null };
     const obj2 = { label: null, subLabel: null, icon: null, value: null, onValueChange: null };
     ({ label: obj6[0], subLabel: obj6[1] } = tmp4);
     const obj3 = { IconComponent: null };
-    obj3[0] = tmp5(4974).ThreadIcon;
-    obj2[2] = tmp8(tmp5(5943).ActionSheetRow.Icon, obj3);
+    obj3[0] = tmp5(4987).ThreadIcon;
+    obj2[2] = tmp8(tmp5(5956).ActionSheetRow.Icon, obj3);
     ({ isEnabled: obj6[3], toggle: obj6[4] } = tmp4);
-    obj1[1] = tmp8(tmp5(5943).ActionSheetSwitchRow, obj2);
-    tmp8Result = tmp8(tmp5(5943).ActionSheetRow.Group, obj1);
+    obj1[1] = tmp8(tmp5(5956).ActionSheetSwitchRow, obj2);
+    tmp8Result = tmp8(tmp5(5956).ActionSheetRow.Group, obj1);
   }
   const items1 = [tmp8Result, , ];
   tmp8Result = null;
@@ -51,24 +51,24 @@ export default function FavoritesGuildActionSheet(onClose) {
       const intl2 = tmp5(1236).intl;
       obj5[0] = intl2.string(tmp5(1236).t["0dOFq+"]);
       const obj6 = { IconComponent: null };
-      obj6[0] = tmp5(11638).ArrowsUpDownIcon;
-      obj5[1] = tmp8(tmp5(5943).ActionSheetRow.Icon, obj6);
+      obj6[0] = tmp5(11657).ArrowsUpDownIcon;
+      obj5[1] = tmp8(tmp5(5956).ActionSheetRow.Icon, obj6);
       obj5[2] = function onPress() {
         onClose();
         lib(closure_2[14])();
       };
-      obj4[1] = tmp8(tmp5(5943).ActionSheetRow, obj5);
-      tmp8Result = tmp8(tmp5(5943).ActionSheetRow.Group, obj4);
+      obj4[1] = tmp8(tmp5(5956).ActionSheetRow, obj5);
+      tmp8Result = tmp8(tmp5(5956).ActionSheetRow.Group, obj4);
     }
   }
   items1[1] = tmp8Result;
   const obj7 = { label: tmp2.label, subLabel: tmp2.subLabel, icon: null, variant: null, onPress: null };
   if (tmp2.isPreview) {
-    let EyeSlashIcon = tmp5(5503).XSmallIcon;
+    let EyeSlashIcon = tmp5(5516).XSmallIcon;
   } else {
-    EyeSlashIcon = tmp5(7674).EyeSlashIcon;
+    EyeSlashIcon = tmp5(7688).EyeSlashIcon;
   }
-  obj7[2] = callback(onClose(5943).ActionSheetRow.Icon, { IconComponent: EyeSlashIcon });
+  obj7[2] = callback(onClose(5956).ActionSheetRow.Icon, { IconComponent: EyeSlashIcon });
   let str = "danger";
   if (tmp2.isPreview) {
     str = "default";
@@ -78,22 +78,22 @@ export default function FavoritesGuildActionSheet(onClose) {
     onClose();
     lib.perform();
   };
-  const items2 = [callback(onClose(5943).ActionSheetRow, obj7), ];
+  const items2 = [callback(onClose(5956).ActionSheetRow, obj7), ];
   let tmp8Result1 = null;
   if (tmp3.isAvailable) {
     const obj8 = { label: null, subLabel: null, icon: null, variant: "danger", onPress: null };
     ({ label: obj12[0], subLabel: obj12[1] } = tmp3);
     const obj9 = { IconComponent: null };
-    obj9[0] = tmp5(4403).TrashIcon;
-    obj8[2] = tmp8(tmp5(5943).ActionSheetRow.Icon, obj9);
+    obj9[0] = tmp5(4404).TrashIcon;
+    obj8[2] = tmp8(tmp5(5956).ActionSheetRow.Icon, obj9);
     obj8[4] = function onPress() {
       onClose();
       closure_2.perform();
     };
-    tmp8Result1 = tmp8(tmp5(5943).ActionSheetRow, obj8);
+    tmp8Result1 = tmp8(tmp5(5956).ActionSheetRow, obj8);
   }
   items2[1] = tmp8Result1;
-  items1[2] = closure_5(onClose(5943).ActionSheetRow.Group, { hasIcons: true, children: items2 });
+  items1[2] = closure_5(onClose(5956).ActionSheetRow.Group, { hasIcons: true, children: items2 });
   obj[1] = items1;
-  return closure_5(onClose(5941).ActionSheet, obj);
+  return closure_5(onClose(5954).ActionSheet, obj);
 };

@@ -3,7 +3,7 @@ import set from "../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import ME from "../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef4810 from "../../../actions/native/AlertActionCreators.tsx";
+import _modDef4823 from "../../../actions/native/AlertActionCreators.tsx";
 import RELATIONSHIP_COUNT_ANIMATION_THRESHOLD from "../Constants.tsx";
 
 let closure_3 = RELATIONSHIP_COUNT_ANIMATION_THRESHOLD.ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL_ID;
@@ -36,5 +36,5 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
       });
     }
   };
-  _modDef4810.openLazy(obj);
+  _modDef4823.openLazy(obj);
 };

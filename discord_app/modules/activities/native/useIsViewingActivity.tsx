@@ -9,8 +9,8 @@ const result = require("set").fileFinishedImporting("modules/activities/native/u
 export const useIsViewingActivity = function useIsViewingActivity(channelId) {
   channelId = channelId.channelId;
   let tmp = useIsActivityFocusedDefault(channelId);
-  const isModalOpen = channelId(4299).useIsModalOpen(ChannelCallCameraPreviewDefault);
-  const obj = channelId(4299);
+  const isModalOpen = channelId(4300).useIsModalOpen(ChannelCallCameraPreviewDefault);
+  const obj = channelId(4300);
   const items = [closure_3];
   const items1 = [channelId];
   const stateFromStores = channelId(589).useStateFromStores(items, () => closure_1_3.getChatOpen(channelId), items1);

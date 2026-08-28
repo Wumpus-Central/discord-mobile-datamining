@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModal.tsx
-import _modDef9649 from "../GuildSettingsActionCreators.tsx";
+import _modDef9667 from "../GuildSettingsActionCreators.tsx";
 import dispatcherDefault from "../GuildSettingsModalChannelsActionCreators.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
@@ -12,7 +12,7 @@ const require = arg1;
 function close() {
   dispatcherDefault.terminate();
   const obj = dispatcherDefault;
-  _modDef9649.close();
+  _modDef9667.close();
 }
 ({ GuildSettingsSections: error, WebhookTypes: closure_8 } = ME);
 const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModal.tsx");

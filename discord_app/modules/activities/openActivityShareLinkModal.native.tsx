@@ -1,8 +1,8 @@
 // discord_app/modules/activities/openActivityShareLinkModal.native.tsx
 import set from "../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02010_asyncRequireImpl.js";
 import getBestActiveInput from "../../utils/native/ChatInputUtils.tsx";
-import _modDef4676 from "../../actions/ModalActionCreators.tsx";
+import _modDef4689 from "../../actions/ModalActionCreators.tsx";
 
 const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
 const result = set.fileFinishedImporting("modules/activities/openActivityShareLinkModal.native.tsx");
@@ -13,8 +13,8 @@ export const openActivityShareLinkModal = function openActivityShareLinkModal(ar
   let obj = getBestActiveInput;
   obj.dismissKeyboard();
   obj = { applicationId, customId, linkId, message, onShare };
-  _modDef4676.pushLazy(asyncRequireImpl(14054, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
+  _modDef4689.pushLazy(asyncRequireImpl(14073, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
 };
 export const closeActivityShareLinkModal = function closeActivityShareLinkModal() {
-  _modDef4676.popWithKey(ACTIVITY_SHARE_LINK_MODAL);
+  _modDef4689.popWithKey(ACTIVITY_SHARE_LINK_MODAL);
 };

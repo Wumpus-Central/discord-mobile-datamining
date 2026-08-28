@@ -2,7 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import set2 from "../../../utils/PlatformUtils.tsx";
 import keys2 from "../../../ConstantsIOS.tsx";
-import _modDef4158 from "../../../lib/native/Linking.tsx";
+import _modDef4159 from "../../../lib/native/Linking.tsx";
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import keys from "../../../../_runtime/00644_keys.js";
@@ -140,20 +140,20 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
       }
     }
   }
-  _modDef4158.performURLNavigation(closure_0);
+  _modDef4159.performURLNavigation(closure_0);
   return Promise.resolve();
 };
 export const browserManagerSelectBrowser = function browserManagerSelectBrowser(selectedBrowser) {
   let obj = set2;
   if (obj.isAndroid()) {
     if (tmp(691).WebBrowserType.SAFARI === selectedBrowser) {
-      const browser = enforcingDefault.selectBrowser(tmp(4411).BrowserType.SAFARI);
+      const browser = enforcingDefault.selectBrowser(tmp(4412).BrowserType.SAFARI);
       const obj3 = enforcingDefault;
     } else if (tmp(691).WebBrowserType.IN_APP === selectedBrowser) {
-      const browser1 = enforcingDefault.selectBrowser(tmp(4411).BrowserType.IN_APP);
+      const browser1 = enforcingDefault.selectBrowser(tmp(4412).BrowserType.IN_APP);
       const obj2 = enforcingDefault;
     } else if (tmp(691).WebBrowserType.CHROME === selectedBrowser) {
-      const browser2 = enforcingDefault.selectBrowser(tmp(4411).BrowserType.CHROME);
+      const browser2 = enforcingDefault.selectBrowser(tmp(4412).BrowserType.CHROME);
       const obj5 = enforcingDefault;
     }
   } else {

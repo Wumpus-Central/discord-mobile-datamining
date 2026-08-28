@@ -1,5 +1,5 @@
 // discord_app/modules/guild_rooms/GuildRoomSpatialAudioManager.tsx
-import experimentDefault from "GuildRoomsExperiment.tsx";
+import GUILD_ROOMS_EXPERIMENT_ID from "GuildRoomsExperiment.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import GUILD_ROOM_SPATIAL_AUDIO_ENABLED from "GuildRoomSpatialAudio.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -68,15 +68,16 @@ prototype["isLivingRoomAvailable"] = function isLivingRoomAvailable() {
     const guildId = store.getGuildId();
     let interactionsEnabled = null != guildId;
     if (interactionsEnabled) {
-      let obj = experimentDefault;
-      obj = { guildId: null, location: "GuildRoomSpatialAudioManager" };
+      const obj = { guildId: null, location: "GuildRoomSpatialAudioManager" };
       obj[0] = guildId;
-      interactionsEnabled = obj.getCurrentConfig(obj, { autoTrackExposure: false }).interactionsEnabled;
+      interactionsEnabled = GUILD_ROOMS_EXPERIMENT_ID.getGuildRoomsConfig(obj, { autoTrackExposure: false }).interactionsEnabled;
+      const tmpResult = GUILD_ROOMS_EXPERIMENT_ID;
     }
     return interactionsEnabled;
   } else {
     return false;
   }
+  const tmp = require;
 };
 prototype["apply"] = function apply() {
   let obj = audioMixerSettings;

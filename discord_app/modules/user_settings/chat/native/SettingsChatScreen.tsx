@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/chat/native/SettingsChatScreen.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/10309_registerAsset.js";
-import _modDef14194 from "../../../settings/native/renderer/SettingLayout.tsx";
+import registerAssetDefault from "../../../../../_runtime/10327_registerAsset.js";
+import _modDef14273 from "../../../settings/native/renderer/SettingLayout.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../../../stores/UserStore.tsx";
@@ -50,10 +50,10 @@ function VideoUploadQualityNitroUpsell() {
       const obj = closure_1_1(closure_1_2[17]);
     };
     obj4[2] = intl2.format(tmp(1236).t.uW1zul, obj5);
-    items2[1] = tmp7(tmp(4441).Text, obj4);
+    items2[1] = tmp7(tmp(4442).Text, obj4);
     obj2[1] = items2;
     obj1[2] = tmp5(tmp6, obj2);
-    obj[1] = tmp7(tmp(5553).Card, obj1);
+    obj[1] = tmp7(tmp(5566).Card, obj1);
     tmp7Result = tmp7(tmp6, obj);
   }
   children[1] = tmp7Result;
@@ -161,5 +161,5 @@ export default function SettingsChatScreen(route) {
     obj[1] = initialSetting;
     return obj.createList(obj);
   }, items);
-  return callback(_modDef14194, { node });
+  return callback(_modDef14273, { node });
 };

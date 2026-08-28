@@ -146,11 +146,11 @@ let closure_18 = createCacheKey.createStyles((arg0, arg1) => {
 });
 createCacheKey = { sm: null, md: null, lg: null };
 const bound = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT) / 2, 0);
-createCacheKey[0] = { top: bound, left: "Array", right: "isArray", bottom: bound };
+createCacheKey[0] = { top: bound, left: "Array", right: "text", bottom: bound };
 const bound1 = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT) / 2, 0);
-createCacheKey[1] = { top: bound1, left: "Array", right: "isArray", bottom: bound1 };
+createCacheKey[1] = { top: bound1, left: "Array", right: "text", bottom: bound1 };
 const bound2 = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").LARGE_BUTTON_HEIGHT) / 2, 0);
-createCacheKey[2] = { top: bound2, left: "Array", right: "isArray", bottom: bound2 };
+createCacheKey[2] = { top: bound2, left: "Array", right: "text", bottom: bound2 };
 function getTextPlatformLineHeight(arg0, arg1) {
 
 }

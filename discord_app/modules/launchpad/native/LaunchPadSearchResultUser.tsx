@@ -5,7 +5,7 @@ import _isStreamingDefault from "../../activities/utils/isStreaming.tsx";
 import useChannelUnreadBadgeState from "shared/useChannelUnreadBadgeState.tsx";
 import getLayoutStyleDefault from "shared/getLayoutStyles.tsx";
 import renderChannelWrapperDefault from "shared/renderChannelWrapper.tsx";
-import _modDef16474 from "shared/UnreadBadge.tsx";
+import _modDef16492 from "shared/UnreadBadge.tsx";
 import ChannelContentDefault from "shared/renderChannelContent.tsx";
 import renderChannelBadgeDefault from "shared/renderChannelBadge.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
@@ -46,7 +46,7 @@ function UserResult(user) {
     const items = [user.id];
     closure_1_1(closure_1_2[13]).openPrivateChannel({ recipientIds: items });
   }, items);
-  let obj = user(4887);
+  let obj = user(4900);
   const fontScale = obj.useFontScale();
   obj1 = user(589);
   const items1 = [closure_5];
@@ -66,8 +66,8 @@ function UserResult(user) {
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
-    relativeTimestamp = tmp6(7319).getRelativeTimestamp(extractTimestampResult);
-    const tmp6Result = tmp6(7319);
+    relativeTimestamp = tmp6(7333).getRelativeTimestamp(extractTimestampResult);
+    const tmp6Result = tmp6(7333);
   }
   let str = "text-muted";
   if (unread) {
@@ -76,11 +76,11 @@ function UserResult(user) {
       str = "text-default";
     }
   }
-  tmp2Result = tmp2(16471);
+  tmp2Result = tmp2(16489);
   obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items4, children: null };
   items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items5 = [callback(_modDef16474, obj), , ];
+  const items5 = [callback(_modDef16492, obj), , ];
   obj1 = { user, guildId: "e", isMobileOnline: true, isVROnline: null, status: false, streaming: false, style: null, size: null, animate: null, typing: null, autoStatusCutout: null };
   obj1[2] = isMobileOnline;
   obj1[3] = isVROnline;
@@ -111,8 +111,8 @@ function UserResult(user) {
   const tmp18 = UnreadSetting;
   const tmp2Result1 = renderChannelWrapperDefault;
   if (comparator == null) {
-    comparator = tmp2(4289).getUserTag(user);
-    const tmp2Result3 = tmp2(4289);
+    comparator = tmp2(4290).getUserTag(user);
+    const tmp2Result3 = tmp2(4290);
   }
   obj2 = { name: comparator, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, mentionCount: null, mentionBadge: null };
   let tmp14Result;
@@ -123,8 +123,8 @@ function UserResult(user) {
       obj3[1] = lastMessage;
       obj3[2] = str;
       obj3[3] = flag;
-      obj3[4] = tmp6(4139).ChannelListLayoutTypes.COMPACT;
-      tmp14Result = tmp14(tmp6(10112).ChannelRowPreview, obj3);
+      obj3[4] = tmp6(4140).ChannelListLayoutTypes.COMPACT;
+      tmp14Result = tmp14(tmp6(10130).ChannelRowPreview, obj3);
     }
   }
   const obj4 = { children: null };
@@ -138,7 +138,7 @@ function UserResult(user) {
   items5[2] = ChannelContentDefault(obj2);
   obj4[0] = items5;
   obj[3] = tmp2Result1(tmp16(tmp17, obj4), { fontScale });
-  return tmp2Result(callback(user(5020).PressableHighlight, obj));
+  return tmp2Result(callback(user(5033).PressableHighlight, obj));
 }
 function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
@@ -154,7 +154,7 @@ function UserResultWithChannel(arg0) {
   const obj3 = initialize;
   const merged = Object.assign(arg0);
   obj.channel = channel;
-  obj.lastMessage = channel(14861)(channel, { unread });
+  obj.lastMessage = channel(14846)(channel, { unread });
   obj.unread = unread;
   obj.mentionCount = mentionCount;
   obj.muted = stateFromStores;

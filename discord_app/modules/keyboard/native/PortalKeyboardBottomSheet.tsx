@@ -1,6 +1,6 @@
 // discord_app/modules/keyboard/native/PortalKeyboardBottomSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4185 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4186 from "../../reanimated/ReanimatedRexport.tsx";
 import SCREEN_READER_ENABLED_GETTER from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import TwinButtons from "../../../design/components/experimental/native.tsx";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -32,7 +32,7 @@ function PortalKeyboardBackground(arg0) {
   style[0] = style;
   style[1] = callback2().background;
   style[2] = roundingStyle;
-  return callback(_modDef4185.View, { pointerEvents, style });
+  return callback(_modDef4186.View, { pointerEvents, style });
 }
 let c4 = importAllResult;
 ({ Platform, View: c5 } = get_ActivityIndicator);

@@ -4,7 +4,7 @@ import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import BaseChannelSubtitle from "BaseChannelItem.tsx";
-import registerAssetDefault from "../../../../_runtime/15618_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/15636_registerAsset.js";
 import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../../stores/PresenceStore.tsx";
@@ -66,7 +66,7 @@ function ChannelIcon(arg0) {
         obj1 = { style: null, source: null };
         obj1[0] = tmp.groupDmAvatar;
         obj1[1] = channelIconSource;
-        return callback2(tmp5(5445), obj1);
+        return callback2(tmp5(5458), obj1);
       }
       tmp5 = importDefault;
     }
@@ -103,7 +103,7 @@ function ChannelIcon(arg0) {
       obj6 = {};
     }
     const merged = Object.assign(obj6);
-    return callback2(tmp9(11865).BaseChannelIcon, obj4);
+    return callback2(tmp9(11884).BaseChannelIcon, obj4);
   }
 }
 function DMChannelIcon(userId) {
@@ -118,7 +118,7 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(589).useStateFromStoresObject(items2, () => ({ status: closure_1_6.getStatus(userId), isMobileOnline: closure_1_6.isMobileOnline(userId), isVROnline: closure_1_6.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  obj = { user: stateFromStores, guildId: "o", size: -15, style: 15, status: null, isMobileOnline: null, isVROnline: 15, statusStyle: null };
+  obj = { user: stateFromStores, guildId: "o", size: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", style: null, status: "gift_sent", isMobileOnline: null, isVROnline: "text-md/semibold", statusStyle: "text-feedback-warning" };
   obj[2] = userId(1297).AvatarSizes.XSMALL_20;
   obj[3] = tmp.dmAvatar;
   obj[4] = status;

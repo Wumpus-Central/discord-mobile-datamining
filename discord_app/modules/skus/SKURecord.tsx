@@ -1,6 +1,6 @@
 // discord_app/modules/skus/SKURecord.tsx
 import toJSDefault from "../../lib/Record.tsx";
-import hooksDefault from "../../../_runtime/04043_hooks.js";
+import hooksDefault from "../../../_runtime/04044_hooks.js";
 import getPricesFromServerDefault from "utils/getPricesFromServer.tsx";
 import transformProfileEffectKeyFrameFromServerDefault from "utils/transformSKUTenantMetadata.tsx";
 import closure_3 from "../../records/ApplicationRecord.tsx";

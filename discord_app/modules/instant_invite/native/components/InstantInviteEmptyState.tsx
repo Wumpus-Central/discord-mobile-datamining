@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ClearButtonDefault from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
-import registerAssetDefault from "../../../../../_runtime/09865_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09883_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_4 from "../../../../stores/CreateInviteModalStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -46,8 +46,8 @@ export default function _default(link) {
   obj3[0] = intl3.string(stateFromStores(1236).t["3D5yo/"]);
   obj3[2] = onPressSettings;
   obj3[3] = tmp.settingsButton;
-  obj3[4] = callback(stateFromStores(6192).SettingsIcon, {});
-  items2[1] = callback(stateFromStores(5020).PressableOpacity, obj3);
+  obj3[4] = callback(stateFromStores(6205).SettingsIcon, {});
+  items2[1] = callback(stateFromStores(5033).PressableOpacity, obj3);
   obj1[1] = items2;
   items1[1] = closure_6(View, obj1);
   const obj4 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -58,11 +58,11 @@ export default function _default(link) {
     const intl5 = tmp2(1236).intl;
     obj5[0] = intl5.string(tmp2(1236).t.Ej3B3Y);
     obj5[1] = onShare;
-    items1[3] = tmp7(tmp2(4880).Button, obj5);
+    items1[3] = tmp7(tmp2(4893).Button, obj5);
     obj[1] = items1;
     return tmp5(tmp6, obj);
   } else {
-    const maxAgeOptionByValue = tmp8(9831).getMaxAgeOptionByValue(stateFromStores.maxAge);
+    const maxAgeOptionByValue = tmp8(9849).getMaxAgeOptionByValue(stateFromStores.maxAge);
     let str2 = "";
     let str3 = "";
     if (null != maxAgeOptionByValue) {
@@ -72,7 +72,7 @@ export default function _default(link) {
       }
       str3 = descriptiveLabel;
     }
-    const getMaxUsesOptions = tmp8(9831).getMaxUsesOptions;
+    const getMaxUsesOptions = tmp8(9849).getMaxUsesOptions;
     const found = getMaxUsesOptions.find((value) => value.value === stateFromStores.maxUses);
     if (null != found) {
       str2 = found.descriptiveLabel;
@@ -87,6 +87,6 @@ export default function _default(link) {
     obj6[0] = str3;
     obj6[1] = str2;
     intl4.format(dqPWMN, obj6);
-    const tmp8Result = tmp8(9831);
+    const tmp8Result = tmp8(9849);
   }
 };

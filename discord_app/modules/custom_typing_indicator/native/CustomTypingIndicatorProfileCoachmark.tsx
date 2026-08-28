@@ -22,7 +22,7 @@ function CoachmarkPreview() {
   return <View name="Locke" suggestion={create.TypingSuggestion.YAPPING} emojiSize={16} spacing={8} emojiGap={4} textVariant="text-xs/medium" textColor="text-subtle" textStyle={tmp.typingText} emojiSource={null} />;
 }
 createCacheKey = { coachmarkImageContainer: null, typingText: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_30 };
+createCacheKey = { alignItems: "center", justifyContent: "center", paddingTop: ThemesDefault.space.PX_10 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { maxWidth: 100 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
@@ -63,7 +63,7 @@ export default function CustomTypingIndicatorProfileCoachmark(visible) {
     obj[7] = intl.string(markAsDismissed(str[8])["6NP6ic"]);
     obj[9] = function onButtonPress() {
       let obj = closure_1_0(closure_1_2[9]);
-      obj = { screen: closure_1_5.TYPING_INDICATOR, params: { isDeepLink: true } };
+      obj = { screen: closure_1_5.TYPING_INDICATOR };
       obj.openUserSettings(obj, () => {
         callback(closure_1_6.TAKE_ACTION);
       });

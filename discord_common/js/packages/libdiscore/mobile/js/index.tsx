@@ -2,6 +2,7 @@
 import set from "../../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import typedGlobal from "global_types.tsx";
+import monotonicNowMs from "clock.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 if (NativeModules.LibDiscoreModule) {
@@ -35,6 +36,7 @@ export const rustMultiply = function rustMultiply(arg0, arg1) {
 export const consumeLogs = function consumeLogs() {
   return LIBDISCORE_JSI.consumeLogs();
 };
+export const monotonicNowMs = monotonicNowMs.monotonicNowMs;
 export const BlockedDomainsStore = prototype;
 export const getFluxApi = function getFluxApi() {
   return LIBDISCORE_JSI.fluxApi;

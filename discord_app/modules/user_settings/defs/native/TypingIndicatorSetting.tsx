@@ -6,6 +6,7 @@ import DismissibleContent from "../../../../../discord_common/js/packages/protos
 import messagesProxyDefault from "../../../custom_typing_indicator/intl/CustomTypingIndicator.messages.js";
 import apexExperiment from "../../../custom_typing_indicator/CustomTypingIndicatorExperiment.tsx";
 import ChatDotsIcon from "../../../../design/components/Icon/native/redesign/generated/ChatDotsIcon.tsx";
+import SettingsBadgeType from "../../../settings/native/renderer/SettingRendererTypes.tsx";
 import createDismissiblePremiumNewBadgeRouteProps from "DismissiblePremiumNewBadgeRouteProps.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { CustomTypingIndicatorEditScreen } from "../../../custom_typing_indicator/native/CustomTypingIndicatorEditScreen.tsx";
@@ -30,6 +31,9 @@ obj = {
   route: ME.UserSettingsSections.TYPING_INDICATOR,
   getComponent() {
     return CustomTypingIndicatorEditScreen /* CustomTypingIndicatorEditScreen */.default;
+  },
+  usePersistentBadge() {
+    return { badgeType: SettingsBadgeType.SettingsBadgeType.BETA };
   }
 };
 const route = createToggle.createRoute(obj);

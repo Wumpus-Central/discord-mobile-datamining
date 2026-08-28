@@ -15,7 +15,7 @@ function AppInThisServer(onAppSelected) {
   const tmp3 = application(1367)("AppLauncherInThisServer-native");
   const tmp4 = callback2();
   application = onAppSelected.appItem.application;
-  let obj = onAppSelected(11540);
+  let obj = onAppSelected(11559);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   obj = {
     accessible: true,
@@ -48,11 +48,11 @@ function AppInThisServer(onAppSelected) {
     obj = { iconSource: null, wrapperStyle: null, iconSize: 36 };
     obj[0] = appLauncherIconSource;
     obj[1] = tmp4.iconContainer;
-    tmp8 = callback(application(11545), obj);
+    tmp8 = callback(application(11564), obj);
   }
-  const items1 = [tmp8, callback(onAppSelected(4441).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
+  const items1 = [tmp8, callback(onAppSelected(4442).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
   obj[5] = items1;
-  return closure_6(onAppSelected(8906).PressableScale, obj, application.id);
+  return closure_6(onAppSelected(8924).PressableScale, obj, application.id);
 }
 noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
@@ -114,8 +114,8 @@ export default function InThisServerSection(arg0) {
       const obj2 = { variant: "text-sm/medium", color: "text-brand", children: null };
       const intl2 = tmp11(1236).intl;
       obj2[2] = intl2.string(tmp11(1236).t["/qG8v7"]);
-      obj1[3] = tmp5(tmp11(4441).Text, obj2);
-      tmp5Result = tmp5(tmp11(5020).PressableOpacity, obj1);
+      obj1[3] = tmp5(tmp11(4442).Text, obj2);
+      tmp5Result = tmp5(tmp11(5033).PressableOpacity, obj1);
     }
     items1[1] = tmp5Result;
     obj[1] = items1;

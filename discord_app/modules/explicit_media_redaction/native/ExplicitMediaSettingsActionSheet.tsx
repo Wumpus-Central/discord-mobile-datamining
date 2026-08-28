@@ -27,15 +27,15 @@ export default function ExplicitMediaSettingsActionSheet(options) {
       const obj2 = closure_1_1(closure_1_2[5]);
     }
   }, items);
-  const items1 = [callback(options(5573).BottomSheetTitleHeader, { title, subtitle }), ];
+  const items1 = [callback(options(5586).BottomSheetTitleHeader, { title, subtitle }), ];
   let obj = { style: callback2().content, children: null };
   if (SHOW == null) {
     SHOW = options(1306).ExplicitContentRedaction.SHOW;
   }
   obj = { startExpanded: true, children: null };
   obj = { defaultValue: SHOW, onChange: callback, hasIcons: false, children: options.map((label) => callback(options(table[10]).TableRadioRow, { label: label.label, value: label.value }, label.value)) };
-  obj[1] = callback(options(7625).TableRadioGroup, obj);
+  obj[1] = callback(options(7639).TableRadioGroup, obj);
   items1[1] = callback(View, obj);
   obj[1] = items1;
-  return closure_6(options(5574).BottomSheet, obj);
+  return closure_6(options(5587).BottomSheet, obj);
 };

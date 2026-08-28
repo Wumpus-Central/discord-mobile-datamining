@@ -10,13 +10,15 @@ export const isHeicFile = function isHeicFile(type) {
   if (set.has(type.type)) {
     return true;
   } else {
-    let name = type.name;
-    const lastIndexOfResult = name.lastIndexOf(".");
+    let str = "";
+    if (typeof type.name === "string") {
+      str = type.name;
+    }
+    const lastIndexOfResult = str.lastIndexOf(".");
     let hasItem = lastIndexOfResult >= 0;
     if (hasItem) {
-      name = type.name;
-      hasItem = set1.has(name.slice(lastIndexOfResult).toLowerCase());
-      const str2 = name.slice(lastIndexOfResult);
+      hasItem = set1.has(str.slice(lastIndexOfResult).toLowerCase());
+      const str3 = str.slice(lastIndexOfResult);
     }
     return hasItem;
   }

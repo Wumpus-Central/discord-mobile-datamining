@@ -190,7 +190,7 @@ function HeaderRow(guild) {
   [tmp5, c5] = callback(React.useState(null), 2);
   const tmp4 = callback(React.useState(null), 2);
   [c6, c7] = callback(React.useState(""), 2);
-  let obj = guild(9561);
+  let obj = guild(9579);
   let canCreateExpressions = obj.useManageResourcePermissions(guild).canCreateExpressions;
   let intl = guild(1236).intl;
   obj = { id: null, text: null };
@@ -234,7 +234,7 @@ function HeaderRow(guild) {
     const intl5 = tmp7(1236).intl;
     obj5[3] = intl5.string(tmp7(1236).t["DU0dy/"]);
     obj5[4] = uploadDisabled;
-    canCreateExpressions = tmp13(tmp7(4880).Button, obj5);
+    canCreateExpressions = tmp13(tmp7(4893).Button, obj5);
   }
   const items1 = [canCreateExpressions, , ];
   let tmp13Result = null != tmp5;
@@ -242,18 +242,18 @@ function HeaderRow(guild) {
     const obj6 = { style: null, variant: "text-sm/medium", color: "text-feedback-critical", children: null };
     obj6[0] = tmp.errorText;
     obj6[3] = tmp5;
-    tmp13Result = tmp13(tmp7(4441).Text, obj6);
+    tmp13Result = tmp13(tmp7(4442).Text, obj6);
   }
   let obj7 = { children: null };
   items1[1] = tmp13Result;
   let obj8 = { style: tmp.uploadInstructionsContainer, children: null };
-  const items2 = [closure_14(guild(4441).Text, { variant: "text-sm/medium", color: "text-muted", children: description }), , ];
+  const items2 = [closure_14(guild(4442).Text, { variant: "text-sm/medium", color: "text-muted", children: description }), , ];
   const obj9 = { variant: "text-xs/bold", color: "text-muted", style: tmp.uploadInstructionsHeading, children: null };
   const intl6 = tmp7(1236).intl;
   const stringResult2 = intl4.string(guild(1236).t["8Vr5Qd"]);
   const tmp14 = closure_15;
   obj9[3] = intl6.string(guild(1236).t.jrXfyw).toUpperCase();
-  items2[1] = closure_14(guild(4441).Text, obj9);
+  items2[1] = closure_14(guild(4442).Text, obj9);
   items2[2] = closure_14(c7, {
     style: tmp.uploadInstructionsList,
     data: items,

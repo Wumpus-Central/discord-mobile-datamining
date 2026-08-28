@@ -45,14 +45,14 @@ export default function ConnectGuardianBottomSheet(arg0) {
   obj1 = { style: tmp.centered, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   if (title == null) {
     const intl = tmp2(1236).intl;
-    title = intl.string(tmp7(2369).aCUVfL);
+    title = intl.string(tmp7(2370).aCUVfL);
   }
   obj1[4] = title;
   const items2 = [closure_7(Text.Text, obj1), ];
   const obj2 = { style: tmp.centered, variant: "text-md/medium", color: "text-default", children: null };
   if (body == null) {
     const intl2 = tmp2(1236).intl;
-    body = intl2.format(tmp7(2369)["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
+    body = intl2.format(tmp7(2370)["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
   }
   obj2[3] = body;
   items2[1] = closure_7(Text.Text, obj2);

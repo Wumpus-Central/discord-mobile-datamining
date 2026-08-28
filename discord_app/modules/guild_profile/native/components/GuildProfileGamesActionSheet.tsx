@@ -30,9 +30,9 @@ export default function GuildProfileGamesActionSheet(profile) {
   let gameActivity;
   id = profile.id;
   gameActivity = profile.gameActivity;
-  let obj = id(8946);
+  let obj = id(8964);
   const allGuildProfileGames = obj.useAllGuildProfileGames(profile);
-  obj1 = id(8012);
+  obj1 = id(8026);
   const intl = id(1236).intl;
   let str = intl.format(id(1236).t.vuAVo7, { serverName: profile.name });
   const items = [id];
@@ -46,8 +46,8 @@ export default function GuildProfileGamesActionSheet(profile) {
   obj = { children: null };
   obj1 = { style: callback().container, children: null };
   const tmp = callback();
-  obj1[1] = jsx(id(5944).TableRowGroup, { title: str, hasIcons: true, children: allGuildProfileGames.map((game) => closure_1_5(closure_1_6, { game, activityLevel: gameActivity[game.id] }, game.id)) });
+  obj1[1] = jsx(id(5957).TableRowGroup, { title: str, hasIcons: true, children: allGuildProfileGames.map((game) => closure_1_5(closure_1_6, { game, activityLevel: gameActivity[game.id] }, game.id)) });
   obj[0] = <View style={callback().container}>{null}</View>;
-  obj[4] = jsx(id(5576).BottomSheetScrollView, { children: null });
-  return jsx(id(5574).BottomSheet, { children: null });
+  obj[4] = jsx(id(5589).BottomSheetScrollView, { children: null });
+  return jsx(id(5587).BottomSheet, { children: null });
 };

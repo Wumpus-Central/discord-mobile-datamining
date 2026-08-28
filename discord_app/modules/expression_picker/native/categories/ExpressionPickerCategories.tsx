@@ -2,8 +2,8 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import Portal from "../../../../../_runtime/04314_Portal.js";
-import _modDef9128 from "ExpressionPickerCategoriesBackdrop.tsx";
+import Portal from "../../../../../_runtime/04315_Portal.js";
+import _modDef9146 from "ExpressionPickerCategoriesBackdrop.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -34,7 +34,7 @@ export default function ExpressionPickerCategories(arg0) {
   items[2] = style;
   let tmp5Result = null;
   if (!tmp4) {
-    tmp5Result = tmp5(_modDef9128, {});
+    tmp5Result = tmp5(_modDef9146, {});
   }
   const items1 = [tmp5Result, children];
   obj[1] = items1;

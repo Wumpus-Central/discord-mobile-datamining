@@ -1,16 +1,16 @@
 // discord_app/modules/guilds_bar/native/GuildsBarFolderSettingsModalActionCreators.tsx
 import set from "../../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
-import _modDef4676 from "../../../actions/ModalActionCreators.tsx";
+import asyncRequireImpl from "../../../../_runtime/02010_asyncRequireImpl.js";
+import _modDef4689 from "../../../actions/ModalActionCreators.tsx";
 
 const GUILD_FOLDER_SETTINGS_MODAL_KEY = "GUILD_FOLDER_SETTINGS_MODAL_KEY";
 const result = set.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderSettingsModalActionCreators.tsx");
 
 export const showGuildsBarFolderModal = function showGuildsBarFolderModal(closure_0) {
-  let obj = _modDef4676;
+  let obj = _modDef4689;
   obj = { folderId: closure_0 };
-  obj.pushLazy(asyncRequireImpl(15792, dependencyMap.paths), obj, GUILD_FOLDER_SETTINGS_MODAL_KEY);
+  obj.pushLazy(asyncRequireImpl(15810, dependencyMap.paths), obj, GUILD_FOLDER_SETTINGS_MODAL_KEY);
 };
 export const hideGuildsBarFolderModal = function hideGuildsBarFolderModal() {
-  _modDef4676.popWithKey(GUILD_FOLDER_SETTINGS_MODAL_KEY);
+  _modDef4689.popWithKey(GUILD_FOLDER_SETTINGS_MODAL_KEY);
 };

@@ -34,18 +34,18 @@ function FriendRequestButton(user) {
   let stateFromStores;
   closure_4 = undefined;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  let obj = user(8490);
+  let obj = user(8504);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(5905)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(5918)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(12408);
+  let tmp3Result = tmp3(12427);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(589);
   const items = [closure_4];
   stateFromStores = tmp3Result.useStateFromStores(items, () => relationshipType.getRelationshipType(user.id));
-  closure_4 = trackUserProfileAction(4289).useName(user);
+  closure_4 = trackUserProfileAction(4290).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== tmp5.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -54,9 +54,9 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(12526).UserClockIcon;
+          let UserPlusIcon = tmp3(12545).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4382).UserPlusIcon;
+          UserPlusIcon = tmp3(4383).UserPlusIcon;
         }
         const intl = tmp3(1236).intl;
         const string = intl.string;
@@ -86,11 +86,11 @@ function FriendRequestButton(user) {
               callback({ action: "CANCEL_FRIEND_REQUEST" });
               closure_1_1(closure_1_2[17]).cancelFriendRequest(id.id, closure_2);
             };
-            const result = user(8992).confirmCancelFriendRequest(obj);
-            const obj3 = user(8992);
+            const result = user(9010).confirmCancelFriendRequest(obj);
+            const obj3 = user(9010);
           } else {
             trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
-            obj = trackUserProfileAction(8980);
+            obj = trackUserProfileAction(8998);
             obj = { userId: null, context: null };
             obj[0] = user.id;
             obj[1] = dependencyMap;

@@ -12,7 +12,7 @@ export default function isOrientationLockSupported() {
     result = !tmpResult.isMetaQuest();
   }
   if (result) {
-    tmpResult = tmp(4424);
+    tmpResult = tmp(4425);
     result = tmpResult.isOrientationLockSupported();
   }
   return result;

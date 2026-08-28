@@ -22,8 +22,8 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   const intl = tmp(1236).intl;
   obj = { actorName: messageAuthorWithProcessedColor.nick, actorHook: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), threadName: null, threadOnClick: null };
   if (null != channel) {
-    let content = tmp(4639).computeChannelName(channel, closure_5, closure_4);
-    const tmpResult = tmp(4639);
+    let content = tmp(4640).computeChannelName(channel, closure_5, closure_4);
+    const tmpResult = tmp(4640);
   } else {
     content = message.content;
   }

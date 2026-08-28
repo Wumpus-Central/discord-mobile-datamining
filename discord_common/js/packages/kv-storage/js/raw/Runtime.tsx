@@ -98,7 +98,7 @@ prototype["initialize"] = function initialize() {
   let self = this;
   self = this;
   if (!this.initialized) {
-    const KV_RAW = self(1958).KV_RAW;
+    const KV_RAW = self(1959).KV_RAW;
     const obj = { status: null, response: null };
     obj[0] = function status(handle) {
       return self.onStatus(handle);

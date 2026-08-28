@@ -3,7 +3,7 @@ import encodeProperties from "../../discord_common/js/packages/analytics-utils/A
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef4666 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef4679 from "../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../stores/SurveyStore.tsx";
 import { SURVEY_REFETCH_INTERVAL } from "../stores/SurveyStore.tsx";
 import ME from "../Constants.tsx";
@@ -61,7 +61,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
     }
   };
   obj[2] = obj;
-  const obj2 = _modDef4666;
+  const obj2 = _modDef4679;
   obj[3] = sendRequest.rejectWithMigratedError();
   const value = obj2.get(obj);
   return value.then((body) => {
@@ -97,7 +97,7 @@ export const surveySeen = function surveySeen(key) {
   obj = { type: "SURVEY_SEEN", key };
   obj.dispatch(obj);
   obj = { url: closure_7.USER_SURVEY_SEEN(key), trackedActionData: null, rejectWithError: null };
-  const obj3 = _modDef4666;
+  const obj3 = _modDef4679;
   obj[1] = {
     event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_SURVEY_SEEN,
     properties() {

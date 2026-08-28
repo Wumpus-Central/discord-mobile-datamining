@@ -89,8 +89,8 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
         accounts.map((account) => closure_1_11(callback(paths[23]), { theme: callback, locale: paths, account }, account.id))
       ];
       obj[1] = items5;
-      obj[1] = callback2(tmp4(4878).Stack, obj);
-      tmp14 = callback(tmp4(8295).Form, obj);
+      obj[1] = callback2(tmp4(4891).Stack, obj);
+      tmp14 = callback(tmp4(8309).Form, obj);
     }
     return tmp14;
   }

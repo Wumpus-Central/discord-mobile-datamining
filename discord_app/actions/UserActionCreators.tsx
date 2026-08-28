@@ -4,7 +4,7 @@ import _modDef38 from "../../_runtime/metro/00038__.js";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ImpressionNames from "../../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import _modDef4666 from "../utils/TrackedHTTPUtils.tsx";
+import _modDef4679 from "../utils/TrackedHTTPUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../records/UserRecord.tsx";
 import closure_5 from "../stores/UserStore.tsx";
@@ -154,7 +154,7 @@ function _fetchProfile() {
               }
               let obj7 = callback2(709);
               obj7 = { type: "USER_PROFILE_FETCH_FAILURE", apiError: null, fetchStartedAt: null, userId: null, guildId: null };
-              const aPIError = new callback(4343).APIError(closure_13);
+              const aPIError = new callback(4344).APIError(closure_13);
               obj7[1] = aPIError;
               obj7[2] = closure_10;
               obj7[3] = callback;
@@ -372,7 +372,7 @@ export const acceptAgreements = function acceptAgreements() {
   if (arg1 === undefined) {
     flag2 = true;
   }
-  let obj = _modDef4666;
+  let obj = _modDef4679;
   obj = { url: Endpoints.USER_AGREEMENTS, trackedActionData: null, body: null, oldFormErrors: true, rejectWithError: null };
   obj = { event: ImpressionNames.NetworkActionNames.USER_ACCEPT_AGREEMENTS };
   obj[1] = obj;

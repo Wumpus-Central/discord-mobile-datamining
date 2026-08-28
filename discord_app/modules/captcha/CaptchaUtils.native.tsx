@@ -3,7 +3,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import closure_3 from "../action_sheet/native/ActionSheetStore.tsx";
 import { CAPTCHA_MODAL_KEY } from "CaptchaConstants.tsx";
-import { asyncRequireImpl } from "../../../_runtime/02009_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../_runtime/02010_asyncRequireImpl.js";
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/captcha/CaptchaUtils.native.tsx");
@@ -29,7 +29,7 @@ export default {
     const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(asyncRequireImpl(16778, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
+    obj2.openLazy(asyncRequireImpl(16796, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
   },
   showCaptchaAsync(nextResult1) {
     let obj = arg1;
@@ -52,8 +52,8 @@ export default {
           return callback({ captcha_key, captcha_rqtoken, captcha_session_id: closure_1_3 });
         },
         onReject(arg0) {
-          if (arg0 === obj(10834).CaptchaError.CANCEL) {
-            const captchaCancelError = new obj(10834).CaptchaCancelError();
+          if (arg0 === obj(10852).CaptchaError.CANCEL) {
+            const captchaCancelError = new obj(10852).CaptchaCancelError();
             callback2(captchaCancelError);
           } else {
             const _Error = Error;
@@ -63,7 +63,7 @@ export default {
           }
         },
         close() {
-          return callback2(4412).hideActionSheet(closure_4);
+          return callback2(4413).hideActionSheet(closure_4);
         }
       };
       const merged = Object.assign(closure_0);

@@ -29,10 +29,10 @@ prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
       if (id === store.getChannelId()) {
         if (ready.isReady(id)) {
           if (self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, closure_0, constants.SEND_MESSAGE)) {
-            let tmpResult = tmp(10439);
+            let tmpResult = tmp(10455);
             const result = tmpResult.logMessageGiftIntentShown(closure_0);
             const userAffinity = self.getUserAffinity(closure_0);
-            tmpResult = tmp(8815);
+            tmpResult = tmp(8832);
             let obj = { name: null, type: null, properties: null };
             obj[0] = tmp(503).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION;
             obj[1] = tmp(503).ImpressionTypes.VIEW;

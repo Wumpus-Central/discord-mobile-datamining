@@ -556,7 +556,7 @@ let closure_34 = importAllResult.memo((blockedUserIds) => {
     }
     obj = { style: null, children: null };
     obj[0] = tmp.blockedMemberWarning;
-    const items = [callback(tmp5(7641).CircleErrorIcon, { color: "text-feedback-warning" }), ];
+    const items = [callback(tmp5(7655).CircleErrorIcon, { color: "text-feedback-warning" }), ];
     obj1 = { variant: "text-sm/bold", color: "interactive-text-active", style: null, children: null };
     obj1[2] = { flexShrink: 1 };
     const items1 = [stringResult1, " ", ];
@@ -564,11 +564,11 @@ let closure_34 = importAllResult.memo((blockedUserIds) => {
     if (null != stringResult) {
       const obj2 = { variant: "heading-sm/semibold", children: null };
       obj2[1] = stringResult;
-      tmp11Result = callback(tmp5(4441).Text, obj2);
+      tmp11Result = callback(tmp5(4442).Text, obj2);
     }
     items1[2] = tmp11Result;
     obj1[3] = items1;
-    items[1] = closure_26(tmp5(4441).Text, obj1);
+    items[1] = closure_26(tmp5(4442).Text, obj1);
     obj[1] = items;
     return closure_26(setDefault, obj);
   }
@@ -696,10 +696,10 @@ let closure_39 = { code: "function VoicePanelPreJoinContentTsx3(){const{windowDi
 let closure_40 = { code: "function VoicePanelPreJoinContentTsx4(finished=false){const{transitionState,TransitionStates,runOnJS,transitionCleanUp}=this.__closure;finished&&transitionState===TransitionStates.YEETED&&runOnJS(transitionCleanUp)();}" };
 let obj4 = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING, marginHorizontal: ThemesDefault.space.PX_16 };
 const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
-  const context = importAllResult.useContext(guildId(11756));
+  const context = importAllResult.useContext(guildId(11775));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(16530)(channelId);
+  const tmp2 = guildId(16548)(channelId);
   dependencyMap = tmp2;
   let obj = channelId(589);
   let items = [closure_17, closure_8, closure_6, closure_12, closure_9];
@@ -744,9 +744,9 @@ const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
       obj[4] = ignoredUsersForVoiceChannel;
       return obj;
     }
-  }, items1, channelId(16657).areVoicePanelPreJoinContentPropsEqual);
+  }, items1, channelId(16675).areVoicePanelPreJoinContentPropsEqual);
   obj = { item: stateFromStores, renderItem };
-  return callback(channelId(4172).TransitionItem, obj);
+  return callback(channelId(4173).TransitionItem, obj);
 });
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinContent.tsx");
 

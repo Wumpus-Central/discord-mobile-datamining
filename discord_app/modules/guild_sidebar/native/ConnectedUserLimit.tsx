@@ -1,7 +1,7 @@
 // discord_app/modules/guild_sidebar/native/ConnectedUserLimit.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import useChannelVideoLimitDefault from "../../video_calls/useChannelVideoLimit.tsx";
-import _modDef15621 from "VoiceChannelUserLimit.tsx";
+import _modDef15639 from "VoiceChannelUserLimit.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 noopAll;
@@ -29,5 +29,5 @@ export const ConnectedUserLimit = function ConnectedUserLimit(users) {
     videoLimit = num < 0 || limit < num;
     const tmp4 = num < 0 || limit < num;
   }
-  return jsx(_modDef15621, { users: users.userCount, total, videoLimit });
+  return jsx(_modDef15639, { users: users.userCount, total, videoLimit });
 };

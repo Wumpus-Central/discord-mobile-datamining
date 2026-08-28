@@ -453,7 +453,7 @@ const items2 = [
     kind: "enum",
     repeat: 1,
     T() {
-      const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1940).ClassificationType];
+      const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1941).ClassificationType];
       return items;
     }
   },
@@ -478,7 +478,7 @@ class BannedState$Type extends MessageType5 {
       kind: "enum",
       repeat: 1,
       T() {
-            const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1940).ClassificationType];
+            const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1941).ClassificationType];
             return items;
           }
     };
@@ -619,7 +619,7 @@ const items3 = [
     kind: "enum",
     repeat: 1,
     T() {
-      const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1940).ClassificationType];
+      const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1941).ClassificationType];
       return items;
     }
   },
@@ -995,7 +995,7 @@ const obj4 = {
   kind: "enum",
   repeat: 1,
   T() {
-    const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1940).ClassificationType];
+    const items = ["discord_protos.safety_common.v1.ClassificationType", callback(1941).ClassificationType];
     return items;
   }
 };

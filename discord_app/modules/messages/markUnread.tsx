@@ -67,7 +67,7 @@ function _markUnreadBySnowflakeID() {
                   channel = 1;
                   c6 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = callback2(7442).unarchiveThread(channel, false);
+                  obj1[0] = callback2(7456).unarchiveThread(channel, false);
                   return obj1;
                 }
               }
@@ -101,7 +101,7 @@ function _markUnreadBySnowflakeID() {
             return obj;
           }
           if (!closure_4.hasJoined(callback)) {
-            obj2 = callback2(7442);
+            obj2 = callback2(7456);
             channel = 2;
             c6 = 1;
             const obj5 = { value: null, done: false };

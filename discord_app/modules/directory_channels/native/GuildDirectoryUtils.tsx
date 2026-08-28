@@ -60,7 +60,7 @@ function _onAddDirectoryGuildEntry() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj3 = lib(11800);
+              let obj3 = lib(11819);
               dependencyMap = 2;
               c4 = 1;
               const obj2 = { value: null, done: false };
@@ -77,7 +77,7 @@ function _onAddDirectoryGuildEntry() {
             return obj3;
           } else {
             callback2();
-            obj = callback(4810);
+            obj = callback(4823);
             const obj4 = { importer: null };
             obj4[0] = function importer() {
               return _undefined(paths[6])(paths[5], paths.paths).then((arg0) => {

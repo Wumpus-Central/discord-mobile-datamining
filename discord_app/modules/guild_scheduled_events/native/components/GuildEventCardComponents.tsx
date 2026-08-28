@@ -508,7 +508,7 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
   dependencyMap = undefined;
   const tmp3 = canEveryoneRoleViewEventDefault(event);
   importDefault = tmp3;
-  let obj = event(9665);
+  let obj = event(9683);
   obj = { guildId: event.guild_id, guildEventId: event.id };
   dependencyMap = obj.SHARE_EVENT_DETAILS_LINK(obj);
   obj = { accessibilityLabel: null, onPress: null, icon: null, variant: "secondary" };
@@ -525,8 +525,8 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
       const obj2 = event(table[23]);
     }
   };
-  obj[2] = importDefault(tmp3 ? 9666 : 4389);
-  return closure_22(event(7938).IconButton, obj);
+  obj[2] = importDefault(tmp3 ? 9684 : 4390);
+  return closure_22(event(7952).IconButton, obj);
 };
 export const GuildEventModeratorAction = function GuildEventModeratorAction(event) {
   event = event.event;
@@ -586,9 +586,9 @@ export const GuildEventIndicateInterestAction = function GuildEventIndicateInter
     str = "tertiary";
   }
   if (first) {
-    let BellIcon = tmp(4396).CheckmarkLargeIcon;
+    let BellIcon = tmp(4397).CheckmarkLargeIcon;
   } else {
-    BellIcon = tmp(9667).BellIcon;
+    BellIcon = tmp(9685).BellIcon;
   }
   obj = { accessibilityRole: "togglebutton", accessibilityState: { checked: first }, accessibilityLabel: null, variant: null, icon: null, text: null, onPress: null, grow: true };
   const intl = tmp(1236).intl;
@@ -835,15 +835,15 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
     }
     return closure_1_11.isMember(guild_id, id);
   }, items3);
-  let tmp7 = stateFromStores(4639)(stateFromStores);
-  let obj2 = channel_id(9596);
+  let tmp7 = stateFromStores(4640)(stateFromStores);
+  let obj2 = channel_id(9614);
   const locationFromEvent = obj2.getLocationFromEvent(event);
   if (null == stateFromStores) {
     if (null == locationFromEvent) {
       return null;
     }
   }
-  let tmp2Result = tmp2(9660);
+  let tmp2Result = tmp2(9678);
   const eventLocationIconComponent = tmp2Result.getEventLocationIconComponent(event, stateFromStores, stateFromStores1);
   obj = { style: tmp.channelContainer, children: null };
   let tmp12 = null != eventLocationIconComponent;
@@ -857,7 +857,7 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
   if (null != stateFromStores) {
     obj2 = { channel: null };
     obj2[0] = stateFromStores;
-    let combined = stateFromStores(9346)(obj2);
+    let combined = stateFromStores(9364)(obj2);
   } else if (null != locationFromEvent) {
     const intl = tmp2(1236).intl;
     const _HermesInternal = HermesInternal;
@@ -867,7 +867,7 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
   if (tmp7 == null) {
     let result = null;
     if (null != locationFromEvent) {
-      tmp2Result = tmp2(9661);
+      tmp2Result = tmp2(9679);
       const obj3 = { guildId: null };
       obj3[0] = event.guild_id;
       result = tmp2Result.guildEventLocationParser(locationFromEvent, true, obj3);
@@ -875,7 +875,7 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
     tmp7 = result;
   }
   obj1[4] = tmp7;
-  items4[1] = callback4(channel_id(4441).Text, obj1);
+  items4[1] = callback4(channel_id(4442).Text, obj1);
   obj[1] = items4;
   return closure_23(closure_6, obj);
 };
@@ -895,7 +895,7 @@ export const GuildEventCardSimpleGuildInfo = function GuildEventCardSimpleGuildI
     obj[0] = items2;
     obj = { guild: null, size: null, style: null };
     obj[0] = stateFromStores;
-    obj[1] = tmp2(5956).GuildIconSizes.XSMALL_20;
+    obj[1] = tmp2(5969).GuildIconSizes.XSMALL_20;
     obj[2] = tmp.guildIcon;
     const items3 = [callback4(GuildIconSizesDefault, obj), ];
     obj1 = { style: null, children: null };
@@ -903,7 +903,7 @@ export const GuildEventCardSimpleGuildInfo = function GuildEventCardSimpleGuildI
     const obj2 = { variant: "text-sm/semibold", style: null, children: null };
     obj2[1] = textStyle;
     obj2[2] = stateFromStores.name;
-    obj1[1] = callback4(tmp2(4441).Text, obj2);
+    obj1[1] = callback4(tmp2(4442).Text, obj2);
     items3[1] = callback4(closure_6, obj1);
     obj[1] = items3;
     tmp5 = callback5(closure_6, obj);

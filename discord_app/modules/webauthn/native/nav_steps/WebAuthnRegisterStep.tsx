@@ -70,10 +70,10 @@ export default function WebAuthnRegisterStep() {
   const items2 = [callback, tmp11, tmp8];
   closure_6 = obj1.useMemo(() => ({ onRegisterSuccess: callback, setError: closure_2, setRegistering: closure_1 }), items2);
   const tmp9 = first(callback.useState(""), 2);
-  const announceError = navigation(14293).useAnnounceError(tmp10);
+  const announceError = navigation(14262).useAnnounceError(tmp10);
   obj = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj = { style: tmp4.centerFlex, children: null };
-  const items3 = [callback(navigation(14294).KeyImage, {}), , ];
+  const items3 = [callback(navigation(14263).KeyImage, {}), , ];
   obj1 = { style: tmp4.margin, variant: "text-md/normal", children: null };
   const intl = tmp(1236).intl;
   const string = intl.string;
@@ -84,12 +84,12 @@ export default function WebAuthnRegisterStep() {
     stringResult = string(t.Lh5vTW);
   }
   obj1[2] = stringResult;
-  items3[1] = callback(navigation(4441).Text, obj1);
+  items3[1] = callback(navigation(4442).Text, obj1);
   let tmp19Result = "" !== tmp10;
   if (tmp19Result) {
     obj2 = { variant: "text-md/normal", color: "text-feedback-critical", children: null };
     obj2[2] = tmp10;
-    tmp19Result = tmp19(tmp(4441).Text, obj2);
+    tmp19Result = tmp19(tmp(4442).Text, obj2);
   }
   items3[2] = tmp19Result;
   obj[1] = items3;
@@ -112,8 +112,8 @@ export default function WebAuthnRegisterStep() {
     string2Result = string2(t2.oibaQa);
   }
   const tmp18 = closure_5;
-  const tmpResult = navigation(14293);
-  items4[2] = callback(navigation(5328).ButtonGroup, { children: callback(navigation(4880).Button, obj5) });
+  const tmpResult = navigation(14262);
+  items4[2] = callback(navigation(5341).ButtonGroup, { children: callback(navigation(4893).Button, obj5) });
   obj[4] = items4;
-  return closure_8(navigation(5505).SafeAreaPaddingView, obj);
+  return closure_8(navigation(5518).SafeAreaPaddingView, obj);
 };

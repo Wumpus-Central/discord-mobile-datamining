@@ -12,14 +12,14 @@ export default function CountrySelectModal() {
     obj = { title: null, headerLeft: null, render: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.gzXECH);
-    obj[1] = callback(5447).getHeaderCloseButton(callback2(4676).pop);
+    obj[1] = callback(5460).getHeaderCloseButton(callback2(4689).pop);
     obj[2] = function render() {
       return callback2(callback(table[5]), {
         onClose() {
-          return callback(4676).pop();
+          return callback(4689).pop();
         },
         onCountrySelected(countryCode) {
-          return callback(7704).setCountryCode(countryCode);
+          return callback(7718).setCountryCode(countryCode);
         }
       });
     };
@@ -27,7 +27,7 @@ export default function CountrySelectModal() {
     return obj;
   }, []);
   const effect = React.useEffect(() => () => {
-    callback(5998).runAfterInteractions(callback(7732).setCountrySelectorClosed, 400);
+    callback(6011).runAfterInteractions(callback(7746).setCountrySelectorClosed, 400);
   }, []);
   return jsx(NavigationStack.Navigator, { screens, initialRouteName: "COUNTRY_SELECT" });
 };

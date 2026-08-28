@@ -1,7 +1,7 @@
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetHeader.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/08793_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/08796_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08810_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/08813_registerAsset.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../../guild_profile/GuildPopoutStore.tsx";
@@ -20,10 +20,10 @@ function CommunityPill(guildVisibility) {
   const intl = GlobeEarthIcon(1236).intl;
   importDefault = intl.string(GlobeEarthIcon(1236).t.TME4LJ);
   let tmp4Result = registerAssetDefault;
-  if (guildVisibility.guildVisibility === GlobeEarthIcon(8792).GuildVisibility.PUBLIC) {
+  if (guildVisibility.guildVisibility === GlobeEarthIcon(8809).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1236).intl;
     importDefault = intl2.string(tmp2(1236).t.op2cJ6);
-    GlobeEarthIcon = tmp2(9290).GlobeEarthIcon;
+    GlobeEarthIcon = tmp2(9308).GlobeEarthIcon;
     tmp4Result = registerAssetDefault2;
   }
   let obj = {
@@ -41,9 +41,9 @@ function CommunityPill(guildVisibility) {
   obj = { variant: "text-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
   const intl3 = tmp2(1236).intl;
   obj[3] = intl3.string(GlobeEarthIcon(1236).t.K7iRig);
-  items[1] = callback(GlobeEarthIcon(4441).Text, obj);
+  items[1] = callback(GlobeEarthIcon(4442).Text, obj);
   obj[3] = items;
-  return callback2(GlobeEarthIcon(5020).PressableOpacity, obj);
+  return callback2(GlobeEarthIcon(5033).PressableOpacity, obj);
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);

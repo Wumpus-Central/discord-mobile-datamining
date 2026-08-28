@@ -112,7 +112,7 @@ function _setGuildIncidentActions() {
       }
       let toISOStringResult = null;
       if (tmp5) {
-        let obj2 = callback2(4043)();
+        let obj2 = callback2(4044)();
         toISOStringResult = obj2.add(tmp8, "hours").toISOString();
         const addResult = obj2.add(tmp8, "hours");
       }
@@ -188,7 +188,7 @@ function _handleResolveRaid() {
               guild = guild.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = callback2(10105)(guild);
+                tmp8 = callback2(10123)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {
@@ -279,7 +279,7 @@ function _handleReportRaid() {
               const guild = closure_1_4.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = v0(10105)(guild);
+                tmp8 = v0(10123)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {

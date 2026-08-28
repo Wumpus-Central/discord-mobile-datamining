@@ -1,7 +1,7 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateUtils.tsx
 import timestampDefault from "../debug/Logger.tsx";
 import keys from "../../ConstantsIOS.tsx";
-import _mod4158 from "../../lib/native/Linking.tsx";
+import _mod4159 from "../../lib/native/Linking.tsx";
 import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { UPDATE_CONFIG } from "MobileNativeUpdateConstants.tsx";
 
@@ -108,7 +108,7 @@ function openBuildInstallerUrl(install) {
       const _HermesInternal = HermesInternal;
       logger.error("Attempted to follow invalid install URL " + str);
     } else {
-      const openURLExternally = _mod4158.default.openURLExternally;
+      const openURLExternally = _mod4159.default.openURLExternally;
       if (obj.isIOS()) {
         openURLExternally(str.toString(), keys.WebBrowserType.SAFARI);
       } else {

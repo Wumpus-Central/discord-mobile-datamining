@@ -158,7 +158,7 @@ function _uploadVideoFilterAsset() {
           } else if (1 === tmp7) {
             constants = 0;
             callback = closure_5;
-            const tmp24 = new callback(9711)(callback);
+            const tmp24 = new callback(9729)(callback);
             throw tmp24;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -256,9 +256,9 @@ function _deleteVideoFilterAsset() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            lib2 = lib(9712).getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
-            const obj7 = lib(9712);
-            let result = lib(9709).isCustomBackgroundOption(lib2);
+            lib2 = lib(9730).getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
+            const obj7 = lib(9730);
+            let result = lib(9727).isCustomBackgroundOption(lib2);
             if (result) {
               result = lib2.id === lib.id;
             }
@@ -336,7 +336,7 @@ function _saveLastUsedBackgroundOption() {
             obj3.dispatch(obj5);
             c4 = 3;
           }
-          obj12 = lib(9709);
+          obj12 = lib(9727);
         }
       } else if (arg0 === 1) {
         c4 = 3;

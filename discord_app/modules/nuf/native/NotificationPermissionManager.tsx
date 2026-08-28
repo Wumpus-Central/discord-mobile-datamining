@@ -1,5 +1,5 @@
 // discord_app/modules/nuf/native/NotificationPermissionManager.tsx
-import hooksDefault from "../../../../_runtime/04043_hooks.js";
+import hooksDefault from "../../../../_runtime/04044_hooks.js";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import getOrRefreshPushSyncToken from "../../../actions/native/PushNotificationActionCreators.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -183,8 +183,8 @@ function _logNotificationPermissionStatus2() {
           return obj;
         } else {
           callback = arg1;
-          callback2 = callback(10088).allowInAppNotifications();
-          const obj5 = callback(10088);
+          callback2 = callback(10106).allowInAppNotifications();
+          const obj5 = callback(10106);
           const obj2 = { os_enabled: null, foreground_app_enabled: null, background_app_enabled: null, notification_authorization_status: null };
           obj2[0] = callback === constants2.AUTHORIZED;
           obj2[1] = callback2;

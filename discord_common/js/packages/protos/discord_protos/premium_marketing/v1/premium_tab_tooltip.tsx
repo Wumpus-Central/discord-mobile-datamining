@@ -16,7 +16,7 @@ class PremiumTabTooltip$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(8395).ThemeAwareAsset;
+            return callback(8409).ThemeAwareAsset;
           }
     };
     obj = { no: 4, name: "header_localized", kind: "message", T: null };
@@ -32,7 +32,7 @@ class PremiumTabTooltip$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(8385).LocalizedString;
+            return callback(8399).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PremiumTabTooltip", items, T);
@@ -173,7 +173,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(8395).ThemeAwareAsset;
+      return callback(8409).ThemeAwareAsset;
     }
   },
 ,
@@ -192,7 +192,7 @@ items[4] = {
   name: "body_localized",
   kind: "message",
   T() {
-    return callback(8385).LocalizedString;
+    return callback(8399).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.PremiumTabTooltip", items, tmp, T, PremiumTabTooltip$Type, prototype, items);

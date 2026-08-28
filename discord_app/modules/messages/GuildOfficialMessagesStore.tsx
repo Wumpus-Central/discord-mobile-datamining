@@ -302,7 +302,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
             let tmp5 = null != tmp4;
             if (tmp5) {
               if (null == tmp4.messages[message.id]) {
-                const messageRecord = tmp23(4690).createMessageRecord(message);
+                const messageRecord = tmp23(4703).createMessageRecord(message);
                 if (null != obj[guildId]) {
                   obj = {};
                   const merged = Object.assign(obj);
@@ -319,7 +319,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
                   const merged3 = Object.assign(obj1);
                   obj[guildId] = obj;
                 }
-                const tmp23Result = tmp23(4690);
+                const tmp23Result = tmp23(4703);
               }
               tmp5 = tmp6;
             }
@@ -350,7 +350,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
         return false;
       } else if (null == message.author) {
         if (null != tmp42) {
-          let obj5 = id(4690);
+          let obj5 = id(4703);
           const updateMessageRecordResult = obj5.updateMessageRecord(tmp42, message);
           if (null != obj11[guildId]) {
             let obj = {};
@@ -377,7 +377,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
         const hasFlagResult = obj11.hasFlag(num, MessageFlags.IS_GUILD_OFFICIAL);
         if (hasFlagResult) {
           if (null == tmp42) {
-            let tmp43Result = tmp43(4690);
+            let tmp43Result = tmp43(4703);
             const messageRecord = tmp43Result.createMessageRecord(message);
             if (null != obj11[guildId]) {
               const obj3 = {};
@@ -421,7 +421,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
         }
         if (hasFlagResult) {
           if (null != tmp42) {
-            tmp43Result = tmp43(4690);
+            tmp43Result = tmp43(4703);
             const updateMessageRecordResult1 = tmp43Result.updateMessageRecord(tmp42, message);
             if (null != obj11[guildId]) {
               obj11 = {};

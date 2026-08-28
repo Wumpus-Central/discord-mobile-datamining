@@ -1,7 +1,7 @@
 // discord_app/modules/polls/chat/buildPlatformPollResources.native.tsx
 import ensureAvatarSource from "../../../utils/native/AvatarUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/05568_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/05947_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/05581_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/05960_registerAsset.js";
 import importDefaultResult from "../../../../_runtime/00012_apply.js";
 import { frozen } from "../../messages/native/renderer/EmbedUtils.tsx";
 

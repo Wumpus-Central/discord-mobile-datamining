@@ -1,6 +1,6 @@
 // discord_app/modules/premium/PremiumSubscriptionOfferUtil.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import hooksDefault from "../../../_runtime/04043_hooks.js";
+import hooksDefault from "../../../_runtime/04044_hooks.js";
 import usePremiumTrialOffer from "hooks/usePremiumTrialOffer.android.tsx";
 import useHasActiveTrial from "PremiumSubscriptionTrialUtil.tsx";
 import usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer.android.tsx";

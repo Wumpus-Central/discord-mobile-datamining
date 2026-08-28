@@ -24,12 +24,16 @@ const prototype = UserAffinitiesV2Store.prototype;
 prototype["initialize"] = function initialize(userAffinities) {
   const self = this;
   this.waitFor(closure_0);
+  userAffinities = undefined;
+  if (userAffinities != null) {
+    userAffinities = userAffinities.userAffinities;
+  }
   if (null != userAffinities) {
     obj.userAffinities = userAffinities.userAffinities;
     obj.lastFetched = userAffinities.lastFetched;
     const _Map = Map;
-    userAffinities = obj.userAffinities;
-    const found = userAffinities.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
+    const userAffinities1 = obj.userAffinities;
+    const found = userAffinities1.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
     map = new Map(found.map((otherUserId) => {
       const items = [otherUserId.otherUserId, otherUserId];
       return items;

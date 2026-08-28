@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesAutoScrollIndicator.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4185 from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4186 from "../../../reanimated/ReanimatedRexport.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -10,7 +10,7 @@ import { map } from "../../../../design/tokens/native/useToken.tsx";
 const require = arg1;
 function BouncingArrow(children) {
   let sharedValue;
-  sharedValue = sharedValue(4185).useSharedValue(0);
+  sharedValue = sharedValue(4186).useSharedValue(0);
   let items = [sharedValue];
   const effect = React.useEffect(() => {
     let obj = sharedValue(closure_1_2[3]);
@@ -26,7 +26,7 @@ function BouncingArrow(children) {
     const result = sharedValue.set(obj.withRepeat(obj2.withSequence(withTimingResult, sharedValue(closure_1_2[4]).withTiming(0, obj)), -1));
     return () => closure_1_0(closure_1_2[3]).cancelAnimation(closure_0);
   }, items);
-  let obj = sharedValue(4185);
+  let obj = sharedValue(4186);
   const fn = function l() {
     let obj = { transform: null };
     obj = { translateY: sharedValue.get() };
@@ -37,8 +37,8 @@ function BouncingArrow(children) {
   fn.__closure = { translateY: sharedValue };
   fn.__workletHash = 10126349088819;
   fn.__initData = closure_7;
-  const style = sharedValue(4185).useAnimatedStyle(fn);
-  return callback(_modDef4185.View, { style, children: children.children });
+  const style = sharedValue(4186).useAnimatedStyle(fn);
+  return callback(_modDef4186.View, { style, children: children.children });
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = { code: "function BountiesAutoScrollIndicatorTsx1(){const{translateY}=this.__closure;return{transform:[{translateY:translateY.get()}]};}" };
@@ -74,7 +74,7 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
     obj3[8] = function children() {
       return closure_0;
     };
-    let tmp5Result = tmp5(require("../../../../../_runtime/14609_CircularProgress.js").AnimatedCircularProgress, obj3);
+    let tmp5Result = tmp5(require("../../../../../_runtime/14593_CircularProgress.js").AnimatedCircularProgress, obj3);
   } else {
     const obj4 = { children: null };
     obj4[0] = tmp6;

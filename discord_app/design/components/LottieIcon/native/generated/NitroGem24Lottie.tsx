@@ -1,6 +1,6 @@
 // discord_app/design/components/LottieIcon/native/generated/NitroGem24Lottie.tsx
 import LottieIcon from "../LottieIcon.tsx";
-import registerAsset from "../../../../../../_runtime/13719_registerAsset.js";
+import registerAsset from "../../../../../../_runtime/13738_registerAsset.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 

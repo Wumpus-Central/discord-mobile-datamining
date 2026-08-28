@@ -2,9 +2,9 @@
 import nDefault from "../../../../../_runtime/00689_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
-import _modDef4185 from "../../../reanimated/ReanimatedRexport.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04892_LinearGradient.js";
-import _isNativeReflectConstructDefault from "../../../../../_runtime/05487__isNativeReflectConstruct.js";
+import _modDef4186 from "../../../reanimated/ReanimatedRexport.tsx";
+import LinearGradientDefault from "../../../../../_runtime/04905_LinearGradient.js";
+import _isNativeReflectConstructDefault from "../../../../../_runtime/05500__isNativeReflectConstruct.js";
 import useQuestDockAnimatedBorderRadiusDefault from "../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import CONNECTION_BANNER_HEIGHT from "YouBarConstants.tsx";
@@ -67,7 +67,7 @@ function YouBarAnimatedBackground(arg0) {
   fn.__initData = closure_10;
   const animatedStyle = require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(fn);
   const style = [{ position: "absolute" }, tmp.youRowFloating, { width: barWidth, height: YOU_BAR_HEIGHT, backgroundColor }, { borderTopRightRadius: 0, borderTopLeftRadius: 0 }, animatedStyle];
-  return callback(_modDef4185.View, { style });
+  return callback(_modDef4186.View, { style });
 }
 const YOU_BAR_HEIGHT = CONNECTION_BANNER_HEIGHT.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = CONNECTION_BANNER_HEIGHT.YOU_BAR_SPRING_CONFIG;

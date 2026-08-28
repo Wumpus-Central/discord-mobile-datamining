@@ -1,5 +1,5 @@
 // discord_app/modules/markup/MarkupLiteralImageRule.tsx
-import tDefault from "../../../_runtime/04160_t.js";
+import tDefault from "../../../_runtime/04161_t.js";
 import AST_KEY from "MarkupTypes.tsx";
 
 require = arg1;

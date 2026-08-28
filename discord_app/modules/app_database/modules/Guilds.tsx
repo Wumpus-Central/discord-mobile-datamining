@@ -113,7 +113,7 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
         let tmp13 = nextResult;
         let tmp14 = guild;
         let fromBackgroundSyncResult = tmp7Result.fromBackgroundSync(tmp2, tmp22);
-        let tmp7Result1 = tmp7(1987);
+        let tmp7Result1 = tmp7(1988);
         let tmp17 = store2;
         let result = tmp7Result1.toSerializedPartition(filterRoleDeletesResult);
         let putResult = self.put(tmp7Result.attachSerializedData(fromBackgroundSyncResult, result, store2.getSelfMember(tmp2.id)), arg1);
@@ -125,8 +125,8 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds, database) {
   const self = this;
   const items = [...unavailableGuilds.unavailableGuilds];
-  const obj = set(1956);
-  set(1956).guildsTransaction(database).deleteAllExcept(items);
+  const obj = set(1957);
+  set(1957).guildsTransaction(database).deleteAllExcept(items);
   for (const item10027 of tmp2) {
     let putOneResult = self.putOne(item10027, arg1);
     continue;
@@ -242,12 +242,12 @@ prototype["putOne"] = function putOne(members) {
   }
 };
 prototype["put"] = function put(arg0, database) {
-  const obj = set(1956);
-  set(1956).guildsTransaction(database).put(arg0);
+  const obj = set(1957);
+  set(1957).guildsTransaction(database).put(arg0);
 };
 prototype["delete"] = function delete(arg0, database) {
-  const obj = set(1956);
-  set(1956).guildsTransaction(database).delete(arg0);
+  const obj = set(1957);
+  set(1957).guildsTransaction(database).delete(arg0);
 };
 set = Object.create(Guilds.prototype);
 set.actions = {

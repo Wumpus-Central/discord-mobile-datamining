@@ -1,6 +1,6 @@
 // discord_app/utils/SubscriptionUtils.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import hooksDefault from "../../_runtime/04043_hooks.js";
+import hooksDefault from "../../_runtime/04044_hooks.js";
 import getPremiumPlanItem from "PremiumUtils.tsx";
 import prototype from "../modules/checkout/CheckoutError.tsx";
 import PauseDuration from "../../discord_common/js/shared/shared-constants/PauseDuration.tsx";
@@ -96,8 +96,8 @@ export const getOrFetchSubscriptionPlan = function getOrFetchSubscriptionPlan(su
     const tmp9 = null != table[subscriptionPlanId];
     const result = getPremiumPlanItem.castPremiumSubscriptionAsSkuId(tmp5.skuId);
     if (!closure_5.isFetchingForSKU(result)) {
-      const subscriptionPlansForSKU = tmp12(6056).fetchSubscriptionPlansForSKU(result, closure_1);
-      const tmp12Result = tmp12(6056);
+      const subscriptionPlansForSKU = tmp12(6069).fetchSubscriptionPlansForSKU(result, closure_1);
+      const tmp12Result = tmp12(6069);
     }
     const obj3 = getPremiumPlanItem;
   }

@@ -5,7 +5,7 @@ import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/exper
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import useGradientBottom from "../../client_themes/native/ClientThemesOverrides.tsx";
-import registerAssetDefault from "../../../../_runtime/12221_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/12240_registerAsset.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_5 from "../../lurker_mode/LurkingStore.tsx";
@@ -159,10 +159,10 @@ function SortAndViewOptions(channel) {
     t = { variant: "secondary", text: null, onPress: null, size: "sm", icon: null };
     t[1] = string3Result;
     t[2] = callback;
-    ArrowsUpDownIcon = ArrowsUpDownIcon(11638).ArrowsUpDownIcon;
+    ArrowsUpDownIcon = ArrowsUpDownIcon(11657).ArrowsUpDownIcon;
     tmp5Result = tmp5(ArrowsUpDownIcon, { size: "xxs" });
     t[4] = tmp5Result;
-    tmp5Result = tmp5(ArrowsUpDownIcon(4880).Button, t);
+    tmp5Result = tmp5(ArrowsUpDownIcon(4893).Button, t);
   } else {
     const intl = ArrowsUpDownIcon(1236).intl;
     const string = intl.string;
@@ -181,7 +181,7 @@ function SortAndViewOptions(channel) {
     obj[0] = tmp.optionsPill;
     obj = { size: "xs", style: null };
     obj[1] = tmp.sortOptionsIcon;
-    const items1 = [tmp5(ArrowsUpDownIcon(11638).ArrowsUpDownIcon, obj), , ];
+    const items1 = [tmp5(ArrowsUpDownIcon(11657).ArrowsUpDownIcon, obj), , ];
     obj1 = { variant: "text-sm/medium", color: "interactive-text-default", style: null, children: null };
     obj1[2] = tmp.sortOptionsText;
     const intl2 = ArrowsUpDownIcon(1236).intl;
@@ -193,11 +193,11 @@ function SortAndViewOptions(channel) {
       string2Result = string2(t2.xyYt8A);
     }
     obj1[3] = string2Result;
-    items1[1] = tmp5(ArrowsUpDownIcon(4441).Text, obj1);
-    items1[2] = tmp5(ArrowsUpDownIcon(8858).ChevronSmallDownIcon, { size: "xs" });
+    items1[1] = tmp5(ArrowsUpDownIcon(4442).Text, obj1);
+    items1[2] = tmp5(ArrowsUpDownIcon(8875).ChevronSmallDownIcon, { size: "xs" });
     obj[1] = items1;
     obj[6] = closure_16(View, obj);
-    return tmp5(ArrowsUpDownIcon(5020).PressableOpacity, obj);
+    return tmp5(ArrowsUpDownIcon(5033).PressableOpacity, obj);
   }
 }
 function TagFilter(channel) {
@@ -214,8 +214,8 @@ function TagFilter(channel) {
     const intl3 = tmp4(1236).intl;
     obj[1] = intl3.string(tmp4(1236).t["112vVE"]);
     obj[2] = handlePress;
-    obj[4] = tmp3(tmp4(10339).TagIcon, { size: "xxs" });
-    let tmp3Result = tmp3(tmp4(4880).Button, obj);
+    obj[4] = tmp3(tmp4(10357).TagIcon, { size: "xxs" });
+    let tmp3Result = tmp3(tmp4(4893).Button, obj);
   } else {
     obj = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.8, style: null, onPress: null, children: null };
     const intl = tmp4(1236).intl;
@@ -231,7 +231,7 @@ function TagFilter(channel) {
       const obj2 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
       obj2[2] = tmp.countText;
       obj2[3] = tagFilter.size;
-      obj1[1] = tmp3(tmp4(4441).Text, obj2);
+      obj1[1] = tmp3(tmp4(4442).Text, obj2);
       tmp3Result = tmp3(tmp6, obj1);
     }
     const items = [tmp3Result, , ];
@@ -239,11 +239,11 @@ function TagFilter(channel) {
     obj3[2] = tmp.sortOptionsText;
     const intl2 = tmp4(1236).intl;
     obj3[3] = intl2.string(tmp4(1236).t["112vVE"]);
-    items[1] = tmp3(tmp4(4441).Text, obj3);
-    items[2] = tmp3(tmp4(8858).ChevronSmallDownIcon, { size: "xs" });
+    items[1] = tmp3(tmp4(4442).Text, obj3);
+    items[2] = tmp3(tmp4(8875).ChevronSmallDownIcon, { size: "xs" });
     obj[1] = items;
     obj[5] = closure_16(View, obj);
-    tmp3Result = tmp3(tmp4(5020).PressableOpacity, obj);
+    tmp3Result = tmp3(tmp4(5033).PressableOpacity, obj);
     const tmp5 = closure_16;
   }
   return tmp3Result;

@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import QuestDockMode from "../../../quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx";
-import getDeliveredQuest from "../../../quests/native/QuestDock/QuestDockCreativeContext.tsx";
+import getQuestDockMenuAdCreative from "../../../quests/native/QuestDock/QuestDockCreativeContext.tsx";
 import contextDefault from "../../../quests/native/QuestDock/QuestDockVisibilityContext.tsx";
 import QuestDockWithGestureAnimation from "../../../quests/native/QuestDock/QuestDock.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -35,7 +35,7 @@ export const QuestBarPreview = function QuestBarPreview(quest) {
       const obj2 = { quest: null, children: null };
       obj2[0] = quest;
       obj2[1] = jsx(QuestDockWithGestureAnimation.QuestDockWithEntranceAnimation, {});
-      obj1[1] = jsx(getDeliveredQuest.QuestDockQuestProvider, { quest: null, children: null });
+      obj1[1] = jsx(getQuestDockMenuAdCreative.QuestDockQuestProvider, { quest: null, children: null });
       obj[0] = jsx(contextDefault.Provider, { value: null, children: null });
       obj[1] = jsx(QuestDockMode.QuestDockExternalCoordinationContextProvider, { children: null });
       obj[1] = <View>{null}</View>;

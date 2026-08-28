@@ -5,7 +5,7 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04892_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04905_LinearGradient.js";
 import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
 import GuildProfileBackground from "GuildProfileView.tsx";

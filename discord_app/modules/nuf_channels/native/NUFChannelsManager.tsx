@@ -93,8 +93,8 @@ class NUFChannelsManager extends tmp2 {
       const value = Storage.get(closure_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(4289).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(4289);
+        isNewUserResult = applyArgumentsResult(4290).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(4290);
       }
       return isNewUserResult;
     };
@@ -117,11 +117,11 @@ prototype["_initialize"] = function _initialize() {
   const value = Storage.get(c9);
   let isNewUserResult = !value;
   if (!value) {
-    let tmpResult = tmp(4289);
+    let tmpResult = tmp(4290);
     isNewUserResult = tmpResult.isNewUser(currentUser.getCurrentUser());
   }
   if (isNewUserResult) {
-    tmpResult = tmp(4300);
+    tmpResult = tmp(4301);
     const rootNavigationRef = tmpResult.getRootNavigationRef();
     if (rootNavigationRef != null) {
       const self = this;

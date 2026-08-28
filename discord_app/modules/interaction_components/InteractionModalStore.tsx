@@ -50,11 +50,11 @@ obj = {
     ({ data, preflight } = nonce);
     let startTimeout;
     const interactionType = data.interactionType;
-    if (nonce(1955).InteractionTypes.APPLICATION_COMMAND === interactionType) {
+    if (nonce(1956).InteractionTypes.APPLICATION_COMMAND === interactionType) {
       const messageId = nonce.messageId;
       const channelId = data.channelId;
       return false;
-    } else if (tmp(1955).InteractionTypes.MODAL_SUBMIT === interactionType) {
+    } else if (tmp(1956).InteractionTypes.MODAL_SUBMIT === interactionType) {
       let tmp7 = null == nonce;
       if (!tmp7) {
         tmp7 = IN_FLIGHT === obj.ERRORED;

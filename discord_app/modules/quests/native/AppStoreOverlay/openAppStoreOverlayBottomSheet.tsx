@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/AppStoreOverlay/openAppStoreOverlayBottomSheet.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
-import { asyncRequireImpl } from "../../../../../_runtime/02009_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../../_runtime/02010_asyncRequireImpl.js";
 
 ({ AnalyticEvents: c3, ComponentActions: c4 } = ME);
 let result = set.fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayBottomSheet.tsx");
@@ -9,7 +9,7 @@ let result = set.fileFinishedImporting("modules/quests/native/AppStoreOverlay/op
 export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(appId) {
   const _require = arg1;
   appId = appId.appId;
-  let obj = appId(4412);
+  let obj = appId(4413);
   obj = {
     metadata: appId,
     onOpen() {
@@ -29,5 +29,5 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
       });
     }
   };
-  obj.openLazy(asyncRequireImpl(11015, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
+  obj.openLazy(asyncRequireImpl(11033, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
 };

@@ -4,8 +4,8 @@ import getSystemLocale from "../../../../../../intl/index.native.tsx";
 import Text from "../../../../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import ButtonBadgeDefault from "../../../shared_components/IconActionButton.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/13507_registerAsset.js";
-import registerAssetDefault2 from "../../../../../../../_runtime/15600_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/13526_registerAsset.js";
+import registerAssetDefault2 from "../../../../../../../_runtime/15618_registerAsset.js";
 import closure_3 from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -65,7 +65,7 @@ function _getFriendInviteCode() {
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          let obj2 = code(4161);
+          let obj2 = code(4162);
           const intl = code(1236).intl;
           obj2.presentError(intl.string(code(1236).t.R0RpRX));
           c5 = 3;
@@ -167,10 +167,10 @@ function _handleShare() {
           return obj;
         } else {
           callback = arg1;
-          const obj5 = callback(9829);
+          const obj5 = callback(9847);
           const intl = callback(1236).intl;
           const obj2 = { link: null };
-          obj2[0] = callback2(7436)(callback);
+          obj2[0] = callback2(7450)(callback);
           obj5.handleOpenShareSheet(callback, null, intl.formatToPlainString(callback(1236).t.PJf9P9, obj2), constants.ADD_FRIENDS_WIDGET);
           c3 = 3;
           return { value: "HermesInternal", done: null };

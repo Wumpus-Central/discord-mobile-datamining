@@ -157,6 +157,9 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
 prototype["isFulfilled"] = function isFulfilled() {
   return this.fulfillmentStatus === set.EntitlementTenantFulfillmentStatus.FULFILLED;
 };
+prototype["isFulfillmentFailed"] = function isFulfillmentFailed() {
+  return this.fulfillmentStatus === set.EntitlementTenantFulfillmentStatus.FULFILLMENT_FAILED;
+};
 const result = require("set").fileFinishedImporting("records/EntitlementRecord.tsx");
 
 export default EntitlementRecord;

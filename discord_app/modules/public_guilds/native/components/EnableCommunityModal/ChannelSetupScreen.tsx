@@ -90,10 +90,10 @@ export default function ChannelSetupScreen() {
     obj[0] = intl.string(guild(publicUpdatesChannel[15]).t.Yr6nGx);
     obj[1] = callback();
     obj[2] = function onItemSelect(rulesChannelId) {
-      let obj = callback(9649);
+      let obj = callback(9667);
       obj = { rulesChannelId };
       obj.updateGuild(obj);
-      callback(4412).hideActionSheet();
+      callback(4413).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -112,10 +112,10 @@ export default function ChannelSetupScreen() {
     obj[0] = intl.string(guild(publicUpdatesChannel[15]).t.VqhxxN);
     obj[1] = callback();
     obj[2] = function onItemSelect(publicUpdatesChannelId) {
-      let obj = callback(9649);
+      let obj = callback(9667);
       obj = { publicUpdatesChannelId };
       obj.updateGuild(obj);
-      callback(4412).hideActionSheet();
+      callback(4413).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {

@@ -3,7 +3,7 @@ import set from "../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
-import tDefault from "../../../_runtime/04160_t.js";
+import tDefault from "../../../_runtime/04161_t.js";
 import getGameMediaRefURLDefault from "../games/getGameMediaRefURL.tsx";
 import textRegexpDefault from "MarkupTextRule.tsx";
 import getChannelDefault from "MarkupChannelMentionRule.tsx";

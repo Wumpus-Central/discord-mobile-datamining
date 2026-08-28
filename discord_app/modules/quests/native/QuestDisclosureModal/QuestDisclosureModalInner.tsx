@@ -37,24 +37,24 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   const setting = DropsOptedOut.useSetting();
   let obj = { icon: null, text: null };
   if (setting) {
-    obj[0] = tmp5(tmp2(9276).ServerIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(9294).ServerIcon, { size: "xs" });
     const intl4 = tmp2(1236).intl;
     obj[1] = intl4.string(tmp2(1236).t["2bL0wT"]);
     let items = [obj];
     let tmp6 = tmp5;
     items1 = items;
   } else {
-    obj[0] = tmp5(tmp2(9290).GlobeEarthIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(9308).GlobeEarthIcon, { size: "xs" });
     const intl = tmp2(1236).intl;
     obj[1] = intl.string(tmp2(1236).t.xQSdPv);
     items1 = [obj, , ];
     obj = { icon: null, text: null };
-    obj[0] = tmp5(tmp2(11312).UserIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(11331).UserIcon, { size: "xs" });
     const intl2 = tmp2(1236).intl;
     obj[1] = intl2.string(tmp2(1236).t.mYt7hQ);
     items1[1] = obj;
     obj = { icon: null, text: null };
-    obj[0] = tmp5(tmp2(9119).GameControllerIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(9137).GameControllerIcon, { size: "xs" });
     const intl3 = tmp2(1236).intl;
     obj[1] = intl3.string(tmp2(1236).t.XAsWxQ);
     items1[2] = obj;
@@ -86,14 +86,14 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
       obj[1] = items;
       return closure_1_7(closure_1_4, obj, arg1);
     });
-    isTargetedDisclosure = tmp6(tmp2(5553).Card, obj4);
+    isTargetedDisclosure = tmp6(tmp2(5566).Card, obj4);
   }
   items2[2] = isTargetedDisclosure;
   const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl5 = tmp2(1236).intl;
   const obj6 = { privacySettingsUrl: null };
   const tmp2Result = getContextualEntrypointHeading;
-  obj6[0] = items1(1995).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
+  obj6[0] = items1(1996).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
   obj5[2] = intl5.format(require("../../../../intl/index.native.tsx").t.tzq9Wa, obj6);
   items2[3] = tmp6(require("../../../../design/components/Text/native/Text.tsx").Text, obj5);
   const obj7 = { style: tmp.closeButton, children: null };

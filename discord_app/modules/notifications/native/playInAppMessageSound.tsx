@@ -17,8 +17,8 @@ export const playInAppMessageSound = function playInAppMessageSound(notification
           const _Date = Date;
           const timestamp = Date.now();
           if (timestamp - timestamp >= 1000) {
-            tmp8(9913).playSound(tmp3, 0.4);
-            const tmp8Result = tmp8(9913);
+            tmp8(9931).playSound(tmp3, 0.4);
+            const tmp8Result = tmp8(9931);
           }
         }
         tmp3 = message1;

@@ -163,8 +163,8 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceInclude
             num[Symbol.iterator]();
             const obj2 = callback2(11);
           }
-          callback(4639).unescapeChannelName(arr.slice(2, arr.length - num));
-          const obj = callback(4639);
+          callback(4640).unescapeChannelName(arr.slice(2, arr.length - num));
+          const obj = callback(4640);
         }
         const substr = arr.slice(1);
       }

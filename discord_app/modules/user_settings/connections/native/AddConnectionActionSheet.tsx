@@ -12,10 +12,10 @@ function AddApplicationIdentityTableRow(application) {
   let _require;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5908)(application));
-  const tmp2 = analyticsLocations(5908)(application);
-  analyticsLocations = analyticsLocations(5905)(analyticsLocations(5925).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(5905);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5921)(application));
+  const tmp2 = analyticsLocations(5921)(application);
+  analyticsLocations = analyticsLocations(5918)(analyticsLocations(5938).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(5918);
   let obj = Button;
   const iconSource = application.getIconSource(obj.getIconSize(require("../../../../design/void/native.tsx").IconSizes.LARGE));
   obj = {

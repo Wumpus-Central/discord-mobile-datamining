@@ -1,7 +1,7 @@
 // discord_app/modules/safety_hub/SafetyHubUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import hooksDefault from "../../../_runtime/04043_hooks.js";
+import hooksDefault from "../../../_runtime/04044_hooks.js";
 import urlMatchesFileExtension from "../messages/MediaFormatTesters.tsx";
 import ContentIdType from "SafetyHubModels.tsx";
 import closure_3 from "../../stores/AuthenticationStore.tsx";

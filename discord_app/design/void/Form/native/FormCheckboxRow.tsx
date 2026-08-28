@@ -1,7 +1,7 @@
 // discord_app/design/void/Form/native/FormCheckboxRow.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import useCheckboxA11yNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import _modDef5544 from "FormRow.tsx";
+import _modDef5557 from "FormRow.tsx";
 import FormCheckboxDefault from "FormCheckbox.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
@@ -24,5 +24,5 @@ export default function FormCheckboxRow(selected) {
   obj.accessibilityState = accessibilityState;
   obj.trailing = jsx(FormCheckboxDefault, { selected });
   obj.trailingWrapperStyle = tmp2.checkboxWrapperStyle;
-  return jsx(_modDef5544, {});
+  return jsx(_modDef5557, {});
 };

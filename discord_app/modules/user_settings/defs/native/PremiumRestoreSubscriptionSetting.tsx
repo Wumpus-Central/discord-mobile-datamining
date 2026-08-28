@@ -2,7 +2,7 @@
 import set from "../../../../utils/PlatformUtils.tsx";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import _modDef4810 from "../../../../actions/native/AlertActionCreators.tsx";
+import _modDef4823 from "../../../../actions/native/AlertActionCreators.tsx";
 import applyAppleReceiptDefault from "../../../../actions/native/BillingActionCreators.tsx";
 import closure_3 from "../../../../stores/UserStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -55,7 +55,7 @@ createToggle = {
         });
       }
     };
-    _modDef4810.openLazy(obj);
+    _modDef4823.openLazy(obj);
   },
   withArrow: true,
   usePredicate: function useHasPremiumRestoreSubscriptionSetting() {

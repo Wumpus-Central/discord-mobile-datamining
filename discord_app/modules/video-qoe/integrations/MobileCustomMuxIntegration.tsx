@@ -1,7 +1,7 @@
 // discord_app/modules/video-qoe/integrations/MobileCustomMuxIntegration.tsx
 import set from "../../../../_runtime/00002_set.js";
 import log from "../../../../discord_common/js/packages/logger/Logger.tsx";
-import UDefault from "../../../../_runtime/14691_U.js";
+import UDefault from "../../../../_runtime/14674_U.js";
 
 const logger = new log.Logger("MobileCustomMuxIntegration");
 let c4 = "1.0.0";

@@ -2,8 +2,8 @@
 import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
-import _modDef4676 from "../../../actions/ModalActionCreators.tsx";
+import asyncRequireImpl from "../../../../_runtime/02010_asyncRequireImpl.js";
+import _modDef4689 from "../../../actions/ModalActionCreators.tsx";
 import setDefault from "../../../actions/AlertActionCreators.tsx";
 import saveProfileAndAccountRequest from "../../../actions/UserSettingsAccountActionCreators.tsx";
 import _startContactSyncForDiscoverability from "../../nuf/native/NUFActionCreators.tsx";
@@ -28,7 +28,7 @@ export const handlePressNext = function handlePressNext(pendingImage, first, fn)
   if (null != fn) {
     fn();
   } else {
-    obj = _modDef4676;
+    obj = _modDef4689;
     obj.popWithKey(ADD_AVATAR_MODAL_KEY);
     _startContactSyncForDiscoverability.nextOnboardingStep({ skip: false });
     const obj2 = _startContactSyncForDiscoverability;
@@ -64,5 +64,5 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   setDefault.show(obj);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  _modDef4676.pushLazy(asyncRequireImpl(16926, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  _modDef4689.pushLazy(asyncRequireImpl(16944, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

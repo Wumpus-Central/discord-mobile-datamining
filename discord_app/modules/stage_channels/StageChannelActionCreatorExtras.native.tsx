@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/StageChannelActionCreatorExtras.native.tsx
 import set from "../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02010_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef4676 from "../../actions/ModalActionCreators.tsx";
+import _modDef4689 from "../../actions/ModalActionCreators.tsx";
 import useIsStageVoicePanelEnabled from "StageVoicePanelExperiment.tsx";
 import setIsOnStartStageScreen2 from "useIsOnStartStageScreenStore.tsx";
 import useStageBlockedUsersCount from "useStageBlockedUsersCount.tsx";
@@ -16,7 +16,7 @@ const result = set.fileFinishedImporting("modules/stage_channels/StageChannelAct
 export const openStageChannelSettings = function openStageChannelSettings(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl(8599, dependencyMap.paths), closure_5, obj);
+  obj.openLazy(asyncRequireImpl(8614, dependencyMap.paths), closure_5, obj);
 };
 export function openEndGuildEventConfirmationModal() {
 
@@ -24,36 +24,36 @@ export function openEndGuildEventConfirmationModal() {
 export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(channelId) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channelId };
-  obj.openLazy(asyncRequireImpl(8663, dependencyMap.paths), closure_4, obj);
+  obj.openLazy(asyncRequireImpl(8679, dependencyMap.paths), closure_4, obj);
 };
 export const openStageBlockedUsersSheet = function openStageBlockedUsersSheet(channel, onAccept) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel, onAccept };
-  obj.openLazy(asyncRequireImpl(8670, dependencyMap.paths), closure_6, obj);
+  obj.openLazy(asyncRequireImpl(8686, dependencyMap.paths), closure_6, obj);
 };
 export const openStageSettingsSheet = function openStageSettingsSheet(closure_0, closure_1) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channelId: closure_0, onOpenRTCDebugOverlay: closure_1 };
-  obj.openLazy(asyncRequireImpl(8673, dependencyMap.paths), closure_7, obj);
+  obj.openLazy(asyncRequireImpl(8689, dependencyMap.paths), closure_7, obj);
 };
 export const openEndStageModal = function openEndStageModal(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl(12703, dependencyMap.paths), closure_8, obj);
+  obj.openLazy(asyncRequireImpl(12722, dependencyMap.paths), closure_8, obj);
 };
 export const openStageChannel = function openStageChannel(closure_0) {
   if (closure_0.isGuildStageVoice()) {
     let obj = useIsStageVoicePanelEnabled;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
-      let tmpResult = tmp(4680);
+      let tmpResult = tmp(4693);
       tmpResult.openGuildVoiceModal(closure_0);
     } else {
       obj = { channel: null };
       obj[0] = closure_0;
-      const obj2 = _modDef4676;
-      tmpResult = tmp(4680);
-      obj2.pushLazy(tmp(2009)(9447, tmp2.paths), obj, tmpResult.getVoiceChannelKey(closure_0.id));
-      const tmp4 = tmp(2009)(9447, tmp2.paths);
+      const obj2 = _modDef4689;
+      tmpResult = tmp(4693);
+      obj2.pushLazy(tmp(2010)(9465, tmp2.paths), obj, tmpResult.getVoiceChannelKey(closure_0.id));
+      const tmp4 = tmp(2010)(9465, tmp2.paths);
     }
     tmp2 = dependencyMap;
   }
@@ -77,15 +77,15 @@ export const navigateToStage = function navigateToStage(id) {
   if (id.isGuildStageVoice()) {
     let obj = useIsStageVoicePanelEnabled;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
-      let tmp3Result = tmp3(4680);
+      let tmp3Result = tmp3(4693);
       tmp3Result.openGuildVoiceModal(id);
     } else {
       obj = { channel: null };
       obj[0] = id;
-      const obj2 = _modDef4676;
-      tmp3Result = tmp3(4680);
-      obj2.pushLazy(tmp3(2009)(9447, tmp4.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
-      const tmp6 = tmp3(2009)(9447, tmp4.paths);
+      const obj2 = _modDef4689;
+      tmp3Result = tmp3(4693);
+      obj2.pushLazy(tmp3(2010)(9465, tmp4.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
+      const tmp6 = tmp3(2010)(9465, tmp4.paths);
     }
     tmp4 = dependencyMap;
   }

@@ -70,13 +70,13 @@ function ChannelPermissionSettingsBasicView(channel) {
               closure_0 = tmp2;
               closure_0 = undefined;
               const accessPermissions = closure_1_0.accessPermissions;
-              const result = v0(9628).isPrivateGuildChannel(closure_1_0);
-              const obj9 = v0(9628);
+              const result = v0(9646).isPrivateGuildChannel(closure_1_0);
+              const obj9 = v0(9646);
               const tmp22 = v0;
-              closure_0 = v0(9628).flipEveryonePermission(closure_1_0, accessPermissions, result);
+              closure_0 = v0(9646).flipEveryonePermission(closure_1_0, accessPermissions, result);
               const currentUser = closure_1_16.getCurrentUser();
               let tmp7 = closure_1_9;
-              const obj10 = v0(9628);
+              const obj10 = v0(9646);
               if (!closure_1_9) {
                 tmp7 = null == currentUser;
               }
@@ -87,7 +87,7 @@ function ChannelPermissionSettingsBasicView(channel) {
                 v0 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = tmp22(9628).grantUserChannelAccess(closure_1_0, accessPermissions);
+                obj1[0] = tmp22(9646).grantUserChannelAccess(closure_1_0, accessPermissions);
                 return obj1;
               }
               canResult = closure_1_14.can(closure_1_19.ADMINISTRATOR, closure_1_4);
@@ -118,7 +118,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           v0 = 2;
           dependencyMap = 1;
           const obj3 = { value: null, done: false };
-          obj3[0] = closure_1_0(9629).savePermissionUpdates(closure_1_0.id, items);
+          obj3[0] = closure_1_0(9647).savePermissionUpdates(closure_1_0.id, items);
           return obj3;
         } catch (tmp16) {
           dependencyMap = tmp;
@@ -171,7 +171,7 @@ function ChannelPermissionSettingsBasicView(channel) {
               v0 = undefined;
               if (null != stringResult.guild_id) {
                 if (!callback) {
-                  obj1 = stringResult(9630);
+                  obj1 = stringResult(9648);
                   v0 = 1;
                   dependencyMap = 1;
                   obj1 = { value: null, done: false };
@@ -200,7 +200,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           } else {
             stringResult = string(t["47gQYL"]);
           }
-          let obj3 = stringResult(4639);
+          let obj3 = stringResult(4640);
           callback = obj3.computeChannelName(stringResult, closure_1_16, closure_1_15);
           let intl2 = stringResult(1236).intl;
           let onCancel = intl2.format;
@@ -216,7 +216,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           }
           v0 = onCancelResult;
           v0(!c1);
-          show = callback(4809).show;
+          show = callback(4822).show;
           const obj4 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, onCancel: null };
           obj4[0] = c0;
           obj4[1] = v0;
@@ -232,7 +232,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           obj4[6] = onCancel;
           show(obj4);
           dependencyMap = 3;
-          const tmp42 = callback(4809);
+          const tmp42 = callback(4822);
         } catch (tmp54) {
           dependencyMap = tmp;
           throw tmp54;

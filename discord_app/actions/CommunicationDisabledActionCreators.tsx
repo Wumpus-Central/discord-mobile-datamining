@@ -40,7 +40,7 @@ export default {
             } else {
               let toISOStringResult = null;
               if (null != closure_1_2) {
-                obj1 = v0(4043)();
+                obj1 = v0(4044)();
                 toISOStringResult = obj1.add(tmp21, "s").toISOString();
                 const addResult = obj1.add(tmp21, "s");
               }
@@ -55,7 +55,7 @@ export default {
               dependencyMap = 1;
               v0 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = v0(5409).setCommunicationDisabledUntil(obj1);
+              obj2[0] = v0(5422).setCommunicationDisabledUntil(obj1);
               return obj2;
             }
           } else if (arg0 === 1) {

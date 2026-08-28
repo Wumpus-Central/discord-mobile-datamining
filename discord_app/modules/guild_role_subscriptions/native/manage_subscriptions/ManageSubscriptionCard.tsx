@@ -5,7 +5,7 @@ import Button from "../../../../design/void/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
-import registerAssetDefault from "../../../../../_runtime/09602_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09620_registerAsset.js";
 import FormSeparatorDefault from "../components/FormSeparator.tsx";
 import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -141,9 +141,9 @@ function CardBody(isTrial) {
                 obj1[0] = intl.string(closure_1_0(1236).t.NL7DFi);
                 const intl2 = closure_1_0(1236).intl;
                 obj1[1] = intl2.string(closure_1_0(1236).t["NX+WJN"]);
-                closure_1_1(4810).show(obj1);
+                closure_1_1(4823).show(obj1);
                 v02 = 3;
-                const obj6 = closure_1_1(4810);
+                const obj6 = closure_1_1(4823);
               } else {
                 dependencyMap = 1;
                 v02(true);
@@ -155,7 +155,7 @@ function CardBody(isTrial) {
                   obj2[0] = v0();
                   return obj2;
                 } else {
-                  obj2 = closure_1_2(4790);
+                  obj2 = closure_1_2(4803);
                   v0 = 2;
                   v02 = 1;
                   const obj3 = { value: null, done: false };
@@ -232,11 +232,11 @@ function CardBody(isTrial) {
   ({ isCancelled, isPastDue, memberSince, nextRenewalDate, nextRenewalLabel, onCancelSubscription, subscriptionPrice } = isTrial);
   let tmp = callback3();
   dependencyMap = tmp;
-  let obj = subscription(8153);
+  let obj = subscription(8167);
   resubscribeSubscription = obj.useResubscribeSubscription(subscription.id);
   resubscribeSubscription = resubscribeSubscription.resubscribeSubscription;
   [tmp6, c5] = callback(analyticsLocations.useState(false), 2);
-  analyticsLocations = subscription(5905)().analyticsLocations;
+  analyticsLocations = subscription(5918)().analyticsLocations;
   obj = { style: tmp.cardContent, children: null };
   let tmp7Result = null;
   if (isPastDue) {
@@ -249,7 +249,7 @@ function CardBody(isTrial) {
     let obj3 = { variant: "text-sm/medium", color: "interactive-text-active", children: null };
     let intl = isTrial(1236).intl;
     obj3[2] = intl.string(isTrial(1236).t.eaqlau);
-    items[2] = callback2(isTrial(4441).Text, obj3);
+    items[2] = callback2(isTrial(4442).Text, obj3);
     obj1[1] = items;
     const items1 = [tmp7(tmp8, obj1), callback2(isTrial(1297).Spacer, { size: 12 })];
     obj[0] = items1;
@@ -257,30 +257,30 @@ function CardBody(isTrial) {
   }
   const items2 = [tmp7Result, , , , ];
   let obj4 = { title: null, icon: null, onPressIcon: null, children: null };
-  let tmp2Result = tmp2(14764);
+  let tmp2Result = tmp2(14749);
   let intl2 = isTrial(1236).intl;
   obj4[0] = intl2.string(isTrial(1236).t.dltUMH);
   tmp2Result = undefined;
   if (isTrial) {
-    tmp2Result = tmp2(12221);
+    tmp2Result = tmp2(12240);
   }
   obj4[1] = tmp2Result;
   let prop;
   if (isTrial) {
-    prop = tmp15(4161).presentGuildRoleSubscriptionTrialTierMonthCost;
+    prop = tmp15(4162).presentGuildRoleSubscriptionTrialTierMonthCost;
   }
   obj4[2] = prop;
   obj4[3] = subscriptionPrice;
   items2[1] = callback2(tmp2Result, obj4);
   items2[2] = callback2(isTrial(1297).Spacer, { size: 16 });
   const obj5 = { style: tmp.cardRow, children: null };
-  const items3 = [callback2(subscription(14764), { title: nextRenewalLabel, children: nextRenewalDate }), callback2(isTrial(1297).Spacer, { size: 8 }), ];
+  const items3 = [callback2(subscription(14749), { title: nextRenewalLabel, children: nextRenewalDate }), callback2(isTrial(1297).Spacer, { size: 8 }), ];
   let obj6 = { title: null, children: null };
   const tmp5 = callback(analyticsLocations.useState(false), 2);
   const intl3 = tmp15(1236).intl;
   obj6[0] = intl3.string(isTrial(1236).t.AOcwWB);
   obj6[1] = memberSince;
-  items3[2] = callback2(subscription(14764), obj6);
+  items3[2] = callback2(subscription(14749), obj6);
   obj5[1] = items3;
   items2[3] = closure_12(_handleResubscribe, obj5);
   const obj7 = { inset: true, titleViewStyle: tmp.manageSection, title: null, children: null };
@@ -294,7 +294,7 @@ function CardBody(isTrial) {
     children: null
   };
   const obj10 = { text: null, onPress: null };
-  const tmp2Result1 = subscription(14764);
+  const tmp2Result1 = subscription(14749);
   const intl5 = tmp15(1236).intl;
   obj10[0] = intl5.string(isTrial(1236).t["7spYft"]);
   obj10[1] = function handleUpdatePaymentMethod() {
@@ -314,15 +314,15 @@ function CardBody(isTrial) {
       }
     }
   };
-  const items4 = [callback2(subscription(14765), obj10), , ];
+  const items4 = [callback2(subscription(14750), obj10), , ];
   const obj11 = { text: null, onPress: null };
-  const tmp2Result2 = subscription(14765);
+  const tmp2Result2 = subscription(14750);
   const intl6 = tmp15(1236).intl;
   obj11[0] = intl6.string(isTrial(1236).t.FRbWR8);
   obj11[1] = function handleChangeTier() {
     isTrial(buttonDivider[30]).transitionTo(closure_1_8.CHANNEL(guildId, closure_1_10.ROLE_SUBSCRIPTIONS));
   };
-  items4[1] = callback2(subscription(14765), obj11);
+  items4[1] = callback2(subscription(14750), obj11);
   if (isCancelled) {
     const obj12 = { style: null, children: null };
     obj12[0] = tmp.resubscribeButtonContainer;
@@ -340,22 +340,22 @@ function CardBody(isTrial) {
       return applyArgumentsResult;
     };
     obj13[2] = tmp6;
-    obj12[1] = tmp13(tmp2(9059), obj13);
+    obj12[1] = tmp13(tmp2(9077), obj13);
     let tmp13Result = tmp13(tmp8, obj12);
-    const tmp2Result4 = tmp2(9059);
+    const tmp2Result4 = tmp2(9077);
   } else {
     const obj14 = { text: null, onPress: null };
     const intl7 = tmp15(1236).intl;
     obj14[0] = intl7.string(tmp15(1236).t.Dx0lF7);
     obj14[1] = onCancelSubscription;
-    tmp13Result = tmp13(tmp2(14765), obj14);
-    const tmp2Result5 = tmp2(14765);
+    tmp13Result = tmp13(tmp2(14750), obj14);
+    const tmp2Result5 = tmp2(14750);
   }
   items4[2] = tmp13Result;
   obj9[1] = items4;
-  obj8[1] = closure_12(isTrial(9111).GappedList, obj9);
+  obj8[1] = closure_12(isTrial(9129).GappedList, obj9);
   obj7[3] = callback2(_handleResubscribe, obj8);
-  items2[4] = callback2(isTrial(8295).FormSection, obj7);
+  items2[4] = callback2(isTrial(8309).FormSection, obj7);
   obj[1] = items2;
   return closure_12(_handleResubscribe, obj);
 }

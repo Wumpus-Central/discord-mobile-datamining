@@ -13,7 +13,7 @@ function getGuildThemeName() {
 const result = require("set").fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
 
 export default function useColorThemeBackground() {
-  const tmp = stateFromStores(4298)();
+  const tmp = stateFromStores(4299)();
   const _require = tmp;
   let items = [closure_4];
   stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => theme.theme);

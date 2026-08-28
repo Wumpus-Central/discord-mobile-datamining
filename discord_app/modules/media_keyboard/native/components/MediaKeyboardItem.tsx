@@ -6,7 +6,7 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import registerAssetDefault from "../../../../../_runtime/10308_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10326_registerAsset.js";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";

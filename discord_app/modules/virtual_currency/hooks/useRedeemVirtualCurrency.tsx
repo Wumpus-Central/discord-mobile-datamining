@@ -2,24 +2,22 @@
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../_runtime/00019_noop.js";
-import { OrderStatus } from "../../payments/PaymentConstants.tsx";
 
 const require = arg1;
 ({ useState: c5, useEffect: closure_6, useCallback: error } = noop);
 const result = require("set").fileFinishedImporting("modules/virtual_currency/hooks/useRedeemVirtualCurrency.tsx");
 
 export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order) {
-  [tmp2, closure_0] = callback(callback2(""), 2);
-  const tmp3 = callback(callback2([]), 2);
+  [tmp2, closure_0] = callback2(enabled(""), 2);
+  const tmp3 = callback2(enabled([]), 2);
   const entitlements = tmp3[0];
   dependencyMap = tmp3[1];
-  const tmp5 = callback(callback2(null), 2);
-  error = tmp5[0];
-  callback = tmp5[1];
-  const isSubmitting = callback(callback2(false), 2);
+  const tmp = callback2(enabled(""), 2);
+  [error, closure_3] = callback2(enabled(null), 2);
+  const isSubmitting = callback2(enabled(false), 2);
   callback2 = isSubmitting[1];
-  const tmp = callback(callback2(""), 2);
-  const enabled = entitlements(11269).useConfig({ location: "orb_checkout_modal" }).enabled;
+  const tmp5 = callback2(enabled(null), 2);
+  enabled = entitlements(11287).useConfig({ location: "orb_checkout_modal" }).enabled;
   order = undefined;
   if (order != null) {
     order = order.order;
@@ -31,428 +29,144 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   if (order != null) {
     onSignFailure = order.onSignFailure;
   }
-  closure_8 = onSignFailure;
-  closure_0 = undefined;
-  closure_0 = error((arg0, arg1, arg2) => {
+  let obj = entitlements(11287);
+  const orderSigning = require("../../payments/hooks/useOrderSigning.tsx").useOrderSigning({ order, errorSource: "orb_redeem_orders_api", onSignFailure });
+  const signOrder = orderSigning.signOrder;
+  const _reportError = orderSigning.reportError;
+  if (enabled) {
+    error = orderSigning.error;
+  }
+  _require = undefined;
+  _require = callback((arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
-    c13 = 0;
-    c14 = 0;
-    c11 = 0;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (c14 === 2) {
-        c14 = 3;
-        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
-      } else {
-        throwTypeErrorResult = arg1;
-        throwTypeErrorResult = arg0;
-        throwTypeErrorResult = tmp8;
-        throwTypeErrorResult = null;
-        throwTypeErrorResult = globalThis;
-        if (tmp9 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+      if (c8 === 2) {
+        c8 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          try {
-            c14 = 2;
-            if (0 === c13) {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c8 = 2;
+          if (0 === v02) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let length = tmp4;
+              c3 = tmp8;
+              c3 = undefined;
+              length = undefined;
+              closure_1_4(true);
+              obj1 = { loadId: null, errorExtra: null };
+              obj1[0] = closure_1;
+              let obj2 = { skuId: null, loadId: null };
+              obj2[0] = callback;
+              obj2[1] = closure_1;
+              obj1[1] = obj2;
+              v02 = 1;
+              c8 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = v0(obj1);
+              return obj3;
+            }
+          } else {
+            if (1 === tmp8) {
               if (arg0 === 1) {
-                c14 = 3;
+                c8 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
-                c14 = 3;
+                c8 = 3;
+                const obj4 = { value: null, done: true };
+                obj4[0] = arg1;
+                return obj4;
+              } else {
+                closure_3 = arg1;
+                if ("signed" === closure_3.type) {
+                  v0 = 2;
+                  obj2 = callback(6055);
+                  v02 = 4;
+                  c8 = 1;
+                  const obj5 = { value: null, done: false };
+                  obj5[0] = obj2.fetchOrderEntitlementsWithRetry(closure_3.order.id);
+                  return obj5;
+                } else {
+                  closure_1_4(false);
+                  c8 = 3;
+                }
+              }
+            } else if (2 !== tmp8) {
+              if (3 === tmp8) {
+                v0 = 1;
+                const obj6 = { skuId: null, loadId: null, orderId: null };
+                obj6[0] = callback;
+                obj6[1] = closure_1;
+                obj6[2] = c3.order.id;
+                v02(closure_5, obj6);
+              } else if (arg0 === 1) {
+                c8 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                v0 = 0;
+                closure_1_4(false);
+                c8 = 3;
                 obj = { value: null, done: true };
                 obj[0] = arg1;
                 return obj;
               } else {
-                closure_10 = tmp4;
-                closure_9 = tmp10;
-                throwTypeErrorResult = callback;
-                throwTypeErrorResult = dependencyMap;
-                closure_3 = undefined;
-                let items;
-                let callback2;
-                let iter3;
-                let next;
-                throwTypeErrorResult = closure_1_7;
-                if (null == closure_1_7) {
-                  throwTypeErrorResult = entitlements;
-                  throwTypeErrorResult = dependencyMap;
-                  throwTypeErrorResult = new.target;
-                  throwTypeErrorResult = new.target;
-                  throwTypeErrorResult = new entitlements(4129)("Order not created yet");
-                  throwTypeErrorResult = closure_1_4;
-                  throwTypeErrorResult = closure_1_4(throwTypeErrorResult);
-                  throwTypeErrorResult = closure_1_5;
-                  throwTypeErrorResult = closure_1_5(false);
-                  c14 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = undefined;
-                  return obj1;
+                length = arg1;
+                if (0 === length.length) {
+                  const orderProcessingPendingError = new callback(6055).OrderProcessingPendingError();
+                  throw orderProcessingPendingError;
                 } else {
-                  throwTypeErrorResult = closure_1_5;
-                  throwTypeErrorResult = closure_1_5(true);
-                  throwTypeErrorResult = closure_1_4;
-                  throwTypeErrorResult = closure_1_4(null);
-                  c11 = 1;
-                  throwTypeErrorResult = callback;
-                  throwTypeErrorResult = dependencyMap;
-                  let obj2 = { orderId: null, loadId: null };
-                  throwTypeErrorResult = closure_1_7;
-                  obj2[0] = closure_1_7.id;
-                  obj2[1] = throwTypeErrorResult;
-                  c13 = 2;
-                  c14 = 1;
-                  let obj3 = { value: null, done: false };
-                  obj3[0] = callback(6042).signOrder(obj2);
-                  return obj3;
+                  dependencyMap(length);
+                  if (dependencyMap != null) {
+                    tmp14(length);
+                  }
+                  v0 = 1;
                 }
               }
-            } else {
-              if (1 === tmp10) {
-                c11 = 0;
-                const constants = throwTypeErrorResult;
-                if (constants instanceof callback(6042).OrderSigningFailedWithConstraintsError) {
-                  throwTypeErrorResult = closure_10;
-                  if (closure_1_8 != null) {
-                    throwTypeErrorResult = closure_9;
-                    throwTypeErrorResult = closure_1_8;
-                    throwTypeErrorResult = throwTypeErrorResult(closure_1_8.order);
-                  }
-                  throwTypeErrorResult = closure_9;
-                  throwTypeErrorResult = closure_10;
-                  throwTypeErrorResult = closure_1_4;
-                  throwTypeErrorResult = constants;
-                  throwTypeErrorResult = closure_1_4(constants);
-                  throwTypeErrorResult = closure_1_5;
-                  throwTypeErrorResult = closure_1_5(false);
-                  c14 = 3;
-                  const obj4 = { value: null, done: true };
-                  obj4[0] = undefined;
-                  return obj4;
-                } else {
-                  if (constants instanceof entitlements(4129)) {
-                    throwTypeErrorResult = constants;
-                  } else {
-                    throwTypeErrorResult = constants;
-                    throwTypeErrorResult = new.target;
-                    throwTypeErrorResult = new.target;
-                    throwTypeErrorResult = new entitlements(4129)(constants);
-                  }
-                  throwTypeErrorResult = closure_9;
-                  throwTypeErrorResult = closure_10;
-                  order = throwTypeErrorResult;
-                  throwTypeErrorResult = callback;
-                  throwTypeErrorResult = dependencyMap;
-                  let obj6 = callback(4122);
-                  throwTypeErrorResult = constants;
-                  if (obj6.isExpectedHttpClientError(constants)) {
-                    throwTypeErrorResult = closure_9;
-                    throwTypeErrorResult = closure_10;
-                    throwTypeErrorResult = closure_1_4;
-                    throwTypeErrorResult = order;
-                    throwTypeErrorResult = closure_1_4(order);
-                    throwTypeErrorResult = closure_1_5;
-                    throwTypeErrorResult = closure_1_5(false);
-                    c14 = 3;
-                  } else {
-                    throwTypeErrorResult = closure_9;
-                    throwTypeErrorResult = closure_10;
-                    throwTypeErrorResult = callback;
-                    throwTypeErrorResult = dependencyMap;
-                    let obj7 = callback(4122);
-                    throwTypeErrorResult = constants;
-                    const _Error3 = Error;
-                    throwTypeErrorResult = closure_9;
-                    if (constants instanceof Error) {
-                      throwTypeErrorResult = constants;
-                    } else {
-                      throwTypeErrorResult = order;
-                    }
-                    throwTypeErrorResult = closure_10;
-                    const obj5 = { tags: null, extra: null };
-                    obj5[0] = { source: "orb_redeem_orders_api" };
-                    obj6 = { skuId: null, loadId: null, orderId: null };
-                    throwTypeErrorResult = callback;
-                    obj6[0] = callback;
-                    throwTypeErrorResult = entitlements;
-                    obj6[1] = entitlements;
-                    throwTypeErrorResult = closure_1_7;
-                    obj6[2] = closure_1_7.id;
-                    obj5[1] = obj6;
-                    throwTypeErrorResult = obj7.captureBillingException(throwTypeErrorResult, obj5);
-                  }
-                }
-              } else if (2 === tmp10) {
-                if (arg0 === 1) {
-                  c14 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c11 = 0;
-                  c14 = 3;
-                  obj7 = { value: null, done: true };
-                  obj7[0] = arg1;
-                  return obj7;
-                } else {
-                  throwTypeErrorResult = closure_9;
-                  throwTypeErrorResult = closure_10;
-                  closure_3 = arg1;
-                  throwTypeErrorResult = closure_3;
-                  throwTypeErrorResult = constants;
-                  if (closure_3.status !== constants.SIGNED) {
-                    if (null != closure_3.errors) {
-                      if (closure_3.errors.length > 0) {
-                        const _Error2 = Error;
-                        const errors = closure_3.errors;
-                        const _HermesInternal2 = HermesInternal;
-                        error = new Error("Order signing failed with errors: " + errors.join(", "));
-                        throw error;
-                      }
-                    }
-                    const _Error = Error;
-                    const _HermesInternal = HermesInternal;
-                    const error1 = new Error("Unexpected order status: " + closure_3.status);
-                    throw error1;
-                  } else {
-                    obj3 = callback(6042);
-                    c13 = 3;
-                    c14 = 1;
-                    const obj8 = { value: null, done: false };
-                    obj8[0] = obj3.fetchOrderEntitlements(closure_1_7.id);
-                    return obj8;
-                  }
-                }
-              } else {
-                if (3 === tmp10) {
-                  if (arg0 === 1) {
-                    c14 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c11 = 0;
-                    c14 = 3;
-                    const obj9 = { value: null, done: true };
-                    obj9[0] = arg1;
-                    return obj9;
-                  } else {
-                    throwTypeErrorResult = closure_9;
-                    items = arg1;
-                    callback2 = function _loop(arg0) {
-                      closure_0 = arg0;
-                      c2 = 0;
-                      c3 = 0;
-                      return (function* _loop(arg0) {
-                        if (c3 === 2) {
-                          c3 = 3;
-                          HermesBuiltin.throwTypeError();
-                        } else if (tmp3 === 3) {
-                          if (arg0 === 1) {
-                            throw arg1;
-                          } else if (arg0 === 2) {
-                            let obj = { value: null, done: true };
-                            obj[0] = arg1;
-                            return obj;
-                          } else {
-                            return { value: "HermesInternal", done: null };
-                          }
-                        } else {
-                          try {
-                            c3 = 2;
-                            if (0 === c2) {
-                              if (arg0 === 1) {
-                                c3 = 3;
-                                throw arg1;
-                              } else if (arg0 === 2) {
-                                c3 = 3;
-                                obj = { value: null, done: true };
-                                obj[0] = arg1;
-                                return obj;
-                              } else {
-                                closure_1 = tmp4;
-                                if (closure_1_4.length > 0) {
-                                  c3 = 3;
-                                  return { value: 1, done: true };
-                                } else {
-                                  const promise = new Promise(() => { ... });
-                                  c2 = 1;
-                                  c3 = 1;
-                                  obj1 = { value: null, done: false };
-                                  obj1[0] = promise;
-                                  return obj1;
-                                }
-                              }
-                            } else if (1 === tmp4) {
-                              if (arg0 === 1) {
-                                c3 = 3;
-                                throw arg1;
-                              } else if (arg0 === 2) {
-                                c3 = 3;
-                                const obj2 = { value: null, done: true };
-                                obj2[0] = arg1;
-                                return obj2;
-                              } else {
-                                obj1 = callback(table[6]);
-                                c2 = 2;
-                                c3 = 1;
-                                const obj3 = { value: null, done: false };
-                                obj3[0] = obj1.fetchOrderEntitlements(closure_1_7.id);
-                                return obj3;
-                              }
-                            } else if (arg0 === 1) {
-                              c3 = 3;
-                              throw arg1;
-                            } else if (arg0 === 2) {
-                              c3 = 3;
-                              obj = { value: null, done: true };
-                              obj[0] = arg1;
-                              return obj;
-                            } else {
-                              closure_4 = arg1;
-                              c3 = 3;
-                              return { value: "HermesInternal", done: null };
-                            }
-                          } catch (tmp17) {
-                            c3 = tmp;
-                            throw tmp17;
-                          }
-                        }
-                      })();
-                    };
-                    items = [250, 500, 1000, 1500, 2500, 4250];
-                    throwTypeErrorResult = items;
-                    closure_3 = items[Symbol.iterator]();
-                    if (closure_3 !== undefined) {
-                      throwTypeErrorResult = closure_9;
-                      c11 = 2;
-                      iter3 = tmp37;
-                      throwTypeErrorResult = callback2;
-                      throwTypeErrorResult = iter3;
-                      throwTypeErrorResult = callback2(iter3);
-                      const iter4 = throwTypeErrorResult[throwTypeErrorResult.iterator]();
-                      throwTypeErrorResult = iter4;
-                      throwTypeErrorResult = HermesBuiltin.ensureObject("iterator is not an object");
-                      next = iter4.next;
-                      callback2 = undefined;
-                    }
-                    if (0 !== items.length) {
-                      dependencyMap(items);
-                      closure_1_5(false);
-                      if (dependencyMap != null) {
-                        tmp53(items);
-                      }
-                      c11 = 0;
-                    }
-                  }
-                } else if (4 === tmp10) {
-                  c11 = 1;
-                  closure_3.return();
-                  throw throwTypeErrorResult;
-                } else {
-                  if (5 !== tmp10) {
-                    c11 = 2;
-                    const method = HermesBuiltin.getMethod("throw");
-                    if (method === undefined) {
-                      const method1 = HermesBuiltin.getMethod("return");
-                      if (method1 !== undefined) {
-                        HermesBuiltin.ensureObject("iterator.return() did not return an object");
-                      }
-                      HermesBuiltin.throwTypeError();
-                    } else {
-                      const iter = method(tmp12);
-                      HermesBuiltin.ensureObject("iterator.throw() did not return an object");
-                      if (iter.done) {
-                        iter3 = iter;
-                      } else {
-                        c13 = 5;
-                        c14 = 1;
-                        return iter;
-                      }
-                    }
-                    c11 = 1;
-                    if (iter3.value) {
-                      closure_3.return();
-                    }
-                    tmp12 = throwTypeErrorResult;
-                  }
-                  c11 = 3;
-                  if (arg0 === 1) {
-                    c14 = 3;
-                    throw arg1;
-                  } else {
-                    callback2 = arg1;
-                    if (arg0 === 2) {
-                      callback2 = arg1;
-                      c11 = 2;
-                      const method2 = HermesBuiltin.getMethod("return");
-                      if (method2 === undefined) {
-                        c11 = 1;
-                        closure_3.return();
-                        c11 = 0;
-                        c14 = 3;
-                        const obj10 = { value: null, done: true };
-                        obj10[0] = arg1;
-                        return obj10;
-                      } else {
-                        const iter2 = method2(callback2);
-                        HermesBuiltin.ensureObject("iterator.return() did not return an object");
-                        if (iter2.done) {
-                          c11 = 1;
-                          closure_3.return();
-                          c11 = 0;
-                          c14 = 3;
-                          obj = { value: null, done: true };
-                          obj[0] = iter2.value;
-                          return obj;
-                        } else {
-                          c13 = 5;
-                          c14 = 1;
-                          return iter2;
-                        }
-                      }
-                    } else {
-                      c11 = 2;
-                      const tmp23 = arg1;
-                    }
-                  }
-                }
-                iter3 = next(tmp23);
-                HermesBuiltin.ensureObject("iterator.next() did not return an object");
-                if (!iter3.done) {
-                  c13 = 5;
-                  c14 = 1;
-                  return iter3;
-                }
-              }
-              const orderProcessingPendingError = new callback(6042).OrderProcessingPendingError();
-              throw orderProcessingPendingError;
+              v0 = 0;
+              closure_1_4(false);
             }
-          } catch (throwTypeErrorResult) {
-            throwTypeErrorResult = c11;
-            if (tmp5 === c11) {
-              throwTypeErrorResult = tmp3;
-              c14 = tmp3;
-              throw throwTypeErrorResult;
-            } else if (tmp2 === throwTypeErrorResult) {
-              c13 = tmp2;
-            } else if (throwTypeErrorResult === throwTypeErrorResult) {
-              c13 = tmp7;
-            } else {
-              c13 = tmp6;
-            }
+            v0 = 0;
+            closure_1_4(false);
+            throw closure_5;
+          }
+        } catch (tmp53) {
+          closure_5 = tmp53;
+          if (tmp5 === v0) {
+            c8 = tmp3;
+            throw tmp53;
+          } else if (tmp2 === tmp55) {
+            v02 = tmp;
+          } else {
+            v02 = tmp3;
           }
         }
       }
     })();
   });
-  let items = [order, onSignFailure];
-  const tmp10 = order(function(arg0, arg1, arg2) {
+  const items = [signOrder, _reportError];
+  const tmp11 = _reportError(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -462,10 +176,10 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
     }
     return applyArgumentsResult;
   }, items);
-  closure_9 = tmp10;
-  const tmp11 = order((skuId, loadId) => {
+  closure_9 = tmp11;
+  const tmp12 = _reportError((skuId, loadId) => {
     const callback = arg2;
-    let obj = callback(10757);
+    let obj = callback(10775);
     obj = {
       skuId,
       loadId,
@@ -475,7 +189,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
       },
       onRedeemSucceed(arg0) {
         closure_1_2(arg0);
-        closure_1_5(false);
+        closure_1_4(false);
         if (callback != null) {
           callback(arg0);
         }
@@ -487,17 +201,17 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
     };
     return obj.redeemVirtualCurrencyForSKU(obj);
   }, []);
-  closure_10 = tmp11;
-  const items1 = [enabled, tmp10, tmp11];
+  closure_10 = tmp12;
+  const items1 = [enabled, tmp11, tmp12];
   const items2 = [entitlements, error];
-  const redeemVirtualCurrency = order((arg0, arg1, arg2) => {
+  const redeemVirtualCurrency = _reportError((arg0, arg1, arg2) => {
     if (enabled) {
       callback2(arg0, arg1, arg2);
     } else {
       callback3(arg0, arg1, arg2);
     }
   }, items1);
-  enabled(() => {
+  signOrder(() => {
     if (null == error) {
       if (null != entitlements) {
         if (arr.length > 0) {

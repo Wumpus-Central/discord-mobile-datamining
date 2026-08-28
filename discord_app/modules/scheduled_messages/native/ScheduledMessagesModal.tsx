@@ -4,9 +4,9 @@ import keys from "../../../ConstantsIOS.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
-import _mod4185 from "../../reanimated/ReanimatedRexport.tsx";
+import _mod4186 from "../../reanimated/ReanimatedRexport.tsx";
 import HeaderBackImage from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import Background from "../../../../_runtime/05454_Background.js";
+import Background from "../../../../_runtime/05467_Background.js";
 import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import usePremiumUpsellConfig from "../../../utils/native/PremiumUpsellUtils.tsx";
@@ -45,7 +45,7 @@ function ScheduledMessagesPage(handleScroll) {
   const stateFromStores1 = obj2.useStateFromStores(items1, () => store.loading);
   let obj3 = _require(stateFromStores2[21]);
   const items2 = [closure_6];
-  stateFromStores2 = obj3.useStateFromStores(items2, () => store.getMessagesPendingDeletion());
+  stateFromStores2 = obj3.useStateFromStores(items2, () => store.getMessagesPendingRemoval());
   const items3 = [stateFromStores];
   const memo = React.useMemo(() => {
     const values = Object.values(stateFromStores);
@@ -58,7 +58,7 @@ function ScheduledMessagesPage(handleScroll) {
   const items4 = [stateFromStores2];
   callback = React.useCallback((item) => {
     item = item.item;
-    const obj = { scheduledMessage: item, isPendingDeletion: stateFromStores2.has(item.scheduledMessageId) };
+    const obj = { scheduledMessage: item, isPendingRemoval: stateFromStores2.has(item.scheduledMessageId) };
     return closure_1_10(stateFromStores(stateFromStores2[22]), obj);
   }, items4);
   const tmp2 = callback(React.useState(false), 2);
@@ -161,7 +161,7 @@ export default function ScheduledMessagesModal() {
   const intl = getSystemLocale.intl;
   const stringResult = intl.string(getSystemLocale.t.SZVs3K);
   require = stringResult;
-  let obj = _mod4185;
+  let obj = _mod4186;
   const sharedValue = obj.useSharedValue(0);
   items = [sharedValue];
   const callback = React.useCallback((nativeEvent) => {
@@ -178,7 +178,7 @@ export default function ScheduledMessagesModal() {
   fn.__workletHash = 2142182513871;
   fn.__initData = closure_15;
   obj = { style: tmp.modal, children: null };
-  const animatedStyle = _mod4185.useAnimatedStyle(fn);
+  const animatedStyle = _mod4186.useAnimatedStyle(fn);
   obj = {
     title: stringResult,
     headerTitle() {
@@ -190,7 +190,7 @@ export default function ScheduledMessagesModal() {
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null
   };
-  const obj2 = _mod4185;
+  const obj2 = _mod4186;
   const tmp10 = View;
   const tmp4 = require;
   const tmp9 = closure_11;
@@ -200,11 +200,11 @@ export default function ScheduledMessagesModal() {
   }
   obj[3] = num + sharedValue(712).space.PX_8;
   obj5 = set;
-  obj[4] = HeaderBackImage.getHeaderCloseButton(sharedValue(4676).pop);
+  obj[4] = HeaderBackImage.getHeaderCloseButton(sharedValue(4689).pop);
   ({ headerLeftContainer: obj4[5], headerRightContainer: obj4[6] } = tmp);
   const items1 = [closure_10(Background.Header, obj), , ];
   const items2 = [tmp.headerBorder, animatedStyle];
-  items1[1] = closure_10(sharedValue(4185).View, { style: items2 });
+  items1[1] = closure_10(sharedValue(4186).View, { style: items2 });
   items1[2] = closure_10(ScheduledMessagesPage, { handleScroll: callback });
   obj[1] = items1;
   return tmp9(tmp10, obj);

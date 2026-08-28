@@ -1,7 +1,7 @@
 // discord_app/modules/guild_themes/native/GuildThemePreviewArt.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/04892_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04905_LinearGradient.js";
 import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay.tsx";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";

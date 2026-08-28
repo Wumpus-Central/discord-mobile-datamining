@@ -103,6 +103,7 @@ import getVoiceStatesForGuild from "../user_profile/notes/NoteStore.tsx";
 import getVoiceStatesForGuild from "../user_settings/LocaleStore.tsx";
 import getVoiceStatesForGuild from "../user_settings/ThemeStore.tsx";
 import getVoiceStatesForGuild from "../user_settings/UserSettingsProtoStore.tsx";
+import getVoiceStatesForGuild from "../user_settings/notifications/EmailSettingsStore.tsx";
 import getVoiceStatesForGuild from "../../stores/ActivityTrackingStore.tsx";
 import getVoiceStatesForGuild from "../../stores/AnalyticsTrackingStore.tsx";
 import getVoiceStatesForGuild from "../../stores/AuthenticationStore.tsx";

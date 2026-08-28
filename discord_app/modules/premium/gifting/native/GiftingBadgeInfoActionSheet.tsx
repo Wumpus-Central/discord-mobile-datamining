@@ -37,7 +37,7 @@ export default function GiftingBadgeInfoActionSheet() {
   const _require = tmp;
   let obj = initialize;
   let items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(lib(8489).BadgeId.GIFTING));
+  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(lib(8503).BadgeId.GIFTING));
   obj1 = initialize;
   const items1 = [closure_5];
   importDefault = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);

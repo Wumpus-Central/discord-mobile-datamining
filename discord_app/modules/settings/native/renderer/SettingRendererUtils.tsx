@@ -2,38 +2,40 @@
 import set2 from "../../../../../_runtime/00002_set.js";
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 import ME from "../../../../Constants.tsx";
+import MobileUserSettings2 from "../../../user_settings/core/native/SettingsConstants.tsx";
 import map2 from "SettingHookHarness.tsx";
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "SettingRendererConstants.tsx";
 
 ({ ListItemType: c3, NodeType: c4, SUPPORTED_SEARCH_RESULT_NO_PARENT_RENDERER_TYPES: c5 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
 const AnalyticsPages = ME.AnalyticsPages;
+const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
 let result = set2.fileFinishedImporting("modules/settings/native/renderer/SettingRendererUtils.tsx");
 
 export const onRouteSettingOnPress = function onRouteSettingOnPress(arg0) {
   ({ navigation: require, screen: importDefault, preNavigationAction } = arg0);
   function goToScreen() {
-    let obj = closure_1_0(closure_1_2[4]);
+    let obj = closure_1_0(closure_1_2[5]);
     if (obj.getKeyboardIsOpen()) {
-      let tmpResult = tmp(tmp2[5]);
+      let tmpResult = tmp(tmp2[6]);
       if (tmpResult.isIOS()) {
-        tmpResult = tmp(tmp2[6]);
+        tmpResult = tmp(tmp2[7]);
         let result = tmpResult.dismissGlobalKeyboard();
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => {
-          let obj = closure_1_1(closure_1_2[2]);
+          let obj = closure_1_1(closure_1_2[3]);
           obj.setSection(closure_1.route);
           obj = { destinationPane: closure_1.route, source: obj };
           obj = { page: closure_1_6.USER_SETTINGS };
-          const result = closure_1_0(closure_1_2[3]).trackUserSettingsPaneViewed(obj);
+          const result = closure_1_0(closure_1_2[4]).trackUserSettingsPaneViewed(obj);
           navigation.navigate(closure_1.route);
         }, 100);
       }
     }
-    closure_1_1(closure_1_2[2]).setSection(closure_1.route);
-    const obj3 = closure_1_1(closure_1_2[2]);
+    closure_1_1(closure_1_2[3]).setSection(closure_1.route);
+    const obj3 = closure_1_1(closure_1_2[3]);
     obj = { destinationPane: closure_1.route, source: obj };
     obj = { page: closure_1_6.USER_SETTINGS };
-    const result1 = closure_1_0(closure_1_2[3]).trackUserSettingsPaneViewed(obj);
+    const result1 = closure_1_0(closure_1_2[4]).trackUserSettingsPaneViewed(obj);
     navigation.navigate(closure_1.route);
   }
   let preNavigationActionResult;
@@ -51,21 +53,21 @@ export const getSettingTitle = function getSettingTitle(closure_0) {
   return cachedSettingTitle;
 };
 export const getSettingSearchableTitles = function getSettingSearchableTitles() {
-  const entries = Object.entries(items(14201).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14171).SETTING_RENDERER_CONFIG);
   items = [];
   const item = entries.forEach((arg0) => {
     [tmp, tmp2] = arg0;
     if (!tmp2.unsearchable) {
-      const cachedSettingTitle = items(closure_1_2[7]).getCachedSettingTitle(tmp);
+      const cachedSettingTitle = items(closure_1_2[8]).getCachedSettingTitle(tmp);
       if (null != cachedSettingTitle) {
         items = [tmp, ];
         const items1 = [cachedSettingTitle];
-        HermesBuiltin.arraySpread(tmp3(tmp4[7]).getCachedSettingSearchTerms(tmp), 1);
+        HermesBuiltin.arraySpread(tmp3(tmp4[8]).getCachedSettingSearchTerms(tmp), 1);
         items[1] = items1;
         items.push(items);
-        const tmp3Result = tmp3(tmp4[7]);
+        const tmp3Result = tmp3(tmp4[8]);
       }
-      const obj = items(closure_1_2[7]);
+      const obj = items(closure_1_2[8]);
       tmp3 = items;
       tmp4 = closure_1_2;
     }
@@ -75,7 +77,7 @@ export const getSettingSearchableTitles = function getSettingSearchableTitles() 
 export const getSettingScreens = function getSettingScreens() {
   let items = [];
   const set = new Set();
-  const entries = Object.entries(items(14201).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14171).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((arg0) => {
     [tmp, tmp2] = arg0;
     if (tmp2.type === closure_1_4.ROUTE) {
@@ -89,20 +91,36 @@ export const getSettingScreens = function getSettingScreens() {
   });
   return items;
 };
+export const getDesignSystemScreens = function getDesignSystemScreens() {
+  let items = [];
+  const entries = Object.entries(items(14171).SETTING_RENDERER_CONFIG);
+  const item = entries.forEach((arg0) => {
+    [tmp, tmp2] = arg0;
+    let tmp3 = tmp2.type === closure_1_4.ROUTE;
+    if (tmp3) {
+      tmp3 = tmp2.parent === closure_1_7.DESIGN_SYSTEMS;
+    }
+    if (tmp3) {
+      items = [tmp, tmp2.screen];
+      items.push(items);
+    }
+  });
+  return items;
+};
 export const toSettingListItems = function toSettingListItems(node, field) {
   closure_0 = field;
   const items = [];
   const sections = node.sections;
   let item = sections.forEach((settings) => {
     settings = settings.settings;
-    const found = settings.filter((arg0) => !closure_1_1(closure_1_2[10]).isBlocked(arg0, found));
+    const found = settings.filter((arg0) => !closure_1_1(closure_1_2[11]).isBlocked(arg0, found));
     if (0 !== found.length) {
       let obj = { type: null, label: null };
       obj[0] = closure_1_3.SECTION_HEADER;
       obj[1] = settings.label;
       items.push(obj);
       const item = found.forEach((setting) => {
-        closure_1_1.push({ type: closure_2_3.SECTION_ROW, setting, settingData: callback(closure_2_2[9]).SETTING_RENDERER_CONFIG[setting], start: 0 === arg1, end: arg1 === found.length - 1 });
+        closure_1_1.push({ type: closure_2_3.SECTION_ROW, setting, settingData: callback(closure_2_2[10]).SETTING_RENDERER_CONFIG[setting], start: 0 === arg1, end: arg1 === found.length - 1 });
       });
       if (null != settings.subLabel) {
         obj = { type: null, label: null };
@@ -119,16 +137,16 @@ export const toSettingListItems = function toSettingListItems(node, field) {
 export const getSettingListSearchResultItems = function getSettingListSearchResultItems(arr) {
   const items = [];
   const item = arr.forEach((setting) => {
-    const tmp2 = items(items1[9]).SETTING_RENDERER_CONFIG[setting];
+    const tmp2 = items(items1[10]).SETTING_RENDERER_CONFIG[setting];
     if (null != tmp2.parent) {
-      const highestLevelAncestor = sortByResult(tmp[10]).getHighestLevelAncestor(setting);
-      const obj2 = sortByResult(tmp[10]);
+      const highestLevelAncestor = sortByResult(tmp[11]).getHighestLevelAncestor(setting);
+      const obj2 = sortByResult(tmp[11]);
       let obj = { category: null, setting: null, data: null };
       obj[0] = highestLevelAncestor;
       obj[1] = setting;
-      obj[2] = sortByResult(tmp[10]).getNearestRouteAncestorDataOrSelf(setting);
+      obj[2] = sortByResult(tmp[11]).getNearestRouteAncestorDataOrSelf(setting);
       items.push(obj);
-      const obj3 = sortByResult(tmp[10]);
+      const obj3 = sortByResult(tmp[11]);
     } else if (closure_1_5.has(tmp2.type)) {
       obj = { category: null, setting: null, data: null };
       obj[0] = setting;
@@ -137,26 +155,26 @@ export const getSettingListSearchResultItems = function getSettingListSearchResu
       items.push(obj);
     }
   });
-  const sortByResult = items(items1[11]).sortBy(items, (category) => category.category);
+  const sortByResult = items(items1[12]).sortBy(items, (category) => category.category);
   importDefault = sortByResult;
   items1 = [];
   const set = new Set();
   const item1 = sortByResult.forEach((data) => {
     ({ category, setting } = data);
-    let obj = items(items1[7]);
+    let obj = items(items1[8]);
     const cachedSettingTitle = obj.getCachedSettingTitle(setting);
-    sortByResult(items1[8])(null != cachedSettingTitle, "Setting " + setting + " is missing a title.");
+    sortByResult(items1[9])(null != cachedSettingTitle, "Setting " + setting + " is missing a title.");
     const tmp = items;
     const tmp2 = items1;
-    const tmp4 = sortByResult(items1[8]);
+    const tmp4 = sortByResult(items1[9]);
     const tmp5 = null != cachedSettingTitle;
-    const breadcrumbs = sortByResult(items1[10]).getBreadcrumbs(setting);
+    const breadcrumbs = sortByResult(items1[11]).getBreadcrumbs(setting);
     const hasItem = set.has(category);
     set.add(category);
     obj = { type: set.SETTING_SEARCH_RESULT, settingData: data.data, title: cachedSettingTitle, IconComponent: null, breadcrumbs: null, setting: null, index: null, total: null };
     let tmp11;
     if (!hasItem) {
-      const tmp12 = tmp(tmp2[9]).SETTING_RENDERER_CONFIG[category];
+      const tmp12 = tmp(tmp2[10]).SETTING_RENDERER_CONFIG[category];
       const type = tmp12.type;
       let IconComponent = null;
       if (closure_1_4.RADIO !== type) {
@@ -199,7 +217,7 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
     constants = 0;
     let item = settings.forEach((arg0) => {
       ({ setting, score } = arg0);
-      const tmp2 = items(map1[9]).SETTING_RENDERER_CONFIG[setting];
+      const tmp2 = items(map1[10]).SETTING_RENDERER_CONFIG[setting];
       let hasItem = null != tmp2.parent;
       if (!hasItem) {
         hasItem = closure_1_5.has(tmp2.type);
@@ -207,7 +225,7 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
       if (hasItem) {
         closure_3 = closure_3 + 1;
       }
-      const highestLevelAncestor = map(map1[10]).getHighestLevelAncestor(setting);
+      const highestLevelAncestor = map(map1[11]).getHighestLevelAncestor(setting);
       let sum = score;
       if (highestLevelAncestor === setting) {
         sum = score + 0.05;
@@ -249,24 +267,24 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
         });
         const item = sorted.forEach((setting) => {
           setting = setting.setting;
-          let nearestRouteAncestorDataOrSelf = arr(closure_1_2[9]).SETTING_RENDERER_CONFIG[setting];
+          let nearestRouteAncestorDataOrSelf = arr(closure_1_2[10]).SETTING_RENDERER_CONFIG[setting];
           if (null != nearestRouteAncestorDataOrSelf.parent) {
-            let obj = closure_1_1(tmp2[10]);
+            let obj = closure_1_1(tmp2[11]);
             let highestLevelAncestor = obj.getHighestLevelAncestor(setting);
-            nearestRouteAncestorDataOrSelf = closure_1_1(tmp2[10]).getNearestRouteAncestorDataOrSelf(setting);
-            const obj2 = closure_1_1(tmp2[10]);
+            nearestRouteAncestorDataOrSelf = closure_1_1(tmp2[11]).getNearestRouteAncestorDataOrSelf(setting);
+            const obj2 = closure_1_1(tmp2[11]);
           } else {
             highestLevelAncestor = setting;
           }
           obj = { type: closure_1_3.SETTING_SEARCH_RESULT, settingData: nearestRouteAncestorDataOrSelf, title: null, IconComponent: null, breadcrumbs: null, setting: null, index: null, total: null };
-          const cachedSettingTitle = arr(closure_1_2[7]).getCachedSettingTitle(setting);
+          const cachedSettingTitle = arr(closure_1_2[8]).getCachedSettingTitle(setting);
           const tmp8 = closure_1_1;
-          const tmpResult = arr(closure_1_2[7]);
-          closure_1_1(closure_1_2[8])(null != cachedSettingTitle, "Setting " + setting + " is missing a title.");
+          const tmpResult = arr(closure_1_2[8]);
+          closure_1_1(closure_1_2[9])(null != cachedSettingTitle, "Setting " + setting + " is missing a title.");
           obj[2] = cachedSettingTitle;
           let tmp12;
           if (0 === arg1) {
-            const tmp13 = tmp(tmp2[9]).SETTING_RENDERER_CONFIG[highestLevelAncestor];
+            const tmp13 = tmp(tmp2[10]).SETTING_RENDERER_CONFIG[highestLevelAncestor];
             const type = tmp13.type;
             let IconComponent = null;
             if (closure_1_4.RADIO !== type) {
@@ -282,8 +300,8 @@ export const getScoredSettingListSearchResultItems = function getScoredSettingLi
           }
           obj[3] = tmp12;
           const tmp10 = null != cachedSettingTitle;
-          const tmp9 = closure_1_1(closure_1_2[8]);
-          obj[4] = tmp8(closure_1_2[10]).getBreadcrumbs(setting);
+          const tmp9 = closure_1_1(closure_1_2[9]);
+          obj[4] = tmp8(closure_1_2[11]).getBreadcrumbs(setting);
           obj[5] = setting;
           obj[6] = closure_4;
           obj[7] = closure_3;

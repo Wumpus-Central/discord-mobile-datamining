@@ -1,7 +1,7 @@
 // discord_app/modules/quests/useQuestForPlacement.tsx
 import set from "../../../_runtime/00002_set.js";
 import setDefault from "../../utils/Durations.tsx";
-import _modDef10857 from "../app_state/DiscordAppState.native.tsx";
+import _modDef10875 from "../app_state/DiscordAppState.native.tsx";
 import getIsEligibleForQuests from "lib/QuestsEligibility.tsx";
 import noop from "../../../_runtime/00019_noop.js";
 import closure_5 from "../ads/AdDeliveryStore.tsx";
@@ -22,18 +22,18 @@ function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
     if ("active" === obj2.getState()) {
       if (!fetchingAdToDeliverByPlacement.isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
         if (obj4.canRefreshAd(QUEST_HOME_BANNER_DESKTOP)) {
-          let tmpResult = tmp(10833);
+          let tmpResult = tmp(10851);
           const currentQuests = tmpResult.fetchCurrentQuests();
-          tmpResult = tmp(10833);
+          tmpResult = tmp(10851);
           const questToDeliver = tmpResult.fetchQuestToDeliver(QUEST_HOME_BANNER_DESKTOP, arg2);
         }
       }
       obj4 = fetchingAdToDeliverByPlacement;
     } else if (null != fetchedAt) {
-      tmp(10833).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
-      const tmpResult1 = tmp(10833);
+      tmp(10851).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
+      const tmpResult1 = tmp(10851);
     }
-    obj2 = _modDef10857;
+    obj2 = _modDef10875;
   }
 }
 ({ useEffect: c3, useRef: c4 } = noop);

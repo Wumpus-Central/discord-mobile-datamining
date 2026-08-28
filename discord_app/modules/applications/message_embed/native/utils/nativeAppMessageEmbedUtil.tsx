@@ -15,19 +15,19 @@ export const getAppGradientColors = function getAppGradientColors(id2) {
     return tmp;
   } else {
     if (obj5.hasFetchedColors(id2)) {
-      let tmp6Result = tmp6(7974);
+      let tmp6Result = tmp6(7988);
       const heroColors = tmp6Result.getHeroColors(id2);
       ({ primaryColor, secondaryColor } = heroColors);
       let tmp5 = tmp;
       if (false === tmp4) {
-        tmp6Result = tmp6(4293);
-        items = [tmp6Result.hexToRgba(primaryColor), tmp6(4293).hexToRgba(secondaryColor)];
+        tmp6Result = tmp6(4294);
+        items = [tmp6Result.hexToRgba(primaryColor), tmp6(4294).hexToRgba(secondaryColor)];
         tmp5 = items;
-        const tmp6Result1 = tmp6(4293);
+        const tmp6Result1 = tmp6(4294);
       }
       return tmp5;
     } else {
-      tmp6(7973).maybeFetchColors(id2);
+      tmp6(7987).maybeFetchColors(id2);
       return tmp;
     }
     obj5 = hasFetchedColors;

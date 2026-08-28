@@ -19,7 +19,7 @@ Object.defineProperty(prototype, "analyticsLocations", {
   set: undefined
 });
 Object.defineProperty(prototype, "analyticsSource", {
-  get: function analyticsSource(arg0) {
+  get: function analyticsSource(id, arg1) {
     return c3;
   },
   set: undefined

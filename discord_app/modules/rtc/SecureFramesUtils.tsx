@@ -3,13 +3,13 @@ import byteLengthDefault from "../../../_runtime/00206_byteLength.js";
 import setDefault from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import combinedDefault from "../../utils/HelpdeskUtils.tsx";
-import hooksDefault from "../../../_runtime/04043_hooks.js";
+import hooksDefault from "../../../_runtime/04044_hooks.js";
 import nameFromUserDefault from "../../utils/UserUtils.tsx";
 import getNicknameDefault from "../../utils/NicknameUtils.tsx";
 import setDefault2 from "../../actions/AlertActionCreators.tsx";
 import set from "../../../discord_common/js/packages/libdave/index.tsx";
 import savePersistentCodesEnabledDefault from "SecureFramesActionCreators.tsx";
-import _modDef9764 from "SecureFramesPlatformUtils.native.tsx";
+import _modDef9782 from "SecureFramesPlatformUtils.native.tsx";
 import trackRTCPanelViewed from "SecureFramesTracking.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -575,7 +575,7 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
 export const deletePersistentVerification = function deletePersistentVerification(userId, verifiedKey) {
   const _require = userId;
   importDefault = verifiedKey;
-  let obj = _modDef9764;
+  let obj = _modDef9782;
   obj = { title: null, subtitle: null, onConfirm: null };
   const intl = require("../../intl/index.native.tsx").intl;
   obj[0] = intl.string(require("../../intl/index.native.tsx").t.hdL152);
@@ -603,7 +603,7 @@ export const deleteUserPersistentVerifications = function deleteUserPersistentVe
     const obj = closure_1_1(closure_1_2[11]);
     const result1 = userId(closure_1_2[12]).trackE2EESettingsUserDelete();
   };
-  let result = _modDef9764.openSecureFramesUpdateConfirmation(obj);
+  let result = _modDef9782.openSecureFramesUpdateConfirmation(obj);
 };
 export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
   let obj = hooksDefault();

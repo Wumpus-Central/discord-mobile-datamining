@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
-import compactDefault from "../../../../_runtime/12453_compact.js";
+import compactDefault from "../../../../_runtime/12473_compact.js";
 import closure_3 from "../CollectiblesPurchaseStore.tsx";
 
 const require = arg1;
@@ -24,7 +24,7 @@ function getProductPurchaseState(closure_1_5, skuId) {
     obj[0] = tmp;
     obj[1] = tmp3Result.length > 0 && tmp3Result.length < items.length;
     return obj;
-  } else if (tmp5(1950).CollectiblesItemType.VARIANTS_GROUP === type) {
+  } else if (tmp5(1951).CollectiblesItemType.VARIANTS_GROUP === type) {
     const variants = skuId.variants;
     let everyResult;
     if (variants != null) {

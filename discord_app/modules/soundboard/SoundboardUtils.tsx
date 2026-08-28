@@ -235,10 +235,10 @@ export const getAmplitudinalSoundboardVolume = function getAmplitudinalSoundboar
 export { hasPermissionToPlaySound };
 export { canUseSoundboardSound };
 export { canMakeSound };
-export const playSound = function playSound(soundId, id) {
+export const playSound = function playSound(soundId, channelId) {
   let obj = _fetchDefaultSoundsFromApi2;
-  obj.playSoundLocally(id, soundId);
-  const result = VoiceChannelEffectSentLocation.sendVoiceChannelSoundboardEffect(id, soundId, false, arg2, arg3);
+  obj.playSoundLocally(channelId, soundId);
+  const result = VoiceChannelEffectSentLocation.sendVoiceChannelSoundboardEffect(channelId, soundId, false, arg2, arg3);
   const obj2 = VoiceChannelEffectSentLocation;
   obj = { type: "SOUNDBOARD_TRACK_USAGE", soundId: soundId.soundId };
   dispatcherDefault.dispatch(obj);
@@ -285,8 +285,8 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
     const _Object = Object;
     const values = Object.values(guilds);
     if (!values.some((joinSound) => null != joinSound.joinSound)) {
-      const result = tmp(4289).ageEligibleForPremiumUpsell(stateFromStores);
-      const tmpResult = tmp(4289);
+      const result = tmp(4290).ageEligibleForPremiumUpsell(stateFromStores);
+      const tmpResult = tmp(4290);
       const obj5 = getPremiumPlanItemDefault;
       if (tmp9) {
         items1.push(tmp(1377).DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);

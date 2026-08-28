@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/quests/native/Quest
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
   let obj = { hasIcons: true, children: null };
-  obj = { arrow: true, icon: callback(onTaskSelect(12549).ScreenIcon, {}), label: null, onPress: null };
+  obj = { arrow: true, icon: callback(onTaskSelect(12568).ScreenIcon, {}), label: null, onPress: null };
   const intl = onTaskSelect(1236).intl;
   obj[2] = intl.string(onTaskSelect(1236).t["QXc01+"]);
   obj[3] = function onPress() {
@@ -21,8 +21,8 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  const items = [callback(onTaskSelect(5551).TableRow, obj), ];
-  obj = { arrow: true, icon: callback(onTaskSelect(9119).GameControllerIcon, {}), label: null, onPress: null };
+  const items = [callback(onTaskSelect(5564).TableRow, obj), ];
+  obj = { arrow: true, icon: callback(onTaskSelect(9137).GameControllerIcon, {}), label: null, onPress: null };
   const intl2 = onTaskSelect(1236).intl;
   obj[2] = intl2.string(onTaskSelect(1236).t["8lAfuB"]);
   obj[3] = function onPress() {
@@ -32,7 +32,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  items[1] = callback(onTaskSelect(5551).TableRow, obj);
+  items[1] = callback(onTaskSelect(5564).TableRow, obj);
   obj[1] = items;
-  return callback2(onTaskSelect(5944).TableRowGroup, obj);
+  return callback2(onTaskSelect(5957).TableRowGroup, obj);
 };

@@ -22,7 +22,7 @@ export default (arg0) => {
           closure_0 = arg0;
           c3 = 0;
           c4 = 0;
-          return (/* F122715 */ function*() { ... })();
+          return (/* F122762 */ function*() { ... })();
         });
         closure_0 = tmp;
         const apply = tmp.apply;

@@ -24,15 +24,15 @@ let prototype = function PushNotificationCacheManager() {
   applyArgumentsResult.handleUserUpdate = function handleUserUpdate() {
     currentUser = currentUser.getCurrentUser();
     if (null != currentUser) {
-      applyArgumentsResult(9578).setCurrentUser(currentUser.username, currentUser.id);
-      const obj2 = applyArgumentsResult(9578);
+      applyArgumentsResult(9596).setCurrentUser(currentUser.username, currentUser.id);
+      const obj2 = applyArgumentsResult(9596);
     } else {
-      applyArgumentsResult(9578).setCurrentUser(null, null);
-      const obj = applyArgumentsResult(9578);
+      applyArgumentsResult(9596).setCurrentUser(null, null);
+      const obj = applyArgumentsResult(9596);
     }
   };
   applyArgumentsResult.syncMultiAccountUsers = function syncMultiAccountUsers() {
-    obj = obj(9578);
+    obj = obj(9596);
     obj = undefined;
     if (obj.canUseMultiAccountNotifications) {
       const validUsers = obj.getValidUsers();

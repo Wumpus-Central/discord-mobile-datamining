@@ -1,5 +1,5 @@
 // discord_app/design/components/experimental/Button/native/PressableScale.native.tsx
-import _mod4185 from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
+import _mod4186 from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
 import styleProperties from "../../../Button/native/ButtonHooks.native.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
@@ -16,7 +16,7 @@ const forwardRefResult = importAllResult.forwardRef((scaleAmountInPx, ref) => {
   }
   ({ onPressIn, onPressOut } = scaleAmountInPx);
   const merged = Object.assign(scaleAmountInPx, Object.create(null));
-  let obj = _mod4185;
+  let obj = _mod4186;
   const sharedValue = obj.useSharedValue(0);
   const buttonPressAnimationProps = styleProperties.useButtonPressAnimationProps(sharedValue, num, scaleAmountInPx.onLayout, onPressIn, onPressOut);
   obj = {};

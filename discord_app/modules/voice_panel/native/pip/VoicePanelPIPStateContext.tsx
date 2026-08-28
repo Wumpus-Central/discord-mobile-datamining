@@ -2,7 +2,7 @@
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 let c0 = importAllResult;
-const context = importAllResult.createContext({ id: "dispatch", mode: "isArray", width: false, height: "earth_americas", containerHeight: "earth_africa", showSecondaryPIP: "earth_asia" });
+const context = importAllResult.createContext({ id: "dispatch", mode: "isArray", width: false, height: 3072, containerHeight: 3073, showSecondaryPIP: 3074 });
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPStateContext.tsx");
 
 export const VoicePanelPIPStateContext = context;

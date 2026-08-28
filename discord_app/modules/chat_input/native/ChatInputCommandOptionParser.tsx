@@ -5,7 +5,7 @@ import ME from "../../../Constants.tsx";
 import set3 from "../../emojis/EmojiConstants.tsx";
 import getEmojiUnavailableReasonDefault from "../../../utils/EmojiUtils.tsx";
 import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
-import registerAssetDefault from "../../../../_runtime/07972_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/07986_registerAsset.js";
 import addRule from "ChatInputParser.tsx";
 import closure_4 from "../../a11y/AccessibilityStore.tsx";
 import closure_5 from "../../emojis/EmojiStore.tsx";

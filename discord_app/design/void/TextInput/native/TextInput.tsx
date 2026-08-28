@@ -31,8 +31,8 @@ const forwardRefResult = importAllResult.forwardRef((style, ref) => {
   tmp3Result = tmp3(500);
   let hexWithOpacityResult = tmp6;
   if (tmp3Result.isAndroid()) {
-    hexWithOpacityResult = tmp3(4293).hexWithOpacity(tmp6, 0.5);
-    const tmp3Result1 = tmp3(4293);
+    hexWithOpacityResult = tmp3(4294).hexWithOpacity(tmp6, 0.5);
+    const tmp3Result1 = tmp3(4294);
   }
   obj[4] = hexWithOpacityResult;
   const merged1 = Object.assign(merged);

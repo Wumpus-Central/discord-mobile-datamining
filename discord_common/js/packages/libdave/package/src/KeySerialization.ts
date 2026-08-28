@@ -1,6 +1,6 @@
 // discord_common/js/packages/libdave/package/src/KeySerialization.ts
 import set from "../../../../../../_runtime/00002_set.js";
-import byteLengthDefault from "../../../../../../_runtime/09759_byteLength.js";
+import byteLengthDefault from "../../../../../../_runtime/09777_byteLength.js";
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/KeySerialization.ts");
 

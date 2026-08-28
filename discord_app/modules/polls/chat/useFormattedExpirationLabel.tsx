@@ -1,7 +1,7 @@
 // discord_app/modules/polls/chat/useFormattedExpirationLabel.tsx
 import set from "../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import hooksDefault from "../../../../_runtime/04043_hooks.js";
+import hooksDefault from "../../../../_runtime/04044_hooks.js";
 
 function formatExpirationLabel(expiry) {
   const tmp2 = hooksDefault();

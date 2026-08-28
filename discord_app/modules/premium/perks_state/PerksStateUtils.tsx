@@ -10,12 +10,12 @@ function parseServerPerkConfigKind(kind) {
     const type = kind.kind.type;
     if (PerkConfigType.PerkConfigType.INCREASED_FILE_UPLOAD_SIZE === type) {
       let obj = { type: null, maxSize: null };
-      obj[0] = tmp(1943).PerkConfigType.INCREASED_FILE_UPLOAD_SIZE;
+      obj[0] = tmp(1944).PerkConfigType.INCREASED_FILE_UPLOAD_SIZE;
       obj[1] = kind.kind.max_size;
       return obj;
-    } else if (tmp(1943).PerkConfigType.INCREASED_GUILD_LIMIT === type) {
+    } else if (tmp(1944).PerkConfigType.INCREASED_GUILD_LIMIT === type) {
       obj = { type: null, maxGuilds: null };
-      obj[0] = tmp(1943).PerkConfigType.INCREASED_GUILD_LIMIT;
+      obj[0] = tmp(1944).PerkConfigType.INCREASED_GUILD_LIMIT;
       obj[1] = kind.kind.max_guilds;
       return obj;
     }

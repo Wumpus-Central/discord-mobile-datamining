@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import noop from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import map from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import toNativeHorizontalOffset from "../../../../../../../_runtime/15544_toNativeHorizontalOffset.js";
+import toNativeHorizontalOffset from "../../../../../../../_runtime/15562_toNativeHorizontalOffset.js";
 import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -97,8 +97,7 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
     setAddedPressed(true);
   }, items4);
   obj = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
-  obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: true };
-  obj[3] = height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32;
+  obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: tmp4(tmp5[18]).AvatarSizes.REFRESH_MEDIUM_32 };
   const items5 = [callback2(height(suggestedFriend[18]).Avatar, obj), , ];
   obj1 = { style: tmp.textContainer, children: null };
   const items6 = [callback2(height(suggestedFriend[19]).Text, { lineClamp: 1, variant: "redesign/channel-title/semibold", maxFontSizeMultiplier: 2, color: "text-default", children: memo1.suggestionName }), ];

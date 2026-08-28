@@ -131,9 +131,9 @@ function _fetchQuestHomeBounties() {
               obj1 = { value: null, done: false };
               obj1[0] = closure_1_7(tmp5, closure_1_3(function*() {
                 let uuid = tmp2;
-                let obj5 = closure_1_0(7141);
+                let obj5 = closure_1_0(7154);
                 uuid = yield obj5.getSession();
-                const uuid2 = closure_1_0(7399).getOrRefreshAdSession();
+                const uuid2 = closure_1_0(7413).getOrRefreshAdSession();
                 const HTTP = closure_1_0(530).HTTP;
                 const obj3 = { url: null, query: null, rejectWithError: false, context: null };
                 obj3[0] = closure_1_6.QUESTS_GET_DECISIONS;

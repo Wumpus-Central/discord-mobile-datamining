@@ -1,7 +1,7 @@
 // discord_app/modules/notification_center/getTimestampString.tsx
 import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
-import hooksDefault from "../../../_runtime/04043_hooks.js";
+import hooksDefault from "../../../_runtime/04044_hooks.js";
 
 function getDurationString(seconds) {
   seconds = seconds.seconds;

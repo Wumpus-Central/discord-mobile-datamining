@@ -5,7 +5,7 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04892_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04905_LinearGradient.js";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import GuildProfileBackground from "GuildProfileView.tsx";

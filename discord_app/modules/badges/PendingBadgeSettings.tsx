@@ -1,6 +1,6 @@
 // discord_app/modules/badges/PendingBadgeSettings.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import getProfileBadgeIconUrl from "BadgeUtils.tsx";
+import isPinnedBadge from "BadgeUtils.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../stores/UserStore.tsx";
 import closure_5 from "BadgeDirectoryStore.tsx";
@@ -17,13 +17,13 @@ function getSavedBadgeSettings() {
       const items = [];
       const _Set = Set;
       const set = new Set();
-      const badges = obj3.getBadges(id);
+      const badges = obj4.getBadges(id);
       for (const item10020 of badges) {
         let tmp10 = item10020;
         let tmp11 = require;
         let tmp12 = dependencyMap;
-        let NON_CUSTOMIZABLE_BADGE_IDS = getProfileBadgeIconUrl.NON_CUSTOMIZABLE_BADGE_IDS;
-        if (!NON_CUSTOMIZABLE_BADGE_IDS.has(item10020.badge_id)) {
+        let obj2 = isPinnedBadge;
+        if (!obj2.isPinnedBadge(item10020.badge_id)) {
           let tmp13 = item10020;
           if (tmp10.owned) {
             let tmp14 = item10020;
@@ -43,7 +43,7 @@ function getSavedBadgeSettings() {
       obj[1] = set;
       return obj;
     }
-    obj3 = closure_5;
+    obj4 = closure_5;
   }
   return null;
 }
@@ -100,7 +100,7 @@ export const setPendingBadgeHiddenBadges = function setPendingBadgeHiddenBadges(
   dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp4 });
 };
 export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "accessibilityRole", pendingBadgeHiddenBadges: "HTTP" });
+  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "container", pendingBadgeHiddenBadges: "h" });
 };
 export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stateFromStoresArray, arg1) {
   ({ pendingBadgeDisplayOrder, pendingBadgeHiddenBadges } = arg1);
@@ -116,10 +116,10 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
     let mapped = items;
   } else {
     mapped = stateFromStoresArray.map((badge_id) => {
-      const NON_CUSTOMIZABLE_BADGE_IDS = set(closure_1_2[3]).NON_CUSTOMIZABLE_BADGE_IDS;
+      let obj = set(closure_1_2[3]);
       let tmp = badge_id;
-      if (!NON_CUSTOMIZABLE_BADGE_IDS.has(badge_id.badge_id)) {
-        const obj = {};
+      if (!obj.isPinnedBadge(badge_id.badge_id)) {
+        obj = {};
         const merged = Object.assign(badge_id);
         obj.hidden = set.has(badge_id.badge_id);
         tmp = obj;
@@ -137,8 +137,8 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
       let tmp11 = item10026;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let NON_CUSTOMIZABLE_BADGE_IDS = set(8927).NON_CUSTOMIZABLE_BADGE_IDS;
-      if (NON_CUSTOMIZABLE_BADGE_IDS.has(item10026.badge_id)) {
+      let obj = set(8945);
+      if (obj.isPinnedBadge(item10026.badge_id)) {
         let tmp16 = item10026;
         let arr = items1.push(tmp11);
       } else {
@@ -148,13 +148,13 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
       continue;
     }
     const items2 = [];
-    for (const item10049 of pendingBadgeDisplayOrder) {
-      let tmp20 = item10049;
-      let value = map.get(item10049);
+    for (const item10048 of pendingBadgeDisplayOrder) {
+      let tmp20 = item10048;
+      let value = map.get(item10048);
       if (null != value) {
         let tmp23 = value;
         arr = items2.push(tmp22);
-        let tmp25 = item10049;
+        let tmp25 = item10048;
         let deleteResult = map.delete(tmp20);
       }
       continue;
@@ -187,15 +187,15 @@ export const applyPendingBadgeSettingsToProfileBadges = function applyPendingBad
   } else {
     found = arr2.filter((id) => {
       const profileBadgeId = set(closure_1_2[5]).resolveProfileBadgeId(id.id);
-      let hasItem = null == profileBadgeId;
-      if (!hasItem) {
-        const NON_CUSTOMIZABLE_BADGE_IDS = set(closure_1_2[3]).NON_CUSTOMIZABLE_BADGE_IDS;
-        hasItem = NON_CUSTOMIZABLE_BADGE_IDS.has(profileBadgeId);
+      let isPinnedBadgeResult = null == profileBadgeId;
+      if (!isPinnedBadgeResult) {
+        isPinnedBadgeResult = set(closure_1_2[3]).isPinnedBadge(profileBadgeId);
+        const tmpResult = set(closure_1_2[3]);
       }
-      if (!hasItem) {
-        hasItem = !set.has(profileBadgeId);
+      if (!isPinnedBadgeResult) {
+        isPinnedBadgeResult = !set.has(profileBadgeId);
       }
-      return hasItem;
+      return isPinnedBadgeResult;
     });
   }
   if (null == pendingBadgeDisplayOrder) {
@@ -208,13 +208,13 @@ export const applyPendingBadgeSettingsToProfileBadges = function applyPendingBad
       let tmp11 = item10027;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let obj = set(8493);
+      let obj = set(8507);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let NON_CUSTOMIZABLE_BADGE_IDS = tmp12(8927).NON_CUSTOMIZABLE_BADGE_IDS;
+        let tmp12Result = tmp12(8945);
         let tmp16 = profileBadgeId;
-        if (!NON_CUSTOMIZABLE_BADGE_IDS.has(tmp15)) {
+        if (!tmp12Result.isPinnedBadge(tmp15)) {
           let tmp17 = profileBadgeId;
           if (!map.has(tmp15)) {
             let tmp18 = profileBadgeId;
@@ -228,13 +228,13 @@ export const applyPendingBadgeSettingsToProfileBadges = function applyPendingBad
       let arr = items2.push(tmp11);
     }
     const items3 = [];
-    for (const item10059 of pendingBadgeDisplayOrder) {
-      let tmp25 = item10059;
-      let value = map.get(item10059);
+    for (const item10058 of pendingBadgeDisplayOrder) {
+      let tmp25 = item10058;
+      let value = map.get(item10058);
       if (null != value) {
         let tmp28 = value;
         arr = items3.push(tmp27);
-        let tmp30 = item10059;
+        let tmp30 = item10058;
         let deleteResult = map.delete(tmp25);
       }
       continue;

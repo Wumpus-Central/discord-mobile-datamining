@@ -17,8 +17,8 @@ function startBackgroundTask(arg0) {
       obj = { title: null, content: null, priority: null, type: null, usesGateway: false };
       obj[0] = title;
       obj[1] = content;
-      obj[2] = tmp(7435).ServiceNotificationPriority.MEDIUM;
-      obj[3] = tmp(7435).ServiceNotificationType.FILE_UPLOAD;
+      obj[2] = tmp(7449).ServiceNotificationPriority.MEDIUM;
+      obj[3] = tmp(7449).ServiceNotificationType.FILE_UPLOAD;
       return initializeDefault.addServiceHandler(obj);
     }
   } else {

@@ -45,7 +45,7 @@ function sortActivity(type, type2) {
       num3 = 1;
     }
     let num4 = 0;
-    if (tmp3(4535)(type)) {
+    if (tmp3(4536)(type)) {
       num4 = 1;
     }
     diff = num3 - num4;

@@ -3,7 +3,7 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import dispatcherDefault from "../../../toast/native/ToastActionCreators.tsx";
 import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
-import registerAssetDefault from "../../../../../_runtime/10811_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10829_registerAsset.js";
 import getChannelModeDefault from "../../../guild_sidebar/native/ChannelItem.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";

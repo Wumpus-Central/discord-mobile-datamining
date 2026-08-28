@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx
-import _modDef14194 from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef14273 from "../../../settings/native/renderer/SettingLayout.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -12,7 +12,7 @@ const memoResult = importAllResult.memo(function SettingsWebBrowserScreen() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(_modDef14194, { node });
+  return jsx(_modDef14273, { node });
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
 

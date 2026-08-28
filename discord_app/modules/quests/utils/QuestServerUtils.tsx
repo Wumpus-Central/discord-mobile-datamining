@@ -1,5 +1,5 @@
 // discord_app/modules/quests/utils/QuestServerUtils.tsx
-import t from "../../../../_runtime/04658_t.js";
+import t from "../../../../_runtime/04671_t.js";
 import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
 import questFromServerV2 from "../types/v2/Quest.tsx";
 import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -56,7 +56,7 @@ function _questsEntitlementFromServer(skuId) {
       obj[0] = obj1;
       obj[0] = obj;
       tmp2 = obj;
-    } else if (tmp3(7386).QuestRewardTypes.REWARD_CODE === tag) {
+    } else if (tmp3(7400).QuestRewardTypes.REWARD_CODE === tag) {
       const obj2 = { tag: null, rewardCode: null };
       obj2[0] = quest_rewards.reward.tag;
       const obj3 = { userId: null, questId: null, code: null, platform: null, claimedAt: null, tier: null };

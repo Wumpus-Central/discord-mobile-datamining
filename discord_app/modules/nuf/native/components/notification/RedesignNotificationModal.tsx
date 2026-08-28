@@ -1,7 +1,7 @@
 // discord_app/modules/nuf/native/components/notification/RedesignNotificationModal.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import NewUserPermissionsOnboardingDefault from "../NewUserPermissionsOnboarding.android.tsx";
-import registerAssetDefault from "../../../../../../_runtime/15504_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/15522_registerAsset.js";
 import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { PermissionStateType } from "../../../../../stores/native/PushNotificationPermissionStore.tsx";

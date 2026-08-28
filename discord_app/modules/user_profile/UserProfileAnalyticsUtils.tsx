@@ -150,7 +150,7 @@ function getTrackUserProfileProperties(userId) {
     }
     obj1[1] = _guildMemberProfile;
     obj[4] = getProfileProperties(obj1);
-    const activities = closure_9.getActivities(user.id);
+    const activities = store2.getActivities(user.id);
     const mapped = activities.map((type) => type.type);
     obj[5] = mapped.filter((arg0) => undefined !== arg0);
     let found;
@@ -236,10 +236,10 @@ function trackUserProfileAction(applicationId) {
     const userAffinity = authStore.getUserAffinity(userId);
     obj = { related_user_id: null, relationship_type: null, related_since: null, num_mutual_friends: null, num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     obj[0] = userId;
-    obj[1] = store2.getRelationshipType(userId);
-    obj[2] = store2.getSince(userId);
-    obj[3] = store3.getMutualFriendsCount(userId);
-    const mutualGuilds = store3.getMutualGuilds(userId);
+    obj[1] = store3.getRelationshipType(userId);
+    obj[2] = store3.getSince(userId);
+    obj[3] = store4.getMutualFriendsCount(userId);
+    const mutualGuilds = store4.getMutualGuilds(userId);
     let length;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
@@ -279,6 +279,22 @@ function trackUserProfileAction(applicationId) {
 ({ ActivityTypes: closure_14, AnalyticEvents: closure_15 } = ME);
 let result = require("set").fileFinishedImporting("modules/user_profile/UserProfileAnalyticsUtils.tsx");
 
+export { getProfileProperties };
+export const getUserStatus = function getUserStatus(id) {
+  const status = store2.getStatus(id);
+  if (status === StatusTypes.ONLINE) {
+    if (store2.isMobileOnline(id)) {
+      const _HermesInternal2 = HermesInternal;
+      let combined = "" + status + "-mobile";
+    }
+    return combined;
+  }
+  combined = status;
+  if (status === StatusTypes.ONLINE) {
+    const _HermesInternal = HermesInternal;
+    combined = "" + status + "-desktop";
+  }
+};
 export const getActivityType = function getActivityType(arg0) {
   let tmp = arg0;
   if (null != arg0) {
@@ -302,10 +318,10 @@ export const getTrackUserRelationshipProperties = function getTrackUserRelations
     const userAffinity = authStore.getUserAffinity(userId);
     const obj = { related_user_id: null, relationship_type: null, related_since: null, num_mutual_friends: null, num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     obj[0] = userId;
-    obj[1] = store2.getRelationshipType(userId);
-    obj[2] = store2.getSince(userId);
-    obj[3] = store3.getMutualFriendsCount(userId);
-    const mutualGuilds = store3.getMutualGuilds(userId);
+    obj[1] = store3.getRelationshipType(userId);
+    obj[2] = store3.getSince(userId);
+    obj[3] = store4.getMutualFriendsCount(userId);
+    const mutualGuilds = store4.getMutualGuilds(userId);
     let length;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
@@ -351,9 +367,9 @@ export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiVie
     }
     if (!tmp5) {
       trackResult = {};
-      let tmpResult = tmp(4653);
+      let tmpResult = tmp(4666);
       const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guildId));
-      tmpResult = tmp(4653);
+      tmpResult = tmp(4666);
       const merged1 = Object.assign(tmpResult.collectChannelAnalyticsMetadataFromId(channelId));
       const merged2 = Object.assign(getTrackUserProfileProperties(userId));
       userId = userId.userId;
@@ -363,10 +379,10 @@ export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiVie
         const userAffinity = authStore.getUserAffinity(userId);
         obj = { related_user_id: null, relationship_type: null, related_since: null, num_mutual_friends: null, num_mutual_guilds: null, communication_probability: null, communication_rank: null };
         obj[0] = userId;
-        obj[1] = store2.getRelationshipType(userId);
-        obj[2] = store2.getSince(userId);
-        obj[3] = store3.getMutualFriendsCount(userId);
-        const mutualGuilds = store3.getMutualGuilds(userId);
+        obj[1] = store3.getRelationshipType(userId);
+        obj[2] = store3.getSince(userId);
+        obj[3] = store4.getMutualFriendsCount(userId);
+        const mutualGuilds = store4.getMutualGuilds(userId);
         let length;
         if (mutualGuilds != null) {
           length = mutualGuilds.length;
@@ -412,10 +428,10 @@ export const trackUserProfileActivityJoined = function trackUserProfileActivityJ
     const userAffinity = authStore.getUserAffinity(userId);
     obj = { related_user_id: null, relationship_type: null, related_since: null, num_mutual_friends: null, num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     obj[0] = userId;
-    obj[1] = store2.getRelationshipType(userId);
-    obj[2] = store2.getSince(userId);
-    obj[3] = store3.getMutualFriendsCount(userId);
-    const mutualGuilds = store3.getMutualGuilds(userId);
+    obj[1] = store3.getRelationshipType(userId);
+    obj[2] = store3.getSince(userId);
+    obj[3] = store4.getMutualFriendsCount(userId);
+    const mutualGuilds = store4.getMutualGuilds(userId);
     let length;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
@@ -474,10 +490,10 @@ export const trackUserProfileActivityAction = function trackUserProfileActivityA
     const userAffinity = authStore.getUserAffinity(userId);
     obj = { related_user_id: null, relationship_type: null, related_since: null, num_mutual_friends: null, num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     obj[0] = userId;
-    obj[1] = store2.getRelationshipType(userId);
-    obj[2] = store2.getSince(userId);
-    obj[3] = store3.getMutualFriendsCount(userId);
-    const mutualGuilds = store3.getMutualGuilds(userId);
+    obj[1] = store3.getRelationshipType(userId);
+    obj[2] = store3.getSince(userId);
+    obj[3] = store4.getMutualFriendsCount(userId);
+    const mutualGuilds = store4.getMutualGuilds(userId);
     let length;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
@@ -588,10 +604,10 @@ export const trackUserProfileBadgeAction = function trackUserProfileBadgeAction(
     const userAffinity = authStore.getUserAffinity(userId2);
     obj = { related_user_id: null, relationship_type: null, related_since: null, num_mutual_friends: null, num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     obj[0] = userId2;
-    obj[1] = store2.getRelationshipType(userId2);
-    obj[2] = store2.getSince(userId2);
-    obj[3] = store3.getMutualFriendsCount(userId2);
-    const mutualGuilds = store3.getMutualGuilds(userId2);
+    obj[1] = store3.getRelationshipType(userId2);
+    obj[2] = store3.getSince(userId2);
+    obj[3] = store4.getMutualFriendsCount(userId2);
+    const mutualGuilds = store4.getMutualGuilds(userId2);
     let length;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
@@ -625,7 +641,7 @@ export const trackDmProfileToggled = function trackDmProfileToggled(displayProfi
   }
   let findActivityResult = null;
   if (null != userId) {
-    findActivityResult = closure_9.findActivity(userId, (type) => {
+    findActivityResult = store2.findActivity(userId, (type) => {
       type = type.type;
       if (null != closure_1_7.getAnyStreamForUser(userId)) {
         let tmp2 = type === closure_1_14.PLAYING;
@@ -657,7 +673,7 @@ export const trackDmProfileToggled = function trackDmProfileToggled(displayProfi
     large_image = small_image;
   }
   obj.has_images = Boolean(large_image);
-  obj.is_friend = store2.isFriend(userId);
+  obj.is_friend = store3.isFriend(userId);
   obj.viewed_profile_user_id = userId;
   let result;
   if (displayProfile != null) {

@@ -14,9 +14,9 @@ export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(creati
     const type = creative.type;
     if (AdCreativeType.AdCreativeType.QUEST === type) {
       return creative.questId;
-    } else if (tmp(7379).AdCreativeType.BOUNTY === type) {
+    } else if (tmp(7393).AdCreativeType.BOUNTY === type) {
       return creative.bounty.id;
-    } else if (tmp(7379).AdCreativeType.QUEST_HOME_HERO === type) {
+    } else if (tmp(7393).AdCreativeType.QUEST_HOME_HERO === type) {
       return creative.questHomeHero.id;
     }
   }
@@ -59,7 +59,7 @@ export const resolveResponseTtl = function resolveResponseTtl(responseTtlSeconds
   }
 };
 export const questAdDecisionFromAdDecision = function questAdDecisionFromAdDecision(response_ttl_seconds, creative) {
-  let obj = { creative: creative.creative, fetchedAt: creative.fetchedAt, ttlMillis: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
+  let obj = { creative: creative.creative, fetchedAt: creative.fetchedAt, ttlMillis: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null };
   response_ttl_seconds = response_ttl_seconds.response_ttl_seconds;
   if (null == response_ttl_seconds) {
     let tmp3 = closure_2;
@@ -113,6 +113,6 @@ export const questAdDecisionFromAdDecision = function questAdDecisionFromAdDecis
   obj[6] = creative.requestId;
   obj[7] = null != response_ttl_seconds.ad_identifiers;
   obj[3] = obj;
-  ({ ad_context: obj[4], metadata_sealed: obj[5], traffic_metadata_sealed: obj[6] } = response_ttl_seconds);
+  ({ ad_context: obj[4], metadata_sealed: obj[5], traffic_metadata_sealed: obj[6], provenance_metadata_sealed: obj[7] } = response_ttl_seconds);
   return obj;
 };

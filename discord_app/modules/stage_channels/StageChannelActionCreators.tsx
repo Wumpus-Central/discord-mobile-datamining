@@ -4,7 +4,7 @@ import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import PermissionOverwriteType from "../../flow/Server.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
-import _modDef4458 from "../../actions/ChannelActionCreators.tsx";
+import _modDef4459 from "../../actions/ChannelActionCreators.tsx";
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
 import useIsStageSpeakingDisabledForCurrentUser from "useStageSpeakingForCurrentUser.tsx";
@@ -103,10 +103,10 @@ function _startStage() {
               closure_1 = undefined;
               if ("" !== closure_1) {
                 if (closure_1_5.getVoiceChannelId() !== tmp28.id) {
-                  let obj2 = callback(8595);
+                  let obj2 = callback(8610);
                   obj2.connectToStage(tmp28);
                 }
-                const obj4 = callback(8608);
+                const obj4 = callback(8623);
                 c6 = 1;
                 c7 = 1;
                 obj1 = { value: null, done: false };
@@ -423,7 +423,7 @@ export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissi
     tmp5Result = tmp5(506);
     obj.deny = tmp5Result.add(obj.deny, REQUEST_TO_SPEAK);
   }
-  const result = _modDef4458.updatePermissionOverwrite(getGuildId.id, obj);
+  const result = _modDef4459.updatePermissionOverwrite(getGuildId.id, obj);
 };
 export const startStage = function startStage(closure_1_0, arg1, GUILD_ONLY, closure_1_11) {
   const self = this;

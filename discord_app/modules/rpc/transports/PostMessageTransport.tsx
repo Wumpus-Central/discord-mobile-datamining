@@ -57,9 +57,9 @@ class PostMessageTransport extends EventEmitter {
         const item = Array.from(selfEmbeddedActivities.entries()).forEach((arg0) => {
           [tmp, tmp2] = arg0;
           let obj = callback2(698);
-          obj = { application_id: tmp, channel_id: callback(4079).getEmbeddedActivityLocationChannelId(tmp2.location), guild_id: null, timeout_ms: null };
-          const obj3 = callback(4079);
-          obj[2] = callback(4079).getEmbeddedActivityLocationGuildId(tmp2.location);
+          obj = { application_id: tmp, channel_id: callback(4080).getEmbeddedActivityLocationChannelId(tmp2.location), guild_id: null, timeout_ms: null };
+          const obj3 = callback(4080);
+          obj[2] = callback(4080).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj[3] = closure_11;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj);
         });
@@ -521,25 +521,25 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframe
       if (null != value) {
         let obj = { closeCode: null };
         obj[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp35 = new tmp7(9424)(obj, "Already connected");
+        const tmp35 = new tmp7(9442)(obj, "Already connected");
         throw tmp35;
       } else {
         return self.handleHandshake(iframeId, tmp6, arg3);
       }
-    } else if (tmp7(9423).FRAME === tmp5) {
+    } else if (tmp7(9441).FRAME === tmp5) {
       if (null == value) {
         obj = { closeCode: null };
         obj[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp27 = new tmp7(9424)(obj, "Not connected");
+        const tmp27 = new tmp7(9442)(obj, "Not connected");
         throw tmp27;
       } else {
         return self.handleFrame(iframeId, value, tmp6);
       }
-    } else if (tmp7(9423).CLOSE === tmp5) {
+    } else if (tmp7(9441).CLOSE === tmp5) {
       if (null == value) {
         obj1 = { closeCode: null };
         obj1[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp20 = new tmp7(9424)(obj1, "Not connected");
+        const tmp20 = new tmp7(9442)(obj1, "Not connected");
         throw tmp20;
       } else {
         return self.handleClose(value, tmp6);
@@ -547,7 +547,7 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframe
     } else {
       obj = { closeCode: null };
       obj[0] = constants2.CLOSE_UNSUPPORTED;
-      const tmp13 = new tmp7(9424)(obj, "Invalid opcode");
+      const tmp13 = new tmp7(9442)(obj, "Invalid opcode");
       throw tmp13;
     }
     const tmp4 = callback2(arg2, 2);

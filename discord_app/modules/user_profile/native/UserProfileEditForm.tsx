@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/UserProfileEditForm.tsx
-import registerAssetDefault from "../../../../_runtime/14207_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/14177_registerAsset.js";
 import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_6 from "../../badges/BadgeDirectoryStore.tsx";
@@ -68,7 +68,7 @@ function EditUserProfileBanner(user) {
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ DISPLAY_NAME_MAX_LENGTH: c9, PRONOUNS_MAX_LENGTH: c10 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let obj = { assetOrigin: require("AssetOriginTypes").AssetOriginTypes.NEW_ASSET, imageUri: registerAssetDefault, staticImageUri: registerAssetDefault, description: "", originalAsset: "call" };
+let obj = { assetOrigin: require("AssetOriginTypes").AssetOriginTypes.NEW_ASSET, imageUri: registerAssetDefault, staticImageUri: registerAssetDefault, description: "", originalAsset: "paddingHorizontal" };
 let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
 
 export default function UserProfileEditForm(currentUser) {
@@ -337,7 +337,7 @@ export default function UserProfileEditForm(currentUser) {
     tmp40Result = tmp40(tmp(tmp2[51]), obj19);
   }
   items14[2] = tmp40Result;
-  const obj20 = { inputRef: ref2, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, maxLength: null, isDisabled: null };
+  const obj20 = { inputRef: ref2, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, maxLength: null, spellCheck: false, autoCorrect: false, isDisabled: null };
   const tmpResult4 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]);
   const intl3 = tmp5(tmp2[21]).intl;
   obj20[1] = intl3.string(str(pendingBadgeHiddenBadges[21]).t["+T3RI/"]);
@@ -353,7 +353,7 @@ export default function UserProfileEditForm(currentUser) {
     return obj.setPendingChanges(obj);
   };
   obj20[6] = closure_10;
-  obj20[7] = isSubmitting;
+  obj20[9] = isSubmitting;
   items14[3] = callback(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]), obj20);
   let tmp40Result1 = !isTryItOut;
   if (!isTryItOut) {

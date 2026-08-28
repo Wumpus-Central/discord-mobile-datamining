@@ -1,7 +1,7 @@
 // discord_app/modules/self_mod/shared/ShowSafetyToast.native.tsx
 import set from "../../../../_runtime/00002_set.js";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/08358_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08372_registerAsset.js";
 import ShieldIcon from "../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
 
 const result = set.fileFinishedImporting("modules/self_mod/shared/ShowSafetyToast.native.tsx");

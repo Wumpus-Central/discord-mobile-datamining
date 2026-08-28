@@ -9,7 +9,7 @@ import getUncachedChannelPermissionsDefault from "../stores/PermissionStore.tsx"
 import getPremiumPlanItemDefault from "../utils/PremiumUtils.tsx";
 import readSnowflake from "../modules/instant_invite/InviteCodeUtils.tsx";
 import collectGuildAnalyticsMetadataDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
-import t2 from "../../_runtime/04658_t.js";
+import t2 from "../../_runtime/04671_t.js";
 import items2 from "../utils/UploadUtils.tsx";
 import redactionSettingToRenderedString from "../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import createMessage from "../modules/messages/createMessage.tsx";
@@ -57,7 +57,7 @@ function trackInvite(channelId) {
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   let result1 = null != invite;
   if (result1) {
-    let tmp3Result = tmp3(7413);
+    let tmp3Result = tmp3(7427);
     result1 = tmp3Result.isEmbeddedApplicationInvite(invite);
   }
   let id1;
@@ -68,7 +68,7 @@ function trackInvite(channelId) {
     }
   }
   if (tmp8) {
-    tmp3Result = tmp3(7371);
+    tmp3Result = tmp3(7385);
     const result2 = tmp3Result.trackAppEmbedLinkSent(id1, LinkType.ACTIVITY_INVITE, id);
   }
   let channel = store.getChannel(channelId.channelId);
@@ -109,14 +109,14 @@ function trackInvite(channelId) {
             STREAM = GDM_INVITE;
             if (lastActiveStream.channelId === channel.id) {
               obj.destination_user_id = lastActiveStream.ownerId;
-              const streamerApplication = tmp3(7416).getStreamerApplication(lastActiveStream, closure_22);
+              const streamerApplication = tmp3(7430).getStreamerApplication(lastActiveStream, closure_22);
               let id3 = null;
               if (null != streamerApplication) {
                 id3 = streamerApplication.id;
               }
               obj.application_id = id3;
               STREAM = constants3.STREAM;
-              const tmp3Result1 = tmp3(7416);
+              const tmp3Result1 = tmp3(7430);
             }
           }
         }
@@ -142,13 +142,13 @@ function trackInvite(channelId) {
     obj.message_id = messageId;
     obj.send_type = constants4.DIRECT_MESSAGE;
     obj.invite_guild_scheduled_event_id = result.guildScheduledEventId;
-    let inviteInstanceId = tmp3(4430).getInviteInstanceId(result.baseCode, messageId);
+    let inviteInstanceId = tmp3(4431).getInviteInstanceId(result.baseCode, messageId);
     if (inviteInstanceId == null) {
       inviteInstanceId = null;
     }
     obj.invite_instance_id = inviteInstanceId;
     const merged1 = Object.assign(overrideProperties);
-    const tmp3Result2 = tmp3(4430);
+    const tmp3Result2 = tmp3(4431);
     collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.INVITE_SENT, obj);
     const obj13 = collectGuildAnalyticsMetadataDefault;
   } else {
@@ -172,13 +172,13 @@ function trackInvite(channelId) {
       obj2.message_id = messageId;
       obj2.send_type = constants4.DIRECT_MESSAGE;
       obj2.invite_guild_scheduled_event_id = result.guildScheduledEventId;
-      let inviteInstanceId1 = tmp3(4430).getInviteInstanceId(result.baseCode, messageId);
+      let inviteInstanceId1 = tmp3(4431).getInviteInstanceId(result.baseCode, messageId);
       if (inviteInstanceId1 == null) {
         inviteInstanceId1 = null;
       }
       obj2.invite_instance_id = inviteInstanceId1;
       const merged3 = Object.assign(overrideProperties);
-      const tmp3Result3 = tmp3(4430);
+      const tmp3Result3 = tmp3(4431);
       collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.INVITE_SENT, obj2);
       const obj8 = collectGuildAnalyticsMetadataDefault;
     }
@@ -607,7 +607,7 @@ let obj14 = {
           } else {
             closure_0 = arg1;
             if (closure_0.body.length > 0) {
-              obj = closure_1_0(4690);
+              obj = closure_1_0(4703);
               dependencyMap = 3;
               const obj5 = { value: null, done: true };
               obj5[0] = obj.createMessageRecord(closure_0.body[0]);
@@ -837,9 +837,9 @@ let obj14 = {
               closure_2 = undefined;
               dependencyMap = undefined;
               basicChannel = closure_1_17.getBasicChannel(closure_1_0);
-              const orCreate = closure_1_1(5168).getOrCreate(closure_1_0);
-              const obj13 = closure_1_1(5168);
-              const databaseResult = closure_1_1(1956).database();
+              const orCreate = closure_1_1(5181).getOrCreate(closure_1_0);
+              const obj13 = closure_1_1(5181);
+              const databaseResult = closure_1_1(1957).database();
               c1 = databaseResult;
               if (null != databaseResult) {
                 if (null != basicChannel) {
@@ -854,14 +854,14 @@ let obj14 = {
                       closure_2 = 1;
                       dependencyMap = 1;
                       obj1 = { value: null, done: false };
-                      obj1[0] = closure_1_0(1976).tryLoadAsync(() => closure_2_1(tmp[60]).load(c1, basicChannel, closure_1_4));
+                      obj1[0] = closure_1_0(1977).tryLoadAsync(() => closure_2_1(tmp[60]).load(c1, basicChannel, closure_1_4));
                       return obj1;
                     }
                     dependencyMap = 3;
                   }
                 }
               }
-              obj14 = closure_1_1(1956);
+              obj14 = closure_1_1(1957);
               closure_1_1(9).addLocalMessages(closure_1_0, -1);
               const obj7 = closure_1_1(9);
             }
@@ -891,7 +891,7 @@ let obj14 = {
                 tmp30 = closure_2.connectionId === closure_1_6.lastTimeConnectedChanged();
               }
               dependencyMap = tmp30;
-              obj2 = closure_1_1(7166);
+              obj2 = closure_1_1(7180);
               const result = obj2.recordChannelFetchedLocal(basicChannel, c1, closure_2, dependencyMap, closure_4, closure_2.messages);
               let obj3 = closure_1_1(709);
               obj3 = { type: "LOCAL_MESSAGES_LOADED", guildId: null, channelId: null, users: null, members: null, messages: null, stale: null };
@@ -961,7 +961,7 @@ let obj14 = {
                     orCreate = 1;
                     c3 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = obj2.tryLoadAsync(() => closure_2_1(7155).load(c1, basicChannel, c1));
+                    obj1[0] = obj2.tryLoadAsync(() => closure_2_1(7169).load(c1, basicChannel, c1));
                     return obj1;
                   }
                 }
@@ -2618,7 +2618,7 @@ let obj14 = {
                   obj.track(constants2.MESSAGE_SWIPE_ACTION_SENT, obj);
                 }
               })(closure_1_1, closure_1_0);
-              obj1 = closure_1_1(7442);
+              obj1 = closure_1_1(7456);
               obj2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2667,18 +2667,18 @@ let obj14 = {
             obj2[4] = closure_0;
             obj2[5] = dependencyMap;
             const obj3 = { type: null, message: null };
-            obj3[0] = closure_1_0(7511).MessageDataType.EDIT;
+            obj3[0] = closure_1_0(7525).MessageDataType.EDIT;
             obj3[1] = obj2;
-            closure_1_1(7511).enqueue(obj3, (hasErr) => {
+            closure_1_1(7525).enqueue(obj3, (hasErr) => {
               hasErr = hasErr.hasErr;
               let hasItem = !hasErr;
               if (!hasErr) {
-                const AUTOMOD_ERROR_CODES = closure_2_0(7781).AUTOMOD_ERROR_CODES;
+                const AUTOMOD_ERROR_CODES = closure_2_0(7795).AUTOMOD_ERROR_CODES;
                 hasItem = AUTOMOD_ERROR_CODES.has(hasErr.body.code);
               }
               if (hasItem) {
                 let obj = { type: null, message: null };
-                obj[0] = closure_2_0(7511).MessageDataType.EDIT;
+                obj[0] = closure_2_0(7525).MessageDataType.EDIT;
                 obj[1] = obj2;
                 obj1 = closure_2_1(709);
                 obj = { type: "MESSAGE_EDIT_FAILED_AUTOMOD", messageData: null, errorResponseBody: null };
@@ -2752,7 +2752,7 @@ let obj14 = {
               closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              obj1 = closure_1_1(7442);
+              obj1 = closure_1_1(7456);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2825,7 +2825,7 @@ let obj14 = {
               closure_1 = tmp5;
               let flags = tmp2;
               flags = undefined;
-              obj1 = closure_1_1(7442);
+              obj1 = closure_1_1(7456);
               c2 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -2978,7 +2978,7 @@ let obj14 = {
                 })();
                 dependencyMap = 3;
               } else {
-                obj1 = closure_1_1(7442);
+                obj1 = closure_1_1(7456);
                 c2 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
@@ -3091,7 +3091,7 @@ let obj14 = {
               formatToPlainStringResult = intl.string(closure_1_0(1236).t.z2gyNF);
             }
             c0 = formatToPlainStringResult;
-            obj3 = closure_1_1(4809);
+            obj3 = closure_1_1(4822);
             const obj4 = { title: null, body: null, confirmText: null };
             const intl3 = closure_1_0(1236).intl;
             obj4[0] = intl3.string(closure_1_0(1236).t.Vd1hs6);

@@ -15,7 +15,7 @@ import TIMESTAMP_FORMATS from "TimestampUtils.tsx";
 import staticRouteToTranslation from "StaticRouteRendering.tsx";
 import matchDefault from "MarkupHeadingRule.tsx";
 import regExpDefault2 from "MarkupListRule.tsx";
-import _modDef4931 from "MarkupSubtextRule.tsx";
+import _modDef4944 from "MarkupSubtextRule.tsx";
 import matchDefault2 from "PlatformMarkupRules.native.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00853__toArray.js";
@@ -26,7 +26,7 @@ import closure_8 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 import { SUB_COMMAND_KEY_SEPARATOR } from "../application_commands/ApplicationCommandConstants.tsx";
 import { GAME_MENTION_RAW_RE } from "../channel_autocomplete/ChannelAutocompleteConstants.tsx";
-import importDefaultResult from "../../../_runtime/04160_t.js";
+import importDefaultResult from "../../../_runtime/04161_t.js";
 import importDefaultResult3 from "combineMarkupRules.tsx";
 import importDefaultResult4 from "../../../_runtime/00012_apply.js";
 
@@ -38,7 +38,7 @@ function parseLink(arg0) {
     obj = { type: "text", content: null };
     obj[1] = arg0[1];
   } else {
-    obj = { type: "link", content: null, target: null, title: "call" };
+    obj = { type: "link", content: null, target: null, title: "container" };
     obj1 = { type: "text", content: null };
     obj1[1] = punycodeLinkResult.displayTarget;
     const items = [obj1];
@@ -136,8 +136,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     if (null != channel) {
       let nickname = getNicknameDefault.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
-        nickname = tmp4(4289).getName(str);
-        const tmp4Result = tmp4(4289);
+        nickname = tmp4(4290).getName(str);
+        const tmp4Result = tmp4(4290);
       }
       str = nickname;
       const obj2 = getNicknameDefault;
@@ -873,7 +873,7 @@ obj[33] = {
 };
 obj[34] = matchDefault;
 obj[35] = regExpDefault2;
-obj[36] = _modDef4931;
+obj[36] = _modDef4944;
 let items = [obj, ];
 const obj20 = {
   order: textRegexpDefault.order,

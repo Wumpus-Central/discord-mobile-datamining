@@ -72,7 +72,7 @@ function _submitPollVote() {
             }
           } else if (2 === tmp8) {
             c4 = 0;
-            const aPIError = new callback(4343).APIError(closure_3);
+            const aPIError = new callback(4344).APIError(closure_3);
             throw aPIError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -177,7 +177,7 @@ function _endPollEarly() {
           } else if (2 === tmp8) {
             c4 = 0;
             closure_2 = closure_3;
-            const aPIError = new callback(4343).APIError(closure_2);
+            const aPIError = new callback(4344).APIError(closure_2);
             throw aPIError;
           } else if (arg0 === 1) {
             c6 = 3;

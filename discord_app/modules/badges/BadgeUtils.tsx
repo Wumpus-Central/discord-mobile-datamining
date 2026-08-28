@@ -1,9 +1,12 @@
 // discord_app/modules/badges/BadgeUtils.tsx
+import set from "../../../_runtime/00002_set.js";
 import USER_PROFILE_TOOLTIP_DELAY from "../user_profile/Constants.tsx";
 import BadgeId from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import set2 from "BadgeIdResolution.tsx";
-import set from "../../../_runtime/00002_set.js";
 
+function isPinnedBadge(badge_id) {
+  return badge_id === BadgeId.BadgeId.STAFF;
+}
 function getProfileBadgeIconUrl(iconSrc) {
   iconSrc = iconSrc.iconSrc;
   if (iconSrc == null) {
@@ -12,21 +15,21 @@ function getProfileBadgeIconUrl(iconSrc) {
   return iconSrc;
 }
 const getBadgeAssetFromCDN = USER_PROFILE_TOOLTIP_DELAY.getBadgeAssetFromCDN;
-let items = [BadgeId.BadgeId.STAFF];
-let set = new Set(items);
 let result = set.fileFinishedImporting("modules/badges/BadgeUtils.tsx");
 
-export const NON_CUSTOMIZABLE_BADGE_IDS = set;
 export const MAX_DISPLAYED_PROFILE_BADGES = 6;
+export { isPinnedBadge };
 export const getUnhideableBadgeIds = function getUnhideableBadgeIds(tenureBadgeHideable) {
-  if (!tenureBadgeHideable.tenureBadgeHideable) {
-    const _Set = Set;
-    const items = [];
-    items[HermesBuiltin.arraySpread(set, 0)] = BadgeId.BadgeId.PREMIUM_TENURE;
-    set = new Set(items);
-    const arraySpreadResult = HermesBuiltin.arraySpread(set, 0);
+  let _Set = Set;
+  const STAFF = BadgeId.BadgeId.STAFF;
+  if (tenureBadgeHideable.tenureBadgeHideable) {
+    const items = [STAFF];
+    _Set = new _Set(items);
+  } else {
+    const items1 = [STAFF, BadgeId.BadgeId.PREMIUM_TENURE];
+    _Set = new _Set(items1);
   }
-  return set;
+  return _Set;
 };
 export const groupCustomizableBadges = function groupCustomizableBadges(memo) {
   const fixedBadges = [];
@@ -37,9 +40,9 @@ export const groupCustomizableBadges = function groupCustomizableBadges(memo) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (nextResult.owned) {
-      let tmp3 = set;
+      let tmp3 = isPinnedBadge;
       let tmp4 = nextResult;
-      if (set.has(tmp2.badge_id)) {
+      if (isPinnedBadge(tmp2.badge_id)) {
         let tmp10 = nextResult;
         let arr = fixedBadges.push(tmp2);
       } else {

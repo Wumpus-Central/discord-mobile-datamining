@@ -1,7 +1,7 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import noop from "../../../../../_runtime/00019_noop.js";
-import hooksDefault from "../../../../../_runtime/04043_hooks.js";
+import hooksDefault from "../../../../../_runtime/04044_hooks.js";
 
 const useMemo = noop.useMemo;
 const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx");
@@ -12,9 +12,9 @@ export const computeDaysUntilNextBadgeDate = function computeDaysUntilNextBadgeD
   return Math.max(0, hooksDefault(arg0).add(arg1, "months").add(1, "day").diff(hooksDefault(), "days"));
 };
 export const useTimeUntilNextBadge = function useTimeUntilNextBadge() {
-  nextTenureBadge = nextTenureBadge(13016).useNextTenureBadge();
-  let obj = nextTenureBadge(13016);
-  const premiumSince = nextTenureBadge(8889).usePremiumSince();
+  nextTenureBadge = nextTenureBadge(13035).useNextTenureBadge();
+  let obj = nextTenureBadge(13035);
+  const premiumSince = nextTenureBadge(8906).usePremiumSince();
   const items = [nextTenureBadge, premiumSince];
   return useMemo(() => {
     if (null != nextTenureBadge) {

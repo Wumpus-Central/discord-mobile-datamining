@@ -31,11 +31,11 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
     }
     obj = { content: null };
     obj[0] = formatToPartsResult;
-    const merged = Object.assign(tmp8(7805)(message));
+    const merged = Object.assign(tmp8(7819)(message));
     return obj;
   } else {
     user = user.getUser(first);
-    const userAuthorWithProcessedColor = tmp5(7802).getUserAuthorWithProcessedColor(user, channel);
+    const userAuthorWithProcessedColor = tmp5(7816).getUserAuthorWithProcessedColor(user, channel);
     obj1 = {};
     const merged1 = Object.assign(obj);
     obj1.otherUsername = userAuthorWithProcessedColor.nick;
@@ -44,7 +44,7 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
     obj2[1] = message;
     obj2[2] = userAuthorWithProcessedColor;
     obj2[3] = roleStyle;
-    obj1.otherUsernameOnClick = tmp8(7804)(obj2);
+    obj1.otherUsernameOnClick = tmp8(7818)(obj2);
     const intl2 = tmp5(1236).intl;
     const formatToParts2 = intl2.formatToParts;
     const t2 = tmp5(1236).t;
@@ -55,7 +55,7 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
     }
     const obj3 = { content: null };
     obj3[0] = formatToParts2Result;
-    const merged2 = Object.assign(tmp8(7805)(message));
+    const merged2 = Object.assign(tmp8(7819)(message));
     return obj3;
   }
 };

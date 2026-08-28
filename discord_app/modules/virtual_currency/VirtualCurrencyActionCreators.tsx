@@ -214,7 +214,7 @@ function _redeemVirtualCurrencyForSKU() {
                 }
                 let result = null != applicationId;
                 if (result) {
-                  let obj8 = callback(8429);
+                  let obj8 = callback(8443);
                   result = obj8.isTestModeForApplication(applicationId);
                 }
                 c8 = result;
@@ -236,10 +236,10 @@ function _redeemVirtualCurrencyForSKU() {
             } else if (2 === tmp7) {
               c4 = 0;
               closure_14 = c3;
-              if (closure_14 instanceof callback(4343).BillingError) {
+              if (closure_14 instanceof callback(4344).BillingError) {
                 billingError = closure_14;
               } else {
-                billingError = new callback(4343).BillingError(closure_14);
+                billingError = new callback(4344).BillingError(closure_14);
               }
               let obj6 = callback2(709);
               const obj5 = { type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: null, error: null };

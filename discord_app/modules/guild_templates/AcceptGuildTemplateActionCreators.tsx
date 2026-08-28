@@ -37,9 +37,9 @@ export default {
             }
           });
         } else {
-          callback(6138).transitionToGuild(body.id);
+          callback(6151).transitionToGuild(body.id);
           body(body);
-          const obj3 = callback(6138);
+          const obj3 = callback(6151);
         }
       }, (body) => {
         let obj = callback2(709);

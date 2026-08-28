@@ -37,14 +37,14 @@ export default function useStableParticipant(arg0, arg1, arg2) {
           obj[1] = tmp;
           obj[2] = user;
           const id = closure_1_4.getId();
-          obj[5] = callback(4638).getName(dependencyMap, tmp3, user);
-          const obj5 = callback(4638);
-          obj[6] = callback(8827).getAvatarDecoration(user, dependencyMap);
+          obj[5] = callback(4639).getName(dependencyMap, tmp3, user);
+          const obj5 = callback(4639);
+          obj[6] = callback(8844).getAvatarDecoration(user, dependencyMap);
           obj[10] = user.id === id;
           return obj;
         }
       } else {
-        const tmp15 = callback2(9512)(participant);
+        const tmp15 = callback2(9530)(participant);
         const type = participant.type;
         if (closure_1_7.ACTIVITY === type) {
           obj = { type: null, id: null, applicationId: null };

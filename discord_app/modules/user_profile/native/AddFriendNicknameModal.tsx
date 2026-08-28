@@ -151,7 +151,7 @@ export default function AddFriendNicknameModal(arg0) {
   obj = { children: null };
   const tmp3Result = initialize;
   obj1 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  const tmp11 = showUserProfile(6001);
+  const tmp11 = showUserProfile(6014);
   const intl3 = tmp3(1236).intl;
   obj1[0] = intl3.string(getSystemLocale.t["R3BPH+"]);
   obj1[1] = function handleSubmit() {
@@ -176,8 +176,8 @@ export default function AddFriendNicknameModal(arg0) {
   const intl6 = tmp3(1236).intl;
   obj4[2] = intl6.string(getSystemLocale.t.pqG6GS);
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
-  const tmp12 = showUserProfile(4899);
-  obj4[3] = showUserProfile(4289).getName(stateFromStores1);
+  const tmp12 = showUserProfile(4912);
+  obj4[3] = showUserProfile(4290).getName(stateFromStores1);
   obj4[4] = stateFromStores;
   items3[2] = callback2(TextField.TextField, obj4);
   obj1[4] = items3;

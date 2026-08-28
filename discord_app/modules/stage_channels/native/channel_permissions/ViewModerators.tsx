@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/native/channel_permissions/ViewModerators.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02010_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../../../stores/GuildMemberStore.tsx";
@@ -218,5 +218,5 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel, canSkip: flag };
-  obj2.openLazy(asyncRequireImpl(16318, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
+  obj2.openLazy(asyncRequireImpl(16336, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
 };

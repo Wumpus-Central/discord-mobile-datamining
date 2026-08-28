@@ -18,9 +18,9 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(16288).trackYouTabAvatarPress();
-    const obj = callback(16288);
-    const result1 = callback(15873).showYouAccountActionSheet();
+    const result = callback(16306).trackYouTabAvatarPress();
+    const obj = callback(16306);
+    const result1 = callback(15891).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();

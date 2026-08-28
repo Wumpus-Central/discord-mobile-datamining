@@ -13,6 +13,23 @@ result = require("set").fileFinishedImporting("modules/clips/clipPayloadUtils.ts
 export const getClipCreatedAt = function getClipCreatedAt(createdAt) {
   return new Date(createdAt).toISOString();
 };
+export const getClipSyncTimestamp = function getClipSyncTimestamp(clip) {
+  if (null != clip.syncTimestamp) {
+    const editMetadata = clip.editMetadata;
+    let end;
+    if (editMetadata != null) {
+      end = editMetadata.end;
+    }
+    if (null != end) {
+      let length = 1000 * clip.editMetadata.end;
+    } else {
+      length = clip.length;
+    }
+    const _Date = Date;
+    const date = new Date(clip.syncTimestamp - (clip.length - length));
+    return date.toISOString();
+  }
+};
 export const getClipParticipantIds = function getClipParticipantIds(users) {
   return users.slice(0, closure_4);
 };

@@ -15,7 +15,7 @@ import useOptInEnabledForGuild from "../modules/opt_in_channels/isOptInEnabled.t
 import updateGuildUnreadSentinel from "GuildReadStateStore.tsx";
 import isChangelogChannelDefault from "../modules/changelog/utils/isChangelogChannel.tsx";
 import getFocusedChannelId from "../modules/panels/isChannelFocused.native.tsx";
-import _modDef10857 from "../modules/app_state/DiscordAppState.native.tsx";
+import _modDef10875 from "../modules/app_state/DiscordAppState.native.tsx";
 import _networkAwareRetryDefault from "../modules/network/networkAwareRetry.tsx";
 import filterOutMessageRequestsAndSpam from "../modules/message_request/MessageRequestUtils.tsx";
 import map2 from "../modules/panels/visibleInlineChannels.tsx";
@@ -305,7 +305,7 @@ function shouldAutomaticallyAck(value, arg1) {
           }
           return false;
         }
-        obj5 = _modDef10857;
+        obj5 = _modDef10875;
       }
       if (tmp4) {
         if (!value._persisted) {
@@ -1713,7 +1713,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
       const result = filterOutMessageRequestsAndSpam.isMessageRequestOrSpamRequest(self.channelId, items);
       let tmp9 = !result;
       if (!result) {
-        let result1 = tmp4(7213).isOptInEnabledForGuild(self._guildId);
+        let result1 = tmp4(7227).isOptInEnabledForGuild(self._guildId);
         if (result1) {
           result1 = self._lastMessageTimestamp < c71;
         }
@@ -1722,7 +1722,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
           canTrackUnreadsResult = self.canTrackUnreads();
         }
         tmp9 = canTrackUnreadsResult;
-        const tmp4Result = tmp4(7213);
+        const tmp4Result = tmp4(7227);
       }
       tmp3 = tmp9;
       obj = filterOutMessageRequestsAndSpam;
@@ -2040,14 +2040,14 @@ prototype2["_ack"] = function _ack(closure_1, c0) {
         }
         callback(709).dispatch({ type: "MESSAGE_ACKED" });
         if (dependencyMap) {
-          recalculateFlagsResult(2009)(13491, tmp5.paths).then((arg0) => {
+          recalculateFlagsResult(2010)(13510, tmp5.paths).then((arg0) => {
             obj = closure_1;
             if (closure_1 == null) {
               obj = {};
             }
             arg0.default(channelId.channelId, obj);
           });
-          const promise = recalculateFlagsResult(2009)(13491, tmp5.paths);
+          const promise = recalculateFlagsResult(2010)(13510, tmp5.paths);
         }
         obj = callback(709);
         tmp5 = dependencyMap;
@@ -3185,7 +3185,7 @@ obj = {
     }
     let result = channelId2 === channelId || currentSidebarChannelId === channelId;
     if (!result) {
-      let tmp8Result = tmp8(13492);
+      let tmp8Result = tmp8(13511);
       result = tmp8Result.isChannelVisibleInline(channelId, (arg0) => focused.isFocused(arg0));
     }
     if (result) {
@@ -3224,7 +3224,7 @@ obj = {
       if (null != value.oldestUnreadMessageId) {
         if (!value.oldestUnreadMessageIdStale) {
           if (!hasUnreadResult) {
-            tmp8Result = tmp8(10092);
+            tmp8Result = tmp8(10110);
             hasUnreadResult = tmp8Result.getFocusedChannelId() === channelId;
           }
           if (!hasUnreadResult) {
@@ -3274,7 +3274,7 @@ obj = {
                   tmp46 = ReadStateTypes;
                 }
               }
-              tmp8Result1 = tmp8(4704);
+              tmp8Result1 = tmp8(4717);
             }
             const channel = obj2.getChannel(message.channel_id);
             let tmp34 = null != channel && channel.isPrivate();
@@ -3290,7 +3290,7 @@ obj = {
                     if (tmp8Result2.computeThreadNotificationSetting(channel) === ThreadMemberFlags.ALL_MESSAGES) {
                       obj6 = { shouldMention: true, isMentionLowImportance: true };
                     }
-                    tmp8Result2 = tmp8(10091);
+                    tmp8Result2 = tmp8(10109);
                   } else if (!channel.isVocal()) {
                     if (!obj16.isChannelMuted(channel.guild_id, channel.id)) {
                       if (obj16.resolvedMessageNotifications(channel) === constants10.ALL_MESSAGES) {
@@ -3721,7 +3721,7 @@ obj = {
     });
     const item = found.forEach((messageId) => {
       const value = closure_81.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "ct", isExplicitUserAction: true, trackAnalytics: false });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "ct", isExplicitUserAction: "literal", trackAnalytics: "," });
     });
     if (context === closure_41) {
       const push = navigation.push;

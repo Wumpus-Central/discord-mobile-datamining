@@ -191,7 +191,7 @@ prototype4["shouldCollectMetrics"] = function shouldCollectMetrics() {
   return tmp2;
 };
 const libdiscoreTelemetryExperiment = new LibdiscoreTelemetryExperiment("2025-09-libdiscore-telemetry");
-const tmp9 = new "shouldCollectMetrics"("2025-11-defer-load-late-lazy-cache", undefined, tmp4, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp7, libdiscoreTelemetryExperiment);
+const tmp9 = new "shouldCollectMetrics"("2025-11-defer-load-late-lazy-cache", undefined, tmp4, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp7);
 // ThrowIfThisInitialized (0x7c)
 tmp9.label = "Allow react to render before lazy cache is loaded";
 tmp9.defaultValue = false;
@@ -219,19 +219,15 @@ const tmp11 = new "getTreatments"("2026-02-android-fresco-cache", undefined, tmp
 // ThrowIfThisInitialized (0x7c)
 tmp11.label = "Android Fresco Cache";
 tmp11.treatmentCount = 3;
-const tmp12 = new "getTreatments"("2026-02-android-chat-mosaic-shared-pool", undefined, tmp4, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp7, libdiscoreTelemetryExperiment);
+const tmp12 = new "getTreatments"("2026-02-android-chat-mosaic-shared-pool", undefined, tmp4, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp7);
 // ThrowIfThisInitialized (0x7c)
 tmp12.label = "Android Chat Mosaic Shared Pool";
 tmp12.defaultValue = false;
-const tmp13 = new "getTreatments"("2026-03-mobile-hermes-occupancy-target", undefined, tmp4, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp7, libdiscoreTelemetryExperiment);
+tmp2 = new tmp2("2026-03-mobile-hermes-occupancy-target", undefined, tmp4, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp7);
 // ThrowIfThisInitialized (0x7c)
-tmp13.label = "Android Hermes Occupancy Target";
-tmp13.defaultValue = false;
-tmp2 = new tmp2("2026-06-ios-ota-streaming", undefined, tmp4, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp7, libdiscoreTelemetryExperiment);
-// ThrowIfThisInitialized (0x7c)
-tmp2.label = "iOS OTA Streaming Download";
+tmp2.label = "Android Hermes Occupancy Target";
 tmp2.defaultValue = false;
-tmp3 = new tmp3("2026-08-android-rn-reparenting-flag", undefined, tmp4, tmp3, new.target, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp7, libdiscoreTelemetryExperiment);
+tmp3 = new tmp3("2026-08-android-rn-reparenting-flag", undefined, tmp4, tmp3, new.target, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp7);
 // ThrowIfThisInitialized (0x7c)
 tmp3.label = "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions";
 tmp3.defaultValue = false;
@@ -248,8 +244,7 @@ export const DelayLoadLateLazyCacheHoldoutExperiment = tmp9;
 export const AndroidPullModeRenderingExperiment = tmp10;
 export const AndroidFrescoCacheExperiment = tmp11;
 export const AndroidChatMosaicSharedPoolExperiment = tmp12;
-export const AndroidHermesOccupancyTargetExperiment = tmp13;
-export const IOSOtaStreamingExperiment = tmp2;
+export const AndroidHermesOccupancyTargetExperiment = tmp2;
 export const AndroidRNFlagReparenting = tmp3;
 export function isExperimentSyncDisabled() {
   return c7;

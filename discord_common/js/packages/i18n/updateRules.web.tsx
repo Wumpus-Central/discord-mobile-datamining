@@ -1,6 +1,6 @@
 // discord_common/js/packages/i18n/updateRules.web.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import t from "../../../../_runtime/04160_t.js";
+import t from "../../../../_runtime/04161_t.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;

@@ -102,7 +102,7 @@ function _validatePurchase() {
           } else if (2 === tmp8) {
             c4 = 0;
             c6 = c3;
-            const tmp18 = new lib(10401)(c6);
+            const tmp18 = new lib(10419)(c6);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -243,8 +243,8 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                 c16 = undefined;
                 c17 = undefined;
                 c18 = undefined;
-                let obj3;
-                closure_20 = undefined;
+                c19 = undefined;
+                c20 = undefined;
                 c21 = undefined;
                 c6 = 1;
                 c7 = 1;
@@ -308,30 +308,30 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                     const str = lib.currencyCode;
                   }
                   obj3.currency = formatted;
-                  obj3.application_id = c9;
-                  const merged1 = Object.assign(c18);
+                  obj3.application_id = closure_2_9;
+                  const merged1 = Object.assign(closure_18);
                   const obj4 = {};
                   const merged2 = Object.assign(obj3);
-                  obj4.succeededOnlyFields = c17;
-                  prop(c0, obj4);
-                  closure_20 = (function getOfferId(c0, closure_1_3, closure_1_1, closure_1_2, c14) {
+                  obj4.succeededOnlyFields = succeededOnlyFields;
+                  prop(callback, obj4);
+                  closure_20 = (function getOfferId(closure_0, closure_1_3, closure_1_1, closure_1_2, closure_14) {
                     let offerIds;
-                    if (c14 != null) {
-                      offerIds = c14.offerIds;
+                    if (closure_14 != null) {
+                      offerIds = closure_14.offerIds;
                     }
                     if (null != offerIds) {
                       if (null != closure_1_1) {
                         const tmp13 = _undefined(_undefined2[16]).TrialIdToProductOfferId[closure_1_1.trialId];
                         let tmp14;
                         if (tmp13 != null) {
-                          tmp14 = tmp13[c0];
+                          tmp14 = tmp13[closure_0];
                         }
                         return tmp14;
                       } else if (null != closure_1_2) {
                         const tmp9 = _undefined(_undefined2[16]).DiscountIdToProductOfferId[closure_1_2.discountId];
                         let tmp10;
                         if (tmp9 != null) {
-                          tmp10 = tmp9[c0];
+                          tmp10 = tmp9[closure_0];
                         }
                         return tmp10;
                       }
@@ -339,26 +339,16 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                     let BOGO_OFFER_ID = null;
                     if (closure_1_3) {
                       BOGO_OFFER_ID = null;
-                      if (c0 === _undefined(_undefined2[16]).ProductIds.PREMIUM_TIER_2_MONTHLY) {
+                      if (closure_0 === _undefined(_undefined2[16]).ProductIds.PREMIUM_TIER_2_MONTHLY) {
                         BOGO_OFFER_ID = tmp5(tmp6[16]).BOGO_OFFER_ID;
                       }
                       tmp5 = _undefined;
                       tmp6 = _undefined2;
                     }
                     return BOGO_OFFER_ID;
-                  })(c0, closure_1_3, closure_1_1, closure_1_2, c14);
-                  let obj14 = callback(premiumDiscountOffer[22]);
-                  let obj5 = {};
-                  throwTypeErrorResult = obj5;
-                  throwTypeErrorResult = Object.assign(obj3);
-                  throwTypeErrorResult = constants;
-                  obj5.payment_gateway = constants.GOOGLE;
-                  throwTypeErrorResult = obj14.trackPaymentFlowStartedAnalyticsAndCTP(obj5);
-                  throwTypeErrorResult = c2;
+                  })(callback, closure_1_3, closure_1_1, closure_1_2, lib);
                   c5 = 1;
-                  throwTypeErrorResult = paymentGatewayPlanId;
                   if (!paymentGatewayPlanId) {
-                    throwTypeErrorResult = prop;
                     if (!prop) {
                       throwTypeErrorResult = c3;
                       throwTypeErrorResult = closure_1_4;
@@ -370,10 +360,10 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                         throwTypeErrorResult = c2;
                         if (closure_2_11 != null) {
                           throwTypeErrorResult = c3;
-                          const obj6 = { paymentGateway: null };
+                          let obj5 = { paymentGateway: null };
                           throwTypeErrorResult = constants;
-                          obj6[0] = constants.GOOGLE;
-                          throwTypeErrorResult = throwTypeErrorResult(obj6);
+                          obj5[0] = constants.GOOGLE;
+                          throwTypeErrorResult = throwTypeErrorResult(obj5);
                         }
                         c5 = 0;
                       } else {
@@ -395,29 +385,29 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                           throwTypeErrorResult = c3;
                           throwTypeErrorResult = callback;
                           throwTypeErrorResult = premiumDiscountOffer;
-                          let obj16 = callback(premiumDiscountOffer[26]);
+                          let obj14 = callback(premiumDiscountOffer[25]);
                           throwTypeErrorResult = callback;
                           throwTypeErrorResult = c6;
                           throwTypeErrorResult = c7;
                           throwTypeErrorResult = c5;
-                          throwTypeErrorResult = obj16;
-                          throwTypeErrorResult = obj16.updatePendingDowngrade(callback, c6, c7, c5);
+                          throwTypeErrorResult = obj14;
+                          throwTypeErrorResult = obj14.updatePendingDowngrade(callback, c6, c7, c5);
                         }
                         throwTypeErrorResult = c2;
                         throwTypeErrorResult = c3;
                         throwTypeErrorResult = lib;
-                        const obj7 = { productId: null, premiumSubscription: null, offerId: null };
+                        const obj6 = { productId: null, premiumSubscription: null, offerId: null };
                         throwTypeErrorResult = callback;
-                        obj7[0] = callback;
+                        obj6[0] = callback;
                         throwTypeErrorResult = callback;
-                        obj7[1] = callback;
-                        throwTypeErrorResult = closure_2_20;
-                        obj7[2] = closure_2_20;
+                        obj6[1] = callback;
+                        throwTypeErrorResult = closure_20;
+                        obj6[2] = closure_20;
                         c6 = 6;
                         c7 = 1;
-                        let obj8 = { value: null, done: false };
-                        obj8[0] = lib(obj7);
-                        return obj8;
+                        const obj7 = { value: null, done: false };
+                        obj7[0] = lib(obj6);
+                        return obj7;
                       }
                     }
                   }
@@ -430,21 +420,21 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                     throwTypeErrorResult = c3;
                     throwTypeErrorResult = premiumTrialOffer;
                     throwTypeErrorResult = premiumDiscountOffer;
-                    throwTypeErrorResult = null != premiumTrialOffer(premiumDiscountOffer[23]).giftInfoOptionsCache;
+                    throwTypeErrorResult = null != premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache;
                     if (throwTypeErrorResult) {
                       throwTypeErrorResult = c2;
                       throwTypeErrorResult = c3;
                       throwTypeErrorResult = premiumTrialOffer;
                       throwTypeErrorResult = premiumDiscountOffer;
                       throwTypeErrorResult = callback;
-                      throwTypeErrorResult = null != premiumTrialOffer(premiumDiscountOffer[23]).giftInfoOptionsCache[callback];
+                      throwTypeErrorResult = null != premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache[callback];
                     }
                     if (throwTypeErrorResult) {
                       throwTypeErrorResult = c2;
                       throwTypeErrorResult = c3;
                       throwTypeErrorResult = premiumTrialOffer;
                       throwTypeErrorResult = premiumDiscountOffer;
-                      const giftInfoOptionsCache = premiumTrialOffer(premiumDiscountOffer[23]).giftInfoOptionsCache;
+                      const giftInfoOptionsCache = premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache;
                       throwTypeErrorResult = callback;
                       delete tmp7[tmp6];
                     }
@@ -453,11 +443,11 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                     throwTypeErrorResult = premiumTrialOffer;
                     throwTypeErrorResult = premiumDiscountOffer;
                     throwTypeErrorResult = callback;
-                    let obj9 = {};
+                    let obj8 = {};
                     throwTypeErrorResult = closure_2_10;
-                    throwTypeErrorResult = obj9;
+                    throwTypeErrorResult = obj8;
                     throwTypeErrorResult = Object.assign(closure_2_10);
-                    premiumTrialOffer(premiumDiscountOffer[23]).giftInfoOptionsCache[callback] = obj9;
+                    premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache[callback] = obj8;
                   }
                   throwTypeErrorResult = c2;
                   closure_21 = null;
@@ -470,17 +460,17 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                     throwTypeErrorResult = premiumDiscountOffer;
                     throwTypeErrorResult = lib;
                     throwTypeErrorResult = lib;
-                    closure_21 = callback(premiumDiscountOffer[24]).convertToMinorCurrencyUnits(lib.price / 100, lib.currencyCode);
+                    closure_21 = callback(premiumDiscountOffer[23]).convertToMinorCurrencyUnits(lib.price / 100, lib.currencyCode);
                     c5 = 1;
-                    const obj22 = callback(premiumDiscountOffer[24]);
+                    const obj20 = callback(premiumDiscountOffer[23]);
                   }
                   throwTypeErrorResult = c2;
                   throwTypeErrorResult = c3;
-                  const obj10 = { productId: null, premiumSubscription: null, offerId: null, currency: null, price: null, isGift: null };
+                  let obj9 = { productId: null, premiumSubscription: null, offerId: null, currency: null, price: null, isGift: null };
                   throwTypeErrorResult = callback;
-                  obj10[0] = callback;
+                  obj9[0] = callback;
                   throwTypeErrorResult = callback;
-                  obj10[1] = callback;
+                  obj9[1] = callback;
                   throwTypeErrorResult = undefined;
                   throwTypeErrorResult = lib;
                   if (lib != null) {
@@ -489,30 +479,30 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                     }
                   }
                   throwTypeErrorResult = c2;
-                  obj10[3] = throwTypeErrorResult;
+                  obj9[3] = throwTypeErrorResult;
                   throwTypeErrorResult = closure_21;
-                  obj10[4] = closure_21;
+                  obj9[4] = closure_21;
                   throwTypeErrorResult = paymentGatewayPlanId;
-                  obj10[5] = paymentGatewayPlanId;
+                  obj9[5] = paymentGatewayPlanId;
                   c6 = 4;
                   c7 = 1;
-                  let obj11 = { value: null, done: false };
-                  obj11[0] = throwTypeErrorResult(obj10);
-                  return obj11;
+                  const obj10 = { value: null, done: false };
+                  obj10[0] = throwTypeErrorResult(obj9);
+                  return obj10;
                 }
               } else if (2 === tmp10) {
                 c5 = 0;
                 let message = c4;
-                obj9 = premiumTrialOffer(premiumDiscountOffer[27]);
-                const obj12 = {};
-                const merged3 = Object.assign(obj3);
-                obj12.payment_gateway = constants.GOOGLE;
-                obj12.error_message = message.message;
-                obj9.track(closure_2_11.PAYMENT_FLOW_FAILED, obj12);
+                obj9 = premiumTrialOffer(premiumDiscountOffer[26]);
+                let obj11 = {};
+                const merged3 = Object.assign(c19);
+                obj11.payment_gateway = constants.GOOGLE;
+                obj11.error_message = message.message;
+                obj9.track(closure_2_11.PAYMENT_FLOW_FAILED, obj11);
                 if (callback3 != null) {
                   callback3();
                 }
-                obj11 = callback(premiumDiscountOffer[25]);
+                obj11 = callback(premiumDiscountOffer[24]);
                 let result = obj11.captureBillingException(closure_2_23);
                 (function showPurchaseErrorModal(closure_2_23) {
                   let billingError = closure_2_23;
@@ -551,7 +541,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
               } else if (3 === tmp10) {
                 c5 = 1;
                 closure_22 = c4;
-                obj8 = callback(premiumDiscountOffer[25]);
+                obj8 = callback(premiumDiscountOffer[24]);
                 const result1 = obj8.captureBillingException(closure_22);
               } else if (4 === tmp10) {
                 if (arg0 === 1) {
@@ -560,18 +550,29 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                 } else if (arg0 === 2) {
                   c5 = 0;
                   c7 = 3;
-                  const obj13 = { value: null, done: true };
-                  obj13[0] = arg1;
-                  return obj13;
+                  const obj12 = { value: null, done: true };
+                  obj12[0] = arg1;
+                  return obj12;
                 } else {
-                  obj5 = callback(premiumDiscountOffer[26]);
+                  obj5 = callback(premiumDiscountOffer[25]);
                   c6 = 5;
                   c7 = 1;
-                  obj14 = { value: null, done: false };
-                  obj14[0] = obj5.purchase(c0, c13);
-                  return obj14;
+                  const obj13 = { value: null, done: false };
+                  obj13[0] = obj5.purchase(c0, c13);
+                  return obj13;
                 }
               } else if (5 === tmp10) {
+                if (arg0 === 1) {
+                  c7 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c5 = 0;
+                  c7 = 3;
+                  obj14 = { value: null, done: true };
+                  obj14[0] = arg1;
+                  return obj14;
+                }
+              } else if (6 === tmp10) {
                 if (arg0 === 1) {
                   c7 = 3;
                   throw arg1;
@@ -581,24 +582,13 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
                   const obj15 = { value: null, done: true };
                   obj15[0] = arg1;
                   return obj15;
-                }
-              } else if (6 === tmp10) {
-                if (arg0 === 1) {
-                  c7 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c5 = 0;
-                  c7 = 3;
-                  obj16 = { value: null, done: true };
-                  obj16[0] = arg1;
-                  return obj16;
                 } else {
-                  obj1 = callback(premiumDiscountOffer[26]);
+                  obj1 = callback(premiumDiscountOffer[25]);
                   c6 = 7;
                   c7 = 1;
-                  const obj17 = { value: null, done: false };
-                  obj17[0] = obj1.subscribe(c0, c13, c6, c7, closure_20);
-                  return obj17;
+                  const obj16 = { value: null, done: false };
+                  obj16[0] = obj1.subscribe(c0, c13, c6, c7, c20);
+                  return obj16;
                 }
               } else if (arg0 === 1) {
                 c7 = 3;

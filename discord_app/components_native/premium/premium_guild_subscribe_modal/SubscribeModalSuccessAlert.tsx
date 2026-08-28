@@ -5,10 +5,10 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/04892_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/04905_LinearGradient.js";
 import componentDidMountDefault from "../../common/Alert.tsx";
 import componentDidMountDefault2 from "../../common/SequencedLottieAnimationView.tsx";
-import _mod13195 from "../../../../_runtime/metro/13195__.js";
+import _mod13214 from "../../../../_runtime/metro/13214__.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -24,7 +24,7 @@ class PremiumPaymentGuildAnimation {
     tmp = closure_11();
     obj = { nextScene, onSceneComplete, loop, sceneSegments: closure_12, style: tmp.animation, source: null };
     tmp2 = require("componentDidMount");
-    obj[5] = require("../../../../_runtime/metro/13195__.js");
+    obj[5] = require("../../../../_runtime/metro/13214__.js");
     return jsx(tmp2, obj);
   }
 }
@@ -71,9 +71,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = tmp2(1236).intl;
   obj[1] = intl.string(getSystemLocale.t.YKxJCI);
   obj[2] = function onConfirm() {
-    callback2(4810).close();
-    const obj = callback2(4810);
-    callback(5329).closeApplyBoostModal();
+    callback2(4823).close();
+    const obj = callback2(4823);
+    callback(5342).closeApplyBoostModal();
   };
   obj = {
     nextScene: tmp6[0],
@@ -97,9 +97,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = closure_6;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(13196);
+    let tmp8Result = tmp8(13215);
   } else {
-    tmp8Result = tmp8(13197);
+    tmp8Result = tmp8(13216);
   }
   obj3[1] = tmp8Result;
   obj2[1] = callback2(tmp15, obj3);

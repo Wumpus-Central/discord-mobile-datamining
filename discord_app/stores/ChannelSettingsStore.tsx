@@ -8,7 +8,7 @@ import createChannelRecord from "../records/ChannelRecord.tsx";
 import set2 from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 import set3 from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
 import fromGuildPropertiesWithAdditionalFields from "../utils/GuildRecordUtils.tsx";
-import hooksDefault from "../../_runtime/04043_hooks.js";
+import hooksDefault from "../../_runtime/04044_hooks.js";
 import MAX_REACTIONS from "../modules/reactions/ReactionUtils.tsx";
 import parseRawEmojiObjectDefault from "../modules/emojis/UnicodeEmojis.tsx";
 import closure_10 from "../records/InviteRecord.tsx";

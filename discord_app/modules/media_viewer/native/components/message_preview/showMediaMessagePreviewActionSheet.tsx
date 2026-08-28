@@ -1,5 +1,5 @@
 // discord_app/modules/media_viewer/native/components/message_preview/showMediaMessagePreviewActionSheet.tsx
-import asyncRequireImpl from "../../../../../../_runtime/02009_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02010_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import closure_3 from "../../../../../stores/ChannelStore.tsx";
 import closure_4 from "../../../../../stores/UserStore.tsx";
@@ -20,7 +20,7 @@ export default function showMediaMessagePreviewActionSheet(message) {
         obj[1] = message;
         obj[2] = user;
         obj[3] = message.closeMediaModal;
-        obj.openLazy(asyncRequireImpl(12751, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj);
+        obj.openLazy(asyncRequireImpl(12770, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj);
       }
     }
   }

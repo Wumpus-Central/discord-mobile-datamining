@@ -34,7 +34,7 @@ export default function UserVideoFailed(arg0) {
   if (!removeSplashImage) {
     obj = { style: null };
     obj[0] = tmp2.placeholderImage;
-    tmp9 = callback(tmp3(9491).StreamFailed, obj);
+    tmp9 = callback(tmp3(9509).StreamFailed, obj);
   }
   obj1 = { children: null };
   const items1 = [tmp9, ];
@@ -62,7 +62,7 @@ export default function UserVideoFailed(arg0) {
         closure_1_1(closure_1_2[12]).setDisableLocalVideo(closure_0, closure_1_4.MANUAL_ENABLED, closure_1_0(closure_1_2[11]).MediaEngineContextTypes.DEFAULT, false);
       }, 1000);
     };
-    tmp11Result = tmp11(tmp3(4880).Button, obj5);
+    tmp11Result = tmp11(tmp3(4893).Button, obj5);
   }
   obj4[1] = tmp11Result;
   items2[2] = callback(View, obj4);

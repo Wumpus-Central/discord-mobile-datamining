@@ -192,7 +192,7 @@ export default function SlayerStorefrontDevTools() {
     const obj4 = { label: null };
     const _HermesInternal = HermesInternal;
     obj4[0] = "Fetch failed: " + tmp10;
-    tmp15Result = tmp15(tmp5(5551).TableRow, obj4);
+    tmp15Result = tmp15(tmp5(5564).TableRow, obj4);
   }
   items5[3] = tmp15Result;
   const items6 = [closure_11(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, { title: "SKU", hasIcons: false, children: items5 }), ];

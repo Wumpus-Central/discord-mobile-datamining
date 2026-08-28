@@ -156,6 +156,8 @@ export const getAttachmentPayload = function getAttachmentPayload(closure_0, clo
     const obj3 = getClipCreatedAt;
     obj.clip_events_timeline = getClipCreatedAt.getClipEventsTimeline(closure_0.clip);
     const obj4 = getClipCreatedAt;
+    obj.clip_sync_timestamp = getClipCreatedAt.getClipSyncTimestamp(closure_0.clip);
+    const obj5 = getClipCreatedAt;
   }
   let tmp9 = "item" in closure_0 && null != closure_0.item;
   if (tmp9) {

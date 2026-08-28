@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/safety/native/TransferOwnershipModal.tsx
-import _modDef11331 from "TransferOwnershipModalActionCreators.tsx";
+import _modDef11350 from "TransferOwnershipModalActionCreators.tsx";
 import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import TransferOwnershipModalScenes from "../TransferOwnershipConstants.tsx";
@@ -7,7 +7,7 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
 function closeModal() {
-  _modDef11331.close();
+  _modDef11350.close();
 }
 ({ TransferOwnershipModalScenes: c5, TransferOwnershipVerificationTypes: closure_6 } = TransferOwnershipModalScenes);
 let result = require("set").fileFinishedImporting("modules/guild_settings/safety/native/TransferOwnershipModal.tsx");
@@ -60,11 +60,11 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj[1] = function onSuccess() {
-        callback2(11331).close();
-        const obj = callback2(11331);
-        callback2(9649).close();
-        const obj2 = callback2(9649);
-        const result = callback(4161).showTransferOwnershipSuccess();
+        callback2(11350).close();
+        const obj = callback2(11350);
+        callback2(9667).close();
+        const obj2 = callback2(9667);
+        const result = callback(4162).showTransferOwnershipSuccess();
       };
       obj[2] = closure_1_3(function*() {
         if (id === 2) {
@@ -130,5 +130,5 @@ export default function TransferOwnershipModal(guild) {
   let obj = { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null };
   let intl = guild(1236).intl;
   obj[2] = intl.string(guild(1236).t["13/7kX"]);
-  return jsx(guild(5960).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
+  return jsx(guild(5973).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
 };

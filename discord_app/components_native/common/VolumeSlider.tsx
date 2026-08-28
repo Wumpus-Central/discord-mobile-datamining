@@ -4,7 +4,7 @@ import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
 import map from "../../design/tokens/native/useToken.tsx";
 import VoiceNormalIcon from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import _getRequireWildcardCacheDefault from "../../../_runtime/08313__getRequireWildcardCache.js";
+import _getRequireWildcardCacheDefault from "../../../_runtime/08327__getRequireWildcardCache.js";
 import VoiceXIcon from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { MAX_EMBEDDED_VOLUME_PERCEPTUAL as closure_4 } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
@@ -44,7 +44,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   obj = { style: tmp4.leftIcon };
   const items1 = [callback(VoiceXIcon.VoiceXIcon, obj), , ];
   obj1 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
-  let tmp5Result = tmp5(4920);
+  let tmp5Result = tmp5(4933);
   obj1[1] = tmp5Result.amplitudeToPerceptual(value);
   obj1[3] = maxVolume;
   obj1[4] = minTrackColor;

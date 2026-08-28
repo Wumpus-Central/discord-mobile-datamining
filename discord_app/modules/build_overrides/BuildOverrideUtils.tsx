@@ -4,7 +4,7 @@ import ME from "../../Constants.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 import UrlAll from "../../../_runtime/01489_Url.js";
 import BUILD_OVERRIDE_TARGET_NAMES from "BuildOverrideConstants.tsx";
-import parseDefault from "../../../_runtime/04362_parse.js";
+import parseDefault from "../../../_runtime/04363_parse.js";
 import getConstants from "../../utils/native/ClientInfoUtils.tsx";
 import set from "../../utils/PlatformUtils.tsx";
 
@@ -48,7 +48,7 @@ function manualOverrideLinkMeta(str) {
   }
   return null;
 }
-const regExp = new RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$", "i");
+const regExp = new RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link/?\\?[\\S]+$", "i");
 const regExp1 = new RegExp("^dev://branch/([\\w-./]+)$", "i");
 set = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]);
 const set1 = new Set(["/__development/link", "/__development/link/"]);

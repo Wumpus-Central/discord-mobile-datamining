@@ -176,8 +176,8 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
         if (null != tmp2) {
           ref.current = tmp2;
           const intl = guildId(1236).intl;
-          editStateId(4161).presentFailedToast(intl.string(guildId(1236).t.R0RpRX));
-          const obj = editStateId(4161);
+          editStateId(4162).presentFailedToast(intl.string(guildId(1236).t.R0RpRX));
+          const obj = editStateId(4162);
         }
       }, items);
       obj = { headerText: null, buttonText: null, descriptionText: null, handleArchiveOrDelete: null, deleting: null, archiving: null };

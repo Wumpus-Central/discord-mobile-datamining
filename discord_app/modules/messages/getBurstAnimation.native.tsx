@@ -4,81 +4,11 @@ import asyncGeneratorStepDefault from "../../../_runtime/00005_asyncGeneratorSte
 let closure_0 = arg1;
 let obj = {
   load() {
-    return callback(7463);
+    return callback(7477);
   }
 };
 const items = [
   obj,
-  {
-    load() {
-      return callback(7464);
-    }
-  },
-  {
-    load() {
-      return callback(7465);
-    }
-  },
-  {
-    load() {
-      return callback(7466);
-    }
-  },
-  {
-    load() {
-      return callback(7467);
-    }
-  },
-  {
-    load() {
-      return callback(7468);
-    }
-  },
-  {
-    load() {
-      return callback(7469);
-    }
-  },
-  {
-    load() {
-      return callback(7470);
-    }
-  },
-  {
-    load() {
-      return callback(7471);
-    }
-  },
-  {
-    load() {
-      return callback(7472);
-    }
-  },
-  {
-    load() {
-      return callback(7473);
-    }
-  },
-  {
-    load() {
-      return callback(7474);
-    }
-  },
-  {
-    load() {
-      return callback(7475);
-    }
-  },
-  {
-    load() {
-      return callback(7476);
-    }
-  },
-  {
-    load() {
-      return callback(7477);
-    }
-  },
   {
     load() {
       return callback(7478);
@@ -93,15 +23,12 @@ const items = [
     load() {
       return callback(7480);
     }
-  }
-];
-obj = {
-  load() {
-    return callback(7481);
-  }
-};
-const items1 = [
-  obj,
+  },
+  {
+    load() {
+      return callback(7481);
+    }
+  },
   {
     load() {
       return callback(7482);
@@ -166,12 +93,15 @@ const items1 = [
     load() {
       return callback(7494);
     }
-  },
-  {
-    load() {
-      return callback(7495);
-    }
-  },
+  }
+];
+obj = {
+  load() {
+    return callback(7495);
+  }
+};
+const items1 = [
+  obj,
   {
     load() {
       return callback(7496);
@@ -185,6 +115,76 @@ const items1 = [
   {
     load() {
       return callback(7498);
+    }
+  },
+  {
+    load() {
+      return callback(7499);
+    }
+  },
+  {
+    load() {
+      return callback(7500);
+    }
+  },
+  {
+    load() {
+      return callback(7501);
+    }
+  },
+  {
+    load() {
+      return callback(7502);
+    }
+  },
+  {
+    load() {
+      return callback(7503);
+    }
+  },
+  {
+    load() {
+      return callback(7504);
+    }
+  },
+  {
+    load() {
+      return callback(7505);
+    }
+  },
+  {
+    load() {
+      return callback(7506);
+    }
+  },
+  {
+    load() {
+      return callback(7507);
+    }
+  },
+  {
+    load() {
+      return callback(7508);
+    }
+  },
+  {
+    load() {
+      return callback(7509);
+    }
+  },
+  {
+    load() {
+      return callback(7510);
+    }
+  },
+  {
+    load() {
+      return callback(7511);
+    }
+  },
+  {
+    load() {
+      return callback(7512);
     }
   }
 ];

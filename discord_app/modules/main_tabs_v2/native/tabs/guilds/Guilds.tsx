@@ -6,7 +6,7 @@ import QuestDockMode from "../../../../quests/native/QuestDock/QuestDockExternal
 import QuestDockWithGestureAnimationDefault from "../../../../quests/native/QuestDock/QuestDock.tsx";
 import trackTabPressed from "../TabsPerformanceTracker.tsx";
 import LeftPanelContentDefault from "../../../../../components_native/MainChannels.tsx";
-import _modDef15866 from "../../you_bar/YouBar.tsx";
+import _modDef15884 from "../../you_bar/YouBar.tsx";
 import { YouBarNavigatorScreens } from "../../MainTabsConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
@@ -20,7 +20,7 @@ const memoResult = importAllResult.memo(function GuildsOnly() {
   const tmp4 = getGuildThemeNameDefault();
   let isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   obj = { gradient: tmp4, children: null };
-  const items = [callback(LeftPanelContentDefault, {}), callback(_modDef15866, {}), ];
+  const items = [callback(LeftPanelContentDefault, {}), callback(_modDef15884, {}), ];
   if (isEligibleForQuests) {
     isEligibleForQuests = tmp6(QuestDockWithGestureAnimationDefault, {});
   }

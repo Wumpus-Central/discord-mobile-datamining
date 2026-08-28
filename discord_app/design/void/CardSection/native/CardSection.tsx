@@ -1,7 +1,7 @@
 // discord_app/design/void/CardSection/native/CardSection.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef8323 from "../../LegacyText/native/LegacyText.tsx";
+import _modDef8337 from "../../LegacyText/native/LegacyText.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
@@ -27,7 +27,7 @@ export default function CardSection(arg0) {
     const items1 = [tmp.title, titleStyle];
     obj[0] = items1;
     obj[2] = title;
-    tmp4 = callback(_modDef8323, obj);
+    tmp4 = callback(_modDef8337, obj);
   }
   const items2 = [tmp4, , ];
   let tmp8 = null;

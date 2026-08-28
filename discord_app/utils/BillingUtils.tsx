@@ -115,24 +115,24 @@ export const captureBillingException = function captureBillingException(error, t
   obj.tags = obj;
   obj.captureException(error, obj);
 };
-export const isExpectedHttpClientError = function isExpectedHttpClientError(closure_8) {
-  let tmp2 = closure_8 instanceof sendRequest.HTTPResponseError;
+export const isExpectedHttpClientError = function isExpectedHttpClientError(status) {
+  let tmp2 = status instanceof sendRequest.HTTPResponseError;
   if (tmp2) {
-    tmp2 = closure_8.status >= 400;
+    tmp2 = status.status >= 400;
   }
   if (tmp2) {
-    tmp2 = closure_8.status < 500;
+    tmp2 = status.status < 500;
   }
   if (!tmp2) {
-    let tmp4 = closure_8 instanceof setDefault;
+    let tmp4 = status instanceof setDefault;
     if (tmp4) {
-      tmp4 = null != closure_8.status;
+      tmp4 = null != status.status;
     }
     if (tmp4) {
-      tmp4 = closure_8.status >= 400;
+      tmp4 = status.status >= 400;
     }
     if (tmp4) {
-      tmp4 = closure_8.status < 500;
+      tmp4 = status.status < 500;
     }
     tmp2 = tmp4;
   }
