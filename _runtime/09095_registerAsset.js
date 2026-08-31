@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 120, height: 96, scales: [2, 3], hash: "f9c127df442a3e2592e404fc380b1a52", name: "img_search_empty_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_gate/native/images", width: 250.66666666666666, height: 167, scales: [3], hash: "9a7cbd196902440a5e0240c4f2a08774", name: "nsfw_gate", type: "png" });

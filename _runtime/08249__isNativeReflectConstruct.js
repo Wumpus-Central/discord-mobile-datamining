@@ -1,13 +1,17 @@
 // === Module 8249: _isNativeReflectConstruct ===
 
 // Module 8249 (_isNativeReflectConstruct)
+import noopDefault from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8248 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8250 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const FePointLight = arg1;
+const FeColorMatrix = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,13 +31,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FePointLight {
+noopDefault;
+class FeColorMatrix {
   constructor() {
     self = this;
-    tmp = closure_2(this, FePointLight);
-    tmp2 = closure_4;
-    obj = closure_4(FePointLight);
-    tmp3 = closure_3;
+    tmp = closure_3(this, FeColorMatrix);
+    tmp2 = closure_5;
+    obj = closure_5(FeColorMatrix);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -47,18 +52,34 @@ class FePointLight {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FePointLight, require("noop").Component);
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const result = FePointLight(8203).warnUnimplementedFilter();
-      return null;
-    }
+_inheritsDefault(FeColorMatrix, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp = __INTERNAL_VIEW_CONFIGDefault;
+    const merged = Object.assign(self(8247).extractFilter(this.props));
+    const obj2 = self(8247);
+    const merged1 = Object.assign(self(8247).extractIn(this.props));
+    const obj3 = self(8247);
+    const merged2 = Object.assign(self(8247).extractFeColorMatrix(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
-];
-const importDefaultResultResult = importDefaultResult(FePointLight, items);
-importDefaultResultResult.displayName = "FePointLight";
-importDefaultResultResult.defaultProps = {};
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeColorMatrix, items);
+importDefaultResultResult.displayName = "FeColorMatrix";
+obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.type = "matrix";
+obj.values = "";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

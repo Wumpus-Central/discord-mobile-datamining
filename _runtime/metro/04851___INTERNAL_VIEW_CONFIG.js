@@ -1,40 +1,16 @@
 // === Module 4851: __INTERNAL_VIEW_CONFIG ===
 
 // Module 4851 (__INTERNAL_VIEW_CONFIG)
-import result from "result" /* 26 */;
-import renderElement from "renderElement" /* 114 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import result from "result" /* 26 */;
 import weakSet from "weakSet" /* 106 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-({ codegenNativeCommands, codegenNativeComponent } = get_ActivityIndicator);
-let obj = { uiViewClassName: "RNSSearchBar", directEventTypes: { topSearchFocus: { registrationName: "onSearchFocus" }, topSearchBlur: { registrationName: "onSearchBlur" }, topSearchButtonPress: { registrationName: "onSearchButtonPress" }, topCancelButtonPress: { registrationName: "onCancelButtonPress" }, topChangeText: { registrationName: "onChangeText" }, topClose: { registrationName: "onClose" }, topOpen: { registrationName: "onOpen" } }, validAttributes: null };
-obj = { hideWhenScrolling: true, autoCapitalize: true, placeholder: true, placement: true, allowToolbarIntegration: true, obscureBackground: true, hideNavigationBar: true, cancelButtonText: true, barTintColor: result.colorAttribute, tintColor: result.colorAttribute, textColor: result.colorAttribute, autoFocus: true, disableBackButtonOverride: true, inputType: true, hintTextColor: result.colorAttribute, headerIconColor: result.colorAttribute, shouldShowHintSearchIcon: true };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSearchFocus: true, onSearchBlur: true, onSearchButtonPress: true, onCancelButtonPress: true, onChangeText: true, onClose: true, onOpen: true }));
+const codegenNativeComponent = get_ActivityIndicator.codegenNativeComponent;
+let obj = { uiViewClassName: "RNSScreenStackHeaderConfig", directEventTypes: { topAttached: { registrationName: "onAttached" }, topDetached: { registrationName: "onDetached" }, topPressHeaderBarButtonItem: { registrationName: "onPressHeaderBarButtonItem" }, topPressHeaderBarButtonMenuItem: { registrationName: "onPressHeaderBarButtonMenuItem" } }, validAttributes: null };
+obj = { backgroundColor: result.colorAttribute, backTitle: true, backTitleFontFamily: true, backTitleFontSize: true, backTitleVisible: true, color: result.colorAttribute, direction: true, hidden: true, hideShadow: true, largeTitle: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleBackgroundColor: result.colorAttribute, largeTitleHideShadow: true, largeTitleColor: result.colorAttribute, translucent: true, title: true, titleFontFamily: true, titleFontSize: true, titleFontWeight: true, titleColor: result.colorAttribute, disableBackButtonMenu: true, backButtonDisplayMode: true, hideBackButton: true, backButtonInCustomView: true, blurEffect: true, topInsetEnabled: true, consumeLeftInset: true, consumeRightInset: true, consumeBottomInset: true, headerLeftBarButtonItems: true, headerRightBarButtonItems: true, synchronousShadowStateUpdatesEnabled: true, userInterfaceStyle: true };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onAttached: true, onDetached: true, onPressHeaderBarButtonItem: true, onPressHeaderBarButtonMenuItem: true }));
 obj[2] = obj;
-obj = {
-  blur(arg0) {
-    renderElement.dispatchCommand(arg0, "blur", []);
-  },
-  focus(arg0) {
-    renderElement.dispatchCommand(arg0, "focus", []);
-  },
-  clearText(arg0) {
-    renderElement.dispatchCommand(arg0, "clearText", []);
-  },
-  toggleCancelButton(arg0, arg1) {
-    const items = [arg1];
-    renderElement.dispatchCommand(arg0, "toggleCancelButton", items);
-  },
-  setText(arg0, arg1) {
-    const items = [arg1];
-    renderElement.dispatchCommand(arg0, "setText", items);
-  },
-  cancelSearch(arg0) {
-    renderElement.dispatchCommand(arg0, "cancelSearch", []);
-  }
-};
 
-export default setRuntimeConfigProvider.get("RNSSearchBar", () => obj);
+export default setRuntimeConfigProvider.get("RNSScreenStackHeaderConfig", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;
-export const Commands = obj;

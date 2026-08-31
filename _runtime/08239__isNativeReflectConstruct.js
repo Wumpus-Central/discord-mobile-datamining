@@ -1,9 +1,9 @@
 // === Module 8239: _isNativeReflectConstruct ===
 
 // Module 8239 (_isNativeReflectConstruct)
-import noopDefault from "noop" /* 19 */;
+import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8226 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8233 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8240 */;
 import closure_3 from "_classCallCheck" /* 41 */;
 import closure_4 from "_possibleConstructorReturn" /* 93 */;
@@ -11,7 +11,7 @@ import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const FeOffset = arg1;
+const ClipPath = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,13 +31,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopDefault;
-class FeOffset {
+noopAll;
+class ClipPath {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeOffset);
+    tmp = closure_3(this, ClipPath);
     tmp2 = closure_5;
-    obj = closure_5(FeOffset);
+    obj = closure_5(ClipPath);
     tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -52,33 +52,21 @@ class FeOffset {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeOffset, _isNativeReflectConstructDefault);
-let obj = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const merged = Object.assign(this.props);
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp = __INTERNAL_VIEW_CONFIGDefault;
-    const merged1 = Object.assign(self(8225).extractFilter(this.props));
-    const obj2 = self(8225);
-    const merged2 = Object.assign(self(8225).extractIn(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+_inheritsDefault(ClipPath, _isNativeReflectConstructDefault);
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      const props = this.props;
+      const obj = { ref: this.refMethod };
+      const tmp = __INTERNAL_VIEW_CONFIGDefault;
+      const merged = Object.assign(ClipPath(8224).extract(this, props));
+      obj.children = props.children;
+      return <tmp ref={this.refMethod} />;
+    }
   }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeOffset, items);
-importDefaultResultResult.displayName = "FeOffset";
-obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.dx = 0;
-obj.dy = 0;
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(ClipPath, items);
+importDefaultResultResult.displayName = "ClipPath";
 
 export default importDefaultResultResult;

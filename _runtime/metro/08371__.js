@@ -1,4 +1,7 @@
 // === Module 8371: ? ===
 
 // Module 8371
-arg5.default = { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };
+import _modDef8372 from "module_8372" /* 8372 */;
+
+
+export default _modDef8372({ contain: null, cover: null, stretch: null });

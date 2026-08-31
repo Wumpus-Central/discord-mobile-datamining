@@ -1,0 +1,23 @@
+// === Module 13873: LookupSupportedLocales ===
+
+// Module 13873 (LookupSupportedLocales)
+import isMatched from "isMatched" /* 13863 */;
+import BestAvailableLocale from "BestAvailableLocale" /* 13866 */;
+
+require = arg1;
+const dependencyMap = arg6;
+arg5.LookupSupportedLocales = function LookupSupportedLocales(arg0, arg1) {
+  const items = [];
+  for (let num = 0; num < arg1.length; num = num + 1) {
+    let str = arg1[num];
+    let tmp = require;
+    let tmp2 = dependencyMap;
+    let replaced = str.replace(isMatched.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
+    let BestAvailableLocaleResult = BestAvailableLocale.BestAvailableLocale(arg0, replaced);
+    let tmp5 = num;
+    if (BestAvailableLocaleResult) {
+      let arr = items.push(BestAvailableLocaleResult);
+    }
+  }
+  return items;
+};

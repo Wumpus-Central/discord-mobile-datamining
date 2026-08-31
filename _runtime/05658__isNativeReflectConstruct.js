@@ -1,13 +1,16 @@
 // === Module 5658: _isNativeReflectConstruct ===
 
 // Module 5658 (_isNativeReflectConstruct)
-import _inheritsDefault from "_inherits" /* 98 */;
-import HoverGesture from "_classCallCheck" /* 41 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
-import closure_3 from "_get" /* 96 */;
+import noopDefault from "noop" /* 19 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5647 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
+import importDefaultResult1 from "_inherits" /* 98 */;
+import importDefaultResult3 from "PlatformConstants" /* 5659 */;
 
+const ForceTouchFallback = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,68 +30,67 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function changeEventCalculator(arg0, arg1) {
-  if (undefined === arg1) {
-    let obj = { changeX: null, changeY: null };
-    ({ x: obj2[0], y: obj2[1] } = arg0);
-  } else {
-    obj = { changeX: null, changeY: null };
-    obj[0] = arg0.x - arg1.x;
-    obj[1] = arg0.y - arg1.y;
-  }
-  obj = {};
-  const merged = Object.assign(arg0);
-  const merged1 = Object.assign(obj);
-  return obj;
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 2074844346342;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}" };
-class HoverGesture {
+class ForceTouchFallback {
   constructor() {
     self = this;
-    tmp = HoverGesture(this, HoverGesture);
-    tmp2 = closure_2;
-    obj = closure_2(HoverGesture);
-    tmp3 = closure_1;
+    tmp = closure_2(this, ForceTouchFallback);
+    tmp2 = closure_4;
+    obj = closure_4(ForceTouchFallback);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "HoverGestureHandler";
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(HoverGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
-let items = [
+importDefaultResult1(ForceTouchFallback, noopDefault.Component);
+let obj = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    console.warn(ForceTouchFallback(5625).tagMessage("ForceTouchGestureHandler is not available on this platform. Please use ForceTouchGestureHandler.forceTouchAvailable to conditionally render other components that would provide a fallback behavior specific to your usecase"));
+  }
+};
+const items = [
+  obj,
   {
-    key: "effect",
-    value: function effect(hoverEffect) {
-      this.config.hoverEffect = hoverEffect;
-      return this;
-    }
-  },
-  {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = changeEventCalculator;
-      const self = this;
-      let fn;
-      fn = callback2(callback(self.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [arg0];
-      return fn(items);
+    key: "render",
+    value: function render() {
+      return this.props.children;
     }
   }
 ];
+let importDefaultResultResult = importDefaultResult(ForceTouchFallback, items);
+importDefaultResultResult.forceTouchAvailable = false;
+let forceTouchAvailable;
+if (importDefaultResult3 != null) {
+  forceTouchAvailable = importDefaultResult3.forceTouchAvailable;
+}
+const items1 = ["minForce", "maxForce", "feedbackOnActivation"];
+if (forceTouchAvailable) {
+  obj = { name: "ForceTouchGestureHandler", allowedProps: null, config: null };
+  const items2 = [];
+  HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(require("items1").baseGestureHandlerProps, 0));
+  obj[1] = items2;
+  obj[2] = {};
+  importDefaultResultResult = _isNativeReflectConstructDefault(obj);
+  const importDefaultResult4 = _isNativeReflectConstructDefault;
+}
+let flag;
+if (importDefaultResult3 != null) {
+  flag = importDefaultResult3.forceTouchAvailable;
+}
+if (!flag) {
+  flag = false;
+}
+importDefaultResultResult.forceTouchAvailable = flag;
 
-export const HoverEffect = { NONE: 0, [0]: "NONE", LIFT: 1, [1]: "LIFT", HIGHLIGHT: 2, [2]: "HIGHLIGHT" };
-export const hoverGestureHandlerProps = ["hoverEffect"];
-export const HoverGesture = importDefaultResult(HoverGesture, items);
+export const forceTouchGestureHandlerProps = items1;
+export const forceTouchHandlerName = "ForceTouchGestureHandler";
+export const ForceTouchGestureHandler = importDefaultResultResult;

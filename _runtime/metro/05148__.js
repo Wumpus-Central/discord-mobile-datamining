@@ -1,266 +1,387 @@
 // === Module 5148: ? ===
 
 // Module 5148
-obj = { 0: obj, 1: obj, 2: null, 3: null, 4: null, 5: null, 6: null, 7: null, 8: "GPSSatellites", 9: null, 10: null, 11: "GPSDOP", 12: null, 13: "GPSSpeed", 14: null, 15: "GPSTrack", 16: null, 17: "GPSImgDirection", 18: "GPSMapDatum", 19: null, 20: null, 21: null, 22: null, 23: null, 24: "GPSDestBearing", 25: null, 26: "GPSDestDistance", 27: null, 28: null, 29: "GPSDateStamp", 30: null, 31: "GPSHPositioningError" };
-obj = {
-  name: "GPSVersionID",
-  description(arg0) {
-    let str = "Unknown";
-    if (2 === arg0[0]) {
-      str = "Unknown";
-      if (2 === arg0[1]) {
-        str = "Unknown";
-        if (0 === arg0[2]) {
-          str = "Unknown";
-          if (0 === arg0[3]) {
-            str = "Version 2.2";
+arg5.default = {
+  ApertureValue(arg0) {
+    return Math.pow(Math.sqrt(2), arg0[0] / arg0[1]).toFixed(2);
+  },
+  ColorSpace(parsed) {
+    let str = "sRGB";
+    if (1 !== parsed) {
+      let str2 = "Unknown";
+      if (65535 === parsed) {
+        str2 = "Uncalibrated";
+      }
+      str = str2;
+    }
+    return str;
+  },
+  ComponentsConfiguration(mapped) {
+    mapped = mapped.map((arg0) => {
+      let str = "Y";
+      if (49 !== arg0) {
+        let str2 = "Cb";
+        if (50 !== arg0) {
+          let str3 = "Cr";
+          if (51 !== arg0) {
+            let str4 = "R";
+            if (52 !== arg0) {
+              let str5 = "G";
+              if (53 !== arg0) {
+                let str6;
+                if (54 === arg0) {
+                  str6 = "B";
+                }
+                str5 = str6;
+              }
+              str4 = str5;
+            }
+            str3 = str4;
           }
+          str2 = str3;
         }
+        str = str2;
       }
-    }
-    return str;
-  }
-};
-obj = {
-  name: "GPSLatitudeRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "North latitude";
-    if ("N" !== joined) {
-      let str2 = "Unknown";
-      if ("S" === joined) {
-        str2 = "South latitude";
-      }
-      str = str2;
-    }
-    return str;
-  }
-};
-obj[2] = { name: "GPSLatitude", description: require("getStringValue").getCalculatedGpsValue };
-obj[3] = {
-  name: "GPSLongitudeRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "East longitude";
-    if ("E" !== joined) {
-      let str2 = "Unknown";
-      if ("W" === joined) {
-        str2 = "West longitude";
+      return str;
+    });
+    return mapped.join("");
+  },
+  Contrast(arg0) {
+    let str = "Normal";
+    if (0 !== arg0) {
+      let str2 = "Soft";
+      if (1 !== arg0) {
+        let str3 = "Unknown";
+        if (2 === arg0) {
+          str3 = "Hard";
+        }
+        str2 = str3;
       }
       str = str2;
     }
     return str;
-  }
-};
-const obj1 = { name: "GPSLatitude", description: require("getStringValue").getCalculatedGpsValue };
-obj[4] = { name: "GPSLongitude", description: require("getStringValue").getCalculatedGpsValue };
-obj[5] = {
-  name: "GPSAltitudeRef",
-  description(arg0) {
-    let str = "Sea level";
+  },
+  CustomRendered(arg0) {
+    let str = "Normal process";
     if (0 !== arg0) {
       let str2 = "Unknown";
       if (1 === arg0) {
-        str2 = "Sea level reference (negative value)";
+        str2 = "Custom process";
       }
       str = str2;
     }
     return str;
-  }
-};
-obj[6] = {
-  name: "GPSAltitude",
-  description(arg0) {
-    return arg0[0] / arg0[1] + " m";
-  }
-};
-obj[7] = {
-  name: "GPSTimeStamp",
-  description(arr) {
-    const mapped = arr.map((arg0) => {
-      [tmp, tmp2] = arg0;
-      const result = tmp / tmp2;
-      let combined = result;
-      if (obj.test("" + result)) {
+  },
+  ExposureMode(arg0) {
+    let str = "Auto exposure";
+    if (0 !== arg0) {
+      let str2 = "Manual exposure";
+      if (1 !== arg0) {
+        let str3 = "Unknown";
+        if (2 === arg0) {
+          str3 = "Auto bracket";
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+  ExposureProgram(arg0) {
+    let str = "Undefined";
+    if (0 !== arg0) {
+      let str10 = "Manual";
+      if (1 !== arg0) {
+        let str9 = "Normal program";
+        if (2 !== arg0) {
+          let str2 = "Aperture priority";
+          if (3 !== arg0) {
+            let str3 = "Shutter priority";
+            if (4 !== arg0) {
+              let str4 = "Creative program";
+              if (5 !== arg0) {
+                let str5 = "Action program";
+                if (6 !== arg0) {
+                  let str6 = "Portrait mode";
+                  if (7 !== arg0) {
+                    let str7 = "Landscape mode";
+                    if (8 !== arg0) {
+                      let str8 = "Unknown";
+                      if (9 === arg0) {
+                        str8 = "Bulb";
+                      }
+                      str7 = str8;
+                    }
+                    str6 = str7;
+                  }
+                  str5 = str6;
+                }
+                str4 = str5;
+              }
+              str3 = str4;
+            }
+            str2 = str3;
+          }
+          str9 = str2;
+        }
+        str10 = str9;
+      }
+      str = str10;
+    }
+    return str;
+  },
+  ExposureTime(parts) {
+    if (parts[0] / parts[1] > 0.25) {
+      const result = parts[0] / parts[1];
+      const _Number = Number;
+      if (Number.isInteger(result)) {
+        let text = `${obj}`;
+      } else {
+        text = result.toFixed(1);
+      }
+      return text;
+    } else {
+      if (0 !== parts[0]) {
+        const _Math = Math;
+        const _HermesInternal2 = HermesInternal;
+        let combined = "1/" + Math.round(parts[1] / parts[0]);
+      } else {
         const _HermesInternal = HermesInternal;
-        combined = "0" + result;
+        combined = "0/" + parts[1];
       }
       return combined;
-    });
-    return mapped.join(":");
-  }
-};
-obj[9] = {
-  name: "GPSStatus",
-  description(join) {
-    const joined = join.join("");
-    let str = "Measurement in progress";
-    if ("A" !== joined) {
-      let str2 = "Unknown";
-      if ("V" === joined) {
-        str2 = "Measurement Interoperability";
-      }
-      str = str2;
     }
-    return str;
-  }
-};
-obj[10] = {
-  name: "GPSMeasureMode",
-  description(join) {
-    const joined = join.join("");
-    let str = "2-dimensional measurement";
-    if ("2" !== joined) {
-      let str2 = "Unknown";
-      if ("3" === joined) {
-        str2 = "3-dimensional measurement";
-      }
-      str = str2;
-    }
-    return str;
-  }
-};
-obj[12] = {
-  name: "GPSSpeedRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "Kilometers per hour";
-    if ("K" !== joined) {
-      let str2 = "Miles per hour";
-      if ("M" !== joined) {
-        let str4 = "Unknown";
-        if ("N" === joined) {
-          str4 = "Knots";
+  },
+  FNumber(arg0) {
+    return "f/" + Number(arg0[0] / arg0[1]).toFixed(1);
+  },
+  FocalLength(arg0) {
+    return arg0[0] / arg0[1] + " mm";
+  },
+  FocalPlaneResolutionUnit(arg0) {
+    let str = "inches";
+    if (2 !== arg0) {
+      let str2 = "centimeters";
+      if (3 !== arg0) {
+        let str3 = "Unknown";
+        if (4 === arg0) {
+          str3 = "millimeters";
         }
-        str2 = str4;
+        str2 = str3;
       }
       str = str2;
     }
     return str;
-  }
-};
-obj[14] = {
-  name: "GPSTrackRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "True direction";
-    if ("T" !== joined) {
-      let str2 = "Unknown";
-      if ("M" === joined) {
-        str2 = "Magnetic direction";
-      }
-      str = str2;
-    }
-    return str;
-  }
-};
-obj[16] = {
-  name: "GPSImgDirectionRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "True direction";
-    if ("T" !== joined) {
-      let str2 = "Unknown";
-      if ("M" === joined) {
-        str2 = "Magnetic direction";
-      }
-      str = str2;
-    }
-    return str;
-  }
-};
-obj[19] = {
-  name: "GPSDestLatitudeRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "North latitude";
-    if ("N" !== joined) {
-      let str2 = "Unknown";
-      if ("S" === joined) {
-        str2 = "South latitude";
-      }
-      str = str2;
-    }
-    return str;
-  }
-};
-obj[20] = {
-  name: "GPSDestLatitude",
-  description(arg0) {
-    return arg0[0][0] / arg0[0][1] + arg0[1][0] / arg0[1][1] / 60 + arg0[2][0] / arg0[2][1] / 3600;
-  }
-};
-obj[21] = {
-  name: "GPSDestLongitudeRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "East longitude";
-    if ("E" !== joined) {
-      let str2 = "Unknown";
-      if ("W" === joined) {
-        str2 = "West longitude";
-      }
-      str = str2;
-    }
-    return str;
-  }
-};
-obj[22] = {
-  name: "GPSDestLongitude",
-  description(arg0) {
-    return arg0[0][0] / arg0[0][1] + arg0[1][0] / arg0[1][1] / 60 + arg0[2][0] / arg0[2][1] / 3600;
-  }
-};
-obj[23] = {
-  name: "GPSDestBearingRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "True direction";
-    if ("T" !== joined) {
-      let str2 = "Unknown";
-      if ("M" === joined) {
-        str2 = "Magnetic direction";
-      }
-      str = str2;
-    }
-    return str;
-  }
-};
-obj[25] = {
-  name: "GPSDestDistanceRef",
-  description(join) {
-    const joined = join.join("");
-    let str = "Kilometers";
-    if ("K" !== joined) {
-      let str2 = "Miles";
-      if ("M" !== joined) {
-        let str4 = "Unknown";
-        if ("N" === joined) {
-          str4 = "Knots";
+  },
+  LightSource(arg0) {
+    let str = "Daylight";
+    if (1 !== arg0) {
+      let str20 = "Fluorescent";
+      if (2 !== arg0) {
+        let str19 = "Tungsten (incandescent light)";
+        if (3 !== arg0) {
+          let str18 = "Flash";
+          if (4 !== arg0) {
+            let str17 = "Fine weather";
+            if (9 !== arg0) {
+              let str16 = "Cloudy weather";
+              if (10 !== arg0) {
+                let str15 = "Shade";
+                if (11 !== arg0) {
+                  let str14 = "Daylight fluorescent (D 5700 \u2013 7100K)";
+                  if (12 !== arg0) {
+                    let str13 = "Day white fluorescent (N 4600 \u2013 5400K)";
+                    if (13 !== arg0) {
+                      let str12 = "Cool white fluorescent (W 3900 \u2013 4500K)";
+                      if (14 !== arg0) {
+                        let str11 = "White fluorescent (WW 3200 \u2013 3700K)";
+                        if (15 !== arg0) {
+                          let str10 = "Standard light A";
+                          if (17 !== arg0) {
+                            let str9 = "Standard light B";
+                            if (18 !== arg0) {
+                              let str2 = "Standard light C";
+                              if (19 !== arg0) {
+                                let str3 = "D55";
+                                if (20 !== arg0) {
+                                  let str4 = "D65";
+                                  if (21 !== arg0) {
+                                    let str5 = "D75";
+                                    if (22 !== arg0) {
+                                      let str6 = "D50";
+                                      if (23 !== arg0) {
+                                        let str7 = "ISO studio tungsten";
+                                        if (24 !== arg0) {
+                                          let str8 = "Unknown";
+                                          if (255 === arg0) {
+                                            str8 = "Other light source";
+                                          }
+                                          str7 = str8;
+                                        }
+                                        str6 = str7;
+                                      }
+                                      str5 = str6;
+                                    }
+                                    str4 = str5;
+                                  }
+                                  str3 = str4;
+                                }
+                                str2 = str3;
+                              }
+                              str9 = str2;
+                            }
+                            str10 = str9;
+                          }
+                          str11 = str10;
+                        }
+                        str12 = str11;
+                      }
+                      str13 = str12;
+                    }
+                    str14 = str13;
+                  }
+                  str15 = str14;
+                }
+                str16 = str15;
+              }
+              str17 = str16;
+            }
+            str18 = str17;
+          }
+          str19 = str18;
         }
-        str2 = str4;
+        str20 = str19;
+      }
+      str = str20;
+    }
+    return str;
+  },
+  MeteringMode(arg0) {
+    let str = "Average";
+    if (1 !== arg0) {
+      let str2 = "CenterWeightedAverage";
+      if (2 !== arg0) {
+        let str3 = "Spot";
+        if (3 !== arg0) {
+          let str4 = "MultiSpot";
+          if (4 !== arg0) {
+            let str5 = "Pattern";
+            if (5 !== arg0) {
+              let str6 = "Partial";
+              if (6 !== arg0) {
+                let str7 = "Unknown";
+                if (255 === arg0) {
+                  str7 = "Other";
+                }
+                str6 = str7;
+              }
+              str5 = str6;
+            }
+            str4 = str5;
+          }
+          str3 = str4;
+        }
+        str2 = str3;
       }
       str = str2;
     }
     return str;
-  }
-};
-const obj2 = { name: "GPSLongitude", description: require("getStringValue").getCalculatedGpsValue };
-obj[27] = { name: "GPSProcessingMethod", description: require("getStringValue").getEncodedString };
-const obj3 = { name: "GPSProcessingMethod", description: require("getStringValue").getEncodedString };
-obj[28] = { name: "GPSAreaInformation", description: require("getStringValue").getEncodedString };
-obj[30] = {
-  name: "GPSDifferential",
-  description(arg0) {
-    let str = "Measurement without differential correction";
+  },
+  ResolutionUnit(arg0) {
+    let str = "inches";
+    if (2 !== arg0) {
+      let str2 = "Unknown";
+      if (3 === arg0) {
+        str2 = "centimeters";
+      }
+      str = str2;
+    }
+    return str;
+  },
+  Saturation(arg0) {
+    let str = "Normal";
+    if (0 !== arg0) {
+      let str2 = "Low saturation";
+      if (1 !== arg0) {
+        let str3 = "Unknown";
+        if (2 === arg0) {
+          str3 = "High saturation";
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+  FocalLengthIn35mmFilm(value4) {
+    let str = "Unknown";
+    if (0 !== value4) {
+      str = `${value4} mm`;
+    }
+    return str;
+  },
+  SceneCaptureType(arg0) {
+    let str = "Standard";
+    if (0 !== arg0) {
+      let str2 = "Landscape";
+      if (1 !== arg0) {
+        let str3 = "Portrait";
+        if (2 !== arg0) {
+          let str4 = "Unknown";
+          if (3 === arg0) {
+            str4 = "Night scene";
+          }
+          str3 = str4;
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+  Sharpness(arg0) {
+    let str = "Normal";
+    if (0 !== arg0) {
+      let str2 = "Soft";
+      if (1 !== arg0) {
+        let str3 = "Unknown";
+        if (2 === arg0) {
+          str3 = "Hard";
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+  ShutterSpeedValue(arg0) {
+    const powResult = Math.pow(2, arg0[0] / arg0[1]);
+    if (powResult <= 1) {
+      const _Math2 = Math;
+      const _HermesInternal2 = HermesInternal;
+      let combined = "" + Math.round(1 / powResult);
+    } else {
+      const _Math = Math;
+      const _HermesInternal = HermesInternal;
+      combined = "1/" + Math.round(powResult);
+    }
+    return combined;
+  },
+  WhiteBalance(arg0) {
+    let str = "Auto white balance";
     if (0 !== arg0) {
       let str2 = "Unknown";
       if (1 === arg0) {
-        str2 = "Differential correction applied";
+        str2 = "Manual white balance";
       }
       str = str2;
     }
     return str;
+  },
+  XResolution(arg0) {
+    return "" + Math.round(arg0[0] / arg0[1]);
+  },
+  YResolution(arg0) {
+    return "" + Math.round(arg0[0] / arg0[1]);
   }
 };
-arg5.default = obj;

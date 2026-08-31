@@ -1,12 +1,12 @@
 // === Module 5657: items1 ===
 
 // Module 5657 (items1)
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5644 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5647 */;
 
-const items = ["numberOfPointers", "direction"];
-const obj = { name: "FlingGestureHandler", allowedProps: items1, config: {} };
+const items = ["minDurationMs", "maxDist", "numberOfPointers"];
+const obj = { name: "LongPressGestureHandler", allowedProps: items1, config: { shouldCancelWhenOutside: true } };
 items1 = [...items];
 
-export const flingGestureHandlerProps = items;
-export const flingHandlerName = "FlingGestureHandler";
-export const FlingGestureHandler = _isNativeReflectConstructDefault(obj);
+export const longPressGestureHandlerProps = items;
+export const longPressHandlerName = "LongPressGestureHandler";
+export const LongPressGestureHandler = _isNativeReflectConstructDefault(obj);

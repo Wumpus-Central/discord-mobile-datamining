@@ -1,15 +1,22 @@
 // === Module 4750: trim ===
 
 // Module 4750 (trim)
-import callBoundIntrinsic from "callBoundIntrinsic" /* 574 */;
-import RequireObjectCoercible from "RequireObjectCoercible" /* 4737 */;
-import ToString from "ToString" /* 4751 */;
+import RequireObjectCoercible from "RequireObjectCoercible" /* 4739 */;
+import getPolyfill from "getPolyfill" /* 4751 */;
+import trim2 from "trim" /* 4752 */;
+import shimStringTrim from "shimStringTrim" /* 4758 */;
+import callBind from "callBind" /* 1418 */;
+import defineProperty from "defineProperty" /* 4754 */;
 
-let closure_2 = callBoundIntrinsic("String.prototype.replace");
-const isMatch = /^\s$/.test("\u180E");
-let closure_3 = isMatch ? /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/ : /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/;
-let closure_4 = isMatch ? /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/ : /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/;
+let closure_2 = callBind(getPolyfill());
+function trim(arg0) {
+  RequireObjectCoercible(arg0);
+  return callback(arg0);
+}
+const obj = { getPolyfill: null, implementation: null, shim: null };
+obj[0] = getPolyfill;
+obj[1] = trim2;
+obj[2] = shimStringTrim;
+defineProperty(trim, obj);
 
-export default function trim() {
-  return callback(callback(ToString(RequireObjectCoercible(this)), closure_3, ""), closure_4, "");
-};
+export default trim;

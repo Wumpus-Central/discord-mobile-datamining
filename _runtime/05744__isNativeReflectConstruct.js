@@ -2,7 +2,7 @@
 
 // Module 5744 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import ForceTouchGesture from "_classCallCheck" /* 41 */;
+import RotationGesture from "_classCallCheck" /* 41 */;
 import closure_1 from "_possibleConstructorReturn" /* 93 */;
 import closure_2 from "_getPrototypeOf" /* 95 */;
 import closure_3 from "_get" /* 96 */;
@@ -27,28 +27,28 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function changeEventCalculator(force, force2) {
-  if (undefined === force2) {
-    let obj = { forceChange: null };
-    obj[0] = force.force;
+function changeEventCalculator(rotation, rotation2) {
+  if (undefined === rotation2) {
+    let obj = { rotationChange: null };
+    obj[0] = rotation.rotation;
   } else {
-    obj = { forceChange: null };
-    obj[0] = force.force - force2.force;
+    obj = { rotationChange: null };
+    obj[0] = rotation.rotation - rotation2.rotation;
   }
   obj = {};
-  const merged = Object.assign(force);
+  const merged = Object.assign(rotation);
   const merged1 = Object.assign(obj);
   return obj;
 }
 changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 11365193947542;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}" };
-class ForceTouchGesture {
+changeEventCalculator.__workletHash = 11988645380499;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}" };
+class RotationGesture {
   constructor() {
     self = this;
-    tmp = ForceTouchGesture(this, ForceTouchGesture);
+    tmp = RotationGesture(this, RotationGesture);
     tmp2 = closure_2;
-    obj = closure_2(ForceTouchGesture);
+    obj = closure_2(RotationGesture);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
@@ -58,34 +58,12 @@ class ForceTouchGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "ForceTouchGestureHandler";
+    tmp3Result.handlerName = "RotationGestureHandler";
     return tmp3Result;
   }
 }
-_inheritsDefault(ForceTouchGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
+_inheritsDefault(RotationGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
 let items = [
-  {
-    key: "minForce",
-    value: function minForce(minForce) {
-      this.config.minForce = minForce;
-      return this;
-    }
-  },
-  {
-    key: "maxForce",
-    value: function maxForce(maxForce) {
-      this.config.maxForce = maxForce;
-      return this;
-    }
-  },
-  {
-    key: "feedbackOnActivation",
-    value: function feedbackOnActivation(feedbackOnActivation) {
-      this.config.feedbackOnActivation = feedbackOnActivation;
-      return this;
-    }
-  },
   {
     key: "onChange",
     value: function onChange(arg0) {
@@ -102,4 +80,4 @@ let items = [
   }
 ];
 
-export const ForceTouchGesture = importDefaultResult(ForceTouchGesture, items);
+export const RotationGesture = importDefaultResult(RotationGesture, items);

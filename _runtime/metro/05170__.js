@@ -1,117 +1,254 @@
 // === Module 5170: ? ===
 
 // Module 5170
-import getDataView from "getDataView" /* 5122 */;
-import _mod5129 from "module_5129" /* 5129 */;
+import getDataView from "getDataView" /* 5125 */;
+import readTag from "readTag" /* 5145 */;
+import importDefaultResult1 from "importDefaultResult1" /* 5146 */;
 
 require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
+let c3 = 16;
 arg5.default = {
-  read(byteLength) {
-    let obj = {};
-    for (let num = 0; num < arg1.length; num = num + 1) {
-      let tmp = module;
-      let tmp2 = dependencyMap;
-      obj1 = module(5139);
-      let tmp3 = require;
-      let longAt = obj1.getLongAt(byteLength, arg1[num] + _mod5129.PNG_CHUNK_LENGTH_OFFSET);
-      let obj2 = getDataView;
-      let sum = arg1[num] + _mod5129.PNG_CHUNK_TYPE_OFFSET;
-      let stringFromDataView = obj2.getStringFromDataView(byteLength, sum, _mod5129.PNG_CHUNK_TYPE_SIZE);
-      let tmp7 = num;
-      if (stringFromDataView === _mod5129.TYPE_PHYS) {
-        let tmp22 = arg1[num];
-        let tmp23 = 4 <= longAt && tmp22 + tmp3(5129).PNG_CHUNK_DATA_OFFSET + 4 <= byteLength.byteLength;
-        let tmp24;
-        if (tmp23) {
-          let tmpResult = tmp(5139);
-          let longAt1 = tmpResult.getLongAt(byteLength, tmp22 + tmp3(5129).PNG_CHUNK_DATA_OFFSET);
-          obj = { value: null, description: null };
-          obj[0] = longAt1;
-          obj[1] = "" + longAt1;
-          tmp24 = obj;
-        }
-        obj["Pixels Per Unit X"] = tmp24;
-        let tmp26 = arg1[num];
-        let tmp27 = 8 <= longAt && tmp26 + tmp3(5129).PNG_CHUNK_DATA_OFFSET + 4 + 4 <= byteLength.byteLength;
-        let tmp28;
-        if (tmp27) {
-          tmpResult = tmp(5139);
-          let longAt2 = tmpResult.getLongAt(byteLength, tmp26 + tmp3(5129).PNG_CHUNK_DATA_OFFSET + 4);
-          obj = { value: null, description: null };
-          obj[0] = longAt2;
-          obj[1] = "" + longAt2;
-          tmp28 = obj;
-        }
-        obj["Pixels Per Unit Y"] = tmp28;
-        let tmp30 = arg1[num];
-        let tmp31 = 9 <= longAt && tmp30 + tmp3(5129).PNG_CHUNK_DATA_OFFSET + 8 + 1 <= byteLength.byteLength;
-        let tmp32;
-        if (tmp31) {
-          let tmpResult1 = tmp(5139);
-          let byteAt = tmpResult1.getByteAt(byteLength, tmp30 + tmp3(5129).PNG_CHUNK_DATA_OFFSET + 8);
-          obj1 = { value: null, description: null };
-          obj1[0] = byteAt;
-          let str7 = "Unknown";
-          if (1 === byteAt) {
-            str7 = "meters";
+  read(buffer, sum) {
+    let iter;
+    let obj = module(5130);
+    const byteOrder = obj.getByteOrder(buffer, sum);
+    obj1 = readTag;
+    let obj2 = readTag;
+    const ifd = obj1.readIfd(buffer, importDefaultResult1.IFD_TYPE_MPF, sum, obj2.get0thIfdOffset(buffer, sum, byteOrder), byteOrder, arg2);
+    if (ifd.MPEntry) {
+      const items = [];
+      const _Math = Math;
+      let num13 = 0;
+      if (0 < Math.ceil(ifd.MPEntry.value.length / c3)) {
+        while (true) {
+          items[num13] = {};
+          let value = ifd.MPEntry.value;
+          let tmp5 = c3;
+          let result = num13 * c3;
+          let tmp7 = module;
+          let tmp8 = dependencyMap;
+          let obj3 = module(5142);
+          let typeSize = obj3.getTypeSize("LONG");
+          let tmp10 = num13;
+          if (byteOrder === module(5130).LITTLE_ENDIAN) {
+            let num17 = 0;
+            let num18 = 0;
+            let num19 = 0;
+            if (0 < typeSize) {
+              do {
+                num18 = num18 + (value[result + num17] << 8 * num17);
+                num17 = num17 + 1;
+                num19 = num18;
+              } while (num17 < typeSize);
+            }
+            let num16 = num19;
+          } else {
+            let num14 = 0;
+            let num15 = 0;
+            num16 = 0;
+            if (0 < typeSize) {
+              do {
+                num15 = num15 + (value[result + num14] << 8 * (typeSize - 1 - num14));
+                num14 = num14 + 1;
+                num16 = num15;
+              } while (num14 < typeSize);
+            }
           }
-          obj1[1] = str7;
-          tmp32 = obj1;
-        }
-        obj["Pixel Units"] = tmp32;
-      } else if (stringFromDataView === tmp3(5129).TYPE_TIME) {
-        let tmp34 = arg1[num];
-        let tmp8 = 7 <= longAt && tmp34 + tmp3(5129).PNG_CHUNK_DATA_OFFSET + 7 <= byteLength.byteLength;
-        let tmp9;
-        if (tmp8) {
-          let tmpResult2 = tmp(5139);
-          let shortAt = tmpResult2.getShortAt(byteLength, tmp34 + tmp3(5129).PNG_CHUNK_DATA_OFFSET);
-          let tmpResult3 = tmp(5139);
-          let byteAt1 = tmpResult3.getByteAt(byteLength, tmp34 + tmp3(5129).PNG_CHUNK_DATA_OFFSET + 2);
-          let tmpResult4 = tmp(5139);
-          let byteAt2 = tmpResult4.getByteAt(byteLength, tmp34 + tmp3(5129).PNG_CHUNK_DATA_OFFSET + 3);
-          let tmpResult5 = tmp(5139);
-          let byteAt3 = tmpResult5.getByteAt(byteLength, tmp34 + tmp3(5129).PNG_CHUNK_DATA_OFFSET + 4);
-          let tmpResult6 = tmp(5139);
-          let byteAt4 = tmpResult6.getByteAt(byteLength, tmp34 + tmp3(5129).PNG_CHUNK_DATA_OFFSET + 5);
-          let tmpResult7 = tmp(5139);
-          let byteAt5 = tmpResult7.getByteAt(byteLength, tmp34 + tmp3(5129).PNG_CHUNK_DATA_OFFSET + 6);
+          let items1 = [num16 >> 31 & 1, num16 >> 30 & 1, num16 >> 29 & 1];
+          let items2 = [];
+          if (items1[0]) {
+            let arr = items2.push("Dependent Parent Image");
+          }
+          if (items1[1]) {
+            arr = items2.push("Dependent Child Image");
+          }
+          if (items1[2]) {
+            let arr1 = items2.push("Representative Image");
+          }
+          obj = { value: null, description: null };
+          obj[0] = items1;
+          let tmp14 = items2.join(", ") || "None";
+          obj[1] = tmp14;
+          items[num13].ImageFlags = obj;
+          let tmp15 = num16 >> 24 & 7;
+          obj = { value: null, description: null };
+          obj[0] = tmp15;
+          let str11 = "Unknown";
+          if (0 === tmp15) {
+            str11 = "JPEG";
+          }
+          obj[1] = str11;
+          items[num13].ImageFormat = obj;
+          let tmp16 = 16777215 & num16;
+          obj1 = { value: null, description: null };
+          obj1[0] = tmp16;
+          let str12 = { 196608: "Baseline MP Primary Image", 65537: "Large Thumbnail (VGA equivalent)", 65538: "Large Thumbnail (Full HD equivalent)", 131073: "Multi-Frame Image (Panorama)", 131074: "Multi-Frame Image (Disparity)", 131075: "Multi-Frame Image (Multi-Angle)", 0: "Undefined" }[tmp16];
+          if (!str12) {
+            str12 = "Unknown";
+          }
+          obj1[1] = str12;
+          items[num13].ImageType = obj1;
+          value = ifd.MPEntry.value;
+          let tmp17 = c3;
+          sum = num13 * c3 + 4;
+          let tmp19 = module;
+          let tmp20 = dependencyMap;
+          let obj8 = module(5142);
+          let typeSize1 = obj8.getTypeSize("LONG");
+          if (byteOrder === module(5130).LITTLE_ENDIAN) {
+            let num23 = 0;
+            let num24 = 0;
+            let num25 = 0;
+            if (0 < typeSize1) {
+              do {
+                num24 = num24 + (value[sum + num23] << 8 * num23);
+                num23 = num23 + 1;
+                num25 = num24;
+              } while (num23 < typeSize1);
+            }
+            let num22 = num25;
+          } else {
+            let num20 = 0;
+            let num21 = 0;
+            num22 = 0;
+            if (0 < typeSize1) {
+              do {
+                num21 = num21 + (value[sum + num20] << 8 * (typeSize1 - 1 - num20));
+                num20 = num20 + 1;
+                num22 = num21;
+              } while (num20 < typeSize1);
+            }
+          }
           obj2 = { value: null, description: null };
-          let items = [shortAt, byteAt1, byteAt2, byteAt3, byteAt4, byteAt5];
-          obj2[0] = items;
-          let repeat = "0".repeat;
-          let _HermesInternal = HermesInternal;
-          let combined = "" + "0".repeat(4 - "" + shortAt.length) + shortAt;
-          let repeat2 = "0".repeat;
-          let _HermesInternal2 = HermesInternal;
-          let repeat3 = "0".repeat;
-          let combined1 = "" + "0".repeat(2 - "" + byteAt1.length) + byteAt1;
-          let _HermesInternal3 = HermesInternal;
-          let repeat4 = "0".repeat;
-          let combined2 = "" + "0".repeat(2 - "" + byteAt2.length) + byteAt2;
-          let _HermesInternal4 = HermesInternal;
-          let repeat5 = "0".repeat;
-          let combined3 = "" + "0".repeat(2 - "" + byteAt3.length) + byteAt3;
-          let _HermesInternal5 = HermesInternal;
-          let repeat6 = "0".repeat;
-          let combined4 = "" + "0".repeat(2 - "" + byteAt4.length) + byteAt4;
-          let _HermesInternal6 = HermesInternal;
-          let _HermesInternal7 = HermesInternal;
-          let str = "";
-          let tmp21 = combined;
-          let str2 = "-";
-          let str3 = "-";
-          let str4 = " ";
-          let str5 = ":";
-          let str6 = ":";
-          obj2[1] = "" + combined + "-" + combined1 + "-" + combined2 + " " + combined3 + ":" + combined4 + ":" + "" + "0".repeat(2 - "" + byteAt5.length) + byteAt5;
-          tmp9 = obj2;
+          obj2[0] = num22;
+          obj2[1] = "" + num22;
+          items[num13].ImageSize = obj2;
+          let num26 = 0;
+          iter = ifd.MPEntry;
+          if (0 !== num13) {
+            break;
+          } else {
+            obj3 = { value: null, description: null };
+            obj3[0] = 0;
+            obj3[1] = "";
+            items[num13].ImageOffset = obj3;
+            value = ifd.MPEntry.value;
+            let tmp23 = c3;
+            let sum1 = num13 * c3 + 12;
+            let tmp25 = module;
+            let tmp26 = dependencyMap;
+            let obj11 = module(5142);
+            let typeSize2 = obj11.getTypeSize("SHORT");
+            if (byteOrder === module(5130).LITTLE_ENDIAN) {
+              let num36 = 0;
+              let num37 = 0;
+              let num38 = 0;
+              if (0 < typeSize2) {
+                do {
+                  num37 = num37 + (value[sum1 + num36] << 8 * num36);
+                  num36 = num36 + 1;
+                  num38 = num37;
+                } while (num36 < typeSize2);
+              }
+              let num35 = num38;
+            } else {
+              let num33 = 0;
+              let num34 = 0;
+              num35 = 0;
+              if (0 < typeSize2) {
+                do {
+                  num34 = num34 + (value[sum1 + num33] << 8 * (typeSize2 - 1 - num33));
+                  num33 = num33 + 1;
+                  num35 = num34;
+                } while (num33 < typeSize2);
+              }
+            }
+            let obj4 = { value: null, description: null };
+            obj4[0] = num35;
+            obj4[1] = "" + num35;
+            items[num13].DependentImage1EntryNumber = obj4;
+            let value1 = ifd.MPEntry.value;
+            let tmp28 = c3;
+            let sum2 = num13 * c3 + 14;
+            let tmp30 = module;
+            let tmp31 = dependencyMap;
+            let obj13 = module(5142);
+            let typeSize3 = obj13.getTypeSize("SHORT");
+            if (byteOrder === module(5130).LITTLE_ENDIAN) {
+              let num42 = 0;
+              let num43 = 0;
+              let num44 = 0;
+              if (0 < typeSize3) {
+                do {
+                  num43 = num43 + (value1[sum2 + num42] << 8 * num42);
+                  num42 = num42 + 1;
+                  num44 = num43;
+                } while (num42 < typeSize3);
+              }
+              let num41 = num44;
+            } else {
+              let num39 = 0;
+              let num40 = 0;
+              num41 = 0;
+              if (0 < typeSize3) {
+                do {
+                  num40 = num40 + (value1[sum2 + num39] << 8 * (typeSize3 - 1 - num39));
+                  num39 = num39 + 1;
+                  num41 = num40;
+                } while (num39 < typeSize3);
+              }
+            }
+            let obj5 = { value: null, description: null };
+            obj5[0] = num41;
+            obj5[1] = "" + num41;
+            items[num13].DependentImage2EntryNumber = obj5;
+            buffer = buffer.buffer;
+            items[num13].image = buffer.slice(0, num22);
+            let tmp33 = require;
+            let tmp34 = dependencyMap;
+            let obj15 = getDataView;
+            let deferInitResult = obj15.deferInit(items[num13], "base64", function() {
+              return callback(table[4]).getBase64Image(this.image);
+            });
+            num13 = num13 + 1;
+            let _Math2 = Math;
+            let tmp36 = c3;
+          }
         }
-        obj["Modify Date"] = tmp9;
+        const value2 = iter.value;
+        const sum3 = num13 * c3 + 8;
+        const typeSize4 = module(5142).getTypeSize("LONG");
+        if (byteOrder === module(5130).LITTLE_ENDIAN) {
+          let num30 = 0;
+          let num31 = 0;
+          let num32 = 0;
+          if (0 < typeSize4) {
+            do {
+              num31 = num31 + (value2[sum3 + num30] << 8 * num30);
+              num30 = num30 + 1;
+              num32 = num31;
+            } while (num30 < typeSize4);
+          }
+          let num29 = num32;
+        } else {
+          let num27 = 0;
+          let num28 = 0;
+          num29 = 0;
+          if (0 < typeSize4) {
+            do {
+              num28 = num28 + (value2[sum3 + num27] << 8 * (typeSize4 - 1 - num27));
+              num27 = num27 + 1;
+              num29 = num28;
+            } while (num27 < typeSize4);
+          }
+        }
+        const sum4 = num29 + sum;
+        const obj16 = module(5142);
       }
+      ifd.Images = items;
     }
-    return obj;
+    return ifd;
   }
 };

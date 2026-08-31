@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "816d3367ed7ad398b85a9db798abd14c", name: "ReactionIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 247.5, height: 194, scales: [2, 3], hash: "ea30e86096b674f657e18d24dc0df08d", name: "img_profile_upsell", type: "png" });

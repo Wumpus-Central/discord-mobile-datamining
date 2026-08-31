@@ -2,4 +2,4 @@
 
 // Module 13930
 
-export default {};
+export default (arg0) => null == arg0;

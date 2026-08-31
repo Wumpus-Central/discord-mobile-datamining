@@ -1,7 +1,0 @@
-// === Module 13447: SemVer ===
-
-// Module 13447 (SemVer)
-import SemVer from "SemVer" /* 13437 */;
-
-
-export default (arg0, arg1) => new SemVer(arg0, arg1).major;

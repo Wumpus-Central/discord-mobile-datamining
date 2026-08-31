@@ -1,13 +1,20 @@
 // === Module 1658: addLogBoxLog ===
 
 // Module 1658 (addLogBoxLog)
-for (const key10013 in require("addLogBoxLog")) {
-  let tmp2 = key10013;
-  arg5[key10013] = require("addLogBoxLog")[key10013];
-  continue;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+
+const LogBox = get_ActivityIndicator.LogBox;
+let fn;
+if (LogBox != null) {
+  const addLog = LogBox.addLog;
+  if (addLog != null) {
+    fn = addLog.bind(LogBox);
+  }
 }
-for (const key10017 in require("logToConsole")) {
-  let tmp3 = key10017;
-  arg5[key10017] = require("logToConsole")[key10017];
-  continue;
+if (fn == null) {
+  fn = () => {
+
+  };
 }
+
+export const addLogBoxLog = fn;

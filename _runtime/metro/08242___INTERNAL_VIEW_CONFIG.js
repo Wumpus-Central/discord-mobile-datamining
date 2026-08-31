@@ -3,7 +3,7 @@
 // Module 8242 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-const obj = { uiViewClassName: "RNSVGFeFlood", validAttributes: { x: true, y: true, width: true, height: true, result: true, floodColor: true, floodOpacity: true } };
+const obj = { uiViewClassName: "RNSVGDefs", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true } };
 
-export default setRuntimeConfigProvider.get("RNSVGFeFlood", () => obj);
+export default setRuntimeConfigProvider.get("RNSVGDefs", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

@@ -1,9 +1,9 @@
 // === Module 8243: _isNativeReflectConstruct ===
 
 // Module 8243 (_isNativeReflectConstruct)
-import noopDefault from "noop" /* 19 */;
+import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8226 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8233 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8244 */;
 import closure_3 from "_classCallCheck" /* 41 */;
 import closure_4 from "_possibleConstructorReturn" /* 93 */;
@@ -11,7 +11,7 @@ import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const FeMerge = arg1;
+const Ellipse = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,13 +31,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopDefault;
-class FeMerge {
+noopAll;
+class Ellipse {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeMerge);
+    tmp = closure_3(this, Ellipse);
     tmp2 = closure_5;
-    obj = closure_5(FeMerge);
+    obj = closure_5(Ellipse);
     tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -52,30 +52,37 @@ class FeMerge {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeMerge, _isNativeReflectConstructDefault);
-let obj = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp = __INTERNAL_VIEW_CONFIGDefault;
-    const merged = Object.assign(self(8225).extractFilter(this.props));
-    const obj2 = self(8225);
-    const merged1 = Object.assign(self(8225).extractFeMerge(this.props, this));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+_inheritsDefault(Ellipse, _isNativeReflectConstructDefault);
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let obj = {};
+      ({ cx, cy, rx, ry } = props);
+      const merged = Object.assign(self(8224).extract(this, props));
+      obj.cx = cx;
+      obj.cy = cy;
+      obj.rx = rx;
+      obj.ry = ry;
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const obj2 = self(8224);
+      const merged1 = Object.assign(obj);
+      return jsx(__INTERNAL_VIEW_CONFIGDefault, {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
+    }
   }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeMerge, items);
-importDefaultResultResult.displayName = "FeMerge";
-obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(Ellipse, items);
+importDefaultResultResult.displayName = "Ellipse";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
 
 export default importDefaultResultResult;
