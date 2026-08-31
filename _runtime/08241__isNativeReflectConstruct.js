@@ -1,16 +1,13 @@
 // _runtime/08241__isNativeReflectConstruct.js
-import noopDefault from "00019_noop.js";
+import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import extractFeFloodDefault from "08225_extractFeFlood.js";
-import _isNativeReflectConstructDefault from "08226__isNativeReflectConstruct.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/08242___INTERNAL_VIEW_CONFIG.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const FeFlood = arg1;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,14 +27,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopDefault;
-class FeFlood {
+noopAll;
+class Defs {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeFlood);
-    tmp2 = closure_5;
-    obj = closure_5(FeFlood);
-    tmp3 = closure_4;
+    tmp = closure_2(this, Defs);
+    tmp2 = closure_4;
+    obj = closure_4(Defs);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -51,31 +48,16 @@ class FeFlood {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeFlood, _isNativeReflectConstructDefault);
-let obj = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp = __INTERNAL_VIEW_CONFIGDefault;
-    const merged = Object.assign(self(8225).extractFilter(this.props));
-    const merged1 = Object.assign(extractFeFloodDefault(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+_inheritsDefault(Defs, require("noop").Component);
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      return jsx(Defs(8242), { children: this.props.children });
+    }
   }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeFlood, items);
-importDefaultResultResult.displayName = "FeFlood";
-obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.floodColor = "black";
-obj.floodOpacity = 1;
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

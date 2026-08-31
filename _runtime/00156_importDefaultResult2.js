@@ -17,7 +17,7 @@ const importDefaultResult2Result = nullthrowsDefault(NativePerformanceCxxDefault
 const error = importDefaultResult2Result;
 ({ reportMark: closure_8, reportMeasure: c9, getMarkTime: c10, clearMarks: unpackModuleId, clearMeasures: closure_12 } = importDefaultResult2Result);
 let closure_13 = { startTime: 0, detail: "call" };
-let closure_14 = { name: "", startTime: 0, duration: 0, detail: "sa" };
+let closure_14 = { name: "", startTime: 0, duration: 0, detail: "disabled" };
 function getMarkTimeForMeasure(arg0) {
 
 }

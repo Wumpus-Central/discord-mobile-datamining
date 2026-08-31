@@ -30,12 +30,12 @@ obj = {
     return obj;
   },
   timing(arg0, arg1) {
-    let f68700 = arg1;
+    let f68822 = arg1;
     closure_1 = arg0;
     obj = {};
     const merged = Object.assign(closure_1);
-    f68700 = (arg0) => {
-      value.setValue(f68700.toValue);
+    f68822 = (arg0) => {
+      value.setValue(f68822.toValue);
       if (arg0 != null) {
         arg0({ finished: true });
       }
@@ -68,12 +68,12 @@ obj = {
     return obj;
   },
   spring(animation, arg1) {
-    let f68701 = arg1;
+    let f68823 = arg1;
     closure_1 = animation;
     obj = {};
     const merged = Object.assign(closure_1);
-    f68701 = (arg0) => {
-      animation.setValue(f68701.toValue);
+    f68823 = (arg0) => {
+      animation.setValue(f68823.toValue);
       if (arg0 != null) {
         arg0({ finished: true });
       }
@@ -118,11 +118,11 @@ obj = {
     if (typeof mockCompositeAnimation !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let f68699 = arg0;
+    let f68821 = arg0;
     obj = {};
     const merged = Object.assign(obj);
-    f68699 = (arg0) => {
-      const item = f68699.forEach((start) => start.start());
+    f68821 = (arg0) => {
+      const item = f68821.forEach((start) => start.start());
       if (arg0 != null) {
         arg0({ finished: true });
       }
@@ -158,11 +158,11 @@ obj = {
     if (typeof mockCompositeAnimation !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let f68699 = items;
+    let f68821 = items;
     obj = {};
     const merged = Object.assign(obj);
-    f68699 = (arg0) => {
-      const item = f68699.forEach((start) => start.start());
+    f68821 = (arg0) => {
+      const item = f68821.forEach((start) => start.start());
       if (arg0 != null) {
         arg0({ finished: true });
       }
@@ -198,11 +198,11 @@ obj = {
     if (typeof mockCompositeAnimation !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let f68699 = arg1;
+    let f68821 = arg1;
     obj = {};
     const merged = Object.assign(obj);
-    f68699 = (arg0) => {
-      const item = f68699.forEach((start) => start.start());
+    f68821 = (arg0) => {
+      const item = f68821.forEach((start) => start.start());
       if (arg0 != null) {
         arg0({ finished: true });
       }

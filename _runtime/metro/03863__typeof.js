@@ -1,5 +1,5 @@
 // _runtime/metro/03863__typeof.js
-import Parser2 from "../03847_Parser.js";
+import Parser2 from "../03848_Parser.js";
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(DayOfYearParser, Parser) {
+function _setPrototypeOf(DateParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(DayOfYearParser, Parser) {
-      DayOfYearParser.__proto__ = Parser;
-      return DayOfYearParser;
+    _setPrototypeOf = function _setPrototypeOf(DateParser, Parser) {
+      DateParser.__proto__ = Parser;
+      return DateParser;
     };
   }
-  return _setPrototypeOf(DayOfYearParser, Parser);
+  return _setPrototypeOf(DateParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,9 +54,11 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+let closure_5 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+let closure_6 = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class DayOfYearParser {
+class DateParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -106,12 +108,12 @@ class DayOfYearParser {
           tmp24 = referenceError1;
           throw referenceError1;
         } else {
-          str3 = "subpriority";
-          if ("subpriority" in applyResult) {
+          str3 = "subPriority";
+          if ("subPriority" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "subpriority", { value: 1, enumerable: true, configurable: true, writable: true });
+            definePropertyResult1 = Object.defineProperty(applyResult, "subPriority", { value: 1, enumerable: true, configurable: true, writable: true });
           } else {
-            applyResult.subpriority = 1;
+            applyResult.subPriority = 1;
           }
           if (tmp13) {
             _ReferenceError = ReferenceError;
@@ -122,7 +124,7 @@ class DayOfYearParser {
             tmp20 = referenceError2;
             throw referenceError2;
           } else {
-            items1 = ["Y", "R", "q", "Q", "M", "L", "w", "I", "d", "E", "i", "e", "c", "t", "T"];
+            items1 = ["Y", "R", "q", "Q", "w", "I", "D", "i", "e", "c", "t", "T"];
             str4 = "incompatibleTokens";
             if ("incompatibleTokens" in applyResult) {
               _Object3 = Object;
@@ -147,7 +149,7 @@ class DayOfYearParser {
     }
   }
 }
-closure_1 = DayOfYearParser;
+closure_1 = DateParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -159,12 +161,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: DayOfYearParser, writable: true, configurable: true };
-DayOfYearParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: DateParser, writable: true, configurable: true };
+DateParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(DayOfYearParser, Parser);
+  _setPrototypeOf(DateParser, Parser);
 }
-_createSuperInternal = DayOfYearParser;
+_createSuperInternal = DateParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -225,16 +227,13 @@ _createSuperInternal = function _createSuperInternal() {
 obj = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    if ("D" !== arg1) {
-      if ("DD" !== arg1) {
-        if ("Do" === arg1) {
-          return ordinalNumber.ordinalNumber(arg0, { unit: "date" });
-        } else {
-          return _createSuperInternal(3849).parseNDigits(arg1.length, arg0);
-        }
-      }
+    if ("d" === arg1) {
+      return _createSuperInternal(3850).parseNumericPattern(_createSuperInternal(3851).numericPatterns.date, arg0);
+    } else if ("do" === arg1) {
+      return ordinalNumber.ordinalNumber(arg0, { unit: "date" });
+    } else {
+      return _createSuperInternal(3850).parseNDigits(arg1.length, arg0);
     }
-    return _createSuperInternal(3849).parseNumericPattern(_createSuperInternal(3850).numericPatterns.dayOfYear, arg0);
   }
 };
 let items = [
@@ -243,27 +242,28 @@ let items = [
     key: "validate",
     value: function validate(getUTCFullYear) {
       const uTCFullYear = getUTCFullYear.getUTCFullYear();
-      let tmp2 = arg1 >= 1;
-      if (_createSuperInternal(3849).isLeapYearIndex(uTCFullYear)) {
-        if (tmp2) {
-          tmp2 = arg1 <= 366;
+      const uTCMonth = getUTCFullYear.getUTCMonth();
+      let tmp4 = arg1 >= 1;
+      if (isLeapYearIndexResult) {
+        if (tmp4) {
+          tmp4 = arg1 <= table2[uTCMonth];
         }
-        let tmp3 = tmp2;
+        let tmp5 = tmp4;
       } else {
-        tmp3 = tmp2;
-        if (tmp2) {
-          tmp3 = arg1 <= 365;
+        tmp5 = tmp4;
+        if (tmp4) {
+          tmp5 = arg1 <= table[uTCMonth];
         }
       }
-      return tmp3;
+      return tmp5;
     }
   },
   {
     key: "set",
-    value: function set(setUTCMonth) {
-      setUTCMonth.setUTCMonth(0, arg2);
-      setUTCMonth.setUTCHours(0, 0, 0, 0);
-      return setUTCMonth;
+    value: function set(setUTCDate) {
+      setUTCDate.setUTCDate(arg2);
+      setUTCDate.setUTCHours(0, 0, 0, 0);
+      return setUTCDate;
     }
   }
 ];
@@ -286,4 +286,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { DayOfYearParser };
+export { DateParser };

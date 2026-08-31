@@ -1,3 +1,3 @@
 // _runtime/metro/13930__.js
 
-export default {};
+export default (arg0) => null == arg0;

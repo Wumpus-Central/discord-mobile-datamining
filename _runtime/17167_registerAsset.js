@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 250, height: 200, scales: [2, 3], hash: "a58504e7154ded917c4b5c349c82a3a7", name: "img_bans_empty_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_settings/roles/native/images", width: 660, height: 240, scales: [2, 3], hash: "19d4157d3d8c12964b276feef3728637", name: "illustration-light-large", type: "png" });

@@ -1,2 +1,5 @@
 // _runtime/metro/08371__.js
-arg5.default = { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };
+import _modDef8372 from "08372__.js";
+
+
+export default _modDef8372({ contain: null, cover: null, stretch: null });

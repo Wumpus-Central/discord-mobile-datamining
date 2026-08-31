@@ -1,2 +1,2 @@
 // _runtime/05683_set.js
-arg5.LongPressNativeProperties = new Set(["minDurationMs", "maxDist", "numberOfPointers"]);
+arg5.NativeHandlerNativeProperties = new Set(["shouldActivateOnStart", "disallowInterruption", "yieldsToContinuousGestures", "delaysChildPressedState"]);

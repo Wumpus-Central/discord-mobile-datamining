@@ -1,6 +1,6 @@
 // _runtime/05745__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import NativeGesture from "metro/00041__classCallCheck.js";
+import FlingGesture from "metro/00041__classCallCheck.js";
 import closure_1 from "metro/00093__possibleConstructorReturn.js";
 import closure_2 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
@@ -24,12 +24,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class NativeGesture {
+class FlingGesture {
   constructor() {
     self = this;
-    tmp = NativeGesture(this, NativeGesture);
+    tmp = FlingGesture(this, FlingGesture);
     tmp2 = closure_2;
-    obj = closure_2(NativeGesture);
+    obj = closure_2(FlingGesture);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
@@ -40,26 +40,26 @@ class NativeGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "NativeViewGestureHandler";
+    tmp3Result.handlerName = "FlingGestureHandler";
     return tmp3Result;
   }
 }
-_inheritsDefault(NativeGesture, require("_isNativeReflectConstruct").BaseGesture);
+_inheritsDefault(FlingGesture, require("_isNativeReflectConstruct").BaseGesture);
 const items = [
   {
-    key: "shouldActivateOnStart",
-    value: function shouldActivateOnStart(shouldActivateOnStart) {
-      this.config.shouldActivateOnStart = shouldActivateOnStart;
+    key: "numberOfPointers",
+    value: function numberOfPointers(numberOfPointers) {
+      this.config.numberOfPointers = numberOfPointers;
       return this;
     }
   },
   {
-    key: "disallowInterruption",
-    value: function disallowInterruption(disallowInterruption) {
-      this.config.disallowInterruption = disallowInterruption;
+    key: "direction",
+    value: function direction(DOWN) {
+      this.config.direction = DOWN;
       return this;
     }
   }
 ];
 
-export const NativeGesture = importDefaultResult(NativeGesture, items);
+export const FlingGesture = importDefaultResult(FlingGesture, items);

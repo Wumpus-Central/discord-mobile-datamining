@@ -1,14 +1,11 @@
 // _runtime/08273__isNativeReflectConstruct.js
-import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08211__isNativeReflectConstruct.js";
 import closure_2 from "metro/00041__classCallCheck.js";
 import closure_3 from "metro/00093__possibleConstructorReturn.js";
 import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import { jsx } from "react/00021_jsxProd.js";
 
-const Pattern = importDefault;
+const FeSpotLight = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,13 +25,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class Pattern {
+class FeSpotLight {
   constructor() {
     self = this;
-    tmp = closure_2(this, Pattern);
+    tmp = closure_2(this, FeSpotLight);
     tmp2 = closure_4;
-    obj = closure_4(Pattern);
+    obj = closure_4(FeSpotLight);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -49,55 +45,18 @@ class Pattern {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Pattern, _isNativeReflectConstructDefault);
+_inheritsDefault(FeSpotLight, require("noop").Component);
 const items = [
   {
     key: "render",
     value: function render() {
-      const self = this;
-      const props = this.props;
-      ({ patternTransform, patternUnits, patternContentUnits } = props);
-      ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
-      if (!patternTransform) {
-        patternTransform = transform;
-      }
-      if (!patternTransform) {
-        patternTransform = props;
-      }
-      const tmp3Result = self(8195)(patternTransform);
-      let obj = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
-      let num = patternUnits;
-      if (patternUnits) {
-        num = tmp(8265)[patternUnits];
-      }
-      if (!num) {
-        num = 0;
-      }
-      obj[7] = num;
-      let num2 = 1;
-      if (patternContentUnits) {
-        num2 = tmp(8265)[patternContentUnits];
-      }
-      obj[8] = num2;
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const tmp3 = self(8195);
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(tmp(8200)({ viewBox, preserveAspectRatio }));
-      obj.children = children;
-      return jsx(self(8274), {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
+      const result = FeSpotLight(8225).warnUnimplementedFilter();
+      return null;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Pattern, items);
-importDefaultResultResult.displayName = "Pattern";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = importDefaultResult(FeSpotLight, items);
+importDefaultResultResult.displayName = "FeSpotLight";
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

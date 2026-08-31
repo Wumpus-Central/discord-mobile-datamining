@@ -1,22 +1,35 @@
 // _runtime/metro/05158__.js
+const module = arg2;
+const dependencyMap = arg6;
 arg5.default = {
-  get(arg0) {
-    if (arg0) {
-      return arg0;
-    } else {
-      if (typeof globalThis.DOMParser !== "undefined") {
-        const dOMParser = new globalThis.DOMParser();
-        return dOMParser;
-      } else {
+  decode(arg0, buffer) {
+    let value = module(5159).get();
+    if (undefined !== value) {
+      if (undefined !== arg0) {
         try {
-          const result = globalThis.__non_webpack_require__("@xmldom/xmldom");
-          const obj = { onError: null };
-          obj[0] = result.onErrorStopParsing;
-          const dOMParser1 = new result.DOMParser(obj);
-          return dOMParser1;
+          value = new value(arg0);
+          const _DataView = DataView;
+          if (buffer instanceof DataView) {
+            buffer = buffer.buffer;
+          } else {
+            const _Uint8Array = Uint8Array;
+            buffer = Uint8Array.from(buffer);
+          }
+          value.decode(buffer);
         } catch (err) {
         }
       }
     }
-  }
+    const mapped = buffer.map((arg0) => String.fromCharCode(arg0));
+    return (function decodeAsciiValue(mapped) {
+      try {
+        const _decodeURIComponent = decodeURIComponent;
+        const _escape = escape;
+        return decodeURIComponent(escape(mapped));
+      } catch (err) {
+        return tmp;
+      }
+    })(mapped.join(""));
+  },
+  TAG_HEADER_SIZE: 5
 };

@@ -1,7 +1,7 @@
 // _runtime/metro/01648___INTERNAL_VIEW_CONFIG.js
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
-const obj = { uiViewClassName: "OverKeyboardView", validAttributes: { visible: true } };
+const obj = { uiViewClassName: "KeyboardBackgroundView", validAttributes: {} };
 
-export default setRuntimeConfigProvider.get("OverKeyboardView", () => obj);
+export default setRuntimeConfigProvider.get("KeyboardBackgroundView", () => obj);
 export const __INTERNAL_VIEW_CONFIG = obj;

@@ -1,10 +1,10 @@
 // _runtime/05657_items1.js
-import _isNativeReflectConstructDefault from "05644__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault from "05647__isNativeReflectConstruct.js";
 
-const items = ["numberOfPointers", "direction"];
-const obj = { name: "FlingGestureHandler", allowedProps: items1, config: {} };
+const items = ["minDurationMs", "maxDist", "numberOfPointers"];
+const obj = { name: "LongPressGestureHandler", allowedProps: items1, config: { shouldCancelWhenOutside: true } };
 items1 = [...items];
 
-export const flingGestureHandlerProps = items;
-export const flingHandlerName = "FlingGestureHandler";
-export const FlingGestureHandler = _isNativeReflectConstructDefault(obj);
+export const longPressGestureHandlerProps = items;
+export const longPressHandlerName = "LongPressGestureHandler";
+export const LongPressGestureHandler = _isNativeReflectConstructDefault(obj);

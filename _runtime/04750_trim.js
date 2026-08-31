@@ -1,13 +1,20 @@
 // _runtime/04750_trim.js
-import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
-import RequireObjectCoercible from "04737_RequireObjectCoercible.js";
-import ToString from "04751_ToString.js";
+import RequireObjectCoercible from "04739_RequireObjectCoercible.js";
+import getPolyfill from "04751_getPolyfill.js";
+import trim2 from "04752_trim.js";
+import shimStringTrim from "04758_shimStringTrim.js";
+import callBind from "01418_callBind.js";
+import defineProperty from "04754_defineProperty.js";
 
-let closure_2 = callBoundIntrinsic("String.prototype.replace");
-const isMatch = /^\s$/.test("\u180E");
-let closure_3 = isMatch ? /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/ : /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/;
-let closure_4 = isMatch ? /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/ : /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/;
+let closure_2 = callBind(getPolyfill());
+function trim(arg0) {
+  RequireObjectCoercible(arg0);
+  return callback(arg0);
+}
+const obj = { getPolyfill: null, implementation: null, shim: null };
+obj[0] = getPolyfill;
+obj[1] = trim2;
+obj[2] = shimStringTrim;
+defineProperty(trim, obj);
 
-export default function trim() {
-  return callback(callback(ToString(RequireObjectCoercible(this)), closure_3, ""), closure_4, "");
-};
+export default trim;

@@ -1,5 +1,5 @@
 // _runtime/01670_WorkletsModule.js
-import WorkletsModule from "01671_WorkletsModule.js";
+import jSWorkletsModule from "01671_jSWorkletsModule.js";
 
 
-export const WorkletsModule = WorkletsModule.WorkletsModule;
+export const WorkletsModule = jSWorkletsModule.WorkletsModule;

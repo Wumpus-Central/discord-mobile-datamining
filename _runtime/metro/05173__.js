@@ -1,182 +1,115 @@
 // _runtime/metro/05173__.js
+import getDataView from "../05125_getDataView.js";
+import _mod5132 from "05132__.js";
+
+require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
-let obj = { INCHES: 2, CENTIMETERS: 3, MILLIMETERS: 4 };
-let c3 = 25.4;
-let c4 = 10;
-let c5 = 1;
 arg5.default = {
-  get(exif) {
-    if (arg1) {
-      if (exif.exif) {
-        if (exif.exif.FocalLength) {
-          let value = exif.exif.FocalLength.value;
+  read(byteLength) {
+    let obj = {};
+    for (let num = 0; num < arg1.length; num = num + 1) {
+      let tmp = module;
+      let tmp2 = dependencyMap;
+      obj1 = module(5142);
+      let tmp3 = require;
+      let longAt = obj1.getLongAt(byteLength, arg1[num] + _mod5132.PNG_CHUNK_LENGTH_OFFSET);
+      let obj2 = getDataView;
+      let sum = arg1[num] + _mod5132.PNG_CHUNK_TYPE_OFFSET;
+      let stringFromDataView = obj2.getStringFromDataView(byteLength, sum, _mod5132.PNG_CHUNK_TYPE_SIZE);
+      let tmp7 = num;
+      if (stringFromDataView === _mod5132.TYPE_PHYS) {
+        let tmp22 = arg1[num];
+        let tmp23 = 4 <= longAt && tmp22 + tmp3(5132).PNG_CHUNK_DATA_OFFSET + 4 <= byteLength.byteLength;
+        let tmp24;
+        if (tmp23) {
+          let tmpResult = tmp(5142);
+          let longAt1 = tmpResult.getLongAt(byteLength, tmp22 + tmp3(5132).PNG_CHUNK_DATA_OFFSET);
+          obj = { value: null, description: null };
+          obj[0] = longAt1;
+          obj[1] = "" + longAt1;
+          tmp24 = obj;
         }
-        if (arg1) {
-          if (exif.exif) {
-            if (exif.exif.FocalPlaneXResolution) {
-              value = exif.exif.FocalPlaneXResolution.value;
-            }
-            if (arg1) {
-              if (exif.exif) {
-                if (exif.exif.FocalPlaneYResolution) {
-                  value = exif.exif.FocalPlaneYResolution.value;
-                }
-                if (arg1) {
-                  if (exif.exif) {
-                    if (exif.exif.FocalPlaneResolutionUnit) {
-                      let value1 = exif.exif.FocalPlaneResolutionUnit.value;
-                    }
-                    if (arg1) {
-                      if (exif.file) {
-                        if (exif.file["Image Width"]) {
-                          let value2 = exif.file["Image Width"].value;
-                        }
-                        if (arg1) {
-                          if (exif.file) {
-                            if (exif.file["Image Height"]) {
-                              let value3 = exif.file["Image Height"].value;
-                            }
-                            if (arg1) {
-                              if (exif.exif) {
-                                if (exif.exif.FocalLengthIn35mmFilm) {
-                                  let value4 = exif.exif.FocalLengthIn35mmFilm.value;
-                                }
-                                if (!value4) {
-                                  value4 = (function getFocalLengthIn35mmFilmValue(value, value2, value1, value2, value3, value3) {
-                                    let _Math = value;
-                                    if (value) {
-                                      let result2 = value2;
-                                      if (value2) {
-                                        if (value1) {
-                                          let tmp3 = value2;
-                                          if (value2) {
-                                            let sqrtResult = value3;
-                                            if (value3) {
-                                              let result3 = value3;
-                                              if (value3) {
-                                                try {
-                                                  if (constants.INCHES === value1) {
-                                                    let tmp7 = closure_3;
-                                                    const result = sqrtResult / (result2[0] / result2[1] * tmp7);
-                                                    const result1 = tmp3 / (_Math[0] / _Math[1] * tmp7);
-                                                    _Math = Math;
-                                                    tmp3 = result1 ** 2;
-                                                    sqrtResult = Math.sqrt(tmp3 + result ** 2);
-                                                    result2 = 5145 / result3[1];
-                                                    result3 = result2 * (43.27 / sqrtResult);
-                                                  } else if (tmp6.CENTIMETERS !== value1) {
-                                                    if (tmp6.MILLIMETERS === value1) {
-                                                      tmp7 = closure_5;
-                                                    }
-                                                  }
-                                                  tmp7 = closure_4;
-                                                } catch (err) {
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  })(value, value, value1, value2, value3, value);
-                                }
-                                obj = {};
-                                let flag = false;
-                                if (value4) {
-                                  obj = { value: null, description: null };
-                                  obj[0] = value4;
-                                  obj[1] = module(5145).FocalLengthIn35mmFilm(value4);
-                                  obj.FocalLength35efl = obj;
-                                  flag = true;
-                                  const obj3 = module(5145);
-                                }
-                                const tmp9 = (function getScaleFactorTo35mmEquivalent(value, value4) {
-                                  if (value) {
-                                    if (value4) {
-                                      try {
-                                        const result = value4 / (value[0] / value[1]);
-                                        obj = { value: null, description: null };
-                                        obj[0] = result;
-                                        obj[1] = result.toFixed(1);
-                                        return obj;
-                                      } catch (err) {
-                                      }
-                                    }
-                                  }
-                                })(value, value4);
-                                if (tmp9) {
-                                  obj.ScaleFactorTo35mmEquivalent = tmp9;
-                                  flag = true;
-                                }
-                                const tmp10 = (function getFieldOfView(value4) {
-                                  if (value4) {
-                                    try {
-                                      const _Math = Math;
-                                      const _Math2 = Math;
-                                      const result = 2 * Math.atan(36 / (2 * value4)) * (180 / Math.PI);
-                                      obj = { value: null, description: null };
-                                      obj[0] = result;
-                                      obj[1] = result.toFixed(1) + " deg";
-                                      return obj;
-                                    } catch (err) {
-                                    }
-                                  }
-                                })(value4);
-                                if (tmp10) {
-                                  obj.FieldOfView = tmp10;
-                                  flag = true;
-                                }
-                                return flag ? obj : undefined;
-                              }
-                            }
-                            if (!arg1) {
-                              if (exif.FocalLengthIn35mmFilm) {
-                                value4 = exif.FocalLengthIn35mmFilm.value;
-                              }
-                            }
-                          }
-                        }
-                        if (!arg1) {
-                          if (exif["Image Height"]) {
-                            value3 = exif["Image Height"].value;
-                          }
-                        }
-                      }
-                    }
-                    if (!arg1) {
-                      if (exif["Image Width"]) {
-                        value2 = exif["Image Width"].value;
-                      }
-                    }
-                  }
-                }
-                if (!arg1) {
-                  if (exif.FocalPlaneResolutionUnit) {
-                    value1 = exif.FocalPlaneResolutionUnit.value;
-                  }
-                }
-              }
-            }
-            if (!arg1) {
-              if (exif.FocalPlaneYResolution) {
-                value = exif.FocalPlaneYResolution.value;
-              }
-            }
+        obj["Pixels Per Unit X"] = tmp24;
+        let tmp26 = arg1[num];
+        let tmp27 = 8 <= longAt && tmp26 + tmp3(5132).PNG_CHUNK_DATA_OFFSET + 4 + 4 <= byteLength.byteLength;
+        let tmp28;
+        if (tmp27) {
+          tmpResult = tmp(5142);
+          let longAt2 = tmpResult.getLongAt(byteLength, tmp26 + tmp3(5132).PNG_CHUNK_DATA_OFFSET + 4);
+          obj = { value: null, description: null };
+          obj[0] = longAt2;
+          obj[1] = "" + longAt2;
+          tmp28 = obj;
+        }
+        obj["Pixels Per Unit Y"] = tmp28;
+        let tmp30 = arg1[num];
+        let tmp31 = 9 <= longAt && tmp30 + tmp3(5132).PNG_CHUNK_DATA_OFFSET + 8 + 1 <= byteLength.byteLength;
+        let tmp32;
+        if (tmp31) {
+          let tmpResult1 = tmp(5142);
+          let byteAt = tmpResult1.getByteAt(byteLength, tmp30 + tmp3(5132).PNG_CHUNK_DATA_OFFSET + 8);
+          obj1 = { value: null, description: null };
+          obj1[0] = byteAt;
+          let str7 = "Unknown";
+          if (1 === byteAt) {
+            str7 = "meters";
           }
+          obj1[1] = str7;
+          tmp32 = obj1;
         }
-        if (!arg1) {
-          if (exif.FocalPlaneXResolution) {
-            value = exif.FocalPlaneXResolution.value;
-          }
+        obj["Pixel Units"] = tmp32;
+      } else if (stringFromDataView === tmp3(5132).TYPE_TIME) {
+        let tmp34 = arg1[num];
+        let tmp8 = 7 <= longAt && tmp34 + tmp3(5132).PNG_CHUNK_DATA_OFFSET + 7 <= byteLength.byteLength;
+        let tmp9;
+        if (tmp8) {
+          let tmpResult2 = tmp(5142);
+          let shortAt = tmpResult2.getShortAt(byteLength, tmp34 + tmp3(5132).PNG_CHUNK_DATA_OFFSET);
+          let tmpResult3 = tmp(5142);
+          let byteAt1 = tmpResult3.getByteAt(byteLength, tmp34 + tmp3(5132).PNG_CHUNK_DATA_OFFSET + 2);
+          let tmpResult4 = tmp(5142);
+          let byteAt2 = tmpResult4.getByteAt(byteLength, tmp34 + tmp3(5132).PNG_CHUNK_DATA_OFFSET + 3);
+          let tmpResult5 = tmp(5142);
+          let byteAt3 = tmpResult5.getByteAt(byteLength, tmp34 + tmp3(5132).PNG_CHUNK_DATA_OFFSET + 4);
+          let tmpResult6 = tmp(5142);
+          let byteAt4 = tmpResult6.getByteAt(byteLength, tmp34 + tmp3(5132).PNG_CHUNK_DATA_OFFSET + 5);
+          let tmpResult7 = tmp(5142);
+          let byteAt5 = tmpResult7.getByteAt(byteLength, tmp34 + tmp3(5132).PNG_CHUNK_DATA_OFFSET + 6);
+          obj2 = { value: null, description: null };
+          let items = [shortAt, byteAt1, byteAt2, byteAt3, byteAt4, byteAt5];
+          obj2[0] = items;
+          let repeat = "0".repeat;
+          let _HermesInternal = HermesInternal;
+          let combined = "" + "0".repeat(4 - "" + shortAt.length) + shortAt;
+          let repeat2 = "0".repeat;
+          let _HermesInternal2 = HermesInternal;
+          let repeat3 = "0".repeat;
+          let combined1 = "" + "0".repeat(2 - "" + byteAt1.length) + byteAt1;
+          let _HermesInternal3 = HermesInternal;
+          let repeat4 = "0".repeat;
+          let combined2 = "" + "0".repeat(2 - "" + byteAt2.length) + byteAt2;
+          let _HermesInternal4 = HermesInternal;
+          let repeat5 = "0".repeat;
+          let combined3 = "" + "0".repeat(2 - "" + byteAt3.length) + byteAt3;
+          let _HermesInternal5 = HermesInternal;
+          let repeat6 = "0".repeat;
+          let combined4 = "" + "0".repeat(2 - "" + byteAt4.length) + byteAt4;
+          let _HermesInternal6 = HermesInternal;
+          let _HermesInternal7 = HermesInternal;
+          let str = "";
+          let tmp21 = combined;
+          let str2 = "-";
+          let str3 = "-";
+          let str4 = " ";
+          let str5 = ":";
+          let str6 = ":";
+          obj2[1] = "" + combined + "-" + combined1 + "-" + combined2 + " " + combined3 + ":" + combined4 + ":" + "" + "0".repeat(2 - "" + byteAt5.length) + byteAt5;
+          tmp9 = obj2;
         }
+        obj["Modify Date"] = tmp9;
       }
     }
-    if (!arg1) {
-      if (exif.FocalLength) {
-        value = exif.FocalLength.value;
-      }
-    }
+    return obj;
   }
 };
-arg5.FOCAL_PLANE_RESOLUTION_UNIT = obj;

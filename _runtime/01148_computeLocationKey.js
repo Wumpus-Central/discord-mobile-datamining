@@ -387,7 +387,7 @@ function wrapPatchRoutesOnNavigation(arg0) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -460,7 +460,7 @@ function wrapPatchRoutesOnNavigation(arg0) {
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       }
                     } else {
                       try {
@@ -1358,8 +1358,8 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
     }
     const result1 = instrumentPageLoad(1149).initializeRouterUtils(closure_7, flag);
   };
-  obj.afterAllSetup = function afterAllSetup(f105261) {
-    closure_2.afterAllSetup(f105261);
+  obj.afterAllSetup = function afterAllSetup(f105420) {
+    closure_2.afterAllSetup(f105420);
     const _location = instrumentPageLoad(1024).WINDOW.location;
     if (_location != null) {
       const pathname = _location.pathname;
@@ -1377,11 +1377,11 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
       const _HermesInternal = HermesInternal;
       obj[tmp2(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + dependencyMap;
       obj[1] = obj;
-      result = tmp2(1024).startBrowserTracingPageLoadSpan(f105261, obj);
+      result = tmp2(1024).startBrowserTracingPageLoadSpan(f105420, obj);
       const tmp2Result = tmp2(1024);
     }
     if (num) {
-      lazyRouteTimeout.add(f105261);
+      lazyRouteTimeout.add(f105420);
     }
   };
   return obj;

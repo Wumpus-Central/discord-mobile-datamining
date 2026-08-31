@@ -1,7 +1,7 @@
 // _runtime/08237__isNativeReflectConstruct.js
-import noopDefault from "00019_noop.js";
+import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08226__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault from "08233__isNativeReflectConstruct.js";
 import __INTERNAL_VIEW_CONFIGDefault from "metro/08238___INTERNAL_VIEW_CONFIG.js";
 import closure_3 from "metro/00041__classCallCheck.js";
 import closure_4 from "metro/00093__possibleConstructorReturn.js";
@@ -9,7 +9,7 @@ import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const FeGaussianBlur = arg1;
+const Circle = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,13 +29,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopDefault;
-class FeGaussianBlur {
+noopAll;
+class Circle {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeGaussianBlur);
+    tmp = closure_3(this, Circle);
     tmp2 = closure_5;
-    obj = closure_5(FeGaussianBlur);
+    obj = closure_5(Circle);
     tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -50,34 +50,36 @@ class FeGaussianBlur {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeGaussianBlur, _isNativeReflectConstructDefault);
-let obj = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp = __INTERNAL_VIEW_CONFIGDefault;
-    const merged = Object.assign(self(8225).extractFilter(this.props));
-    const obj2 = self(8225);
-    const merged1 = Object.assign(self(8225).extractIn(this.props));
-    const obj3 = self(8225);
-    const merged2 = Object.assign(self(8225).extractFeGaussianBlur(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+_inheritsDefault(Circle, _isNativeReflectConstructDefault);
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let obj = {};
+      ({ cx, cy, r } = props);
+      const merged = Object.assign(self(8224).extract(this, props));
+      obj.cx = cx;
+      obj.cy = cy;
+      obj.r = r;
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const obj2 = self(8224);
+      const merged1 = Object.assign(obj);
+      return jsx(__INTERNAL_VIEW_CONFIGDefault, {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
+    }
   }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeGaussianBlur, items);
-importDefaultResultResult.displayName = "FeGaussianBlur";
-obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.stdDeviation = 0;
-obj.edgeMode = "none";
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(Circle, items);
+importDefaultResultResult.displayName = "Circle";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
 
 export default importDefaultResultResult;

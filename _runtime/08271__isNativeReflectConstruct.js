@@ -1,15 +1,11 @@
 // _runtime/08271__isNativeReflectConstruct.js
-import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "08211__isNativeReflectConstruct.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/08272___INTERNAL_VIEW_CONFIG.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import { jsx } from "react/00021_jsxProd.js";
 
-const Path = arg1;
+const FePointLight = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,14 +25,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class Path {
+class FePointLight {
   constructor() {
     self = this;
-    tmp = closure_3(this, Path);
-    tmp2 = closure_5;
-    obj = closure_5(Path);
-    tmp3 = closure_4;
+    tmp = closure_2(this, FePointLight);
+    tmp2 = closure_4;
+    obj = closure_4(FePointLight);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -50,32 +45,18 @@ class Path {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Path, _isNativeReflectConstructDefault);
+_inheritsDefault(FePointLight, require("noop").Component);
 const items = [
   {
     key: "render",
     value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = {};
-      const merged = Object.assign(self(8202).extract(this, props));
-      obj.d = props.d;
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const obj2 = self(8202);
-      const merged1 = Object.assign(obj);
-      return jsx(__INTERNAL_VIEW_CONFIGDefault, {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
+      const result = FePointLight(8225).warnUnimplementedFilter();
+      return null;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Path, items);
-importDefaultResultResult.displayName = "Path";
+const importDefaultResultResult = importDefaultResult(FePointLight, items);
+importDefaultResultResult.displayName = "FePointLight";
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

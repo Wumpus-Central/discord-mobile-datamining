@@ -1,18 +1,92 @@
 // _runtime/metro/05127__.js
-let c0 = 18761;
-let c1 = 19789;
+import getDataView from "../05125_getDataView.js";
+
+require = arg1;
+const module = arg2;
+const dependencyMap = arg6;
 arg5.default = {
-  BIG_ENDIAN: 19789,
-  LITTLE_ENDIAN: 18761,
-  getByteOrder(getUint16, sum) {
-    if (getUint16.getUint16(sum) === c0) {
-      return c0;
-    } else if (getUint16.getUint16(sum) === c1) {
-      return c1;
-    } else {
-      const _Error = Error;
-      error = new Error("Illegal byte order value. Faulty image.");
-      throw error;
+  parseAppMarkers(byteLength, flag2) {
+    if (module(5128).USE_TIFF) {
+      let tmpResult = tmp(5129);
+      if (tmpResult.isTiffFile(byteLength)) {
+        tmpResult = tmp(5129);
+        const findTiffOffsetsResult = tmpResult.findTiffOffsets();
+        let obj = { fileType: null };
+        obj[0] = { value: "tiff", description: "TIFF" };
+        return getDataView.objectAssign({}, findTiffOffsetsResult, obj);
+      }
     }
+    if (module(5128).USE_JPEG) {
+      if (tmpResult1.isJpegFile(byteLength)) {
+        const tmpResult2 = tmp(5131);
+        const findJpegOffsetsResult = tmp(5131).findJpegOffsets(byteLength);
+        obj = { fileType: null };
+        obj[0] = { value: "jpeg", description: "JPEG" };
+        return getDataView.objectAssign({}, findJpegOffsetsResult, obj);
+      }
+      tmpResult1 = tmp(5131);
+    }
+    if (module(5128).USE_PNG) {
+      if (tmpResult3.isPngFile(byteLength)) {
+        const tmpResult4 = tmp(5132);
+        const findPngOffsetsResult = tmp(5132).findPngOffsets(byteLength, flag2);
+        obj1 = { fileType: null };
+        obj1[0] = { value: "png", description: "PNG" };
+        return getDataView.objectAssign({}, findPngOffsetsResult, obj1);
+      }
+      tmpResult3 = tmp(5132);
+    }
+    if (module(5128).USE_HEIC) {
+      if (tmpResult5.isHeicFile(byteLength)) {
+        const tmpResult6 = tmp(5133);
+        const findHeicOffsetsResult = tmp(5133).findHeicOffsets(byteLength);
+        const obj2 = { fileType: null };
+        obj2[0] = { value: "heic", description: "HEIC" };
+        return getDataView.objectAssign({}, findHeicOffsetsResult, obj2);
+      }
+      tmpResult5 = tmp(5133);
+    }
+    if (module(5128).USE_AVIF) {
+      if (tmpResult7.isAvifFile(byteLength)) {
+        const tmpResult8 = tmp(5137);
+        const findAvifOffsetsResult = tmp(5137).findAvifOffsets(byteLength);
+        const obj3 = { fileType: null };
+        obj3[0] = { value: "avif", description: "AVIF" };
+        return getDataView.objectAssign({}, findAvifOffsetsResult, obj3);
+      }
+      tmpResult7 = tmp(5137);
+    }
+    if (module(5128).USE_WEBP) {
+      if (tmpResult9.isWebpFile(byteLength)) {
+        const tmpResult10 = tmp(5138);
+        const findOffsetsResult = tmp(5138).findOffsets(byteLength);
+        const obj4 = { fileType: null };
+        obj4[0] = { value: "webp", description: "WebP" };
+        return getDataView.objectAssign({}, findOffsetsResult, obj4);
+      }
+      tmpResult9 = tmp(5138);
+    }
+    if (module(5128).USE_GIF) {
+      if (tmpResult11.isGifFile(byteLength)) {
+        const tmpResult12 = tmp(5139);
+        const findOffsetsResult1 = tmp(5139).findOffsets(byteLength);
+        const obj5 = { fileType: null };
+        obj5[0] = { value: "gif", description: "GIF" };
+        return getDataView.objectAssign({}, findOffsetsResult1, obj5);
+      }
+      tmpResult11 = tmp(5139);
+    }
+    if (module(5128).USE_XMP) {
+      if (tmpResult13.isXMLFile(byteLength)) {
+        const tmpResult14 = tmp(5140);
+        const findOffsetsResult2 = tmp(5140).findOffsets(byteLength);
+        const obj6 = { fileType: null };
+        obj6[0] = { value: "xml", description: "XML" };
+        return getDataView.objectAssign({}, findOffsetsResult2, obj6);
+      }
+      tmpResult13 = tmp(5140);
+    }
+    error = new Error("Invalid image format");
+    throw error;
   }
 };

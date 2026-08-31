@@ -1,9 +1,8 @@
 // _runtime/05741__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import RotationGesture from "metro/00041__classCallCheck.js";
+import TapGesture from "metro/00041__classCallCheck.js";
 import closure_1 from "metro/00093__possibleConstructorReturn.js";
 import closure_2 from "00095__getPrototypeOf.js";
-import closure_3 from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 function _isNativeReflectConstruct() {
@@ -25,28 +24,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function changeEventCalculator(rotation, rotation2) {
-  if (undefined === rotation2) {
-    let obj = { rotationChange: null };
-    obj[0] = rotation.rotation;
-  } else {
-    obj = { rotationChange: null };
-    obj[0] = rotation.rotation - rotation2.rotation;
-  }
-  obj = {};
-  const merged = Object.assign(rotation);
-  const merged1 = Object.assign(obj);
-  return obj;
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 11988645380499;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}" };
-class RotationGesture {
+class TapGesture {
   constructor() {
     self = this;
-    tmp = RotationGesture(this, RotationGesture);
+    tmp = TapGesture(this, TapGesture);
     tmp2 = closure_2;
-    obj = closure_2(RotationGesture);
+    obj = closure_2(TapGesture);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
@@ -56,26 +39,63 @@ class RotationGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "RotationGestureHandler";
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "TapGestureHandler";
+    result = tmp3Result.shouldCancelWhenOutside(true);
     return tmp3Result;
   }
 }
-_inheritsDefault(RotationGesture, require("_isNativeReflectConstruct").ContinousBaseGesture);
-let items = [
+_inheritsDefault(TapGesture, require("_isNativeReflectConstruct").BaseGesture);
+const items = [
   {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = changeEventCalculator;
-      const self = this;
-      let fn;
-      fn = callback2(callback(self.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [arg0];
-      return fn(items);
+    key: "minPointers",
+    value: function minPointers(minPointers) {
+      this.config.minPointers = minPointers;
+      return this;
+    }
+  },
+  {
+    key: "numberOfTaps",
+    value: function numberOfTaps(numberOfTaps) {
+      this.config.numberOfTaps = numberOfTaps;
+      return this;
+    }
+  },
+  {
+    key: "maxDistance",
+    value: function maxDistance(maxDist) {
+      this.config.maxDist = maxDist;
+      return this;
+    }
+  },
+  {
+    key: "maxDuration",
+    value: function maxDuration(maxDurationMs) {
+      this.config.maxDurationMs = maxDurationMs;
+      return this;
+    }
+  },
+  {
+    key: "maxDelay",
+    value: function maxDelay(maxDelayMs) {
+      this.config.maxDelayMs = maxDelayMs;
+      return this;
+    }
+  },
+  {
+    key: "maxDeltaX",
+    value: function maxDeltaX(maxDeltaX) {
+      this.config.maxDeltaX = maxDeltaX;
+      return this;
+    }
+  },
+  {
+    key: "maxDeltaY",
+    value: function maxDeltaY(maxDeltaY) {
+      this.config.maxDeltaY = maxDeltaY;
+      return this;
     }
   }
 ];
 
-export const RotationGesture = importDefaultResult(RotationGesture, items);
+export const TapGesture = importDefaultResult(TapGesture, items);
