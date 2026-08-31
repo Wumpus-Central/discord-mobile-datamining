@@ -1,6 +1,6 @@
 // discord_app/modules/interaction_components/native/NativeSearchableSelectActionComponentUtils.tsx
 import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/07979_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08001_registerAsset.js";
 import closure_3 from "../../../stores/ChannelStore.tsx";
 import closure_4 from "../../../stores/GuildRoleStore.tsx";
 import closure_5 from "../../../stores/GuildStore.tsx";

@@ -5,7 +5,7 @@ import Text from "../../../../../design/components/Text/native/Text.tsx";
 import SafeAreaPaddingView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoFAModalSetupSections from "TwoFASetupModal.tsx";
 import styles from "TwoFASetupStyles.tsx";
-import registerAssetDefault from "../../../../../../_runtime/14326_registerAsset.js";
+import registerAssetDefault from "../../../../../../_runtime/14360_registerAsset.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";

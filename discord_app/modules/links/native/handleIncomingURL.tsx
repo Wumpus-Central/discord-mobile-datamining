@@ -33,7 +33,7 @@ function _handleIncomingURL() {
             obj[0] = url;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -62,10 +62,11 @@ function _handleIncomingURL() {
                 let attemptId;
                 let payload;
                 let installationId;
+                let didRegister;
                 let inviteCode;
                 let guildTemplateCode;
                 let authToken;
-                c15 = undefined;
+                c16 = undefined;
                 ({ url, source: Iterable } = lib);
                 throwTypeErrorResult = closure_1_10;
                 throwTypeErrorResult = url;
@@ -182,23 +183,23 @@ function _handleIncomingURL() {
                           obj4[1] = throwTypeErrorResult.id;
                           obj4[2] = throwTypeErrorResult;
                           throwTypeErrorResult = callback(closure_1_2[9]).track(constants.LIVE_ACTIVITY_INTERACTED, obj4);
-                          const obj22 = callback(closure_1_2[9]);
+                          const obj24 = callback(closure_1_2[9]);
                         }
-                        const obj30 = lib(closure_1_2[8]);
+                        const obj32 = lib(closure_1_2[8]);
                       }
                       fingerprint = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     } else {
                       throwTypeErrorResult = url;
                       const parts = url.split("voice/");
                       if (2 !== parts.length) {
                         fingerprint = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       } else {
                         const parts1 = parts[1].split("/");
                         if (0 === parts1.length) {
                           fingerprint = 3;
-                          return { value: "HermesInternal", done: null };
+                          return { value: "HermesInternal", done: "HermesInternal" };
                         } else if ("user" !== parts1[0]) {
                           if ("invite" === parts1[0]) {
                             throwTypeErrorResult = callback;
@@ -225,7 +226,7 @@ function _handleIncomingURL() {
                           } else if ("join" === parts1[0]) {
                             throwTypeErrorResult = callback;
                             throwTypeErrorResult = closure_1_2;
-                            let obj9 = { payload: null };
+                            const obj9 = { payload: null };
                             let obj10 = { type: null, guildId: null, channelId: null };
                             throwTypeErrorResult = closure_1_9;
                             obj10[0] = closure_1_9.CHANNEL;
@@ -237,8 +238,8 @@ function _handleIncomingURL() {
                             throwTypeErrorResult = callback;
                             throwTypeErrorResult = closure_1_2;
                             [tmp, tmp] = parts1;
-                            const obj11 = { payload: null };
-                            const obj12 = { type: null, guildId: null, channelId: null };
+                            let obj11 = { payload: null };
+                            let obj12 = { type: null, guildId: null, channelId: null };
                             throwTypeErrorResult = closure_1_9;
                             obj12[0] = closure_1_9.CHANNEL;
                             obj12[1] = throwTypeErrorResult;
@@ -296,6 +297,7 @@ function _handleIncomingURL() {
             attemptId = c7.attemptId;
             payload = c7.payload;
             installationId = c7.installationId;
+            didRegister = c7.didRegister;
             payload.log("Parsed url as: ", c7);
             inviteCode = payload.inviteCode;
             guildTemplateCode = payload.guildTemplateCode;
@@ -305,60 +307,68 @@ function _handleIncomingURL() {
               obj5 = lib(url[12]);
               result = obj5.parseInviteCodeFromInviteKey(inviteCode);
             }
-            c15 = result;
-            let tmp63 = null == fingerprint;
-            if (tmp63) {
-              tmp63 = null == attemptId;
+            c16 = result;
+            let tmp64 = null == fingerprint;
+            if (tmp64) {
+              tmp64 = null == attemptId;
             }
-            if (tmp63) {
-              tmp63 = null == inviteCode;
+            if (tmp64) {
+              tmp64 = null == inviteCode;
             }
-            if (tmp63) {
-              tmp63 = null == guildTemplateCode;
+            if (tmp64) {
+              tmp64 = null == guildTemplateCode;
             }
-            if (tmp63) {
-              tmp63 = null == authToken;
+            if (tmp64) {
+              tmp64 = null == authToken;
             }
-            if (tmp63) {
-              tmp63 = null == Iterable;
+            if (tmp64) {
+              tmp64 = null == Iterable;
             }
-            if (tmp63) {
-              tmp63 = null == installationId;
+            if (tmp64) {
+              tmp64 = null == installationId;
             }
-            if (!tmp63) {
+            if (!tmp64) {
               obj6 = callback(url[9]);
               const obj17 = { invite_code: null, guild_template_code: null, has_auth_token: null, is_backgrounded: null, attempt_id: null, deeplink_source: null, link_type: null, is_cold_start: null, received_installation_id: null };
-              obj17[0] = c15;
+              obj17[0] = c16;
               obj17[1] = guildTemplateCode;
-              let tmp84 = null != authToken;
-              if (tmp84) {
-                tmp84 = 0 === authToken.length;
+              let tmp85 = null != authToken;
+              if (tmp85) {
+                tmp85 = 0 === authToken.length;
               }
-              obj17[2] = tmp84;
+              obj17[2] = tmp85;
               obj17[3] = store.getState() === c7.BACKGROUND;
               obj17[4] = attemptId;
               obj17[5] = Iterable;
               obj17[6] = payload.type;
               obj17[7] = callback;
               obj17[8] = installationId;
-              let tmp97 = null;
+              let obj18 = null;
+              if (didRegister) {
+                obj18 = { did_register: true };
+              }
+              throwTypeErrorResult = obj18;
+              throwTypeErrorResult = Object.assign(obj18);
+              throwTypeErrorResult = fingerprint;
+              throwTypeErrorResult = null;
               if (null != fingerprint) {
-                const obj18 = { fingerprint: null };
+                throwTypeErrorResult = Iterable;
+                throwTypeErrorResult = str2;
+                const obj19 = { fingerprint: null };
                 throwTypeErrorResult = lib;
                 throwTypeErrorResult = url;
-                obj9 = lib(url[13]);
+                obj10 = lib(url[13]);
                 throwTypeErrorResult = fingerprint;
-                obj18[0] = obj9.extractId(fingerprint);
-                tmp97 = obj18;
+                obj19[0] = obj10.extractId(fingerprint);
+                throwTypeErrorResult = obj19;
               }
               throwTypeErrorResult = obj17;
-              throwTypeErrorResult = tmp97;
-              throwTypeErrorResult = Object.assign(tmp97);
+              throwTypeErrorResult = Object.assign(throwTypeErrorResult);
               throwTypeErrorResult = obj6.track(fingerprint.EXTERNAL_DYNAMIC_LINK_RECEIVED, obj17);
             }
             throwTypeErrorResult = Iterable;
-            throwTypeErrorResult = c15;
-            throwTypeErrorResult = null != c15;
+            throwTypeErrorResult = c16;
+            throwTypeErrorResult = null != c16;
             if (throwTypeErrorResult) {
               throwTypeErrorResult = Iterable;
               throwTypeErrorResult = installationId;
@@ -369,23 +379,37 @@ function _handleIncomingURL() {
               throwTypeErrorResult = str2;
               throwTypeErrorResult = callback;
               throwTypeErrorResult = url;
-              obj10 = callback(url[14]);
-              throwTypeErrorResult = c15;
+              obj11 = callback(url[14]);
+              throwTypeErrorResult = c16;
               throwTypeErrorResult = installationId;
-              throwTypeErrorResult = obj10.setReceivedInstallationIdForInviteCode(c15, installationId);
+              throwTypeErrorResult = obj11.setReceivedInstallationIdForInviteCode(c16, installationId);
+            }
+            throwTypeErrorResult = Iterable;
+            throwTypeErrorResult = c16;
+            throwTypeErrorResult = null != c16;
+            if (throwTypeErrorResult) {
+              throwTypeErrorResult = Iterable;
+              throwTypeErrorResult = didRegister;
+            }
+            if (throwTypeErrorResult) {
+              throwTypeErrorResult = str2;
+              throwTypeErrorResult = lib;
+              throwTypeErrorResult = url;
+              obj12 = lib(url[15]);
+              throwTypeErrorResult = obj12.setRegistrationHandoff();
             }
             throwTypeErrorResult = Iterable;
             throwTypeErrorResult = str2;
             throwTypeErrorResult = callback;
             throwTypeErrorResult = url;
             throwTypeErrorResult = url;
-            throwTypeErrorResult = callback(url[15])(url);
+            throwTypeErrorResult = callback(url[16])(url);
             throwTypeErrorResult = callback;
             throwTypeErrorResult = url;
-            const obj19 = { payload: null };
+            const obj20 = { payload: null };
             throwTypeErrorResult = payload;
-            obj19[0] = payload;
-            throwTypeErrorResult = callback(url[10])(obj19);
+            obj20[0] = payload;
+            throwTypeErrorResult = callback(url[10])(obj20);
           } catch (throwTypeErrorResult) {
             str35 = throwTypeErrorResult;
             throwTypeErrorResult = store;

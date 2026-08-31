@@ -76,5 +76,5 @@ export default function useFetchStreamPreview(arg0, arg1, arg2) {
     }
     return obj;
   }
-  obj = { previewUrl: "ct", isLoading: true };
+  obj = { previewUrl: "Object", isLoading: true };
 };

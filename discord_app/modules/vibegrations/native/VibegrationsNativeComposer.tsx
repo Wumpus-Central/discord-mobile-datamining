@@ -163,7 +163,7 @@ export default function VibegrationsNativeComposer(projectId) {
         const current = closure_1_11.current;
         if (current.has(callback)) {
           c8 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else {
           const obj2 = { status: "error", errorText: null };
           const intl = callback(str[9]).intl;
@@ -204,7 +204,7 @@ export default function VibegrationsNativeComposer(projectId) {
           if (current3.has(callback)) {
             c6 = 0;
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             obj3 = callback(str[11]);
             if (obj3.isVibegrationsAttachmentWithinLimit(size.size, closure_2)) {
@@ -347,7 +347,7 @@ export default function VibegrationsNativeComposer(projectId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -365,9 +365,9 @@ export default function VibegrationsNativeComposer(projectId) {
             closure_1 = tmp5;
             closure_0 = tmp2;
             closure_0 = undefined;
-            obj1 = closure_1_1(5059);
+            obj1 = closure_1_1(5062);
             obj1 = { mediaType: "any", selectionLimit: null, skipProcessing: true };
-            obj1[1] = closure_1_0(6060).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
+            obj1[1] = closure_1_0(6063).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
             dependencyMap = 1;
             c3 = 1;
             const obj2 = { value: null, done: false };
@@ -417,7 +417,7 @@ export default function VibegrationsNativeComposer(projectId) {
             }));
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp19) {
         c3 = tmp;
@@ -438,7 +438,7 @@ export default function VibegrationsNativeComposer(projectId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -500,7 +500,7 @@ export default function VibegrationsNativeComposer(projectId) {
             }));
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp16) {
         c3 = tmp;

@@ -56,7 +56,6 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   let obj = index(pan[3]);
   animatedRef = obj.useAnimatedRef();
   const tmp4 = callback(variant);
-  const tmp6 = animatedRef(pan[7])("ContextMenuItem");
   pan = state.pan;
   itemMeasurements = state.itemMeasurements;
   activeIndex = state.activeIndex;
@@ -77,28 +76,28 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
         const measureResult = index(pan[3]).measure(animatedRef);
         if (null != measureResult) {
           ({ pageX, pageY, width, height } = measureResult);
-          const result = index * tmp2(tmp3[8]).INDEX_BOUNDS_OFFSET;
+          const result = index * tmp2(tmp3[7]).INDEX_BOUNDS_OFFSET;
           let value = itemMeasurements.get();
-          value[result + tmp2(tmp3[8]).INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
+          value[result + tmp2(tmp3[7]).INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
           value = itemMeasurements.get();
-          value[result + tmp2(tmp3[8]).INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
+          value[result + tmp2(tmp3[7]).INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
           const value1 = itemMeasurements.get();
-          value1[result + tmp2(tmp3[8]).INDEX_BOUNDS_WIDTH_OFFSET] = width;
+          value1[result + tmp2(tmp3[7]).INDEX_BOUNDS_WIDTH_OFFSET] = width;
           const value2 = itemMeasurements.get();
-          value2[result + tmp2(tmp3[8]).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
+          value2[result + tmp2(tmp3[7]).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
         }
         const obj = index(pan[3]);
       }
     }
   };
-  obj = { measure: index(pan[3]).measure, ref: animatedRef, index, INDEX_BOUNDS_OFFSET: index(pan[8]).INDEX_BOUNDS_OFFSET, itemMeasurements, INDEX_BOUNDS_PAGE_X_OFFSET: index(pan[8]).INDEX_BOUNDS_PAGE_X_OFFSET, INDEX_BOUNDS_PAGE_Y_OFFSET: index(pan[8]).INDEX_BOUNDS_PAGE_Y_OFFSET, INDEX_BOUNDS_WIDTH_OFFSET: index(pan[8]).INDEX_BOUNDS_WIDTH_OFFSET, INDEX_BOUNDS_HEIGHT_OFFSET: index(pan[8]).INDEX_BOUNDS_HEIGHT_OFFSET };
+  obj = { measure: index(pan[3]).measure, ref: animatedRef, index, INDEX_BOUNDS_OFFSET: index(pan[7]).INDEX_BOUNDS_OFFSET, itemMeasurements, INDEX_BOUNDS_PAGE_X_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_X_OFFSET, INDEX_BOUNDS_PAGE_Y_OFFSET: index(pan[7]).INDEX_BOUNDS_PAGE_Y_OFFSET, INDEX_BOUNDS_WIDTH_OFFSET: index(pan[7]).INDEX_BOUNDS_WIDTH_OFFSET, INDEX_BOUNDS_HEIGHT_OFFSET: index(pan[7]).INDEX_BOUNDS_HEIGHT_OFFSET };
   fn.__closure = obj;
   fn.__workletHash = 9571959267234;
   fn.__initData = closure_9;
   const animatedReaction = obj2.useAnimatedReaction(U, fn);
   backgroundColor = tmp4.pressed.backgroundColor;
   let obj4 = index(pan[3]);
-  class R {
+  class P {
     constructor() {
       tmp = activeIndex.get() === index;
       if (!tmp) {
@@ -108,38 +107,38 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
       }
       tmp3 = index;
       tmp4 = pan;
-      obj = index(pan[9]);
+      obj = index(pan[8]);
       str = "transparent";
       if (tmp) {
         str = backgroundColor;
       }
-      obj = { backgroundColor: obj.withSpring(str, tmp3(tmp4[10]).SUBTLE_SPRING, "animate-always") };
+      obj = { backgroundColor: obj.withSpring(str, tmp3(tmp4[9]).SUBTLE_SPRING, "animate-always") };
       return obj;
     }
   }
-  obj = { activeIndex, index, pressed: sharedValue, withSpring: index(pan[9]).withSpring, backgroundColor, SUBTLE_SPRING: index(pan[10]).SUBTLE_SPRING };
-  R.__closure = obj;
-  R.__workletHash = 624481847983;
-  R.__initData = closure_10;
-  const animatedStyle = obj4.useAnimatedStyle(R);
+  obj = { activeIndex, index, pressed: sharedValue, withSpring: index(pan[8]).withSpring, backgroundColor, SUBTLE_SPRING: index(pan[9]).SUBTLE_SPRING };
+  P.__closure = obj;
+  P.__workletHash = 624481847983;
+  P.__initData = closure_10;
+  const animatedStyle = obj4.useAnimatedStyle(P);
   if (null != IconComponent) {
     obj1 = { size: "sm", color: null };
     obj1[1] = tmp4.icon.tintColor;
-    let tmp10 = activeIndex(IconComponent, obj1);
+    let tmp8 = activeIndex(IconComponent, obj1);
   } else {
-    tmp10 = null;
+    tmp8 = null;
     if (null != iconSource) {
       obj2 = { source: null, style: null };
       obj2[0] = iconSource;
       obj2[1] = tmp4.icon;
-      tmp10 = activeIndex(tmp5(tmp2[11]), obj2);
+      tmp8 = activeIndex(animatedRef(tmp2[10]), obj2);
     }
   }
-  let tmp13 = null;
+  let tmp12 = null;
   if (null != trailingIndicator) {
     const obj3 = { size: "sm", color: null };
     obj3[1] = tmp4.icon.tintColor;
-    tmp13 = activeIndex(trailingIndicator, obj3);
+    tmp12 = activeIndex(trailingIndicator, obj3);
   }
   const items = [index, itemMeasurements];
   const items1 = [activeIndex, index];
@@ -147,11 +146,11 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
     ({ height, width } = nativeEvent.nativeEvent.layout);
     if (0 !== height) {
       if (0 !== width) {
-        const result = index * index(pan[8]).INDEX_BOUNDS_OFFSET;
+        const result = index * index(pan[7]).INDEX_BOUNDS_OFFSET;
         let value = itemMeasurements.get();
-        value[result + index(pan[8]).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
+        value[result + index(pan[7]).INDEX_BOUNDS_HEIGHT_OFFSET] = height;
         value = itemMeasurements.get();
-        value[result + index(pan[8]).INDEX_BOUNDS_WIDTH_OFFSET] = width;
+        value[result + index(pan[7]).INDEX_BOUNDS_WIDTH_OFFSET] = width;
       }
     }
   }, items);
@@ -160,16 +159,12 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
     const result = activeIndex.set(index);
   }, items1);
   obj4 = { ref: animatedRef, style: null, onLayout: null, onPressIn: null, onPressOut: null, onPress: null, accessibilityRole: null, children: null };
-  const items3 = [tmp4.container, , , , , ];
-  let containerRefresh = tmp6;
+  const items3 = [, , , , , ];
+  ({ container: arr4[0], containerRefresh: arr4[1] } = tmp4);
+  let border = !end;
   const callback2 = itemMeasurements.useCallback(() => {
     const result = activeIndex.set(-1);
   }, items2);
-  if (tmp6) {
-    containerRefresh = tmp4.containerRefresh;
-  }
-  items3[1] = containerRefresh;
-  let border = !end;
   if (!end) {
     border = !lastInSection;
   }
@@ -192,36 +187,23 @@ export const ContextMenuItem = function ContextMenuItem(accessibilityRole) {
   obj4[4] = callback2;
   obj4[5] = onPress;
   obj4[6] = str;
-  let tmp20 = tmp6;
-  if (tmp6) {
-    const obj5 = { children: null };
-    obj5[0] = tmp10;
-    tmp20 = activeIndex(tmp5(tmp2[3]).View, obj5);
-  }
-  const items4 = [tmp20, , , ];
-  const obj6 = { animated: true, variant: "text-md/medium", style: tmp4.label, color: null, children: null };
+  const items4 = [activeIndex(animatedRef(pan[3]).View, { children: tmp8 }), , ];
+  const obj5 = { animated: true, variant: "text-md/medium", style: tmp4.label, color: null, children: null };
   let str2 = "text-strong";
   if ("destructive" === variant) {
     str2 = "text-feedback-critical";
   }
-  obj6[3] = str2;
-  obj6[4] = label;
-  items4[1] = activeIndex(index(pan[12]).Text, obj6);
-  let tmp22Result = !tmp6;
-  if (!tmp6) {
-    const obj7 = { children: null };
-    obj7[0] = tmp10;
-    tmp22Result = tmp22(tmp5(tmp2[3]).View, obj7);
+  obj5[3] = str2;
+  obj5[4] = label;
+  items4[1] = activeIndex(index(pan[11]).Text, obj5);
+  let tmp19Result = null != tmp12;
+  if (tmp19Result) {
+    const obj6 = { style: null, children: null };
+    obj6[0] = tmp4.trailingIndicator;
+    obj6[1] = tmp12;
+    tmp19Result = tmp19(animatedRef(tmp2[3]).View, obj6);
   }
-  items4[2] = tmp22Result;
-  tmp22Result = null != tmp13;
-  if (tmp22Result) {
-    const obj8 = { style: null, children: null };
-    obj8[0] = tmp4.trailingIndicator;
-    obj8[1] = tmp13;
-    tmp22Result = tmp22(tmp5(tmp2[3]).View, obj8);
-  }
-  items4[3] = tmp22Result;
+  items4[2] = tmp19Result;
   obj4[7] = items4;
   return sharedValue(backgroundColor, obj4);
 };

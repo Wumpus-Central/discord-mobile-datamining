@@ -4,7 +4,7 @@ import dispatcherDefault from "../Dispatcher.tsx";
 import transitionTo from "../modules/routing/router_utils.tsx";
 import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import transitionToChannel from "../modules/routing/transitionToChannel.tsx";
-import _modDef5320 from "SelectedChannelActionCreators.tsx";
+import _modDef5323 from "SelectedChannelActionCreators.tsx";
 import isChangelogChannelDefault from "../modules/changelog/utils/isChangelogChannel.tsx";
 import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../_runtime/00005_asyncGeneratorStep.js";
@@ -45,7 +45,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -174,7 +174,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -276,13 +276,13 @@ export default {
           c4();
         }
         if (null != obj2.getRootNavigationRef()) {
-          tmp6(4457).transitionToChannel(channel.id, { navigationReplace: true });
+          tmp6(4459).transitionToChannel(channel.id, { navigationReplace: true });
           tmp3 = channel;
-          const tmp6Result = tmp6(4457);
+          const tmp6Result = tmp6(4459);
         } else {
-          const privateChannel = _modDef5320.selectPrivateChannel(channel.id);
+          const privateChannel = _modDef5323.selectPrivateChannel(channel.id);
           tmp3 = channel;
-          const obj3 = _modDef5320;
+          const obj3 = _modDef5323;
         }
         obj2 = getRootNavigationRef;
         tmp6 = require;
@@ -327,7 +327,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -415,8 +415,8 @@ export default {
       transitionToChannel.transitionToChannel(tmp.id, { navigationReplace: true });
       const tmp5Result = transitionToChannel;
     } else {
-      const privateChannel = _modDef5320.selectPrivateChannel(tmp.id);
-      const tmp2Result = _modDef5320;
+      const privateChannel = _modDef5323.selectPrivateChannel(tmp.id);
+      const tmp2Result = _modDef5323;
     }
     return tmp;
   },
@@ -437,7 +437,7 @@ export default {
       tmpResult.track(constants.CHANGE_LOG_DM_REMOVED, obj);
     }
     tmpResult = tmp(709);
-    obj = { id, guild_id: "Array", parent_id: "text" };
+    obj = { id, guild_id: "Array", parent_id: "accessibilityLabel" };
     tmpResult.dispatch({ type: "CHANNEL_DELETE", channel: obj, silent: flag2 });
     if (flag) {
       transitionTo.transitionTo(constants2.FRIENDS);
@@ -576,7 +576,7 @@ export default {
         tmp10 = isThreadResult;
       }
       if (!tmp10) {
-        obj1 = closure_1_1(6133);
+        obj1 = closure_1_1(6136);
         const result = obj1.checkGuildTemplateDirty(guildId);
       }
       return closure_1;
@@ -598,7 +598,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -744,7 +744,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -935,7 +935,7 @@ export default {
       const obj4 = closure_1_0(530);
       obj2[3] = obj4.rejectWithMigratedError();
       closure_0 = yield HTTP.post(obj2);
-      const obj = closure_1_1(6133);
+      const obj = closure_1_1(6136);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();

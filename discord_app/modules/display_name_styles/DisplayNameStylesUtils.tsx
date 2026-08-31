@@ -18,9 +18,9 @@ let result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameS
 export const getEffectColorCount = function getEffectColorCount(effectId) {
   if (DisplayNameEffect.DisplayNameEffect.GRADIENT === effectId) {
     return 2;
-  } else if (tmp(1936).DisplayNameEffect.GUMMY === effectId) {
+  } else if (tmp(1935).DisplayNameEffect.GUMMY === effectId) {
     return 4;
-  } else if (tmp(1936).DisplayNameEffect.PRISM === effectId) {
+  } else if (tmp(1935).DisplayNameEffect.PRISM === effectId) {
     return 5;
   } else {
     return 1;

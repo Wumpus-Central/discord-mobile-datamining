@@ -39,7 +39,7 @@ function MemberPreviews(role) {
   return callback3(View, obj);
 }
 function Content() {
-  const tmp3 = role(13570)();
+  const tmp3 = role(13604)();
   let obj = useEditStateContext;
   const editStateContext = obj.useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
@@ -68,19 +68,19 @@ function Content() {
   obj = { children: null };
   const items1 = [callback2(MemberPreviews, { role }), , , , ];
   obj1 = { style: tmp3.header, children: null };
-  let tmpResult = tmp(9843);
+  let tmpResult = tmp(9866);
   const intl = tmp4(1236).intl;
   obj1[1] = intl.string(require("../../../../intl/index.native.tsx").t.sEr1zr);
   items1[1] = callback2(tmpResult, obj1);
   obj2 = { description: null, image: null, imageUploadSize: null, previewShape: null, previewResizeMode: "cover", setImage: null, disabled: null };
-  tmpResult = tmp(17245);
+  tmpResult = tmp(17278);
   const intl2 = tmp4(1236).intl;
   obj2[0] = intl2.string(require("../../../../intl/index.native.tsx").t.Glqj9m);
   obj2[1] = tmp10;
   obj2[2] = UPLOAD_SMALL_SIZE;
   obj2[3] = require("FormImagePicker.tsx").PreviewShape.SQUIRCLE;
   obj2[5] = function setImage(icon) {
-    return callback({ icon: icon.uri, unicodeEmoji: "r" });
+    return callback({ icon: icon.uri, unicodeEmoji: "Array" });
   };
   obj2[6] = roleSubscriptionSettingsDisabled;
   items1[2] = callback2(tmpResult, obj2);
@@ -88,8 +88,8 @@ function Content() {
   const tmp4Result = useRoleSubscriptionSettingsDisabled;
   const intl3 = tmp4(1236).intl;
   obj3[1] = intl3.string(require("../../../../intl/index.native.tsx").t["W7hH+z"]);
-  items1[3] = callback2(role(9843), obj3);
-  items1[4] = callback2(role(17283), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  items1[3] = callback2(role(9866), obj3);
+  items1[4] = callback2(role(17316), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   obj[0] = items1;
   return callback3(closure_11, obj);
 }

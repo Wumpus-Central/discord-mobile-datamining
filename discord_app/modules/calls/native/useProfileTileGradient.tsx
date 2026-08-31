@@ -8,35 +8,24 @@ const result = require("set").fileFinishedImporting("modules/calls/native/usePro
 export default function useProfileTileGradient(userId) {
   userId = userId.userId;
   const guildId = userId.guildId;
-  dependencyMap = undefined;
-  let tmp2 = guildId(1367)(userId.location);
-  dependencyMap = tmp2;
-  const tmp3 = guildId(8060)(userId, guildId);
-  let items = null;
-  if (tmp2) {
-    let themeColors;
-    if (tmp3 != null) {
-      themeColors = tmp3.themeColors;
-    }
-    items = themeColors;
+  const tmp2 = guildId(8082)(userId, guildId);
+  let themeColors;
+  if (tmp2 != null) {
+    themeColors = tmp2.themeColors;
   }
-  if (items == null) {
-    items = [];
+  if (themeColors == null) {
+    themeColors = [];
   }
-  [tmp7, tmp8] = closure_3(items, 2);
-  const items1 = [tmp2, userId, guildId];
+  [tmp5, tmp6] = closure_3(themeColors, 2);
+  const items = [userId, guildId];
   const effect = React.useEffect(() => {
-    let tmp2 = null != userId;
-    if (tmp2) {
-      tmp2 = table;
-    }
-    if (tmp2) {
+    if (null != userId) {
       const obj = { guildId: null, dispatchWait: true };
       obj[0] = guildId;
-      guildId(table[4])(userId, undefined, obj);
+      guildId(closure_1_2[3])(tmp, undefined, obj);
     }
-  }, items1);
-  const tmp4 = closure_3;
-  const tmp4Result = closure_3(items, 2);
-  return userId(8065).useVideoTileGradientColors(tmp7, tmp8);
+  }, items);
+  const tmp3 = closure_3;
+  const tmp3Result = closure_3(themeColors, 2);
+  return userId(8087).useVideoTileGradientColors(tmp5, tmp6);
 };

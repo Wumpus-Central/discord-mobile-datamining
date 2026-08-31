@@ -21,7 +21,7 @@ const obj8 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", ACTIVE: 1, [1]: "ACTIVE", UNU
 const obj9 = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", DRAFT: 1, [1]: "DRAFT", MEASUREMENT: 2, [2]: "MEASUREMENT", ROLLING_OUT: 4, [4]: "ROLLING_OUT", ARCHIVED: 6, [6]: "ARCHIVED", AA_MODE: 7, [7]: "AA_MODE", PAUSED: 8, [8]: "PAUSED" };
 class Experiment$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
     items[0] = { no: 1, name: "id", kind: "scalar", T: 6 };
     items[1] = { no: 2, name: "name", kind: "scalar", T: 9 };
     items[2] = {
@@ -87,7 +87,7 @@ class Experiment$Type extends MessageType {
       kind: "message",
       repeat: 1,
       T() {
-            return callback(7584).Rule;
+            return callback(7605).Rule;
           }
     };
     items[16] = {
@@ -205,9 +205,10 @@ class Experiment$Type extends MessageType {
             return items;
           }
     };
-    items[38] = { no: 37, name: "growthbook_tags", kind: "scalar", repeat: 2, T: 9 };
-    items[39] = { no: 38, name: "allocate_right_to_left", kind: "scalar", T: 8 };
-    items[40] = { no: 39, name: "is_managed", kind: "scalar", T: 8 };
+    items[38] = { no: 47, name: "dynamic_config_model", kind: "scalar", T: 9 };
+    items[39] = { no: 37, name: "growthbook_tags", kind: "scalar", repeat: 2, T: 9 };
+    items[40] = { no: 38, name: "allocate_right_to_left", kind: "scalar", T: 8 };
+    items[41] = { no: 39, name: "is_managed", kind: "scalar", T: 8 };
     obj = { no: 43, name: "number_line_settings", kind: "message", T: null };
     class T {
       constructor() {
@@ -215,8 +216,8 @@ class Experiment$Type extends MessageType {
       }
     }
     obj[3] = T;
-    items[41] = obj;
-    items[42] = {
+    items[42] = obj;
+    items[43] = {
       no: 42,
       name: "eligibility_persistence",
       kind: "enum",
@@ -232,7 +233,7 @@ class Experiment$Type extends MessageType {
 }
 const prototype = Experiment$Type.prototype;
 prototype["create"] = function create(arr) {
-  obj = { id: "0", name: "", creatorId: "0", version: 0, editorId: "0", title: "", description: "", revision: 0, hashKey: "", unitType: 0, variations: [], rules: [], phase: 0, surfaces: [], owningTeamId: "", cachedNotificationChannelId: "0", exposureTracking: 0, assignmentMode: 0, enableEditRawJsonUi: false, winningVariationId: 0, extraOutcomeContext: "", type: 0, isTemplate: false, fieldNumbersToCopy: [], engineFeatureFlags: [], isAutomatedChange: false, suppressEditorMention: false, customUnitPrefix: 0, exposurePoints: [], growthbookTags: [], allocateRightToLeft: false, isManaged: false, eligibilityPersistence: 0 };
+  obj = { id: "0", name: "", creatorId: "0", version: 0, editorId: "0", title: "", description: "", revision: 0, hashKey: "", unitType: 0, variations: [], rules: [], phase: 0, surfaces: [], owningTeamId: "", cachedNotificationChannelId: "0", exposureTracking: 0, assignmentMode: 0, enableEditRawJsonUi: false, winningVariationId: 0, extraOutcomeContext: "", type: 0, isTemplate: false, fieldNumbersToCopy: [], engineFeatureFlags: [], isAutomatedChange: false, suppressEditorMention: false, customUnitPrefix: 0, exposurePoints: [], dynamicConfigModel: "", growthbookTags: [], allocateRightToLeft: false, isManaged: false, eligibilityPersistence: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -498,34 +499,40 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     joined10 = tag.join();
     const tagResult37 = tag.tag(45, _mod1307.WireType.LengthDelimited);
   }
-  let num42 = 0;
+  if ("" !== id.dynamicConfigModel) {
+    joined10 = require;
+    joined10 = dependencyMap;
+    joined10 = tag.tag(47, _mod1307.WireType.LengthDelimited).string(id.dynamicConfigModel);
+    const tagResult38 = tag.tag(47, _mod1307.WireType.LengthDelimited);
+  }
+  let num43 = 0;
   if (0 < id.growthbookTags.length) {
     do {
       joined10 = require;
       joined10 = dependencyMap;
-      let tagResult38 = tag.tag(37, _mod1307.WireType.LengthDelimited);
-      joined10 = tagResult38.string(id.growthbookTags[num42]);
-      num42 = num42 + 1;
+      let tagResult39 = tag.tag(37, _mod1307.WireType.LengthDelimited);
+      joined10 = tagResult39.string(id.growthbookTags[num43]);
+      num43 = num43 + 1;
       length7 = id.growthbookTags.length;
-    } while (num42 < length7);
+    } while (num43 < length7);
   }
   if (false !== id.allocateRightToLeft) {
     joined10 = require;
     joined10 = dependencyMap;
     joined10 = tag.tag(38, _mod1307.WireType.Varint).bool(id.allocateRightToLeft);
-    const tagResult39 = tag.tag(38, _mod1307.WireType.Varint);
+    const tagResult40 = tag.tag(38, _mod1307.WireType.Varint);
   }
   if (false !== id.isManaged) {
     joined10 = require;
     joined10 = dependencyMap;
     joined10 = tag.tag(39, _mod1307.WireType.Varint).bool(id.isManaged);
-    const tagResult40 = tag.tag(39, _mod1307.WireType.Varint);
+    const tagResult41 = tag.tag(39, _mod1307.WireType.Varint);
   }
   if (id.numberLineSettings) {
     joined10 = closure_15;
     joined10 = require;
     joined10 = dependencyMap;
-    const tagResult41 = tag.tag(43, _mod1307.WireType.LengthDelimited);
+    const tagResult42 = tag.tag(43, _mod1307.WireType.LengthDelimited);
     joined10 = closure_15.internalBinaryWrite(id.numberLineSettings, tag.tag(43, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult11 = closure_15.internalBinaryWrite(id.numberLineSettings, tag.tag(43, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
@@ -533,7 +540,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     joined10 = require;
     joined10 = dependencyMap;
     joined10 = tag.tag(42, _mod1307.WireType.Varint).int32(id.eligibilityPersistence);
-    const tagResult42 = tag.tag(42, _mod1307.WireType.Varint);
+    const tagResult43 = tag.tag(42, _mod1307.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

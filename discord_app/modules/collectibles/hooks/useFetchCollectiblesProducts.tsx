@@ -9,8 +9,8 @@ import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/fl
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProducts.tsx");
 
-export const useFetchCollectiblesProducts = function useFetchCollectiblesProducts(arg0, arg1) {
-  const _require = arg0;
+export const useFetchCollectiblesProducts = function useFetchCollectiblesProducts(first) {
+  const _require = first;
   dependencyMap = arg1;
   const items = [stateFromStoresArray2];
   const stateFromStoresArray = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items, () => lib.map((arg0) => closure_4.get(arg0)));
@@ -23,7 +23,7 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
   const obj4 = defaultAreStatesEqual;
   const items3 = [stateFromStoresArray3];
   stateFromStoresArray3 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresArray(items3, () => lib.map((closure_0) => productFetchBackedOff.isProductFetchBackedOff(closure_0)));
-  const items4 = [arg0, stateFromStoresArray, stateFromStoresArray2, stateFromStoresArray1, arg1, stateFromStoresArray3];
+  const items4 = [first, stateFromStoresArray, stateFromStoresArray2, stateFromStoresArray1, arg1, stateFromStoresArray3];
   stateFromStoresArray1(() => {
     const entries = lib.entries();
     while (tmp2 !== undefined) {
@@ -47,7 +47,7 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
         }
         let tmp19 = lib;
         let tmp20 = dependencyMap;
-        tmp16 = type === lib(1951).CollectiblesItemType.BUNDLE;
+        tmp16 = type === lib(1950).CollectiblesItemType.BUNDLE;
       }
       if (tmp16) {
         let tmp21 = tmp12;
@@ -85,7 +85,7 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
       if (!tmp24) {
         let tmp34 = lib;
         let tmp35 = dependencyMap;
-        let obj = lib(7233);
+        let obj = lib(7254);
         let tmp36 = tmp8;
         obj = { includeBundles: null };
         obj[0] = tmp15;

@@ -28,7 +28,7 @@ function isActivityInTextSupportedForChannel(channel) {
 const result = require("set").fileFinishedImporting("modules/activities/ActivitiesInTextUtils.tsx");
 
 export { isActivityInTextSupportedForChannel };
-export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(channel) {
+export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(channel, arg1, arg2) {
   let flag = false;
   if (null != channel) {
     flag = false;

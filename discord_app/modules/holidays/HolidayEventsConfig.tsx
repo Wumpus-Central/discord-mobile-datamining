@@ -3,8 +3,8 @@ import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import Soundpacks from "../soundpacks/Constants.tsx";
-import registerAssetDefault from "../../../_runtime/16891_registerAsset.js";
-import registerAssetDefault2 from "../../../_runtime/16892_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/16924_registerAsset.js";
+import registerAssetDefault2 from "../../../_runtime/16925_registerAsset.js";
 
 let obj = {
   experiment: null,

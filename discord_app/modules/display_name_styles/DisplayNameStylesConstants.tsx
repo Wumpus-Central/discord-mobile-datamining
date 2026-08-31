@@ -26,11 +26,11 @@ export const DISPLAY_NAME_STYLES_PRISM_PRESETS = items6;
 export const getColorPresetsForEffect = function getColorPresetsForEffect(arg0) {
   if (DisplayNameEffect.DisplayNameEffect.GUMMY === arg0) {
     return items5;
-  } else if (tmp(1936).DisplayNameEffect.PRISM === arg0) {
+  } else if (tmp(1935).DisplayNameEffect.PRISM === arg0) {
     return items6;
   } else {
-    if (tmp(1936).DisplayNameEffect.GRADIENT !== arg0) {
-      if (tmp(1936).DisplayNameEffect.GLOW !== arg0) {
+    if (tmp(1935).DisplayNameEffect.GRADIENT !== arg0) {
+      if (tmp(1935).DisplayNameEffect.GLOW !== arg0) {
         return items3.map((arg0) => {
           const items = [arg0];
           return items;

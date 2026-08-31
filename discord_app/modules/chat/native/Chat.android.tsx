@@ -1,7 +1,6 @@
 // discord_app/modules/chat/native/Chat.android.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import useIsMobileVisualRefreshExperimentEnabled from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import LegacyBaseButton from "../../../../_runtime/05617_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05620_LegacyBaseButton.js";
 import __INTERNAL_VIEW_CONFIGDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
 import __INTERNAL_VIEW_CONFIGDefault2 from "../../../../discord_common/js/packages/rtn-codegen/js/ChatListNativeComponent.tsx";
 import TTIFirstContentfulPaint from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
@@ -12,14 +11,13 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 require = arg1;
 function DCDChatList() {
-  let obj = useIsMobileVisualRefreshExperimentEnabled;
   const memo = importAllResult.useMemo(() => {
-    const Gesture = callback(table[5]).Gesture;
+    const Gesture = callback(table[4]).Gesture;
     const NativeResult = Gesture.Native();
     return Gesture.Native().disallowInterruption(true).shouldCancelWhenOutside(false);
   }, []);
-  obj = { gesture: memo, children: null };
-  obj = { style: callback3().chatList, floatingChatInputEnabled: obj.useMobileVisualRefreshConfig({ location: "DCDChatList" }).chatInputFloating, children: null };
+  let obj = { gesture: memo, children: null };
+  obj = { style: callback3().chatList, floatingChatInputEnabled: true, children: null };
   const tmp = callback3();
   obj[2] = callback(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "chat_list_android" });
   obj[1] = callback(__INTERNAL_VIEW_CONFIGDefault2, obj);

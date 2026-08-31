@@ -1,13 +1,12 @@
 // discord_app/modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import closure_2 from "../../../a11y/AccessibilityStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
 function useEnableSwitchIconsSettingValue() {
-  const items = [closure_3];
+  const items = [closure_2];
   return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
 createToggle = {
@@ -18,9 +17,6 @@ createToggle = {
   parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,
   onValueChange: require("setFontSize").setSwitchIconsEnabled,
-  usePredicate: function useShowSwitchIconsSetting() {
-    return useIsMobileVisualRefreshExperimentEnabledDefault("SettingsAccessibilityScreen");
-  },
   hasIcon: true
 };
 createToggle = createToggle.createToggle(createToggle);

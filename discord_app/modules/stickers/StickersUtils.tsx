@@ -12,14 +12,14 @@ import { Endpoints } from "../../Constants.tsx";
 require = arg1;
 function getStickerExtensionFromFormatType(format_type) {
   if (StickerFormat.StickerFormat.PNG === format_type) {
-    const StickerExtensions = tmp(5177).StickerExtensions;
-    return tmp(1435).SUPPORTS_WEBP ? StickerExtensions.WEBP : StickerExtensions.PNG;
-  } else if (tmp(5177).StickerFormat.APNG === format_type) {
-    return tmp(5177).StickerExtensions.APNG;
-  } else if (tmp(5177).StickerFormat.LOTTIE === format_type) {
-    return tmp(5177).StickerExtensions.LOTTIE;
-  } else if (tmp(5177).StickerFormat.GIF === format_type) {
-    return tmp(5177).StickerExtensions.GIF;
+    const StickerExtensions = tmp(5180).StickerExtensions;
+    return tmp(1431).SUPPORTS_WEBP ? StickerExtensions.WEBP : StickerExtensions.PNG;
+  } else if (tmp(5180).StickerFormat.APNG === format_type) {
+    return tmp(5180).StickerExtensions.APNG;
+  } else if (tmp(5180).StickerFormat.LOTTIE === format_type) {
+    return tmp(5180).StickerExtensions.LOTTIE;
+  } else if (tmp(5180).StickerFormat.GIF === format_type) {
+    return tmp(5180).StickerExtensions.GIF;
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -101,28 +101,28 @@ export const getStickerAssetUrl = (format_type) => {
   } else {
     let PNG = format_type.format_type;
     if (tmp) {
-      PNG = tmp23(5177).StickerFormat.PNG;
+      PNG = tmp23(5180).StickerFormat.PNG;
     }
     const tmp3 = getStickerExtensionFromFormatType(PNG);
     const STICKER_ASSETResult = Endpoints.STICKER_ASSET(format_type.id, tmp3);
     try {
-      const enabled = tmp23(1897).getForceSdrEmojisStickersConfig({ location: "sticker_url" }).enabled;
+      const enabled = tmp23(1896).getForceSdrEmojisStickersConfig({ location: "sticker_url" }).enabled;
       let str2 = "";
       if (enabled) {
         str2 = "&force_sdr=true";
       }
       let str3 = "";
-      if (tmp3 === tmp23(5177).StickerExtensions.WEBP) {
+      if (tmp3 === tmp23(5180).StickerExtensions.WEBP) {
         str3 = "&quality=lossless";
       }
       if ("development" !== closure_12) {
-        if (format_type.format_type === tmp23(5177).StickerFormat.LOTTIE) {
+        if (format_type.format_type === tmp23(5180).StickerFormat.LOTTIE) {
           const _location3 = location;
           const _HermesInternal4 = HermesInternal;
           return "" + location.protocol + ASSET_ENDPOINT + STICKER_ASSETResult;
         } else {
           let str6 = "";
-          if (format_type.format_type === tmp23(5177).StickerFormat.APNG) {
+          if (format_type.format_type === tmp23(5180).StickerFormat.APNG) {
             str6 = "";
             if (flag) {
               let tmp23Result = tmp23(500);
@@ -133,14 +133,14 @@ export const getStickerAssetUrl = (format_type) => {
             }
           }
           const _Math = Math;
-          tmp23Result = tmp23(1469);
+          tmp23Result = tmp23(1465);
           const _location2 = location;
           const bound = Math.min(2, tmp23Result.getDevicePixelRatio());
           const _HermesInternal3 = HermesInternal;
-          return "" + protocol + MEDIA_PROXY_ENDPOINT + STICKER_ASSETResult + "?size=" + tmp23(1469).getBestMediaProxySize(size * bound) + str6 + str3 + str2;
+          return "" + protocol + MEDIA_PROXY_ENDPOINT + STICKER_ASSETResult + "?size=" + tmp23(1465).getBestMediaProxySize(size * bound) + str6 + str3 + str2;
         }
       } else {
-        if (format_type.format_type === tmp23(5177).StickerFormat.LOTTIE) {
+        if (format_type.format_type === tmp23(5180).StickerFormat.LOTTIE) {
           if (tmp23Result2.isWeb()) {
             return STICKER_ASSETResult;
           }
@@ -228,10 +228,10 @@ export const shouldAttachSticker = function shouldAttachSticker(arg0, str, chann
     }
     if (StickerFormat.StickerSelectLocation.STICKER_PICKER === arg0) {
       return "" !== str.trim();
-    } else if (tmp3(5177).StickerSelectLocation.AUTOCOMPLETE === arg0) {
-      return tmp3(5179).getQueriesFromUserInput(str).length > 1;
+    } else if (tmp3(5180).StickerSelectLocation.AUTOCOMPLETE === arg0) {
+      return tmp3(5182).getQueriesFromUserInput(str).length > 1;
     } else {
-      const BUILT_IN_INTEGRATION = tmp3(5177).StickerSelectLocation.BUILT_IN_INTEGRATION;
+      const BUILT_IN_INTEGRATION = tmp3(5180).StickerSelectLocation.BUILT_IN_INTEGRATION;
       return false;
     }
   }

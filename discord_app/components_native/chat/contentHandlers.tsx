@@ -1,6 +1,6 @@
 // discord_app/components_native/chat/contentHandlers.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/02010_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
 import presentAddedFriendToast from "../../modules/toast/native/ToastUtils.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 import setDefault from "../../actions/AlertActionCreators.tsx";
@@ -47,7 +47,7 @@ let closure_5 = importDefaultResult((arg0) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -69,7 +69,7 @@ let closure_5 = importDefaultResult((arg0) => {
             callback = undefined;
             dependencyMap = 1;
             c4 = 1;
-            return { value: "ct", done: true };
+            return { value: "Object", done: true };
           }
         } else {
           if (1 === tmp5) {
@@ -84,7 +84,7 @@ let closure_5 = importDefaultResult((arg0) => {
             } else {
               if (null != attachmentUrl) {
                 if ("" !== attachmentUrl) {
-                  let obj3 = callback2(9971);
+                  let obj3 = callback2(9994);
                   dependencyMap = 2;
                   c4 = 1;
                   const obj2 = { value: null, done: false };
@@ -99,9 +99,9 @@ let closure_5 = importDefaultResult((arg0) => {
             throw arg1;
           } else if (arg0 !== 2) {
             callback = arg1;
-            obj = callback(8592);
+            obj = callback(8614);
             obj.trackLinkClicked(callback);
-            obj1 = callback(4159);
+            obj1 = callback(4160);
             obj1.openURL(callback);
           }
           c4 = 3;
@@ -144,7 +144,7 @@ let closure_4 = importDefaultResult((arg0) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -166,7 +166,7 @@ let closure_4 = importDefaultResult((arg0) => {
             callback = undefined;
             dependencyMap = 1;
             c4 = 1;
-            return { value: "ct", done: true };
+            return { value: "Object", done: true };
           }
         } else {
           if (1 === tmp5) {
@@ -181,7 +181,7 @@ let closure_4 = importDefaultResult((arg0) => {
             } else {
               if (null != attachmentUrl) {
                 if ("" !== attachmentUrl) {
-                  let obj2 = callback2(9971);
+                  let obj2 = callback2(9994);
                   dependencyMap = 2;
                   c4 = 1;
                   obj2 = { value: null, done: false };
@@ -198,7 +198,7 @@ let closure_4 = importDefaultResult((arg0) => {
             callback = arg1;
             obj = { urlString: null };
             obj[0] = callback;
-            callback(11117)(obj);
+            callback(11146)(obj);
           }
           c4 = 3;
           const obj3 = { value: null, done: true };
@@ -225,7 +225,7 @@ obj[2] = function() {
   return applyArgumentsResult;
 };
 obj[3] = function onTapMention(closure_0) {
-  let obj = parsedUserId(11080);
+  let obj = parsedUserId(11109);
   const nativeSyntheticEventData = obj.getNativeSyntheticEventData(closure_0);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
@@ -244,7 +244,7 @@ obj[3] = function onTapMention(closure_0) {
         obj[0] = guildId;
         obj[1] = roleId;
         obj[2] = channelId;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(2010)(11120, tmp2.paths), "RoleMembersActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(2009)(11149, tmp2.paths), "RoleMembersActionSheet", obj);
         const obj9 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }
@@ -253,7 +253,7 @@ obj[3] = function onTapMention(closure_0) {
         obj1 = { guildId: null, roleId: null, channelId: null };
         obj1[0] = guildId;
         const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
-        const tmp10 = tmp(2010)(11120, tmp2.paths);
+        const tmp10 = tmp(2009)(11149, tmp2.paths);
         obj1[1] = DISCORD_EPOCHDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj1[2] = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);
@@ -261,7 +261,7 @@ obj[3] = function onTapMention(closure_0) {
       }
     }
     if (null == roleName) {
-      const DeveloperMode = tmp(4135).DeveloperMode;
+      const DeveloperMode = tmp(4136).DeveloperMode;
       if (DeveloperMode.getSetting()) {
         if (null != parsedUserId) {
           const obj2 = { secondaryConfirmText: null, onConfirmSecondary: null };
@@ -302,7 +302,7 @@ obj[5] = function onTapInlineCode(nativeEvent) {
   }
 };
 obj[6] = function onTapEmoji(emojiNode) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9109, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9132, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
 };
 let result = require("set").fileFinishedImporting("components_native/chat/contentHandlers.tsx");
 

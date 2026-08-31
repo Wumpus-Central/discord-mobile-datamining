@@ -39,7 +39,7 @@ export default function ForumPostListBody(arg0) {
     const obj4 = { title: null, lineClamp: 2, ellipsizeMode: "tail", hasUnreads: null };
     obj4[0] = thread.name;
     obj4[3] = hasUnreads;
-    tmp9Result = tmp9(tmp10(11528), obj4);
+    tmp9Result = tmp9(tmp10(11555), obj4);
   }
   items2[1] = tmp9Result;
   items2[2] = callback(ForumPostMessageContentDefault, { messageContent, message: firstMessage, isMessageDeleted: false, messageLoaded: firstMessageLoaded, hasUnreads, senderModifier });
@@ -64,7 +64,7 @@ export default function ForumPostListBody(arg0) {
       }
       obj5[4] = id;
       obj5[5] = tmp.thumbnailContainer;
-      tmp9Result = tmp9(tmp2(11521).ForumPostMediaThumbnail, obj5);
+      tmp9Result = tmp9(tmp2(11548).ForumPostMediaThumbnail, obj5);
     }
   }
   items3[1] = tmp9Result;

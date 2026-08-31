@@ -1,7 +1,7 @@
 // discord_app/modules/replies/ReferencedMessageStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01405_priv.js";
+import privDefault from "../../../_runtime/01401_priv.js";
 import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
 import redactionSettingToRenderedString from "../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";

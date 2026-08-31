@@ -1,32 +1,28 @@
 // discord_app/modules/themes/native/useNativeThemeUpdater.tsx
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../experiments/MobileVisualRefreshExperiment.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../user_settings/ThemeStore.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../user_settings/ThemeStore.tsx";
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");
 
 export default function useNativeThemeUpdater() {
-  const tmp = useIsMobileVisualRefreshExperimentEnabledDefault("useNativeThemeUpdater");
-  closure_0 = tmp;
-  importDefault = React.useRef(theme.theme);
-  const items = [tmp];
+  closure_0 = React.useRef(theme.theme);
   const layoutEffect = React.useLayoutEffect(() => {
-    callback(closure_1_2[3]).updateVisualRefresh(callback);
-  }, items);
+    callback(table[2]).updateVisualRefresh(true);
+  }, []);
   const layoutEffect1 = React.useLayoutEffect(() => {
     function handleThemeUpdate(arg0) {
-      const theme = closure_1_4.theme;
-      if (theme !== ref.current) {
-        ref.current = theme;
-        handleThemeUpdate(closure_1_2[4]).updateTheme(theme);
-        const obj = handleThemeUpdate(closure_1_2[4]);
+      const theme = closure_1_3.theme;
+      if (theme !== handleThemeUpdate.current) {
+        handleThemeUpdate.current = theme;
+        handleThemeUpdate(closure_1_1[3]).updateTheme(theme);
+        const obj = handleThemeUpdate(closure_1_1[3]);
       }
     }
-    callback(closure_1_2[4]).updateTheme(closure_1_4.theme);
-    closure_1_4.addChangeListener(handleThemeUpdate);
+    callback(closure_1_1[3]).updateTheme(closure_1_3.theme);
+    closure_1_3.addChangeListener(handleThemeUpdate);
     return () => {
-      closure_2_4.removeChangeListener(handleThemeUpdate);
+      closure_2_3.removeChangeListener(handleThemeUpdate);
     };
   }, []);
 };

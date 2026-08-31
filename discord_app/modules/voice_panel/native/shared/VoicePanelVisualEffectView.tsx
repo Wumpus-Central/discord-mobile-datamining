@@ -30,24 +30,15 @@ const memoResult = importAllResult.memo(function VoicePanelVisualEffectViewInner
   const token = obj.useToken(ThemesDefault.colors.THEME_LOCKED_BLUR_FALLBACK);
   const tmp2 = callback2();
   obj = { blurTheme: str, android_fallbackColor: null };
-  let tmp5;
+  let tmp4;
   if (!flag) {
-    tmp5 = token;
+    tmp4 = token;
   }
-  obj[1] = tmp5;
-  const tmp4Result = closure_4(TwinButtons.BackgroundBlurFill, obj);
-  let tmp7 = tmp4Result;
-  if (tmp3) {
-    obj = { style: null, children: null };
-    obj[0] = tmp2.wrapper;
-    const items = [tmp4Result, ];
-    obj1 = { style: null };
-    obj1[0] = tmp2.border;
-    items[1] = tmp4(closure_3, obj1);
-    obj[1] = items;
-    tmp7 = callback(closure_3, obj);
-  }
-  return tmp7;
+  obj[1] = tmp4;
+  obj = { style: tmp2.wrapper, children: null };
+  const items = [closure_4(TwinButtons.BackgroundBlurFill, obj), closure_4(closure_3, { style: tmp2.border })];
+  obj[1] = items;
+  return callback(closure_3, obj);
 });
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelVisualEffectView.tsx");
 

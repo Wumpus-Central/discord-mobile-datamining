@@ -78,7 +78,7 @@ export default function GuildFolderSettingsModal(folderId) {
   callback = obj2.useCallback(() => {
     dependencyMap = first1;
     const guildFolders = store.getGuildFolders();
-    folderId(8159).saveGuildFolders(guildFolders.map((folderId) => {
+    folderId(8181).saveGuildFolders(guildFolders.map((folderId) => {
       let tmp = folderId;
       if (folderId.folderId === closure_0) {
         const obj = {};
@@ -89,11 +89,11 @@ export default function GuildFolderSettingsModal(folderId) {
       }
       return tmp;
     }));
-    let obj = folderId(8159);
-    const result = folderId(15809).hideGuildsBarFolderModal();
+    let obj = folderId(8181);
+    const result = folderId(15843).hideGuildsBarFolderModal();
   }, items2);
   callback1 = obj2.useCallback(() => {
-    const result = folderId(15809).hideGuildsBarFolderModal();
+    const result = folderId(15843).hideGuildsBarFolderModal();
   }, []);
   const items3 = [first1, first, first !== initialFolderName || first1 !== initialFolderColor, callback, callback1];
   const memo = obj2.useMemo(() => {
@@ -119,11 +119,11 @@ export default function GuildFolderSettingsModal(folderId) {
     };
     const intl = folderId(1236).intl;
     obj[1] = intl.string(folderId(1236).t.Dx7im5);
-    obj[2] = folderId(5460).getHeaderCloseButton(callback1);
+    obj[2] = folderId(5463).getHeaderCloseButton(callback1);
     if (closure_5) {
       const intl2 = tmp3(1236).intl;
-      let fn = tmp3(5460).getHeaderTextButton(intl2.string(tmp3(1236).t["R3BPH+"]), callback);
-      const tmp3Result = tmp3(5460);
+      let fn = tmp3(5463).getHeaderTextButton(intl2.string(tmp3(1236).t["R3BPH+"]), callback);
+      const tmp3Result = tmp3(5463);
     } else {
       fn = () => null;
     }
@@ -131,5 +131,5 @@ export default function GuildFolderSettingsModal(folderId) {
     return { [closure_1_10]: obj };
   }, items3);
   obj = { screens: memo, initialRouteName: c10 };
-  return callback1(folderId(5973).Navigator, obj);
+  return callback1(folderId(5976).Navigator, obj);
 };

@@ -9,7 +9,7 @@ const result = set.fileFinishedImporting("modules/mfa/native/components/BackButt
 export default function BackButton(props) {
   props = props.props;
   importDefault = undefined;
-  let obj = props(1500);
+  let obj = props(1499);
   importDefault = obj.useNavigation();
   obj = { variant: "secondary", text: null, onPress: null };
   const intl = props(1236).intl;

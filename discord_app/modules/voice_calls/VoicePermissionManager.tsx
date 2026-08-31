@@ -43,35 +43,35 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
               isSpeakerResult = speaker.isSpeaker(userId, channelId);
             }
             if (isSpeakerResult) {
-              const permission = callback2(5048).requestPermission(constants2.AUDIO);
+              const permission = callback2(5051).requestPermission(constants2.AUDIO);
               permission.then((arg0) => {
                 if (arg0) {
                   callback(table[9])(true);
                 }
               });
               if (store.getMode() === constants.PUSH_TO_TALK) {
-                const permission1 = callback2(5048).requestPermission(constants2.INPUT_MONITORING);
-                const tmp19Result = callback2(5048);
+                const permission1 = callback2(5051).requestPermission(constants2.INPUT_MONITORING);
+                const tmp19Result = callback2(5051);
               }
             } else {
               const tmp8 = new closure_4(arg0);
-              const audienceRequestToSpeakState = callback(4634).getAudienceRequestToSpeakState(tmp8);
-              if (audienceRequestToSpeakState === callback(4634).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
-                const permission2 = callback2(5048).requestPermission(constants2.AUDIO);
+              const audienceRequestToSpeakState = callback(4636).getAudienceRequestToSpeakState(tmp8);
+              if (audienceRequestToSpeakState === callback(4636).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
+                const permission2 = callback2(5051).requestPermission(constants2.AUDIO);
                 permission2.then((arg0) => {
                   if (arg0) {
                     callback(table[9])(true);
                   }
                 });
                 if (store.getMode() === constants.PUSH_TO_TALK) {
-                  const permission3 = tmp13(5048).requestPermission(tmp14.INPUT_MONITORING);
-                  const tmp13Result = tmp13(5048);
+                  const permission3 = tmp13(5051).requestPermission(tmp14.INPUT_MONITORING);
+                  const tmp13Result = tmp13(5051);
                 }
-                const obj2 = callback2(5048);
+                const obj2 = callback2(5051);
                 tmp13 = callback2;
                 tmp14 = constants2;
               }
-              const obj = callback(4634);
+              const obj = callback(4636);
             }
           }
         }

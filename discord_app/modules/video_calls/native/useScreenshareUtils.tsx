@@ -23,8 +23,8 @@ function stopScreenshare() {
   voiceEngine.stopBroadcast();
   const currentUserActiveStream = authStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    let tmpResult = tmp(4629);
-    tmpResult = tmp(4512);
+    let tmpResult = tmp(4631);
+    tmpResult = tmp(4514);
     tmpResult.stopStream(tmpResult.encodeStreamKey(currentUserActiveStream));
   }
   const obj = inject;
@@ -102,7 +102,7 @@ export default function useScreenshareUtils(arg0) {
             }
           }
         } else {
-          fn = callback(9713).showScreenshareDisabledAlert;
+          fn = callback(9735).showScreenshareDisabledAlert;
         }
       } else {
         fn = function l() {
@@ -114,17 +114,17 @@ export default function useScreenshareUtils(arg0) {
       }
       obj[3] = fn;
       if (obj2.isMetaQuest()) {
-        tmp19(tmp ? 9992 : 9993);
+        tmp19(tmp ? 10015 : 10016);
       } else {
         if (tmp4) {
-          let tmp20 = 9994;
+          let tmp20 = 10017;
         } else {
-          tmp20 = tmp ? 9995 : 9994;
+          tmp20 = tmp ? 10018 : 10017;
         }
         obj[4] = tmp19(tmp20);
         return obj;
       }
-      obj2 = callback(1625);
+      obj2 = callback(1624);
       tmp11 = closure_1;
       tmp12 = dependencyMap;
       const tmp13 = analyticsLocations;

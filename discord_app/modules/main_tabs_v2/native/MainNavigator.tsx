@@ -12,7 +12,7 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import set from "../../../utils/PlatformUtils.tsx";
 import { ContextMenuCommandNavigator } from "../../application_commands/native/ContextMenuCommandNavigator.tsx";
-import { NavigatorWithCaptchaHook } from "../../auth/native/components/Auth.tsx";
+import { getInitialAuthRouteStack } from "../../auth/native/components/Auth.tsx";
 import { HeaderWithBorder } from "../../conversations/components/native/ConversationNavigator.tsx";
 import { Loading } from "../../guild_member_verification/native/components/MemberVerificationScreen.tsx";
 import { SuspendedUserSafetyHubPage } from "../../safety_hub/native/SuspendedUserPage.tsx";
@@ -24,7 +24,7 @@ import { Settings } from "tabs/settings/Settings.tsx";
 
 require = arg1;
 function getAuthComponent() {
-  return NavigatorWithCaptchaHook /* NavigatorWithCaptchaHook */.default;
+  return getInitialAuthRouteStack /* getInitialAuthRouteStack */.default;
 }
 function getTabsComponent() {
   return require("MainTabs.tsx").default;
@@ -101,12 +101,12 @@ function getChannelScreen() {
   };
   obj = {
     beforeRemove(data) {
-      let obj = animation(4308);
+      let obj = animation(4310);
       if (null != obj.getBestActiveInput()) {
         obj = { type: null };
-        obj[0] = tmp(1627).KeyboardTypes.SYSTEM;
-        tmp(1498).setKeyboardType(obj);
-        const tmpResult = tmp(1498);
+        obj[0] = tmp(1626).KeyboardTypes.SYSTEM;
+        tmp(1497).setKeyboardType(obj);
+        const tmpResult = tmp(1497);
       }
       data = data.data;
       let type;
@@ -121,7 +121,7 @@ function getChannelScreen() {
       } else {
         SWIPE = constants2.SWIPE;
       }
-      callback(4666).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+      callback(4668).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
     }
   };
   return callback2(Screen.Screen, obj);
@@ -184,7 +184,7 @@ export default importAllResult.memo(function StackNavigator() {
               if (closure_15) {
                 str = "default";
               }
-              const merged = Object.assign(animation(7554).getDefaultStackHeaderProps(navigation.navigation));
+              const merged = Object.assign(animation(7575).getDefaultStackHeaderProps(navigation.navigation));
               const merged1 = Object.assign(closure_7);
               return { orientation: str, headerShown: false };
             },
@@ -239,7 +239,7 @@ export default importAllResult.memo(function StackNavigator() {
         name: "conversations",
         getComponent: closure_1_26,
         options() {
-          return callback2(10600)();
+          return callback2(10624)();
         }
       }),
       closure_1_10(closure_1_16.Screen, { name: "auth", getComponent: closure_1_18, options: closure_1_30 }),
@@ -301,7 +301,7 @@ export default importAllResult.memo(function StackNavigator() {
           str = "modal";
         }
         const obj = {};
-        const merged = Object.assign(callback2(10600)({ presentation: str }));
+        const merged = Object.assign(callback2(10624)({ presentation: str }));
         const params3 = route.params;
         let presentation;
         if (params3 != null) {
@@ -327,7 +327,7 @@ export default importAllResult.memo(function StackNavigator() {
             if (closure_15) {
               str = "default";
             }
-            const merged = Object.assign(animation(7554).getDefaultStackHeaderProps(navigation.navigation));
+            const merged = Object.assign(animation(7575).getDefaultStackHeaderProps(navigation.navigation));
             const merged1 = Object.assign(closure_7);
             return { orientation: str, headerShown: false };
           },
@@ -382,7 +382,7 @@ export default importAllResult.memo(function StackNavigator() {
       name: "conversations",
       getComponent: closure_1_26,
       options() {
-        return callback2(10600)();
+        return callback2(10624)();
       }
     };
     const obj5 = { name: "auth", getComponent: closure_1_18, options: closure_1_30 };
@@ -433,13 +433,13 @@ export default importAllResult.memo(function StackNavigator() {
     items1[7] = closure_1_10(closure_1_16.Screen, {
       name: "settings",
       options() {
-        let obj = callback(4425);
+        let obj = callback(4427);
         obj = undefined;
         if (obj.isIpadOS()) {
           obj = { presentation: "modal" };
         }
         obj = {};
-        const merged = Object.assign(callback2(10600)(obj));
+        const merged = Object.assign(callback2(10624)(obj));
         obj.animation = "slide_from_bottom";
         obj.fullScreenGestureEnabled = true;
         return obj;
@@ -450,19 +450,19 @@ export default importAllResult.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: closure_1_25,
       options() {
-        return callback2(10600)({ lockOrientation: false });
+        return callback2(10624)({ lockOrientation: false });
       }
     });
     const obj13 = {
       name: "settings",
       options() {
-        let obj = callback(4425);
+        let obj = callback(4427);
         obj = undefined;
         if (obj.isIpadOS()) {
           obj = { presentation: "modal" };
         }
         obj = {};
-        const merged = Object.assign(callback2(10600)(obj));
+        const merged = Object.assign(callback2(10624)(obj));
         obj.animation = "slide_from_bottom";
         obj.fullScreenGestureEnabled = true;
         return obj;
@@ -473,7 +473,7 @@ export default importAllResult.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: closure_1_25,
       options() {
-        return callback2(10600)({ lockOrientation: false });
+        return callback2(10624)({ lockOrientation: false });
       }
     };
     tmp5Result = lib(first[8]);
@@ -501,7 +501,7 @@ export default importAllResult.memo(function StackNavigator() {
           }
           str2 = str3;
         }
-        const merged = Object.assign(callback2(10600)({ presentation: str2 }));
+        const merged = Object.assign(callback2(10624)({ presentation: str2 }));
         return obj;
       },
       getComponent: closure_1_29

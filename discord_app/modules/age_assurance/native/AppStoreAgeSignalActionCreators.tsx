@@ -52,7 +52,7 @@ function _submitAgeSignal() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -70,10 +70,10 @@ function _submitAgeSignal() {
               const HTTP = callback(table[2]).HTTP;
               obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
               obj1[0] = constants.AGE_SIGNAL;
-              const obj2 = { platform: null, age_lower: null, age_upper: null, google_user_status: null, apple_verified_method: null, is_cold_launch: null, integrity_token: null };
-              ({ platform: obj6[0], ageLower: obj6[1], ageUpper: obj6[2], googleUserStatus: obj6[3], appleVerifiedMethod: obj6[4] } = callback);
-              obj2[5] = closure_2;
-              obj2[6] = table;
+              const obj2 = { platform: null, age_lower: null, age_upper: null, google_age_signals_status: null, google_age_range_source: null, google_significant_change_status: null, apple_verified_method: null, is_cold_launch: null, integrity_token: null };
+              ({ platform: obj6[0], ageLower: obj6[1], ageUpper: obj6[2], googleAgeSignalsStatus: obj6[3], googleAgeRangeSource: obj6[4], googleSignificantChangeStatus: obj6[5], appleVerifiedMethod: obj6[6] } = callback);
+              obj2[7] = closure_2;
+              obj2[8] = table;
               obj1[1] = obj2;
               c4 = 1;
               constants = 1;
@@ -91,7 +91,7 @@ function _submitAgeSignal() {
             return obj;
           } else {
             constants = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp5) {
           constants = tmp;

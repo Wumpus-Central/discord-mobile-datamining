@@ -30,7 +30,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   const channelId = userId.channelId;
   const fingerprint = userId.fingerprint;
   let callback;
-  let userKey;
+  let fingerprintUserKey;
   let fingerprint2;
   let isSecureFramesUIEnabled;
   let isUserSecureFramesVerified;
@@ -44,14 +44,14 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   callback = tmp;
   let obj = userId(fingerprint[10]);
   const secureFramesPairwiseFingerprint = obj.useSecureFramesPairwiseFingerprint({ userId });
-  userKey = secureFramesPairwiseFingerprint.userKey;
+  fingerprintUserKey = secureFramesPairwiseFingerprint.fingerprintUserKey;
   fingerprint2 = secureFramesPairwiseFingerprint.fingerprint;
   obj1 = userId(fingerprint[11]);
   isSecureFramesUIEnabled = obj1.useIsSecureFramesUIEnabled({ channelId });
   let obj2 = userId(fingerprint[12]);
-  isUserSecureFramesVerified = obj2.useIsUserSecureFramesVerified({ userId, channelId });
+  isUserSecureFramesVerified = obj2.useIsUserSecureFramesVerified({ userId, channelId, userKey: fingerprintUserKey });
   let obj3 = userId(fingerprint[13]);
-  const isPersistentSecureFramesFingerprint = obj3.useIsPersistentSecureFramesFingerprint({ userId });
+  const isPersistentSecureFramesFingerprint = obj3.useIsPersistentSecureFramesFingerprint({ userId, userKey: fingerprintUserKey });
   isOtherUserKeyPersistent = isPersistentSecureFramesFingerprint.isOtherUserKeyPersistent;
   let loading = isPersistentSecureFramesFingerprint.loading;
   let obj4 = userId(fingerprint[14]);
@@ -63,7 +63,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   let obj6 = userId(fingerprint[15]);
   isSecureFramesKeyInconsistent = obj6.useIsSecureFramesKeyInconsistent({ userId });
   const items2 = [fingerprint, channelId, fingerprint2, stateFromStores, isSecureFramesKeyInconsistent, stateFromStores1, isSecureFramesUIEnabled, isUserSecureFramesVerified];
-  memo = userKey.useMemo(() => {
+  memo = fingerprintUserKey.useMemo(() => {
     if (null != channelId) {
       if (stateFromStores) {
         if (!stateFromStores1) {
@@ -86,7 +86,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     return stateFromStores.CURRENT_USER_DISCONNECTED;
   }, items2);
   const items3 = [userId];
-  const effect = userKey.useEffect(() => {
+  const effect = fingerprintUserKey.useEffect(() => {
     const user = userId(fingerprint[16]).getUser(userId);
   }, items3);
   let obj7 = userId(fingerprint[14]);
@@ -96,8 +96,8 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   name = obj8.useName(userId.guildId, channelId, stateFromStores2);
   const items5 = [memo, name];
   const items6 = [channelId, memo, userId];
-  [tmp17, tmp18] = callback(userKey.useMemo(() => userId(fingerprint[18]).getUserVerifyStateText(memo, name), items5), 2);
-  const effect1 = userKey.useEffect(() => {
+  [tmp17, tmp18] = callback(fingerprintUserKey.useMemo(() => userId(fingerprint[18]).getUserVerifyStateText(memo, name), items5), 2);
+  const effect1 = fingerprintUserKey.useEffect(() => {
     if (stateFromStores.OTHER_USER_ALREADY_VERIFIED !== memo) {
       if (stateFromStores.MATCH !== tmp) {
         let obj = userId(fingerprint[19]);
@@ -111,7 +111,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     }
   }, items6);
   const items7 = [memo, tmp.icon];
-  let memo1 = userKey.useMemo(() => {
+  let memo1 = fingerprintUserKey.useMemo(() => {
     if (stateFromStores.OTHER_USER_ALREADY_VERIFIED !== memo) {
       if (stateFromStores.MATCH !== tmp) {
         let obj = { style: null, color: null };
@@ -123,18 +123,18 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     obj = { style: closure_3.icon, color: channelId(fingerprint[9]).colors.TEXT_FEEDBACK_POSITIVE };
     return name(userId(fingerprint[20]).CheckmarkLargeBoldIcon, obj);
   }, items7);
-  callback = userKey.useCallback(() => {
+  callback = fingerprintUserKey.useCallback(() => {
     channelId(fingerprint[22]).hideActionSheet();
   }, []);
-  const items8 = [channelId, userKey, isOtherUserKeyPersistent, name, userId];
-  const callback1 = userKey.useCallback(() => {
+  const items8 = [channelId, fingerprintUserKey, isOtherUserKeyPersistent, name, userId];
+  const callback1 = fingerprintUserKey.useCallback(() => {
     let tmp2 = null != channelId;
     if (tmp2) {
-      tmp2 = null != userKey;
+      tmp2 = null != fingerprintUserKey;
     }
     if (tmp2) {
       let obj = userId(fingerprint[18]);
-      obj.addVerification(userId, userKey, isOtherUserKeyPersistent, tmp, memo.DEEP_LINK);
+      obj.addVerification(userId, fingerprintUserKey, isOtherUserKeyPersistent, tmp, memo.DEEP_LINK);
       channelId(fingerprint[22]).hideActionSheet();
       const obj2 = channelId(fingerprint[22]);
       obj = { key: null, iconColor: "text-feedback-positive", IconComponent: null, content: null };
@@ -166,7 +166,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     obj5 = { style: null, userId: null, userKey: null };
     obj5[0] = tmp.helpMessage;
     obj5[1] = userId;
-    obj5[2] = userKey;
+    obj5[2] = fingerprintUserKey;
     items9[3] = tmp23(channelId(tmp3[30]), obj5);
     obj6 = { spacing: 12, style: null, children: null };
     obj6[1] = tmp.buttons;

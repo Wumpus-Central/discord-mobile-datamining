@@ -45,7 +45,7 @@ export const filterHappeningNowCards = function filterHappeningNowCards(isFocuse
             let someResult = null != voiceStatesForChannel;
             if (someResult) {
               const mapped = callback2(12)(voiceStatesForChannel).map((userId) => userId.userId);
-              const found = mapped.filter(callback(1370).isNotNullish);
+              const found = mapped.filter(callback(1471).isNotNullish);
               someResult = found.some((id) => blockedOrIgnored.isBlockedOrIgnored(id));
               const arr2 = callback2(12)(voiceStatesForChannel);
             }

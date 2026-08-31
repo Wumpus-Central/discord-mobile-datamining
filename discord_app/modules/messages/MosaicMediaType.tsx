@@ -30,12 +30,12 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
           if (height > 0) {
             let str3 = "IMAGE";
             if (!obj2.isImageFile(filename)) {
-              let tmp5Result = tmp5(4637);
+              let tmp5Result = tmp5(4639);
               let str5 = "INVALID";
               if (tmp5Result.isVideoFile(filename)) {
                 str5 = "INVALID";
                 if (null != proxy_url.proxy_url) {
-                  tmp5Result = tmp5(1403);
+                  tmp5Result = tmp5(1399);
                   let num2 = proxy_url.flags;
                   if (num2 == null) {
                     num2 = 0;
@@ -84,7 +84,7 @@ export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTyp
             if (tmpResult.isVideoContentType(contentType)) {
               return "VIDEO";
             }
-            tmpResult = tmp(4637);
+            tmpResult = tmp(4639);
           }
           obj = urlMatchesFileExtension;
           tmp = require;

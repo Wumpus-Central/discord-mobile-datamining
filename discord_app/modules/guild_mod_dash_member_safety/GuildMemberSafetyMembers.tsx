@@ -1,6 +1,6 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx
 import version from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
-import isEqualDefault from "../../../_runtime/04609_isEqual.js";
+import isEqualDefault from "../../../_runtime/04611_isEqual.js";
 import result2 from "MemberSafetyElasticSearchQueryTypes.tsx";
 import getJoinedAtDateFormatter from "DateUtils.tsx";
 import getSortValueForMember from "SortUtils.tsx";
@@ -116,7 +116,7 @@ prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(
     const _Date = Date;
     const date = new Date(unusualDMActivityUntil);
     const time = date.getTime();
-    tmp9 = time >= closure_4 - tmp(7189).UNUSUAL_DM_COMPARISON_DELTA;
+    tmp9 = time >= closure_4 - tmp(7210).UNUSUAL_DM_COMPARISON_DELTA;
   }
   obj[6] = tmp9;
   obj[7] = isSpamSupported.isSpammer(userId);

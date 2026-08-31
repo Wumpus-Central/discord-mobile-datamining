@@ -46,8 +46,8 @@ function AlwaysCompressImagesSwitch(isKestrelTreatment) {
       obj1[0] = tmp.compressionHint;
       const intl2 = tmp2(1236).intl;
       obj1[2] = intl2.string(tmp2(1236).t["wC0+Ph"]);
-      obj[5] = callback2(tmp2(4442).Text, obj1);
-      obj[1] = callback2(tmp2(5958).TableSwitchRow, obj);
+      obj[5] = callback2(tmp2(4444).Text, obj1);
+      obj[1] = callback2(tmp2(5961).TableSwitchRow, obj);
       tmp6 = callback2(View, obj);
     }
   }

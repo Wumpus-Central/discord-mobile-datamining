@@ -51,19 +51,19 @@ export default function ConnectAccountStep(clientId) {
     }
     return currentUser;
   });
-  let obj2 = platformType(5192);
+  let obj2 = platformType(5195);
   const value = obj2.get(platformType);
   if (null == value) {
     let applicationIconSource;
     if (null != stateFromStores) {
-      let tmp2Result = tmp2(1435);
+      let tmp2Result = tmp2(1431);
       obj = { id: null, icon: null };
       ({ id: obj7[0], icon: obj7[1] } = stateFromStores);
       applicationIconSource = tmp2Result.getApplicationIconSource(obj);
     }
     let userAvatarSource;
     if (null != stateFromStores1) {
-      tmp2Result = tmp2(1435);
+      tmp2Result = tmp2(1431);
       userAvatarSource = tmp2Result.getUserAvatarSource(stateFromStores1);
     }
     let str;
@@ -89,7 +89,7 @@ export default function ConnectAccountStep(clientId) {
     const items4 = [callback(tmp5(1297).Avatar, obj3), , ];
     const obj4 = { color: null, size: "md" };
     obj4[0] = tmp2(712).colors.INTERACTIVE_TEXT_DEFAULT;
-    items4[1] = callback(tmp5(8739).MoreHorizontalIcon, obj4);
+    items4[1] = callback(tmp5(8761).MoreHorizontalIcon, obj4);
     const obj5 = { source: null, size: null };
     obj5[0] = userAvatarSource;
     obj5[1] = tmp5(1297).AvatarSizes.XLARGE;
@@ -99,10 +99,10 @@ export default function ConnectAccountStep(clientId) {
     const obj6 = { variant: "text-lg/normal", color: "text-default", children: null };
     const intl = tmp5(1236).intl;
     obj6[2] = intl.string(tmp5(1236).t.uT1CPa);
-    items5[1] = callback(tmp5(4442).Text, obj6);
+    items5[1] = callback(tmp5(4444).Text, obj6);
     const obj7 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
     obj7[2] = str;
-    items5[2] = callback(tmp5(4442).Text, obj7);
+    items5[2] = callback(tmp5(4444).Text, obj7);
     obj1[1] = items5;
     const items6 = [callback2(View, obj1), , , ];
     const obj8 = { variant: "text-sm/normal", color: "text-default", children: null };
@@ -111,7 +111,7 @@ export default function ConnectAccountStep(clientId) {
     obj9[0] = str;
     obj9[1] = platformName;
     obj8[2] = intl2.format(tmp5(1236).t["aJRE/Q"], obj9);
-    items6[1] = callback(tmp5(4442).Text, obj8);
+    items6[1] = callback(tmp5(4444).Text, obj8);
     const obj10 = { style: null, children: null };
     obj10[0] = tmp.card;
     let tmp16Result = null;
@@ -125,21 +125,21 @@ export default function ConnectAccountStep(clientId) {
     const obj12 = { variant: "text-md/medium", style: null, color: "text-default", children: null };
     obj12[1] = tmp.cardName;
     obj12[3] = platformName;
-    items7[1] = callback(tmp5(4442).Text, obj12);
+    items7[1] = callback(tmp5(4444).Text, obj12);
     const obj13 = { variant: "primary", size: "sm", onPress: null, text: null };
     obj13[2] = function onPress() {
       platformType(closure_1_2[19])({ platformType, location: "OAuth2 Connect Account Step" });
     };
     const intl3 = tmp5(1236).intl;
     obj13[3] = intl3.string(tmp5(1236).t.S0W8Z5);
-    items7[2] = callback(tmp5(4893).Button, obj13);
+    items7[2] = callback(tmp5(4896).Button, obj13);
     obj10[1] = items7;
     items6[2] = callback2(View, obj10);
     const obj14 = { style: null, children: null };
     obj14[0] = tmp.infoNotice;
     const obj15 = { color: null, size: "sm" };
     obj15[0] = tmp2(712).colors.ICON_FEEDBACK_INFO;
-    const items8 = [callback(tmp5(4401).CircleInformationIcon, obj15), ];
+    const items8 = [callback(tmp5(4403).CircleInformationIcon, obj15), ];
     const obj16 = { variant: "text-sm/normal", color: "text-default", style: null, children: null };
     obj16[2] = tmp.infoText;
     const intl4 = tmp5(1236).intl;
@@ -147,13 +147,13 @@ export default function ConnectAccountStep(clientId) {
     obj17[0] = platformName;
     obj17[1] = str;
     obj16[3] = intl4.format(tmp5(1236).t["8psEFX"], obj17);
-    items8[1] = callback(tmp5(4442).Text, obj16);
+    items8[1] = callback(tmp5(4444).Text, obj16);
     obj14[1] = items8;
     items6[3] = callback2(View, obj14);
     obj[1] = items6;
     return callback2(View, obj);
   } else {
-    let tmp5Result = tmp5(1435);
+    let tmp5Result = tmp5(1431);
     tmp5Result = tmp5(1363);
     const icon = value.icon;
     const source = tmp5Result.makeSource(tmp5Result.isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);

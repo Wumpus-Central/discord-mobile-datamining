@@ -2,12 +2,16 @@
 import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
-let obj = { BASE: 0, [0]: "BASE", POPULARITY: 1, [1]: "POPULARITY", RECENCY: 2, [2]: "RECENCY" };
-obj = { enabled: false, variation: obj.BASE };
-obj = { 1: null, 2: obj1 };
-obj[2] = { enabled: true, variation: obj.RECENCY };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-06-bounties-shop-carousel", kind: "user", defaultConfig: obj, variations: obj });
+const obj = { 1: null, 2: { placement: "outside", sortType: "popularity", buttonVariant: "default" }, 3: { placement: "inside", sortType: "popularity", buttonVariant: "default" }, 4: { placement: "inside", sortType: "recency", buttonVariant: "default" }, 5: { placement: "replace_media", sortType: "popularity", buttonVariant: "default" } };
+obj[5] = { placement: "none", sortType: "popularity", buttonVariant: "blurple" };
+const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-06-bounties-shop-carousel", kind: "user", defaultConfig: { placement: "none", sortType: "popularity", buttonVariant: "default" }, variations: obj });
 const result = set.fileFinishedImporting("modules/quests/experiments/BountiesShopCarouselExperiment.tsx");
 
-export const BountiesShopCarouselExperimentVariation = obj;
 export const BountiesShopCarouselExperiment = apexExperiment;
+export function getBountiesEntryPointButtonVariant(shopCarouselButtonVariant) {
+  let str = "primary-overlay";
+  if ("blurple" === shopCarouselButtonVariant) {
+    str = "primary";
+  }
+  return str;
+}

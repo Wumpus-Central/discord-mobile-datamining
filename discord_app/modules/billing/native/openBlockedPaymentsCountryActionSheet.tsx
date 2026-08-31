@@ -1,6 +1,6 @@
 // discord_app/modules/billing/native/openBlockedPaymentsCountryActionSheet.tsx
 import set from "../../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../../_runtime/02010_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02009_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const result = set.fileFinishedImporting("modules/billing/native/openBlockedPaymentsCountryActionSheet.tsx");
@@ -8,5 +8,5 @@ const result = set.fileFinishedImporting("modules/billing/native/openBlockedPaym
 export default function openBlockedPaymentsCountryActionSheet() {
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8427, dependencyMap.paths), "BlockedPaymentsCountryActionSheet");
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8449, dependencyMap.paths), "BlockedPaymentsCountryActionSheet");
 };

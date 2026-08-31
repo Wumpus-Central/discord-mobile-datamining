@@ -34,7 +34,7 @@ function _getOrFetchApplicationForLaunch() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -58,7 +58,7 @@ function _getOrFetchApplicationForLaunch() {
               PRIVATE_CHANNEL = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -74,16 +74,16 @@ function _getOrFetchApplicationForLaunch() {
               c7 = 3;
               c8 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = callback2(9418)(callback, callback2);
+              obj2[0] = callback2(9440)(callback, callback2);
               return obj2;
             }
           } else if (2 === tmp7) {
             c6 = 0;
             closure_4 = closure_5;
             if (null != dependencyMap) {
-              PRIVATE_CHANNEL = callback(9412).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+              PRIVATE_CHANNEL = callback(9434).EmbeddedActivityLocationKind.GUILD_CHANNEL;
             } else {
-              PRIVATE_CHANNEL = callback(9412).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+              PRIVATE_CHANNEL = callback(9434).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
             }
             obj2 = callback2(709);
             const obj3 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: "", applicationId: null, channelId: null, guildId: null, error: null, locationKind: null };
@@ -96,12 +96,12 @@ function _getOrFetchApplicationForLaunch() {
               dependencyMap = null;
             }
             obj3[4] = dependencyMap;
-            const aPIError = new callback(4344).APIError(closure_4);
+            const aPIError = new callback(4346).APIError(closure_4);
             obj3[5] = aPIError;
             obj3[6] = PRIVATE_CHANNEL;
             obj2.dispatch(obj3);
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else if (arg0 === 1) {
             c8 = 3;
             throw arg1;
@@ -159,7 +159,7 @@ function _confirmActivityChange() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -181,7 +181,7 @@ function _confirmActivityChange() {
               ({ currentEmbeddedApplication: c0, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: c1, onConfirmActivityLaunchChecksAlertOpen: c2 } = c0);
               c2 = 1;
               c3 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -203,13 +203,13 @@ function _confirmActivityChange() {
                   if (value != null) {
                     _location = value.location;
                   }
-                  const channel = closure_1_4.getChannel(_undefined(4080).getEmbeddedActivityLocationChannelId(_location));
+                  const channel = closure_1_4.getChannel(_undefined(4081).getEmbeddedActivityLocationChannelId(_location));
                   if (null != value) {
                     if (null != channel) {
                       if (dependencyMap != null) {
                         dependencyMap();
                       }
-                      _undefined2(9420)(tmp, channel, () => {
+                      _undefined2(9442)(tmp, channel, () => {
                         let obj = value(table[10])();
                         obj = { location: value.location, applicationId: lib.id, shouldClosePopout: value };
                         obj.leaveActivity(obj);
@@ -276,7 +276,7 @@ function _confirmActivityAgeGate() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -302,7 +302,7 @@ function _confirmActivityAgeGate() {
               obj = undefined;
               obj = 1;
               c6 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -446,7 +446,7 @@ function _confirmExternalAppLaunch() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -471,7 +471,7 @@ function _confirmExternalAppLaunch() {
               isVerified = undefined;
               c5 = 1;
               constants = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp5) {

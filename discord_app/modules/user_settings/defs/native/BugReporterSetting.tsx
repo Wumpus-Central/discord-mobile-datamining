@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/BugReporterSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02010_asyncRequireImpl.js";
-import _modDef4689 from "../../../../actions/ModalActionCreators.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02009_asyncRequireImpl.js";
+import _modDef4691 from "../../../../actions/ModalActionCreators.tsx";
 import apexExperimentDefault from "../../../bug_reporter/BugReporterExperiment.tsx";
 import closure_3 from "../../../bug_reporter/BugReportStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -20,8 +20,8 @@ createToggle = {
   onPress: function handleBugReporterSettingPress() {
     if (!field.getField("isReportOpen")) {
       field.setState({ isReportOpen: true });
-      _modDef4689.pushLazy(asyncRequireImpl(10206, dependencyMap.paths));
-      const obj2 = _modDef4689;
+      _modDef4691.pushLazy(asyncRequireImpl(10229, dependencyMap.paths));
+      const obj2 = _modDef4691;
     }
   },
   withArrow: true,

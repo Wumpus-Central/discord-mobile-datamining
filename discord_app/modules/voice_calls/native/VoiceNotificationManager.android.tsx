@@ -22,7 +22,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: 2132, isPushToTalk: 2133, embeddedActivity: 2134, isStreaming: 2135 };
+    obj.state = { channelId: "PX_16", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "PAYPAL_NOT_ENABLED", embeddedActivity: "PayPal is not enabled for this merchant.", isStreaming: 2132 };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = closure_1_9.getChannelId();
       const state = closure_1_9.getState();
@@ -217,7 +217,7 @@ prototype["terminate"] = function terminate() {
 };
 set = Object.create(VoiceNotificationManager.prototype);
 set.voiceServiceHandlerId = 9000;
-set.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: 2132, isPushToTalk: 2133, embeddedActivity: 2134, isStreaming: 2135 };
+set.state = { channelId: "PX_16", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "PAYPAL_NOT_ENABLED", embeddedActivity: "PayPal is not enabled for this merchant.", isStreaming: 2132 };
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = closure_1_9.getChannelId();
   const state = closure_1_9.getState();

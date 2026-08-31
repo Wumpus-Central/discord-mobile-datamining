@@ -1,6 +1,6 @@
 // discord_app/design/void/Form/native/FormRadioRow.tsx
 import useCheckboxA11yNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import _modDef5557 from "FormRow.tsx";
+import _modDef5560 from "FormRow.tsx";
 import context2 from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import TableRadioRow from "../../../components/TableRow/native/TableRadioRow.native.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
@@ -39,18 +39,18 @@ export default function FormRadioRow(arg0) {
     if ("right" === align) {
       obj1 = { selected: null };
       obj1[0] = selected;
-      tmp8Result = tmp8(tmp9(5580), obj1);
+      tmp8Result = tmp8(tmp9(5583), obj1);
     }
     obj.trailing = tmp8Result;
     let tmp8Result1 = leading;
     if ("left" === align) {
       const obj2 = { selected: null };
       obj2[0] = selected;
-      tmp8Result1 = tmp8(tmp9(5580), obj2);
+      tmp8Result1 = tmp8(tmp9(5583), obj2);
     }
     obj.leading = tmp8Result1;
-    tmp8Result = tmp8(_modDef5557, obj);
-    const tmp10 = _modDef5557;
+    tmp8Result = tmp8(_modDef5560, obj);
+    const tmp10 = _modDef5560;
   }
   return tmp8Result;
 };

@@ -42,7 +42,7 @@ prototype["mapDiscordToMuxMetadata"] = function mapDiscordToMuxMetadata(config, 
   return obj;
 };
 prototype["getAppVersion"] = function getAppVersion() {
-  return "6302";
+  return "6319";
 };
 prototype["getBuildChannel"] = function getBuildChannel() {
   try {

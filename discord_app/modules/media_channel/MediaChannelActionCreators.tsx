@@ -72,7 +72,7 @@ function _unfurlEmbedUrl() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -123,11 +123,11 @@ function _unfurlEmbedUrl() {
             obj[0] = body.body;
             return obj;
           }
-        } catch (tmp19) {
-          closure_3 = tmp19;
+        } catch (tmp23) {
+          closure_3 = tmp23;
           if (tmp4 === constants) {
             c6 = tmp2;
-            throw tmp19;
+            throw tmp23;
           } else {
             c5 = tmp;
           }

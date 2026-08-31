@@ -23,7 +23,6 @@ import handleConnectionReset from "../channel/ChannelStatusStore.tsx";
 import isSubscriptionGated from "../channel/GatedChannelStore.tsx";
 import resetAllState from "../channel/VoiceChannelAnimationStateStore.tsx";
 import _toTimestampMs from "../channel/VoiceChannelStartTimeStore.tsx";
-import isSyncedModeThemesEnabled from "../client_themes/ClientThemesBackgroundStore.tsx";
 import updateState from "../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 import entryToKey from "../content_inventory/ContentInventoryActivityStore.tsx";
 import withContent from "../dismissible_content/DismissibleContentShownStateStore.tsx";

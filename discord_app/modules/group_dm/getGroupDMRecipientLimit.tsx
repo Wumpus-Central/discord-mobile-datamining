@@ -31,7 +31,7 @@ export default function getGroupDMRecipientLimit() {
         if (tmp2Result.getGroupDMNitroCapConfig("getGroupDMRecipientLimit").enabled) {
           tmp5 = closure_3;
         }
-        tmp2Result = tmp2(16267);
+        tmp2Result = tmp2(16301);
       }
       obj3 = isPremiumAtLeast;
       tmp2 = require;

@@ -19,12 +19,12 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   const memo = React.useMemo(() => {
     const actions = {
       onEnableMFAClick() {
-        let obj = callback2(4413);
+        let obj = callback2(4415);
         obj.hideActionSheet(closure_7);
-        callback2(9667).close();
-        const obj2 = callback2(9667);
+        callback2(9689).close();
+        const obj2 = callback2(9689);
         obj = { screen: constants.ACCOUNT };
-        callback(6210).openUserSettings(obj);
+        callback(6213).openUserSettings(obj);
       },
       onRequireModeratorMFAClick() {
         closure_1_1(closure_1_2[4]).hideActionSheet(closure_1_7);
@@ -37,10 +37,10 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   obj = { style: tmp.title, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = onRequireModeratorMFAClick(1236).intl;
   obj[3] = intl.string(onRequireModeratorMFAClick(1236).t["3s47iN"]);
-  const items1 = [callback(onRequireModeratorMFAClick(4442).Heading, obj), ];
+  const items1 = [callback(onRequireModeratorMFAClick(4444).Heading, obj), ];
   obj = { style: tmp.container, items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo) };
   items1[1] = callback(EligibilityChecklistRowDefault, obj);
   obj[1] = items1;
-  return callback2(onRequireModeratorMFAClick(5587).BottomSheet, obj);
+  return callback2(onRequireModeratorMFAClick(5590).BottomSheet, obj);
 };
 export const ELIGIBILITY_ACTION_SHEET_KEY = "EligibilityActionSheet";

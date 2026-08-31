@@ -3,7 +3,7 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import registerAssetDefault from "../../../../../_runtime/08625_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/08647_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -32,8 +32,8 @@ function StageSparkleInner(style) {
   }
   obj[1] = tmp6Result;
   const items1 = [closure_4(View, obj), ];
-  const obj2 = { style: tmp3.sparkles, source: tmp10(8626) };
-  items1[1] = closure_4(tmp10(5458), obj2);
+  const obj2 = { style: tmp3.sparkles, source: tmp10(8648) };
+  items1[1] = closure_4(tmp10(5461), obj2);
   obj[1] = items1;
   return closure_5(View, obj);
 }

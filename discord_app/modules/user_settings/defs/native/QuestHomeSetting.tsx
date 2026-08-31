@@ -20,8 +20,8 @@ obj = {
   screen: obj,
   usePreNavigationAction() {
     return () => {
-      let obj = callback(7414);
-      obj = { fromContent: callback(5357).QuestContent.USER_SETTINGS };
+      let obj = callback(7435);
+      obj = { fromContent: callback(5360).QuestContent.USER_SETTINGS };
       const result = obj.setQuestHomeUtmContext(obj);
       return true;
     };

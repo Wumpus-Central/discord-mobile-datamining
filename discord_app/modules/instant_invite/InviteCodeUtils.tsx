@@ -1,6 +1,6 @@
 // discord_app/modules/instant_invite/InviteCodeUtils.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import parseDefault from "../../../_runtime/01484_parse.js";
+import parseDefault from "../../../_runtime/01483_parse.js";
 import getFirstQueryStringValue from "../../utils/QueryStringUtils.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 
@@ -63,8 +63,8 @@ export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlP
       obj[2] = tmp12;
       let tmp10Result;
       if (null != tmp12) {
-        tmp10Result = tmp10(tmp6(4432).getFirstQueryStringValue(parsed[message]));
-        const tmp6Result = tmp6(4432);
+        tmp10Result = tmp10(tmp6(4434).getFirstQueryStringValue(parsed[message]));
+        const tmp6Result = tmp6(4434);
       }
       obj[3] = tmp10Result;
       return generateInviteKeyFromExtraData(obj);
@@ -100,7 +100,7 @@ export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(
     obj[2] = tmp4;
     let tmp5;
     if (null != tmp4) {
-      const firstQueryStringValue2 = tmp12(4432).getFirstQueryStringValue(parsed[message]);
+      const firstQueryStringValue2 = tmp12(4434).getFirstQueryStringValue(parsed[message]);
       let tmp8;
       if (typeof firstQueryStringValue2 === "string") {
         tmp9Result = tmp9(11);
@@ -109,7 +109,7 @@ export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(
         }
       }
       tmp5 = tmp8;
-      const tmp12Result = tmp12(4432);
+      const tmp12Result = tmp12(4434);
     }
     obj[3] = tmp5;
     return obj;

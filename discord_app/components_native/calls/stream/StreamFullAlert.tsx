@@ -4,7 +4,7 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import componentDidMountDefault from "../../common/Alert.tsx";
 import mapped from "../../../modules/errors/av_errors/AVError.tsx";
-import registerAssetDefault from "../../../../_runtime/17371_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/17404_registerAsset.js";
 import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 

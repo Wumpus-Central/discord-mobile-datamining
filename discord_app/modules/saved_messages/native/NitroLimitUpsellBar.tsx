@@ -4,8 +4,8 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
-import _modDef8910 from "../../premium/components/native/NitroUpsellButton.tsx";
-import registerAssetDefault from "../../../../_runtime/09106_registerAsset.js";
+import _modDef8933 from "../../premium/components/native/NitroUpsellButton.tsx";
+import registerAssetDefault from "../../../../_runtime/09129_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -46,9 +46,9 @@ export default function NitroLimitUpsellBar(isAtLimit) {
   obj1[3] = items1;
   items[1] = closure_6(Text.Text, obj1);
   if (isAtLimit) {
-    let Button = _modDef8910;
+    let Button = _modDef8933;
   } else {
-    Button = tmp12(4893).Button;
+    Button = tmp12(4896).Button;
   }
   const obj3 = { size: "sm", text: null, onPress: null, loading: null };
   const intl2 = tmp12(1236).intl;

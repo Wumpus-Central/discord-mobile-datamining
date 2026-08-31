@@ -41,11 +41,11 @@ function ImageItem(index) {
       };
       obj.openMediaModal(obj);
     }, items),
-    children: <closure_7 {...obj} />
+    children: <closure_6 {...obj} />
   };
   items1 = [tmp.mediaItem, { width, height }];
   obj = { source: { uri: url }, style: tmp.mediaImage };
-  return <closure_8 source={{ uri: url }} style={tmp.mediaImage} />;
+  return <closure_7 source={{ uri: url }} style={tmp.mediaImage} />;
 }
 function TrailerItem(active) {
   active = active.active;
@@ -67,9 +67,9 @@ function TrailerItem(active) {
     closure_7.current = current;
   }, []);
   let obj = active(sources[10]);
-  ref1 = onScrollToIndex.useRef(obj.createVideoControls(ref1));
+  ref1 = onScrollToIndex.useRef(obj.createVideoControls(c8));
   let current = ref1.current;
-  const subscribe = current.useSubscribe(callback, ref1, ref1);
+  const subscribe = current.useSubscribe(callback, c8, c8);
   const items = [active];
   const effect = onScrollToIndex.useEffect(() => {
     if (obj.isAndroid()) {
@@ -108,17 +108,17 @@ function TrailerItem(active) {
   };
   items2 = [tmp.mediaItem, { width, height }];
   obj = { style: tmp.mediaVideo, source: { uri: url }, poster: posterUrl, paused: !active, muted: true, resizeMode: "cover", pauseWhileAppInactive: true, controls: ref1.current };
-  const tmp10 = c8;
+  const tmp10 = closure_7;
   const tmp3 = trackAction(onScrollToIndex.useState(0), 2);
   let combined;
   if (obj4.isAndroid()) {
     const _HermesInternal = HermesInternal;
     combined = "render-" + tmp4;
   }
-  obj[3] = jsx(active(sources[10]).VideoComponent, { style: tmp.mediaVideo, source: { uri: url }, poster: posterUrl, paused: !active, muted: true, resizeMode: "cover", pauseWhileAppInactive: true, controls: ref1.current }, combined);
-  return <tmp10 style={tmp.mediaVideo} source={{ uri: url }} poster={posterUrl} paused={!active} muted resizeMode="cover" pauseWhileAppInactive controls={ref1.current} />;
+  obj[3] = ref1(active(sources[10]).VideoComponent, obj, combined);
+  return ref1(tmp10, obj);
 }
-({ View: c5, ScrollView: closure_6, Image: error, Pressable: closure_8 } = get_ActivityIndicator);
+({ View: c5, Image: closure_6, Pressable: error } = get_ActivityIndicator);
 createCacheKey = { container: null, scrollView: null, scrollViewContent: null, mediaItem: null, mediaImage: null, mediaVideo: null };
 createCacheKey = { gap: ThemesDefault.space.PX_12, marginHorizontal: -ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
@@ -130,7 +130,7 @@ createCacheKey[3] = { maxWidth: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_W
 createCacheKey[4] = { width: "100%", height: "100%", resizeMode: "cover" };
 const obj2 = { maxWidth: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_WIDTH, maxHeight: require("MEDIA_ITEM_MAX_WIDTH").MEDIA_ITEM_MAX_HEIGHT, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
 createCacheKey[5] = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BLACK };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
+let closure_10 = createCacheKey.createStyles(createCacheKey);
 const obj3 = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BLACK };
 const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileMedia.tsx");
 
@@ -152,14 +152,15 @@ export default function GameProfileMedia(game) {
   closure_14 = undefined;
   let memo3;
   closure_16 = undefined;
-  let tmp = memo1();
+  let tmp = memo();
   let obj = game(obscured[12]);
   obscured = obj.useObscuredSurface().obscured;
-  let tmp2 = first(React.useState(0), 2);
-  first = tmp2[0];
-  React = tmp2[1];
+  let tmp3 = first(React.useState(0), 2);
+  first = tmp3[0];
+  React = tmp3[1];
   [c5, c6] = first(React.useState(0), 2);
-  let tmp4 = first(React.useState(0), 2);
+  let tmp2 = obscured;
+  const tmp5 = first(React.useState(0), 2);
   [c7, c8] = first(React.useState(false), 2);
   ref = React.useRef(null);
   memo = React.useMemo(() => game(obscured[7]).getCarouselPreviewPixelSize(), []);
@@ -225,17 +226,17 @@ export default function GameProfileMedia(game) {
     }
     _undefined(arg0);
   }, items6);
-  let tmp12 = null;
+  let tmp13 = null;
   if (0 !== memo1.length) {
     obj = { style: null, onLayout: null, children: null };
     obj[0] = tmp.container;
     obj[1] = callback;
-    obj = { ref: null, horizontal: true, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, decelerationRate: "fast", snapToOffsets: null, snapToStart: false, snapToEnd: false, onMomentumScrollEnd: null, children: null };
+    obj = { ref: null, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, decelerationRate: "fast", snapToOffsets: null, snapToStart: false, snapToEnd: false, onMomentumScrollEnd: null, children: null };
     obj[0] = ref;
-    ({ scrollView: obj3[3], scrollViewContent: obj3[4] } = tmp);
-    obj[6] = memo3;
-    obj[9] = callback1;
-    obj[10] = memo1.map((type) => {
+    ({ scrollView: obj3[2], scrollViewContent: obj3[3] } = tmp);
+    obj[5] = memo3;
+    obj[8] = callback1;
+    obj[9] = memo1.map((type) => {
       if ("trailer" === type.type) {
         let obj = { url: null, posterUrl: null, active: null, index: null, sources: null, trackAction: null, width: null, height: null, onScrollToIndex: null, setMediaModalOpen: null };
         ({ originalUrl: obj[0], previewUrl: obj[1] } = type);
@@ -255,9 +256,9 @@ export default function GameProfileMedia(game) {
         obj[8] = closure_16;
         obj[9] = c8;
         const _HermesInternal = HermesInternal;
-        let tmpResult = memo(closure_13, obj, "" + type.originalUrl + "-" + arg1);
-        const tmp = memo;
-        const tmp2 = closure_13;
+        let tmpResult = ref(memo2, obj, "" + type.originalUrl + "-" + arg1);
+        const tmp = ref;
+        const tmp2 = memo2;
       } else {
         obj = { url: null, index: null, sources: null, trackAction: null, width: null, height: null, onScrollToIndex: null, setMediaModalOpen: null };
         obj[0] = type.previewUrl;
@@ -269,12 +270,13 @@ export default function GameProfileMedia(game) {
         obj[6] = closure_16;
         obj[7] = c8;
         const _HermesInternal2 = HermesInternal;
-        tmpResult = memo(memo2, obj, "" + type.originalUrl + "-" + arg1);
+        tmpResult = ref(memo1, obj, "" + type.originalUrl + "-" + arg1);
       }
       return tmpResult;
     });
-    obj[2] = memo(c6, obj);
-    tmp12 = memo(c5, obj);
+    obj[2] = ref(trackAction(tmp2[13]), obj);
+    tmp13 = ref(c5, obj);
+    const tmp17 = trackAction(tmp2[13]);
   }
-  return tmp12;
+  return tmp13;
 };

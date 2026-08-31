@@ -140,8 +140,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         let str4 = "quest";
         if (AdCreativeType.AdCreativeType.QUEST !== type) {
           str4 = "bounty";
-          if (tmp8(7393).AdCreativeType.BOUNTY !== type) {
-            if (tmp8(7393).AdCreativeType.QUEST_HOME_HERO === type) {
+          if (tmp8(7414).AdCreativeType.BOUNTY !== type) {
+            if (tmp8(7414).AdCreativeType.QUEST_HOME_HERO === type) {
               str4 = "quest_home_hero";
             }
           }
@@ -158,8 +158,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         let str7 = "quest";
         if (AdCreativeType.AdCreativeType.QUEST !== type2) {
           str7 = "bounty";
-          if (tmp10(7393).AdCreativeType.BOUNTY !== type2) {
-            if (tmp10(7393).AdCreativeType.QUEST_HOME_HERO === type2) {
+          if (tmp10(7414).AdCreativeType.BOUNTY !== type2) {
+            if (tmp10(7414).AdCreativeType.QUEST_HOME_HERO === type2) {
               str7 = "quest_home_hero";
             }
           }

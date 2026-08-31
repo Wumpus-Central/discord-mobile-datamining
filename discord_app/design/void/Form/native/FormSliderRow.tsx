@@ -1,7 +1,7 @@
 // discord_app/design/void/Form/native/FormSliderRow.tsx
-import _modDef5557 from "FormRow.tsx";
+import _modDef5560 from "FormRow.tsx";
 import context2 from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
-import _getRequireWildcardCacheDefault from "../../../../../_runtime/08327__getRequireWildcardCache.js";
+import _modDef8349 from "../../../../../_runtime/metro/08349__.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -23,28 +23,28 @@ export default function FormSliderRow(arg0) {
     obj[0] = tmp5.labels;
     obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj1[2] = label;
-    const items = [callback(tmp2(4442).Text, obj1), trailing];
+    const items = [callback(tmp2(4444).Text, obj1), trailing];
     obj[1] = items;
     const items1 = [tmp6(View, obj), ];
     const obj2 = {};
     const merged1 = Object.assign(merged);
     obj2.style = tmp5.slider;
-    items1[1] = callback(_getRequireWildcardCacheDefault, obj2);
+    items1[1] = callback(_modDef8349, obj2);
     obj[0] = items1;
-    let tmp6Result = tmp6(tmp2(5566).Card, obj);
-    const tmp18 = _getRequireWildcardCacheDefault;
+    let tmp6Result = tmp6(tmp2(5569).Card, obj);
+    const tmp18 = _modDef8349;
   } else {
     obj = { children: null };
     const obj3 = { label: null, trailing: null };
     obj3[0] = label;
     obj3[1] = trailing;
-    const items2 = [callback(_modDef5557, obj3), ];
+    const items2 = [callback(_modDef5560, obj3), ];
     const obj4 = {};
     const merged2 = Object.assign(merged);
-    items2[1] = callback(_getRequireWildcardCacheDefault, obj4);
+    items2[1] = callback(_modDef8349, obj4);
     obj[0] = items2;
     tmp6Result = tmp6(closure_7, obj);
-    const tmp10 = _getRequireWildcardCacheDefault;
+    const tmp10 = _modDef8349;
   }
   return tmp6Result;
 };

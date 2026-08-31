@@ -27,7 +27,7 @@ export const SafeAreaPaddingView = function SafeAreaPaddingView(top) {
   let ref;
   dependencyMap = undefined;
   let React;
-  const rect = ref(1629)();
+  const rect = ref(1628)();
   obj1 = React;
   ref = React.useRef(null);
   if (style == null) {
@@ -63,7 +63,7 @@ export const SafeAreaPaddingView = function SafeAreaPaddingView(top) {
   }
   items[4] = tmp12;
   dependencyMap = items;
-  const tmp13 = ref(5519)(ref);
+  const tmp13 = ref(5522)(ref);
   const tmp14 = ref(659)(items, tmp13);
   React = tmp14;
   if (tmp14) {

@@ -7,20 +7,24 @@ require = arg1;
 fromServerDefault;
 let prototype;
 prototype = function CollectiblesCategoryRecord(products) {
-  const tmp3 = new prototype(products, tmp2, new.target, tmp, new.target);
+  const tmp4 = new prototype(products, tmp3, tmp2, tmp);
   // ThrowIfThisInitialized (0x7c)
-  ({ products: tmp3.products, heroRanking: tmp3.heroRanking, unpublishedAt: tmp3.unpublishedAt } = products);
-  let isArray = Array.isArray(products.products);
-  if (isArray) {
-    isArray = products.products.length > 0;
+  ({ products: tmp4.products, heroRanking: tmp4.heroRanking, unpublishedAt: tmp4.unpublishedAt, isOrbsExclusive } = products);
+  if (isOrbsExclusive == null) {
+    const _Array = Array;
+    let isArray = Array.isArray(products.products);
+    if (isArray) {
+      isArray = products.products.length > 0;
+    }
+    if (isArray) {
+      products = products.products;
+      isArray = undefined === products.find((product) => !callback(table[3]).isOrbsExclusiveProduct(product));
+    }
+    isOrbsExclusive = isArray;
   }
-  if (isArray) {
-    products = products.products;
-    isArray = undefined === products.find((product) => !callback(table[3]).isOrbsExclusiveProduct(product));
-  }
-  tmp3.isOrbsExclusive = isArray;
-  ({ heroBannerUrl: tmp3.heroBannerUrl, heroBannerAnimatedUrl: tmp3.heroBannerAnimatedUrl, heroRiveUrl: tmp3.heroRiveUrl, heroLogoUrl: tmp3.heroLogoUrl, catalogBannerUrl: tmp3.catalogBannerUrl, catalogBannerAnimatedUrl: tmp3.catalogBannerAnimatedUrl, catalogBannerRiveUrl: tmp3.catalogBannerRiveUrl, featuredBlockUrl: tmp3.featuredBlockUrl, logoUrl: tmp3.logoUrl, pdpBgUrl: tmp3.pdpBgUrl, mobileBannerUrl: tmp3.mobileBannerUrl, mobileBgUrl: tmp3.mobileBgUrl, heroLogoDisplayConfig: tmp3.heroLogoDisplayConfig, heroBannerDisplayConfig: tmp3.heroBannerDisplayConfig } = products);
-  return tmp3;
+  tmp4.isOrbsExclusive = isOrbsExclusive;
+  ({ heroBannerUrl: tmp4.heroBannerUrl, heroBannerAnimatedUrl: tmp4.heroBannerAnimatedUrl, heroRiveUrl: tmp4.heroRiveUrl, heroLogoUrl: tmp4.heroLogoUrl, catalogBannerUrl: tmp4.catalogBannerUrl, catalogBannerAnimatedUrl: tmp4.catalogBannerAnimatedUrl, catalogBannerRiveUrl: tmp4.catalogBannerRiveUrl, featuredBlockUrl: tmp4.featuredBlockUrl, logoUrl: tmp4.logoUrl, pdpBgUrl: tmp4.pdpBgUrl, mobileBannerUrl: tmp4.mobileBannerUrl, mobileBgUrl: tmp4.mobileBgUrl, heroLogoDisplayConfig: tmp4.heroLogoDisplayConfig, heroBannerDisplayConfig: tmp4.heroBannerDisplayConfig } = products);
+  return tmp4;
 }.prototype;
 class prototype extends tmp2 {
 }
@@ -70,6 +74,7 @@ prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionR
     name: id.name,
     summary: id.description,
     unpublishedAt: id.unpublishedAt,
+    isOrbsExclusive: id.isOrbsExclusive,
     styles: id.styles,
     products: products.reduce((arr, skus) => {
       const result = closure_2.fromStorefrontProductRecord(skus);

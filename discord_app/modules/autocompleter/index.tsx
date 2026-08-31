@@ -3,7 +3,7 @@ import set from "../../../_runtime/00002_set.js";
 import sortByMatchScoreDefault from "sortByMatchScore.tsx";
 import getAutocompleterBoosterMapDefault from "Autocompleter.tsx";
 import HeaderRecord2 from "createAutocompleterResult.tsx";
-import _modDef9872 from "findNextSelectedResult.tsx";
+import _modDef9895 from "findNextSelectedResult.tsx";
 import HeaderRecord from "AutocompleterConstants.tsx";
 
 const result = set.fileFinishedImporting("modules/autocompleter/index.tsx");
@@ -15,5 +15,5 @@ for (const key10022 in _module1) {
 
 export default getAutocompleterBoosterMapDefault;
 export const createHeaderResult = HeaderRecord2.createHeaderResult;
-export const findNextSelectedResult = _modDef9872;
+export const findNextSelectedResult = _modDef9895;
 export const sortByMatchScore = sortByMatchScoreDefault;

@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import closure_3 from "../../ThemeStore.tsx";
+import closure_2 from "../../ThemeStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { ThemeTypes } from "../../appearance/native/SettingsAppearanceThemePickerScreen.tsx";
 
@@ -13,13 +13,8 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   usePredicate: function useIsSingleThemePickerVisible() {
-    const tmp = useIsMobileVisualRefreshExperimentEnabledDefault("AppearanceThemePickerSetting");
-    const items = [closure_3];
-    let tmp2 = !tmp;
-    if (tmp) {
-      tmp2 = !obj.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
-    }
-    return tmp2;
+    const items = [closure_2];
+    return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   useTrailing: require("useAppearanceSettingTrailing").useAppearanceSettingTrailing,
   screen: createToggle

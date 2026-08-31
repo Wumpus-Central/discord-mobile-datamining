@@ -4,7 +4,7 @@ import sum from "../../../../discord_common/js/shared/Constants.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import fromServer from "../records/NameplateRecord.tsx";
 import NAMEPLATE_PALETTES from "constants.tsx";
-import decodeImageDefault from "../../../../_runtime/01954_decodeImage.js";
+import decodeImageDefault from "../../../../_runtime/01953_decodeImage.js";
 
 const isNameplateRecord = fromServer.isNameplateRecord;
 const ThemeTypes = sum.ThemeTypes;
@@ -17,7 +17,7 @@ export const getNameplateData = function getNameplateData(nameplate) {
     ({ skuId: obj[0], asset: obj[1], label: obj[2] } = nameplate);
     let INVALID_NAMEPLATE_PALETTE = NAMEPLATE_PALETTES.NAMEPLATE_PALETTES[nameplate.palette];
     if (INVALID_NAMEPLATE_PALETTE == null) {
-      INVALID_NAMEPLATE_PALETTE = tmp2(1952).INVALID_NAMEPLATE_PALETTE;
+      INVALID_NAMEPLATE_PALETTE = tmp2(1951).INVALID_NAMEPLATE_PALETTE;
     }
     obj[3] = INVALID_NAMEPLATE_PALETTE;
     tmp = obj;
@@ -38,7 +38,7 @@ export const getNameplateDataFromProductRecord = function getNameplateDataFromPr
         ({ skuId: obj[0], asset: obj[1], label: obj[2], palette } = first);
         let INVALID_NAMEPLATE_PALETTE = NAMEPLATE_PALETTES.NAMEPLATE_PALETTES[palette];
         if (INVALID_NAMEPLATE_PALETTE == null) {
-          INVALID_NAMEPLATE_PALETTE = tmp2(1952).INVALID_NAMEPLATE_PALETTE;
+          INVALID_NAMEPLATE_PALETTE = tmp2(1951).INVALID_NAMEPLATE_PALETTE;
         }
         obj[3] = INVALID_NAMEPLATE_PALETTE;
         tmp = obj;

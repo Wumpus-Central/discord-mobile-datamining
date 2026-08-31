@@ -36,7 +36,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -63,7 +63,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
               let guild3;
               c3 = 1;
               guild = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -100,7 +100,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
                     if (null != set) {
                       if (!set.has(guild3.PREVIEW_ENABLED)) {
                         if (null != lib) {
-                          let obj4 = lib(8595);
+                          let obj4 = lib(8617);
                           let obj2 = { inviteKey: null, context: null, skipOnboarding: true };
                           obj2[0] = lib.code;
                           obj2[1] = { location: "game_shop" };
@@ -115,12 +115,12 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
                     c3 = 2;
                     guild = 1;
                     obj4 = { value: null, done: false };
-                    obj4[0] = id(6150).startLurking(id, {}, { shouldNavigate: false });
+                    obj4[0] = id(6153).startLurking(id, {}, { shouldNavigate: false });
                     return obj4;
                   }
                 } else {
                   guild = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               }
             } else if (2 === tmp5) {

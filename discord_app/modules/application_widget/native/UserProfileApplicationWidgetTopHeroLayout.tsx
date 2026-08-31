@@ -1,7 +1,7 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/04905_LinearGradient.js";
-import _isNativeReflectConstructDefault from "../../../../_runtime/05500__isNativeReflectConstruct.js";
+import LinearGradientDefault from "../../../../_runtime/04908_LinearGradient.js";
+import _isNativeReflectConstructDefault from "../../../../_runtime/05503__isNativeReflectConstruct.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -64,7 +64,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   if (tmp15Result) {
     obj3 = { style: null };
     obj3[0] = tmp.heroImageSkeleton;
-    tmp15Result = tmp15(tmp4(12689).ImageSkeleton, obj3);
+    tmp15Result = tmp15(tmp4(12724).ImageSkeleton, obj3);
   }
   obj2[1] = tmp15Result;
   items3[1] = callback2(closure_6, obj2);

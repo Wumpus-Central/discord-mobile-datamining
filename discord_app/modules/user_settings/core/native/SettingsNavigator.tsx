@@ -9,7 +9,7 @@ import closure_6 from "../../LocaleStore.tsx";
 import closure_7 from "../../UserSettingSearchStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/07769_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/07790_createNativeStackNavigator.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;

@@ -113,9 +113,9 @@ export default function UploadPreviewActionSheet(onAdd) {
       }
     }).catch((code) => {
       if ("E_PICKER_CANCELLED" !== code.code) {
-        let obj = callback2(4163);
+        let obj = callback2(4164);
         obj = { key: "CROP_ERROR", IconComponent: null, content: null };
-        obj[1] = callback(7655).CircleErrorIcon;
+        obj[1] = callback(7676).CircleErrorIcon;
         obj[2] = code.message;
         obj.open(obj);
       }

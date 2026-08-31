@@ -35,7 +35,7 @@ export default function SoundboardButton(arg0) {
     obj[0] = handlePress;
     obj[1] = disabled;
     obj[2] = props;
-    let tmpResult = tmp(16696);
+    let tmpResult = tmp(16729);
     const intl = tmp4(1236).intl;
     obj[3] = intl.string(tmp4(1236).t["6EJvHt"]);
     obj = { style: null };
@@ -44,13 +44,13 @@ export default function SoundboardButton(arg0) {
     obj1[0] = voicePanelButtonStyles.iconBg.backgroundColor;
     items[1] = obj1;
     obj[0] = items;
-    const items1 = [callback(tmp(5971), obj), ];
+    const items1 = [callback(tmp(5974), obj), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp3.iconContainer;
-    tmpResult = tmp(5971);
+    tmpResult = tmp(5974);
     const obj3 = { color: null };
     obj3[0] = color;
-    obj2[1] = callback(tmp4(12026).SoundboardIcon, obj3);
+    obj2[1] = callback(tmp4(12059).SoundboardIcon, obj3);
     items1[1] = callback(tmpResult, obj2);
     obj[4] = items1;
     tmp8 = callback2(tmpResult, obj);

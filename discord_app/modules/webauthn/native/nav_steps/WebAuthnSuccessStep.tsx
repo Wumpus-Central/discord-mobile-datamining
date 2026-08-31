@@ -7,7 +7,7 @@ const require = arg1;
 let result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnSuccessStep.tsx");
 
 export default function WebAuthnSuccessStep() {
-  let obj = navigation(1500);
+  let obj = navigation(1499);
   navigation = obj.useNavigation();
   const items = [navigation];
   const layoutEffect = React.useLayoutEffect(() => {

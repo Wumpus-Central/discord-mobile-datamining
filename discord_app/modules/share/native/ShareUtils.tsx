@@ -1,6 +1,6 @@
 // discord_app/modules/share/native/ShareUtils.tsx
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/10829_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/10853_registerAsset.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { DraftType } from "../../../stores/DraftStore.tsx";
 import { MessageSendLocation } from "../../messages/MessageConstants.tsx";
@@ -24,7 +24,7 @@ function _sendShareMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -51,7 +51,7 @@ function _sendShareMessage() {
               let future;
               c4 = 1;
               constants = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp4) {
             if (arg0 === 1) {
@@ -72,13 +72,13 @@ function _sendShareMessage() {
               if (dependencyMap == null) {
                 lib2 = "";
               }
-              constants = lib2(7374).parse(lib2, lib2);
+              constants = lib2(7395).parse(lib2, lib2);
               if (c4.length > 0) {
-                let obj2 = lib2(8109);
+                let obj2 = lib2(8131);
                 obj2.clearAll(id, c4.ChannelMessage);
               }
-              future = new lib(8095).Future();
-              let obj3 = lib2(7148);
+              future = new lib(8117).Future();
+              let obj3 = lib2(7169);
               obj2 = { location: null, doNotNotifyOnError: true, attachmentsToUpload: null, onAttachmentUploadError: null };
               obj2[0] = constants.SHARE_MODAL;
               obj2[2] = c4;

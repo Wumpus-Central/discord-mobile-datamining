@@ -8,6 +8,7 @@ import PressableCard from "../../../../design/components/Card/native/Card.native
 import RedesignBottomSheetTitleHeaderBase from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetRowIcon from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import metadataDefault from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import PromoSheet from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -41,14 +42,14 @@ function DemoActionSheet() {
     obj = { onPress: null, label: null };
     obj[0] = NOOP;
     obj[1] = tmp12;
-    tmp14Result = tmp14(tmp15(9627).ActionSheetHeaderPressableText, obj);
+    tmp14Result = tmp14(tmp15(9649).ActionSheetHeaderPressableText, obj);
   }
   obj[2] = tmp14Result;
   tmp14Result = tmp2;
   if (tmp2) {
     obj = { onPress: null };
     obj[0] = NOOP;
-    tmp14Result = tmp14(tmp15(5955).ActionSheetCloseButton, obj);
+    tmp14Result = tmp14(tmp15(5958).ActionSheetCloseButton, obj);
   }
   obj1 = { header: closure_7(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), children: null };
   obj[3] = tmp14Result;
@@ -100,22 +101,13 @@ function DemoPromoSheet() {
   };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.BddRzS);
-  const tmp5 = callback2(Button.Button, obj);
-  if (tmp3) {
-    obj = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
-    obj = { type: "image", src: null, aspectRatio: "16/9" };
-    obj1 = { uri: null };
-    obj1[0] = tmp(6337);
-    obj[1] = obj1;
-    obj[0] = obj;
-    obj[4] = tmp5;
-    let obj2 = obj;
-  } else {
-    obj2 = { illustration: null, title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
-    obj2[0] = tmp4(tmp(13357), {});
-    obj2[3] = tmp5;
-  }
-  return callback2(PromoSheet.PromoSheet, obj2);
+  obj = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
+  obj = { type: "image", src: null, aspectRatio: "16/9" };
+  const tmp = callback2(Button.Button, obj);
+  obj[1] = { uri: metadataDefault };
+  obj[0] = obj;
+  obj[4] = tmp;
+  return callback2(PromoSheet.PromoSheet, obj);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { padding: 16, alignItems: "center" } });

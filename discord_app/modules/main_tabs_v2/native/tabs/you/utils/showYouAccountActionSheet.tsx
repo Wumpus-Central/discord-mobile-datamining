@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/utils/showYouAccountActionSheet.tsx
 import set from "../../../../../../../_runtime/00002_set.js";
-import asyncRequireImpl from "../../../../../../../_runtime/02010_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../../_runtime/02009_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import YOU_SCREEN_ID from "../YouConstants.tsx";
 
@@ -16,5 +16,5 @@ export const showYouAccountActionSheet = function showYouAccountActionSheet() {
   if (arg1 === undefined) {
     flag2 = true;
   }
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(15893, dependencyMap.paths), closure_3, { statusOnly: flag, disableHapticOnOpen: flag2 });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(15927, dependencyMap.paths), closure_3, { statusOnly: flag, disableHapticOnOpen: flag2 });
 };

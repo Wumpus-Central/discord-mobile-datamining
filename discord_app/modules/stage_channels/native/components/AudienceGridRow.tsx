@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/native/components/AudienceGridRow.tsx
-import _modDef10089 from "BlankAudienceTile.tsx";
+import _modDef10112 from "BlankAudienceTile.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { MAX_AUDIENCE_ROW_LIMIT } from "../../StageChannelsConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";

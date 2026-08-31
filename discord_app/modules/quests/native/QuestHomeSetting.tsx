@@ -85,7 +85,7 @@ export default function QuestHomeSetting() {
   }, { equalityFn: navigation(closure_1_2[8]).shallow, fireImmediately: true }), []);
   navigation = undefined;
   importDefault = undefined;
-  let obj = navigation(1500);
+  let obj = navigation(1499);
   navigation = obj.useNavigation();
   const tmp10 = callback(React.useState(false), 2);
   importDefault = tmp10[1];

@@ -12,9 +12,9 @@ export const MobileVisualRefreshExperiment = tmp2;
 export const useMobileVisualRefreshConfig = function useMobileVisualRefreshConfig(location) {
   return closure_0.useConfig({ location: location.location });
 };
-export const isMobileVisualRefreshEnabled = function isMobileVisualRefreshEnabled(ClientThemesBackgroundStore) {
-  return closure_0.getConfig({ location: ClientThemesBackgroundStore }).enabled;
+export const isMobileVisualRefreshEnabled = function isMobileVisualRefreshEnabled(location) {
+  return closure_0.getConfig({ location }).enabled;
 };
-export const resolveRefreshToken = function resolveRefreshToken(CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND, chatInputFloating) {
-  return CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND.resolve({ enabledExperiments: chatInputFloating ? ["mobile-visual-refresh"] : [] });
+export const resolveRefreshToken = function resolveRefreshToken(CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND) {
+  return CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND.resolve({ enabledExperiments: ["mobile-visual-refresh"] });
 };

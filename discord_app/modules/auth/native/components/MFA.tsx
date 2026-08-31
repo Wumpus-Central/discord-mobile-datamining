@@ -18,9 +18,9 @@ export default function ConnectedMFA() {
   }
   ({ inContainer, isMultiAccount } = obj);
   let navigation;
-  navigation = isMultiAccount(1500).useNavigation();
+  navigation = isMultiAccount(1499).useNavigation();
   if (inContainer) {
-    inContainer = navigation(7664)();
+    inContainer = navigation(7685)();
   }
   let tmpResult = tmp(589);
   const items = [closure_4];
@@ -57,7 +57,7 @@ export default function ConnectedMFA() {
       tmp13 = obj;
     }
     obj[7] = tmp13;
-    return jsx(tmp(15199).MFAModal, obj);
+    return jsx(tmp(15232).MFAModal, obj);
   } else {
     tmpResult = tmp(501);
     let space = tmp4(712).space;

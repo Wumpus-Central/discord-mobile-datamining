@@ -48,7 +48,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   const obj2 = initialize;
   gameRelationshipsByType = require("../../game_relationships/GameRelationshipStoreHooks.tsx").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = lib(9877).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = lib(9900).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -60,7 +60,7 @@ export default function UserProfileYourFriendsCard(arg0) {
     const takeResult = found.take(5);
     const tmp3 = closure_1_8;
     const tmp4 = lib;
-    let valueResult = mapped.filter(lib(1370).isNotNullish).value();
+    let valueResult = mapped.filter(lib(1471).isNotNullish).value();
     if (valueResult.length >= 5) {
       dependencyMap(valueResult);
     } else {
@@ -70,11 +70,11 @@ export default function UserProfileYourFriendsCard(arg0) {
       const uniqResult = mapped1.uniq();
       const mapped2 = mapped1.uniq().take(5 - valueResult.length).map(tmp3.getUser);
       const takeResult1 = mapped1.uniq().take(5 - valueResult.length);
-      valueResult = mapped2.filter(tmp4(1370).isNotNullish).value();
+      valueResult = mapped2.filter(tmp4(1471).isNotNullish).value();
       const items = [];
       HermesBuiltin.arraySpread(valueResult, HermesBuiltin.arraySpread(valueResult, 0));
       dependencyMap(items);
-      const iter2 = mapped2.filter(tmp4(1370).isNotNullish);
+      const iter2 = mapped2.filter(tmp4(1471).isNotNullish);
     }
   }, items2);
   const items3 = [first, , ];
@@ -87,7 +87,7 @@ export default function UserProfileYourFriendsCard(arg0) {
         let obj = { style: { transform: items }, children: null };
         obj = { translateX: 4 * (closure_1.length - 1 - arg1) };
         items = [obj];
-        obj = { user: id, guildId: "r", size: "r", cutout: "quests" };
+        obj = { user: id, guildId: "r", size: "Object", cutout: null };
         obj[2] = closure_1_0(closure_1_2[8]).AvatarSizes.XSMALL;
         let tmp3;
         if (arg1 < closure_1.length - 1) {

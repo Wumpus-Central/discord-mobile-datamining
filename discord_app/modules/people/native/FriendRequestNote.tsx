@@ -25,11 +25,11 @@ export default function FriendRequestNote(styles) {
   let note;
   let React;
   const tmp = callback();
-  const HideFriendRequestNotes = require(analyticsLocation[8]).HideFriendRequestNotes;
-  const setting = HideFriendRequestNotes.useSetting();
-  let obj = require(analyticsLocation[9]);
+  let obj = require(analyticsLocation[8]);
+  const hideFriendRequestNotes = obj.useHideFriendRequestNotes();
+  obj1 = require(analyticsLocation[9]);
   const items = [closure_6];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ note: closure_1_6.getNote(closure_0), type: closure_1_6.getRelationshipType(closure_0) }));
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ note: closure_1_6.getNote(closure_0), type: closure_1_6.getRelationshipType(closure_0) }));
   note = stateFromStoresObject.note;
   [tmp7, c3] = note(React.useState(stateFromStoresObject.type === RelationshipTypes.PENDING_OUTGOING), 2);
   const items1 = [analyticsLocation, note];
@@ -48,7 +48,7 @@ export default function FriendRequestNote(styles) {
     const result = obj.trackViewFriendRequestNote(obj);
   }, items1);
   let tmp13Result = null;
-  if (!setting) {
+  if (!hideFriendRequestNotes) {
     tmp13Result = null;
     if (null != note) {
       tmp13Result = null;

@@ -2,9 +2,9 @@
 import keys from "../../../../ConstantsIOS.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04905_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04908_LinearGradient.js";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
-import PaginationDefault from "../../../../../_runtime/10470_Pagination.js";
+import PaginationDefault from "../../../../../_runtime/10494_Pagination.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -52,7 +52,7 @@ function PremiumFeaturesCarousel(arg0) {
   let mapped;
   let React;
   const tmp = callback4();
-  let obj = width(4880);
+  let obj = width(4883);
   const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
   const tmp5 = mapped(React.useState(0), 2);
   const first = tmp5[0];
@@ -66,7 +66,7 @@ function PremiumFeaturesCarousel(arg0) {
     let obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = width(1236).intl;
     obj[0] = intl.string(width(1236).t["3cyhe3"]);
-    obj[1] = lib(12955);
+    obj[1] = lib(12989);
     obj[2] = lib.emojiImage;
     const items = [, ];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = closure_1_9);
@@ -75,7 +75,7 @@ function PremiumFeaturesCarousel(arg0) {
     obj = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = width(1236).intl;
     obj[0] = intl2.string(width(1236).t["8AhJqy"]);
-    obj[1] = lib(12956);
+    obj[1] = lib(12990);
     const items2 = [, ];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = closure_1_9);
     const set = new Set(items);
@@ -84,7 +84,7 @@ function PremiumFeaturesCarousel(arg0) {
     obj = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = width(1236).intl;
     obj[0] = intl3.string(width(1236).t["t/Mvdj"]);
-    obj[1] = lib(12959);
+    obj[1] = lib(12993);
     const items3 = [closure_1_9.TIER_2];
     const set1 = new Set(items2);
     obj[2] = new Set(items3);
@@ -92,7 +92,7 @@ function PremiumFeaturesCarousel(arg0) {
     obj1 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = width(1236).intl;
     obj1[0] = intl4.string(width(1236).t["n+DGY/"]);
-    obj1[1] = lib(12960);
+    obj1[1] = lib(12994);
     const items4 = [closure_1_9.TIER_2];
     const set2 = new Set(items3);
     obj1[2] = new Set(items4);
@@ -122,7 +122,7 @@ function PremiumFeaturesCarousel(arg0) {
   const callback = React.useCallback((nativeEvent) => {
     dependencyMap(Math.max(0, Math.min(mapped.length - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / c4))));
   }, items2);
-  if (!width(1625).isThumbstickScrollDevice) {
+  if (!width(1624).isThumbstickScrollDevice) {
     if (!isScreenReaderEnabled) {
       let tmp17 = callback2;
       obj = { style: null, data: null, renderItem: null, width: null, loop: false, onConfigurePanGesture: null, scrollAnimationDuration: 200, mode: "parallax", modeConfig: null, onSnapToItem: null };
@@ -178,11 +178,11 @@ export default function PremiumFeaturesCarouselSection(style) {
   dependencyMap = undefined;
   let callback;
   const tmp = callback4();
-  analyticsLocations = first(5918)().analyticsLocations;
+  analyticsLocations = first(5921)().analyticsLocations;
   const tmp2 = callback(React.useState(false), 2);
   first = tmp2[0];
   dependencyMap = tmp2[1];
-  let obj = analyticsLocations(1494);
+  let obj = analyticsLocations(1493);
   const tmp4 = callback(React.useState(obj.getWindowDimensions().width), 2);
   callback = tmp4[1];
   const items = [analyticsLocations, first];
@@ -206,7 +206,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   obj = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   const intl = analyticsLocations(1236).intl;
   obj[4] = intl.string(analyticsLocations(1236).t.RGadQR);
-  const items2 = [callback2(analyticsLocations(4442).Text, obj), callback2(PremiumFeaturesCarousel, { width: tmp4[0], onEndReached: callback })];
+  const items2 = [callback2(analyticsLocations(4444).Text, obj), callback2(PremiumFeaturesCarousel, { width: tmp4[0], onEndReached: callback })];
   obj[2] = items2;
   return callback3(closure_6, obj);
 };

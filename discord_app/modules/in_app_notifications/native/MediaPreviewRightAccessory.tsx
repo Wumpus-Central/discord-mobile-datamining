@@ -61,11 +61,11 @@ function ObscuredMediaOverlay(isSpoiler) {
   items[2] = tmp11;
   obj1 = { style: tmp.spoilerIconContainer, children: null };
   if (isObscured) {
-    let tmp14Result = tmp14(tmp2(4995).ImageWarningIcon, { size: "sm", color: "white" });
+    let tmp14Result = tmp14(tmp2(4998).ImageWarningIcon, { size: "sm", color: "white" });
   } else {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.spoilerPill;
-    obj2[1] = tmp14(tmp2(7690).EyeIcon, { size: "sm", color: "white" });
+    obj2[1] = tmp14(tmp2(7711).EyeIcon, { size: "sm", color: "white" });
     tmp14Result = tmp14(tmp15, obj2);
   }
   const obj3 = { children: null };
@@ -94,11 +94,11 @@ function SinglePreviewableMedia(arg0) {
     obj[1] = icon;
     return callback(View, obj);
   } else {
-    if (tmp2(10150).PreviewableMediaTypes.AUDIO !== type) {
-      if (tmp2(10150).PreviewableMediaTypes.FILE !== type) {
-        if (tmp2(10150).PreviewableMediaTypes.IMAGE !== type) {
-          if (tmp2(10150).PreviewableMediaTypes.VIDEO !== type) {
-            if (tmp2(10150).PreviewableMediaTypes.GIF === type) {
+    if (tmp2(10173).PreviewableMediaTypes.AUDIO !== type) {
+      if (tmp2(10173).PreviewableMediaTypes.FILE !== type) {
+        if (tmp2(10173).PreviewableMediaTypes.IMAGE !== type) {
+          if (tmp2(10173).PreviewableMediaTypes.VIDEO !== type) {
+            if (tmp2(10173).PreviewableMediaTypes.GIF === type) {
               const video = media.video;
               if (video != null) {
                 const url = video.url;
@@ -107,17 +107,17 @@ function SinglePreviewableMedia(arg0) {
               if (null == thumbnail) {
                 return null;
               } else {
-                let tmp2Result = tmp2(6103);
+                let tmp2Result = tmp2(6106);
                 const author = message.author;
                 let id;
                 if (author != null) {
                   id = author.id;
                 }
                 const enabledHarmTypesForChannelAndAuthorId = tmp2Result.getEnabledHarmTypesForChannelAndAuthorId(message.channel_id, id);
-                tmp2Result = tmp2(6103);
+                tmp2Result = tmp2(6106);
                 obj1 = { type: null, media: null };
                 const getMediaObscuredReasonFromBitmask = tmp2Result.getMediaObscuredReasonFromBitmask;
-                obj1[0] = tmp2(6108).ObscuredMediaTypes.Embed;
+                obj1[0] = tmp2(6111).ObscuredMediaTypes.Embed;
                 obj1[1] = media;
                 if (null != thumbnail.proxyURL) {
                   if ("" !== thumbnail.proxyURL) {
@@ -158,7 +158,7 @@ function SinglePreviewableMedia(arg0) {
                 }
                 url2 = thumbnail.url;
               }
-            } else if (tmp2(10150).PreviewableMediaTypes.STICKER === type) {
+            } else if (tmp2(10173).PreviewableMediaTypes.STICKER === type) {
               const obj9 = { style: null, children: null };
               const items2 = [tmp.mediaThumbnailContainer, ];
               const obj10 = { width: null, height: null };
@@ -186,10 +186,10 @@ function SinglePreviewableMedia(arg0) {
                 obj12[0] = media;
                 obj12[2] = enabledHarmTypesBitmaskForMessage;
                 obj12[3] = shouldAgeVerifyForExplicitMedia;
-                const attachmentObscurityProps = tmp2(7980).getAttachmentObscurityProps(obj12);
-                const tmp2Result1 = tmp2(7980);
-                const attachmentUrl = tmp2(8514).getAttachmentUrl(media);
-                const tmp2Result2 = tmp2(8514);
+                const attachmentObscurityProps = tmp2(8002).getAttachmentObscurityProps(obj12);
+                const tmp2Result1 = tmp2(8002);
+                const attachmentUrl = tmp2(8536).getAttachmentUrl(media);
+                const tmp2Result2 = tmp2(8536);
                 const obj13 = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, animated: false, format: null };
                 obj13[0] = attachmentUrl;
                 obj13[1] = width;
@@ -197,7 +197,7 @@ function SinglePreviewableMedia(arg0) {
                 obj13[3] = 2 * size;
                 obj13[4] = 2 * size;
                 let str3;
-                if (type === tmp2(10150).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(10173).PreviewableMediaTypes.VIDEO) {
                   str3 = "png";
                 }
                 obj13[6] = str3;
@@ -210,7 +210,7 @@ function SinglePreviewableMedia(arg0) {
                 obj14[0] = items3;
                 const obj16 = { isObscured: null, isSpoiler: null, children: null };
                 ({ obscure: obj17[0], isSpoiler: obj17[1] } = attachmentObscurityProps);
-                const srcWithWidthAndHeight = tmp2(1493).getSrcWithWidthAndHeight(obj13);
+                const srcWithWidthAndHeight = tmp2(1492).getSrcWithWidthAndHeight(obj13);
                 const obj17 = { source: null, style: null, resizeMode: "cover" };
                 const obj18 = { uri: null };
                 obj18[0] = srcWithWidthAndHeight;
@@ -218,7 +218,7 @@ function SinglePreviewableMedia(arg0) {
                 obj17[1] = tmp.mediaThumbnail;
                 const items4 = [callback(preloadDefault, obj17), ];
                 let tmp24Result = null;
-                if (type === tmp2(10150).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(10173).PreviewableMediaTypes.VIDEO) {
                   tmp24Result = tmp24(VideoBadge, {});
                 }
                 items4[1] = tmp24Result;
@@ -250,7 +250,7 @@ function MultiplePreviewableMedia(arg0) {
     const BADGE_PADDING = callback(1297).BADGE_PADDING;
     const sum = BADGE_PADDING + 5;
     const roundToNearestPixelResult = closure_4.roundToNearestPixel(20 + 2 * BADGE_PADDING);
-    const obj = { shape: callback(8044).CutoutShape.RoundedRect, x: 56 - roundToNearestPixelResult + sum, y: -sum, width: roundToNearestPixelResult, height: roundToNearestPixelResult, cornerRadius: closure_4.roundToNearestPixel(roundToNearestPixelResult / 2) };
+    const obj = { shape: callback(8066).CutoutShape.RoundedRect, x: 56 - roundToNearestPixelResult + sum, y: -sum, width: roundToNearestPixelResult, height: roundToNearestPixelResult, cornerRadius: closure_4.roundToNearestPixel(roundToNearestPixelResult / 2) };
     return obj;
   }, []);
   obj = { cutouts: items, children: null };

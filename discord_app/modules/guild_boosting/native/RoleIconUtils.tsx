@@ -38,34 +38,34 @@ export const useRoleIcon = function useRoleIcon(guildId) {
       if (null != roleId) {
         let obj = guildId(num[5]);
         if (obj.canGuildUseRoleIcons(tmp, role)) {
-          let roleIconData = tmp2(tmp3[5]).getRoleIconData(tmp4);
+          let roleIconData = tmp3(tmp4[5]).getRoleIconData(tmp5);
           if (roleIconData == null) {
             roleIconData = {};
           }
           ({ customIconSrc, unicodeEmoji } = roleIconData);
-          let tmp5;
+          let tmp6;
           if (null != customIconSrc) {
             obj = { uri: null };
             obj[0] = customIconSrc;
-            tmp5 = obj;
+            tmp6 = obj;
           }
           obj = { source: null, unicodeEmoji: null, name: null, size: null };
-          obj[0] = tmp5;
+          obj[0] = tmp6;
           obj[1] = unicodeEmoji;
           let str;
-          const tmp2Result = tmp2(tmp3[5]);
-          const tmp6 = closure_1_6;
-          if (tmp4 != null) {
-            str = tmp4.name;
+          const tmp3Result = tmp3(tmp4[5]);
+          const tmp7 = closure_1_6;
+          if (tmp5 != null) {
+            str = tmp5.name;
           }
           if (str == null) {
             str = "";
           }
           obj[2] = str;
           obj[3] = num;
-          return tmp6(roleId(tmp3[6]), obj);
+          return tmp7(roleId(tmp4[6]), obj);
         }
-        tmp2 = guildId;
+        tmp3 = guildId;
       }
     }
   }, items2);
@@ -79,7 +79,7 @@ export const getRoleIcon = function getRoleIcon(roleId) {
       if (null != role) {
         let obj = getRoleIconData;
         if (obj.canGuildUseRoleIcons(guild, role)) {
-          let roleIconData = tmp4(5943).getRoleIconData(role);
+          let roleIconData = tmp4(5946).getRoleIconData(role);
           if (roleIconData == null) {
             roleIconData = {};
           }

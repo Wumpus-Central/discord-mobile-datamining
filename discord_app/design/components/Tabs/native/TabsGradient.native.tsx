@@ -1,5 +1,5 @@
 // discord_app/design/components/Tabs/native/TabsGradient.native.tsx
-import LinearGradientDefault from "../../../../../_runtime/04905_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04908_LinearGradient.js";
 import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { HorizontalGradient } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";

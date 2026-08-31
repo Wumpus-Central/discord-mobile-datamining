@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsRow.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseChannelSubtitleDefault from "../../../guild_sidebar/native/BaseChannelItem.tsx";
-import registerAssetDefault from "../../../../../_runtime/12250_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/12284_registerAsset.js";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { Routes } from "../../../../Constants.tsx";
 import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
@@ -36,7 +36,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
     };
     obj.openLazy(id(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), rolesubscriptionschannelactionsheet, obj);
   }, items1);
-  const ChannelModes = id(11884).ChannelModes;
+  const ChannelModes = id(11915).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -54,8 +54,8 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1236).intl;
   obj[0] = intl2.string(tmp6(1236).t["KzCF/6"]);
   obj[1] = DEFAULT;
-  obj[7] = jsx(tmp6(11884).BaseChannelName, { name: null, mode: null });
+  obj[7] = jsx(tmp6(11915).BaseChannelName, { name: null, mode: null });
   obj = { disableColor: true, mode: DEFAULT, source: registerAssetDefault };
-  obj[8] = jsx(tmp6(11884).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: registerAssetDefault });
+  obj[8] = jsx(tmp6(11915).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: registerAssetDefault });
   return jsx(BaseChannelSubtitleDefault, { disableColor: true, mode: DEFAULT, source: registerAssetDefault });
 };

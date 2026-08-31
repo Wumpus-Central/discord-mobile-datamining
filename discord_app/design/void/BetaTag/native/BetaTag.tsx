@@ -4,7 +4,7 @@ import keys from "../../../../ConstantsIOS.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04905_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/04908_LinearGradient.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { Gradients } from "../../../../modules/colors/native/ColorConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";

@@ -28,9 +28,9 @@ export default function AddFriendScreen(navigation) {
   dependencyMap = undefined;
   let callback;
   let tmp = callback2();
-  let obj = navigation(12151);
+  let obj = navigation(12185);
   contactSyncAccount = obj.useContactSyncAccount();
-  obj1 = navigation(12151);
+  obj1 = navigation(12185);
   [tmp5, c2] = callback(React.useState(!obj1.isContactSyncEnabled(contactSyncAccount)), 2);
   callback = React.useCallback(() => {
     currentUser = currentUser.getCurrentUser();
@@ -72,27 +72,27 @@ export default function AddFriendScreen(navigation) {
       callback(tmp5);
     });
   }, items);
-  const items1 = [callback(contactSyncAccount(5035), { absolute: true }), ];
+  const items1 = [callback(contactSyncAccount(5038), { absolute: true }), ];
   obj = { keyboardShouldPersistTaps: "handled", style: tmp.background, children: null };
   obj = { style: tmp.headerText, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = navigation(1236).intl;
   obj[4] = intl.string(navigation(1236).t.GWMTSE);
-  const items2 = [callback(navigation(4442).Text, obj), , , ];
+  const items2 = [callback(navigation(4444).Text, obj), , , ];
   obj1 = { style: tmp.subheaderText, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1236).intl;
   obj1[3] = intl2.string(navigation(1236).t["Rn/sLl"]);
-  items2[1] = callback(navigation(4442).Text, obj1);
-  items2[2] = callback(contactSyncAccount(13527), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
+  items2[1] = callback(navigation(4444).Text, obj1);
+  items2[2] = callback(contactSyncAccount(13561), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
   const obj3 = { style: tmp.otherOptionsContainer, children: null };
   const obj4 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
   const intl3 = navigation(1236).intl;
   obj4[3] = intl3.string(navigation(1236).t.dukg0Z);
-  const items3 = [callback(navigation(4442).Text, obj4), ];
+  const items3 = [callback(navigation(4444).Text, obj4), ];
   let tmp10Result = null;
   if (tmp5) {
     const obj5 = { style: null, location: "Add Friend Modal" };
     obj5[0] = tmp.rowContainer;
-    tmp10Result = callback(contactSyncAccount(13529), obj5);
+    tmp10Result = callback(contactSyncAccount(13563), obj5);
   }
   const obj6 = { children: null };
   items3[1] = tmp10Result;

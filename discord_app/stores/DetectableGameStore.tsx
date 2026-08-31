@@ -259,7 +259,7 @@ prototype["findGame"] = function findGame(nextResult) {
         return gameByExecutable;
       } else {
         const parts1 = nextResult.exePath.split("/");
-        const found1 = parts1.filter(tmp15(1370).isNotNullish);
+        const found1 = parts1.filter(tmp15(1471).isNotNullish);
         const substr = found1.slice(-2);
         const gameByExecutable1 = self.getGameByExecutable(substr.join("/"));
         if (null != gameByExecutable1) {

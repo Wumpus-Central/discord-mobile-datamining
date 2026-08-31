@@ -75,59 +75,59 @@ let closure_11 = importAllResult.memo((arg0) => {
     obj = { channel: null, connected: null };
     obj[0] = channel;
     obj[1] = tmp2;
-    items[2] = callback2(tmp3(16719).GameConsoles, obj);
+    items[2] = callback2(tmp3(16752).GameConsoles, obj);
     if (nonContextualStreamOutputPresent) {
-      nonContextualStreamOutputPresent = tmp14(tmp3(16719).StreamVolumeItem, {});
+      nonContextualStreamOutputPresent = tmp14(tmp3(16752).StreamVolumeItem, {});
     }
     items[3] = nonContextualStreamOutputPresent;
     obj = { title: null, hasIcons: true, children: null };
     const intl = tmp3(1236).intl;
     obj[0] = intl.string(tmp3(1236).t.NiTd0e);
-    const items1 = [callback2(tmp3(16719).DeafenSwitch, {}), , , , ];
+    const items1 = [callback2(tmp3(16752).DeafenSwitch, {}), , , , ];
     obj1 = { channel: null, connected: null };
     obj1[0] = channel;
     obj1[1] = tmp2;
-    items1[1] = callback2(tmp3(16719).AudioRouteButton, obj1);
+    items1[1] = callback2(tmp3(16752).AudioRouteButton, obj1);
     obj2 = { channelId: null };
     obj2[0] = channelId;
-    items1[2] = callback2(tmp3(16719).HideNonVideoParticipants, obj2);
-    items1[3] = callback2(tmp3(16719).HideSelfVideo, {});
+    items1[2] = callback2(tmp3(16752).HideNonVideoParticipants, obj2);
+    items1[3] = callback2(tmp3(16752).HideSelfVideo, {});
     let tmp14Result = tmp2;
     if (tmp2) {
       const obj3 = { channel: null, connected: null };
       obj3[0] = channel;
       obj3[1] = tmp2;
-      tmp14Result = tmp14(tmp3(16719).InviteButton, obj3);
+      tmp14Result = tmp14(tmp3(16752).InviteButton, obj3);
     }
     items1[4] = tmp14Result;
     obj[2] = items1;
-    items[4] = tmp7(tmp3(5957).TableRowGroup, obj);
-    items[5] = callback2(tmp3(10013).VoiceProcessingOptions, {});
+    items[4] = tmp7(tmp3(5960).TableRowGroup, obj);
+    items[5] = callback2(tmp3(10036).VoiceProcessingOptions, {});
     const obj4 = { guildId: null };
     obj4[0] = channel.guild_id;
-    const items2 = [callback2(tmp3(16719).VoiceSettingsButton, obj4), ];
+    const items2 = [callback2(tmp3(16752).VoiceSettingsButton, obj4), ];
     tmp14Result = null != tmp6;
     if (tmp14Result) {
       const obj5 = { stream: null };
       obj5[0] = tmp6;
-      tmp14Result = tmp14(tmp3(16719).ReportStreamIssueButton, obj5);
+      tmp14Result = tmp14(tmp3(16752).ReportStreamIssueButton, obj5);
     }
     const obj6 = { hasIcons: true, children: null };
     items2[1] = tmp14Result;
     obj6[1] = items2;
-    items[6] = tmp7(tmp3(5957).TableRowGroup, obj6);
+    items[6] = tmp7(tmp3(5960).TableRowGroup, obj6);
     let tmp7Result = null;
     if (tmp2) {
       tmp7Result = null;
       if (setting) {
         tmp7Result = null;
-        if (embeddedActivityLaunchability === tmp3(9425).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+        if (embeddedActivityLaunchability === tmp3(9447).EmbeddedActivityLaunchability.CAN_LAUNCH) {
           const obj7 = { title: null, hasIcons: true, children: null };
           const intl2 = tmp3(1236).intl;
           obj7[0] = intl2.string(tmp3(1236).t.J6rqB7);
-          const items3 = [tmp14(tmp3(16719).LeaveActivitiesButton, {}), tmp14(tmp3(16719).ShareActivityLogsButton, {}), tmp14(tmp3(16719).ToggleShowActivitiesDebugOverlay, {})];
+          const items3 = [tmp14(tmp3(16752).LeaveActivitiesButton, {}), tmp14(tmp3(16752).ShareActivityLogsButton, {}), tmp14(tmp3(16752).ToggleShowActivitiesDebugOverlay, {})];
           obj7[2] = items3;
-          tmp7Result = tmp7(tmp3(5957).TableRowGroup, obj7);
+          tmp7Result = tmp7(tmp3(5960).TableRowGroup, obj7);
         }
       }
     }
@@ -138,23 +138,23 @@ let closure_11 = importAllResult.memo((arg0) => {
   } else {
     const obj9 = { openTab: null };
     obj9[0] = openTab;
-    const items4 = [callback2(tmp3(16719).ActivitiesButton, obj9), ];
-    if (tmp3(16613).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
+    const items4 = [callback2(tmp3(16752).ActivitiesButton, obj9), ];
+    if (tmp3(16646).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
       const obj10 = { openTab: null };
       obj10[0] = openTab;
-      let tmp11Result = tmp11(tmp3(16719).ChatButton, obj10);
+      let tmp11Result = tmp11(tmp3(16752).ChatButton, obj10);
       const obj11 = { hasIcons: true, children: null };
       items4[1] = tmp11Result;
       obj11[1] = items4;
-      tmp7Result = tmp7(tmp3(5957).TableRowGroup, obj11);
-    } else if (tmp3(16613).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
+      tmp7Result = tmp7(tmp3(5960).TableRowGroup, obj11);
+    } else if (tmp3(16646).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
       const obj12 = { channel: null };
       obj12[0] = channel;
-      tmp11Result = tmp11(tmp3(16719).ScreenshareButton, obj12);
+      tmp11Result = tmp11(tmp3(16752).ScreenshareButton, obj12);
     }
     const obj13 = { channel: null };
     obj13[0] = channel;
-    tmp11Result = tmp11(tmp3(16719).SoundboardButton, obj13);
+    tmp11Result = tmp11(tmp3(16752).SoundboardButton, obj13);
   }
 });
 let closure_13 = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };

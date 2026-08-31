@@ -28,13 +28,13 @@ let obj = keys.create((arg0) => {
   closure_0 = arg0;
   obj = {
     activeMediaPlayerSource: "HermesInternal",
-    mediaSourceMessage: "PX_16",
-    canAccessMedia: "disabled",
+    mediaSourceMessage: "ct",
+    canAccessMedia: "ip",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
-    rate: "ct",
-    showPip: "SAVE_LAST_ROUTE",
+    rate: "Object",
+    showPip: "SEARCH_GUILD_MEMBER_TAB_CLEANUP",
     closePip() {
       callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
     },
@@ -295,7 +295,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_1_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      obj = { activeMediaPlayerSource: null, mediaSourceMessage: null, progress: "disabled", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
+      obj = { activeMediaPlayerSource: null, mediaSourceMessage: null, progress: "ip", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
       obj[0] = tmp3;
       let orFetchMediaSourceMessage;
       if (null != tmp3) {
@@ -339,13 +339,13 @@ prototype["getOrFetchMediaSourceMessage"] = function getOrFetchMediaSourceMessag
         obj = { channelId: null, messageId: null };
         obj[0] = channelId;
         obj[1] = messageId;
-        const message1 = self(7148).fetchMessage(obj);
+        const message1 = self(7169).fetchMessage(obj);
         message1.then((arg0) => {
           if (null != arg0) {
             const result = self.handleMediaSourceMessageUpdated(arg0);
           }
         });
-        const obj2 = self(7148);
+        const obj2 = self(7169);
       }
       obj4 = message;
     }

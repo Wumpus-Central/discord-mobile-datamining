@@ -1,7 +1,7 @@
 // discord_app/modules/virtual_currency/native/BalanceWidgetPillButton.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
-import registerAssetDefault from "../../../../_runtime/10693_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/10717_registerAsset.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 require = arg1;

@@ -3,7 +3,7 @@ import set from "../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
 import _modDef1208 from "SentryUtils.native.tsx";
 import isMetaQuest from "../modules/device/MetaQuestUtils.android.tsx";
-import encodeDefault from "../../_runtime/07672_encode.js";
+import encodeDefault from "../../_runtime/07693_encode.js";
 
 let _crypto;
 if (window != null) {

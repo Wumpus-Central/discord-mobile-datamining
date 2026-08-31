@@ -38,9 +38,9 @@ class VoiceProcessingOptions {
       obj1 = { value: null, onChange: null, title: null, hasIcons: false, children: null };
       obj1[0] = selectedNoiseSuppressionOption;
       obj1[1] = function noiseCancellationChanged(arg0) {
-        callback2(9720).setNoiseCancellation(arg0 === callback(10014).NoiseSuppressionOpt.KRISP);
-        const obj = callback2(9720);
-        callback2(9720).setNoiseSuppression(arg0 === callback(10014).NoiseSuppressionOpt.STANDARD);
+        callback2(9742).setNoiseCancellation(arg0 === callback(10037).NoiseSuppressionOpt.KRISP);
+        const obj = callback2(9742);
+        callback2(9742).setNoiseSuppression(arg0 === callback(10037).NoiseSuppressionOpt.STANDARD);
       };
       intl3 = require("getSystemLocale").intl;
       obj1[2] = intl3.string(require("getSystemLocale").t.t8Qhib);
@@ -109,8 +109,8 @@ class VoiceProcessingOptions {
       obj10[1] = intl2.string(require("getSystemLocale").t.najZCV);
       obj10[2] = selectedNoiseSuppressionOption === require("handleAutomaticGainControlChange").NoiseSuppressionOpt.STANDARD;
       obj10[3] = function onValueChange(arg0) {
-        const NoiseSuppressionOpt = callback(10014).NoiseSuppressionOpt;
-        return callback(10014).handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
+        const NoiseSuppressionOpt = callback(10037).NoiseSuppressionOpt;
+        return callback(10037).handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
       };
       obj9[1] = jsx(require("TableSwitchRow").TableSwitchRow, obj10);
       return jsx(require("UserSettingsVoice").UserSettingsTableRowGroup, obj9);
@@ -163,7 +163,7 @@ export default function UserSettingsVoiceProcessing() {
       obj = { vadUseKrisp };
       return obj.setMode(closure_0, obj);
     };
-    advancedVoiceActivitySupported = callback(tmp(5958).TableSwitchRow, obj2);
+    advancedVoiceActivitySupported = callback(tmp(5961).TableSwitchRow, obj2);
   }
   const obj3 = { children: null };
   items2[1] = advancedVoiceActivitySupported;

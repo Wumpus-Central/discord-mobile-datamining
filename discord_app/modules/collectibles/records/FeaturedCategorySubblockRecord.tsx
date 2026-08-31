@@ -6,7 +6,7 @@ let prototype;
 prototype = function FeaturedCategorySubblockRecord(unpublished_at) {
   const obj = Object.create(new.target.prototype);
   obj.type = FeaturedSubblockType.FeaturedSubblockType.CATEGORY;
-  ({ category_store_listing_id: tmp.categoryStoreListingId, name: tmp.name } = unpublished_at);
+  ({ category_store_listing_id: tmp.categoryStoreListingId, category_sku_id: tmp.categorySkuId, name: tmp.name } = unpublished_at);
   let date = null;
   if (null != unpublished_at.unpublished_at) {
     const _Date = Date;
@@ -22,7 +22,7 @@ prototype["fromServer"] = function fromServer(unpublished_at) {
   }
   const obj = Object.create(prototype.prototype);
   obj.type = FeaturedSubblockType.FeaturedSubblockType.CATEGORY;
-  ({ category_store_listing_id: tmp2.categoryStoreListingId, name: tmp2.name } = unpublished_at);
+  ({ category_store_listing_id: tmp2.categoryStoreListingId, category_sku_id: tmp2.categorySkuId, name: tmp2.name } = unpublished_at);
   let date = null;
   if (null != unpublished_at.unpublished_at) {
     const _Date = Date;

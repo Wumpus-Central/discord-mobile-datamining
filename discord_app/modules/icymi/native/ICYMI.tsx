@@ -54,11 +54,11 @@ function InfoButton() {
     size: "sm",
     icon: callback(CircleInformationIcon.CircleInformationIcon, { size: "sm" }),
     onPress() {
-      callback2(8568).itemInteracted("info_button", "info_button", "press_info_button");
-      const obj = callback2(8568);
-      callback2(8568).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
-      const obj2 = callback2(8568);
-      callback(15984).pushICYMIInfoModal({ extendedOnboarding: true });
+      callback2(8590).itemInteracted("info_button", "info_button", "press_info_button");
+      const obj = callback2(8590);
+      callback2(8590).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
+      const obj2 = callback2(8590);
+      callback(16018).pushICYMIInfoModal({ extendedOnboarding: true });
     }
   });
 }
@@ -71,11 +71,11 @@ function ICYMIHeaderTextWrapper() {
       obj = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
       const intl = callback(1236).intl;
       obj[4] = intl.string(callback(1236).t.SY4sdZ);
-      const items = [callback2(callback(4442).Text, obj), ];
+      const items = [callback2(callback(4444).Text, obj), ];
       obj = { color: "text-brand", variant: "text-xs/bold", style: { marginTop: 4 }, children: null };
       const intl2 = callback(1236).intl;
       obj[3] = intl2.string(callback(1236).t.Ac2OZA);
-      items[1] = callback2(callback(4442).Text, obj);
+      items[1] = callback2(callback(4444).Text, obj);
       obj[0] = items;
       return callback3(closure_15, obj);
     }, [])
@@ -185,7 +185,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       obj = { scrollToTop: null };
       obj[0] = function scrollToTop() {
-        callback(7550).showForLaterModal(callback(7551).SavedMessageSortTypes.BOOKMARK);
+        callback(7571).showForLaterModal(callback(7572).SavedMessageSortTypes.BOOKMARK);
       };
       ref1.current = obj;
     }

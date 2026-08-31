@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting("design/void/Form/native/Fre
 export default function Label(style) {
   const children = style.children;
   let nodeText;
-  nodeText = nodeText(4168).getNodeText(children);
+  nodeText = nodeText(4169).getNodeText(children);
   const items = [nodeText];
   const effect = React.useEffect(() => {
     let tmp2 = null != nodeText;
@@ -20,5 +20,5 @@ export default function Label(style) {
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);
-  return jsx(nodeText(4442).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
+  return jsx(nodeText(4444).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
 };

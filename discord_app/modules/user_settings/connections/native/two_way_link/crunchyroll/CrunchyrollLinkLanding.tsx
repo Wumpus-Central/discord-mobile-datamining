@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx
 import combinedDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/09282_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/09304_registerAsset.js";
 import closure_3 from "../../../../../../../_runtime/00019_noop.js";
 import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkConstants.tsx";
 import ME from "../../../../../../Constants.tsx";
@@ -13,14 +13,14 @@ let closure_8 = createCacheKey.createStyles({ image: { width: 234, height: 147 }
 const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx");
 
 export default function CrunchyrollLinkLanding() {
-  let obj = navigation(1500);
+  let obj = navigation(1499);
   navigation = obj.useNavigation();
   let items = [navigation];
   const memo = React.useMemo(() => {
     const obj = { label: null, icon: null };
     const intl = navigation(1236).intl;
     obj[0] = intl.string(navigation(1236).t["2TXHQd"]);
-    obj[1] = navigation(8524).PlayIcon;
+    obj[1] = navigation(8546).PlayIcon;
     const items = [obj];
     return items;
   }, []);
@@ -36,5 +36,5 @@ export default function CrunchyrollLinkLanding() {
   obj[5] = combinedDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj[6] = callback;
   obj[7] = memo;
-  return jsx(navigation(9244).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: registerAssetDefault, imgStyle: callback().image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  return jsx(navigation(9266).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: registerAssetDefault, imgStyle: callback().image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 };

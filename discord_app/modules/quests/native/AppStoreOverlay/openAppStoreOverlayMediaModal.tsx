@@ -23,7 +23,7 @@ function _openAppStoreOverlayMediaModal() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -61,7 +61,7 @@ function _openAppStoreOverlayMediaModal() {
               let initVideoStateStore;
               v0 = 1;
               c4 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -93,7 +93,7 @@ function _openAppStoreOverlayMediaModal() {
             dependencyMap = v0(closure_8, 3);
             setMediaViewerSources = 32.setMediaViewerSources;
             MediaViewerAnalytics = 5.MediaViewerAnalytics;
-            initVideoStateStore = 4155.initVideoStateStore;
+            initVideoStateStore = 4156.initVideoStateStore;
             const obj4 = { text: null, onPress: null };
             const intl = callback(c2[10]).intl;
             obj4[0] = intl.string(callback(c2[10]).t.lwQdjB);
@@ -120,14 +120,19 @@ function _openAppStoreOverlayMediaModal() {
                 }
                 arg0(size.x, size.y, size.width, size.height, size.resizeMode);
               };
-            })(callback)((arg0, arg1, width, height, resizeMode) => {
+            })(callback)((arg0, arg1, width, height) => {
+              let str = arg4;
               initialIndex(_undefined2[11])(_undefined3.isOpen(), "An action sheet must be open to open the media modal as an action sheet");
               let obj = initialIndex(_undefined2[12]);
               const tmp = initialIndex(_undefined2[11]);
               obj = {};
               const merged = Object.assign(closure_7);
               obj.initialIndex = initialIndex;
-              obj = { x: arg0, y: arg1, width, height, resizeMode };
+              obj = { x: arg0, y: arg1, width, height, resizeMode: null };
+              if (arg4 == null) {
+                str = "cover";
+              }
+              obj[4] = str;
               obj.originLayout = obj;
               obj.onCloseCallback = c6;
               obj.disableHapticOnOpen = true;
@@ -137,7 +142,7 @@ function _openAppStoreOverlayMediaModal() {
               initVideoStateStore();
             });
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp8) {
           c4 = tmp;

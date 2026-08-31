@@ -3,7 +3,7 @@ import set from "../../../../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import frozen from "../../EmbedUtils.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/07903_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/07925_registerAsset.js";
 import getPremiumGroupInviteEmbedText from "../../../../../premium/premium_group/PremiumGroupUtils.native.tsx";
 import SubscriptionStatusTypes from "../../../../../premium/premium_group/PremiumGroupConstants.tsx";
 
@@ -47,7 +47,7 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       obj2[3] = backgroundColor;
       obj2[4] = assetUriForEmbed;
       const intl2 = tmp6(1236).intl;
-      const formatToPartsResult = intl.formatToParts(tmp8(2986)["9VTnfI"], obj);
+      const formatToPartsResult = intl.formatToParts(tmp8(2987)["9VTnfI"], obj);
       obj2[5] = intl2.string(tmp6(1236).t.oW0eUd).toUpperCase();
       obj2[6] = betaPillTextColor;
       obj2[7] = betaPillBackgroundColor;

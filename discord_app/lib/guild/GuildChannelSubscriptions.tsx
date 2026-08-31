@@ -1,6 +1,6 @@
 // discord_app/lib/guild/GuildChannelSubscriptions.tsx
 import set from "../../../_runtime/00002_set.js";
-import privDefault from "../../../_runtime/01405_priv.js";
+import privDefault from "../../../_runtime/01401_priv.js";
 
 let result = set.fileFinishedImporting("lib/guild/GuildChannelSubscriptions.tsx");
 class GuildChannelSubscriptions {

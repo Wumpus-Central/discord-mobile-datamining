@@ -21,19 +21,19 @@ function renderCard(arg0, item, transitionState, cleanUp) {
 function CardContentFreezer(children) {
   children = children.children;
   let _require = children;
-  importDefault = undefined;
+  let connected;
   let animatedStyle;
   _require = undefined;
-  importDefault = undefined;
+  connected = undefined;
   animatedStyle = undefined;
-  obj = _require(animatedStyle[20]);
+  obj = _require(animatedStyle[19]);
   const mode = obj.usePIPState().mode;
   _require = mode;
-  const ref = safeArea.useRef(mode === VoicePanelPIPModes.IN_APP);
-  importDefault = ref;
-  animatedStyle = controlsSpecs(safeArea.useState({}), 2)[1];
+  const ref = contentDimensions.useRef(mode === VoicePanelPIPModes.IN_APP);
+  connected = ref;
+  animatedStyle = safeArea(contentDimensions.useState({}), 2)[1];
   let items = [mode];
-  const effect = safeArea.useEffect(() => {
+  const effect = contentDimensions.useEffect(() => {
     if (timeout === closure_1_11.IN_APP) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
@@ -46,49 +46,46 @@ function CardContentFreezer(children) {
         clearTimeout(closure_0);
       };
     } else {
-      closure_1.current = false;
+      connected.current = false;
     }
   }, items);
-  const tmp6 = mode === VoicePanelPIPModes.IN_APP && importDefault(animatedStyle[21])(ref);
-  importDefault = tmp6;
+  const tmp6 = mode === VoicePanelPIPModes.IN_APP && connected(animatedStyle[20])(ref);
+  connected = tmp6;
   _require = tmp6;
-  importDefault = undefined;
+  connected = undefined;
   animatedStyle = undefined;
-  controlsSpecs = undefined;
   safeArea = undefined;
-  let contentDimensions;
+  contentDimensions = undefined;
   let windowDimensions;
   let mode2;
   let focused;
   let wrapperOffset;
   let token;
-  let tmp7 = importDefault(animatedStyle[13])("VoicePanelCardView");
-  importDefault = tmp7;
-  const context = obj2.useContext(tmp5(tmp2[14]));
-  const connected = context.connected;
-  animatedStyle = connected;
-  controlsSpecs = context.controlsSpecs;
+  const context = obj2.useContext(tmp5(tmp2[13]));
+  connected = context.connected;
+  const controlsSpecs = context.controlsSpecs;
+  animatedStyle = controlsSpecs;
   safeArea = context.safeArea;
   contentDimensions = context.contentDimensions;
   windowDimensions = context.windowDimensions;
   mode2 = context.mode;
   focused = context.focused;
   wrapperOffset = context.wrapperOffset;
-  let tmpResult = tmp(tmp2[15]);
-  token = tmpResult.useToken(tmp5(tmp2[16]).modules.mobile.VOICE_PANEL_GUTTER);
+  let tmpResult = tmp(tmp2[14]);
+  token = tmpResult.useToken(tmp5(tmp2[15]).modules.mobile.VOICE_PANEL_GUTTER);
   tmpResult = tmp(tmp2[11]);
   const fn = function o() {
-    obj = controlsSpecs;
+    obj = animatedStyle;
     const bound = Math.max(safeArea.get().bottom, closure_1_12);
     const tmp = closure_1_12;
-    const tmp3 = callback2;
-    const tmp5 = callback2(animatedStyle[17]);
-    ({ height, paddingTop } = callback2(animatedStyle[17])(safeArea.get(), token));
+    const tmp3 = connected;
+    const tmp5 = connected(animatedStyle[16]);
+    ({ height, paddingTop } = connected(animatedStyle[16])(safeArea.get(), token));
     let num = 1;
     let num2 = 0;
     let num3 = 1;
     let num4 = 0;
-    if (animatedStyle.get()) {
+    if (connected.get()) {
       obj1 = contentDimensions;
       let height2 = paddingTop + contentDimensions.get().height + bound;
       if (height2 - windowDimensions.get().height < 8) {
@@ -97,11 +94,11 @@ function CardContentFreezer(children) {
       num2 = 0;
       num3 = num;
       num4 = height2;
-      if (mode2.get() !== wrapperOffset.PIP) {
+      if (mode2.get() !== token.PIP) {
         num2 = 0;
         num3 = num;
         num4 = height2;
-        if (controlsSpecs.get().mode !== token.HIDDEN) {
+        if (animatedStyle.get().mode !== closure_1_10.HIDDEN) {
           num2 = 0;
           num3 = num;
           num4 = height2;
@@ -111,48 +108,41 @@ function CardContentFreezer(children) {
             const diff2 = obj3.get().height - paddingTop - bound;
             const diff3 = obj3.get().height - height;
             const diff4 = diff3 - obj.get().height - bound;
+            let result = num;
             if (obj1.get().height > diff1) {
-              let result = diff1 / obj1.get().height;
-            } else {
-              const width = obj3.get().width;
-              if (callback2) {
-                result = width / obj3.get().width;
-              } else {
-                const diff5 = width - 48;
-                result = diff5 / obj3.get().width;
-              }
+              result = diff1 / obj1.get().height;
             }
-            let diff6 = height;
-            if (tmp18) {
+            let diff5 = height;
+            if (tmp16) {
               const result1 = (diff2 - obj1.get().height) / 2;
-              diff6 = height - (result1 - (diff4 - obj1.get().height * result) / 2) * result;
+              diff5 = height - (result1 - (diff4 - obj1.get().height * result) / 2) * result;
             }
             if (obj1.get().height > diff1) {
-              let sum = diff6 + (height2 * result - height2) / 2;
+              let sum = diff5 + (height2 * result - height2) / 2;
             } else {
-              sum = diff6 + (diff1 - (obj3.get().height - paddingTop - bound)) / 2;
+              sum = diff5 + (diff1 - (obj3.get().height - paddingTop - bound)) / 2;
             }
             paddingTop = paddingTop * result;
-            const diff7 = sum - paddingTop;
-            tmp18 = obj1.get().height < diff2 && obj1.get().height > diff4;
+            const diff6 = sum - paddingTop;
+            tmp16 = obj1.get().height < diff2 && obj1.get().height > diff4;
           }
         }
       }
       const tmp7 = paddingTop;
     }
-    obj = { position: "relative", width: windowDimensions.get().width, height: tmp3(tmp4[18])(num4), transform: null, opacity: null };
-    const tmp25 = callback;
-    const tmp5Result = callback2(animatedStyle[17])(safeArea.get(), token);
+    obj = { position: "relative", width: windowDimensions.get().width, height: tmp3(tmp4[17])(num4), transform: null, opacity: null };
+    const tmp23 = callback;
+    const tmp5Result = connected(animatedStyle[16])(safeArea.get(), token);
     const sum1 = num2 + wrapperOffset.get().y;
     if (!wrapperOffset.get().gestureActive) {
-      if (mode2.get() !== wrapperOffset.PIP) {
-        let tmp29 = closure_1_15;
+      if (mode2.get() !== token.PIP) {
+        let tmp27 = closure_1_15;
       }
       obj = { translateY: null };
-      obj[0] = obj5.withSpring(sum1, tmp29);
+      obj[0] = obj5.withSpring(sum1, tmp27);
       const items = [obj, ];
       obj1 = { scale: null };
-      obj1[0] = tmp25(tmp4[19]).withSpring(num3, closure_1_15);
+      obj1[0] = tmp23(tmp4[18]).withSpring(num3, closure_1_15);
       items[1] = obj1;
       obj[3] = items;
       if (callback) {
@@ -161,20 +151,20 @@ function CardContentFreezer(children) {
       obj[4] = num;
       return obj;
     }
-    tmp29 = focused;
+    tmp27 = wrapperOffset;
   };
-  obj = { controlsSpecs, VoicePanelControlsModes: token, safeArea, EDGE_GUTTER, calculateVoicePanelHeaderSpecs: tmp5(tmp2[17]), edgeGutter: token, connected, contentDimensions, windowDimensions, mode: mode2, VoicePanelModes: wrapperOffset, focused, isRefreshEnabled: tmp7, roundToNearestPixel: tmp5(tmp2[18]), withSpring: tmp(tmp2[19]).withSpring, wrapperOffset, LAYOUT_PHYSICS: focused, SCALE_PHYSICS: obj, freeze: tmp6 };
+  obj = { controlsSpecs, VoicePanelControlsModes, safeArea, EDGE_GUTTER, calculateVoicePanelHeaderSpecs: tmp5(tmp2[16]), edgeGutter: token, connected, contentDimensions, windowDimensions, mode: mode2, VoicePanelModes: token, focused, roundToNearestPixel: tmp5(tmp2[17]), withSpring: tmp(tmp2[18]).withSpring, wrapperOffset, LAYOUT_PHYSICS: wrapperOffset, SCALE_PHYSICS: obj, freeze: tmp6 };
   fn.__closure = obj;
-  fn.__workletHash = 495797244676;
+  fn.__workletHash = 15194344033500;
   fn.__initData = closure_21;
   animatedStyle = tmpResult.useAnimatedStyle(fn);
   const items1 = [animatedStyle, tmp6, children];
-  return safeArea.useMemo(() => {
+  return contentDimensions.useMemo(() => {
     obj = { style: animatedStyle, children: null };
-    obj = { freeze: callback2, children: closure_1_14(windowDimensions, obj) };
-    obj = { collapsable: false, style: contentDimensions.absoluteFill, children: callback };
-    obj[1] = closure_1_14(callback(animatedStyle[23]).Freeze, obj);
-    return closure_1_14(callback2(animatedStyle[22]), obj);
+    obj = { freeze: connected, children: closure_1_14(mode2, obj) };
+    obj = { collapsable: false, style: windowDimensions.absoluteFill, children: callback };
+    obj[1] = closure_1_14(callback(animatedStyle[22]).Freeze, obj);
+    return closure_1_14(connected(animatedStyle[21]), obj);
   }, items1);
 }
 let c4 = importAllResult;
@@ -187,14 +177,14 @@ obj.restSpeedThreshold = 0.00001;
 let closure_18 = { start: 0, end: VOICE_PANEL_CHUNK_DIVISOR };
 let closure_19 = { code: "function VoicePanelCardViewTsx1(){const{viewableChunks}=this.__closure;return viewableChunks.get();}" };
 let closure_20 = { code: "function VoicePanelCardViewTsx2(newChunks,previous){const{cheapWorkletShallowEqual,runOnJS,updateValueIfChange}=this.__closure;if(cheapWorkletShallowEqual(newChunks,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(updateValueIfChange)(newChunks);}" };
-let closure_21 = { code: "function VoicePanelCardViewTsx3(){const{controlsSpecs,VoicePanelControlsModes,safeArea,EDGE_GUTTER,calculateVoicePanelHeaderSpecs,edgeGutter,connected,contentDimensions,windowDimensions,mode,VoicePanelModes,focused,isRefreshEnabled,roundToNearestPixel,withSpring,wrapperOffset,LAYOUT_PHYSICS,SCALE_PHYSICS,freeze}=this.__closure;const hidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;let height=0;let scale=1;let top=0;const safeAreaBottom=Math.max(safeArea.get().bottom,EDGE_GUTTER);const{height:headerBarHeight,paddingTop:safeAreaTop}=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);if(connected.get()){height+=safeAreaTop;height+=contentDimensions.get().height;height+=safeAreaBottom;if(height-windowDimensions.get().height<8){height=windowDimensions.get().height;}if(mode.get()!==VoicePanelModes.PIP&&!hidden&&focused.get()==null){const targetHeight=height-headerBarHeight-EDGE_GUTTER-controlsSpecs.get().height-safeAreaBottom;const fullView=windowDimensions.get().height-safeAreaTop-safeAreaBottom;const controlsView=windowDimensions.get().height-headerBarHeight-controlsSpecs.get().height-safeAreaBottom;top=headerBarHeight;scale=function(){if(contentDimensions.get().height>targetHeight){return targetHeight/contentDimensions.get().height;}return isRefreshEnabled?windowDimensions.get().width/windowDimensions.get().width:(windowDimensions.get().width-48)/windowDimensions.get().width;}();if(contentDimensions.get().height<fullView&&contentDimensions.get().height>controlsView){const offsetOriginal=(fullView-contentDimensions.get().height)/2;const scaledContent=contentDimensions.get().height*scale;const scaledOffset=(controlsView-scaledContent)/2;top-=(offsetOriginal-scaledOffset)*scale;}if(contentDimensions.get().height>targetHeight){top+=(height*scale-height)/2;}else{top+=(targetHeight-(windowDimensions.get().height-safeAreaTop-safeAreaBottom))/2;}top-=safeAreaTop*scale;}}return{position:'relative',width:windowDimensions.get().width,height:roundToNearestPixel(height),transform:[{translateY:withSpring(top+wrapperOffset.get().y,wrapperOffset.get().gestureActive||mode.get()===VoicePanelModes.PIP?LAYOUT_PHYSICS:SCALE_PHYSICS)},{scale:withSpring(scale,SCALE_PHYSICS)}],opacity:freeze?0:1};}" };
+let closure_21 = { code: "function VoicePanelCardViewTsx3(){const{controlsSpecs,VoicePanelControlsModes,safeArea,EDGE_GUTTER,calculateVoicePanelHeaderSpecs,edgeGutter,connected,contentDimensions,windowDimensions,mode,VoicePanelModes,focused,roundToNearestPixel,withSpring,wrapperOffset,LAYOUT_PHYSICS,SCALE_PHYSICS,freeze}=this.__closure;const hidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;let height=0;let scale=1;let top=0;const safeAreaBottom=Math.max(safeArea.get().bottom,EDGE_GUTTER);const{height:headerBarHeight,paddingTop:safeAreaTop}=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);if(connected.get()){height+=safeAreaTop;height+=contentDimensions.get().height;height+=safeAreaBottom;if(height-windowDimensions.get().height<8){height=windowDimensions.get().height;}if(mode.get()!==VoicePanelModes.PIP&&!hidden&&focused.get()==null){const targetHeight=height-headerBarHeight-EDGE_GUTTER-controlsSpecs.get().height-safeAreaBottom;const fullView=windowDimensions.get().height-safeAreaTop-safeAreaBottom;const controlsView=windowDimensions.get().height-headerBarHeight-controlsSpecs.get().height-safeAreaBottom;top=headerBarHeight;scale=function(){if(contentDimensions.get().height>targetHeight){return targetHeight/contentDimensions.get().height;}return 1;}();if(contentDimensions.get().height<fullView&&contentDimensions.get().height>controlsView){const offsetOriginal=(fullView-contentDimensions.get().height)/2;const scaledContent=contentDimensions.get().height*scale;const scaledOffset=(controlsView-scaledContent)/2;top-=(offsetOriginal-scaledOffset)*scale;}if(contentDimensions.get().height>targetHeight){top+=(height*scale-height)/2;}else{top+=(targetHeight-(windowDimensions.get().height-safeAreaTop-safeAreaBottom))/2;}top-=safeAreaTop*scale;}}return{position:'relative',width:windowDimensions.get().width,height:roundToNearestPixel(height),transform:[{translateY:withSpring(top+wrapperOffset.get().y,wrapperOffset.get().gestureActive||mode.get()===VoicePanelModes.PIP?LAYOUT_PHYSICS:SCALE_PHYSICS)},{scale:withSpring(scale,SCALE_PHYSICS)}],opacity:freeze?0:1};}" };
 const memoResult = importAllResult.memo(function VoicePanelCardView(viewableChunks) {
   viewableChunks = viewableChunks.viewableChunks;
   viewableChunks = undefined;
   chunkedParticipants = undefined;
   let stateFromStoresArray;
   let callback;
-  const channelId = importAllResult.useContext(chunkedParticipants(stateFromStoresArray[14])).channelId;
+  const channelId = importAllResult.useContext(chunkedParticipants(stateFromStoresArray[13])).channelId;
   chunkedParticipants = undefined;
   stateFromStoresArray = undefined;
   [tmp2, chunkedParticipants] = callback(importAllResult.useState(closure_18), 2);
@@ -213,7 +203,7 @@ const memoResult = importAllResult.memo(function VoicePanelCardView(viewableChun
   }, []);
   stateFromStoresArray = callback;
   obj = viewableChunks(stateFromStoresArray[11]);
-  const fn = function h() {
+  const fn = function c() {
     return viewableChunks.get();
   };
   fn.__closure = { viewableChunks };
@@ -231,38 +221,38 @@ const memoResult = importAllResult.memo(function VoicePanelCardView(viewableChun
   fn2.__initData = closure_20;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
   const tmp = callback(importAllResult.useState(closure_18), 2);
-  chunkedParticipants = viewableChunks(stateFromStoresArray[24]).useChunkedParticipants(channelId, tmp2);
-  const obj3 = viewableChunks(stateFromStoresArray[24]);
+  chunkedParticipants = viewableChunks(stateFromStoresArray[23]).useChunkedParticipants(channelId, tmp2);
+  const obj3 = viewableChunks(stateFromStoresArray[23]);
   const items = [closure_7];
   const items1 = [channelId];
-  stateFromStoresArray = viewableChunks(stateFromStoresArray[25]).useStateFromStoresArray(items, () => {
+  stateFromStoresArray = viewableChunks(stateFromStoresArray[24]).useStateFromStoresArray(items, () => {
     const participants = closure_1_7.getParticipants(viewableChunks);
     return participants.filter((arg0) => callback(arg0));
   }, items1);
   callback = importAllResult.useRef(stateFromStoresArray);
   const items2 = [stateFromStoresArray, channelId];
   const effect = importAllResult.useEffect(() => {
-    obj = chunkedParticipants(stateFromStoresArray[26]);
+    obj = chunkedParticipants(stateFromStoresArray[25]);
     if (!obj.isEqual(ref.current, stateFromStoresArray)) {
-      const differenceWithResult = chunkedParticipants(tmp2[26]).differenceWith(tmp3.current, tmp4, (id, id2) => id.id === id2.id);
+      const differenceWithResult = chunkedParticipants(tmp2[25]).differenceWith(tmp3.current, tmp4, (id, id2) => id.id === id2.id);
       let user = null;
       if (differenceWithResult.length > 0) {
         user = differenceWithResult[0].user;
       }
       if (null != user) {
-        const AccessibilityAnnouncer = viewableChunks(tmp2[27]).AccessibilityAnnouncer;
-        const intl = viewableChunks(tmp2[28]).intl;
+        const AccessibilityAnnouncer = viewableChunks(tmp2[26]).AccessibilityAnnouncer;
+        const intl = viewableChunks(tmp2[27]).intl;
         obj = { username: null };
         obj[0] = user.username;
-        AccessibilityAnnouncer.announce(intl.formatToPlainString(viewableChunks(tmp2[28]).t["9NqwWZ"], obj));
+        AccessibilityAnnouncer.announce(intl.formatToPlainString(viewableChunks(tmp2[27]).t["9NqwWZ"], obj));
       }
-      const tmpResult = chunkedParticipants(tmp2[26]);
+      const tmpResult = chunkedParticipants(tmp2[25]);
     }
     ref.current = stateFromStoresArray;
   }, items2);
   const items3 = [chunkedParticipants];
   return importAllResult.useMemo(() => {
-    obj = { children: closure_1_14(viewableChunks(stateFromStoresArray[29]).TransitionGroup, obj) };
+    obj = { children: closure_1_14(viewableChunks(stateFromStoresArray[28]).TransitionGroup, obj) };
     obj = { items: chunkedParticipants, renderItem: closure_1_17, getItemKey: closure_1_16, lazyCleanUpDelay: 1000 };
     return closure_1_14(closure_1_22, obj);
   }, items3);

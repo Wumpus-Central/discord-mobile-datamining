@@ -106,7 +106,7 @@ export default function VoiceSensitivity(auto) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -147,7 +147,7 @@ export default function VoiceSensitivity(auto) {
                 mediaEngine.on(closure_2_0(closure_2_2[16]).MediaEngineEvent.VoiceActivity, closure_1_12);
               }
               c2 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp17) {
             c2 = tmp;
@@ -226,15 +226,15 @@ export default function VoiceSensitivity(auto) {
   }, items4);
   if (auto) {
     obj = { accessible: true, role: "meter", "aria-label": null, "aria-valuenow": null, "aria-valuemin": 0, "aria-valuemax": 100, "aria-valuetext": null, onAccessibilityFocus: null, onAccessibilityBlur: null, style: null, children: null };
-    let intl = tmp10(tmp9[18]).intl;
-    obj[2] = intl.string(tmp10(tmp9[18]).t.yZcOjo);
+    const intl2 = tmp10(tmp9[18]).intl;
+    obj[2] = intl2.string(tmp10(tmp9[18]).t.yZcOjo);
     let num = 0;
     if (first) {
       num = 100;
     }
     obj[3] = num;
-    const intl2 = tmp10(tmp9[18]).intl;
-    const string = intl2.string;
+    const intl3 = tmp10(tmp9[18]).intl;
+    const string = intl3.string;
     const t = tmp10(tmp9[18]).t;
     if (first) {
       let stringResult = string(t.haLKZ0);
@@ -264,8 +264,8 @@ export default function VoiceSensitivity(auto) {
     obj[10] = callback(first1, obj1);
     const items6 = [callback(tmp10(tmp9[19]).AccessibilityFocusView, obj), ];
     const obj3 = { inset: true, children: null };
-    const intl3 = tmp10(tmp9[18]).intl;
-    obj3[1] = intl3.string(tmp10(tmp9[18]).t.W3K5Im);
+    const intl4 = tmp10(tmp9[18]).intl;
+    obj3[1] = intl4.string(tmp10(tmp9[18]).t.W3K5Im);
     items6[1] = callback(tmp10(tmp9[20]).FormHint, obj3);
     obj[0] = items6;
     return callback(first1, obj);
@@ -302,11 +302,13 @@ export default function VoiceSensitivity(auto) {
     items11[1] = obj11;
     obj10[1] = items11;
     items10[1] = callback(first1, obj10);
-    const obj12 = { style: null, value: null, minimumValue: 0, maximumValue: 100, minimumTrackTintColor: "transparent", maximumTrackTintColor: "transparent", onValueChange: null, onSlidingComplete: null, onResponderGrant: null };
+    const obj12 = { style: null, value: null, minimumValue: 0, maximumValue: 100, minimumTrackTintColor: "transparent", maximumTrackTintColor: "transparent", accessibilityLabel: null, onValueChange: null, onSlidingComplete: null, onResponderGrant: null };
     obj12[0] = tmp.sensitivitySlider;
     obj12[1] = sum;
-    obj12[6] = callback1;
-    obj12[7] = function handleSlidingComplete(arg0) {
+    let intl = tmp10(tmp9[18]).intl;
+    obj12[6] = intl.string(tmp10(tmp9[18]).t["sqUm+k"]);
+    obj12[7] = callback1;
+    obj12[8] = function handleSlidingComplete(arg0) {
       onThresholdChange(-1 * (100 - arg0));
     };
     const tmp25 = callback;
@@ -317,7 +319,7 @@ export default function VoiceSensitivity(auto) {
     if (tmp10Result.isAndroid()) {
       fn = () => true;
     }
-    obj12[8] = fn;
+    obj12[9] = fn;
     items10[2] = tmp27(tmp8Result, obj12);
     obj4[1] = items10;
     return tmp25(tmp26, obj4);

@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemHappeningNow.tsx
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import useIsMobileVisualRefreshExperimentEnabled from "../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import map from "../../../../../../design/tokens/native/useToken.tsx";
 import useCutoutBackgroundColor from "../../../../../../design/components/Icon/native/CutoutBackgroundContext.tsx";
+import useIsMobileVisualRefreshExperimentEnabled from "../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import renderCardDefault from "../../../shared_components/happening_now/HappeningNow.tsx";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "../../../shared_components/happening_now/HappeningNowConstants.tsx";
@@ -31,6 +31,6 @@ export default importAllResult.memo(function MessagesItemHappeningNow(listRef) {
   obj[1] = <View style={callback(closure_4 + obj.useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container} collapsable={false}>{jsx(renderCardDefault, obj1)}</View>;
   return jsx(useCutoutBackgroundColor.CutoutBackgroundProvider, { style: callback(closure_4 + obj.useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: jsx(renderCardDefault, obj1) });
 });
-export const getMessagesItemHappeningNowHeight = function getMessagesItemHappeningNowHeight(closure_0) {
-  return useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM, closure_0) + closure_4;
+export const getMessagesItemHappeningNowHeight = function getMessagesItemHappeningNowHeight() {
+  return useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM) + closure_4;
 };

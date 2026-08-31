@@ -10,10 +10,9 @@ const require = arg1;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { top: ThemesDefault.space.PX_12, bottom: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12 };
-obj = { aboutSection: null, toggle: null };
+obj = { aboutSection: null };
 obj = { borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
 obj[0] = obj;
-obj[1] = { alignSelf: "center" };
 let closure_9 = createCacheKey.createStyles(obj);
 const result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayAboutSection.tsx");
 
@@ -37,28 +36,24 @@ export default function AppStoreOverlayAboutSection(children) {
   }, []);
   const intl = _require(first[6]).intl;
   const t = _require(first[6]).t;
-  const tmp2 = callback(React.useState(false), 2);
-  if (tmp3) {
-    let ChevronSmallDownIcon = tmp8(tmp9[7]).ChevronSmallUpIcon;
-  } else {
-    ChevronSmallDownIcon = tmp8(tmp9[8]).ChevronSmallDownIcon;
-  }
+  const stringResult = intl.string(tmp3 ? t["6MwJo/"] : t.lBeKY2);
   obj = { style: tmp.aboutSection, children: null };
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp8(tmp9[6]).intl;
   obj[2] = intl2.string(_require(first[6]).t.CI0vSJ);
-  const items1 = [callback2(_require(first[9]).Text, obj), callback2(_require(first[9]).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: num, onTextLayout: callback, children: children.description }), ];
+  const items1 = [callback2(_require(first[7]).Text, obj), callback2(_require(first[7]).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: num, onTextLayout: callback, children: children.description }), ];
   let tmp13Result = true === first;
   if (tmp13Result) {
-    obj = { style: null, hitSlop: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null };
-    obj[0] = tmp.toggle;
-    obj[1] = obj;
-    obj[3] = stringResult;
+    obj = { hitSlop: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null };
+    obj[0] = obj;
+    obj[2] = stringResult;
     obj1 = { expanded: null };
     obj1[0] = tmp3;
-    obj[4] = obj1;
-    obj[5] = callback1;
-    obj[6] = tmp13(ChevronSmallDownIcon, { size: "sm" });
+    obj[3] = obj1;
+    obj[4] = callback1;
+    const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
+    obj2[2] = stringResult;
+    obj[5] = tmp13(tmp8(tmp9[7]).Text, obj2);
     tmp13Result = tmp13(closure_4, obj);
   }
   items1[2] = tmp13Result;

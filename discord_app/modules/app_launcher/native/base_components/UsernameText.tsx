@@ -31,7 +31,7 @@ export default function UsernameText(color) {
     obj.color = "text-muted";
     const items1 = ["#", user.discriminator];
     obj.children = items1;
-    items[1] = callback(tmp(4442).Text, obj);
+    items[1] = callback(tmp(4444).Text, obj);
     obj[0] = items;
     str = callback(closure_3, obj);
   }
@@ -46,7 +46,7 @@ export default function UsernameText(color) {
     obj3.color = "text-muted";
     const items3 = ["(", str, ")"];
     obj3.children = items3;
-    items2[2] = callback(tmp(4442).Text, obj3);
+    items2[2] = callback(tmp(4444).Text, obj3);
     obj2[0] = items2;
     tmp13 = callback(closure_3, obj2);
   }

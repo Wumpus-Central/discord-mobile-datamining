@@ -9,8 +9,8 @@ const obj = keys.create(() => ({ time: DEFAULT_LOCKDOWN_DURATION, pauseInvites: 
 const result = set.fileFinishedImporting("modules/guild_antiraid/native/GuildIncidentsActionSheetStore.tsx");
 
 export const useGuildIncidentsActionSheetStore = obj;
-export const setTime = function setTime(arg0) {
-  const _require = arg0;
+export const setTime = function setTime(sum) {
+  const _require = sum;
   require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_3.setState({ time: closure_0, hasTimeChanges: true }));
 };
 export const setInitialTime = function setInitialTime(arg0) {

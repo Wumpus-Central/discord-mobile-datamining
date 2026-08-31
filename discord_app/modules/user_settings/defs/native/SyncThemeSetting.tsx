@@ -1,7 +1,6 @@
 // discord_app/modules/user_settings/defs/native/SyncThemeSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import saveGuildFoldersDefault from "../../../../actions/UserSettingsActionCreators.tsx";
 import track from "../../../../actions/AnalyticsTrackingActionCreators.tsx";
 import closure_3 from "../../../client_themes/ClientThemesBackgroundStore.tsx";
@@ -19,12 +18,8 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   useIsDisabled: function useSyncThemeDisabled() {
-    let stateFromStores = useIsMobileVisualRefreshExperimentEnabledDefault("SyncThemeSetting");
     const items = [closure_5];
-    if (stateFromStores) {
-      stateFromStores = obj.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
-    }
-    return stateFromStores;
+    return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   useValue: function useSyncThemeAcrossClientsValue() {
     const items = [closure_4];

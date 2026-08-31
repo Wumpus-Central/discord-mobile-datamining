@@ -25,12 +25,7 @@ export const generateSeparatorRowData = function generateSeparatorRowData(text, 
     obj = { type: null, id: null, color: null, borderColor: null, changeType: null, text: null };
     obj[0] = constants.SEPARATOR;
     obj[1] = rowType;
-    obj[2] = tmp.unreadTextColor;
-    let unreadBorderColor;
-    if (obj4.isMobileVisualRefreshEnabled("Separator")) {
-      unreadBorderColor = tmp.unreadBorderColor;
-    }
-    obj[3] = unreadBorderColor;
+    ({ unreadTextColor: obj3[2], unreadBorderColor: obj3[3] } = tmp);
     obj[4] = changeType;
     obj[5] = text.text;
     return obj;

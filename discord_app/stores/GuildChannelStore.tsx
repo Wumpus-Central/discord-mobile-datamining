@@ -43,7 +43,7 @@ function rebuildGuildChannels(guildId) {
   importDefault = undefined;
   const id = obj.id;
   importDefault = id;
-  obj1 = obj2(1913);
+  obj1 = obj2(1912);
   obj = {};
   if (obj1.isFavoritesGuildId(id)) {
     favoriteChannels = favoriteChannels.getFavoriteChannels();

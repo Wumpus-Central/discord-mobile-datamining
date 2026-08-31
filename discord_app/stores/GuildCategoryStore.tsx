@@ -35,7 +35,7 @@ function rebuildGuild(arg0) {
   });
   const item1 = channels[closure_5].forEach(updateChannel);
   const item2 = channels[closure_6].forEach(updateChannel);
-  const item3 = obj(5445)(obj._categories, obj).forEach(setIndex);
+  const item3 = obj(5448)(obj._categories, obj).forEach(setIndex);
   closure_12[arg0] = obj;
   return obj;
 }
@@ -66,12 +66,12 @@ function handleConnectionOpen() {
     });
     const item1 = channels[closure_5].forEach(updateChannel);
     const item2 = channels[closure_6].forEach(updateChannel);
-    const item3 = obj(5445)(obj._categories, obj).forEach(setIndex);
+    const item3 = obj(5448)(obj._categories, obj).forEach(setIndex);
     closure_12[c11] = obj;
     const arr = channels[constants.GUILD_CATEGORY];
     const arr2 = channels[closure_5];
     const arr3 = channels[closure_6];
-    const arr4 = obj(5445)(obj._categories, obj);
+    const arr4 = obj(5448)(obj._categories, obj);
   }
 }
 function handleGuildUpdates(guild) {
@@ -102,12 +102,12 @@ function handleGuildUpdates(guild) {
     });
     const item1 = channels[closure_5].forEach(updateChannel);
     const item2 = channels[closure_6].forEach(updateChannel);
-    const item3 = obj(5445)(obj._categories, obj).forEach(setIndex);
+    const item3 = obj(5448)(obj._categories, obj).forEach(setIndex);
     closure_12[id] = obj;
     const arr = channels[constants.GUILD_CATEGORY];
     const arr2 = channels[closure_5];
     const arr3 = channels[closure_6];
-    const arr4 = obj(5445)(obj._categories, obj);
+    const arr4 = obj(5448)(obj._categories, obj);
   }
 }
 function handleChannelUpdate(channel) {
@@ -141,12 +141,12 @@ function handleChannelUpdate(channel) {
       });
       const item1 = channels[closure_5].forEach(updateChannel);
       const item2 = channels[closure_6].forEach(updateChannel);
-      const item3 = obj(5445)(obj._categories, obj).forEach(setIndex);
+      const item3 = obj(5448)(obj._categories, obj).forEach(setIndex);
       closure_12[guild_id] = obj;
       const arr = channels[constants.GUILD_CATEGORY];
       const arr2 = channels[closure_5];
       const arr3 = channels[closure_6];
-      const arr4 = obj(5445)(obj._categories, obj);
+      const arr4 = obj(5448)(obj._categories, obj);
     }
   }
 }
@@ -178,12 +178,12 @@ function handleGuildRoleUpdate(guildId) {
     });
     const item1 = channels[closure_5].forEach(updateChannel);
     const item2 = channels[closure_6].forEach(updateChannel);
-    const item3 = obj(5445)(obj._categories, obj).forEach(setIndex);
+    const item3 = obj(5448)(obj._categories, obj).forEach(setIndex);
     closure_12[guildId] = obj;
     const arr = channels[constants.GUILD_CATEGORY];
     const arr2 = channels[closure_5];
     const arr3 = channels[closure_6];
-    const arr4 = obj(5445)(obj._categories, obj);
+    const arr4 = obj(5448)(obj._categories, obj);
   }
 }
 function updateSelectedVoiceChannel(channel, channelId) {
@@ -220,13 +220,13 @@ function updateSelectedVoiceChannel(channel, channelId) {
           });
           const item1 = channels[closure_5].forEach(updateChannel);
           const item2 = channels[closure_6].forEach(updateChannel);
-          const item3 = obj(5445)(obj._categories, obj).forEach(setIndex);
+          const item3 = obj(5448)(obj._categories, obj).forEach(setIndex);
           closure_12[guildId] = obj;
           flag = true;
           const arr = channels[constants.GUILD_CATEGORY];
           const arr2 = channels[closure_5];
           const arr3 = channels[closure_6];
-          const arr4 = obj(5445)(obj._categories, obj);
+          const arr4 = obj(5448)(obj._categories, obj);
         }
       }
       return flag;
@@ -257,7 +257,7 @@ function handleFavoritesUpdate() {
   });
   const item1 = channels[closure_5].forEach(updateChannel);
   const item2 = channels[closure_6].forEach(updateChannel);
-  const item3 = obj(5445)(obj._categories, obj).forEach(setIndex);
+  const item3 = obj(5448)(obj._categories, obj).forEach(setIndex);
   closure_12[closure_10] = obj;
 }
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c5, GUILD_VOCAL_CHANNELS_KEY: closure_6 } = comparator);
@@ -303,13 +303,13 @@ prototype["getCategories"] = function getCategories(arg0) {
       });
       const item1 = channels[closure_5].forEach(updateChannel);
       const item2 = channels[closure_6].forEach(updateChannel);
-      const item3 = obj(5445)(obj._categories, obj).forEach(setIndex);
+      const item3 = obj(5448)(obj._categories, obj).forEach(setIndex);
       dependencyMap[arg0] = obj;
       tmp3 = obj;
       const arr = channels[constants.GUILD_CATEGORY];
       const arr2 = channels[closure_5];
       const arr3 = channels[closure_6];
-      const arr4 = obj(5445)(obj._categories, obj);
+      const arr4 = obj(5448)(obj._categories, obj);
     }
     let tmp = tmp3;
   } else {
@@ -353,12 +353,12 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
         });
         const item1 = channels[closure_5].forEach(updateChannel);
         const item2 = channels[closure_6].forEach(updateChannel);
-        const item3 = obj(5445)(obj._categories, obj).forEach(setIndex);
+        const item3 = obj(5448)(obj._categories, obj).forEach(setIndex);
         dependencyMap[guildId] = obj;
         const arr = channels[constants.GUILD_CATEGORY];
         const arr2 = channels[closure_5];
         const arr3 = channels[closure_6];
-        const arr4 = obj(5445)(obj._categories, obj);
+        const arr4 = obj(5448)(obj._categories, obj);
       }
       tmp2 = tmp4;
     }
@@ -427,12 +427,12 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
         });
         const item1 = channels[closure_5].forEach(updateChannel);
         const item2 = channels[closure_6].forEach(updateChannel);
-        const item3 = obj(5445)(obj._categories, obj).forEach(setIndex);
+        const item3 = obj(5448)(obj._categories, obj).forEach(setIndex);
         closure_12[guildId] = obj;
         const arr = channels[constants.GUILD_CATEGORY];
         const arr2 = channels[closure_5];
         const arr3 = channels[closure_6];
-        const arr4 = obj(5445)(obj._categories, obj);
+        const arr4 = obj(5448)(obj._categories, obj);
       }
     }
   },
@@ -464,7 +464,7 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
       });
       const item1 = channels[closure_5].forEach(updateChannel);
       const item2 = channels[closure_6].forEach(updateChannel);
-      const item3 = obj(5445)(obj._categories, obj).forEach(setIndex);
+      const item3 = obj(5448)(obj._categories, obj).forEach(setIndex);
       closure_12[c11] = obj;
     }
   },

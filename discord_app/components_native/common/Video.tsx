@@ -136,7 +136,7 @@ class Video extends PureComponent {
 const prototype = Video.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
-  this._renderTask = self(6011).runAfterInteractions(() => {
+  this._renderTask = self(6014).runAfterInteractions(() => {
     self.setState({ postponeRender: false });
   });
 };

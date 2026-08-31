@@ -54,7 +54,7 @@ export default function useMobileInviteSuggestions(arg0, arg1, arg2, arg3) {
       isGuildVoiceResult = set.isGuildVoice();
     }
     if (isGuildVoiceResult) {
-      let obj = lib(9875);
+      let obj = lib(9898);
       obj = { location: "useMobileInviteSuggestions", guildId: null };
       obj[1] = set.guild_id;
       isGuildVoiceResult = obj.getGuildMembersInMobileVCInvitesExperiment(obj);
@@ -78,8 +78,8 @@ export default function useMobileInviteSuggestions(arg0, arg1, arg2, arg3) {
       obj[1] = isFetchingRows.getGuild(set.guild_id);
       obj[2] = set;
       obj[3] = dependencyMap;
-      const inviteSuggestions = lib(9876).loadInviteSuggestions(obj);
-      const obj3 = lib(9876);
+      const inviteSuggestions = lib(9899).loadInviteSuggestions(obj);
+      const obj3 = lib(9899);
       inviteSuggestions.catch(closure_1_11).finally(() => {
         callback(false);
       });

@@ -270,73 +270,64 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
       customBackgroundGradient = null;
     }
     if (null == customBackgroundGradient) {
-      const items = [];
-      let tmp2Result = tmp2(tmp3[12]);
-      if (tmp2Result.isMobileVisualRefreshEnabled("createFakeThemedContext")) {
-        items.push("mobile-visual-refresh");
-      }
-      let tmp8;
-      if (items.length > 0) {
-        tmp8 = items;
-      }
       obj = {};
       const merged = Object.assign(tmp2(tmp3[4]).FALLBACK_THEME_CONTEXT_VALUE);
       obj.flags = 0;
       obj.saturation = closure_1_5.saturation;
       obj.theme = theme;
-      obj.enabledExperiments = tmp8;
+      obj.enabledExperiments = ["mobile-visual-refresh"];
       obj.gradient = customBackgroundGradient;
       const _JSON = JSON;
       obj = {};
       const json = JSON.stringify(obj);
       const merged1 = Object.assign(obj);
       obj.key = json;
-      const items1 = [];
+      const items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(substr, 0);
-      items1[arraySpreadResult] = obj.key;
-      const applyResult = HermesBuiltin.apply(items1, undefined);
+      items[arraySpreadResult] = obj.key;
+      const applyResult = HermesBuiltin.apply(items, undefined);
       const value = map.get(applyResult);
       if (null != value) {
         return value;
       } else {
         let applyResult1 = createCacheKey;
         if (typeof createCacheKey === "function") {
-          const items2 = [];
+          const items1 = [];
           arraySpreadResult = HermesBuiltin.arraySpread(substr, 0);
-          applyResult1 = HermesBuiltin.apply(items2, undefined);
+          applyResult1 = HermesBuiltin.apply(items1, undefined);
         }
-        const tmp34Result = closure_1_9(applyResult1, obj);
-        for (const key10073 in tmp34Result) {
-          let tmp41 = key10073;
-          let tmp42 = tmp34Result[key10073];
-          let tmp43 = closure_1_4;
-          let tmp44 = closure_1_4(tmp42);
-          if (null == tmp44) {
+        const tmp32Result = closure_1_9(applyResult1, obj);
+        for (const key10062 in tmp32Result) {
+          let tmp39 = key10062;
+          let tmp40 = tmp32Result[key10062];
+          let tmp41 = closure_1_4;
+          let tmp42 = closure_1_4(tmp40);
+          if (null == tmp42) {
             let _Error = Error;
             let _HermesInternal = HermesInternal;
-            let str4 = "\"";
-            let str5 = "Unable to parse color: \"";
-            let tmp28 = new.target;
-            let tmp29 = new.target;
-            error = new Error("Unable to parse color: \"" + tmp42 + "\"");
-            let tmp31 = error;
+            let str2 = "\"";
+            let str3 = "Unable to parse color: \"";
+            let tmp26 = new.target;
+            let tmp27 = new.target;
+            error = new Error("Unable to parse color: \"" + tmp40 + "\"");
+            let tmp29 = error;
             throw error;
           } else {
-            tmp34Result[key10073] = tmp44;
+            tmp32Result[key10062] = tmp42;
             continue;
           }
         }
-        const result = map.set(applyResult, tmp34Result);
-        return tmp34Result;
+        const result = map.set(applyResult, tmp32Result);
+        return tmp32Result;
       }
     } else {
-      tmp2Result = tmp2(tmp3[4]);
       if ("light" === customBackgroundGradient.theme) {
         let MOBILE_DARK_GRADIENT_THEME_ENABLED = tmp2(tmp3[4]).ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED;
       } else {
         MOBILE_DARK_GRADIENT_THEME_ENABLED = tmp2(tmp3[4]).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED;
       }
-      tmp2Result.setThemeFlag(0, MOBILE_DARK_GRADIENT_THEME_ENABLED);
+      tmp2(tmp3[4]).setThemeFlag(0, MOBILE_DARK_GRADIENT_THEME_ENABLED);
+      const tmp2Result = tmp2(tmp3[4]);
     }
   };
 };
@@ -402,7 +393,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
       obj[2] = num4;
       obj = {};
       const merged = Object.assign(obj);
-      class S {
+      class T {
         constructor() {
           obj = {};
           for (const key10005 in closure_4) {
@@ -449,7 +440,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
       let tmp7 = items;
     }
     obj = tmp3;
-    class S {
+    class T {
       constructor() {
         obj = {};
         for (const key10005 in closure_4) {
@@ -477,9 +468,9 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
       }
     }
     const obj4 = arr(obj[8]);
-    S.__closure = { resolvedStyles: tmp3, withTiming: arr(obj[9]).withTiming, interpolateColor: arr(obj[8]).interpolateColor, themeIndex, stops: callback, timingStandard: arr(obj[10]).timingStandard };
-    S.__workletHash = 6815805628278;
-    S.__initData = closure_1_11;
-    return obj4.useAnimatedStyle(S);
+    T.__closure = { resolvedStyles: tmp3, withTiming: arr(obj[9]).withTiming, interpolateColor: arr(obj[8]).interpolateColor, themeIndex, stops: callback, timingStandard: arr(obj[10]).timingStandard };
+    T.__workletHash = 6815805628278;
+    T.__initData = closure_1_11;
+    return obj4.useAnimatedStyle(T);
   };
 };

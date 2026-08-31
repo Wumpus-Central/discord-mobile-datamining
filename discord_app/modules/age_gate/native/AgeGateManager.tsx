@@ -1,5 +1,5 @@
 // discord_app/modules/age_gate/native/AgeGateManager.tsx
-import _modDef4689 from "../../../actions/ModalActionCreators.tsx";
+import _modDef4691 from "../../../actions/ModalActionCreators.tsx";
 import shouldShowAgeGateForVoiceChannel from "../AgeGateUtils.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -44,7 +44,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(source) {
   source = source.source;
-  _modDef4689.pushLazy(callback(function*() {
+  _modDef4691.pushLazy(callback(function*() {
     closure_1 = tmp5;
     closure_0 = tmp2;
     yield closure_1_0(paths[10])(paths[9], paths.paths);
@@ -58,7 +58,7 @@ prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(source) {
   }), { source }, closure_7);
 };
 prototype["handleAgeGateModalClose"] = function handleAgeGateModalClose() {
-  _modDef4689.popWithKey(closure_7);
+  _modDef4691.popWithKey(closure_7);
 };
 prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
   guild = guild.guild;

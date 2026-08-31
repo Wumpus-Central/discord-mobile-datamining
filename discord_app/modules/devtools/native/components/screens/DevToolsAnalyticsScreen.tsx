@@ -28,7 +28,7 @@ function LoggedEvent(arg0) {
   user = user.getUser(fingerprint);
   let CopyIcon = fingerprint;
   let tmp6Result = dependencyMap;
-  let obj = { arrow: !tmp2, icon: callback2(fingerprint(10313).AnalyticsIcon, {}), label: event, subLabel: null, onPress: null, start: null, end: null };
+  let obj = { arrow: !tmp2, icon: callback2(fingerprint(10337).AnalyticsIcon, {}), label: event, subLabel: null, onPress: null, start: null, end: null };
   if ("name" in properties) {
     let str2 = properties.name;
   } else {
@@ -46,7 +46,7 @@ function LoggedEvent(arg0) {
   };
   obj[5] = start;
   obj[6] = end;
-  let items = [callback2(fingerprint(5564).TableRow, obj), ];
+  let items = [callback2(fingerprint(5567).TableRow, obj), ];
   if (!tmp2) {
     obj = { collapsable: false, children: null };
     items[1] = tmp2;
@@ -59,16 +59,16 @@ function LoggedEvent(arg0) {
     obj1[0] = map.commonPropertiesContainer;
     const obj2 = { name: "Timestamp (local)", children: null };
     const obj3 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-    let obj4 = map(4044)(timestamp);
+    let obj4 = map(4045)(timestamp);
     obj3[2] = obj4.calendar();
-    obj2[1] = tmp6(CopyIcon(4442).Text, obj3);
+    obj2[1] = tmp6(CopyIcon(4444).Text, obj3);
     let items1 = [tmp6(CommonProperty, obj2), , ];
     tmp6Result = null != user;
     if (tmp6Result) {
       obj4 = { name: "User ", children: null };
       const obj5 = { user: null };
       obj5[0] = user;
-      obj4[1] = tmp6(tmp10(9710), obj5);
+      obj4[1] = tmp6(tmp10(9732), obj5);
       tmp6Result = tmp6(tmp9, obj4);
     }
     items1[1] = tmp6Result;
@@ -85,16 +85,16 @@ function LoggedEvent(arg0) {
       const items2 = [map.monospace, { marginRight: 4 }];
       obj7[2] = items2;
       obj7[3] = fingerprint;
-      const items3 = [tmp6(CopyIcon(4442).Text, obj7), ];
-      CopyIcon = CopyIcon(4393).CopyIcon;
+      const items3 = [tmp6(CopyIcon(4444).Text, obj7), ];
+      CopyIcon = CopyIcon(4395).CopyIcon;
       tmp6Result = tmp6(CopyIcon, { size: "sm" });
       items3[1] = tmp6Result;
       obj6[2] = items3;
-      let tmp6Result1 = tmp4(CopyIcon(5033).PressableOpacity, obj6);
+      let tmp6Result1 = tmp4(CopyIcon(5036).PressableOpacity, obj6);
     } else {
       const obj8 = { variant: "text-sm/medium", color: "text-muted", style: null, children: "null" };
       obj8[2] = map.monospace;
-      tmp6Result1 = tmp6(CopyIcon(4442).Text, obj8);
+      tmp6Result1 = tmp6(CopyIcon(4444).Text, obj8);
     }
     const obj9 = { name: "Fingerprint", children: null };
     obj9[1] = tmp6Result1;
@@ -185,29 +185,29 @@ export default function DevToolsAnalyticsScreen() {
   const str2 = str.toLowerCase();
   const tmp12 = View;
   const tmp13 = callback3;
-  const items2 = [callback2(trimmed(5958).TableSwitchRow, { icon: callback2(trimmed(11657).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] }), ];
-  obj1 = { icon: callback2(trimmed(11657).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] };
-  items2[1] = callback2(trimmed(5564).TableRow, { arrow: true, variant: "danger", icon: callback2(trimmed(4404).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(15107).clearAnalyticsLog });
+  const items2 = [callback2(trimmed(5961).TableSwitchRow, { icon: callback2(trimmed(11688).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] }), ];
+  obj1 = { icon: callback2(trimmed(11688).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] };
+  items2[1] = callback2(trimmed(5567).TableRow, { arrow: true, variant: "danger", icon: callback2(trimmed(4406).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(15140).clearAnalyticsLog });
   obj[2] = items2;
-  const items3 = [callback3(trimmed(5957).TableRowGroup, obj), , ];
-  const obj2 = { arrow: true, variant: "danger", icon: callback2(trimmed(4404).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(15107).clearAnalyticsLog };
-  items3[1] = callback2(View, { style: tmp.searchFieldContainer, children: callback2(trimmed(6186).SearchField, { placeholder: "Search by event name", onChange: tmp8 }) });
+  const items3 = [callback3(trimmed(5960).TableRowGroup, obj), , ];
+  const obj2 = { arrow: true, variant: "danger", icon: callback2(trimmed(4406).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(15140).clearAnalyticsLog };
+  items3[1] = callback2(View, { style: tmp.searchFieldContainer, children: callback2(trimmed(6189).SearchField, { placeholder: "Search by event name", onChange: tmp8 }) });
   if (0 === loggedEvents.length) {
-    let tmp11Result = tmp11(tmp2(5564).TableRow, { label: "No events logged." });
+    let tmp11Result = tmp11(tmp2(5567).TableRow, { label: "No events logged." });
   } else {
     tmp11Result = null;
     if (0 === found.length) {
       const obj4 = { label: null };
       const _HermesInternal = HermesInternal;
       obj4[0] = "No events match \"" + str + "\"";
-      tmp11Result = tmp11(tmp2(5564).TableRow, obj4);
+      tmp11Result = tmp11(tmp2(5567).TableRow, obj4);
     }
   }
   const obj5 = { ListHeaderComponent: null, contentContainerStyle: null, extraData: null, data: null, renderItem: null };
   const obj6 = { spacing: 16, children: null };
-  items3[2] = callback2(trimmed(5957).TableRowGroup, { title: "Analytics Events", hasIcons: false, children: tmp11Result });
+  items3[2] = callback2(trimmed(5960).TableRowGroup, { title: "Analytics Events", hasIcons: false, children: tmp11Result });
   obj6[1] = items3;
-  obj5[0] = tmp13(trimmed(4891).Stack, obj6);
+  obj5[0] = tmp13(trimmed(4894).Stack, obj6);
   obj5[1] = tmp.contentContainer;
   obj5[2] = stateFromStores;
   obj5[3] = reversed;
@@ -215,6 +215,6 @@ export default function DevToolsAnalyticsScreen() {
     ({ item, index } = arg0);
     return closure_1_8(closure_1_12, { start: 0 === index, end: index === reversed.length - 1, event: item.event, properties: item.properties, timestamp: item.timestamp, fingerprint: item.fingerprint });
   };
-  obj[1] = callback2(trimmed(8051).FlashList, obj5);
+  obj[1] = callback2(trimmed(8073).FlashList, obj5);
   return callback2(tmp12, obj);
 };

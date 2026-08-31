@@ -1,5 +1,4 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import explicitContentFromProto from "../../../user_settings/UserSettings.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
 import LinkIcon from "../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
@@ -67,17 +66,16 @@ class ChannelRowPreview {
     if (lineClamp === undefined) {
       lineClamp = 1;
     }
-    ({ variant, color } = global);
-    tmp = closure_2;
-    tmp2 = require("useIsMobileVisualRefreshExperimentEnabled")("ChannelRowPreview");
-    tmp3 = closure_0;
+    ({ variant, color, muted } = global);
+    tmp = closure_0;
+    tmp2 = closure_2;
     obj = require("getFontScale");
     fontScale = obj.useFontScale();
     obj2 = require("formatMessagePreview");
     formattedMessagePreview = obj2.useFormattedMessagePreview(message, channel);
     obj3 = require("getLayoutStyles");
     layoutStyles = obj3.getLayoutStyles(layout);
-    tmp7 = require("map");
+    tmp6 = require("map");
     if (null == formattedMessagePreview) {
       return null;
     } else {
@@ -92,8 +90,8 @@ class ChannelRowPreview {
       } else {
         str2 = "markup";
         if ("markup" === type) {
-          tmp9 = jsx;
-          tmp10 = closure_9;
+          tmp8 = jsx;
+          tmp9 = closure_9;
           if ("markup" === formattedMessagePreview.type) {
             content = formattedMessagePreview.markup;
           } else {
@@ -103,38 +101,34 @@ class ChannelRowPreview {
           obj[0] = content;
           obj[1] = message.channel_id;
           obj[2] = channel.guild_id;
-          obj[3] = global.muted;
+          obj[3] = muted;
           obj[4] = layout;
           obj[5] = color;
-          text = tmp9(tmp10, obj);
+          text = tmp8(tmp9, obj);
         } else {
           str3 = "message";
         }
       }
-      tmp11 = jsxs;
+      tmp10 = jsxs;
       obj1 = { style: null, children: null };
       obj2 = { flexDirection: "row", alignItems: "center", minHeight: null };
-      obj2[2] = tmp8;
+      obj2[2] = tmp7;
       obj1[0] = obj2;
-      tmp12 = View;
+      tmp11 = View;
       obj3 = { lineClamp: null, variant: null, maxFontSizeMultiplier: 1.75, color: null, style: null, children: null };
       obj3[0] = lineClamp;
       if (variant == null) {
-        str4 = "text-sm/normal";
-        if (!tmp2) {
-          str4 = layoutStyles.messagePreview.text.variant;
-        }
-        variant = str4;
+        variant = "text-sm/normal";
       }
       obj3[1] = variant;
       obj3[3] = color;
       obj3[4] = { paddingBottom: 2, flexShrink: 1 };
       combined = null != authorLabel;
       if (combined) {
-        tmp14 = globalThis;
+        tmp13 = globalThis;
         _HermesInternal = HermesInternal;
-        str5 = ": ";
-        str6 = "";
+        str4 = ": ";
+        str5 = "";
         combined = "" + authorLabel + ": ";
       }
       items = [, ];
@@ -142,21 +136,21 @@ class ChannelRowPreview {
       items[1] = text;
       obj3[5] = items;
       items1 = [, ];
-      items1[0] = tmp11(require("Text").Text, obj3);
-      tmp15 = null != trailingIcon;
-      if (tmp15) {
-        tmp16 = jsx;
-        tmp17 = PreviewIcon;
+      items1[0] = tmp10(require("Text").Text, obj3);
+      tmp14 = null != trailingIcon;
+      if (tmp14) {
+        tmp15 = jsx;
+        tmp16 = PreviewIcon;
         obj4 = { icon: null, size: null, color: null, style: null };
         obj4[0] = trailingIcon;
         obj4[1] = layoutStyles.messagePreview.messageTypeIconSizeNew;
         obj4[2] = color;
         obj4[3] = { marginLeft: 4 };
-        tmp15 = jsx(PreviewIcon, obj4);
+        tmp14 = jsx(PreviewIcon, obj4);
       }
-      items1[1] = tmp15;
+      items1[1] = tmp14;
       obj1[1] = items1;
-      return tmp11(tmp12, obj1);
+      return tmp10(tmp11, obj1);
     }
   }
 }
@@ -195,7 +189,7 @@ class NativeChannelRowPreview {
     items[2] = setting2;
     items[3] = gifAutoPlay;
     memo = closure_3.useMemo(() => {
-      let obj = new gifAutoPlay(seeMoreLabelColor[24])();
+      let obj = new gifAutoPlay(seeMoreLabelColor[23])();
       obj = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
       obj.setOptions(obj);
       return obj;
@@ -205,11 +199,11 @@ class NativeChannelRowPreview {
       horizontalOffset: 0,
       modifyRow(message) {
             let processColorOrThrowResult;
-            message.contextType = closure_1_0(seeMoreLabelColor[26]).MessageContextType.SEARCH;
+            message.contextType = closure_1_0(seeMoreLabelColor[25]).MessageContextType.SEARCH;
             if (null != closure_3) {
               try {
-                processColorOrThrowResult = closure_1_0(seeMoreLabelColor[27]).processColorOrThrow(tmp4);
-                const tmp2Result = closure_1_0(seeMoreLabelColor[27]);
+                processColorOrThrowResult = closure_1_0(seeMoreLabelColor[26]).processColorOrThrow(tmp4);
+                const tmp2Result = closure_1_0(seeMoreLabelColor[26]);
               } catch (err) {
               }
             }

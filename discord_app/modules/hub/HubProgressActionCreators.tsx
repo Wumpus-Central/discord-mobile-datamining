@@ -16,7 +16,7 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
     }
     if (hasItem) {
       const items = [JOIN_GUILD];
-      const result = items(1374).updateUserGuildSettings(guildId, (hubProgress) => {
+      const result = items(1370).updateUserGuildSettings(guildId, (hubProgress) => {
         let flag = false;
         for (const item10008 of closure_0) {
           let tmp = item10008;
@@ -32,8 +32,8 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
           continue;
         }
         return flag;
-      }, items(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
-      const obj = items(1374);
+      }, items(1370).UserSettingsDelay.INFREQUENT_USER_ACTION);
+      const obj = items(1370);
     }
   }
 };

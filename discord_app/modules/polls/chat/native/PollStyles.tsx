@@ -1,12 +1,12 @@
 // discord_app/modules/polls/chat/native/PollStyles.tsx
 import set from "../../../../../_runtime/00002_set.js";
 import NativeShadowType from "../PollMessageChatDataTypes.tsx";
-import { t } from "../../../../../_runtime/04671_t.js";
+import { t } from "../../../../../_runtime/04673_t.js";
 
 function normal(border) {
   const _require = border;
   const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-  const match = require("../../../../../_runtime/04671_t.js").match(arg1);
+  const match = require("../../../../../_runtime/04673_t.js").match(arg1);
   const str = t;
   obj[3] = match.with(require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
   obj[5] = border.colors.BACKGROUND_MOD_MUTED;
@@ -23,7 +23,7 @@ function normalVote(border, arg1) {
   let obj = {};
   const _require = border;
   obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-  const match = require("../../../../../_runtime/04671_t.js").match(arg1);
+  const match = require("../../../../../_runtime/04673_t.js").match(arg1);
   const str = t;
   obj[3] = match.with(require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
   obj[5] = border.colors.BACKGROUND_MOD_MUTED;
@@ -71,14 +71,14 @@ export const pollStyleSets = {
   },
   normal,
   notVoted,
-  selected(guild, arg1, selected) {
+  selected(View, arg1, selected) {
     const obj = {};
-    const merged = Object.assign(normalVote(guild, arg1));
-    obj.border = guild.colors.BACKGROUND_BRAND;
+    const merged = Object.assign(normalVote(View, arg1));
+    obj.border = View.colors.BACKGROUND_BRAND;
     obj.borderWidth = 1;
     obj.radioStyle = NativeShadowType.PollRadioStyle.FILLED;
-    obj.radioBackground = guild.colors.REDESIGN_INPUT_CONTROL_SELECTED;
-    obj.radioForeground = guild.colors.STATUS_POSITIVE_TEXT;
+    obj.radioBackground = View.colors.REDESIGN_INPUT_CONTROL_SELECTED;
+    obj.radioForeground = View.colors.STATUS_POSITIVE_TEXT;
     return obj;
   },
   victorNotSelected,

@@ -162,9 +162,9 @@ prototype["reset"] = function reset() {
   emitter.removeAllListeners();
   return this;
 };
-prototype["dispatchKeyed"] = function dispatchKeyed(VOICE_MESSAGE_SEND, voiceMessageAnimationState, arg2) {
+prototype["dispatchKeyed"] = function dispatchKeyed(VOICE_MESSAGE_SEND, closure_0, arg2) {
   const substr = [...arguments].slice();
-  const items = ["" + VOICE_MESSAGE_SEND + "_" + voiceMessageAnimationState, ...substr];
+  const items = ["" + VOICE_MESSAGE_SEND + "_" + closure_0, ...substr];
   return this.dispatch.apply(items);
 };
 prototype["subscribeKeyed"] = function subscribeKeyed(VOICE_MESSAGE_SEND, sharedValue1, callback) {

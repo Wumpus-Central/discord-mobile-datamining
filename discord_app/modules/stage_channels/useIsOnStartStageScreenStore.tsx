@@ -21,10 +21,10 @@ export const useUpdateIsOnStartStageScreenEffect = function useUpdateIsOnStartSt
   let obj = initialize;
   const items1 = [closure_4];
   const items2 = [id];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_4.can(id(1399).MODERATE_STAGE_CHANNEL_PERMISSIONS, id), items2);
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_4.can(id(1395).MODERATE_STAGE_CHANNEL_PERMISSIONS, id), items2);
   let tmp3 = stateFromStores1;
   if (stateFromStores1) {
-    tmp3 = !stateFromStores(8613)(id.id);
+    tmp3 = !stateFromStores(8635)(id.id);
   }
   dependencyMap = tmp3;
   const items3 = [stateFromStores, tmp3];

@@ -1,6 +1,6 @@
 // discord_app/modules/polls/transformMessagPoll.tsx
 import set from "../../../_runtime/00002_set.js";
-import hooksDefault from "../../../_runtime/04044_hooks.js";
+import hooksDefault from "../../../_runtime/04045_hooks.js";
 
 const result = set.fileFinishedImporting("modules/polls/transformMessagPoll.tsx");
 

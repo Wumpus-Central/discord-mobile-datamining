@@ -1,6 +1,6 @@
 // discord_app/modules/markup/MarkupTextRule.tsx
-import tDefault from "../../../_runtime/04161_t.js";
-import t from "../../../_runtime/04161_t.js";
+import tDefault from "../../../_runtime/04162_t.js";
+import t from "../../../_runtime/04162_t.js";
 
 const tmp2 = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/;
 const obj = {};

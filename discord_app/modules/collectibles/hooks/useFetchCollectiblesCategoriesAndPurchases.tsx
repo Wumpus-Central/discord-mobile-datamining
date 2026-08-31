@@ -72,7 +72,7 @@ function useFetchCollectiblesCategoriesAndPurchases(paymentGateway) {
   if (paymentGateway != null) {
     paymentGateway = paymentGateway.paymentGateway;
   }
-  let obj = { paymentGateway, noOp: null, logPerf: null, countryCode: null };
+  let obj = { paymentGateway, noOp: null, logPerf: null, countryCode: null, skipFetch: null };
   let noOp;
   if (paymentGateway != null) {
     noOp = paymentGateway.noOp;
@@ -88,6 +88,11 @@ function useFetchCollectiblesCategoriesAndPurchases(paymentGateway) {
     countryCode = paymentGateway.countryCode;
   }
   obj[3] = countryCode;
+  let skipFetch;
+  if (paymentGateway != null) {
+    skipFetch = paymentGateway.skipFetch;
+  }
+  obj[4] = skipFetch;
   const tmp2Result = setDefault(obj, arg1);
   const isFetching = tmp2Result.isFetching;
   let stalePurchasesOK;
@@ -95,14 +100,14 @@ function useFetchCollectiblesCategoriesAndPurchases(paymentGateway) {
   if (paymentGateway != null) {
     stalePurchasesOK = paymentGateway.stalePurchasesOK;
   }
-  const tmp7Result = useFetchPurchases(stalePurchasesOK);
-  const isFetching2 = tmp7Result.isFetching;
-  let tmp10 = isFetching;
-  ({ isClaiming, fetchPurchasesError, claimError } = tmp7Result);
+  const tmp8Result = useFetchPurchases(stalePurchasesOK);
+  const isFetching2 = tmp8Result.isFetching;
+  let tmp11 = isFetching;
+  ({ isClaiming, fetchPurchasesError, claimError } = tmp8Result);
   if (!isFetching) {
-    tmp10 = isFetching2;
+    tmp11 = isFetching2;
   }
-  obj = { isFetching: tmp10, isFetchingCategories: isFetching, isFetchingPurchases: isFetching2, isClaiming, categories, purchases: tmp7Result.purchases, fetchCategoriesError, fetchPurchasesError, claimError, refreshCategories, hasPreviouslyFetched: tmp7Result.hasPreviouslyFetched };
+  obj = { isFetching: tmp11, isFetchingCategories: isFetching, isFetchingPurchases: isFetching2, isClaiming, categories, purchases: tmp8Result.purchases, fetchCategoriesError, fetchPurchasesError, claimError, refreshCategories, hasPreviouslyFetched: tmp8Result.hasPreviouslyFetched };
   return obj;
 }
 ({ useEffect: c4, useRef: c5 } = noop);

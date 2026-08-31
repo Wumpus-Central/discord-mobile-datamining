@@ -1,6 +1,5 @@
 // discord_app/design/void/Form/native/FormDivider.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
 import context from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
 import useProfileThemeValues from "../../../../modules/user_profile/useProfileThemeValues.native.tsx";
@@ -11,7 +10,7 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 require = arg1;
 ({ View: c4, StyleSheet: c5, Platform } = get_ActivityIndicator);
-let closure_7 = createCacheKey.createStyles((arg0) => {
+let closure_7 = createCacheKey.createStyles(() => {
   let obj = { divider: {}, dividerOuter: null, dividerHasIcon: null };
   obj = { marginLeft: 0, height: closure_5.hairlineWidth, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: -1 * closure_5.hairlineWidth };
   obj[1] = obj;
@@ -31,7 +30,7 @@ export default function Divider(outer) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const tmp2 = callback(useIsMobileVisualRefreshExperimentEnabledDefault("FormDivider"));
+  const tmp = callback();
   let obj = ManaContext;
   const themeContext = obj.useThemeContext();
   ({ theme, primaryColor } = themeContext);
@@ -39,15 +38,15 @@ export default function Divider(outer) {
   let tmp7 = null;
   if (tmp6) {
     obj = { backgroundColor: null };
-    obj[0] = tmp3(4294).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
+    obj[0] = tmp2(4296).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
     tmp7 = obj;
-    const tmp3Result = tmp3(4294);
+    const tmp2Result = tmp2(4296);
   }
   let tmp10Result = null;
   if (!React.useContext(context.RedesignCompatContext)) {
-    const items = [flag ? tmp2.dividerOuter : tmp2.divider, , , ];
+    const items = [flag ? tmp.dividerOuter : tmp.divider, , , ];
     if (flag2) {
-      flag2 = tmp2.dividerHasIcon;
+      flag2 = tmp.dividerHasIcon;
     }
     obj = { style: null };
     items[1] = flag2;

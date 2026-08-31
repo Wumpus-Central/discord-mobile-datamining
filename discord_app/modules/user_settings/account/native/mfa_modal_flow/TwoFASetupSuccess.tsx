@@ -5,7 +5,7 @@ import Button from "../../../../../design/void/native.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import Button2 from "../../../../../design/components/Button/native/Button.native.tsx";
 import TwoFAModalSetupSections from "TwoFASetupModal.tsx";
-import registerAsset from "../../../../../../_runtime/14331_registerAsset.js";
+import registerAsset from "../../../../../../_runtime/14365_registerAsset.js";
 import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_5 from "../../../../../../_runtime/00019_noop.js";
@@ -54,7 +54,7 @@ export default function TwoFASetupSuccess() {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -76,7 +76,7 @@ export default function TwoFASetupSuccess() {
                   ({ ticket: c0, credential: c1 } = c0);
                   c5 = 1;
                   c6 = 1;
-                  return { value: "ct", done: true };
+                  return { value: "Object", done: true };
                 }
               } else if (1 === tmp8) {
                 if (arg0 === 1) {

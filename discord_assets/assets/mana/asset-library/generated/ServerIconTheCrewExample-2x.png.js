@@ -3,5 +3,5 @@ import set from "../../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconTheCrewExample-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/644a2b9194f2f8902baebac86c45631924cbc7d03e7d5fef9d5f3fb99fa3a989.png";
-export const metadata = { fileBytes: 43569 };
+export default "https://cdn.discordapp.com/assets/content/f22c11791351a451c93026f30afb031d49a7d9f23f9c3a35dd9b214e0382c7f6.png";
+export const metadata = { fileBytes: 43756 };

@@ -42,9 +42,9 @@ export default function BlockedPaymentsCountryDisplay() {
   const obj5 = combinedDefault;
   const tmp8 = closure_4;
   if (obj7.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(8429);
+    let tmp2Result = tmp2(8451);
   } else {
-    tmp2Result = tmp2(8430);
+    tmp2Result = tmp2(8452);
   }
   obj2[1] = tmp2Result;
   items[2] = tmp7(tmp8, obj2);

@@ -1,9 +1,9 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useIsMobileVisualRefreshExperimentEnabled from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
 import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import RowButtonWrapper from "../../../../design/components/TableRow/native/RowButton.native.tsx";
+import useIsMobileVisualRefreshExperimentEnabled from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import closure_5 from "../../../../stores/ChannelStore.tsx";
@@ -165,8 +165,8 @@ let closure_14 = { code: "function VoicePanelFloatingCTAContainerTsx2(finished){
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx");
 
 export default VoicePanelFloatingCTAContainer;
-export const getFloatingCTATotalViewHeight = function getFloatingCTATotalViewHeight(chatInputFloating) {
-  return useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, chatInputFloating) + 16;
+export const getFloatingCTATotalViewHeight = function getFloatingCTATotalViewHeight() {
+  return useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT) + 16;
 };
 export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(arg0, arg1, state, cleanUp) {
   let obj = { theme: ThemeTypes.DARK, children: null };

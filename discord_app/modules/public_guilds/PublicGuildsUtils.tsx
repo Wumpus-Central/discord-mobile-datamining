@@ -5,7 +5,7 @@ import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
 import isCrosspostDefault from "../messages/isCrosspost.tsx";
 import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PublicGuildsConstants.tsx";
-import { registerAsset } from "../../../_runtime/07892_registerAsset.js";
+import { registerAsset } from "../../../_runtime/07914_registerAsset.js";
 
 ({ PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID: c3, PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID: c4, ENABLE_COMMUNITY_FLOW_MODAL_KEY: c5 } = PUBLIC_SUCCESS_MODAL_SEEN_KEY);
 const AnalyticEvents = ME.AnalyticEvents;

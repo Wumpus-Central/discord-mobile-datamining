@@ -3,7 +3,7 @@ import timestampDefault from "../../modules/debug/Logger.tsx";
 import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _modDef4679 from "../../utils/TrackedHTTPUtils.tsx";
+import _modDef4681 from "../../utils/TrackedHTTPUtils.tsx";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_5 from "../../modules/multi_account/MultiAccountStore.tsx";
 import closure_6 from "../../stores/AuthenticationStore.tsx";
@@ -40,7 +40,7 @@ function _getOrRefreshPushSyncToken() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -104,7 +104,7 @@ function _getOrRefreshPushSyncToken() {
           } else {
             token = body.body.token;
             c4 = 0;
-            obj = callback(11919);
+            obj = callback(11953);
             obj.updatePushSyncToken(lib.id, token);
             c6 = 3;
             const obj6 = { value: null, done: true };
@@ -148,7 +148,7 @@ let obj = {
       const self = this;
       let syncDeviceResult = this.syncDevice(token, flag);
     } else {
-      obj = _modDef4679;
+      obj = _modDef4681;
       obj = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: false };
       obj[0] = constants.DEVICES;
       if (flag) {
@@ -219,7 +219,7 @@ let obj = {
               const obj4 = { provider: null, token: null, push_sync_tokens: null, bypass_server_throttling_supported: null, bundle_id: null };
               obj4[0] = tmp9;
               obj4[1] = closure_1_0;
-              obj4[2] = closure_1.filter(closure_1_0(1370).isNotNullish);
+              obj4[2] = closure_1.filter(closure_1_0(1471).isNotNullish);
               obj2 = closure_1_0(500);
               let isAndroidResult = obj2.isAndroid();
               if (isAndroidResult) {
@@ -243,8 +243,8 @@ let obj = {
       } else if (arg0 !== 2) {
         v0 = arg1;
         if (v0.body.invalid_push_sync_tokens.length > 0) {
-          const result = v0(11919).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
-          const obj9 = v0(11919);
+          const result = v0(11953).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
+          const obj9 = v0(11953);
         }
       }
       return arg1;
@@ -252,7 +252,7 @@ let obj = {
   },
   unregisterDevice(token) {
     logger.log("Unregistering push notification token: " + token);
-    let obj = _modDef4679;
+    let obj = _modDef4681;
     obj = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
     obj = { provider: callback2(), token };
     obj[1] = obj;

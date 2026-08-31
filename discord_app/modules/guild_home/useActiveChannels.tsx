@@ -1,9 +1,9 @@
 // discord_app/modules/guild_home/useActiveChannels.tsx
 import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
-import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
 import set2 from "../channel/ChannelConstants.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import closure_3 from "../../stores/ChannelStore.tsx";
 import closure_4 from "../../stores/PermissionStore.tsx";
 import closure_5 from "../../stores/UserGuildSettingsStore.tsx";

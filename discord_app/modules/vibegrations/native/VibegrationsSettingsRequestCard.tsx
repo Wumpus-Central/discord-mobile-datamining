@@ -52,8 +52,8 @@ export default function VibegrationsSettingsRequestCard(projectId) {
   }, items1);
   obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = tmp2(1236).intl;
-  obj[2] = intl.string(request(3470).wgDhiQ);
-  const items2 = [callback(projectId(4442).Text, obj), , , ];
+  obj[2] = intl.string(request(3471).wgDhiQ);
+  const items2 = [callback(projectId(4444).Text, obj), , , ];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -76,11 +76,11 @@ export default function VibegrationsSettingsRequestCard(projectId) {
     const obj3 = { variant: "secondary", size: "sm", onPress: null, text: null };
     obj3[2] = callback;
     const intl3 = tmp2(1236).intl;
-    obj3[3] = intl3.string(tmp8(3470)["KO2xN+"]);
-    items2[3] = tmp7(tmp2(4893).Button, obj3);
+    obj3[3] = intl3.string(tmp8(3471)["KO2xN+"]);
+    items2[3] = tmp7(tmp2(4896).Button, obj3);
     obj[1] = items2;
     return closure_7(tmp6, obj);
   }
   const intl2 = tmp2(1236).intl;
-  note = intl2.string(tmp8(3470)["V+DBhs"]);
+  note = intl2.string(tmp8(3471)["V+DBhs"]);
 };

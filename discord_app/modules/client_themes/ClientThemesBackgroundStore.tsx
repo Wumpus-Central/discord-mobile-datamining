@@ -2,7 +2,6 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import getThemeForColor from "ClientThemesUtils.tsx";
-import useIsMobileVisualRefreshExperimentEnabled from "../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
@@ -19,9 +18,6 @@ import { SystemThemeState } from "../user_settings/ThemeConstants.tsx";
 import { isPerModeThemingActive } from "../user_settings/isPerModeThemingActive.tsx";
 
 require = arg1;
-function isSyncedModeThemesEnabled() {
-  return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
-}
 function reset() {
   if (c14) {
     c3 = undefined;
@@ -55,10 +51,10 @@ function handleSelectivelySyncedStoreChange() {
   }
 }
 function handleSyncedModeChange() {
-  return isPerModeThemingActive /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
+  return isPerModeThemingActive /* isPerModeThemingActive */.isPerModeThemingActive();
 }
 function handleSameAsDeviceThemeToggle() {
-  return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
+  return true;
 }
 function handleUserSettingsProtoStoreUpdate() {
   const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
@@ -69,27 +65,27 @@ function handleUserSettingsProtoStoreUpdate() {
   }
   if (!result) {
     let tmpResult = tmp(1366);
-    result = tmpResult.isPerModeThemingActive(isSyncedModeThemesEnabled);
+    result = tmpResult.isPerModeThemingActive();
   }
   if (!result) {
-    tmpResult = tmp(4293);
+    tmpResult = tmp(4295);
     tmpResult.setUseSystemTheme(SystemThemeState.OFF);
   }
   if (null != backgroundGradientPresetId) {
-    let tmp11 = null == tmp10;
-    if (!tmp11) {
+    let tmp10 = null == tmp9;
+    if (!tmp10) {
       let id;
       if (user != null) {
         id = user.id;
       }
       let id1;
-      if (tmp10 != null) {
-        id1 = tmp10.id;
+      if (tmp9 != null) {
+        id1 = tmp9.id;
       }
-      tmp11 = id === id1;
+      tmp10 = id === id1;
     }
-    if (!tmp11) {
-      user = tmp10;
+    if (!tmp10) {
+      user = tmp9;
     }
   } else if (null != user) {
     user = undefined;
@@ -149,7 +145,7 @@ prototype["getState"] = function getState() {
 };
 Object.defineProperty(prototype, "gradientPreset", {
   get: function gradientPreset() {
-    if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
+    if (obj.isPerModeThemingActive()) {
       if (c14) {
         let tmp10;
         if (c16) {
@@ -241,7 +237,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDe
               c15 = true;
             }
           }
-          tmp6Result = tmp6(4290);
+          tmp6Result = tmp6(4292);
         }
         obj2 = UNSAFE_isDismissibleContentDismissed;
         tmp6 = require;

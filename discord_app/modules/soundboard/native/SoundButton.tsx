@@ -14,7 +14,7 @@ function SoundButtonEmoji(arg0) {
   ({ sound, sharedValues } = arg0);
   const tmp = callback();
   let obj = { sharedValues, scaleFactors: { pressed: 0.8, playing: 1.2 } };
-  obj1 = obj(4186);
+  obj1 = obj(4187);
   const fn = function o() {
     const pressed = obj.sharedValues.pressed;
     const playing = obj.sharedValues.playing;
@@ -56,13 +56,13 @@ function SoundButtonEmoji(arg0) {
     obj[0] = items2;
     return obj;
   };
-  obj = { animationConfig: obj, withDelay: obj(4186).withDelay, withSpring: obj(4892).withSpring, interpolate: obj(4186).interpolate, SPRING_CONFIG: closure_8 };
+  obj = { animationConfig: obj, withDelay: obj(4187).withDelay, withSpring: obj(4895).withSpring, interpolate: obj(4187).interpolate, SPRING_CONFIG: closure_8 };
   fn.__closure = obj;
   fn.__workletHash = 13932429225740;
   fn.__initData = closure_11;
   obj = { sharedValues, scaleFactors: { pressed: 0.7200000000000001, playing: 1.08 }, playingAnimationDelay: 100, pressedRotationDegrees: -15 };
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  let obj4 = obj(4186);
+  let obj4 = obj(4187);
   const fn2 = function o() {
     const pressed = obj.sharedValues.pressed;
     const playing = obj.sharedValues.playing;
@@ -104,7 +104,7 @@ function SoundButtonEmoji(arg0) {
     obj[0] = items2;
     return obj;
   };
-  obj1 = { animationConfig: obj, withDelay: obj(4186).withDelay, withSpring: obj(4892).withSpring, interpolate: obj(4186).interpolate, SPRING_CONFIG: closure_8 };
+  obj1 = { animationConfig: obj, withDelay: obj(4187).withDelay, withSpring: obj(4895).withSpring, interpolate: obj(4187).interpolate, SPRING_CONFIG: closure_8 };
   fn2.__closure = obj1;
   fn2.__workletHash = 13932429225740;
   fn2.__initData = closure_11;

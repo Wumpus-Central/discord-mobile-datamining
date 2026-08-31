@@ -29,9 +29,9 @@ export const buildMediaEntries = function buildMediaEntries(game) {
     }
     items = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(trailers.map((application_id) => {
-      const obj = { type: "trailer", originalUrl: callback(4721).getAssetURL(application_id.application_id, application_id.id, styles.width, "mp4"), previewUrl: null };
-      const obj2 = callback(4721);
-      obj[2] = callback(4721).getAssetURL(application_id.application_id, application_id.id, closure_2, "webp");
+      const obj = { type: "trailer", originalUrl: callback(4723).getAssetURL(application_id.application_id, application_id.id, styles.width, "mp4"), previewUrl: null };
+      const obj2 = callback(4723);
+      obj[2] = callback(4723).getAssetURL(application_id.application_id, application_id.id, closure_2, "webp");
       return obj;
     }), 0);
     let screenshotUrls = game.screenshotUrls;
@@ -41,7 +41,7 @@ export const buildMediaEntries = function buildMediaEntries(game) {
     arraySpreadResult = HermesBuiltin.arraySpread(screenshotUrls.map((originalUrl) => {
       let obj = { type: "image", originalUrl, previewUrl: null };
       obj = { size: closure_2, keepAspectRatio: true };
-      obj[2] = callback(4480).getSizedImageAssetURL(originalUrl, obj);
+      obj[2] = callback(4482).getSizedImageAssetURL(originalUrl, obj);
       return obj;
     }), arraySpreadResult);
   }

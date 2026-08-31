@@ -12,7 +12,7 @@ import MAX_ACCOUNTS from "../Constants.tsx";
 import { ManageAccountsScreens } from "ManageAccountsConstants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../_runtime/07769_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../_runtime/07790_createNativeStackNavigator.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
 
@@ -34,7 +34,7 @@ function RemoveMultiAccountUserButton(user) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -82,7 +82,7 @@ function RemoveMultiAccountUserButton(user) {
               obj.removeAccount(id.id);
             }
             v02 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp11) {
           v02 = tmp;
@@ -135,8 +135,8 @@ function RemoveMultiAccountUserButton(user) {
     };
     obj = { color: null };
     obj[0] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
-    obj[3] = callback2(tmp(14841).CircleMinusIcon, obj);
-    return callback2(tmp(5033).PressableOpacity, obj);
+    obj[3] = callback2(tmp(14875).CircleMinusIcon, obj);
+    return callback2(tmp(5036).PressableOpacity, obj);
   }
   let obj2 = user(589);
 }
@@ -376,14 +376,14 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return obj;
       },
       children() {
-        return callback2(_undefined(15499), {
+        return callback2(_undefined(15533), {
           handleLogin(login, password, undelete) {
-            let obj = callback(6017);
+            let obj = callback(6020);
             obj = { login, password, undelete };
             obj.login(obj);
           },
           onReset(arg0, arg1, arg2) {
-            callback(6017).loginReset(true);
+            callback(6020).loginReset(true);
           }
         });
       }
@@ -394,7 +394,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(7662), { isMultiAccount: true });
+        return callback2(_undefined(7683), { isMultiAccount: true });
       }
     }),
     callback2(closure_20.Screen, {
@@ -403,7 +403,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(15498), { isMultiAccount: true });
+        return callback2(_undefined(15532), { isMultiAccount: true });
       }
     })
   ];

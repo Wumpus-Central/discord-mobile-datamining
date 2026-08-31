@@ -3,5 +3,5 @@ import set from "../../../../../_runtime/00002_set.js";
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BadgeCustomizeAbstractUI-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/99d6e1fb32af8c92e31c48d249783641660d0c2f48003f1e278bae9aa4658fd5.png";
-export const metadata = { fileBytes: 11738 };
+export default "https://cdn.discordapp.com/assets/content/166b1f65a7d5193c101acf4a7cc32ab377db68a9e6d57edd73a4cf94e01489dd.png";
+export const metadata = { fileBytes: 11681 };

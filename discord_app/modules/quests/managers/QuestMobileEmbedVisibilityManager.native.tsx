@@ -1,5 +1,5 @@
 // discord_app/modules/quests/managers/QuestMobileEmbedVisibilityManager.native.tsx
-import privDefault from "../../../../_runtime/01405_priv.js";
+import privDefault from "../../../../_runtime/01401_priv.js";
 import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import useAlertStore2 from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
@@ -229,8 +229,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(10110).isChannelFocused();
-      applyArgumentsResult(4300);
+      let isChannelFocusedResult = applyArgumentsResult(10133).isChannelFocused();
+      applyArgumentsResult(4302);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }

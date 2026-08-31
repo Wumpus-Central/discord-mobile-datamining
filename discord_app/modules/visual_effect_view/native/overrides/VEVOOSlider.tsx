@@ -1,6 +1,6 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOSlider.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _getRequireWildcardCacheDefault from "../../../../../_runtime/08327__getRequireWildcardCache.js";
+import _modDef8349 from "../../../../../_runtime/metro/08349__.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import set from "../../../../utils/PlatformUtils.tsx";
@@ -30,7 +30,7 @@ export default importAllResult.memo(function VEVOOSlider(disabled) {
   const obj = { style: items, disabled: disabled.disabled, value: current, minimumValue: 0, maximumValue: 1, minimumTrackTintColor: ThemesDefault.unsafe_rawColors.BRAND_500, maximumTrackTintColor: ThemesDefault.unsafe_rawColors.PRIMARY_400, onValueChange, onResponderGrant: null };
   items[1] = { opacity: num };
   current = initialValue.current;
-  const tmp5 = _getRequireWildcardCacheDefault;
+  const tmp5 = _modDef8349;
   let fn;
   if (obj2.isAndroid()) {
     fn = () => true;

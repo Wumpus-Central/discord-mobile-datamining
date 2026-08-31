@@ -33,7 +33,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -77,7 +77,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
               callback();
             }
             v0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp16) {
           v0 = tmp;
@@ -118,7 +118,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
     return items;
   }, []);
   obj = { guildId, editStateId: first, groupListingId, children: null };
-  obj = { guildId, children: jsx(groupListingId(17257), obj1) };
-  obj[3] = jsx(guildId(17239).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: jsx(groupListingId(17257), obj1) });
-  return jsx(guildId(17256).EditStateContextProvider, { guildId, children: jsx(groupListingId(17257), obj1) });
+  obj = { guildId, children: jsx(groupListingId(17290), obj1) };
+  obj[3] = jsx(guildId(17272).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: jsx(groupListingId(17290), obj1) });
+  return jsx(guildId(17289).EditStateContextProvider, { guildId, children: jsx(groupListingId(17290), obj1) });
 };

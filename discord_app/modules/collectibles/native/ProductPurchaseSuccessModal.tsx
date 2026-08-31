@@ -2,8 +2,8 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import Background from "../../../../_runtime/05467_Background.js";
-import tinycolorDefault from "../../../../_runtime/07244_tinycolor.js";
+import Background from "../../../../_runtime/05470_Background.js";
+import tinycolorDefault from "../../../../_runtime/07265_tinycolor.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00853__toArray.js";
 import closure_5 from "../../../../_runtime/00019_noop.js";
@@ -123,7 +123,7 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
   }
   obj2[5] = PX_32;
   if (flag) {
-    if (arg0 === tmp3(1951).CollectiblesItemType.AVATAR_DECORATION) {
+    if (arg0 === tmp3(1950).CollectiblesItemType.AVATAR_DECORATION) {
       const obj3 = { shadowColor: null, shadowOffset: null, shadowOpacity: 1, shadowRadius: 60, elevation: 24 };
       obj3[0] = tmp(712).unsafe_rawColors.PRIMARY_630;
       obj3[1] = { width: 0, height: 0 };
@@ -135,7 +135,7 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
     const obj4 = { paddingTop: null, minHeight: null, flexDirection: "column", alignItems: "center", justifyContent: "flex-start", gap: null };
     obj4[0] = tmp(712).space.PX_24;
     let str2;
-    if (arg0 === tmp3(1951).CollectiblesItemType.AVATAR_DECORATION) {
+    if (arg0 === tmp3(1950).CollectiblesItemType.AVATAR_DECORATION) {
       str2 = "32%";
     }
     obj4[1] = str2;

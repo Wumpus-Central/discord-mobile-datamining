@@ -45,9 +45,9 @@ export default function DevToolsAccountLinkingScreen() {
   if (gameApplicationIds == null) {
     gameApplicationIds = [];
   }
-  const tmp4 = stateFromStores1(1629)();
-  let found = stateFromStores1(5924)(gameApplicationIds).filter((arg0) => null != arg0);
-  let tmp8Result = tmp8(5924);
+  const tmp4 = stateFromStores1(1628)();
+  let found = stateFromStores1(5927)(gameApplicationIds).filter((arg0) => null != arg0);
+  let tmp8Result = tmp8(5927);
   getOrFetchApplication = tmp8Result.useGetOrFetchApplication(first);
   tmp8Result = tmp8(589);
   const items2 = [closure_8];
@@ -65,13 +65,13 @@ export default function DevToolsAccountLinkingScreen() {
     }
     return found;
   });
-  const tmp11 = stateFromStores1(5921)(getOrFetchApplication, { debug: true });
+  const tmp11 = stateFromStores1(5924)(getOrFetchApplication, { debug: true });
   ({ startAuthorization: closure_4, hasAlreadyLinked, debug, connectionApp } = tmp11);
   id = undefined;
   if (connectionApp != null) {
     id = connectionApp.id;
   }
-  const arr4 = stateFromStores1(5924)(gameApplicationIds);
+  const arr4 = stateFromStores1(5927)(gameApplicationIds);
   const items3 = [closure_9];
   stateFromStores1 = id(589).useStateFromStores(items3, () => closure_1_9.getNewestTokenForApplication(id));
   const items4 = [stateFromStores1];
@@ -79,8 +79,8 @@ export default function DevToolsAccountLinkingScreen() {
   let str2 = "N/A";
   callback = obj.useCallback(() => {
     if (null != stateFromStores1) {
-      stateFromStores1(5926).delete(tmp.id);
-      const obj = stateFromStores1(5926);
+      stateFromStores1(5929).delete(tmp.id);
+      const obj = stateFromStores1(5929);
     }
   }, items4);
   if (stateFromStoresArray.length > 0) {
@@ -125,17 +125,17 @@ export default function DevToolsAccountLinkingScreen() {
         };
         let tmpResult;
         if (closure_0 === name.id) {
-          tmpResult = tmp(id(4442).Text, { variant: "text-sm/semibold", children: "Selected" });
+          tmpResult = tmp(id(4444).Text, { variant: "text-sm/semibold", children: "Selected" });
         }
         obj[2] = tmpResult;
-        return closure_1_12(id(5564).TableRow, obj, name.id);
+        return closure_1_12(id(5567).TableRow, obj, name.id);
       });
     } else {
-      mapped1 = tmp18(tmp8(5564).TableRow, { label: "No official games" });
+      mapped1 = tmp18(tmp8(5567).TableRow, { label: "No official games" });
     }
   } else {
-    obj1[2] = tmp18(tmp8(5564).TableRow, { label: "No guild selected" });
-    const items6 = [tmp18(tmp8(5957).TableRowGroup, obj1), , , ];
+    obj1[2] = tmp18(tmp8(5567).TableRow, { label: "No guild selected" });
+    const items6 = [tmp18(tmp8(5960).TableRowGroup, obj1), , , ];
     obj2 = { style: null, children: null };
     const obj3 = { padding: null };
     obj3[0] = tmp2(712).space.PX_12;
@@ -143,7 +143,7 @@ export default function DevToolsAccountLinkingScreen() {
     const obj4 = { label: "Application ID", value: null, onChange: null };
     obj4[1] = first;
     obj4[2] = tmp7;
-    obj2[1] = tmp18(tmp8(7652).TextInput, obj4);
+    obj2[1] = tmp18(tmp8(7673).TextInput, obj4);
     const items7 = [tmp18(closure_7, obj2), , ];
     if (null != getOrFetchApplication) {
       str = getOrFetchApplication.name;
@@ -152,13 +152,13 @@ export default function DevToolsAccountLinkingScreen() {
     const obj6 = { label: null };
     let _HermesInternal = HermesInternal;
     obj6[0] = "Name: " + str;
-    items7[1] = tmp18(tmp8(5564).TableRow, obj6);
+    items7[1] = tmp18(tmp8(5567).TableRow, obj6);
     const obj7 = { label: null };
     const _HermesInternal2 = HermesInternal;
     obj7[0] = "Linked Games: " + str2;
-    items7[2] = tmp18(tmp8(5564).TableRow, obj7);
+    items7[2] = tmp18(tmp8(5567).TableRow, obj7);
     obj5[2] = items7;
-    items6[1] = tmp16(tmp8(5957).TableRowGroup, obj5);
+    items6[1] = tmp16(tmp8(5960).TableRowGroup, obj5);
     let str6 = "text-feedback-critical";
     if (debug.hasConnectionEntrypointUrl) {
       str6 = "text-feedback-positive";
@@ -171,8 +171,8 @@ export default function DevToolsAccountLinkingScreen() {
     }
     const obj9 = { label: "Connection Entrypoint URL", trailing: null };
     obj8[2] = str7;
-    obj9[1] = tmp18(tmp8(4442).Text, obj8);
-    const items8 = [tmp18(tmp8(5564).TableRow, obj9), , ];
+    obj9[1] = tmp18(tmp8(4444).Text, obj8);
+    const items8 = [tmp18(tmp8(5567).TableRow, obj9), , ];
     let str8 = "text-muted";
     if (hasAlreadyLinked) {
       str8 = "text-feedback-positive";
@@ -186,8 +186,8 @@ export default function DevToolsAccountLinkingScreen() {
     const obj11 = { title: "Authorization", hasIcons: false, children: null };
     const obj12 = { label: "Already Linked", trailing: null };
     obj10[2] = str9;
-    obj12[1] = tmp18(tmp8(4442).Text, obj10);
-    items8[1] = tmp18(tmp8(5564).TableRow, obj12);
+    obj12[1] = tmp18(tmp8(4444).Text, obj10);
+    items8[1] = tmp18(tmp8(5567).TableRow, obj12);
     const obj13 = { style: null, children: null };
     obj13[0] = tmp.buttonRow;
     const obj14 = { disabled: null, onPress: null, variant: "primary", text: "Start Authorization" };
@@ -195,15 +195,15 @@ export default function DevToolsAccountLinkingScreen() {
     obj14[1] = function onPress() {
       return callback({});
     };
-    const items9 = [tmp18(tmp8(4893).Button, obj14), ];
+    const items9 = [tmp18(tmp8(4896).Button, obj14), ];
     const obj15 = { disabled: null, onPress: null, variant: "critical-primary", text: "Deauthorize" };
     obj15[0] = !tmp15;
     obj15[1] = callback;
-    items9[1] = tmp18(tmp8(4893).Button, obj15);
+    items9[1] = tmp18(tmp8(4896).Button, obj15);
     obj13[1] = items9;
     items8[2] = tmp16(closure_7, obj13);
     obj11[2] = items8;
-    items6[2] = tmp16(tmp8(5957).TableRowGroup, obj11);
+    items6[2] = tmp16(tmp8(5960).TableRowGroup, obj11);
     let prop;
     if (connectionApp != null) {
       prop = connectionApp.applicationAccountLinkBenefitConfig;
@@ -233,9 +233,9 @@ export default function DevToolsAccountLinkingScreen() {
       const obj21 = { label: null };
       const _HermesInternal3 = HermesInternal;
       obj21[0] = "Reward: " + str10;
-      items10[1] = tmp18(tmp8(5564).TableRow, obj21);
+      items10[1] = tmp18(tmp8(5567).TableRow, obj21);
       obj20[2] = items10;
-      tmp16Result = tmp16(tmp8(5957).TableRowGroup, obj20);
+      tmp16Result = tmp16(tmp8(5960).TableRowGroup, obj20);
     }
     items6[3] = tmp16Result;
     obj[2] = items6;

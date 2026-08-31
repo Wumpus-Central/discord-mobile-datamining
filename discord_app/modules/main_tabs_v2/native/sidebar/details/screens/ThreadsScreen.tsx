@@ -13,7 +13,7 @@ import createCacheKey from "../../../../../../design/components/Styles/native/cr
 const require = arg1;
 function ThreadsScreen(channel) {
   channel = channel.channel;
-  let obj = channel(6081);
+  let obj = channel(6084);
   const canStartThread = obj.useCanStartThread(channel);
   const items = [channel];
   const callback = importAllResult.useCallback(() => {
@@ -70,7 +70,7 @@ const memoResult = importAllResult.memo((searchContext) => {
   return tmp4;
 });
 const memoResult1 = importAllResult.memo(() => {
-  let obj = channelId(1501);
+  let obj = channelId(1500);
   channelId = obj.useRoute().params.channelId;
   const items = [closure_5];
   const stateFromStores = channelId(647).useStateFromStores(items, () => closure_1_5.getChannel(channelId));

@@ -298,7 +298,7 @@ const memoResult = importAllResult.memo((transitionState) => {
   const items2 = [memo];
   stateFromStores1 = tmpResult.useStateFromStores(items2, () => memo.getChannel(c2));
   _require = undefined;
-  const tmp8 = transitionCleanUp(1629)();
+  const tmp8 = transitionCleanUp(1628)();
   _require = tmp8;
   const items3 = [tmp8.right];
   memo = activity.useMemo(() => {

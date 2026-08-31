@@ -19,14 +19,14 @@ export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSk
     let obj = { product: null };
     obj[0] = name;
     let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t.lvBzLi, obj);
-  } else if (tmp2(1951).CollectiblesItemType.PROFILE_EFFECT === type) {
+  } else if (tmp2(1950).CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl = tmp2(1236).intl;
     obj = { product: null };
     obj[0] = name;
     formatToPlainStringResult = intl.formatToPlainString(tmp2(1236).t.eR7moP, obj);
   } else {
     formatToPlainStringResult = name;
-    if (tmp2(1951).CollectiblesItemType.NAMEPLATE === type) {
+    if (tmp2(1950).CollectiblesItemType.NAMEPLATE === type) {
       const intl3 = tmp2(1236).intl;
       obj = { product: null };
       obj[0] = name;

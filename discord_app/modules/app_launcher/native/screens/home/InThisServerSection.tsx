@@ -12,10 +12,9 @@ require = arg1;
 function AppInThisServer(onAppSelected) {
   onAppSelected = onAppSelected.onAppSelected;
   let application;
-  const tmp3 = application(1367)("AppLauncherInThisServer-native");
-  const tmp4 = callback2();
+  const tmp = callback2();
   application = onAppSelected.appItem.application;
-  let obj = onAppSelected(11559);
+  let obj = onAppSelected(11590);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   obj = {
     accessible: true,
@@ -29,40 +28,31 @@ function AppInThisServer(onAppSelected) {
       if (tmp2) {
         const obj = { application: null, sectionName: null };
         obj[0] = application;
-        obj[1] = onAppSelected(closure_1_2[13]).AppLauncherSectionName.APPS_IN_THIS_SERVER;
+        obj[1] = onAppSelected(closure_1_2[12]).AppLauncherSectionName.APPS_IN_THIS_SERVER;
         onAppSelected(obj);
       }
     },
-    style: null,
+    style: tmp.appCardContainer,
     children: null
   };
-  const items = [tmp4.appCardContainer, ];
-  let rowShadow = !tmp3;
-  if (!tmp3) {
-    rowShadow = tmp4.rowShadow;
-  }
-  items[1] = rowShadow;
-  obj[4] = items;
-  let tmp8 = null;
+  let tmp6 = null;
   if (null != appLauncherIconSource) {
     obj = { iconSource: null, wrapperStyle: null, iconSize: 36 };
     obj[0] = appLauncherIconSource;
-    obj[1] = tmp4.iconContainer;
-    tmp8 = callback(application(11564), obj);
+    obj[1] = tmp.iconContainer;
+    tmp6 = callback(application(11595), obj);
   }
-  const items1 = [tmp8, callback(onAppSelected(4442).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
-  obj[5] = items1;
-  return closure_6(onAppSelected(8924).PressableScale, obj, application.id);
+  const items = [tmp6, callback(onAppSelected(4444).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
+  obj[5] = items;
+  return closure_6(onAppSelected(8947).PressableScale, obj, application.id);
 }
 noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { marginBottom: 16 }, headerContainer: { justifyContent: "center" }, viewAll: { position: "absolute", right: 0 }, scrollView: { marginTop: 8, overflow: "visible" }, scrollViewContentContainer: { gap: 8 }, appCardContainer: null, rowShadow: null, iconContainer: null };
+createCacheKey = { container: { marginBottom: 16 }, headerContainer: { justifyContent: "center" }, viewAll: { position: "absolute", right: 0 }, scrollView: { marginTop: 8, overflow: "visible" }, scrollViewContentContainer: { gap: 8 }, appCardContainer: null, iconContainer: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.lg, paddingLeft: 12, paddingRight: 12, paddingVertical: 12, flexDirection: "row", justifyContent: "center", alignItems: "center" };
 createCacheKey[5] = createCacheKey;
-const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
-createCacheKey[6] = {};
-createCacheKey[7] = { marginEnd: 12, justifyContent: "space-around" };
+createCacheKey[6] = { marginEnd: 12, justifyContent: "space-around" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/InThisServerSection.tsx");
 
@@ -114,8 +104,8 @@ export default function InThisServerSection(arg0) {
       const obj2 = { variant: "text-sm/medium", color: "text-brand", children: null };
       const intl2 = tmp11(1236).intl;
       obj2[2] = intl2.string(tmp11(1236).t["/qG8v7"]);
-      obj1[3] = tmp5(tmp11(4442).Text, obj2);
-      tmp5Result = tmp5(tmp11(5033).PressableOpacity, obj1);
+      obj1[3] = tmp5(tmp11(4444).Text, obj2);
+      tmp5Result = tmp5(tmp11(5036).PressableOpacity, obj1);
     }
     items1[1] = tmp5Result;
     obj[1] = items1;

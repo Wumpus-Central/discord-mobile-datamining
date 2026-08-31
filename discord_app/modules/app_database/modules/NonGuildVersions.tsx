@@ -38,14 +38,14 @@ class NonGuildVersions {
               const _isNaN = isNaN;
               const _Number = Number;
               if (!isNaN(Number(guildId))) {
-                obj = callback(1957);
+                obj = callback(1956);
                 const result = obj.nonGuildVersionsTransaction(database);
                 obj = { id: "initial_guild_id", versionString: null };
                 obj[1] = guildId;
                 result.put(obj);
               }
             }
-            const result1 = callback(1957).nonGuildVersionsTransaction(database);
+            const result1 = callback(1956).nonGuildVersionsTransaction(database);
             result1.delete("initial_guild_id");
           });
         }
@@ -68,7 +68,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -177,14 +177,14 @@ if (isCacheEnabled.isCacheEnabled()) {
           const _isNaN = isNaN;
           const _Number = Number;
           if (!isNaN(Number(guildId))) {
-            obj = callback(1957);
+            obj = callback(1956);
             const result = obj.nonGuildVersionsTransaction(database);
             obj = { id: "initial_guild_id", versionString: null };
             obj[1] = guildId;
             result.put(obj);
           }
         }
-        const result1 = callback(1957).nonGuildVersionsTransaction(database);
+        const result1 = callback(1956).nonGuildVersionsTransaction(database);
         result1.delete("initial_guild_id");
       });
     }

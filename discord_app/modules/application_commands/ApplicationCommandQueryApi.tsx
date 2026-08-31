@@ -12,11 +12,11 @@ import { NOOP } from "../../Constants.tsx";
 import { buildCommand } from "ApplicationCommandUtils.tsx";
 
 require = arg1;
-function findCommandInSection(found, commandKey) {
-  const _require = commandKey;
-  if (null != commandKey) {
-    if (null != found.commands[commandKey]) {
-      return found.commands[commandKey];
+function findCommandInSection(found, commandId) {
+  const _require = commandId;
+  if (null != commandId) {
+    if (null != found.commands[commandId]) {
+      return found.commands[commandId];
     } else {
       const _Object = Object;
       const values = Object.values(found.commands);
@@ -58,10 +58,10 @@ let items = [require("PermissionOverwriteType").ApplicationCommandType.CHAT];
 let obj = { id: "placeholder-section", type: require("ApplicationCommandSectionType").ApplicationCommandSectionType.APPLICATION, name: "" };
 let result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
-export const getCachedCommand = function getCachedCommand(type, commandKey) {
-  closure_0 = arg2;
-  if (null == commandKey) {
-    return { application: "Array", command: "ct" };
+export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
+  closure_0 = applicationId;
+  if (null == commandId) {
+    return { application: "Array", command: "bottom", section: "container" };
   } else {
     const userState = authStore.getUserState();
     const result2 = userState.result;
@@ -83,7 +83,7 @@ export const getCachedCommand = function getCachedCommand(type, commandKey) {
       sections1 = {};
     }
     const combined = values.concat(Object.values(sections1));
-    if (null != arg2) {
+    if (null != applicationId) {
       const found = combined.find((descriptor) => {
         const application = descriptor.descriptor.application;
         let id;
@@ -93,9 +93,10 @@ export const getCachedCommand = function getCachedCommand(type, commandKey) {
         return id === closure_0;
       });
       if (null != found) {
-        obj = { application: null, command: null };
+        obj = { application: null, command: null, section: null };
         obj[0] = found.descriptor.application;
-        obj[1] = findCommandInSection(found, commandKey);
+        obj[1] = findCommandInSection(found, commandId);
+        obj[2] = found.descriptor;
         return obj;
       }
     } else {
@@ -104,19 +105,20 @@ export const getCachedCommand = function getCachedCommand(type, commandKey) {
       while (iter !== undefined) {
         let tmp5 = nextResult;
         let tmp6 = findCommandInSection;
-        let tmp7 = findCommandInSection(nextResult, commandKey);
+        let tmp7 = findCommandInSection(nextResult, commandId);
         let tmp8 = tmp7;
         if (null != tmp7) {
-          obj = { application: null, command: null };
+          obj = { application: null, command: null, section: null };
           obj[0] = nextResult.descriptor.application;
           obj[1] = tmp7;
+          obj[2] = nextResult.descriptor;
           let tmp9 = iter;
           iter.return();
           return obj;
         }
       }
     }
-    return { application: "Array", command: "ct" };
+    return { application: "Array", command: "bottom", section: "container" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -450,7 +452,7 @@ export const useCommand = function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "ct" };
+    return { command: "cix", application: "id" };
   }, items);
 };
 export const useCommandsForApplication = function useCommandsForApplication(arg0, arg1, arg2) {

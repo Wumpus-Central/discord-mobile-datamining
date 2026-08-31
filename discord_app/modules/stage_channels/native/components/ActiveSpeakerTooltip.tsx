@@ -32,7 +32,7 @@ const memoResult = importAllResult.memo((channel) => {
     const speakingParticipants = closure_1_5.getSpeakingParticipants(channel.id);
     const items = [speakingParticipants.map((user) => user.user), closure_1_5.getParticipantsVersion(channel.id)];
     return items;
-  }, items1, channel(5340).isVersionEqual), 1)[0];
+  }, items1, channel(5343).isVersionEqual), 1)[0];
   let tmp5 = null;
   if (0 !== first.length) {
     tmp5 = null;
@@ -59,11 +59,11 @@ const memoResult = importAllResult.memo((channel) => {
       const obj5 = { count: null };
       obj5[0] = first.length;
       obj4[3] = intl.format(tmp2(1236).t["+dia6l"], obj5);
-      obj3[1] = callback3(tmp2(4442).Text, obj4);
+      obj3[1] = callback3(tmp2(4444).Text, obj4);
       items2[1] = callback3(View, obj3);
       obj[1] = items2;
       obj[3] = callback4(View, obj);
-      tmp5 = callback3(tmp2(5033).PressableOpacity, obj);
+      tmp5 = callback3(tmp2(5036).PressableOpacity, obj);
       const tmp10 = UserSummaryItemDefault;
     }
   }

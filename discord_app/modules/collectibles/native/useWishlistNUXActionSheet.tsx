@@ -29,7 +29,7 @@ export default function useWishlistNUXActionSheet() {
   }
   const obj3 = initialize;
   if (stateFromStores1) {
-    stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1377).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET);
+    stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1373).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET);
   }
   obj = {
     shouldShowWishlistNUXActionSheet: stateFromStores1,

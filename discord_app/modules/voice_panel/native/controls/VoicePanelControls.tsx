@@ -182,7 +182,7 @@ let closure_41 = { code: "function VoicePanelControlsTsx14(){const{mode,VoicePan
 let closure_42 = { code: "function VoicePanelControlsTsx15(){const{controlsSpecs}=this.__closure;return controlsSpecs.get().mode;}" };
 let closure_43 = { code: "function VoicePanelControlsTsx16(mode,previousMode){const{isScreenReaderEnabled,VoicePanelControlsModes,runOnJS,setIsDrawer}=this.__closure;if(mode===previousMode||!isScreenReaderEnabled)return;if(mode===VoicePanelControlsModes.DRAWER&&previousMode!==VoicePanelControlsModes.DRAWER){runOnJS(setIsDrawer)(true);}else if(mode!==VoicePanelControlsModes.DRAWER&&previousMode===VoicePanelControlsModes.DRAWER){runOnJS(setIsDrawer)(false);}}" };
 let closure_44 = { code: "function VoicePanelControlsTsx17(){const{wrapperSpecs}=this.__closure;return wrapperSpecs.get().drawerMode;}" };
-let closure_45 = { code: "function VoicePanelControlsTsx18(drawerMode,previousDrawerMode){const{isRefreshEnabled,runOnJS,setIsDrawerActive}=this.__closure;if(drawerMode===previousDrawerMode)return;if(!isRefreshEnabled)return;if(drawerMode){runOnJS(setIsDrawerActive)(true);}else{runOnJS(setIsDrawerActive)(false);}}" };
+let closure_45 = { code: "function VoicePanelControlsTsx18(drawerMode,previousDrawerMode){const{runOnJS,setIsDrawerActive}=this.__closure;if(drawerMode===previousDrawerMode)return;if(drawerMode){runOnJS(setIsDrawerActive)(true);}else{runOnJS(setIsDrawerActive)(false);}}" };
 let obj2 = { position: "absolute", left: 0, right: 0, zIndex: 20, flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginHorizontal: ThemesDefault.space.PX_16 };
 const memoResult = importAllResult.memo(function VoicePanelControls(gestureState) {
   gestureState = gestureState.gestureState;
@@ -202,37 +202,34 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
   let sharedValue6;
   closure_14 = undefined;
   closure_15 = undefined;
-  closure_16 = undefined;
-  let obj = sharedValue1(4880);
+  let obj = sharedValue1(4883);
   const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
   isScreenReaderEnabled1 = isScreenReaderEnabled;
-  let tmp5 = isScreenReaderEnabled1(1367)("VoicePanelControls");
-  dependencyMap = tmp5;
-  const context = windowDimensions2.useContext(isScreenReaderEnabled1(11775));
+  const context = windowDimensions2.useContext(isScreenReaderEnabled1(11806));
   const channelId = context.channelId;
-  controlsSpecs3 = channelId;
+  dependencyMap = channelId;
   const controlsSpecs = context.controlsSpecs;
-  windowDimensions2 = controlsSpecs;
+  controlsSpecs3 = controlsSpecs;
   const mode = context.mode;
-  mode2 = mode;
+  windowDimensions2 = mode;
   const setControlsMode = context.setControlsMode;
-  setControlsMode2 = setControlsMode;
+  mode2 = setControlsMode;
   const useReducedMotion = context.useReducedMotion;
-  safeArea2 = useReducedMotion;
-  const tmp7 = callback2();
-  let tmp8 = controlsSpecs3(windowDimensions2.useState(null), 2);
-  const first = tmp8[0];
-  connected = first;
-  sharedValue3 = tmp8[1];
-  obj1 = sharedValue1(4186);
+  setControlsMode2 = useReducedMotion;
+  let tmp6 = callback2();
+  const tmp7 = controlsSpecs3(windowDimensions2.useState(null), 2);
+  const first = tmp7[0];
+  safeArea2 = first;
+  connected = tmp7[1];
+  obj1 = sharedValue1(4187);
   const sharedValue = obj1.useSharedValue(first);
-  sharedValue4 = sharedValue;
+  sharedValue3 = sharedValue;
   const layoutEffect = windowDimensions2.useLayoutEffect(() => {
-    const result = sharedValue4.set(connected);
+    const result = sharedValue3.set(safeArea2);
   });
-  const tmp12 = isScreenReaderEnabled1(16548)(channelId);
-  let obj2 = sharedValue1(16582);
-  const maybeFetchSoundboardSounds = obj2.useMaybeFetchSoundboardSounds({ shouldFetch: tmp12 });
+  const tmp11 = isScreenReaderEnabled1(16582)(channelId);
+  let obj2 = sharedValue1(16615);
+  const maybeFetchSoundboardSounds = obj2.useMaybeFetchSoundboardSounds({ shouldFetch: tmp11 });
   let items = [channelId, controlsSpecs, setControlsMode];
   const callback = windowDimensions2.useCallback((controlsProps) => {
     ({ tab: sharedValue1, source: isScreenReaderEnabled1, disableControlsUpdate } = controlsProps);
@@ -240,9 +237,9 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
       disableControlsUpdate = false;
     }
     controlsProps = controlsProps.controlsProps;
-    sharedValue1(store[40]).batchUpdates(() => {
+    sharedValue1(store[39]).batchUpdates(() => {
       c0 = false;
-      closure_1_9((arg0) => {
+      closure_1_8((arg0) => {
         closure_0 = arg0 !== c0;
         return c0;
       });
@@ -250,41 +247,41 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
         const obj = { mode: null };
         obj[0] = constants.DRAWER;
         const merged = Object.assign(controlsProps);
-        closure_1_6(obj);
+        closure_1_5(obj);
       }
       let tmp8 = c0;
       if (!c0) {
-        tmp8 = closure_1_4.get().mode !== constants.DRAWER;
+        tmp8 = controlsProps.get().mode !== constants.DRAWER;
       }
       if (tmp8) {
-        isScreenReaderEnabled1(disableControlsUpdate[20])(controlsProps, c0, closure_1);
+        isScreenReaderEnabled1(disableControlsUpdate[20])(disableControlsUpdate, c0, closure_1);
       }
     });
   }, items);
-  sharedValue5 = callback;
-  let tmp15 = isScreenReaderEnabled1(16715)();
-  closure_12 = tmp15;
+  sharedValue4 = callback;
+  const tmp14 = isScreenReaderEnabled1(16748)();
+  sharedValue5 = tmp14;
   const items1 = [channelId, controlsSpecs, callback, first];
   const layoutEffect1 = windowDimensions2.useLayoutEffect(() => {
     function handleStoreChange() {
-      chatOpen = setControlsMode2.getChatOpen(closure_1_3);
+      chatOpen = setControlsMode2.getChatOpen(closure_1_2);
       if (chatOpen !== chatOpen) {
         if (chatOpen) {
           const obj = { tab: "chat", source: null, controlsProps: null };
           obj[1] = sharedValue1(table[20]).VoicePanelTabAnalyticsSources.STORE;
           obj[2] = { debounce: true };
-          closure_1_11(obj);
+          closure_1_10(obj);
         }
       }
     }
     let obj = setControlsMode2;
-    let chatOpen = setControlsMode2.getChatOpen(controlsSpecs3);
+    let chatOpen = setControlsMode2.getChatOpen(store);
     if (chatOpen !== chatOpen) {
       if (chatOpen) {
         obj = { tab: "chat", source: null, controlsProps: null };
         obj[1] = sharedValue1(store[20]).VoicePanelTabAnalyticsSources.STORE;
         obj[2] = { debounce: true };
-        sharedValue5(obj);
+        sharedValue4(obj);
       }
     }
     obj.addChangeListener(handleStoreChange);
@@ -297,38 +294,38 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
     function handleOpenChatTab(arg0) {
       callback({ tab: "chat", source: handleOpenChatTab(closure_1_2[20]).VoicePanelTabAnalyticsSources.HEADER_BUTTON });
     }
-    let ComponentDispatch = sharedValue1(store[42]).ComponentDispatch;
-    const subscription = ComponentDispatch.subscribe(constants2.VOICE_PANEL_OPEN_CHAT_TAB, handleOpenChatTab);
+    let ComponentDispatch = sharedValue1(store[41]).ComponentDispatch;
+    const subscription = ComponentDispatch.subscribe(closure_1_16.VOICE_PANEL_OPEN_CHAT_TAB, handleOpenChatTab);
     return () => {
-      const ComponentDispatch = sharedValue1(table[42]).ComponentDispatch;
-      ComponentDispatch.unsubscribe(constants.VOICE_PANEL_OPEN_CHAT_TAB, handleOpenChatTab);
+      const ComponentDispatch = sharedValue1(table[41]).ComponentDispatch;
+      ComponentDispatch.unsubscribe(closure_2_16.VOICE_PANEL_OPEN_CHAT_TAB, handleOpenChatTab);
     };
   }, items2);
-  let obj3 = sharedValue1(1629);
+  let obj3 = sharedValue1(1628);
   const rect = obj3.getSafeAreaInsets();
-  let obj4 = sharedValue1(4186);
+  let obj4 = sharedValue1(4187);
   obj = { width: null, height: 0, x: 0, y: 0, drawerMode: false, hidden: false };
-  let obj6 = sharedValue1(11782);
-  let obj7 = sharedValue1(1494);
+  let obj6 = sharedValue1(11813);
+  let obj7 = sharedValue1(1493);
   obj[0] = obj6.getControlsDefaultWidth(obj7.getWindowDimensions().width, rect.left, rect.right);
   sharedValue1 = obj4.useSharedValue(obj);
-  sharedValue6 = sharedValue1;
-  let obj8 = sharedValue1(4166);
+  closure_12 = sharedValue1;
+  let obj8 = sharedValue1(4167);
   const token = obj8.useToken(isScreenReaderEnabled1(712).modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS);
-  closure_14 = token;
-  let obj9 = sharedValue1(4186);
-  function ge() {
+  sharedValue6 = token;
+  let obj9 = sharedValue1(4187);
+  function le() {
     let obj = sharedValue1(store[35]);
-    obj1 = sharedValue6;
+    obj1 = store2;
     num = 0;
-    if (!sharedValue6.get().drawerMode) {
-      num = closure_14;
+    if (!store2.get().drawerMode) {
+      num = sharedValue6;
     }
     obj = { borderBottomRightRadius: obj.withSpring(num, sharedValue3), borderBottomLeftRadius: null, height: null, width: null, marginLeft: null, opacity: null, transform: null };
     let tmpResult = tmp(tmp2[35]);
     let num2 = 0;
     if (!obj1.get().drawerMode) {
-      num2 = closure_14;
+      num2 = sharedValue6;
     }
     obj[1] = tmpResult.withSpring(num2, sharedValue3);
     tmpResult = tmp(tmp2[35]);
@@ -338,8 +335,8 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
     const tmp4 = connected;
     const tmpResult1 = sharedValue1(store[35]);
     const tmpResult2 = sharedValue1(store[35]);
-    obj[4] = tmpResult2.withSpring(-1 * isScreenReaderEnabled1(store[45])(obj1.get().width / 2), connected);
-    const tmp5 = isScreenReaderEnabled1(store[45]);
+    obj[4] = tmpResult2.withSpring(-1 * isScreenReaderEnabled1(store[44])(obj1.get().width / 2), connected);
+    const tmp5 = isScreenReaderEnabled1(store[44]);
     let num3 = 1;
     if (obj1.get().hidden) {
       num3 = 0;
@@ -351,11 +348,11 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
     const items = [obj, ];
     const tmp6 = safeArea2;
     const tmpResult4 = sharedValue1(store[35]);
-    if (safeArea2.get()) {
+    if (setControlsMode2.get()) {
       let y = obj1.get().y;
     } else if (obj1.get().hidden) {
-      const sum = obj1.get().height + closure_12;
-      y = sum + closure_12.get();
+      const sum = obj1.get().height + store2;
+      y = sum + sharedValue5.get();
     } else {
       const obj12 = sharedValue1;
     }
@@ -364,14 +361,14 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
     obj[6] = items;
     return obj;
   }
-  obj = { withSpring: sharedValue1(4892).withSpring, wrapperSpecs: sharedValue1, borderRadius: token, BORDER_RADIUS_PHYSICS: sharedValue3, PANEL_CONTROLS_HEIGHT_PHYSICS: sharedValue4, MODE_CHANGE_PHYSICS: connected, roundToNearestPixel: isScreenReaderEnabled1(10668), UI_SHOW_HIDE_PHYSICS: safeArea2, useReducedMotion, gestureState, CALL_TILE_GUTTER: closure_12, accessoryHeights: tmp15 };
-  ge.__closure = obj;
-  ge.__workletHash = 14734014706335;
-  ge.__initData = closure_40;
-  const animatedStyle = obj9.useAnimatedStyle(ge);
-  let obj11 = sharedValue1(4186);
-  function de() {
-    if (mode2.get() !== sharedValue5.PANEL) {
+  obj = { withSpring: sharedValue1(4895).withSpring, wrapperSpecs: sharedValue1, borderRadius: token, BORDER_RADIUS_PHYSICS: sharedValue3, PANEL_CONTROLS_HEIGHT_PHYSICS: sharedValue4, MODE_CHANGE_PHYSICS: connected, roundToNearestPixel: isScreenReaderEnabled1(10692), UI_SHOW_HIDE_PHYSICS: safeArea2, useReducedMotion, gestureState, CALL_TILE_GUTTER: closure_12, accessoryHeights: tmp14 };
+  le.__closure = obj;
+  le.__workletHash = 14734014706335;
+  le.__initData = closure_40;
+  const animatedStyle = obj9.useAnimatedStyle(le);
+  let obj11 = sharedValue1(4187);
+  function ge() {
+    if (windowDimensions2.get() !== sharedValue5.PANEL) {
       let pointerEvents = "none";
     } else {
       pointerEvents = "auto";
@@ -379,9 +376,9 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
     return { pointerEvents };
   }
   obj1 = { mode, VoicePanelModes: sharedValue5, wrapperSpecs: sharedValue1 };
-  de.__closure = obj1;
-  de.__workletHash = 5608048435620;
-  de.__initData = closure_41;
+  ge.__closure = obj1;
+  ge.__workletHash = 5608048435620;
+  ge.__initData = closure_41;
   sharedValue1 = first;
   isScreenReaderEnabled1 = sharedValue;
   dependencyMap = sharedValue1;
@@ -398,8 +395,8 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
   sharedValue6 = undefined;
   closure_14 = undefined;
   closure_15 = undefined;
-  const animatedProps = obj11.useAnimatedProps(de);
-  const context1 = windowDimensions2.useContext(isScreenReaderEnabled1(11775));
+  const animatedProps = obj11.useAnimatedProps(ge);
+  const context1 = windowDimensions2.useContext(isScreenReaderEnabled1(11806));
   const controlsSpecs2 = context1.controlsSpecs;
   windowDimensions2 = controlsSpecs2;
   const windowDimensions = context1.windowDimensions;
@@ -408,25 +405,25 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
   setControlsMode2 = wrapperDimensions;
   const safeArea = context1.safeArea;
   safeArea2 = safeArea;
+  let obj13 = sharedValue1(4187);
   obj2 = { absoluteX: 0, absoluteY: 0, x: 0, y: 0, height: 0, isDrawer: false, active: false, drawerTransitionHeight: c22, interFloatingTransitionHeight: c23 };
-  const sharedValue2 = sharedValue1(4186).useSharedValue(obj2);
+  const sharedValue2 = obj13.useSharedValue(obj2);
   connected = sharedValue2;
-  const obj14 = sharedValue1(4186);
+  sharedValue3 = sharedValue1(4187).useSharedValue(0);
+  const obj16 = sharedValue1(4187);
   let tmp4 = isScreenReaderEnabled1;
-  sharedValue3 = sharedValue1(4186).useSharedValue(0);
-  const obj16 = sharedValue1(4186);
-  sharedValue4 = sharedValue1(4186).useSharedValue(false);
-  const obj17 = sharedValue1(4186);
-  sharedValue5 = sharedValue1(4186).useSharedValue(0);
+  sharedValue4 = sharedValue1(4187).useSharedValue(false);
+  const obj17 = sharedValue1(4187);
+  sharedValue5 = sharedValue1(4187).useSharedValue(0);
   closure_12 = windowDimensions2.useRef(undefined);
-  const obj18 = sharedValue1(4186);
-  sharedValue6 = sharedValue1(4186).useSharedValue(false);
-  const tmp28 = isScreenReaderEnabled1(16607)();
-  closure_14 = tmp28;
-  const obj19 = sharedValue1(4186);
-  const token1 = sharedValue1(4166).useToken(isScreenReaderEnabled1(712).modules.mobile.VOICE_PANEL_GUTTER);
+  const obj18 = sharedValue1(4187);
+  sharedValue6 = sharedValue1(4187).useSharedValue(false);
+  const tmp27 = isScreenReaderEnabled1(16640)();
+  closure_14 = tmp27;
+  const obj19 = sharedValue1(4187);
+  const token1 = sharedValue1(4167).useToken(isScreenReaderEnabled1(712).modules.mobile.VOICE_PANEL_GUTTER);
   closure_15 = token1;
-  const items3 = [controlsSpecs2, tmp28, sharedValue2, sharedValue4, callback, safeArea, sharedValue6, sharedValue5, sharedValue, first, sharedValue3, windowDimensions, wrapperDimensions, sharedValue1, token1];
+  const items3 = [controlsSpecs2, tmp27, sharedValue2, sharedValue4, callback, safeArea, sharedValue6, sharedValue5, sharedValue, first, sharedValue3, windowDimensions, wrapperDimensions, sharedValue1, token1];
   const memo = windowDimensions2.useMemo(() => {
     const Gesture = sharedValue1(store[19]).Gesture;
     const PanResult = Gesture.Pan();
@@ -642,7 +639,7 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
     fn6.__initData = closure_1_26;
     return onEndResult.onFinalize(fn6);
   }, items3);
-  const obj20 = sharedValue1(4166);
+  const obj20 = sharedValue1(4167);
   let fn = function p() {
     return store.get().drawerMode;
   };
@@ -656,11 +653,11 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
       const runOnJSResult = sharedValue1(store[15]).runOnJS(sharedValue1(store[23]).triggerHapticFeedback);
     }
   };
-  obj3 = { runOnJS: sharedValue1(4186).runOnJS, triggerHapticFeedback: sharedValue1(4414).triggerHapticFeedback, HapticFeedbackTypes: sharedValue1(4414).HapticFeedbackTypes };
+  obj3 = { runOnJS: sharedValue1(4187).runOnJS, triggerHapticFeedback: sharedValue1(4416).triggerHapticFeedback, HapticFeedbackTypes: sharedValue1(4416).HapticFeedbackTypes };
   fn2.__closure = obj3;
   fn2.__workletHash = 10186886451735;
   fn2.__initData = closure_34;
-  const animatedReaction = sharedValue1(4186).useAnimatedReaction(fn, fn2);
+  const animatedReaction = sharedValue1(4187).useAnimatedReaction(fn, fn2);
   isScreenReaderEnabled1 = undefined;
   dependencyMap = undefined;
   controlsSpecs3 = undefined;
@@ -669,22 +666,22 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
   setControlsMode2 = undefined;
   safeArea2 = undefined;
   connected = undefined;
-  const obj21 = sharedValue1(4186);
-  isScreenReaderEnabled1 = sharedValue1(4880).useIsScreenReaderEnabled();
-  const tmp33 = isScreenReaderEnabled1(11496)({ ignoreKeyboard: true });
-  dependencyMap = tmp33;
-  const context2 = windowDimensions2.useContext(isScreenReaderEnabled1(11775));
+  const obj21 = sharedValue1(4187);
+  isScreenReaderEnabled1 = sharedValue1(4883).useIsScreenReaderEnabled();
+  const tmp32 = isScreenReaderEnabled1(11572)({ ignoreKeyboard: true });
+  dependencyMap = tmp32;
+  const context2 = windowDimensions2.useContext(isScreenReaderEnabled1(11806));
   controlsSpecs3 = context2.controlsSpecs;
   windowDimensions2 = context2.windowDimensions;
   mode2 = context2.mode;
   setControlsMode2 = context2.setControlsMode;
   safeArea2 = context2.safeArea;
   connected = context2.connected;
-  const obj23 = sharedValue1(4880);
+  const obj23 = sharedValue1(4883);
   let fn3 = function n() {
     return { connected: connected.get(), currentControlsMode: controlsSpecs3.get().mode, mode: mode2.get(), windowWidth: windowDimensions2.get().width, windowHeight: windowDimensions2.get().height, windowHeightIgnoringKeyboard: store.get().height, controlsHeightValue: controlsSpecs3.get().height, safeArea: safeArea2.get() };
   };
-  fn3.__closure = { connected, controlsSpecs: controlsSpecs3, mode: mode2, windowDimensions: windowDimensions2, windowDimensionsIgnoringKeyboard: tmp33, safeArea: safeArea2 };
+  fn3.__closure = { connected, controlsSpecs: controlsSpecs3, mode: mode2, windowDimensions: windowDimensions2, windowDimensionsIgnoringKeyboard: tmp32, safeArea: safeArea2 };
   fn3.__workletHash = 11588370229444;
   fn3.__initData = closure_35;
   let fn4 = function s(safeAreaState, currentControlsMode) {
@@ -751,23 +748,23 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
       }
     }
   };
-  obj4 = { cheapWorkletShallowEqual: sharedValue1(9148).cheapWorkletShallowEqual, VoicePanelModes: sharedValue5, wrapperSpecs: sharedValue1, VoicePanelControlsModes: closure_15, runOnJS: sharedValue1(4186).runOnJS, setControlsMode: setControlsMode2, isScreenReaderEnabled: isScreenReaderEnabled1, EDGE_GUTTER: sharedValue6, getControlsDefaultWidth: sharedValue1(11782).getControlsDefaultWidth, getDrawerSpec: sharedValue1(16684).getDrawerSpec, getControlsDrawerOpenWidth: sharedValue1(11782).getControlsDrawerOpenWidth };
+  obj4 = { cheapWorkletShallowEqual: sharedValue1(9170).cheapWorkletShallowEqual, VoicePanelModes: sharedValue5, wrapperSpecs: sharedValue1, VoicePanelControlsModes: closure_15, runOnJS: sharedValue1(4187).runOnJS, setControlsMode: setControlsMode2, isScreenReaderEnabled: isScreenReaderEnabled1, EDGE_GUTTER: sharedValue6, getControlsDefaultWidth: sharedValue1(11813).getControlsDefaultWidth, getDrawerSpec: sharedValue1(16717).getDrawerSpec, getControlsDrawerOpenWidth: sharedValue1(11813).getControlsDrawerOpenWidth };
   fn4.__closure = obj4;
   fn4.__workletHash = 1154430392188;
   fn4.__initData = closure_36;
-  const animatedReaction1 = sharedValue1(4186).useAnimatedReaction(fn3, fn4);
-  const tmp36 = controlsSpecs3(windowDimensions2.useState(false), 2);
-  closure_15 = tmp37;
-  const obj24 = sharedValue1(4186);
-  class Ae {
+  const animatedReaction1 = sharedValue1(4187).useAnimatedReaction(fn3, fn4);
+  const tmp35 = controlsSpecs3(windowDimensions2.useState(false), 2);
+  closure_14 = tmp36;
+  const obj24 = sharedValue1(4187);
+  class De {
     constructor() {
-      return windowDimensions.get().mode;
+      return controlsSpecs.get().mode;
     }
   }
-  Ae.__closure = { controlsSpecs };
-  Ae.__workletHash = 7719878249076;
-  Ae.__initData = closure_42;
-  class De {
+  De.__closure = { controlsSpecs };
+  De.__workletHash = 7719878249076;
+  De.__initData = closure_42;
+  class Ce {
     constructor(arg0, arg1) {
       tmp = gestureState !== arg1 && closure_1;
       if (tmp) {
@@ -777,9 +774,9 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
             tmp8 = closure_0;
             tmp9 = closure_2;
             obj2 = closure_0(closure_2[15]);
-            tmp10 = closure_15;
+            tmp10 = closure_14;
             flag2 = true;
-            tmp11 = obj2.runOnJS(closure_15)(true);
+            tmp11 = obj2.runOnJS(closure_14)(true);
           }
         }
         tmp3 = gestureState !== tmp2.DRAWER && arg1 === tmp2.DRAWER;
@@ -787,91 +784,90 @@ const memoResult = importAllResult.memo(function VoicePanelControls(gestureState
           tmp4 = closure_0;
           tmp5 = closure_2;
           obj = closure_0(closure_2[15]);
-          tmp6 = closure_15;
+          tmp6 = closure_14;
           flag = false;
-          tmp7 = obj.runOnJS(closure_15)(false);
+          tmp7 = obj.runOnJS(closure_14)(false);
         }
       }
       return;
     }
   }
-  const obj26 = sharedValue1(4186);
-  De.__closure = { isScreenReaderEnabled, VoicePanelControlsModes: closure_15, runOnJS: sharedValue1(4186).runOnJS, setIsDrawer: tmp36[1] };
-  De.__workletHash = 12036469956927;
-  De.__initData = closure_43;
-  const animatedReaction2 = obj26.useAnimatedReaction(Ae, De);
-  const tmp39 = controlsSpecs3(windowDimensions2.useState(false), 2);
-  closure_16 = tmp40;
-  const obj5 = { isScreenReaderEnabled, VoicePanelControlsModes: closure_15, runOnJS: sharedValue1(4186).runOnJS, setIsDrawer: tmp36[1] };
-  class Me {
-    constructor() {
-      return closure_13.get().drawerMode;
-    }
+  const obj26 = sharedValue1(4187);
+  Ce.__closure = { isScreenReaderEnabled, VoicePanelControlsModes: closure_15, runOnJS: sharedValue1(4187).runOnJS, setIsDrawer: tmp35[1] };
+  Ce.__workletHash = 12036469956927;
+  Ce.__initData = closure_43;
+  const animatedReaction2 = obj26.useAnimatedReaction(De, Ce);
+  const tmp38 = controlsSpecs3(windowDimensions2.useState(false), 2);
+  closure_15 = tmp39;
+  const obj5 = { isScreenReaderEnabled, VoicePanelControlsModes: closure_15, runOnJS: sharedValue1(4187).runOnJS, setIsDrawer: tmp35[1] };
+  function be() {
+    return store2.get().drawerMode;
   }
-  Me.__closure = { wrapperSpecs: sharedValue1 };
-  Me.__workletHash = 2374715205601;
-  Me.__initData = closure_44;
-  function be(arg0, arg1) {
-    if (tmp) {
-      const runOnJSResult = sharedValue1(store[15]).runOnJS(closure_16);
-      if (arg0) {
-        runOnJSResult(true);
-      } else {
-        runOnJSResult(false);
+  be.__closure = { wrapperSpecs: sharedValue1 };
+  be.__workletHash = 2374715205601;
+  be.__initData = closure_44;
+  class Re {
+    constructor(arg0, arg1) {
+      if (gestureState !== arg1) {
+        tmp = closure_0;
+        tmp2 = closure_2;
+        obj = closure_0(closure_2[15]);
+        tmp3 = closure_15;
+        runOnJSResult = obj.runOnJS(closure_15);
+        if (gestureState) {
+          flag2 = true;
+          tmp4Result = runOnJSResult(true);
+        } else {
+          flag = false;
+          tmp4Result1 = runOnJSResult(false);
+        }
       }
-      const obj = sharedValue1(store[15]);
+      return;
     }
   }
-  obj6 = { isRefreshEnabled: tmp5, runOnJS: sharedValue1(4186).runOnJS, setIsDrawerActive: tmp40 };
-  be.__closure = obj6;
-  be.__workletHash = 1721919006032;
-  be.__initData = closure_45;
-  const animatedReaction3 = sharedValue1(4186).useAnimatedReaction(Me, be);
+  obj6 = { runOnJS: sharedValue1(4187).runOnJS, setIsDrawerActive: tmp39 };
+  Re.__closure = obj6;
+  Re.__workletHash = 13719768238274;
+  Re.__initData = closure_45;
+  const animatedReaction3 = sharedValue1(4187).useAnimatedReaction(be, Re);
   const items4 = [setControlsMode];
   const id = windowDimensions2.useId();
   const callback1 = windowDimensions2.useCallback(() => {
-    setControlsMode2({ mode: constants.FLOATING_DEFAULT });
+    mode2({ mode: constants.FLOATING_DEFAULT });
   }, items4);
   obj7 = { value: controlsSpecs3(windowDimensions2.useState(() => sharedValue1(store[16]).createUseAnimatedScrollLock(closure_12, sharedValue6, sharedValue5, sharedValue4)), 1)[0], children: null };
-  const items5 = [callback(isScreenReaderEnabled1(16716), { wrapperSpecs: sharedValue1 }), callback(closure_37, { channelId, wrapperSpecs: sharedValue1, controlsSpecs, accessoryHeights: tmp15, gestureState }), ];
-  obj8 = { nativeID: id, style: tmp7.accessibilityWrapper, accessibilityViewIsModal: tmp36[0], onAccessibilityEscape: callback1, pointerEvents: "box-none", children: null };
-  const obj28 = sharedValue1(4186);
+  const items5 = [callback(isScreenReaderEnabled1(16749), { wrapperSpecs: sharedValue1 }), callback(closure_37, { channelId, wrapperSpecs: sharedValue1, controlsSpecs, accessoryHeights: tmp14, gestureState }), ];
+  obj8 = { nativeID: id, style: tmp6.accessibilityWrapper, accessibilityViewIsModal: tmp35[0], onAccessibilityEscape: callback1, pointerEvents: "box-none", children: null };
+  const obj28 = sharedValue1(4187);
   obj9 = { gesture: memo, children: null };
   const obj10 = { style: items6, animatedProps, children: null };
-  items6 = [tmp7.wrapper, animatedStyle];
-  const tmp46 = isScreenReaderEnabled1(16609);
+  items6 = [tmp6.wrapper, animatedStyle];
+  const tmp45 = isScreenReaderEnabled1(16642);
   let MIDNIGHT;
-  if (tmp5) {
-    if (tmp12) {
-      if (!tmp39[0]) {
-        MIDNIGHT = constants.MIDNIGHT;
-      }
+  if (tmp11) {
+    if (!tmp38[0]) {
+      MIDNIGHT = constants.MIDNIGHT;
     }
   }
   obj11 = { theme: MIDNIGHT, children: null };
-  let tmp50 = !tmp12;
-  if (!tmp12) {
-    let tmpResult = tmp(500);
-    tmp50 = tmpResult.isAndroid() || tmp5;
-    const tmp51 = tmpResult.isAndroid() || tmp5;
-  }
-  const items7 = [callback(sharedValue1(16692).VoicePanelVisualEffectView, { matchAppTheme: tmp50 }), callback(closure_39, { openTab: callback, wrapperSpecs: sharedValue1, sharedTab: sharedValue })];
+  const items7 = [callback(sharedValue1(16725).VoicePanelVisualEffectView, { matchAppTheme: !tmp11 }), callback(closure_39, { openTab: callback, wrapperSpecs: sharedValue1, sharedTab: sharedValue })];
   obj11[1] = items7;
-  const items8 = [closure_20(sharedValue1(4173).ThemeContextProvider, obj11), callback(tmp4(16717), { wrapperSpecs: sharedValue1, tab: first, sharedTab: sharedValue, gestureSpecs: sharedValue2, openTab: callback }), ];
-  tmpResult = tmp(1625);
-  let tmp45Result = null;
+  const items8 = [closure_20(sharedValue1(4174).ThemeContextProvider, obj11), callback(tmp4(16750), { wrapperSpecs: sharedValue1, tab: first, sharedTab: sharedValue, gestureSpecs: sharedValue2, openTab: callback }), ];
+  let obj12 = { matchAppTheme: !tmp11 };
+  const tmp46 = isScreenReaderEnabled1(7764);
+  let tmp44Result = null;
   if (!tmpResult.isMetaQuest()) {
-    let obj12 = { openTab: null };
-    obj12[0] = callback;
-    tmp45Result = tmp45(closure_25, obj12);
+    obj13 = { openTab: null };
+    obj13[0] = callback;
+    tmp44Result = tmp44(closure_25, obj13);
   }
-  items8[2] = tmp45Result;
+  items8[2] = tmp44Result;
   obj10[2] = items8;
-  obj9[1] = closure_20(isScreenReaderEnabled1(7743), obj10);
-  obj8[5] = callback(sharedValue1(5617).GestureDetector, obj9);
-  items5[2] = callback(tmp46, obj8);
+  obj9[1] = closure_20(tmp46, obj10);
+  obj8[5] = callback(sharedValue1(5620).GestureDetector, obj9);
+  items5[2] = callback(tmp45, obj8);
   obj7[1] = items5;
-  return closure_20(sharedValue1(11611).ControlsGestureScrollLock.Provider, obj7);
+  return closure_20(sharedValue1(11642).ControlsGestureScrollLock.Provider, obj7);
 });
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControls.tsx");
 

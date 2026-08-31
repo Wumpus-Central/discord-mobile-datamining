@@ -8,26 +8,28 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethodsV2.tsx");
 
 export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2() {
-  [tmp2, closure_0] = callback2(callback.useState(() => {
-    let methodsV2 = closure_6.methodsV2;
+  [tmp2, closure_0] = callback2(React.useState(() => {
+    let methodsV2 = callback.methodsV2;
     if (methodsV2 == null) {
       methodsV2 = [];
     }
     return methodsV2;
   }), 2);
-  const tmp = callback2(callback.useState(() => {
-    let methodsV2 = closure_6.methodsV2;
+  const tmp = callback2(React.useState(() => {
+    let methodsV2 = callback.methodsV2;
     if (methodsV2 == null) {
       methodsV2 = [];
     }
     return methodsV2;
   }), 2);
-  [tmp4, importDefault] = callback2(callback.useState(() => closure_6.methodsV2FooterMessage), 2);
-  const tmp5 = callback2(callback.useState(() => null == closure_6.methodsV2), 2);
-  closure_2 = tmp5[1];
-  const tmp6 = callback2(callback.useState(false), 2);
-  callback = tmp6[1];
-  callback2 = callback.useRef(true);
+  [tmp4, importDefault] = callback2(React.useState(() => callback.methodsV2FooterMessage), 2);
+  const tmp3 = callback2(React.useState(() => callback.methodsV2FooterMessage), 2);
+  [tmp6, dependencyMap] = callback2(React.useState(() => callback.methodsV2OutageBannerMessage), 2);
+  const tmp7 = callback2(React.useState(() => null == callback.methodsV2), 2);
+  let callback = tmp7[1];
+  const tmp8 = callback2(React.useState(false), 2);
+  callback2 = tmp8[1];
+  React = React.useRef(true);
   closure_0 = undefined;
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
@@ -46,7 +48,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -61,26 +63,27 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               obj[0] = arg1;
               return obj;
             } else {
-              dependencyMap = tmp4;
+              closure_2 = tmp4;
               closure_1 = tmp6;
               let lib;
-              const methodsV2 = closure_2_6.methodsV2;
+              const methodsV2 = callback.methodsV2;
               if (!lib) {
                 if (null != methodsV2) {
                   lib(methodsV2);
-                  closure_1_1(tmp72.methodsV2FooterMessage);
-                  closure_1_2(false);
+                  closure_1_1(tmp78.methodsV2FooterMessage);
+                  closure_1_2(tmp78.methodsV2OutageBannerMessage);
                   closure_1_3(false);
+                  v0(false);
                   c6 = 3;
                   obj1 = { value: null, done: true };
                   obj1[0] = undefined;
                   return obj1;
                 }
               }
-              closure_1_2(true);
-              closure_1_3(false);
-              c4 = 2;
-              let obj2 = lib(8657);
+              closure_1_3(true);
+              v0(false);
+              v0 = 2;
+              let obj2 = lib(closure_2_2[4]);
               c5 = 3;
               c6 = 1;
               obj2 = { value: null, done: false };
@@ -88,24 +91,24 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               return obj2;
             }
           } else if (1 === tmp9) {
-            c4 = 0;
-            if (c4.current) {
-              closure_1_2(false);
+            v0 = 0;
+            if (c5.current) {
+              closure_1_3(false);
             }
             throw closure_3;
           } else {
             if (2 === tmp9) {
-              c4 = 1;
-              if (c4.current) {
-                closure_1_3(true);
+              v0 = 1;
+              if (c5.current) {
+                v0(true);
               }
             } else if (arg0 === 1) {
               c6 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              c4 = 0;
-              if (c4.current) {
-                closure_1_2(false);
+              v0 = 0;
+              if (c5.current) {
+                closure_1_3(false);
               }
               c6 = 3;
               obj = { value: null, done: true };
@@ -113,30 +116,32 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               return obj;
             } else {
               lib = arg1;
-              const obj3 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: null, footerMessage: null };
+              const obj3 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: null, footerMessage: null, outageBannerMessage: null };
               obj3[1] = lib.methods;
               obj3[2] = lib.footerMessage;
-              closure_2_1(709).dispatch(obj3);
-              if (c4.current) {
+              obj3[3] = lib.outageBannerMessage;
+              closure_2_1(closure_2_2[5]).dispatch(obj3);
+              if (c5.current) {
                 lib(lib.methods);
                 closure_1_1(lib.footerMessage);
+                closure_1_2(lib.outageBannerMessage);
               }
-              c4 = 1;
-              const obj7 = closure_2_1(709);
+              v0 = 1;
+              const obj7 = closure_2_1(closure_2_2[5]);
             }
-            c4 = 0;
-            if (c4.current) {
-              closure_1_2(false);
+            v0 = 0;
+            if (c5.current) {
+              closure_1_3(false);
             }
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
-        } catch (tmp54) {
-          closure_3 = tmp54;
-          if (tmp5 === c4) {
+        } catch (tmp59) {
+          closure_3 = tmp59;
+          if (tmp5 === v0) {
             c6 = tmp3;
-            throw tmp54;
-          } else if (tmp2 === tmp56) {
+            throw tmp59;
+          } else if (tmp2 === tmp61) {
             c5 = tmp2;
           } else {
             c5 = tmp;
@@ -145,7 +150,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
       }
     })();
   });
-  callback = callback.useCallback(function() {
+  callback = React.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -156,21 +161,22 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
     return applyArgumentsResult;
   }, []);
   const items = [callback];
-  const effect = callback.useEffect(() => {
-    closure_4.current = true;
+  const effect = React.useEffect(() => {
+    closure_5.current = true;
     callback(false);
     return () => {
-      closure_4.current = false;
+      closure_5.current = false;
     };
   }, items);
-  const tmp3 = callback2(callback.useState(() => closure_6.methodsV2FooterMessage), 2);
+  const tmp5 = callback2(React.useState(() => callback.methodsV2OutageBannerMessage), 2);
   const items1 = [callback];
   return {
-    loading: tmp5[0],
-    error: tmp6[0],
+    loading: tmp7[0],
+    error: tmp8[0],
     methods: tmp2,
     footerMessage: tmp4,
-    refetch: callback.useCallback(() => {
+    outageBannerMessage: tmp6,
+    refetch: React.useCallback(() => {
       callback(true);
     }, items1)
   };

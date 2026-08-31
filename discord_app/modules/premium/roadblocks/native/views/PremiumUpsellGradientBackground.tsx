@@ -1,7 +1,7 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import keys from "../../../../../ConstantsIOS.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/04905_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/04908_LinearGradient.js";
 import { Gradients } from "../../../../colors/native/ColorConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";

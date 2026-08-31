@@ -77,8 +77,8 @@ const audioManagerStore = new AudioManagerStore(dispatcherDefault, {
             obj[0] = obj;
             tmp4Result.captureMessage("AudioManagerStore received a string for an android audio device", obj);
           } else {
-            tmp4(9718).setActiveAudioDevice(tmp10);
-            const tmp4Result1 = tmp4(9718);
+            tmp4(9740).setActiveAudioDevice(tmp10);
+            const tmp4Result1 = tmp4(9740);
           }
         }
         const obj2 = enforcingDefault;
@@ -103,7 +103,7 @@ const audioManagerStore = new AudioManagerStore(dispatcherDefault, {
         obj[0] = obj;
         tmpResult.captureMessage("AudioManagerStore received a string for an android audio device", obj);
       } else {
-        tmpResult = tmp(9718);
+        tmpResult = tmp(9740);
         tmpResult.setActiveAudioDevice(device);
       }
     }

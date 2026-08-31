@@ -25,12 +25,11 @@ let closure_12 = createCacheKey.createStyles((backgroundColor) => {
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx");
 
 export default function useChannelSafeAreaBottomStyles(arg0) {
+  const refreshToken = _require(stateFromStores[16]).resolveRefreshToken(importDefault(stateFromStores[9]).modules.mobile.CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND);
   let obj = _require(stateFromStores[16]);
-  const refreshToken = _require(stateFromStores[16]).resolveRefreshToken(importDefault(stateFromStores[9]).modules.mobile.CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND, obj.useMobileVisualRefreshConfig({ location: "useChannelSafeAreaBottomStyles" }).chatInputFloating);
-  const obj2 = _require(stateFromStores[16]);
   const tmp2 = callback(_require(stateFromStores[17]).useToken(refreshToken));
   _require = tmp2;
-  const obj3 = _require(stateFromStores[17]);
+  const obj2 = _require(stateFromStores[17]);
   const gradientBottom = _require(stateFromStores[18]).useGradientBottom();
   importDefault = gradientBottom;
   _require = arg0;
@@ -40,7 +39,7 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
   importDefault = null != importDefault(stateFromStores[10])(arg0);
   stateFromStores = importDefault(stateFromStores[11])(arg0).needSubscriptionToAccess;
   React = importDefault(stateFromStores[12])();
-  const obj4 = _require(stateFromStores[18]);
+  const obj3 = _require(stateFromStores[18]);
   const items = [closure_4, closure_6, closure_5, closure_7, closure_8];
   stateFromStores = _require(stateFromStores[13]).useStateFromStores(items, () => {
     const channel = closure_1_6.getChannel(lib);

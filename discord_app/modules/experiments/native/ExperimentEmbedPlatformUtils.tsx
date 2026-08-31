@@ -1,7 +1,7 @@
 // discord_app/modules/experiments/native/ExperimentEmbedPlatformUtils.tsx
 import set from "../../../../_runtime/00002_set.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { asyncRequireImpl } from "../../../../_runtime/02010_asyncRequireImpl.js";
+import { asyncRequireImpl } from "../../../../_runtime/02009_asyncRequireImpl.js";
 import { makeClientVariant } from "../client_override_hooks/useApexExperiments.tsx";
 import { parseRegisteredExperiments } from "../client_override_hooks/useLegacyExperiments.tsx";
 
@@ -30,23 +30,23 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
         if (tmp6 == null) {
           tmp6 = null;
         }
-        let tmpResult = tmp(7580);
+        let tmpResult = tmp(7601);
         const experimentBuckets = tmpResult.getExperimentBuckets(tmp5);
         const iter = experimentBuckets.find((value) => value.value === closure_0);
         if (null != iter) {
           if (null != tmp6) {
             if (tmp6.variantId === iter.value) {
-              tmpResult = tmp(4367);
+              tmpResult = tmp(4369);
               tmpResult.overrideBucket(tmp5.system, experimentFromEmbedURL, null);
             }
           }
-          tmp(4367).overrideBucket(tmp5.system, experimentFromEmbedURL, iter.value);
-          const tmpResult1 = tmp(4367);
+          tmp(4369).overrideBucket(tmp5.system, experimentFromEmbedURL, iter.value);
+          const tmpResult1 = tmp(4369);
         }
       }
       const obj2 = makeClientVariant;
     }
   }
   obj = { id: experimentFromEmbedURL };
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11313, dependencyMap.paths), "ExperimentOverrideSheet", obj);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11342, dependencyMap.paths), "ExperimentOverrideSheet", obj);
 };

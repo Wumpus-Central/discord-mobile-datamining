@@ -2,7 +2,7 @@
 import set from "../../../../_runtime/00002_set.js";
 import set2 from "../../../utils/PlatformUtils.tsx";
 import keys2 from "../../../ConstantsIOS.tsx";
-import _modDef4159 from "../../../lib/native/Linking.tsx";
+import _modDef4160 from "../../../lib/native/Linking.tsx";
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import keys from "../../../../_runtime/00644_keys.js";
@@ -136,24 +136,24 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
         }
         return openInChromeURLResult;
       } else {
-        return tmp2(1370).assertNever(selectedBrowser);
+        return tmp2(1471).assertNever(selectedBrowser);
       }
     }
   }
-  _modDef4159.performURLNavigation(closure_0);
+  _modDef4160.performURLNavigation(closure_0);
   return Promise.resolve();
 };
 export const browserManagerSelectBrowser = function browserManagerSelectBrowser(selectedBrowser) {
   let obj = set2;
   if (obj.isAndroid()) {
     if (tmp(691).WebBrowserType.SAFARI === selectedBrowser) {
-      const browser = enforcingDefault.selectBrowser(tmp(4412).BrowserType.SAFARI);
+      const browser = enforcingDefault.selectBrowser(tmp(4414).BrowserType.SAFARI);
       const obj3 = enforcingDefault;
     } else if (tmp(691).WebBrowserType.IN_APP === selectedBrowser) {
-      const browser1 = enforcingDefault.selectBrowser(tmp(4412).BrowserType.IN_APP);
+      const browser1 = enforcingDefault.selectBrowser(tmp(4414).BrowserType.IN_APP);
       const obj2 = enforcingDefault;
     } else if (tmp(691).WebBrowserType.CHROME === selectedBrowser) {
-      const browser2 = enforcingDefault.selectBrowser(tmp(4412).BrowserType.CHROME);
+      const browser2 = enforcingDefault.selectBrowser(tmp(4414).BrowserType.CHROME);
       const obj5 = enforcingDefault;
     }
   } else {
@@ -170,17 +170,17 @@ export const browserManagerCloseBrowser = function browserManagerCloseBrowser() 
     BrowserManager.closeBrowser();
   }
 };
-export const openPlayStoreInlineInstall = function openPlayStoreInlineInstall(url, arg1, arg2) {
+export const openPlayStoreInlineInstall = function openPlayStoreInlineInstall(url, appId, arg2, impressionToken) {
   const _require = arg2;
   importDefault = Date.now();
   if (obj.isAndroid()) {
-    let openPlayStoreInlineResult = enforcingDefault.openPlayStoreInline(url, arg1, function callback() {
+    let openPlayStoreInlineResult = enforcingDefault.openPlayStoreInline(url, appId, function callback() {
       if (closure_0 != null) {
         tmp2(tmp);
       }
     });
     const obj2 = enforcingDefault;
-  } else if (null == arg1) {
+  } else if (null == appId) {
     openPlayStoreInlineResult = Promise.resolve(false);
   } else {
     if (null != arg2) {
@@ -188,7 +188,14 @@ export const openPlayStoreInlineInstall = function openPlayStoreInlineInstall(ur
         callback(Date.now() - closure_1);
       });
     }
-    openPlayStoreInlineResult = BrowserManager.openAppStoreInline(url, arg1);
+    impressionToken = undefined;
+    if (impressionToken != null) {
+      impressionToken = impressionToken.impressionToken;
+    }
+    if (impressionToken == null) {
+      impressionToken = null;
+    }
+    openPlayStoreInlineResult = BrowserManager.openAppStoreInline(url, appId, impressionToken);
   }
   return openPlayStoreInlineResult;
 };

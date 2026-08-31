@@ -37,7 +37,7 @@ function MethodsScreen(onClose) {
   let obj2 = _require(modalSessionId[15]);
   const ageVerificationMethodsV2 = obj2.useAgeVerificationMethodsV2();
   ({ loading, methods } = ageVerificationMethodsV2);
-  ({ footerMessage, refetch } = ageVerificationMethodsV2);
+  ({ footerMessage, outageBannerMessage, refetch } = ageVerificationMethodsV2);
   const tmp7 = first(React.useState(false), 2);
   first = tmp7[0];
   React = tmp7[1];
@@ -78,7 +78,7 @@ function MethodsScreen(onClose) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -270,7 +270,7 @@ function MethodsScreen(onClose) {
     obj4[3] = items8;
     items7[1] = closure_10(tmp2(tmp3[24]).Stack, obj4);
     obj3[3] = items7;
-    const items9 = [closure_10(tmp2(tmp3[24]).Stack, obj3), , , , ];
+    const items9 = [closure_10(tmp2(tmp3[24]).Stack, obj3), , , ];
     tmp22Result = loading;
     if (loading) {
       obj5 = { align: "center", justify: "center", style: null, children: null };
@@ -279,107 +279,115 @@ function MethodsScreen(onClose) {
       tmp22Result = tmp22(tmp2(tmp3[24]).Stack, obj5);
     }
     items9[1] = tmp22Result;
-    let tmp30 = !loading;
+    let tmp23Result = !loading;
     if (!loading) {
-      tmp30 = !tmp10;
-    }
-    if (!tmp30) {
-      items9[2] = tmp30;
-      let tmp22Result1 = !loading;
-      if (!loading) {
-        tmp22Result1 = tmp10;
-      }
+      let tmp22Result1 = null != outageBannerMessage;
       if (tmp22Result1) {
-        obj6 = { hasIcons: true, children: null };
-        obj6[1] = memo.map((children) => {
-          callback = children;
-          const method = children.method;
-          if (callback(modalSessionId[7]).AgeAssuranceMethod.FACIAL_AGE_ESTIMATION === method) {
-            let GoogleNeutralIcon = tmp(tmp2[8]).VideoSelfieIcon;
-          } else if (tmp(tmp2[7]).AgeAssuranceMethod.ID_SELFIE_MATCH === method) {
-            GoogleNeutralIcon = tmp(tmp2[9]).IdCardIcon;
-          } else if (tmp(tmp2[7]).AgeAssuranceMethod.GOOGLE_WALLET === method) {
-            GoogleNeutralIcon = tmp(tmp2[10]).GoogleNeutralIcon;
-          }
-          if (null != GoogleNeutralIcon) {
-            let obj = { IconComponent: null, variant: "secondary" };
-            obj[0] = GoogleNeutralIcon;
-            let tmp4 = _undefined2(tmp(tmp2[34]).TableRow.Icon, obj);
-            let tmp5 = _undefined2;
-          } else if (null != children.icon) {
-            obj = { icon: null };
-            obj[0] = children.icon;
-            tmp4 = _undefined2(onClose(tmp2[35]), obj);
-            tmp5 = _undefined2;
-          } else {
-            obj = { IconComponent: null, variant: "secondary" };
-            obj[0] = tmp(tmp2[36]).UnknownGameIcon;
-            tmp4 = _undefined2(tmp(tmp2[34]).TableRow.Icon, obj);
-            tmp5 = _undefined2;
-          }
-          const combined = "" + children.method + "-" + children.vendor;
-          if (c8 === combined) {
-            let tmp5Result = tmp5(initiateAgeVerificationV2, {});
-          } else {
-            obj1 = { size: "md", color: null };
-            obj1[1] = onClose(tmp2[12]).colors.INTERACTIVE_ICON_DEFAULT;
-            tmp5Result = tmp5(tmp(tmp2[37]).ChevronSmallRightIcon, obj1);
-          }
-          const obj2 = { trailing: tmp5Result, disabled: null != c8, icon: tmp4, label: children.title, subLabel: null, onPress: null };
-          const items = [tmp5(callback(modalSessionId[26]).Text, { variant: "text-sm/normal", color: "text-muted", children: children.description }), ];
-          tmp5Result = null != children.providedBy;
-          if (tmp5Result) {
-            const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
-            obj4[2] = children.providedBy;
-            tmp5Result = tmp5(tmp(tmp2[26]).Text, obj4);
-          }
-          items[1] = tmp5Result;
-          obj2[4] = closure_10(callback(modalSessionId[24]).Stack, { direction: "vertical", spacing: 4, children: items });
-          obj2[5] = function onPress() {
-            return closure_1_10(closure_0, combined);
-          };
-          return tmp5(callback(modalSessionId[34]).TableRow, obj2, combined);
-        });
-        tmp22Result1 = tmp22(tmp2(tmp3[33]).TableRowGroup, obj6);
+        obj6 = { messageType: null, children: null };
+        obj6[0] = tmp2(tmp3[29]).HelpMessageTypes.WARNING;
+        obj6[1] = outageBannerMessage;
+        tmp22Result1 = tmp22(tmp2(tmp3[29]).HelpMessage, obj6);
       }
-      items9[3] = tmp22Result1;
-      let tmp22Result2 = !loading;
-      if (!loading) {
-        tmp22Result2 = tmp10;
+      const items10 = [tmp22Result1, , ];
+      if (tmp10) {
+        items10[1] = !tmp10;
+        let tmp22Result2 = tmp10;
+        if (tmp10) {
+          obj7 = { hasIcons: true, children: null };
+          obj7[1] = memo.map((children) => {
+            callback = children;
+            const method = children.method;
+            if (callback(modalSessionId[7]).AgeAssuranceMethod.FACIAL_AGE_ESTIMATION === method) {
+              let GoogleNeutralIcon = tmp(tmp2[8]).VideoSelfieIcon;
+            } else if (tmp(tmp2[7]).AgeAssuranceMethod.ID_SELFIE_MATCH === method) {
+              GoogleNeutralIcon = tmp(tmp2[9]).IdCardIcon;
+            } else if (tmp(tmp2[7]).AgeAssuranceMethod.GOOGLE_WALLET === method) {
+              GoogleNeutralIcon = tmp(tmp2[10]).GoogleNeutralIcon;
+            }
+            if (null != GoogleNeutralIcon) {
+              let obj = { IconComponent: null, variant: "secondary" };
+              obj[0] = GoogleNeutralIcon;
+              let tmp4 = _undefined2(tmp(tmp2[34]).TableRow.Icon, obj);
+              let tmp5 = _undefined2;
+            } else if (null != children.icon) {
+              obj = { icon: null };
+              obj[0] = children.icon;
+              tmp4 = _undefined2(onClose(tmp2[35]), obj);
+              tmp5 = _undefined2;
+            } else {
+              obj = { IconComponent: null, variant: "secondary" };
+              obj[0] = tmp(tmp2[36]).UnknownGameIcon;
+              tmp4 = _undefined2(tmp(tmp2[34]).TableRow.Icon, obj);
+              tmp5 = _undefined2;
+            }
+            const combined = "" + children.method + "-" + children.vendor;
+            if (c8 === combined) {
+              let tmp5Result = tmp5(initiateAgeVerificationV2, {});
+            } else {
+              obj1 = { size: "md", color: null };
+              obj1[1] = onClose(tmp2[12]).colors.INTERACTIVE_ICON_DEFAULT;
+              tmp5Result = tmp5(tmp(tmp2[37]).ChevronSmallRightIcon, obj1);
+            }
+            const obj2 = { trailing: tmp5Result, disabled: null != c8, icon: tmp4, label: children.title, subLabel: null, onPress: null };
+            const items = [tmp5(callback(modalSessionId[26]).Text, { variant: "text-sm/normal", color: "text-muted", children: children.description }), ];
+            tmp5Result = null != children.providedBy;
+            if (tmp5Result) {
+              const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
+              obj4[2] = children.providedBy;
+              tmp5Result = tmp5(tmp(tmp2[26]).Text, obj4);
+            }
+            items[1] = tmp5Result;
+            obj2[4] = closure_10(callback(modalSessionId[24]).Stack, { direction: "vertical", spacing: 4, children: items });
+            obj2[5] = function onPress() {
+              return closure_1_10(closure_0, combined);
+            };
+            return tmp5(callback(modalSessionId[34]).TableRow, obj2, combined);
+          });
+          tmp22Result2 = tmp22(tmp2(tmp3[33]).TableRowGroup, obj7);
+        }
+        const obj8 = { direction: "vertical", spacing: 12, children: null };
+        items10[2] = tmp22Result2;
+        obj8[2] = items10;
+        tmp23Result = tmp23(tmp2(tmp3[24]).Stack, obj8);
+      } else {
+        const obj9 = { style: null, children: null };
+        obj9[0] = tmp.emptyContainer;
+        let obj10 = { messageType: null, button: null, children: null };
+        obj10[0] = tmp2(tmp3[29]).HelpMessageTypes.ERROR;
+        const obj11 = { variant: "primary", size: "sm", text: null, onPress: null };
+        const intl = tmp2(tmp3[31]).intl;
+        obj11[2] = intl.string(onClose(tmp3[32]).hDvmYP);
+        obj11[3] = refetch;
+        obj10[1] = tmp22(tmp2(tmp3[30]).Button, obj11);
+        const intl2 = tmp2(tmp3[31]).intl;
+        const tmp33 = onClose(tmp3[32]);
+        obj10[2] = intl2.string(ageVerificationMethodsV2.error ? tmp33.Bkmk4Y : tmp33.cR6336);
+        obj10 = tmp22(tmp2(tmp3[29]).HelpMessage, obj10);
+        obj9[1] = obj10;
+        tmp22(tmp2(tmp3[24]).Stack, obj9);
       }
-      if (tmp22Result2) {
-        tmp22Result2 = null != footerMessage;
-      }
-      if (tmp22Result2) {
-        obj7 = { variant: "text-sm/normal", color: "text-subtle", style: null, children: null };
-        obj7[2] = tmp.footer;
-        obj7[3] = footerMessage;
-        tmp22Result2 = tmp22(tmp2(tmp3[26]).Text, obj7);
-      }
-      const obj8 = { children: null };
-      const obj9 = { children: null };
-      items9[4] = tmp22Result2;
-      obj[3] = items9;
-      obj9[0] = tmp23(tmp2(tmp3[24]).Stack, obj);
-      obj8[0] = tmp22(tmp2(tmp3[23]).ModalContent, obj9);
-      tmp22Result = tmp22(tmp2(tmp3[22]).ModalScreen, obj8);
-    } else {
-      const obj10 = { style: null, children: null };
-      obj10[0] = tmp.emptyContainer;
-      let obj11 = { messageType: null, button: null, children: null };
-      obj11[0] = tmp2(tmp3[29]).HelpMessageTypes.ERROR;
-      const obj12 = { variant: "primary", size: "sm", text: null, onPress: null };
-      const intl = tmp2(tmp3[31]).intl;
-      obj12[2] = intl.string(onClose(tmp3[32]).hDvmYP);
-      obj12[3] = refetch;
-      obj11[1] = tmp22(tmp2(tmp3[30]).Button, obj12);
-      const intl2 = tmp2(tmp3[31]).intl;
-      const tmp32 = onClose(tmp3[32]);
-      obj11[2] = intl2.string(ageVerificationMethodsV2.error ? tmp32.Bkmk4Y : tmp32.cR6336);
-      obj11 = tmp22(tmp2(tmp3[29]).HelpMessage, obj11);
-      obj10[1] = obj11;
-      tmp22(tmp2(tmp3[24]).Stack, obj10);
     }
+    items9[2] = tmp23Result;
+    let tmp22Result4 = !loading;
+    if (!loading) {
+      tmp22Result4 = tmp10;
+    }
+    if (tmp22Result4) {
+      tmp22Result4 = null != footerMessage;
+    }
+    if (tmp22Result4) {
+      const obj12 = { variant: "text-sm/normal", color: "text-subtle", style: null, children: null };
+      obj12[2] = tmp.footer;
+      obj12[3] = footerMessage;
+      tmp22Result4 = tmp22(tmp2(tmp3[26]).Text, obj12);
+    }
+    const obj13 = { children: null };
+    const obj14 = { children: null };
+    items9[3] = tmp22Result4;
+    obj[3] = items9;
+    obj14[0] = closure_10(tmp2(tmp3[24]).Stack, obj);
+    obj13[0] = tmp22(tmp2(tmp3[23]).ModalContent, obj14);
+    tmp22Result = tmp22(tmp2(tmp3[22]).ModalScreen, obj13);
   }
   return tmp22Result;
 }
@@ -413,7 +421,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
     closure_1 = closure_0;
     closure_2 = closure_1;
     closeModal = function closeModal() {
-      let arr = callback(4689);
+      let arr = callback(4691);
       arr = arr.pop();
       dependencyMap();
     };
@@ -440,7 +448,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
     const obj3 = entryPoint(closure_2[39]);
     obj[2] = entryPoint(closure_2[39]).getHeaderBackButton();
     obj[3] = function render() {
-      return closure_1_9(callback(8663), { onClose: closeModal, modalSessionId: closure_0 });
+      return closure_1_9(callback(8685), { onClose: closeModal, modalSessionId: closure_0 });
     };
     obj[closure_1_12.GOOGLE_WALLET_VERIFICATION] = obj;
     return obj;
@@ -451,5 +459,5 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
   let obj = { screens: memo1, initialRouteName: constants.METHODS, headerBackTitle: null };
   const intl = entryPoint(1236).intl;
   obj[2] = intl.string(entryPoint(1236).t["13/7kX"]);
-  return callback(entryPoint(5973).Navigator, obj);
+  return callback(entryPoint(5976).Navigator, obj);
 };

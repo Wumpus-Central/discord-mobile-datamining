@@ -2,9 +2,6 @@
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
 import getEmojiUnavailableReasonDefault from "../../utils/EmojiUtils.tsx";
-import _modDef6159 from "../../../_runtime/metro/06159__.js";
-import _modDef6160 from "../../../_runtime/metro/06160__.js";
-import _modDef6161 from "../../../_runtime/metro/06161__.js";
 import _modDef6162 from "../../../_runtime/metro/06162__.js";
 import _modDef6163 from "../../../_runtime/metro/06163__.js";
 import _modDef6164 from "../../../_runtime/metro/06164__.js";
@@ -24,14 +21,17 @@ import _modDef6177 from "../../../_runtime/metro/06177__.js";
 import _modDef6178 from "../../../_runtime/metro/06178__.js";
 import _modDef6179 from "../../../_runtime/metro/06179__.js";
 import _modDef6180 from "../../../_runtime/metro/06180__.js";
+import _modDef6181 from "../../../_runtime/metro/06181__.js";
+import _modDef6182 from "../../../_runtime/metro/06182__.js";
+import _modDef6183 from "../../../_runtime/metro/06183__.js";
 import closure_3 from "../../stores/UserStore.tsx";
 import VoiceChannelEffectAnimationType from "VoiceChannelEffectsConstants.tsx";
 import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 const require = arg1;
 ({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
-const items = [_modDef6159];
-const items1 = [_modDef6160, _modDef6161, _modDef6162, _modDef6163, _modDef6164, _modDef6165, _modDef6166, _modDef6167, _modDef6168, _modDef6169, _modDef6170, _modDef6171, _modDef6172, _modDef6173, _modDef6174, _modDef6175, _modDef6176, _modDef6177, _modDef6178, _modDef6179, _modDef6180];
+const items = [_modDef6162];
+const items1 = [_modDef6163, _modDef6164, _modDef6165, _modDef6166, _modDef6167, _modDef6168, _modDef6169, _modDef6170, _modDef6171, _modDef6172, _modDef6173, _modDef6174, _modDef6175, _modDef6176, _modDef6177, _modDef6178, _modDef6179, _modDef6180, _modDef6181, _modDef6182, _modDef6183];
 let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const memoizeResult = importDefaultResult.memoize((arg0) => {
   closure_0 = arg0;

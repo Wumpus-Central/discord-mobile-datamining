@@ -24,7 +24,7 @@ const result = require("set").fileFinishedImporting("modules/user_settings/notif
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = callback3();
-  let obj = canSeePushNotificationNudge(11913);
+  let obj = canSeePushNotificationNudge(11947);
   canSeePushNotificationNudge = obj.useCanSeePushNotificationNudge();
   const items = [canSeePushNotificationNudge];
   const effect = React.useEffect(() => {
@@ -47,28 +47,28 @@ export default function NotificationPermissionSettingsHeader() {
     obj2[0] = tmp.iconCircle;
     const obj3 = { size: "md", color: null };
     obj3[1] = ThemesDefault.colors.ICON_STRONG;
-    obj2[1] = callback(tmp2(10176).BellSlashIcon, obj3);
+    obj2[1] = callback(tmp2(10199).BellSlashIcon, obj3);
     const items1 = [callback(View, obj2), , , ];
     const obj4 = { variant: "heading-lg/bold", color: "text-default", children: null };
     const intl = tmp2(1236).intl;
     obj4[2] = intl.string(tmp2(1236).t.MUwOvc);
-    items1[1] = callback(tmp2(4442).Text, obj4);
+    items1[1] = callback(tmp2(4444).Text, obj4);
     const obj5 = { variant: "text-sm/medium", style: null, color: "text-muted", children: null };
     obj5[1] = tmp.body;
     const intl2 = tmp2(1236).intl;
     obj5[3] = intl2.string(tmp2(1236).t.G4uKoe);
-    items1[2] = callback(tmp2(4442).Text, obj5);
+    items1[2] = callback(tmp2(4444).Text, obj5);
     const obj6 = { style: null, children: null };
     obj6[0] = { alignSelf: "stretch" };
     const obj7 = { variant: "primary", text: null, onPress: null };
     const intl3 = tmp2(1236).intl;
     obj7[1] = intl3.string(tmp2(1236).t["5xWOXv"]);
     obj7[2] = tmp6;
-    obj6[1] = callback(tmp2(4893).Button, obj7);
+    obj6[1] = callback(tmp2(4896).Button, obj7);
     items1[3] = callback(View, obj6);
     obj1[1] = items1;
     obj[2] = callback2(View, obj1);
-    obj[1] = callback(tmp2(5566).Card, obj);
+    obj[1] = callback(tmp2(5569).Card, obj);
     tmp7 = callback(View, obj);
   }
   return tmp7;

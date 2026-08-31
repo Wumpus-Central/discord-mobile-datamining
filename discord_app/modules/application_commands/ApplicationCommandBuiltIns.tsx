@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/ApplicationCommandBuiltIns.tsx
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 import useCanUnarchiveThread from "../threads/ThreadHooks.tsx";
-import _modDef8105 from "../../actions/ChangeNicknameActionCreators.tsx";
+import _modDef8127 from "../../actions/ChangeNicknameActionCreators.tsx";
 import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../stores/ChannelStore.tsx";
 import closure_5 from "../../stores/PermissionStore.tsx";
@@ -399,7 +399,7 @@ obj13.execute = function execute(arr) {
       if (str == null) {
         str = "";
       }
-      const obj = _modDef8105;
+      const obj = _modDef8127;
       const id = guild.id;
       const id2 = channel.id;
       if (!str) {
@@ -489,7 +489,7 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -513,7 +513,7 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             id = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "ct", done: true };
+            return { value: "Object", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -535,8 +535,8 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             if (tmp11 == null) {
               closure_3 = "";
             }
-            obj1 = callback(8107);
-            let obj2 = callback(8108);
+            obj1 = callback(8129);
+            let obj2 = callback(8130);
             c6 = 2;
             c7 = 1;
             obj2 = { value: null, done: false };
@@ -553,13 +553,13 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
           return obj;
         } else {
           id = arg1;
-          const obj8 = channel(7148);
+          const obj8 = channel(7169);
           id = id.id;
           const obj3 = { location: null };
           obj3[0] = constants.THREAD_CREATION;
-          obj8.sendMessage(id, channel(7374).parse(id, closure_3), true, obj3);
+          obj8.sendMessage(id, channel(7395).parse(id, closure_3), true, obj3);
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp27) {
         c7 = tmp;
@@ -654,7 +654,7 @@ obj18.execute = function execute(arr, guild) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -916,7 +916,7 @@ obj21.execute = function execute(arr, guild) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1141,7 +1141,7 @@ obj25.execute = function execute(arr, guild) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1345,7 +1345,7 @@ obj29.execute = function execute(arr, channel) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1385,7 +1385,7 @@ obj29.execute = function execute(arr, channel) {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp8) {
           c0 = tmp;
@@ -1519,8 +1519,8 @@ obj32.execute = function execute(arr, channel) {
     }
     const NumberResult = Number(num);
     const NumberResult1 = Number(num2);
-    size(6057).startDiceRoll(channel.id, NumberResult, NumberResult1);
-    const obj = size(6057);
+    size(6060).startDiceRoll(channel.id, NumberResult, NumberResult1);
+    const obj = size(6060);
   }
 };
 items[sum10 + 1] = obj32;

@@ -205,11 +205,11 @@ let closure_17 = importAllResult.memo((game) => {
     obj3[0] = tmp.comment;
     const obj4 = { size: "xxs", color: null };
     obj4[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items3 = [tmp10(tmp6(12596).QuoteIcon, obj4), ];
+    const items3 = [tmp10(tmp6(12631).QuoteIcon, obj4), ];
     const obj5 = { variant: "text-sm/normal", color: "text-muted", lineClamp: 3, style: null, children: null };
     obj5[3] = tmp.commentText;
     obj5[4] = game.comment;
-    items3[1] = tmp10(tmp6(4442).Text, obj5);
+    items3[1] = tmp10(tmp6(4444).Text, obj5);
     obj3[1] = items3;
     tmp8Result = tmp8(tmp9, obj3);
   }
@@ -316,34 +316,33 @@ const memoResult = importAllResult.memo((style) => {
   let obj = userId(disableInteraction[16]);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getId() === userId);
-  const tmp6 = widget(disableInteraction[17])("UserProfileWidgetsBoard");
-  [tmp8, c3] = callback(undefined.useState(false), 2);
-  const tmp7 = callback(undefined.useState(false), 2);
-  [tmp10, c4] = callback(undefined.useState(0), 2);
-  const result = (tmp10 - 2 * widget(disableInteraction[7]).space.PX_16) / 3;
+  [tmp6, c3] = callback(undefined.useState(false), 2);
+  const tmp5 = callback(undefined.useState(false), 2);
+  [tmp8, c4] = callback(undefined.useState(0), 2);
+  const result = (tmp8 - 2 * widget(disableInteraction[7]).space.PX_16) / 3;
   c5 = result;
   const items1 = [widget.games];
-  const memo = importAllResult.useMemo(() => widget(disableInteraction[18]).uniqBy(widget.games, "gameId"), items1);
+  const memo = importAllResult.useMemo(() => widget(disableInteraction[17]).uniqBy(widget.games, "gameId"), items1);
   const type = widget.type;
-  if (userId(disableInteraction[19]).WidgetType.FAVORITE_GAMES === type) {
-    let tmp34 = tmp10 > 0;
-    if (tmp34) {
+  if (userId(disableInteraction[18]).WidgetType.FAVORITE_GAMES === type) {
+    let tmp33 = tmp8 > 0;
+    if (tmp33) {
       obj = { userId: null, game: null, coverWidth: null, disableInteraction: null };
       obj[0] = userId;
       obj[1] = memo[0];
       obj[2] = result;
       obj[3] = disableInteraction;
-      tmp34 = callback2(closure_17, obj);
+      tmp33 = callback2(closure_17, obj);
     }
-    let tmp14Result = tmp34;
-  } else if (tmp2(tmp3[19]).WidgetType.CURRENT_GAMES === type) {
+    let tmp13Result = tmp33;
+  } else if (tmp2(tmp3[18]).WidgetType.CURRENT_GAMES === type) {
     let substr = memo;
-    if (!tmp8) {
+    if (!tmp6) {
       substr = memo.slice(0, 2);
     }
     obj = { style: null, children: null };
     obj[0] = tmp.list;
-    let mapped = tmp10 > 0;
+    let mapped = tmp8 > 0;
     if (mapped) {
       mapped = substr.map((game) => closure_1_10(closure_1_18, { userId, game, coverWidth: c5, disableInteraction }, game.gameId));
     }
@@ -351,9 +350,9 @@ const memoResult = importAllResult.memo((style) => {
     const items2 = [callback2(closure_7, obj), ];
     if (memo.length <= 2) {
       obj1 = { children: null };
-      items2[1] = tmp24;
+      items2[1] = tmp23;
       obj1[0] = items2;
-      tmp14Result = tmp25(tmp26, obj1);
+      tmp13Result = tmp24(tmp25, obj1);
     } else {
       const obj2 = { style: null, hitSlop: null, onPress: null, accessibilityRole: "button", children: null };
       obj2[0] = tmp.viewMore;
@@ -361,42 +360,36 @@ const memoResult = importAllResult.memo((style) => {
       obj2[2] = function onPress() {
         return _undefined((arg0) => !arg0);
       };
-      let str2 = "text-sm/semibold";
+      const intl2 = tmp2(tmp3[19]).intl;
       if (tmp6) {
-        str2 = "text-sm/medium";
-      }
-      let obj3 = { variant: null, color: "text-muted", children: null };
-      obj3[0] = str2;
-      const intl2 = tmp2(tmp3[20]).intl;
-      if (tmp8) {
-        let stringResult = intl2.string(tmp2(tmp3[20]).t["6MwJo/"]);
+        let stringResult = intl2.string(tmp2(tmp3[19]).t["6MwJo/"]);
       } else {
-        const obj4 = { numberOfItems: null };
-        obj4[0] = memo.length - 2;
-        stringResult = intl2.formatToPlainString(tmp2(tmp3[20]).t.zr0Y5R, obj4);
+        const obj3 = { numberOfItems: null };
+        obj3[0] = memo.length - 2;
+        stringResult = intl2.formatToPlainString(tmp2(tmp3[19]).t.zr0Y5R, obj3);
       }
-      obj3[2] = stringResult;
-      obj3 = tmp27(tmp2(tmp3[12]).Text, obj3);
-      obj2[4] = obj3;
-      tmp27(closure_6, obj2);
-      const tmp30 = closure_6;
+      const obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      obj4[2] = stringResult;
+      obj2[4] = tmp26(tmp2(tmp3[12]).Text, obj4);
+      tmp26(closure_6, obj2);
+      const tmp29 = closure_6;
     }
-    tmp25 = closure_11;
-    tmp26 = closure_12;
-    const tmp28 = closure_7;
+    tmp24 = closure_11;
+    tmp25 = closure_12;
+    const tmp27 = closure_7;
   } else {
-    if (tmp2(tmp3[19]).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-      if (tmp2(tmp3[19]).WidgetType.PLAYED_GAMES !== type) {
+    if (tmp2(tmp3[18]).WidgetType.WANT_TO_PLAY_GAMES !== type) {
+      if (tmp2(tmp3[18]).WidgetType.PLAYED_GAMES !== type) {
         return null;
       }
     }
     let substr1 = memo;
-    if (!tmp8) {
+    if (!tmp6) {
       substr1 = memo.slice(0, 6);
     }
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.grid;
-    let mapped1 = tmp10 > 0;
+    let mapped1 = tmp8 > 0;
     if (mapped1) {
       mapped1 = substr1.map((game) => closure_1_10(closure_1_19, { userId, game, coverWidth: c5, disableInteraction }, game.gameId));
     }
@@ -404,9 +397,9 @@ const memoResult = importAllResult.memo((style) => {
     const items3 = [callback2(closure_7, obj5), ];
     if (memo.length <= 6) {
       const obj6 = { children: null };
-      items3[1] = tmp13;
+      items3[1] = tmp12;
       obj6[0] = items3;
-      tmp14Result = tmp14(tmp15, obj6);
+      tmp13Result = tmp13(tmp14, obj6);
     } else {
       const obj7 = { style: null, hitSlop: null, onPress: null, accessibilityRole: "button", children: null };
       obj7[0] = tmp.viewMore;
@@ -414,52 +407,46 @@ const memoResult = importAllResult.memo((style) => {
       obj7[2] = function onPress() {
         return _undefined((arg0) => !arg0);
       };
-      let str = "text-sm/semibold";
+      const intl = tmp2(tmp3[19]).intl;
       if (tmp6) {
-        str = "text-sm/medium";
-      }
-      let obj8 = { variant: null, color: "text-muted", children: null };
-      obj8[0] = str;
-      const intl = tmp2(tmp3[20]).intl;
-      if (tmp8) {
-        let stringResult1 = intl.string(tmp2(tmp3[20]).t["6MwJo/"]);
+        let stringResult1 = intl.string(tmp2(tmp3[19]).t["6MwJo/"]);
       } else {
-        const obj9 = { numberOfItems: null };
-        obj9[0] = memo.length - 6;
-        stringResult1 = intl.formatToPlainString(tmp2(tmp3[20]).t.zr0Y5R, obj9);
+        const obj8 = { numberOfItems: null };
+        obj8[0] = memo.length - 6;
+        stringResult1 = intl.formatToPlainString(tmp2(tmp3[19]).t.zr0Y5R, obj8);
       }
-      obj8[2] = stringResult1;
-      obj8 = tmp16(tmp2(tmp3[12]).Text, obj8);
-      obj7[4] = obj8;
-      tmp16(closure_6, obj7);
-      const tmp19 = closure_6;
+      const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
+      obj9[2] = stringResult1;
+      obj7[4] = tmp15(tmp2(tmp3[12]).Text, obj9);
+      tmp15(closure_6, obj7);
+      const tmp18 = closure_6;
     }
-    tmp14 = closure_11;
-    tmp15 = closure_12;
-    const tmp17 = closure_7;
+    tmp13 = closure_11;
+    tmp14 = closure_12;
+    const tmp16 = closure_7;
   }
   const obj10 = { style: style.cardStyle, title: null, trailingAction: null, children: null };
-  const tmp9 = callback(undefined.useState(0), 2);
-  const tmp5Result = widget(disableInteraction[21]);
-  obj10[1] = userId(disableInteraction[22]).getWidgetTitle(widget);
-  let tmp37Result = !stateFromStores;
+  const tmp7 = callback(undefined.useState(0), 2);
+  const tmp9Result = widget(disableInteraction[20]);
+  obj10[1] = userId(disableInteraction[21]).getWidgetTitle(widget);
+  let tmp36Result = !stateFromStores;
   if (!stateFromStores) {
-    tmp37Result = !disableInteraction;
+    tmp36Result = !disableInteraction;
   }
-  if (tmp37Result) {
+  if (tmp36Result) {
     const obj11 = { userId: null, widget: null };
     obj11[0] = userId;
     obj11[1] = widget;
-    tmp37Result = tmp37(tmp5(tmp3[23]), obj11);
+    tmp36Result = tmp36(tmp9(tmp3[22]), obj11);
   }
-  obj10[2] = tmp37Result;
+  obj10[2] = tmp36Result;
   obj10[3] = callback2(closure_7, {
     onLayout(nativeEvent) {
       return _undefined2(nativeEvent.nativeEvent.layout.width);
     },
-    children: tmp14Result
+    children: tmp13Result
   });
-  return callback2(tmp5Result, obj10);
+  return callback2(tmp9Result, obj10);
 });
 let obj11 = { marginTop: ThemesDefault.space.PX_12 };
 let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsBoard.tsx");
@@ -472,7 +459,7 @@ export default function UserProfileWidgetsBoard(userId) {
     flag = true;
   }
   let cardStyle = userId.cardStyle;
-  let obj = flag(trackUserProfileAction[28]);
+  let obj = flag(trackUserProfileAction[27]);
   const displayableBoardWidgets = obj.useDisplayableBoardWidgets(userId);
   cardStyle = tmp2;
   trackUserProfileAction = undefined;

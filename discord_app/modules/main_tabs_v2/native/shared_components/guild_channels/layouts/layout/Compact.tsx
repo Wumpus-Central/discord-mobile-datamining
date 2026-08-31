@@ -34,19 +34,7 @@ const tmp2 = mergeDefault(obj, { layout: { marginThread: { marginLeft: 4 } }, co
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/Compact.tsx");
 
 export const CHANNEL_LIST_STYLES_COMPACT = obj;
-export const getCompactStyles = function getCompactStyles(arg0) {
-  if (arg0) {
-    obj = { messagePreview: null, timestamp: null };
-    obj = { text: null };
-    obj[0] = { variant: "text-sm/medium", color: "text-muted" };
-    obj[0] = obj;
-    obj = { text: null };
-    obj[0] = { variant: "text-xs/semibold" };
-    obj[1] = obj;
-    let tmp = mergeDefault(obj, obj);
-  } else {
-    tmp = obj;
-  }
-  return tmp;
+export const getCompactStyles = function getCompactStyles() {
+  return mergeDefault(obj, { messagePreview: { text: { variant: "text-sm/medium", color: "text-muted" } }, timestamp: { text: { variant: "text-xs/semibold" } } });
 };
 export const CHANNEL_LIST_STYLES_COMPACT_LAUNCHPAD = tmp2;

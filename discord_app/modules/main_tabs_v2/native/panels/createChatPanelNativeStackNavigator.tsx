@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx
-import createStandardNavigationFactories from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
+import createStandardNavigationFactories from "../../../../../_runtime/01500_createStandardNavigationFactories.js";
 import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 

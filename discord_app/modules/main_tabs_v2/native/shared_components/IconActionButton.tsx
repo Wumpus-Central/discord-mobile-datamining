@@ -1,7 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/IconActionButton.tsx
 import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import getFontScale from "../../../screen/native/useFontScale.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import DEFAULT_BADGE_SIZE from "Badge.tsx";
@@ -17,7 +16,7 @@ class ButtonBadge {
     if (str === undefined) {
       str = "left";
     }
-    tmp = closure_6(false);
+    tmp = closure_6();
     tmp2 = jsx;
     obj = { size: null, maskSize: 2, style: null, maskColor: null };
     tmp3 = require("DEFAULT_BADGE_SIZE");
@@ -29,48 +28,38 @@ class ButtonBadge {
 }
 let c3 = importAllResult;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles((arg0) => {
-  let obj = { actionIconButtonPressable: { minWidth: 32, minHeight: 32, borderRadius: 20, marginEnd: 12, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 12 }, withoutMargin: { marginEnd: 0 }, filled: null, outlined: null, roundButton: null, actionIcon: null, actionText: null, unreadBadgeLeft: null, unreadBadgeRight: null, unreadBadgeMask: null, countStyle: null };
-  let prop;
-  if (!arg0) {
-    prop = ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND;
-  }
-  obj[2] = { backgroundColor: prop };
+let closure_6 = createCacheKey.createStyles(() => {
+  let obj = { actionIconButtonPressable: { minWidth: 32, minHeight: 32, borderRadius: 20, marginEnd: 12, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 12 }, withoutMargin: { marginEnd: 0 }, filled: {}, outlined: null, roundButton: null, actionIcon: null, actionText: null, unreadBadgeLeft: null, unreadBadgeRight: null, unreadBadgeMask: null, countStyle: null };
   obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
   obj[3] = obj;
   obj[4] = { maxWidth: 32, maxHeight: 32 };
-  const colors = ThemesDefault.colors;
-  obj[5] = { tintColor: arg0 ? colors.ICON_SUBTLE : colors.INTERACTIVE_TEXT_DEFAULT };
+  obj = { tintColor: ThemesDefault.colors.ICON_SUBTLE };
+  obj[5] = obj;
   let num = 0;
-  if (obj3.isAndroid()) {
+  if (obj4.isAndroid()) {
     num = -2;
   }
   obj[6] = { marginLeft: 4, marginTop: num };
   obj[7] = { position: "absolute", left: -2, top: -1 };
   obj[8] = { position: "absolute", right: -2, top: -1 };
-  obj = { color: tmp4(712).colors.BACKGROUND_BASE_LOW };
-  obj[9] = obj;
-  obj3 = set;
+  obj4 = set;
+  obj[9] = { color: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+  obj1 = { color: ThemesDefault.colors.BACKGROUND_BASE_LOW };
   obj[10] = { position: "relative", marginLeft: ThemesDefault.space.PX_8 };
   return obj;
 });
 let closure_7 = importAllResult.memo((color) => {
   ({ IconComponent, source } = color);
-  let ICON_SUBTLE = color.color;
-  const isRefreshEnabled = color.isRefreshEnabled;
+  color = color.color;
   dependencyMap = undefined;
-  const tmp = callback2(isRefreshEnabled);
+  const tmp = callback2();
   dependencyMap = tmp;
-  const items = [tmp, ICON_SUBTLE, source];
+  const items = [tmp, color, source];
   if (null != IconComponent) {
-    if (isRefreshEnabled) {
-      ICON_SUBTLE = ICON_SUBTLE(712).colors.ICON_SUBTLE;
-    }
     let obj = { size: "sm", color: null };
-    obj[1] = ICON_SUBTLE;
-    let tmp2Result = closure_4(IconComponent, obj);
-    const tmp4 = closure_4;
+    obj[1] = color(712).colors.ICON_SUBTLE;
+    let tmp2Result = callback(IconComponent, obj);
   } else {
     tmp2Result = tmp2();
   }
@@ -93,48 +82,47 @@ export default function IconActionButton(variant) {
     num = 0;
   }
   ({ noMargin, hitSlop, disabled, onPress, onLongPress } = variant);
-  const tmp2 = useIsMobileVisualRefreshExperimentEnabledDefault("IconActionButton");
-  const tmp3 = callback2(tmp2);
+  const tmp = callback2();
   getFontScale;
-  let tmp11Result = null != buttonText;
-  if (tmp11Result) {
-    tmp11Result = tmp6 <= 1.2;
+  let tmp10Result = null != buttonText;
+  if (tmp10Result) {
+    tmp10Result = tmp5 <= 1.2;
   }
   let obj = { hitSlop, onPress, onLongPress, disabled, accessibilityRole: "button", accessibilityLabel, style: null, children: null };
-  const items = [tmp3.actionIconButtonPressable, "outlined" === str ? tmp3.outlined : tmp3.filled, , , ];
+  const items = [tmp.actionIconButtonPressable, "outlined" === str ? tmp.outlined : tmp.filled, , , ];
   let roundButton;
-  if (!tmp11Result) {
-    roundButton = tmp3.roundButton;
+  if (!tmp10Result) {
+    roundButton = tmp.roundButton;
   }
   items[2] = roundButton;
   let withoutMargin;
   if (noMargin) {
-    withoutMargin = tmp3.withoutMargin;
+    withoutMargin = tmp.withoutMargin;
   }
   items[3] = withoutMargin;
   items[4] = style;
   obj[6] = items;
-  const items1 = [callback(closure_7, { IconComponent, color, source, isRefreshEnabled: tmp2 }), , , ];
-  if (tmp11Result) {
+  const items1 = [callback(closure_7, { IconComponent, color, source }), , , ];
+  if (tmp10Result) {
     obj = { variant: "text-sm/bold", color: null, style: null, children: null };
     obj[1] = buttonTextColor;
-    obj[2] = tmp3.actionText;
+    obj[2] = tmp.actionText;
     obj[3] = buttonText;
-    tmp11Result = tmp11(tmp4(4442).Text, obj);
+    tmp10Result = tmp10(tmp2(4444).Text, obj);
   }
-  items1[1] = tmp11Result;
-  tmp11Result = null;
+  items1[1] = tmp10Result;
+  tmp10Result = null;
   if (num > 0) {
     obj = { style: null, value: null };
-    obj[0] = tmp3.countStyle;
+    obj[0] = tmp.countStyle;
     obj[1] = num;
-    tmp11Result = tmp11(tmp4(1297).Badge, obj);
+    tmp10Result = tmp10(tmp2(1297).Badge, obj);
   }
-  items1[2] = tmp11Result;
+  items1[2] = tmp10Result;
   if (badge) {
     obj1 = { badgePosition: null };
     obj1[0] = badgePosition;
-    badge = tmp11(ButtonBadge, obj1);
+    badge = tmp10(ButtonBadge, obj1);
   }
   items1[3] = badge;
   obj[7] = items1;

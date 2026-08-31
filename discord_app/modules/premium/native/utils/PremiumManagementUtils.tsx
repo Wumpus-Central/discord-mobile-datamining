@@ -5,7 +5,7 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import sum from "../../../../../discord_common/js/shared/Constants.tsx";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import _modDef4823 from "../../../../actions/native/AlertActionCreators.tsx";
+import _modDef4826 from "../../../../actions/native/AlertActionCreators.tsx";
 import { set } from "../../../../utils/PlatformUtils.tsx";
 
 function defaultMobileWebNitroManagementSuccessCallback() {
@@ -13,7 +13,7 @@ function defaultMobileWebNitroManagementSuccessCallback() {
 }
 function defaultMobileWebNitroManagementFailureCallback(arg0) {
   logger.error("Failed to open mobile web Nitro Management page, error response: ", arg0);
-  obj = _modDef4823;
+  obj = _modDef4826;
   obj = { title: null, body: null, hideActionSheet: true };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.NrBVjw);
@@ -56,7 +56,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
       if (null !== obj.IN_APP) {
         let str2 = "iOS";
         if (!obj7.isIOS()) {
-          let tmp13Result = tmp13(1625);
+          let tmp13Result = tmp13(1624);
           let str = "Android";
           if (tmp13Result.isMetaQuest()) {
             str = "Meta Quest";
@@ -78,7 +78,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
           if (null != tmp) {
             if (tmp.shouldAllowExternalManagement) {
               if ("iOS" !== str2) {
-                tmp13Result = tmp13(1625);
+                tmp13Result = tmp13(1624);
               }
               let status;
               if (subscription != null) {
@@ -100,7 +100,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 const intl3 = tmp13(1236).intl;
                 const t = tmp13(1236).t;
                 obj[2] = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
-                jsx(tmp13(7098).LinkButton, { containerStyle: null, onPress: null, text: null, variant: "text-sm/semibold" });
+                jsx(tmp13(7119).LinkButton, { containerStyle: null, onPress: null, text: null, variant: "text-sm/semibold" });
                 const tmp9 = jsx;
               } else {
                 function manageExternalNitroSubscription() {

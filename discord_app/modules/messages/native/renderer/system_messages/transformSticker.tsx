@@ -16,16 +16,16 @@ export const transformSticker = function transformSticker(tmp5Result1) {
     str = "";
   }
   obj.asset = str;
-  let tmpResult = tmp(4818);
+  let tmpResult = tmp(4820);
   obj = { isPreview: !tmp5 };
   let str2 = tmpResult.getStickerAssetUrl(tmp5Result1, obj);
   if (str2 == null) {
     str2 = "";
   }
   obj.url = str2;
-  const NativeLottieRenderMode = tmp(7854).NativeLottieRenderMode;
+  const NativeLottieRenderMode = tmp(7876).NativeLottieRenderMode;
   obj.renderMode = setting === StickerAnimationSettings.ALWAYS_ANIMATE ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
-  tmpResult = tmp(7807);
+  tmpResult = tmp(7828);
   obj = {
     expensive() {
       const intl = tmp5Result1(closure_1_1[4]).intl;

@@ -57,7 +57,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       if (null != arr) {
         str2 = "";
         if (0 !== arr.length) {
-          let first = tmp2(13169)(arr);
+          let first = tmp2(13202)(arr);
           if (1 === first.length) {
             obj = { powerup: null };
             first = first[0];
@@ -72,14 +72,14 @@ export default function GuildPowerupsMarketingHeader(guild) {
             const obj3 = { powerup: null };
             obj3[0] = first[1];
             obj1[1] = tmp6(PerkText, obj3);
-            formatResult = intl2.format(tmp2(2402).MNO3sG, obj1);
+            formatResult = intl2.format(tmp2(2401).MNO3sG, obj1);
           }
         }
       }
       const obj4 = { perks: null };
       obj4[0] = str2;
-      obj[2] = intl.format(tmp2(2402)["7lwpzR"], obj4);
-      obj[1] = jsx(guild(4442).Text, { style: null, variant: "text-sm/semibold", children: null });
+      obj[2] = intl.format(tmp2(2401)["7lwpzR"], obj4);
+      obj[1] = jsx(guild(4444).Text, { style: null, variant: "text-sm/semibold", children: null });
       return <View style={null} variant="text-sm/semibold">{null}</View>;
     }
   }

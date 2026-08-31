@@ -10,7 +10,7 @@ import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowTrailingText from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
-import registerAssetDefault from "../../../../_runtime/07979_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/08001_registerAsset.js";
 import Form from "../../../design/void/Form/native/index.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import useStickerPackCategories from "../../stickers/StickersHooks.tsx";
@@ -75,16 +75,16 @@ const obj9 = {
       nick = stateFromStores;
     }
     if (nick == null) {
-      nick = guildId(4290).getName(user);
-      const obj3 = guildId(4290);
+      nick = guildId(4292).getName(user);
+      const obj3 = guildId(4292);
     }
     obj[3] = closure_9(AutocompleteLabel, { text: nick });
     obj = { status, user, size: tmp2(1297).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
     obj[4] = closure_9(user(1297).Avatar, obj);
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
-    obj[5] = closure_9(guildId(9710), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
-    return closure_9(user(8309).FormRow, obj);
+    obj[5] = closure_9(guildId(9732), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
+    return closure_9(user(8331).FormRow, obj);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -215,7 +215,7 @@ const obj9 = {
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
-      let tmp6Result = tmp6(tmp5(8662).UnknownGameIcon, obj);
+      let tmp6Result = tmp6(tmp5(8684).UnknownGameIcon, obj);
       let tmp8 = tmp6;
     } else {
       obj = { style: null, source: null };

@@ -5,7 +5,7 @@ import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight.tsx";
 import PlainTextExperimentProvider from "PlainTextExperimentContext.tsx";
 import useTypographyVariantRemap from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
 import set from "PlainTextEligibility.tsx";
-import __INTERNAL_VIEW_CONFIGDefault from "../../../../../_runtime/metro/04456___INTERNAL_VIEW_CONFIG.js";
+import __INTERNAL_VIEW_CONFIGDefault from "../../../../../_runtime/metro/04458___INTERNAL_VIEW_CONFIG.js";
 import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -113,7 +113,7 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
   const arraySpreadResult = HermesBuiltin.arraySpread(includeFontPadding ? items : closure_11, 2);
   items[arraySpreadResult] = style;
   items[arraySpreadResult + 1] = manaTextMigrationHighlight;
-  let tmp4Result = tmp4(4455);
+  let tmp4Result = tmp4(4457);
   obj = { animated: flag, children, enabled: plainTextExperimentEnabled, experimentalUseNativeText: flag2, hasRef: null != arg1, hasTextAncestor: context, isIOS: null, props: null, style: null };
   tmp4Result = tmp4(501);
   obj[6] = tmp4Result.isIOS();
@@ -123,9 +123,9 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
   const obj3 = useManaTextMigrationHighlight2;
   const tmp10 = includeFontPadding ? items : closure_11;
   if (tmp4Result1.isPlainTextEligible(plainTextEligibility)) {
-    ({ fontWeight, textAlignVertical, verticalAlign } = plainTextEligibility);
-    ({ color: color2, fontSize, fontFamily, fontStyle, textAlign, textDecorationLine, lineHeight, letterSpacing } = plainTextEligibility);
-    obj = { text: null, color: null, fontSize: null, fontFamily: null, fontWeight: null, fontStyle: null, textAlign: null, textAlignVertical: null, textDecorationLine: null, lineHeight: null, letterSpacing: null, style: null, numberOfLines: null, ellipsizeMode: null, allowFontScaling: true };
+    ({ fontWeight, textAlignVertical, verticalAlign, letterSpacing } = plainTextEligibility);
+    ({ color: color2, fontSize, fontFamily, fontStyle, textAlign, textDecorationLine, lineHeight } = plainTextEligibility);
+    obj = { text: null, color: null, fontSize: null, fontFamily: null, fontWeight: null, fontStyle: null, textAlign: null, textAlignVertical: null, textDecorationLine: null, lineHeight: null, letterSpacing: null, hasLetterSpacing: null, style: null, numberOfLines: null, ellipsizeMode: null, allowFontScaling: true };
     obj[0] = children;
     obj[1] = color2;
     obj[2] = fontSize;
@@ -151,12 +151,13 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
     obj[8] = textDecorationLine;
     obj[9] = lineHeight;
     obj[10] = letterSpacing;
-    obj[11] = tmp19;
-    obj[12] = lineClamp;
+    obj[11] = undefined !== letterSpacing;
+    obj[12] = tmp19;
+    obj[13] = lineClamp;
     if (ellipsizeMode == null) {
       ellipsizeMode = "tail";
     }
-    obj[13] = ellipsizeMode;
+    obj[14] = ellipsizeMode;
     const merged1 = Object.assign(merged);
     return tmp20(__INTERNAL_VIEW_CONFIGDefault, obj);
   } else {

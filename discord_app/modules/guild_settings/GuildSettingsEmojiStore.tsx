@@ -4,7 +4,7 @@ import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import closure_0 from "../../records/EmojiRecord.tsx";
 import closure_1 from "../../stores/SelectedGuildStore.tsx";
-import importDefaultResult from "../../../_runtime/01405_priv.js";
+import importDefaultResult from "../../../_runtime/01401_priv.js";
 
 let closure_2 = {};
 let closure_3 = {};

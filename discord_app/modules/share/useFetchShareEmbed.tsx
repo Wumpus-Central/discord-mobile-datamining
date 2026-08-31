@@ -32,7 +32,7 @@ export default function useFetchShareEmbed(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -62,7 +62,7 @@ export default function useFetchShareEmbed(arg0) {
                   c4 = 3;
                   c5 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = closure_2_0(11381).unfurlEmbedUrl(items);
+                  obj1[0] = closure_2_0(11410).unfurlEmbedUrl(items);
                   return obj1;
                 } else {
                   c5 = 3;
@@ -101,7 +101,7 @@ export default function useFetchShareEmbed(arg0) {
                     }
                   });
                   c5 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else if (0 === closure_1.embeds.length) {
                   closure_1_1(undefined);
                   c3 = 0;

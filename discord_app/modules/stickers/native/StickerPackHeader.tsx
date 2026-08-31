@@ -4,8 +4,8 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import getStickerExtensionFromFormatType from "../StickersUtils.tsx";
-import registerAssetDefault from "../../../../_runtime/10326_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/10327_registerAsset.js";
+import registerAssetDefault from "../../../../_runtime/10350_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10351_registerAsset.js";
 import StickerPackBannerDefault from "StickerPackBanner.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import PADDING_HORIZONTAL from "StickerPickerConstants.tsx";
@@ -71,7 +71,7 @@ const memoResult = importAllResult.memo((withDescription) => {
   if (flag) {
     const obj5 = { variant: "text-sm/medium", children: null };
     obj5[1] = stickerPack.description;
-    flag = tmp4(tmp6(4442).Text, obj5);
+    flag = tmp4(tmp6(4444).Text, obj5);
   }
   const obj6 = { children: null };
   items1[1] = flag;
@@ -94,7 +94,7 @@ const memoResult = importAllResult.memo((withDescription) => {
     obj10[0] = items3;
     obj10[1] = onPress;
     obj10[3] = tmp2Result;
-    let tmp4Result = tmp4(tmp6(5033).PressableOpacity, obj10);
+    let tmp4Result = tmp4(tmp6(5036).PressableOpacity, obj10);
   } else {
     const obj11 = { style: null, children: null };
     const items4 = [tmp.section, style];

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/components/ChannelSelectorActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import registerAssetDefault from "../../../../../_runtime/13196_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/13229_registerAsset.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -19,20 +19,20 @@ function ChannelRow(channel) {
   const onChannelSelected = channel.onChannelSelected;
   let selected = channel.selected;
   const tmp = callback();
-  const tmp4 = onChannelSelected(4640)(channel);
+  const tmp4 = onChannelSelected(4642)(channel);
   const items = [onChannelSelected, channel];
   callback = React.useCallback(() => {
     onChannelSelected(closure_1_2[13]).hideActionSheet();
     onChannelSelected(channel);
   }, items);
   let obj = { style: tmp.channelRow, onPress: callback, accessible: true, accessibilityLabel: tmp4, channel, selected, disableHighlightOnPress: true, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS };
-  const children = [closure_11(onChannelSelected(15635), obj), ];
+  const children = [closure_11(onChannelSelected(15669), obj), ];
   if (selected) {
     obj = { style: null, source: null };
     obj[0] = tmp.selectedIcon;
-    obj[1] = tmp2(17207);
-    selected = tmp8(tmp2(5458), obj);
-    const tmp2Result = tmp2(5458);
+    obj[1] = tmp2(17240);
+    selected = tmp8(tmp2(5461), obj);
+    const tmp2Result = tmp2(5461);
   }
   children[1] = selected;
   return closure_13(closure_12, { children });
@@ -110,7 +110,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     const intl = tmp5(1236).intl;
     title = intl.string(tmp5(1236).t.PDn2fR);
   }
-  obj[1] = closure_11(guildId(4442).Text, { accessibilityRole: "header", variant: "text-md/bold", color: "mobile-text-heading-primary", children: title });
+  obj[1] = closure_11(guildId(4444).Text, { accessibilityRole: "header", variant: "text-md/bold", color: "mobile-text-heading-primary", children: title });
   const items2 = [closure_11(View, obj), , ];
   obj1 = { style: tmp.searchContainer, children: null };
   let obj2 = { size: "md", placeholder: null, onChange: null, onFocus: null };
@@ -125,7 +125,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     }
     return expandActionSheetResult;
   };
-  obj1[1] = closure_11(guildId(6186).SearchField, obj2);
+  obj1[1] = closure_11(guildId(6189).SearchField, obj2);
   items2[1] = closure_11(View, obj1);
   let tmp9Result = !hideCreateChannel;
   if (!hideCreateChannel) {
@@ -159,13 +159,13 @@ export default function ChannelSelectorActionSheet(guildId) {
     obj5[0] = tmp.createChannelLabel;
     const intl3 = tmp5(1236).intl;
     obj5[3] = intl3.string(tmp5(1236).t.d7AN7W);
-    items3[1] = tmp8(tmp5(4442).Text, obj5);
+    items3[1] = tmp8(tmp5(4444).Text, obj5);
     obj3[3] = items3;
-    tmp9Result = tmp9(tmp5(5033).PressableOpacity, obj3);
+    tmp9Result = tmp9(tmp5(5036).PressableOpacity, obj3);
   }
   items2[2] = tmp9Result;
   obj[2] = closure_13(closure_12, { children: items2 });
-  obj[3] = closure_11(guildId(5589).BottomSheetFlatList, {
+  obj[3] = closure_11(guildId(5592).BottomSheetFlatList, {
     style: tmp.bodyContainer,
     data: stateFromStoresArray,
     keyExtractor(id) {
@@ -176,5 +176,5 @@ export default function ChannelSelectorActionSheet(guildId) {
       return closure_1_11(closure_1_15, { channel: item, onChannelSelected: closure_1, selected: item.id === closure_2 });
     }
   });
-  return closure_11(guildId(5954).ActionSheet, obj);
+  return closure_11(guildId(5957).ActionSheet, obj);
 };

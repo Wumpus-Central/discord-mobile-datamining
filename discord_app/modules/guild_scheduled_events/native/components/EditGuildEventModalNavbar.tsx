@@ -4,7 +4,7 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/07711_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/07732_registerAsset.js";
 import EditGuildEventScreens from "../../utils/EditGuildEventUtils.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -22,13 +22,13 @@ export default function EditGuildEventModalNavbar(screen) {
   const tmp = callback4();
   if (EditGuildEventScreens.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
     let items = [1, 3];
-  } else if (tmp2(9613).EditGuildEventScreens.DETAILS === screen) {
+  } else if (tmp2(9635).EditGuildEventScreens.DETAILS === screen) {
     items = [2, 3];
-  } else if (tmp2(9613).EditGuildEventScreens.PREVIEW === screen) {
+  } else if (tmp2(9635).EditGuildEventScreens.PREVIEW === screen) {
     items = [3, 3];
   } else {
-    tmp2(1370).assertNever(screen);
-    const tmp2Result = tmp2(1370);
+    tmp2(1471).assertNever(screen);
+    const tmp2Result = tmp2(1471);
   }
   [tmp6, tmp7] = callback(items, 2);
   let obj = { top: true, style: tmp.header, children: null };

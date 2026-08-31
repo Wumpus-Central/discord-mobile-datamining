@@ -55,7 +55,23 @@ class Coachmark {
     items2[1] = imgSource;
     items2[2] = renderImgComponent;
     items2[3] = tmp;
-    memo = closure_6.useMemo(() => {
+    tmp14 = jsxs;
+    tmp15 = Fragment;
+    tmp16 = View;
+    obj = {
+      ref,
+      accessibilityRole: "alert",
+      style: tmp.center,
+      accessible: true,
+      onLayout() {
+            let obj = graphic(renderImgComponent[11]);
+            obj = { ref, delay: 100 };
+            const result = obj.setAccessibilityFocus(obj);
+          },
+      children: null
+    };
+    items3 = [, ];
+    items3[0] = closure_6.useMemo(() => {
       if (null != graphic) {
         let obj = { style: null, children: null };
         const items = [closure_3.bottomMargin];
@@ -92,145 +108,95 @@ class Coachmark {
         return tmp7;
       }
     }, items2);
-    tmp15 = require("useIsMobileVisualRefreshExperimentEnabled")("Coachmark");
-    tmp16 = jsxs;
-    tmp17 = Fragment;
-    tmp18 = View;
-    obj = {
-      ref,
-      accessibilityRole: "alert",
-      style: tmp.center,
-      accessible: true,
-      onLayout() {
-            let obj = graphic(renderImgComponent[12]);
-            obj = { ref, delay: 100 };
-            const result = obj.setAccessibilityFocus(obj);
-          },
-      children: null
-    };
-    items3 = [, ];
-    items3[0] = memo;
-    textGap = undefined;
-    if (tmp15) {
-      textGap = tmp.textGap;
-    }
-    obj1 = { style: textGap, children: null };
-    tmp20 = jsx;
+    obj1 = { style: tmp.textGap, children: null };
+    tmp17 = jsx;
     items4 = [, ];
     items4[0] = tmp.text;
     textOnlyPadding = undefined;
     if (null == graphic) {
       textOnlyPadding = tmp.textOnlyPadding;
     }
-    obj2 = { style: items4, variant: null, color: "mobile-text-heading-primary", children: null };
     items4[1] = textOnlyPadding;
-    str = "heading-md/bold";
-    if (tmp15) {
-      str = "text-md/semibold";
-    }
-    obj2[1] = str;
-    obj2[3] = title;
     items5 = [, ];
-    items5[0] = tmp20(require("Text").Text, obj2);
-    obj3 = { style: tmp.text, variant: "text-sm/medium", color: null, children: null };
-    str2 = "text-default";
-    if (tmp15) {
-      str2 = "text-subtle";
-    }
-    obj3[2] = str2;
-    obj3[3] = description;
-    items5[1] = tmp20(require("Text").Text, obj3);
+    items5[0] = tmp17(require("Text").Text, { style: items4, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title });
+    obj2 = { style: tmp.text, variant: "text-sm/medium", color: "text-subtle", children: description };
+    items5[1] = tmp17(require("Text").Text, obj2);
     obj1[1] = items5;
-    items3[1] = tmp16(tmp18, obj1);
+    items3[1] = tmp14(tmp16, obj1);
     obj[5] = items3;
     items6 = [, , ];
-    items6[0] = tmp16(tmp18, obj);
-    tmp22 = null;
+    items6[0] = tmp14(tmp16, obj);
+    tmp19 = null;
     if (null != buttonLabel) {
-      tmp22 = null;
+      tmp19 = null;
       if (null != onButtonPress) {
-        obj4 = { style: null };
-        obj4[0] = tmp.buttonSpacing;
+        obj3 = { style: null };
+        obj3[0] = tmp.buttonSpacing;
         items7 = [, ];
-        items7[0] = tmp20(tmp18, obj4);
+        items7[0] = tmp17(tmp16, obj3);
         if (experimental_withBlurBackground) {
-          obj5 = { variant: "secondary-overlay", size: "lg", icon: null, text: null, onPress: null, grow: true };
-          obj5[2] = buttonIcon;
-          obj5[3] = buttonLabel;
-          obj5[4] = onButtonPress;
-          obj6 = obj5;
+          obj4 = { variant: "secondary-overlay", size: "lg", icon: null, text: null, onPress: null, grow: true };
+          obj4[2] = buttonIcon;
+          obj4[3] = buttonLabel;
+          obj4[4] = onButtonPress;
+          obj5 = obj4;
         } else {
           if (buttonVariant == null) {
             buttonVariant = "secondary";
           }
-          obj6 = { variant: null, size: null, icon: null, text: null, onPress: null, shiny: null, grow: true };
-          obj6[0] = buttonVariant;
-          str3 = "lg";
-          if (tmp15) {
-            str3 = "sm";
-          }
-          obj6[1] = str3;
-          obj6[2] = buttonIcon;
-          obj6[3] = buttonLabel;
-          obj6[4] = onButtonPress;
-          obj6[5] = buttonShiny;
+          obj5 = { variant: null, size: "sm", icon: null, text: null, onPress: null, shiny: null, grow: true };
+          obj5[0] = buttonVariant;
+          obj5[2] = buttonIcon;
+          obj5[3] = buttonLabel;
+          obj5[4] = onButtonPress;
+          obj5[5] = buttonShiny;
         }
-        obj7 = { children: null };
-        items7[1] = tmp20(require("Button").Button, obj6);
-        obj7[0] = items7;
-        tmp16Result = tmp16(tmp17, obj7);
+        obj6 = { children: null };
+        items7[1] = tmp17(require("Button").Button, obj5);
+        obj6[0] = items7;
+        tmp14Result = tmp14(tmp15, obj6);
       }
     }
-    items6[1] = tmp22;
+    obj7 = { children: null };
+    items6[1] = tmp19;
     obj8 = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, onPressIn: null, onPressOut: null, children: null };
-    tmp24 = Pressable;
     intl = require("getSystemLocale").intl;
     obj8[1] = intl.string(require("getSystemLocale").t.cpT0Cq);
     obj8[2] = tmp.closeButton;
     obj8[3] = onDismiss;
     obj8[4] = callback;
     obj8[5] = callback1;
-    if (tmp15) {
-      obj9 = { size: "xs", color: null };
-      obj9[1] = require("Themes").colors.ICON_STRONG;
-      obj10 = obj9;
-    } else {
-      obj10 = {};
-    }
-    obj11 = { children: null };
-    obj8[6] = tmp20(require("XSmallIcon").XSmallIcon, obj10);
-    items6[2] = tmp20(tmp24, obj8);
-    obj11[0] = items6;
-    tmp16Result1 = tmp16(tmp17, obj11);
+    obj9 = { size: "xs", color: require("Themes").colors.ICON_STRONG };
+    obj8[6] = tmp17(require("XSmallIcon").XSmallIcon, obj9);
+    items6[2] = tmp17(Pressable, obj8);
+    obj7[0] = items6;
+    tmp14Result1 = tmp14(tmp15, obj7);
     if (experimental_withBlurBackground) {
-      obj12 = { style: null, blurTheme: "dark", pressed: null, children: null };
-      obj12[0] = tmp.bodyContainer;
-      obj12[2] = sharedValue;
-      obj12[3] = tmp16Result1;
-      tmp20Result = tmp20(require("TwinButtons").BackgroundBlurView, obj12);
+      obj10 = { style: null, blurTheme: "dark", pressed: null, children: null };
+      obj10[0] = tmp.bodyContainer;
+      obj10[2] = sharedValue;
+      obj10[3] = tmp14Result1;
+      tmp17Result = tmp17(require("TwinButtons").BackgroundBlurView, obj10);
     } else {
-      obj13 = { style: null, children: null };
+      obj11 = { style: null, children: null };
       items8 = [, ];
       ({ bodyContainer: arr9[0], bodyBgColor: arr9[1] } = tmp);
-      obj13[0] = items8;
-      tmp20Result1 = null;
-      if (tmp15) {
-        tmp20Result1 = null;
-        if (null != gradientColor) {
-          obj14 = { style: null, color: null, backgroundColor: null };
-          obj14[0] = tmp.gradient;
-          obj14[1] = gradientColor;
-          obj14[2] = require("Themes").colors.MOBILE_COACHMARK_BACKGROUND_DEFAULT;
-          tmp20Result1 = tmp20(require("ExpressiveGradient").ExpressiveGradient, obj14);
-        }
+      obj11[0] = items8;
+      tmp17Result1 = null;
+      if (null != gradientColor) {
+        obj12 = { style: null, color: null, backgroundColor: null };
+        obj12[0] = tmp.gradient;
+        obj12[1] = gradientColor;
+        obj12[2] = require("Themes").colors.MOBILE_COACHMARK_BACKGROUND_DEFAULT;
+        tmp17Result1 = tmp17(require("ExpressiveGradient").ExpressiveGradient, obj12);
       }
       items9 = [, ];
-      items9[0] = tmp20Result1;
-      items9[1] = tmp16Result1;
-      obj13[1] = items9;
-      tmp20Result = tmp16(tmp18, obj13);
+      items9[0] = tmp17Result1;
+      items9[1] = tmp14Result1;
+      obj11[1] = items9;
+      tmp17Result = tmp14(tmp16, obj11);
     }
-    obj15 = {
+    obj13 = {
       onLayout(nativeEvent) {
             nativeEvent = nativeEvent.nativeEvent;
             callback({ width: nativeEvent.layout.width, height: nativeEvent.layout.height });
@@ -251,22 +217,22 @@ class Coachmark {
       num2 = 1;
     }
     items10[2] = { opacity: num2, top: tooltipY, left: tooltipX };
-    obj15[1] = items10;
-    tmp20Result2 = "bottom" === position;
-    if (tmp20Result2) {
-      tmp30 = Cursor;
-      obj16 = { position: "bottom", adjustmentX: null };
-      obj16[1] = adjustmentX;
-      tmp20Result2 = tmp20(Cursor, obj16);
+    obj13[1] = items10;
+    tmp17Result2 = "bottom" === position;
+    if (tmp17Result2) {
+      tmp26 = Cursor;
+      obj14 = { position: "bottom", adjustmentX: null };
+      obj14[1] = adjustmentX;
+      tmp17Result2 = tmp17(Cursor, obj14);
     }
     items11 = [, , ];
-    items11[0] = tmp20Result2;
-    obj17 = {};
-    tmp31 = closure_13;
+    items11[0] = tmp17Result2;
+    obj15 = {};
+    tmp27 = closure_13;
     merged = Object.assign(tmp13);
-    obj17.onAccessibilityEscape = onDismiss;
-    obj17.accessible = false;
-    obj17.onPress = onDismiss;
+    obj15.onAccessibilityEscape = onDismiss;
+    obj15.accessible = false;
+    obj15.onPress = onDismiss;
     items12 = [, ];
     items12[0] = tmp.body;
     tmp8Result1 = require("set");
@@ -279,19 +245,19 @@ class Coachmark {
       items14 = [];
     }
     items12[HermesBuiltin.arraySpread(items14, 1)] = buttonPressAnimationProps.style;
-    obj17.style = items12;
-    obj17.children = tmp20Result;
-    items11[1] = tmp20(tmp31, obj17);
-    tmp20Result3 = "top" === position;
-    if (tmp20Result3) {
-      tmp34 = Cursor;
-      obj18 = { position: "top", adjustmentX: null };
-      obj18[1] = adjustmentX;
-      tmp20Result3 = tmp20(Cursor, obj18);
+    obj15.style = items12;
+    obj15.children = tmp17Result;
+    items11[1] = tmp17(tmp27, obj15);
+    tmp17Result3 = "top" === position;
+    if (tmp17Result3) {
+      tmp30 = Cursor;
+      obj16 = { position: "top", adjustmentX: null };
+      obj16[1] = adjustmentX;
+      tmp17Result3 = tmp17(Cursor, obj16);
     }
-    items11[2] = tmp20Result3;
-    obj15[2] = items11;
-    return tmp16(tmp18, obj15);
+    items11[2] = tmp17Result3;
+    obj13[2] = items11;
+    return tmp14(tmp16, obj13);
   }
 }
 function Cursor(arg0) {
@@ -339,7 +305,7 @@ obj[12] = { height: 8, width: 8, borderRadius: ThemesDefault.radii.xs, borderWid
 let obj7 = { height: 8, width: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: 2, backgroundColor: "transparent", borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[13] = { width: 2, height: 16, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[14] = { height: 40, width: 40 };
-let obj8 = { width: 2, height: 16, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+const obj8 = { width: 2, height: 16, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[15] = { marginBottom: ThemesDefault.modules.mobile.COACHMARK_BUTTON_SPACING };
 let obj9 = { marginBottom: ThemesDefault.modules.mobile.COACHMARK_BUTTON_SPACING };
 obj[16] = { position: "absolute", top: ThemesDefault.modules.mobile.COACHMARK_BUTTON_SPACING, right: ThemesDefault.modules.mobile.COACHMARK_BUTTON_SPACING };

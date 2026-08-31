@@ -1,6 +1,6 @@
 // discord_app/design/components/Navigator/native/Navigator.native.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import createStandardNavigationFactories from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
+import createStandardNavigationFactories from "../../../../../_runtime/01500_createStandardNavigationFactories.js";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
@@ -219,7 +219,7 @@ function WrappedNavigationStack(arg0) {
     return tmp2;
   }), 1)[0];
   obj1 = useNavigationTheme;
-  navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4381)());
+  navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4383)());
   obj = { ref: navigationContainerRef, theme: navigationTheme, initialState: null, onReady: null, onStateChange: null, children: null };
   if (null == initialRouteState) {
     let tmp7;
@@ -258,7 +258,7 @@ export const useNavigatorScreens = function useNavigatorScreens(getNextRenewalDa
   return React.useMemo(getNextRenewalDateLabel, items);
 };
 export const useAccessibilityNativeStackOptions = function useAccessibilityNativeStackOptions() {
-  navigatorShouldCrossfade = navigatorShouldCrossfade(5974).useNavigatorShouldCrossfade();
+  navigatorShouldCrossfade = navigatorShouldCrossfade(5977).useNavigatorShouldCrossfade();
   const items = [navigatorShouldCrossfade];
   return React.useMemo(() => {
     let obj;

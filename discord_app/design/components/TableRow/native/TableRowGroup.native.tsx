@@ -1,6 +1,5 @@
 // discord_app/design/components/TableRow/native/TableRowGroup.native.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 import map from "../../../tokens/native/useToken.tsx";
 import Text from "../../Text/native/Text.tsx";
 import context from "TableRowGroupContext.native.tsx";
@@ -13,26 +12,11 @@ require = arg1;
 class TableRowGroupTitle {
   constructor(arg0) {
     ({ title, style, lineClamp } = global);
-    tmp = require("useIsMobileVisualRefreshExperimentEnabled")("TableRowGroup");
-    tmp2 = closure_8();
-    tmp3 = jsx;
-    str = "text-sm/semibold";
-    if (tmp) {
-      str = "text-md/medium";
-    }
-    obj = { accessibilityRole: "header", variant: str, color: null, style: null, lineClamp: null, children: null };
-    str2 = "text-default";
-    if (tmp) {
-      str2 = "text-subtle";
-    }
-    obj[2] = str2;
+    tmp = closure_8();
     items = [, ];
-    items[0] = tmp2.title;
+    items[0] = tmp.title;
     items[1] = style;
-    obj[3] = items;
-    obj[4] = lineClamp;
-    obj[5] = title;
-    return tmp3(require("Text").Text, obj);
+    return jsx(require("Text").Text, { accessibilityRole: "header", variant: "text-md/medium", color: "text-subtle", style: items, lineClamp, children });
   }
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
@@ -58,7 +42,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     str = "none";
   }
   importDefault = undefined;
-  const tmp = callback();
+  const tmp = callback2();
   let obj = map;
   importDefault = false;
   const Children = React.Children;
@@ -70,7 +54,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
       let obj = { children: null };
       obj = { adjustSpacingForIcon: null };
       obj[0] = closure_0;
-      const items = [closure_1_5(closure_1_0(closure_1_2[8]).TableRowDivider, obj), arg0];
+      const items = [closure_1_5(closure_1_0(closure_1_2[7]).TableRowDivider, obj), arg0];
       obj[0] = items;
       let tmp2 = closure_1_7(closure_1_6, obj);
     } else {
@@ -91,7 +75,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     obj1 = { variant: "text-sm/normal", color: "text-subtle", style: null, children: null };
     obj1[2] = tmp.description;
     obj1[3] = description;
-    tmp6Result = tmp6(tmp2(4442).Text, obj1);
+    tmp6Result = tmp6(tmp2(4444).Text, obj1);
   }
   items[1] = tmp6Result;
   const items1 = [tmp.content, ];
@@ -107,7 +91,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     obj2[0] = token;
     obj2[2] = tmp.helperText;
     obj2[3] = helperText;
-    tmp6Result1 = tmp6(tmp2(4442).Text, obj2);
+    tmp6Result1 = tmp6(tmp2(4444).Text, obj2);
   }
   items[3] = tmp6Result1;
   obj[1] = items;

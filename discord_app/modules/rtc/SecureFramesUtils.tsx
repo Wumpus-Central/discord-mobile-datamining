@@ -3,13 +3,13 @@ import byteLengthDefault from "../../../_runtime/00206_byteLength.js";
 import setDefault from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import combinedDefault from "../../utils/HelpdeskUtils.tsx";
-import hooksDefault from "../../../_runtime/04044_hooks.js";
+import hooksDefault from "../../../_runtime/04045_hooks.js";
 import nameFromUserDefault from "../../utils/UserUtils.tsx";
 import getNicknameDefault from "../../utils/NicknameUtils.tsx";
 import setDefault2 from "../../actions/AlertActionCreators.tsx";
 import set from "../../../discord_common/js/packages/libdave/index.tsx";
 import savePersistentCodesEnabledDefault from "SecureFramesActionCreators.tsx";
-import _modDef9782 from "SecureFramesPlatformUtils.native.tsx";
+import _modDef9804 from "SecureFramesPlatformUtils.native.tsx";
 import trackRTCPanelViewed from "SecureFramesTracking.tsx";
 import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -90,7 +90,7 @@ function _isPublicKeyMatch() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -193,7 +193,7 @@ function _uploadCurrentUserPublicKey() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -267,7 +267,7 @@ function _uploadCurrentUserPublicKey() {
             const result = obj.addUploadedKeyVersion(callback);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp25) {
           signature = tmp25;
@@ -312,7 +312,7 @@ function _ensureCurrentUserPublicKey() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -346,7 +346,7 @@ function _ensureCurrentUserPublicKey() {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp8) {
           c1 = tmp;
           throw tmp8;
@@ -381,7 +381,7 @@ function _isCurrentUserPublicKeyMatch() {
           obj[0] = key;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -549,12 +549,12 @@ export const getSecureFramesPersistentCodesHelpdeskArticle = function getSecureF
 export const getSecureFramesVerifiedDevicesHelpdeskArticle = function getSecureFramesVerifiedDevicesHelpdeskArticle() {
   return combinedDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
 };
-export const addVerification = function addVerification(userId, userKey, isOtherUserKeyPersistent, channelId, DEEP_LINK) {
+export const addVerification = function addVerification(userId, fingerprintUserKey, isOtherUserKeyPersistent, channelId, DEEP_LINK) {
   let obj = savePersistentCodesEnabledDefault;
   if (isOtherUserKeyPersistent) {
-    const secureFramesVerifiedKey = obj.createSecureFramesVerifiedKey(userId, userKey);
+    const secureFramesVerifiedKey = obj.createSecureFramesVerifiedKey(userId, fingerprintUserKey);
   } else {
-    const secureFramesTransientKey = obj.createSecureFramesTransientKey(userId, userKey);
+    const secureFramesTransientKey = obj.createSecureFramesTransientKey(userId, fingerprintUserKey);
   }
   obj = { channelId, userId, analyticsLocation: DEEP_LINK };
   const result = trackRTCPanelViewed.trackE2EEUserVerified(obj);
@@ -575,7 +575,7 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
 export const deletePersistentVerification = function deletePersistentVerification(userId, verifiedKey) {
   const _require = userId;
   importDefault = verifiedKey;
-  let obj = _modDef9782;
+  let obj = _modDef9804;
   obj = { title: null, subtitle: null, onConfirm: null };
   const intl = require("../../intl/index.native.tsx").intl;
   obj[0] = intl.string(require("../../intl/index.native.tsx").t.hdL152);
@@ -603,7 +603,7 @@ export const deleteUserPersistentVerifications = function deleteUserPersistentVe
     const obj = closure_1_1(closure_1_2[11]);
     const result1 = userId(closure_1_2[12]).trackE2EESettingsUserDelete();
   };
-  let result = _modDef9782.openSecureFramesUpdateConfirmation(obj);
+  let result = _modDef9804.openSecureFramesUpdateConfirmation(obj);
 };
 export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
   let obj = hooksDefault();
@@ -763,7 +763,7 @@ export const ensureCurrentUserPublicKey = function ensureCurrentUserPublicKey(c7
   }
   return applyArgumentsResult;
 };
-export const isCurrentUserPublicKeyMatch = function isCurrentUserPublicKeyMatch(closure_2_6) {
+export const isCurrentUserPublicKeyMatch = function isCurrentUserPublicKeyMatch(callback) {
   const self = this;
   const apply = _isCurrentUserPublicKeyMatch.apply;
   if (typeof apply === "unknown") {

@@ -1,6 +1,6 @@
 // discord_app/modules/activities/panel/native/ActivityInviteSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef9856 from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
+import _modDef9879 from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -24,7 +24,7 @@ function Loading() {
     let tmp4 = dependencyMap;
     let obj = { row: null };
     obj[0] = num;
-    let arr = items.push(callback3(_modDef9856, obj, num));
+    let arr = items.push(callback3(_modDef9879, obj, num));
     num = num + 1;
   } while (num < 10);
   obj = { children: null };
@@ -54,9 +54,9 @@ export default function ActivityInviteSheet(activity) {
   let callback;
   let React;
   const tmp = callback5();
-  analyticsLocations = analyticsLocations(5918)(analyticsLocations(5938).ACTIVITY_INVITE_SHEET).analyticsLocations;
+  analyticsLocations = analyticsLocations(5921)(analyticsLocations(5941).ACTIVITY_INVITE_SHEET).analyticsLocations;
   const tmp2 = analyticsLocations;
-  const tmp4 = analyticsLocations(5918);
+  const tmp4 = analyticsLocations(5921);
   [tmp6, c2] = callback(React.useState(null), 2);
   const tmp7 = callback2((arg0) => arg0);
   callback = tmp7;
@@ -163,11 +163,11 @@ export default function ActivityInviteSheet(activity) {
   obj1 = { title: null };
   const intl = tmp11(1236).intl;
   obj1[0] = intl.string(activity(1236).t["OzOM/q"]);
-  obj[3] = closure_13(activity(5586).BottomSheetTitleHeader, obj1);
+  obj[3] = closure_13(activity(5589).BottomSheetTitleHeader, obj1);
   if (null != tmp6) {
     const obj2 = { style: null, Illustration: null, title: null };
     obj2[0] = tmp.emptyState;
-    obj2[1] = tmp11(9878).AppCrash;
+    obj2[1] = tmp11(9901).AppCrash;
     obj2[2] = tmp6;
     let tmp19Result = tmp17(tmp11(1297).EmptyState, obj2);
   } else if (tmp15) {
@@ -177,10 +177,10 @@ export default function ActivityInviteSheet(activity) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.searchAndShareContainer;
     const obj5 = { size: "md", isRound: true, onChange: null, placeholder: null };
-    obj5[2] = tmp11(9876).searchInviteSuggestions;
+    obj5[2] = tmp11(9899).searchInviteSuggestions;
     const intl2 = tmp11(1236).intl;
     obj5[3] = intl2.string(tmp11(1236).t.iI1gMg);
-    obj4[1] = tmp17(tmp11(6186).SearchField, obj5);
+    obj4[1] = tmp17(tmp11(6189).SearchField, obj5);
     obj3[0] = tmp17(View, obj4);
     const items4 = [tmp17(View, obj3), ];
     if (tmp16) {
@@ -196,7 +196,7 @@ export default function ActivityInviteSheet(activity) {
       obj7[2] = callback;
       obj7[3] = callback2;
       obj7[4] = callback1;
-      tmp17Result = tmp17(tmp2(16539), obj7);
+      tmp17Result = tmp17(tmp2(16573), obj7);
     }
     const obj8 = { children: null };
     items4[1] = tmp17Result;
@@ -206,6 +206,6 @@ export default function ActivityInviteSheet(activity) {
     const tmp20 = closure_14;
   }
   obj[4] = tmp19Result;
-  obj[1] = closure_13(activity(5587).BottomSheet, obj);
-  return closure_13(activity(5918).AnalyticsLocationProvider, obj);
+  obj[1] = closure_13(activity(5590).BottomSheet, obj);
+  return closure_13(activity(5921).AnalyticsLocationProvider, obj);
 };

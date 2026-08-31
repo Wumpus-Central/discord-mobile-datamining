@@ -1,5 +1,4 @@
 // discord_app/modules/channel_list_v2/native/items/RedesignCategory.tsx
-import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -10,13 +9,13 @@ import hairlineWidth from "../RedesignChannelListConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+const require = arg1;
 function renderCategoryItem(longPressAction) {
   ({ name, icon, note, muted } = longPressAction);
   if (muted === undefined) {
     muted = false;
   }
-  ({ onPress, onLongPress, styles, isRefreshEnabled, trailingAction } = longPressAction);
+  ({ onPress, onLongPress, styles, trailingAction } = longPressAction);
   longPressAction = longPressAction.longPressAction;
   let tmp = null != onPress;
   ({ withMarginTop, accessibilityState } = longPressAction);
@@ -24,23 +23,13 @@ function renderCategoryItem(longPressAction) {
     tmp = null != onLongPress;
   }
   const items = [styles.categoryWrapper, ];
-  let num = 16;
-  let num2 = 16;
-  if (!isRefreshEnabled) {
-    if (null != icon) {
-      num = 3;
-    }
-    num2 = num;
-  }
-  let obj = { paddingLeft: num2, marginTop: null, marginBottom: null };
-  let num3 = 0;
+  let num = 0;
   if (withMarginTop) {
-    num3 = closure_9;
+    num = closure_9;
   }
-  obj[1] = num3;
-  obj[2] = closure_8;
+  let obj = { paddingLeft: 16, marginTop: num, marginBottom: closure_8 };
   items[1] = obj;
-  let tmp35Result = name;
+  let tmp34Result = name;
   if (typeof name === "string") {
     let str = "text-subtle";
     if (muted) {
@@ -50,8 +39,8 @@ function renderCategoryItem(longPressAction) {
     obj[2] = str;
     obj[4] = styles.categoryText;
     obj[5] = name;
-    tmp35Result = callback(trailingAction(4442).Text, obj);
-    const tmp35 = callback;
+    tmp34Result = callback(trailingAction(4444).Text, obj);
+    const tmp34 = callback;
   }
   let tmp3 = null;
   if (null != icon) {
@@ -65,34 +54,23 @@ function renderCategoryItem(longPressAction) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(12224).PlusMediumIcon;
+    Icon = trailingAction(12258).PlusMediumIcon;
   }
   if (null == trailingAction) {
-    obj1 = { children: null };
-    const items1 = [, , , ];
-    if (isRefreshEnabled) {
-      items1[0] = tmp35Result;
-      let tmp21 = null;
-      if (null != note) {
-        let obj2 = { style: null, children: null };
-        obj2[0] = styles.noteWrapper;
-        obj2[1] = note;
-        tmp21 = callback(View, obj2);
-      }
-      items1[1] = tmp21;
-      items1[2] = tmp3;
-      items1[3] = null;
-      obj1[0] = items1;
-      let tmp20 = obj1;
-    } else {
-      items1[0] = tmp3;
-      items1[1] = tmp35Result;
-      items1[2] = note;
-      items1[3] = null;
-      obj1[0] = items1;
-      tmp20 = obj1;
+    const items1 = [tmp34Result, , , ];
+    let tmp20 = null;
+    if (null != note) {
+      obj1 = { style: null, children: null };
+      obj1[0] = styles.noteWrapper;
+      obj1[1] = note;
+      tmp20 = callback(View, obj1);
     }
-    const tmp18Result = closure_13(closure_12, tmp20);
+    let obj2 = { children: null };
+    items1[1] = tmp20;
+    items1[2] = tmp3;
+    items1[3] = null;
+    obj2[0] = items1;
+    const tmp18Result = closure_13(closure_12, obj2);
     const items2 = [];
     if (null != trailingAction) {
       const obj3 = { name: null, label: null };
@@ -109,11 +87,11 @@ function renderCategoryItem(longPressAction) {
     if (tmp) {
       const obj5 = { accessibilityRole: "header", accessibilityState: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, onLongPress: null, style: null, children: null };
       obj5[1] = accessibilityState;
-      let tmp34;
+      let tmp33;
       if (items2.length > 0) {
-        tmp34 = items2;
+        tmp33 = items2;
       }
-      obj5[2] = tmp34;
+      obj5[2] = tmp33;
       let handleAccessibilityAction;
       if (items2.length > 0) {
         handleAccessibilityAction = function handleAccessibilityAction(nativeEvent) {
@@ -136,14 +114,14 @@ function renderCategoryItem(longPressAction) {
       obj5[5] = onLongPress;
       obj5[6] = items;
       obj5[7] = tmp18Result;
-      let tmp29Result = tmp29(trailingAction(5033).PressableHighlight, obj5);
+      let tmp28Result = tmp28(trailingAction(5036).PressableHighlight, obj5);
     } else {
       const obj6 = { accessibilityRole: "header", style: null, children: null };
       obj6[1] = items;
       obj6[2] = tmp18Result;
-      tmp29Result = tmp29(View, obj6);
+      tmp28Result = tmp28(View, obj6);
     }
-    return tmp29Result;
+    return tmp28Result;
   } else {
     const obj7 = { style: null, children: null };
     obj7[0] = styles.trailingActionWrapper;
@@ -163,7 +141,7 @@ function renderCategoryItem(longPressAction) {
     obj9[1] = muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
     colors = tmp9(Icon, obj9);
     obj8[6] = colors;
-    obj8 = tmp9(trailingAction(5033).PressableOpacity, obj8);
+    obj8 = tmp9(trailingAction(5036).PressableOpacity, obj8);
     obj7[1] = obj8;
     callback(View, obj7);
     const tmp10 = View;
@@ -172,28 +150,17 @@ function renderCategoryItem(longPressAction) {
 ({ CATEGORY_MARGIN_BOTTOM: closure_8, CATEGORY_MARGIN_TOP: c9, CATEGORY_VERTICAL_PADDING: c10 } = hairlineWidth);
 ({ jsx: unpackModuleId, Fragment: closure_12, jsxs: map1 } = jsxProd);
 const styles = createCacheKey.createStyles(() => {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = false;
-  }
   obj = { categoryWrapper: obj, categoryText: null, noteWrapper: null, iconWrapperStyles: null, trailingActionWrapper: null };
   obj = { display: "flex", flexDirection: "row", alignItems: "center", paddingVertical: closure_10, paddingRight: 16 };
-  obj = {};
-  const merged = Object.assign(flag ? { flexShrink: 1 } : { flex: 1 });
   let num = 0;
-  if (obj4.isAndroid()) {
+  if (obj3.isAndroid()) {
     num = -1;
   }
-  obj.marginTop = num;
-  obj[1] = obj;
+  obj[1] = { flexShrink: 1, marginTop: num };
   obj[2] = { marginLeft: 4 };
-  const merged1 = Object.assign(flag ? { marginLeft: 4 } : { marginRight: 3 });
-  obj[3] = {};
-  obj1 = {};
-  obj4 = set;
-  const tmp = flag ? { flexShrink: 1 } : { flex: 1 };
-  const tmp4 = flag ? { marginLeft: 4 } : { marginRight: 3 };
-  obj[4] = { paddingLeft: ThemesDefault.space.PX_8, marginLeft: "auto" };
+  obj[3] = { marginLeft: 4 };
+  obj = { paddingLeft: ThemesDefault.space.PX_8, marginLeft: "auto" };
+  obj[4] = obj;
   return obj;
 });
 let closure_15 = { top: 16, bottom: 16, left: 16, right: 16 };
@@ -231,11 +198,10 @@ export const useCategoryPressEvents = function useCategoryPressEvents(arg0, arg1
 export const CategoryChannel = function CategoryChannel(channel) {
   channel = channel.channel;
   let id = channel;
-  const tmp3 = collapsed(1367)("CategoryChannel");
   let obj = id(589);
   const items = [closure_6, closure_7];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ collapsed: closure_1_6.isCollapsed(id.id), muted: closure_1_7.isChannelMuted(id.getGuildId(), id.id) }));
-  collapsed = stateFromStoresObject.collapsed;
+  const collapsed = stateFromStoresObject.collapsed;
   id = channel.id;
   const items1 = [id, collapsed];
   const items2 = [id];
@@ -248,85 +214,79 @@ export const CategoryChannel = function CategoryChannel(channel) {
     }
   }, items1);
   const callback1 = React.useCallback(() => id(closure_1_2[15]).openChannelLongPressActionSheet(id), items2);
-  const tmp9 = collapsed(4640)(channel);
-  const tmp = collapsed;
-  const tmp4 = styles(tmp3);
-  const tmp11 = collapsed(15626)(channel, tmp9);
-  const tmp12 = collapsed(15627)(channel);
-  obj = { name: tmp9, muted: stateFromStoresObject.muted, collapsed, onPress: callback, onLongPress: null, withMarginTop: null, styles: null, isRefreshEnabled: null, note: null, trailingAction: null, longPressAction: null };
+  const tmp8 = collapsed(4642)(channel);
+  const tmp = styles();
+  const tmp7 = collapsed;
+  const tmp10 = collapsed(15660)(channel, tmp8);
+  const tmp11 = collapsed(15661)(channel);
+  obj = { name: tmp8, muted: stateFromStoresObject.muted, collapsed, onPress: callback, onLongPress: null, withMarginTop: null, styles: null, note: null, trailingAction: null, longPressAction: null };
   let perform;
-  if (tmp12 != null) {
-    perform = tmp12.perform;
+  if (tmp11 != null) {
+    perform = tmp11.perform;
   }
   if (perform == null) {
     perform = callback1;
   }
   obj[4] = perform;
   obj[5] = channel.withMarginTop;
-  obj[6] = tmp4;
-  obj[7] = tmp3;
-  let tmp14 = null;
-  if (null != tmp11) {
+  obj[6] = tmp;
+  let tmp13 = null;
+  if (null != tmp10) {
     obj = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
-    ({ tooltip: obj3[2], label: obj3[3] } = tmp11);
-    tmp14 = callback(tmp5(4442).Text, obj);
+    ({ tooltip: obj3[2], label: obj3[3] } = tmp10);
+    tmp13 = callback(tmp2(4444).Text, obj);
   }
-  obj[8] = tmp14;
-  obj[9] = collapsed(10650)(channel);
-  obj[10] = tmp12;
-  ({ collapsed: collapsed2, isRefreshEnabled } = obj);
+  obj[7] = tmp13;
+  obj[8] = collapsed(10674)(channel);
+  obj[9] = tmp11;
+  const collapsed2 = obj.collapsed;
   const merged = Object.assign(obj, Object.create(null));
-  const colors = tmp(712).colors;
+  const colors = tmp7(712).colors;
   obj1 = {};
   const merged1 = Object.assign(merged);
-  obj1.icon = callback(id(8875).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createCacheKey : obj1 });
+  obj1.icon = callback(id(8898).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createCacheKey : obj1 });
   obj1.accessibilityState = { expanded: !collapsed2 };
-  obj1.isRefreshEnabled = isRefreshEnabled;
   return renderCategoryItem(obj1);
 };
 export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   guildId = guildId.guildId;
   let stateFromStores;
-  const tmp2 = stateFromStores(1367)("RecentlyActiveCategory");
   let obj = guildId(589);
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_5.isCollapsed(guildId));
   const items1 = [guildId, stateFromStores];
-  obj = { name: null, collapsed: null, onPress: null, withMarginTop: null, styles: null, isRefreshEnabled: null };
-  const callback = React.useCallback(() => guildId(closure_1_2[22]).setRecentlyActiveCollapsed(guildId, !stateFromStores), items1);
+  obj = { name: null, collapsed: null, onPress: null, withMarginTop: null, styles: null };
+  const callback = React.useCallback(() => guildId(closure_1_2[21]).setRecentlyActiveCollapsed(guildId, !stateFromStores), items1);
   const intl = guildId(1236).intl;
   obj[0] = intl.string(guildId(1236).t.uZyspD);
   obj[1] = stateFromStores;
   obj[2] = callback;
   obj[3] = guildId.withMarginTop;
-  obj[4] = styles(tmp2);
-  obj[5] = tmp2;
+  obj[4] = styles();
   const collapsed = obj.collapsed;
   const merged = Object.assign(obj, Object.create(null));
   const colors = stateFromStores(712).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = callback(guildId(8875).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createCacheKey : obj1 });
+  obj.icon = callback(guildId(8898).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createCacheKey : obj1 });
   obj.accessibilityState = { expanded: !collapsed };
-  obj.isRefreshEnabled = obj.isRefreshEnabled;
   return renderCategoryItem(obj);
 };
 export const SuggestedCategory = function SuggestedCategory(guildId) {
   guildId = guildId.guildId;
   const channelIds = guildId.channelIds;
-  const tmp = channelIds(1367)("SuggestedCategory");
   let items = [guildId, channelIds];
-  let obj = { name: null, onPress: null, withMarginTop: null, styles: null, isRefreshEnabled: null };
+  let obj = { name: null, onPress: null, withMarginTop: null, styles: null };
   const callback = React.useCallback(() => {
-    let obj = guildId(closure_1_2[24]);
+    let obj = guildId(closure_1_2[23]);
     obj = { key: "REDESIGN_SUGGESTED_CHANNELS_CLEAR", options: null, hasIcons: true };
     obj = { label: null, onPress: null, IconComponent: null };
-    const intl = guildId(closure_1_2[23]).intl;
-    obj[0] = intl.string(guildId(closure_1_2[23]).t.VkKicb);
+    const intl = guildId(closure_1_2[22]).intl;
+    obj[0] = intl.string(guildId(closure_1_2[22]).t.VkKicb);
     obj[1] = function onPress() {
-      closure_1_0(closure_1_2[25]).clearRecentChannels(closure_0, closure_1);
+      closure_1_0(closure_1_2[24]).clearRecentChannels(closure_0, closure_1);
     };
-    obj[2] = guildId(closure_1_2[26]).CircleXIcon;
+    obj[2] = guildId(closure_1_2[25]).CircleXIcon;
     const items = [obj];
     obj[1] = items;
     const result = obj.showSimpleActionSheet(obj);
@@ -335,7 +295,6 @@ export const SuggestedCategory = function SuggestedCategory(guildId) {
   obj[0] = intl.string(guildId(1236).t.HbJ7eD);
   obj[1] = callback;
   obj[2] = guildId.withMarginTop;
-  obj[3] = styles(tmp);
-  obj[4] = tmp;
+  obj[3] = styles();
   return renderCategoryItem(obj);
 };

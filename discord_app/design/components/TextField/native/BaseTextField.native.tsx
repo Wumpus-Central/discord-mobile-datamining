@@ -3,17 +3,16 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 const require = arg1;
-let c3 = importAllResult;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+({ jsx: c3, jsxs: c4 } = jsxProd);
 const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
-  let obj = ref(6194);
-  obj = { size: size.size, isRound: size.isRound, hasLeadingIcon: null != size.leadingIcon, isRefreshEnabled: onChangeText(1367)("InputFieldContainer") };
+  let obj = ref(onChangeText[3]);
+  obj = { size: size.size, isRound: size.isRound, hasLeadingIcon: null != size.leadingIcon };
   const inputStyles = obj.useInputStyles(obj);
-  let obj2 = ref(4171);
+  let obj2 = ref(onChangeText[4]);
   const focus = obj2.useFocus();
   ({ focusProps, isFocused } = focus);
   ref = importAllResult.useRef(null);
-  let tmp7 = null;
+  let tmp6 = null;
   if (size.enableAndroidSanitizedInputWorkaround) {
     ({ secureTextEntry, keyboardType, autoComplete } = size);
     if (secureTextEntry === undefined) {
@@ -22,23 +21,23 @@ const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
     if (keyboardType === undefined) {
       keyboardType = "default";
     }
-    let tmp3Result = tmp3(500);
+    let tmpResult = tmp(tmp2[2]);
     let str = "off";
-    if (!tmp3Result.isAndroid()) {
+    if (!tmpResult.isAndroid()) {
       str = autoComplete;
     }
     obj = { autoComplete: null, secureTextEntry: null, keyboardType: null };
     obj[0] = str;
-    tmp3Result = tmp3(500);
-    obj[1] = tmp3Result.isAndroid() || secureTextEntry;
-    const tmp8 = tmp3Result.isAndroid() || secureTextEntry;
+    tmpResult = tmp(tmp2[2]);
+    obj[1] = tmpResult.isAndroid() || secureTextEntry;
+    const tmp7 = tmpResult.isAndroid() || secureTextEntry;
     let str2 = "visible-password";
-    if (!tmp3Result1.isAndroid()) {
+    if (!tmpResult1.isAndroid()) {
       str2 = keyboardType;
     }
     obj[2] = str2;
-    tmp7 = obj;
-    tmp3Result1 = tmp3(500);
+    tmp6 = obj;
+    tmpResult1 = tmp(tmp2[2]);
   }
   onChangeText = size.onChangeText;
   const items = [onChangeText];
@@ -64,12 +63,8 @@ const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
   obj1.isFocused = isFocused;
   const items1 = [size.leading, , ];
   obj2 = {};
-  const merged1 = Object.assign(tmp7);
-  const obj4 = importAllResult;
-  const tmp10 = closure_5;
-  const tmp12 = closure_4;
-  const tmp2 = onChangeText(1367)("InputFieldContainer");
-  const merged2 = Object.assign(ref(4170).mergeProps(size, focusProps));
+  const merged1 = Object.assign(tmp6);
+  const merged2 = Object.assign(ref(onChangeText[6]).mergeProps(size, focusProps));
   let replaced = str3;
   if (null != size.value) {
     replaced = str3.replace(/\r\n?|\n/g, " ");
@@ -81,17 +76,20 @@ const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
   }
   obj2.defaultValue = replaced1;
   obj2.onChangeText = callback;
-  const tmp3Result2 = ref(4170);
-  obj2.ref = ref(4170).mergeRefs(ref, ref2);
+  const obj4 = importAllResult;
+  const tmp11 = closure_3;
+  const tmp9 = closure_4;
+  const tmpResult2 = ref(onChangeText[6]);
+  obj2.ref = ref(onChangeText[6]).mergeRefs(ref, ref2);
   const items2 = [, , ];
   ({ padding: arr3[0], text: arr3[1] } = inputStyles);
   items2[2] = size.inputStyle;
   obj2.style = items2;
   obj2.placeholderTextColor = inputStyles.placeholderText.color;
-  items1[1] = tmp12(ref(6197).NativeTextInput, obj2);
+  items1[1] = tmp11(ref(onChangeText[5]).NativeTextInput, obj2);
   items1[2] = size.trailing;
   obj1.children = items1;
-  return tmp10(ref(6194).InputFieldContainer, obj1);
+  return tmp9(ref(onChangeText[3]).InputFieldContainer, obj1);
 });
 const result = require("set").fileFinishedImporting("design/components/TextField/native/BaseTextField.native.tsx");
 

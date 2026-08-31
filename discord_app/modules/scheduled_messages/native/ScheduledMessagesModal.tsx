@@ -4,9 +4,9 @@ import keys from "../../../ConstantsIOS.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
-import _mod4186 from "../../reanimated/ReanimatedRexport.tsx";
+import _mod4187 from "../../reanimated/ReanimatedRexport.tsx";
 import HeaderBackImage from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import Background from "../../../../_runtime/05467_Background.js";
+import Background from "../../../../_runtime/05470_Background.js";
 import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import usePremiumUpsellConfig from "../../../utils/native/PremiumUpsellUtils.tsx";
@@ -161,7 +161,7 @@ export default function ScheduledMessagesModal() {
   const intl = getSystemLocale.intl;
   const stringResult = intl.string(getSystemLocale.t.SZVs3K);
   require = stringResult;
-  let obj = _mod4186;
+  let obj = _mod4187;
   const sharedValue = obj.useSharedValue(0);
   items = [sharedValue];
   const callback = React.useCallback((nativeEvent) => {
@@ -178,7 +178,7 @@ export default function ScheduledMessagesModal() {
   fn.__workletHash = 2142182513871;
   fn.__initData = closure_15;
   obj = { style: tmp.modal, children: null };
-  const animatedStyle = _mod4186.useAnimatedStyle(fn);
+  const animatedStyle = _mod4187.useAnimatedStyle(fn);
   obj = {
     title: stringResult,
     headerTitle() {
@@ -190,21 +190,21 @@ export default function ScheduledMessagesModal() {
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null
   };
-  const obj2 = _mod4186;
+  const obj2 = _mod4187;
   const tmp10 = View;
   const tmp4 = require;
   const tmp9 = closure_11;
   let num = 0;
   if (!obj5.isIOS()) {
-    num = sharedValue(1629)().top;
+    num = sharedValue(1628)().top;
   }
   obj[3] = num + sharedValue(712).space.PX_8;
   obj5 = set;
-  obj[4] = HeaderBackImage.getHeaderCloseButton(sharedValue(4689).pop);
+  obj[4] = HeaderBackImage.getHeaderCloseButton(sharedValue(4691).pop);
   ({ headerLeftContainer: obj4[5], headerRightContainer: obj4[6] } = tmp);
   const items1 = [closure_10(Background.Header, obj), , ];
   const items2 = [tmp.headerBorder, animatedStyle];
-  items1[1] = closure_10(sharedValue(4186).View, { style: items2 });
+  items1[1] = closure_10(sharedValue(4187).View, { style: items2 });
   items1[2] = closure_10(ScheduledMessagesPage, { handleScroll: callback });
   obj[1] = items1;
   return tmp9(tmp10, obj);

@@ -3,7 +3,7 @@ import failsDefault from "../../../../discord_common/js/packages/backoff/Backoff
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import snowflakeSequence from "../../messages/createNonce.tsx";
-import _modDef16107 from "../lib/VibegrationsPlatformUtils.native.tsx";
+import _modDef16141 from "../lib/VibegrationsPlatformUtils.native.tsx";
 import vibegrationLocation from "../lib/VibegrationsAnalytics.tsx";
 import map10 from "../lib/vibegrationsPreviewClaims.tsx";
 import open2 from "../lib/VibegrationsWebSocket.tsx";
@@ -468,7 +468,7 @@ function handleEvent(projectId, pendingEvents, type) {
         const intl2 = require("../../../intl/index.native.tsx").intl;
         deleteResult = attachment_id;
         deleteResult = obj;
-        deleteResult = sendFailedStep(projectId, intl2.string(attachment_id(3470).Z8Eo8I), obj);
+        deleteResult = sendFailedStep(projectId, intl2.string(attachment_id(3471).Z8Eo8I), obj);
       }
     } else if ("announcement" === type.kind) {
       let str21 = type.message;
@@ -569,7 +569,7 @@ function handleEvent(projectId, pendingEvents, type) {
         obj35.dispatch(obj16);
       } else {
         const intl = require("../../../intl/index.native.tsx").intl;
-        sendFailedStep(projectId, intl.string(attachment_id(3470).IHCafX), obj);
+        sendFailedStep(projectId, intl.string(attachment_id(3471).IHCafX), obj);
       }
     } else if ("ideas" === type.kind) {
       let tmp79 = null != type.ideas;
@@ -874,10 +874,10 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            obj8 = attachment_id(16107);
+            obj8 = attachment_id(16141);
             const result3 = obj8.beginPreviewOperation(projectId);
           } else {
-            obj7 = attachment_id(16107);
+            obj7 = attachment_id(16141);
             obj7.endPreviewOperation(projectId);
           }
         } else if ("model_settings" === type.type) {
@@ -925,9 +925,9 @@ function handleEvent(projectId, pendingEvents, type) {
                   value.add(combined);
                   ({ location: obj3[0], code: obj3[1] } = tmp2);
                   ({ message: obj3[2], source: obj3[3] } = level);
-                  const result1 = pendingEvents(16109).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
+                  const result1 = pendingEvents(16143).trackVibegrationErrored(project_id, { location: null, code: null, message: null, details: null });
                   obj = { location: null, code: null, message: null, details: null };
-                  const obj2 = pendingEvents(16109);
+                  const obj2 = pendingEvents(16143);
                 }
                 obj4 = closure_29;
                 const str = level.message;
@@ -965,7 +965,7 @@ function _openWithFreshTicket() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1000,7 +1000,7 @@ function _openWithFreshTicket() {
               c5 = baseUrl;
               if (closure_1.disposed) {
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 callback3(callback, "failed");
                 let _Error = Error;
@@ -1111,7 +1111,7 @@ function _openWithFreshTicket() {
             }
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp47) {
           baseUrl = tmp47;
@@ -1155,8 +1155,8 @@ function teardown(closure_0) {
     ws.close();
     obj.delete(closure_0);
     map7.delete(closure_0);
-    const result = _modDef16107.releasePreviewControl(closure_0);
-    const obj2 = _modDef16107;
+    const result = _modDef16141.releasePreviewControl(closure_0);
+    const obj2 = _modDef16141;
     const result1 = map10.clearVibegrationsPreviewClaims(closure_0);
     const obj3 = map10;
     obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: null, connState: "closed" };
@@ -1299,7 +1299,7 @@ function _fetchSourceHistory() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1430,7 +1430,7 @@ function _restoreSourceHistoryEntry() {
           obj[0] = str;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1749,7 +1749,7 @@ function _remixProjectWorkspace() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1825,7 +1825,7 @@ function _remixProjectWorkspace() {
             c5 = arg1;
             if (c5.ok) {
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               throw new closure_51(c5.status);
             }
@@ -1865,7 +1865,7 @@ function _submitProjectSecrets() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1936,7 +1936,7 @@ function _submitProjectSecrets() {
             closure_5 = arg1;
             if (closure_5.ok) {
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
@@ -2027,7 +2027,7 @@ function _fetchProjectMcpConnection() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2061,7 +2061,7 @@ function _fetchProjectMcpConnection() {
               closure_7 = undefined;
               baseUrl = 1;
               c5 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -2189,7 +2189,7 @@ function _requestExternalAuthorizeUrl() {
           obj[0] = error;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2385,7 +2385,7 @@ function _deleteStagedAttachment() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2452,7 +2452,7 @@ function _deleteStagedAttachment() {
             c5 = arg1;
             if (c5.ok) {
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
@@ -2536,7 +2536,7 @@ function _getAttachmentUrl() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2568,7 +2568,7 @@ function _getAttachmentUrl() {
               c6 = undefined;
               baseUrl = 1;
               c6 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -2649,7 +2649,7 @@ function _isAttachmentAvailable() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -3224,7 +3224,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -3286,7 +3286,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
           } else {
             const ok = arg1.ok;
             baseUrl = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp8) {
           baseUrl = tmp;

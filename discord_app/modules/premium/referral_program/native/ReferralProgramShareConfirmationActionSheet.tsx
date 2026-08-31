@@ -14,7 +14,7 @@ function SharedUser(user) {
   const tmp = callback3();
   let obj = nameFromUserDefault;
   const name = obj.getName(user);
-  const tmp6 = user.trialCreationResult === user(7145).CreateReferralStatus.FAIL;
+  const tmp6 = user.trialCreationResult === user(7166).CreateReferralStatus.FAIL;
   obj = { style: tmp.recipientRow, children: null };
   const items = [tmp.avatarContainer, ];
   let erroredAvatar = tmp6;
@@ -29,33 +29,33 @@ function SharedUser(user) {
     const obj2 = { variant: "text-md/medium", color: "text-muted", style: null, children: null };
     obj2[2] = tmp.recipientDisplayName;
     obj2[3] = name;
-    const items2 = [tmp9(tmp5(4442).Text, obj2), ];
+    const items2 = [tmp9(tmp5(4444).Text, obj2), ];
     const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
     const intl = tmp5(1236).intl;
     const obj4 = { userName: null };
     obj4[0] = name;
     obj3[2] = intl.format(tmp5(1236).t.RO3T4B, obj4);
-    items2[1] = tmp9(tmp5(4442).Text, obj3);
+    items2[1] = tmp9(tmp5(4444).Text, obj3);
     obj1[0] = items2;
     let tmp9Result = tmp7(closure_6, obj1);
   } else {
     const obj5 = { variant: "text-md/medium", color: "text-strong", style: null, children: null };
     obj5[2] = tmp.recipientDisplayName;
     obj5[3] = name;
-    tmp9Result = tmp9(tmp5(4442).Text, obj5);
+    tmp9Result = tmp9(tmp5(4444).Text, obj5);
   }
   items1[1] = tmp9Result;
   const obj6 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
   const intl2 = tmp5(1236).intl;
   obj6[2] = intl2.string(user(1236).t["g33r/P"]);
-  obj6[3] = closure_5(user(4985).ChatIcon, { size: "xs", color: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
+  obj6[3] = closure_5(user(4988).ChatIcon, { size: "xs", color: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
   obj6[4] = function onPress() {
     let obj = closure_1_1(closure_1_2[12]);
     obj.hideActionSheet();
     obj = { recipientIds: user.id };
     closure_1_1(closure_1_2[13]).openPrivateChannel(obj);
   };
-  items1[2] = closure_5(user(4893).Button, obj6);
+  items1[2] = closure_5(user(4896).Button, obj6);
   obj[1] = items1;
   return closure_7(View, obj);
 }
@@ -97,18 +97,18 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   let obj = { helpdeskArticle: null };
   obj1 = combinedDefault;
   obj[0] = obj1.getArticleURL(HelpdeskArticles.REFERRAL_PROGRAM);
-  obj = { startExpanded: true, contentStyles: tmp.content, header: callback(tmp5(5586).BottomSheetTitleHeader, { title: null }), children: null };
+  obj = { startExpanded: true, contentStyles: tmp.content, header: callback(tmp5(5589).BottomSheetTitleHeader, { title: null }), children: null };
   obj = { children: null };
-  obj1 = { style: tmp.headerAsset, children: callback(tmp5(6221).FistBumpSpotIllustration, {}) };
-  const items = [callback(View, obj1), callback(tmp5(4442).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), , ];
+  obj1 = { style: tmp.headerAsset, children: callback(tmp5(6224).FistBumpSpotIllustration, {}) };
+  const items = [callback(View, obj1), callback(tmp5(4444).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), , ];
   const formatResult = intl3.format(tmp5(1236).t.AwGSWl, obj);
   const obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult };
-  items[2] = callback(tmp5(4442).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: intl3.format(tmp5(1236).t.AwGSWl, obj) });
+  items[2] = callback(tmp5(4444).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: intl3.format(tmp5(1236).t.AwGSWl, obj) });
   const obj4 = { style: tmp.recipientContainer, children: null };
   arr = Array.from(trialCreationResult.selectedUsers);
   obj4[1] = arr.map((id) => closure_1_5(closure_1_9, { user: id, trialCreationResult: trialCreationResult.get(id.id) }, id.id));
   items[3] = callback(View, obj4);
   obj[0] = items;
-  obj[3] = callback2(tmp5(4891).Stack, obj);
-  return callback(tmp5(5587).BottomSheet, obj);
+  obj[3] = callback2(tmp5(4894).Stack, obj);
+  return callback(tmp5(5590).BottomSheet, obj);
 };

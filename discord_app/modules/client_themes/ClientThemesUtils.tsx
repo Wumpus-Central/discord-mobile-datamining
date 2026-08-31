@@ -2,12 +2,12 @@
 import set from "../../../_runtime/00002_set.js";
 import sum from "../../../discord_common/js/shared/Constants.tsx";
 import SystemThemeState from "../user_settings/ThemeConstants.tsx";
+import ThemeTypes2 from "ClientThemesConstants.tsx";
 import AccessibilityAnnouncer from "../../design/shared.tsx";
-import ThemeTypes from "ClientThemesConstants.tsx";
 
-({ LEGACY_STANDARD_BACKGROUND_THEMES: obj1, REFRESH_STANDARD_BACKGROUND_THEMES: c3 } = ThemeTypes);
-let closure_4 = SystemThemeState.PROTO_THEME_MAP_WEB_REFRESH;
-ThemeTypes = sum.ThemeTypes;
+let closure_2 = ThemeTypes2.REFRESH_STANDARD_BACKGROUND_THEMES;
+let closure_3 = SystemThemeState.PROTO_THEME_MAP_WEB_REFRESH;
+const ThemeTypes = sum.ThemeTypes;
 const result = set.fileFinishedImporting("modules/client_themes/ClientThemesUtils.tsx");
 
 export const getThemeForColor = function getThemeForColor(l) {
@@ -63,9 +63,9 @@ export const areThemesEqualForGradientThemes = function areThemesEqualForGradien
 export const getBaseTheme = function getBaseTheme(arg0) {
   return AccessibilityAnnouncer.isThemeDark(table[arg0]) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
 };
-export const getThemeName = function getThemeName(DARK, closure_1) {
+export const getThemeName = function getThemeName(DARK) {
   closure_0 = DARK;
-  const found = closure_1 ? closure_3 : closure_2.find((theme) => theme.theme === closure_0);
+  const found = closure_2.find((theme) => theme.theme === closure_0);
   let str;
   if (found != null) {
     str = found.getName();

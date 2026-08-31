@@ -24,28 +24,28 @@ function NotificationCenterBannerImpl(onDismiss) {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.iconContainer, children: null };
   obj = { size: "md", color: ThemesDefault.colors.ICON_STRONG };
-  obj[1] = callback4(onDismiss(10176).BellSlashIcon, obj);
+  obj[1] = callback4(onDismiss(10199).BellSlashIcon, obj);
   const items = [callback4(View, obj), , ];
   obj1 = { style: tmp.contentContainer, children: null };
   const obj2 = { variant: "text-md/semibold", color: "text-default", children: null };
   const intl = onDismiss(1236).intl;
   obj2[2] = intl.string(onDismiss(1236).t.G6YBna);
-  const items1 = [callback4(onDismiss(4442).Text, obj2), , ];
+  const items1 = [callback4(onDismiss(4444).Text, obj2), , ];
   const obj3 = { variant: "text-md/medium", color: "text-muted", style: { marginTop: ThemesDefault.space.PX_4 }, children: null };
   const intl2 = onDismiss(1236).intl;
   obj3[3] = intl2.string(onDismiss(1236).t["9CoPDE"]);
-  items1[1] = callback4(onDismiss(4442).Text, obj3);
+  items1[1] = callback4(onDismiss(4444).Text, obj3);
   const obj5 = { style: tmp.ctaButton, children: null };
   const obj6 = { variant: "primary", size: "md", text: null, onPress: null };
   const intl3 = onDismiss(1236).intl;
   obj6[2] = intl3.string(onDismiss(1236).t.a4bgO0);
   obj6[3] = function onPress() {
-    let obj = onDismiss(11913);
+    let obj = onDismiss(11947);
     const pushNotificationPermission = obj.requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_8);
     obj = { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER };
     callback(698).track(constants.CONTEXTUAL_REMINDER_ACTION, obj);
   };
-  obj5[1] = callback4(onDismiss(4893).Button, obj6);
+  obj5[1] = callback4(onDismiss(4896).Button, obj6);
   items1[2] = callback4(View, obj5);
   obj1[1] = items1;
   items[1] = callback5(View, obj1);
@@ -63,8 +63,8 @@ function NotificationCenterBannerImpl(onDismiss) {
   };
   const intl4 = onDismiss(1236).intl;
   obj7[3] = intl4.string(onDismiss(1236).t.WAI6xu);
-  obj7[4] = callback4(onDismiss(5516).XSmallIcon, { size: "sm", color: "icon-strong" });
-  items[2] = callback4(onDismiss(5033).PressableHighlight, obj7);
+  obj7[4] = callback4(onDismiss(5519).XSmallIcon, { size: "sm", color: "icon-strong" });
+  items[2] = callback4(onDismiss(5036).PressableHighlight, obj7);
   obj[1] = items;
   return callback5(View, obj);
 }
@@ -91,7 +91,7 @@ export default function NotificationCenterPermissionNudge() {
   if (!obj.useConfig({ location: "NotificationCenterPermissionNudge" }).inHoldout) {
     prop = null;
     if (canSeePushNotificationNudge) {
-      prop = tmp2(1377).DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER;
+      prop = tmp2(1373).DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER;
     }
   }
   const tmp5 = callback(require("../../dismissible_content/hooks/useSelectedDismissibleContent.tsx").useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 604800000 }), 2);

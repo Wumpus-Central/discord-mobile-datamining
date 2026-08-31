@@ -13,8 +13,8 @@ function getMatchData(pathname) {
   }
   obj = { path: null };
   let obj2 = closure_2;
-  const RouteParam = tmp(4286).RouteParam;
-  const RouteParam2 = tmp(4286).RouteParam;
+  const RouteParam = tmp(4287).RouteParam;
+  const RouteParam2 = tmp(4287).RouteParam;
   obj[0] = closure_2.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
   const matchPathResult = obj.matchPath(str2, obj);
   if (null != matchPathResult) {
@@ -35,9 +35,9 @@ function getMatchData(pathname) {
       str = "";
     }
     obj1 = { path: null };
-    const RouteParam3 = tmp(4286).RouteParam;
+    const RouteParam3 = tmp(4287).RouteParam;
     obj1[0] = obj2.GUILD_BOOSTING_MARKETING(RouteParam3.guildId());
-    const matchPathResult1 = tmp(4273).matchPath(str, obj1);
+    const matchPathResult1 = tmp(4274).matchPath(str, obj1);
     if (null != matchPathResult1) {
       obj2 = { guildId: null, channelId: null };
       obj2[0] = matchPathResult1.params.guildId;

@@ -1,8 +1,8 @@
 // discord_app/modules/guild_communication_disabled/GuildDisableCommunicationActionCreators.native.tsx
 import noopAll from "../../../_runtime/00019_noop.js";
-import asyncRequireImpl from "../../../_runtime/02010_asyncRequireImpl.js";
-import _modDef4689 from "../../actions/ModalActionCreators.tsx";
-import _modDef4823 from "../../actions/native/AlertActionCreators.tsx";
+import asyncRequireImpl from "../../../_runtime/02009_asyncRequireImpl.js";
+import _modDef4691 from "../../actions/ModalActionCreators.tsx";
+import _modDef4826 from "../../actions/native/AlertActionCreators.tsx";
 import closure_3 from "../../stores/UserStore.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
@@ -14,17 +14,17 @@ export const openDisableCommunication = function openDisableCommunication(userId
   ({ guildId, cancelButtonCallback } = userId);
   user = user.getUser(userId.userId);
   if (null != user) {
-    let obj = _modDef4689;
+    let obj = _modDef4691;
     obj = { guildId: null, user: null, cancelButtonCallback: null };
     obj[0] = guildId;
     obj[1] = user;
     obj[2] = cancelButtonCallback;
-    obj.pushLazy(asyncRequireImpl(11346, dependencyMap.paths), obj);
+    obj.pushLazy(asyncRequireImpl(11375, dependencyMap.paths), obj);
   }
 };
 export const openEnableCommunication = function openEnableCommunication(arg0) {
   ({ guildId: require, userId: importDefault, cancelButtonCallback: dependencyMap } = arg0);
-  let obj = _modDef4823;
+  let obj = _modDef4826;
   obj = {
     importer() {
       return closure_1_0(closure_1_2[5])(closure_1_2[7], closure_1_2.paths).then((arg0) => {

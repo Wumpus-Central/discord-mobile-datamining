@@ -1,8 +1,8 @@
 // discord_common/js/packages/time-utils/TimeUtils.tsx
 import u from "../performance-utils/index.js";
-import findLastIndexDefault from "../../../../_runtime/04526_findLastIndex.js";
+import findLastIndexDefault from "../../../../_runtime/04528_findLastIndex.js";
 import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import tryCatch from "../../../../_runtime/04525_tryCatch.js";
+import tryCatch from "../../../../_runtime/04527_tryCatch.js";
 
 require = arg1;
 function sleep(num) {
@@ -368,7 +368,7 @@ TimeOut["waitFor"] = function waitFor(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -552,7 +552,7 @@ export const TimeUnitMax = items;
 export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
-  const tmp2 = findLastIndexDefault(items, (unit) => f76637(unit.unit), items.findIndex((max) => {
+  const tmp2 = findLastIndexDefault(items, (unit) => f76762(unit.unit), items.findIndex((max) => {
     max = max.max;
     let tmp = max.unit === closure_1_10.NONE;
     if (tmp) {
@@ -566,7 +566,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   if (null != tmp2) {
     return tmp2.unit;
   } else {
-    const found = arr.find((unit) => f76637(unit.unit));
+    const found = arr.find((unit) => f76762(unit.unit));
     let unit = null;
     if (null != found) {
       unit = found.unit;
@@ -594,8 +594,8 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     return obj;
   } else {
     closure_0 = rounded;
-    const f76637 = (arg0) => closure_0.includes(arg0);
-    const tmp12 = f76637(4526)(items, (unit) => f76637(unit.unit), items.findIndex((max) => {
+    const f76762 = (arg0) => closure_0.includes(arg0);
+    const tmp12 = f76762(4528)(items, (unit) => f76762(unit.unit), items.findIndex((max) => {
       max = max.max;
       let tmp = max.unit === closure_1_10.NONE;
       if (tmp) {
@@ -609,7 +609,7 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     if (null != tmp12) {
       let unit = tmp12.unit;
     } else {
-      const found = arr.find((unit) => f76637(unit.unit));
+      const found = arr.find((unit) => f76762(unit.unit));
       unit = null;
       if (null != found) {
         unit = found.unit;

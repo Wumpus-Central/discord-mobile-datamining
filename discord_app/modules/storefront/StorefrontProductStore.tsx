@@ -216,6 +216,23 @@ const storefrontProductStore = new StorefrontProductStore(dispatcherDefault, {
       });
     });
   },
+  STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS: function handleCollectionsForApplicationPageFetchSuccess(collections) {
+    collections = collections.collections;
+    closure_0 = undefined;
+    closure_0 = Date.now();
+    let item = collections.forEach((products) => {
+      products = products.products;
+      let item = products.forEach((id) => {
+        closure_0 = id;
+        closure_1_0[id.id] = { state: "success", product: id, fetchedAt: closure_0 };
+        const skuIds = id.skuIds;
+        const item = skuIds.forEach((arg0) => {
+          const items = [closure_0];
+          closure_2_1[arg0] = { state: "success", products: items, fetchedAt: closure_0 };
+        });
+      });
+    });
+  },
   LOGOUT: function handleLogout() {
     closure_0 = {};
     closure_1 = {};

@@ -4,7 +4,7 @@ import _modDef1208 from "../utils/SentryUtils.native.tsx";
 import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "../modules/errors/native/SentryInitUtils.tsx";
 import ComponentDispatcher from "../utils/ComponentDispatchUtils.tsx";
 import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
-import createStandardNavigationFactories from "../../_runtime/01501_createStandardNavigationFactories.js";
+import createStandardNavigationFactories from "../../_runtime/01500_createStandardNavigationFactories.js";
 import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import useThemeDefault from "../hooks/useTheme.tsx";
 import enqueueDefault from "../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx";
@@ -29,7 +29,7 @@ function GestureWrapper(children) {
   let isScreenLandscape;
   const tmp = callback3();
   closure_0 = tmp;
-  isScreenLandscape = isScreenLandscape(5036).useIsScreenLandscape();
+  isScreenLandscape = isScreenLandscape(5039).useIsScreenLandscape();
   let items = [isScreenLandscape, tmp];
   const style = React.useMemo(() => {
     const items = [styles.flex, ];
@@ -90,7 +90,7 @@ function AppNavigationContainer(children) {
     closure_1_7();
   }, []);
   const memo = React.useMemo(() => {
-    const tmp = callback(4302)();
+    const tmp = callback(4304)();
     let name;
     if (tmp != null) {
       const first = tmp.routes[0];
@@ -98,7 +98,7 @@ function AppNavigationContainer(children) {
         name = first.name;
       }
     }
-    callback(14146).log("Initial Screen: " + name);
+    callback(14180).log("Initial Screen: " + name);
     return tmp;
   }, []);
   _require = React.useRef(true);
@@ -131,7 +131,7 @@ function AppNavigationContainer(children) {
   obj[3] = callback;
   obj[4] = memo;
   obj[6] = children.children;
-  return callback2(require("../../_runtime/01501_createStandardNavigationFactories.js").NavigationContainer, obj);
+  return callback2(require("../../_runtime/01500_createStandardNavigationFactories.js").NavigationContainer, obj);
 }
 function ShareNavigationContainer(children) {
   const tmp = useThemeDefault();
@@ -159,7 +159,7 @@ createCacheKey = { flex: { flex: 1 }, rootBackgroundColor: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
 createCacheKey[1] = createCacheKey;
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-let result = module_4186.configureReanimatedLogger({ level: require("../modules/reanimated/ReanimatedRexport.tsx").ReanimatedLogLevel.error, strict: false });
+let result = module_4187.configureReanimatedLogger({ level: require("../modules/reanimated/ReanimatedRexport.tsx").ReanimatedLogLevel.error, strict: false });
 try {
   require("enableScreens").enableFreeze();
   let obj6 = require("enableScreens");
@@ -175,11 +175,11 @@ try {
     const appEntryKey = children.appEntryKey;
     let memo = appEntryKey;
     let memo1;
-    const requestGatewaySocket = memo(14147).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = memo(14181).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = React.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
-        let obj = memo(4186);
+        let obj = memo(4187);
         const fn = function e() {
           RNScreensTurboModule.RNScreensTurboModule = RNScreensTurboModule;
         };
@@ -204,8 +204,8 @@ try {
     }, []);
     riveAppStatePlaybackExperiment = undefined;
     memo = undefined;
-    let obj = memo(14147);
-    riveAppStatePlaybackExperiment = memo(15462).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = memo(14181);
+    riveAppStatePlaybackExperiment = memo(15495).useRiveAppStatePlaybackExperiment("AppContainer");
     let items = [riveAppStatePlaybackExperiment];
     memo = React.useMemo(() => {
       const items = [];

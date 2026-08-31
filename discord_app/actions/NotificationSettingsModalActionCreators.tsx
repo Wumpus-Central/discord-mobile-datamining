@@ -138,7 +138,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -156,7 +156,7 @@ export default {
               closure_1 = tmp2;
               c0 = tmp5;
               c0 = undefined;
-              const setFlagResult = closure_1_0(1403).setFlag(closure_1_4.accountNotificationSettings.flags, closure_1_0, closure_1_1);
+              const setFlagResult = closure_1_0(1399).setFlag(closure_1_4.accountNotificationSettings.flags, closure_1_0, closure_1_1);
               c0 = setFlagResult;
               const HTTP = closure_1_0(530).HTTP;
               obj1 = { url: null, body: null, rejectWithError: null };
@@ -164,7 +164,7 @@ export default {
               const obj2 = { flags: null };
               obj2[0] = setFlagResult;
               obj1[1] = obj2;
-              const obj10 = closure_1_0(1403);
+              const obj10 = closure_1_0(1399);
               obj1[2] = closure_1_0(530).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
@@ -203,7 +203,7 @@ export default {
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp11) {
           c3 = tmp;

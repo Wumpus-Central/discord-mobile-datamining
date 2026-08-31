@@ -1,6 +1,5 @@
 // discord_app/design/components/Sheet/native/PromoSheet.native.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import closure_5 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -19,77 +18,48 @@ const result = require("set").fileFinishedImporting("design/components/Sheet/nat
 export const PromoSheet = function PromoSheet(arg0) {
   ({ description, illustration, graphic, gradientColor } = arg0);
   ({ title, actions } = arg0);
-  const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("PromoSheet");
-  importDefault = tmp3;
-  const tmp4 = callback2();
-  const items = [tmp3, gradientColor];
-  const memo = React.useMemo(() => {
-    if (closure_1) {
-      if (null != gradientColor) {
-        return (arg0) => {
-          let obj = {};
-          const merged = Object.assign(arg0);
-          obj = { offsetBottom: 0.25, color: closure_0, backgroundColor: closure_1_1(closure_1_2[5]).colors.MOBILE_ACTIONSHEET_BACKGROUND };
-          obj.children = closure_1_7(closure_1_0(closure_1_2[7]).ExpressiveGradient, obj);
-          return closure_1_7(closure_1_6, obj);
-        };
-      }
-    }
-  }, items);
+  const tmp2 = callback2();
+  const items = [gradientColor];
+  const memo = React.useMemo(() => null != gradientColor ? ((arg0) => {
+    let obj = {};
+    const merged = Object.assign(arg0);
+    obj = { offsetBottom: 0.25, color: closure_0, backgroundColor: closure_1_1(closure_1_2[5]).colors.MOBILE_ACTIONSHEET_BACKGROUND };
+    obj.children = closure_1_7(closure_1_0(closure_1_2[6]).ExpressiveGradient, obj);
+    return closure_1_7(closure_1_6, obj);
+  }) : undefined, items);
   let obj = {};
   let merged = Object.assign(callback(arg0, closure_3));
   obj.startExpanded = true;
-  obj.contentStyles = tmp4.content;
+  obj.contentStyles = tmp2.content;
   obj.backgroundComponent = memo;
-  if (tmp3) {
-    if (null != graphic) {
-      obj = {};
-      const merged1 = Object.assign(graphic);
-      obj.style = tmp4.graphic;
-      let tmp6Result = tmp6(tmp7(8923).Graphic, obj);
+  if (null != graphic) {
+    obj = {};
+    const merged1 = Object.assign(graphic);
+    obj.style = tmp2.graphic;
+    let tmp4Result = tmp4(tmp5(8946).Graphic, obj);
+  } else {
+    tmp4Result = null;
+    if (null != illustration) {
+      obj = { style: null, children: null };
+      obj[0] = tmp2.illustration;
+      obj[1] = illustration;
+      tmp4Result = tmp4(View, obj);
     }
-    const items1 = [tmp6Result, , ];
-    let str = "heading-xl/bold";
-    if (tmp3) {
-      str = "heading-xl/semibold";
-    }
-    obj = { variant: null, color: "mobile-text-heading-primary", style: null, children: null };
-    obj[0] = str;
-    obj[2] = tmp4.title;
-    obj[3] = title;
-    const items2 = [tmp6(tmp7(4442).Text, obj), ];
-    tmp6Result = null;
-    if (null != description) {
-      let str2 = "text-md/medium";
-      if (tmp3) {
-        str2 = "redesign/heading-18/medium";
-      }
-      obj1 = { variant: null, color: null, style: null, children: null };
-      obj1[0] = str2;
-      let str3 = "text-default";
-      if (tmp3) {
-        str3 = "text-subtle";
-      }
-      obj1[1] = str3;
-      obj1[2] = tmp4.description;
-      obj1[3] = description;
-      tmp6Result = tmp6(tmp7(4442).Text, obj1);
-    }
-    const obj2 = { spacing: 24, children: null };
-    const obj3 = { children: null };
-    items2[1] = tmp6Result;
-    obj3[0] = items2;
-    items1[1] = tmp9(tmp7(4891).Stack, obj3);
-    items1[2] = actions;
-    obj2[1] = items1;
-    obj.children = tmp9(tmp10, obj2);
-    return tmp6(gradientColor(5587).BottomSheet, obj);
   }
-  tmp6Result = null;
-  if (null != illustration) {
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp4.illustration;
-    obj4[1] = illustration;
-    tmp6Result = tmp6(View, obj4);
+  const items1 = [tmp4Result, , ];
+  const items2 = [closure_7(gradientColor(4444).Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp2.title, children: title }), ];
+  tmp4Result = null;
+  if (null != description) {
+    const obj2 = { variant: "redesign/heading-18/medium", color: "text-subtle", style: null, children: null };
+    obj2[2] = tmp2.description;
+    obj2[3] = description;
+    tmp4Result = tmp4(tmp5(4444).Text, obj2);
   }
+  const obj3 = { spacing: 24, children: null };
+  items2[1] = tmp4Result;
+  items1[1] = closure_8(gradientColor(4894).Stack, { children: items2 });
+  items1[2] = actions;
+  obj3[1] = items1;
+  obj.children = closure_8(gradientColor(4894).Stack, obj3);
+  return closure_7(gradientColor(5590).BottomSheet, obj);
 };

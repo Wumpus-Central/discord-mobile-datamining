@@ -39,8 +39,8 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     if (!tmp9) {
       let result = GOOGLE === tmp7.GOOGLE;
       if (result) {
-        result = tmp(4121).isGooglePlayBillingSupported();
-        const tmpResult = tmp(4121);
+        result = tmp(4122).isGooglePlayBillingSupported();
+        const tmpResult = tmp(4122);
       }
       if (result) {
         result = androidShopOrdersEnabled;
@@ -59,7 +59,7 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     activeSubscription: null,
     initialExternalGatewayFacet: tmp5,
     onOrderRetryCancellation() {
-      return callback2(4413).hideActionSheet(callback(12460).PRODUCT_DETAILS_ACTION_SHEET_KEY);
+      return callback2(4415).hideActionSheet(callback(12494).PRODUCT_DETAILS_ACTION_SHEET_KEY);
     },
     checkoutAnalyticsFields: obj1,
     children: null
@@ -77,7 +77,7 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     activeSubscription: null,
     initialExternalGatewayFacet: tmp5,
     onOrderRetryCancellation() {
-      return callback2(4413).hideActionSheet(callback(12460).PRODUCT_DETAILS_ACTION_SHEET_KEY);
+      return callback2(4415).hideActionSheet(callback(12494).PRODUCT_DETAILS_ACTION_SHEET_KEY);
     },
     checkoutAnalyticsFields: obj1,
     children: null
@@ -91,7 +91,7 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     activeSubscription: null,
     initialExternalGatewayFacet: tmp5,
     onOrderRetryCancellation() {
-      return callback2(4413).hideActionSheet(callback(12460).PRODUCT_DETAILS_ACTION_SHEET_KEY);
+      return callback2(4415).hideActionSheet(callback(12494).PRODUCT_DETAILS_ACTION_SHEET_KEY);
     },
     checkoutAnalyticsFields: obj1,
     children: null

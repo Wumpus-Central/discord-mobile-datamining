@@ -225,7 +225,7 @@ function _fetchCollectiblesPurchases() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -453,7 +453,7 @@ function _maybeFetchCollectiblesProduct() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -492,7 +492,7 @@ function _maybeFetchCollectiblesProduct() {
             return obj;
           }
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp9) {
           c2 = tmp;
           throw tmp9;
@@ -538,7 +538,7 @@ function _claimPremiumCollectiblesProduct() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -605,7 +605,7 @@ function _claimPremiumCollectiblesProduct() {
             obj6.dispatch(obj6);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp29) {
           closure_3 = tmp29;
@@ -648,7 +648,7 @@ function _validateCollectiblesRecipient() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -682,8 +682,8 @@ function _validateCollectiblesRecipient() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            obj2 = callback(6148);
-            const aPIError = new callback(4344).APIError(callback);
+            obj2 = callback(6151);
+            const aPIError = new callback(4346).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
             return { value: false, done: true };
@@ -744,7 +744,7 @@ function _validateCollectiblesRecipientsBatch() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -778,8 +778,8 @@ function _validateCollectiblesRecipientsBatch() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            obj2 = callback(6148);
-            const aPIError = new callback(4344).APIError(callback);
+            obj2 = callback(6151);
+            const aPIError = new callback(4346).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
             const obj4 = { value: null, done: true };
@@ -841,7 +841,7 @@ function _fetchCollectiblesMarketings() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -867,7 +867,7 @@ function _fetchCollectiblesMarketings() {
               body = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -1088,7 +1088,7 @@ function _claimCollectiblesCategoryReward() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1157,7 +1157,7 @@ function _claimCollectiblesCategoryReward() {
             obj6.dispatch(obj6);
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp29) {
           closure_4 = tmp29;
@@ -1199,7 +1199,7 @@ function _maybeFetchCollectiblesShopTabLayout() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1224,7 +1224,7 @@ function _maybeFetchCollectiblesShopTabLayout() {
               c4 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -1326,7 +1326,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(4301).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(4303).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {
@@ -1403,10 +1403,10 @@ export const productDetailsOpened = function productDetailsOpened(skuId) {
   obj = { type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId };
   obj.dispatch(obj);
 };
-export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_4, closure_12) {
+export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_5, closure_12) {
   let noCache;
-  if (closure_4 != null) {
-    noCache = closure_4.noCache;
+  if (closure_5 != null) {
+    noCache = closure_5.noCache;
   }
   let noCache1;
   if (closure_12 != null) {
@@ -1415,8 +1415,8 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_4,
   let tmp4 = Boolean(noCache) === Boolean(noCache1);
   if (tmp4) {
     let includeUnpublished;
-    if (closure_4 != null) {
-      includeUnpublished = closure_4.includeUnpublished;
+    if (closure_5 != null) {
+      includeUnpublished = closure_5.includeUnpublished;
     }
     let includeUnpublished1;
     if (closure_12 != null) {
@@ -1429,8 +1429,8 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_4,
   }
   if (tmp4) {
     let includeBundles;
-    if (closure_4 != null) {
-      includeBundles = closure_4.includeBundles;
+    if (closure_5 != null) {
+      includeBundles = closure_5.includeBundles;
     }
     let includeBundles1;
     if (closure_12 != null) {
@@ -1443,8 +1443,8 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_4,
   }
   if (tmp4) {
     let includeDynamicBlocks;
-    if (closure_4 != null) {
-      includeDynamicBlocks = closure_4.includeDynamicBlocks;
+    if (closure_5 != null) {
+      includeDynamicBlocks = closure_5.includeDynamicBlocks;
     }
     let includeDynamicBlocks1;
     if (closure_12 != null) {
@@ -1457,8 +1457,8 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_4,
   }
   if (tmp4) {
     let countryCode;
-    if (closure_4 != null) {
-      countryCode = closure_4.countryCode;
+    if (closure_5 != null) {
+      countryCode = closure_5.countryCode;
     }
     let countryCode1;
     if (closure_12 != null) {
@@ -1468,8 +1468,8 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_4,
   }
   if (tmp4) {
     let paymentGateway;
-    if (closure_4 != null) {
-      paymentGateway = closure_4.paymentGateway;
+    if (closure_5 != null) {
+      paymentGateway = closure_5.paymentGateway;
     }
     let paymentGateway1;
     if (closure_12 != null) {
@@ -1479,8 +1479,8 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_4,
   }
   if (tmp4) {
     let shopHomeConfig;
-    if (closure_4 != null) {
-      shopHomeConfig = closure_4.shopHomeConfig;
+    if (closure_5 != null) {
+      shopHomeConfig = closure_5.shopHomeConfig;
     }
     let shopHomeConfig1;
     if (closure_12 != null) {
@@ -1490,8 +1490,8 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_4,
   }
   if (tmp4) {
     let skipNumCategories;
-    if (closure_4 != null) {
-      skipNumCategories = closure_4.skipNumCategories;
+    if (closure_5 != null) {
+      skipNumCategories = closure_5.skipNumCategories;
     }
     let skipNumCategories1;
     if (closure_12 != null) {

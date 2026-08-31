@@ -23,8 +23,8 @@ function useApplicationsInContext(allowFetch) {
   if ("channel" === context.type) {
     channel = context.channel;
   }
-  let obj = onlyWithCommands(8097);
-  const items = [onlyWithCommands(1956).ApplicationCommandType.CHAT];
+  let obj = onlyWithCommands(8119);
+  const items = [onlyWithCommands(1955).ApplicationCommandType.CHAT];
   const hasBaseAccessPermissions = obj.usePermissionContext(channel, items).hasBaseAccessPermissions;
   const tmp2 = callback2(context, hasBaseAccessPermissions, flag);
   let tmp3 = callback3(hasBaseAccessPermissions, flag);
@@ -107,7 +107,7 @@ function useApplicationsInContext(allowFetch) {
     includeBuiltIn = allowFetch.includeBuiltIn;
   }
   if (includeBuiltIn) {
-    items2.push(onlyWithCommands(8091).FAKE_BUILT_IN_APP);
+    items2.push(onlyWithCommands(8113).FAKE_BUILT_IN_APP);
   }
   obj = { apps: items2, loading: null };
   let fetching;
@@ -858,12 +858,12 @@ export const useLocalSearchResults = function useLocalSearchResults(context) {
   if ("channel" === context.type) {
     guild_id = context.channel.guild_id;
   }
-  const tmp8Result = flag4(11547)({ guildId: guild_id });
+  const tmp8Result = flag4(11578)({ guildId: guild_id });
   callback3 = tmp8Result;
   let items1 = [flag, commands, commandLimit, context, tmp];
   memo1 = obj2.useMemo(() => {
     if (flag) {
-      let obj = context2(11578);
+      let obj = context2(11609);
       obj = { limit: null, filterPredicates: null, bucketPredicates: null, sortComparers: null };
       obj[0] = closure_2;
       closure_1 = undefined;
@@ -872,8 +872,8 @@ export const useLocalSearchResults = function useLocalSearchResults(context) {
       if ("channel" === obj.type) {
         channel = tmp5.channel;
       }
-      const items = [context2(1956).ApplicationCommandType.CHAT];
-      closure_1 = context2(8097).buildPermissionContext(channel, items);
+      const items = [context2(1955).ApplicationCommandType.CHAT];
+      closure_1 = context2(8119).buildPermissionContext(channel, items);
       closure_2 = {};
       const items1 = [
         (applicationId) => {
@@ -1070,7 +1070,7 @@ export const useLocalSearchResults = function useLocalSearchResults(context) {
       ];
       obj[3] = items3;
       let queryDataResult = obj.queryData(commands, obj);
-      const obj3 = context2(8097);
+      const obj3 = context2(8119);
       let tmp = context2;
       let tmp3 = commands;
     } else {
@@ -1130,15 +1130,15 @@ export const useLocalSearchResults = function useLocalSearchResults(context) {
         tmp2 = apps;
       }
     }
-    let obj = context2(11578);
+    let obj = context2(11609);
     obj = { limit: dependencyMap, filterPredicates: null, bucketPredicates: null, sortComparers: null };
     closure_1 = undefined;
     let channel;
     if ("channel" === type.type) {
       channel = type.channel;
     }
-    const items3 = [context2(1956).ApplicationCommandType.CHAT, context2(1956).ApplicationCommandType.PRIMARY_ENTRY_POINT];
-    closure_1 = context2(8097).buildPermissionContext(channel, items3);
+    const items3 = [context2(1955).ApplicationCommandType.CHAT, context2(1955).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+    closure_1 = context2(8119).buildPermissionContext(channel, items3);
     const items4 = [
       (id) => {
         ({ context, userId, roleIds, isImpersonating } = closure_1);
@@ -1285,7 +1285,7 @@ export const useGlobalSearchResults = function useGlobalSearchResults(fetches) {
     substr = query.substring(1);
     tmp = substr;
   }
-  const tmp5 = fetches.entrypoint === substr(8381).AppLauncherEntrypoint.VOICE;
+  const tmp5 = fetches.entrypoint === substr(8403).AppLauncherEntrypoint.VOICE;
   dependencyMap = tmp5;
   guild_id = undefined;
   if ("channel" === context.type) {
@@ -1300,9 +1300,9 @@ export const useGlobalSearchResults = function useGlobalSearchResults(fetches) {
   const items1 = [tmp, guild_id, first, tmp5];
   const stateFromStoresObject = substr(589).useStateFromStoresObject(items, () => {
     let obj = { fetchState: null, totalPages: null };
-    obj = { query: substr, guildId: guild_id, page: first, integrationType: substr(8379).ApplicationIntegrationType.USER_INSTALL, minUserInstallCommandCount: 1, excludeAppsWithCustomInstallUrl: true, excludeNonEmbeddedApps: dependencyMap, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: true, source: substr(11577).SearchAppsRequestSource.APP_LAUNCHER };
+    obj = { query: substr, guildId: guild_id, page: first, integrationType: substr(8401).ApplicationIntegrationType.USER_INSTALL, minUserInstallCommandCount: 1, excludeAppsWithCustomInstallUrl: true, excludeNonEmbeddedApps: dependencyMap, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: true, source: substr(11608).SearchAppsRequestSource.APP_LAUNCHER };
     obj[0] = closure_1_12.getFetchState(obj);
-    obj = { query: substr, guildId: guild_id, page: first, integrationType: substr(8379).ApplicationIntegrationType.USER_INSTALL, minUserInstallCommandCount: 1, excludeAppsWithCustomInstallUrl: true, excludeNonEmbeddedApps: dependencyMap, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: true, source: substr(11577).SearchAppsRequestSource.APP_LAUNCHER };
+    obj = { query: substr, guildId: guild_id, page: first, integrationType: substr(8401).ApplicationIntegrationType.USER_INSTALL, minUserInstallCommandCount: 1, excludeAppsWithCustomInstallUrl: true, excludeNonEmbeddedApps: dependencyMap, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: true, source: substr(11608).SearchAppsRequestSource.APP_LAUNCHER };
     const searchResults = closure_1_12.getSearchResults(obj);
     num = undefined;
     if (searchResults != null) {
@@ -1364,9 +1364,9 @@ export const useGlobalSearchResults = function useGlobalSearchResults(fetches) {
   }, items3);
   callback1 = first.useCallback((arg0) => {
     ({ query, page, guildId } = arg0);
-    let obj = num(11579);
+    let obj = num(11610);
     obj = { query, guildId, options: null };
-    obj = { page, integrationType: substr(8379).ApplicationIntegrationType.USER_INSTALL, minUserInstallCommandCount: 1, excludeAppsWithCustomInstallUrl: true, excludeNonEmbeddedApps: dependencyMap, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: true, source: substr(11577).SearchAppsRequestSource.APP_LAUNCHER };
+    obj = { page, integrationType: substr(8401).ApplicationIntegrationType.USER_INSTALL, minUserInstallCommandCount: 1, excludeAppsWithCustomInstallUrl: true, excludeNonEmbeddedApps: dependencyMap, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: true, source: substr(11608).SearchAppsRequestSource.APP_LAUNCHER };
     obj[2] = obj;
     obj.search(obj);
   }, items4);

@@ -1,6 +1,6 @@
 // discord_app/lib/guild/GuildThreadSubscriptions.tsx
 import set2 from "../../../_runtime/00002_set.js";
-import privDefault from "../../../_runtime/01405_priv.js";
+import privDefault from "../../../_runtime/01401_priv.js";
 
 let result = set2.fileFinishedImporting("lib/guild/GuildThreadSubscriptions.tsx");
 class GuildThreadSubscriptions {

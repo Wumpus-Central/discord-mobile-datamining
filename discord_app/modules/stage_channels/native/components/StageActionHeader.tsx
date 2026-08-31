@@ -4,12 +4,12 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
 import collectGuildAnalyticsMetadata from "../../../app_analytics/AppAnalyticsUtils.tsx";
-import _modDef4689 from "../../../../actions/ModalActionCreators.tsx";
+import _modDef4691 from "../../../../actions/ModalActionCreators.tsx";
 import openChannelCallModal from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import componentDidMountDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import registerAssetDefault from "../../../../../_runtime/10049_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/10051_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/10072_registerAsset.js";
+import registerAssetDefault2 from "../../../../../_runtime/10074_registerAsset.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import CameraButton from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -328,7 +328,7 @@ export const closeStageModal = function closeStageModal(id) {
   const obj3 = collectGuildAnalyticsMetadata;
   componentDidMountDefault.setHidden(false);
   const obj4 = componentDidMountDefault;
-  const obj5 = _modDef4689;
+  const obj5 = _modDef4691;
   obj5.popWithKey(openChannelCallModal.getVoiceChannelKey(id.id));
 };
 export { HideStageChannelCallIcon };

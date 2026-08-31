@@ -7,17 +7,17 @@ let result = 6 * setDefault.Millis.HOUR;
 const result1 = require("set").fileFinishedImporting("modules/ads/utils/AdDecisionUtils.tsx");
 
 export const MAX_RESPONSE_TTL_MS = result;
-export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(creative) {
-  if (null == creative) {
+export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(type) {
+  if (null == type) {
     return null;
   } else {
-    const type = creative.type;
+    type = type.type;
     if (AdCreativeType.AdCreativeType.QUEST === type) {
-      return creative.questId;
-    } else if (tmp(7393).AdCreativeType.BOUNTY === type) {
-      return creative.bounty.id;
-    } else if (tmp(7393).AdCreativeType.QUEST_HOME_HERO === type) {
-      return creative.questHomeHero.id;
+      return type.questId;
+    } else if (tmp(7414).AdCreativeType.BOUNTY === type) {
+      return type.bounty.id;
+    } else if (tmp(7414).AdCreativeType.QUEST_HOME_HERO === type) {
+      return type.questHomeHero.id;
     }
   }
 };

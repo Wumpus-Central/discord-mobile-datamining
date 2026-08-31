@@ -3,8 +3,8 @@ import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02010_asyncRequireImpl.js";
-import _modDef4689 from "../../../../actions/ModalActionCreators.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02009_asyncRequireImpl.js";
+import _modDef4691 from "../../../../actions/ModalActionCreators.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import _uploadContacts from "../../../contact_sync/native/ContactSyncUtils.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -19,7 +19,7 @@ const pressable = createToggle.createPressable({
   onPress: function onContactSyncNamePress() {
     expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj = expandEventPropertiesDefault;
-    _modDef4689.pushLazy(asyncRequireImpl(14384, dependencyMap.paths), "Contact Sync Name Update Modal");
+    _modDef4691.pushLazy(asyncRequireImpl(14418, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
@@ -35,7 +35,7 @@ let obj = {
   onPress: function onContactSyncNamePress() {
     expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj = expandEventPropertiesDefault;
-    _modDef4689.pushLazy(asyncRequireImpl(14384, dependencyMap.paths), "Contact Sync Name Update Modal");
+    _modDef4691.pushLazy(asyncRequireImpl(14418, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {

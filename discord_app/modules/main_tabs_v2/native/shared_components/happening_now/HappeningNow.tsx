@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05617_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05620_LegacyBaseButton.js";
 import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder.tsx";
 import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
@@ -10,7 +10,7 @@ import { AnalyticEvents } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createFakeSharedValue from "../../../../reanimated/ReanimatedHelperTypes.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { Gesture } from "../../../../../../_runtime/05617_LegacyBaseButton.js";
+import { Gesture } from "../../../../../../_runtime/05620_LegacyBaseButton.js";
 
 require = arg1;
 function renderCard(kind, fullWidth) {
@@ -65,7 +65,7 @@ const memoResult = importAllResult.memo((listRef) => {
   obj = obj(isFocused[14]);
   isFocused = obj.useIsFocused();
   ref = isFocused;
-  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: -1, isFocused: false };
+  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "AM", isFocused: "PM" };
   obj[3] = isFocused;
   const tmp7 = callback(ref(isFocused[15])(listRef.cards, obj), 2);
   let first = tmp7[0];

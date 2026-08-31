@@ -1,5 +1,5 @@
 // discord_app/modules/emojis/native/utils/EmojiColorUtils.tsx
-import privDefault from "../../../../../_runtime/01405_priv.js";
+import privDefault from "../../../../../_runtime/01401_priv.js";
 import closure_0 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
@@ -25,7 +25,7 @@ function _getFromCacheOrFallback2() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -50,7 +50,7 @@ function _getFromCacheOrFallback2() {
               closure_5 = undefined;
               c2 = 1;
               c4 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -141,7 +141,7 @@ function _getEmojiDominantColors() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -163,7 +163,7 @@ function _getEmojiDominantColors() {
               ({ emoji: c0, emojiSource: closure_1 } = c0);
               c4 = 1;
               c5 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

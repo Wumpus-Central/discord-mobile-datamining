@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/ConnectionBanner.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
-import _modDef4186 from "../../reanimated/ReanimatedRexport.tsx";
+import _modDef4187 from "../../reanimated/ReanimatedRexport.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/04905_LinearGradient.js";
-import _isNativeReflectConstructDefault from "../../../../_runtime/05500__isNativeReflectConstruct.js";
+import LinearGradientDefault from "../../../../_runtime/04908_LinearGradient.js";
+import _isNativeReflectConstructDefault from "../../../../_runtime/05503__isNativeReflectConstruct.js";
 import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -33,14 +33,14 @@ function ConnectionBannerIcon(state) {
     obj1[0] = tmp.leadingSlot;
     const obj2 = { size: "xs", color: null };
     obj2[1] = tmp5(712).colors.INTERACTIVE_ICON_DEFAULT;
-    obj1[1] = callback2(tmp2(15916).ConnectionUnknownIcon, obj2);
+    obj1[1] = callback2(tmp2(15950).ConnectionUnknownIcon, obj2);
     return callback2(closure_6, obj1);
   } else if (tmp7.BACK_ONLINE === state) {
     obj = { style: null, children: null };
     obj[0] = tmp.leadingSlot;
     const obj3 = { size: "xs", color: null };
     obj3[1] = tmp5(712).colors.ICON_FEEDBACK_POSITIVE;
-    obj[1] = callback2(tmp2(15918).ConnectionFineIcon, obj3);
+    obj[1] = callback2(tmp2(15952).ConnectionFineIcon, obj3);
     return callback2(closure_6, obj);
   }
 }
@@ -71,7 +71,7 @@ function ConnectionBannerContent(state) {
 function BackOnlineGlow(opacity) {
   let token;
   const tmp = callback3();
-  let obj = token(4166);
+  let obj = token(4167);
   token = obj.useToken(ThemesDefault.colors.ICON_FEEDBACK_POSITIVE);
   let items = [token];
   const memo = React.useMemo(() => {
@@ -89,7 +89,7 @@ function BackOnlineGlow(opacity) {
   items1 = [tmp.glow, { opacity: opacity.progress }];
   obj = { style: tmp.glow, maskElement: callback2(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: closure_14, locations: closure_15, start: closure_16, end: closure_17 }), children: callback2(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: memo, locations: closure_18, start: closure_19, end: closure_20 }) };
   obj[2] = callback2(_isNativeReflectConstructDefault, obj);
-  return callback2(_modDef4186.View, obj);
+  return callback2(_modDef4187.View, obj);
 }
 function ConnectionBannerInner() {
   let obj = _require(sharedValue[20]);
@@ -201,11 +201,11 @@ let closure_26 = { code: "function ConnectionBannerTsx2(){const{progress,CONNECT
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(13272).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(13306).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
   dependencyMap = undefined;
-  let obj = stateFromStores(13272);
+  let obj = stateFromStores(13306);
   const items = [closure_7];
   stateFromStores = hidden(589).useStateFromStores(items, () => state.getState());
   dependencyMap = React.useRef(null);

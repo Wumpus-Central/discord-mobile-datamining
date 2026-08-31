@@ -32,7 +32,7 @@ function _loadSavedGuildStickers() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -52,12 +52,12 @@ function _loadSavedGuildStickers() {
             c0 = undefined;
             callback = undefined;
             if (Loaded === closure_1_8.Unloaded) {
-              obj1 = closure_1_1(1957);
+              obj1 = closure_1_1(1956);
               const databaseResult = obj1.database();
               c0 = databaseResult;
               if (null != databaseResult) {
                 Loaded = tmp28.Loaded;
-                let obj2 = closure_1_0(1977);
+                let obj2 = closure_1_0(1976);
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };

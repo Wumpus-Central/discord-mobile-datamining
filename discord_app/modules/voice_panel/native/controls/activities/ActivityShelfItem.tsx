@@ -28,15 +28,15 @@ function ActivityActionOverlay(arg0) {
   ({ applicationId, activityItem, launchingComponentId } = arg0);
   ({ id, name } = activityItem.application);
   if (useActivityAction.ActivityAction.JOIN !== action) {
-    if (tmp4(11565).ActivityAction.LEAVE !== action) {
+    if (tmp4(11596).ActivityAction.LEAVE !== action) {
       return null;
     }
   }
-  let tmp8 = action === tmp4(11565).ActivityAction.LEAVE;
+  let tmp8 = action === tmp4(11596).ActivityAction.LEAVE;
   if (tmp8) {
     let obj = { style: null };
     obj[0] = tmp3.ongoingActivityJoinedContainer;
-    tmp8 = callback(tmp(5971), obj);
+    tmp8 = callback(tmp(5974), obj);
   }
   const items = [tmp8, ];
   id = undefined;
@@ -66,7 +66,7 @@ function ParticipantsText(arg0) {
   obj = { style: items, children: null };
   items = [, ];
   ({ participantsContainer: arr2[0], overlayBubble: arr2[1] } = tmp);
-  obj = { source: tmp2(12249), size: Button.Icon.Sizes.EXTRA_SMALL, color: "white" };
+  obj = { source: tmp2(12283), size: Button.Icon.Sizes.EXTRA_SMALL, color: "white" };
   const items1 = [callback(Button.Icon, obj), ];
   obj1 = { lineClamp: 1, style: tmp.participantsText, variant: "text-xxs/medium", color: "text-overlay-light", children: null };
   if (action === useActivityAction.ActivityAction.START) {
@@ -74,8 +74,8 @@ function ParticipantsText(arg0) {
     if (num2 == null) {
       num2 = 0;
     }
-    let itemSubtitleForMaxPlayersShort = tmp9(11652).getItemSubtitleForMaxPlayersShort(num2);
-    const tmp9Result = tmp9(11652);
+    let itemSubtitleForMaxPlayersShort = tmp9(11683).getItemSubtitleForMaxPlayersShort(num2);
+    const tmp9Result = tmp9(11683);
   } else {
     itemSubtitleForMaxPlayersShort = name;
     if (arr.length > 1) {
@@ -131,17 +131,17 @@ export default function ActivityShelfItem(arg0) {
   let tmp10 = useEmbeddedActivityBackgroundDefault(obj);
   let tmp11 = !disableBadges;
   if (!disableBadges) {
-    const items = [tmp8(11565).ActivityAction.LEAVE, tmp8(11565).ActivityAction.JOIN];
+    const items = [tmp8(11596).ActivityAction.LEAVE, tmp8(11596).ActivityAction.JOIN];
     tmp11 = !items.includes(activityAction);
   }
   const tmp7Result = useActivityActionDefault(obj);
   const isTestModeForApplication = isTestModeForApplication2.useIsTestModeForApplication(activityItem.application.id);
-  obj = { activeOpacity: 0.7, onPress: onActivityItemSelected2, disabled: activityAction === tmp8(11565).ActivityAction.LEAVE, androidRippleConfig: ANDROID_FOREGROUND_RIPPLE, style: items1, children: null };
+  obj = { activeOpacity: 0.7, onPress: onActivityItemSelected2, disabled: activityAction === tmp8(11596).ActivityAction.LEAVE, androidRippleConfig: ANDROID_FOREGROUND_RIPPLE, style: items1, children: null };
   items1 = [tmp.container, { width, height }];
   obj1 = { style: tmp.imageOuterContainer, children: null };
-  let tmp3Result = tmp3(5971);
+  let tmp3Result = tmp3(5974);
   const obj2 = { accessibilityLabel: activityItem.application.name, imageBackground: null, aspectRatio: null };
-  tmp3Result = tmp3(16659);
+  tmp3Result = tmp3(16692);
   if (activityAction === useActivityAction.ActivityAction.START) {
     tmp10 = imageBackground;
   }
@@ -154,7 +154,7 @@ export default function ActivityShelfItem(arg0) {
   if (tmp11) {
     const obj4 = { labelType: null };
     obj4[0] = labelType;
-    tmp15Result = tmp15(tmp3(11594), obj4);
+    tmp15Result = tmp15(tmp3(11625), obj4);
   }
   items3[1] = tmp15Result;
   tmp15Result = null;
@@ -165,16 +165,16 @@ export default function ActivityShelfItem(arg0) {
       obj5[0] = tmp.developerIconContainer;
       const obj6 = { size: null, source: null, color: null };
       obj6[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-      obj6[1] = tmp3(16663);
+      obj6[1] = tmp3(16696);
       obj6[2] = tmp.developerIconColor.color;
       obj5[1] = tmp15(tmp8(1297).Icon, obj6);
-      tmp15Result = tmp15(tmp3(5971), obj5);
-      const tmp3Result1 = tmp3(5971);
+      tmp15Result = tmp15(tmp3(5974), obj5);
+      const tmp3Result1 = tmp3(5974);
     }
   }
   items3[2] = tmp15Result;
   const items4 = [closure_7(ManaContext.ThemeContextProvider, { theme: "dark", children: items3 }), ];
-  let tmp15Result1 = activityAction === tmp8(11565).ActivityAction.START;
+  let tmp15Result1 = activityAction === tmp8(11596).ActivityAction.START;
   if (tmp15Result1) {
     const obj7 = { action: null, channelId: null, guildId: null, activityItem: null };
     obj7[0] = activityAction;

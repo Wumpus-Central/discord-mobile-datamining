@@ -21,10 +21,10 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
     flag = false;
   }
   const tmp = callback();
-  let obj = channel(15865);
+  let obj = channel(15899);
   const baseChannelUnreadBadgeState = obj.useBaseChannelUnreadBadgeState(channel, muted);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const tmp7 = flag(14846)(channel, { unread });
+  const tmp7 = flag(14880)(channel, { unread });
   let extractTimestampResult;
   if (null != tmp7) {
     let tmp2Result = tmp2(11);
@@ -37,9 +37,9 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
       str = "text-default";
     }
   }
-  const tmp4 = flag(16488)();
-  const fontScale = channel(4900).useFontScale();
-  tmp2Result = tmp2(16489);
+  const tmp4 = flag(16522)();
+  const fontScale = channel(4903).useFontScale();
+  tmp2Result = tmp2(16523);
   obj = { style: items, underlayColor: tmp.pressableUnderlayColor.backgroundColor };
   items = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = {
@@ -54,8 +54,8 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
   items2 = [channel.id];
   const merged = Object.assign(obj);
   obj1 = { channel, unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted, mentionCount, unreadBadge: null, subtitle: null, latestMessageTimestamp: null, channelName: null, fontScale: null };
-  const tmp5Result = channel(4900);
-  obj1[5] = jsx(flag(16492), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
+  const tmp5Result = channel(4903);
+  obj1[5] = jsx(flag(16526), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
   let tmp11Result = null != tmp7;
   if (tmp11Result) {
     const obj3 = { channel: null, message: null, color: null, muted: null, layout: null };
@@ -63,15 +63,15 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
     obj3[1] = tmp7;
     obj3[2] = str;
     obj3[3] = muted;
-    obj3[4] = tmp5(4140).ChannelListLayoutTypes.COMPACT;
-    tmp11Result = tmp11(tmp5(10130).ChannelRowPreview, obj3);
+    obj3[4] = tmp5(4141).ChannelListLayoutTypes.COMPACT;
+    tmp11Result = tmp11(tmp5(10153).ChannelRowPreview, obj3);
   }
   obj1[6] = tmp11Result;
   obj1[7] = extractTimestampResult;
-  obj1[8] = flag(4640)(channel);
+  obj1[8] = flag(4642)(channel);
   obj1[9] = fontScale;
-  obj.children = flag(16501)(obj1);
-  return tmp2Result(jsx(channel(5033).PressableHighlight, {
+  obj.children = flag(16535)(obj1);
+  return tmp2Result(jsx(channel(5036).PressableHighlight, {
     onPress: importAllResult.useCallback(() => {
       let obj = channel(closure_1_2[3]);
       obj = { navigationReplace: flag };

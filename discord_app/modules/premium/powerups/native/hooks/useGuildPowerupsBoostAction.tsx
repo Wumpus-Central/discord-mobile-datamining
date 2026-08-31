@@ -34,7 +34,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -58,9 +58,9 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               tmp15 = dependencyMap;
               if (dependencyMap > 0) {
                 if (!closure_1_5.hasFetched) {
-                  obj1 = arr(7111);
+                  obj1 = arr(7132);
                   const items = [obj1.init(), ];
-                  let obj2 = PERK(4341);
+                  let obj2 = PERK(4343);
                   items[1] = obj2.fetchGuildBoostSlots();
                   dependencyMap = 1;
                   c3 = 1;
@@ -87,10 +87,10 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
         if (arr.type === closure_1_7.PERK) {
           PERK = closure_1_6.PERK;
         }
-        let obj4 = PERK(4337);
+        let obj4 = PERK(4339);
         arr = obj4.getAvailableGuildBoostSlots(closure_1_5.boostSlots);
         if (arr.length >= dependencyMap) {
-          tmp15 = PERK(5342);
+          tmp15 = PERK(5345);
           obj2 = { guildBoostSlots: null, guildId: null, intent: null };
           obj2[0] = arr.slice(0, dependencyMap);
           obj2[1] = PERK;
@@ -117,8 +117,8 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               const tmpResult = PERK(table[10]);
             }
           };
-          const result = PERK(7093).launchGuildBoostFlowOrAlert(obj3);
-          const obj6 = PERK(7093);
+          const result = PERK(7114).launchGuildBoostFlowOrAlert(obj3);
+          const obj6 = PERK(7114);
         }
       } catch (tmp50) {
         c3 = tmp;

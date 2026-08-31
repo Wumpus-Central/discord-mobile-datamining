@@ -1400,14 +1400,11 @@ definePropertyResult = set.defineProtoSetting("textAndImages", "isCrossDmSearchE
   return BoolValue.create({ value });
 });
 definePropertyResult = set.defineProtoSetting("privacy", "hideFriendRequestNotes", (value) => {
-  let flag;
+  value = undefined;
   if (value != null) {
-    flag = value.value;
+    value = value.value;
   }
-  if (flag == null) {
-    flag = false;
-  }
-  return flag;
+  return value;
 }, (value) => {
   const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });

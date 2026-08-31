@@ -126,7 +126,7 @@ prototype["initialize"] = function initialize(arg0) {
   self.syncWith(items, maybeApplyNoTextColorForLightCustomTheme);
 };
 Object.defineProperty(prototype, "fontScale", {
-  get: function fontScale(applicationAccountLinkMarkAsDismissed, arg1, id) {
+  get: function fontScale(arg0) {
     return obj.fontSize / Accessibility.FONT_SIZE_DEFAULT * 100;
   },
   set: undefined

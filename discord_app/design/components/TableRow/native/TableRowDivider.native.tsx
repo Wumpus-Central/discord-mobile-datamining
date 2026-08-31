@@ -1,35 +1,23 @@
 // discord_app/design/components/TableRow/native/TableRowDivider.native.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 import map from "../../../tokens/native/useToken.tsx";
-import result2 from "../../../migrations/native/LegacyTokens.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import { getTableDividerWidth } from "TableRowConstants.tsx";
+import { TABLE_DIVIDER_WIDTH } from "TableRowConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 require = arg1;
 noopAll;
-let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2) => {
-  const tmp = getTableDividerWidth(arg1);
+let closure_6 = createCacheKey.createStyles((arg0, arg1) => {
+  let obj = { height: TABLE_DIVIDER_WIDTH, paddingStart: null, marginTop: null };
   let num = 12;
   if (arg0) {
-    num = arg2;
+    num = arg1;
   }
-  let prop;
-  if (!arg1) {
-    prop = ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
-  }
-  obj = { container: obj, divider: null };
-  obj = { backgroundColor: prop, height: tmp, paddingStart: num, marginTop: -tmp };
-  obj = { height: tmp, backgroundColor: null };
-  if (arg1) {
-    let DIVIDER_BACKGROUND = ThemesDefault.colors.BORDER_SUBTLE;
-  } else {
-    DIVIDER_BACKGROUND = result2.DIVIDER_BACKGROUND;
-  }
-  obj[1] = DIVIDER_BACKGROUND;
+  obj = { container: obj, divider: num };
+  obj[2] = -TABLE_DIVIDER_WIDTH;
+  obj = { height: tmp, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
   obj[1] = obj;
   return obj;
 });
@@ -41,8 +29,8 @@ export const TableRowDivider = function TableRowDivider(adjustSpacingForIcon) {
     flag = false;
   }
   let obj = map;
-  const tmp2 = callback(flag, useIsMobileVisualRefreshExperimentEnabledDefault("TableRowDivider"), obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING));
-  obj = { style: tmp2.container, children: <View {...obj} /> };
-  obj = { style: tmp2.divider };
-  return <View style={tmp2.divider} />;
+  const tmp = callback(flag, obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING));
+  obj = { style: tmp.container, children: <View {...obj} /> };
+  obj = { style: tmp.divider };
+  return <View style={tmp.divider} />;
 };

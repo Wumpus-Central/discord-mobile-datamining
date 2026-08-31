@@ -2,9 +2,9 @@
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../../Constants.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
-import UrlAll from "../../../_runtime/01489_Url.js";
+import UrlAll from "../../../_runtime/01488_Url.js";
 import BUILD_OVERRIDE_TARGET_NAMES from "BuildOverrideConstants.tsx";
-import parseDefault from "../../../_runtime/04363_parse.js";
+import parseDefault from "../../../_runtime/04365_parse.js";
 import getConstants from "../../utils/native/ClientInfoUtils.tsx";
 import set from "../../utils/PlatformUtils.tsx";
 

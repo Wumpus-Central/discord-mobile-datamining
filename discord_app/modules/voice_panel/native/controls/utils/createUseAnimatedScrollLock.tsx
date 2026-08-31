@@ -18,9 +18,9 @@ export function createUseAnimatedScrollLock(closure_12, sharedValue6, sharedValu
   closure_1 = sharedValue6;
   closure_2 = sharedValue5;
   closure_3 = sharedValue4;
-  return (fn) => {
-    let obj = fn;
-    if (fn === undefined) {
+  return (A) => {
+    let obj = A;
+    if (A === undefined) {
       obj = {};
     }
     const onScrollHandler = obj.onScrollHandler;
@@ -42,7 +42,7 @@ export function createUseAnimatedScrollLock(closure_12, sharedValue6, sharedValu
     class H {
       constructor(arg0) {
         result = closure_3.set(false);
-        velocity = fn.velocity;
+        velocity = A.velocity;
         num = undefined;
         if (velocity != null) {
           num = velocity.y;

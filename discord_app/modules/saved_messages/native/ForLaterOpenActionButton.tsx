@@ -20,9 +20,9 @@ function BadgedIcon(arg0) {
   obj1 = styleProperties;
   const iconSizeStyles = obj1.useIconSizeStyles("sm", true, 2);
   if (type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
-    let BookmarkIcon = tmp4(4409).ClockIcon;
+    let BookmarkIcon = tmp4(4411).ClockIcon;
   } else {
-    BookmarkIcon = tmp4(11224).BookmarkIcon;
+    BookmarkIcon = tmp4(11253).BookmarkIcon;
   }
   obj = { style: items, children: null };
   items = [tmp6.container, iconSizeStyles];

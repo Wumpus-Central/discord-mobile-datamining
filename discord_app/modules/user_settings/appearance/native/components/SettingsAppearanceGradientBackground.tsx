@@ -8,7 +8,7 @@ import importDefaultResult from "../../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
 let c3 = importAllResult;
-let num = module_4186.processColor("rgba(0, 0, 0, 0)");
+let num = module_4187.processColor("rgba(0, 0, 0, 0)");
 if (num == null) {
   num = 0;
 }
@@ -27,65 +27,60 @@ const memoResult = importAllResult.memo(function SettingsAppearanceGradientBackg
   if (BACKGROUND_SURFACE_HIGH === undefined) {
     BACKGROUND_SURFACE_HIGH = sharedValue(sharedValue1[9]).colors.BACKGROUND_SURFACE_HIGH;
   }
-  StyleSheet = undefined;
   let memo;
   sharedValue = undefined;
   sharedValue1 = undefined;
   let sharedValue2;
-  const tmp5 = sharedValue(sharedValue1[10])("SettingsAppearanceGradientBackground");
-  StyleSheet = tmp5;
   let obj = BACKGROUND_SURFACE_HIGH;
-  let items = [tmp5];
-  memo = BACKGROUND_SURFACE_HIGH.useMemo(() => closure_4 ? ["mobile-visual-refresh"] : [], items);
-  const items1 = [themes, themeIndex, isDimmed, memo, BACKGROUND_SURFACE_HIGH];
+  memo = BACKGROUND_SURFACE_HIGH.useMemo(() => ["mobile-visual-refresh"], []);
+  let items = [themes, themeIndex, isDimmed, memo, BACKGROUND_SURFACE_HIGH];
   const memo1 = BACKGROUND_SURFACE_HIGH.useMemo(() => {
     let prop;
     if (launchWelcomeSystemTheme) {
-      prop = memo.BACKGROUND_GRADIENT_DARK_OPACITY;
+      prop = sharedValue.BACKGROUND_GRADIENT_DARK_OPACITY;
     }
     let prop1;
     if (launchWelcomeSystemTheme) {
-      prop1 = memo.BACKGROUND_GRADIENT_LIGHT_OPACITY;
+      prop1 = sharedValue.BACKGROUND_GRADIENT_LIGHT_OPACITY;
     }
     return launchWelcomeSystemTheme(sharedValue1[6]).convertThemesToAnimatedThemes(sharedValue, prop, prop1, memo, BACKGROUND_SURFACE_HIGH)[sharedValue1];
-  }, items1);
+  }, items);
   launchWelcomeSystemTheme = undefined;
   sharedValue = undefined;
   sharedValue1 = undefined;
   launchWelcomeSystemTheme = launchWelcomeSystemTheme(sharedValue1[6]).useLaunchWelcomeSystemTheme();
-  let tmp10 = memo1;
+  let tmp8 = memo1;
   if ("system" === memo1.theme) {
-    tmp10 = launchWelcomeSystemTheme;
+    tmp8 = launchWelcomeSystemTheme;
   }
-  launchWelcomeSystemTheme = tmp10;
-  let tmp8Result = tmp8(tmp4[4]);
-  sharedValue = tmp8Result.useSharedValue({ themePrev: tmp10, themeCurrent: tmp10 });
-  tmp8Result = tmp8(tmp4[4]);
-  sharedValue1 = tmp8Result.useSharedValue(0);
-  const items2 = [tmp10, sharedValue, sharedValue1, launchWelcomeSystemTheme];
+  launchWelcomeSystemTheme = tmp8;
+  let tmp5Result = tmp5(tmp6[4]);
+  sharedValue = tmp5Result.useSharedValue({ themePrev: tmp8, themeCurrent: tmp8 });
+  tmp5Result = tmp5(tmp6[4]);
+  sharedValue1 = tmp5Result.useSharedValue(0);
+  const items1 = [tmp8, sharedValue, sharedValue1, launchWelcomeSystemTheme];
   const effect = obj.useEffect(() => {
     const result = sharedValue.set({ themePrev: sharedValue.get().themeCurrent, themeCurrent: launchWelcomeSystemTheme });
     const result1 = sharedValue1.set(0);
     const obj = { themePrev: sharedValue.get().themeCurrent, themeCurrent: launchWelcomeSystemTheme };
     const result2 = sharedValue1.set(launchWelcomeSystemTheme(sharedValue1[7]).withTiming(1, launchWelcomeSystemTheme(sharedValue1[8]).timingStandard));
-  }, items2);
+  }, items1);
   const obj2 = launchWelcomeSystemTheme(sharedValue1[6]);
-  const tmp3 = sharedValue;
   sharedValue2 = launchWelcomeSystemTheme(sharedValue1[4]).useSharedValue({ width: 0, height: 0 });
-  const items3 = [sharedValue2];
+  const items2 = [sharedValue2];
   const callback = obj.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     const result = sharedValue2.set({ width: nativeEvent.layout.width, height: nativeEvent.layout.height });
-  }, items3);
-  const tmp8Result1 = launchWelcomeSystemTheme(sharedValue1[4]);
+  }, items2);
+  const tmp5Result1 = launchWelcomeSystemTheme(sharedValue1[4]);
   class P {
     constructor() {
-      value = closure_8.get();
+      value = closure_7.get();
       ({ width, height } = value);
       if (0 !== width) {
         if (0 !== height) {
-          tmp2 = closure_6;
-          value1 = closure_6.get();
+          tmp2 = closure_5;
+          value1 = closure_5.get();
           themePrev = value1.themePrev;
           colors = themePrev.colors;
           themeCurrent = value1.themeCurrent;
@@ -93,19 +88,19 @@ const memoResult = importAllResult.memo(function SettingsAppearanceGradientBackg
           tmp4 = closure_0;
           tmp5 = closure_2;
           obj = closure_0(closure_2[4]);
-          tmp6 = closure_7;
+          tmp6 = closure_6;
           items = [, ];
           items[0] = themePrev.angle;
           items[1] = themeCurrent.angle;
           num = 90;
           tmp8 = closure_1;
-          diff = 90 - obj.interpolate(closure_7.get(), [0, 1], items);
-          tmp9 = closure_1(closure_2[11])(diff, width, height);
+          diff = 90 - obj.interpolate(closure_6.get(), [0, 1], items);
+          tmp9 = closure_1(closure_2[10])(diff, width, height);
           obj = { colors: null, locations: null, startPoint: null, endPoint: null };
           obj[0] = colors.map((arg0, arg1) => {
             const obj = launchWelcomeSystemTheme(sharedValue1[4]);
             const items = [colors[arg1].hex, colors[arg1].hex];
-            let num = obj.processColor(launchWelcomeSystemTheme(sharedValue1[4]).interpolateColor(closure_1_7.get(), [0, 1], items));
+            let num = obj.processColor(launchWelcomeSystemTheme(sharedValue1[4]).interpolateColor(closure_1_6.get(), [0, 1], items));
             if (num == null) {
               num = 0;
             }
@@ -113,7 +108,7 @@ const memoResult = importAllResult.memo(function SettingsAppearanceGradientBackg
           });
           obj[1] = colors.map((arg0, arg1) => {
             const items = [colors[arg1].stop / 100, colors[arg1].stop / 100];
-            return launchWelcomeSystemTheme(sharedValue1[4]).interpolate(closure_1_7.get(), [0, 1], items);
+            return launchWelcomeSystemTheme(sharedValue1[4]).interpolate(closure_1_6.get(), [0, 1], items);
           });
           obj1 = { x: null, y: null };
           num2 = 2;
@@ -127,18 +122,18 @@ const memoResult = importAllResult.memo(function SettingsAppearanceGradientBackg
           return obj;
         }
       }
-      return closure_8;
+      return closure_1_8;
     }
   }
-  obj = { gradientSize: sharedValue2, animatedLinearGradientLoadingProps: sharedValue2, themeState: sharedValue, interpolate: tmp8(tmp4[4]).interpolate, tweener: sharedValue1, getGradientStartPoint: tmp3(tmp4[11]), processColor: tmp8(tmp4[4]).processColor, interpolateColor: tmp8(tmp4[4]).interpolateColor };
+  obj = { gradientSize: sharedValue2, animatedLinearGradientLoadingProps: closure_8, themeState: sharedValue, interpolate: tmp5(tmp6[4]).interpolate, tweener: sharedValue1, getGradientStartPoint: sharedValue(tmp6[10]), processColor: tmp5(tmp6[4]).processColor, interpolateColor: tmp5(tmp6[4]).interpolateColor };
   P.__closure = obj;
   P.__workletHash = 5151435414824;
   P.__initData = closure_9;
-  obj = { style: StyleSheet.absoluteFill, onLayout: callback };
+  obj = { style: memo.absoluteFill, onLayout: callback };
   const animatedProps = launchWelcomeSystemTheme(sharedValue1[4]).useAnimatedProps(P);
-  const merged = Object.assign(sharedValue2);
+  const merged = Object.assign(closure_8);
   obj.animatedProps = animatedProps;
-  return sharedValue(sharedValue1, obj);
+  return sharedValue1(sharedValue2, obj);
 });
 let result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceGradientBackground.tsx");
 

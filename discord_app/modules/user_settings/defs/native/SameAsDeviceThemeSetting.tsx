@@ -1,9 +1,8 @@
 // discord_app/modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import handleSaveTheme from "../../appearance/native/UserSettingsAppearanceThemeUtils.tsx";
-import closure_3 from "../../ThemeStore.tsx";
+import closure_2 from "../../ThemeStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
 require = arg1;
@@ -13,11 +12,8 @@ createToggle = {
     return intl.string(getSystemLocale.t.c445ix);
   },
   parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
-  usePredicate() {
-    return useIsMobileVisualRefreshExperimentEnabledDefault("SameAsDeviceThemeSetting");
-  },
   useValue: function useSameAsDeviceThemeValue() {
-    const items = [closure_3];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   onValueChange: function onSameAsDeviceThemeValueChange(arg0) {

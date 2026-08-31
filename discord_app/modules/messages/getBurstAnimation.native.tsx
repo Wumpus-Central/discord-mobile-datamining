@@ -4,119 +4,11 @@ import asyncGeneratorStepDefault from "../../../_runtime/00005_asyncGeneratorSte
 let closure_0 = arg1;
 let obj = {
   load() {
-    return callback(7477);
+    return callback(7498);
   }
 };
 const items = [
   obj,
-  {
-    load() {
-      return callback(7478);
-    }
-  },
-  {
-    load() {
-      return callback(7479);
-    }
-  },
-  {
-    load() {
-      return callback(7480);
-    }
-  },
-  {
-    load() {
-      return callback(7481);
-    }
-  },
-  {
-    load() {
-      return callback(7482);
-    }
-  },
-  {
-    load() {
-      return callback(7483);
-    }
-  },
-  {
-    load() {
-      return callback(7484);
-    }
-  },
-  {
-    load() {
-      return callback(7485);
-    }
-  },
-  {
-    load() {
-      return callback(7486);
-    }
-  },
-  {
-    load() {
-      return callback(7487);
-    }
-  },
-  {
-    load() {
-      return callback(7488);
-    }
-  },
-  {
-    load() {
-      return callback(7489);
-    }
-  },
-  {
-    load() {
-      return callback(7490);
-    }
-  },
-  {
-    load() {
-      return callback(7491);
-    }
-  },
-  {
-    load() {
-      return callback(7492);
-    }
-  },
-  {
-    load() {
-      return callback(7493);
-    }
-  },
-  {
-    load() {
-      return callback(7494);
-    }
-  }
-];
-obj = {
-  load() {
-    return callback(7495);
-  }
-};
-const items1 = [
-  obj,
-  {
-    load() {
-      return callback(7496);
-    }
-  },
-  {
-    load() {
-      return callback(7497);
-    }
-  },
-  {
-    load() {
-      return callback(7498);
-    }
-  },
   {
     load() {
       return callback(7499);
@@ -186,6 +78,114 @@ const items1 = [
     load() {
       return callback(7512);
     }
+  },
+  {
+    load() {
+      return callback(7513);
+    }
+  },
+  {
+    load() {
+      return callback(7514);
+    }
+  },
+  {
+    load() {
+      return callback(7515);
+    }
+  }
+];
+obj = {
+  load() {
+    return callback(7516);
+  }
+};
+const items1 = [
+  obj,
+  {
+    load() {
+      return callback(7517);
+    }
+  },
+  {
+    load() {
+      return callback(7518);
+    }
+  },
+  {
+    load() {
+      return callback(7519);
+    }
+  },
+  {
+    load() {
+      return callback(7520);
+    }
+  },
+  {
+    load() {
+      return callback(7521);
+    }
+  },
+  {
+    load() {
+      return callback(7522);
+    }
+  },
+  {
+    load() {
+      return callback(7523);
+    }
+  },
+  {
+    load() {
+      return callback(7524);
+    }
+  },
+  {
+    load() {
+      return callback(7525);
+    }
+  },
+  {
+    load() {
+      return callback(7526);
+    }
+  },
+  {
+    load() {
+      return callback(7527);
+    }
+  },
+  {
+    load() {
+      return callback(7528);
+    }
+  },
+  {
+    load() {
+      return callback(7529);
+    }
+  },
+  {
+    load() {
+      return callback(7530);
+    }
+  },
+  {
+    load() {
+      return callback(7531);
+    }
+  },
+  {
+    load() {
+      return callback(7532);
+    }
+  },
+  {
+    load() {
+      return callback(7533);
+    }
   }
 ];
 closure_0 = asyncGeneratorStepDefault((arg0, arg1, arg2) => {
@@ -207,7 +207,7 @@ closure_0 = asyncGeneratorStepDefault((arg0, arg1, arg2) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -231,7 +231,7 @@ closure_0 = asyncGeneratorStepDefault((arg0, arg1, arg2) => {
             burstAnimationHash = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "ct", done: true };
+            return { value: "Object", done: true };
           }
         } else if (arg0 === 1) {
           c7 = 3;

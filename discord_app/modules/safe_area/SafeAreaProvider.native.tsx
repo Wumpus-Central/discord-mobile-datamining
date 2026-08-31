@@ -1,6 +1,6 @@
 // discord_app/modules/safe_area/SafeAreaProvider.native.tsx
 import EMPTY_SAFE_AREA_INSETS from "SafeAreaConstants.native.tsx";
-import _mod1632 from "../../../_runtime/metro/01632__.js";
+import _mod1631 from "../../../_runtime/metro/01631__.js";
 import closure_3 from "../../../_runtime/00019_noop.js";
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
@@ -10,9 +10,9 @@ let closure_6 = { position: "absolute", width: 0, height: 0 };
 const result = require("set").fileFinishedImporting("modules/safe_area/SafeAreaProvider.native.tsx");
 
 export const SafeAreaReporter = function SafeAreaReporter() {
-  let obj = safeAreaInsets(1632);
+  let obj = safeAreaInsets(1631);
   safeAreaInsets = obj.useSafeAreaInsets();
-  const appEntryKey = safeAreaInsets(1497).useAppEntryKey();
+  const appEntryKey = safeAreaInsets(1496).useAppEntryKey();
   const items = [safeAreaInsets, appEntryKey];
   const layoutEffect = React.useLayoutEffect(() => {
     safeAreaInsets(ref[8]).batchUpdates(() => {
@@ -162,5 +162,5 @@ export const SafeAreaReporter = function SafeAreaReporter() {
 };
 export const SafeAreaProvider = function SafeAreaProvider(arg0) {
   ({ children, style } = arg0);
-  return jsx(_mod1632.SafeAreaProvider, { initialMetrics: EMPTY_SAFE_AREA_INSETS.INITIAL_SAFE_AREA_METRICS, children, style });
+  return jsx(_mod1631.SafeAreaProvider, { initialMetrics: EMPTY_SAFE_AREA_INSETS.INITIAL_SAFE_AREA_METRICS, children, style });
 };

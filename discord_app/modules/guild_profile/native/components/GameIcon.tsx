@@ -24,7 +24,7 @@ export default function GameIcon(arg0) {
   const iconURL = game.getIconURL(24);
   let source = null;
   if (null != iconURL) {
-    let obj = onPress(1435);
+    let obj = onPress(1431);
     source = obj.makeSource(iconURL);
   }
   const items = [game, onPress];
@@ -57,7 +57,7 @@ export default function GameIcon(arg0) {
         source = closure_4;
         obj1 = { style: null, children: null };
         obj1[0] = fireIcon.gameIconMask;
-        FireIcon = FireIcon(8962).FireIcon;
+        FireIcon = FireIcon(8985).FireIcon;
         const obj2 = { style: null, color: null };
         fireIcon = fireIcon.fireIcon;
         obj2[0] = fireIcon;
@@ -68,7 +68,7 @@ export default function GameIcon(arg0) {
       }
       callback[1] = style;
       obj[2] = callback;
-      let tmp14Result = closure_7(FireIcon(5033).PressableHighlight, obj);
+      let tmp14Result = closure_7(FireIcon(5036).PressableHighlight, obj);
       const tmp10 = closure_7;
     } else {
       const obj3 = { style: null, children: null };
@@ -85,7 +85,7 @@ export default function GameIcon(arg0) {
         const obj6 = { style: null, color: null };
         obj6[0] = fireIcon.fireIcon;
         obj6[1] = onPress(712).unsafe_rawColors.ORANGE_330;
-        obj5[1] = tmp16(FireIcon(8962).FireIcon, obj6);
+        obj5[1] = tmp16(FireIcon(8985).FireIcon, obj6);
         tmp16Result = tmp16(tmp15, obj5);
       }
       items3[1] = tmp16Result;

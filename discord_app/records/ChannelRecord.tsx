@@ -7,7 +7,7 @@ import set29 from "../../discord_common/js/shared/shared-constants/ForumLayout.t
 import set30 from "../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
 import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import exact from "../../discord_common/js/packages/type-utils/TypeUtils.tsx";
-import privDefault from "../../_runtime/01405_priv.js";
+import privDefault from "../../_runtime/01401_priv.js";
 import closure_4 from "../modules/stage_channels/StageInstanceStore.tsx";
 import ME from "../Constants.tsx";
 import { ChannelFlags } from "../modules/channel/ChannelConstants.tsx";
@@ -621,7 +621,7 @@ class UnknownChannelRecord extends ChannelRecordBase {
   }
 }
 UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
-  obj = { application_id: application_id.application_id, appliedTags: application_id.applied_tags, availableTags: null, bitrate_: null, defaultAutoArchiveDuration: null, defaultForumLayout: null, defaultReactionEmoji: null, defaultSortOrder: null, defaultTagSetting: null, defaultThreadRateLimitPerUser: null, flags_: null, gameId: null, guild_id: null, icon: null, iconEmoji: null, id: null, isMessageRequest: null, isMessageRequestTimestamp: null, isSpam: null, lastMessageId: null, lastNonMessageActivityTimestamp: null, lastPinTimestamp: null, member: null, memberCount: null, memberIdsPreview: null, memberListId: null, messageCount: null, name: null, nicks: null, nsfw_: null, originChannelId: null, ownerId: null, parent_id: null, parentChannelThreadType: "find", permissionOverwrites_: true, position_: true, rateLimitPerUser_: true, rawRecipients: true, recipients: true, recipientFlags: true, rtcRegion: "D", safetyWarnings: "DD", blockedUserWarningDismissed: "validate", template: null, themeColor: "\u{1F93D}\u200D\u2642\uFE0F", threadMetadata: true, topic_: 9, totalMessageSent: 292, type: null, userLimit_: "\u{1F6C1}", version: 6, videoQualityMode: 916, linkedLobby: "parse", hdStreamingUntil: null, hdStreamingBuyerId: "\u{1F6A3}", voiceHangout: true };
+  obj = { application_id: application_id.application_id, appliedTags: application_id.applied_tags, availableTags: null, bitrate_: null, defaultAutoArchiveDuration: null, defaultForumLayout: null, defaultReactionEmoji: null, defaultSortOrder: null, defaultTagSetting: null, defaultThreadRateLimitPerUser: null, flags_: null, gameId: null, guild_id: null, icon: null, iconEmoji: null, id: null, isMessageRequest: null, isMessageRequestTimestamp: null, isSpam: null, lastMessageId: null, lastNonMessageActivityTimestamp: null, lastPinTimestamp: null, member: null, memberCount: null, memberIdsPreview: null, memberListId: null, messageCount: null, name: null, nicks: null, nsfw_: null, originChannelId: null, ownerId: null, parent_id: null, parentChannelThreadType: "fill", permissionOverwrites_: true, position_: true, rateLimitPerUser_: true, rawRecipients: true, recipients: true, recipientFlags: true, rtcRegion: "D", safetyWarnings: "DD", blockedUserWarningDismissed: "YY", template: "YYYY", themeColor: 53410560, threadMetadata: 49118464, topic_: 57268480, totalMessageSent: 50906624, type: 53051648, userLimit_: -1649266176, version: -1681479697, videoQualityMode: 755908692, linkedLobby: -940597838, hdStreamingUntil: 25575505, hdStreamingBuyerId: 301655121, voiceHangout: 1650 };
   if (null == application_id.available_tags) {
     obj[2] = undefined;
     ({ bitrate: obj[3], default_auto_archive_duration: obj[4], default_forum_layout: obj[5] } = application_id);
@@ -726,7 +726,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
     }
     obj[48] = UNKNOWN;
     ({ user_limit: obj[49], version: obj[50], video_quality_mode: obj[51], linked_lobby: obj[52], hd_streaming_until: obj[53], hd_streaming_buyer_id: obj[54], voice_hangout: obj[55] } = application_id);
-    return obj3(1404).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj3(1400).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
@@ -818,7 +818,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id) {
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj(1404).dangerouslyCast(obj, tmp7);
+  return obj(1400).dangerouslyCast(obj, tmp7);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -893,7 +893,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id) {
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj(1404).dangerouslyCast(obj, tmp7);
+  return obj(1400).dangerouslyCast(obj, tmp7);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {
 }
@@ -1014,7 +1014,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags) {
     }
     obj[24] = GUILD_TEXT;
     obj[25] = available_tags.version;
-    return obj1(1404).dangerouslyCast(obj, ForumChannelRecord);
+    return obj1(1400).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {

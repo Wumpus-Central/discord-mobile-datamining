@@ -22,8 +22,8 @@ let closure_5 = apply.memoize((arg0) => {
   }
   tmpResult = tmp(1363);
   if (tmpResult.isThemeDark(arg0)) {
-    let GREY1 = tmp(4294).hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_300, 0.6);
-    const tmpResult1 = tmp(4294);
+    let GREY1 = tmp(4296).hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_300, 0.6);
+    const tmpResult1 = tmp(4296);
   } else {
     GREY1 = UNSAFE_Colors.GREY1;
   }

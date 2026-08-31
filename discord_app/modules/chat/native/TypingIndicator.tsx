@@ -22,18 +22,17 @@ function TypingIndicatorInner(channel) {
   let sharedValue;
   let sharedValue1;
   let obj = channel(cleanUp[13]);
-  obj1 = channel(cleanUp[14]);
-  let customTypingIndicatorConfig = obj1.useCustomTypingIndicatorConfig("TypingIndicatorInner");
+  let customTypingIndicatorConfig = obj.useCustomTypingIndicatorConfig("TypingIndicatorInner");
   canView = customTypingIndicatorConfig.canView;
-  let obj2 = channel(cleanUp[10]);
+  obj1 = channel(cleanUp[10]);
   let items = [sharedValue];
-  stateFromStores = obj2.useStateFromStores(items, () => sharedValue.get("preview_own_typing_indicator"));
-  let obj3 = canView;
+  stateFromStores = obj1.useStateFromStores(items, () => sharedValue.get("preview_own_typing_indicator"));
+  let obj2 = canView;
   const callback = canView.useCallback(() => {
-    const result = channel(cleanUp[15]).openCustomTypingIndicatorAnnounceActionSheet();
+    const result = channel(cleanUp[14]).openCustomTypingIndicatorAnnounceActionSheet();
   }, []);
   obj = { channelId: channel.id, guildId: channel.getGuildId(), typingUserIds };
-  const tmp7Result = transitionState(cleanUp[16])(obj);
+  const tmp7Result = transitionState(cleanUp[15])(obj);
   first = null;
   if (1 === typingUserIds.length) {
     first = typingUserIds[0];
@@ -65,9 +64,9 @@ function TypingIndicatorInner(channel) {
               guildEmojis = sharedValue1.getGuildEmojis(guildId);
             }
             const obj = { config: null, name: null };
-            const obj2 = channel(cleanUp[17]);
+            const obj2 = channel(cleanUp[16]);
             obj[0] = obj2.getViewableCustomTypingIndicatorConfig(customTypingIndicatorConfig, channel, tmp, guildEmojis);
-            obj[1] = transitionState(cleanUp[18]).getName(guildId, channel.id, user);
+            obj[1] = transitionState(cleanUp[17]).getName(guildId, channel.id, user);
             return obj;
           }
         }
@@ -76,23 +75,24 @@ function TypingIndicatorInner(channel) {
     }
     return { config: null, name: null };
   }, items2);
-  tmpResult = tmp(tmp2[19]);
+  tmpResult = tmp(tmp2[18]);
   sharedValue = tmpResult.useSharedValue(undefined);
   const items3 = [sharedValue];
-  const callback1 = obj3.useCallback((nativeEvent) => {
+  const callback1 = obj2.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout);
   }, items3);
-  const tmp13 = callback3();
-  let tmp7 = transitionState(cleanUp[16]);
-  sharedValue1 = channel(cleanUp[19]).useSharedValue(0);
+  let tmp7 = transitionState(cleanUp[15]);
+  const tmp13 = callback3(channel(cleanUp[19]).useToken(transitionState(cleanUp[12]).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING));
+  const tmpResult1 = channel(cleanUp[19]);
+  sharedValue1 = channel(cleanUp[18]).useSharedValue(0);
   const items4 = [cleanUp, transitionState, sharedValue1];
-  const effect = obj3.useEffect(() => {
+  const effect = obj2.useEffect(() => {
     if (transitionState === channel(cleanUp[20]).TransitionStates.YEETED) {
       const result = sharedValue1.set(0);
       cleanUp();
     }
   }, items4);
-  const tmpResult1 = channel(cleanUp[19]);
+  const tmpResult2 = channel(cleanUp[18]);
   class D {
     constructor() {
       return closure_6.get();
@@ -122,93 +122,75 @@ function TypingIndicatorInner(channel) {
   fn.__closure = obj;
   fn.__workletHash = 14874351700395;
   fn.__initData = closure_16;
-  const animatedReaction = channel(cleanUp[19]).useAnimatedReaction(D, fn);
-  const tmpResult2 = channel(cleanUp[19]);
-  class G {
-    constructor() {
-      value = closure_6.get();
-      obj = closure_7;
-      if (0 === closure_7.get()) {
-        num = 0;
-      } else {
-        tmp2 = transitionState;
-        tmp3 = channel;
-        tmp4 = cleanUp;
-        num = 1;
-      }
-      obj = { opacity: num, top: null, transform: null };
-      height = undefined;
-      if (value != null) {
-        height = value.height;
-      }
-      obj[1] = height;
-      obj1 = { translateY: obj.get() };
-      items = [];
-      items[0] = obj1;
-      obj[2] = items;
-      return obj;
+  const animatedReaction = channel(cleanUp[18]).useAnimatedReaction(D, fn);
+  const tmpResult3 = channel(cleanUp[18]);
+  const fn2 = function k() {
+    const value = sharedValue.get();
+    let obj = sharedValue1;
+    if (0 === sharedValue1.get()) {
+      let num = 0;
+    } else {
+      num = 1;
     }
-  }
+    obj = { opacity: num, top: null, transform: null };
+    let height;
+    if (value != null) {
+      height = value.height;
+    }
+    obj[1] = height;
+    obj = { translateY: obj.get() };
+    const items = [obj];
+    obj[2] = items;
+    return obj;
+  };
   obj1 = { typingIndicatorLayout: sharedValue, translateYValue: sharedValue1, transitionState, TransitionStates: tmp(tmp2[20]).TransitionStates };
-  G.__closure = obj1;
-  G.__workletHash = 15240163018691;
-  G.__initData = closure_17;
-  const animatedStyle = channel(cleanUp[19]).useAnimatedStyle(G);
-  const tmpResult3 = channel(cleanUp[19]);
-  const token = channel(cleanUp[23]).useToken(tmp6(tmp2[12]).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING);
-  const items5 = [tmp13.typingWrapper, , ];
-  let tmp20;
-  if (obj.useMobileVisualRefreshConfig({ location: "TypingIndicatorInner" }).chatInputFloating) {
-    const items6 = [tmp13.floatingWrapper, ];
-    obj2 = { paddingLeft: null };
-    obj2[0] = 2 * token;
-    items6[1] = obj2;
-    tmp20 = items6;
-  }
-  obj3 = { style: items5, onLayout: callback1, children: null };
-  items5[1] = tmp20;
-  items5[2] = animatedStyle;
-  const obj4 = { style: tmp13.wrapperHoriz, children: null };
-  const obj5 = { style: tmp13.horiz, children: null };
+  fn2.__closure = obj1;
+  fn2.__workletHash = 15240163018691;
+  fn2.__initData = closure_17;
+  const animatedStyle = channel(cleanUp[18]).useAnimatedStyle(fn2);
+  obj2 = { style: items5, onLayout: callback1, children: null };
+  items5 = [tmp13.typingWrapper, animatedStyle];
+  const obj3 = { style: tmp13.wrapperHoriz, children: null };
+  const obj4 = { style: tmp13.horiz, children: null };
   if (null != stateFromStoresObject.config) {
-    const obj6 = { config: null, username: null, onPress: null };
-    ({ config: obj20[0], name: obj20[1] } = stateFromStoresObject);
-    let tmp27;
+    const obj5 = { config: null, username: null, onPress: null };
+    ({ config: obj18[0], name: obj18[1] } = stateFromStoresObject);
+    let tmp25;
     if (customTypingIndicatorConfig.canSet) {
-      tmp27 = callback;
+      tmp25 = callback;
     }
-    obj6[2] = tmp27;
-    let tmp21Result = tmp19(tmp6(tmp2[24]), obj6);
-    const tmp6Result = tmp6(tmp2[24]);
+    obj5[2] = tmp25;
+    let tmp19Result = tmp18(tmp6(tmp2[23]), obj5);
+    const tmp6Result = tmp6(tmp2[23]);
   } else {
-    let tmp19Result = null;
+    let tmp18Result = null;
     if (null != tmp7Result) {
-      tmp19Result = tmp19(tmp(tmp2[25]).Ellipsis, {});
+      tmp18Result = tmp18(tmp(tmp2[24]).Ellipsis, {});
     }
-    const obj7 = { children: null };
-    const items7 = [tmp19Result, ];
-    const obj8 = { style: null, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/medium", color: "interactive-text-default", includeFontPadding: true, ellipsizeMode: "tail", children: null };
-    obj8[0] = tmp13.text;
-    obj8[7] = tmp7Result;
-    items7[1] = tmp19(tmp(tmp2[26]).Text, obj8);
-    obj7[0] = items7;
-    tmp21Result = tmp21(closure_12, obj7);
-    const tmp23 = closure_12;
+    const obj6 = { children: null };
+    const items6 = [tmp18Result, ];
+    const obj7 = { style: null, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/medium", color: "interactive-text-default", includeFontPadding: true, ellipsizeMode: "tail", children: null };
+    obj7[0] = tmp13.text;
+    obj7[7] = tmp7Result;
+    items6[1] = tmp18(tmp(tmp2[25]).Text, obj7);
+    obj6[0] = items6;
+    tmp19Result = tmp19(closure_12, obj6);
+    const tmp21 = closure_12;
   }
-  obj5[1] = tmp21Result;
-  const items8 = [closure_11(stateFromStores, obj5), ];
-  let tmp19Result1 = null;
+  obj4[1] = tmp19Result;
+  const items7 = [closure_11(stateFromStores, obj4), ];
+  let tmp18Result1 = null;
   if (channel.rateLimitPerUser > 0) {
-    const obj9 = { channel: null, hasTypingText: null, slowmodeType: null };
-    obj9[0] = channel;
-    obj9[1] = null != tmp7Result;
-    obj9[2] = SlowmodeType.SendMessage;
-    tmp19Result1 = tmp19(tmp6(tmp2[27]), obj9);
+    const obj8 = { channel: null, hasTypingText: null, slowmodeType: null };
+    obj8[0] = channel;
+    obj8[1] = null != tmp7Result;
+    obj8[2] = SlowmodeType.SendMessage;
+    tmp18Result1 = tmp18(tmp6(tmp2[26]), obj8);
   }
-  items8[1] = tmp19Result1;
-  obj4[1] = items8;
-  obj3[2] = closure_13(stateFromStores, obj4);
-  return closure_11(transitionState(cleanUp[19]).View, obj3);
+  items7[1] = tmp18Result1;
+  obj3[1] = items7;
+  obj2[2] = closure_13(stateFromStores, obj3);
+  return closure_11(transitionState(cleanUp[18]).View, obj2);
 }
 function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   const obj = {};
@@ -219,19 +201,19 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
 }
 let c3 = importAllResult;
 ({ jsx: unpackModuleId, Fragment: closure_12, jsxs: map1 } = jsxProd);
-let obj = { typingWrapper: null, floatingWrapper: null, wrapperHoriz: null, horiz: null, text: null };
-obj = { paddingTop: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.MOBILE_TYPING_INDICATOR_BACKGROUND_DEFAULT };
-obj[0] = obj;
-createCacheKey = { backgroundColor: "transparent", paddingRight: ThemesDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING };
-obj[1] = createCacheKey;
-obj[2] = { justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
-obj[3] = { marginRight: ThemesDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
-obj[4] = { flex: 1 };
-let closure_14 = createCacheKey.createStyles(obj);
+let closure_14 = createCacheKey.createStyles((arg0) => {
+  let obj = { typingWrapper: null, wrapperHoriz: null, horiz: null, text: null };
+  obj = { paddingTop: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: ThemesDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 };
+  obj[0] = obj;
+  obj[1] = { justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
+  obj = { marginRight: ThemesDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
+  obj[2] = obj;
+  obj[3] = { flex: 1 };
+  return obj;
+});
 let closure_15 = { code: "function TypingIndicatorTsx1(){const{typingIndicatorLayout}=this.__closure;return typingIndicatorLayout.get();}" };
 let closure_16 = { code: "function TypingIndicatorTsx2(current,prev){const{translateYValue,withSpring,springStandard}=this.__closure;if(current===prev)return;if(current==null)return;if(current.y.toFixed(2)!==current.height.toFixed(2))return;translateYValue.set(withSpring(-current.height,springStandard,'respect-motion-settings'));}" };
 let closure_17 = { code: "function TypingIndicatorTsx3(){const{typingIndicatorLayout,translateYValue,transitionState,TransitionStates}=this.__closure;const layout=typingIndicatorLayout.get();return{opacity:translateYValue.get()===0||transitionState===TransitionStates.YEETED?0:1,top:layout===null||layout===void 0?void 0:layout.height,transform:[{translateY:translateYValue.get()}]};}" };
-let obj2 = { marginRight: ThemesDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   let typingUserIds = channel;

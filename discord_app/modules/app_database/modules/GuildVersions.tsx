@@ -74,7 +74,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -204,8 +204,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op) {
     writes = emojis.writes;
   } else {
-    set(1370).assertNever(emojis);
-    const obj = set(1370);
+    set(1471).assertNever(emojis);
+    const obj = set(1471);
   }
   this.updateWith(id, writes);
   const stickers = guild.stickers;
@@ -215,8 +215,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op2) {
     writes2 = stickers.writes;
   } else {
-    set(1370).assertNever(stickers);
-    const obj2 = set(1370);
+    set(1471).assertNever(stickers);
+    const obj2 = set(1471);
   }
   self.updateWith(id, writes2);
   const channels = guild.channels;
@@ -226,8 +226,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op3) {
     writes3 = channels.writes;
   } else {
-    set(1370).assertNever(channels);
-    const obj3 = set(1370);
+    set(1471).assertNever(channels);
+    const obj3 = set(1471);
   }
   self.updateWith(id, writes3);
   const roles = guild.roles;
@@ -237,8 +237,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op4) {
     writes4 = roles.writes;
   } else {
-    set(1370).assertNever(roles);
-    const obj4 = set(1370);
+    set(1471).assertNever(roles);
+    const obj4 = set(1471);
   }
   self.updateWith(id, writes4);
   self.commit(arg1);

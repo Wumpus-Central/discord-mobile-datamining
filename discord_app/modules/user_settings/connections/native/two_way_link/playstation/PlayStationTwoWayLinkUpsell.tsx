@@ -5,7 +5,7 @@ import DismissibleContent from "../../../../../../../discord_common/js/packages/
 import combinedDefault from "../../../../../../utils/HelpdeskUtils.tsx";
 import preloadDefault from "../../../../../../components_native/common/FastImage.tsx";
 import OneWayToTwoWayNewTag from "../OneWayToTwoWayLinkUpsell.tsx";
-import registerAssetDefault from "../../../../../../../_runtime/14508_registerAsset.js";
+import registerAssetDefault from "../../../../../../../_runtime/14542_registerAsset.js";
 import ME from "../../../../../../Constants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";

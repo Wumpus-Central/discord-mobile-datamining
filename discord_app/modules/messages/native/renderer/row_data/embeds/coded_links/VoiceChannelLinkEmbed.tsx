@@ -42,8 +42,8 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
                 icon1 = guild.icon;
               }
               obj[1] = icon1;
-              const guildIconURL = tmp4(1435).getGuildIconURL(obj);
-              const tmp4Result = tmp4(1435);
+              const guildIconURL = tmp4(1431).getGuildIconURL(obj);
+              const tmp4Result = tmp4(1431);
             } else if (null != guild) {
               const tmp8 = getGuildAcronym(guild);
             }
@@ -69,14 +69,14 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj.acceptLabelText = stringResult;
             obj.onlineText = undefined;
             obj.memberText = undefined;
-            let tmp16Result = tmp16(4946);
+            let tmp16Result = tmp16(4949);
             const assetSource = Image.resolveAssetSource(tmp16Result.getChannelIcon(channel));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
             }
             obj.channelIcon = uri;
-            tmp16Result = tmp16(4640);
+            tmp16Result = tmp16(4642);
             obj.titleText = tmp16Result.computeChannelName(channel, closure_10, closure_9);
             obj.titleColor = colors.titleColor;
             let tmp24;

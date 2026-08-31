@@ -1,6 +1,5 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButton.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useIsMobileVisualRefreshExperimentEnabled from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
@@ -9,27 +8,15 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
-let closure_5 = createCacheKey.createStyles((arg0, height, marginHorizontal) => {
-  const radii = ThemesDefault.radii;
-  if (arg0) {
-    let round = radii.sm;
-    let tmp4 = tmp;
-  } else {
-    round = radii.round;
-    tmp4 = tmp;
-  }
-  let obj = { borderRadius: round, height, width: height, marginHorizontal, flexShrink: 0, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: null };
-  let prop;
-  if (!arg0) {
-    prop = tmp4(712).colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND;
-  }
-  obj = { actionButton: obj, actionButtonIcon: null, actionButtonIconActive: null, actionButtonIconDisabled: null };
-  obj[8] = prop;
-  obj = { tintColor: tmp4(712).colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT, width: tmp4(712).modules.mobile.CHAT_INPUT_ACTION_ICON_PIXEL_SIZE, height: tmp4(712).modules.mobile.CHAT_INPUT_ACTION_ICON_PIXEL_SIZE };
+let closure_5 = createCacheKey.createStyles((height, marginHorizontal) => {
+  let obj = { actionButton: null, actionButtonIcon: null, actionButtonIconActive: null, actionButtonIconDisabled: null };
+  obj = { borderRadius: ThemesDefault.radii.sm, height, width: height, marginHorizontal, flexShrink: 0, flexDirection: "row", alignItems: "center", justifyContent: "center" };
+  obj[0] = obj;
+  obj = { tintColor: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT, width: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_ICON_PIXEL_SIZE, height: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_ICON_PIXEL_SIZE };
   obj[1] = obj;
-  obj[2] = { tintColor: tmp4(712).colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
-  obj1 = { tintColor: tmp4(712).colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
-  obj[3] = { tintColor: tmp4(712).colors.ICON_MUTED };
+  obj[2] = { tintColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
+  obj1 = { tintColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
+  obj[3] = { tintColor: ThemesDefault.colors.ICON_MUTED };
   return obj;
 });
 const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref) => {
@@ -38,46 +25,39 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
     flag = false;
   }
   ({ style, disabled, accessibilityState, activeStyle, activeIconStyle, onPress, accessible, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, IconComponent } = active);
-  let obj = useIsMobileVisualRefreshExperimentEnabled;
-  const mobileVisualRefreshConfig = obj.useMobileVisualRefreshConfig({ location: "ChatInputActionButton" });
-  ({ enabled, chatInputFloating } = mobileVisualRefreshConfig);
-  const token = map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  let obj = map;
+  const token = obj.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const token1 = map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   const obj2 = map;
   const tmp = require;
-  const token1 = map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-  const obj3 = map;
   const token2 = map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
-  const tmp7 = callback(enabled, token, token1);
-  let tmp8;
-  if (chatInputFloating) {
-    const flattenResult = StyleSheet.flatten(style);
-    let height;
-    if (flattenResult != null) {
-      height = flattenResult.height;
-    }
-    tmp8 = height;
+  const tmp6 = callback(token, token1);
+  const flattenResult = StyleSheet.flatten(style);
+  let height;
+  if (flattenResult != null) {
+    height = flattenResult.height;
   }
-  let tmp13 = token;
-  if (typeof tmp8 === "number") {
-    tmp13 = tmp8;
+  let tmp9 = token;
+  if (typeof height === "number") {
+    tmp9 = height;
   }
-  const bound = Math.max(0, (token2 - tmp13) / 2);
+  const bound = Math.max(0, (token2 - tmp9) / 2);
   obj = { ref, style: null, hitSlop: null, disabled: null, accessible: null, accessibilityRole: "button", accessibilityState: null, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, children: null };
-  const items = [tmp7.actionButton, style, ];
-  let tmp16 = flag;
+  const items = [tmp6.actionButton, style, ];
+  let tmp12 = flag;
   if (flag) {
-    tmp16 = !disabled;
+    tmp12 = !disabled;
   }
-  if (tmp16) {
-    tmp16 = activeStyle;
+  if (tmp12) {
+    tmp12 = activeStyle;
   }
-  items[2] = tmp16;
+  items[2] = tmp12;
   obj[1] = items;
-  let tmp17;
+  let tmp13;
   if (bound > 0) {
-    tmp17 = bound;
+    tmp13 = bound;
   }
-  obj[2] = tmp17;
+  obj[2] = tmp13;
   obj[3] = disabled;
   obj[4] = accessible;
   obj = { disabled };
@@ -88,10 +68,10 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
   obj[9] = accessibilityActions;
   obj[10] = onAccessibilityAction;
   obj[11] = onPress;
-  const items1 = [tmp7.actionButtonIcon, , , ];
+  const items1 = [tmp6.actionButtonIcon, , , ];
   let actionButtonIconActive = flag;
   if (flag) {
-    actionButtonIconActive = tmp7.actionButtonIconActive;
+    actionButtonIconActive = tmp6.actionButtonIconActive;
   }
   items1[1] = actionButtonIconActive;
   if (flag) {
@@ -99,7 +79,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
   }
   items1[2] = flag;
   if (disabled) {
-    disabled = tmp7.actionButtonIconDisabled;
+    disabled = tmp6.actionButtonIconDisabled;
   }
   items1[3] = disabled;
   obj[12] = <IconComponent size="custom" style={items1} />;

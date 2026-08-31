@@ -53,7 +53,7 @@ export const getSurpriseMeEmojiPool = function getSurpriseMeEmojiPool() {
     usableGuildEmoji = usableGuildEmoji.getUsableGuildEmoji(arg0);
     const found = usableGuildEmoji.filter((emoji) => {
       obj = callback(table[10]);
-      obj = { emoji, channel: null, guildId: "Array", intention: true, bypassPremiumEmojiEntitlement: "/assets/modules/go_live/web/modal" };
+      obj = { emoji, channel: null, guildId: "Array", intention: true, bypassPremiumEmojiEntitlement: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl" };
       obj[3] = constants.TYPING_INDICATOR;
       return null == obj.getEmojiUnavailableReason(obj);
     });

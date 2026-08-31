@@ -1,7 +1,7 @@
 // discord_app/modules/message_previews/native/MessagePreviewMarkup.tsx
-import privDefault from "../../../../_runtime/01405_priv.js";
+import privDefault from "../../../../_runtime/01401_priv.js";
 import ChannelListLayoutTypes from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
-import tDefault from "../../../../_runtime/04161_t.js";
+import tDefault from "../../../../_runtime/04162_t.js";
 import get_defaultRulesDefault from "../../markup/MarkupUtils.tsx";
 import combineMarkupRulesDefault from "../../markup/combineMarkupRules.tsx";
 import parseLinkDefault from "../../markup/MarkupRules.tsx";

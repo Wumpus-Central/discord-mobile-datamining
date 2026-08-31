@@ -1,7 +1,7 @@
 // discord_app/modules/auth/RedirectUnauthenticated.tsx
 import noopAll from "../../../_runtime/00019_noop.js";
 import getAuthenticationPath from "../../../discord_common/js/shared/utils/PathUtils.tsx";
-import _extends from "../../../_runtime/metro/04279__extends.js";
+import _extends from "../../../_runtime/metro/04280__extends.js";
 import { Routes } from "../../Constants.tsx";
 import { CONFERENCE_MODE_ENABLED } from "../conference_mode/ConferenceModeConstants.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";

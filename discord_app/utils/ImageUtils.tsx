@@ -1,6 +1,6 @@
 // discord_app/utils/ImageUtils.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import PQueueDefault from "../../_runtime/01492_PQueue.js";
+import PQueueDefault from "../../_runtime/01491_PQueue.js";
 import getSrcWithWidthAndHeight from "native/ImageUtils.tsx";
 import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
 import importDefaultResult from "../../_runtime/00012_apply.js";
@@ -165,7 +165,7 @@ function _isPNGAnimated() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

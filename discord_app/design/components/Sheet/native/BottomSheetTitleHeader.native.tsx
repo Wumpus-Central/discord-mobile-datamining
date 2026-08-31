@@ -1,6 +1,5 @@
 // discord_app/design/components/Sheet/native/BottomSheetTitleHeader.native.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 import useWindowDimensionsDefault from "../../../../modules/screen/useWindowDimensions.native.tsx";
 import Text from "../../Text/native/Text.tsx";
 import useHeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
@@ -101,26 +100,13 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   return closure_7(View, obj);
 }
 function Title(arg0) {
-  let str = "redesign/heading-18/bold";
-  if (useIsMobileVisualRefreshExperimentEnabledDefault("BottomSheetTitleHeader")) {
-    str = "redesign/heading-18/semibold";
-  }
   const tmp = callback4();
   const merged = Object.assign(arg0);
-  return callback2(Text.Text, { variant: str, color: "mobile-text-heading-primary", accessibilityRole: "header", style: callback4().title });
+  return callback2(Text.Text, { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: callback4().title });
 }
 function Subtitle(children) {
-  const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("BottomSheetTitleHeader");
-  let str = "text-default";
-  if (tmp3) {
-    str = "text-muted";
-  }
-  let str2 = "text-xs/medium";
-  if (tmp3) {
-    str2 = "text-sm/medium";
-  }
   const tmp = callback4();
-  return callback2(Text.Text, { variant: str2, color: str, lineClamp: 1, style: callback4().subtitle, children: children.children });
+  return callback2(Text.Text, { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, style: callback4().subtitle, children: children.children });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles(() => {

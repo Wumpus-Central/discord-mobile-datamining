@@ -37,7 +37,7 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
             str = str.trim();
           }
         }
-        tmpResult = tmp(1913);
+        tmpResult = tmp(1912);
       }
     }
   }

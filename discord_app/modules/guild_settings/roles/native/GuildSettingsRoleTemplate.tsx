@@ -3,8 +3,8 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import SCREEN_READER_ENABLED_GETTER from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _getRequireWildcardCacheDefault from "../../../../../_runtime/08327__getRequireWildcardCache.js";
-import PaginationDefault from "../../../../../_runtime/10470_Pagination.js";
+import _modDef8349 from "../../../../../_runtime/metro/08349__.js";
+import PaginationDefault from "../../../../../_runtime/10494_Pagination.js";
 import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
@@ -132,7 +132,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
       return obj;
     }
   }
-  obj = { interpolate: tmp11(4186).interpolate, sheetWidth: first1, parallaxScrollingOffset: bound, Extrapolation: tmp11(4186).Extrapolation, inactiveOpacity: num };
+  obj = { interpolate: tmp11(4187).interpolate, sheetWidth: first1, parallaxScrollingOffset: bound, Extrapolation: tmp11(4187).Extrapolation, inactiveOpacity: num };
   V.__closure = obj;
   V.__workletHash = 1786335394860;
   V.__initData = closure_18;
@@ -142,8 +142,8 @@ export default function GuildSettingsRoleTemplate(arg0) {
   obj = { ref, style: tmp.container, children: null };
   obj1 = { style: tmp.sliderContainer, children: null };
   tmp4 = useIsWindowLargeDefault();
-  let items2 = [callback2(ref1, { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(_getRequireWildcardCacheDefault, obj3) }), ];
-  let obj2 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(_getRequireWildcardCacheDefault, obj3) };
+  let items2 = [callback2(ref1, { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(_modDef8349, obj3) }), ];
+  let obj2 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(_modDef8349, obj3) };
   items2[1] = callback2(ref1, {
     style: tmp.sliderLabels,
     children: values.map((title) => {

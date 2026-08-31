@@ -215,9 +215,9 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
     if (set.has(context.type)) {
       const channel = store.getChannel(context.parent_id);
       if (null == channel) {
-        let NONE4 = tmp(4095).NONE;
+        let NONE4 = tmp(4096).NONE;
       } else {
-        let tmpResult = tmp(4095);
+        let tmpResult = tmp(4096);
         const tmp24 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
         NONE4 = tmpResult.applyThreadPermissions(context, tmp24, closure_7.hasJoined(context.id), closure_14.isCurrentUserGuest(context.guild_id));
         const hasJoinedResult = closure_7.hasJoined(context.id);
@@ -241,13 +241,13 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       if (null == NONE2) {
         const currentUser = authStore.getCurrentUser();
         if (null == currentUser) {
-          NONE2 = tmp(4095).NONE;
+          NONE2 = tmp(4096).NONE;
         } else {
           const guild = store2.getGuild(id);
           if (null == guild) {
-            let NONE3 = tmp(4095).NONE;
+            let NONE3 = tmp(4096).NONE;
           } else {
-            tmpResult = tmp(4095);
+            tmpResult = tmp(4096);
             obj = { user: null, context: null, checkElevated: null };
             obj[0] = currentUser;
             obj[1] = guild;
@@ -343,19 +343,19 @@ prototype["canAccessMemberSafetyPage"] = function canAccessMemberSafetyPage(id) 
   if (null == NONE) {
     const currentUser = authStore.getCurrentUser();
     if (null == currentUser) {
-      NONE = tmp(4095).NONE;
+      NONE = tmp(4096).NONE;
     } else {
       const guild = store2.getGuild(id);
       if (null == guild) {
-        let NONE2 = tmp(4095).NONE;
+        let NONE2 = tmp(4096).NONE;
       } else {
         obj = { user: null, context: null, checkElevated: null };
         obj[0] = currentUser;
         obj[1] = guild;
         obj[2] = true;
-        NONE2 = tmp(4095).computePermissions(obj);
+        NONE2 = tmp(4096).computePermissions(obj);
         dependencyMap[id] = NONE2;
-        const tmpResult = tmp(4095);
+        const tmpResult = tmp(4096);
       }
       NONE = NONE2;
     }
@@ -369,19 +369,19 @@ prototype["canAccessGuildSettings"] = function canAccessGuildSettings(guild) {
   if (null == NONE) {
     const currentUser = authStore.getCurrentUser();
     if (null == currentUser) {
-      NONE = tmp(4095).NONE;
+      NONE = tmp(4096).NONE;
     } else {
       guild = store2.getGuild(id);
       if (null == guild) {
-        let NONE2 = tmp(4095).NONE;
+        let NONE2 = tmp(4096).NONE;
       } else {
         obj = { user: null, context: null, checkElevated: null };
         obj[0] = currentUser;
         obj[1] = guild;
         obj[2] = true;
-        NONE2 = tmp(4095).computePermissions(obj);
+        NONE2 = tmp(4096).computePermissions(obj);
         dependencyMap[id] = NONE2;
-        const tmpResult = tmp(4095);
+        const tmpResult = tmp(4096);
       }
       NONE = NONE2;
     }

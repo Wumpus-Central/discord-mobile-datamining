@@ -13,8 +13,8 @@ let Idle = obj.Idle;
 const result = require("set").fileFinishedImporting("modules/checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx");
 
 export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileConsumptionHalfsheet() {
-  enabled = enabled(6215).useGiftCardsExperimentConfig({ location: "useGiftCardMobileConsumptionHalfsheet" }).enabled;
-  obj = enabled(6215);
+  enabled = enabled(6218).useGiftCardsExperimentConfig({ location: "useGiftCardMobileConsumptionHalfsheet" }).enabled;
+  obj = enabled(6218);
   let tmp = enabled;
   let items = [callback];
   let items1 = [enabled];
@@ -73,7 +73,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
   const items6 = [tmp6];
   const memo = React.useMemo(() => {
     if (dependencyMap) {
-      const items = [enabled(1377).DismissibleContent.GIFT_CARD_MOBILE_CONSUMPTION_UNAVAILABLE_HALFSHEET];
+      const items = [enabled(1373).DismissibleContent.GIFT_CARD_MOBILE_CONSUMPTION_UNAVAILABLE_HALFSHEET];
       let items1 = items;
     } else {
       items1 = [];
@@ -81,7 +81,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
     return items1;
   }, items6);
   const obj4 = enabled(589);
-  const tmp10 = first(tmp(6216).useSelectedDismissibleContent(memo, undefined, true), 2);
+  const tmp10 = first(tmp(6219).useSelectedDismissibleContent(memo, undefined, true), 2);
   first = tmp10[0];
   React = tmp12;
   closure_5 = React.useRef(tmp12);
@@ -95,15 +95,15 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
   const items8 = [enabled];
   const effect1 = React.useEffect(() => {
     if (enabled) {
-      const paymentSources = enabled(4803).fetchPaymentSources();
-      obj = enabled(4803);
+      const paymentSources = enabled(4805).fetchPaymentSources();
+      obj = enabled(4805);
     }
   }, items8);
   const items9 = [stateFromStores];
   const effect2 = React.useEffect(() => {
     if (null != stateFromStores) {
-      const walletInformation = enabled(4803).fetchWalletInformation(tmp);
-      obj = enabled(4803);
+      const walletInformation = enabled(4805).fetchWalletInformation(tmp);
+      obj = enabled(4805);
     }
   }, items9);
   const items10 = [first, callback];
@@ -117,13 +117,13 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
         Idle = closure_1_10.Opened;
       }
     }
-    if (first === enabled(1377).DismissibleContent.GIFT_CARD_MOBILE_CONSUMPTION_UNAVAILABLE_HALFSHEET) {
+    if (first === enabled(1373).DismissibleContent.GIFT_CARD_MOBILE_CONSUMPTION_UNAVAILABLE_HALFSHEET) {
       if (Opening === closure_1_10.Idle) {
         Opening = closure_1_10.Opening;
         c0 = false;
         obj = stateFromStores(709);
         const subscription = obj.subscribe("SHOW_ACTION_SHEET", handleShow);
-        const promise = enabled(2010)(6220, dependencyMap.paths);
+        const promise = enabled(2009)(6223, dependencyMap.paths);
         promise.catch(() => {
           let tmp = c0;
           if (!c0) {
@@ -133,7 +133,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
             Idle = closure_1_10.Idle;
           }
         });
-        const obj2 = stateFromStores(4413);
+        const obj2 = stateFromStores(4415);
         obj = { markAsDismissed: null };
         obj[0] = callback;
         obj2.openLazy(promise, closure_1_9, obj, "stack");
@@ -154,7 +154,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
         ref.current(closure_1_7.USER_DISMISS);
       }
     }
-    if (first === enabled(1377).DismissibleContent.GIFT_CARD_MOBILE_CONSUMPTION_UNAVAILABLE_HALFSHEET) {
+    if (first === enabled(1373).DismissibleContent.GIFT_CARD_MOBILE_CONSUMPTION_UNAVAILABLE_HALFSHEET) {
       const subscription = stateFromStores(709).subscribe("HIDE_ACTION_SHEET", handleHide);
       return () => {
         stateFromStores(table[11]).unsubscribe("HIDE_ACTION_SHEET", handleHide);

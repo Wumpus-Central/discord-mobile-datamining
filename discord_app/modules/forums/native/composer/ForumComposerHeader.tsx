@@ -68,8 +68,8 @@ export default function ForumComposerHeader(height) {
     obj2[1] = intl3.string(tmp7(1236).t.yR6HwZ);
     obj2[2] = tmp.button;
     obj2[3] = onGuidelinesPress;
-    obj2[4] = tmp6(tmp7(4989).BookCheckIcon, {});
-    tmp6Result = tmp6(tmp7(5033).PressableOpacity, obj2);
+    obj2[4] = tmp6(tmp7(4992).BookCheckIcon, {});
+    tmp6Result = tmp6(tmp7(5036).PressableOpacity, obj2);
   }
   items[2] = tmp6Result;
   items[3] = callback(closure_4, { style: tmp.headerBarSeparator });

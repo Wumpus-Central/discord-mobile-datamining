@@ -2,9 +2,9 @@
 import noopAll from "../../../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import registerAsset from "../../../../../../../_runtime/08772_registerAsset.js";
-import registerAsset2 from "../../../../../../../_runtime/08773_registerAsset.js";
-import registerAsset3 from "../../../../../../../_runtime/08774_registerAsset.js";
+import registerAsset from "../../../../../../../_runtime/08794_registerAsset.js";
+import registerAsset2 from "../../../../../../../_runtime/08795_registerAsset.js";
+import registerAsset3 from "../../../../../../../_runtime/08796_registerAsset.js";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 

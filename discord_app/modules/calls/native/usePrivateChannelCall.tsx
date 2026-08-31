@@ -19,7 +19,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
     if (null != channel) {
       if (channel.isPrivate()) {
         let obj = { text: null, accessibilityHint: null, inCall: null };
-        ({ text: obj2[0], accessibilityHint: obj2[1], inCall: obj2[2] } = callback2(10579)(channel, callback2));
+        ({ text: obj2[0], accessibilityHint: obj2[1], inCall: obj2[2] } = callback2(10603)(channel, callback2));
         return obj;
       }
     }
@@ -61,7 +61,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -85,7 +85,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1(4459).ensurePrivateChannel(tmp33);
+                obj1[0] = closure_1_1(4461).ensurePrivateChannel(tmp33);
                 return obj1;
               }
               tmp33 = closure_1_0;
@@ -108,14 +108,14 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             isPrivateResult = obj1.isPrivate();
           }
           if (isPrivateResult) {
-            closure_1_1(10579)(channel, closure_1).onPress();
-            const obj3 = closure_1_1(10579)(channel, closure_1);
+            closure_1_1(10603)(channel, closure_1).onPress();
+            const obj3 = closure_1_1(10603)(channel, closure_1);
           }
           if (dependencyMap != null) {
             dependencyMap();
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp25) {
           c3 = tmp;
           throw tmp25;

@@ -1,4 +1,5 @@
 // discord_app/modules/people/PeopleUtils.tsx
+import nameFromUserDefault from "../../utils/UserUtils.tsx";
 import handleRelationshipAddErrorDefault from "../../actions/RelationshipActionCreators.tsx";
 import showRequestFailedAlertDefault from "../game_relationships/GameRelationshipActionCreators.tsx";
 import closure_3 from "../../stores/RelationshipStore.tsx";
@@ -71,7 +72,7 @@ export default {
     let result = obj.isSettingTeenByDefault(userId(_location[5]).SettingsDefaultFeature.FRIEND_REQUEST_STRANGER_CONFIRMATION);
     obj1 = userId(_location[6]);
     const result1 = obj1.isFriendRequestAlertsV2Enabled("maybeConfirmFriendRequestAccept");
-    const isStrangerResult = stranger.isStranger(userId);
+    const isStrangerResult = closure_3.isStranger(userId);
     if (null == applicationId) {
       if (result) {
         if (false !== isStrangerResult) {
@@ -514,5 +515,13 @@ export default {
         tmp3();
       }
     });
+  },
+  getDisplayName(id) {
+    let nickname = closure_3.getNickname(id.id);
+    if (nickname == null) {
+      nickname = nameFromUserDefault.getName(id);
+      const obj = nameFromUserDefault;
+    }
+    return nickname;
   }
 };

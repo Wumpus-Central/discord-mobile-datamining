@@ -2,19 +2,34 @@
 import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
-let closure_3 = { [arg1(16973).AgeSignalsVerificationStatus.VERIFIED]: "VERIFIED", [arg1(16973).AgeSignalsVerificationStatus.SUPERVISED]: "SUPERVISED", [arg1(16973).AgeSignalsVerificationStatus.SUPERVISED_APPROVAL_PENDING]: "SUPERVISED_APPROVAL_PENDING", [arg1(16973).AgeSignalsVerificationStatus.SUPERVISED_APPROVAL_DENIED]: "SUPERVISED_APPROVAL_DENIED", [arg1(16973).AgeSignalsVerificationStatus.UNKNOWN]: "UNKNOWN", [arg1(16973).AgeSignalsVerificationStatus.DECLARED]: "DECLARED" };
+let closure_3 = { [arg1(17006).AgeSignalsStatus.SHARED]: "SHARED", [arg1(17006).AgeSignalsStatus.NOT_SHARED]: "NOT_SHARED", [arg1(17006).AgeSignalsStatus.VERIFICATION_REQUIRED]: "VERIFICATION_REQUIRED" };
+let closure_4 = { [arg1(17006).AgeRangeSource.TIER_A]: "TIER_A", [arg1(17006).AgeRangeSource.TIER_B]: "TIER_B", [arg1(17006).AgeRangeSource.TIER_C]: "TIER_C", [arg1(17006).AgeRangeSource.TIER_D]: "TIER_D" };
+let closure_5 = { [arg1(17006).SignificantChangeStatus.APPROVED]: "APPROVED", [arg1(17006).SignificantChangeStatus.PENDING]: "PENDING", [arg1(17006).SignificantChangeStatus.DECLINED]: "DECLINED" };
 const result = require("set").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeAssurance.android.tsx");
 
 export default {
   getAgeSignals() {
     return callback(function*() {
       function toAppStoreAgeCheck(ageLower) {
-        const obj = { platform: "android", ageLower: ageLower.ageLower, ageUpper: ageLower.ageUpper, googleUserStatus: null };
+        const obj = { platform: "android", ageLower: ageLower.ageLower, ageUpper: ageLower.ageUpper, googleAgeSignalsStatus: null, googleAgeRangeSource: null, googleSignificantChangeStatus: null };
+        const ageSignalsStatus = ageLower.ageSignalsStatus;
         let tmp;
-        if (null != ageLower.userStatus) {
-          tmp = table[ageLower.userStatus];
+        if (null != ageSignalsStatus) {
+          tmp = table[ageSignalsStatus];
         }
         obj[3] = tmp;
+        const ageRangeSource = ageLower.ageRangeSource;
+        let tmp2;
+        if (null != ageRangeSource) {
+          tmp2 = table2[ageRangeSource];
+        }
+        obj[4] = tmp2;
+        const significantChangeStatus = ageLower.significantChangeStatus;
+        let tmp3;
+        if (null != significantChangeStatus) {
+          tmp3 = table3[significantChangeStatus];
+        }
+        obj[5] = tmp3;
         return obj;
       }
       const obj2 = closure_1_0(table[1]);

@@ -28,7 +28,7 @@ function SyncedLoadingAlertModal(onConfirm) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -70,7 +70,7 @@ function SyncedLoadingAlertModal(onConfirm) {
             c3 = 0;
             v0(false);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp22) {
           closure_2 = tmp22;
@@ -85,16 +85,16 @@ function SyncedLoadingAlertModal(onConfirm) {
     }),
     loading: tmp2
   };
-  const items = [callback3(onConfirm(4828).AlertActionButton, obj), ];
+  const items = [callback3(onConfirm(4831).AlertActionButton, obj), ];
   obj1 = { variant: "secondary", text: null, onPress: null, loading: null };
   const intl = onConfirm(1236).intl;
   obj1[1] = intl.string(onConfirm(1236).t["ETE/oC"]);
   obj1[2] = onCancel;
   obj1[3] = tmp2;
-  items[1] = callback3(onConfirm(4828).AlertActionButton, obj1);
+  items[1] = callback3(onConfirm(4831).AlertActionButton, obj1);
   obj[0] = items;
   obj[2] = callback4(closure_6, obj);
-  return callback3(onConfirm(4828).AlertModal, obj);
+  return callback3(onConfirm(4831).AlertModal, obj);
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 const result = require("set").fileFinishedImporting("modules/checkout/native/showCheckoutOrderErrorModal.tsx");
@@ -132,7 +132,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -168,7 +168,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
             callback = arg1;
             callback(callback);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp12) {
           c3 = tmp;
@@ -197,6 +197,6 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
     obj = {};
     const merged1 = Object.assign(merged);
     obj = { dismissable: obj.dismissable };
-    callback(4824).openAlert(key, closure_1_5(closure_1_8, obj), onCloseCallback, obj);
+    callback(4827).openAlert(key, closure_1_5(closure_1_8, obj), onCloseCallback, obj);
   });
 };

@@ -3,8 +3,8 @@ import set2 from "../../../_runtime/00002_set.js";
 import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
+import privDefault from "../../../_runtime/01401_priv.js";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
-import privDefault from "../../../_runtime/01405_priv.js";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import QUICK_SWITCHERDefault from "../app_analytics/AnalyticsLocation.tsx";
 

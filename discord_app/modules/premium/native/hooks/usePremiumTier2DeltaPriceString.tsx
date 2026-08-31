@@ -13,9 +13,9 @@ function getViewerProductId(subscription) {
     try {
       const productIdFromSubscription = getPremiumBundledItemsFromProductId.getProductIdFromSubscription(subscription, false);
       try {
-        const productIdFromSubscription1 = tmp3(7099).getProductIdFromSubscription(subscription, true);
-        const tmp8 = tmp3(6052).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
-        const tmp10 = tmp3(6052).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription1];
+        const productIdFromSubscription1 = tmp3(7120).getProductIdFromSubscription(subscription, true);
+        const tmp8 = tmp3(6055).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
+        const tmp10 = tmp3(6055).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription1];
         if (null != tmp8) {
           if (null != tmp10) {
             if (tmp8.numPremiumGuild === tmp10.numPremiumGuild) {
@@ -25,7 +25,7 @@ function getViewerProductId(subscription) {
           }
         }
         tmp11 = productIdFromSubscription;
-        const tmp3Result = tmp3(7099);
+        const tmp3Result = tmp3(7120);
       } catch (err) {
         return tmp2;
       }
@@ -38,7 +38,7 @@ function getViewerProductId(subscription) {
 let closure_6 = { priceString: null, failure: null };
 let result = require("set").fileFinishedImporting("modules/premium/native/hooks/usePremiumTier2DeltaPriceString.tsx");
 
-export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPriceString(plan, subscription, first, flag3) {
+export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPriceString(plan, subscription, first, flag4) {
   const tmp = productId((orderRequired) => ({ orderRequired: orderRequired.orderRequired, checkoutContext: orderRequired.getCheckoutContextRecord() }));
   const checkoutContext = tmp.checkoutContext;
   const tmp3 = getViewerProductId(subscription);
@@ -54,7 +54,7 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
   });
   obj1 = kind(platform[6]);
   let flag = false;
-  if (flag3) {
+  if (flag4) {
     flag = false;
     if (plan.premiumTier === PremiumTypes.TIER_2) {
       flag = false;

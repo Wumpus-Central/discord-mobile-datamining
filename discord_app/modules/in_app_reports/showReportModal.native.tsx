@@ -1,5 +1,5 @@
 // discord_app/modules/in_app_reports/showReportModal.native.tsx
-import _modDef4689 from "../../actions/ModalActionCreators.tsx";
+import _modDef4691 from "../../actions/ModalActionCreators.tsx";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = arg1;
@@ -24,7 +24,7 @@ function _showReportModal() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -50,7 +50,7 @@ function _showReportModal() {
               closure_4 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -152,5 +152,5 @@ export const showReportModal = function showReportModal(arg0, arg1, arg2) {
   return applyArgumentsResult;
 };
 export const hideReportModal = function hideReportModal() {
-  _modDef4689.popWithKey(IN_APP_REPORT_MODAL_KEY);
+  _modDef4691.popWithKey(IN_APP_REPORT_MODAL_KEY);
 };

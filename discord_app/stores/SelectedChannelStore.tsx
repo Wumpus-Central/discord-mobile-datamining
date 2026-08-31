@@ -4,8 +4,8 @@ import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
 import set2 from "../modules/channel/ChannelConstants.tsx";
+import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
 import createChannelRecord from "../records/ChannelRecord.tsx";
 import closure_13 from "AuthenticationStore.tsx";
 import closure_14 from "ChannelStore.tsx";
@@ -753,7 +753,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
             const values = callback2(12)(closure_25).values();
             const obj2 = callback2(12)(closure_25);
             const combined = values.concat(callback2(12).values(closure_27));
-            const found = combined.filter(callback(1370).isNotNullish);
+            const found = combined.filter(callback(1471).isNotNullish);
             const obj4 = callback2(12);
             const uniqResult = found.uniq();
             obj[6] = found.uniq().filter((arg0) => {
@@ -783,7 +783,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         const obj9 = callback2(12)(closure_25);
         tmp26 = sessionId.guildId !== guildId && null == sessionId.channelId;
         let combined = values.concat(callback2(12).values(closure_27));
-        let found = combined.filter(callback(1370).isNotNullish);
+        let found = combined.filter(callback(1471).isNotNullish);
         const obj11 = callback2(12);
         let uniqResult = found.uniq();
         obj[6] = found.uniq().filter((arg0) => {
@@ -847,7 +847,7 @@ const selectedChannelStore = new SelectedChannelStore(dispatcherDefault, {
         const obj13 = store;
         const obj3 = callback2(12)(closure_25);
         const combined1 = values.concat(callback2(12).values(closure_27));
-        const found1 = combined1.filter(callback(1370).isNotNullish);
+        const found1 = combined1.filter(callback(1471).isNotNullish);
         const obj5 = callback2(12);
         const uniqResult1 = found1.uniq();
         obj[6] = found1.uniq().filter((arg0) => {

@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/LightModeThemeSetting.tsx
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import useSyncedModeThemeName from "useSyncedModeThemeName.tsx";
-import closure_3 from "../../ThemeStore.tsx";
+import closure_2 from "../../ThemeStore.tsx";
 import { SystemTheme } from "../../ThemeConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { SettingsAppearanceLightModeThemePickerScreen } from "../../appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx";
@@ -15,12 +15,8 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   usePredicate: function useSyncedModePickerVisible() {
-    let stateFromStores = useIsMobileVisualRefreshExperimentEnabledDefault("LightModeThemeSetting");
-    const items = [closure_3];
-    if (stateFromStores) {
-      stateFromStores = obj.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
-    }
-    return stateFromStores;
+    const items = [closure_2];
+    return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   useTrailing() {
     return useSyncedModeThemeName.useSyncedModeThemeName(SystemTheme.LIGHT);

@@ -532,7 +532,7 @@ let closure_5 = {
   [AnalyticEvents.WEBSOCKET_MESSAGE_RECEIVED]: (data) => {
     data = data.data;
     if (null == data) {
-      let obj = { message_identity: "unknown", socket_kind: "accessible" };
+      let obj = { message_identity: "unknown", socket_kind: "l" };
     } else {
       const url = data.url;
       let tmp61 = null;

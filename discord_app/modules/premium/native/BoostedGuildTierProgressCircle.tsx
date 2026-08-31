@@ -60,11 +60,11 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (tmp13.TIER_1 === premiumTier) {
-          let tier048PxSource = tmp2(13102);
+          let tier048PxSource = tmp2(13136);
         } else if (tmp13.TIER_2 === premiumTier) {
-          tier048PxSource = tmp2(13103);
+          tier048PxSource = tmp2(13137);
         } else if (tmp13.TIER_3 === premiumTier) {
-          tier048PxSource = tmp2(13104);
+          tier048PxSource = tmp2(13138);
         }
       }
       const obj2 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no" };
@@ -73,14 +73,14 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       const items = [tmp8(tmp12, obj2), ];
       const obj3 = { style: null, variant: "text-xs/semibold", color: "interactive-text-active", children: null };
       obj3[0] = tmp.guildTierName;
-      let tmp19Result = tmp19(4337);
+      let tmp19Result = tmp19(4339);
       obj3[3] = tmp19Result.getTierName(guild.premiumTier);
-      items[1] = tmp8(tmp19(4442).Text, obj3);
+      items[1] = tmp8(tmp19(4444).Text, obj3);
       obj1[1] = items;
       obj[2] = tmp10(tmp11, obj1);
       return tmp8(tmp9, obj);
     }
-    tmp19Result = tmp19(13098);
+    tmp19Result = tmp19(13132);
     tier048PxSource = tmp19Result.getTier048PxSource(theme);
     const obj10 = getGuildTierFromGuild;
   }

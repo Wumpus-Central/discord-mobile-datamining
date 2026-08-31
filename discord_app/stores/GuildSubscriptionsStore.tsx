@@ -86,7 +86,7 @@ function handleConnectionOpenOrResumed(type) {
       }
     }
     store4.subscribeToGuild(tmp11);
-    obj5 = obj(1913);
+    obj5 = obj(1912);
   }
   obj = {};
   set = new Set(closure_6.lurkingGuildIds());

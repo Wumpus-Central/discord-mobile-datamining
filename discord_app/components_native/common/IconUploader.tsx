@@ -4,7 +4,7 @@ import getAvatarURL from "../../utils/AvatarUtils.tsx";
 import PressableBase from "../../design/void/Pressables/native/Pressables.tsx";
 import GuildIconSizes from "../../modules/guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../modules/guild/native/GuildIcon.tsx";
-import registerAssetDefault from "../../../_runtime/10604_registerAsset.js";
+import registerAssetDefault from "../../../_runtime/10628_registerAsset.js";
 import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_4 from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
@@ -49,7 +49,7 @@ export default function IconUploader(disabled) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

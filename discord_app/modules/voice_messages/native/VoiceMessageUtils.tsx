@@ -33,7 +33,7 @@ function _startAudioRecording() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -94,14 +94,14 @@ function _startAudioRecording() {
             if (state.getState().recordingId !== callback) {
               store = 0;
               c6 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               callback2(constants.STARTED);
               const _Date = Date;
               callback3(Date.now());
               store = 0;
               c6 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           }
         } catch (tmp22) {
@@ -168,7 +168,7 @@ function _endAudioRecording() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -261,7 +261,7 @@ function _stopAndCacheAudioRecording() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -299,7 +299,7 @@ function _stopAndCacheAudioRecording() {
           mediaEngine.removeListener(callback(table[9]).MediaEngineEvent.VoiceActivity, closure_21);
           callback2(callback);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp18) {
         c3 = tmp;

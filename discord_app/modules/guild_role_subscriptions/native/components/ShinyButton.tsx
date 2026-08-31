@@ -2,7 +2,7 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import CollapsingText from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
-import registerAssetDefault from "../../../../../_runtime/09078_registerAsset.js";
+import registerAssetDefault from "../../../../../_runtime/09101_registerAsset.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 

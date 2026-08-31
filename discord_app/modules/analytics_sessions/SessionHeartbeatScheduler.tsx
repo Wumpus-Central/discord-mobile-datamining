@@ -43,7 +43,7 @@ function _trackHeartbeat() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -98,7 +98,7 @@ function _trackHeartbeat() {
             obj1.addBreadcrumb(obj3);
             let obj5 = { client_heartbeat_initialization_timestamp: null, client_heartbeat_version: 31 };
             obj5[0] = lib.createdAtTimestamp;
-            obj5 = num2(7161);
+            obj5 = num2(7182);
             const merged = Object.assign(obj5.getClientHeartbeatPiggybackProperties());
             const idleSince = store.getIdleSince();
             num2 = idleSince;
@@ -115,10 +115,10 @@ function _trackHeartbeat() {
             tmp40 = lib(698);
             track = tmp40.track;
             track(constants.CLIENT_HEARTBEAT, c4);
-            closure_19 = num2(7157).monotonicNowMs();
-            const obj8 = num2(7157);
-            num2 = num2(7158).drainClickstream();
-            const obj9 = num2(7158);
+            closure_19 = num2(7178).monotonicNowMs();
+            const obj8 = num2(7178);
+            num2 = num2(7179).drainClickstream();
+            const obj9 = num2(7179);
           } else {
             obj = lib(1208);
             const _Error = Error;
@@ -233,7 +233,7 @@ function validateClientSession(version) {
     let tmp4 = version;
     if (version.version !== result2.CLIENT_SESSION_STORAGE_VERSION) {
       const _HermesInternal = HermesInternal;
-      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(7164).CLIENT_SESSION_STORAGE_VERSION);
+      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(7185).CLIENT_SESSION_STORAGE_VERSION);
       tmp4 = null;
     }
     tmp = tmp4;
@@ -265,7 +265,7 @@ function _forceDispatchSessionIdUpdate() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -307,7 +307,7 @@ function _forceDispatchSessionIdUpdate() {
             }
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp16) {
         c3 = tmp;
@@ -408,7 +408,7 @@ function _getSession() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -434,7 +434,7 @@ function _getSession() {
               uuid = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -613,15 +613,15 @@ export const initSessionHeartbeatScheduler = function initSessionHeartbeatSchedu
     obj[0] = setInterval(() => {
       let result = null != closure_24;
       if (result) {
-        result = callback(7162).shouldLogClientHeartbeatSkipped();
-        obj = callback(7162);
+        result = callback(7183).shouldLogClientHeartbeatSkipped();
+        obj = callback(7183);
       }
       if (result) {
         if (obj2.monotonicNowMs() - closure_19 > closure_11) {
           callback2(698).track(constants.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 31 });
           const obj3 = callback2(698);
         }
-        obj2 = callback(7157);
+        obj2 = callback(7178);
       }
     }, closure_11);
   }
@@ -636,9 +636,9 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
     let tmp7 = null;
     if (null != value) {
       let tmp8 = value;
-      if (value.version !== tmp2(7164).CLIENT_SESSION_STORAGE_VERSION) {
+      if (value.version !== tmp2(7185).CLIENT_SESSION_STORAGE_VERSION) {
         const _HermesInternal = HermesInternal;
-        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(7164).CLIENT_SESSION_STORAGE_VERSION);
+        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(7185).CLIENT_SESSION_STORAGE_VERSION);
         tmp8 = null;
       }
       tmp7 = tmp8;

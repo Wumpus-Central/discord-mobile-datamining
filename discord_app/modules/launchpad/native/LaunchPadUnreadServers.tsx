@@ -47,7 +47,7 @@ let closure_13 = importAllResult.memo(function GuildItemInner(guildId) {
     guildId(closure_1_2[9]).transitionToGuild(guildId);
   }, items1);
   obj = { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor };
-  obj[1] = callback(onGuildSelect(16481), obj);
+  obj[1] = callback(onGuildSelect(16515), obj);
   return callback(closure_5, obj);
 });
 let closure_14 = importAllResult.memo(function PrivateChannelItemInner(channelId) {
@@ -86,7 +86,7 @@ let closure_14 = importAllResult.memo(function PrivateChannelItemInner(channelId
   }
   if (type === ChannelTypes.DM) {
     if (null != stateFromStores1) {
-      obj = { style: null, user: null, guildId: "Array", size: null };
+      obj = { style: null, user: null, guildId: "Array", size: "<string:285213222>" };
       obj[0] = tmp.privateChannelIcon;
       obj[1] = stateFromStores1;
       obj[3] = tmp2(tmp3[12]).AvatarSizes.LARGE_48;
@@ -156,7 +156,7 @@ const memoResult = importAllResult.memo(function LaunchPadUnreadServers(selected
   const items = [setSelectedGuild, selectedGuildId];
   callback = unreadGuilds.useCallback((arg0) => {
     if (ref.current < 0) {
-      if (setSelectedGuild(prop[22])(arg0)) {
+      if (setSelectedGuild(prop[21])(arg0)) {
         let tmp6;
         if (arg0 !== selectedGuildId) {
           tmp6 = arg0;
@@ -234,22 +234,19 @@ const memoResult = importAllResult.memo(function LaunchPadUnreadServers(selected
     }
   }
   obj = { style: list.listWrapper, children: null };
-  const tmp11 = closure_11;
-  const tmp12 = visible;
-  let tmp3 = setSelectedGuild(prop[20])("LaunchPadUnreadServers");
   let renderCategoryItem = AnimatedFastList(tmp[19]).renderCategoryItem;
-  const intl = AnimatedFastList(tmp[23]).intl;
+  const intl = AnimatedFastList(tmp[22]).intl;
   const string = intl.string;
-  let t = AnimatedFastList(tmp[23]).t;
+  let t = AnimatedFastList(tmp[22]).t;
   if (unreadGuilds.length > 0 || prop.length > 0) {
     let stringResult = string(t.xSY9BH);
   } else {
     stringResult = string(t.kCt2zG);
   }
-  t = [renderCategoryItem({ name: stringResult, styles: categoryStyles, isRefreshEnabled: tmp3 }), ];
+  t = [renderCategoryItem({ name: stringResult, styles: categoryStyles }), ];
   renderCategoryItem = callback;
-  AnimatedFastList = AnimatedFastList(tmp[24]).AnimatedFastList;
-  obj = { ref, style: list, horizontal: true, renderItem: callback1, renderSection: renderHistorySection, sectionSize: length, sections: prop, itemSize: 58, headerSize: 19, footerSize: 19, chunkBase: setSelectedGuild(prop[21])().width, showsHorizontalScrollIndicator: false, showsVerticalScrollIndicator: false, stickySectionsVariant: "disabled", keyboardShouldPersistTaps: "always" };
+  AnimatedFastList = AnimatedFastList(tmp[23]).AnimatedFastList;
+  obj = { ref, style: list, horizontal: true, renderItem: callback1, renderSection: renderHistorySection, sectionSize: length, sections: prop, itemSize: 58, headerSize: 19, footerSize: 19, chunkBase: setSelectedGuild(prop[20])().width, showsHorizontalScrollIndicator: false, showsVerticalScrollIndicator: false, stickySectionsVariant: "disabled", keyboardShouldPersistTaps: "always" };
   list = list.list;
   length = prop.length;
   prop = [length, , ];
@@ -260,7 +257,7 @@ const memoResult = importAllResult.memo(function LaunchPadUnreadServers(selected
   tmp = callback(AnimatedFastList, obj);
   t[1] = tmp;
   obj[1] = t;
-  tmp11(tmp12, obj);
+  closure_11(visible, obj);
 });
 const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadUnreadServers.tsx");
 

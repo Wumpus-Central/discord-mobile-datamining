@@ -8,7 +8,7 @@ import keys from "../../../../_runtime/00644_keys.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
 require = arg1;
-keys = keys.create(() => ({ controls: "ct", paused: true }));
+keys = keys.create(() => ({ controls: "Object", paused: true }));
 let closure_8 = createCacheKey.createStyles({ slider: { marginBottom: 8 } });
 let result = require("set").fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
 
@@ -74,7 +74,7 @@ export default function useVideoControls(arg0, portal) {
 export const useVideoStateStore = keys;
 export const initVideoStateStore = function initVideoStateStore() {
   batchUpdates.batchUpdates(() => {
-    state.setState({ controls: "ct", paused: true });
+    state.setState({ controls: "Object", paused: true });
   });
 };
 export const setMuted = function setMuted(arg0) {

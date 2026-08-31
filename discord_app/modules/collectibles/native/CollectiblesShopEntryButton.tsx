@@ -13,13 +13,13 @@ function CoachmarkVariant(shopButtonRef) {
   shopButtonRef = shopButtonRef.shopButtonRef;
   importDefault = undefined;
   dependencyMap = undefined;
-  let obj = navigateToShop(6216);
-  const tmp = callback(obj.useSelectedVersionedDismissibleContent(navigateToShop(1377).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING, marketing.version, undefined, true), 2);
+  let obj = navigateToShop(6219);
+  const tmp = callback(obj.useSelectedVersionedDismissibleContent(navigateToShop(1373).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING, marketing.version, undefined, true), 2);
   importDefault = tmp2;
-  const tmp3 = tmp[0] === navigateToShop(1377).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING;
+  const tmp3 = tmp[0] === navigateToShop(1373).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING;
   dependencyMap = tmp3;
   obj = { children: null };
-  obj = { ref: shopButtonRef, IconComponent: navigateToShop(11645).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
+  obj = { ref: shopButtonRef, IconComponent: navigateToShop(11676).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
   const intl = navigateToShop(1236).intl;
   obj[2] = intl.string(navigateToShop(1236).t.pWG4ze);
   obj[3] = function onPress() {
@@ -48,13 +48,13 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
     tmp4 = "dismissibleContent" in stateFromStores;
   }
   if (tmp4) {
-    tmp4 = stateFromStores.dismissibleContent === tmp(1377).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING;
+    tmp4 = stateFromStores.dismissibleContent === tmp(1373).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING;
   }
   let type;
   if (stateFromStores != null) {
     type = stateFromStores.type;
   }
-  if (type === navigateToShop(7258).CollectiblesMarketingType.COACHMARK) {
+  if (type === navigateToShop(7279).CollectiblesMarketingType.COACHMARK) {
     obj = { marketing: null, navigateToShop: null, shopButtonRef: null };
     obj[0] = stateFromStores;
     obj[1] = navigateToShop;
@@ -82,8 +82,8 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         type1 = stateFromStores.type;
       }
       let prop = null;
-      if (type1 === tmp(7258).CollectiblesMarketingType.BADGE) {
-        prop = tmp(1377).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING;
+      if (type1 === tmp(7279).CollectiblesMarketingType.BADGE) {
+        prop = tmp(1373).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING;
       }
       obj = { contentType: null, latestVersion: null, children: null };
       obj[0] = prop;
@@ -96,13 +96,13 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
       }
       obj[1] = num;
       obj[2] = content;
-      let tmp15Result = tmp15(tmp(10355).SelectedVersionedDismissibleContent, obj);
+      let tmp15Result = tmp15(tmp(10379).SelectedVersionedDismissibleContent, obj);
     } else {
       let type2;
       if (stateFromStores != null) {
         type2 = stateFromStores.type;
       }
-      if (type2 === tmp(7258).CollectiblesMarketingType.BADGE) {
+      if (type2 === tmp(7279).CollectiblesMarketingType.BADGE) {
         let dismissibleContent;
         if (stateFromStores != null) {
           dismissibleContent = stateFromStores.dismissibleContent;
@@ -117,7 +117,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         tmp15Result = tmp15(tmp7, obj1);
       }
       items2 = [];
-      tmp7 = shopButtonRef(10355);
+      tmp7 = shopButtonRef(10379);
     }
     return tmp15Result;
   }

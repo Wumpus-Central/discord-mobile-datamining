@@ -32,7 +32,7 @@ let closure_20 = importAllResult.memo((guild) => {
   const sortedGuildRoles = guild.sortedGuildRoles;
   dependencyMap = undefined;
   ({ start, end } = guild);
-  let obj = guild(1500);
+  let obj = guild(1499);
   dependencyMap = obj.useNavigation();
   if (null == guild) {
     return null;
@@ -49,11 +49,11 @@ let closure_20 = importAllResult.memo((guild) => {
     let formatToPlainStringResult;
     if (found.length > 0) {
       user = user.getUser(guildMember.userId);
-      obj1 = guildMember(4639);
+      obj1 = guildMember(4641);
       let str = obj1.getNickname(guild.id, undefined, user);
       if (str == null) {
-        str = tmp9(4290).getGlobalName(user);
-        const tmp9Result = tmp9(4290);
+        str = tmp9(4292).getGlobalName(user);
+        const tmp9Result = tmp9(4292);
       }
       if (str == null) {
         let username;
@@ -92,7 +92,7 @@ let closure_20 = importAllResult.memo((guild) => {
     };
     obj[7] = start;
     obj[8] = end;
-    return closure_15(guildMember(10617), obj);
+    return closure_15(guildMember(10641), obj);
   }
   tmp = callback();
 });
@@ -282,12 +282,12 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.create(null));
-            const obj = { source: callback2(9707), accessibilityLabel: null, ref: null };
+            const obj = { source: callback2(9729), accessibilityLabel: null, ref: null };
             const intl = callback(1236).intl;
             obj[1] = intl.string(callback(1236).t.ogxXGq);
             obj[2] = ref.ref;
             const merged1 = Object.assign(merged);
-            return callback3(callback(6202).HeaderActionButton, obj);
+            return callback3(callback(6205).HeaderActionButton, obj);
           }
         };
         return closure_1_15(closure_1_0(closure_1_2[26]).ContextMenu, obj);

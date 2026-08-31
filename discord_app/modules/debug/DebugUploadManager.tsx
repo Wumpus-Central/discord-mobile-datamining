@@ -25,7 +25,7 @@ function _uploadDebugLogFiles() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -42,8 +42,9 @@ function _uploadDebugLogFiles() {
             } else {
               dependencyMap = tmp3;
               closure_2 = tmp7;
-              const callback = closure_1;
-              closure_1 = undefined;
+              const callback = enabled;
+              enabled = undefined;
+              closure_2 = undefined;
               c5 = 1;
               c6 = 2;
               c7 = 1;
@@ -53,11 +54,11 @@ function _uploadDebugLogFiles() {
             }
           } else if (1 === tmp7) {
             c5 = 0;
-            closure_2 = closure_4;
-            if (closure_2 instanceof callback(4344).UploadVoiceDebugLogsError) {
-              closure_1 = (function uploadErrorToAVUnderlyingError(closure_2) {
-                const code = closure_2.code;
-                if (callback(tmp3[5]).UploadErrorCodes.GENERAL === code) {
+            dependencyMap = closure_4;
+            if (dependencyMap instanceof callback(4346).UploadVoiceDebugLogsError) {
+              closure_2 = (function uploadErrorToAVUnderlyingError(closure_3) {
+                const code = closure_3.code;
+                if (callback(table[5]).UploadErrorCodes.GENERAL === code) {
                   return tmp(tmp2[6]).AVUnderlyingError.UploadErrorGeneral;
                 } else if (tmp(tmp2[5]).UploadErrorCodes.NO_FILE === code) {
                   return tmp(tmp2[6]).AVUnderlyingError.UploadErrorNoFile;
@@ -68,15 +69,14 @@ function _uploadDebugLogFiles() {
                 } else if (tmp(tmp2[5]).UploadErrorCodes.READ === code) {
                   return tmp(tmp2[6]).AVUnderlyingError.UploadErrorRead;
                 }
-              })(closure_2);
+              })(dependencyMap);
             }
-            let obj4 = callback(9504);
-            const obj2 = { type: null, underlyingError: null, errorMessage: null };
-            obj2[0] = callback(9504).AVError.DEBUG_LOG_UPLOAD_FAILED;
-            obj2[1] = closure_1;
-            obj2[2] = closure_1_2.message;
-            obj4.reportAVError(obj2);
-            throw closure_1_2;
+            let obj2 = { type: null, underlyingError: null, errorMessage: null };
+            obj2[0] = callback(9526).AVError.DEBUG_LOG_UPLOAD_FAILED;
+            obj2[1] = closure_1_2;
+            obj2[2] = closure_1_3.message;
+            callback(9526).reportAVError(obj2);
+            throw closure_1_3;
           } else if (2 === tmp7) {
             if (arg0 === 1) {
               c7 = 3;
@@ -88,11 +88,13 @@ function _uploadDebugLogFiles() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(10210);
+              obj1 = enabled(10233);
+              enabled = obj1.getConfig({ location: "uploadDebugLogFiles" }).enabled;
+              obj2 = callback(10234);
               c6 = 3;
               c7 = 1;
-              obj4 = { value: null, done: false };
-              obj4[0] = obj1.uploadRtcLogFiles(14680064, callback);
+              const obj4 = { value: null, done: false };
+              obj4[0] = obj2.uploadRtcLogFiles(14680064, enabled, callback);
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -107,13 +109,13 @@ function _uploadDebugLogFiles() {
           } else {
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
-        } catch (tmp35) {
-          closure_4 = tmp35;
+        } catch (tmp38) {
+          closure_4 = tmp38;
           if (tmp4 === c5) {
             c7 = tmp2;
-            throw tmp35;
+            throw tmp38;
           } else {
             c6 = tmp;
           }
@@ -164,7 +166,7 @@ function _uploadAppLogFiles() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -194,7 +196,7 @@ function _uploadAppLogFiles() {
                 debugInfo = 2;
                 tmp = closure_1_2;
                 tmp = closure_1_3;
-                lib = closure_1_2(closure_1_3[8]).stringify();
+                lib = closure_1_2(closure_1_3[9]).stringify();
                 debugInfo = 1;
                 debugInfo = 3;
                 getSystemLog = undefined;
@@ -213,12 +215,12 @@ function _uploadAppLogFiles() {
                   lib2 = str;
                   debugInfo = 1;
                   debugInfo = 4;
-                  promise = lib(closure_3[9])();
-                  promise.then((arg0) => callback(table[10])(arg0, true));
+                  promise = lib(closure_3[10])();
+                  promise.then((arg0) => callback(table[11])(arg0, true));
                   c6 = 7;
                   c7 = 1;
                 }
-                const obj14 = closure_1_2(closure_1_3[8]);
+                const obj14 = closure_1_2(closure_1_3[9]);
               }
             } else {
               if (1 === tmp11) {
@@ -238,7 +240,7 @@ function _uploadAppLogFiles() {
                     const _HermesInternal2 = HermesInternal;
                     closure_3 = "Push logs failed: " + closure_4;
                     debugInfo = 5;
-                    let obj4 = callback(closure_3[11]);
+                    let obj4 = callback(closure_3[12]);
                     const consumeLogsResult = obj4.consumeLogs();
                     lib = consumeLogsResult;
                     if (consumeLogsResult == null) {
@@ -300,18 +302,18 @@ function _uploadAppLogFiles() {
                       debugInfo = 0;
                     }
                     c7 = tmp12;
-                    const tmp42 = lib(closure_3[13])(c7);
-                    let obj5 = callback(closure_3[14]);
+                    const tmp42 = lib(closure_3[14])(c7);
+                    let obj5 = callback(closure_3[15]);
                     const result = obj5.serializeComponentRenderAverages();
                     const _JSON = JSON;
                     const _JSON2 = JSON;
-                    const json = JSON.stringify(lib(closure_3[15])(), undefined, 2);
+                    const json = JSON.stringify(lib(closure_3[16])(), undefined, 2);
                     const _HermesInternal3 = HermesInternal;
                     logger = "\n    " + tmp42 + "\n\n    " + result + "\n\n    Metadata:\n    " + json + "\n\n    ChannelStore:\n    " + JSON.stringify(debugInfo.getDebugInfo(), undefined, 2) + "\n\n    Logs:\n    " + lib + "\n\n    System logs:\n    " + lib2 + "\n\n    LibDiscore logs:\n    " + closure_4 + "\n\n    Push Notifications:\n    " + closure_3 + "\n    ";
-                    let obj6 = lib2(closure_3[8]);
+                    let obj6 = lib2(closure_3[9]);
                     obj6.clear();
                     getSystemLog = c6.DEBUG_LOG(callback, "discord_app_logs");
-                    const HTTP = callback(closure_3[16]).HTTP;
+                    const HTTP = callback(closure_3[17]).HTTP;
                     obj5 = { url: null, body: null, retries: 3, headers: null, oldFormErrors: true, rejectWithError: false };
                     obj5[0] = getSystemLog;
                     obj5[1] = logger;
@@ -359,11 +361,11 @@ function _uploadAppLogFiles() {
                     closure_4 = slice4(length4 - Math.floor(closure_4.length * c6));
                   }
                   tmp12 = null;
-                  if (null != callback(closure_3[12]).default) {
+                  if (null != callback(closure_3[13]).default) {
                     c6 = 8;
                     c7 = 1;
                     const obj7 = { value: null, done: false };
-                    obj7[0] = callback(closure_3[12]).default.getAppFirstVisibleTimestamp();
+                    obj7[0] = callback(closure_3[13]).default.getAppFirstVisibleTimestamp();
                     return obj7;
                   }
                 }

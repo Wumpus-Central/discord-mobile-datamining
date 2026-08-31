@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/billing/native/PaymentFlowTestModal.tsx
 import TestViewDefault from "PaymentFlowTest.android.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createNativeStackNavigator from "../../../../../_runtime/07769_createNativeStackNavigator.js";
+import createNativeStackNavigator from "../../../../../_runtime/07790_createNativeStackNavigator.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 

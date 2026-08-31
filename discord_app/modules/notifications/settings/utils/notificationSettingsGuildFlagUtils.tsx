@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/utils/notificationSettingsGuildFlagUtils.tsx
 import Presets from "notificationSettingsPresetUtils.tsx";
-import _modDef5452 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
+import _modDef5455 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
 import closure_3 from "../../../../stores/UserGuildSettingsStore.tsx";
 import { UserNotificationSettings } from "../../../../Constants.tsx";
 import { GuildNotificationSettingsFlags as closure_5 } from "../../../user_settings/UserSettingsConstants.tsx";
@@ -14,24 +14,24 @@ export const updateGuildPreset = function updateGuildPreset(guildId, arg1) {
   if (arg1 === Presets.Presets.ALL_MESSAGES) {
     let obj = { message_notifications: null, flags: null };
     obj[0] = UserNotificationSettings.ALL_MESSAGES;
-    let tmp2Result = tmp2(10171);
+    let tmp2Result = tmp2(10194);
     obj[1] = tmp2Result.withGuildUnreadFlags(guildFlags, constants.UNREADS_ALL_MESSAGES);
-    const result = _modDef5452.updateGuildNotificationSettings(guildId, obj, tmp2(5447).NotificationLabels.PresetAll);
-    const obj4 = _modDef5452;
-  } else if (arg1 === tmp2(4670).Presets.MENTIONS) {
-    obj = _modDef5452;
+    const result = _modDef5455.updateGuildNotificationSettings(guildId, obj, tmp2(5450).NotificationLabels.PresetAll);
+    const obj4 = _modDef5455;
+  } else if (arg1 === tmp2(4672).Presets.MENTIONS) {
+    obj = _modDef5455;
     obj = { message_notifications: null, flags: null };
     obj[0] = UserNotificationSettings.ONLY_MENTIONS;
-    tmp2Result = tmp2(10171);
+    tmp2Result = tmp2(10194);
     obj[1] = tmp2Result.withGuildUnreadFlags(guildFlags, constants.UNREADS_ONLY_MENTIONS);
-    const result1 = obj.updateGuildNotificationSettings(guildId, obj, tmp2(5447).NotificationLabels.PresetMentions);
-  } else if (arg1 === tmp2(4670).Presets.NOTHING) {
+    const result1 = obj.updateGuildNotificationSettings(guildId, obj, tmp2(5450).NotificationLabels.PresetMentions);
+  } else if (arg1 === tmp2(4672).Presets.NOTHING) {
     obj1 = { message_notifications: null, flags: null };
     obj1[0] = UserNotificationSettings.NO_MESSAGES;
-    const obj7 = _modDef5452;
-    obj1[1] = tmp2(10171).withGuildUnreadFlags(guildFlags, constants.UNREADS_ONLY_MENTIONS);
-    const result2 = obj7.updateGuildNotificationSettings(guildId, obj1, tmp2(5447).NotificationLabels.PresetNothing);
-    const tmp2Result1 = tmp2(10171);
+    const obj7 = _modDef5455;
+    obj1[1] = tmp2(10194).withGuildUnreadFlags(guildFlags, constants.UNREADS_ONLY_MENTIONS);
+    const result2 = obj7.updateGuildNotificationSettings(guildId, obj1, tmp2(5450).NotificationLabels.PresetNothing);
+    const tmp2Result1 = tmp2(10194);
   }
 };
 export const useGuildPresetSettings = function useGuildPresetSettings(guildId) {

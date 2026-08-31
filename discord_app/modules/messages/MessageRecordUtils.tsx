@@ -1,6 +1,6 @@
 // discord_app/modules/messages/MessageRecordUtils.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import hooksDefault from "../../../_runtime/04044_hooks.js";
+import hooksDefault from "../../../_runtime/04045_hooks.js";
 import getPathsFromURLDefault from "../coded_links/findCodedLinks.tsx";
 import useNullableMessageAuthor from "useMessageAuthor.tsx";
 import isMentionedDefault from "isMessageMentioned.tsx";
@@ -159,7 +159,7 @@ function createMessageRecord(message, message) {
   obj.mentionRoles = mention_roles;
   obj.mentionChannels = mention_channels;
   obj.messageReference = message.message_reference;
-  let tmp9Result = tmp9(4717);
+  let tmp9Result = tmp9(4719);
   obj1 = { userId: store.getId(), channelId: message.channel_id, mentionEveryone: null, mentionUsers: null, mentionRoles: null };
   let flag = message.mention_everyone;
   if (flag == null) {
@@ -169,7 +169,7 @@ function createMessageRecord(message, message) {
   obj1[3] = mapped;
   obj1[4] = mention_roles;
   obj.mentioned = tmp9Result.isMentioned(obj1);
-  tmp9Result = tmp9(4718);
+  tmp9Result = tmp9(4720);
   const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
   const findGiftCodes = _resolveGiftCode.findGiftCodes;
   if (isGiftCodeEmbedResult) {

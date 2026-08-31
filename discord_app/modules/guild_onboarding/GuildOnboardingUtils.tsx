@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingUtils.tsx
 import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import hasFlagAll from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
 import useCanChannelBeDefault from "DefaultChannelUtils.tsx";
 import closure_4 from "../../stores/ChannelStore.tsx";

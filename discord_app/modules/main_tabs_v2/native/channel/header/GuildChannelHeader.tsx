@@ -23,8 +23,8 @@ function GuildChannelMemberCount(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  const token = channel(4166).useToken(ThemesDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
-  let obj = channel(4166);
+  const token = channel(4167).useToken(ThemesDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  let obj = channel(4167);
   const items = [closure_9, closure_6];
   const stateFromStoresObject = channel(589).useStateFromStoresObject(items, () => {
     let flag = false;
@@ -76,8 +76,8 @@ function GuildChannelMemberCount(channel) {
     const count = closure_1_6.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(12866);
-    return tmpResult.renderMemberCountText(online, total, flag, tmp(5967).ICON_SIZE[token]);
+    const tmpResult = tmp(12900);
+    return tmpResult.renderMemberCountText(online, total, flag, tmp(5970).ICON_SIZE[token]);
   }
 }
 function computeVisibleChannelName(channel) {
@@ -100,8 +100,8 @@ function computeVisibleChannelName(channel) {
       stringResult1 = string(ai6Lbr.ZTNur7);
     }
   } else {
-    stringResult = tmp(4640).computeChannelName(channel, closure_14, closure_13);
-    const tmpResult = tmp(4640);
+    stringResult = tmp(4642).computeChannelName(channel, closure_14, closure_13);
+    const tmpResult = tmp(4642);
   }
   return stringResult;
 }
@@ -110,10 +110,10 @@ function ChannelLinkedLobbyCoachmark(guild) {
   const channel = guild.channel;
   dependencyMap = undefined;
   let callback;
-  const items = [guild(1377).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = callback(guild(6216).useSelectedDismissibleContent(items, undefined, true), 2);
+  const items = [guild(1373).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
+  const tmp = callback(guild(6219).useSelectedDismissibleContent(items, undefined, true), 2);
   dependencyMap = tmp2;
-  const tmp3 = tmp[0] === guild(1377).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
+  const tmp3 = tmp[0] === guild(1373).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   callback = tmp3;
   const items1 = [channel, guild, tmp[1], tmp3];
   const memo = importAllResult.useMemo(() => {
@@ -121,7 +121,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
     const intl = guild(1236).intl;
     obj[0] = intl.string(guild(1236).t.YIVr4B);
     const intl2 = guild(1236).intl;
-    obj = { helpdeskArticle: channel(1996).getArticleURL(closure_1_16.LINKED_LOBBIES) };
+    obj = { helpdeskArticle: channel(1995).getArticleURL(closure_1_16.LINKED_LOBBIES) };
     obj[1] = intl2.format(guild(1236).t.w8VWRT, obj);
     let linkedLobby;
     if (channel != null) {
@@ -133,14 +133,14 @@ function ChannelLinkedLobbyCoachmark(guild) {
     };
     let channelIconWithGuild;
     if (null != channel) {
-      channelIconWithGuild = guild(4946).getChannelIconWithGuild(tmp3, guild);
-      const tmpResult = guild(4946);
+      channelIconWithGuild = guild(4949).getChannelIconWithGuild(tmp3, guild);
+      const tmpResult = guild(4949);
     }
     obj[6] = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(6216);
-  const coachmark = guild(8913).useCoachmark(guild.iconRef, memo);
+  let obj = guild(6219);
+  const coachmark = guild(8936).useCoachmark(guild.iconRef, memo);
   return null;
 }
 let c4 = importAllResult;
@@ -154,7 +154,6 @@ const memoResult = importAllResult.memo(function GuildChannelHeader(channelId) {
   ({ pressable, isGuildMemberCountVisible, showCreateThread } = channelId);
   let stateFromStores;
   closure_5 = undefined;
-  const tmp2 = screenIndex(guildId[29])("GuildChannelHeader");
   let obj = stateFromStores;
   const ref = stateFromStores.useRef(null);
   obj1 = guildId(guildId[17]);
@@ -163,7 +162,7 @@ const memoResult = importAllResult.memo(function GuildChannelHeader(channelId) {
   let obj3 = guildId(guildId[17]);
   const items1 = [closure_7];
   const stateFromStores1 = obj3.useStateFromStores(items1, () => closure_7.isConnected());
-  closure_5 = screenIndex(guildId[30])(channelId);
+  closure_5 = screenIndex(guildId[29])(channelId);
   let obj4 = guildId(guildId[17]);
   const items2 = [closure_10];
   const stateFromStores2 = obj4.useStateFromStores(items2, () => {
@@ -191,76 +190,72 @@ const memoResult = importAllResult.memo(function GuildChannelHeader(channelId) {
   if (pressable) {
     pressable = !showCreateThread;
   }
-  let tmp4Result = tmp4(tmp[17]);
+  let tmp2Result = tmp2(tmp3[17]);
   const items3 = [closure_12];
-  const stateFromStores3 = tmp4Result.useStateFromStores(items3, () => closure_1_12.getGuild(guildId));
+  const stateFromStores3 = tmp2Result.useStateFromStores(items3, () => closure_1_12.getGuild(guildId));
   let renderChannelIconResult = null;
   if (null != stateFromStores) {
     renderChannelIconResult = null;
     if (!showCreateThread) {
-      tmp4Result = tmp4(tmp[18]);
-      renderChannelIconResult = tmp4Result.renderChannelIcon(stateFromStores, stateFromStores3);
+      tmp2Result = tmp2(tmp3[18]);
+      renderChannelIconResult = tmp2Result.renderChannelIcon(stateFromStores, stateFromStores3);
     }
-  }
-  let tmp12 = null;
-  if (tmp2) {
-    tmp12 = renderChannelIconResult;
   }
   const items4 = [closure_7];
   obj = { channel: stateFromStores, guildId, showCreateThread, isConnected: guildId(guildId[17]).useStateFromStores(items4, () => closure_7.isConnected()) };
-  const tmp14 = computeVisibleChannelName(obj);
-  const tmp10 = !pressable;
-  const tmp11 = !isGuildMemberCountVisible;
-  const tmp13 = computeVisibleChannelName;
-  const tmp4Result1 = guildId(guildId[17]);
-  const tmp5 = closure_7;
+  const tmp12 = computeVisibleChannelName(obj);
+  const tmp10 = !isGuildMemberCountVisible;
+  const tmp11 = computeVisibleChannelName;
+  const tmp2Result1 = guildId(guildId[17]);
+  const tmp4 = closure_7;
+  const tmp9 = !pressable;
   const shouldNSFWGateGuildResult = guildId(guildId[20]).shouldNSFWGateGuild(guildId);
-  let tmp16 = !shouldNSFWGateGuildResult;
+  let tmp14 = !shouldNSFWGateGuildResult;
   if (!shouldNSFWGateGuildResult) {
-    let tmp17 = showCreateThread;
+    let tmp15 = showCreateThread;
     if (!showCreateThread) {
       let isThreadResult;
       if (stateFromStores != null) {
         isThreadResult = stateFromStores.isThread();
       }
-      tmp17 = isThreadResult;
+      tmp15 = isThreadResult;
     }
-    tmp16 = tmp17;
+    tmp14 = tmp15;
   }
-  const intl = tmp4(tmp[21]).intl;
-  const t = tmp4(tmp[21]).t;
-  const tmp4Result2 = guildId(guildId[20]);
-  if (tmp16) {
+  const intl = tmp2(tmp3[21]).intl;
+  const t = tmp2(tmp3[21]).t;
+  const tmp2Result2 = guildId(guildId[20]);
+  if (tmp14) {
     if (null != stateFromStores2) {
-      let result = tmp4(tmp[18]).renderParentChannelSubTitle(stateFromStores2);
-      const tmp4Result3 = tmp4(tmp[18]);
+      let result = tmp2(tmp3[18]).renderParentChannelSubTitle(stateFromStores2);
+      const tmp2Result3 = tmp2(tmp3[18]);
     }
   }
-  const formatToPlainStringResult = intl.formatToPlainString(tmp16 ? t["OkzL+Q"] : t.UbNmGc, { channelName: tmp14 });
+  const formatToPlainStringResult = intl.formatToPlainString(tmp14 ? t["OkzL+Q"] : t.UbNmGc, { channelName: tmp12 });
   const items5 = [closure_11];
   let num = guildId(guildId[17]).useStateFromStores(items5, () => closure_1_11.getMemberCount(guildId));
   if (num == null) {
     num = 0;
   }
-  let tmp21 = !tmp11;
+  let tmp19 = !tmp10;
   if (isGuildMemberCountVisible) {
-    tmp21 = num < 500;
+    tmp19 = num < 500;
   }
-  if (tmp21) {
-    tmp21 = null != stateFromStores;
+  if (tmp19) {
+    tmp19 = null != stateFromStores;
   }
-  if (tmp21) {
-    tmp21 = !stateFromStores.isThread();
+  if (tmp19) {
+    tmp19 = !stateFromStores.isThread();
   }
-  if (tmp21) {
+  if (tmp19) {
     const items6 = [, ];
     ({ GUILD_DIRECTORY: arr7[0], GUILD_FORUM: arr7[1] } = closure_15);
-    tmp21 = !items6.includes(stateFromStores.type);
+    tmp19 = !items6.includes(stateFromStores.type);
   }
-  if (tmp21) {
-    tmp21 = !showCreateThread;
+  if (tmp19) {
+    tmp19 = !showCreateThread;
   }
-  const tmp4Result4 = guildId(guildId[17]);
+  const tmp2Result4 = guildId(guildId[17]);
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -270,112 +265,86 @@ const memoResult = importAllResult.memo(function GuildChannelHeader(channelId) {
   if (stateFromStores != null) {
     isForumLikeChannelResult = stateFromStores.isForumLikeChannel();
   }
-  let tmp26 = !isForumLikeChannelResult;
+  let tmp24 = !isForumLikeChannelResult;
   if (!isForumLikeChannelResult) {
-    tmp26 = shouldChannelShowLoadingIndicator;
+    tmp24 = shouldChannelShowLoadingIndicator;
   }
-  if (tmp26) {
-    let tmp27Result = callback2(tmp4(tmp[23]).ChannelHeaderLoadingIndicator, {});
+  if (tmp24) {
+    let tmp25Result = callback2(tmp2(tmp3[23]).ChannelHeaderLoadingIndicator, {});
   } else {
-    let tmp29 = tmp21;
-    if (tmp21) {
+    let tmp27 = tmp19;
+    if (tmp19) {
       obj = { channel: null, withSeparator: null };
       obj[0] = stateFromStores;
       obj[1] = null != result;
-      tmp29 = callback2(GuildChannelMemberCount, obj);
+      tmp27 = callback2(GuildChannelMemberCount, obj);
     }
-    const items7 = [tmp29, ];
+    const items7 = [tmp27, ];
     obj1 = { children: null };
     items7[1] = null != stateFromStores2 && result;
     obj1[0] = items7;
-    tmp27Result = closure_21(closure_20, obj1);
-    const tmp27 = closure_21;
-    const tmp28 = closure_20;
-    const tmp32 = null != stateFromStores2 && result;
+    tmp25Result = closure_21(closure_20, obj1);
+    const tmp25 = closure_21;
+    const tmp26 = closure_20;
+    const tmp30 = null != stateFromStores2 && result;
   }
-  const tmp4Result5 = guildId(guildId[23]);
-  const tmp4Result6 = guildId(guildId[18]);
-  if (!tmp26) {
-    tmp26 = tmp21;
+  const tmp2Result5 = guildId(guildId[23]);
+  const tmp2Result6 = guildId(guildId[18]);
+  if (!tmp24) {
+    tmp24 = tmp19;
   }
-  if (!tmp26) {
-    tmp26 = null != result;
+  if (!tmp24) {
+    tmp24 = null != result;
   }
   const items8 = [channelId, screenIndex];
   const callback = obj.useCallback(() => {
-    const result = guildId(guildId[31]).navigateToChannelDetails(guildId, screenIndex, "guild-channel-header-title");
+    const result = guildId(guildId[30]).navigateToChannelDetails(guildId, screenIndex, "guild-channel-header-title");
   }, items8);
-  if (tmp2) {
-    let tmp45 = null;
-    if (null != stateFromStores3) {
-      let linkedLobby;
-      if (stateFromStores != null) {
-        linkedLobby = stateFromStores.linkedLobby;
-      }
-      tmp45 = null;
-      if (null != linkedLobby) {
-        const obj2 = { ref: null, children: null };
-        obj2[0] = ref;
-        obj3 = { iconRef: null, guild: null, channel: null };
-        obj3[0] = ref;
-        obj3[1] = stateFromStores3;
-        obj3[2] = stateFromStores;
-        obj2[1] = callback2(ChannelLinkedLobbyCoachmark, obj3);
-        tmp45 = callback2(closure_5, obj2);
-      }
+  let tmp37 = null;
+  if (null != stateFromStores3) {
+    let linkedLobby;
+    if (stateFromStores != null) {
+      linkedLobby = stateFromStores.linkedLobby;
     }
-    let tmp37Result = tmp45;
-  } else {
-    obj4 = { ref: null, style: null, children: null };
-    obj4[0] = ref;
-    obj4[1] = { marginRight: 8 };
-    const items9 = [renderChannelIconResult, ];
-    let tmp40 = null;
-    if (null != stateFromStores3) {
-      let linkedLobby1;
-      if (stateFromStores != null) {
-        linkedLobby1 = stateFromStores.linkedLobby;
-      }
-      tmp40 = null;
-      if (null != linkedLobby1) {
-        const obj5 = { iconRef: null, guild: null, channel: null };
-        obj5[0] = ref;
-        obj5[1] = stateFromStores3;
-        obj5[2] = stateFromStores;
-        tmp40 = callback2(ChannelLinkedLobbyCoachmark, obj5);
-      }
+    tmp37 = null;
+    if (null != linkedLobby) {
+      const obj2 = { ref: null, children: null };
+      obj2[0] = ref;
+      obj3 = { iconRef: null, guild: null, channel: null };
+      obj3[0] = ref;
+      obj3[1] = stateFromStores3;
+      obj3[2] = stateFromStores;
+      obj2[1] = callback2(ChannelLinkedLobbyCoachmark, obj3);
+      tmp37 = callback2(closure_5, obj2);
     }
-    items9[1] = tmp40;
-    obj4[2] = items9;
-    tmp37Result = tmp37(closure_5, obj4);
-    const tmp39 = closure_5;
   }
-  const items10 = [tmp37Result, guildId(guildId[18]).renderChannelTitle(tmp14, { accessibleTitle: formatToPlainStringResult, subtitle: tmp27Result, disableArrow: tmp10, guildId, icon: tmp12 })];
-  tmp37Result = tmp37(tmp38, { children: items10 });
+  const items9 = [tmp37, guildId(guildId[18]).renderChannelTitle(tmp12, { accessibleTitle: formatToPlainStringResult, subtitle: tmp25Result, disableArrow: tmp9, guildId, icon: renderChannelIconResult })];
+  const tmp35Result = closure_21(closure_20, { children: items9 });
   if (null != stateFromStores) {
-    const obj6 = { channel: null, guildId: null, showCreateThread: null, isConnected: null };
-    obj6[0] = stateFromStores;
-    obj6[1] = guildId;
-    obj6[2] = showCreateThread;
-    obj6[3] = stateFromStores1;
-    const intl2 = tmp4(tmp[21]).intl;
+    obj4 = { channel: null, guildId: null, showCreateThread: null, isConnected: null };
+    obj4[0] = stateFromStores;
+    obj4[1] = guildId;
+    obj4[2] = showCreateThread;
+    obj4[3] = stateFromStores1;
+    const intl2 = tmp2(tmp3[21]).intl;
     const _HermesInternal = HermesInternal;
-    const combined = "" + tmp13(obj6) + ", " + intl2.string(tmp4(tmp[21]).t.x87QCk);
-    const tmp13Result = tmp13(obj6);
+    const combined = "" + tmp11(obj4) + ", " + intl2.string(tmp2(tmp3[21]).t.x87QCk);
+    const tmp11Result = tmp11(obj4);
   }
   if (pressable) {
     let num3 = 24;
-    if (tmp26) {
+    if (tmp24) {
       num3 = 44;
     }
-    const obj7 = { children: null };
-    const tmp4Result7 = tmp4(tmp[18]);
-    obj7[0] = tmp4Result7.renderTitleWrapper(tmp37Result, callback, combined, num3);
-    return callback2(tmp38, obj7);
+    const obj5 = { children: null };
+    const tmp2Result7 = tmp2(tmp3[18]);
+    obj5[0] = tmp2Result7.renderTitleWrapper(tmp35Result, callback, combined, num3);
+    return callback2(tmp36, obj5);
   } else {
-    return tmp37Result;
+    return tmp35Result;
   }
-  const renderChannelTitleResult = guildId(guildId[18]).renderChannelTitle(tmp14, { accessibleTitle: formatToPlainStringResult, subtitle: tmp27Result, disableArrow: tmp10, guildId, icon: tmp12 });
+  const renderChannelTitleResult = guildId(guildId[18]).renderChannelTitle(tmp12, { accessibleTitle: formatToPlainStringResult, subtitle: tmp25Result, disableArrow: tmp9, guildId, icon: renderChannelIconResult });
+  const tmp35 = closure_21;
 });
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/GuildChannelHeader.tsx");
 

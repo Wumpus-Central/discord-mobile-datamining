@@ -3,7 +3,7 @@ import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.ts
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01405_priv.js";
+import privDefault from "../../../_runtime/01401_priv.js";
 import urlUserId from "BadgeDirectoryActionCreators.tsx";
 import closure_3 from "../../stores/UserStore.tsx";
 

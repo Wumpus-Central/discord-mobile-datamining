@@ -23,7 +23,7 @@ function _trackAndroidArtProfileSnapshotAsync() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -87,7 +87,7 @@ function _trackAndroidArtProfileSnapshotAsync() {
             obj2.current_profile_last_modified_ms = c5.currentProfileLastModifiedMs;
             callback2(table[5]).track(c5.ANDROID_ART_PROFILE_SNAPSHOT, obj2, { logEventProperties: true });
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp6) {
           c5 = tmp;

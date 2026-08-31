@@ -23,7 +23,7 @@ export default function useEmojiPickerSearchState(arg0, arg1, arg2, arg3) {
         if (":" === arr[0]) {
           substr = arr.slice(1);
         }
-        const FrecencyUserSettingsActionCreators = callback(1374).FrecencyUserSettingsActionCreators;
+        const FrecencyUserSettingsActionCreators = callback(1370).FrecencyUserSettingsActionCreators;
         const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
         let obj = { channel: null, query: null, count: 0, intention: null, bypassPremiumEmojiEntitlement: null };
         obj[0] = callback;

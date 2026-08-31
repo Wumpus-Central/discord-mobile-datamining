@@ -1,7 +1,7 @@
 // discord_app/stores/UserStore.tsx
 import clearAllDefault from "MobileCacheSnapshotStore.tsx";
-import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
 import hasFlagAll from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
 import validatePremiumType from "../modules/user/UserStoreUtils.tsx";
 import isUserPrimaryGuildEqual from "../modules/guild_tag/PrimaryGuildUtils.tsx";
 import PermissionOverwriteType from "../flow/Server.tsx";
@@ -37,11 +37,11 @@ function mergeUserPrimaryGuild(id, primary_guild) {
     if (!result) {
       let flag = null == tmp2.primaryGuild || null != primary_guild.primary_guild;
       if (flag) {
-        tmp2.primaryGuild = tmp5(1933).ensureUserPrimaryGuild(primary_guild.primary_guild);
+        tmp2.primaryGuild = tmp5(1932).ensureUserPrimaryGuild(primary_guild.primary_guild);
         tmp[tmp2.id] = tmp2;
         closure_12 = closure_12 + 1;
         flag = true;
-        const tmp5Result = tmp5(1933);
+        const tmp5Result = tmp5(1932);
       }
       tmp8 = flag;
     }
@@ -91,14 +91,14 @@ function transformUser(mfa_enabled) {
   }
   const avatar_decoration_data = mfa_enabled.avatar_decoration_data;
   if (undefined !== avatar_decoration_data) {
-    let tmp4Result = tmp4(1899);
+    let tmp4Result = tmp4(1898);
     mfa_enabled.avatarDecorationData = tmp4Result.parseAvatarDecorationData(avatar_decoration_data);
     delete tmp[tmp3];
   }
   const collectibles = mfa_enabled.collectibles;
   if (undefined !== collectibles) {
     delete tmp[tmp3];
-    tmp4Result = tmp4(1900);
+    tmp4Result = tmp4(1899);
     mfa_enabled.collectibles = tmp4Result.parseServerUserCollectibles(collectibles);
   }
   const global_name = mfa_enabled.global_name;
@@ -108,30 +108,30 @@ function transformUser(mfa_enabled) {
   }
   const primary_guild = mfa_enabled.primary_guild;
   if (undefined !== primary_guild) {
-    mfa_enabled.primary_guild = tmp4(1933).ensureUserPrimaryGuild(primary_guild);
-    const tmp4Result1 = tmp4(1933);
+    mfa_enabled.primary_guild = tmp4(1932).ensureUserPrimaryGuild(primary_guild);
+    const tmp4Result1 = tmp4(1932);
   }
   const display_name_styles = mfa_enabled.display_name_styles;
   if (undefined !== display_name_styles) {
-    mfa_enabled.displayNameStyles = tmp4(1934).parseServerDisplayNameStyles(display_name_styles);
+    mfa_enabled.displayNameStyles = tmp4(1933).parseServerDisplayNameStyles(display_name_styles);
     delete tmp[tmp3];
-    const tmp4Result2 = tmp4(1934);
+    const tmp4Result2 = tmp4(1933);
   }
   const typing_indicator_style = mfa_enabled.typing_indicator_style;
   if (undefined !== typing_indicator_style) {
-    mfa_enabled.typingIndicatorStyle = tmp4(1938).parseServerTypingIndicatorStyle(typing_indicator_style);
+    mfa_enabled.typingIndicatorStyle = tmp4(1937).parseServerTypingIndicatorStyle(typing_indicator_style);
     delete tmp[tmp3];
-    const tmp4Result3 = tmp4(1938);
+    const tmp4Result3 = tmp4(1937);
   }
   const premium_state = mfa_enabled.premium_state;
   if (undefined !== premium_state) {
-    mfa_enabled.premiumState = tmp4(1942).parseServerPremiumState(premium_state);
+    mfa_enabled.premiumState = tmp4(1941).parseServerPremiumState(premium_state);
     delete tmp[tmp3];
-    const tmp4Result4 = tmp4(1942);
+    const tmp4Result4 = tmp4(1941);
   }
   const restricted_schedule = mfa_enabled.restricted_schedule;
   if (undefined !== restricted_schedule) {
-    const RestrictedScheduleRecord = tmp4(1945).RestrictedScheduleRecord;
+    const RestrictedScheduleRecord = tmp4(1944).RestrictedScheduleRecord;
     let fromServerResult = RestrictedScheduleRecord.fromServer(restricted_schedule);
     if (fromServerResult == null) {
       fromServerResult = null;
@@ -211,8 +211,8 @@ function mergeUser(user, arg1) {
       if (tmp14 !== true) {
         if (tmp15 !== true) {
           if (obj4.isUserPrimaryGuildEqual(obj.primaryGuild, user.primary_guild) !== true) {
-            user.primary_guild = tmp16(1933).ensureUserPrimaryGuild(user.primary_guild);
-            const tmp16Result = tmp16(1933);
+            user.primary_guild = tmp16(1932).ensureUserPrimaryGuild(user.primary_guild);
+            const tmp16Result = tmp16(1932);
           }
           obj4 = isUserPrimaryGuildEqual;
           tmp16 = require;
@@ -678,9 +678,9 @@ function handleIncomingMessage(message) {
       let flag = null != obj3;
       if (flag) {
         const id = store2.getId();
-        obj[id] = obj3.set("flags", tmp2(1403).setFlag(obj3.flags, constants.HAS_UNREAD_URGENT_MESSAGES, true));
+        obj[id] = obj3.set("flags", tmp2(1399).setFlag(obj3.flags, constants.HAS_UNREAD_URGENT_MESSAGES, true));
         flag = true;
-        const tmp2Result = tmp2(1403);
+        const tmp2Result = tmp2(1399);
       }
       return flag;
     }

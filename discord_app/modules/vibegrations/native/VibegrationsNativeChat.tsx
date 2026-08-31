@@ -42,10 +42,10 @@ function ProposalCard(proposal) {
   const items1 = [callback(Text.Text, obj), , , , , ];
   if ("" === trimmed) {
     const intl2 = tmp6(1236).intl;
-    let stringResult = intl2.string(tmp8(3470).IHCafX);
+    let stringResult = intl2.string(tmp8(3471).IHCafX);
   } else {
-    stringResult = tmp8(4436).parse(trimmed, true, closure_16);
-    const tmp8Result = tmp8(4436);
+    stringResult = tmp8(4438).parse(trimmed, true, closure_16);
+    const tmp8Result = tmp8(4438);
   }
   items1[1] = callback(Text.Text, { variant: "text-md/normal", color: "text-default", children: stringResult });
   let tmp5Result = null;
@@ -53,12 +53,12 @@ function ProposalCard(proposal) {
     obj = { direction: "vertical", spacing: 4, children: null };
     obj1 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl3 = tmp6(1236).intl;
-    obj1[2] = intl3.string(tmp8(3470).KLyB8Y);
-    const items2 = [tmp3(tmp6(4442).Text, obj1), ];
+    obj1[2] = intl3.string(tmp8(3471).KLyB8Y);
+    const items2 = [tmp3(tmp6(4444).Text, obj1), ];
     const changes = proposal.changes;
     items2[1] = changes.map((arg0, arg1) => callback2(callback(table[11]).Text, { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + arg0 }, arg1));
     obj[2] = items2;
-    tmp5Result = tmp5(tmp6(4891).Stack, obj);
+    tmp5Result = tmp5(tmp6(4894).Stack, obj);
   }
   items1[2] = tmp5Result;
   tmp5Result = null;
@@ -66,13 +66,13 @@ function ProposalCard(proposal) {
     const obj2 = { direction: "vertical", spacing: 4, children: null };
     const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl4 = tmp6(1236).intl;
-    obj3[2] = intl4.string(tmp8(3470).ieqTtP);
-    const items3 = [tmp3(tmp6(4442).Text, obj3), ];
+    obj3[2] = intl4.string(tmp8(3471).ieqTtP);
+    const items3 = [tmp3(tmp6(4444).Text, obj3), ];
     const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
     obj4[2] = bot_permissions.join(", ");
-    items3[1] = tmp3(tmp6(4442).Text, obj4);
+    items3[1] = tmp3(tmp6(4444).Text, obj4);
     obj2[2] = items3;
-    tmp5Result = tmp5(tmp6(4891).Stack, obj2);
+    tmp5Result = tmp5(tmp6(4894).Stack, obj2);
   }
   items1[3] = tmp5Result;
   let tmp5Result1 = null;
@@ -80,22 +80,22 @@ function ProposalCard(proposal) {
     const obj5 = { direction: "vertical", spacing: 4, children: null };
     const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl5 = tmp6(1236).intl;
-    obj6[2] = intl5.string(tmp8(3470).Cn9qix);
-    const items4 = [tmp3(tmp6(4442).Text, obj6), ];
+    obj6[2] = intl5.string(tmp8(3471).Cn9qix);
+    const items4 = [tmp3(tmp6(4444).Text, obj6), ];
     const obj7 = { variant: "text-sm/normal", color: "text-default", children: null };
     obj7[2] = privileged_intents.join(", ");
-    items4[1] = tmp3(tmp6(4442).Text, obj7);
+    items4[1] = tmp3(tmp6(4444).Text, obj7);
     obj5[2] = items4;
-    tmp5Result1 = tmp5(tmp6(4891).Stack, obj5);
+    tmp5Result1 = tmp5(tmp6(4894).Stack, obj5);
   }
   items1[4] = tmp5Result1;
   let tmp3Result = null;
   if (actionable) {
     const obj8 = { text: null, variant: "primary", onPress: null };
     const intl6 = tmp6(1236).intl;
-    obj8[0] = intl6.string(tmp8(3470).GYoWRk);
+    obj8[0] = intl6.string(tmp8(3471).GYoWRk);
     obj8[2] = onApprove;
-    tmp3Result = tmp3(tmp6(4893).Button, obj8);
+    tmp3Result = tmp3(tmp6(4896).Button, obj8);
   }
   items1[5] = tmp3Result;
   obj[1] = closure_15(Stack.Stack, { direction: "vertical", spacing: 8, children: items1 });
@@ -164,11 +164,11 @@ function AttachmentPills(projectId) {
         const intl = projectId(1236).intl;
         obj = { name: null };
         obj[0] = id.name;
-        obj[2] = intl.formatToPlainString(lib(3470).QUFLUq, obj);
+        obj[2] = intl.formatToPlainString(lib(3471).QUFLUq, obj);
         obj = { variant: "text-xs/medium", color: "text-default", children: null };
         obj[2] = id.name;
-        obj[3] = closure_1_14(projectId(4442).Text, obj);
-        let tmp12 = closure_1_14(projectId(5566).Card, obj, id.id);
+        obj[3] = closure_1_14(projectId(4444).Text, obj);
+        let tmp12 = closure_1_14(projectId(5569).Card, obj, id.id);
       } else {
         obj1 = { style: null, children: null };
         obj1[0] = lib.attachmentPill;
@@ -176,8 +176,8 @@ function AttachmentPills(projectId) {
         const intl2 = projectId(1236).intl;
         const obj3 = { name: null };
         obj3[0] = id.name;
-        obj2[2] = intl2.formatToPlainString(lib(3470).OBr7WW, obj3);
-        obj1[1] = closure_1_14(projectId(4442).Text, obj2);
+        obj2[2] = intl2.formatToPlainString(lib(3471).OBr7WW, obj3);
+        obj1[1] = closure_1_14(projectId(4444).Text, obj2);
         const _HermesInternal = HermesInternal;
         tmp12 = closure_1_14(closure_1_5, obj1, "" + id.name + "-" + arg1);
       }
@@ -212,8 +212,8 @@ function ActivityBox(tree) {
     const steps = tree.steps;
     const items1 = [
       steps.map((id) => {
-          const obj = { variant: "text-sm/normal", color: "text-muted", children: callback(16119).describeNode(id) };
-          return callback3(callback(4442).Text, obj, id.id);
+          const obj = { variant: "text-sm/normal", color: "text-muted", children: callback(16153).describeNode(id) };
+          return callback3(callback(4444).Text, obj, id.id);
         }),
 
     ];
@@ -352,7 +352,7 @@ let closure_25 = importAllResult.memo((isNewest) => {
       if ("" !== trimmed) {
         obj1 = { variant: "text-md/normal", color: "text-default", children: null };
         obj1[2] = trimmed;
-        tmp51Result = tmp51(message(4442).Text, obj1);
+        tmp51Result = tmp51(message(4444).Text, obj1);
       }
       items5[1] = tmp51Result;
       tmp51Result = null;
@@ -496,7 +496,7 @@ let closure_25 = importAllResult.memo((isNewest) => {
           const obj5 = { variant: "text-md/normal", color: "text-default", children: null };
           obj4 = get_defaultRulesDefault;
           obj5[2] = obj4.parse(trimmed, true, closure_16);
-          obj4[1] = tmp19(message(4442).Text, obj5);
+          obj4[1] = tmp19(message(4444).Text, obj5);
           tmp19Result = tmp19(tmp18, obj4);
         }
       }
@@ -574,7 +574,7 @@ let closure_25 = importAllResult.memo((isNewest) => {
       if ("message" in found) {
         const obj15 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
         obj15[2] = found.message;
-        tmp19Result8 = tmp19(message(4442).Text, obj15);
+        tmp19Result8 = tmp19(message(4444).Text, obj15);
       }
     }
     items7[12] = tmp19Result8;

@@ -22,11 +22,11 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
         remoteApplicationActivity = remoteApplicationActivity.getRemoteApplicationActivity(application_id);
         let tmp4 = null;
         if (null != remoteApplicationActivity) {
-          let tmp11Result = tmp11(9377);
+          let tmp11Result = tmp11(9399);
           tmp4 = null;
           if (!tmp11Result.isContextlessEmbeddedActivity(remoteApplicationActivity)) {
             if (null == remoteApplicationActivity.application_id) {
-              tmp11Result = tmp11(1403);
+              tmp11Result = tmp11(1399);
               let num2 = remoteApplicationActivity.flags;
               if (num2 == null) {
                 num2 = 0;

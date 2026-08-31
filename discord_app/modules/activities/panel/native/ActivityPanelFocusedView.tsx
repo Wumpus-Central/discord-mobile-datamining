@@ -302,7 +302,7 @@ export default memoResult;
 export const useBaseActivityPanelFocusedView = function useBaseActivityPanelFocusedView(context) {
   closure_0 = undefined;
   let isWindowLandscape;
-  const tmp = isWindowLandscape(1629)();
+  const tmp = isWindowLandscape(1628)();
   closure_0 = tmp;
   let obj = importAllResult;
   const wrapperDimensions = importAllResult.useContext(context.context).wrapperDimensions;

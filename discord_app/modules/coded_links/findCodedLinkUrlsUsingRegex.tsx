@@ -1,5 +1,5 @@
 // discord_app/modules/coded_links/findCodedLinkUrlsUsingRegex.tsx
-import importDefaultResult from "../../../_runtime/01488_ip.js";
+import importDefaultResult from "../../../_runtime/01487_ip.js";
 
 function trimTrailingPunctuation(str) {
   return str.replace(closure_2, "");
