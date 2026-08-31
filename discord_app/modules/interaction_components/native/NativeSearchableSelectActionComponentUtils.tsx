@@ -1,12 +1,12 @@
-// === Module 7977: transformSearchableSelectOptions ===
+// === Module 7999: transformSearchableSelectOptions ===
 
-// Module 7977 (transformSearchableSelectOptions)
-import getChannelIcon from "getChannelIcon" /* 4946 */;
-import registerAssetDefault from "registerAsset" /* 7979 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1986 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "mergeGuildAvatar" /* 1923 */;
+// Module 7999 (transformSearchableSelectOptions)
+import getChannelIcon from "getChannelIcon" /* 4949 */;
+import registerAssetDefault from "registerAsset" /* 8001 */;
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_5 from "createGuildRecordFromRust" /* 1909 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -101,7 +101,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
       return null;
     }
   });
-  return mapped.filter(_require(1370).isNotNullish);
+  return mapped.filter(_require(1471).isNotNullish);
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {

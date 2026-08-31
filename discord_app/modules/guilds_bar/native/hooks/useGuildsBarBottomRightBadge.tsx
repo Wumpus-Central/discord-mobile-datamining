@@ -1,10 +1,10 @@
-// === Module 15818: useGuildsBarBottomRightBadge ===
+// === Module 15852: useGuildsBarBottomRightBadge ===
 
-// Module 15818 (useGuildsBarBottomRightBadge)
+// Module 15852 (useGuildsBarBottomRightBadge)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles({ bottomRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
@@ -93,7 +93,7 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
       obj5[2] = items2;
       return obj5;
     } else {
-      return { badge: null, cutout: "Array", cutouts: "text" };
+      return { badge: null, cutout: "Array", cutouts: "accessibilityLabel" };
     }
   }, items1);
 };

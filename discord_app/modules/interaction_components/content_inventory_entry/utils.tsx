@@ -1,9 +1,9 @@
-// === Module 7964: isContentInventoryFallbackEmbed ===
+// === Module 7986: isContentInventoryFallbackEmbed ===
 
-// Module 7964 (isContentInventoryFallbackEmbed)
+// Module 7986 (isContentInventoryFallbackEmbed)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import hasFlag from "hasFlag" /* 1403 */;
+import hasFlag from "hasFlag" /* 1399 */;
 
 const MessageEmbedFlags = ME.MessageEmbedFlags;
 const result = set.fileFinishedImporting("modules/interaction_components/content_inventory_entry/utils.tsx");

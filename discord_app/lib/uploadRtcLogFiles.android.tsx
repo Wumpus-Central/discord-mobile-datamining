@@ -1,6 +1,6 @@
-// === Module 10210: _uploadRtcLogFiles ===
+// === Module 10234: _uploadRtcLogFiles ===
 
-// Module 10210 (_uploadRtcLogFiles)
+// Module 10234 (_uploadRtcLogFiles)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
@@ -25,7 +25,7 @@ function _uploadRtcLogFiles() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         while (true) {
@@ -191,7 +191,7 @@ function _uploadRtcLogFiles() {
           if (closure_1 === undefined) {
             let num7 = 3;
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             let tmp58 = closure_3;
             closure_1 = tmp57;
@@ -227,7 +227,7 @@ let closure_5 = new timestampDefault("uploadRtcLogFiles");
 const tmp3 = new timestampDefault("uploadRtcLogFiles");
 const result = require("set").fileFinishedImporting("lib/uploadRtcLogFiles.android.tsx");
 
-export const uploadRtcLogFiles = function uploadRtcLogFiles(arg0, closure_0) {
+export const uploadRtcLogFiles = function uploadRtcLogFiles(arg0, enabled, closure_0) {
   const self = this;
   const apply = _uploadRtcLogFiles.apply;
   if (typeof apply === "unknown") {

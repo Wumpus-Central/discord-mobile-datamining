@@ -1,12 +1,12 @@
-// === Module 9579: canManageResource ===
+// === Module 9601: canManageResource ===
 
-// Module 9579 (canManageResource)
+// Module 9601 (canManageResource)
 import fromStringAll from "fromString" /* 506 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_6 from "mergeGuildAvatar" /* 1923 */;
-import VIEW_CHANNEL from "VIEW_CHANNEL" /* 9580 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import VIEW_CHANNEL from "VIEW_CHANNEL" /* 9602 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;
@@ -95,7 +95,7 @@ export const attachChannelPermissions = function attachChannelPermissions(channe
 };
 export const useManageResourcePermissions = function useManageResourcePermissions(channel) {
   const _require = channel;
-  let obj = _require(1430);
+  let obj = _require(1426);
   if (obj.isGuildRecord(channel)) {
     let items = [, ];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);

@@ -1,10 +1,10 @@
-// === Module 5326: useStageHasMedia ===
+// === Module 5329: useStageHasMedia ===
 
-// Module 5326 (useStageHasMedia)
-import sortKey from "sortKey" /* 5333 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "updateVoiceState" /* 4465 */;
-import closure_4 from "getActiveStageChannelIds" /* 5327 */;
+// Module 5329 (useStageHasMedia)
+import sortKey from "sortKey" /* 5336 */;
+import closure_2 from "createGuildRecordFromRust" /* 1909 */;
+import closure_3 from "updateVoiceState" /* 4467 */;
+import closure_4 from "getActiveStageChannelIds" /* 5330 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/StageMediaHooks.tsx");

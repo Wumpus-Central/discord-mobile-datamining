@@ -1,9 +1,9 @@
-// === Module 9434: _getActivityLaunchErrorInfo ===
+// === Module 9456: _getActivityLaunchErrorInfo ===
 
-// Module 9434 (_getActivityLaunchErrorInfo)
+// Module 9456 (_getActivityLaunchErrorInfo)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 8444 */;
-import { DevShelfFetchState } from "initialize" /* 8444 */;
+import closure_4 from "initialize" /* 8466 */;
+import { DevShelfFetchState } from "initialize" /* 8466 */;
 import { AbortCodes } from "ME" /* 676 */;
 
 const require = arg1;
@@ -26,7 +26,7 @@ function _getActivityLaunchErrorInfo() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

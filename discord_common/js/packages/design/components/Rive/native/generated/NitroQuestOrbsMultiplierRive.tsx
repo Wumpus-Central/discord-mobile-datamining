@@ -1,8 +1,8 @@
-// === Module 4256: NitroQuestOrbsMultiplierRive ===
+// === Module 4257: NitroQuestOrbsMultiplierRive ===
 
-// Module 4256 (NitroQuestOrbsMultiplierRive)
-import BaseRive from "BaseRive" /* 4180 */;
-import getDerivedStateFromError from "getDerivedStateFromError" /* 4235 */;
+// Module 4257 (NitroQuestOrbsMultiplierRive)
+import BaseRive from "BaseRive" /* 4181 */;
+import getDerivedStateFromError from "getDerivedStateFromError" /* 4236 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

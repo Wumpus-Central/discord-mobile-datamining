@@ -1,8 +1,8 @@
-// === Module 8459: shouldAnimate ===
+// === Module 8481: shouldAnimate ===
 
-// Module 8459 (shouldAnimate)
+// Module 8481 (shouldAnimate)
 import set from "set" /* 2 */;
-import DEFAULT_PROFILE_EFFECT_WH_RATIO from "DEFAULT_PROFILE_EFFECT_WH_RATIO" /* 8460 */;
+import DEFAULT_PROFILE_EFFECT_WH_RATIO from "DEFAULT_PROFILE_EFFECT_WH_RATIO" /* 8482 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
 

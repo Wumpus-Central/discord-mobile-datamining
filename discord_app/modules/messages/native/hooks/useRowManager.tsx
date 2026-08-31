@@ -1,6 +1,6 @@
-// === Module 11460: useRowManager ===
+// === Module 11490: useRowManager ===
 
-// Module 11460 (useRowManager)
+// Module 11490 (useRowManager)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/hooks/useRowManager.tsx");

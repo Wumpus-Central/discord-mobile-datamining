@@ -1,16 +1,16 @@
-// === Module 16983: onPostConnectionOpen ===
+// === Module 17016: onPostConnectionOpen ===
 
-// Module 16983 (onPostConnectionOpen)
+// Module 17016 (onPostConnectionOpen)
 import failsDefault from "fails" /* 584 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5451 */;
-import trackInviteDefault from "trackInvite" /* 7148 */;
-import fetchAndReconcileGiftIntentDismissals from "fetchAndReconcileGiftIntentDismissals" /* 10455 */;
-import closure_3 from "dropChannelIfEmpty" /* 4702 */;
+import initializeDefault from "initialize" /* 5454 */;
+import trackInviteDefault from "trackInvite" /* 7169 */;
+import fetchAndReconcileGiftIntentDismissals from "fetchAndReconcileGiftIntentDismissals" /* 10479 */;
+import closure_3 from "dropChannelIfEmpty" /* 4704 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "getCurrentTime" /* 7933 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "getCurrentTime" /* 7955 */;
 import { MessageTypes } from "ME" /* 676 */;
 
 require = arg1;

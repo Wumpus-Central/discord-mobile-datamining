@@ -1,6 +1,6 @@
-// === Module 10683: BalanceWidgetMode ===
+// === Module 10707: BalanceWidgetMode ===
 
-// Module 10683 (BalanceWidgetMode)
+// Module 10707 (BalanceWidgetMode)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/virtual_currency/types.tsx");

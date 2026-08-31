@@ -1,6 +1,6 @@
-// === Module 17435: libDiscoreSmokeTest ===
+// === Module 17468: libDiscoreSmokeTest ===
 
-// Module 17435 (libDiscoreSmokeTest)
+// Module 17468 (libDiscoreSmokeTest)
 import timestampDefault from "timestamp" /* 3 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -31,7 +31,7 @@ function _libDiscoreSmokeTest() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -107,7 +107,7 @@ function _libDiscoreSmokeTest() {
 }
 function trackLibdiscoreSuccess() {
   const items = [];
-  const prop = items(1914).ALL_LIBDISCORE_EXPERIMENTS;
+  const prop = items(1913).ALL_LIBDISCORE_EXPERIMENTS;
   const item = prop.forEach((getEnabledFeatureName) => {
     const enabledFeatureName = getEnabledFeatureName.getEnabledFeatureName();
     if (null != enabledFeatureName) {

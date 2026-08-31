@@ -1,8 +1,8 @@
-// === Module 16847: timeout ===
+// === Module 16880: timeout ===
 
-// Module 16847 (timeout)
-import initializeDefault from "initialize" /* 5451 */;
-import closure_3 from "filterPlayingActivities" /* 5188 */;
+// Module 16880 (timeout)
+import initializeDefault from "initialize" /* 5454 */;
+import closure_3 from "filterPlayingActivities" /* 5191 */;
 import ME from "ME" /* 676 */;
 
 let require = arg1;
@@ -35,7 +35,7 @@ let prototype = function CustomStatusManager() {
     const result2 = applyArgumentsResult.manageExpiringFocusMode();
   };
   applyArgumentsResult.manageExpiringCustomStatus = function manageExpiringCustomStatus() {
-    let CustomStatusSetting = applyArgumentsResult(4135).CustomStatusSetting;
+    let CustomStatusSetting = applyArgumentsResult(4136).CustomStatusSetting;
     const setting = CustomStatusSetting.getSetting();
     if (null == setting) {
       closure_8.stop();
@@ -55,7 +55,7 @@ let prototype = function CustomStatusManager() {
               CustomStatusSetting.updateSetting(undefined);
             }, true);
           } else {
-            const CustomStatusSetting2 = applyArgumentsResult(4135).CustomStatusSetting;
+            const CustomStatusSetting2 = applyArgumentsResult(4136).CustomStatusSetting;
             CustomStatusSetting2.updateSetting(undefined);
             closure_8.stop();
           }
@@ -68,7 +68,7 @@ let prototype = function CustomStatusManager() {
     }
   };
   applyArgumentsResult.manageExpiringStatus = function manageExpiringStatus() {
-    const StatusExpiresAtSetting = applyArgumentsResult(4135).StatusExpiresAtSetting;
+    const StatusExpiresAtSetting = applyArgumentsResult(4136).StatusExpiresAtSetting;
     const setting = StatusExpiresAtSetting.getSetting();
     if (null != setting) {
       if ("0" !== setting) {
@@ -94,7 +94,7 @@ let prototype = function CustomStatusManager() {
             obj1[0] = constants.CUSTOM_STATUS_MANAGER;
             obj[0] = obj1;
             obj[1] = obj;
-            callback(10112)(obj);
+            callback(10135)(obj);
             closure_6.stop();
           }
         }
@@ -108,19 +108,19 @@ let prototype = function CustomStatusManager() {
   applyArgumentsResult.lazilyMigrateStatusCreatedAt = function lazilyMigrateStatusCreatedAt() {
     let tmp = store.getStatus() !== constants2.ONLINE;
     if (tmp) {
-      const StatusCreatedAtSetting = applyArgumentsResult(4135).StatusCreatedAtSetting;
+      const StatusCreatedAtSetting = applyArgumentsResult(4136).StatusCreatedAtSetting;
       tmp = null == StatusCreatedAtSetting.getSetting();
     }
     if (tmp) {
-      const PreloadedUserSettingsActionCreators = applyArgumentsResult(1374).PreloadedUserSettingsActionCreators;
+      const PreloadedUserSettingsActionCreators = applyArgumentsResult(1370).PreloadedUserSettingsActionCreators;
       PreloadedUserSettingsActionCreators.updateAsync("status", (arg0) => {
         const UInt64Value = callback(table[7]).UInt64Value;
         arg0.statusCreatedAtMs = UInt64Value.create({ value: "" + Date.now() });
-      }, applyArgumentsResult(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
+      }, applyArgumentsResult(1370).UserSettingsDelay.INFREQUENT_USER_ACTION);
     }
   };
   applyArgumentsResult.manageExpiringFocusMode = function manageExpiringFocusMode() {
-    const FocusModeExpiresAtSetting = applyArgumentsResult(4135).FocusModeExpiresAtSetting;
+    const FocusModeExpiresAtSetting = applyArgumentsResult(4136).FocusModeExpiresAtSetting;
     const setting = FocusModeExpiresAtSetting.getSetting();
     if (null != setting) {
       if ("0" !== setting) {
@@ -136,9 +136,9 @@ let prototype = function CustomStatusManager() {
             callback(table[8]).setFocusMode(false);
           }, true);
         } else {
-          applyArgumentsResult(10111).setFocusMode(false);
+          applyArgumentsResult(10134).setFocusMode(false);
           closure_7.stop();
-          const tmpResult = applyArgumentsResult(10111);
+          const tmpResult = applyArgumentsResult(10134);
         }
       }
     }

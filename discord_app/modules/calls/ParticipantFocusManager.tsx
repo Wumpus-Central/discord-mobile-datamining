@@ -1,9 +1,9 @@
-// === Module 16981: handleFocusParticipant ===
+// === Module 17014: handleFocusParticipant ===
 
-// Module 16981 (handleFocusParticipant)
-import initializeDefault from "initialize" /* 5451 */;
-import closure_0 from "createRTCConnection" /* 4520 */;
-import closure_1 from "getParticipants" /* 4462 */;
+// Module 17014 (handleFocusParticipant)
+import initializeDefault from "initialize" /* 5454 */;
+import closure_0 from "createRTCConnection" /* 4522 */;
+import closure_1 from "getParticipants" /* 4464 */;
 
 initializeDefault;
 class ParticipantFocusManager extends tmp2 {

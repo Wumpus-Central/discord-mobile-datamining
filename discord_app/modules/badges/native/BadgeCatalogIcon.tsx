@@ -1,6 +1,6 @@
-// === Module 8936: BadgeCatalogIcon ===
+// === Module 8959: BadgeCatalogIcon ===
 
-// Module 8936 (BadgeCatalogIcon)
+// Module 8959 (BadgeCatalogIcon)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -71,7 +71,7 @@ export default function BadgeCatalogIcon(style) {
     if (url === complex_icon_animated_url) {
       let xml = tmp4.xml;
     } else {
-      let obj5 = complex_icon_animated_url(8937);
+      let obj5 = complex_icon_animated_url(8960);
       xml = obj5.getCachedSvgXml(complex_icon_animated_url);
     }
     obj = { style: null, "aria-hidden": true, children: null };
@@ -82,7 +82,7 @@ export default function BadgeCatalogIcon(style) {
       obj1[0] = xml;
       obj1[1] = size;
       obj1[2] = size;
-      tmp15Result = tmp15(complex_icon_animated_url(8187).SvgXml, obj1);
+      tmp15Result = tmp15(complex_icon_animated_url(8209).SvgXml, obj1);
     }
     obj[2] = tmp15Result;
     return <View style={null} aria-hidden>{null}</View>;
@@ -103,7 +103,7 @@ export default function BadgeCatalogIcon(style) {
       obj5[1] = size;
       obj3[1] = obj5;
       obj3[2] = tmp7;
-      obj[2] = tmp8(isMatch(5458), obj3);
+      obj[2] = tmp8(isMatch(5461), obj3);
     }
     return <View {...obj} />;
   }

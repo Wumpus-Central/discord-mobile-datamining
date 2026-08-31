@@ -1,9 +1,9 @@
-// === Module 9591: useMyCurrentStageChannel ===
+// === Module 9613: useMyCurrentStageChannel ===
 
-// Module 9591 (useMyCurrentStageChannel)
+// Module 9613 (useMyCurrentStageChannel)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "handleConnectionOpen" /* 1982 */;
+import closure_2 from "ensureGuildLoaded" /* 1387 */;
+import closure_3 from "handleConnectionOpen" /* 1981 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannel.tsx");

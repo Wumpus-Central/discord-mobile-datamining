@@ -1,8 +1,8 @@
-// === Module 5373: dedupeEmojisByNameOrId ===
+// === Module 5376: dedupeEmojisByNameOrId ===
 
-// Module 5373 (dedupeEmojisByNameOrId)
+// Module 5376 (dedupeEmojisByNameOrId)
 import set from "set" /* 2 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4103 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4104 */;
 
 let result = set.fileFinishedImporting("modules/emojis/utils/dedupeEmojisByNameOrId.tsx");
 

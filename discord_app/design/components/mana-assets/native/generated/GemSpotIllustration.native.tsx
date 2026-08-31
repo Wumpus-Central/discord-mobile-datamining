@@ -1,10 +1,10 @@
-// === Module 6632: GemSpotIllustration ===
+// === Module 6645: GemSpotIllustration ===
 
-// Module 6632 (GemSpotIllustration)
+// Module 6645 (GemSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6633 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6646 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GemSpotIllustration.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 4660: metadata ===
+// === Module 4662: metadata ===
 
-// Module 4660 (metadata)
+// Module 4662 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/guild-room/plant-dead-2.png.js");

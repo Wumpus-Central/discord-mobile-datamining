@@ -1,8 +1,8 @@
-// === Module 4553: Camera ===
+// === Module 4555: Camera ===
 
-// Module 4553 (Camera)
+// Module 4555 (Camera)
 import noopAll from "noop" /* 19 */;
-import VideoDefault from "Video" /* 4549 */;
+import VideoDefault from "Video" /* 4551 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 class Camera {

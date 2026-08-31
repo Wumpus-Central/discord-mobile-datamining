@@ -1,14 +1,14 @@
-// === Module 6212: GuildBoostingMarketingOverview ===
+// === Module 6215: GuildBoostingMarketingOverview ===
 
-// Module 6212 (GuildBoostingMarketingOverview)
+// Module 6215 (GuildBoostingMarketingOverview)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "mergeGuildAvatar" /* 1923 */;
+import closure_6 from "createGuildRecordFromRust" /* 1909 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ AnalyticEvents: closure_8, AnalyticsPages: c9 } = ME);
@@ -79,9 +79,9 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, items3);
   const effect1 = obj3.useEffect(() => {
     guildBoostSlots(stateFromStores[16]).wait(() => {
-      const premiumSubscriptionPlans = callback(6069).fetchPremiumSubscriptionPlans();
-      const obj = callback(6069);
-      const paymentSources = callback(4803).fetchPaymentSources();
+      const premiumSubscriptionPlans = callback(6072).fetchPremiumSubscriptionPlans();
+      const obj = callback(6072);
+      const paymentSources = callback(4805).fetchPaymentSources();
     });
   }, []);
   let tmp18 = null;

@@ -1,11 +1,11 @@
-// === Module 16969: buildRequestHashPayload ===
+// === Module 17002: buildRequestHashPayload ===
 
-// Module 16969 (buildRequestHashPayload)
+// Module 17002 (buildRequestHashPayload)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 function buildRequestHashPayload(arg0, platform) {
-  const items = [arg0, platform.platform, , , ];
+  const items = [arg0, platform.platform, , , , , ];
   let str = "";
   if (null != platform.ageLower) {
     const _String = String;
@@ -18,11 +18,21 @@ function buildRequestHashPayload(arg0, platform) {
     str2 = String(platform.ageUpper);
   }
   items[3] = str2;
-  let str3 = platform.googleUserStatus;
+  let str3 = platform.googleAgeSignalsStatus;
   if (str3 == null) {
     str3 = "";
   }
   items[4] = str3;
+  let str4 = platform.googleAgeRangeSource;
+  if (str4 == null) {
+    str4 = "";
+  }
+  items[5] = str4;
+  let str5 = platform.googleSignificantChangeStatus;
+  if (str5 == null) {
+    str5 = "";
+  }
+  items[6] = str5;
   return items.join("|");
 }
 function _requestPlayIntegrityToken() {
@@ -88,7 +98,7 @@ function _getAgeSignalIntegrityToken() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -160,7 +170,7 @@ function _getAgeSignalIntegrityToken() {
             return obj;
           }
           v0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp9) {
           v0 = tmp;
           throw tmp9;

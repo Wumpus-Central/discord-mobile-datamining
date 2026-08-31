@@ -1,18 +1,18 @@
-// === Module 16839: handleGuildCreate ===
+// === Module 16872: handleGuildCreate ===
 
-// Module 16839 (handleGuildCreate)
+// Module 16872 (handleGuildCreate)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 687 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5451 */;
+import initializeDefault from "initialize" /* 5454 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 4821 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "_handleConnectionOpen" /* 5186 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "handleConnectionOpen" /* 4823 */;
+import closure_7 from "createGuildRecordFromRust" /* 1909 */;
+import closure_8 from "_handleConnectionOpen" /* 5189 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { ChannelFlags } from "set" /* 1398 */;
+import { ChannelFlags } from "set" /* 1394 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -281,7 +281,7 @@ function _scheduleGuildResyncs() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -429,7 +429,7 @@ function _scheduleGuildResyncs() {
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           c4 = tmp;
@@ -479,7 +479,7 @@ function _getResyncGuilds() {
 }
 function scheduleIntegrityCheck(guild_id) {
   const _require = guild_id;
-  let obj = _require(13257);
+  let obj = _require(13291);
   if (obj.isChannelMetadataIntegrityCheckEnabled("scheduleIntegrityCheck")) {
     if (null != dependencyMap3[guild_id]) {
       let _clearTimeout = clearTimeout;

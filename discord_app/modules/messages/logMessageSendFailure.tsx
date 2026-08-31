@@ -1,9 +1,9 @@
-// === Module 7534: logMessageSendFailure ===
+// === Module 7555: logMessageSendFailure ===
 
-// Module 7534 (logMessageSendFailure)
+// Module 7555 (logMessageSendFailure)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4666 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4668 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/messages/logMessageSendFailure.tsx");

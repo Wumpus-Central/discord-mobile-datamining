@@ -1,6 +1,6 @@
-// === Module 6623: metadata ===
+// === Module 6636: metadata ===
 
-// Module 6623 (metadata)
+// Module 6636 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemLevel2SpotIllustration-2x.png.js");

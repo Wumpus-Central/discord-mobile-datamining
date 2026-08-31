@@ -1,20 +1,20 @@
-// === Module 14473: OverlappingSchedulesWarning ===
+// === Module 14507: OverlappingSchedulesWarning ===
 
-// Module 14473 (OverlappingSchedulesWarning)
+// Module 14507 (OverlappingSchedulesWarning)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button2 from "Button" /* 1297 */;
-import messagesProxyDefault from "messagesProxy" /* 2370 */;
-import Text from "Text" /* 4442 */;
-import Stack from "Stack" /* 4891 */;
+import messagesProxyDefault from "messagesProxy" /* 2369 */;
+import Text from "Text" /* 4444 */;
+import Stack from "Stack" /* 4894 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "mergeGuildAvatar" /* 1923 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function OverlappingSchedulesWarning(conflictingEntries) {
@@ -77,7 +77,7 @@ export default function ScheduleDowntimeScreen() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -318,7 +318,7 @@ export default function ScheduleDowntimeScreen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -427,7 +427,7 @@ export default function ScheduleDowntimeScreen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -563,9 +563,9 @@ export default function ScheduleDowntimeScreen() {
     obj10[1] = callback2(tmp2(stringResult[14]).Text, obj11);
     obj10[3] = function handleStartTimePress() {
       const intl = lib(rule[15]).intl;
-      const f113114 = (first1) => {
+      const f113287 = (first1) => {
         callback(first1);
-        let obj = f113114(closure_1_2[19]);
+        let obj = f113287(closure_1_2[19]);
         const result = (obj.timeToMinutes(first1) + 540) % 1440;
         obj = { hours: Math.floor(result / 60), minutes: result % 60 };
         callback2(obj);

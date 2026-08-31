@@ -1,12 +1,12 @@
-// === Module 12509: computeEntryState ===
+// === Module 12543: computeEntryState ===
 
-// Module 12509 (computeEntryState)
+// Module 12543 (computeEntryState)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getFetchState" /* 12510 */;
-import closure_5 from "getFetchState" /* 8847 */;
-import closure_6 from "fromServer" /* 7235 */;
-import closure_7 from "fromServer" /* 7236 */;
+import closure_4 from "getFetchState" /* 12544 */;
+import closure_5 from "getFetchState" /* 8870 */;
+import closure_6 from "fromServer" /* 7256 */;
+import closure_7 from "fromServer" /* 7257 */;
 
 const require = arg1;
 function computeEntryState(arg0) {
@@ -98,6 +98,34 @@ function useAbsentIds(arg0) {
 }
 let result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCollectiblesShopProducts.tsx");
 
+export const useFetchResolvedAbsent = function useFetchResolvedAbsent(id) {
+  let obj = { id, sawFetch: false };
+  [tmp2, tmp3] = callback(React.useState(obj), 2);
+  let flag = tmp2.sawFetch;
+  if (tmp2.id !== id) {
+    obj = { id: null, sawFetch: null };
+    obj[0] = id;
+    obj[1] = null != arg1;
+    tmp3(obj);
+    flag = tmp8;
+  } else {
+    if (!tmp5) {
+      obj = { id: null, sawFetch: true };
+      obj[0] = id;
+      tmp3(obj);
+      flag = true;
+    }
+    tmp5 = null == arg1 || tmp2.sawFetch;
+  }
+  let tmp10 = "" !== id;
+  if (tmp10) {
+    tmp10 = null == arg1;
+  }
+  if (tmp10) {
+    tmp10 = flag;
+  }
+  return tmp10;
+};
 export const useCollectiblesShopProduct = function useCollectiblesShopProduct(skuId, arg1) {
   const _require = skuId;
   let obj = arg1;

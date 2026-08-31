@@ -1,9 +1,9 @@
-// === Module 6935: metadata ===
+// === Module 6952: metadata ===
 
-// Module 6935 (metadata)
+// Module 6952 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconLilQuackSPondverseExample-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/5c08c9b1f16804e389c678ff592c0e22db2b41634e060028bca763fcb6bff5a4.png";
-export const metadata = { fileBytes: 37962 };
+export default "https://cdn.discordapp.com/assets/content/a6061ce1b908d173b898fc6dce06c35cf50a132ccf6bd78fa81128d1e2515116.png";
+export const metadata = { fileBytes: 38141 };

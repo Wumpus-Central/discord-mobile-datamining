@@ -1,6 +1,6 @@
-// === Module 8961: ClanGameplayActivity ===
+// === Module 8984: ClanGameplayActivity ===
 
-// Module 8961 (ClanGameplayActivity)
+// Module 8984 (ClanGameplayActivity)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ClanGameplayActivity.tsx");

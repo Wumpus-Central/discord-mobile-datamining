@@ -1,6 +1,6 @@
-// === Module 4259: metadata ===
+// === Module 4260: metadata ===
 
-// Module 4259 (metadata)
+// Module 4260 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/OmnibuttonCoachmark.riv.js");

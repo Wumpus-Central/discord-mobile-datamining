@@ -1,7 +1,7 @@
-// === Module 15782: useCanShowGameClaimCoachmark ===
+// === Module 15816: useCanShowGameClaimCoachmark ===
 
-// Module 15782 (useCanShowGameClaimCoachmark)
-import closure_2 from "getUncachedChannelPermissions" /* 4090 */;
+// Module 15816 (useCanShowGameClaimCoachmark)
+import closure_2 from "getUncachedChannelPermissions" /* 4091 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;
@@ -9,8 +9,8 @@ const result = require("set").fileFinishedImporting("modules/game_claim/useGameC
 
 export const useCanShowGameClaimCoachmark = function useCanShowGameClaimCoachmark(id) {
   const _require = id;
-  let gameClaimCoachmarkEnabled = _require(15783).useGameClaimCoachmarkEnabled(id, "useCanShowGameClaimCoachmark");
-  const obj = _require(15783);
+  let gameClaimCoachmarkEnabled = _require(15817).useGameClaimCoachmarkEnabled(id, "useCanShowGameClaimCoachmark");
+  const obj = _require(15817);
   const tmp = _require;
   const items = [closure_2];
   const items1 = [id];

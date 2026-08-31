@@ -1,10 +1,10 @@
-// === Module 9298: ChatSmileIcon ===
+// === Module 9320: ChatSmileIcon ===
 
-// Module 9298 (ChatSmileIcon)
+// Module 9320 (ChatSmileIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 9299 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 9321 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 5340: isVersionEqual ===
+// === Module 5343: isVersionEqual ===
 
-// Module 5340 (isVersionEqual)
+// Module 5343 (isVersionEqual)
 import set from "set" /* 2 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
 

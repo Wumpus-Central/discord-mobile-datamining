@@ -1,11 +1,11 @@
-// === Module 9814: onConnectToConsole ===
+// === Module 9837: onConnectToConsole ===
 
-// Module 9814 (onConnectToConsole)
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4267 */;
-import _modDef9239 from "module_9239" /* 9239 */;
-import _modDef9267 from "module_9267" /* 9267 */;
-import _beginConsoleTransfer from "_beginConsoleTransfer" /* 9815 */;
+// Module 9837 (onConnectToConsole)
+import DismissibleContent from "DismissibleContent" /* 1373 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4268 */;
+import _modDef9261 from "module_9261" /* 9261 */;
+import _modDef9289 from "module_9289" /* 9289 */;
+import _beginConsoleTransfer from "_beginConsoleTransfer" /* 9838 */;
 import closure_3 from "noop" /* 19 */;
 import ME from "ME" /* 676 */;
 
@@ -23,10 +23,10 @@ export const onConnectToConsole = function onConnectToConsole(channel, closure_0
   const type = closure_0.type;
   if (constants2.XBOX === type) {
     const items = [constants.CHANNEL_CALL];
-    return _modDef9239.showModal(items);
+    return _modDef9261.showModal(items);
   } else {
     const items1 = [constants.CHANNEL_CALL];
-    return _modDef9267.showModal(items1, closure_0.type);
+    return _modDef9289.showModal(items1, closure_0.type);
   }
   const obj = UNSAFE_isDismissibleContentDismissed;
   const tmp = require;

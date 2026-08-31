@@ -1,12 +1,12 @@
-// === Module 12690: items ===
+// === Module 12725: items ===
 
-// Module 12690 (items)
-import MarkupTextDefault from "MarkupText" /* 4437 */;
-import parseLinkDefault from "parseLink" /* 4916 */;
-import parseDefault from "parse" /* 12691 */;
-import importDefaultResult from "combineMarkupRules" /* 4915 */;
+// Module 12725 (items)
+import MarkupTextDefault from "MarkupText" /* 4439 */;
+import parseLinkDefault from "parseLink" /* 4919 */;
+import parseDefault from "parse" /* 12726 */;
+import importDefaultResult from "combineMarkupRules" /* 4918 */;
 import importDefaultResult1 from "apply" /* 12 */;
-import importAllResult from "reactParserFor" /* 7842 */;
+import importAllResult from "reactParserFor" /* 7864 */;
 
 const items = ["text", "link", "emoji"];
 const items1 = [importDefaultResult1.pick(parseLinkDefault.RULES, items), , ];

@@ -1,12 +1,12 @@
-// === Module 12587: widgetGameTagMetadata ===
+// === Module 12622: widgetGameTagMetadata ===
 
-// Module 12587 (widgetGameTagMetadata)
+// Module 12622 (widgetGameTagMetadata)
 import set from "set" /* 2 */;
-import FriendsIcon from "FriendsIcon" /* 4164 */;
-import RibbonIcon from "RibbonIcon" /* 12589 */;
-import ThumbsUpIcon from "ThumbsUpIcon" /* 12591 */;
-import ThumbsDownIcon from "ThumbsDownIcon" /* 12593 */;
-import WidgetGameTagIconRole from "WidgetGameTagIconRole" /* 12588 */;
+import FriendsIcon from "FriendsIcon" /* 4165 */;
+import RibbonIcon from "RibbonIcon" /* 12624 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 12626 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 12628 */;
+import WidgetGameTagIconRole from "WidgetGameTagIconRole" /* 12623 */;
 
 const obj = {};
 obj[WidgetGameTagIconRole.WidgetGameTagIconRole.RIBBON] = RibbonIcon.RibbonIcon;

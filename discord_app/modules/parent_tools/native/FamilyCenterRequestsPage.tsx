@@ -1,23 +1,23 @@
-// === Module 14451: FamilyCenterMaxConnectionsBlurb ===
+// === Module 14485: FamilyCenterMaxConnectionsBlurb ===
 
-// Module 14451 (FamilyCenterMaxConnectionsBlurb)
+// Module 14485 (FamilyCenterMaxConnectionsBlurb)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2370 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5518 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8713 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8714 */;
-import set from "set" /* 10965 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11430 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14412 */;
-import FamilyCenterLinkingBannerParentContentDefault from "FamilyCenterLinkingBannerParentContent" /* 14452 */;
-import FamilyCenterAcceptedLinkRowDefault from "FamilyCenterAcceptedLinkRow" /* 14454 */;
-import FamilyCenterPendingLinkRowDefault from "FamilyCenterPendingLinkRow" /* 14463 */;
+import messagesProxyDefault from "messagesProxy" /* 2369 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5521 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8735 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8736 */;
+import set from "set" /* 10990 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11459 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14446 */;
+import FamilyCenterLinkingBannerParentContentDefault from "FamilyCenterLinkingBannerParentContent" /* 14486 */;
+import FamilyCenterAcceptedLinkRowDefault from "FamilyCenterAcceptedLinkRow" /* 14488 */;
+import FamilyCenterPendingLinkRowDefault from "FamilyCenterPendingLinkRow" /* 14497 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 7230 */;
-import { THROUGHLINE_URL } from "LOCATION_CONTEXT_MOBILE" /* 10938 */;
+import items from "items" /* 7251 */;
+import { THROUGHLINE_URL } from "LOCATION_CONTEXT_MOBILE" /* 10963 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function FamilyCenterMaxConnectionsBlurb() {
@@ -35,7 +35,7 @@ function FamilyCenterMaxConnectionsBlurb() {
     obj[0] = tmp.container;
     obj = { variant: "text-xxs/medium", color: "text-muted", children: null };
     obj[2] = tmp9;
-    obj[1] = callback(tmp2(4442).Text, obj);
+    obj[1] = callback(tmp2(4444).Text, obj);
     tmp10 = callback(closure_3, obj);
   }
   return tmp10;
@@ -65,10 +65,10 @@ function FamilyCenterHelpLineInfo() {
     obj1[0] = tmp.supportHeader;
     const intl3 = tmp2(1236).intl;
     obj1[2] = intl3.string(messagesProxyDefault["7/tVhv"]);
-    const items = [callback(tmp2(4442).Text, obj1), ];
+    const items = [callback(tmp2(4444).Text, obj1), ];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", children: null };
     obj2[2] = formatResult;
-    items[1] = callback(tmp2(4442).Text, obj2);
+    items[1] = callback(tmp2(4444).Text, obj2);
     obj[1] = items;
     tmp11 = callback2(closure_3, obj);
   }

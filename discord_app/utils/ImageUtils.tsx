@@ -1,9 +1,9 @@
-// === Module 1491: fit ===
+// === Module 1490: fit ===
 
-// Module 1491 (fit)
+// Module 1490 (fit)
 import _modDef38 from "module_38" /* 38 */;
-import PQueueDefault from "PQueue" /* 1492 */;
-import getSrcWithWidthAndHeight from "getSrcWithWidthAndHeight" /* 1493 */;
+import PQueueDefault from "PQueue" /* 1491 */;
+import getSrcWithWidthAndHeight from "getSrcWithWidthAndHeight" /* 1492 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importDefaultResult from "apply" /* 12 */;
 
@@ -167,7 +167,7 @@ function _isPNGAnimated() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

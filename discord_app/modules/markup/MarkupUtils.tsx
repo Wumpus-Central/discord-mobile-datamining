@@ -1,11 +1,11 @@
-// === Module 4436: get defaultRules ===
+// === Module 4438: get defaultRules ===
 
-// Module 4436 (get defaultRules)
-import MarkupText from "MarkupText" /* 4437 */;
-import MarkupTextDefault from "MarkupText" /* 4437 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 4915 */;
-import parseLinkDefault from "parseLink" /* 4916 */;
-import reactParserForAll from "reactParserFor" /* 7842 */;
+// Module 4438 (get defaultRules)
+import MarkupText from "MarkupText" /* 4439 */;
+import MarkupTextDefault from "MarkupText" /* 4439 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 4918 */;
+import parseLinkDefault from "parseLink" /* 4919 */;
+import reactParserForAll from "reactParserFor" /* 7864 */;
 import importDefaultResult from "apply" /* 12 */;
 
 require = arg1;

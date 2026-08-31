@@ -1,10 +1,10 @@
-// === Module 11808: DirectoryEntryTypes ===
+// === Module 11839: DirectoryEntryTypes ===
 
-// Module 11808 (DirectoryEntryTypes)
+// Module 11839 (DirectoryEntryTypes)
 import set from "set" /* 2 */;
 import fromStringAll from "fromString" /* 506 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import applyOverwritesAll from "applyOverwrites" /* 4095 */;
+import applyOverwritesAll from "applyOverwrites" /* 4096 */;
 import ME from "ME" /* 676 */;
 
 ({ ChannelTypes: c3, Permissions: c4 } = ME);

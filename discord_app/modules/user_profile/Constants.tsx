@@ -1,9 +1,9 @@
-// === Module 8502: USER_PROFILE_TOOLTIP_DELAY ===
+// === Module 8524: USER_PROFILE_TOOLTIP_DELAY ===
 
-// Module 8502 (USER_PROFILE_TOOLTIP_DELAY)
+// Module 8524 (USER_PROFILE_TOOLTIP_DELAY)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import BadgeId from "BadgeId" /* 8503 */;
+import BadgeId from "BadgeId" /* 8525 */;
 
 const Endpoints = ME.Endpoints;
 const result = set.fileFinishedImporting("modules/user_profile/Constants.tsx");

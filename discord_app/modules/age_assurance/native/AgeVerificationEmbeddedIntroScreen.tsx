@@ -1,13 +1,13 @@
-// === Module 8672: AgeVerificationEmbeddedIntroScreen ===
+// === Module 8694: AgeVerificationEmbeddedIntroScreen ===
 
-// Module 8672 (AgeVerificationEmbeddedIntroScreen)
+// Module 8694 (AgeVerificationEmbeddedIntroScreen)
 import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2888 */;
-import useAgeVerificationMethodsDefault from "useAgeVerificationMethods" /* 8673 */;
+import messagesProxyDefault from "messagesProxy" /* 2889 */;
+import useAgeVerificationMethodsDefault from "useAgeVerificationMethods" /* 8695 */;
 import closure_3 from "noop" /* 19 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -21,7 +21,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   ({ entryPoint, navigation } = arg0);
   ({ onClose, modalSessionId, classificationId } = arg0);
   const tmp = callback3();
-  let obj = navigation(8635);
+  let obj = navigation(8657);
   const items = [navigation];
   const isSuspendedUser = obj.useIsSuspendedUser();
   const callback = React.useCallback(() => {
@@ -31,31 +31,31 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   obj = { children: null };
   obj1 = { align: "center", justify: "center", spacing: 24, children: null };
   const obj2 = { align: "center", justify: "center", spacing: 16, children: null };
-  const items1 = [callback(navigation(6221).ShieldSpotIllustration, { height: 100, width: 177 }), ];
+  const items1 = [callback(navigation(6224).ShieldSpotIllustration, { height: 100, width: 177 }), ];
   const obj3 = { align: "center", justify: "center", spacing: 8, children: null };
   const obj4 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
-  let obj7 = navigation(4699);
+  let obj7 = navigation(4701);
   obj4[3] = obj7.getAgeVerificationGetStartedTitle(entryPoint);
-  const items2 = [callback(navigation(4442).Text, obj4), ];
-  const obj5 = { variant: "text-md/medium", color: "text-strong", style: tmp.header, children: navigation(4699).getAgeVerificationGetStartedSubtitle(entryPoint, undefined, isSuspendedUser) };
-  items2[1] = callback(navigation(4442).Text, obj5);
+  const items2 = [callback(navigation(4444).Text, obj4), ];
+  const obj5 = { variant: "text-md/medium", color: "text-strong", style: tmp.header, children: navigation(4701).getAgeVerificationGetStartedSubtitle(entryPoint, undefined, isSuspendedUser) };
+  items2[1] = callback(navigation(4444).Text, obj5);
   obj3[3] = items2;
-  items1[1] = callback2(navigation(4891).Stack, obj3);
+  items1[1] = callback2(navigation(4894).Stack, obj3);
   obj2[3] = items1;
-  const items3 = [callback2(navigation(4891).Stack, obj2), callback(navigation(8675).AgeVerificationMethodsContainer, { ageVerificationMethods: useAgeVerificationMethodsDefault({ onClose, classificationId, onGoogleWalletSelect: callback }).ageVerificationMethods, modalSessionId })];
+  const items3 = [callback2(navigation(4894).Stack, obj2), callback(navigation(8697).AgeVerificationMethodsContainer, { ageVerificationMethods: useAgeVerificationMethodsDefault({ onClose, classificationId, onGoogleWalletSelect: callback }).ageVerificationMethods, modalSessionId })];
   obj1[3] = items3;
-  const items4 = [callback2(navigation(4891).Stack, obj1), ];
+  const items4 = [callback2(navigation(4894).Stack, obj1), ];
   const obj6 = { variant: "text-xs/medium", color: "text-muted", style: tmp.helpLink, children: null };
   const intl = navigation(1236).intl;
   obj7 = {
     handleOnHelpUrlHook() {
-      const obj = callback(8628);
-      obj.openUrl(callback(1996).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+      const obj = callback(8650);
+      obj.openUrl(callback(1995).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
     }
   };
   obj6[3] = intl.format(messagesProxyDefault.lG69e1, obj7);
-  items4[1] = callback(navigation(4442).Text, obj6);
+  items4[1] = callback(navigation(4444).Text, obj6);
   obj[0] = items4;
-  obj[0] = callback2(navigation(8639).ModalContent, obj);
-  return callback(navigation(8638).ModalScreen, obj);
+  obj[0] = callback2(navigation(8661).ModalContent, obj);
+  return callback(navigation(8660).ModalScreen, obj);
 };

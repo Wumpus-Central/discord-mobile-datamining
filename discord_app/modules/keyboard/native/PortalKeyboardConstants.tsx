@@ -1,8 +1,8 @@
-// === Module 11544: KEYBOARD_ANIMATION_DURATION ===
+// === Module 11575: KEYBOARD_ANIMATION_DURATION ===
 
-// Module 11544 (KEYBOARD_ANIMATION_DURATION)
+// Module 11575 (KEYBOARD_ANIMATION_DURATION)
 import set from "set" /* 2 */;
-import BottomSheetModal from "BottomSheetModal" /* 5589 */;
+import BottomSheetModal from "BottomSheetModal" /* 5592 */;
 
 const keyboardAnimationConfigs = BottomSheetModal.getKeyboardAnimationConfigs("keyboard", 250);
 const result = set.fileFinishedImporting("modules/keyboard/native/PortalKeyboardConstants.tsx");

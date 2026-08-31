@@ -1,20 +1,20 @@
-// === Module 17271: GuildRoleSubscriptionBenefitModalHeader ===
+// === Module 17304: GuildRoleSubscriptionBenefitModalHeader ===
 
-// Module 17271 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 17304 (GuildRoleSubscriptionBenefitModalHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4442 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5518 */;
-import renderDefault from "render" /* 9006 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14756 */;
+import Text from "Text" /* 4444 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5521 */;
+import renderDefault from "render" /* 9029 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 14790 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { Fonts } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
-import importDefaultResult from "createTextStyle" /* 5426 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
+import importDefaultResult from "createTextStyle" /* 5429 */;
 
 require = arg1;
 noopAll;

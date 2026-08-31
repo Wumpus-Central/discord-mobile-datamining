@@ -1,11 +1,11 @@
-// === Module 8716: ShieldElement ===
+// === Module 8738: ShieldElement ===
 
-// Module 8716 (ShieldElement)
+// Module 8738 (ShieldElement)
 import noopAll from "noop" /* 19 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6221 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6224 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;

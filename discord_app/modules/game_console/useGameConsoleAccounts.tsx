@@ -1,8 +1,8 @@
-// === Module 9813: useGameConsoleAccounts ===
+// === Module 9836: useGameConsoleAccounts ===
 
-// Module 9813 (useGameConsoleAccounts)
+// Module 9836 (useGameConsoleAccounts)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "set" /* 5190 */;
+import closure_2 from "set" /* 5193 */;
 import { PlatformTypes } from "ME" /* 676 */;
 
 require = arg1;

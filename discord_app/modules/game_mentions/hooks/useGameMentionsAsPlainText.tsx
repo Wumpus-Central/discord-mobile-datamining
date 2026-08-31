@@ -1,10 +1,10 @@
-// === Module 9026: useGameMentionsAsPlainText ===
+// === Module 9049: useGameMentionsAsPlainText ===
 
-// Module 9026 (useGameMentionsAsPlainText)
+// Module 9049 (useGameMentionsAsPlainText)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleLoadMessages" /* 4470 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
-import regExp from "regExp" /* 4918 */;
+import closure_3 from "handleLoadMessages" /* 4472 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import regExp from "regExp" /* 4921 */;
 
 const require = arg1;
 ({ extractGameMentionIds: c5, GAME_MENTION_RAW_RE_GLOBAL: closure_6 } = regExp);

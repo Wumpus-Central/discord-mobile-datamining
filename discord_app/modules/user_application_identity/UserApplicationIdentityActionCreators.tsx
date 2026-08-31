@@ -1,8 +1,8 @@
-// === Module 12449: fetchStore ===
+// === Module 12483: fetchStore ===
 
-// Module 12449 (fetchStore)
+// Module 12483 (fetchStore)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importDefaultResult from "map" /* 12450 */;
+import importDefaultResult from "map" /* 12484 */;
 import ME from "ME" /* 676 */;
 import initialize from "initialize" /* 589 */;
 
@@ -25,7 +25,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -84,7 +84,7 @@ let obj = {
             obj.dispatch(obj6);
             c3 = 0;
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp24) {
           closure_2 = tmp24;
@@ -114,7 +114,7 @@ let obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -149,7 +149,7 @@ let obj = {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp11) {
           v0 = tmp;

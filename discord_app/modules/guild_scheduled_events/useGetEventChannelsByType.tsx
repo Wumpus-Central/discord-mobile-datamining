@@ -1,12 +1,12 @@
-// === Module 9635: getEventChannelsByType ===
+// === Module 9657: getEventChannelsByType ===
 
-// Module 9635 (getEventChannelsByType)
-import canManageResource from "canManageResource" /* 9579 */;
-import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_3 from "comparator" /* 1983 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1983 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4090 */;
-import VIEW_CHANNEL from "VIEW_CHANNEL" /* 9580 */;
+// Module 9657 (getEventChannelsByType)
+import canManageResource from "canManageResource" /* 9601 */;
+import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1392 */;
+import closure_3 from "comparator" /* 1982 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4091 */;
+import VIEW_CHANNEL from "VIEW_CHANNEL" /* 9602 */;
 
 require = arg1;
 function getEventChannelsByType(id, channelTypeFromEntity) {

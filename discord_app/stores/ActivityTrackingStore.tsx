@@ -1,19 +1,19 @@
-// === Module 13330: stopActivity ===
+// === Module 13364: stopActivity ===
 
-// Module 13330 (stopActivity)
+// Module 13364 (stopActivity)
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import removeExecutablePathPrefix from "removeExecutablePathPrefix" /* 4619 */;
-import _modDef11010 from "module_11010" /* 11010 */;
-import closure_3 from "initialize" /* 4469 */;
+import removeExecutablePathPrefix from "removeExecutablePathPrefix" /* 4621 */;
+import _modDef11035 from "module_11035" /* 11035 */;
+import closure_3 from "initialize" /* 4471 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "gameFromServer" /* 4482 */;
-import closure_7 from "setLibraryApplications" /* 4485 */;
-import closure_8 from "createRTCConnection" /* 4520 */;
-import closure_9 from "handleConnectionOpen" /* 1982 */;
+import closure_6 from "gameFromServer" /* 4484 */;
+import closure_7 from "setLibraryApplications" /* 4487 */;
+import closure_8 from "createRTCConnection" /* 4522 */;
+import closure_9 from "handleConnectionOpen" /* 1981 */;
 import { Distributors } from "ME" /* 676 */;
 import { Storage } from "Storage" /* 595 */;
 
@@ -48,7 +48,7 @@ function updateActivity(applicationId) {
   if (num > closure_12 + closure_13) {
     num = 0;
   }
-  obj = _require(4494);
+  obj = _require(4496);
   const result = obj.shouldShareApplicationActivity(applicationId.applicationId, closure_7);
   voiceChannelId = voiceChannelId.getVoiceChannelId();
   sessionId = sessionId.getSessionId();
@@ -68,10 +68,10 @@ function updateActivity(applicationId) {
   obj[7] = voiceChannelId;
   obj[8] = sessionId;
   obj[9] = mediaSessionId;
-  _modDef11010.updateActivity(obj);
+  _modDef11035.updateActivity(obj);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
-    const interval = new tmp3(4330).Interval();
+    const interval = new tmp3(4332).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
       closure_1_18(closure_0);

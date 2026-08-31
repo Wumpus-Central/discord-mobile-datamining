@@ -1,8 +1,8 @@
-// === Module 8851: getIllustrationSource ===
+// === Module 8874: getIllustrationSource ===
 
-// Module 8851 (getIllustrationSource)
+// Module 8874 (getIllustrationSource)
 import set from "set" /* 2 */;
-import ManaContext from "ManaContext" /* 4173 */;
+import ManaContext from "ManaContext" /* 4174 */;
 
 const result = set.fileFinishedImporting("design/components/Illustration/native/index.tsx");
 

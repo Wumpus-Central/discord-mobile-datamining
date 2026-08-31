@@ -1,8 +1,8 @@
-// === Module 7551: SavedMessageSortTypes ===
+// === Module 7572: SavedMessageSortTypes ===
 
-// Module 7551 (SavedMessageSortTypes)
+// Module 7572 (SavedMessageSortTypes)
 import set from "set" /* 2 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4703 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4705 */;
 
 const result = set.fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");
 

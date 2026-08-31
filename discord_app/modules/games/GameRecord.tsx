@@ -1,11 +1,11 @@
-// === Module 4471: getOfficialApplicationId ===
+// === Module 4473: getOfficialApplicationId ===
 
-// Module 4471 (getOfficialApplicationId)
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import toJSDefault from "toJS" /* 1932 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4479 */;
-import closure_3 from "createExecutable" /* 4472 */;
-import { createExecutable } from "createExecutable" /* 4472 */;
+// Module 4473 (getOfficialApplicationId)
+import getAvatarURL from "getAvatarURL" /* 1431 */;
+import toJSDefault from "toJS" /* 1931 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4481 */;
+import closure_3 from "createExecutable" /* 4474 */;
+import { createExecutable } from "createExecutable" /* 4474 */;
 
 require = arg1;
 toJSDefault;
@@ -166,7 +166,7 @@ prototype["getArtworkURLs"] = function getArtworkURLs() {
     artwork = [];
   }
   const mapped = artwork.map((arg0) => closure_1_1(closure_1_2[3])(self.id, arg0, { keepAspectRatio: true }));
-  return mapped.filter(self(1370).isNotNullish);
+  return mapped.filter(self(1471).isNotNullish);
 };
 prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {
   closure_0 = DEVELOPER;

@@ -1,11 +1,11 @@
-// === Module 7861: createChannelFollowAddSystemMessage ===
+// === Module 7883: createChannelFollowAddSystemMessage ===
 
-// Module 7861 (createChannelFollowAddSystemMessage)
+// Module 7883 (createChannelFollowAddSystemMessage)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7816 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7818 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7819 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7837 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7839 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7841 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelFollowAddSystemMessage.tsx");
 

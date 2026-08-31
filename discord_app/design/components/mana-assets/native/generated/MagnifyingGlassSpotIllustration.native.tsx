@@ -1,10 +1,10 @@
-// === Module 6736: MagnifyingGlassSpotIllustration ===
+// === Module 6751: MagnifyingGlassSpotIllustration ===
 
-// Module 6736 (MagnifyingGlassSpotIllustration)
+// Module 6751 (MagnifyingGlassSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6737 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6752 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/MagnifyingGlassSpotIllustration.native.tsx");

@@ -1,10 +1,10 @@
-// === Module 9140: ObjectIcon ===
+// === Module 9163: ObjectIcon ===
 
-// Module 9140 (ObjectIcon)
+// Module 9163 (ObjectIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 9141 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 9164 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

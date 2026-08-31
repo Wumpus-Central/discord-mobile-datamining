@@ -1,11 +1,11 @@
-// === Module 4287: RouteParam ===
+// === Module 4288: RouteParam ===
 
-// Module 4287 (RouteParam)
+// Module 4288 (RouteParam)
 import set from "set" /* 2 */;
 import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
 import INVITE from "INVITE" /* 677 */;
-import set2 from "set" /* 1398 */;
-import escapeRegExpDefault from "escapeRegExp" /* 4288 */;
+import set2 from "set" /* 1394 */;
+import escapeRegExpDefault from "escapeRegExp" /* 4289 */;
 
 const PSEUDO_GUILD_IDS = INVITE.PSEUDO_GUILD_IDS;
 const StaticChannelRoutes = set2.StaticChannelRoutes;

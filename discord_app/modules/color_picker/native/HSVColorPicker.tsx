@@ -1,13 +1,13 @@
-// === Module 14186: HSVColorPicker ===
+// === Module 14220: HSVColorPicker ===
 
-// Module 14186 (HSVColorPicker)
+// Module 14220 (HSVColorPicker)
 import noopAll from "noop" /* 19 */;
-import _mod4186 from "module_4186" /* 4186 */;
-import ColorBoxDefault from "ColorBox" /* 14187 */;
-import HuePickerDefault from "HuePicker" /* 14188 */;
+import _mod4187 from "module_4187" /* 4187 */;
+import ColorBoxDefault from "ColorBox" /* 14221 */;
+import HuePickerDefault from "HuePicker" /* 14222 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;
@@ -18,15 +18,15 @@ const result = require("set").fileFinishedImporting("modules/color_picker/native
 export default function HSVColorPicker(arg0) {
   ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
   ({ saturationValuePickerStyle, saturationValueColorBoxStyle, saturationValueColorBoxInnerStyle, saturationValueSelectorStyle, huePickerStyle, hueColorBarInnerStyle, hueSliderStyle } = arg0);
-  let obj = _mod4186;
+  let obj = _mod4187;
   const sharedValue = obj.useSharedValue(0);
   const tmp = callback();
-  const sharedValue1 = _mod4186.useSharedValue(1);
-  const obj2 = _mod4186;
+  const sharedValue1 = _mod4187.useSharedValue(1);
+  const obj2 = _mod4187;
   obj = { style: tmp.hsvColorPicker, children: null };
-  const sharedValue2 = _mod4186.useSharedValue(1);
+  const sharedValue2 = _mod4187.useSharedValue(1);
   let tmp11 = hue;
-  const obj3 = _mod4186;
+  const obj3 = _mod4187;
   const tmp6 = closure_5;
   const tmp7 = View;
   const tmp9 = importDefault;

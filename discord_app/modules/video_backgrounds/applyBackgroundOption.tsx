@@ -1,13 +1,13 @@
-// === Module 9725: _getFilterBlob ===
+// === Module 9747: _getFilterBlob ===
 
-// Module 9725 (_getFilterBlob)
-import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9728 */;
-import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9730 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9737 */;
+// Module 9747 (_getFilterBlob)
+import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9750 */;
+import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9752 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9759 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
-import closure_5 from "handleSyncedStoresUpdate" /* 9726 */;
-import VideoFilterType from "VideoFilterType" /* 7706 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "handleSyncedStoresUpdate" /* 9748 */;
+import VideoFilterType from "VideoFilterType" /* 7727 */;
 import { NOOP } from "ME" /* 676 */;
 
 require = arg1;
@@ -72,7 +72,7 @@ function _applyBackgroundOption() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -94,31 +94,31 @@ function _applyBackgroundOption() {
               c5 = undefined;
               closure_3 = false;
               if (null == source) {
-                closure_1_10(tmp59, tmp60, callback(4545).FilterSettingsGraph.NONE);
+                closure_1_10(tmp59, tmp60, callback(4547).FilterSettingsGraph.NONE);
                 c9 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else if (tmp61 === c7) {
-                closure_1_10(tmp59, tmp60, callback(4545).FilterSettingsGraph.BACKGROUND_BLUR);
+                closure_1_10(tmp59, tmp60, callback(4547).FilterSettingsGraph.BACKGROUND_BLUR);
                 c9 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 if (typeof tmp61 !== "string") {
                   if (typeof tmp61 !== "number") {
                     const asset = tmp61.asset;
-                    let isAnimatedIconHashResult = callback(1435).isAnimatedIconHash(asset);
+                    let isAnimatedIconHashResult = callback(1431).isAnimatedIconHash(asset);
                     if (!isAnimatedIconHashResult) {
-                      let obj3 = callback(1435);
+                      let obj3 = callback(1431);
                       isAnimatedIconHashResult = obj3.isVideoAssetHash(asset);
                     }
                     closure_3 = isAnimatedIconHashResult;
-                    let obj4 = callback(1435);
+                    let obj4 = callback(1431);
                     obj1 = { userId: null, assetId: null, assetHash: null, size: null };
                     ({ user_id: obj6[0], id: obj6[1] } = tmp61);
                     obj1[2] = asset;
                     obj1[3] = closure_1_6.width;
                     let videoFilterAssetURL = obj4.getVideoFilterAssetURL(obj1);
                     source = videoFilterAssetURL;
-                    const obj11 = callback(1435);
+                    const obj11 = callback(1431);
                   }
                   if (null != videoFilterAssetURL) {
                     c7 = 1;
@@ -149,12 +149,12 @@ function _applyBackgroundOption() {
                       c8 = 2;
                       c9 = 1;
                       obj3 = { value: null, done: false };
-                      obj3[0] = callback2(9736)(videoFilterAssetURL);
+                      obj3[0] = callback2(9758)(videoFilterAssetURL);
                       return obj3;
                     }
                   }
                 }
-                const tmp24 = callback2(9731)()[tmp61];
+                const tmp24 = callback2(9753)()[tmp61];
                 const isVideo = tmp24.isVideo;
                 closure_3 = isVideo;
                 if (isVideo == null) {
@@ -247,7 +247,7 @@ function _applyBackgroundOptionLive() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -273,7 +273,7 @@ function _applyBackgroundOptionLive() {
               location = flag.location;
               c4 = 1;
               c5 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -307,11 +307,11 @@ function _applyBackgroundOptionLive() {
               const result = obj.trackBackgroundOptionUpdated(callback, location, "Enabled");
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
-        } catch (tmp16) {
+        } catch (tmp24) {
           c5 = tmp;
-          throw tmp16;
+          throw tmp24;
         }
       }
     })();
@@ -347,7 +347,7 @@ function _applyBackgroundOptionPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -373,7 +373,7 @@ function _applyBackgroundOptionPreview() {
               location = flag.location;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -409,7 +409,7 @@ function _applyBackgroundOptionPreview() {
               const result1 = obj.trackBackgroundOptionUpdated(callback, location, "Preview");
             }
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp17) {
           c6 = tmp;

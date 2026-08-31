@@ -1,17 +1,17 @@
-// === Module 12181: GuildTemplatesHeader ===
+// === Module 12215: GuildTemplatesHeader ===
 
-// Module 12181 (GuildTemplatesHeader)
+// Module 12215 (GuildTemplatesHeader)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4442 */;
+import Text from "Text" /* 4444 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import GuildTemplateId from "GuildTemplateId" /* 12178 */;
-import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 7700 */;
+import GuildTemplateId from "GuildTemplateId" /* 12212 */;
+import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 7721 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function GuildTemplatesHeader() {
@@ -33,7 +33,7 @@ function GuildTemplatesJoinFooter(trigger) {
   const onHeightChange = trigger.onHeightChange;
   dependencyMap = undefined;
   const tmp = callback5();
-  let obj = trigger(1500);
+  let obj = trigger(1499);
   dependencyMap = obj.useNavigation();
   if (trigger === constants2.NUF) {
     const intl2 = tmp2(1236).intl;
@@ -50,14 +50,14 @@ function GuildTemplatesJoinFooter(trigger) {
     }, items),
     children: null
   };
-  items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1629)().bottom }];
+  items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1628)().bottom }];
   obj = { style: tmp.footerContainer, children: null };
   obj1 = { style: tmp.footerTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = tmp2(1236).intl;
   obj1[3] = intl3.string(trigger(1236).t["N+Mi/U"]);
   const items2 = [
-    callback3(trigger(4442).Text, obj1),
-    callback3(trigger(4893).Button, {
+    callback3(trigger(4444).Text, obj1),
+    callback3(trigger(4896).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,
@@ -85,13 +85,13 @@ function GuildTemplatesItem(guildTemplate) {
   guildTemplate = guildTemplate.guildTemplate;
   const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
   const obj = {
-    Icon: guildTemplate(12182).GUILD_TEMPLATE_ICON_COMPONENTS[guildTemplate.id],
+    Icon: guildTemplate(12216).GUILD_TEMPLATE_ICON_COMPONENTS[guildTemplate.id],
     message: guildTemplate.label,
     onPress() {
       return onGuildTemplatePress(guildTemplate);
     }
   };
-  return callback3(onGuildTemplatePress(11827), obj);
+  return callback3(onGuildTemplatePress(11858), obj);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ getGuildTemplatesMap: error, GuildTemplateId: closure_8 } = GuildTemplateId);

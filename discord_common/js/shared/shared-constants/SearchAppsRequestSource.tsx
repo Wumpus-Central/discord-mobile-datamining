@@ -1,6 +1,6 @@
-// === Module 11577: SearchAppsRequestSource ===
+// === Module 11608: SearchAppsRequestSource ===
 
-// Module 11577 (SearchAppsRequestSource)
+// Module 11608 (SearchAppsRequestSource)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/SearchAppsRequestSource.tsx");

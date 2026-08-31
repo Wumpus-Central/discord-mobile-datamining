@@ -1,9 +1,9 @@
-// === Module 15356: useCardLayout ===
+// === Module 15389: useCardLayout ===
 
-// Module 15356 (useCardLayout)
+// Module 15389 (useCardLayout)
 import set from "set" /* 2 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 8827 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 8850 */;
 
 let result = set.fileFinishedImporting("modules/collectibles/native/hooks/useCardLayout.tsx");
 
@@ -14,7 +14,7 @@ export const useCardLayout = function useCardLayout() {
     num = 2;
   }
   if (num < 2) {
-    let obj = { columns: null, cardWidth: "Array", rowWidth: "text" };
+    let obj = { columns: null, cardWidth: "Array", rowWidth: "accessibilityLabel" };
     obj[0] = num;
     return obj;
   } else {
@@ -29,9 +29,9 @@ export const useCardLayout = function useCardLayout() {
       const _Math = Math;
       let bound = Math.max(4, diff1);
     } else {
-      bound = 2 * tmp2(8827).COLLECTIBLES_SHOP_CARD_GAP;
+      bound = 2 * tmp2(8850).COLLECTIBLES_SHOP_CARD_GAP;
     }
-    const result1 = (width - (bound + tmp2(8827).COLLECTIBLES_SHOP_CARD_GAP * diff)) / num;
+    const result1 = (width - (bound + tmp2(8850).COLLECTIBLES_SHOP_CARD_GAP * diff)) / num;
     let tmp10 = tmp2;
     let tmp11 = result1;
     let tmp12 = num;
@@ -65,13 +65,13 @@ export const useCardLayout = function useCardLayout() {
     }
     const _Math2 = Math;
     const _Math3 = Math;
-    const bound1 = Math.max(tmp11, tmp14(8827).COLLECTIBLES_SHOP_CARD_WIDTH);
-    const bound2 = Math.min(bound1, tmp14(8827).COLLECTIBLES_SHOP_CARD_MAX_WIDTH);
+    const bound1 = Math.max(tmp11, tmp14(8850).COLLECTIBLES_SHOP_CARD_WIDTH);
+    const bound2 = Math.min(bound1, tmp14(8850).COLLECTIBLES_SHOP_CARD_MAX_WIDTH);
     const result3 = bound2 * tmp12;
     const diff2 = tmp12 - 1;
-    if (result3 + (bound + tmp10(8827).COLLECTIBLES_SHOP_CARD_GAP * diff2) > width) {
+    if (result3 + (bound + tmp10(8850).COLLECTIBLES_SHOP_CARD_GAP * diff2) > width) {
       if (1 < tmp12) {
-        obj = { columns: 1, cardWidth: "Array", rowWidth: "accessibilityRole" };
+        obj = { columns: 1, cardWidth: "Array", rowWidth: "accessibilityLabel" };
       }
       return obj;
     }
@@ -79,6 +79,6 @@ export const useCardLayout = function useCardLayout() {
     obj[0] = tmp12;
     obj[1] = bound2;
     const result4 = bound2 * tmp12;
-    obj[2] = result4 + tmp14(8827).COLLECTIBLES_SHOP_CARD_GAP * diff2;
+    obj[2] = result4 + tmp14(8850).COLLECTIBLES_SHOP_CARD_GAP * diff2;
   }
 };

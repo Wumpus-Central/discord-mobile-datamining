@@ -1,7 +1,7 @@
-// === Module 15465: ChatPanelNativeStackNavigator ===
+// === Module 15498: ChatPanelNativeStackNavigator ===
 
-// Module 15465 (ChatPanelNativeStackNavigator)
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+// Module 15498 (ChatPanelNativeStackNavigator)
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1500 */;
 import closure_2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

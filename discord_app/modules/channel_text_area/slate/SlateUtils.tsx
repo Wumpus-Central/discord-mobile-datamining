@@ -1,6 +1,6 @@
-// === Module 7377: createEmptyState ===
+// === Module 7398: createEmptyState ===
 
-// Module 7377 (createEmptyState)
+// Module 7398 (createEmptyState)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/channel_text_area/slate/SlateUtils.tsx");

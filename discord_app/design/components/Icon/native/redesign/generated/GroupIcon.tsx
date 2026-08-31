@@ -1,10 +1,10 @@
-// === Module 5003: GroupIcon ===
+// === Module 5006: GroupIcon ===
 
-// Module 5003 (GroupIcon)
+// Module 5006 (GroupIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 4951 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 4954 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,11 +1,11 @@
-// === Module 11178: canForwardMessage ===
+// === Module 11207: canForwardMessage ===
 
-// Module 11178 (canForwardMessage)
-import hasFlag from "hasFlag" /* 1403 */;
-import closure_2 from "isSubscriptionGated" /* 1984 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4090 */;
+// Module 11207 (canForwardMessage)
+import hasFlag from "hasFlag" /* 1399 */;
+import closure_2 from "isSubscriptionGated" /* 1983 */;
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "createGuildRecordFromRust" /* 1909 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4091 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

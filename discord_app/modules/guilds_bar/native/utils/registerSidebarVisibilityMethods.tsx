@@ -1,11 +1,11 @@
-// === Module 15699: registerGuildVisibilityMethod ===
+// === Module 15733: registerGuildVisibilityMethod ===
 
-// Module 15699 (registerGuildVisibilityMethod)
+// Module 15733 (registerGuildVisibilityMethod)
 import set2 from "set" /* 2 */;
-import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5346 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 8941 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "insertUnsortedGuilds" /* 5346 */;
+import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5349 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 8964 */;
+import closure_2 from "createGuildRecordFromRust" /* 1909 */;
+import closure_3 from "insertUnsortedGuilds" /* 5349 */;
 
 ({ setGetVisibleChannelIds: c0, setGetVisibleGuildIds: closure_1 } = SidebarVisibilityMethodStore);
 const GuildsNodeType = insertUnsortedGuilds.GuildsNodeType;

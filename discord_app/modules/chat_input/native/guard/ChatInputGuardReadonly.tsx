@@ -1,16 +1,16 @@
-// === Module 11965: sortChannelsByLastMessageId ===
+// === Module 11998: sortChannelsByLastMessageId ===
 
-// Module 11965 (sortChannelsByLastMessageId)
+// Module 11998 (sortChannelsByLastMessageId)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import { isTextChannel } from "createChannelRecord" /* 1395 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "comparator" /* 1983 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "comparator" /* 1983 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_8 from "generateOldThreadCutoff" /* 4461 */;
-import closure_9 from "markAllUserIdListsStale" /* 4099 */;
-import closure_10 from "mergeGuildAvatar" /* 1923 */;
-import { TextAreaCta } from "TextAreaCta" /* 11472 */;
+import { isTextChannel } from "createChannelRecord" /* 1391 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "comparator" /* 1982 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "comparator" /* 1982 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_8 from "generateOldThreadCutoff" /* 4463 */;
+import closure_9 from "markAllUserIdListsStale" /* 4100 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import { TextAreaCta } from "TextAreaCta" /* 11502 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;

@@ -1,8 +1,8 @@
-// === Module 7270: fromServer ===
+// === Module 7291: fromServer ===
 
-// Module 7270 (fromServer)
+// Module 7291 (fromServer)
 import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 7265 */;
+import ShopBlockType from "ShopBlockType" /* 7286 */;
 
 let prototype;
 prototype = function GameServerHostingBannerBlockRecord(is_dismissible) {

@@ -1,11 +1,11 @@
-// === Module 8013: getDecorationSizeForAvatarSize ===
+// === Module 8035: getDecorationSizeForAvatarSize ===
 
-// Module 8013 (getDecorationSizeForAvatarSize)
+// Module 8035 (getDecorationSizeForAvatarSize)
 import set from "set" /* 2 */;
 import Button from "Button" /* 1297 */;
-import DECORATION_TO_AVATAR_RATIO from "DECORATION_TO_AVATAR_RATIO" /* 1436 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4413 */;
+import DECORATION_TO_AVATAR_RATIO from "DECORATION_TO_AVATAR_RATIO" /* 1432 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4415 */;
 
 let closure_3 = DECORATION_TO_AVATAR_RATIO.DECORATION_TO_AVATAR_RATIO;
 let result = set.fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx");
@@ -49,5 +49,5 @@ export const openAvatarDecorationActionSheet = function openAvatarDecorationActi
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8014, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8036, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
 };

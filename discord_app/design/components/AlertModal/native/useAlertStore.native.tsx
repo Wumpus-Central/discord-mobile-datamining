@@ -1,7 +1,7 @@
-// === Module 4824: useAlertStore ===
+// === Module 4827: useAlertStore ===
 
-// Module 4824 (useAlertStore)
-import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 4827 */;
+// Module 4827 (useAlertStore)
+import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 4830 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import keys from "keys" /* 644 */;
 
@@ -36,7 +36,7 @@ export const dismissAlerts = function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(4825)();
+    arr4(4828)();
   }
 };
 export const dismissAlert = function dismissAlert(c6) {
@@ -64,7 +64,7 @@ export const dismissAlert = function dismissAlert(c6) {
       }
     });
     if (tmp2) {
-      found(4825)();
+      found(4828)();
     }
     const obj = _require(705);
   }

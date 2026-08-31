@@ -1,21 +1,21 @@
-// === Module 4503: _migrateDefaultStorage ===
+// === Module 4505: _migrateDefaultStorage ===
 
-// Module 4503 (_migrateDefaultStorage)
+// Module 4505 (_migrateDefaultStorage)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import isClipsEnabled from "isClipsEnabled" /* 4507 */;
-import isStreamKey from "isStreamKey" /* 4512 */;
-import apexExperimentDefault from "apexExperiment" /* 4515 */;
-import apexExperiment from "apexExperiment" /* 4516 */;
+import hasFlag from "hasFlag" /* 1399 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4499 */;
+import isClipsEnabled from "isClipsEnabled" /* 4509 */;
+import isStreamKey from "isStreamKey" /* 4514 */;
+import apexExperimentDefault from "apexExperiment" /* 4517 */;
+import apexExperiment from "apexExperiment" /* 4518 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4469 */;
+import closure_4 from "initialize" /* 4471 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import result from "result" /* 4504 */;
+import result from "result" /* 4506 */;
 import { VoiceFlags } from "ME" /* 676 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4505 */;
+import RESOLUTION_720 from "RESOLUTION_720" /* 4507 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -33,7 +33,7 @@ function _migrateDefaultStorage() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ function _migrateDefaultStorage() {
         } else if (1 === tmp7) {
           c3 = 0;
           logger.error("Failed to resolve videos path for default storage migration", dependencyMap);
-          const app = callback2(4073).app;
+          const app = callback2(4074).app;
           c4 = 2;
           c5 = 1;
           const obj2 = { value: null, done: false };
@@ -95,7 +95,7 @@ function _migrateDefaultStorage() {
             return obj3;
           } else {
             callback2 = arg1;
-            obj = callback(4506);
+            obj = callback(4508);
             callback = obj.pathJoin(callback2, closure_15);
             c3 = 0;
           }
@@ -180,7 +180,7 @@ let c26 = null;
 let set = new Set();
 let c28 = false;
 const map = new Map();
-obj = { clipsEnabled: false, storageLocation: "default", clipsQuality: obj, clipsLength: ClipsLengthSettings.SECONDS_30, remindersEnabled: true, decoupledClipsEnabled: false, viewerClipsEnabled: true, viewerConnectivity: ClipsViewerConnectivitySettings.ALL, maxAutoClips: 20, clipSignals: { enableDistributedSignals: true, enableGameSignals: true }, debugTooltipsEnabled: false, enableAutoclipping: "ct", showPovClipsInGallery: true };
+obj = { clipsEnabled: false, storageLocation: "default", clipsQuality: obj, clipsLength: ClipsLengthSettings.SECONDS_30, remindersEnabled: true, decoupledClipsEnabled: false, viewerClipsEnabled: true, viewerConnectivity: ClipsViewerConnectivitySettings.ALL, maxAutoClips: 20, clipSignals: { enableDistributedSignals: true, enableGameSignals: true }, debugTooltipsEnabled: false, enableAutoclipping: "Object", showPovClipsInGallery: true };
 obj = { resolution: ApplicationStreamResolutions.RESOLUTION_1080, frameRate: ApplicationStreamFPS.FPS_30, bitratePercent: DEFAULT_CLIPS_BITRATE_PERCENT };
 let closure_31 = { clipsSettings: obj, hardwareClassification: null, hardwareClassificationForDecoupled: null, hardwareClassificationVersion: 0, newClipIds: [], hasClips: false, hasTakenDecoupledClip: false, clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 } };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;

@@ -1,18 +1,18 @@
-// === Module 5055: combineStatuses ===
+// === Module 5058: combineStatuses ===
 
-// Module 5055 (combineStatuses)
+// Module 5058 (combineStatuses)
 import timestampDefault from "timestamp" /* 3 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useAlertStore from "useAlertStore" /* 4824 */;
-import openPrivacySettingsDefault from "openPrivacySettings" /* 5056 */;
+import useAlertStore from "useAlertStore" /* 4827 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 5059 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4696 */;
+import NativePermissionStatus from "NativePermissionStatus" /* 4698 */;
 import { jsx } from "jsxProd" /* 21 */;
 import set from "set" /* 500 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
-import { NativePermissionBaseUtils } from "requestAuthorization" /* 5052 */;
+import isMetaQuest from "isMetaQuest" /* 1624 */;
+import { NativePermissionBaseUtils } from "requestAuthorization" /* 5055 */;
 
 require = arg1;
 function combineStatuses(items) {
@@ -44,7 +44,7 @@ function _combineStatuses() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         while (true) {

@@ -1,10 +1,10 @@
-// === Module 15103: _writeCaches ===
+// === Module 15136: _writeCaches ===
 
-// Module 15103 (_writeCaches)
+// Module 15136 (_writeCaches)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { ChannelLoader } from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleClearCaches" /* 7168 */;
+import { ChannelLoader } from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "handleClearCaches" /* 7189 */;
 
 function _writeCaches() {
   const self = this;
@@ -24,7 +24,7 @@ function _writeCaches() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -48,7 +48,7 @@ function _writeCaches() {
               table = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -98,7 +98,7 @@ function _writeCaches() {
               return obj;
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp20) {
           c4 = tmp;

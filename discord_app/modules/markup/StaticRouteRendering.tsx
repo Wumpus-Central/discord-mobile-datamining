@@ -1,8 +1,8 @@
-// === Module 4941: staticRouteToTranslation ===
+// === Module 4944: staticRouteToTranslation ===
 
-// Module 4941 (staticRouteToTranslation)
+// Module 4944 (staticRouteToTranslation)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "createGuildRoleRecordFromRust" /* 1986 */;
+import closure_2 from "createGuildRoleRecordFromRust" /* 1985 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");

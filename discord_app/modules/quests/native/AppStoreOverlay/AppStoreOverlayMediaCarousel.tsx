@@ -1,13 +1,13 @@
-// === Module 11037: getMeasurableUrl ===
+// === Module 11068: getMeasurableUrl ===
 
-// Module 11037 (getMeasurableUrl)
+// Module 11068 (getMeasurableUrl)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
 import { NOOP } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 function getMeasurableUrl(type) {
@@ -22,84 +22,104 @@ function getMeasurableUrl(type) {
   }
   return url;
 }
-function AppStoreOverlayScreenshotItem(index) {
-  index = index.index;
-  const mediaViewerSources = index.mediaViewerSources;
-  const onGetGamePress = index.onGetGamePress;
+function AppStoreOverlayScreenshotItem(media) {
+  media = media.media;
+  const index = media.index;
+  const mediaViewerSources = media.mediaViewerSources;
+  const recordMediaSize = media.recordMediaSize;
+  const onGetGamePress = media.onGetGamePress;
   let ref;
-  ({ media, tileSize } = index);
   const tmp = callback3();
-  ref = ref.useRef(null);
-  const items = [index, mediaViewerSources, onGetGamePress];
+  ref = recordMediaSize.useRef(null);
+  const items = [media.url];
+  const items1 = [media.url, recordMediaSize];
+  const memo = recordMediaSize.useMemo(() => media(mediaViewerSources[7]).getAppStoreOverlayCarouselImageUrl(media.url), items);
+  const items2 = [index, mediaViewerSources, onGetGamePress];
+  const callback = recordMediaSize.useCallback((nativeEvent) => {
+    const mediaSizeFromLoadEvent = media(mediaViewerSources[7]).getMediaSizeFromLoadEvent(nativeEvent);
+    if (null != mediaSizeFromLoadEvent) {
+      recordMediaSize(media.url, mediaSizeFromLoadEvent);
+    }
+  }, items1);
   let obj = {
     ref,
-    style: items1,
-    onPress: ref.useCallback(() => {
-      let obj = index(onGetGamePress[8]);
+    style: items3,
+    onPress: recordMediaSize.useCallback(() => {
+      let obj = media(mediaViewerSources[8]);
       obj = { initialSources: mediaViewerSources, initialIndex: index, originViewOrOriginLayout: ref.current, analyticsSource: "quest_app_store_overlay", onGetGamePress };
       const result = obj.openAppStoreOverlayMediaModal(obj);
-    }, items),
+    }, items2),
     accessibilityLabel: null,
     children: null
   };
-  items1 = [tmp.mediaItem, tileSize];
-  const intl = index(onGetGamePress[9]).intl;
-  obj[3] = intl.string(index(onGetGamePress[9]).t.lWDPcO);
-  obj = { source: obj, style: tmp.media, resizeMode: "cover", accessibilityIgnoresInvertColors: true };
-  obj = { uri: media.url };
-  obj[4] = callback(mediaViewerSources(onGetGamePress[10]), obj);
-  return callback(closure_4, obj);
+  items3 = [tmp.mediaItem, media.tileSize];
+  const intl = media(mediaViewerSources[9]).intl;
+  obj[3] = intl.string(media(mediaViewerSources[9]).t.lWDPcO);
+  obj = { source: { uri: memo }, style: tmp.media, resizeMode: "cover", onLoad: callback, accessibilityIgnoresInvertColors: true };
+  obj[4] = callback(index(mediaViewerSources[10]), obj);
+  return callback(onGetGamePress, obj);
 }
-function AppStoreOverlayTrailerItem(mediaViewerSources) {
-  ({ media, index } = mediaViewerSources);
-  mediaViewerSources = mediaViewerSources.mediaViewerSources;
-  const onGetGamePress = mediaViewerSources.onGetGamePress;
+function AppStoreOverlayTrailerItem(media) {
+  media = media.media;
+  const index = media.index;
+  const mediaViewerSources = media.mediaViewerSources;
+  const onGetGamePress = media.onGetGamePress;
   let ref;
-  closure_4 = undefined;
+  closure_5 = undefined;
   const tmp = callback3();
-  ref = ref.useRef(null);
-  closure_4 = ref.useRef(0);
-  let obj = index(onGetGamePress[11]);
-  const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const callback = ref.useCallback((current) => {
-    closure_4.current = current;
+  ref = onGetGamePress.useRef(null);
+  closure_5 = onGetGamePress.useRef(0);
+  const items = [media.posterUrl];
+  const memo = onGetGamePress.useMemo(() => {
+    let appStoreOverlayCarouselImageUrl;
+    if (null != media.posterUrl) {
+      appStoreOverlayCarouselImageUrl = media(mediaViewerSources[7]).getAppStoreOverlayCarouselImageUrl(tmp.posterUrl);
+      const obj = media(mediaViewerSources[7]);
+    }
+    return appStoreOverlayCarouselImageUrl;
+  }, items);
+  let obj = media(mediaViewerSources[11]);
+  const items1 = [closure_7];
+  const stateFromStores = obj.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
+  const callback = onGetGamePress.useCallback((current) => {
+    closure_5.current = current;
   }, []);
-  obj1 = index(onGetGamePress[12]);
-  const ref1 = ref.useRef(obj1.createVideoControls(NOOP));
+  obj1 = media(mediaViewerSources[12]);
+  const ref1 = onGetGamePress.useRef(obj1.createVideoControls(NOOP));
   const current = ref1.current;
   const subscribe = current.useSubscribe(callback, NOOP, NOOP);
-  const items1 = [index, mediaViewerSources, onGetGamePress];
+  const items2 = [index, mediaViewerSources, onGetGamePress];
   obj = {
     ref,
-    style: items2,
-    onPress: ref.useCallback(() => {
-      let obj = index(onGetGamePress[8]);
+    style: items3,
+    onPress: onGetGamePress.useCallback(() => {
+      let obj = media(mediaViewerSources[8]);
       obj = { initialSources: mediaViewerSources, initialIndex: index, initialIndexVideoStartTime: ref.current, originViewOrOriginLayout: ref.current, analyticsSource: "quest_app_store_overlay", onGetGamePress };
       const result = obj.openAppStoreOverlayMediaModal(obj);
-    }, items1),
+    }, items2),
     accessibilityLabel: null,
     children: null
   };
-  items2 = [tmp.mediaItem, mediaViewerSources.tileSize];
-  const intl = index(onGetGamePress[9]).intl;
-  obj[3] = intl.string(index(onGetGamePress[9]).t.N0IE3v);
-  obj = { style: tmp.media, source: obj1, poster: media.posterUrl, posterResizeMode: "cover", resizeMode: "cover", muted: true, pauseWhileAppInactive: true, paused: stateFromStores, controls: ref1.current };
+  items3 = [tmp.mediaItem, media.tileSize];
+  const intl = media(mediaViewerSources[9]).intl;
+  obj[3] = intl.string(media(mediaViewerSources[9]).t.N0IE3v);
+  obj = { style: tmp.media, source: obj1, poster: memo, posterResizeMode: "cover", resizeMode: "cover", muted: true, pauseWhileAppInactive: true, paused: stateFromStores, controls: ref1.current };
   obj1 = { uri: media.url };
-  const items3 = [callback(index(onGetGamePress[12]).VideoComponent, obj), callback(closure_6, { style: tmp.playIconWrapper, pointerEvents: "none", children: callback(index(onGetGamePress[13]).CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" }) })];
-  obj[4] = items3;
-  return callback2(closure_4, obj);
+  const items4 = [callback(media(mediaViewerSources[12]).VideoComponent, obj), callback(closure_6, { style: tmp.playIconWrapper, pointerEvents: "none", children: callback(media(mediaViewerSources[13]).CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" }) })];
+  obj[4] = items4;
+  return callback2(ref, obj);
 }
 function AppStoreOverlayMediaCarouselItem(arg0) {
   ({ media, index, mediaViewerSources, tileSize, onGetGamePress } = arg0);
   const type = media.type;
   if ("screenshot" === type) {
-    let obj = { media: null, index: null, mediaViewerSources: null, tileSize: null, onGetGamePress: null };
+    let obj = { media: null, index: null, mediaViewerSources: null, tileSize: null, recordMediaSize: null, onGetGamePress: null };
     obj[0] = media;
     obj[1] = index;
     obj[2] = mediaViewerSources;
     obj[3] = tileSize;
-    obj[4] = onGetGamePress;
+    obj[4] = tmp;
+    obj[5] = onGetGamePress;
     return callback(AppStoreOverlayScreenshotItem, obj);
   } else if ("trailer" === type) {
     obj = { media: null, index: null, mediaViewerSources: null, tileSize: null, onGetGamePress: null };
@@ -113,42 +133,41 @@ function AppStoreOverlayMediaCarouselItem(arg0) {
 }
 ({ Pressable: c4, ScrollView: c5, StyleSheet, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { carousel: null, carouselContent: null, carouselPlaceholder: null, mediaItem: null, media: null, playIconWrapper: null };
+createCacheKey = { carousel: null, carouselContent: null, mediaItem: null, media: null, playIconWrapper: null };
 createCacheKey = { marginHorizontal: -ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { gap: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16, alignItems: "center" };
 let obj1 = { gap: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16, alignItems: "center" };
-createCacheKey[2] = { height: require("MEDIA_SHORT_SIDE").MEDIA_LONG_SIDE };
-const obj2 = { height: require("MEDIA_SHORT_SIDE").MEDIA_LONG_SIDE };
-createCacheKey[3] = { borderRadius: ThemesDefault.space.PX_16, overflow: "hidden", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT };
+createCacheKey[2] = { borderRadius: ThemesDefault.space.PX_16, overflow: "hidden", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey[4] = {};
-const obj5 = {};
-const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj5.alignItems = "center";
-obj5.justifyContent = "center";
-createCacheKey[5] = obj5;
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { borderRadius: ThemesDefault.space.PX_16, overflow: "hidden", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT };
+createCacheKey[3] = {};
 const obj4 = {};
+const merged1 = Object.assign(StyleSheet.absoluteFillObject);
+obj4.alignItems = "center";
+obj4.justifyContent = "center";
+createCacheKey[4] = obj4;
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+const obj2 = { borderRadius: ThemesDefault.space.PX_16, overflow: "hidden", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT };
+const obj3 = {};
 let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaCarousel.tsx");
 
 export default function AppStoreOverlayMediaCarousel(media) {
   media = media.media;
   const onGetGamePress = media.onGetGamePress;
   let sizes;
-  let React;
-  let map = callback3();
+  let recordMediaSize;
+  closure_4 = undefined;
   const items = [media];
-  const memo = React.useMemo(() => {
+  const memo = recordMediaSize.useMemo(() => {
     const mapped = media.map(closure_1_12);
     return mapped.filter((arg0) => null != arg0);
   }, items);
   let obj = media(sizes[7]);
-  const remoteMediaSizes = obj.useRemoteMediaSizes(memo);
-  sizes = remoteMediaSizes.sizes;
+  const appStoreOverlayMediaSizes = obj.useAppStoreOverlayMediaSizes(memo);
+  sizes = appStoreOverlayMediaSizes.sizes;
+  recordMediaSize = appStoreOverlayMediaSizes.recordMediaSize;
   const items1 = [media, sizes];
-  React = React.useMemo(() => {
+  closure_4 = recordMediaSize.useMemo(() => {
     media = sizes;
     return media.map((type) => {
       if ("trailer" === type.type) {
@@ -198,13 +217,14 @@ export default function AppStoreOverlayMediaCarousel(media) {
       return obj1;
     });
   }, items1);
-  if (0 === media.length) {
-    return null;
-  } else if (remoteMediaSizes.isMeasured) {
+  media(sizes[14]);
+  let tmp8 = null;
+  if (0 !== media.length) {
+    obj = { gesture: null, children: null };
+    obj[0] = tmp7;
     obj = { horizontal: true, nestedScrollEnabled: true, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, children: null };
-    ({ carousel: obj3[3], carouselContent: obj3[4] } = map);
-    map = media.map;
-    obj[5] = map((media, index) => {
+    ({ carousel: obj3[3], carouselContent: obj3[4] } = tmp);
+    obj[5] = media.map((media, index) => {
       if ("trailer" === media.type) {
         let posterUrl = media.posterUrl;
         if (posterUrl == null) {
@@ -214,19 +234,18 @@ export default function AppStoreOverlayMediaCarousel(media) {
       } else {
         url = media.url;
       }
-      const obj = { media, index, mediaViewerSources: closure_3, tileSize: null, onGetGamePress: null };
+      const obj = { media, index, mediaViewerSources: closure_4, tileSize: null, recordMediaSize: null, onGetGamePress: null };
       let value;
       if (null != url) {
         value = sizes.get(url);
       }
       obj[3] = media(sizes[7]).getMediaTileSize(value);
-      obj[4] = onGetGamePress;
+      obj[4] = recordMediaSize;
+      obj[5] = onGetGamePress;
       return closure_1_9(closure_1_15, obj, "" + media.type + "-" + index);
     });
-    let tmp3Result = tmp3(closure_5, obj);
-  } else {
-    obj = { style: null };
-    obj[0] = map.carouselPlaceholder;
-    tmp3Result = tmp3(closure_6, obj);
+    obj[1] = callback(closure_5, obj);
+    tmp8 = callback(media(sizes[14]).GestureDetector, obj);
   }
+  return tmp8;
 };

@@ -1,27 +1,25 @@
-// === Module 11399: DCDChatList ===
+// === Module 11428: DCDChatList ===
 
-// Module 11399 (DCDChatList)
+// Module 11428 (DCDChatList)
 import initialize from "initialize" /* 589 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5617 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 10848 */;
-import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 11400 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11401 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5620 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 10872 */;
+import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 11429 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11430 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function DCDChatList() {
-  let obj = useIsMobileVisualRefreshExperimentEnabled;
   const memo = importAllResult.useMemo(() => {
-    const Gesture = callback(table[5]).Gesture;
+    const Gesture = callback(table[4]).Gesture;
     const NativeResult = Gesture.Native();
     return Gesture.Native().disallowInterruption(true).shouldCancelWhenOutside(false);
   }, []);
-  obj = { gesture: memo, children: null };
-  obj = { style: callback3().chatList, floatingChatInputEnabled: obj.useMobileVisualRefreshConfig({ location: "DCDChatList" }).chatInputFloating, children: null };
+  let obj = { gesture: memo, children: null };
+  obj = { style: callback3().chatList, floatingChatInputEnabled: true, children: null };
   const tmp = callback3();
   obj[2] = callback(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "chat_list_android" });
   obj[1] = callback(__INTERNAL_VIEW_CONFIGDefault2, obj);

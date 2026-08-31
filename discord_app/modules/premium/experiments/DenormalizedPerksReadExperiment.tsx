@@ -1,8 +1,8 @@
-// === Module 13655: apexExperiment ===
+// === Module 13689: apexExperiment ===
 
-// Module 13655 (apexExperiment)
+// Module 13689 (apexExperiment)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import ApexExperiment from "ApexExperiment" /* 1468 */;
 
 let obj = { CONTROL: 0, [0]: "CONTROL", DUAL_READ_RETURN_OLD: 1, [1]: "DUAL_READ_RETURN_OLD", DUAL_READ_RETURN_NEW: 2, [2]: "DUAL_READ_RETURN_NEW" };
 obj = { name: "2026-03-denormalized-perks-access-read", kind: "user", defaultConfig: obj.CONTROL, variations: obj };

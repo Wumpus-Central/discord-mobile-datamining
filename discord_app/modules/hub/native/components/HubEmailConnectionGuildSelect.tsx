@@ -1,22 +1,22 @@
-// === Module 12208: HubEmailConnectionGuildSelectRow ===
+// === Module 12242: HubEmailConnectionGuildSelectRow ===
 
-// Module 12208 (HubEmailConnectionGuildSelectRow)
+// Module 12242 (HubEmailConnectionGuildSelectRow)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4442 */;
-import Button2 from "Button" /* 4893 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5969 */;
-import Form from "Form" /* 8309 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1426 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import Text from "Text" /* 4444 */;
+import Button2 from "Button" /* 4896 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5972 */;
+import Form from "Form" /* 8331 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 12190 */;
+import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 12224 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 class HubEmailConnectionGuildSelectRow {
@@ -156,7 +156,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {

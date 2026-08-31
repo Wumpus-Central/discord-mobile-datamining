@@ -1,8 +1,8 @@
-// === Module 15377: CollectiblesProgressiveImage ===
+// === Module 15410: CollectiblesProgressiveImage ===
 
-// Module 15377 (CollectiblesProgressiveImage)
+// Module 15410 (CollectiblesProgressiveImage)
 import noopAll from "noop" /* 19 */;
-import _modDef4186 from "module_4186" /* 4186 */;
+import _modDef4187 from "module_4187" /* 4187 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,7 +15,7 @@ export const CollectiblesProgressiveImage = function CollectiblesProgressiveImag
   ({ source, style } = arg0);
   let sharedValue;
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = sharedValue(4186);
+  let obj = sharedValue(4187);
   sharedValue = obj.useSharedValue(0);
   obj = { style, children: null };
   obj = {};
@@ -32,6 +32,6 @@ export const CollectiblesProgressiveImage = function CollectiblesProgressiveImag
     obj[1] = Easing.inOut(sharedValue(closure_1_2[3]).Easing.ease);
     const result = sharedValue.set(obj.withTiming(1, obj));
   };
-  obj[1] = jsx(_modDef4186.Image, {});
+  obj[1] = jsx(_modDef4187.Image, {});
   return <closure_3 />;
 };

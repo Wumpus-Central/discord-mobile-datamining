@@ -1,30 +1,29 @@
-// === Module 13162: GiftingBadgeIntro ===
+// === Module 13194: GiftingBadgeIntro ===
 
-// Module 13162 (GiftingBadgeIntro)
+// Module 13194 (GiftingBadgeIntro)
 import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import contextDefault from "context" /* 5918 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5938 */;
+import contextDefault from "context" /* 5921 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5941 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initialize" /* 8506 */;
-import { getSingleRequirementThreshold as closure_8 } from "initialize" /* 8506 */;
+import closure_7 from "initialize" /* 8528 */;
+import { getSingleRequirementThreshold as closure_8 } from "initialize" /* 8528 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 function GiftingBadgeIntro(analyticsLocation) {
   analyticsLocation = analyticsLocation.analyticsLocation;
   importDefault = undefined;
   let analyticsLocations;
-  const tmp3 = callback4(importDefault(analyticsLocations[7])("UserSettingsGiftingBadgeProgress"));
-  importDefault = tmp3;
-  analyticsLocations = importDefault(analyticsLocations[8])(importDefault(analyticsLocations[9]).USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
-  let obj = analyticsLocation(analyticsLocations[10]);
+  const tmp = callback4();
+  importDefault = tmp;
+  analyticsLocations = importDefault(analyticsLocations[7])(importDefault(analyticsLocations[8]).USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
+  let obj = analyticsLocation(analyticsLocations[9]);
   let items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    badgeById = badgeById.getBadgeById(analyticsLocation(analyticsLocations[11]).BadgeId.GIFTING);
+    badgeById = badgeById.getBadgeById(analyticsLocation(analyticsLocations[10]).BadgeId.GIFTING);
     let tiers;
     if (badgeById != null) {
       tiers = badgeById.tiers;
@@ -34,23 +33,23 @@ function GiftingBadgeIntro(analyticsLocation) {
   let tmp6 = null;
   if (null != stateFromStores) {
     obj = { style: null, children: null };
-    obj[0] = tmp3.wrapper;
+    obj[0] = tmp.wrapper;
     obj = { style: null, children: null };
-    obj[0] = tmp3.introContent;
+    obj[0] = tmp.introContent;
     obj1 = { variant: "text-xs/normal", color: "text-muted", children: null };
-    let intl = tmp5(tmp2[13]).intl;
-    obj1[2] = intl.string(tmp(tmp2[14])["4Yp0mI"]);
-    obj[1] = callback2(tmp5(tmp2[12]).Text, obj1);
+    let intl = tmp5(tmp3[12]).intl;
+    obj1[2] = intl.string(tmp2(tmp3[13])["4Yp0mI"]);
+    obj[1] = callback2(tmp5(tmp3[11]).Text, obj1);
     let items1 = [callback2(closure_6, obj), , ];
     const obj2 = { style: null, children: null };
-    obj2[0] = tmp3.introGrid;
+    obj2[0] = tmp.introGrid;
     obj2[1] = stateFromStores.map((simple_icon_url) => {
       let obj = { style: lib.introGridItem, children: null };
       let tmp4 = null != simple_icon_url.simple_icon_url;
       if (tmp4) {
         obj = { icon: null, size: 44 };
         obj[0] = simple_icon_url.simple_icon_url;
-        tmp4 = closure_1_9(lib(analyticsLocations[15]), obj);
+        tmp4 = closure_1_9(lib(analyticsLocations[14]), obj);
       }
       const items = [tmp4, ];
       obj = { style: lib.badgeCopy, children: null };
@@ -58,11 +57,11 @@ function GiftingBadgeIntro(analyticsLocation) {
       if (str == null) {
         str = "";
       }
-      const items1 = [closure_1_9(analyticsLocation(analyticsLocations[12]).Text, { variant: "text-sm/semibold", color: "text-subtle", children: str }), ];
+      const items1 = [closure_1_9(analyticsLocation(analyticsLocations[11]).Text, { variant: "text-sm/semibold", color: "text-subtle", children: str }), ];
       obj1 = { variant: "text-xs/normal", color: "text-muted", children: null };
-      const intl = tmp9(tmp10[13]).intl;
-      obj1[2] = intl.format(lib(analyticsLocations[14]).qvx9E4, { count: closure_1_8(simple_icon_url) });
-      items1[1] = closure_1_9(analyticsLocation(analyticsLocations[12]).Text, obj1);
+      const intl = tmp9(tmp10[12]).intl;
+      obj1[2] = intl.format(lib(analyticsLocations[13]).qvx9E4, { count: closure_1_8(simple_icon_url) });
+      items1[1] = closure_1_9(analyticsLocation(analyticsLocations[11]).Text, obj1);
       obj[1] = items1;
       items[1] = closure_1_10(closure_1_6, obj);
       obj[1] = items;
@@ -71,16 +70,16 @@ function GiftingBadgeIntro(analyticsLocation) {
     items1[1] = callback2(closure_6, obj2);
     const obj3 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj4 = { size: "sm", color: null };
-    obj4[1] = tmp(tmp2[6]).unsafe_rawColors.WHITE;
-    obj3[1] = callback2(tmp5(tmp2[17]).GiftIcon, obj4);
-    const intl2 = tmp5(tmp2[13]).intl;
-    obj3[2] = intl2.string(tmp(tmp2[14]).DZnomS);
+    obj4[1] = tmp2(tmp3[6]).unsafe_rawColors.WHITE;
+    obj3[1] = callback2(tmp5(tmp3[16]).GiftIcon, obj4);
+    const intl2 = tmp5(tmp3[12]).intl;
+    obj3[2] = intl2.string(tmp2(tmp3[13]).DZnomS);
     obj3[3] = function onPress() {
-      let obj = analyticsLocation(analyticsLocations[18]);
+      let obj = analyticsLocation(analyticsLocations[17]);
       obj = { analyticsLocation, analyticsLocations };
       obj.openGiftModal(obj);
     };
-    items1[2] = callback2(tmp5(tmp2[16]).Button, obj3);
+    items1[2] = callback2(tmp5(tmp3[15]).Button, obj3);
     obj[1] = items1;
     tmp6 = callback3(closure_6, obj);
   }
@@ -88,14 +87,11 @@ function GiftingBadgeIntro(analyticsLocation) {
 }
 ({ Pressable: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles((arg0) => {
-  let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: null, padding: null, gap: null };
-  let num = 0;
-  if (arg0) {
-    num = tmp(712).radii.md;
-  }
-  obj = { wrapper: obj, progressContainer: num, progressRow: tmp(712).space.PX_16, progressTitleText: tmp(712).space.PX_16, progressBarContainer: null, progressBarTrack: null, progressBarFill: null, progressLabels: null, divider: null, dropdownRow: null, badgesRow: null, badgeItem: null, badgeItemActive: null, badgeCopy: null, footerText: null, introContent: null, introGrid: null, introGridItem: null };
-  obj = { gap: tmp(712).space.PX_8 };
+let closure_12 = createCacheKey.createStyles(() => {
+  let obj = { wrapper: null, progressContainer: null, progressRow: null, progressTitleText: null, progressBarContainer: null, progressBarTrack: null, progressBarFill: null, progressLabels: null, divider: null, dropdownRow: null, badgesRow: null, badgeItem: null, badgeItemActive: null, badgeCopy: null, footerText: null, introContent: null, introGrid: null, introGridItem: null };
+  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+  obj[0] = obj;
+  obj = { gap: ThemesDefault.space.PX_8 };
   obj[1] = obj;
   obj[2] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
   obj[3] = { flex: 1 };
@@ -135,15 +131,15 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
   dependencyMap = undefined;
   let analyticsLocations;
   currentTier = undefined;
-  const tmp3 = callback4(useIsMobileVisualRefreshExperimentEnabledDefault("UserSettingsGiftingBadgeProgress"));
-  importDefault = tmp3;
-  [tmp5, c2] = analyticsLocations(currentTier.useState(false), 2);
-  const tmp4 = analyticsLocations(currentTier.useState(false), 2);
+  const tmp = callback4();
+  importDefault = tmp;
+  [tmp3, c2] = analyticsLocations(currentTier.useState(false), 2);
+  const tmp2 = analyticsLocations(currentTier.useState(false), 2);
   analyticsLocations = contextDefault(QUICK_SWITCHERDefault.USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
   let obj = analyticsLocation(589);
   let items = [closure_7];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    singleRequirementProgress = singleRequirementProgress.getSingleRequirementProgress(analyticsLocation(_undefined[11]).BadgeId.GIFTING);
+    singleRequirementProgress = singleRequirementProgress.getSingleRequirementProgress(analyticsLocation(_undefined[10]).BadgeId.GIFTING);
     let num;
     if (singleRequirementProgress != null) {
       num = singleRequirementProgress.current;
@@ -151,9 +147,9 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     if (num == null) {
       num = 0;
     }
-    const obj = { badgeProgress: num, currentTier: getCurrentTier(analyticsLocation(_undefined[11]).BadgeId.GIFTING), nextTier: getNextTier(analyticsLocation(_undefined[11]).BadgeId.GIFTING), giftsRemaining: getRemainingToNextTier(analyticsLocation(_undefined[11]).BadgeId.GIFTING), tiers: null };
+    const obj = { badgeProgress: num, currentTier: getCurrentTier(analyticsLocation(_undefined[10]).BadgeId.GIFTING), nextTier: getNextTier(analyticsLocation(_undefined[10]).BadgeId.GIFTING), giftsRemaining: getRemainingToNextTier(analyticsLocation(_undefined[10]).BadgeId.GIFTING), tiers: null };
     ({ getCurrentTier, getNextTier, getRemainingToNextTier, getBadgeById } = singleRequirementProgress);
-    const badgeById = getBadgeById(tmp2(tmp3[11]).BadgeId.GIFTING);
+    const badgeById = getBadgeById(tmp2(tmp3[10]).BadgeId.GIFTING);
     let tiers;
     if (badgeById != null) {
       tiers = badgeById.tiers;
@@ -173,7 +169,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
   } else {
     let tmp21 = callback(currentTier);
     const tmp27 = callback(nextTier);
-    const giftingBadgeProgressPercent = tmp7(13163).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
+    const giftingBadgeProgressPercent = tmp7(13195).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
     if (null != nextTier) {
       const intl2 = tmp7(1236).intl;
       obj = { count: null, nextTier: null };
@@ -186,7 +182,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
         str2 = "";
       }
       obj[1] = str2;
-      let formatToPlainStringResult = intl2.formatToPlainString(tmp(2466).XTX3OO, obj);
+      let formatToPlainStringResult = intl2.formatToPlainString(tmp4(2465).XTX3OO, obj);
     } else {
       let intl = tmp7(1236).intl;
       let str;
@@ -198,14 +194,14 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       }
       obj1 = { currentTier: null };
       obj1[0] = str;
-      formatToPlainStringResult = intl.formatToPlainString(tmp(2466).LnsdbK, obj1);
+      formatToPlainStringResult = intl.formatToPlainString(tmp4(2465).LnsdbK, obj1);
     }
     const obj2 = { style: null, children: null };
-    obj2[0] = tmp3.wrapper;
+    obj2[0] = tmp.wrapper;
     const obj3 = { style: null, children: null };
-    obj3[0] = tmp3.progressContainer;
+    obj3[0] = tmp.progressContainer;
     const obj4 = { style: null, children: null };
-    obj4[0] = tmp3.progressRow;
+    obj4[0] = tmp.progressRow;
     let simple_icon_url;
     if (currentTier != null) {
       simple_icon_url = currentTier.simple_icon_url;
@@ -215,13 +211,13 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       const obj5 = { icon: null, size: 36, style: null };
       obj5[0] = currentTier.simple_icon_url;
       obj5[2] = { margin: 4 };
-      tmp14 = callback2(tmp(10460), obj5);
+      tmp14 = callback2(tmp4(10484), obj5);
     }
     let items1 = [tmp14, , ];
     const obj6 = { style: null, variant: "text-md/medium", color: "text-strong", children: null };
-    obj6[0] = tmp3.progressTitleText;
+    obj6[0] = tmp.progressTitleText;
     obj6[3] = formatToPlainStringResult;
-    items1[1] = callback2(tmp7(4442).Text, obj6);
+    items1[1] = callback2(tmp7(4444).Text, obj6);
     let simple_icon_url1;
     if (nextTier != null) {
       simple_icon_url1 = nextTier.simple_icon_url;
@@ -231,17 +227,17 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       const obj7 = { icon: null, size: 36, style: null };
       obj7[0] = nextTier.simple_icon_url;
       obj7[2] = { margin: 4 };
-      tmp16Result = tmp16(tmp(10460), obj7);
+      tmp16Result = tmp16(tmp4(10484), obj7);
     }
     items1[2] = tmp16Result;
     obj4[1] = items1;
     let items2 = [closure_10(closure_6, obj4), ];
     const obj8 = { style: null, children: null };
-    obj8[0] = tmp3.progressBarContainer;
+    obj8[0] = tmp.progressBarContainer;
     const obj9 = { style: null, children: null };
-    obj9[0] = tmp3.progressBarTrack;
+    obj9[0] = tmp.progressBarTrack;
     const obj10 = { style: null };
-    const items3 = [tmp3.progressBarFill, ];
+    const items3 = [tmp.progressBarFill, ];
     const obj11 = { width: null };
     const _HermesInternal = HermesInternal;
     obj11[0] = "" + giftingBadgeProgressPercent + "%";
@@ -250,7 +246,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     obj9[1] = callback2(closure_6, obj10);
     const items4 = [callback2(closure_6, obj9), ];
     const obj12 = { style: null, children: null };
-    obj12[0] = tmp3.progressLabels;
+    obj12[0] = tmp.progressLabels;
     const intl3 = tmp7(1236).intl;
     let tmp20 = tmp21;
     if (null != nextTier) {
@@ -263,8 +259,8 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     }
     const obj14 = { variant: "text-xs/normal", color: "text-subtle", children: null };
     obj13[1] = tmp21;
-    obj14[2] = intl3.format(tmp(2466).iIpfQe, obj13);
-    obj12[1] = callback2(tmp7(4442).Text, obj14);
+    obj14[2] = intl3.format(tmp4(2465).iIpfQe, obj13);
+    obj12[1] = callback2(tmp7(4444).Text, obj14);
     items4[1] = callback2(closure_6, obj12);
     obj8[1] = items4;
     items2[1] = closure_10(closure_6, obj8);
@@ -272,42 +268,42 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     const items5 = [closure_10(closure_6, obj3), , , , ];
     const obj15 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj16 = { size: "sm", color: null };
-    obj16[1] = tmp(712).unsafe_rawColors.WHITE;
-    obj15[1] = callback2(tmp7(10712).GiftIcon, obj16);
+    obj16[1] = tmp4(712).unsafe_rawColors.WHITE;
+    obj15[1] = callback2(tmp7(10736).GiftIcon, obj16);
     const intl4 = tmp7(1236).intl;
-    obj15[2] = intl4.string(tmp(2466).DZnomS);
+    obj15[2] = intl4.string(tmp4(2465).DZnomS);
     obj15[3] = function onPress() {
-      let obj = analyticsLocation(_undefined[18]);
+      let obj = analyticsLocation(_undefined[17]);
       obj = { analyticsLocation, analyticsLocations };
       obj.openGiftModal(obj);
     };
-    items5[1] = callback2(tmp7(4893).Button, obj15);
+    items5[1] = callback2(tmp7(4896).Button, obj15);
     const obj17 = { style: null };
-    obj17[0] = tmp3.divider;
+    obj17[0] = tmp.divider;
     items5[2] = callback2(closure_6, obj17);
     const obj18 = { style: null, onPress: null, children: null };
-    obj18[0] = tmp3.dropdownRow;
+    obj18[0] = tmp.dropdownRow;
     obj18[1] = function onPress() {
       return _undefined((arg0) => !arg0);
     };
     const obj19 = { variant: "text-sm/medium", color: "text-strong", children: null };
     const intl5 = tmp7(1236).intl;
-    obj19[2] = intl5.string(tmp(2466).WZ4cXA);
-    const items6 = [callback2(tmp7(4442).Text, obj19), ];
+    obj19[2] = intl5.string(tmp4(2465).WZ4cXA);
+    const items6 = [callback2(tmp7(4444).Text, obj19), ];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(11043).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(13197).ChevronSmallUpIcon;
     } else {
-      ChevronSmallDownIcon = tmp7(8875).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = tmp7(8898).ChevronSmallDownIcon;
     }
     const obj20 = { color: null };
-    obj20[0] = tmp(712).colors.INTERACTIVE_ICON_DEFAULT;
+    obj20[0] = tmp4(712).colors.INTERACTIVE_ICON_DEFAULT;
     items6[1] = callback2(ChevronSmallDownIcon, obj20);
     obj18[2] = items6;
     items5[3] = closure_10(closure_5, obj18);
     if (tmp11Result) {
       const obj21 = { children: null };
       const obj22 = { style: null, children: null };
-      obj22[0] = tmp3.badgesRow;
+      obj22[0] = tmp.badgesRow;
       obj22[1] = tiers.map((key) => {
         const items = [lib.badgeItem, ];
         key = undefined;
@@ -320,7 +316,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
         if (tmp6) {
           obj = { icon: null, size: 36 };
           obj[0] = key.simple_icon_url;
-          tmp6 = closure_1_9(lib(_undefined[15]), obj);
+          tmp6 = closure_1_9(lib(_undefined[14]), obj);
         }
         const items1 = [tmp6, ];
         obj = { style: tmp3.badgeCopy, children: null };
@@ -328,11 +324,11 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
         if (str == null) {
           str = "";
         }
-        const items2 = [closure_1_9(analyticsLocation(_undefined[12]).Text, { variant: "text-sm/semibold", color: "text-strong", children: str }), ];
+        const items2 = [closure_1_9(analyticsLocation(_undefined[11]).Text, { variant: "text-sm/semibold", color: "text-strong", children: str }), ];
         obj1 = { variant: "text-xs/normal", color: "text-subtle", children: null };
-        const intl = tmp11(tmp12[13]).intl;
-        obj1[2] = intl.format(lib(_undefined[14]).qvx9E4, { count: closure_1_8(key) });
-        items2[1] = closure_1_9(analyticsLocation(_undefined[12]).Text, obj1);
+        const intl = tmp11(tmp12[12]).intl;
+        obj1[2] = intl.format(lib(_undefined[13]).qvx9E4, { count: closure_1_8(key) });
+        items2[1] = closure_1_9(analyticsLocation(_undefined[11]).Text, obj1);
         obj[1] = items2;
         items1[1] = closure_1_10(closure_1_6, obj);
         obj[1] = items1;
@@ -340,10 +336,10 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       });
       const items7 = [tmp16(tmp12, obj22), ];
       const obj23 = { style: null, variant: "text-xs/normal", color: "text-muted", children: null };
-      obj23[0] = tmp3.footerText;
+      obj23[0] = tmp.footerText;
       const intl6 = tmp7(1236).intl;
-      obj23[3] = intl6.string(tmp(2466)["4Yp0mI"]);
-      items7[1] = tmp16(tmp7(4442).Text, obj23);
+      obj23[3] = intl6.string(tmp4(2465)["4Yp0mI"]);
+      items7[1] = tmp16(tmp7(4444).Text, obj23);
       obj21[0] = items7;
       tmp11Result = tmp11(closure_11, obj21);
     }

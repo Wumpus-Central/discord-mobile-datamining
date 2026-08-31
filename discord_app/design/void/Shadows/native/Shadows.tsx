@@ -1,6 +1,6 @@
-// === Module 13700: generateBoxShadowStyle ===
+// === Module 13734: generateBoxShadowStyle ===
 
-// Module 13700 (generateBoxShadowStyle)
+// Module 13734 (generateBoxShadowStyle)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 

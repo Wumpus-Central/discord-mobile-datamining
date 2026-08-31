@@ -1,6 +1,6 @@
-// === Module 13418: DEFAULT_ROOM_SIZE ===
+// === Module 13452: DEFAULT_ROOM_SIZE ===
 
-// Module 13418 (DEFAULT_ROOM_SIZE)
+// Module 13452 (DEFAULT_ROOM_SIZE)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/spatial_audio/SpatialAudioConstants.tsx");

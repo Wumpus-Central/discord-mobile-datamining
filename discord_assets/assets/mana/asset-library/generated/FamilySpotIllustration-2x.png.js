@@ -1,6 +1,6 @@
-// === Module 6499: metadata ===
+// === Module 6512: metadata ===
 
-// Module 6499 (metadata)
+// Module 6512 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/FamilySpotIllustration-2x.png.js");

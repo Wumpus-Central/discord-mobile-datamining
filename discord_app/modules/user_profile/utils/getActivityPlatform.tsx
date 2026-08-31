@@ -1,8 +1,8 @@
-// === Module 9353: PlatformTypes ===
+// === Module 9375: PlatformTypes ===
 
-// Module 9353 (PlatformTypes)
+// Module 9375 (PlatformTypes)
 import ME from "ME" /* 676 */;
-import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 9352 */;
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 9374 */;
 import set from "set" /* 2 */;
 
 const PlatformTypes = ME.PlatformTypes;
@@ -16,20 +16,20 @@ export default function getActivityPlatform(session_id) {
   const tmp3 = parseProviderRouteHeadlessSessionIdDefault(session_id.session_id);
   if (null != tmp3) {
     return tmp3;
-  } else if (tmp(9195)(session_id)) {
-    let tmpResult = tmp(5192);
+  } else if (tmp(9217)(session_id)) {
+    let tmpResult = tmp(5195);
     return tmpResult.get(PlatformTypes.SPOTIFY);
-  } else if (tmp(8561)(session_id)) {
-    tmpResult = tmp(5192);
+  } else if (tmp(8583)(session_id)) {
+    tmpResult = tmp(5195);
     return tmpResult.get(PlatformTypes.CRUNCHYROLL);
-  } else if (tmp(9326)(session_id)) {
-    return tmp(5192).get(PlatformTypes.XBOX);
-  } else if (tmp(9327)(session_id)) {
-    return tmp(5192).get(PlatformTypes.PLAYSTATION);
+  } else if (tmp(9348)(session_id)) {
+    return tmp(5195).get(PlatformTypes.XBOX);
+  } else if (tmp(9349)(session_id)) {
+    return tmp(5195).get(PlatformTypes.PLAYSTATION);
   } else {
-    if (!tmp(9354)(session_id)) {
-      if (!tmp(9355)(session_id)) {
-        const found = tmp(5192).find((name) => name.name === session_id.name);
+    if (!tmp(9376)(session_id)) {
+      if (!tmp(9377)(session_id)) {
+        const found = tmp(5195).find((name) => name.name === session_id.name);
         let tmp5 = null;
         if (null != found) {
           tmp5 = null;
@@ -40,6 +40,6 @@ export default function getActivityPlatform(session_id) {
         return tmp5;
       }
     }
-    return tmp(5192).get(PlatformTypes.META_QUEST_OR_HORIZON);
+    return tmp(5195).get(PlatformTypes.META_QUEST_OR_HORIZON);
   }
 };

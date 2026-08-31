@@ -1,6 +1,6 @@
-// === Module 6042: RewardRequirementType ===
+// === Module 6045: RewardRequirementType ===
 
-// Module 6042 (RewardRequirementType)
+// Module 6045 (RewardRequirementType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontTypes.tsx");

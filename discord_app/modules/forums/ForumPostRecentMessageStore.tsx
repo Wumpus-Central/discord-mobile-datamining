@@ -1,13 +1,13 @@
-// === Module 6118: handleLoadThreadsSuccess ===
+// === Module 6121: handleLoadThreadsSuccess ===
 
-// Module 6118 (handleLoadThreadsSuccess)
+// Module 6121 (handleLoadThreadsSuccess)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4703 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4705 */;
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
 function handleLoadThreadsSuccess(arg0) {

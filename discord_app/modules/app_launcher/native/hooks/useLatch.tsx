@@ -1,6 +1,6 @@
-// === Module 11665: useLatch ===
+// === Module 11696: useLatch ===
 
-// Module 11665 (useLatch)
+// Module 11696 (useLatch)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useLatch.tsx");

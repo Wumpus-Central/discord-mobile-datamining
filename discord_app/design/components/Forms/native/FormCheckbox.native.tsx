@@ -1,12 +1,12 @@
-// === Module 7631: FormCheckbox ===
+// === Module 7652: FormCheckbox ===
 
-// Module 7631 (FormCheckbox)
+// Module 7652 (FormCheckbox)
 import ThemesDefault from "Themes" /* 712 */;
-import IconSizesDefault from "IconSizes" /* 4895 */;
+import IconSizesDefault from "IconSizes" /* 4898 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
-import importDefaultResult from "module_4186" /* 4186 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
+import importDefaultResult from "module_4187" /* 4187 */;
 
 const require = arg1;
 createCacheKey = { checkbox: null, unselected: null, selected: null, checkmark: null };
@@ -26,33 +26,33 @@ const result = require("set").fileFinishedImporting("design/components/Forms/nat
 
 export const FormCheckbox = function FormCheckbox(checked) {
   checked = checked.checked;
-  const tmp2 = callback();
-  enabled = React.useContext(enabled(unselected[7]).AccessibilityPreferencesContext).reducedMotion.enabled;
+  const tmp = callback();
+  enabled = React.useContext(enabled(unselected[6]).AccessibilityPreferencesContext).reducedMotion.enabled;
   enabled = checked;
   checked = undefined;
   unselected = undefined;
-  const tmp3 = callback();
-  const selected = tmp3.selected;
+  const tmp2 = callback();
+  const selected = tmp2.selected;
   checked = selected;
-  unselected = tmp3.unselected;
+  unselected = tmp2.unselected;
   let obj = enabled(unselected[4]);
   const fn = function _() {
-    let obj = enabled(unselected[9]);
+    let obj = enabled(unselected[8]);
     if (enabled) {
       let borderColor = checked.borderColor;
     } else {
       borderColor = unselected.borderColor;
     }
-    obj = { borderColor: obj.withSpring(borderColor, tmp(tmp2[10]).SUBTLE_SPRING, "animate-always"), backgroundColor: null };
+    obj = { borderColor: obj.withSpring(borderColor, tmp(tmp2[9]).SUBTLE_SPRING, "animate-always"), backgroundColor: null };
     if (enabled) {
       let backgroundColor = checked.backgroundColor;
     } else {
       backgroundColor = unselected.backgroundColor;
     }
-    obj[1] = enabled(unselected[9]).withSpring(backgroundColor, enabled(unselected[10]).SUBTLE_SPRING, "animate-always");
+    obj[1] = enabled(unselected[8]).withSpring(backgroundColor, enabled(unselected[9]).SUBTLE_SPRING, "animate-always");
     return obj;
   };
-  obj = { withSpring: enabled(unselected[9]).withSpring, checked, selected, unselected, SUBTLE_SPRING: enabled(unselected[10]).SUBTLE_SPRING };
+  obj = { withSpring: enabled(unselected[8]).withSpring, checked, selected, unselected, SUBTLE_SPRING: enabled(unselected[9]).SUBTLE_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 11278373524374;
   fn.__initData = closure_7;
@@ -63,33 +63,30 @@ export const FormCheckbox = function FormCheckbox(checked) {
     if (enabled) {
       num = 1;
     }
-    let obj = enabled(unselected[9]);
+    let obj = enabled(unselected[8]);
     let num2 = 0;
     if (checked) {
       num2 = 1;
     }
-    obj = { opacity: obj.withSpring(num2, tmp(tmp2[10]).SUBTLE_SPRING, "animate-always"), transform: null };
+    obj = { opacity: obj.withSpring(num2, tmp(tmp2[9]).SUBTLE_SPRING, "animate-always"), transform: null };
     let num3 = 1;
     if (!checked) {
       num3 = num;
     }
-    obj = { scale: enabled(unselected[9]).withSpring(num3, tmp(tmp2[10]).SUBTLE_SPRING) };
+    obj = { scale: enabled(unselected[8]).withSpring(num3, tmp(tmp2[9]).SUBTLE_SPRING) };
     const items = [obj];
     obj[1] = items;
     return obj;
   };
-  obj = { useReducedMotion: enabled, withSpring: enabled(unselected[9]).withSpring, checked, SUBTLE_SPRING: enabled(unselected[10]).SUBTLE_SPRING };
+  obj = { useReducedMotion: enabled, withSpring: enabled(unselected[8]).withSpring, checked, SUBTLE_SPRING: enabled(unselected[9]).SUBTLE_SPRING };
   fn2.__closure = obj;
   fn2.__workletHash = 13939484082835;
   fn2.__initData = closure_8;
   const animatedStyle1 = obj2.useAnimatedStyle(fn2);
   obj1 = { style: items, children: null };
-  items = [tmp2.checkbox, animatedStyle];
-  obj2 = { source: checked(unselected[8]), size: null, style: null };
-  const Sizes = checked(unselected[5]).Sizes;
-  obj2[1] = checked(unselected[6])("FormCheckbox") ? Sizes.SMALL_20 : Sizes.SMALL;
-  const items1 = [tmp2.checkmark, animatedStyle1];
-  obj2[2] = items1;
-  obj1[1] = <closure_6 source={checked(unselected[8])} size={null} style={null} />;
+  items = [tmp.checkbox, animatedStyle];
+  obj2 = { source: checked(unselected[7]), size: checked(unselected[5]).Sizes.SMALL_20, style: items1 };
+  items1 = [tmp.checkmark, animatedStyle1];
+  obj1[1] = <closure_6 source={checked(unselected[7])} size={checked(unselected[5]).Sizes.SMALL_20} style={items1} />;
   return jsx(checked(unselected[4]).View, { style: items, children: null });
 };

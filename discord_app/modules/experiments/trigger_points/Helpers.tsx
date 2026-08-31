@@ -1,8 +1,8 @@
-// === Module 10521: registeredExperimentIds ===
+// === Module 10545: registeredExperimentIds ===
 
-// Module 10521 (registeredExperimentIds)
+// Module 10545 (registeredExperimentIds)
 import closure_0 from "initialize" /* 1212 */;
-import { CommonTriggerPoints } from "ExperimentBuckets" /* 4360 */;
+import { CommonTriggerPoints } from "ExperimentBuckets" /* 4362 */;
 
 let result = require("set").fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
 class CommonTriggerPointConfiguration {

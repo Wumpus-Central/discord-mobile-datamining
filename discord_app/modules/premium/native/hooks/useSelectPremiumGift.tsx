@@ -1,6 +1,6 @@
-// === Module 10456: useSelectPremiumGift ===
+// === Module 10480: useSelectPremiumGift ===
 
-// Module 10456 (useSelectPremiumGift)
+// Module 10480 (useSelectPremiumGift)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -36,7 +36,7 @@ export const useSelectPremiumGift = function useSelectPremiumGift(PremiumGiftPla
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -97,7 +97,7 @@ export const useSelectPremiumGift = function useSelectPremiumGift(PremiumGiftPla
             v0(navigation);
             navigation.navigate(navigation(recipientUserId[9]).PremiumGiftScreens.CUSTOMIZATION);
             v02 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp29) {
           if (tmp4 === c3) {

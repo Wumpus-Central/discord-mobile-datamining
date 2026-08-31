@@ -1,8 +1,8 @@
-// === Module 7162: shouldLogClientHeartbeatSkipped ===
+// === Module 7183: shouldLogClientHeartbeatSkipped ===
 
-// Module 7162 (shouldLogClientHeartbeatSkipped)
-import sampleWithUserId from "sampleWithUserId" /* 7163 */;
-import closure_2 from "mergeGuildAvatar" /* 1923 */;
+// Module 7183 (shouldLogClientHeartbeatSkipped)
+import sampleWithUserId from "sampleWithUserId" /* 7184 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx");

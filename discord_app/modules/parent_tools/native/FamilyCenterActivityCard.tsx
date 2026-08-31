@@ -1,27 +1,27 @@
-// === Module 14428: FamilyCenterActivityCardPrefaceText ===
+// === Module 14462: FamilyCenterActivityCardPrefaceText ===
 
-// Module 14428 (FamilyCenterActivityCardPrefaceText)
+// Module 14462 (FamilyCenterActivityCardPrefaceText)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import messagesProxyDefault from "messagesProxy" /* 2370 */;
-import Text from "Text" /* 4442 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7285 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8713 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8714 */;
-import renderDefault from "render" /* 9006 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11430 */;
-import registerAssetDefault from "registerAsset" /* 12240 */;
-import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14431 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 14432 */;
-import FamilyCenterTopActivityDefault from "FamilyCenterTopActivity" /* 14435 */;
-import SpendingLimitRowDefault from "SpendingLimitRow" /* 14445 */;
+import messagesProxyDefault from "messagesProxy" /* 2369 */;
+import Text from "Text" /* 4444 */;
+import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7306 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8735 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8736 */;
+import renderDefault from "render" /* 9029 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11459 */;
+import registerAssetDefault from "registerAsset" /* 12274 */;
+import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14465 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 14466 */;
+import FamilyCenterTopActivityDefault from "FamilyCenterTopActivity" /* 14469 */;
+import SpendingLimitRowDefault from "SpendingLimitRow" /* 14479 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 7230 */;
+import items from "items" /* 7251 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function FamilyCenterActivityCardPrefaceText() {
@@ -43,7 +43,7 @@ function FamilyCenterActivityCardPrefaceText() {
   if (!tmp4) {
     obj1 = { color: null, source: null, style: null };
     obj1[0] = tmp.icon.color;
-    obj1[1] = tmp2(14429);
+    obj1[1] = tmp2(14463);
     obj1[2] = tmp.icon;
     tmp12 = callback(tmp5(1297).Icon, obj1);
   }
@@ -144,9 +144,9 @@ class FamilyCenterActivityCardAccountSelect {
     items[0] = activeLinkUsers;
     closure_3 = closure_3.useMemo(() => activeLinkUsers.map((id) => {
       const obj = { label: null, value: null };
-      const name = callback(4290).getName(id);
-      const obj2 = callback(4290);
-      obj[0] = "" + name + " (" + callback(4290).getUserTag(id) + ")";
+      const name = callback(4292).getName(id);
+      const obj2 = callback(4292);
+      obj[0] = "" + name + " (" + callback(4292).getUserTag(id) + ")";
       obj[1] = id.id;
       return obj;
     }), items);
@@ -238,7 +238,7 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.avatarContainer, children: callback(tmp4(1297).Avatar, obj) };
-  obj = { avatarStyle: tmp.avatar, user, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: user.avatarDecoration, size: 437 };
+  obj = { avatarStyle: tmp.avatar, user, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: user.avatarDecoration, size: 213.5 };
   obj[5] = NORMAL;
   const items = [callback(View, obj), ];
   const items1 = [tmp.userHeader, ];
@@ -287,13 +287,13 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/native
 export default function FamilyCenterActivityCard() {
   const tmp = callback6();
   const _require = tmp;
-  let obj = _require(14432);
+  let obj = _require(14466);
   const selectedTeenUser = obj.useSelectedTeenUser();
-  _require(14433);
+  _require(14467);
   if (undefined === selectedTeenUser) {
     return null;
   } else {
-    const sortedActivityTypeConfigs = tmp2(7285).getSortedActivityTypeConfigs();
+    const sortedActivityTypeConfigs = tmp2(7306).getSortedActivityTypeConfigs();
     obj = { style: null, children: null };
     obj[0] = tmp.card;
     obj = { style: null, children: null };

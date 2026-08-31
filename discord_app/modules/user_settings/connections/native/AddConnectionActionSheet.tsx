@@ -1,11 +1,11 @@
-// === Module 14496: AddApplicationIdentityTableRow ===
+// === Module 14530: AddApplicationIdentityTableRow ===
 
-// Module 14496 (AddApplicationIdentityTableRow)
+// Module 14530 (AddApplicationIdentityTableRow)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import items2 from "items" /* 4476 */;
+import items2 from "items" /* 4478 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 import Button from "Button" /* 1297 */;
 
 function AddApplicationIdentityTableRow(application) {
@@ -13,10 +13,10 @@ function AddApplicationIdentityTableRow(application) {
   let _require;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5921)(application));
-  const tmp2 = analyticsLocations(5921)(application);
-  analyticsLocations = analyticsLocations(5918)(analyticsLocations(5938).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(5918);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5924)(application));
+  const tmp2 = analyticsLocations(5924)(application);
+  analyticsLocations = analyticsLocations(5921)(analyticsLocations(5941).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(5921);
   let obj = _require(1297);
   const iconSource = application.getIconSource(obj.getIconSize(_require(1297).IconSizes.LARGE));
   obj = {
@@ -41,9 +41,9 @@ function AddApplicationIdentityTableRow(application) {
     tmp7Result = tmp7(tmp5(1297).Icon, obj);
   }
   obj[4] = tmp7Result;
-  obj[5] = closure_5(_require(5564).TableRow.Arrow, {});
+  obj[5] = closure_5(_require(5567).TableRow.Arrow, {});
   obj[6] = !canStartAuthorization;
-  return closure_5(_require(5564).TableRow, obj, application.id);
+  return closure_5(_require(5567).TableRow, obj, application.id);
 }
 const AnalyticsLocations = ME.AnalyticsLocations;
 let closure_4 = items2.getMigratedApplicationIdentityConnectionsScreenApplications;

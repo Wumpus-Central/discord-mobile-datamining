@@ -1,8 +1,8 @@
-// === Module 10415: useGiftStyles ===
+// === Module 10439: useGiftStyles ===
 
-// Module 10415 (useGiftStyles)
+// Module 10439 (useGiftStyles)
 import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1925 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 const PremiumGiftStyles = GuildFeatures.PremiumGiftStyles;
 const result = set.fileFinishedImporting("modules/premium/gifting/hooks/useGiftStyles.tsx");

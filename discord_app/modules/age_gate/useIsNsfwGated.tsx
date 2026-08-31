@@ -1,8 +1,8 @@
-// === Module 7574: useIsNsfwGated ===
+// === Module 7595: useIsNsfwGated ===
 
-// Module 7574 (useIsNsfwGated)
-import closure_2 from "initialize" /* 4698 */;
-import closure_3 from "mergeGuildAvatar" /* 1923 */;
+// Module 7595 (useIsNsfwGated)
+import closure_2 from "initialize" /* 4700 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/age_gate/useIsNsfwGated.tsx");

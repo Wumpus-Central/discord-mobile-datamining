@@ -1,6 +1,6 @@
-// === Module 9269: PlayStationLinkModalScenes ===
+// === Module 9291: PlayStationLinkModalScenes ===
 
-// Module 9269 (PlayStationLinkModalScenes)
+// Module 9291 (PlayStationLinkModalScenes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkConstants.tsx");

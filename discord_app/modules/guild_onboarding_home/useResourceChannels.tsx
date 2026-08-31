@@ -1,8 +1,8 @@
-// === Module 16078: useResourceChannels ===
+// === Module 16112: useResourceChannels ===
 
-// Module 16078 (useResourceChannels)
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "handleSettingsLoadSuccess" /* 4673 */;
+// Module 16112 (useResourceChannels)
+import closure_2 from "ensureGuildLoaded" /* 1387 */;
+import closure_3 from "handleSettingsLoadSuccess" /* 4675 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/useResourceChannels.tsx");

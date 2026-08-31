@@ -1,12 +1,12 @@
-// === Module 17361: AVErrorAudioCaptureSampleRateMismatchDefinition ===
+// === Module 17394: AVErrorAudioCaptureSampleRateMismatchDefinition ===
 
-// Module 17361 (AVErrorAudioCaptureSampleRateMismatchDefinition)
+// Module 17394 (AVErrorAudioCaptureSampleRateMismatchDefinition)
 import setDefault from "set" /* 687 */;
-import mapped from "mapped" /* 9504 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17349 */;
-import closure_2 from "updateAveragedStatsHelper" /* 4533 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "createRTCConnection" /* 4520 */;
+import mapped from "mapped" /* 9526 */;
+import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17382 */;
+import closure_2 from "updateAveragedStatsHelper" /* 4535 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_4 from "createRTCConnection" /* 4522 */;
 
 require = arg1;
 let closure_5 = 10 * setDefault.Millis.SECOND;

@@ -1,11 +1,11 @@
-// === Module 15974: ICYMICustomScoresModal ===
+// === Module 16008: ICYMICustomScoresModal ===
 
-// Module 15974 (ICYMICustomScoresModal)
+// Module 16008 (ICYMICustomScoresModal)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7769 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7790 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 noopAll;
@@ -19,7 +19,7 @@ const result = require("set").fileFinishedImporting("modules/icymi/native/custom
 
 export default function ICYMICustomScoresModal() {
   const _require = callback3();
-  let obj = _require(5973);
+  let obj = _require(5976);
   closure_1 = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions() {
@@ -43,12 +43,12 @@ export default function ICYMICustomScoresModal() {
       const obj = { title: null, headerLeft: null };
       const intl = lib(1236).intl;
       obj[0] = intl.string(lib(1236).t.jVshKt);
-      obj[1] = lib(7554).getRenderModalCloseImage(navigation.navigation);
-      const merged = Object.assign(callback(10600)());
+      obj[1] = lib(7575).getRenderModalCloseImage(navigation.navigation);
+      const merged = Object.assign(callback(10624)());
       return obj;
     },
     getComponent() {
-      return lib(15975).default;
+      return lib(16009).default;
     }
   };
   const items = [
@@ -56,11 +56,11 @@ export default function ICYMICustomScoresModal() {
     callback(closure_5.Screen, {
       name: "guild",
       options(navigation) {
-        const obj = { headerLeft: lib(7554).getRenderModalBackImage(navigation.navigation) };
+        const obj = { headerLeft: lib(7575).getRenderModalBackImage(navigation.navigation) };
         return obj;
       },
       getComponent() {
-        return lib(15976).default;
+        return lib(16010).default;
       }
     })
   ];

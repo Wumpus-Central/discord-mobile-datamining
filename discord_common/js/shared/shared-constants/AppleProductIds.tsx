@@ -1,6 +1,6 @@
-// === Module 7108: AppleProductIds ===
+// === Module 7129: AppleProductIds ===
 
-// Module 7108 (AppleProductIds)
+// Module 7129 (AppleProductIds)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AppleProductIds.tsx");

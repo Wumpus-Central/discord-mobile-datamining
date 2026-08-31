@@ -1,9 +1,9 @@
-// === Module 5325: canJoinVoiceChannel ===
+// === Module 5328: canJoinVoiceChannel ===
 
-// Module 5325 (canJoinVoiceChannel)
+// Module 5328 (canJoinVoiceChannel)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
+import createChannelRecord from "createChannelRecord" /* 1391 */;
 
 const isPrivate = createChannelRecord.isPrivate;
 const BasicPermissions = ME.BasicPermissions;

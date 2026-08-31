@@ -1,11 +1,11 @@
-// === Module 7885: createApplicationSubscriptionPurchaseSystemMessage ===
+// === Module 7907: createApplicationSubscriptionPurchaseSystemMessage ===
 
-// Module 7885 (createApplicationSubscriptionPurchaseSystemMessage)
+// Module 7907 (createApplicationSubscriptionPurchaseSystemMessage)
 import set from "set" /* 2 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7816 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7818 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7819 */;
-import getApplicationSubscriptionSystemMessageASTContent from "getApplicationSubscriptionSystemMessageASTContent" /* 7850 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7837 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7839 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7841 */;
+import getApplicationSubscriptionSystemMessageASTContent from "getApplicationSubscriptionSystemMessageASTContent" /* 7872 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/ApplicationSubscriptionPurchaseSystemMessage.tsx");
 

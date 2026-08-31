@@ -1,10 +1,10 @@
-// === Module 14719: useQuestDockSwipeGesture ===
+// === Module 14753: useQuestDockSwipeGesture ===
 
-// Module 14719 (useQuestDockSwipeGesture)
-import LegacyBaseButton from "LegacyBaseButton" /* 5617 */;
+// Module 14753 (useQuestDockSwipeGesture)
+import LegacyBaseButton from "LegacyBaseButton" /* 5620 */;
 import importAllResult from "noop" /* 19 */;
-import { QuestDockMode } from "QuestsExperimentLocations" /* 5352 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14629 */;
+import { QuestDockMode } from "QuestsExperimentLocations" /* 5355 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14663 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

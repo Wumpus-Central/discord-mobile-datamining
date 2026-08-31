@@ -1,7 +1,7 @@
-// === Module 17447: promise ===
+// === Module 17480: promise ===
 
-// Module 17447 (promise)
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+// Module 17480 (promise)
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/headless_tasks/android/ToggleSelfMute.tsx");

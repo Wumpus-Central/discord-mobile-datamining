@@ -1,6 +1,6 @@
-// === Module 11012: markChannelInvited ===
+// === Module 11037: markChannelInvited ===
 
-// Module 11012 (markChannelInvited)
+// Module 11037 (markChannelInvited)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

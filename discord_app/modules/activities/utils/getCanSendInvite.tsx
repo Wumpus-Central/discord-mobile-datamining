@@ -1,10 +1,10 @@
-// === Module 12831: getCanSendInvite ===
+// === Module 12866: getCanSendInvite ===
 
-// Module 12831 (getCanSendInvite)
+// Module 12866 (getCanSendInvite)
 import set from "set" /* 2 */;
-import getPartySize from "getPartySize" /* 9386 */;
-import hasPartySize from "hasPartySize" /* 9387 */;
-import resultDefault from "result" /* 11260 */;
+import getPartySize from "getPartySize" /* 9408 */;
+import hasPartySize from "hasPartySize" /* 9409 */;
+import resultDefault from "result" /* 11289 */;
 import ME from "ME" /* 676 */;
 
 ({ ActivityFlags: c3, ActivityActionTypes: c4 } = ME);
@@ -22,15 +22,15 @@ export const getCanSendInvite = function getCanSendInvite(findActivityResult, au
       }
       if (type !== constants2.JOIN_REQUEST) {
         return false;
-      } else if (tmp11(6123)(findActivityResult, constants.JOIN)) {
+      } else if (tmp11(6126)(findActivityResult, constants.JOIN)) {
         const partySize = getPartySize.getPartySize(findActivityResult);
         const obj = getPartySize;
         const tmp5 = require;
         const hasPartySizeResult = hasPartySize.hasPartySize(partySize);
         let isPartyFullResult = !hasPartySizeResult;
         if (hasPartySizeResult) {
-          isPartyFullResult = tmp5(9388).isPartyFull(partySize);
-          const tmp5Result = tmp5(9388);
+          isPartyFullResult = tmp5(9410).isPartyFull(partySize);
+          const tmp5Result = tmp5(9410);
         }
         return !isPartyFullResult;
       } else {

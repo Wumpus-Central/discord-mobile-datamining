@@ -1,10 +1,10 @@
-// === Module 15661: FavoritesGuildChannelSortModal ===
+// === Module 15695: FavoritesGuildChannelSortModal ===
 
-// Module 15661 (FavoritesGuildChannelSortModal)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+// Module 15695 (FavoritesGuildChannelSortModal)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "sortCategoryList" /* 15662 */;
-import { ALL_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
+import closure_4 from "sortCategoryList" /* 15696 */;
+import { ALL_CHANNEL_TYPES } from "createChannelRecord" /* 1391 */;
 import { FAVORITES } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -17,9 +17,9 @@ export default function FavoritesGuildChannelSortModal() {
     const items = [...closure_5];
     callback(table[5]).startReordering.apply(items);
     return () => {
-      callback(15663).stopReordering();
-      const obj = callback(15663);
-      callback(15663).terminate();
+      callback(15697).stopReordering();
+      const obj = callback(15697);
+      callback(15697).terminate();
     };
   }, []);
   const bottom = useSafeAreaInsetsDefault().bottom;
@@ -38,5 +38,5 @@ export default function FavoritesGuildChannelSortModal() {
     obj[0] = obj;
     return obj;
   }, items);
-  return jsx(bottom(5973).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
+  return jsx(bottom(5976).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
 };

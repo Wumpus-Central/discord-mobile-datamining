@@ -1,10 +1,10 @@
-// === Module 4470: handleLoadMessages ===
+// === Module 4472: handleLoadMessages ===
 
-// Module 4470 (handleLoadMessages)
+// Module 4472 (handleLoadMessages)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import closure_2 from "getOfficialApplicationId" /* 4471 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
+import closure_2 from "getOfficialApplicationId" /* 4473 */;
 import set from "set" /* 2 */;
 
 function handleLoadMessages(messages) {

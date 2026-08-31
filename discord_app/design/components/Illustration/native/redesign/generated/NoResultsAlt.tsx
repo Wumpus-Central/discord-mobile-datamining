@@ -1,9 +1,9 @@
-// === Module 9660: getNoResultsAltSource ===
+// === Module 9682: getNoResultsAltSource ===
 
-// Module 9660 (getNoResultsAltSource)
+// Module 9682 (getNoResultsAltSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getIllustrationSource from "getIllustrationSource" /* 8851 */;
+import getIllustrationSource from "getIllustrationSource" /* 8874 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getNoResultsAltSource = function getNoResultsAltSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(9661);
+      return callback(9683);
     },
     darker() {
-      return callback(9662);
+      return callback(9684);
     },
     light() {
-      return callback(7724);
+      return callback(7745);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useNoResultsAltSource = function useNoResultsAltSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9661);
+      return callback(9683);
     },
     darker() {
-      return callback(9662);
+      return callback(9684);
     },
     light() {
-      return callback(7724);
+      return callback(7745);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const NoResultsAlt = function NoResultsAlt(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9661);
+      return callback(9683);
     },
     darker() {
-      return callback(9662);
+      return callback(9684);
     },
     light() {
-      return callback(7724);
+      return callback(7745);
     }
   };
   obj = {};

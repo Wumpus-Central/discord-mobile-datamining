@@ -1,6 +1,6 @@
-// === Module 13709: MenuPopout ===
+// === Module 13743: MenuPopout ===
 
-// Module 13709 (MenuPopout)
+// Module 13743 (MenuPopout)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -56,8 +56,8 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
       let obj = { children: null };
       obj = { showIconFirst: true };
       const merged = Object.assign(arg0);
-      obj[0] = callback2(callback(13708).MenuItem, obj);
-      return callback2(callback(13707).MenuGroup, obj, "chat-context-menu-group-" + arg1);
+      obj[0] = callback2(callback(13742).MenuItem, obj);
+      return callback2(callback(13741).MenuGroup, obj, "chat-context-menu-group-" + arg1);
     })
   }), items1);
   const items2 = [memo, key, onRequestOpen];

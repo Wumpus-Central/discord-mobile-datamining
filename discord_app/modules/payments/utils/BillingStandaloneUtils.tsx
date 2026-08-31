@@ -1,10 +1,10 @@
-// === Module 7097: goToStandalonePremiumCheckout ===
+// === Module 7118: goToStandalonePremiumCheckout ===
 
-// Module 7097 (goToStandalonePremiumCheckout)
+// Module 7118 (goToStandalonePremiumCheckout)
 import set from "set" /* 2 */;
 import v1 from "v1" /* 514 */;
 import sendRequest from "sendRequest" /* 530 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
 import ME from "ME" /* 676 */;
 
 function goToStandalonePremiumCheckout(planId, arg1, arg2) {

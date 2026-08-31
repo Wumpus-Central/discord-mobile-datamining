@@ -1,9 +1,9 @@
-// === Module 8629: set ===
+// === Module 8651: set ===
 
-// Module 8629 (set)
+// Module 8651 (set)
 import ME from "ME" /* 676 */;
-import messagesProxyDefault from "messagesProxy" /* 2888 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8630 */;
+import messagesProxyDefault from "messagesProxy" /* 2889 */;
+import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8652 */;
 import set from "set" /* 2 */;
 
 const HelpdeskArticles = ME.HelpdeskArticles;
@@ -52,7 +52,7 @@ export const TRUSTED_PROVIDERS_URL = "https://discord.com/safety/age-assurance-o
 export const AGE_VERIFICATION_MODAL_KEY = "AGE_VERIFICATION_MODAL_KEY";
 export const AGE_VERIFICATION_GET_STARTED_MODAL_KEY = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY";
 export const AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY = "AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY";
-export const MANUAL_REVIEW_PENDING_ALERT_KEY = "MANUAL_REVIEW_PENDING_ALERT_KEY";
+export const MANUAL_REVIEW_DECIDED_TEEN_ALERT_KEY = "MANUAL_REVIEW_DECIDED_TEEN_ALERT_KEY";
 export const VerificationVendorName = { K_ID: "K_ID", GOOGLE_WALLET: "GOOGLE_WALLET", INCODE: "INCODE" };
 export const VerificationMethod = obj;
 export const VERIFICATION_METHOD_TITLE_MAP = obj;

@@ -1,8 +1,8 @@
-// === Module 13388: canSpectate ===
+// === Module 13422: canSpectate ===
 
-// Module 13388 (canSpectate)
+// Module 13422 (canSpectate)
 import set from "set" /* 2 */;
-import DesktopSources from "DesktopSources" /* 4510 */;
+import DesktopSources from "DesktopSources" /* 4512 */;
 
 const Features = DesktopSources.Features;
 const result = set.fileFinishedImporting("modules/go_live/utils/canSpectate.tsx");

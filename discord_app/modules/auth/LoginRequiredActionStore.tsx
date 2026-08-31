@@ -1,6 +1,6 @@
-// === Module 1384: handleUpdateUser ===
+// === Module 1380: handleUpdateUser ===
 
-// Module 1384 (handleUpdateUser)
+// Module 1380 (handleUpdateUser)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

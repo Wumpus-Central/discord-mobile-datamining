@@ -1,11 +1,11 @@
-// === Module 17440: resolved ===
+// === Module 17473: resolved ===
 
-// Module 17440 (resolved)
+// Module 17473 (resolved)
 import timestampDefault from "timestamp" /* 3 */;
-import databaseNameDefault from "databaseName" /* 1974 */;
-import closure_3 from "_handleConnectionOpen" /* 5186 */;
+import databaseNameDefault from "databaseName" /* 1973 */;
+import closure_3 from "_handleConnectionOpen" /* 5189 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "getState" /* 7104 */;
+import closure_5 from "getState" /* 7125 */;
 
 const require = arg1;
 let closure_6 = new timestampDefault("BackgroundSync");

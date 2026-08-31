@@ -1,11 +1,11 @@
-// === Module 13413: updateVoiceStates ===
+// === Module 13447: updateVoiceStates ===
 
-// Module 13413 (updateVoiceStates)
+// Module 13447 (updateVoiceStates)
 import apply from "apply" /* 12 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_3 from "updateVoiceState" /* 4465 */;
-import closure_4 from "getVoiceStatesForGuild" /* 4521 */;
-import { SpeakingFlags } from "DesktopSources" /* 4510 */;
+import closure_2 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_3 from "updateVoiceState" /* 4467 */;
+import closure_4 from "getVoiceStatesForGuild" /* 4523 */;
+import { SpeakingFlags } from "DesktopSources" /* 4512 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("lib/VoiceStateAnalytics.tsx");

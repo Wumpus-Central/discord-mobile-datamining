@@ -1,17 +1,17 @@
-// === Module 15598: HappeningNowVoiceCardSubtitle ===
+// === Module 15632: HappeningNowVoiceCardSubtitle ===
 
-// Module 15598 (HappeningNowVoiceCardSubtitle)
+// Module 15632 (HappeningNowVoiceCardSubtitle)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeChannelNameDefault from "computeChannelName" /* 4640 */;
-import _isStreamingDefault from "_isStreaming" /* 8054 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9364 */;
-import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 14824 */;
+import computeChannelNameDefault from "computeChannelName" /* 4642 */;
+import _isStreamingDefault from "_isStreaming" /* 8076 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9386 */;
+import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 14858 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import { ActivityTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;
@@ -32,7 +32,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     obj[0] = stateFromStores;
     tmp8 = getChannelA11yLabelDefault(obj);
   }
-  obj[1] = jsx(voiceState(14824).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: computeChannelNameDefault(stateFromStores) });
+  obj[1] = jsx(voiceState(14858).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: computeChannelNameDefault(stateFromStores) });
   return <View style={callback().cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
@@ -66,7 +66,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     tmp3 = null;
     if (null != name) {
       if (!_isStreamingDefault(activity)) {
-        if (tmp4(9195)(activity)) {
+        if (tmp4(9217)(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {
               const _HermesInternal = HermesInternal;

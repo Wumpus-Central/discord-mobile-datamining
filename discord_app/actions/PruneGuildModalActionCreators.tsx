@@ -1,6 +1,6 @@
-// === Module 16095: ? ===
+// === Module 16129: ? ===
 
-// Module 16095
+// Module 16129
 import sendRequest from "sendRequest" /* 530 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
@@ -48,7 +48,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -87,7 +87,7 @@ export default {
             return obj;
           } else {
             v0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp5) {
           v0 = tmp;

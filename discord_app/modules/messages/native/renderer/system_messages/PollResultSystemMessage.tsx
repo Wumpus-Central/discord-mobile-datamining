@@ -1,9 +1,9 @@
-// === Module 7896: createPollResultSystemMessage ===
+// === Module 7918: createPollResultSystemMessage ===
 
-// Module 7896 (createPollResultSystemMessage)
+// Module 7918 (createPollResultSystemMessage)
 import set from "set" /* 2 */;
-import set2 from "set" /* 1926 */;
-import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 7897 */;
+import set2 from "set" /* 1925 */;
+import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 7919 */;
 
 const EMOJI_URL_BASE_SIZE = set2.EMOJI_URL_BASE_SIZE;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");
@@ -16,14 +16,14 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
     return null;
   } else {
     message = message.message;
-    const messageAuthorWithProcessedColor = obj6(7816).getMessageAuthorWithProcessedColor(message);
+    const messageAuthorWithProcessedColor = obj6(7837).getMessageAuthorWithProcessedColor(message);
     let obj = { username: null, usernameOnClick: null, title: null, titleOnClick: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
     obj = { message: null, author: null, roleStyle: null };
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = message.roleStyle;
-    obj[1] = tmp(7818)(obj);
+    obj[1] = tmp(7839)(obj);
     obj[2] = tmp3.questionText;
     obj1 = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
     obj1[1] = message.messageReference.channel_id;
@@ -65,12 +65,12 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
           if (null != id.id) {
             const obj7 = { id: null, type: "customEmoji", alt: null, src: null, frozenSrc: null };
             ({ id: obj3[0], name: obj3[2] } = id);
-            let tmpResult = tmp(1435);
+            let tmpResult = tmp(1431);
             const obj8 = { id: null, animated: null, size: null };
             ({ id: obj5[0], animated: obj5[1] } = id);
             obj8[2] = EMOJI_URL_BASE_SIZE;
             obj7[3] = tmpResult.getEmojiURL(obj8);
-            tmpResult = tmp(1435);
+            tmpResult = tmp(1431);
             const obj9 = { id: null, animated: false, size: null };
             id = id.id;
             obj9[0] = id;
@@ -79,17 +79,17 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
             items.push(obj7);
           } else {
             obj = { type: "emoji", content: null, surrogate: null };
-            obj[1] = tmp(4103).convertSurrogateToName(id.name, false);
+            obj[1] = tmp(4104).convertSurrogateToName(id.name, false);
             obj[2] = id.name;
             items.push(obj);
-            const tmpResult1 = tmp(4103);
+            const tmpResult1 = tmp(4104);
           }
           items.push({ type: "text", content: " " });
         }
       }
     }
     const obj10 = {};
-    const merged3 = Object.assign(tmp(7819)(message));
+    const merged3 = Object.assign(tmp(7841)(message));
     obj10.content = formatToPartsResult;
     return obj10;
   }

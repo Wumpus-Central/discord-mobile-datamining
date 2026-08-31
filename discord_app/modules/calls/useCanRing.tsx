@@ -1,17 +1,17 @@
-// === Module 9803: useCanRingToGuildVoiceChannel ===
+// === Module 9826: useCanRingToGuildVoiceChannel ===
 
-// Module 9803 (useCanRingToGuildVoiceChannel)
-import getChannelRoleSubscriptionStatusDefault from "getChannelRoleSubscriptionStatus" /* 4925 */;
-import experimentDefault from "experiment" /* 9804 */;
+// Module 9826 (useCanRingToGuildVoiceChannel)
+import getChannelRoleSubscriptionStatusDefault from "getChannelRoleSubscriptionStatus" /* 4928 */;
+import experimentDefault from "experiment" /* 9827 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "callConnect" /* 5187 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1993 */;
-import closure_7 from "recomputeGuild" /* 5322 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_9 from "sortActivity" /* 4535 */;
-import closure_10 from "markAllUserIdListsStale" /* 4099 */;
-import closure_11 from "updateVoiceState" /* 4465 */;
+import closure_4 from "callConnect" /* 5190 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "trackCommunicationDisabled" /* 1992 */;
+import closure_7 from "recomputeGuild" /* 5325 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_9 from "sortActivity" /* 4537 */;
+import closure_10 from "markAllUserIdListsStale" /* 4100 */;
+import closure_11 from "updateVoiceState" /* 4467 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

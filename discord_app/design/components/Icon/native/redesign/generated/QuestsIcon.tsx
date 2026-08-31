@@ -1,10 +1,10 @@
-// === Module 14533: QuestsIcon ===
+// === Module 14567: QuestsIcon ===
 
-// Module 14533 (QuestsIcon)
+// Module 14567 (QuestsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 14534 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 14568 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

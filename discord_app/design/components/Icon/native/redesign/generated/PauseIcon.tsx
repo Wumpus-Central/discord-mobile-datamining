@@ -1,10 +1,10 @@
-// === Module 8526: PauseIcon ===
+// === Module 8548: PauseIcon ===
 
-// Module 8526 (PauseIcon)
+// Module 8548 (PauseIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 8527 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 8549 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

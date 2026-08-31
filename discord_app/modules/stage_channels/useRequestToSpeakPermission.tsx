@@ -1,9 +1,9 @@
-// === Module 9945: useRequestToSpeakPermission ===
+// === Module 9968: useRequestToSpeakPermission ===
 
-// Module 9945 (useRequestToSpeakPermission)
+// Module 9968 (useRequestToSpeakPermission)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;
@@ -15,8 +15,8 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
   const items1 = [id];
   const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_5.getChannel(closure_0), items1);
   let obj = _require(589);
-  const canEveryoneRoleResult = stateFromStores(4095).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-  const obj2 = stateFromStores(4095);
+  const canEveryoneRoleResult = stateFromStores(4096).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+  const obj2 = stateFromStores(4096);
   [tmp4, tmp5] = callback(React.useState(canEveryoneRoleResult), 2);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {

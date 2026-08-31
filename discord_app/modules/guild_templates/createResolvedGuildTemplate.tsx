@@ -1,8 +1,8 @@
-// === Module 6135: createResolvedGuildTemplate ===
+// === Module 6138: createResolvedGuildTemplate ===
 
-// Module 6135 (createResolvedGuildTemplate)
+// Module 6138 (createResolvedGuildTemplate)
 import set from "set" /* 2 */;
-import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6136 */;
+import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6139 */;
 
 const GuildTemplateStates = GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD.GuildTemplateStates;
 const result = set.fileFinishedImporting("modules/guild_templates/createResolvedGuildTemplate.tsx");

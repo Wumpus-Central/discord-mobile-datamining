@@ -1,7 +1,7 @@
-// === Module 10267: useGetThreadDraftSettings ===
+// === Module 10291: useGetThreadDraftSettings ===
 
-// Module 10267 (useGetThreadDraftSettings)
-import closure_3 from "handleChanged" /* 4820 */;
+// Module 10291 (useGetThreadDraftSettings)
+import closure_3 from "handleChanged" /* 4822 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/threads/useGetThreadDraftSettings.tsx");

@@ -1,15 +1,15 @@
-// === Module 11592: HeroMedia ===
+// === Module 11623: HeroMedia ===
 
-// Module 11592 (HeroMedia)
+// Module 11623 (HeroMedia)
 import noopAll from "noop" /* 19 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 8990 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9560 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11566 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
-import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5588 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 9013 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9582 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11597 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1498 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 5591 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;
@@ -35,7 +35,7 @@ export default function HeroMedia(width) {
   let tmp2Result = tmp2(589);
   const items = [closure_3];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
-  tmp2Result = tmp2(5924);
+  tmp2Result = tmp2(5927);
   const getOrFetchApplication = tmp2Result.useGetOrFetchApplication(applicationId);
   let prop;
   if (getOrFetchApplication != null) {

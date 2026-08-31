@@ -1,6 +1,6 @@
-// === Module 9097: noop ===
+// === Module 9120: noop ===
 
-// Module 9097 (noop)
+// Module 9120 (noop)
 import closure_2 from "noop" /* 19 */;
 import { RefreshControl } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -12,7 +12,7 @@ function noop() {
 const result = require("set").fileFinishedImporting("modules/keyboard/native/useModalDismissGuardRefreshControl.tsx");
 
 export const useModalDismissGuardRefreshControl = function useModalDismissGuardRefreshControl() {
-  isPortalKeyboardInModal = isPortalKeyboardInModal(9098).useIsPortalKeyboardInModal();
+  isPortalKeyboardInModal = isPortalKeyboardInModal(9121).useIsPortalKeyboardInModal();
   const items = [isPortalKeyboardInModal];
   return React.useMemo(() => {
     let tmp;

@@ -1,11 +1,11 @@
-// === Module 9420: confirmActivityChangeModal ===
+// === Module 9442: confirmActivityChangeModal ===
 
-// Module 9420 (confirmActivityChangeModal)
+// Module 9442 (confirmActivityChangeModal)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeChannelName from "computeChannelName" /* 4640 */;
-import setDefault from "set" /* 4822 */;
-import closure_3 from "markAllUserIdListsStale" /* 4099 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
+import computeChannelName from "computeChannelName" /* 4642 */;
+import setDefault from "set" /* 4825 */;
+import closure_3 from "markAllUserIdListsStale" /* 4100 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/confirmActivityChangeAlert.tsx");

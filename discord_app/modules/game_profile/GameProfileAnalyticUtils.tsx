@@ -1,11 +1,11 @@
-// === Module 8753: GameProfileEmbedAction ===
+// === Module 8775: GameProfileEmbedAction ===
 
-// Module 8753 (GameProfileEmbedAction)
+// Module 8775 (GameProfileEmbedAction)
 import v1 from "v1" /* 514 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "map" /* 8553 */;
+import closure_3 from "map" /* 8575 */;
 import ME from "ME" /* 676 */;
-import { ContentInventoryFeedKey } from "ContentInventoryFeedKey" /* 8575 */;
+import { ContentInventoryFeedKey } from "ContentInventoryFeedKey" /* 8597 */;
 
 require = arg1;
 ({ AnalyticEvents: c4, GuildFeatures: c5 } = ME);

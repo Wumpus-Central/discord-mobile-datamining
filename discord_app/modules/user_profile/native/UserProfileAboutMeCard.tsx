@@ -1,26 +1,26 @@
-// === Module 8976: Heading ===
+// === Module 8999: Heading ===
 
-// Module 8976 (Heading)
+// Module 8999 (Heading)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import map from "map" /* 4166 */;
-import Text from "Text" /* 4442 */;
-import DividerDefault from "Divider" /* 5965 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5969 */;
-import LinkButtonDefault from "LinkButton" /* 8977 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 8981 */;
+import map from "map" /* 4167 */;
+import Text from "Text" /* 4444 */;
+import UserProfileCardDefault from "UserProfileCard" /* 5968 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5972 */;
+import LinkButtonDefault from "LinkButton" /* 9000 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 9004 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 1997 */;
-import closure_6 from "trackCommunicationDisabled" /* 1993 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 5966 */;
+import closure_5 from "_getSystemLocale" /* 1996 */;
+import closure_6 from "trackCommunicationDisabled" /* 1992 */;
+import closure_7 from "createGuildRecordFromRust" /* 1909 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 5969 */;
 import { Routes } from "ME" /* 676 */;
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1498 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function Heading(children) {
@@ -123,10 +123,10 @@ function MemberJoinDates(userId) {
     }
     return member;
   });
-  let obj3 = userId(5316);
+  let obj3 = userId(5319);
   let obj4 = DISCORD_EPOCHDefault;
   const createdAtDate = obj3.getCreatedAtDate(obj4.extractTimestamp(userId), stateFromStores);
-  let obj5 = userId(5316);
+  let obj5 = userId(5319);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
@@ -138,7 +138,7 @@ function MemberJoinDates(userId) {
   const items3 = [callback(Heading, obj), ];
   obj = { style: items4, children: null };
   items4 = [callback3().memberJoinDates, { columnGap }];
-  obj1 = { themeType, icon: callback(tmp4(8979).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
+  obj1 = { themeType, icon: callback(tmp4(9002).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
   const intl2 = tmp4(1236).intl;
   obj1[2] = intl2.formatToPlainString(userId(1236).t["9t7w53"], { date: createdAtDate });
   obj1[3] = createdAtDate;
@@ -149,12 +149,12 @@ function MemberJoinDates(userId) {
     obj3 = { variant: null, color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
     obj3[0] = textVariant;
     obj3[4] = closure_8;
-    const items6 = [tmp15(tmp4(4442).Text, obj3), ];
+    const items6 = [tmp15(tmp4(4444).Text, obj3), ];
     obj4 = { themeType: null, icon: null, accessibilityLabel: null, children: null };
     obj4[0] = themeType;
     obj5 = { guild: null, size: null };
     obj5[0] = stateFromStores1;
-    obj5[1] = tmp4(5969).GuildIconSizes.XXSMALL;
+    obj5[1] = tmp4(5972).GuildIconSizes.XXSMALL;
     obj4[1] = tmp15(GuildIconSizesDefault, obj5);
     const intl3 = tmp4(1236).intl;
     const obj6 = { guildName: null, date: null };
@@ -196,7 +196,7 @@ function FriendsSinceDate(themeType) {
     obj1 = { variant: null, color: "text-default", children: null };
     obj1[0] = tmp.textVariant;
     obj1[2] = friendsSinceDate;
-    items[1] = callback(tmp3(4442).Text, obj1);
+    items[1] = callback(tmp3(4444).Text, obj1);
     obj[0] = items;
     tmp6 = callback2(View, obj);
   }
@@ -370,5 +370,5 @@ export default function UserProfileAboutMeCard(arg0) {
   }
   items1[4] = tmp7Result;
   obj[1] = items1;
-  return tmp5(DividerDefault, obj);
+  return tmp5(UserProfileCardDefault, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 4514: Notifications ===
+// === Module 4516: Notifications ===
 
-// Module 4514 (Notifications)
+// Module 4516 (Notifications)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/Notifications.tsx");

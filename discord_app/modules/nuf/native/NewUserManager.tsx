@@ -1,18 +1,18 @@
-// === Module 16941: items ===
+// === Module 16974: items ===
 
-// Module 16941 (items)
+// Module 16974 (items)
 import keys from "keys" /* 691 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5451 */;
-import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12175 */;
+import initializeDefault from "initialize" /* 5454 */;
+import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12209 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleSetLocationMetadata" /* 7663 */;
-import closure_5 from "set" /* 5190 */;
-import closure_6 from "mergeGuildAvatar" /* 1923 */;
-import closure_7 from "initialize" /* 5535 */;
-import { NewUserTypes } from "NewUserTypes" /* 12176 */;
+import closure_4 from "handleSetLocationMetadata" /* 7684 */;
+import closure_5 from "set" /* 5193 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "initialize" /* 5538 */;
+import { NewUserTypes } from "NewUserTypes" /* 12210 */;
 import { PlatformTypes } from "ME" /* 676 */;
-import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "HubEmailConnectionSteps" /* 12190 */;
+import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "HubEmailConnectionSteps" /* 12224 */;
 
 require = arg1;
 let obj = { REGISTRATION: "Registration", ADD_AVATAR: "Add Avatar", CONTACT_SYNC: "Contact Sync", GUILD_TEMPLATE: "Guild Template", STUDENT_HUB: "Student Hub", NEW_USER_INTENT: "New User Intent", ACCEPT_INVITE: "Accept Invite", DISCOVERABILITY: "Discoverability" };
@@ -130,7 +130,7 @@ let prototype = function NewUserManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -174,7 +174,7 @@ let prototype = function NewUserManager() {
               transitionToStep = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

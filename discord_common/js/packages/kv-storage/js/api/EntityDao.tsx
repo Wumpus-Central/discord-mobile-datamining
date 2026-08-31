@@ -1,9 +1,9 @@
-// === Module 1968: prefix ===
+// === Module 1967: prefix ===
 
-// Module 1968 (prefix)
+// Module 1967 (prefix)
 import set from "set" /* 2 */;
-import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1962 */;
-import TableId from "TableId" /* 1964 */;
+import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1961 */;
+import TableId from "TableId" /* 1963 */;
 
 let EntityDao;
 class EntityDao {

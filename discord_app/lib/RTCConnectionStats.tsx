@@ -1,11 +1,11 @@
-// === Module 13390: reset ===
+// === Module 13424: reset ===
 
-// Module 13390 (reset)
+// Module 13424 (reset)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import ME from "ME" /* 676 */;
-import sleep from "sleep" /* 4524 */;
-import zipWithNextDefault from "zipWithNext" /* 13391 */;
+import sleep from "sleep" /* 4526 */;
+import zipWithNextDefault from "zipWithNext" /* 13425 */;
 
 const RTCConnectionStates = ME.RTCConnectionStates;
 const result = set.fileFinishedImporting("lib/RTCConnectionStats.tsx");
@@ -47,7 +47,7 @@ prototype["update"] = function update(current) {
 };
 prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccessStats(nowResult) {
   if (nowResult === undefined) {
-    let obj = RTC_DISCONNECTED(4524);
+    let obj = RTC_DISCONNECTED(4526);
     nowResult = obj.now();
   }
   const stateDurations = this.getStateDurations(nowResult);

@@ -1,9 +1,9 @@
-// === Module 9599: openNotificationSettings ===
+// === Module 9621: openNotificationSettings ===
 
-// Module 9599 (openNotificationSettings)
+// Module 9621 (openNotificationSettings)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 5057 */;
+import enforcingDefault from "enforcing" /* 5060 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let result = set.fileFinishedImporting("modules/native_permissions/mobile/openNotificationSettings.native.tsx");

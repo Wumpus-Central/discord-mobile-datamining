@@ -1,10 +1,10 @@
-// === Module 1469: handleImageLoad ===
+// === Module 1465: handleImageLoad ===
 
-// Module 1469 (handleImageLoad)
-import privDefault from "priv" /* 1405 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import fit from "fit" /* 1491 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1896 */;
+// Module 1465 (handleImageLoad)
+import privDefault from "priv" /* 1401 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
+import fit from "fit" /* 1490 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1895 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
@@ -42,7 +42,7 @@ function getSrcWithWidthAndHeight(quality) {
     if (!obj.isDiscordCdnUrl(src)) {
       const items = [, ];
       [arr[0], tmp6] = callback(src.split("?"), 2);
-      let tmp2Result = tmp2(1484);
+      let tmp2Result = tmp2(1483);
       items[1] = tmp2Result.parse(tmp6);
       let tmp5 = callback(src.split("?"), 2);
       [tmp8, tmp9] = callback(items, 2);
@@ -95,14 +95,14 @@ function getSrcWithWidthAndHeight(quality) {
         size[0] = width;
         size[1] = height;
         if (null != tmp18) {
-          let tmp15Result = tmp15(1471);
+          let tmp15Result = tmp15(1467);
           obj = { targetWidth: null, targetHeight: null, sourceWidth: null, sourceHeight: null, maxUpscale: null };
           obj[0] = width;
           obj[1] = height;
           obj[2] = sourceWidth;
           obj[3] = sourceHeight;
-          tmp15Result = tmp15(1471);
-          obj[4] = tmp15Result.getSnapDownMaxUpscale(tmp18, tmp2(1896)());
+          tmp15Result = tmp15(1467);
+          obj[4] = tmp15Result.getSnapDownMaxUpscale(tmp18, tmp2(1895)());
           size = tmp15Result.snapAttachmentDimensions(obj);
         }
         if (!tmp19) {
@@ -114,7 +114,7 @@ function getSrcWithWidthAndHeight(quality) {
       tmp2Result = tmp2(12);
       let text = tmp8;
       if (!tmp2Result.isEmpty(tmp9)) {
-        tmp2(1484);
+        tmp2(1483);
         text = `${tmp8}?${obj9.stringify(tmp9)}`;
       }
       return text;
@@ -189,7 +189,7 @@ export const loadImage = function loadImage(arg0, bind) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -243,7 +243,7 @@ export const loadImage = function loadImage(arg0, bind) {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } else {
                     try {
@@ -285,7 +285,7 @@ export const loadImage = function loadImage(arg0, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_1_4(/* F105513 */ function() { ... });
+                            image.onerror = closure_1_4(/* F105669 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = tmp2.url;
                           });

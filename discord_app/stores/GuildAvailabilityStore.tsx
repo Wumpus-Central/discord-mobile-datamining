@@ -1,10 +1,10 @@
-// === Module 4821: handleConnectionOpen ===
+// === Module 4823: handleConnectionOpen ===
 
-// Module 4821 (handleConnectionOpen)
+// Module 4823 (handleConnectionOpen)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "createGuildRecordFromRust" /* 1910 */;
+import closure_0 from "createGuildRecordFromRust" /* 1909 */;
 import set from "set" /* 2 */;
 
 function handleConnectionOpen(unavailableGuilds) {

@@ -1,6 +1,6 @@
-// === Module 16498: CHANNEL_THEME_COLOR_PALETTE ===
+// === Module 16532: CHANNEL_THEME_COLOR_PALETTE ===
 
-// Module 16498 (CHANNEL_THEME_COLOR_PALETTE)
+// Module 16532 (CHANNEL_THEME_COLOR_PALETTE)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/channel_emoji/ChannelEmojiConstants.tsx");

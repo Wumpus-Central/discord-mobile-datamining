@@ -1,11 +1,11 @@
-// === Module 4702: dropChannelIfEmpty ===
+// === Module 4704: dropChannelIfEmpty ===
 
-// Module 4702 (dropChannelIfEmpty)
+// Module 4704 (dropChannelIfEmpty)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4703 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import hasFlag from "hasFlag" /* 1399 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4705 */;
+import closure_2 from "ensureGuildLoaded" /* 1387 */;
 import { MessageFlags } from "ME" /* 676 */;
 
 require = arg1;

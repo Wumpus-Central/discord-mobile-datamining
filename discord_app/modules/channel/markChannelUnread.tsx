@@ -1,12 +1,12 @@
-// === Module 10260: markChannelUnread ===
+// === Module 10284: markChannelUnread ===
 
-// Module 10260 (markChannelUnread)
+// Module 10284 (markChannelUnread)
 import timestampDefault from "timestamp" /* 3 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import markUnreadBySnowflakeID from "markUnreadBySnowflakeID" /* 10261 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4461 */;
-import closure_6 from "generateOldThreadCutoff" /* 4461 */;
+import markUnreadBySnowflakeID from "markUnreadBySnowflakeID" /* 10285 */;
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4463 */;
+import closure_6 from "generateOldThreadCutoff" /* 4463 */;
 
 require = arg1;
 ({ isNonMutedPrivateMessage: c4, ReadState: c5 } = generateOldThreadCutoff);

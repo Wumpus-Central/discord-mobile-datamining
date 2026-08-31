@@ -1,6 +1,6 @@
-// === Module 17224: useFetchHighlightedCreatorGuildDetails ===
+// === Module 17257: useFetchHighlightedCreatorGuildDetails ===
 
-// Module 17224 (useFetchHighlightedCreatorGuildDetails)
+// Module 17257 (useFetchHighlightedCreatorGuildDetails)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -32,7 +32,7 @@ export default function useFetchHighlightedCreatorGuildDetails(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

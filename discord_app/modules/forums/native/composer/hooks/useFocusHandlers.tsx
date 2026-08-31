@@ -1,6 +1,6 @@
-// === Module 10273: PostComposerInputs ===
+// === Module 10297: PostComposerInputs ===
 
-// Module 10273 (PostComposerInputs)
+// Module 10297 (PostComposerInputs)
 import closure_0 from "_slicedToArray" /* 32 */;
 import closure_1 from "noop" /* 19 */;
 

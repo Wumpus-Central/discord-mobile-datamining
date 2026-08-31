@@ -1,18 +1,18 @@
-// === Module 16246: FavoritesEmptyState ===
+// === Module 16280: FavoritesEmptyState ===
 
-// Module 16246 (FavoritesEmptyState)
+// Module 16280 (FavoritesEmptyState)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3148 */;
-import Text from "Text" /* 4442 */;
-import Stack from "Stack" /* 4891 */;
-import Button from "Button" /* 4893 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6221 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10244 */;
+import messagesProxyDefault from "messagesProxy" /* 3149 */;
+import Text from "Text" /* 4444 */;
+import Stack from "Stack" /* 4894 */;
+import Button from "Button" /* 4896 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6224 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10268 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -49,14 +49,14 @@ export default function FavoritesEmptyState() {
   if (obj.useFavoritesAccess("favorites_empty_state").hasAccess) {
     const obj3 = { variant: "primary", text: null, icon: null, onPress: null };
     const intl4 = tmp2(1236).intl;
-    obj3[1] = intl4.string(tmp9(3148)["6kk0gM"]);
-    obj3[2] = tmp8(tmp2(12224).PlusMediumIcon, {});
+    obj3[1] = intl4.string(tmp9(3149)["6kk0gM"]);
+    obj3[2] = tmp8(tmp2(12258).PlusMediumIcon, {});
     obj3[3] = callback;
     let obj4 = obj3;
   } else {
     obj4 = { variant: "primary", text: null, onPress: null };
     const intl3 = tmp2(1236).intl;
-    obj4[1] = intl3.string(tmp9(3148).yYVbdv);
+    obj4[1] = intl3.string(tmp9(3149).yYVbdv);
     obj4[2] = callback1;
   }
   items[2] = callback(Button.Button, obj4);

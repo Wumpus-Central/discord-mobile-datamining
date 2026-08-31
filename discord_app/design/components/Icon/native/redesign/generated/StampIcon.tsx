@@ -1,10 +1,10 @@
-// === Module 11251: StampIcon ===
+// === Module 11280: StampIcon ===
 
-// Module 11251 (StampIcon)
+// Module 11280 (StampIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 11252 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 11281 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

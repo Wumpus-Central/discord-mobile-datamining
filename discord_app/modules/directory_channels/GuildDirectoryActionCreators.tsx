@@ -1,11 +1,11 @@
-// === Module 11819: _addDirectoryGuildEntry ===
+// === Module 11850: _addDirectoryGuildEntry ===
 
-// Module 11819 (_addDirectoryGuildEntry)
+// Module 11850 (_addDirectoryGuildEntry)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef4679 from "module_4679" /* 4679 */;
+import _modDef4681 from "module_4681" /* 4681 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getSearchState" /* 11806 */;
-import { DirectoryEntryCategories } from "DirectoryEntryTypes" /* 11808 */;
+import closure_4 from "getSearchState" /* 11837 */;
+import { DirectoryEntryCategories } from "DirectoryEntryTypes" /* 11839 */;
 import { Endpoints } from "ME" /* 676 */;
 import importDefaultResult1 from "debounce" /* 636 */;
 
@@ -31,7 +31,7 @@ function _addDirectoryGuildEntry() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -55,7 +55,7 @@ function _addDirectoryGuildEntry() {
               body = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -67,7 +67,7 @@ function _addDirectoryGuildEntry() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj7 = callback2(4679);
+              let obj7 = callback2(4681);
               const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
               obj2[0] = c6.DIRECTORY_CHANNEL_ENTRY(callback, callback2);
               const obj3 = { description: null, primary_category_id: null };
@@ -105,7 +105,7 @@ function _addDirectoryGuildEntry() {
             obj8[2] = body.body;
             obj.dispatch(obj8);
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp18) {
           c7 = tmp;
@@ -146,7 +146,7 @@ function _updateDirectoryEntry() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -170,7 +170,7 @@ function _updateDirectoryEntry() {
               body = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -212,7 +212,7 @@ function _updateDirectoryEntry() {
             obj6[2] = body.body;
             obj.dispatch(obj6);
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp18) {
           c7 = tmp;
@@ -390,7 +390,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -497,7 +497,7 @@ export const addDirectoryGuildEntry = function addDirectoryGuildEntry(c0, id, c3
   return applyArgumentsResult;
 };
 export const removeDirectoryGuildEntry = function removeDirectoryGuildEntry(channelId, guildId) {
-  let obj = _modDef4679;
+  let obj = _modDef4681;
   obj = { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
   obj = { event: callback(503).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: obj1 };
   obj[1] = obj;

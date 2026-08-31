@@ -1,17 +1,17 @@
-// === Module 5328: anyoneHasFlagInContext ===
+// === Module 5331: anyoneHasFlagInContext ===
 
-// Module 5328 (anyoneHasFlagInContext)
+// Module 5331 (anyoneHasFlagInContext)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4095 */;
-import getUnitIdDefault from "getUnitId" /* 5329 */;
+import applyOverwritesAll from "applyOverwrites" /* 4096 */;
+import getUnitIdDefault from "getUnitId" /* 5332 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "createRTCConnection" /* 4520 */;
-import closure_7 from "handleConnectionOpen" /* 1982 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_6 from "createRTCConnection" /* 4522 */;
+import closure_7 from "handleConnectionOpen" /* 1981 */;
 import { Permissions } from "ME" /* 676 */;
-import DesktopSources from "DesktopSources" /* 4510 */;
+import DesktopSources from "DesktopSources" /* 4512 */;
 
 function anyoneHasFlagInContext(DEFAULT, VOICE, arg2) {
   let flag = arg2;

@@ -1,22 +1,22 @@
-// === Module 16184: GuildChannelMessageRowHeader ===
+// === Module 16218: GuildChannelMessageRowHeader ===
 
-// Module 16184 (GuildChannelMessageRowHeader)
+// Module 16218 (GuildChannelMessageRowHeader)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import computeChannelNameDefault from "computeChannelName" /* 4640 */;
-import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4712 */;
-import PollBadgeDefault from "PollBadge" /* 16186 */;
+import computeChannelNameDefault from "computeChannelName" /* 4642 */;
+import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4714 */;
+import PollBadgeDefault from "PollBadge" /* 16220 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
-import closure_6 from "initializeFromUserSettings" /* 1394 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4667 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import closure_6 from "initializeFromUserSettings" /* 1390 */;
+import closure_7 from "ensureGuildLoaded" /* 1387 */;
+import closure_8 from "createGuildRecordFromRust" /* 1909 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4669 */;
 import { MessageFlags } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function GuildChannelMessageRowHeader(channel) {
@@ -33,15 +33,15 @@ function GuildChannelMessageRowHeader(channel) {
     }
     return rulesChannelId;
   });
-  obj1 = channel(4946);
+  obj1 = channel(4949);
   obj = { isRulesChannel: stateFromStores === channel.id };
   const channelIcon = obj1.getChannelIcon(channel, obj);
   obj = { style: tmp.header, children: null };
   obj1 = { source: channelIcon, size: channel(1297).Icon.Sizes.REFRESH_SMALL_16, style: tmp.channelIcon };
-  const items1 = [callback(channel(1297).Icon, obj1), callback(channel(4442).Text, { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: computeChannelNameDefault(channel) }), , , ];
+  const items1 = [callback(channel(1297).Icon, obj1), callback(channel(4444).Text, { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: computeChannelNameDefault(channel) }), , , ];
   if (muted) {
     const obj2 = { source: null, size: null, style: null };
-    obj2[0] = tmp6(10166);
+    obj2[0] = tmp6(10189);
     obj2[1] = tmp2(1297).Icon.Sizes.EXTRA_SMALL;
     obj2[2] = tmp.channelStatus;
     muted = tmp10(tmp2(1297).Icon, obj2);
@@ -49,7 +49,7 @@ function GuildChannelMessageRowHeader(channel) {
   items1[2] = muted;
   if (isFavorite) {
     const obj3 = { source: null, size: null, style: null };
-    obj3[0] = tmp6(10320);
+    obj3[0] = tmp6(10344);
     obj3[1] = tmp2(1297).Icon.Sizes.EXTRA_SMALL;
     obj3[2] = tmp.channelStatus;
     isFavorite = tmp10(tmp2(1297).Icon, obj3);
@@ -58,9 +58,9 @@ function GuildChannelMessageRowHeader(channel) {
   let isSystemDMResult = channel.isSystemDM();
   if (isSystemDMResult) {
     const obj4 = { type: null, verified: true };
-    obj4[0] = tmp6(8873).Types.SYSTEM_DM;
-    isSystemDMResult = tmp10(tmp6(8873), obj4);
-    const tmp6Result = tmp6(8873);
+    obj4[0] = tmp6(8896).Types.SYSTEM_DM;
+    isSystemDMResult = tmp10(tmp6(8896), obj4);
+    const tmp6Result = tmp6(8896);
   }
   items1[4] = isSystemDMResult;
   obj[1] = items1;
@@ -84,15 +84,15 @@ function PrivateChannelMessageRowLabel(message) {
       const item = recipients.forEach((arg0) => callback(table[20]).getUser(arg0));
     }
   }, items1);
-  let obj = message(16185);
+  let obj = message(16219);
   const searchMessageTimestamp = obj.useSearchMessageTimestamp(message, channel);
   obj = { style: tmp.labelContainer, children: null };
   obj = { style: tmp.authorRow, children: null };
   ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
-  const items2 = [callback(message(4442).Text, { lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: memo }), , ];
+  const items2 = [callback(message(4444).Text, { lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: memo }), , ];
   if (muted) {
     obj1 = { source: null, size: null, style: null };
-    obj1[0] = channel(10166);
+    obj1[0] = channel(10189);
     obj1[1] = tmp4(1297).Icon.Sizes.EXTRA_SMALL;
     obj1[2] = tmp.channelStatus;
     muted = tmp9(tmp4(1297).Icon, obj1);
@@ -101,25 +101,25 @@ function PrivateChannelMessageRowLabel(message) {
   let isSystemDMResult = channel.isSystemDM();
   if (isSystemDMResult) {
     const obj2 = { type: null, verified: true };
-    obj2[0] = channel(8873).Types.SYSTEM_DM;
-    isSystemDMResult = tmp9(channel(8873), obj2);
-    const tmp13 = channel(8873);
+    obj2[0] = channel(8896).Types.SYSTEM_DM;
+    isSystemDMResult = tmp9(channel(8896), obj2);
+    const tmp13 = channel(8896);
   }
   items2[2] = isSystemDMResult;
   obj[1] = items2;
-  const items3 = [closure_12(closure_4, obj), callback(message(4442).Text, { variant: "text-xs/medium", color: "interactive-text-active", lineClamp: 1, style: tmp.timestamp, accessibilityLabel: timestampAccessibilityLabel, children: timestamp }), , ];
+  const items3 = [closure_12(closure_4, obj), callback(message(4444).Text, { variant: "text-xs/medium", color: "interactive-text-active", lineClamp: 1, style: tmp.timestamp, accessibilityLabel: timestampAccessibilityLabel, children: timestamp }), , ];
   let tmp9Result = null;
   if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
     const obj4 = { size: "xs", style: null };
     obj4[1] = tmp.suppressNotificationsIcon;
-    tmp9Result = tmp9(tmp4(12881).BellZIcon, obj4);
+    tmp9Result = tmp9(tmp4(12915).BellZIcon, obj4);
   }
   items3[2] = tmp9Result;
   tmp9Result = null;
   if (message.isPoll()) {
     const obj5 = { style: null };
     obj5[0] = tmp.pollBadge;
-    tmp9Result = tmp9(channel(16186), obj5);
+    tmp9Result = tmp9(channel(16220), obj5);
   }
   items3[3] = tmp9Result;
   obj[1] = items3;
@@ -137,11 +137,11 @@ function GuildChannelMessageRowLabel(arg0) {
       obj = { color: null };
       obj[0] = colorString;
     }
-    let tmp2Result = tmp2(7817);
+    let tmp2Result = tmp2(7838);
     const processColorStringsArray = tmp2Result.useProcessColorStringsArray(colorStrings);
-    tmp2Result = tmp2(7817);
+    tmp2Result = tmp2(7838);
     const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result.useIsRoleStyleAndRoleColorsEligibleForERC(channel.guild_id, message.author.id, stateFromStores, processColorStringsArray);
-    const searchMessageTimestamp = tmp2(16185).useSearchMessageTimestamp(message, channel);
+    const searchMessageTimestamp = tmp2(16219).useSearchMessageTimestamp(message, channel);
     obj = { style: null, children: null };
     obj[0] = tmp.labelContainer;
     obj1 = { style: null, children: null };
@@ -166,19 +166,19 @@ function GuildChannelMessageRowLabel(arg0) {
     }
     obj3[4] = tmp22;
     obj3[5] = tmp7;
-    items1[1] = callback(tmp2(4442).Text, obj3);
+    items1[1] = callback(tmp2(4444).Text, obj3);
     obj1[1] = items1;
     const items2 = [closure_12(closure_4, obj1), , , ];
     const obj4 = { variant: "text-xs/medium", color: "text-default", lineClamp: 1, style: null, accessibilityLabel: null, children: null };
     obj4[3] = tmp.timestamp;
     obj4[4] = timestampAccessibilityLabel;
     obj4[5] = timestamp;
-    items2[1] = callback(tmp2(4442).Text, obj4);
+    items2[1] = callback(tmp2(4444).Text, obj4);
     let tmp21Result = null;
     if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
       const obj5 = { size: "xs", style: null };
       obj5[1] = tmp.suppressNotificationsIcon;
-      tmp21Result = tmp21(tmp2(12881).BellZIcon, obj5);
+      tmp21Result = tmp21(tmp2(12915).BellZIcon, obj5);
     }
     items2[2] = tmp21Result;
     tmp21Result = null;

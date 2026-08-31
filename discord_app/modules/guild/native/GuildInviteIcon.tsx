@@ -1,14 +1,14 @@
-// === Module 12130: render ===
+// === Module 12164: render ===
 
-// Module 12130 (render)
+// Module 12164 (render)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import preloadDefault from "preload" /* 5458 */;
-import getClass from "getClass" /* 12131 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+import preloadDefault from "preload" /* 5461 */;
+import getClass from "getClass" /* 12165 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -45,7 +45,7 @@ GuildInviteIcon.prototype["render"] = function render() {
     obj1[3] = guildIconSource;
     return jsx(preloadDefault, { accessibilityRole: "image", accessibilityLabel: null, style: null, source: null });
   } else {
-    const acronym = tmp2(1903).getAcronym(guild.name);
+    const acronym = tmp2(1902).getAcronym(guild.name);
     let num = table[acronym.length - 1];
     if (num == null) {
       num = 10;

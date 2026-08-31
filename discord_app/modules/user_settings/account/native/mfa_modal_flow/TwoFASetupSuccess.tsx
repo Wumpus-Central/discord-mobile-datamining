@@ -1,19 +1,19 @@
-// === Module 14330: TwoFASetupSuccess ===
+// === Module 14364: TwoFASetupSuccess ===
 
-// Module 14330 (TwoFASetupSuccess)
+// Module 14364 (TwoFASetupSuccess)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4442 */;
-import Button2 from "Button" /* 4893 */;
-import TwoFAModalSetupSections from "TwoFAModalSetupSections" /* 14321 */;
-import registerAsset from "registerAsset" /* 14331 */;
+import Text from "Text" /* 4444 */;
+import Button2 from "Button" /* 4896 */;
+import TwoFAModalSetupSections from "TwoFAModalSetupSections" /* 14355 */;
+import registerAsset from "registerAsset" /* 14365 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 ({ View: closure_6, Image: error } = get_ActivityIndicator);
@@ -56,7 +56,7 @@ export default function TwoFASetupSuccess() {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -78,7 +78,7 @@ export default function TwoFASetupSuccess() {
                   ({ ticket: c0, credential: c1 } = c0);
                   c5 = 1;
                   c6 = 1;
-                  return { value: "ct", done: true };
+                  return { value: "Object", done: true };
                 }
               } else if (1 === tmp8) {
                 if (arg0 === 1) {

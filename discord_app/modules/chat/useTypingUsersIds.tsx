@@ -1,9 +1,9 @@
-// === Module 11476: useTypingUserIds ===
+// === Module 11505: useTypingUserIds ===
 
-// Module 11476 (useTypingUserIds)
-import closure_2 from "markAllUserIdListsStale" /* 4099 */;
-import closure_3 from "handleTypingStart" /* 11475 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
+// Module 11505 (useTypingUserIds)
+import closure_2 from "markAllUserIdListsStale" /* 4100 */;
+import closure_3 from "handleTypingStart" /* 11504 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/chat/useTypingUsersIds.tsx");

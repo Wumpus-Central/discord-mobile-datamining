@@ -1,10 +1,10 @@
-// === Module 6354: CaterpillarIllocon ===
+// === Module 6361: CaterpillarIllocon ===
 
-// Module 6354 (CaterpillarIllocon)
+// Module 6361 (CaterpillarIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6355 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6362 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 4153: _openURL ===
+// === Module 4154: _openURL ===
 
-// Module 4153 (_openURL)
+// Module 4154 (_openURL)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -23,7 +23,7 @@ function _openURL() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -60,7 +60,7 @@ function _openURL() {
             obj[1] = [];
             arg1.default(callback, obj);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp15) {
           c4 = tmp;

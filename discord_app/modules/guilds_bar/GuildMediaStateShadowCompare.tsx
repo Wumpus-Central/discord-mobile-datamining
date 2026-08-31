@@ -1,9 +1,9 @@
-// === Module 15853: logger ===
+// === Module 15887: logger ===
 
-// Module 15853 (logger)
+// Module 15887 (logger)
 import addAll from "add" /* 594 */;
 import _modDef1208 from "module_1208" /* 1208 */;
-import closure_3 from "markAllStale" /* 13292 */;
+import closure_3 from "markAllStale" /* 13326 */;
 import set from "set" /* 2 */;
 
 const logger = new require("log").Logger("GuildMediaStateShadowCompare");

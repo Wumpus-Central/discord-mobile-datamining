@@ -1,13 +1,13 @@
-// === Module 11036: FractionalStar ===
+// === Module 11067: FractionalStar ===
 
-// Module 11036 (FractionalStar)
+// Module 11067 (FractionalStar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import StarIcon from "StarIcon" /* 9119 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9121 */;
+import StarIcon from "StarIcon" /* 9142 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9144 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function FractionalStar(fillAmount) {

@@ -1,10 +1,10 @@
-// === Module 9811: ShieldLockIcon ===
+// === Module 9834: ShieldLockIcon ===
 
-// Module 9811 (ShieldLockIcon)
+// Module 9834 (ShieldLockIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 9812 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 9835 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

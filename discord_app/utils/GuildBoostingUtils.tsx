@@ -1,25 +1,25 @@
-// === Module 4337: getGuildTierFromGuild ===
+// === Module 4339: getGuildTierFromGuild ===
 
-// Module 4337 (getGuildTierFromGuild)
+// Module 4339 (getGuildTierFromGuild)
 import _modDef1208 from "module_1208" /* 1208 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import combinedDefault from "combined" /* 1996 */;
-import messagesProxyDefault from "messagesProxy" /* 2986 */;
-import hooksDefault from "hooks" /* 4044 */;
-import getPremiumPlanItemAll from "getPremiumPlanItem" /* 4108 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 4339 */;
-import formatSize from "formatSize" /* 4340 */;
-import _fetchAppliedGuildBoostsForGuild from "_fetchAppliedGuildBoostsForGuild" /* 4341 */;
-import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4352 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "mergeGuildAvatar" /* 1923 */;
-import closure_6 from "handleGuildBoostsUpdate" /* 4338 */;
-import closure_7 from "reset" /* 4114 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+import combinedDefault from "combined" /* 1995 */;
+import messagesProxyDefault from "messagesProxy" /* 2987 */;
+import hooksDefault from "hooks" /* 4045 */;
+import getPremiumPlanItemAll from "getPremiumPlanItem" /* 4109 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 4341 */;
+import formatSize from "formatSize" /* 4342 */;
+import _fetchAppliedGuildBoostsForGuild from "_fetchAppliedGuildBoostsForGuild" /* 4343 */;
+import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4354 */;
+import closure_4 from "createGuildRecordFromRust" /* 1909 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "handleGuildBoostsUpdate" /* 4340 */;
+import closure_7 from "reset" /* 4115 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 1926 */;
-import GuildFeatures from "GuildFeatures" /* 1925 */;
-import { getPremiumGroupProductName as closure_25 } from "SubscriptionStatusTypes" /* 4122 */;
+import set from "set" /* 1925 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import { getPremiumGroupProductName as closure_25 } from "SubscriptionStatusTypes" /* 4123 */;
 import importDefaultResult from "apply" /* 12 */;
 
 require = arg1;
@@ -768,7 +768,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj1;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4371).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4373).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= closure_1_9[arg0]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

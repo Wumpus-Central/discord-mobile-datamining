@@ -1,8 +1,8 @@
-// === Module 4943: regExp ===
+// === Module 4946: regExp ===
 
-// Module 4943 (regExp)
+// Module 4946 (regExp)
 import _modDef38 from "module_38" /* 38 */;
-import tDefault from "t" /* 4161 */;
+import tDefault from "t" /* 4162 */;
 import closure_10 from "module_0" /* 0 */;
 
 const re2 = /\n{2,}$/;

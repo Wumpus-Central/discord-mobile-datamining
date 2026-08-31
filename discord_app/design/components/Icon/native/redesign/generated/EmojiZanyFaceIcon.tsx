@@ -1,10 +1,10 @@
-// === Module 14931: EmojiZanyFaceIcon ===
+// === Module 14964: EmojiZanyFaceIcon ===
 
-// Module 14931 (EmojiZanyFaceIcon)
+// Module 14964 (EmojiZanyFaceIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 14932 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 14965 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

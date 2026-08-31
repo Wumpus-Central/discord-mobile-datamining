@@ -1,15 +1,15 @@
-// === Module 15576: HappeningNowItem ===
+// === Module 15610: HappeningNowItem ===
 
-// Module 15576 (HappeningNowItem)
+// Module 15610 (HappeningNowItem)
 import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4166 */;
-import useCutoutBackgroundColor from "useCutoutBackgroundColor" /* 8045 */;
-import renderCardDefault from "renderCard" /* 15577 */;
+import map from "map" /* 4167 */;
+import useCutoutBackgroundColor from "useCutoutBackgroundColor" /* 8067 */;
+import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 10958 */;
+import renderCardDefault from "renderCard" /* 15611 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14823 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14857 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 import importAllResult from "noop" /* 19 */;
 import set from "set" /* 2 */;
 
@@ -33,6 +33,6 @@ export default importAllResult.memo(function MessagesItemHappeningNow(listRef) {
   obj[1] = <View style={callback(closure_4 + obj.useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container} collapsable={false}>{jsx(renderCardDefault, obj1)}</View>;
   return jsx(useCutoutBackgroundColor.CutoutBackgroundProvider, { style: callback(closure_4 + obj.useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: jsx(renderCardDefault, obj1) });
 });
-export const getMessagesItemHappeningNowHeight = function getMessagesItemHappeningNowHeight(closure_0) {
-  return useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM, closure_0) + closure_4;
+export const getMessagesItemHappeningNowHeight = function getMessagesItemHappeningNowHeight() {
+  return useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM) + closure_4;
 };

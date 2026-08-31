@@ -1,10 +1,10 @@
-// === Module 6198: useKeyboardIsOpen ===
+// === Module 6201: useKeyboardIsOpen ===
 
-// Module 6198 (useKeyboardIsOpen)
-import context from "context" /* 1497 */;
-import computeEntryStateDefault from "computeEntryState" /* 1498 */;
-import KeyboardTypes from "KeyboardTypes" /* 1627 */;
-import closure_3 from "subscribeToKeyboardUIStore" /* 1496 */;
+// Module 6201 (useKeyboardIsOpen)
+import context from "context" /* 1496 */;
+import computeEntryStateDefault from "computeEntryState" /* 1497 */;
+import KeyboardTypes from "KeyboardTypes" /* 1626 */;
+import closure_3 from "subscribeToKeyboardUIStore" /* 1495 */;
 
 require = arg1;
 let closure_4 = {};
@@ -20,7 +20,7 @@ export default function useKeyboardIsOpen() {
     flag = false;
   }
   importDefault = undefined;
-  importDefault = flag(1497).useAppEntryKey();
+  importDefault = flag(1496).useAppEntryKey();
   return computeEntryStateDefault((arg0) => {
     const systemKeyboardOpen = tmp.systemKeyboardOpen;
     if (flag) {

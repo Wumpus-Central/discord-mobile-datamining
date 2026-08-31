@@ -1,10 +1,10 @@
-// === Module 4972: shouldShowMembershipVerificationGate ===
+// === Module 4975: shouldShowMembershipVerificationGate ===
 
-// Module 4972 (shouldShowMembershipVerificationGate)
-import isValidFormResponse from "isValidFormResponse" /* 4973 */;
-import closure_2 from "trackCommunicationDisabled" /* 1993 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
+// Module 4975 (shouldShowMembershipVerificationGate)
+import isValidFormResponse from "isValidFormResponse" /* 4976 */;
+import closure_2 from "trackCommunicationDisabled" /* 1992 */;
+import closure_3 from "createGuildRecordFromRust" /* 1909 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
 function shouldShowMembershipVerificationGate(guildId, items) {

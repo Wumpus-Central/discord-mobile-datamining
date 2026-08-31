@@ -1,6 +1,6 @@
-// === Module 12599: ApplicationWidgetLayoutName ===
+// === Module 12634: ApplicationWidgetLayoutName ===
 
-// Module 12599 (ApplicationWidgetLayoutName)
+// Module 12634 (ApplicationWidgetLayoutName)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetLayoutName.tsx");

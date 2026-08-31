@@ -1,19 +1,19 @@
-// === Module 11504: findGameMentionTokens ===
+// === Module 11530: findGameMentionTokens ===
 
-// Module 11504 (findGameMentionTokens)
+// Module 11530 (findGameMentionTokens)
 import set2 from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
-import set3 from "set" /* 1926 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4107 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4479 */;
-import registerAssetDefault from "registerAsset" /* 7986 */;
-import addRule from "addRule" /* 11505 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
-import closure_5 from "getEmojiToGroupId" /* 5366 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1986 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4090 */;
-import regExp from "regExp" /* 4918 */;
+import set3 from "set" /* 1925 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4108 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4481 */;
+import registerAssetDefault from "registerAsset" /* 8008 */;
+import addRule from "addRule" /* 11531 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import closure_5 from "getEmojiToGroupId" /* 5369 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4091 */;
+import regExp from "regExp" /* 4921 */;
 
 function findGameMentionTokens(text, name, items) {
   closure_0 = name;
@@ -295,7 +295,7 @@ export const getEmojiHighlightNodes = function getEmojiHighlightNodes(channel, a
 };
 export const getUsernameHighlightNodes = function getUsernameHighlightNodes(channel, arg1) {
   const items = [];
-  let obj = _require(11506);
+  let obj = _require(11532);
   const users = obj.getUsers(channel);
   _require = (arg0) => arg0;
   let match = regex3.exec(arg1);
@@ -428,7 +428,7 @@ export const getGameHighlightNodes = function getGameHighlightNodes(mentionGames
   return items1;
 };
 export const getGameMentionInputNodes = function getGameMentionInputNodes(arr) {
-  const IncludeGameMentionsInAutocomplete = _require(4135).IncludeGameMentionsInAutocomplete;
+  const IncludeGameMentionsInAutocomplete = _require(4136).IncludeGameMentionsInAutocomplete;
   const items = [];
   if (IncludeGameMentionsInAutocomplete.getSetting()) {
     _require = closure_9;
@@ -437,7 +437,7 @@ export const getGameMentionInputNodes = function getGameMentionInputNodes(arr) {
       do {
         let tmp3 = _require;
         let tmp4 = dependencyMap;
-        let obj = _require(10276);
+        let obj = _require(10300);
         let tmp5 = index;
         if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
           arr = items.push(index);
@@ -480,7 +480,7 @@ export const getChannelHighlightNodes = function getChannelHighlightNodes(channe
   let _loop4Result;
   const _require = arg1;
   let items = [];
-  dependencyMap = _require(11506).getChannels(channel);
+  dependencyMap = _require(11532).getChannels(channel);
   c3 = 0;
   function _loop4() {
     let arr = lib;

@@ -1,7 +1,7 @@
-// === Module 12214: ? ===
+// === Module 12248: ? ===
 
-// Module 12214
-import _modDef4689 from "module_4689" /* 4689 */;
+// Module 12248
+import _modDef4691 from "module_4691" /* 4691 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/hub/native/componen
 export default {
   open(closure_0) {
     closure_0 = arg1;
-    _modDef4689.pushLazy(callback(function*() {
+    _modDef4691.pushLazy(callback(function*() {
       closure_1 = tmp5;
       closure_0 = tmp2;
       yield closure_1_0(paths[3])(paths[2], paths.paths);
@@ -25,6 +25,6 @@ export default {
     }), closure_0, HUB_EMAIL_CONNECTION_MODAL_KEY);
   },
   close() {
-    _modDef4689.popWithKey(HUB_EMAIL_CONNECTION_MODAL_KEY);
+    _modDef4691.popWithKey(HUB_EMAIL_CONNECTION_MODAL_KEY);
   }
 };

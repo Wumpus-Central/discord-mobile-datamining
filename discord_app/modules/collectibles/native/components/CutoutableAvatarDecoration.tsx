@@ -1,9 +1,9 @@
-// === Module 8043: CutoutableAvatarDecoration ===
+// === Module 8065: CutoutableAvatarDecoration ===
 
-// Module 8043 (CutoutableAvatarDecoration)
+// Module 8065 (CutoutableAvatarDecoration)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

@@ -1,14 +1,14 @@
-// === Module 12843: createSafetyPolicyNoticeEmbed ===
+// === Module 12878: createSafetyPolicyNoticeEmbed ===
 
-// Module 12843 (createSafetyPolicyNoticeEmbed)
+// Module 12878 (createSafetyPolicyNoticeEmbed)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hooksDefault from "hooks" /* 4044 */;
-import frozen from "frozen" /* 7802 */;
-import SafetyHubView from "SafetyHubView" /* 8636 */;
-import registerAssetDefault from "registerAsset" /* 8678 */;
+import hooksDefault from "hooks" /* 4045 */;
+import frozen from "frozen" /* 7823 */;
+import SafetyHubView from "SafetyHubView" /* 8658 */;
+import registerAssetDefault from "registerAsset" /* 8700 */;
 
 const Image = get_ActivityIndicator.Image;
 const MessageEmbedTypes = ME.MessageEmbedTypes;

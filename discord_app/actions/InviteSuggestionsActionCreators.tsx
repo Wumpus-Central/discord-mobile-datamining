@@ -1,10 +1,10 @@
-// === Module 9876: loadInviteSuggestions ===
+// === Module 9899: loadInviteSuggestions ===
 
-// Module 9876 (loadInviteSuggestions)
+// Module 9899 (loadInviteSuggestions)
 import set2 from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import fetchUserAffinitiesV2 from "fetchUserAffinitiesV2" /* 9877 */;
-import _computeRows from "_computeRows" /* 9860 */;
+import fetchUserAffinitiesV2 from "fetchUserAffinitiesV2" /* 9900 */;
+import _computeRows from "_computeRows" /* 9883 */;
 
 const result = set2.fileFinishedImporting("actions/InviteSuggestionsActionCreators.tsx");
 

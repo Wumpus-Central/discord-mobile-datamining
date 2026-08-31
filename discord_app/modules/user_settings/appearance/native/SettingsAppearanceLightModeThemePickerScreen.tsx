@@ -1,9 +1,9 @@
-// === Module 14834: SettingsAppearanceLightModeThemePickerScreen ===
+// === Module 14868: SettingsAppearanceLightModeThemePickerScreen ===
 
-// Module 14834 (SettingsAppearanceLightModeThemePickerScreen)
+// Module 14868 (SettingsAppearanceLightModeThemePickerScreen)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ThemeTypesDefault from "ThemeTypes" /* 14795 */;
+import ThemeTypesDefault from "ThemeTypes" /* 14829 */;
 import { SystemTheme } from "SystemThemeState" /* 1305 */;
 import { jsx } from "jsxProd" /* 21 */;
 

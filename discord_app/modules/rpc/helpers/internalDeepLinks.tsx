@@ -1,8 +1,8 @@
-// === Module 14069: set ===
+// === Module 14103: set ===
 
-// Module 14069 (set)
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import _openURL from "_openURL" /* 4153 */;
+// Module 14103 (set)
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
+import _openURL from "_openURL" /* 4154 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import set from "set" /* 2 */;
 
@@ -17,11 +17,11 @@ export const resolveInternalDeepLink = function resolveInternalDeepLink(closure_
     return null;
   } else {
     ({ hostname: hostname2, protocol, host } = toURLSafeResult);
-    let tmpResult = tmp(1487);
+    let tmpResult = tmp(1486);
     if (tmpResult.isDiscordProtocol(protocol)) {
       ({ hostname, pathname } = toURLSafeResult);
       if (!set1.has(hostname)) {
-        tmpResult = tmp(1487);
+        tmpResult = tmp(1486);
         if (!tmpResult.isDiscordHostname(hostname)) {
           const _HermesInternal = HermesInternal;
           let combined = "/" + hostname + pathname;
@@ -38,7 +38,7 @@ export const resolveInternalDeepLink = function resolveInternalDeepLink(closure_
         if (!tmpResult2.isDiscordLocalhost(host, hostname2)) {
           return null;
         }
-        tmpResult2 = tmp(1487);
+        tmpResult2 = tmp(1486);
       }
       const tmp11 = callback(toURLSafeResult.pathname.split("/"), 2)[1];
       let combined2 = null;

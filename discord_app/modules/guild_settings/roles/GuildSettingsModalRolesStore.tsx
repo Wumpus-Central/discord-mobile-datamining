@@ -1,14 +1,14 @@
-// === Module 17119: handleGuildRoleCreateOrUpdate ===
+// === Module 17152: handleGuildRoleCreateOrUpdate ===
 
-// Module 17119 (handleGuildRoleCreateOrUpdate)
+// Module 17152 (handleGuildRoleCreateOrUpdate)
 import fromStringAll from "fromString" /* 506 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer3 from "AccessibilityAnnouncer" /* 1363 */;
-import calculatePositionDeltasDefault from "calculatePositionDeltas" /* 11918 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1986 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import calculatePositionDeltasDefault from "calculatePositionDeltas" /* 11952 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_5 from "createGuildRecordFromRust" /* 1909 */;
 import { FormStates } from "ME" /* 676 */;
 
 require = arg1;

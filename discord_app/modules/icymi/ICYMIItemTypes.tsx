@@ -1,6 +1,6 @@
-// === Module 8574: set ===
+// === Module 8596: set ===
 
-// Module 8574 (set)
+// Module 8596 (set)
 import set from "set" /* 2 */;
 
 let set = new Set(["end", "loading", "bottomLoading", "icymiHeader", "recommendedGuilds"]);

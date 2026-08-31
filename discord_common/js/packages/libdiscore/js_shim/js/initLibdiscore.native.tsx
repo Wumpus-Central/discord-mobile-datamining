@@ -1,9 +1,9 @@
-// === Module 1921: _initLibdiscore ===
+// === Module 1920: _initLibdiscore ===
 
-// Module 1921 (_initLibdiscore)
+// Module 1920 (_initLibdiscore)
 import closure_0 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import importAllResult from "setTimeout" /* 1922 */;
+import importAllResult from "setTimeout" /* 1921 */;
 
 function _initLibdiscore() {
   const self = this;
@@ -19,7 +19,7 @@ function _initLibdiscore() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -34,7 +34,7 @@ function _initLibdiscore() {
           return obj;
         } else {
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp4) {
         c0 = tmp;

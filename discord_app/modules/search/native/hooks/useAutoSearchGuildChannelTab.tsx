@@ -1,8 +1,8 @@
-// === Module 16232: useAutoSearchGuildChannelTab ===
+// === Module 16266: useAutoSearchGuildChannelTab ===
 
-// Module 16232 (useAutoSearchGuildChannelTab)
+// Module 16266 (useAutoSearchGuildChannelTab)
 import closure_3 from "noop" /* 19 */;
-import { SEARCH_TEXT_INPUT_DEBOUNCE_TIME as closure_4 } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 11856 */;
+import { SEARCH_TEXT_INPUT_DEBOUNCE_TIME as closure_4 } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 11887 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx");

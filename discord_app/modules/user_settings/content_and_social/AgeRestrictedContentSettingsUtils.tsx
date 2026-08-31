@@ -1,12 +1,12 @@
-// === Module 8098: resolveNsfwTogglesWithDefaults ===
+// === Module 8120: resolveNsfwTogglesWithDefaults ===
 
-// Module 8098 (resolveNsfwTogglesWithDefaults)
-import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4141 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4699 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5332 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 8099 */;
-import closure_2 from "mergeGuildAvatar" /* 1923 */;
+// Module 8120 (resolveNsfwTogglesWithDefaults)
+import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 4142 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4701 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5335 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 8121 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx");

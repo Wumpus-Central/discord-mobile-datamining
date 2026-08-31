@@ -1,15 +1,15 @@
-// === Module 10576: Placeholder ===
+// === Module 10600: Placeholder ===
 
-// Module 10576 (Placeholder)
+// Module 10600 (Placeholder)
 import ThemesDefault from "Themes" /* 712 */;
-import TableRowInner from "TableRowInner" /* 5564 */;
-import styles from "styles" /* 10577 */;
+import TableRowInner from "TableRowInner" /* 5567 */;
+import styles from "styles" /* 10601 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import PX_24 from "PX_24" /* 10233 */;
+import PX_24 from "PX_24" /* 10257 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function Placeholder(arg0) {
@@ -61,7 +61,6 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
   ({ action, disableStickySections } = stickyAt);
   const tmp = callback3();
   importAllResult = tmp;
-  const tmp4 = scrollPosValue(stickyAt[9])("UserSectionInner");
   let items = [colorOverride];
   const memo = importAllResult.useMemo(() => {
     let tmp2 = null != colorOverride;
@@ -72,7 +71,7 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
     }
     return tmp2;
   }, items);
-  let obj = colorOverride(stickyAt[10]);
+  let obj = colorOverride(stickyAt[9]);
   clientThemesOverride = obj.useClientThemesOverride();
   const items1 = [, , , ];
   ({ section: arr2[0], interactiveSection: arr2[1] } = tmp);
@@ -82,8 +81,8 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
     const items = [closure_4.section, null != onTitlePress && closure_4.interactiveSection, clientThemesOverride];
     return items;
   }, items1);
-  obj1 = colorOverride(stickyAt[11]);
-  const fn = function w() {
+  obj1 = colorOverride(stickyAt[10]);
+  const fn = function x() {
     let value;
     if (scrollPosValue != null) {
       value = scrollPosValue.get();
@@ -101,8 +100,8 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
   fn.__workletHash = 15448160320615;
   fn.__initData = closure_13;
   derivedValue = obj1.useDerivedValue(fn);
-  let obj2 = colorOverride(stickyAt[11]);
-  class I {
+  let obj2 = colorOverride(stickyAt[10]);
+  class C {
     constructor() {
       backgroundColor = "transparent";
       if (closure_6.get()) {
@@ -112,17 +111,17 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
       return { backgroundColor };
     }
   }
-  I.__closure = { isSticky: derivedValue, styles: tmp };
-  I.__workletHash = 6340072007400;
-  I.__initData = closure_14;
-  animatedStyle = obj2.useAnimatedStyle(I);
+  C.__closure = { isSticky: derivedValue, styles: tmp };
+  C.__workletHash = 6340072007400;
+  C.__initData = closure_14;
+  animatedStyle = obj2.useAnimatedStyle(C);
   const items2 = [tmp.sectionHeader, animatedStyle];
   const memo2 = importAllResult.useMemo(() => {
     const items = [closure_4.sectionHeader, animatedStyle];
     return items;
   }, items2);
-  let obj3 = colorOverride(stickyAt[11]);
-  class C {
+  let obj3 = colorOverride(stickyAt[10]);
+  class H {
     constructor() {
       opacity = 0;
       if (closure_6.get()) {
@@ -131,10 +130,10 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
       return { opacity };
     }
   }
-  C.__closure = { isSticky: derivedValue };
-  C.__workletHash = 13270974904859;
-  C.__initData = closure_15;
-  const animatedStyle1 = obj3.useAnimatedStyle(C);
+  H.__closure = { isSticky: derivedValue };
+  H.__workletHash = 13270974904859;
+  H.__initData = closure_15;
+  const animatedStyle1 = obj3.useAnimatedStyle(H);
   if (null == title) {
     if (null == actionTitle) {
       obj = { style: null };
@@ -142,76 +141,66 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
       return animatedStyle(clientThemesOverride, obj);
     }
   }
-  let str = "text-sm/semibold";
-  if (tmp4) {
-    str = "text-md/medium";
-  }
-  obj = { maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: str, color: null, style: null, children: null };
-  let str2 = "interactive-text-default";
-  if (tmp4) {
-    str2 = "text-subtle";
-  }
-  obj[3] = str2;
-  obj[4] = memo;
+  obj = { maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-md/medium", color: "text-subtle", style: memo, children: null };
   const items3 = [title, ];
-  let tmp14 = null;
+  let tmp12 = null;
   if (null != badge) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.badgeWrapper;
     obj2 = { style: null, value: null };
     obj2[0] = tmp.badge;
     obj2[1] = badge;
-    obj1[1] = animatedStyle(tmp6(tmp3[13]).Badge, obj2);
-    tmp14 = animatedStyle(clientThemesOverride, obj1);
+    obj1[1] = animatedStyle(tmp3(tmp4[12]).Badge, obj2);
+    tmp12 = animatedStyle(clientThemesOverride, obj1);
   }
-  items3[1] = tmp14;
+  items3[1] = tmp12;
   obj[5] = items3;
-  let tmp13Result = tmp13(tmp6(tmp3[12]).Text, obj);
+  let tmp11Result = tmp11(tmp3(tmp4[11]).Text, obj);
   if (null != titleLeading) {
     obj3 = { style: null, children: null };
     obj3[0] = tmp.titleRow;
-    const items4 = [titleLeading, tmp13Result];
+    const items4 = [titleLeading, tmp11Result];
     obj3[1] = items4;
-    tmp13Result = tmp13(clientThemesOverride, obj3);
+    tmp11Result = tmp11(clientThemesOverride, obj3);
   }
-  let tmp20 = tmp13Result;
+  let tmp18 = tmp11Result;
   if (null != onTitlePress) {
     const obj4 = { accessibilityRole: "button", style: null, onPress: null, children: null };
     obj4[1] = tmp.titlePressable;
     obj4[2] = onTitlePress;
-    obj4[3] = tmp13Result;
-    tmp20 = animatedStyle(tmp6(tmp3[14]).PressableOpacity, obj4);
+    obj4[3] = tmp11Result;
+    tmp18 = animatedStyle(tmp3(tmp4[13]).PressableOpacity, obj4);
   }
   const obj5 = { style: memo1, children: null };
-  const items5 = [tmp20, ];
-  let tmp23 = null;
+  const items5 = [tmp18, ];
+  let tmp21 = null;
   if (null != actionTitle) {
     const obj6 = { onPress: null, children: null };
     obj6[0] = action;
     const obj7 = { variant: "text-sm/semibold", color: "text-brand", children: null };
     obj7[2] = actionTitle;
-    obj6[1] = animatedStyle(tmp6(tmp3[12]).Text, obj7);
-    tmp23 = animatedStyle(tmp6(tmp3[14]).PressableOpacity, obj6);
+    obj6[1] = animatedStyle(tmp3(tmp4[11]).Text, obj7);
+    tmp21 = animatedStyle(tmp3(tmp4[13]).PressableOpacity, obj6);
   }
-  items5[1] = tmp23;
+  items5[1] = tmp21;
   obj5[1] = items5;
-  const tmp13Result1 = closure_8(clientThemesOverride, obj5);
-  let tmp13Result2 = tmp13Result1;
+  const tmp11Result1 = closure_8(clientThemesOverride, obj5);
+  let tmp11Result2 = tmp11Result1;
   if (!disableStickySections) {
     const obj8 = { style: null, children: null };
     obj8[0] = memo2;
-    let tmp27 = !disableThemedGradient;
+    let tmp26 = !disableThemedGradient;
     if (!disableThemedGradient) {
       const obj9 = { style: null, children: null };
       obj9[0] = animatedStyle1;
-      obj9[1] = animatedStyle(tmp2(tmp3[15]), { absolute: true, tall: true, wide: true, mix: true });
-      tmp27 = animatedStyle(tmp2(tmp3[11]).View, obj9);
+      obj9[1] = animatedStyle(tmp25(tmp4[14]), { absolute: true, tall: true, wide: true, mix: true });
+      tmp26 = animatedStyle(tmp25(tmp4[10]).View, obj9);
     }
-    const items6 = [tmp27, tmp13Result1];
+    const items6 = [tmp26, tmp11Result1];
     obj8[1] = items6;
-    tmp13Result2 = tmp13(tmp2(tmp3[11]).View, obj8);
+    tmp11Result2 = tmp11(scrollPosValue(tmp4[10]).View, obj8);
   }
-  return tmp13Result2;
+  return tmp11Result2;
 });
 let obj6 = { position: "absolute", left: ThemesDefault.space.PX_4 + ThemesDefault.space.PX_4 / 2, top: 5 };
 const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(getItemProps, ref) {
@@ -241,12 +230,12 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
   closure_6 = tmp;
   let num = 0;
   if (!flag) {
-    num = getSectionProps(flag2[16])().bottom;
+    num = getSectionProps(flag2[15])().bottom;
   }
   const sum = insetEnd + num;
-  const tmp6 = getSectionProps(flag2[18])();
+  const tmp6 = getSectionProps(flag2[17])();
   closure_7 = tmp6;
-  let obj = getItemProps(tmp3[10]);
+  let obj = getItemProps(tmp3[9]);
   clientThemesOverride = obj.useClientThemesOverride();
   let items = [getSectionProps, flag2, disableThemedGradient];
   const items1 = [getItemProps];
@@ -280,7 +269,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
     if ("user" === type) {
       let obj = {};
       const merged = Object.assign(element.props);
-      return callback(getSectionProps(flag2[19]), obj);
+      return callback(getSectionProps(flag2[18]), obj);
     } else if ("placeholder" === type) {
       obj = {};
       const merged1 = Object.assign(element.props);
@@ -288,11 +277,11 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
     } else if ("gdm" === type) {
       obj1 = {};
       const merged2 = Object.assign(element.props);
-      return callback(getSectionProps(flag2[20]), obj1);
+      return callback(getSectionProps(flag2[19]), obj1);
     } else if ("channel" === type) {
       const obj2 = {};
       const merged3 = Object.assign(element.props);
-      return callback(getSectionProps(flag2[21]), obj2);
+      return callback(getSectionProps(flag2[20]), obj2);
     } else if ("custom" === type) {
       obj = { children: null };
       obj[0] = element.component();
@@ -328,7 +317,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
     items[2] = listStyleOverride;
     return items;
   }, items3);
-  const tmp5 = getSectionProps(flag2[17])();
+  const tmp5 = getSectionProps(flag2[16])();
   obj = { sections, sectionHeaderIsSticky: !flag2, sectionHeaderSize: callback2, estimatedListSize: "windowSize", ref, style: memo, itemSize: null, renderItem: null, renderListHeader: null, renderSectionHeader: null, insetStart: null, insetEnd: null, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "always", inActionSheet: null, onScroll: null, onLayout: null, placeholderConfig: null, listId: "users-fast-list", listHeaderSize: null, listHeaderAlwaysMounted: true, scrollReporting: "callbacks", wrapChildren: true };
   const tmp12 = getSectionProps(flag2[7])();
   const tmp13 = closure_7;
@@ -346,7 +335,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
   obj[16] = onLayout;
   obj[17] = tmp12;
   obj[19] = listHeaderSize;
-  return tmp13(getSectionProps(flag2[22]), obj);
+  return tmp13(getSectionProps(flag2[21]), obj);
 });
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx");
 

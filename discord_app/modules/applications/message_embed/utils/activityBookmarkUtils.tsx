@@ -1,8 +1,8 @@
-// === Module 7383: extractActivityBookmarkParams ===
+// === Module 7404: extractActivityBookmarkParams ===
 
-// Module 7383 (extractActivityBookmarkParams)
+// Module 7404 (extractActivityBookmarkParams)
 import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
 
 const result = set.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
 

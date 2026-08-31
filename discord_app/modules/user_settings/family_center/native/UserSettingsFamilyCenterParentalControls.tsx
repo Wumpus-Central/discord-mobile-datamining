@@ -1,14 +1,14 @@
-// === Module 14468: FamilyCenterParentalControlsSettings ===
+// === Module 14502: FamilyCenterParentalControlsSettings ===
 
-// Module 14468 (FamilyCenterParentalControlsSettings)
+// Module 14502 (FamilyCenterParentalControlsSettings)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { UserSettingsSections } from "ME" /* 676 */;
-import { FamilyCenterSubPages } from "items" /* 7230 */;
+import { FamilyCenterSubPages } from "items" /* 7251 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
@@ -101,7 +101,7 @@ export default function FamilyCenterParentalControlsSettings() {
         }
       }
     }
-    stackNavigation.setOptions({ title: "Array", headerRight: "ct" });
+    stackNavigation.setOptions({ title: "cix", headerRight: "id" });
   }, items1);
   if (isFamilyCenterV3Enabled) {
     isFamilyCenterV3Enabled = selectedSubPage === items2.SCREEN_TIME_CONTROLS;

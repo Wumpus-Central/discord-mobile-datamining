@@ -1,13 +1,13 @@
-// === Module 13306: initialize ===
+// === Module 13340: initialize ===
 
-// Module 13306 (initialize)
+// Module 13340 (initialize)
 import timestampDefault from "timestamp" /* 3 */;
 import createFastConnectSocket from "createFastConnectSocket" /* 15 */;
 import initializeDefault from "initialize" /* 589 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_4 from "initialize" /* 11915 */;
+import closure_4 from "initialize" /* 11949 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;

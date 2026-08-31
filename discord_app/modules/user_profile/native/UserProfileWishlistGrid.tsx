@@ -1,25 +1,25 @@
-// === Module 12453: WishlistEmptyState ===
+// === Module 12487: WishlistEmptyState ===
 
-// Module 12453 (WishlistEmptyState)
+// Module 12487 (WishlistEmptyState)
 import timestampDefault from "timestamp" /* 3 */;
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateCategoriesAndProducts" /* 7234 */;
-import closure_7 from "initialize" /* 10717 */;
-import closure_8 from "get" /* 10395 */;
-import { isCollectiblesWishlistItemRecord as closure_9 } from "createCollectiblesItemFromServerResponse" /* 10398 */;
-import { getWishlistProductLines } from "fromServer" /* 10396 */;
-import closure_11 from "mergeGuildAvatar" /* 1923 */;
-import closure_12 from "addSku" /* 4495 */;
-import closure_13 from "createUserWidgetFromServer" /* 7313 */;
-import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8502 */;
+import closure_6 from "updateCategoriesAndProducts" /* 7255 */;
+import closure_7 from "initialize" /* 10741 */;
+import closure_8 from "get" /* 10419 */;
+import { isCollectiblesWishlistItemRecord as closure_9 } from "createCollectiblesItemFromServerResponse" /* 10422 */;
+import { getWishlistProductLines } from "fromServer" /* 10420 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import closure_12 from "addSku" /* 4497 */;
+import closure_13 from "createUserWidgetFromServer" /* 7334 */;
+import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8524 */;
 import ME from "ME" /* 676 */;
 import { CollectiblesMobileShopScreen as closure_18 } from "items" /* 678 */;
-import GuildFeatures from "GuildFeatures" /* 1925 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 class WishlistEmptyState {
@@ -290,7 +290,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -348,7 +348,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                   throwTypeErrorResult = closure_2_18;
                                   obj2[2] = closure_2_18.FEATURED_PAGE;
                                   obj2[3] = function onNavigateAway(arg0) {
-                                    callback(8836)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
+                                    callback(8859)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
                                   };
                                   throwTypeErrorResult = lib(context[24]).openCollectiblesShopMobile(obj2);
                                   throwTypeErrorResult = lib;
@@ -499,7 +499,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                               throwTypeErrorResult = closure_2_19;
                               obj11[3] = closure_2_19.USER_PROFILE_WISHLIST;
                               obj11[4] = function onGiftModalDismiss(arg0) {
-                                callback(8836)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
+                                callback(8859)({ userId: user.id, initialSection: closure_1_15.WISHLIST });
                               };
                               throwTypeErrorResult = lib(context[49]).openSocialLayerStorefrontGiftModal(obj11);
                               const obj55 = lib(context[49]);

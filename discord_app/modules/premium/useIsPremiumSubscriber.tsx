@@ -1,8 +1,8 @@
-// === Module 8878: useIsPremiumSubscriber ===
+// === Module 8901: useIsPremiumSubscriber ===
 
-// Module 8878 (useIsPremiumSubscriber)
-import closure_2 from "mergeGuildAvatar" /* 1923 */;
-import { PremiumTypes } from "GuildFeatures" /* 1925 */;
+// Module 8901 (useIsPremiumSubscriber)
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/useIsPremiumSubscriber.tsx");

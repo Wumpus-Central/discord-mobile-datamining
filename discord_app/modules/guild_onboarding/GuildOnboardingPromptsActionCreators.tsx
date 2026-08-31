@@ -1,17 +1,17 @@
-// === Module 5431: fetchOnboardingPrompts ===
+// === Module 5434: fetchOnboardingPrompts ===
 
-// Module 5431 (fetchOnboardingPrompts)
+// Module 5434 (fetchOnboardingPrompts)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4666 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4668 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1993 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleUpdate" /* 5432 */;
-import { serverApiResponseToClientState as closure_8 } from "serverPromptToClientPrompt" /* 5433 */;
+import closure_5 from "trackCommunicationDisabled" /* 1992 */;
+import closure_6 from "createGuildRecordFromRust" /* 1909 */;
+import closure_7 from "handleUpdate" /* 5435 */;
+import { serverApiResponseToClientState as closure_8 } from "serverPromptToClientPrompt" /* 5436 */;
 import ME from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4078 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4079 */;
 
 require = arg1;
 function fetchOnboardingPrompts(guildId) {
@@ -55,7 +55,7 @@ function _maybeFetchOnboardingPrompts() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

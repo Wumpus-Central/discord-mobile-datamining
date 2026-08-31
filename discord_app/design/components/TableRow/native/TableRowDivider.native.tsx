@@ -1,37 +1,25 @@
-// === Module 5522: TableRowDivider ===
+// === Module 5525: TableRowDivider ===
 
-// Module 5522 (TableRowDivider)
+// Module 5525 (TableRowDivider)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4166 */;
-import result2 from "result" /* 5349 */;
+import map from "map" /* 4167 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { getTableDividerWidth } from "TABLE_ROW_HEIGHT" /* 5523 */;
+import { TABLE_DIVIDER_WIDTH } from "TABLE_ROW_HEIGHT" /* 5526 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;
-let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2) => {
-  const tmp = getTableDividerWidth(arg1);
+let closure_6 = createCacheKey.createStyles((arg0, arg1) => {
+  let obj = { height: TABLE_DIVIDER_WIDTH, paddingStart: null, marginTop: null };
   let num = 12;
   if (arg0) {
-    num = arg2;
+    num = arg1;
   }
-  let prop;
-  if (!arg1) {
-    prop = ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
-  }
-  obj = { container: obj, divider: null };
-  obj = { backgroundColor: prop, height: tmp, paddingStart: num, marginTop: -tmp };
-  obj = { height: tmp, backgroundColor: null };
-  if (arg1) {
-    let DIVIDER_BACKGROUND = ThemesDefault.colors.BORDER_SUBTLE;
-  } else {
-    DIVIDER_BACKGROUND = result2.DIVIDER_BACKGROUND;
-  }
-  obj[1] = DIVIDER_BACKGROUND;
+  obj = { container: obj, divider: num };
+  obj[2] = -TABLE_DIVIDER_WIDTH;
+  obj = { height: tmp, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
   obj[1] = obj;
   return obj;
 });
@@ -43,8 +31,8 @@ export const TableRowDivider = function TableRowDivider(adjustSpacingForIcon) {
     flag = false;
   }
   let obj = map;
-  const tmp2 = callback(flag, useIsMobileVisualRefreshExperimentEnabledDefault("TableRowDivider"), obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING));
-  obj = { style: tmp2.container, children: <View {...obj} /> };
-  obj = { style: tmp2.divider };
-  return <View style={tmp2.divider} />;
+  const tmp = callback(flag, obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING));
+  obj = { style: tmp.container, children: <View {...obj} /> };
+  obj = { style: tmp.divider };
+  return <View style={tmp.divider} />;
 };

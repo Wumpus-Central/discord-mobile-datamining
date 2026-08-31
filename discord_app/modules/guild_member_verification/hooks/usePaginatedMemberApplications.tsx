@@ -1,6 +1,6 @@
-// === Module 16103: result ===
+// === Module 16137: result ===
 
-// Module 16103 (result)
+// Module 16137 (result)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -44,7 +44,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -84,8 +84,8 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
                   obj1[1] = tmp69;
                   obj1[2] = closure_6;
                   const merged = Object.assign((function getRequestPaginationParams(closure_0, aPIError, arg2, arg3, flag) {
-                    const tmp2 = arg3 === callback(4271).GuildJoinRequestApplicationStatuses.SUBMITTED;
-                    if (arg2 === callback(4271).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
+                    const tmp2 = arg3 === callback(4272).GuildJoinRequestApplicationStatuses.SUBMITTED;
+                    if (arg2 === callback(4272).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
                       if (!flag) {
                         if (0 !== aPIError.length) {
                           let obj = { before: null };

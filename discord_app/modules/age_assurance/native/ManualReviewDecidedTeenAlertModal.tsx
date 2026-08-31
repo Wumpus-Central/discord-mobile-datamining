@@ -1,22 +1,22 @@
-// === Module 8676: ManualReviewPendingAlertModal ===
+// === Module 8698: ManualReviewDecidedTeenAlertModal ===
 
-// Module 8676 (ManualReviewPendingAlertModal)
+// Module 8698 (ManualReviewDecidedTeenAlertModal)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2920 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4828 */;
+import messagesProxyDefault from "messagesProxy" /* 2921 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4831 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/ManualReviewPendingAlertModal.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
 
-export default function ManualReviewPendingAlertModal() {
+export default function ManualReviewDecidedTeenAlertModal() {
   let obj = { title: null, content: null, actions: null };
   const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxyDefault.CNm4w6);
+  obj[0] = intl.string(messagesProxyDefault.AA3xYb);
   const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(messagesProxyDefault["14Fje3"]);
+  obj[1] = intl2.string(messagesProxyDefault["2+f8w1"]);
   obj = { children: null };
   obj = { text: null };
   const intl3 = getSystemLocale.intl;

@@ -1,12 +1,12 @@
-// === Module 14791: ? ===
+// === Module 14825: ? ===
 
-// Module 14791
+// Module 14825
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "isSyncedModeThemesEnabled" /* 4266 */;
+import closure_4 from "reset" /* 4267 */;
 import closure_5 from "initialize" /* 1303 */;
 import closure_6 from "handleThemeChange" /* 1302 */;
-import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE" /* 14792 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7830 */;
+import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE" /* 14826 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7852 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -14,10 +14,10 @@ const require = arg1;
 let c3 = importAllResult;
 ({ DEFAULT_FONT_SCALE_STORE_STATE: error, useFontScaleStore: closure_8 } = DEFAULT_FONT_SCALE_STORE_STATE);
 const memoResult = importAllResult.memo(() => {
-  nativeStackNavigation(4910)(() => {
+  nativeStackNavigation(4913)(() => {
     if (closure_5.shouldSync("appearance")) {
-      const userCustomThemes = lib(14793).fetchUserCustomThemes();
-      const obj = lib(14793);
+      const userCustomThemes = lib(14827).fetchUserCustomThemes();
+      const obj = lib(14827);
     }
   });
   let items = [closure_6, closure_4];
@@ -40,7 +40,7 @@ const memoResult = importAllResult.memo(() => {
   const tmp3 = callback();
   _require = tmp3;
   let obj = _require(647);
-  nativeStackNavigation = _require(1500).useNativeStackNavigation();
+  nativeStackNavigation = _require(1499).useNativeStackNavigation();
   let items1 = [nativeStackNavigation, , , , ];
   ({ fontScale: arr2[1], isClassicChatFontScaleEnabled: arr2[2], persistedFontScale: arr2[3], persistedIsClassicChatFontScaleEnabled: arr2[4] } = tmp3);
   const effect = importAllResult.useEffect(() => {
@@ -48,7 +48,7 @@ const memoResult = importAllResult.memo(() => {
     if (obj.isAndroid()) {
       if (lib.persistedFontScale === lib.fontScale) {
         if (tmp3.persistedIsClassicChatFontScaleEnabled === tmp3.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "r" });
+          nativeStackNavigation.setOptions({ headerRight: "Array" });
         }
       }
       obj = { headerRight: null };
@@ -62,55 +62,53 @@ const memoResult = importAllResult.memo(() => {
     callback(table[13]).batchUpdates(() => state.setState(closure_7));
   }, []);
   const node = importAllResult.useMemo(() => {
-    let obj = lib(11006);
+    let obj = lib(11031);
     obj = { sections: null };
-    const items = [constants.MOBILE_VISUAL_REFRESH];
-    const items1 = [{ settings: items }, , , , , , , , , ];
     obj = { label: null, settings: null };
     const intl = lib(1236).intl;
     obj[0] = intl.string(lib(1236).t.Ksh3ik);
-    const items2 = [, , , , ];
-    ({ SAME_AS_DEVICE_THEME: arr3[0], APPEARANCE_THEME_PICKER: arr3[1], LIGHT_MODE_THEME_PICKER: arr3[2], DARK_MODE_THEME_PICKER: arr3[3], SYNC_THEME: arr3[4] } = constants);
-    obj[1] = items2;
-    items1[1] = obj;
-    const items3 = [constants.DEFAULT_GUILD_THEME_PREFERENCE];
-    items1[2] = { settings: items3 };
+    const items = [, , , , ];
+    ({ SAME_AS_DEVICE_THEME: arr[0], APPEARANCE_THEME_PICKER: arr[1], LIGHT_MODE_THEME_PICKER: arr[2], DARK_MODE_THEME_PICKER: arr[3], SYNC_THEME: arr[4] } = constants);
+    obj[1] = items;
+    const items1 = [obj, , , , , , , , ];
+    const items2 = [constants.DEFAULT_GUILD_THEME_PREFERENCE];
+    items1[1] = { settings: items2 };
     obj1 = { label: null, settings: null };
     const intl2 = lib(1236).intl;
     obj1[0] = intl2.string(lib(1236).t.i19n5L);
-    const items4 = [, ];
-    ({ ANDROID_FONT_SCALE: arr5[0], ANDROID_CLASSIC_CHAT_FONT_SCALE: arr5[1] } = constants);
-    obj1[1] = items4;
-    items1[3] = obj1;
-    const items5 = [constants.DMS_MESSAGE_PREVIEWS];
+    const items3 = [, ];
+    ({ ANDROID_FONT_SCALE: arr4[0], ANDROID_CLASSIC_CHAT_FONT_SCALE: arr4[1] } = constants);
+    obj1[1] = items3;
+    items1[2] = obj1;
+    const items4 = [constants.DMS_MESSAGE_PREVIEWS];
+    items1[3] = { settings: items4 };
+    const items5 = [constants.GAME_MENTIONS_AUTOCOMPLETE];
     items1[4] = { settings: items5 };
-    const items6 = [constants.GAME_MENTIONS_AUTOCOMPLETE];
-    items1[5] = { settings: items6 };
-    const obj2 = { settings: items7, subLabel: null };
-    items7 = [constants.FAVORITES_GUILD_TOGGLE];
+    const obj2 = { settings: items6, subLabel: null };
+    items6 = [constants.FAVORITES_GUILD_TOGGLE];
     const intl3 = lib(1236).intl;
-    const obj3 = { helpCenterLink: nativeStackNavigation(1996).getArticleURL(constants2.FAVORITES_GUILD) };
-    obj2[1] = intl3.format(nativeStackNavigation(3148).GR2KOG, obj3);
-    items1[6] = obj2;
+    const obj3 = { helpCenterLink: nativeStackNavigation(1995).getArticleURL(constants2.FAVORITES_GUILD) };
+    obj2[1] = intl3.format(nativeStackNavigation(3149).GR2KOG, obj3);
+    items1[5] = obj2;
     const obj4 = { label: null, settings: null };
     const intl4 = lib(1236).intl;
     obj4[0] = intl4.string(lib(1236).t.lEde7i);
-    const items8 = [constants.DMS_HAPPENING_NOW_CARDS];
-    obj4[1] = items8;
-    items1[7] = obj4;
+    const items7 = [constants.DMS_HAPPENING_NOW_CARDS];
+    obj4[1] = items7;
+    items1[6] = obj4;
     const obj5 = { label: null, settings: null };
     const intl5 = lib(1236).intl;
     obj5[0] = intl5.string(lib(1236).t["5h0QOP"]);
-    const items9 = [constants.EXACT_SEARCH_RESULT_COUNTS];
-    obj5[1] = items9;
-    items1[8] = obj5;
-    const items10 = [constants.TIMESTAMP_HOUR_CYCLE];
-    items1[9] = { settings: items10 };
+    const items8 = [constants.EXACT_SEARCH_RESULT_COUNTS];
+    obj5[1] = items8;
+    items1[7] = obj5;
+    const items9 = [constants.TIMESTAMP_HOUR_CYCLE];
+    items1[8] = { settings: items9 };
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  let obj2 = _require(1500);
-  return jsx(nativeStackNavigation(14273), { node }, "" + theme + "-" + gradientPresetId);
+  let obj2 = _require(1499);
+  return jsx(nativeStackNavigation(14307), { node }, "" + theme + "-" + gradientPresetId);
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 

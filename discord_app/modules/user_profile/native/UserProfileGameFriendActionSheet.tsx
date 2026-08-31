@@ -1,15 +1,15 @@
-// === Module 12426: GameFriendApplicationRow ===
+// === Module 12460: GameFriendApplicationRow ===
 
-// Module 12426 (GameFriendApplicationRow)
+// Module 12460 (GameFriendApplicationRow)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "markAllUserIdListsStale" /* 4099 */;
+import closure_8 from "markAllUserIdListsStale" /* 4100 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 function GameFriendApplicationRow(application) {
@@ -89,7 +89,7 @@ export default function UserProfileGameFriendActionSheet(user) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

@@ -1,7 +1,7 @@
-// === Module 4116: createFromServer ===
+// === Module 4117: createFromServer ===
 
-// Module 4116 (createFromServer)
-import toJSDefault from "toJS" /* 1932 */;
+// Module 4117 (createFromServer)
+import toJSDefault from "toJS" /* 1931 */;
 
 toJSDefault;
 const obj = { PRICE_CHANGE_MODE_UNSPECIFIED: "PRICE_CHANGE_MODE_UNSPECIFIED", PRICE_DECREASE: "PRICE_DECREASE", PRICE_INCREASE: "PRICE_INCREASE", OPT_OUT_PRICE_INCREASE: "OPT_OUT_PRICE_INCREASE" };

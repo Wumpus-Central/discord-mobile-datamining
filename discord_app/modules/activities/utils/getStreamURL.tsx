@@ -1,8 +1,8 @@
-// === Module 12400: getStreamURL ===
+// === Module 12434: getStreamURL ===
 
-// Module 12400 (getStreamURL)
+// Module 12434 (getStreamURL)
 import set from "set" /* 2 */;
-import items3 from "items3" /* 4474 */;
+import items3 from "items3" /* 4476 */;
 
 const validStreamURL = items3.validStreamURL;
 const result = set.fileFinishedImporting("modules/activities/utils/getStreamURL.tsx");

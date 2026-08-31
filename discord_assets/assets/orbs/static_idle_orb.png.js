@@ -1,6 +1,6 @@
-// === Module 11282: metadata ===
+// === Module 11311: metadata ===
 
-// Module 11282 (metadata)
+// Module 11311 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/orbs/static_idle_orb.png.js");

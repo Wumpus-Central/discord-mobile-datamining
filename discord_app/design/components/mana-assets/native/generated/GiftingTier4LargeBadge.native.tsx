@@ -1,10 +1,10 @@
-// === Module 6674: GiftingTier4LargeBadge ===
+// === Module 6687: GiftingTier4LargeBadge ===
 
-// Module 6674 (GiftingTier4LargeBadge)
+// Module 6687 (GiftingTier4LargeBadge)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import vanityUrlDefault from "vanityUrl" /* 6675 */;
+import preloadDefault from "preload" /* 5461 */;
+import vanityUrlDefault from "vanityUrl" /* 6688 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier4LargeBadge.native.tsx");

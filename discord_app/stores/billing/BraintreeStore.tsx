@@ -1,6 +1,6 @@
-// === Module 4125: getClient ===
+// === Module 4126: getClient ===
 
-// Module 4125 (getClient)
+// Module 4126 (getClient)
 import sendRequest from "sendRequest" /* 530 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

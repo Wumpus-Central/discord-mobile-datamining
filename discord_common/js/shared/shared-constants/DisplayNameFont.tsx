@@ -1,6 +1,6 @@
-// === Module 1937: DisplayNameFont ===
+// === Module 1936: DisplayNameFont ===
 
-// Module 1937 (DisplayNameFont)
+// Module 1936 (DisplayNameFont)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/DisplayNameFont.tsx");

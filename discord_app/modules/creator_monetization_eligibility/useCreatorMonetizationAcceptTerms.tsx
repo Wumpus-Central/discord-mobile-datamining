@@ -1,12 +1,12 @@
-// === Module 17199: useCreateCreatorMonetizationAcceptTermsRequest ===
+// === Module 17232: useCreateCreatorMonetizationAcceptTermsRequest ===
 
-// Module 17199 (useCreateCreatorMonetizationAcceptTermsRequest)
+// Module 17232 (useCreateCreatorMonetizationAcceptTermsRequest)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "mergeGuildAvatar" /* 1923 */;
+import { isGuildOwner } from "GuildNSFWContentLevel" /* 1430 */;
+import closure_8 from "createGuildRecordFromRust" /* 1909 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx");
@@ -21,9 +21,9 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
   dependencyMap = tmp2[1];
   [tmp4, closure_4] = isExpeditedOnboardingGuild(React.useState(false), 2);
   let tmp3 = isExpeditedOnboardingGuild(React.useState(false), 2);
-  isExpeditedOnboardingGuild = _require(6073).useIsExpeditedOnboardingGuild(stateFromStores);
+  isExpeditedOnboardingGuild = _require(6076).useIsExpeditedOnboardingGuild(stateFromStores);
   obj = { canSubmitAcceptance: null, error: null, loading: null, submitAcceptTermsRequest: null };
-  let obj2 = _require(6073);
+  let obj2 = _require(6076);
   const items1 = [closure_9];
   const items2 = [stateFromStores];
   obj[0] = _require(589).useStateFromStores(items1, () => {
@@ -48,7 +48,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -73,10 +73,10 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                 v0 = 4;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_2(17200).acceptCreatorMonetizationTerms(tmp56, tmp42);
+                obj1[0] = closure_1_2(17233).acceptCreatorMonetizationTerms(tmp56, tmp42);
                 return obj1;
               } else {
-                let obj2 = closure_1_2(17200);
+                let obj2 = closure_1_2(17233);
                 v0 = 3;
                 c5 = 1;
                 obj2 = { value: null, done: false };
@@ -90,7 +90,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
           if (2 === tmp8) {
             dependencyMap = 1;
             closure_0 = closure_2;
-            const tmp25 = new closure_1_1(4345)(closure_0);
+            const tmp25 = new closure_1_1(4347)(closure_0);
             dependencyMap(tmp25);
           } else {
             if (3 === tmp8) {

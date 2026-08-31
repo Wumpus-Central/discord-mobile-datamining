@@ -1,11 +1,11 @@
-// === Module 16593: isVoicePanelParticipantFocusable ===
+// === Module 16626: isVoicePanelParticipantFocusable ===
 
-// Module 16593 (isVoicePanelParticipantFocusable)
-import closure_2 from "participantFromServer" /* 1390 */;
-import closure_3 from "getParticipants" /* 4462 */;
-import closure_4 from "reset" /* 4468 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import ParticipantTypes from "ParticipantTypes" /* 4467 */;
+// Module 16626 (isVoicePanelParticipantFocusable)
+import closure_2 from "participantFromServer" /* 1386 */;
+import closure_3 from "getParticipants" /* 4464 */;
+import closure_4 from "reset" /* 4470 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4499 */;
+import ParticipantTypes from "ParticipantTypes" /* 4469 */;
 
 const require = arg1;
 function isVoicePanelParticipantFocusable(sharedValue1, closure_1, id2, arg3, closure_1_4) {
@@ -42,10 +42,10 @@ function isVoicePanelParticipantFocusable(sharedValue1, closure_1, id2, arg3, cl
       if (callback2(participant)) {
         let result = null != obj3.getActiveStreamForUser(participant.user.id, sharedValue1);
       } else if (callback3(participant)) {
-        let tmp4Result = tmp4(9530);
+        let tmp4Result = tmp4(9552);
         result = tmp4Result.canRenderParticipantVideo(participant, tmp);
       } else {
-        tmp4Result = tmp4(1370);
+        tmp4Result = tmp4(1471);
         tmp4Result.assertNever(participant);
       }
       return result;

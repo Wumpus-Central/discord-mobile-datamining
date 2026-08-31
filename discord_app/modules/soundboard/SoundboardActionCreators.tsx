@@ -1,10 +1,10 @@
-// === Module 6147: _fetchDefaultSoundsFromApi2 ===
+// === Module 6150: _fetchDefaultSoundsFromApi2 ===
 
-// Module 6147 (_fetchDefaultSoundsFromApi2)
+// Module 6150 (_fetchDefaultSoundsFromApi2)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleSoundCreateOrUpdate" /* 4930 */;
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4932 */;
+import closure_4 from "handleSoundCreateOrUpdate" /* 4933 */;
+import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4935 */;
 import ME from "ME" /* 676 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 
@@ -24,8 +24,8 @@ function _fetchDefaultSoundsFromApi2() {
       callback2 = dependencyMap;
       let obj3 = callback2(709);
       obj3.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE" });
-      const obj4 = callback(6148);
-      const tmp28 = new callback2(4345)(callback2);
+      const obj4 = callback(6151);
+      const tmp28 = new callback2(4347)(callback2);
       const result = obj4.captureOrIgnoreApiError(tmp28);
       c5 = 3;
     } else if (arg0 === 1) {
@@ -80,7 +80,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  let obj = SOUNDBOARD_SOUNDS_RECEIVED(6149);
+  let obj = SOUNDBOARD_SOUNDS_RECEIVED(6152);
   const guildIdsToFetchSoundsFor = obj.getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
@@ -169,7 +169,7 @@ function _uploadSound() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -196,7 +196,7 @@ function _uploadSound() {
               closure_6 = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -235,7 +235,7 @@ function _uploadSound() {
             return obj5;
           } else {
             closure_6 = arg1;
-            obj = callback(4938);
+            obj = callback(4941);
             c4 = 3;
             const obj6 = { value: null, done: true };
             obj6[0] = obj.soundboardSoundFromAPI(closure_6.body, callback);
@@ -277,7 +277,7 @@ function _updateSound() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -304,7 +304,7 @@ function _updateSound() {
               closure_6 = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -342,7 +342,7 @@ function _updateSound() {
             return obj5;
           } else {
             closure_6 = arg1;
-            obj = callback(4938);
+            obj = callback(4941);
             c4 = 3;
             const obj6 = { value: null, done: true };
             obj6[0] = obj.soundboardSoundFromAPI(closure_6.body, callback);
@@ -385,7 +385,7 @@ function _deleteSound() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -420,7 +420,7 @@ function _deleteSound() {
             return obj;
           } else {
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp5) {
           dependencyMap = tmp;
@@ -458,7 +458,7 @@ function _fetchSoundGuildData() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -490,7 +490,7 @@ function _fetchSoundGuildData() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = closure_4;
-            const tmp25 = new callback(4345)(callback);
+            const tmp25 = new callback(4347)(callback);
             throw tmp25;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -505,7 +505,7 @@ function _fetchSoundGuildData() {
             lib = arg1;
             let discoverableGuild = null;
             if (null != lib.body) {
-              obj = lib(6150);
+              obj = lib(6153);
               discoverableGuild = obj.makeDiscoverableGuild(lib.body);
             }
             c5 = 0;
@@ -582,7 +582,7 @@ export const deleteSound = function deleteSound() {
 };
 export const addFavoriteSound = function addFavoriteSound(soundId) {
   const _require = soundId;
-  const FrecencyUserSettingsActionCreators = _require(1374).FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _require(1370).FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", (soundIds) => {
     let obj = closure_1_1(closure_1_2[13]);
     if (obj.size(soundIds.soundIds) >= closure_1_8) {
@@ -611,7 +611,7 @@ export const addFavoriteSound = function addFavoriteSound(soundId) {
 };
 export const removeFavoriteSound = function removeFavoriteSound(soundId) {
   const _require = soundId;
-  const FrecencyUserSettingsActionCreators = _require(1374).FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _require(1370).FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", (soundIds) => {
     soundIds = soundIds.soundIds;
     soundIds.soundIds = soundIds.filter((arg0) => arg0 !== closure_0);

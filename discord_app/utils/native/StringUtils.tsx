@@ -1,8 +1,8 @@
-// === Module 8872: splitGraphemes ===
+// === Module 8895: splitGraphemes ===
 
-// Module 8872 (splitGraphemes)
+// Module 8895 (splitGraphemes)
 import set from "set" /* 2 */;
-import rawDefault from "raw" /* 8871 */;
+import rawDefault from "raw" /* 8894 */;
 
 const result = set.fileFinishedImporting("utils/native/StringUtils.tsx");
 

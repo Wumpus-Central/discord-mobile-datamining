@@ -1,6 +1,6 @@
-// === Module 7442: _getDeviceState ===
+// === Module 7463: _getDeviceState ===
 
-// Module 7442 (_getDeviceState)
+// Module 7463 (_getDeviceState)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -25,7 +25,7 @@ function _getDeviceState() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -50,7 +50,7 @@ function _getDeviceState() {
               fallback = obj1.fallback;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {

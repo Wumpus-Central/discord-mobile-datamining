@@ -1,16 +1,16 @@
-// === Module 11529: ForumPostGridFooter ===
+// === Module 11556: ForumPostGridFooter ===
 
-// Module 11529 (ForumPostGridFooter)
+// Module 11556 (ForumPostGridFooter)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import MaxForumPostReactions from "MaxForumPostReactions" /* 10986 */;
-import useTypingUserIds from "useTypingUserIds" /* 11476 */;
-import num2Default from "num2" /* 11530 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 11531 */;
+import MaxForumPostReactions from "MaxForumPostReactions" /* 11011 */;
+import useTypingUserIds from "useTypingUserIds" /* 11505 */;
+import num2Default from "num2" /* 11557 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 11558 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticsObjects } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;

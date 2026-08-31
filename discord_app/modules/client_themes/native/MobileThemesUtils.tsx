@@ -1,15 +1,13 @@
-// === Module 4378: getCustomThemesName ===
+// === Module 4380: getCustomThemesName ===
 
-// Module 4378 (getCustomThemesName)
+// Module 4380 (getCustomThemesName)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import ClientThemeType from "ClientThemeType" /* 1349 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import messagesProxyDefault from "messagesProxy" /* 2568 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4380 */;
+import messagesProxyDefault from "messagesProxy" /* 2569 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4382 */;
 import closure_3 from "handleThemeChange" /* 1302 */;
-import closure_4 from "validateSavedTheme" /* 4379 */;
+import closure_4 from "validateSavedTheme" /* 4381 */;
 import closure_5 from "reset" /* 1346 */;
 import ThemeTypes from "ThemeTypes" /* 1348 */;
 
@@ -18,7 +16,7 @@ function getCustomThemesName() {
   const intl = getSystemLocale.intl;
   return intl.string(messagesProxyDefault.yl1iMm);
 }
-({ BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_6, LEGACY_STANDARD_BACKGROUND_THEMES: error, REFRESH_STANDARD_BACKGROUND_THEMES: closure_8 } = ThemeTypes);
+({ BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_6, REFRESH_STANDARD_BACKGROUND_THEMES: error } = ThemeTypes);
 const result = require("set").fileFinishedImporting("modules/client_themes/native/MobileThemesUtils.tsx");
 
 export const getCustomBackgroundGradient = function getCustomBackgroundGradient() {
@@ -64,7 +62,7 @@ export const usePerModeCustomBackgroundGradient = function usePerModeCustomBackg
         if (0 !== prop.colors.length) {
           const obj = { type: null, getName: null, theme: null, customThemeSettings: null };
           obj[0] = mode(closure_1_2[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
-          obj[1] = closure_1_9;
+          obj[1] = closure_1_8;
           obj[2] = closure_1_3.themePreferenceForSystemTheme(tmp);
           obj[3] = prop;
           tmp3 = obj;
@@ -84,16 +82,15 @@ export const getAllMobileThemes = function getAllMobileThemes() {
     ({ baseTheme: obj[2], customTheme: obj[3] } = customThemeDisplaySettings);
     tmp2 = obj;
   }
-  const tmp6 = useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("MobileThemesUtils") ? closure_8 : closure_7;
   if (null != tmp2) {
     const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(tmp6, 0);
+    let arraySpreadResult = HermesBuiltin.arraySpread(closure_7, 0);
     items[arraySpreadResult] = tmp2;
     arraySpreadResult = HermesBuiltin.arraySpread(closure_6, arraySpreadResult + 1);
     let items1 = items;
   } else {
     items1 = [];
-    HermesBuiltin.arraySpread(closure_6, HermesBuiltin.arraySpread(tmp6, 0));
+    HermesBuiltin.arraySpread(closure_6, HermesBuiltin.arraySpread(closure_7, 0));
   }
   return items1;
 };
@@ -105,7 +102,7 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
   if (null != stateFromStores) {
     tmp4 = stateFromStores;
   }
-  let tmpResult = tmp(4380);
+  let tmpResult = tmp(4382);
   const customThemeDisplaySettings = tmpResult.useCustomThemeDisplaySettings(tmp4);
   let stateFromStores1 = null;
   if (undefined !== customThemeDisplaySettings) {
@@ -134,7 +131,7 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
           if (0 !== prop.colors.length) {
             const obj = { type: null, getName: null, theme: null, customThemeSettings: null };
             obj[0] = mode(closure_1_2[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
-            obj[1] = closure_1_9;
+            obj[1] = closure_1_8;
             obj[2] = closure_1_3.themePreferenceForSystemTheme(tmp);
             obj[3] = prop;
             tmp3 = obj;
@@ -144,16 +141,15 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
       }
     });
   }
-  const tmp8 = useIsMobileVisualRefreshExperimentEnabledDefault("MobileThemesUtils") ? closure_8 : closure_7;
   if (null != stateFromStores1) {
     const items2 = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(tmp8, 0);
+    let arraySpreadResult = HermesBuiltin.arraySpread(closure_7, 0);
     items2[arraySpreadResult] = stateFromStores1;
     arraySpreadResult = HermesBuiltin.arraySpread(closure_6, arraySpreadResult + 1);
     let items3 = items2;
   } else {
     items3 = [];
-    HermesBuiltin.arraySpread(closure_6, HermesBuiltin.arraySpread(tmp8, 0));
+    HermesBuiltin.arraySpread(closure_6, HermesBuiltin.arraySpread(closure_7, 0));
   }
   return items3;
 };

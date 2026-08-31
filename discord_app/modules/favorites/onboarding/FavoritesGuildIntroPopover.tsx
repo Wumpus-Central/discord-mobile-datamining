@@ -1,13 +1,13 @@
-// === Module 10254: hasOfferedFavoritesGuildOnboarding ===
+// === Module 10278: hasOfferedFavoritesGuildOnboarding ===
 
-// Module 10254 (hasOfferedFavoritesGuildOnboarding)
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10255 */;
+// Module 10278 (hasOfferedFavoritesGuildOnboarding)
+import DismissibleContent from "DismissibleContent" /* 1373 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10279 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import withContent from "withContent" /* 1383 */;
-import closure_7 from "withContent" /* 1383 */;
-import closure_8 from "initializeFromUserSettings" /* 1394 */;
+import withContent from "withContent" /* 1379 */;
+import closure_7 from "withContent" /* 1379 */;
+import closure_8 from "initializeFromUserSettings" /* 1390 */;
 import { NOOP } from "ME" /* 676 */;
 import keys from "keys" /* 644 */;
 
@@ -17,30 +17,30 @@ let c4 = importAllResult;
 let closure_10 = keys.create(() => ({ shouldShowPopover: false, markPopoverAsDismissed: NOOP }));
 let c11 = false;
 const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
-  const favoritesAccess = _require(10244).useFavoritesAccess("FavoritesGuildIntroPopover");
+  const favoritesAccess = _require(10268).useFavoritesAccess("FavoritesGuildIntroPopover");
   ({ hasAccess, isFreemium } = favoritesAccess);
-  const obj = _require(10244);
+  const obj = _require(10268);
   const items = [closure_8];
   const stateFromStores = _require(589).useStateFromStores(items, () => false === obj.favoriteGuildVisibleSetting);
   const obj2 = _require(589);
   const tmp5 = useCanShowFavoritesGuildOnboardingDefault();
-  _require(6216);
+  _require(6219);
   if (hasAccess) {
     if (isFreemium) {
       if (!stateFromStores) {
         if (tmp5) {
           if (tmp6) {
-            let items1 = [tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
+            let items1 = [tmp(1373).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
           }
           const tmp10 = callback(tmp8(items1), 2);
           _require = tmp11;
-          if (tmp10[0] === tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
-            const items2 = [tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+          if (tmp10[0] === tmp(1373).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
+            const items2 = [tmp(1373).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
             let items3 = items2;
           } else {
             items3 = [];
           }
-          const tmp12 = callback(tmp(6216).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          const tmp12 = callback(tmp(6219).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1373).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];
           const effect = importAllResult.useEffect(() => {

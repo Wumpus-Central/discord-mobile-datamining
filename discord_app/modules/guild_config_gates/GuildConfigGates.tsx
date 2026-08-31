@@ -1,7 +1,7 @@
-// === Module 17154: importDefaultResult1 ===
+// === Module 17187: importDefaultResult1 ===
 
-// Module 17154 (importDefaultResult1)
-import importDefaultResult1 from "hasLoaded" /* 17155 */;
+// Module 17187 (importDefaultResult1)
+import importDefaultResult1 from "hasLoaded" /* 17188 */;
 import { Endpoints } from "ME" /* 676 */;
 import initialize from "initialize" /* 589 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
@@ -45,7 +45,7 @@ let closure_3 = importDefaultResult((arg0) => {
         obj[0] = body;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

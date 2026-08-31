@@ -1,15 +1,15 @@
-// === Module 10006: UserSettingsVoiceOutputOptions ===
+// === Module 10029: UserSettingsVoiceOutputOptions ===
 
-// Module 10006 (UserSettingsVoiceOutputOptions)
-import VolumeSliderDefault from "VolumeSlider" /* 10007 */;
+// Module 10029 (UserSettingsVoiceOutputOptions)
+import VolumeSliderDefault from "VolumeSlider" /* 10030 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "reset" /* 4468 */;
+import closure_5 from "reset" /* 4470 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4510 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4499 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4512 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -54,31 +54,38 @@ export default function UserSettingsVoiceOutputOptions() {
   obj = { label: null, subLabel: null };
   const intl2 = stateFromStores1(1236).intl;
   obj[0] = intl2.string(stateFromStores1(1236).t.xPHVBs);
-  obj1 = { style: tmp.slider, children: callback(VolumeSliderDefault, obj2) };
+  obj1 = { style: tmp.slider, children: null };
   obj2 = {
     style: tmp.slider,
     value: stateFromStores,
     onValueChange(arg0) {
       return callback(table[10]).setOutputVolume(arg0);
-    }
+    },
+    accessibilityLabel: null
   };
+  const intl3 = stateFromStores1(1236).intl;
+  obj2[3] = intl3.string(stateFromStores1(1236).t.xPHVBs);
+  obj1[1] = callback(VolumeSliderDefault, obj2);
   obj[1] = callback(View, obj1);
-  const items4 = [callback(stateFromStores1(5564).TableRow, obj), ];
+  const items4 = [callback(stateFromStores1(5567).TableRow, obj), ];
   let tmp9Result = null != stateFromStores1;
   if (tmp9Result) {
     const obj3 = { label: null, subLabel: null };
-    const intl3 = tmp2(1236).intl;
-    obj3[0] = intl3.string(tmp2(1236).t.pEAl4b);
+    const intl4 = tmp2(1236).intl;
+    obj3[0] = intl4.string(tmp2(1236).t.pEAl4b);
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.slider;
-    const obj5 = { value: null, onValueChange: null };
+    const obj5 = { value: null, onValueChange: null, accessibilityLabel: null };
     obj5[0] = stateFromStores2;
     obj5[1] = callback;
+    const intl5 = tmp2(1236).intl;
+    obj5[2] = intl5.string(tmp2(1236).t.pEAl4b);
     obj4[1] = tmp9(VolumeSliderDefault, obj5);
     obj3[1] = tmp9(View, obj4);
-    tmp9Result = tmp9(tmp2(5564).TableRow, obj3);
+    tmp9Result = tmp9(tmp2(5567).TableRow, obj3);
+    const tmp11Result = VolumeSliderDefault;
   }
   items4[1] = tmp9Result;
   obj[2] = items4;
-  return closure_10(stateFromStores1(10000).UserSettingsTableRowGroup, obj);
+  return closure_10(stateFromStores1(10023).UserSettingsTableRowGroup, obj);
 };

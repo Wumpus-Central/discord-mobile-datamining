@@ -1,7 +1,7 @@
-// === Module 13519: trimTrailingPunctuation ===
+// === Module 13553: trimTrailingPunctuation ===
 
-// Module 13519 (trimTrailingPunctuation)
-import importDefaultResult from "ip" /* 1488 */;
+// Module 13553 (trimTrailingPunctuation)
+import importDefaultResult from "ip" /* 1487 */;
 
 function trimTrailingPunctuation(str) {
   return str.replace(closure_2, "");

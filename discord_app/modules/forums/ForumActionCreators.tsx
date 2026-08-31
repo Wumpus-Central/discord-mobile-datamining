@@ -1,11 +1,11 @@
-// === Module 7587: withErrorHandling ===
+// === Module 7608: withErrorHandling ===
 
-// Module 7587 (withErrorHandling)
+// Module 7608 (withErrorHandling)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import markAnalyticsFeedItemSeen from "markAnalyticsFeedItemSeen" /* 7588 */;
-import prototype from "prototype" /* 7589 */;
-import maybeMarkSeen from "maybeMarkSeen" /* 7590 */;
+import markAnalyticsFeedItemSeen from "markAnalyticsFeedItemSeen" /* 7609 */;
+import prototype from "prototype" /* 7610 */;
+import maybeMarkSeen from "maybeMarkSeen" /* 7611 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 
@@ -41,7 +41,7 @@ function _withErrorHandling() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -199,7 +199,7 @@ export default {
     closure_1 = arg1;
     return callback(function*() {
       closure_0 = tmp4;
-      const obj2 = v0(7456);
+      const obj2 = v0(7477);
       yield obj2.unarchiveThreadIfNecessary(closure_1_0);
       const HTTP = closure_1_0(530).HTTP;
       const obj3 = { url: null, body: null, rejectWithError: null };
@@ -243,7 +243,7 @@ export default {
       obj1[1] = closure_1_1;
       closure_1_1(709).dispatch(obj1);
       dependencyMap = 1;
-      const obj13 = closure_1_1(7456);
+      const obj13 = closure_1_1(7477);
       yield obj13.searchThreads(closure_1_0, closure_1_1, dependencyMap, c3, c4);
       if (1 === tmp7) {
         dependencyMap = 0;
@@ -261,8 +261,8 @@ export default {
         obj4[0] = length;
         obj4[1] = closure_1;
         obj4[2] = length.length;
-        closure_1_0(7458).trackForumSearched(obj4);
-        const obj7 = closure_1_0(7458);
+        closure_1_0(7479).trackForumSearched(obj4);
+        const obj7 = closure_1_0(7479);
         const obj5 = { type: "FORUM_SEARCH_SUCCESS", channelId: null, threadIds: null };
         obj5[1] = closure_1;
         obj5[2] = length;

@@ -1,11 +1,11 @@
-// === Module 12140: getHubProgressTitleForStep ===
+// === Module 12174: getHubProgressTitleForStep ===
 
-// Module 12140 (getHubProgressTitleForStep)
+// Module 12174 (getHubProgressTitleForStep)
 import create from "create" /* 1306 */;
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "set" /* 5190 */;
-import { HUB_PROGRESS_STEP_ORDER } from "items" /* 9858 */;
+import closure_4 from "set" /* 5193 */;
+import { HUB_PROGRESS_STEP_ORDER } from "items" /* 9881 */;
 import { PlatformTypes } from "ME" /* 676 */;
 
 require = arg1;
@@ -24,7 +24,7 @@ export const getHubProgressTitleForStep = function getHubProgressTitleForStep(ne
   } else if (tmp(1306).HubProgressStep.NO_PROGRESS === nextHubProgressStep) {
     return null;
   } else {
-    tmp(1370).assertNever(nextHubProgressStep);
+    tmp(1471).assertNever(nextHubProgressStep);
   }
 };
 export const useHubProgressBarCompletedSteps = function useHubProgressBarCompletedSteps(guild) {

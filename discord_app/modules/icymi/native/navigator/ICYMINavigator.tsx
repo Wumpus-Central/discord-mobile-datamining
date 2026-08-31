@@ -1,16 +1,16 @@
-// === Module 15968: ICYMINavigator ===
+// === Module 16002: ICYMINavigator ===
 
-// Module 15968 (ICYMINavigator)
+// Module 16002 (ICYMINavigator)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7769 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7790 */;
 
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
 const result = set.fileFinishedImporting("modules/icymi/native/navigator/ICYMINavigator.tsx");
 
 export default function ICYMINavigator() {
-  let obj = _require(5973);
+  let obj = _require(5976);
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions() {
@@ -23,7 +23,7 @@ export default function ICYMINavigator() {
   obj = {
     name: "icymi-screen",
     getComponent() {
-      return callback(15969).ICYMITab;
+      return callback(16003).ICYMITab;
     }
   };
   const items = [
@@ -31,7 +31,7 @@ export default function ICYMINavigator() {
     callback(closure_4.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return callback(15920).ThemedNotificationsModal;
+        return callback(15954).ThemedNotificationsModal;
       }
     })
   ];

@@ -1,11 +1,11 @@
-// === Module 16415: useAutoSettingsSearchSessionAnalytics ===
+// === Module 16449: useAutoSettingsSearchSessionAnalytics ===
 
-// Module 16415 (useAutoSettingsSearchSessionAnalytics)
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4910 */;
-import usePreviousDefault from "usePrevious" /* 8522 */;
+// Module 16449 (useAutoSettingsSearchSessionAnalytics)
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4913 */;
+import usePreviousDefault from "usePrevious" /* 8544 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getState" /* 7104 */;
-import closure_5 from "zustandStore" /* 14275 */;
+import closure_4 from "getState" /* 7125 */;
+import closure_5 from "zustandStore" /* 14309 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");

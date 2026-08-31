@@ -1,7 +1,7 @@
-// === Module 17252: useArchiveOrDelete ===
+// === Module 17285: useArchiveOrDelete ===
 
-// Module 17252 (useArchiveOrDelete)
-import getRoleEmojisAll from "getRoleEmojis" /* 14756 */;
+// Module 17285 (useArchiveOrDelete)
+import getRoleEmojisAll from "getRoleEmojis" /* 14790 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
@@ -29,7 +29,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -131,18 +131,18 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
     return applyArgumentsResult;
   }
   let stringResult3 = dependencyMap;
-  let obj = _require(14741);
+  let obj = _require(14775);
   const subscriptionListing = obj.useSubscriptionListing(editStateId);
   const removeEditStateId = getRoleEmojisAll.useEditStateIds(groupListingId, guildId).removeEditStateId;
   let obj2 = getRoleEmojisAll;
-  const deleteSubscriptionListing = _require(14741).useDeleteSubscriptionListing();
+  const deleteSubscriptionListing = _require(14775).useDeleteSubscriptionListing();
   ({ error, deleteSubscriptionListing: closure_8, submitting } = deleteSubscriptionListing);
-  let obj3 = _require(14741);
-  const archiveSubscriptionListing = _require(14741).useArchiveSubscriptionListing();
+  let obj3 = _require(14775);
+  const archiveSubscriptionListing = _require(14775).useArchiveSubscriptionListing();
   closure_9 = archiveSubscriptionListing.archiveSubscriptionListing;
   ({ submitting: submitting2, error: error2 } = archiveSubscriptionListing);
   closure_10 = removeEditStateId(null);
-  let obj4 = _require(14741);
+  let obj4 = _require(14775);
   const first = callback(getRoleEmojisAll.useName(editStateId), 1)[0];
   let archived;
   if (subscriptionListing != null) {
@@ -177,8 +177,8 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
         if (null != tmp2) {
           ref.current = tmp2;
           const intl = guildId(1236).intl;
-          editStateId(4162).presentFailedToast(intl.string(guildId(1236).t.R0RpRX));
-          const obj = editStateId(4162);
+          editStateId(4163).presentFailedToast(intl.string(guildId(1236).t.R0RpRX));
+          const obj = editStateId(4163);
         }
       }, items);
       obj = { headerText: null, buttonText: null, descriptionText: null, handleArchiveOrDelete: null, deleting: null, archiving: null };

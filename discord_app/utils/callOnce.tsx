@@ -1,6 +1,6 @@
-// === Module 7360: callOnce ===
+// === Module 7381: callOnce ===
 
-// Module 7360 (callOnce)
+// Module 7381 (callOnce)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("utils/callOnce.tsx");

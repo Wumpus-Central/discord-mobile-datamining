@@ -1,9 +1,9 @@
-// === Module 13674: ThemedIcon ===
+// === Module 13708: ThemedIcon ===
 
-// Module 13674 (ThemedIcon)
+// Module 13708 (ThemedIcon)
 import noopAll from "noop" /* 19 */;
-import map from "map" /* 4166 */;
-import IconSizesDefault from "IconSizes" /* 4895 */;
+import map from "map" /* 4167 */;
+import IconSizesDefault from "IconSizes" /* 4898 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

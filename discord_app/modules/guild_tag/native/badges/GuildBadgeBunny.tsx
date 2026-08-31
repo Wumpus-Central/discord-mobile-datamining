@@ -1,8 +1,8 @@
-// === Module 13611: items ===
+// === Module 13645: items ===
 
-// Module 13611 (items)
-import inlineStyles from "inlineStyles" /* 8187 */;
-import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13589 */;
+// Module 13645 (items)
+import inlineStyles from "inlineStyles" /* 8209 */;
+import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13623 */;
 import closure_2 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 

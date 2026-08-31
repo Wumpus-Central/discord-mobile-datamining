@@ -1,6 +1,6 @@
-// === Module 8657: _fetchAgeVerificationMethodsV ===
+// === Module 8679: _fetchAgeVerificationMethodsV ===
 
-// Module 8657 (_fetchAgeVerificationMethodsV)
+// Module 8679 (_fetchAgeVerificationMethodsV)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -8,14 +8,15 @@ const require = arg1;
 function _fetchAgeVerificationMethodsV() {
   const self = this;
   const tmp = callback(function*() {
-    closure_1 = tmp4;
+    closure_2 = tmp4;
     const HTTP = closure_1_0(closure_1_1[2]).HTTP;
     obj1 = { url: null, rejectWithError: true };
     obj1[0] = obj.AGE_VERIFICATION_METHODS_V2;
     yield HTTP.get(obj1);
     let body = arg1.body;
+    const obj4 = { methods: null, footerMessage: null, outageBannerMessage: null };
     const methods = body.methods;
-    obj[0] = methods.map((method) => {
+    obj4[0] = methods.map((method) => {
       let obj = { method: method.method, vendor: method.vendor, title: method.title, description: method.description, providedBy: null, icon: null, externalWindow: null };
       let provided_by = method.provided_by;
       if (provided_by == null) {
@@ -54,8 +55,14 @@ function _fetchAgeVerificationMethodsV() {
     if (footer_message == null) {
       body = null;
     }
-    obj[1] = body;
-    return obj;
+    obj4[1] = body;
+    const outage_banner_message = body.outage_banner_message;
+    c1 = outage_banner_message;
+    if (outage_banner_message == null) {
+      c1 = null;
+    }
+    obj4[2] = c1;
+    return obj4;
   });
   closure_4 = tmp;
   const apply = tmp.apply;

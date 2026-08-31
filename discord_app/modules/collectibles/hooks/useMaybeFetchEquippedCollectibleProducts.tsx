@@ -1,8 +1,8 @@
-// === Module 8843: useEquippedCollectibleSkuIds ===
+// === Module 8866: useEquippedCollectibleSkuIds ===
 
-// Module 8843 (useEquippedCollectibleSkuIds)
+// Module 8866 (useEquippedCollectibleSkuIds)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;
 function useEquippedCollectibleSkuIds(id, guildId) {

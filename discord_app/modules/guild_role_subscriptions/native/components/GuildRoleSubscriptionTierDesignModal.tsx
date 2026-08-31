@@ -1,19 +1,19 @@
-// === Module 17282: MemberPreviews ===
+// === Module 17315: MemberPreviews ===
 
-// Module 17282 (MemberPreviews)
+// Module 17315 (MemberPreviews)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import map from "map" /* 4166 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14756 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 14767 */;
-import HeaderDefault from "Header" /* 17248 */;
+import map from "map" /* 4167 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 14790 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 14801 */;
+import HeaderDefault from "Header" /* 17281 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { GuildRoleSubscriptionsTierScenes as closure_7 } from "MAX_SUBSCRIPTION_TIERS" /* 14734 */;
+import { GuildRoleSubscriptionsTierScenes as closure_7 } from "MAX_SUBSCRIPTION_TIERS" /* 14768 */;
 import { UPLOAD_SMALL_SIZE } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function MemberPreviews(role) {
@@ -39,8 +39,8 @@ function MemberPreviews(role) {
   return callback3(View, obj);
 }
 function Content() {
-  const tmp3 = role(13570)();
-  let obj = _require(17256);
+  const tmp3 = role(13604)();
+  let obj = _require(17289);
   const editStateContext = obj.useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   obj1 = getRoleEmojisAll;
@@ -64,32 +64,32 @@ function Content() {
     tmp10 = obj;
   }
   const tmp6 = callback(obj1.useRoleColor(editStateId, guildId), 2);
-  const roleSubscriptionSettingsDisabled = _require(17239).useRoleSubscriptionSettingsDisabled();
+  const roleSubscriptionSettingsDisabled = _require(17272).useRoleSubscriptionSettingsDisabled();
   obj = { children: null };
   const items1 = [callback2(MemberPreviews, { role }), , , , ];
   obj1 = { style: tmp3.header, children: null };
-  let tmpResult = tmp(9843);
+  let tmpResult = tmp(9866);
   const intl = tmp4(1236).intl;
   obj1[1] = intl.string(_require(1236).t.sEr1zr);
   items1[1] = callback2(tmpResult, obj1);
   obj2 = { description: null, image: null, imageUploadSize: null, previewShape: null, previewResizeMode: "cover", setImage: null, disabled: null };
-  tmpResult = tmp(17245);
+  tmpResult = tmp(17278);
   const intl2 = tmp4(1236).intl;
   obj2[0] = intl2.string(_require(1236).t.Glqj9m);
   obj2[1] = tmp10;
   obj2[2] = UPLOAD_SMALL_SIZE;
-  obj2[3] = _require(17245).PreviewShape.SQUIRCLE;
+  obj2[3] = _require(17278).PreviewShape.SQUIRCLE;
   obj2[5] = function setImage(icon) {
-    return callback({ icon: icon.uri, unicodeEmoji: "r" });
+    return callback({ icon: icon.uri, unicodeEmoji: "Array" });
   };
   obj2[6] = roleSubscriptionSettingsDisabled;
   items1[2] = callback2(tmpResult, obj2);
   obj3 = { style: tmp3.header, children: null };
-  const tmp4Result = _require(17239);
+  const tmp4Result = _require(17272);
   const intl3 = tmp4(1236).intl;
   obj3[1] = intl3.string(_require(1236).t["W7hH+z"]);
-  items1[3] = callback2(role(9843), obj3);
-  items1[4] = callback2(role(17283), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  items1[3] = callback2(role(9866), obj3);
+  items1[4] = callback2(role(17316), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   obj[0] = items1;
   return callback3(closure_11, obj);
 }

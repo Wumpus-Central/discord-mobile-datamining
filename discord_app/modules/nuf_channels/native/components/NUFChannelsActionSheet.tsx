@@ -1,10 +1,10 @@
-// === Module 13355: NUFChannelsActionSheet ===
+// === Module 13389: NUFChannelsActionSheet ===
 
-// Module 13355 (NUFChannelsActionSheet)
-import NUFActionSheetTemplateDefault from "NUFActionSheetTemplate" /* 13356 */;
-import NUFChannelIllustrationDefault from "NUFChannelIllustration" /* 13357 */;
+// Module 13389 (NUFChannelsActionSheet)
+import NUFActionSheetTemplateDefault from "NUFActionSheetTemplate" /* 13390 */;
+import NUFChannelIllustrationDefault from "NUFChannelIllustration" /* 13391 */;
 import closure_3 from "noop" /* 19 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -39,5 +39,5 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
   obj[3] = intl3.string(markAsDismissed(1236).t.BddRzS);
   obj[4] = callback;
   obj[2] = jsx(NUFActionSheetTemplateDefault, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
-  return jsx(markAsDismissed(5587).BottomSheet, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
+  return jsx(markAsDismissed(5590).BottomSheet, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
 };

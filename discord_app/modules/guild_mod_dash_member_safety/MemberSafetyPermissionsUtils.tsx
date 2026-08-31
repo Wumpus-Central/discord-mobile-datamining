@@ -1,13 +1,13 @@
-// === Module 6077: getContextForPermission ===
+// === Module 6080: getContextForPermission ===
 
-// Module 6077 (getContextForPermission)
+// Module 6080 (getContextForPermission)
 import fromStringAll from "fromString" /* 506 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_7 from "mergeGuildAvatar" /* 1923 */;
-import { MemberSafetyPagePermissions as closure_8 } from "MemberSafetyPagePermissions" /* 4094 */;
+import { isGuildOwner } from "GuildNSFWContentLevel" /* 1430 */;
+import closure_5 from "createGuildRecordFromRust" /* 1909 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { MemberSafetyPagePermissions as closure_8 } from "MemberSafetyPagePermissions" /* 4095 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

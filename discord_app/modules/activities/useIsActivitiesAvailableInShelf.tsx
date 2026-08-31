@@ -1,6 +1,6 @@
-// === Module 9488: useIsActivitiesAvailableInShelf ===
+// === Module 9510: useIsActivitiesAvailableInShelf ===
 
-// Module 9488 (useIsActivitiesAvailableInShelf)
+// Module 9510 (useIsActivitiesAvailableInShelf)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
@@ -8,9 +8,9 @@ const result = require("set").fileFinishedImporting("modules/activities/useIsAct
 
 export default function useIsActivitiesAvailableInShelf(arg0, arg1) {
   const _require = arg0;
-  const isActivitiesEnabledForCurrentPlatform = _require(9384).useIsActivitiesEnabledForCurrentPlatform();
+  const isActivitiesEnabledForCurrentPlatform = _require(9406).useIsActivitiesEnabledForCurrentPlatform();
   let tmp3 = null != arg0;
-  let obj = _require(9384);
+  let obj = _require(9406);
   if (tmp3) {
     tmp3 = "" !== arg0;
   }

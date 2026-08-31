@@ -1,6 +1,6 @@
-// === Module 11917: isStaff ===
+// === Module 11951: isStaff ===
 
-// Module 11917 (isStaff)
+// Module 11951 (isStaff)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

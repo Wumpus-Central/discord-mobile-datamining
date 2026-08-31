@@ -1,14 +1,14 @@
-// === Module 16045: PostCallDisconnectNudge ===
+// === Module 16079: PostCallDisconnectNudge ===
 
-// Module 16045 (PostCallDisconnectNudge)
+// Module 16079 (PostCallDisconnectNudge)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 16044 */;
+import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 16078 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleConnectionOpen" /* 1982 */;
-import closure_6 from "updateVoiceState" /* 4465 */;
-import { PermissionPromptType } from "set" /* 11911 */;
-import EventActionType from "EventActionType" /* 11912 */;
+import closure_5 from "handleConnectionOpen" /* 1981 */;
+import closure_6 from "updateVoiceState" /* 4467 */;
+import { PermissionPromptType } from "set" /* 11945 */;
+import EventActionType from "EventActionType" /* 11946 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -32,10 +32,10 @@ export default function PostCallDisconnectNudge(arg0) {
 };
 export const POST_CALL_DISCONNECT_NUDGE_KEY = "post-call-disconnect-nudge-key";
 export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() {
-  let obj = stateFromStores1(15013);
+  let obj = stateFromStores1(15046);
   let tmp2 = stateFromStores;
-  const canSeePushNotificationNudge = stateFromStores(11913).useCanSeePushNotificationNudge();
-  let obj2 = stateFromStores(11913);
+  const canSeePushNotificationNudge = stateFromStores(11947).useCanSeePushNotificationNudge();
+  let obj2 = stateFromStores(11947);
   const items = [closure_6];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null));
   const obj3 = stateFromStores(589);
@@ -66,11 +66,11 @@ export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() 
     if (!obj.useConfig({ location: "usePostCallDisconnectNudge" }).inHoldout) {
       prop = null;
       if (canSeePushNotificationNudge) {
-        prop = tmp2(1377).DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT;
+        prop = tmp2(1373).DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT;
       }
     }
   }
-  const tmp6Result = tmp6(stateFromStores(6216).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
+  const tmp6Result = tmp6(stateFromStores(6219).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
   first = tmp6Result[0];
   closure_5 = tmp12;
   const items3 = [first, tmp6Result[1]];

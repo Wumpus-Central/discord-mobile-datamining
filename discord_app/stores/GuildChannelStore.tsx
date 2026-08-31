@@ -1,22 +1,22 @@
-// === Module 1983: comparator ===
+// === Module 1982: comparator ===
 
-// Module 1983 (comparator)
+// Module 1982 (comparator)
 import applyDefault from "apply" /* 12 */;
 import fromStringAll from "fromString" /* 506 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4095 */;
-import closure_4 from "isSubscriptionGated" /* 1984 */;
-import closure_5 from "initializeFromUserSettings" /* 1394 */;
-import { createFavoritesGuildChannelRecord as closure_6 } from "createFavoritesGuildChannelRecord" /* 4089 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
+import applyOverwritesAll from "applyOverwrites" /* 4096 */;
+import closure_4 from "isSubscriptionGated" /* 1983 */;
+import closure_5 from "initializeFromUserSettings" /* 1390 */;
+import { createFavoritesGuildChannelRecord as closure_6 } from "createFavoritesGuildChannelRecord" /* 4090 */;
+import createChannelRecord from "createChannelRecord" /* 1391 */;
 import closure_10 from "fetchFingerprint" /* 1218 */;
-import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "trackCommunicationDisabled" /* 1993 */;
-import closure_13 from "createGuildRecordFromRust" /* 1910 */;
-import closure_14 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_15 from "markAllUserIdListsStale" /* 4099 */;
-import closure_16 from "mergeGuildAvatar" /* 1923 */;
+import closure_11 from "ensureGuildLoaded" /* 1387 */;
+import closure_12 from "trackCommunicationDisabled" /* 1992 */;
+import closure_13 from "createGuildRecordFromRust" /* 1909 */;
+import closure_14 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_15 from "markAllUserIdListsStale" /* 4100 */;
+import closure_16 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -45,7 +45,7 @@ function rebuildGuildChannels(guildId) {
   importDefault = undefined;
   const id = obj.id;
   importDefault = id;
-  obj1 = obj2(1913);
+  obj1 = obj2(1912);
   obj = {};
   if (obj1.isFavoritesGuildId(id)) {
     favoriteChannels = favoriteChannels.getFavoriteChannels();

@@ -1,9 +1,9 @@
-// === Module 5937: useProviderConnection ===
+// === Module 5940: useProviderConnection ===
 
-// Module 5937 (useProviderConnection)
+// Module 5940 (useProviderConnection)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "set" /* 5190 */;
+import closure_5 from "set" /* 5193 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/application_account_linking/hooks/useProviderConnection.tsx");
@@ -43,7 +43,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

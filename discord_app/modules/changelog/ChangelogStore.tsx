@@ -1,13 +1,13 @@
-// === Module 4460: handleUserSettingsProtoStoreChange ===
+// === Module 4462: handleUserSettingsProtoStoreChange ===
 
-// Module 4460 (handleUserSettingsProtoStoreChange)
+// Module 4462 (handleUserSettingsProtoStoreChange)
 import initializeDefault from "initialize" /* 589 */;
 import Storage3 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
-import closure_2 from "_getSystemLocale" /* 1997 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
+import closure_2 from "_getSystemLocale" /* 1996 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import CHANGELOG_MODAL_KEY from "CHANGELOG_MODAL_KEY" /* 1981 */;
+import CHANGELOG_MODAL_KEY from "CHANGELOG_MODAL_KEY" /* 1980 */;
 import set from "set" /* 2 */;
 
 require = arg1;

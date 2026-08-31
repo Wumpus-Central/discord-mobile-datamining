@@ -1,11 +1,11 @@
-// === Module 8393: updateGiftCode ===
+// === Module 8415: updateGiftCode ===
 
-// Module 8393 (updateGiftCode)
+// Module 8415 (updateGiftCode)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import hooksDefault from "hooks" /* 4044 */;
-import _resolveGiftCode from "_resolveGiftCode" /* 4718 */;
-import closure_3 from "frozen" /* 8394 */;
+import hooksDefault from "hooks" /* 4045 */;
+import _resolveGiftCode from "_resolveGiftCode" /* 4720 */;
+import closure_3 from "frozen" /* 8416 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -19,7 +19,7 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4330).Timeout();
+      const timeout = new code(4332).Timeout();
       closure_7[code] = timeout;
       value = obj.get(code);
       if (null != value) {

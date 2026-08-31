@@ -1,8 +1,8 @@
-// === Module 1500: useNavigation ===
+// === Module 1499: useNavigation ===
 
-// Module 1500 (useNavigation)
+// Module 1499 (useNavigation)
 import set from "set" /* 2 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1500 */;
 
 function useNavigation() {
   return createStandardNavigationFactories.useNavigation();

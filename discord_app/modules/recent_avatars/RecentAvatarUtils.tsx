@@ -1,12 +1,12 @@
-// === Module 8025: getArchivedAvatarURL ===
+// === Module 8047: getArchivedAvatarURL ===
 
-// Module 8025 (getArchivedAvatarURL)
+// Module 8047 (getArchivedAvatarURL)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import handleImageLoad from "handleImageLoad" /* 1469 */;
-import parseDefault from "parse" /* 1484 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 7708 */;
+import getAvatarURL from "getAvatarURL" /* 1431 */;
+import handleImageLoad from "handleImageLoad" /* 1465 */;
+import parseDefault from "parse" /* 1483 */;
+import AssetOriginTypes from "AssetOriginTypes" /* 7729 */;
 
 function getArchivedAvatarURL(allowWebp) {
   ({ userId, avatarId, storageHash, canAnimate } = allowWebp);
@@ -38,7 +38,7 @@ function getArchivedAvatarURL(allowWebp) {
       let str6 = "gif";
       if (flag) {
         str6 = "gif";
-        if (tmp2(1435).SUPPORTS_WEBP) {
+        if (tmp2(1431).SUPPORTS_WEBP) {
           str6 = "webp";
         }
       }
@@ -51,8 +51,8 @@ function getArchivedAvatarURL(allowWebp) {
     obj[0] = obj3.getBestMediaProxySize(allowWebp.size * handleImageLoad.getDevicePixelRatio());
     let isAnimatedIconHashResult = "webp" === str2 && canAnimate;
     if (isAnimatedIconHashResult) {
-      isAnimatedIconHashResult = tmp6(1435).isAnimatedIconHash(storageHash);
-      const tmp6Result = tmp6(1435);
+      isAnimatedIconHashResult = tmp6(1431).isAnimatedIconHash(storageHash);
+      const tmp6Result = tmp6(1431);
     }
     if (isAnimatedIconHashResult) {
       obj.animated = true;
@@ -129,7 +129,7 @@ export const generateAvatarDescription = function generateAvatarDescription(maxS
     const _Date = Date;
     const date = new Date();
     const intl2 = tmp3(1236).intl;
-    if (assetOrigin === tmp3(7708).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
+    if (assetOrigin === tmp3(7729).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
       let DYil93 = tmp3(1236).t.eC2sZi;
     } else {
       DYil93 = tmp3(1236).t.DYil93;
@@ -145,12 +145,12 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
   if (flag === undefined) {
     flag = true;
   }
-  let tmpResult = tmp(1435);
+  let tmpResult = tmp(1431);
   if (tmpResult.isAnimatedIconHash(storageHash)) {
     let str5 = "gif";
     if (flag) {
       str5 = "gif";
-      if (tmp(1435).SUPPORTS_WEBP) {
+      if (tmp(1431).SUPPORTS_WEBP) {
         str5 = "webp";
       }
     }
@@ -162,7 +162,7 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
       let str3 = "png";
       if (flag) {
         str3 = "png";
-        if (tmp(1435).SUPPORTS_WEBP) {
+        if (tmp(1431).SUPPORTS_WEBP) {
           str3 = "webp";
         }
       }
@@ -185,7 +185,7 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
   } else {
     str9 = "image/webp";
     if ("webp" !== str) {
-      tmpResult = tmp(1370);
+      tmpResult = tmp(1471);
       tmpResult.assertNever(str);
     }
   }

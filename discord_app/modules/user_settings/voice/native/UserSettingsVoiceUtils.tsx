@@ -1,9 +1,9 @@
-// === Module 10014: handleAutomaticGainControlChange ===
+// === Module 10037: handleAutomaticGainControlChange ===
 
-// Module 10014 (handleAutomaticGainControlChange)
+// Module 10037 (handleAutomaticGainControlChange)
 import initialize from "initialize" /* 589 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9720 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9742 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4499 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

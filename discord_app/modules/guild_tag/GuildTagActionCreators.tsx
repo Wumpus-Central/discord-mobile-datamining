@@ -1,8 +1,8 @@
-// === Module 13586: _adoptGuildIdentity ===
+// === Module 13620: _adoptGuildIdentity ===
 
-// Module 13586 (_adoptGuildIdentity)
+// Module 13620 (_adoptGuildIdentity)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -26,7 +26,7 @@ function _adoptGuildIdentity() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

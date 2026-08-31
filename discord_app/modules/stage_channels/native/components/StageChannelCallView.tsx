@@ -1,16 +1,16 @@
-// === Module 10062: StageChannelCallBackground ===
+// === Module 10085: StageChannelCallBackground ===
 
-// Module 10062 (StageChannelCallBackground)
+// Module 10085 (StageChannelCallBackground)
 import noopAll from "noop" /* 19 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _modDef4186 from "module_4186" /* 4186 */;
-import componentDidMountDefault from "componentDidMount" /* 9469 */;
-import FocusedControlsHeader from "FocusedControlsHeader" /* 9585 */;
-import useStageActionBarAnimation from "useStageActionBarAnimation" /* 10063 */;
-import StageChannelBackgroundDefault from "StageChannelBackground" /* 10064 */;
-import StageChannelCallListDefault from "StageChannelCallList" /* 10065 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import _modDef4187 from "module_4187" /* 4187 */;
+import componentDidMountDefault from "componentDidMount" /* 9491 */;
+import FocusedControlsHeader from "FocusedControlsHeader" /* 9607 */;
+import useStageActionBarAnimation from "useStageActionBarAnimation" /* 10086 */;
+import StageChannelBackgroundDefault from "StageChannelBackground" /* 10087 */;
+import StageChannelCallListDefault from "StageChannelCallList" /* 10088 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function StageChannelCallBackground(arg0) {
@@ -20,7 +20,7 @@ function StageChannelCallBackground(arg0) {
   obj = { children: null };
   const tmp = callback3();
   const items = [tmp.container, stageActionBarAnimation];
-  obj[0] = callback(_modDef4186.View, { style: items, children });
+  obj[0] = callback(_modDef4187.View, { style: items, children });
   return callback(StageChannelBackgroundDefault, obj);
 }
 noopAll;

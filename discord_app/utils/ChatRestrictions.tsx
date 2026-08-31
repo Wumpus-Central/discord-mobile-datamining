@@ -1,10 +1,10 @@
-// === Module 10271: items ===
+// === Module 10295: items ===
 
-// Module 10271 (items)
+// Module 10295 (items)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import parsedItemUsesEveryoneRoleDefault from "parsedItemUsesEveryoneRole" /* 10272 */;
+import parsedItemUsesEveryoneRoleDefault from "parsedItemUsesEveryoneRole" /* 10296 */;
 
 const TOKEN_REGEX = ME.TOKEN_REGEX;
 const items = [
@@ -18,9 +18,9 @@ const items = [
           if (null == extractEveryoneRoleResult) {
             return false;
           } else {
-            let tmp8Result = tmp8(10272);
+            let tmp8Result = tmp8(10296);
             if (tmp8Result.shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId)) {
-              tmp8Result = tmp8(10272);
+              tmp8Result = tmp8(10296);
               const everyoneMemberCountResult = tmp8Result.everyoneMemberCount(extractEveryoneRoleResult, getGuildId);
               const _Math = Math;
               const _Math2 = Math;
@@ -51,7 +51,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "accessibilityRole"
+    animation: "accessibilityLabel"
   },
   {
     check(arg0) {

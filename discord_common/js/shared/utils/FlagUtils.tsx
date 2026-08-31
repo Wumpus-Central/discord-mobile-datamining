@@ -1,6 +1,6 @@
-// === Module 1403: hasFlag ===
+// === Module 1399: hasFlag ===
 
-// Module 1403 (hasFlag)
+// Module 1399 (hasFlag)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");

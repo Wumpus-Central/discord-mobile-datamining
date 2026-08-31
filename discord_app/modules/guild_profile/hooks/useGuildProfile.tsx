@@ -1,9 +1,9 @@
-// === Module 8951: useGuildProfile ===
+// === Module 8974: useGuildProfile ===
 
-// Module 8951 (useGuildProfile)
+// Module 8974 (useGuildProfile)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUpdateStart" /* 8949 */;
+import closure_4 from "handleUpdateStart" /* 8972 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfile.tsx");
@@ -33,7 +33,7 @@ export const useGuildProfile = function useGuildProfile(guildId) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -56,7 +56,7 @@ export const useGuildProfile = function useGuildProfile(guildId) {
               }
               c3 = 1;
               c4 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

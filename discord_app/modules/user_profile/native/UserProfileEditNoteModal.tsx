@@ -1,10 +1,10 @@
-// === Module 12421: UserProfileEditNoteModal ===
+// === Module 12455: UserProfileEditNoteModal ===
 
-// Module 12421 (UserProfileEditNoteModal)
+// Module 12455 (UserProfileEditNoteModal)
 import noopAll from "noop" /* 19 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NavigationStack from "NavigationStack" /* 5973 */;
+import NavigationStack from "NavigationStack" /* 5976 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -36,9 +36,9 @@ export default function UserProfileEditNoteModal(arg0) {
     const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
     const intl = callback(1236).intl;
     obj[2] = intl.string(callback(1236).t.sHHsOM);
-    return handleClose(callback(4442).Text, obj);
+    return handleClose(callback(4444).Text, obj);
   };
-  tmp2Result = tmp2(5460);
+  tmp2Result = tmp2(5463);
   obj2[2] = tmp2Result.getHeaderCloseButton(handleClose);
   obj2[3] = function render() {
     return handleClose(closure_1_0(closure_1_2[8]).default, { userId: closure_0, onSave: closure_1, onClose: handleClose });

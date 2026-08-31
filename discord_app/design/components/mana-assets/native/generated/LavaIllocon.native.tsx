@@ -1,10 +1,10 @@
-// === Module 6728: LavaIllocon ===
+// === Module 6741: LavaIllocon ===
 
-// Module 6728 (LavaIllocon)
+// Module 6741 (LavaIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6729 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6742 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/LavaIllocon.native.tsx");

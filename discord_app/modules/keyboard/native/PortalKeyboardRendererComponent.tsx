@@ -1,8 +1,8 @@
-// === Module 16269: ? ===
+// === Module 16303: ? ===
 
-// Module 16269
+// Module 16303
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

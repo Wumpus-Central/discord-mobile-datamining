@@ -1,6 +1,6 @@
-// === Module 12833: isMostRecentDeadEndInvite ===
+// === Module 12868: isMostRecentDeadEndInvite ===
 
-// Module 12833 (isMostRecentDeadEndInvite)
+// Module 12868 (isMostRecentDeadEndInvite)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

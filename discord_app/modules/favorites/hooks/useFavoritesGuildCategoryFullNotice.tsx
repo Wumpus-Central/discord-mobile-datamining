@@ -1,11 +1,11 @@
-// === Module 15626: useFavoritesGuildCategoryFullNotice ===
+// === Module 15660: useFavoritesGuildCategoryFullNotice ===
 
-// Module 15626 (useFavoritesGuildCategoryFullNotice)
+// Module 15660 (useFavoritesGuildCategoryFullNotice)
 import initialize from "initialize" /* 589 */;
-import messagesProxyDefault from "messagesProxy" /* 3148 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10244 */;
-import closure_3 from "initializeFromUserSettings" /* 1394 */;
-import { FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME as closure_4 } from "date" /* 1429 */;
+import messagesProxyDefault from "messagesProxy" /* 3149 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10268 */;
+import closure_3 from "initializeFromUserSettings" /* 1390 */;
+import { FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME as closure_4 } from "date" /* 1425 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
 require = arg1;
@@ -39,7 +39,7 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
             str = str.trim();
           }
         }
-        tmpResult = tmp(1913);
+        tmpResult = tmp(1912);
       }
     }
   }

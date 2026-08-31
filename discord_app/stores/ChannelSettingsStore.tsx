@@ -1,21 +1,21 @@
-// === Module 8694: normalizeChannelPropertyForCompare ===
+// === Module 8716: normalizeChannelPropertyForCompare ===
 
-// Module 8694 (normalizeChannelPropertyForCompare)
+// Module 8716 (normalizeChannelPropertyForCompare)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import AbortCodes from "AbortCodes" /* 1235 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import set2 from "set" /* 1400 */;
-import set3 from "set" /* 1401 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import hooksDefault from "hooks" /* 4044 */;
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4101 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4103 */;
-import closure_10 from "createFromServer" /* 8597 */;
-import closure_11 from "createdAt" /* 1931 */;
-import closure_12 from "ensureGuildLoaded" /* 1391 */;
+import createChannelRecord from "createChannelRecord" /* 1391 */;
+import set2 from "set" /* 1396 */;
+import set3 from "set" /* 1397 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1426 */;
+import hooksDefault from "hooks" /* 4045 */;
+import MAX_REACTIONS from "MAX_REACTIONS" /* 4102 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4104 */;
+import closure_10 from "createFromServer" /* 8619 */;
+import closure_11 from "createdAt" /* 1930 */;
+import closure_12 from "ensureGuildLoaded" /* 1387 */;
 import ME from "ME" /* 676 */;
 import importDefaultResult from "apply" /* 12 */;
 

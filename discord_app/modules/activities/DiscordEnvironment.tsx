@@ -1,10 +1,10 @@
-// === Module 9545: frozen ===
+// === Module 9567: frozen ===
 
-// Module 9545 (frozen)
-import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+// Module 9567 (frozen)
+import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
 import closure_3 from "handleThemeChange" /* 1302 */;
-import RESPONSIVE_DENSITY_MEDIA_QUERY from "RESPONSIVE_DENSITY_MEDIA_QUERY" /* 9546 */;
+import RESPONSIVE_DENSITY_MEDIA_QUERY from "RESPONSIVE_DENSITY_MEDIA_QUERY" /* 9568 */;
 
 require = arg1;
 ({ RESPONSIVE_DENSITY_FALLBACK: c4, RESPONSIVE_DENSITY_MEDIA_QUERY: c5, resolveUIDensity: closure_6 } = RESPONSIVE_DENSITY_MEDIA_QUERY);
@@ -135,9 +135,9 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
       }
       let tmp3 = str5;
     }
-    const UIDensitySetting = documentElement(4135).UIDensitySetting;
+    const UIDensitySetting = documentElement(4136).UIDensitySetting;
     obj[2] = callback(UIDensitySetting.getSetting(), tmp3);
-    const MessageDisplayCompact = documentElement(4135).MessageDisplayCompact;
+    const MessageDisplayCompact = documentElement(4136).MessageDisplayCompact;
     obj[3] = MessageDisplayCompact.getSetting();
     const fontScale = closure_2.fontScale;
     const _Number = Number;

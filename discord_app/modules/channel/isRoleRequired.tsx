@@ -1,11 +1,11 @@
-// === Module 4977: isRoleRequired ===
+// === Module 4980: isRoleRequired ===
 
-// Module 4977 (isRoleRequired)
+// Module 4980 (isRoleRequired)
 import set from "set" /* 2 */;
 import sum from "sum" /* 505 */;
 import fromStringAll from "fromString" /* 506 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import applyOverwritesAll from "applyOverwrites" /* 4095 */;
+import createChannelRecord from "createChannelRecord" /* 1391 */;
+import applyOverwritesAll from "applyOverwrites" /* 4096 */;
 
 let closure_2 = createChannelRecord.GUILD_NON_CATEGORY_CHANNEL_TYPES;
 const Permissions = sum.Permissions;

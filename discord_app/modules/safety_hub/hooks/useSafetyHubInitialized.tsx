@@ -1,8 +1,8 @@
-// === Module 11421: useSafetyHubInitialized ===
+// === Module 11450: useSafetyHubInitialized ===
 
-// Module 11421 (useSafetyHubInitialized)
+// Module 11450 (useSafetyHubInitialized)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11387 */;
+import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11416 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubInitialized.tsx");

@@ -1,9 +1,9 @@
-// === Module 4112: createFromServer ===
+// === Module 4113: createFromServer ===
 
-// Module 4112 (createFromServer)
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import toJSDefault from "toJS" /* 1932 */;
+// Module 4113 (createFromServer)
+import hasFlag from "hasFlag" /* 1399 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+import toJSDefault from "toJS" /* 1931 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

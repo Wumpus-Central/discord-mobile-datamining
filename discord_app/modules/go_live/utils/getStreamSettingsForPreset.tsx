@@ -1,13 +1,13 @@
-// === Module 9982: getApplicationStreamPresetValues ===
+// === Module 10005: getApplicationStreamPresetValues ===
 
-// Module 9982 (getApplicationStreamPresetValues)
+// Module 10005 (getApplicationStreamPresetValues)
 import set from "set" /* 2 */;
-import _modDef9983 from "module_9983" /* 9983 */;
-import canStreamWithSettingsDefault from "canStreamWithSettings" /* 9984 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4505 */;
+import _modDef10006 from "module_10006" /* 10006 */;
+import canStreamWithSettingsDefault from "canStreamWithSettings" /* 10007 */;
+import RESOLUTION_720 from "RESOLUTION_720" /* 4507 */;
 
 function getApplicationStreamPresetValues() {
-  let obj = _modDef9983;
+  let obj = _modDef10006;
   obj = { [closure_3.PRESET_DOCUMENTS]: items };
   obj = { resolution: closure_4.RESOLUTION_SOURCE, fps: closure_2.FPS_15 };
   items = [obj, { resolution: closure_4.RESOLUTION_SOURCE, fps: closure_2.FPS_5 }];

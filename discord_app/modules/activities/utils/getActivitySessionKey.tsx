@@ -1,6 +1,6 @@
-// === Module 11011: getActivitySessionKey ===
+// === Module 11036: getActivitySessionKey ===
 
-// Module 11011 (getActivitySessionKey)
+// Module 11036 (getActivitySessionKey)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/utils/getActivitySessionKey.tsx");

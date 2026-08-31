@@ -1,8 +1,8 @@
-// === Module 10945: trackViewedEvent ===
+// === Module 10970: trackViewedEvent ===
 
-// Module 10945 (trackViewedEvent)
+// Module 10970 (trackViewedEvent)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_2 from "mergeGuildAvatar" /* 1923 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");

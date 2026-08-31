@@ -1,6 +1,6 @@
-// === Module 9682: canViewInviteModal ===
+// === Module 9704: canViewInviteModal ===
 
-// Module 9682 (canViewInviteModal)
+// Module 9704 (canViewInviteModal)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

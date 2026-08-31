@@ -1,42 +1,42 @@
-// === Module 11076: items ===
+// === Module 11105: items ===
 
-// Module 11076 (items)
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5938 */;
+// Module 11105 (items)
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5941 */;
 import closure_6 from "_objectWithoutProperties" /* 109 */;
 import closure_7 from "asyncGeneratorStep" /* 5 */;
 import closure_8 from "_slicedToArray" /* 32 */;
-import closure_9 from "initialize" /* 8656 */;
-import closure_10 from "addApplication" /* 4487 */;
-import closure_11 from "set" /* 5920 */;
-import closure_12 from "computeAlertSettings" /* 10101 */;
-import closure_13 from "scheduledEventSort" /* 7218 */;
-import { isGuildScheduledEventActive as closure_14 } from "scheduledEventSort" /* 7218 */;
-import closure_15 from "getCurrentTime" /* 7933 */;
-import closure_16 from "initializeState" /* 7395 */;
-import closure_17 from "processMessage" /* 7287 */;
-import closure_18 from "handleQuickSwitcherUpdate" /* 10920 */;
-import closure_19 from "storeThread" /* 4092 */;
-import closure_20 from "recomputeAffinities" /* 7351 */;
+import closure_9 from "initialize" /* 8678 */;
+import closure_10 from "addApplication" /* 4489 */;
+import closure_11 from "set" /* 5923 */;
+import closure_12 from "computeAlertSettings" /* 10124 */;
+import closure_13 from "scheduledEventSort" /* 7239 */;
+import { isGuildScheduledEventActive as closure_14 } from "scheduledEventSort" /* 7239 */;
+import closure_15 from "getCurrentTime" /* 7955 */;
+import closure_16 from "initializeState" /* 7416 */;
+import closure_17 from "processMessage" /* 7308 */;
+import closure_18 from "handleQuickSwitcherUpdate" /* 10944 */;
+import closure_19 from "storeThread" /* 4093 */;
+import closure_20 from "recomputeAffinities" /* 7372 */;
 import closure_21 from "fetchFingerprint" /* 1218 */;
-import closure_22 from "ensureGuildLoaded" /* 1391 */;
-import closure_23 from "updateGiftCode" /* 8393 */;
-import closure_24 from "trackCommunicationDisabled" /* 1993 */;
-import closure_25 from "createGuildRecordFromRust" /* 1910 */;
-import closure_26 from "updateInvite" /* 4430 */;
-import closure_27 from "updateActivities" /* 9372 */;
-import closure_28 from "reinjectEphemerals" /* 4701 */;
-import closure_29 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_30 from "sortActivity" /* 4535 */;
-import closure_31 from "handleConnectionOpen" /* 1982 */;
-import closure_32 from "handleConnectionOpen" /* 4268 */;
-import closure_33 from "filterPlayingActivities" /* 5188 */;
-import closure_34 from "initialize" /* 7529 */;
-import closure_35 from "mergeGuildAvatar" /* 1923 */;
-import { SeparatorAction } from "Changeset" /* 7789 */;
+import closure_22 from "ensureGuildLoaded" /* 1387 */;
+import closure_23 from "updateGiftCode" /* 8415 */;
+import closure_24 from "trackCommunicationDisabled" /* 1992 */;
+import closure_25 from "createGuildRecordFromRust" /* 1909 */;
+import closure_26 from "updateInvite" /* 4432 */;
+import closure_27 from "updateActivities" /* 9394 */;
+import closure_28 from "reinjectEphemerals" /* 4703 */;
+import closure_29 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_30 from "sortActivity" /* 4537 */;
+import closure_31 from "handleConnectionOpen" /* 1981 */;
+import closure_32 from "handleConnectionOpen" /* 4269 */;
+import closure_33 from "filterPlayingActivities" /* 5191 */;
+import closure_34 from "initialize" /* 7550 */;
+import closure_35 from "mergeGuildAvatar" /* 1922 */;
+import { SeparatorAction } from "Changeset" /* 7810 */;
 import ME from "ME" /* 676 */;
-import { InviteTypes } from "InviteSendStates" /* 7428 */;
-import GuildFeatures from "GuildFeatures" /* 1925 */;
-import { SafetySystemNotificationCtaType as closure_61 } from "SafetyHubView" /* 8636 */;
+import { InviteTypes } from "InviteSendStates" /* 7449 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import { SafetySystemNotificationCtaType as closure_61 } from "SafetyHubView" /* 8658 */;
 import { OpenThreadAnalyticsLocations as closure_62 } from "AbortCodes" /* 1235 */;
 
 const require = arg1;
@@ -2153,7 +2153,7 @@ class MessagesHandlers {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -2267,7 +2267,7 @@ class MessagesHandlers {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -2286,25 +2286,25 @@ class MessagesHandlers {
                 closure_1 = tmp2;
                 isReveal = undefined;
                 closure_1 = undefined;
-                const nativeSyntheticEventData = callback(11080).getNativeSyntheticEventData(isReveal);
+                const nativeSyntheticEventData = callback(11109).getNativeSyntheticEventData(isReveal);
                 ({ messageId, channelId, isReveal } = nativeSyntheticEventData);
                 ({ attachmentId, embedId } = nativeSyntheticEventData);
-                const obj10 = callback(11080);
+                const obj10 = callback(11109);
                 if (isReveal) {
                   if (obj11.shouldAgeVerifyForExplicitMedia()) {
                     dependencyMap = 1;
                     c4 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = callback(4699).maybePerformReactiveCheck();
+                    obj1[0] = callback(4701).maybePerformReactiveCheck();
                     return obj1;
                   }
                 }
-                let obj3 = callback(7292);
+                let obj3 = callback(7313);
                 const obj2 = { obscure: null };
                 obj2[0] = isReveal;
                 const result = obj3.trackToggleMediaObscurityV2(obj2);
                 c4 = 3;
-                obj11 = callback(7292);
+                obj11 = callback(7313);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -2317,9 +2317,9 @@ class MessagesHandlers {
                 reactiveCheckPassed = closure_1_9.getReactiveCheckPassed();
               }
               if (!reactiveCheckPassed) {
-                obj = closure_1_1(8628);
+                obj = closure_1_1(8650);
                 obj3 = { entryPoint: null };
-                obj3[0] = callback(8630).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
+                obj3[0] = callback(8652).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
                 const result1 = obj.showAgeVerificationGetStartedModal(obj3);
               }
             }
@@ -2434,22 +2434,22 @@ class MessagesHandlers {
         const result3 = tmp(tmp2[176]).trackAgeVerificationDmClicked(tmp(tmp2[176]).AgeVerificationDmCta.CONNECT_TO_TEEN, channelId);
         const tmpResult3 = tmp(tmp2[176]);
       } else if (tmp(tmp2[181]).CtaButtonType.AGE_VERIFICATION_MANUAL_REVIEW === callback) {
-        const result4 = callback(tmp2[175]).showManualReviewPendingModal();
-        const obj10 = callback(tmp2[175]);
+        const result4 = tmp(tmp2[184]).handleManualReviewCta();
+        const tmpResult4 = tmp(tmp2[184]);
         const result5 = tmp(tmp2[176]).trackAgeVerificationDmClicked(tmp(tmp2[176]).AgeVerificationDmCta.MANUAL_REVIEW, channelId);
-        const tmpResult4 = tmp(tmp2[176]);
+        const tmpResult5 = tmp(tmp2[176]);
       }
     };
     obj.handleMessageAccessibilityAction = function handleMessageAccessibilityAction(nativeEvent) {
       let obj = uiStore(closure_1_3[39]);
       const messageId = obj.getNativeSyntheticEventData(nativeEvent).messageId;
-      obj1 = uiStore(closure_1_3[184]);
+      obj1 = uiStore(closure_1_3[185]);
       const messageAccessibilityActionFromLabel = obj1.getMessageAccessibilityActionFromLabel(nativeEvent.nativeEvent.action);
       const params = uiStore.params;
       const message = params.getMessage(messageId);
       if (null != message) {
         const channel = closure_1_22.getChannel(message.channel_id);
-        if (tmp(tmp2[184]).MessageAccessibilityAction.VIEW_PROFILE === messageAccessibilityActionFromLabel) {
+        if (tmp(tmp2[185]).MessageAccessibilityAction.VIEW_PROFILE === messageAccessibilityActionFromLabel) {
           if (message.type === closure_1_52.FRIEND_REQUEST_ACCEPTED) {
             if (null != channel) {
               if (channel.isDM()) {
@@ -2473,7 +2473,7 @@ class MessagesHandlers {
           if (author2 != null) {
             id = author2.id;
           }
-        } else if (tmp(tmp2[184]).MessageAccessibilityAction.REPLY === messageAccessibilityActionFromLabel) {
+        } else if (tmp(tmp2[185]).MessageAccessibilityAction.REPLY === messageAccessibilityActionFromLabel) {
           if (null != channel) {
             obj = { message: null, channel: null, chatInputRef: null, actionSource: "a11y_action" };
             obj[0] = message;
@@ -2481,12 +2481,12 @@ class MessagesHandlers {
             obj[2] = params.chatInputRef;
             closure_1_1(tmp2[79])(obj);
           }
-        } else if (tmp(tmp2[184]).MessageAccessibilityAction.ADD_REACTION === messageAccessibilityActionFromLabel) {
+        } else if (tmp(tmp2[185]).MessageAccessibilityAction.ADD_REACTION === messageAccessibilityActionFromLabel) {
           if (null != channel) {
             let tmpResult = tmp(tmp2[60]);
             const result = tmpResult.handleAddNewReactions(channel, message.id);
           }
-        } else if (tmp(tmp2[184]).MessageAccessibilityAction.MESSAGE_ACTIONS_MENU === messageAccessibilityActionFromLabel) {
+        } else if (tmp(tmp2[185]).MessageAccessibilityAction.MESSAGE_ACTIONS_MENU === messageAccessibilityActionFromLabel) {
           if (null != channel) {
             tmpResult = tmp(tmp2[75]);
             obj1 = { channel: null, message: null, canAddNewReactions: null, user: null, chatInputRef: null };
@@ -2504,21 +2504,21 @@ class MessagesHandlers {
             obj1[4] = uiStore.params.chatInputRef;
             const result1 = tmpResult.showLongPressMessageActionSheet(obj1);
           }
-        } else if (tmp(tmp2[184]).MessageAccessibilityAction.ADD_QUICK_REACTION === messageAccessibilityActionFromLabel) {
+        } else if (tmp(tmp2[185]).MessageAccessibilityAction.ADD_QUICK_REACTION === messageAccessibilityActionFromLabel) {
           if (null != channel) {
             const result2 = tmp(tmp2[86]).handleAddDefaultDoubleTapReaction(message, channel);
             const tmpResult1 = tmp(tmp2[86]);
           }
-        } else if (tmp(tmp2[184]).MessageAccessibilityAction.EDIT_GDM === messageAccessibilityActionFromLabel) {
+        } else if (tmp(tmp2[185]).MessageAccessibilityAction.EDIT_GDM === messageAccessibilityActionFromLabel) {
           if (null != channel) {
             const obj2 = { channelId: null };
             obj2[0] = channel.id;
-            closure_1_1(tmp2[185])(obj2);
+            closure_1_1(tmp2[186])(obj2);
           }
-        } else if (tmp(tmp2[184]).MessageAccessibilityAction.OPEN_PINS === messageAccessibilityActionFromLabel) {
-          closure_1_1(tmp2[186])(message.channel_id, "pinned-message-system-message");
-        } else if (tmp(tmp2[184]).MessageAccessibilityAction.JUMP_TO_MESSAGE === messageAccessibilityActionFromLabel) {
-          closure_1_1(tmp2[187])(message);
+        } else if (tmp(tmp2[185]).MessageAccessibilityAction.OPEN_PINS === messageAccessibilityActionFromLabel) {
+          closure_1_1(tmp2[187])(message.channel_id, "pinned-message-system-message");
+        } else if (tmp(tmp2[185]).MessageAccessibilityAction.JUMP_TO_MESSAGE === messageAccessibilityActionFromLabel) {
+          closure_1_1(tmp2[188])(message);
         }
       }
     };
@@ -2526,7 +2526,7 @@ class MessagesHandlers {
       const params = uiStore.params;
       const message = params.getMessage(uiStore(closure_1_3[39]).getNativeSyntheticEventData(closure_0).messageId);
       if (null != message) {
-        closure_1_1(closure_1_3[188])(message);
+        closure_1_1(closure_1_3[189])(message);
       }
     };
     obj.handleTapInlineForward = function handleTapInlineForward(nativeEvent) {
@@ -2535,7 +2535,7 @@ class MessagesHandlers {
       const params = uiStore.params;
       const message = params.getMessage(nativeSyntheticEventData.messageId);
       if (null != message) {
-        let tmpResult = tmp(tmp2[189]);
+        let tmpResult = tmp(tmp2[190]);
         const inlineForwardOptions = tmpResult.getInlineForwardOptions(message, nativeSyntheticEventData);
         if (null != inlineForwardOptions) {
           const _Object = Object;
@@ -2555,14 +2555,14 @@ class MessagesHandlers {
             tmp7 = inlineForwardOptions;
           }
           obj[2] = tmp7;
-          tmp(tmp2[190]).openForwardModal(obj);
-          const tmpResult1 = tmp(tmp2[190]);
+          tmp(tmp2[191]).openForwardModal(obj);
+          const tmpResult1 = tmp(tmp2[191]);
         }
       }
     };
     obj.handleTapSoundmoji = function handleTapSoundmoji(closure_0) {
       const nativeSyntheticEventData = uiStore(closure_3[39]).getNativeSyntheticEventData(closure_0);
-      callback(closure_3[191])(nativeSyntheticEventData);
+      callback(closure_3[192])(nativeSyntheticEventData);
     };
     obj.handleTapClanTagChiplet = function handleTapClanTagChiplet(closure_0) {
       let obj = uiStore(closure_3[39]);
@@ -2584,8 +2584,8 @@ class MessagesHandlers {
         obj = { message: null, authorId: null, contentId: null, tappedElement: null };
         obj[0] = message;
         ({ authorId: obj3[1], contentId: obj3[2], tappedElement: obj3[3] } = tmp4);
-        const result = uiStore(closure_1_3[192]).onTapContentInventoryEntryEmbed(obj);
-        const tmpResult = uiStore(closure_1_3[192]);
+        const result = uiStore(closure_1_3[193]).onTapContentInventoryEntryEmbed(obj);
+        const tmpResult = uiStore(closure_1_3[193]);
       }
     };
     obj.handleTapCheckpointCard = function handleTapCheckpointCard(closure_0) {
@@ -2596,8 +2596,8 @@ class MessagesHandlers {
         obj = { message: null, authorId: null };
         obj[0] = message;
         obj[1] = tmp4.authorId;
-        uiStore(closure_1_3[193]).onTapCheckpointCard(obj);
-        const tmpResult = uiStore(closure_1_3[193]);
+        uiStore(closure_1_3[194]).onTapCheckpointCard(obj);
+        const tmpResult = uiStore(closure_1_3[194]);
       }
     };
     obj.handleTapAppMessageEmbed = function handleTapAppMessageEmbed(closure_0) {
@@ -2608,8 +2608,8 @@ class MessagesHandlers {
         obj = {};
         const merged = Object.assign(nativeSyntheticEventData);
         obj.message = message;
-        const result = uiStore(closure_1_3[194]).handleTapAppMessageEmbed(obj);
-        const tmpResult = uiStore(closure_1_3[194]);
+        const result = uiStore(closure_1_3[195]).handleTapAppMessageEmbed(obj);
+        const tmpResult = uiStore(closure_1_3[195]);
       }
     };
     obj.handleTapPreviewSharedClientTheme = function handleTapPreviewSharedClientTheme(closure_0) {
@@ -2620,8 +2620,8 @@ class MessagesHandlers {
         obj = {};
         const merged = Object.assign(nativeSyntheticEventData);
         obj.message = message;
-        const result = uiStore(closure_1_3[195]).handleTapPreviewSharedClientTheme(obj);
-        const tmpResult = uiStore(closure_1_3[195]);
+        const result = uiStore(closure_1_3[196]).handleTapPreviewSharedClientTheme(obj);
+        const tmpResult = uiStore(closure_1_3[196]);
       }
     };
     obj.handleSharedClientThemeViewed = function handleSharedClientThemeViewed(closure_0) {
@@ -2632,8 +2632,8 @@ class MessagesHandlers {
         obj = {};
         const merged = Object.assign(nativeSyntheticEventData);
         obj.message = message;
-        const result = uiStore(closure_1_3[196]).handleSharedClientThemeViewed(obj);
-        const tmpResult = uiStore(closure_1_3[196]);
+        const result = uiStore(closure_1_3[197]).handleSharedClientThemeViewed(obj);
+        const tmpResult = uiStore(closure_1_3[197]);
       }
     };
     obj.getParams = global;

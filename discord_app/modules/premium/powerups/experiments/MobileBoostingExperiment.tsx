@@ -1,8 +1,8 @@
-// === Module 7100: apexExperiment ===
+// === Module 7121: apexExperiment ===
 
-// Module 7100 (apexExperiment)
+// Module 7121 (apexExperiment)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import ApexExperiment from "ApexExperiment" /* 1468 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-mobile-boosting-optimizations", kind: "user", defaultConfig: { enabled: false, removeYearlyUpsell: false, recommendedBoostCount: null }, variations: { 0: { enabled: false, removeYearlyUpsell: false, recommendedBoostCount: null }, 1: { enabled: true, removeYearlyUpsell: false, recommendedBoostCount: 2 }, 2: { enabled: true, removeYearlyUpsell: true, recommendedBoostCount: 2 }, 3: { enabled: true, removeYearlyUpsell: false, recommendedBoostCount: 3 }, 4: { enabled: true, removeYearlyUpsell: true, recommendedBoostCount: 3 } } });
 const result = set.fileFinishedImporting("modules/premium/powerups/experiments/MobileBoostingExperiment.tsx");

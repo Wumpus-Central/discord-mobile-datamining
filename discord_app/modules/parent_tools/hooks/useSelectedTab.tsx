@@ -1,9 +1,9 @@
-// === Module 14410: useSelectedMyFamilyTab ===
+// === Module 14444: useSelectedMyFamilyTab ===
 
-// Module 14410 (useSelectedMyFamilyTab)
+// Module 14444 (useSelectedMyFamilyTab)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import closure_3 from "freshTeenActivityWithMap" /* 7229 */;
-import items from "items" /* 7230 */;
+import closure_3 from "freshTeenActivityWithMap" /* 7250 */;
+import items from "items" /* 7251 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;
@@ -14,7 +14,7 @@ export default function useSelectedMyFamilyTab() {
   let obj = {
     selectedTab: defaultAreStatesEqual.useStateFromStores(items, () => selectedTab.getSelectedTab()),
     handleTabChange(tab) {
-      let obj = callback(7231);
+      let obj = callback(7252);
       tab = obj.selectTab(tab);
       obj = { action: TabChange.TabChange, tab };
       callback(698).track(constants.FAMILY_CENTER_ACTION, obj);

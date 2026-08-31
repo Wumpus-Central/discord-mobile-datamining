@@ -1,10 +1,10 @@
-// === Module 11861: YoutubeNeutralIcon ===
+// === Module 11892: YoutubeNeutralIcon ===
 
-// Module 11861 (YoutubeNeutralIcon)
+// Module 11892 (YoutubeNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 11862 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 11893 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

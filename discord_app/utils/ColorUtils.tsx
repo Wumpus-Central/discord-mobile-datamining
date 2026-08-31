@@ -1,10 +1,10 @@
-// === Module 4294: hexToRgba ===
+// === Module 4296: hexToRgba ===
 
-// Module 4294 (hexToRgba)
+// Module 4296 (hexToRgba)
 import timestampDefault from "timestamp" /* 3 */;
 import nDefault from "n" /* 689 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hslToRgbDefault from "hslToRgb" /* 4295 */;
+import hslToRgbDefault from "hslToRgb" /* 4297 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 
 require = arg1;

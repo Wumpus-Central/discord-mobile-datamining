@@ -1,16 +1,16 @@
-// === Module 9930: checkVoiceStates ===
+// === Module 9953: checkVoiceStates ===
 
-// Module 9930 (checkVoiceStates)
-import sortKey from "sortKey" /* 5333 */;
-import initializeDefault from "initialize" /* 5451 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import importDefaultResult from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "handleConnectionOpen" /* 1982 */;
-import closure_5 from "updateVoiceState" /* 4465 */;
-import closure_6 from "getActiveStageChannelIds" /* 5327 */;
-import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_8 from "initialize" /* 9928 */;
-import createSoundForPack from "createSoundForPack" /* 9931 */;
+// Module 9953 (checkVoiceStates)
+import sortKey from "sortKey" /* 5336 */;
+import initializeDefault from "initialize" /* 5454 */;
+import closure_2 from "ensureGuildLoaded" /* 1387 */;
+import importDefaultResult from "_detectH265HardwareDecode" /* 4499 */;
+import closure_4 from "handleConnectionOpen" /* 1981 */;
+import closure_5 from "updateVoiceState" /* 4467 */;
+import closure_6 from "getActiveStageChannelIds" /* 5330 */;
+import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1392 */;
+import closure_8 from "initialize" /* 9951 */;
+import createSoundForPack from "createSoundForPack" /* 9954 */;
 
 require = arg1;
 function checkVoiceStates() {
@@ -139,8 +139,8 @@ export const useShowStageMusicMuteButton = function useShowStageMusicMuteButton(
   const items = [closure_4];
   let stateFromStores = _require(589).useStateFromStores(items, () => closure_1_4.getVoiceChannelId() === closure_0);
   const obj = _require(589);
-  const stageParticipants = _require(5339).useStageParticipants(channelId, _require(5333).StageChannelParticipantNamedIndex.SPEAKER);
-  const obj2 = _require(5339);
+  const stageParticipants = _require(5342).useStageParticipants(channelId, _require(5336).StageChannelParticipantNamedIndex.SPEAKER);
+  const obj2 = _require(5342);
   const tmp2 = null != stageParticipants.find((voiceState) => {
     voiceState = voiceState.voiceState;
     return !voiceState.isVoiceMuted();

@@ -1,10 +1,10 @@
-// === Module 6936: ServerIconShieldzordExample ===
+// === Module 6953: ServerIconShieldzordExample ===
 
-// Module 6936 (ServerIconShieldzordExample)
+// Module 6953 (ServerIconShieldzordExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6937 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6954 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconShieldzordExample.native.tsx");

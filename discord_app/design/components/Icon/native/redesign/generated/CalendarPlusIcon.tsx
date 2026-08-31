@@ -1,10 +1,10 @@
-// === Module 11712: CalendarPlusIcon ===
+// === Module 11743: CalendarPlusIcon ===
 
-// Module 11712 (CalendarPlusIcon)
+// Module 11743 (CalendarPlusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 11713 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 11744 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,9 +1,9 @@
-// === Module 7665: useIsWindowLarge ===
+// === Module 7686: useIsWindowLarge ===
 
-// Module 7665 (useIsWindowLarge)
+// Module 7686 (useIsWindowLarge)
 import set from "set" /* 2 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4304 */;
-import useWindowSizeClassifierDefault from "useWindowSizeClassifier" /* 4304 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4306 */;
+import useWindowSizeClassifierDefault from "useWindowSizeClassifier" /* 4306 */;
 
 const result = set.fileFinishedImporting("modules/screen/native/useIsWindowLarge.tsx");
 

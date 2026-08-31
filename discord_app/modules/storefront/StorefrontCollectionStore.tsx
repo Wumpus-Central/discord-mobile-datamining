@@ -1,11 +1,15 @@
-// === Module 12510: getFetchState ===
+// === Module 12544: getFetchState ===
 
-// Module 12510 (getFetchState)
+// Module 12544 (getFetchState)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
 let closure_0 = {};
 let closure_1 = {};
+let closure_2 = {};
+let closure_3 = {};
+let closure_4 = {};
+let closure_5 = {};
 const Store = initializeDefault.Store;
 class StorefrontCollectionStore extends Store {
 }
@@ -131,6 +135,78 @@ prototype["getCollectionsForApplication"] = function getCollectionsForApplicatio
   }
   return collections;
 };
+prototype["getCollectionPageFetchState"] = function getCollectionPageFetchState(arg0) {
+  let state;
+  if (dependencyMap3[arg0] != null) {
+    state = tmp.state;
+  }
+  return state;
+};
+prototype["getCollectionPageFetchedAt"] = function getCollectionPageFetchedAt(arg0) {
+  let fetchedAt;
+  if (dependencyMap3[arg0] != null) {
+    fetchedAt = tmp.fetchedAt;
+  }
+  return fetchedAt;
+};
+prototype["getCollectionPageIds"] = function getCollectionPageIds(arg0) {
+  let collectionIds = null;
+  if (null != dependencyMap3[arg0]) {
+    collectionIds = null;
+    if ("error" !== tmp.state) {
+      collectionIds = null;
+      if (null != tmp.collectionIds) {
+        collectionIds = tmp.collectionIds;
+      }
+    }
+  }
+  return collectionIds;
+};
+prototype["getCollectionListTotal"] = function getCollectionListTotal(arg0) {
+  return table[arg0];
+};
+prototype["getCollectionsAfterFetchState"] = function getCollectionsAfterFetchState(arg0) {
+  let state;
+  if (dependencyMap4[arg0] != null) {
+    state = tmp.state;
+  }
+  return state;
+};
+prototype["getCollectionsAfterFetchedAt"] = function getCollectionsAfterFetchedAt(arg0) {
+  let fetchedAt;
+  if (dependencyMap4[arg0] != null) {
+    fetchedAt = tmp.fetchedAt;
+  }
+  return fetchedAt;
+};
+prototype["getCollectionsAfterIds"] = function getCollectionsAfterIds(arg0) {
+  let collectionIds = null;
+  if (null != dependencyMap4[arg0]) {
+    collectionIds = null;
+    if ("error" !== tmp.state) {
+      collectionIds = null;
+      if (null != tmp.collectionIds) {
+        collectionIds = tmp.collectionIds;
+      }
+    }
+  }
+  return collectionIds;
+};
+prototype["getCollectionOrSummary"] = function getCollectionOrSummary(item10006) {
+  let tmp = null;
+  if (null != item10006) {
+    const self = this;
+    let collection = this.getCollection(item10006);
+    if (collection == null) {
+      collection = table2[item10006];
+    }
+    if (collection == null) {
+      collection = null;
+    }
+    tmp = collection;
+  }
+  return tmp;
+};
 StorefrontCollectionStore.displayName = "StorefrontCollectionStore";
 const storefrontCollectionStore = new StorefrontCollectionStore(dispatcherDefault, {
   STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH: function handleCollectionsWithProductsFetch(collectionIds) {
@@ -189,9 +265,55 @@ const storefrontCollectionStore = new StorefrontCollectionStore(dispatcherDefaul
     ({ applicationId, apiError } = arg0);
     closure_1[applicationId] = { state: "error", fetchedAt: Date.now(), fetchError: apiError };
   },
+  STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH: function handleCollectionsForApplicationPageFetch(pageKey) {
+    pageKey = pageKey.pageKey;
+    let collectionIds;
+    if (dependencyMap3[pageKey] != null) {
+      collectionIds = tmp2.collectionIds;
+    }
+    dependencyMap3[pageKey] = { state: "loading", collectionIds };
+  },
+  STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_SUCCESS: function handleCollectionsForApplicationPageFetchSuccess(collections) {
+    collections = collections.collections;
+    let timestamp;
+    ({ pageKey, listKey, total } = collections);
+    timestamp = Date.now();
+    closure_2[pageKey] = { state: "success", collectionIds: collections.map((id) => id.id), fetchedAt: timestamp };
+    closure_3[listKey] = total;
+    const item = collections.forEach((collection) => {
+      timestamp[collection.id] = { state: "success", collection, fetchedAt: timestamp };
+    });
+  },
+  STOREFRONT_COLLECTIONS_FOR_APPLICATION_PAGE_FETCH_FAILURE: function handleCollectionsForApplicationPageFetchFailure(arg0) {
+    ({ pageKey, apiError } = arg0);
+    closure_2[pageKey] = { state: "error", fetchedAt: Date.now(), fetchError: apiError };
+  },
+  STOREFRONT_COLLECTIONS_AFTER_FETCH: function handleCollectionsAfterFetch(requestKey) {
+    requestKey = requestKey.requestKey;
+    let collectionIds;
+    if (dependencyMap4[requestKey] != null) {
+      collectionIds = tmp2.collectionIds;
+    }
+    dependencyMap4[requestKey] = { state: "loading", collectionIds };
+  },
+  STOREFRONT_COLLECTIONS_AFTER_FETCH_SUCCESS: function handleCollectionsAfterFetchSuccess(collections) {
+    collections = collections.collections;
+    closure_4[collections.requestKey] = { state: "success", collectionIds: collections.map((id) => id.id), fetchedAt: Date.now() };
+    const item = collections.forEach((id) => {
+      closure_5[id.id] = id;
+    });
+  },
+  STOREFRONT_COLLECTIONS_AFTER_FETCH_FAILURE: function handleCollectionsAfterFetchFailure(arg0) {
+    ({ requestKey, apiError } = arg0);
+    closure_4[requestKey] = { state: "error", fetchedAt: Date.now(), fetchError: apiError };
+  },
   LOGOUT: function handleLogout() {
     closure_0 = {};
     closure_1 = {};
+    closure_2 = {};
+    closure_3 = {};
+    closure_4 = {};
+    closure_5 = {};
   }
 });
 const result = require("set").fileFinishedImporting("modules/storefront/StorefrontCollectionStore.tsx");

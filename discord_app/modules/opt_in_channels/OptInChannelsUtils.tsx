@@ -1,23 +1,23 @@
-// === Module 11092: setIndex ===
+// === Module 11121: setIndex ===
 
-// Module 11092 (setIndex)
+// Module 11121 (setIndex)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import transitionTo from "transitionTo" /* 1222 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hooksDefault from "hooks" /* 4044 */;
-import ack from "ack" /* 5443 */;
-import computeSubtitle from "computeSubtitle" /* 7220 */;
-import _bulkClearRecents from "_bulkClearRecents" /* 11093 */;
+import hooksDefault from "hooks" /* 4045 */;
+import ack from "ack" /* 5446 */;
+import computeSubtitle from "computeSubtitle" /* 7241 */;
+import _bulkClearRecents from "_bulkClearRecents" /* 11122 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "setIndex" /* 5444 */;
-import closure_6 from "generateOldThreadCutoff" /* 4461 */;
-import closure_7 from "markAllUserIdListsStale" /* 4099 */;
-import closure_8 from "mergeGuildAvatar" /* 1923 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "setIndex" /* 5447 */;
+import closure_6 from "generateOldThreadCutoff" /* 4463 */;
+import closure_7 from "markAllUserIdListsStale" /* 4100 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 1398 */;
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7226 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 4668 */;
+import set from "set" /* 1394 */;
+import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7247 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 4670 */;
 
 require = arg1;
 function setIndex(arg0, index) {
@@ -140,8 +140,8 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
   const _require = guildId;
   closure_1 = filterCategoriesByQuery;
   dependencyMap = arg2;
-  let obj = _require(4267);
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require(1377).DismissibleContent.CHANNEL_BROWSER_NUX);
+  let obj = _require(4268);
+  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require(1373).DismissibleContent.CHANNEL_BROWSER_NUX);
   const items = [closure_4];
   const items1 = [guildId];
   closure_3 = _require(589).useStateFromStoresObject(items, () => {

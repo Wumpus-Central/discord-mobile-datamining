@@ -1,8 +1,8 @@
-// === Module 4117: createFromServer ===
+// === Module 4118: createFromServer ===
 
-// Module 4117 (createFromServer)
-import toJSDefault from "toJS" /* 1932 */;
-import coalesceInvoiceItems from "coalesceInvoiceItems" /* 4118 */;
+// Module 4118 (createFromServer)
+import toJSDefault from "toJS" /* 1931 */;
+import coalesceInvoiceItems from "coalesceInvoiceItems" /* 4119 */;
 
 require = arg1;
 toJSDefault;

@@ -1,12 +1,12 @@
-// === Module 13033: TieredTenureBadgePerkCard ===
+// === Module 13067: TieredTenureBadgePerkCard ===
 
-// Module 13033 (TieredTenureBadgePerkCard)
+// Module 13067 (TieredTenureBadgePerkCard)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1923 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -14,17 +14,17 @@ let closure_9 = createCacheKey.createStyles({ badgeNameContainer: { flexDirectio
 const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx");
 
 export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
-  let obj = tieredTenureBadgeData(8906);
+  let obj = tieredTenureBadgeData(8929);
   tieredTenureBadgeData = obj.useTieredTenureBadgeData();
-  obj1 = tieredTenureBadgeData(8906);
+  obj1 = tieredTenureBadgeData(8929);
   const premiumSince = obj1.usePremiumSince();
-  let obj2 = tieredTenureBadgeData(13034);
+  let obj2 = tieredTenureBadgeData(13068);
   const timeUntilNextBadge = obj2.useTimeUntilNextBadge();
   const tmp6 = callback3();
   let obj3 = tieredTenureBadgeData(589);
   const items = [closure_5];
   const stateFromStores = obj3.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj4 = tieredTenureBadgeData(8880);
+  let obj4 = tieredTenureBadgeData(8903);
   let id;
   if (tieredTenureBadgeData != null) {
     id = tieredTenureBadgeData.id;
@@ -44,10 +44,10 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
   } else {
     const intl9 = tmp(1236).intl;
     let stringResult = intl9.string(tmp(1236).t["jyYgZ+"]);
-    if (tieredTenureBadgeData.status === tmp(8906).TieredTenureBadgeStatus.UPCOMING) {
+    if (tieredTenureBadgeData.status === tmp(8929).TieredTenureBadgeStatus.UPCOMING) {
       const intl2 = tmp(1236).intl;
       stringResult = intl2.string(tmp(1236).t.O9TBwQ);
-    } else if (tieredTenureBadgeData.status === tmp(8906).TieredTenureBadgeStatus.WITHHELD) {
+    } else if (tieredTenureBadgeData.status === tmp(8929).TieredTenureBadgeStatus.WITHHELD) {
       const intl = tmp(1236).intl;
       stringResult = intl.string(tmp(1236).t.lHYDUu);
     }
@@ -55,11 +55,11 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     let tmp14 = large;
     if (null != premiumSince) {
       const status = tieredTenureBadgeData.status;
-      if (tmp(8906).TieredTenureBadgeStatus.EARNED !== status) {
-        if (tmp(8906).TieredTenureBadgeStatus.WITHHELD !== status) {
+      if (tmp(8929).TieredTenureBadgeStatus.EARNED !== status) {
+        if (tmp(8929).TieredTenureBadgeStatus.WITHHELD !== status) {
           formatResult = null;
           tmp14 = large;
-          if (tmp(8906).TieredTenureBadgeStatus.UPCOMING === status) {
+          if (tmp(8929).TieredTenureBadgeStatus.UPCOMING === status) {
             formatResult = null;
             tmp14 = large;
             if (null != timeUntilNextBadge) {
@@ -73,7 +73,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
               const date = new Date(premiumSince);
               obj[1] = date;
               formatResult = intl3.format(tmp(1236).t.vwLvec, obj);
-              tmp14 = stateFromStores(13036);
+              tmp14 = stateFromStores(13070);
             }
           }
         }
@@ -91,24 +91,24 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     obj3 = { variant: "heading-md/medium", color: "text-default", children: null };
     const intl6 = tmp(1236).intl;
     obj3[2] = intl6.string(tieredTenureBadgeData.nameUnformatted);
-    const items2 = [callback(tmp(4442).Text, obj3), ];
+    const items2 = [callback(tmp(4444).Text, obj3), ];
     obj4 = { variant: "heading-md/medium", color: "text-muted", style: null, children: null };
     obj4[2] = tmp6.tenureRequirements;
-    obj4[3] = tmp(8905).getTenureBadgeRequirementString(tieredTenureBadgeData.id, tieredTenureBadgeData.tenureReqNumMonths);
-    items2[1] = callback(tmp(4442).Text, obj4);
+    obj4[3] = tmp(8928).getTenureBadgeRequirementString(tieredTenureBadgeData.id, tieredTenureBadgeData.tenureReqNumMonths);
+    items2[1] = callback(tmp(4444).Text, obj4);
     obj2[1] = items2;
     const items3 = [callback2(View, obj2), ];
     let tmp30Result = null != formatResult;
     if (tmp30Result) {
       const obj5 = { variant: "heading-sm/normal", color: "text-muted", children: null };
       obj5[2] = formatResult;
-      tmp30Result = tmp30(tmp(4442).Text, obj5);
+      tmp30Result = tmp30(tmp(4444).Text, obj5);
     }
     const obj6 = { children: null };
     items3[1] = tmp30Result;
     obj6[0] = items3;
     const tmp28 = callback2;
-    const tmpResult = tmp(8905);
+    const tmpResult = tmp(8928);
     const obj7 = { title: null, titleStyle: null, bodyComponent: null, cta: null, buttonOnPress: null, headerComponent: null, pillText: null };
     const tmp28Result = callback2(View, obj6);
     const intl7 = tmp(1236).intl;
@@ -121,10 +121,10 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     const obj8 = { style: null, children: null };
     obj8[0] = tmp6.imageContainer;
     const items4 = [tmp6.image, ];
-    const tmp34 = stateFromStores(13010);
-    let upcomingBadge = tieredTenureBadgeData.status === tmp(8906).TieredTenureBadgeStatus.UPCOMING;
+    const tmp34 = stateFromStores(13044);
+    let upcomingBadge = tieredTenureBadgeData.status === tmp(8929).TieredTenureBadgeStatus.UPCOMING;
     if (!upcomingBadge) {
-      upcomingBadge = tieredTenureBadgeData.status === tmp(8906).TieredTenureBadgeStatus.WITHHELD;
+      upcomingBadge = tieredTenureBadgeData.status === tmp(8929).TieredTenureBadgeStatus.WITHHELD;
     }
     if (upcomingBadge) {
       upcomingBadge = tmp6.upcomingBadge;
@@ -135,7 +135,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     const obj10 = { uri: null };
     obj10[0] = tmp14;
     obj9[2] = obj10;
-    obj8[1] = callback(stateFromStores(5458), obj9);
+    obj8[1] = callback(stateFromStores(5461), obj9);
     obj7[5] = callback(View, obj8);
     obj7[6] = stringResult;
     return callback(tmp34, obj7);

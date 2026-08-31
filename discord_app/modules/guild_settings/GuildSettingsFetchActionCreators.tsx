@@ -1,10 +1,10 @@
-// === Module 9674: _fetchGuildIntegrationsApplications ===
+// === Module 9696: _fetchGuildIntegrationsApplications ===
 
-// Module 9674 (_fetchGuildIntegrationsApplications)
+// Module 9696 (_fetchGuildIntegrationsApplications)
 import sendRequest from "sendRequest" /* 530 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { BasicApplicationRecord } from "createExecutable" /* 4472 */;
-import closure_5 from "createdAt" /* 1931 */;
+import { BasicApplicationRecord } from "createExecutable" /* 4474 */;
+import closure_5 from "createdAt" /* 1930 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;

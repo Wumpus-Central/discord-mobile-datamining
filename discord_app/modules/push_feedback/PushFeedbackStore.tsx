@@ -1,10 +1,10 @@
-// === Module 10999: initialize ===
+// === Module 11024: initialize ===
 
-// Module 10999 (initialize)
+// Module 11024 (initialize)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import str2 from "str2" /* 6020 */;
+import str2 from "str2" /* 6023 */;
 
 const NotificationTypes = str2.NotificationTypes;
 let c1 = null;

@@ -1,10 +1,10 @@
-// === Module 11455: _joinOrStartActivityInChannel ===
+// === Module 11485: _joinOrStartActivityInChannel ===
 
-// Module 11455 (_joinOrStartActivityInChannel)
+// Module 11485 (_joinOrStartActivityInChannel)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 1982 */;
+import closure_4 from "participantFromServer" /* 1386 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "handleConnectionOpen" /* 1981 */;
 
 const require = arg1;
 function _joinOrStartActivityInChannel() {
@@ -25,7 +25,7 @@ function _joinOrStartActivityInChannel() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -56,7 +56,7 @@ function _joinOrStartActivityInChannel() {
               let compositeInstanceId;
               store = 1;
               channel = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -86,7 +86,7 @@ function _joinOrStartActivityInChannel() {
                     callback2 = null;
                   }
                   closure_8 = callback2;
-                  callback2(9458)(closure_8, channel.location);
+                  callback2(9480)(closure_8, channel.location);
                   channel = 3;
                   return { value: true, done: true };
                 }
@@ -97,12 +97,12 @@ function _joinOrStartActivityInChannel() {
               if (length.length > 0) {
                 compositeInstanceId = length[0].compositeInstanceId;
               }
-              let obj2 = callback(9408);
+              let obj2 = callback(9430);
               obj2 = { channelId: null, applicationId: null, isStart: null, embeddedActivitiesManager: null, analyticsLocations: null, customId: null, referrerId: null };
               obj2[0] = callback2;
               obj2[1] = callback;
               obj2[2] = null == compositeInstanceId;
-              obj2[3] = callback2(9391)();
+              obj2[3] = callback2(9413)();
               obj2[4] = dependencyMap;
               obj2[5] = c3;
               obj2[6] = store;

@@ -1,9 +1,9 @@
-// === Module 16710: useSoundboardConfig ===
+// === Module 16743: useSoundboardConfig ===
 
-// Module 16710 (useSoundboardConfig)
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16548 */;
+// Module 16743 (useSoundboardConfig)
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16582 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
 
 const require = arg1;
 let obj = { VOICE_CONTROLS: "call control drawer", VOICE_PANEL_CONTROLS: "voice panel controls" };
@@ -13,7 +13,7 @@ export default function useSoundboardConfig(arg0, arg1) {
   const _require = arg0;
   importDefault = arg1;
   const tmp = useIsConnectedToVoiceChannelDefault(arg0);
-  obj = _require(4267);
+  obj = _require(4268);
   let tmp3 = tmp;
   if (tmp) {
     if (obj.VOICE_CONTROLS === arg1) {
@@ -36,7 +36,7 @@ export default function useSoundboardConfig(arg0, arg1) {
       }
     }, items),
     disabled: React.useMemo(() => !callback2(closure_1_2[6])(closure_1_4.getChannel(closure_0)), items1),
-    showIndicator: !obj.useIsDismissibleContentDismissed_UNSAFE(_require(1377).DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE)
+    showIndicator: !obj.useIsDismissibleContentDismissed_UNSAFE(_require(1373).DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE)
   };
   items = [arg0, arg1];
   items1 = [arg0];

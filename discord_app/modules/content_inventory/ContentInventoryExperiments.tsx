@@ -1,10 +1,10 @@
-// === Module 13277: apexExperiment ===
+// === Module 13311: apexExperiment ===
 
-// Module 13277 (apexExperiment)
+// Module 13311 (apexExperiment)
 import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4360 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
-import createExperiment from "createExperiment" /* 4357 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4362 */;
+import ApexExperiment from "ApexExperiment" /* 1468 */;
+import createExperiment from "createExperiment" /* 4359 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-content-inventory-memberlist-and-ranker", defaultConfig: { enabled: true, impressionCappingEnabled: true }, variations: { 0: { enabled: false, impressionCappingEnabled: false } } });
 const items = [{ id: 16, label: "ML model V3 - Nvidia small boost", config: {} }, { id: 17, label: "ML model V3 - Nvidia big boost", config: {} }];

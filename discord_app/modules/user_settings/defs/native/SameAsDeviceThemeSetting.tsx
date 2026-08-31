@@ -1,12 +1,11 @@
-// === Module 14831: toggle ===
+// === Module 14865: toggle ===
 
-// Module 14831 (toggle)
+// Module 14865 (toggle)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import handleSaveTheme from "handleSaveTheme" /* 14711 */;
-import closure_3 from "handleThemeChange" /* 1302 */;
-import createToggle from "createToggle" /* 11006 */;
+import handleSaveTheme from "handleSaveTheme" /* 14745 */;
+import closure_2 from "handleThemeChange" /* 1302 */;
+import createToggle from "createToggle" /* 11031 */;
 
 require = arg1;
 createToggle = {
@@ -15,11 +14,8 @@ createToggle = {
     return intl.string(getSystemLocale.t.c445ix);
   },
   parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
-  usePredicate() {
-    return useIsMobileVisualRefreshExperimentEnabledDefault("SameAsDeviceThemeSetting");
-  },
   useValue: function useSameAsDeviceThemeValue() {
-    const items = [closure_3];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   onValueChange: function onSameAsDeviceThemeValueChange(arg0) {

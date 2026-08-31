@@ -1,22 +1,22 @@
-// === Module 12192: InviteErrorBase ===
+// === Module 12226: InviteErrorBase ===
 
-// Module 12192 (InviteErrorBase)
+// Module 12226 (InviteErrorBase)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import combinedDefault from "combined" /* 1996 */;
-import useThemeDefault from "useTheme" /* 4381 */;
-import Text from "Text" /* 4442 */;
-import Button from "Button" /* 4893 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5969 */;
-import getDescriptiveInviteError from "getDescriptiveInviteError" /* 12195 */;
-import registerAssetDefault from "registerAsset" /* 12196 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+import combinedDefault from "combined" /* 1995 */;
+import useThemeDefault from "useTheme" /* 4383 */;
+import Text from "Text" /* 4444 */;
+import Button from "Button" /* 4896 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5972 */;
+import getDescriptiveInviteError from "getDescriptiveInviteError" /* 12229 */;
+import registerAssetDefault from "registerAsset" /* 12230 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function InviteErrorBase(invite) {
@@ -24,7 +24,7 @@ function InviteErrorBase(invite) {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 12193 : 12194);
+  const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 12227 : 12228);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
@@ -93,7 +93,7 @@ function InviteDisabledError(onPressClose) {
     const obj3 = { style: null, icon: null, size: null };
     obj3[0] = tmp.guildIcon;
     obj3[1] = guildIconURL;
-    obj3[2] = onPressClose(5969).GuildIconSizes.XLARGE;
+    obj3[2] = onPressClose(5972).GuildIconSizes.XLARGE;
     items[1] = callback(GuildIconSizesDefault, obj3);
     obj1[1] = items;
     const items1 = [callback2(closure_4, obj1), , , ];
@@ -101,7 +101,7 @@ function InviteDisabledError(onPressClose) {
     obj4[0] = tmp.disabledTitle;
     const intl = onPressClose(1236).intl;
     obj4[3] = intl.string(onPressClose(1236).t.jlLX2Z);
-    items1[1] = callback(onPressClose(4442).Text, obj4);
+    items1[1] = callback(onPressClose(4444).Text, obj4);
     const obj5 = { style: null, variant: "text-md/normal", color: "text-default", children: null };
     obj5[0] = tmp.disabledBody;
     const intl2 = onPressClose(1236).intl;
@@ -109,12 +109,12 @@ function InviteDisabledError(onPressClose) {
     const tmp10 = GuildIconSizesDefault;
     obj6[0] = combinedDefault.getArticleURL(constants2.INVITE_DISABLED);
     obj5[3] = intl2.format(onPressClose(1236).t.RXSeLl, obj6);
-    items1[2] = callback(onPressClose(4442).Text, obj5);
+    items1[2] = callback(onPressClose(4444).Text, obj5);
     const obj7 = { variant: "primary", size: "lg", text: null, onPress: null };
     const intl3 = onPressClose(1236).intl;
     obj7[2] = intl3.string(onPressClose(1236).t["yD/zkn"]);
     obj7[3] = handlePressClose;
-    items1[3] = callback(onPressClose(4893).Button, obj7);
+    items1[3] = callback(onPressClose(4896).Button, obj7);
     obj[0] = items1;
     return callback2(closure_9, obj);
   }

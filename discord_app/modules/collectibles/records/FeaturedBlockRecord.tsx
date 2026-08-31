@@ -1,9 +1,9 @@
-// === Module 7266: fromServer ===
+// === Module 7287: fromServer ===
 
-// Module 7266 (fromServer)
+// Module 7287 (fromServer)
 import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 7265 */;
-import fromServer from "fromServer" /* 7267 */;
+import ShopBlockType from "ShopBlockType" /* 7286 */;
+import fromServer from "fromServer" /* 7288 */;
 
 let closure_2 = fromServer.FeaturedCategorySubblockRecord;
 let prototype;

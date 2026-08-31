@@ -1,19 +1,19 @@
-// === Module 12536: AddFriendNicknameModal ===
+// === Module 12570: AddFriendNicknameModal ===
 
-// Module 12536 (AddFriendNicknameModal)
+// Module 12570 (AddFriendNicknameModal)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4442 */;
-import TextField from "TextField" /* 6187 */;
+import Text from "Text" /* 4444 */;
+import TextField from "TextField" /* 6190 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "markAllUserIdListsStale" /* 4099 */;
-import closure_8 from "mergeGuildAvatar" /* 1923 */;
+import closure_7 from "markAllUserIdListsStale" /* 4100 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -45,7 +45,7 @@ export default function AddFriendNicknameModal(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -153,7 +153,7 @@ export default function AddFriendNicknameModal(arg0) {
   obj = { children: null };
   const tmp3Result = initialize;
   obj1 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  const tmp11 = showUserProfile(6014);
+  const tmp11 = showUserProfile(6017);
   const intl3 = tmp3(1236).intl;
   obj1[0] = intl3.string(getSystemLocale.t["R3BPH+"]);
   obj1[1] = function handleSubmit() {
@@ -178,8 +178,8 @@ export default function AddFriendNicknameModal(arg0) {
   const intl6 = tmp3(1236).intl;
   obj4[2] = intl6.string(getSystemLocale.t.pqG6GS);
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
-  const tmp12 = showUserProfile(4912);
-  obj4[3] = showUserProfile(4290).getName(stateFromStores1);
+  const tmp12 = showUserProfile(4915);
+  obj4[3] = showUserProfile(4292).getName(stateFromStores1);
   obj4[4] = stateFromStores;
   items3[2] = callback2(TextField.TextField, obj4);
   obj1[4] = items3;

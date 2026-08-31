@@ -1,13 +1,13 @@
-// === Module 14697: NonInlineConsoleConnection ===
+// === Module 14731: NonInlineConsoleConnection ===
 
-// Module 14697 (NonInlineConsoleConnection)
+// Module 14731 (NonInlineConsoleConnection)
 import ThemesDefault from "Themes" /* 712 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5957 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5960 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function NonInlineConsoleConnection(arg0) {
@@ -28,7 +28,7 @@ function ConsoleRow(onPress) {
   const type = merged.type;
   if (constants.PLAYSTATION === type) {
     let obj = { arrow: true, icon: null, label: null, subLabel: null, onPress: null };
-    obj[1] = callback(onPress(12570).PlaystationNeutralIcon, {});
+    obj[1] = callback(onPress(12605).PlaystationNeutralIcon, {});
     const intl3 = onPress(1236).intl;
     obj[2] = intl3.string(onPress(1236).t.JafL6p);
     let stringResult;
@@ -40,10 +40,10 @@ function ConsoleRow(onPress) {
     obj[4] = function onPress() {
       return onPress(merged);
     };
-    return callback(onPress(5564).TableRow, obj);
+    return callback(onPress(5567).TableRow, obj);
   } else if (tmp2.XBOX === type) {
     obj = { arrow: true, icon: null, label: null, subLabel: null, onPress: null };
-    obj[1] = callback(onPress(8775).XboxNeutralIcon, {});
+    obj[1] = callback(onPress(8797).XboxNeutralIcon, {});
     const intl = onPress(1236).intl;
     obj[2] = intl.string(onPress(1236).t.Nfvo72);
     let stringResult1;
@@ -55,7 +55,7 @@ function ConsoleRow(onPress) {
     obj[4] = function onPress() {
       return onPress(merged);
     };
-    return callback(onPress(5564).TableRow, obj);
+    return callback(onPress(5567).TableRow, obj);
   } else {
     return null;
   }
@@ -82,11 +82,11 @@ export default function QuestBottomSheetConsoleConnect(quest) {
     obj = { questId: quest.id, initialStep: closure_1, sourceQuestContent: closure_2 };
     obj.openLazy(quest(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), "QuestBottomSheet", obj);
   }
-  let obj = quest(11021);
+  let obj = quest(11046);
   xboxAndPlaystationAccounts = obj.useConnectedAccounts().xboxAndPlaystationAccounts;
-  closure_4 = quest(11274).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(11274);
-  closure_5 = quest(11024).useQuestImpressionId();
+  closure_4 = quest(11303).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(11303);
+  closure_5 = quest(11049).useQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
   obj = {
     consoles: xboxAndPlaystationAccounts.useMemo(() => {

@@ -1,11 +1,11 @@
-// === Module 17394: useDerivedPendingRequests ===
+// === Module 17427: useDerivedPendingRequests ===
 
-// Module 17394 (useDerivedPendingRequests)
+// Module 17427 (useDerivedPendingRequests)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "freshTeenActivityWithMap" /* 7229 */;
-import closure_5 from "mergeGuildAvatar" /* 1923 */;
-import { UserLinkStatus } from "items" /* 7230 */;
+import closure_4 from "freshTeenActivityWithMap" /* 7250 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { UserLinkStatus } from "items" /* 7251 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/safety_flows/usePendingParentRequests.tsx");
@@ -112,7 +112,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
   c6 = undefined;
   c7 = undefined;
   callback = undefined;
-  let obj = pendingRequests(8713);
+  let obj = pendingRequests(8735);
   const hasMaxConnections = obj.useHasMaxConnections();
   [tmp4, c2] = callback(acceptLinkRequest.useState(null), 2);
   let tmp3 = callback(acceptLinkRequest.useState(null), 2);
@@ -125,7 +125,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
       callback();
     }
   };
-  const familyCenterActions = pendingRequests(11427).useFamilyCenterActions(obj);
+  const familyCenterActions = pendingRequests(11456).useFamilyCenterActions(obj);
   acceptLinkRequest = familyCenterActions.acceptLinkRequest;
   declineLinkRequest = familyCenterActions.declineLinkRequest;
   ({ isAcceptLoading, isDeclineLoading } = familyCenterActions);
@@ -168,7 +168,7 @@ export const usePendingRequestListController = function usePendingRequestListCon
   }, items1);
   tmp2Result = tmp2(obj2.useState(pendingRequests), 2);
   [tmp12, tmp13] = tmp2Result;
-  const obj3 = pendingRequests(11427);
+  const obj3 = pendingRequests(11456);
   [tmp15, tmp16] = callback(acceptLinkRequest.useState(pendingRequests), 2);
   const tmp2Result1 = callback(acceptLinkRequest.useState(pendingRequests), 2);
   if (linkedUsersProcessed) {

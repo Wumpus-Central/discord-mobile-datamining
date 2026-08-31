@@ -1,7 +1,7 @@
-// === Module 8613: useStageChannelIsLive ===
+// === Module 8635: useStageChannelIsLive ===
 
-// Module 8613 (useStageChannelIsLive)
-import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+// Module 8635 (useStageChannelIsLive)
+import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1392 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useStateChannelIsLive.tsx");

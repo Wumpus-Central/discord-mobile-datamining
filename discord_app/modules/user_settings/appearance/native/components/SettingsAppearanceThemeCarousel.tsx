@@ -1,13 +1,13 @@
-// === Module 14800: SettingsAppearanceThemeCarousel ===
+// === Module 14834: SettingsAppearanceThemeCarousel ===
 
-// Module 14800 (SettingsAppearanceThemeCarousel)
+// Module 14834 (SettingsAppearanceThemeCarousel)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import importDefaultResult from "THEME_ITEM_WIDTH" /* 14801 */;
+import importDefaultResult from "THEME_ITEM_WIDTH" /* 14835 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
-import importDefaultResult1 from "module_4186" /* 4186 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
+import importDefaultResult1 from "module_4187" /* 4187 */;
 
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
@@ -43,7 +43,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
   const currentThemeIndex = themes.currentThemeIndex;
   const isPreview = themes.isPreview;
   ({ defaultIndex, deviceWidth } = themes);
-  ({ animatedStyles, hasMidnightNux: closure_4, isRefreshEnabled, onThemeSelected } = themes);
+  ({ animatedStyles, hasMidnightNux: closure_4, onThemeSelected } = themes);
   let ref;
   let callback;
   closure_8 = undefined;
@@ -117,7 +117,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     });
   }, items3);
   let obj3 = themes(isPreview[4]);
-  class P {
+  class L {
     constructor() {
       tmp = themes;
       tmp2 = isPreview;
@@ -137,11 +137,11 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     }
   }
   obj = { withTiming: themes(isPreview[11]).withTiming, isMidnightNuxVisible: sharedValue, timingStandard: themes(isPreview[12]).timingStandard };
-  P.__closure = obj;
-  P.__workletHash = 3854555745742;
-  P.__initData = closure_12;
+  L.__closure = obj;
+  L.__workletHash = 3854555745742;
+  L.__initData = closure_12;
   obj = { style: tmp.titleContainer, children: null };
-  const animatedStyle = obj3.useAnimatedStyle(P);
+  const animatedStyle = obj3.useAnimatedStyle(L);
   let tmp13 = null;
   if (themes[currentThemeIndex].type !== themes(isPreview[13]).ClientThemeType.STANDARD_BACKGROUND_THEME) {
     obj1 = { source: null, style: null, size: null };
@@ -151,11 +151,10 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     tmp13 = callback(sharedValue1, obj1);
   }
   const items4 = [tmp13, ];
-  obj2 = { animated: true, style: isRefreshEnabled ? animatedStyles.headerPrimary : animatedStyles.headerSecondary, variant: "heading-sm/semibold", children: obj8.getName() };
+  obj2 = { animated: true, style: animatedStyles.headerPrimary, variant: "heading-sm/semibold", children: obj8.getName() };
   obj8 = themes[currentThemeIndex];
   items4[1] = callback(themes(isPreview[15]).Text, obj2);
   obj[1] = items4;
-  let tmp11Result = tmp11(tmp12, obj);
   if (!isScreenReaderEnabled) {
     if (!tmp2(tmp3[16]).isThumbstickScrollDevice) {
       obj3 = { children: null };
@@ -198,11 +197,11 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       };
       items5[1] = tmp17(currentThemeIndex(tmp3[17]), obj5);
       obj3[0] = items5;
-      tmp11Result = tmp11(sharedValue, obj3);
+      let tmp17Result = tmp11(sharedValue, obj3);
     }
     const obj7 = { children: null };
-    obj7[0] = tmp11Result;
-    let tmp17Result = tmp17(tmp12, obj7);
+    obj7[0] = tmp17Result;
+    tmp17Result = tmp17(tmp12, obj7);
     obj8 = { animated: true, style: null, variant: "text-sm/medium", children: null };
     const items6 = [animatedStyles.headerSecondary, tmp.textCentered];
     obj8[1] = items6;
@@ -212,46 +211,38 @@ export default function SettingsAppearanceThemeCarousel(themes) {
         let stringResult = intl2.string(tmp2(tmp3[19]).t.VqGKm0);
       }
       obj8[3] = stringResult;
-      tmp17Result = tmp17(tmp24, obj8);
       const obj9 = { children: null };
-      if (isRefreshEnabled) {
-        const items7 = [tmp17Result, ];
-        const obj10 = { style: null, children: null };
-        obj10[0] = tmp.labelGroup;
-        const items8 = [tmp11Result, tmp17Result];
-        obj10[1] = items8;
-        items7[1] = tmp11(tmp12, obj10);
-        obj9[0] = items7;
-        let tmp28 = obj9;
-      } else {
-        const items9 = [tmp11Result, tmp17Result, tmp17Result];
-        obj9[0] = items9;
-        tmp28 = obj9;
-      }
+      const items7 = [tmp17Result, ];
+      const obj10 = { style: null, children: null };
+      obj10[0] = tmp.labelGroup;
+      const items8 = [tmp18, tmp17(tmp24, obj8)];
+      obj10[1] = items8;
+      items7[1] = tmp11(tmp12, obj10);
+      obj9[0] = items7;
       const obj11 = { style: null, children: null };
       obj11[0] = tmp.container;
       const obj12 = { style: null, children: null };
       obj12[0] = tmp.floatingNuxContainer;
       const obj13 = { style: null, children: null };
-      const items10 = [tmp.floatingNux, animatedStyle, , ];
-      ({ bgSurfaceOverlay: arr12[2], borderFaint: arr12[3] } = animatedStyles);
-      obj13[0] = items10;
+      const items9 = [tmp.floatingNux, animatedStyle, , ];
+      ({ bgSurfaceOverlay: arr11[2], borderFaint: arr11[3] } = animatedStyles);
+      obj13[0] = items9;
       const obj14 = { style: null, source: null, size: null };
-      const items11 = [tmp.arrowLeft, animatedStyles.iconInteractive];
-      obj14[0] = items11;
+      const items10 = [tmp.arrowLeft, animatedStyles.iconInteractive];
+      obj14[0] = items10;
       obj14[1] = currentThemeIndex(tmp3[20]);
       obj14[2] = tmp2(tmp3[5]).IconSizes.REFRESH_SMALL_16;
-      const items12 = [tmp17(sharedValue1, obj14), ];
+      const items11 = [tmp17(sharedValue1, obj14), ];
       const obj15 = { animated: true, style: null, variant: "eyebrow", maxFontSizeMultiplier: 1.5, children: null };
-      const items13 = [animatedStyles.textNormal, tmp.uppercase];
-      obj15[1] = items13;
+      const items12 = [animatedStyles.textNormal, tmp.uppercase];
+      obj15[1] = items12;
       const intl3 = tmp2(tmp3[19]).intl;
       obj15[4] = intl3.string(tmp2(tmp3[19]).t.y2b7CA);
-      items12[1] = tmp17(tmp2(tmp3[15]).Text, obj15);
-      obj13[1] = items12;
+      items11[1] = tmp17(tmp2(tmp3[15]).Text, obj15);
+      obj13[1] = items11;
       obj12[1] = tmp11(currentThemeIndex(tmp3[4]).View, obj13);
-      const items14 = [tmp17(tmp12, obj12), tmp11(sharedValue, tmp28)];
-      obj11[1] = items14;
+      const items13 = [tmp17(tmp12, obj12), tmp11(sharedValue, obj9)];
+      obj11[1] = items13;
       return tmp11(tmp12, obj11);
     }
     const intl = tmp2(tmp3[19]).intl;
@@ -263,7 +254,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       stringResult = string(t.d5Gu9A);
     }
   }
-  tmp11Result = tmp17(onThemeSelected, {
+  tmp17Result = tmp17(onThemeSelected, {
     horizontal: true,
     style: tmp.a11yThemeListScroll,
     contentContainerStyle: tmp.a11yThemeList,

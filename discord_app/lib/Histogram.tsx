@@ -1,8 +1,8 @@
-// === Module 7434: getSamples ===
+// === Module 7455: getSamples ===
 
-// Module 7434 (getSamples)
+// Module 7455 (getSamples)
 import set from "set" /* 2 */;
-import TDigest from "TDigest" /* 7435 */;
+import TDigest from "TDigest" /* 7456 */;
 
 const result = set.fileFinishedImporting("lib/Histogram.tsx");
 class Histogram {
@@ -44,7 +44,7 @@ prototype["addSamples"] = function addSamples(prop3) {
   this.total = this.total + prop3.reduce((arg0, arg1) => arg0 + arg1 * num, 0);
   this.totalWeight = this.totalWeight + num * prop3.length;
   this.samples = this.samples + prop3.length;
-  const push = num(7435).TDigest.prototype.push;
+  const push = num(7456).TDigest.prototype.push;
   const call = push.call;
   const digest = this.digest;
   if (typeof call === "unknown") {

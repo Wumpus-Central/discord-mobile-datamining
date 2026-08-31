@@ -1,6 +1,6 @@
-// === Module 15996: GuildPrimaryCategory ===
+// === Module 16030: GuildPrimaryCategory ===
 
-// Module 15996 (GuildPrimaryCategory)
+// Module 16030 (GuildPrimaryCategory)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

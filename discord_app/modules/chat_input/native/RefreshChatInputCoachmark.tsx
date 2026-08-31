@@ -1,10 +1,10 @@
-// === Module 11499: RefreshChatInputCoachmark ===
+// === Module 11524: RefreshChatInputCoachmark ===
 
-// Module 11499 (RefreshChatInputCoachmark)
-import useCoachmark from "useCoachmark" /* 8913 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+// Module 11524 (RefreshChatInputCoachmark)
+import useCoachmark from "useCoachmark" /* 8936 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");
@@ -16,35 +16,33 @@ export default function RefreshChatInputCoachmark(buttonRef) {
 };
 export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmark(disabled) {
   let _require;
-  importDefault = undefined;
-  _require(6216);
-  if (tmp2) {
-    if (!disabled.disabled) {
-      let items = [tmp3(1377).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
-    }
-    const tmp7 = callback(tmp5(items), 2);
-    _require = tmp8;
-    const tmp9 = tmp7[0] === tmp3(1377).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
-    importDefault = tmp9;
-    const items1 = [tmp9, tmp7[1]];
-    let memo = null;
-    if (tmp9) {
-      memo = React.useMemo(() => {
-        let obj = { title: null, description: null, position: "top", offsetY: 4, visible: null, onDismiss: null, graphic: null };
-        const intl = callback(closure_1_2[6]).intl;
-        obj[0] = intl.string(callback(closure_1_2[6]).t.eqI1WA);
-        const intl2 = callback(closure_1_2[6]).intl;
-        obj[1] = intl2.string(callback(closure_1_2[6]).t.nxO3NK);
-        obj[4] = closure_1;
-        obj[5] = function onDismiss() {
-          callback(closure_1_5.USER_DISMISS);
-        };
-        obj = { type: "rive", rive: callback(closure_1_2[7]).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
-        obj[6] = obj;
-        return obj;
-      }, items1);
-    }
-    return memo;
+  dependencyMap = undefined;
+  if (disabled.disabled) {
+    let items = [];
+  } else {
+    items = [tmp(1373).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
   }
-  items = [];
+  const tmp3 = callback(_require(6219).useSelectedDismissibleContent(items), 2);
+  _require = tmp4;
+  const tmp5 = tmp3[0] === _require(1373).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
+  dependencyMap = tmp5;
+  const items1 = [tmp5, tmp3[1]];
+  let memo = null;
+  if (tmp5) {
+    memo = React.useMemo(() => {
+      let obj = { title: null, description: null, position: "top", offsetY: 4, visible: null, onDismiss: null, graphic: null };
+      const intl = callback(1236).intl;
+      obj[0] = intl.string(callback(1236).t.eqI1WA);
+      const intl2 = callback(1236).intl;
+      obj[1] = intl2.string(callback(1236).t.nxO3NK);
+      obj[4] = dependencyMap;
+      obj[5] = function onDismiss() {
+        callback(closure_1_4.USER_DISMISS);
+      };
+      obj = { type: "rive", rive: callback(4174).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
+      obj[6] = obj;
+      return obj;
+    }, items1);
+  }
+  return memo;
 };

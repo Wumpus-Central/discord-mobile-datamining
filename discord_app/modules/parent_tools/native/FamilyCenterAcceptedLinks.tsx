@@ -1,19 +1,19 @@
-// === Module 14454: FamilyCenterAcceptedLinkRow ===
+// === Module 14488: FamilyCenterAcceptedLinkRow ===
 
-// Module 14454 (FamilyCenterAcceptedLinkRow)
+// Module 14488 (FamilyCenterAcceptedLinkRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2370 */;
-import Text from "Text" /* 4442 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8713 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8714 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11430 */;
-import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 14457 */;
-import registerAssetDefault from "registerAsset" /* 14462 */;
+import messagesProxyDefault from "messagesProxy" /* 2369 */;
+import Text from "Text" /* 4444 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8735 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8736 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11459 */;
+import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 14491 */;
+import registerAssetDefault from "registerAsset" /* 14496 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 7230 */;
+import items from "items" /* 7251 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function FamilyCenterAcceptedLinkRow(otherUser) {
@@ -41,7 +41,7 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     obj1[0] = str(1297).Icon.Sizes.SMALL;
     obj1[2] = registerAssetDefault;
     obj[4] = closure_6(str(1297).Icon, obj1);
-    obj[1] = closure_6(str(5033).PressableOpacity, obj);
+    obj[1] = closure_6(str(5036).PressableOpacity, obj);
     tmp4Result = tmp4(FamilyCenterLinkRowDefault, obj);
     const tmp5 = importDefault;
     const tmp7 = FamilyCenterLinkRowDefault;
@@ -72,7 +72,7 @@ export default function FamilyCenterAcceptedLinks() {
   const tmp5Result = useAgeSpecificText;
   const intl2 = tmp5(1236).intl;
   obj = { style: tmp.container, children: null };
-  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(messagesProxyDefault["+tnO34"], obj), intl2.formatToPlainString(tmp2(2370)["pu6/U0"], obj));
+  const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(messagesProxyDefault["+tnO34"], obj), intl2.formatToPlainString(tmp2(2369)["pu6/U0"], obj));
   const items = [callback(Text.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }), ];
   const obj2 = { style: tmp.content, children: null };
   if (0 === activeLinkUsers.length) {
@@ -80,10 +80,10 @@ export default function FamilyCenterAcceptedLinks() {
     obj3[0] = tmp.empty;
     const obj4 = { text: null };
     const intl3 = tmp5(1236).intl;
-    obj4[0] = intl3.string(tmp2(2370).C4ScLD);
-    obj3[1] = tmp10(tmp2(14455), obj4);
+    obj4[0] = intl3.string(tmp2(2369).C4ScLD);
+    obj3[1] = tmp10(tmp2(14489), obj4);
     let mapped = tmp10(tmp9, obj3);
-    const tmp2Result = tmp2(14455);
+    const tmp2Result = tmp2(14489);
   } else {
     mapped = activeLinkUsers.map((id) => callback(closure_10, { otherUser: id }, "accepted-" + id.id));
   }

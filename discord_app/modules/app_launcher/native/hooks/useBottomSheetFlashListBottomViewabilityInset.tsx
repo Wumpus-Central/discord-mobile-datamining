@@ -1,6 +1,6 @@
-// === Module 11606: useBottomSheetFlashListBottomViewabilityInset ===
+// === Module 11637: useBottomSheetFlashListBottomViewabilityInset ===
 
-// Module 11606 (useBottomSheetFlashListBottomViewabilityInset)
+// Module 11637 (useBottomSheetFlashListBottomViewabilityInset)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
@@ -10,13 +10,13 @@ const result = require("set").fileFinishedImporting("modules/app_launcher/native
 
 export const useBottomSheetFlashListBottomViewabilityInset = function useBottomSheetFlashListBottomViewabilityInset() {
   let obj = bottomVisibilityInsetRef;
-  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(8989).AppLauncherContext);
+  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(9012).AppLauncherContext);
   bottomSheetPosition = undefined;
   if (context != null) {
     bottomSheetPosition = context.bottomSheetPosition;
   }
   const flashListRef = obj.useRef(null);
-  const diff = flashListRef(1494)().height - flashListRef(10931)().maximum;
+  const diff = flashListRef(1493)().height - flashListRef(10955)().maximum;
   dependencyMap = diff;
   bottomVisibilityInsetRef = obj.useRef(9999);
   const memo = obj.useMemo(() => flashListRef(diff[4]).debounce((current) => {
@@ -27,7 +27,7 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
     }
   }, 200), []);
   const tmp = flashListRef;
-  const tmp3 = flashListRef(1494)();
+  const tmp3 = flashListRef(1493)();
   const fn = function u() {
     let num;
     if (bottomSheetPosition != null) {
@@ -44,10 +44,10 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
   const fn2 = function s(arg0) {
     bottomSheetPosition(diff[5]).runOnJS(memo)(arg0 - closure_2);
   };
-  obj = { distanceBetweenExpandedScreenTopAndSheetTop: diff, runOnJS: tmp4(4186).runOnJS, handleBottomViewabilityInsetDebounced: memo };
+  obj = { distanceBetweenExpandedScreenTopAndSheetTop: diff, runOnJS: tmp4(4187).runOnJS, handleBottomViewabilityInsetDebounced: memo };
   fn2.__closure = obj;
   fn2.__workletHash = 6025307858098;
   fn2.__initData = closure_5;
-  const animatedReaction = bottomSheetPosition(4186).useAnimatedReaction(fn, fn2);
+  const animatedReaction = bottomSheetPosition(4187).useAnimatedReaction(fn, fn2);
   return { flashListRef, bottomVisibilityInsetRef };
 };

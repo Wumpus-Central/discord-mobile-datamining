@@ -1,14 +1,14 @@
-// === Module 7917: getPaymentGateway ===
+// === Module 7939: getPaymentGateway ===
 
-// Module 7917 (getPaymentGateway)
+// Module 7939 (getPaymentGateway)
 import set from "set" /* 500 */;
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createFromServer" /* 7918 */;
-import closure_5 from "createFromServer" /* 7146 */;
-import closure_6 from "emitChanges" /* 7142 */;
-import { PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID as closure_7 } from "GuildFeatures" /* 1925 */;
+import closure_4 from "createFromServer" /* 7940 */;
+import closure_5 from "createFromServer" /* 7167 */;
+import closure_6 from "emitChanges" /* 7163 */;
+import { PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID as closure_7 } from "GuildFeatures" /* 1924 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -53,7 +53,7 @@ function _fetchUserOffer() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -79,7 +79,7 @@ function _fetchUserOffer() {
                   flag = true;
                 }
                 if (obj1 === undefined) {
-                  obj1 = { offerId: "Array", paymentGatewayOverride: "ct" };
+                  obj1 = { offerId: "cix", paymentGatewayOverride: "id" };
                 }
                 throwTypeErrorResult = retries;
                 throwTypeErrorResult = closure_4;
@@ -94,7 +94,7 @@ function _fetchUserOffer() {
                 c13 = undefined;
                 c12 = 1;
                 c13 = 1;
-                return { value: "ct", done: true };
+                return { value: "Object", done: true };
               }
             } else if (1 === tmp7) {
               if (arg0 === 1) {

@@ -1,6 +1,6 @@
-// === Module 14547: getRevealProgress ===
+// === Module 14581: getRevealProgress ===
 
-// Module 14547 (getRevealProgress)
+// Module 14581 (getRevealProgress)
 import closure_0 from "noop" /* 19 */;
 
 function getRevealProgress(scrollY, lastBountyScrollOffset, height3) {

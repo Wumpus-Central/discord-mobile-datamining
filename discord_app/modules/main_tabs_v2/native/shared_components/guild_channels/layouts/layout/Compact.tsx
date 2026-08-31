@@ -1,8 +1,8 @@
-// === Module 10143: CHANNEL_LIST_STYLES_COMPACT ===
+// === Module 10166: CHANNEL_LIST_STYLES_COMPACT ===
 
-// Module 10143 (CHANNEL_LIST_STYLES_COMPACT)
+// Module 10166 (CHANNEL_LIST_STYLES_COMPACT)
 import ThemesDefault from "Themes" /* 712 */;
-import mergeDefault from "merge" /* 10142 */;
+import mergeDefault from "merge" /* 10165 */;
 
 let obj = { layout: { margin: { marginLeft: 4, marginRight: 4, marginVertical: 0 }, marginPanels: { marginLeft: 8, marginRight: 8, marginVertical: 0 }, marginThread: { marginLeft: 56, marginRight: 4, marginVertical: 0 } }, container: null, voiceUsers: null, voiceOrStageSummaryRow: null, channelName: null, messagePreview: null, timestamp: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, category: null, typing: null, activeThreadCount: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, separator: null, searchButton: null };
 obj = { borderRadius: ThemesDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 20, paddingRight: 12 }, paddingPanels: { paddingVertical: 4, paddingLeft: 8, paddingRight: 8 }, paddingThread: { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 } };
@@ -36,19 +36,7 @@ const tmp2 = mergeDefault(obj, { layout: { marginThread: { marginLeft: 4 } }, co
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/Compact.tsx");
 
 export const CHANNEL_LIST_STYLES_COMPACT = obj;
-export const getCompactStyles = function getCompactStyles(arg0) {
-  if (arg0) {
-    obj = { messagePreview: null, timestamp: null };
-    obj = { text: null };
-    obj[0] = { variant: "text-sm/medium", color: "text-muted" };
-    obj[0] = obj;
-    obj = { text: null };
-    obj[0] = { variant: "text-xs/semibold" };
-    obj[1] = obj;
-    let tmp = mergeDefault(obj, obj);
-  } else {
-    tmp = obj;
-  }
-  return tmp;
+export const getCompactStyles = function getCompactStyles() {
+  return mergeDefault(obj, { messagePreview: { text: { variant: "text-sm/medium", color: "text-muted" } }, timestamp: { text: { variant: "text-xs/semibold" } } });
 };
 export const CHANNEL_LIST_STYLES_COMPACT_LAUNCHPAD = tmp2;

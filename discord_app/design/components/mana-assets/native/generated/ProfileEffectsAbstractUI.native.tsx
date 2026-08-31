@@ -1,10 +1,10 @@
-// === Module 6872: ProfileEffectsAbstractUI ===
+// === Module 6889: ProfileEffectsAbstractUI ===
 
-// Module 6872 (ProfileEffectsAbstractUI)
+// Module 6889 (ProfileEffectsAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6873 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6890 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ProfileEffectsAbstractUI.native.tsx");

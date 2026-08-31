@@ -1,6 +1,6 @@
-// === Module 17205: formatDurationFromDays ===
+// === Module 17238: formatDurationFromDays ===
 
-// Module 17205 (formatDurationFromDays)
+// Module 17238 (formatDurationFromDays)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

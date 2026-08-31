@@ -1,8 +1,8 @@
-// === Module 8185: useDiscountedPremiumPlan ===
+// === Module 8207: useDiscountedPremiumPlan ===
 
-// Module 8185 (useDiscountedPremiumPlan)
+// Module 8207 (useDiscountedPremiumPlan)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateProduct" /* 6049 */;
+import closure_3 from "updateProduct" /* 6052 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumPlan.tsx");

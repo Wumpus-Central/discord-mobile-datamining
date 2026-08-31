@@ -1,16 +1,15 @@
-// === Module 5586: RedesignBottomSheetTitleHeaderBase ===
+// === Module 5589: RedesignBottomSheetTitleHeaderBase ===
 
-// Module 5586 (RedesignBottomSheetTitleHeaderBase)
+// Module 5589 (RedesignBottomSheetTitleHeaderBase)
 import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import Text from "Text" /* 4442 */;
-import useHeaderDebugOverlayDefault from "useHeaderDebugOverlay" /* 5461 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import Text from "Text" /* 4444 */;
+import useHeaderDebugOverlayDefault from "useHeaderDebugOverlay" /* 5464 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function RedesignBottomSheetTitleHeaderBase(children) {
@@ -62,7 +61,7 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   ({ title, leading, trailing, onTitleTextLayout } = subtitle);
   const tmp = callback4();
   const tmp2 = callback6();
-  let obj = _require(4166);
+  let obj = _require(4167);
   const diff = useWindowDimensionsDefault().width - 2 * obj.useToken(ThemesDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL);
   [tmp5, c0] = callback(React.useState(undefined), 2);
   callback = React.useCallback((nativeEvent) => {
@@ -102,26 +101,13 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   return closure_7(View, obj);
 }
 function Title(arg0) {
-  let str = "redesign/heading-18/bold";
-  if (useIsMobileVisualRefreshExperimentEnabledDefault("BottomSheetTitleHeader")) {
-    str = "redesign/heading-18/semibold";
-  }
   const tmp = callback4();
   const merged = Object.assign(arg0);
-  return callback2(Text.Text, { variant: str, color: "mobile-text-heading-primary", accessibilityRole: "header", style: callback4().title });
+  return callback2(Text.Text, { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", style: callback4().title });
 }
 function Subtitle(children) {
-  const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("BottomSheetTitleHeader");
-  let str = "text-default";
-  if (tmp3) {
-    str = "text-muted";
-  }
-  let str2 = "text-xs/medium";
-  if (tmp3) {
-    str2 = "text-sm/medium";
-  }
   const tmp = callback4();
-  return callback2(Text.Text, { variant: str2, color: str, lineClamp: 1, style: callback4().subtitle, children: children.children });
+  return callback2(Text.Text, { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, style: callback4().subtitle, children: children.children });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles(() => {

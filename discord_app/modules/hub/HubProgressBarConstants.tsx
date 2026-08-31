@@ -1,6 +1,6 @@
-// === Module 9858: items ===
+// === Module 9881: items ===
 
-// Module 9858 (items)
+// Module 9881 (items)
 import set from "set" /* 2 */;
 import create from "create" /* 1306 */;
 

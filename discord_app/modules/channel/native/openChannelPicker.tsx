@@ -1,11 +1,11 @@
-// === Module 10904: openChannelPicker ===
+// === Module 10928: openChannelPicker ===
 
-// Module 10904 (openChannelPicker)
+// Module 10928 (openChannelPicker)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4413 */;
-import closure_3 from "comparator" /* 1983 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4415 */;
+import closure_3 from "comparator" /* 1982 */;
+import closure_4 from "createGuildRecordFromRust" /* 1909 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/channel/native/openChannelPicker.tsx");
@@ -36,5 +36,5 @@ export default function openChannelPicker(onClose) {
   obj[2] = found.map((channel) => channel.channel);
   obj[3] = selectedChannel;
   const merged1 = Object.assign(merged);
-  obj.openLazy(asyncRequireImpl(10905, dependencyMap.paths), "ChannelPicker", obj);
+  obj.openLazy(asyncRequireImpl(10929, dependencyMap.paths), "ChannelPicker", obj);
 };

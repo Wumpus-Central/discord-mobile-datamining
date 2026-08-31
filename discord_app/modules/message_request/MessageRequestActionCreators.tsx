@@ -1,9 +1,9 @@
-// === Module 10634: _acceptMessageRequest ===
+// === Module 10658: _acceptMessageRequest ===
 
-// Module 10634 (_acceptMessageRequest)
+// Module 10658 (_acceptMessageRequest)
 import sendRequest from "sendRequest" /* 530 */;
-import handleLogoutDefault from "handleLogout" /* 6017 */;
-import MessageRequestConsentStatusTypes from "MessageRequestConsentStatusTypes" /* 10635 */;
+import handleLogoutDefault from "handleLogout" /* 6020 */;
+import MessageRequestConsentStatusTypes from "MessageRequestConsentStatusTypes" /* 10659 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -26,7 +26,7 @@ function _acceptMessageRequest() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -70,7 +70,7 @@ function _acceptMessageRequest() {
             obj5[1] = callback;
             obj.dispatch(obj5);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp12) {
           c4 = tmp;

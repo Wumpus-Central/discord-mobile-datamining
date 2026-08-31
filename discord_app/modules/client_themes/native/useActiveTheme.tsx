@@ -1,10 +1,10 @@
-// === Module 7565: useActiveThemeType ===
+// === Module 7586: useActiveThemeType ===
 
-// Module 7565 (useActiveThemeType)
+// Module 7586 (useActiveThemeType)
 import initialize from "initialize" /* 589 */;
-import getGuildIdFromNavigationStateDefault from "getGuildIdFromNavigationState" /* 4299 */;
+import getGuildIdFromNavigationStateDefault from "getGuildIdFromNavigationState" /* 4301 */;
 import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_4 from "isSyncedModeThemesEnabled" /* 4266 */;
+import closure_4 from "reset" /* 4267 */;
 import closure_5 from "reset" /* 1346 */;
 import SystemThemeState from "SystemThemeState" /* 1305 */;
 

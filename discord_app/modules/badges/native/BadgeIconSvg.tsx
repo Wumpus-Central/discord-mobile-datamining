@@ -1,6 +1,6 @@
-// === Module 8937: normalizeSvgXml ===
+// === Module 8960: normalizeSvgXml ===
 
-// Module 8937 (normalizeSvgXml)
+// Module 8960 (normalizeSvgXml)
 import set from "set" /* 2 */;
 
 function normalizeSvgXml(str) {

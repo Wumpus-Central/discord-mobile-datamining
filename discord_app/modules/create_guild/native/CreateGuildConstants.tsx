@@ -1,6 +1,6 @@
-// === Module 7700: NUXGuildTemplatesAnalytics ===
+// === Module 7721: NUXGuildTemplatesAnalytics ===
 
-// Module 7700 (NUXGuildTemplatesAnalytics)
+// Module 7721 (NUXGuildTemplatesAnalytics)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/create_guild/native/CreateGuildConstants.tsx");

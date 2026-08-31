@@ -1,9 +1,9 @@
-// === Module 11977: openGuildPowerupsModal ===
+// === Module 12010: openGuildPowerupsModal ===
 
-// Module 11977 (openGuildPowerupsModal)
+// Module 12010 (openGuildPowerupsModal)
 import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
-import _modDef4689 from "module_4689" /* 4689 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
+import _modDef4691 from "module_4691" /* 4691 */;
 
 let c3 = 0;
 const result = set.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
@@ -19,5 +19,5 @@ export default function openGuildPowerupsModal(navigationParams) {
     obj.autoOpenRequestId = sum;
     tmp2 = obj;
   }
-  _modDef4689.pushLazy(asyncRequireImpl(11978, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
+  _modDef4691.pushLazy(asyncRequireImpl(12011, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
 };

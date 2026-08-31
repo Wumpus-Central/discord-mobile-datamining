@@ -1,6 +1,6 @@
-// === Module 12170: SuggestedFriendSource ===
+// === Module 12204: SuggestedFriendSource ===
 
-// Module 12170 (SuggestedFriendSource)
+// Module 12204 (SuggestedFriendSource)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendsScreenConstants.tsx");

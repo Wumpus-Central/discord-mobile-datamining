@@ -1,129 +1,136 @@
-// === Module 11038: MEDIA_SHORT_SIDE ===
+// === Module 11069: map ===
 
-// Module 11038 (MEDIA_SHORT_SIDE)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+// Module 11069 (map)
+import getAvatarURL from "getAvatarURL" /* 1431 */;
+import getSizedImageProxyURL from "getSizedImageProxyURL" /* 4482 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 2 */;
 
-let closure_3 = { width: 166, height: 289 };
-let closure_4 = { width: 289, height: 166 };
-let set = new Set();
-let closure_5 = { sizes: new Map(), settledUrls: set, hasTimedOut: false };
-const result = set.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaSize.tsx");
+require = arg1;
+let closure_5 = { width: 166, height: 289 };
+let closure_6 = { width: 289, height: 166 };
+let map = new Map();
+let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaSize.tsx");
 
-export const MEDIA_SHORT_SIDE = 166;
-export const MEDIA_LONG_SIDE = 289;
 export const MEDIA_FALLBACK_WIDTH = 1080;
 export const MEDIA_FALLBACK_HEIGHT = 1920;
 export const getMediaTileSize = function getMediaTileSize(value) {
   if (null != value) {
     if (value.width > value.height) {
-      let tmp = closure_4;
+      let tmp = closure_6;
     }
     return tmp;
   }
-  tmp = closure_3;
+  tmp = closure_5;
 };
-export const useRemoteMediaSizes = function useRemoteMediaSizes(memo) {
-  first = first(React.useState(memo), 1)[0];
-  [tmp2, closure_1] = first(React.useState(closure_5), 2);
+export const getAppStoreOverlayCarouselImageUrl = function getAppStoreOverlayCarouselImageUrl(posterUrl) {
+  let format = null;
+  if (getAvatarURL.SUPPORTS_WEBP) {
+    format = "webp";
+  }
+  return getSizedImageProxyURL.getSizedImageAssetURL(posterUrl, { size: 289, keepAspectRatio: true, format });
+};
+export const getMediaSizeFromLoadEvent = function getMediaSizeFromLoadEvent(nativeEvent) {
+  nativeEvent = nativeEvent.nativeEvent;
+  const source = nativeEvent.source;
+  let width;
+  if (source != null) {
+    width = source.width;
+  }
+  if (width == null) {
+    width = nativeEvent.width;
+  }
+  const source2 = nativeEvent.source;
+  let height;
+  if (source2 != null) {
+    height = source2.height;
+  }
+  if (height == null) {
+    height = nativeEvent.height;
+  }
+  let tmp3 = null;
+  if (null != width) {
+    tmp3 = null;
+    if (null != height) {
+      tmp3 = null;
+      if (width > 0) {
+        tmp3 = null;
+        if (height > 0) {
+          const obj = { width: null, height: null };
+          obj[0] = width;
+          obj[1] = height;
+          tmp3 = obj;
+        }
+      }
+    }
+  }
+  return tmp3;
+};
+export const useAppStoreOverlayMediaSizes = function useAppStoreOverlayMediaSizes(memo) {
+  const first = callback(React.useState(memo), 1)[0];
+  [tmp3, dependencyMap] = callback(React.useState(map), 2);
   const items = [first];
+  const recordMediaSize = React.useCallback((arg0, arg1) => {
+    closure_0 = arg0;
+    const callback = arg1;
+    callback((get) => {
+      const size = closure_1;
+      const size2 = get.get(closure_0);
+      let width;
+      if (size2 != null) {
+        width = size2.width;
+      }
+      if (width !== size.width) {
+        const _Map = Map;
+        map = new Map(get);
+        let result = map.set(closure_0, size);
+      } else {
+        let height;
+        if (size2 != null) {
+          height = size2.height;
+        }
+        result = get;
+      }
+      return result;
+    });
+  }, []);
   const effect = React.useEffect(() => {
     c0 = false;
-    c1 = false;
     const item = c0.forEach((arg0) => {
       closure_0 = arg0;
-      const size = closure_2_2.getSize(arg0, (width, height) => {
-        const obj = { width, height };
-        let tmp = closure_0;
+      let size = closure_2_4.getSize(arg0, (arg0, arg1) => {
+        closure_0 = arg0;
+        closure_1 = arg1;
         if (!closure_0) {
-          tmp = closure_1_1;
-        }
-        if (!tmp) {
-          closure_1_1((hasTimedOut) => {
-            let addResult = hasTimedOut;
-            let tmp2 = hasTimedOut;
-            if (!hasTimedOut.hasTimedOut) {
-              const settledUrls = addResult.settledUrls;
-              tmp2 = addResult;
-              if (!settledUrls.has(closure_0)) {
-                const obj = {};
-                const merged = Object.assign(addResult);
-                if (null == c1) {
-                  let sizes = addResult.sizes;
-                } else {
-                  const _Map = Map;
-                  const map = new Map(addResult.sizes);
-                  sizes = map.set(tmp3, tmp7);
-                }
-                obj.sizes = sizes;
-                const _Set = Set;
-                const set = new Set(addResult.settledUrls);
-                addResult = set.add(tmp3);
-                obj.settledUrls = addResult;
-              }
+          closure_2_1((get) => {
+            const size = { width: closure_0, height: closure_1 };
+            const size2 = get.get(closure_0);
+            let width;
+            if (size2 != null) {
+              width = size2.width;
             }
-            return tmp2;
+            if (width !== size.width) {
+              const _Map = Map;
+              map = new Map(get);
+              let result = map.set(closure_0, size);
+            } else {
+              let height;
+              if (size2 != null) {
+                height = size2.height;
+              }
+              result = get;
+            }
+            return result;
           });
         }
       }, () => {
-        c1 = null;
-        let tmp = closure_0;
-        if (!closure_0) {
-          tmp = closure_1_1;
-        }
-        if (!tmp) {
-          closure_1_1((hasTimedOut) => {
-            let addResult = hasTimedOut;
-            let tmp2 = hasTimedOut;
-            if (!hasTimedOut.hasTimedOut) {
-              const settledUrls = addResult.settledUrls;
-              tmp2 = addResult;
-              if (!settledUrls.has(closure_0)) {
-                const obj = {};
-                const merged = Object.assign(addResult);
-                if (null == c1) {
-                  let sizes = addResult.sizes;
-                } else {
-                  const _Map = Map;
-                  const map = new Map(addResult.sizes);
-                  sizes = map.set(tmp3, tmp7);
-                }
-                obj.sizes = sizes;
-                const _Set = Set;
-                const set = new Set(addResult.settledUrls);
-                addResult = set.add(tmp3);
-                obj.settledUrls = addResult;
-              }
-            }
-            return tmp2;
-          });
-        }
+
       });
     });
-    const timeout = setTimeout(() => {
-      if (!c0) {
-        const callback = true;
-        callback((hasTimedOut) => {
-          let tmp = hasTimedOut;
-          if (!hasTimedOut.hasTimedOut) {
-            tmp = hasTimedOut;
-            if (hasTimedOut.settledUrls.size < length.length) {
-              const obj = {};
-              const merged = Object.assign(hasTimedOut);
-              obj.hasTimedOut = true;
-              tmp = obj;
-            }
-          }
-          return tmp;
-        });
-      }
-    }, 2500);
     return () => {
       c0 = true;
-      clearTimeout(closure_2);
     };
   }, items);
-  return { sizes: tmp2.sizes, isMeasured: tmp4 };
+  return { sizes, recordMediaSize };
 };

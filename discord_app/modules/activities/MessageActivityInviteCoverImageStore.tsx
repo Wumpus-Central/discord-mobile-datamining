@@ -1,9 +1,9 @@
-// === Module 12836: getCoverImageURL ===
+// === Module 12871: getCoverImageURL ===
 
-// Module 12836 (getCoverImageURL)
+// Module 12871 (getCoverImageURL)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import privDefault from "priv" /* 1405 */;
+import privDefault from "priv" /* 1401 */;
 
 let closure_0 = new privDefault({ max: 500 });
 const Store = initializeDefault.Store;

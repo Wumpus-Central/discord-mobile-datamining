@@ -1,6 +1,6 @@
-// === Module 16720: SelfStreamAndVideoAlertType ===
+// === Module 16753: SelfStreamAndVideoAlertType ===
 
-// Module 16720 (SelfStreamAndVideoAlertType)
+// Module 16753 (SelfStreamAndVideoAlertType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/calls/HideSelfStreamAndVideoConstants.tsx");

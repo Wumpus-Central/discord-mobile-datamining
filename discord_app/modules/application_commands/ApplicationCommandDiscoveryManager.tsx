@@ -1,10 +1,10 @@
-// === Module 11902: useCommandDiscoveryManager ===
+// === Module 11933: useCommandDiscoveryManager ===
 
-// Module 11902 (useCommandDiscoveryManager)
+// Module 11933 (useCommandDiscoveryManager)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 
-const obj = keys.create(() => ({ initialSectionId: "r" }));
+const obj = keys.create(() => ({ initialSectionId: "Array" }));
 const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandDiscoveryManager.tsx");
 
 export const useCommandDiscoveryManager = obj;

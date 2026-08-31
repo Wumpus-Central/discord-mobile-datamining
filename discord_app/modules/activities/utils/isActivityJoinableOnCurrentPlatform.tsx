@@ -1,9 +1,9 @@
-// === Module 9385: isActivityJoinableOnCurrentPlatform ===
+// === Module 9407: isActivityJoinableOnCurrentPlatform ===
 
-// Module 9385 (isActivityJoinableOnCurrentPlatform)
+// Module 9407 (isActivityJoinableOnCurrentPlatform)
 import set from "set" /* 2 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
-import hasFlagDefault from "hasFlag" /* 6123 */;
+import hasFlagDefault from "hasFlag" /* 6126 */;
 import ME from "ME" /* 676 */;
 
 ({ ActivityFlags: c3, ActivityGamePlatforms: c4, ActivityTypes: c5 } = ME);
@@ -22,7 +22,7 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
       let DESKTOP = constants2.IOS;
       let tmp9 = constants2;
     } else {
-      let tmp6Result = tmp6(1625);
+      let tmp6Result = tmp6(1624);
       if (tmp6Result.isMetaQuest()) {
         DESKTOP = constants2.META_QUEST;
         tmp9 = constants2;
@@ -66,7 +66,7 @@ export const getCurrentActivityGamePlatform = function getCurrentActivityGamePla
   if (obj.isIOS()) {
     let META_QUEST = constants2.IOS;
   } else {
-    let tmpResult = tmp(1625);
+    let tmpResult = tmp(1624);
     if (tmpResult.isMetaQuest()) {
       META_QUEST = constants2.META_QUEST;
     } else {

@@ -1,17 +1,17 @@
-// === Module 16884: _initialize ===
+// === Module 16917: _initialize ===
 
-// Module 16884 (_initialize)
-import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4686 */;
-import initializeDefault from "initialize" /* 5451 */;
-import GUILD_ROOM_SPATIAL_AUDIO_ENABLED from "GUILD_ROOM_SPATIAL_AUDIO_ENABLED" /* 16885 */;
+// Module 16917 (_initialize)
+import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4688 */;
+import initializeDefault from "initialize" /* 5454 */;
+import GUILD_ROOM_SPATIAL_AUDIO_ENABLED from "GUILD_ROOM_SPATIAL_AUDIO_ENABLED" /* 16918 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getHash" /* 4359 */;
+import closure_4 from "getHash" /* 4361 */;
 import closure_5 from "initialize" /* 1212 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_9 from "createRTCConnection" /* 4520 */;
-import closure_10 from "resolveCreatingNotes" /* 4645 */;
+import closure_7 from "ensureGuildLoaded" /* 1387 */;
+import closure_8 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_9 from "createRTCConnection" /* 4522 */;
+import closure_10 from "resolveCreatingNotes" /* 4647 */;
 
 require = arg1;
 initializeDefault;
@@ -97,7 +97,7 @@ prototype["apply"] = function apply() {
           obj[0] = roomUsers.getRoomUsers(channelId);
           obj[1] = id.getId();
           obj[2] = channelId;
-          _require = _require(16885).computeLivingRoomWorldPoints(obj);
+          _require = _require(16918).computeLivingRoomWorldPoints(obj);
           const mediaEngine = obj.getMediaEngine();
           mediaEngine.eachConnection((setUserPosition) => {
             const entries = Object.entries(callback);
@@ -112,7 +112,7 @@ prototype["apply"] = function apply() {
               continue;
             }
           });
-          const obj3 = _require(16885);
+          const obj3 = _require(16918);
         }
       }
     }

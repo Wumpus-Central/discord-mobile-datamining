@@ -1,14 +1,14 @@
-// === Module 14296: route ===
+// === Module 14330: route ===
 
-// Module 14296 (route)
+// Module 14330 (route)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4442 */;
-import useCurrentUserHasAutomodQuarantinedProfile from "useCurrentUserHasAutomodQuarantinedProfile" /* 11377 */;
-import closure_3 from "mergeGuildAvatar" /* 1923 */;
+import Text from "Text" /* 4444 */;
+import useCurrentUserHasAutomodQuarantinedProfile from "useCurrentUserHasAutomodQuarantinedProfile" /* 11406 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11006 */;
+import createToggle from "createToggle" /* 11031 */;
 
 require = arg1;
 noopAll;
@@ -45,7 +45,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
   getComponent() {
-    return require(14297) /* UsernameStatusMessage */.default;
+    return require(14331) /* UsernameStatusMessage */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

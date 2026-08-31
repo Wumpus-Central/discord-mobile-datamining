@@ -1,15 +1,15 @@
-// === Module 1495: getDimensionsStoreStateForEntry ===
+// === Module 1494: getDimensionsStoreStateForEntry ===
 
-// Module 1495 (getDimensionsStoreStateForEntry)
+// Module 1494 (getDimensionsStoreStateForEntry)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import batchUpdates from "batchUpdates" /* 705 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
-import APP_ENTRY_KEYS from "APP_ENTRY_KEYS" /* 1642 */;
-import readWindowSizeForAppEntry from "readWindowSizeForAppEntry" /* 1894 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1628 */;
+import APP_ENTRY_KEYS from "APP_ENTRY_KEYS" /* 1641 */;
+import readWindowSizeForAppEntry from "readWindowSizeForAppEntry" /* 1893 */;
 import keys from "keys" /* 644 */;
-import importDefaultResult from "subscribeToKeyboardUIStore" /* 1496 */;
-import importDefaultResult1 from "module_1630" /* 1630 */;
+import importDefaultResult from "subscribeToKeyboardUIStore" /* 1495 */;
+import importDefaultResult1 from "module_1629" /* 1629 */;
 
 function getDimensionsStoreStateForEntry(appEntryKey) {
   const size = {};
@@ -34,7 +34,7 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
   }
   let width = size.width;
   ({ width: width2, height } = size2);
-  let tmp2Result = tmp2(1629);
+  let tmp2Result = tmp2(1628);
   const rect = tmp2Result.getSafeAreaInsets(appEntryKey);
   let tmp8 = height;
   let tmp9 = width2;
@@ -44,7 +44,7 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
   }
   const bound = Math.min(width + rect.left + rect.right, tmp9);
   const sum = size.height + rect.top + rect.bottom;
-  tmp2Result = tmp2(1895);
+  tmp2Result = tmp2(1894);
   obj = { appEntryKey };
   const bound1 = Math.min(sum - tmp2Result.getSystemKeyboardHeight(obj), tmp8);
   width = undefined;

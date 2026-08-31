@@ -1,6 +1,6 @@
-// === Module 1927: BadgeRarity ===
+// === Module 1926: BadgeRarity ===
 
-// Module 1927 (BadgeRarity)
+// Module 1926 (BadgeRarity)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/BadgeRarity.tsx");

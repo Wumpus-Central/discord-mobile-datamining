@@ -1,10 +1,10 @@
-// === Module 7852: computeIsStickerReplyEnabled ===
+// === Module 7874: computeIsStickerReplyEnabled ===
 
-// Module 7852 (computeIsStickerReplyEnabled)
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6081 */;
-import closure_2 from "trackCommunicationDisabled" /* 1993 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
+// Module 7874 (computeIsStickerReplyEnabled)
+import useCanUnarchiveThread from "useCanUnarchiveThread" /* 6084 */;
+import closure_2 from "trackCommunicationDisabled" /* 1992 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { Permissions } from "ME" /* 676 */;
 
 require = arg1;

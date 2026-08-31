@@ -1,6 +1,6 @@
-// === Module 16455: metadata ===
+// === Module 16489: metadata ===
 
-// Module 16455 (metadata)
+// Module 16489 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js");

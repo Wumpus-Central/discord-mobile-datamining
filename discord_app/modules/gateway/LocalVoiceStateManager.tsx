@@ -1,13 +1,13 @@
-// === Module 13262: guildId ===
+// === Module 13296: guildId ===
 
-// Module 13262 (guildId)
-import hasFlag from "hasFlag" /* 1403 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
-import isClipsEnabled from "isClipsEnabled" /* 4507 */;
-import shouldCommitDefault from "shouldCommit" /* 13260 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "initialize" /* 4541 */;
+// Module 13296 (guildId)
+import hasFlag from "hasFlag" /* 1399 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
+import isClipsEnabled from "isClipsEnabled" /* 4509 */;
+import shouldCommitDefault from "shouldCommit" /* 13294 */;
+import closure_2 from "ensureGuildLoaded" /* 1387 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_4 from "initialize" /* 4543 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

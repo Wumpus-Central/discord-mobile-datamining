@@ -1,23 +1,23 @@
-// === Module 9981: ApplicationStreamPresets ===
+// === Module 10004: ApplicationStreamPresets ===
 
-// Module 9981 (ApplicationStreamPresets)
+// Module 10004 (ApplicationStreamPresets)
 import encodeProperties from "encodeProperties" /* 503 */;
 import ThemesDefault from "Themes" /* 712 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4413 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4415 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "ApplicationStreamPresets" /* 4538 */;
-import closure_6 from "reset" /* 4468 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "handleConnectionOpen" /* 1982 */;
-import closure_10 from "mergeGuildAvatar" /* 1923 */;
-import { ApplicationStreamPresets } from "RESOLUTION_720" /* 4505 */;
+import closure_5 from "ApplicationStreamPresets" /* 4540 */;
+import closure_6 from "reset" /* 4470 */;
+import closure_7 from "ensureGuildLoaded" /* 1387 */;
+import closure_8 from "createGuildRecordFromRust" /* 1909 */;
+import closure_9 from "handleConnectionOpen" /* 1981 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import { ApplicationStreamPresets } from "RESOLUTION_720" /* 4507 */;
 import { ApplicationStreamStates } from "ME" /* 676 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4510 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4512 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 
 require = arg1;
@@ -323,5 +323,5 @@ export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(
   obj = { impressionName: encodeProperties.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET, impressionProperties: null };
   obj = { location_stack: closure_1 };
   obj[1] = obj;
-  obj.openLazy(asyncRequireImpl(9981, dependencyMap.paths), MobileGoLiveActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(10004, dependencyMap.paths), MobileGoLiveActionSheet, obj);
 };

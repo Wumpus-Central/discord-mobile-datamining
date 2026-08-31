@@ -1,14 +1,14 @@
-// === Module 8802: GameProfileCommunityServer ===
+// === Module 8825: GameProfileCommunityServer ===
 
-// Module 8802 (GameProfileCommunityServer)
+// Module 8825 (GameProfileCommunityServer)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "allGuildIds" /* 1393 */;
+import closure_7 from "allGuildIds" /* 1389 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
@@ -95,7 +95,7 @@ export default function GameProfileCommunityServer(game) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

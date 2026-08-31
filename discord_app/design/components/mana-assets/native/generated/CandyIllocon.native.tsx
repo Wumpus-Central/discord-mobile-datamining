@@ -1,10 +1,10 @@
-// === Module 6350: CandyIllocon ===
+// === Module 6357: CandyIllocon ===
 
-// Module 6350 (CandyIllocon)
+// Module 6357 (CandyIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6351 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6358 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CandyIllocon.native.tsx");

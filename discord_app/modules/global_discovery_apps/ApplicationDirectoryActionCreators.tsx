@@ -1,21 +1,21 @@
-// === Module 11579: _getEmbedApplication ===
+// === Module 11610: _getEmbedApplication ===
 
-// Module 11579 (_getEmbedApplication)
+// Module 11610 (_getEmbedApplication)
 import refreshSourceMapCookieDefault from "refreshSourceMapCookie" /* 706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getUserAgnosticState" /* 4445 */;
-import closure_5 from "_getSystemLocale" /* 1997 */;
-import closure_6 from "set" /* 5920 */;
-import { FetchState } from "set" /* 5920 */;
-import closure_8 from "getLastFetchTimeMs" /* 11580 */;
-import closure_9 from "getLastFetchTimeMs" /* 11581 */;
-import { FetchState } from "getLastFetchTimeMs" /* 11581 */;
-import closure_11 from "getSearchResults" /* 11576 */;
-import { FetchState } from "getSearchResults" /* 11576 */;
-import closure_13 from "getSimilarApplications" /* 11582 */;
-import { FetchState } from "getSimilarApplications" /* 11582 */;
-import closure_15 from "addToApplicationIdToGuildIds" /* 11583 */;
-import { FetchState } from "addToApplicationIdToGuildIds" /* 11583 */;
+import closure_4 from "getUserAgnosticState" /* 4447 */;
+import closure_5 from "_getSystemLocale" /* 1996 */;
+import closure_6 from "set" /* 5923 */;
+import { FetchState } from "set" /* 5923 */;
+import closure_8 from "getLastFetchTimeMs" /* 11611 */;
+import closure_9 from "getLastFetchTimeMs" /* 11612 */;
+import { FetchState } from "getLastFetchTimeMs" /* 11612 */;
+import closure_11 from "getSearchResults" /* 11607 */;
+import { FetchState } from "getSearchResults" /* 11607 */;
+import closure_13 from "getSimilarApplications" /* 11613 */;
+import { FetchState } from "getSimilarApplications" /* 11613 */;
+import closure_15 from "addToApplicationIdToGuildIds" /* 11614 */;
+import { FetchState } from "addToApplicationIdToGuildIds" /* 11614 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -38,7 +38,7 @@ function _getEmbedApplication() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -174,7 +174,7 @@ function _getApplication() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -203,7 +203,7 @@ function _getApplication() {
               closure_7 = undefined;
               closure_7 = 1;
               c8 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -312,7 +312,7 @@ function _getCategories() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -400,7 +400,7 @@ function _getSimilarApplications() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -428,7 +428,7 @@ function _getSimilarApplications() {
               closure_7 = undefined;
               closure_7 = 1;
               c8 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -565,7 +565,7 @@ function _search() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -605,7 +605,7 @@ function _search() {
                 closure_18 = undefined;
                 categoryId = 1;
                 integrationType = 1;
-                return { value: "ct", done: true };
+                return { value: "Object", done: true };
               }
             } else {
               if (1 === tmp7) {
@@ -830,7 +830,7 @@ function _fetchCollections() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -869,7 +869,7 @@ function _fetchCollections() {
               let body;
               locale = 1;
               c6 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -896,7 +896,7 @@ function _fetchCollections() {
                 if (fetchState !== constants.FETCHING) {
                   let tmp29 = !dependencyMap;
                   if (!dependencyMap) {
-                    tmp29 = ACTIVE === APPLICATION_DIRECTORY(11586).ApplicationCollectionActiveState.ACTIVE;
+                    tmp29 = ACTIVE === APPLICATION_DIRECTORY(11617).ApplicationCollectionActiveState.ACTIVE;
                   }
                   c6 = tmp29;
                   let obj5 = ACTIVE(709);
@@ -915,10 +915,10 @@ function _fetchCollections() {
                   let obj9 = APPLICATION_DIRECTORY(500);
                   locale = APPLICATION_DIRECTORY;
                   if (obj9.isAndroid()) {
-                    let WEB = locale(11584).ApplicationCollectionPlatforms.ANDROID;
+                    let WEB = locale(11615).ApplicationCollectionPlatforms.ANDROID;
                   } else {
                     const localeResult = locale(500);
-                    const ApplicationCollectionPlatforms = APPLICATION_DIRECTORY(11584).ApplicationCollectionPlatforms;
+                    const ApplicationCollectionPlatforms = APPLICATION_DIRECTORY(11615).ApplicationCollectionPlatforms;
                     if (isIOSResult) {
                       WEB = ApplicationCollectionPlatforms.IOS;
                     } else {
@@ -1002,7 +1002,7 @@ function _fetchIntegrationApplicationIdsForMyGuilds() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

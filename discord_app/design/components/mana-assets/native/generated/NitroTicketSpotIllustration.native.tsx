@@ -1,10 +1,10 @@
-// === Module 6808: NitroTicketSpotIllustration ===
+// === Module 6825: NitroTicketSpotIllustration ===
 
-// Module 6808 (NitroTicketSpotIllustration)
+// Module 6825 (NitroTicketSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6809 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6826 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroTicketSpotIllustration.native.tsx");

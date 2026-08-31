@@ -1,6 +1,6 @@
-// === Module 11813: GuildDirectoryCreate ===
+// === Module 11844: GuildDirectoryCreate ===
 
-// Module 11813 (GuildDirectoryCreate)
+// Module 11844 (GuildDirectoryCreate)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryConstants.tsx");

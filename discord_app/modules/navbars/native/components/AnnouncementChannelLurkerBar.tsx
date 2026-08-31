@@ -1,11 +1,11 @@
-// === Module 10899: AnnouncementChannelLurkerBar ===
+// === Module 10923: AnnouncementChannelLurkerBar ===
 
-// Module 10899 (AnnouncementChannelLurkerBar)
+// Module 10923 (AnnouncementChannelLurkerBar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 class AnnouncementChannelLurkerBar {

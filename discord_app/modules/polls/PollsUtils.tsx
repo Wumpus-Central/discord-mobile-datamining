@@ -1,22 +1,22 @@
-// === Module 7452: getSampleOfVoterUsernamesForAnswer ===
+// === Module 7473: getSampleOfVoterUsernamesForAnswer ===
 
-// Module 7452 (getSampleOfVoterUsernamesForAnswer)
+// Module 7473 (getSampleOfVoterUsernamesForAnswer)
 import v1 from "v1" /* 514 */;
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4712 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reactionKey" /* 7453 */;
-import closure_5 from "reinjectEphemerals" /* 4701 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_7 from "markAllUserIdListsStale" /* 4099 */;
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7520 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4714 */;
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "reactionKey" /* 7474 */;
+import closure_5 from "reinjectEphemerals" /* 4703 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_7 from "markAllUserIdListsStale" /* 4100 */;
+import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7541 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7454).ReactionTypes.VOTE);
+  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7475).ReactionTypes.VOTE);
   channel = channel.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -98,7 +98,7 @@ function formatVoterTooltipText(arr, arg1) {
 const result = require("set").fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "ct", localCreationAnswerId: v1.v4() };
+  const obj = { text: "Array", image: "Object", localCreationAnswerId: v1.v4() };
   return obj;
 };
 export const generateLocalCreationAnswerId = function generateLocalCreationAnswerId() {
@@ -276,8 +276,8 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
   }
   let truncateTextResult = str;
   if (null != closure_8) {
-    truncateTextResult = tmp(1904).truncateText(str, tmp4);
-    const tmpResult = tmp(1904);
+    truncateTextResult = tmp(1903).truncateText(str, tmp4);
+    const tmpResult = tmp(1903);
   }
   const intl = tmp(1236).intl;
   obj = { username: messageAuthor.nick, title: truncateTextResult };
@@ -303,8 +303,8 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
     }
     let truncateTextResult = str;
     if (null != closure_8) {
-      truncateTextResult = tmp2(1904).truncateText(str, tmp5);
-      const tmp2Result = tmp2(1904);
+      truncateTextResult = tmp2(1903).truncateText(str, tmp5);
+      const tmp2Result = tmp2(1903);
     }
     const intl = tmp2(1236).intl;
     obj = { username: null, title: null };

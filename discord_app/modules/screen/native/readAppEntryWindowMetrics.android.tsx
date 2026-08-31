@@ -1,6 +1,6 @@
-// === Module 1894: readWindowSizeForAppEntry ===
+// === Module 1893: readWindowSizeForAppEntry ===
 
-// Module 1894 (readWindowSizeForAppEntry)
+// Module 1893 (readWindowSizeForAppEntry)
 import set from "set" /* 2 */;
 import enforcingDefault from "enforcing" /* 671 */;
 

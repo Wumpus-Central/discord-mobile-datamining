@@ -1,6 +1,6 @@
-// === Module 13400: getKrispModel ===
+// === Module 13434: getKrispModel ===
 
-// Module 13400 (getKrispModel)
+// Module 13434 (getKrispModel)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/noise_cancellation/native/KrispUtils.tsx");

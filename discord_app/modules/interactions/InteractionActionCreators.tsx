@@ -1,6 +1,6 @@
-// === Module 7972: _fetchMessageInteractionData ===
+// === Module 7994: _fetchMessageInteractionData ===
 
-// Module 7972 (_fetchMessageInteractionData)
+// Module 7994 (_fetchMessageInteractionData)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;

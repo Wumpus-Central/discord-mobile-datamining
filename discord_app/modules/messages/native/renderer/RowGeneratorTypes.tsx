@@ -1,6 +1,6 @@
-// === Module 7981: MediaGalleryItemType ===
+// === Module 8003: MediaGalleryItemType ===
 
-// Module 7981 (MediaGalleryItemType)
+// Module 8003 (MediaGalleryItemType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorTypes.tsx");

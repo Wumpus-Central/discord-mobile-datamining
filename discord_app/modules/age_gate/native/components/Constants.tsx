@@ -1,6 +1,6 @@
-// === Module 9071: NsfwGateSource ===
+// === Module 9094: NsfwGateSource ===
 
-// Module 9071 (NsfwGateSource)
+// Module 9094 (NsfwGateSource)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/age_gate/native/components/Constants.tsx");

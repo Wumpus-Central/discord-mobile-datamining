@@ -1,6 +1,6 @@
-// === Module 15529: isTimingConfig ===
+// === Module 15563: isTimingConfig ===
 
-// Module 15529 (isTimingConfig)
+// Module 15563 (isTimingConfig)
 import set from "set" /* 2 */;
 import Button from "Button" /* 1297 */;
 

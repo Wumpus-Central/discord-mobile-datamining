@@ -1,6 +1,6 @@
-// === Module 6009: designConfig ===
+// === Module 6012: designConfig ===
 
-// Module 6009 (designConfig)
+// Module 6012 (designConfig)
 import set from "set" /* 2 */;
 
 const obj = {

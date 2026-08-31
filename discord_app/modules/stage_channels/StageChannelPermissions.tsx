@@ -1,6 +1,6 @@
-// === Module 1399: Permissions ===
+// === Module 1395: Permissions ===
 
-// Module 1399 (Permissions)
+// Module 1395 (Permissions)
 import ME from "ME" /* 676 */;
 import importAllResult from "fromString" /* 506 */;
 import set from "set" /* 2 */;

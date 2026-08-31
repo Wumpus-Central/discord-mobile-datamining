@@ -7,13 +7,10 @@ import { SystemThemeState } from "SystemThemeState" /* 1305 */;
 
 let result = require("set").fileFinishedImporting("modules/user_settings/isPerModeThemingActive.tsx");
 
-export const isPerModeThemingActive = function isPerModeThemingActive(isSyncedModeThemesEnabled) {
+export const isPerModeThemingActive = function isPerModeThemingActive() {
   let result = useSystemTheme.useSystemTheme === SystemThemeState.ON;
   if (result) {
     result = sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
-  }
-  if (result) {
-    result = isSyncedModeThemesEnabled();
   }
   return result;
 };

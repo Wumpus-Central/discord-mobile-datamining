@@ -1,13 +1,13 @@
-// === Module 12774: ? ===
+// === Module 12809: ? ===
 
-// Module 12774
+// Module 12809
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4166 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 12760 */;
+import map from "map" /* 4167 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 12795 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 import set from "set" /* 500 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -49,18 +49,18 @@ export default importAllResult.memo(function MediaModalSpoilerOverlay(source) {
     obj[0] = str;
     obj[1] = token;
     obj[2] = absoluteFill.absoluteFill;
-    const items1 = [closure_6(tmp3(4883), obj), ];
+    const items1 = [closure_6(tmp3(4886), obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = items2.spoilerOverlayContainer;
     const obj2 = { style: null, children: null };
     if (source.obscure) {
       obj2[0] = items2.obscureContentContainer;
-      items2 = [tmp9(tmp(4995).ImageWarningIcon, { size: "lg", color: "white" }), ];
+      items2 = [tmp9(tmp(4998).ImageWarningIcon, { size: "lg", color: "white" }), ];
       const obj3 = { accessibilityRole: "text", variant: "heading-md/medium", color: "text-overlay-light", children: null };
       const intl2 = tmp(1236).intl;
       stringResult = intl2.string(tmp(1236).t.SpxcUR);
       obj3[3] = stringResult;
-      items2[1] = tmp9(tmp(4442).Text, obj3);
+      items2[1] = tmp9(tmp(4444).Text, obj3);
       obj2[1] = items2;
       let tmp9Result = tmp7(tmp11, obj2);
     } else {
@@ -68,7 +68,7 @@ export default importAllResult.memo(function MediaModalSpoilerOverlay(source) {
       const obj4 = { accessibilityRole: "text", variant: "heading-md/medium", color: "text-overlay-light", children: null };
       const intl = tmp(1236).intl;
       obj4[3] = intl.string(tmp(1236).t["F+x38C"]).toUpperCase();
-      obj2[1] = tmp9(tmp(4442).Text, obj4);
+      obj2[1] = tmp9(tmp(4444).Text, obj4);
       tmp9Result = tmp9(tmp11, obj2);
       const str2 = intl.string(tmp(1236).t["F+x38C"]);
     }
@@ -76,8 +76,8 @@ export default importAllResult.memo(function MediaModalSpoilerOverlay(source) {
     obj1 = tmp9(tmp11, obj1);
     items1[1] = obj1;
     obj[1] = items1;
-    closure_7(tmp3(4186).View, obj);
-    const tmp3Result = tmp3(4883);
+    closure_7(tmp3(4187).View, obj);
+    const tmp3Result = tmp3(4886);
     const tmp8 = absoluteFill;
   }
 });

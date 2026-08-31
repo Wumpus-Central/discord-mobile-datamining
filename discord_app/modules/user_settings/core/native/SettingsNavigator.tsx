@@ -1,18 +1,18 @@
-// === Module 16413: SettingHeaderBadge ===
+// === Module 16447: SettingHeaderBadge ===
 
-// Module 16413 (SettingHeaderBadge)
+// Module 16447 (SettingHeaderBadge)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4442 */;
-import SettingsBadgeType from "SettingsBadgeType" /* 14938 */;
+import Text from "Text" /* 4444 */;
+import SettingsBadgeType from "SettingsBadgeType" /* 14971 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 1997 */;
-import closure_7 from "zustandStore" /* 14275 */;
+import closure_6 from "_getSystemLocale" /* 1996 */;
+import closure_7 from "zustandStore" /* 14309 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7769 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7790 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function SettingHeaderBadge(badge) {

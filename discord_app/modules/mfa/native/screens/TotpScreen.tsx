@@ -1,7 +1,7 @@
-// === Module 15207: isValidClipboardCode ===
+// === Module 15240: isValidClipboardCode ===
 
-// Module 15207 (isValidClipboardCode)
-import finishMFACheck from "finishMFACheck" /* 15208 */;
+// Module 15240 (isValidClipboardCode)
+import finishMFACheck from "finishMFACheck" /* 15241 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -53,7 +53,7 @@ export default function TotpScreen(finish) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

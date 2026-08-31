@@ -1,7 +1,7 @@
-// === Module 16626: Permissions ===
+// === Module 16659: Permissions ===
 
-// Module 16626 (Permissions)
-import closure_3 from "getUncachedChannelPermissions" /* 4090 */;
+// Module 16659 (Permissions)
+import closure_3 from "getUncachedChannelPermissions" /* 4091 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;

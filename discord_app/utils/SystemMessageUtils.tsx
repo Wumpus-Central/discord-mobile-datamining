@@ -1,25 +1,25 @@
-// === Module 7841: getSystemMessageUserJoinMobile ===
+// === Module 7863: getSystemMessageUserJoinMobile ===
 
-// Module 7841 (getSystemMessageUserJoinMobile)
+// Module 7863 (getSystemMessageUserJoinMobile)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getNicknameDefault from "getNickname" /* 4639 */;
-import computeChannelName from "computeChannelName" /* 4640 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4703 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4712 */;
-import reactParserFor from "reactParserFor" /* 7842 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7846 */;
-import identityHook from "identityHook" /* 7847 */;
-import getGuildProductPurchaseSystemMessageContentMobile from "getGuildProductPurchaseSystemMessageContentMobile" /* 7849 */;
-import getApplicationSubscriptionSystemMessageASTContent from "getApplicationSubscriptionSystemMessageASTContent" /* 7850 */;
-import getPrivateChannelIntegrationAddedSystemMessageContent from "getPrivateChannelIntegrationAddedSystemMessageContent" /* 7851 */;
+import getNicknameDefault from "getNickname" /* 4641 */;
+import computeChannelName from "computeChannelName" /* 4642 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4705 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4714 */;
+import reactParserFor from "reactParserFor" /* 7864 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7868 */;
+import identityHook from "identityHook" /* 7869 */;
+import getGuildProductPurchaseSystemMessageContentMobile from "getGuildProductPurchaseSystemMessageContentMobile" /* 7871 */;
+import getApplicationSubscriptionSystemMessageASTContent from "getApplicationSubscriptionSystemMessageASTContent" /* 7872 */;
+import getPrivateChannelIntegrationAddedSystemMessageContent from "getPrivateChannelIntegrationAddedSystemMessageContent" /* 7873 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "hasFlag" /* 4100 */;
+import closure_4 from "hasFlag" /* 4101 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "markAllUserIdListsStale" /* 4099 */;
-import closure_9 from "mergeGuildAvatar" /* 1923 */;
+import closure_6 from "ensureGuildLoaded" /* 1387 */;
+import closure_7 from "createGuildRecordFromRust" /* 1909 */;
+import closure_8 from "markAllUserIdListsStale" /* 4100 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -50,7 +50,7 @@ export default {
           obj = { username: null, usernameOnClick: null, otherUsername: null, otherUsernameOnClick: null };
           obj[0] = name;
           obj[1] = closure_12;
-          let tmp6Result = tmp6(4639);
+          let tmp6Result = tmp6(4641);
           obj[2] = tmp6Result.getName(null, channel_id, null);
           obj[3] = closure_12;
           return reactParserFor.astToString(intl18.formatToParts(getSystemLocale.t["7/Xl0S"], obj));
@@ -64,7 +64,7 @@ export default {
               obj = { username: null, usernameOnClick: null, otherUsername: null, otherUsernameOnClick: null };
               obj[0] = name;
               obj[1] = closure_12;
-              tmp6Result = tmp6(4639);
+              tmp6Result = tmp6(4641);
               obj[2] = tmp6Result.getName(null, channel_id, null);
               obj[3] = closure_12;
               let astToStringResult = reactParserFor.astToString(intl17.formatToParts(getSystemLocale.t.QtZ0RD, obj));
@@ -247,13 +247,13 @@ export default {
                     astToStringResult6 = null;
                     if (null != guild) {
                       if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED === value) {
-                        let tmp34Result = tmp34(7842);
+                        let tmp34Result = tmp34(7864);
                         const intl5 = tmp34(1236).intl;
                         const obj14 = { guildName: null };
                         obj14[0] = guild.name;
                         astToStringResult6 = tmp34Result.astToString(intl5.formatToParts(tmp34(1236).t.wt3ZUM, obj14));
-                      } else if (tmp34(7846).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
-                        tmp34Result = tmp34(7842);
+                      } else if (tmp34(7868).AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value) {
+                        tmp34Result = tmp34(7864);
                         const intl4 = tmp34(1236).intl;
                         obj15 = { guildName: null };
                         obj15[0] = guild.name;
@@ -262,8 +262,8 @@ export default {
                         const intl3 = tmp34(1236).intl;
                         obj16 = { guildName: null };
                         obj16[0] = guild.name;
-                        astToStringResult6 = tmp34(7842).astToString(intl3.formatToParts(tmp34(1236).t["a+lJKl"], obj16));
-                        const tmp34Result1 = tmp34(7842);
+                        astToStringResult6 = tmp34(7864).astToString(intl3.formatToParts(tmp34(1236).t["a+lJKl"], obj16));
+                        const tmp34Result1 = tmp34(7864);
                       }
                     }
                   }

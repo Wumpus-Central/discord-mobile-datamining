@@ -1,8 +1,8 @@
-// === Module 16102: useSortedMemberApplications ===
+// === Module 16136: useSortedMemberApplications ===
 
-// Module 16102 (useSortedMemberApplications)
+// Module 16136 (useSortedMemberApplications)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateSubmittedGuildJoinRequestTotal" /* 7149 */;
+import closure_3 from "updateSubmittedGuildJoinRequestTotal" /* 7170 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useSortedMemberApplications.tsx");

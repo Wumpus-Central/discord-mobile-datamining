@@ -1,15 +1,15 @@
-// === Module 8448: WarningBox ===
+// === Module 8470: WarningBox ===
 
-// Module 8448 (WarningBox)
+// Module 8470 (WarningBox)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4442 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8449 */;
-import InfoBox from "InfoBox" /* 8451 */;
-import InfoBoxDefault from "InfoBox" /* 8451 */;
+import Text from "Text" /* 4444 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8471 */;
+import InfoBox from "InfoBox" /* 8473 */;
+import InfoBoxDefault from "InfoBox" /* 8473 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function WarningBox(application) {
@@ -26,7 +26,7 @@ function WarningBox(application) {
     obj[1] = tmp.warningBox;
     const intl = getSystemLocale.intl;
     if (mobileAccountLinkingDisabled) {
-      BMMo2K = name(3340).BMMo2K;
+      BMMo2K = name(3341).BMMo2K;
       tmp2 = application == tmp2;
       name = undefined;
       if (!tmp2) {

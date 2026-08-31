@@ -1,9 +1,9 @@
-// === Module 15705: useLiveStageChannels ===
+// === Module 15739: useLiveStageChannels ===
 
-// Module 15705 (useLiveStageChannels)
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+// Module 15739 (useLiveStageChannels)
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1392 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useLiveStageChannels.tsx");

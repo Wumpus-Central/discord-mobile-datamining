@@ -1,8 +1,8 @@
-// === Module 6025: HotspotStore ===
+// === Module 6028: HotspotStore ===
 
-// Module 6025 (HotspotStore)
-import importDefaultResult from "set" /* 6026 */;
-import HotspotLocations from "HotspotLocations" /* 6027 */;
+// Module 6028 (HotspotStore)
+import importDefaultResult from "set" /* 6029 */;
+import HotspotLocations from "HotspotLocations" /* 6030 */;
 
 const result = require("set").fileFinishedImporting("modules/hotspot/index.tsx");
 for (const key10022 in tmp4) {

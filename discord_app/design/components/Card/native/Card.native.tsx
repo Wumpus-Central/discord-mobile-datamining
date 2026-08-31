@@ -1,16 +1,15 @@
-// === Module 5566: PressableCard ===
+// === Module 5569: PressableCard ===
 
-// Module 5566 (PressableCard)
+// Module 5569 (PressableCard)
 import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4166 */;
-import createCardShadowToken from "createCardShadowToken" /* 5567 */;
+import map from "map" /* 4167 */;
+import createCardShadowToken from "createCardShadowToken" /* 5570 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
-import importDefaultResult from "module_4186" /* 4186 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
+import importDefaultResult from "module_4187" /* 4187 */;
 
 require = arg1;
 class Card {
@@ -36,39 +35,37 @@ class Card {
       str3 = "primary";
     }
     merged = Object.assign(global, Object.create(null));
-    tmp2 = require("useIsMobileVisualRefreshExperimentEnabled")("Card");
     obj = require("map");
     radius = merged.radius;
     if (radius == null) {
       radius = obj.useToken(require("Themes").modules.mobile.CARD_DEFAULT_RADIUS);
     }
-    tmp3 = closure_10(flag, flag2, str3, str, str2, radius);
+    tmp2 = closure_10(flag, flag2, str3, str, str2, radius);
     items = [, , ];
-    ({ spacing: arr[0], card: arr[1] } = tmp3);
+    ({ spacing: arr[0], card: arr[1] } = tmp2);
     items[2] = merged.style;
     if ("onPress" in merged) {
       if (null != merged.onPress) {
         str4 = merged.accessibilityRole;
-        tmp5 = closure_4;
-        tmp6 = closure_3;
-        tmp7 = closure_4(merged, closure_3);
-        tmp8 = jsx;
-        tmp9 = PressableCard;
+        tmp4 = closure_4;
+        tmp5 = closure_3;
+        tmp6 = closure_4(merged, closure_3);
+        tmp7 = jsx;
+        tmp8 = PressableCard;
         if (str4 == null) {
           str4 = "button";
         }
         obj = { accessibilityRole: null };
         obj[0] = str4;
-        tmp10 = obj;
-        tmp11 = tmp7;
-        merged1 = Object.assign(tmp7);
+        tmp9 = obj;
+        tmp10 = tmp6;
+        merged1 = Object.assign(tmp6);
         obj.start = flag;
         obj.end = flag2;
         obj.style = items;
         obj.variant = str3;
-        obj.isRefreshEnabled = tmp2;
         obj.radius = radius;
-        return tmp8(tmp9, obj);
+        return tmp7(tmp8, obj);
       }
     }
     obj1 = {};
@@ -78,7 +75,7 @@ class Card {
   }
 }
 function PressableCard(start) {
-  let obj = onPressIn(sharedValue[10]);
+  let obj = onPressIn(sharedValue[9]);
   if (obj.isAndroid()) {
     const start2 = start.start;
     onPressIn = start2;
@@ -86,7 +83,6 @@ function PressableCard(start) {
     let onPressOut = end2;
     const radius2 = start.radius;
     sharedValue = radius2;
-    const isRefreshEnabled2 = start.isRefreshEnabled;
     obj = {};
     const merged = Object.assign(start, Object.create(null));
     let items = [start2, end2, radius2];
@@ -102,12 +98,12 @@ function PressableCard(start) {
     obj[0] = memo;
     const merged1 = Object.assign(merged);
     obj.children = start.children;
-    let tmp19 = jsx(tmp(tmp2[13]).AnimatedPressableHighlight, { androidRippleConfig: null });
+    let tmp19 = jsx(tmp(tmp2[12]).AnimatedPressableHighlight, { androidRippleConfig: null });
   } else {
     onPressIn = start.onPressIn;
     onPressOut = start.onPressOut;
     ({ radius, start, end } = start);
-    ({ children, style, variant, isRefreshEnabled } = start);
+    ({ children, style, variant } = start);
     const merged2 = Object.assign(start, Object.create(null));
     sharedValue = undefined;
     let backgroundColor;
@@ -128,30 +124,30 @@ function PressableCard(start) {
         tmp2(arg0);
       }
     }, items2);
-    const tmp11 = callback2(variant, isRefreshEnabled);
+    const tmp11 = callback2(variant);
     backgroundColor = tmp11.backgroundColor;
     backgroundColorPressed = tmp11.backgroundColorPressed;
     tmpResult = tmp(tmp2[4]);
     class B {
       constructor() {
         obj = { backgroundColor: null };
-        obj2 = onPressIn(closure_2[11]);
+        obj2 = onPressIn(closure_2[10]);
         obj3 = onPressIn(closure_2[4]);
         items = [, ];
         items[0] = backgroundColor;
         items[1] = backgroundColorPressed;
         interpolateColorResult = obj3.interpolateColor(closure_2.get(), [0, 1], items);
-        obj[0] = obj2.withSpring(interpolateColorResult, onPressIn(closure_2[12]).ON_PRESS_SPRING, "animate-always");
+        obj[0] = obj2.withSpring(interpolateColorResult, onPressIn(closure_2[11]).ON_PRESS_SPRING, "animate-always");
         return obj;
       }
     }
     let obj2 = { withSpring: null, interpolateColor: null, pressed: null, backgroundColor: null, backgroundColorPressed: null, ON_PRESS_SPRING: null };
-    obj2[0] = tmp(tmp2[11]).withSpring;
+    obj2[0] = tmp(tmp2[10]).withSpring;
     obj2[1] = tmp(tmp2[4]).interpolateColor;
     obj2[2] = sharedValue;
     obj2[3] = backgroundColor;
     obj2[4] = backgroundColorPressed;
-    obj2[5] = tmp(tmp2[12]).ON_PRESS_SPRING;
+    obj2[5] = tmp(tmp2[11]).ON_PRESS_SPRING;
     B.__closure = obj2;
     B.__workletHash = 14943431549291;
     B.__initData = closure_12;
@@ -172,10 +168,6 @@ let closure_3 = ["accessibilityRole"];
 ({ View: closure_6, Pressable } = get_ActivityIndicator);
 let closure_8 = importDefaultResult.createAnimatedComponent(Pressable);
 let closure_9 = createCacheKey.createStyleProperties((arg0) => {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
   if ("primary" === arg0) {
     let backgroundColor = ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
   } else if ("secondary" === arg0) {
@@ -189,9 +181,6 @@ let closure_9 = createCacheKey.createStyleProperties((arg0) => {
   } else if ("surface-high" === arg0) {
     backgroundColor = ThemesDefault.colors.BACKGROUND_SURFACE_HIGH;
   }
-  if (flag === undefined) {
-    flag = false;
-  }
   if ("primary" === arg0) {
     let backgroundColorPressed = ThemesDefault.colors.TABLEROW_BACKGROUND_PRESSED;
   } else if ("secondary" === arg0) {
@@ -199,13 +188,7 @@ let closure_9 = createCacheKey.createStyleProperties((arg0) => {
   } else if ("muted" === arg0) {
     backgroundColorPressed = ThemesDefault.colors.CARD_MUTED_PRESSED_BG;
   } else if ("transparent" === arg0) {
-    const tmp15 = ThemesDefault;
-    if (flag) {
-      let TRANSPARENT = tmp15.colors.BACKGROUND_MOD_SUBTLE;
-    } else {
-      TRANSPARENT = tmp15.unsafe_rawColors.TRANSPARENT;
-    }
-    backgroundColorPressed = TRANSPARENT;
+    backgroundColorPressed = ThemesDefault.colors.BACKGROUND_MOD_SUBTLE;
   } else if ("control-secondary" === arg0) {
     backgroundColorPressed = ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE;
   } else if ("surface-high" === arg0) {

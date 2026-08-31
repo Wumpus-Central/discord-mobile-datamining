@@ -1,6 +1,6 @@
-// === Module 16123: isClarificationComplete ===
+// === Module 16157: isClarificationComplete ===
 
-// Module 16123 (isClarificationComplete)
+// Module 16157 (isClarificationComplete)
 import set from "set" /* 2 */;
 
 let result = set.fileFinishedImporting("modules/vibegrations/lib/VibegrationsClarification.tsx");

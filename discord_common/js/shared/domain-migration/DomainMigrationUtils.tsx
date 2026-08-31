@@ -1,6 +1,6 @@
-// === Module 5542: DomainMigrationEventType ===
+// === Module 5545: DomainMigrationEventType ===
 
-// Module 5542 (DomainMigrationEventType)
+// Module 5545 (DomainMigrationEventType)
 import set from "set" /* 2 */;
 
 let obj = { MIGRATION_SOURCE_DOMAIN: 0, [0]: "MIGRATION_SOURCE_DOMAIN", MIGRATION_DESTINATION_DOMAIN: 1, [1]: "MIGRATION_DESTINATION_DOMAIN" };

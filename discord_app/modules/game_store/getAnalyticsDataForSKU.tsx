@@ -1,7 +1,7 @@
-// === Module 4814: getAnalyticsDataForSKU ===
+// === Module 4816: getAnalyticsDataForSKU ===
 
-// Module 4814 (getAnalyticsDataForSKU)
-import closure_0 from "addApplication" /* 4487 */;
+// Module 4816 (getAnalyticsDataForSKU)
+import closure_0 from "addApplication" /* 4489 */;
 import { SKUFeatureTypes } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("modules/game_store/getAnalyticsDataForSKU.tsx");

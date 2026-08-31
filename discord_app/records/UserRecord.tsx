@@ -1,14 +1,14 @@
-// === Module 1931: createdAt ===
+// === Module 1930: createdAt ===
 
-// Module 1931 (createdAt)
-import hasFlag from "hasFlag" /* 1403 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1899 */;
-import toJSDefault from "toJS" /* 1932 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1947 */;
+// Module 1930 (createdAt)
+import hasFlag from "hasFlag" /* 1399 */;
+import getAvatarURL from "getAvatarURL" /* 1431 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1898 */;
+import toJSDefault from "toJS" /* 1931 */;
+import isPremiumAtLeast from "isPremiumAtLeast" /* 1946 */;
 import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1925 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 require = arg1;
 toJSDefault;
@@ -478,7 +478,7 @@ prototype["isOnReverseTrial"] = function isOnReverseTrial() {
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === require(1939) /* create */.PremiumSource.REVERSE_TRIAL;
+    isPremiumResult = premiumSource === require(1938) /* create */.PremiumSource.REVERSE_TRIAL;
   }
   return isPremiumResult;
 };
@@ -490,7 +490,7 @@ prototype["isPremiumWithPremiumGroup"] = function isPremiumWithPremiumGroup() {
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === require(1939) /* create */.PremiumSource.SUBSCRIPTION_GROUP;
+    isPremiumResult = premiumSource === require(1938) /* create */.PremiumSource.SUBSCRIPTION_GROUP;
   }
   return isPremiumResult;
 };
@@ -502,7 +502,7 @@ prototype["hasPaidTier2Subscription"] = function hasPaidTier2Subscription() {
     if (premiumState != null) {
       prop = premiumState.premiumSubscriptionType;
     }
-    isPremiumResult = prop === require(1939) /* create */.PremiumSubscriptionType.TIER_2;
+    isPremiumResult = prop === require(1938) /* create */.PremiumSubscriptionType.TIER_2;
   }
   return isPremiumResult;
 };
@@ -515,14 +515,14 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
     if (premiumState != null) {
       prop = premiumState.premiumSubscriptionType;
     }
-    let tmp6 = prop === tmp(1939).PremiumSubscriptionType.NONE_UNSPECIFIED;
+    let tmp6 = prop === tmp(1938).PremiumSubscriptionType.NONE_UNSPECIFIED;
     if (!tmp6) {
       const premiumState2 = self.premiumState;
       let prop1;
       if (premiumState2 != null) {
         prop1 = premiumState2.premiumSubscriptionType;
       }
-      tmp6 = prop1 === tmp(1939).PremiumSubscriptionType.BOOST_ONLY;
+      tmp6 = prop1 === tmp(1938).PremiumSubscriptionType.BOOST_ONLY;
     }
     isPremiumResult = tmp6;
   }
@@ -532,7 +532,7 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
     if (premiumState3 != null) {
       premiumSource = premiumState3.premiumSource;
     }
-    isPremiumResult = premiumSource === tmp(1939).PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === tmp(1938).PremiumSource.FRACTIONAL_NITRO;
   }
   return isPremiumResult;
 };
@@ -545,10 +545,10 @@ prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremium
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === tmp(1939).PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === tmp(1938).PremiumSource.FRACTIONAL_NITRO;
   }
   if (isPremiumResult) {
-    isPremiumResult = self.premiumState.premiumSubscriptionType !== tmp(1939).PremiumSubscriptionType.TIER_2;
+    isPremiumResult = self.premiumState.premiumSubscriptionType !== tmp(1938).PremiumSubscriptionType.TIER_2;
   }
   return isPremiumResult;
 };
@@ -560,7 +560,7 @@ prototype["isFractionalPremium"] = function isFractionalPremium() {
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === require(1939) /* create */.PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === require(1938) /* create */.PremiumSource.FRACTIONAL_NITRO;
   }
   return isPremiumResult;
 };
@@ -611,14 +611,14 @@ prototype["hasUniqueUsername"] = function hasUniqueUsername() {
 prototype["isPremiumGroupMember"] = function isPremiumGroupMember() {
   let result = this.isPremiumWithPremiumGroup();
   if (result) {
-    result = this.premiumGroupRole === require(1939) /* create */.PremiumSubscriptionGroupRole.MEMBER;
+    result = this.premiumGroupRole === require(1938) /* create */.PremiumSubscriptionGroupRole.MEMBER;
   }
   return result;
 };
 prototype["isPremiumGroupPrimary"] = function isPremiumGroupPrimary() {
   let result = this.isPremiumWithPremiumGroup();
   if (result) {
-    result = this.premiumGroupRole === require(1939) /* create */.PremiumSubscriptionGroupRole.PRIMARY;
+    result = this.premiumGroupRole === require(1938) /* create */.PremiumSubscriptionGroupRole.PRIMARY;
   }
   return result;
 };
@@ -647,7 +647,7 @@ Object.defineProperty(prototype, "nameplate", {
     if (collectibles != null) {
       nameplate = collectibles.nameplate;
     }
-    return require(1948) /* getNameplateData */.getNameplateData(nameplate);
+    return require(1947) /* getNameplateData */.getNameplateData(nameplate);
   },
   set: undefined
 });
@@ -659,7 +659,7 @@ Object.defineProperty(prototype, "premiumGroupRole", {
       prop = premiumState.premiumSubscriptionGroupRole;
     }
     if (prop == null) {
-      prop = require(1939) /* create */.PremiumSubscriptionGroupRole.UNSPECIFIED;
+      prop = require(1938) /* create */.PremiumSubscriptionGroupRole.UNSPECIFIED;
     }
     return prop;
   },

@@ -1,11 +1,11 @@
-// === Module 4269: handleGatewayJoinRequestUpdate ===
+// === Module 4270: handleGatewayJoinRequestUpdate ===
 
-// Module 4269 (handleGatewayJoinRequestUpdate)
+// Module 4270 (handleGatewayJoinRequestUpdate)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4270 */;
-import closure_2 from "mergeGuildAvatar" /* 1923 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1426 */;
+import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4271 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
 function handleGatewayJoinRequestUpdate(arg0) {

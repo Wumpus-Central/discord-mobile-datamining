@@ -1,11 +1,11 @@
-// === Module 10083: useFetchStreamPreview ===
+// === Module 10106: useFetchStreamPreview ===
 
-// Module 10083 (useFetchStreamPreview)
+// Module 10106 (useFetchStreamPreview)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "reset" /* 4631 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_6 from "handleConnectionOpen" /* 1982 */;
+import closure_3 from "reset" /* 4633 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_6 from "handleConnectionOpen" /* 1981 */;
 import { BasicPermissions } from "sum" /* 505 */;
 
 const require = arg1;
@@ -77,5 +77,5 @@ export default function useFetchStreamPreview(arg0, arg1, arg2) {
     }
     return obj;
   }
-  obj = { previewUrl: "ct", isLoading: true };
+  obj = { previewUrl: "Object", isLoading: true };
 };

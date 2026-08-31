@@ -1,7 +1,7 @@
-// === Module 7295: isStable ===
+// === Module 7316: isStable ===
 
-// Module 7295 (isStable)
-import getConstantsAll from "getConstants" /* 1626 */;
+// Module 7316 (isStable)
+import getConstantsAll from "getConstants" /* 1625 */;
 import set from "set" /* 500 */;
 
 const ReleaseChannel = getConstantsAll.getConstants().ReleaseChannel;

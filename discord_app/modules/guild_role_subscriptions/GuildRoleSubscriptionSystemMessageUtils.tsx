@@ -1,13 +1,13 @@
-// === Module 7847: identityHook ===
+// === Module 7869: identityHook ===
 
-// Module 7847 (identityHook)
+// Module 7869 (identityHook)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4666 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6063 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
-import getJoinButtonLabels from "getJoinButtonLabels" /* 7848 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4668 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6066 */;
+import closure_3 from "createGuildRecordFromRust" /* 1909 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import getJoinButtonLabels from "getJoinButtonLabels" /* 7870 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

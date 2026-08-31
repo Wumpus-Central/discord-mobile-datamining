@@ -1,12 +1,12 @@
-// === Module 11228: _savedMessageJumpToMessage ===
+// === Module 11257: _savedMessageJumpToMessage ===
 
-// Module 11228 (_savedMessageJumpToMessage)
+// Module 11257 (_savedMessageJumpToMessage)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hooksDefault from "hooks" /* 4044 */;
+import hooksDefault from "hooks" /* 4045 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { UnknownChannelRecord } from "createChannelRecord" /* 1395 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import { UnknownChannelRecord } from "createChannelRecord" /* 1391 */;
+import closure_6 from "ensureGuildLoaded" /* 1387 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -30,7 +30,7 @@ function _savedMessageJumpToMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -80,11 +80,11 @@ function _savedMessageJumpToMessage() {
               if (null == closure_2.recipients) {
                 c5 = 0;
                 constants = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else if (closure_2.recipients.length > 1) {
                 c5 = 0;
                 constants = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 obj1 = lib(closure_2[8]);
                 const recipients = closure_2.recipients;
@@ -113,7 +113,7 @@ function _savedMessageJumpToMessage() {
           }
           lib(closure_2[9])(closure_8.CHANNEL(guildId, closure_0.saveData.channelId, closure_0.saveData.messageId), { openChannel: true });
           constants = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp30) {
           closure_4 = tmp30;
           if (tmp4 === c5) {

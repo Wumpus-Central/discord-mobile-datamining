@@ -1,9 +1,9 @@
-// === Module 1970: prefix ===
+// === Module 1969: prefix ===
 
-// Module 1970 (prefix)
+// Module 1969 (prefix)
 import set from "set" /* 2 */;
-import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1962 */;
-import TableId from "TableId" /* 1964 */;
+import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1961 */;
+import TableId from "TableId" /* 1963 */;
 
 let GuildEntityDao;
 class GuildEntityDao {
@@ -83,7 +83,7 @@ prototype["put"] = function put(arg0, arg1) {
   dependencyMap = arg1;
   let Replace = arg2;
   if (arg2 === undefined) {
-    Replace = _require(1964).ConflictOptions.Replace;
+    Replace = _require(1963).ConflictOptions.Replace;
   }
   return this.transaction((put) => put.put(closure_0, closure_1, Replace), "" + this.prefix + " put");
 };
@@ -92,7 +92,7 @@ prototype["putAll"] = function putAll(arg0, arg1) {
   dependencyMap = arg1;
   let Replace = arg2;
   if (arg2 === undefined) {
-    Replace = _require(1964).ConflictOptions.Replace;
+    Replace = _require(1963).ConflictOptions.Replace;
   }
   return this.transaction((putAll) => putAll.putAll(closure_0, closure_1, Replace), "" + this.prefix + " putAll");
 };
@@ -187,7 +187,7 @@ prototype2["putAll"] = function putAll(arg0, arr) {
   const _require = arg0;
   let Replace = arg2;
   if (arg2 === undefined) {
-    Replace = _require(1964).ConflictOptions.Replace;
+    Replace = _require(1963).ConflictOptions.Replace;
   }
   const transaction = this.transaction;
   return transaction.putAll(arr.map((arg0) => closure_1_2.cell(closure_0, arg0, null)), Replace);

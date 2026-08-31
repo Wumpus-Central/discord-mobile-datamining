@@ -1,11 +1,11 @@
-// === Module 12847: generateSeparatorRowData ===
+// === Module 12881: generateSeparatorRowData ===
 
-// Module 12847 (generateSeparatorRowData)
+// Module 12881 (generateSeparatorRowData)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import Changeset from "Changeset" /* 7789 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+import Changeset from "Changeset" /* 7810 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 ({ RowType: obj1, SeparatorType: c3 } = Changeset);
 let closure_4 = createCacheKey.createNativeStyleProperties({ dayColor: ThemesDefault.colors.TEXT_MUTED, unreadTextColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_TEXT, unreadBorderColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_BORDER, summaryColor: ThemesDefault.colors.TEXT_BRAND });
@@ -27,12 +27,7 @@ export const generateSeparatorRowData = function generateSeparatorRowData(text, 
     obj = { type: null, id: null, color: null, borderColor: null, changeType: null, text: null };
     obj[0] = constants.SEPARATOR;
     obj[1] = rowType;
-    obj[2] = tmp.unreadTextColor;
-    let unreadBorderColor;
-    if (obj4.isMobileVisualRefreshEnabled("Separator")) {
-      unreadBorderColor = tmp.unreadBorderColor;
-    }
-    obj[3] = unreadBorderColor;
+    ({ unreadTextColor: obj3[2], unreadBorderColor: obj3[3] } = tmp);
     obj[4] = changeType;
     obj[5] = text.text;
     return obj;

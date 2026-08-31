@@ -1,7 +1,7 @@
-// === Module 9170: useIsUserProfileObfuscated ===
+// === Module 9192: useIsUserProfileObfuscated ===
 
-// Module 9170 (useIsUserProfileObfuscated)
-import closure_2 from "createUserWidgetFromServer" /* 7313 */;
+// Module 9192 (useIsUserProfileObfuscated)
+import closure_2 from "createUserWidgetFromServer" /* 7334 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useIsUserProfileObfuscated.tsx");

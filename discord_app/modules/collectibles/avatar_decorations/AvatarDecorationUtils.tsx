@@ -1,9 +1,9 @@
-// === Module 1899: parseAvatarDecorationData ===
+// === Module 1898: parseAvatarDecorationData ===
 
-// Module 1899 (parseAvatarDecorationData)
+// Module 1898 (parseAvatarDecorationData)
 import set from "set" /* 2 */;
 import apply from "apply" /* 12 */;
-import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1900 */;
+import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1899 */;
 
 let result = set.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");
 
@@ -52,7 +52,7 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
       if (typeof avatarDecoration === "object") {
         tmp2 = null;
         if (null != avatarDecoration) {
-          let tmp12Result = tmp12(1900);
+          let tmp12Result = tmp12(1899);
           const result = tmp12Result.parseSkuIdFromServerData(avatarDecoration);
           tmp2 = null;
           if (null != result) {
@@ -79,7 +79,7 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
       if (typeof skuId === "object") {
         tmp6 = null;
         if (null != skuId) {
-          tmp12Result = tmp12(1900);
+          tmp12Result = tmp12(1899);
           const result1 = tmp12Result.parseSkuIdFromServerData(skuId);
           tmp6 = null;
           if (null != result1) {

@@ -1,69 +1,70 @@
-// === Module 15893: YouStatusRadioGroup ===
+// === Module 15927: YouStatusRadioGroup ===
 
-// Module 15893 (YouStatusRadioGroup)
+// Module 15927 (YouStatusRadioGroup)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getThemeForColor from "getThemeForColor" /* 1347 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
-import map from "map" /* 4166 */;
-import Text from "Text" /* 4442 */;
-import Stack from "Stack" /* 4891 */;
-import PressableBase from "PressableBase" /* 5033 */;
-import useDesignToggleDefault from "useDesignToggle" /* 5462 */;
-import PressableCard from "PressableCard" /* 5566 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5586 */;
-import ActionSheet from "ActionSheet" /* 5954 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5957 */;
-import TableSwitchRow from "TableSwitchRow" /* 5958 */;
-import context from "context" /* 7639 */;
-import TableRadioRow from "TableRadioRow" /* 7640 */;
-import _activityFromSetting from "_activityFromSetting" /* 8477 */;
-import useFocusModeEnabled from "useFocusModeEnabled" /* 10111 */;
-import BellSlashIcon from "BellSlashIcon" /* 10176 */;
-import ThemeLightIcon from "ThemeLightIcon" /* 14796 */;
-import ThemeMidnightIcon from "ThemeMidnightIcon" /* 14798 */;
-import DevToolsContentSortButtonsDefault from "DevToolsContentSortButtons" /* 15276 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
+import map from "map" /* 4167 */;
+import Text from "Text" /* 4444 */;
+import Stack from "Stack" /* 4894 */;
+import PressableBase from "PressableBase" /* 5036 */;
+import useDesignToggleDefault from "useDesignToggle" /* 5465 */;
+import PressableCard from "PressableCard" /* 5569 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5589 */;
+import ActionSheet from "ActionSheet" /* 5957 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5960 */;
+import TableSwitchRow from "TableSwitchRow" /* 5961 */;
+import context from "context" /* 7660 */;
+import TableRadioRow from "TableRadioRow" /* 7661 */;
+import _activityFromSetting from "_activityFromSetting" /* 8499 */;
+import useFocusModeEnabled from "useFocusModeEnabled" /* 10134 */;
+import BellSlashIcon from "BellSlashIcon" /* 10199 */;
+import ThemeDarkIcon from "ThemeDarkIcon" /* 10919 */;
+import ThemeLightIcon from "ThemeLightIcon" /* 14830 */;
+import ThemeMidnightIcon from "ThemeMidnightIcon" /* 14832 */;
+import DevToolsContentSortButtonsDefault from "DevToolsContentSortButtons" /* 15309 */;
+import ThemeGrayIcon from "ThemeGrayIcon" /* 15928 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initialize" /* 11915 */;
-import { MultiAccountTokenStatus } from "initialize" /* 11915 */;
+import closure_7 from "initialize" /* 11949 */;
+import { MultiAccountTokenStatus } from "initialize" /* 11949 */;
 import closure_9 from "handleThemeChange" /* 1302 */;
-import closure_10 from "createdAt" /* 1931 */;
-import closure_11 from "init" /* 7412 */;
-import closure_12 from "initialize" /* 4291 */;
-import closure_13 from "mergeGuildAvatar" /* 1923 */;
+import closure_10 from "createdAt" /* 1930 */;
+import closure_11 from "init" /* 7433 */;
+import closure_12 from "initialize" /* 4293 */;
+import closure_13 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { MultiAccountSwitchLocation as closure_18 } from "MAX_ACCOUNTS" /* 11916 */;
+import { MultiAccountSwitchLocation as closure_18 } from "MAX_ACCOUNTS" /* 11950 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function YouStatusRadioGroup() {
   const memo = importAllResult.useMemo(() => {
     let obj = { icon: null, value: null };
-    obj = { source: callback(13688), variant: "text-status-online" };
-    obj[0] = callback2(setting(5570).TableRowIcon, obj);
+    obj = { source: callback(13722), variant: "text-status-online" };
+    obj[0] = callback2(setting(5573).TableRowIcon, obj);
     obj[1] = constants.ONLINE;
     const items = [obj, , , ];
-    obj = { icon: callback2(setting(5570).TableRowIcon, { source: callback(13685), variant: "text-status-idle" }), value: constants.IDLE };
+    obj = { icon: callback2(setting(5573).TableRowIcon, { source: callback(13719), variant: "text-status-idle" }), value: constants.IDLE };
     items[1] = obj;
     const obj2 = { icon: null, value: null };
-    obj1 = { source: callback(13685), variant: "text-status-idle" };
-    obj2[0] = callback2(setting(5570).TableRowIcon, { source: callback(13686), variant: "text-status-dnd" });
+    obj1 = { source: callback(13719), variant: "text-status-idle" };
+    obj2[0] = callback2(setting(5573).TableRowIcon, { source: callback(13720), variant: "text-status-dnd" });
     obj2[1] = constants.DND;
     items[2] = obj2;
     const obj4 = { icon: null, value: null };
-    const obj3 = { source: callback(13686), variant: "text-status-dnd" };
-    obj4[0] = callback2(setting(5570).TableRowIcon, { source: callback(13687), variant: "text-status-offline" });
+    const obj3 = { source: callback(13720), variant: "text-status-dnd" };
+    obj4[0] = callback2(setting(5573).TableRowIcon, { source: callback(13721), variant: "text-status-offline" });
     obj4[1] = constants.INVISIBLE;
     items[3] = obj4;
     return items;
   }, []);
-  const StatusSetting = setting(4135).StatusSetting;
+  const StatusSetting = setting(4136).StatusSetting;
   setting = StatusSetting.useSetting();
-  const StatusExpiresAtSetting = setting(4135).StatusExpiresAtSetting;
+  const StatusExpiresAtSetting = setting(4136).StatusExpiresAtSetting;
   closure_1 = StatusExpiresAtSetting.useSetting();
   let items = [setting];
   const callback = importAllResult.useCallback((nextStatus) => {
@@ -96,59 +97,53 @@ function YouStatusRadioGroup() {
     obj.subLabel = formatToPlainStringResult;
     return closure_1_19(setting(closure_1_3[23]).TableRadioRow, obj, value.value);
   });
-  return callback(setting(7639).TableRadioGroup, obj);
+  return callback(setting(7660).TableRadioGroup, obj);
 }
 function ThemeRadioGroup() {
-  const tmp2 = useIsMobileVisualRefreshExperimentEnabledDefault("ThemeRadioGroup");
   let obj = initialize;
   const items = [closure_9];
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
+  obj = { children: null };
   const callback = importAllResult.useCallback((arg0) => {
-    const result = callback(14712).resetBackgroundGradientPreset();
-    const obj = callback(14712);
-    callback(11458).resetCustomTheme();
-    const obj2 = callback(11458);
-    callback2(8159).updateTheme(arg0);
+    const result = callback(14746).resetBackgroundGradientPreset();
+    const obj = callback(14746);
+    callback(11488).resetCustomTheme();
+    const obj2 = callback(11488);
+    callback2(8181).updateTheme(arg0);
   }, []);
   obj = { title: null, onChange: null, defaultValue: null, hasIcons: true, children: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.Ksh3ik);
   obj[1] = callback;
   obj[2] = stateFromStores;
-  obj = { icon: callback(ThemeLightIcon.ThemeLightIcon, {}), label: null, value: null };
-  let obj3 = getThemeForColor;
-  obj[1] = obj3.getThemeName(constants.LIGHT, tmp2);
-  obj[2] = constants.LIGHT;
-  const items1 = [callback(TableRadioRow.TableRadioRow, obj), , , ];
-  let tmp6Result = tmp2;
-  if (tmp2) {
-    obj1 = { icon: null, label: null, value: null };
-    obj1[0] = tmp6(tmp3(15894).ThemeGrayIcon, {});
-    let tmp3Result = tmp3(1347);
-    obj1[1] = tmp3Result.getThemeName(tmp9.DARK, true);
-    obj1[2] = tmp9.DARK;
-    tmp6Result = tmp6(tmp3(7640).TableRadioRow, obj1);
-  }
-  let obj2 = { children: null };
-  items1[1] = tmp6Result;
-  obj3 = { icon: tmp6(tmp3(10895).ThemeDarkIcon, {}), label: null, value: null };
-  tmp3Result = tmp3(1347);
-  obj3[1] = tmp3Result.getThemeName(constants.DARKER, tmp2);
+  obj1 = { icon: callback(ThemeLightIcon.ThemeLightIcon, {}), label: null, value: null };
+  let obj4 = getThemeForColor;
+  obj1[1] = obj4.getThemeName(constants.LIGHT);
+  obj1[2] = constants.LIGHT;
+  const items1 = [callback(TableRadioRow.TableRadioRow, obj1), , , ];
+  let obj2 = { icon: callback(ThemeGrayIcon.ThemeGrayIcon, {}), label: getThemeForColor.getThemeName(constants.DARK), value: constants.DARK };
+  items1[1] = callback(TableRadioRow.TableRadioRow, obj2);
+  const obj3 = { icon: callback(ThemeDarkIcon.ThemeDarkIcon, {}), label: null, value: null };
+  const obj7 = getThemeForColor;
+  obj3[1] = getThemeForColor.getThemeName(constants.DARKER);
   obj3[2] = constants.DARKER;
   items1[2] = callback(TableRadioRow.TableRadioRow, obj3);
-  const obj4 = { icon: callback(ThemeMidnightIcon.ThemeMidnightIcon, {}), label: getThemeForColor.getThemeName(constants.MIDNIGHT, tmp2), value: constants.MIDNIGHT };
+  obj4 = { icon: callback(ThemeMidnightIcon.ThemeMidnightIcon, {}), label: null, value: null };
+  const obj9 = getThemeForColor;
+  obj4[1] = getThemeForColor.getThemeName(constants.MIDNIGHT);
+  obj4[2] = constants.MIDNIGHT;
   items1[3] = callback(TableRadioRow.TableRadioRow, obj4);
   obj[4] = items1;
-  obj2[0] = closure_20(context.TableRadioGroup, obj);
-  return callback(closure_5, obj2);
+  obj[0] = callback2(context.TableRadioGroup, obj);
+  return callback(closure_5, obj);
 }
 function YouAccountRadioGroup() {
-  const tmp3 = callback2();
+  const tmp = callback3();
   let obj = multiAccountUsers(589);
   const items = [closure_13];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   multiAccountUsers = stateFromStores;
-  obj1 = multiAccountUsers(15473);
+  obj1 = multiAccountUsers(15507);
   multiAccountUsers = obj1.useMultiAccountUsers().multiAccountUsers;
   let stateFromStores1 = multiAccountUsers;
   stateFromStores1 = undefined;
@@ -170,10 +165,10 @@ function YouAccountRadioGroup() {
     if (closure_1) {
       str2 = "never";
     }
-    obj = { label: closure_1_1(closure_1_3[35]).getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: null };
-    obj = { user: obj, guildId: "Array", size: true };
-    obj[2] = closure_1_0(closure_1_3[36]).AvatarSizes.REFRESH_MEDIUM_32;
-    obj[3] = closure_1_19(closure_1_0(closure_1_3[36]).Avatar, obj);
+    obj = { label: closure_1_1(closure_1_3[34]).getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: null };
+    obj = { user: obj, guildId: "Array", size: -64684031 };
+    obj[2] = closure_1_0(closure_1_3[35]).AvatarSizes.REFRESH_MEDIUM_32;
+    obj[3] = closure_1_19(closure_1_0(closure_1_3[35]).Avatar, obj);
     return obj;
   }), items2);
   const items3 = [multiAccountUsers, ];
@@ -182,42 +177,36 @@ function YouAccountRadioGroup() {
     id = stateFromStores.id;
   }
   items3[1] = id;
-  let tmp10Result = null;
+  let tmp8 = null;
   if (null != stateFromStores) {
     obj = { style: null, children: null };
-    obj[0] = tmp3.account;
+    obj[0] = tmp.account;
     obj = { style: null, children: null };
-    obj[0] = tmp3.manage;
+    obj[0] = tmp.manage;
     obj1 = { onPress: null, children: null };
     obj1[0] = function onPress() {
-      return stateFromStores1(15896)();
+      return stateFromStores1(15930)();
     };
-    let str = "text-link";
-    if (tmp2) {
-      str = "text-brand";
-    }
-    obj2 = { variant: "text-sm/semibold", color: null, children: null };
-    obj2[1] = str;
-    const intl = tmp4(1236).intl;
-    obj2[2] = intl.string(tmp4(1236).t.HxrBOZ);
-    obj1[1] = closure_19(tmp4(4442).Text, obj2);
-    obj[1] = closure_19(tmp4(5033).PressableOpacity, obj1);
-    const items4 = [closure_19(closure_5, obj), ];
+    obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
+    const intl = tmp2(1236).intl;
+    obj2[2] = intl.string(tmp2(1236).t.HxrBOZ);
+    obj1[1] = callback(tmp2(4444).Text, obj2);
+    obj[1] = callback(tmp2(5036).PressableOpacity, obj1);
+    const items4 = [callback(closure_5, obj), ];
     const obj3 = { title: null, onChange: null, defaultValue: null, hasIcons: true, children: null };
-    const intl2 = tmp4(1236).intl;
-    obj3[0] = intl2.string(tmp4(1236).t.oMNyYN);
-    obj3[1] = tmp8;
+    const intl2 = tmp2(1236).intl;
+    obj3[0] = intl2.string(tmp2(1236).t.oMNyYN);
+    obj3[1] = tmp7;
     obj3[2] = stateFromStores.id;
     obj3[4] = memo.map((value) => {
       const merged = Object.assign(value);
-      return callback(multiAccountUsers(7640).TableRadioRow, {}, value.value);
+      return callback(multiAccountUsers(7661).TableRadioRow, {}, value.value);
     });
-    items4[1] = closure_19(tmp4(7639).TableRadioGroup, obj3);
+    items4[1] = callback(tmp2(7660).TableRadioGroup, obj3);
     obj[1] = items4;
-    tmp10Result = closure_20(tmp11, obj);
-    const tmp10 = closure_20;
+    tmp8 = callback2(closure_5, obj);
   }
-  return tmp10Result;
+  return tmp8;
 }
 function FocusModeSetting() {
   let currentLocale = require;
@@ -241,16 +230,16 @@ function FocusModeSetting() {
       if (arg0) {
         let obj = { onSelect: null };
         obj[0] = function onSelect(quiet_mode_enabled) {
-          callback(10111).setFocusMode(quiet_mode_enabled, arg1);
-          const obj = callback(10111);
-          callback2(4413).hideActionSheet();
-          const obj2 = callback2(4413);
-          const result = callback(15891).showYouAccountActionSheet();
+          callback(10134).setFocusMode(quiet_mode_enabled, arg1);
+          const obj = callback(10134);
+          callback2(4415).hideActionSheet();
+          const obj2 = callback2(4415);
+          const result = callback(15925).showYouAccountActionSheet();
         };
-        callback2(paths[20]).openLazy(callback(paths[49])(paths[48], paths.paths), "FocusModeOptionsActionSheet", obj);
+        callback2(paths[20]).openLazy(callback(paths[48])(paths[47], paths.paths), "FocusModeOptionsActionSheet", obj);
         let obj2 = callback2(paths[20]);
       } else {
-        obj = callback(paths[44]);
+        obj = callback(paths[43]);
         obj.setFocusMode(false);
       }
     };
@@ -279,7 +268,7 @@ function FocusModeSetting() {
   }
 }
 function CustomStatus() {
-  const tmp = callback2();
+  const tmp = callback3();
   let obj = _activityFromSetting;
   const customStatusActivity = obj.useCustomStatusActivity();
   obj1 = map;
@@ -299,14 +288,13 @@ function CustomStatus() {
     }
     tmp8 = null != emoji;
   }
-  let tmp2Result = tmp2(9026);
+  let tmp2Result = tmp2(9049);
   let state1;
   if (customStatusActivity != null) {
     state1 = customStatusActivity.state;
   }
   let gameMentionsAsPlainText = tmp2Result.useGameMentionsAsPlainText(state1);
-  const tmp12 = useIsMobileVisualRefreshExperimentEnabledDefault("CustomStatus");
-  tmp2Result = tmp2(4166);
+  tmp2Result = tmp2(4167);
   const token1 = tmp2Result.useToken(tmp5(712).modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
   const token2 = map.useToken(tmp5(712).modules.mobile.TABLE_ROW_LABEL_COLOR);
   obj = { shadow: "none", border: "none", style: tmp.customStatusRow, children: null };
@@ -338,12 +326,12 @@ function CustomStatus() {
   }
   obj[3] = formatToPlainStringResult;
   obj[4] = function onPress() {
-    let obj = callback2(4413);
+    let obj = callback2(4415);
     obj.hideActionSheet();
     obj = { analyticsLocations: null };
-    const items = [callback2(5938).YOU_ACCOUNT_ACTION_SHEET];
+    const items = [callback2(5941).YOU_ACCOUNT_ACTION_SHEET];
     obj[0] = items;
-    const result = callback(9029).openEditCustomStatusModal(obj);
+    const result = callback(9052).openEditCustomStatusModal(obj);
   };
   let emoji1;
   if (customStatusActivity != null) {
@@ -353,24 +341,14 @@ function CustomStatus() {
     const obj2 = { emoji: null, size: null };
     obj2[0] = customStatusActivity.emoji;
     obj2[1] = token;
-    let tmp15Result = tmp15(tmp5(9159), obj2);
+    let tmp14Result = tmp14(tmp5(9181), obj2);
   } else {
     const obj3 = { size: "md", style: null };
     obj3[1] = tmp.leadingIcon;
-    tmp15Result = tmp15(tmp2(8174).ReactionIcon, obj3);
+    tmp14Result = tmp14(tmp2(8196).ReactionIcon, obj3);
   }
-  let items = [tmp15Result, ];
-  let str3 = "text-md/semibold";
-  if (tmp12) {
-    str3 = token1;
-  }
-  const obj4 = { variant: str3, color: null, lineClamp: 2, style: null, children: null };
-  let str4 = "mobile-text-heading-primary";
-  if (tmp12) {
-    str4 = token2;
-  }
-  obj4[1] = str4;
-  obj4[3] = tmp.customStatusText;
+  let items = [tmp14Result, ];
+  const obj4 = { variant: token1, color: token2, lineClamp: 2, style: tmp.customStatusText, children: null };
   if (!tmp8) {
     const intl3 = tmp2(1236).intl;
     gameMentionsAsPlainText = intl3.string(tmp2(1236).t["/UonHN"]);
@@ -379,24 +357,24 @@ function CustomStatus() {
   items[1] = closure_19(Text.Text, obj4);
   obj[5] = items;
   const items1 = [closure_20(PressableBase.PressableOpacity, obj), ];
-  tmp15Result = null;
+  tmp14Result = null;
   if (null != customStatusActivity) {
     const obj5 = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, style: null, children: null };
     obj5[0] = function onPress(stopPropagation) {
       stopPropagation.stopPropagation();
-      callback2(9036)();
+      callback2(9059)();
     };
     const intl4 = tmp2(1236).intl;
     obj5[2] = intl4.string(tmp2(1236).t.wfYTHe);
     obj5[3] = tmp.customStatusRemoveButton;
     const obj6 = { style: null, source: null };
     obj6[0] = tmp.trailingIcon;
-    obj6[1] = tmp5(7759);
-    obj5[4] = tmp15(closure_6, obj6);
-    tmp15Result = tmp15(tmp2(5033).PressableOpacity, obj5);
+    obj6[1] = tmp5(7780);
+    obj5[4] = tmp14(closure_6, obj6);
+    tmp14Result = tmp14(tmp2(5036).PressableOpacity, obj5);
   }
   const tmp2Result1 = map;
-  items1[1] = tmp15Result;
+  items1[1] = tmp14Result;
   obj[3] = items1;
   return closure_19(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: closure_20(PressableCard.Card, obj) });
 }

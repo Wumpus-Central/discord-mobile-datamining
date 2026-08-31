@@ -1,9 +1,9 @@
-// === Module 11202: isStaffToNonStaffForward ===
+// === Module 11231: isStaffToNonStaffForward ===
 
-// Module 11202 (isStaffToNonStaffForward)
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import closure_1 from "createGuildRecordFromRust" /* 1910 */;
-import closure_2 from "mergeGuildAvatar" /* 1923 */;
+// Module 11231 (isStaffToNonStaffForward)
+import closure_0 from "ensureGuildLoaded" /* 1387 */;
+import closure_1 from "createGuildRecordFromRust" /* 1909 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");

@@ -1,17 +1,17 @@
-// === Module 15976: ICYMICustomScoreChannelRow ===
+// === Module 16010: ICYMICustomScoreChannelRow ===
 
-// Module 15976 (ICYMICustomScoreChannelRow)
+// Module 16010 (ICYMICustomScoreChannelRow)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleReset" /* 7217 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 4667 */;
-import closure_10 from "filterStaffGuild" /* 8552 */;
+import closure_6 from "handleReset" /* 7238 */;
+import closure_7 from "ensureGuildLoaded" /* 1387 */;
+import closure_8 from "createGuildRecordFromRust" /* 1909 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4669 */;
+import closure_10 from "filterStaffGuild" /* 8574 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 function ICYMICustomScoreChannelRow(channelId) {
@@ -161,7 +161,7 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   let tmp2Result = tmp2(589);
   const items2 = [closure_10];
   const stateFromStores1 = tmp2Result.useStateFromStores(items2, () => closure_1_10.getCustomGuildScore(guildId));
-  tmp2Result = tmp2(8567);
+  tmp2Result = tmp2(8589);
   const numberToCustomScoreResult = tmp2Result.numberToCustomScore(stateFromStores1);
   React = numberToCustomScoreResult;
   const items3 = [closure_6];
@@ -309,11 +309,11 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
     }
   }, items5);
   obj = { contentInset: null, showsVerticalScrollIndicator: false, renderItem: null, data: null, keyExtractor: null };
-  obj1 = { bottom: guildId(1629)().bottom, top: guildId(712).space.PX_12 };
+  obj1 = { bottom: guildId(1628)().bottom, top: guildId(712).space.PX_12 };
   obj[0] = obj1;
   obj[2] = callback;
   obj[3] = memo;
   obj[4] = keyExtractor;
-  obj[1] = callback(navigation(8051).AnimatedFlashList, obj);
+  obj[1] = callback(navigation(8073).AnimatedFlashList, obj);
   return callback(guildChannels, obj);
 };

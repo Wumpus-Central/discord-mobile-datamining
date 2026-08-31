@@ -1,9 +1,9 @@
-// === Module 11463: map ===
+// === Module 11493: map ===
 
-// Module 11463 (map)
-import hasFlag from "hasFlag" /* 1403 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4703 */;
-import createMessageDefault from "createMessage" /* 7444 */;
+// Module 11493 (map)
+import hasFlag from "hasFlag" /* 1399 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4705 */;
+import createMessageDefault from "createMessage" /* 7465 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import ME from "ME" /* 676 */;
 
@@ -38,13 +38,13 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
           if (id.author.id !== id.getId()) {
             tmp4 = null;
             if (null == id.activity) {
-              let tmpResult = tmp(1403);
+              let tmpResult = tmp(1399);
               let num = closure_0.recipientFlags;
               if (num == null) {
                 num = 0;
               }
               tmp4 = null;
-              if (!tmpResult.hasFlag(num, tmp(11464).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX)) {
+              if (!tmpResult.hasFlag(num, tmp(11494).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX)) {
                 tmp4 = null;
                 if (!obj.has(closure_0.id)) {
                   obj = { channelId: null, type: null, content: "", author: null, flags: null, state: null };
@@ -53,7 +53,7 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
                   obj[3] = id.author;
                   obj[4] = tmp3.EPHEMERAL;
                   obj[5] = constants2.SENT;
-                  tmpResult = tmp(4703);
+                  tmpResult = tmp(4705);
                   const messageRecord1 = tmpResult.createMessageRecord(createMessageDefault(obj));
                   ({ applicationId: tmp10.applicationId, timestamp: tmp10.timestamp } = id);
                   const result = obj.set(closure_0.id, id.id);
@@ -63,11 +63,11 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
                   if (num2 == null) {
                     num2 = 0;
                   }
-                  const tmpResult1 = tmp(1403);
-                  const setFlagResult = tmp(1403).setFlag(num2, tmp(11464).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX, true);
-                  const result1 = tmp6(11465).updatePrivateChannelRecipientFlags(closure_0.id, setFlagResult);
+                  const tmpResult1 = tmp(1399);
+                  const setFlagResult = tmp(1399).setFlag(num2, tmp(11494).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX, true);
+                  const result1 = tmp6(11495).updatePrivateChannelRecipientFlags(closure_0.id, setFlagResult);
                   tmp4 = messageRecord1;
-                  const tmp6Result = tmp6(11465);
+                  const tmp6Result = tmp6(11495);
                 }
               }
             }

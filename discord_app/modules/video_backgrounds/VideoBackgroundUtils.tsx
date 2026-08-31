@@ -1,12 +1,12 @@
-// === Module 9727: isAnimatedBackgroundOption ===
+// === Module 9749: isAnimatedBackgroundOption ===
 
-// Module 9727 (isAnimatedBackgroundOption)
+// Module 9749 (isAnimatedBackgroundOption)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4666 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4520 */;
-import VideoFilterType from "VideoFilterType" /* 7706 */;
+import getAvatarURL from "getAvatarURL" /* 1431 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4668 */;
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "createRTCConnection" /* 4522 */;
+import VideoFilterType from "VideoFilterType" /* 7727 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;
@@ -34,8 +34,8 @@ function isAnimatedBackgroundOption(closure_0) {
     if (hasItem) {
       let isAnimatedIconHashResult = getAvatarURL.isAnimatedIconHash(closure_0.asset);
       if (!isAnimatedIconHashResult) {
-        isAnimatedIconHashResult = tmp6(1435).isVideoAssetHash(closure_0.asset);
-        const tmp6Result = tmp6(1435);
+        isAnimatedIconHashResult = tmp6(1431).isVideoAssetHash(closure_0.asset);
+        const tmp6Result = tmp6(1431);
       }
       hasItem = isAnimatedIconHashResult;
       const obj = getAvatarURL;
@@ -170,7 +170,7 @@ export const trackBackgroundOptionDeleted = function trackBackgroundOptionDelete
 };
 export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProtoFromOption(closure_0) {
   if (null == closure_0) {
-    let obj = { oneofKind: "r" };
+    let obj = { oneofKind: "Array" };
   } else {
     let tmp = null != closure_0 && typeof closure_0 === "object";
     if (tmp) {

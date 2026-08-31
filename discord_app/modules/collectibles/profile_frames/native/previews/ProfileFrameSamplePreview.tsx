@@ -1,17 +1,17 @@
-// === Module 10687: filterLayer ===
+// === Module 10711: filterLayer ===
 
-// Module 10687 (filterLayer)
+// Module 10711 (filterLayer)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4166 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8485 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 8493 */;
-import ProfileFrameLayerDefault from "ProfileFrameLayer" /* 8494 */;
-import metadataDefault from "metadata" /* 10688 */;
+import map from "map" /* 4167 */;
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8507 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 8515 */;
+import ProfileFrameLayerDefault from "ProfileFrameLayer" /* 8516 */;
+import metadataDefault from "metadata" /* 10712 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 5966 */;
+import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 5969 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function filterLayer(responsive) {
@@ -70,14 +70,14 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   items3[1] = tmp16;
   const obj10 = { source: null, style: null, resizeMode: "cover" };
   const obj11 = { uri: null };
-  let tmp3Result = tmp3(5458);
+  let tmp3Result = tmp3(5461);
   obj11[0] = metadataDefault;
   obj10[0] = obj11;
   obj10[1] = tmp.sampleProfile;
   obj9[1] = callback(tmp3Result, obj10);
   items2[1] = callback(closure_4, obj9);
   const obj12 = { frame: profileFrame, filterLayer: tmp10, profileThemeType: tmp11.PREVIEW, frameOrder: null, containerWidth: null, containerHeight: null };
-  tmp3Result = tmp3(8494);
+  tmp3Result = tmp3(8516);
   obj12[3] = ProfileFrameLayerOrder.ProfileFrameLayerOrder.FRONT;
   obj12[4] = result;
   obj12[5] = previewHeight - overflowTop - overflowBottom;

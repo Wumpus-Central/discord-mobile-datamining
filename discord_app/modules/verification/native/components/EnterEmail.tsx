@@ -1,16 +1,16 @@
-// === Module 7701: EnterEmail ===
+// === Module 7722: EnterEmail ===
 
-// Module 7701 (EnterEmail)
+// Module 7722 (EnterEmail)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "mergeGuildAvatar" /* 1923 */;
-import ChangeEmailFields from "ChangeEmailFields" /* 7636 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import ChangeEmailFields from "ChangeEmailFields" /* 7657 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
@@ -71,7 +71,7 @@ export default function EnterEmail(isChangeEmail) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

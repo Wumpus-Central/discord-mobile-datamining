@@ -1,12 +1,12 @@
-// === Module 7255: fromServer ===
+// === Module 7276: fromServer ===
 
-// Module 7255 (fromServer)
-import closure_0 from "fromServer" /* 7254 */;
-import closure_1 from "createFromServer" /* 4489 */;
+// Module 7276 (fromServer)
+import closure_0 from "fromServer" /* 7275 */;
+import closure_1 from "createFromServer" /* 4491 */;
 
 let prototype;
 prototype = function StorefrontProductRecord(arg0) {
-  ({ id: tmp.id, skuIds: tmp.skuIds, name: tmp.name, summary: tmp.summary, options: tmp.options, createdAt: tmp.createdAt, updatedAt: tmp.updatedAt, skus: tmp.skus, primaryCollectionId: tmp.primaryCollectionId, primaryCollectionStyles: tmp.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp.primaryCollectionWillUnpublishAt, gameApplicationId: tmp.gameApplicationId } = arg0);
+  ({ id: tmp.id, skuIds: tmp.skuIds, name: tmp.name, summary: tmp.summary, options: tmp.options, createdAt: tmp.createdAt, updatedAt: tmp.updatedAt, skus: tmp.skus, primaryCollectionId: tmp.primaryCollectionId, primaryCollectionStyles: tmp.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp.primaryCollectionWillUnpublishAt, gameApplicationId: tmp.gameApplicationId, badgeOverride: tmp.badgeOverride, hideBadge: tmp.hideBadge } = arg0);
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["fromServer"] = function fromServer(sku_ids) {
@@ -61,11 +61,23 @@ prototype["fromServer"] = function fromServer(sku_ids) {
     }
   }
   obj.gameApplicationId = game_application_id;
+  const collectibles5 = tenant_metadata.collectibles;
+  let badge_override;
+  if (collectibles5 != null) {
+    badge_override = collectibles5.badge_override;
+  }
+  obj.badgeOverride = badge_override;
+  const collectibles6 = tenant_metadata.collectibles;
+  let hide_badge;
+  if (collectibles6 != null) {
+    hide_badge = collectibles6.hide_badge;
+  }
+  obj.hideBadge = hide_badge;
   if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(tmp.prototype);
-  ({ id: tmp15.id, skuIds: tmp15.skuIds, name: tmp15.name, summary: tmp15.summary, options: tmp15.options, createdAt: tmp15.createdAt, updatedAt: tmp15.updatedAt, skus: tmp15.skus, primaryCollectionId: tmp15.primaryCollectionId, primaryCollectionStyles: tmp15.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp15.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp15.primaryCollectionWillUnpublishAt, gameApplicationId: tmp15.gameApplicationId } = obj);
+  ({ id: tmp17.id, skuIds: tmp17.skuIds, name: tmp17.name, summary: tmp17.summary, options: tmp17.options, createdAt: tmp17.createdAt, updatedAt: tmp17.updatedAt, skus: tmp17.skus, primaryCollectionId: tmp17.primaryCollectionId, primaryCollectionStyles: tmp17.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp17.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp17.primaryCollectionWillUnpublishAt, gameApplicationId: tmp17.gameApplicationId, badgeOverride: tmp17.badgeOverride, hideBadge: tmp17.hideBadge } = obj);
   return obj;
 };
 const result = require("set").fileFinishedImporting("modules/storefront/records/StorefrontProductRecord.tsx");

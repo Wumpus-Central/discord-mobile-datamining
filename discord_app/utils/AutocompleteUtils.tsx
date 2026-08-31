@@ -1,51 +1,51 @@
-// === Module 5350: NOOP ===
+// === Module 5353: NOOP ===
 
-// Module 5350 (NOOP)
+// Module 5353 (NOOP)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1374 */;
-import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
-import nameFromUserDefault from "nameFromUser" /* 4290 */;
-import setDefault from "set" /* 4433 */;
-import computeChannelName from "computeChannelName" /* 4640 */;
-import StickerFormat from "StickerFormat" /* 5177 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5419 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 5420 */;
-import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5421 */;
-import useCanSeeOnboardingHome from "useCanSeeOnboardingHome" /* 6034 */;
-import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 6144 */;
-import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 6145 */;
+import updateUserGuildSettings from "updateUserGuildSettings" /* 1370 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+import isNullOrEmpty from "isNullOrEmpty" /* 1902 */;
+import nameFromUserDefault from "nameFromUser" /* 4292 */;
+import setDefault from "set" /* 4435 */;
+import computeChannelName from "computeChannelName" /* 4642 */;
+import StickerFormat from "StickerFormat" /* 5180 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5422 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 5423 */;
+import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5424 */;
+import useCanSeeOnboardingHome from "useCanSeeOnboardingHome" /* 6037 */;
+import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 6147 */;
+import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 6148 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import fromType from "fromType" /* 5351 */;
-import closure_7 from "getEmojiToGroupId" /* 5366 */;
-import closure_8 from "handleSoundCreateOrUpdate" /* 4930 */;
-import closure_9 from "handleStickersStoreUpdate" /* 5408 */;
-import closure_10 from "loadSavedGuildStickers" /* 5409 */;
-import closure_11 from "rebuild" /* 5413 */;
-import closure_12 from "storeThread" /* 4092 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1987 */;
-import closure_21 from "createdAt" /* 1931 */;
-import closure_22 from "ensureGuildLoaded" /* 1391 */;
-import closure_23 from "handleChannelSelect" /* 5416 */;
-import comparator from "comparator" /* 1983 */;
-import closure_26 from "comparator" /* 1983 */;
-import closure_27 from "trackCommunicationDisabled" /* 1993 */;
-import closure_28 from "createGuildRoleRecordFromRust" /* 1986 */;
-import closure_29 from "createGuildRecordFromRust" /* 1910 */;
-import closure_30 from "reinjectEphemerals" /* 4701 */;
-import closure_31 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_32 from "sortActivity" /* 4535 */;
-import closure_33 from "markAllUserIdListsStale" /* 4099 */;
-import closure_34 from "handleConnectionOpen" /* 1982 */;
-import closure_35 from "handleConnectionOpen" /* 4268 */;
-import closure_36 from "mergeGuildAvatar" /* 1923 */;
-import closure_37 from "addSku" /* 4495 */;
+import fromType from "fromType" /* 5354 */;
+import closure_7 from "getEmojiToGroupId" /* 5369 */;
+import closure_8 from "handleSoundCreateOrUpdate" /* 4933 */;
+import closure_9 from "handleStickersStoreUpdate" /* 5411 */;
+import closure_10 from "loadSavedGuildStickers" /* 5412 */;
+import closure_11 from "rebuild" /* 5416 */;
+import closure_12 from "storeThread" /* 4093 */;
+import createChannelRecord from "createChannelRecord" /* 1391 */;
+import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1986 */;
+import closure_21 from "createdAt" /* 1930 */;
+import closure_22 from "ensureGuildLoaded" /* 1387 */;
+import closure_23 from "handleChannelSelect" /* 5419 */;
+import comparator from "comparator" /* 1982 */;
+import closure_26 from "comparator" /* 1982 */;
+import closure_27 from "trackCommunicationDisabled" /* 1992 */;
+import closure_28 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_29 from "createGuildRecordFromRust" /* 1909 */;
+import closure_30 from "reinjectEphemerals" /* 4703 */;
+import closure_31 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_32 from "sortActivity" /* 4537 */;
+import closure_33 from "markAllUserIdListsStale" /* 4100 */;
+import closure_34 from "handleConnectionOpen" /* 1981 */;
+import closure_35 from "handleConnectionOpen" /* 4269 */;
+import closure_36 from "mergeGuildAvatar" /* 1922 */;
+import closure_37 from "addSku" /* 4497 */;
 import ME from "ME" /* 676 */;
-import { StaticChannelId } from "set" /* 1398 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1992 */;
+import { StaticChannelId } from "set" /* 1394 */;
+import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1991 */;
 
 require = arg1;
 function NOOP() {
@@ -159,10 +159,10 @@ function queryMemberList(arg0) {
           if (null == str) {
             let items2 = [null, null];
           } else {
-            let tmp16Result = tmp16(1903);
+            let tmp16Result = tmp16(1902);
             let stripDiacriticsResult = tmp16Result.stripDiacritics(str);
             items2 = [stripDiacriticsResult, ];
-            tmp16Result = tmp16(1903);
+            tmp16Result = tmp16(1902);
             items2[1] = tmp16Result.normalize(stripDiacriticsResult);
           }
           let tmp18 = callback;
@@ -171,10 +171,10 @@ function queryMemberList(arg0) {
           if (null == str2) {
             let items3 = [null, null];
           } else {
-            let tmp16Result1 = tmp16(1903);
+            let tmp16Result1 = tmp16(1902);
             let stripDiacriticsResult1 = tmp16Result1.stripDiacritics(str2);
             items3 = [stripDiacriticsResult1, ];
-            let tmp16Result2 = tmp16(1903);
+            let tmp16Result2 = tmp16(1902);
             items3[1] = tmp16Result2.normalize(stripDiacriticsResult1);
           }
           let tmp18Result = tmp18(items3, 2);
@@ -215,21 +215,21 @@ function queryMemberList(arg0) {
                             if (substr5 !== normalizeResult) {
                               let tmp33 = num < 50;
                               if (num < 50) {
-                                let tmp28 = tmp12(5419)(toLocaleLowerCaseResult, str4) || tmp12(5419)(normalizeResult, str5);
+                                let tmp28 = tmp12(5422)(toLocaleLowerCaseResult, str4) || tmp12(5422)(normalizeResult, str5);
                                 if (!tmp28) {
-                                  let tmp29 = null != str6 && tmp12(5419)(toLocaleLowerCaseResult, str6);
+                                  let tmp29 = null != str6 && tmp12(5422)(toLocaleLowerCaseResult, str6);
                                   tmp28 = tmp29;
                                 }
                                 if (!tmp28) {
-                                  let tmp30 = null != str7 && tmp12(5419)(normalizeResult, str7);
+                                  let tmp30 = null != str7 && tmp12(5422)(normalizeResult, str7);
                                   tmp28 = tmp30;
                                 }
                                 if (!tmp28) {
-                                  let tmp31 = null != str8 && tmp12(5419)(toLocaleLowerCaseResult, str8);
+                                  let tmp31 = null != str8 && tmp12(5422)(toLocaleLowerCaseResult, str8);
                                   tmp28 = tmp31;
                                 }
                                 if (!tmp28) {
-                                  let tmp32 = null != str9 && tmp12(5419)(normalizeResult, str9);
+                                  let tmp32 = null != str9 && tmp12(5422)(normalizeResult, str9);
                                   tmp28 = tmp32;
                                 }
                                 tmp33 = tmp28;
@@ -363,13 +363,13 @@ function queryMemberList(arg0) {
 function getPriorityForStickerMetadataType(arg0) {
   if (StickerFormat.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
-  } else if (tmp(5177).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
+  } else if (tmp(5180).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
-  } else if (tmp(5177).StickerMetadataTypes.TAG === arg0) {
+  } else if (tmp(5180).StickerMetadataTypes.TAG === arg0) {
     return 1;
   } else {
-    if (tmp(5177).StickerMetadataTypes.GUILD_NAME !== arg0) {
-      if (tmp(5177).StickerMetadataTypes.PACK_NAME !== arg0) {
+    if (tmp(5180).StickerMetadataTypes.GUILD_NAME !== arg0) {
+      if (tmp(5180).StickerMetadataTypes.PACK_NAME !== arg0) {
         return 1;
       }
     }
@@ -889,10 +889,10 @@ areArraysShallowlyEqual = {
       const mapped = found.map((toLocaleLowerCase) => {
         const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
         const obj = { queryLower: toLocaleLowerCaseResult, exactQuery: null, containQuery: null, isFullMatch: false };
-        const regExp = new RegExp("^" + callback(4433).escape(toLocaleLowerCaseResult), "i");
+        const regExp = new RegExp("^" + callback(4435).escape(toLocaleLowerCaseResult), "i");
         obj[1] = regExp;
-        const obj2 = callback(4433);
-        const regExp1 = new RegExp(callback(4433).escape(toLocaleLowerCaseResult), "i");
+        const obj2 = callback(4435);
+        const regExp1 = new RegExp(callback(4435).escape(toLocaleLowerCaseResult), "i");
         obj[2] = regExp1;
         return obj;
       });
@@ -901,17 +901,17 @@ areArraysShallowlyEqual = {
         let obj = { queryLower: null, exactQuery: null, containQuery: null, isFullMatch: true };
         obj[0] = toLocaleLowerCaseResult;
         const _RegExp = RegExp;
-        let obj2 = callback(4433);
+        let obj2 = callback(4435);
         const _HermesInternal = HermesInternal;
-        let regExp = new RegExp("^" + callback(4433).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        let regExp = new RegExp("^" + callback(4435).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[1] = regExp;
         const _RegExp2 = RegExp;
-        const str = callback(4433).escape(toLocaleLowerCaseResult);
-        const obj3 = callback(4433);
-        let regExp1 = new RegExp(callback(4433).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
+        const str = callback(4435).escape(toLocaleLowerCaseResult);
+        const obj3 = callback(4435);
+        let regExp1 = new RegExp(callback(4435).escape(toLocaleLowerCaseResult).replace(" ", "( |-)"), "i");
         obj[2] = regExp1;
         mapped.unshift(obj);
-        const str6 = callback(4433).escape(toLocaleLowerCaseResult);
+        const str6 = callback(4435).escape(toLocaleLowerCaseResult);
       }
       return mapped;
     })(guildId.query, flag2);
@@ -1915,21 +1915,15 @@ areArraysShallowlyEqual = {
     }
     channelTypes = channelTypes.channelTypes;
     let obj = { channels: null };
-    obj = {
-      query: channelTypes.query,
-      guildId: channel.getGuildId(),
-      limit: "r",
-      fuzzy: "HermesInternal",
-      filter(type) {
-        let hasItem = null == channelTypes;
-        if (!hasItem) {
-          hasItem = channelTypes.includes(type.type);
-        }
-        return hasItem;
-      },
-      type,
-      allowEmptyQueries: null
+    obj = { query: channelTypes.query, guildId: channel.getGuildId(), limit: "r", fuzzy: "HermesInternal", filter: 20, type: true, allowEmptyQueries: "/assets/.cache/intl/bW9kdWxlcy9hZHM=" };
+    obj[4] = function filter(type) {
+      let hasItem = null == channelTypes;
+      if (!hasItem) {
+        hasItem = channelTypes.includes(type.type);
+      }
+      return hasItem;
     };
+    obj[5] = type;
     obj[0] = this.queryChannels(obj).map((record) => record.record);
     return obj;
   },
@@ -2017,22 +2011,22 @@ areArraysShallowlyEqual = {
     set = new Set();
     items1 = [];
     closure_5 = items1;
-    const FrecencyUserSettingsActionCreators = flag(1374).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = flag(1370).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     function _loop() {
       if ("" === closure_6) {
         return 1;
       } else {
         const toLocaleLowerCaseResult = obj.toLocaleLowerCase();
-        const stripDiacriticsResult = toLocaleLowerCaseResult(1903).stripDiacritics(toLocaleLowerCaseResult);
+        const stripDiacriticsResult = toLocaleLowerCaseResult(1902).stripDiacritics(toLocaleLowerCaseResult);
         const _RegExp = RegExp;
-        let obj2 = toLocaleLowerCaseResult(1903);
+        let obj2 = toLocaleLowerCaseResult(1902);
         const _HermesInternal = HermesInternal;
-        const regExp = new RegExp("^" + nextResult(4433).escape(stripDiacriticsResult), "i");
+        const regExp = new RegExp("^" + nextResult(4435).escape(stripDiacriticsResult), "i");
         const _RegExp2 = RegExp;
-        const obj3 = nextResult(4433);
+        const obj3 = nextResult(4435);
         const _HermesInternal2 = HermesInternal;
-        const regExp1 = new RegExp("" + nextResult(4433).escape(stripDiacriticsResult), "i");
+        const regExp1 = new RegExp("" + nextResult(4435).escape(stripDiacriticsResult), "i");
         const stickerMetadataArrays = closure_1_10.getStickerMetadataArrays();
         let item = stickerMetadataArrays.forEach((arr) => {
           const item = arr.forEach((arg0, id) => {
@@ -2160,10 +2154,10 @@ areArraysShallowlyEqual = {
       tmp3 = !obj.hasFetchedAllSounds();
     }
     if (tmp3) {
-      const result = _require(6147).maybeFetchSoundboardSounds();
-      const obj2 = _require(6147);
+      const result = _require(6150).maybeFetchSoundboardSounds();
+      const obj2 = _require(6150);
     }
-    const FrecencyUserSettingsActionCreators = _require(1374).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = _require(1370).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     const sounds = obj.getSounds();
     const reduced = Array.from(sounds.values()).reduce((arg0, arr) => {
@@ -2184,7 +2178,7 @@ areArraysShallowlyEqual = {
       return arg0;
     }, []);
     let arr = Array.from(sounds.values());
-    return _require(6152).searchSounds(arg0, reduced, currentUser, channel);
+    return _require(6155).searchSounds(arg0, reduced, currentUser, channel);
   },
   matchSentinel(arg0, arg1, closure_12) {
     const isMatch = regex.test(arg1);

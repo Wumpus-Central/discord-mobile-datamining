@@ -1,10 +1,10 @@
-// === Module 10462: useThemeAndReducedMotionAwareAssetUrl ===
+// === Module 10486: useThemeAndReducedMotionAwareAssetUrl ===
 
-// Module 10462 (useThemeAndReducedMotionAwareAssetUrl)
+// Module 10486 (useThemeAndReducedMotionAwareAssetUrl)
 import initialize from "initialize" /* 589 */;
 import isThemeLight from "isThemeLight" /* 1364 */;
-import useThemeDefault from "useTheme" /* 4381 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import useThemeDefault from "useTheme" /* 4383 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/promotions/MarketingComponentHooks.tsx");

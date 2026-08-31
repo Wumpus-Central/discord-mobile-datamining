@@ -1,18 +1,18 @@
-// === Module 10603: IconUploader ===
+// === Module 10627: IconUploader ===
 
-// Module 10603 (IconUploader)
+// Module 10627 (IconUploader)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import PressableBase from "PressableBase" /* 5033 */;
-import GuildIconSizes from "GuildIconSizes" /* 5969 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5969 */;
-import registerAssetDefault from "registerAsset" /* 10604 */;
+import getAvatarURL from "getAvatarURL" /* 1431 */;
+import PressableBase from "PressableBase" /* 5036 */;
+import GuildIconSizes from "GuildIconSizes" /* 5972 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5972 */;
+import registerAssetDefault from "registerAsset" /* 10628 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
@@ -51,7 +51,7 @@ export default function IconUploader(disabled) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

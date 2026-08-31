@@ -1,9 +1,9 @@
-// === Module 2470: messagesProxy ===
+// === Module 2471: messagesProxy ===
 
-// Module 2470 (messagesProxy)
+// Module 2471 (messagesProxy)
 import set from "set" /* 2 */;
 import loadJsonAsset from "loadJsonAsset" /* 1239 */;
-import registerAsset from "registerAsset" /* 2471 */;
+import registerAsset from "registerAsset" /* 2472 */;
 import module_1274 from "module_1274" /* 1274 */;
 
 const loader = module_1274.createLoader({

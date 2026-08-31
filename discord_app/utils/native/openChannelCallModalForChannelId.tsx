@@ -1,9 +1,9 @@
-// === Module 12398: openChannelCallModalForChannelId ===
+// === Module 12432: openChannelCallModalForChannelId ===
 
-// Module 12398 (openChannelCallModalForChannelId)
-import openChannelCallModal from "openChannelCallModal" /* 4693 */;
-import connectToStage from "connectToStage" /* 8610 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
+// Module 12432 (openChannelCallModalForChannelId)
+import openChannelCallModal from "openChannelCallModal" /* 4695 */;
+import connectToStage from "connectToStage" /* 8632 */;
+import closure_2 from "ensureGuildLoaded" /* 1387 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("utils/native/openChannelCallModalForChannelId.tsx");

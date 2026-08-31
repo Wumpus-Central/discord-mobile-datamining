@@ -1,6 +1,6 @@
-// === Module 10923: SummarySources ===
+// === Module 10947: SummarySources ===
 
-// Module 10923 (SummarySources)
+// Module 10947 (SummarySources)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/summaries/Summary.tsx");

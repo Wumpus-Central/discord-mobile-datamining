@@ -1,8 +1,8 @@
-// === Module 8507: set ===
+// === Module 8529: set ===
 
-// Module 8507 (set)
-import BadgeId from "BadgeId" /* 8503 */;
-import LEGACY_BADGE_ID_MAP from "LEGACY_BADGE_ID_MAP" /* 8508 */;
+// Module 8529 (set)
+import BadgeId from "BadgeId" /* 8525 */;
+import LEGACY_BADGE_ID_MAP from "LEGACY_BADGE_ID_MAP" /* 8530 */;
 import set from "set" /* 2 */;
 
 let set = new Set(Object.values(LEGACY_BADGE_ID_MAP.LEGACY_BADGE_ID_MAP));

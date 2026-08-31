@@ -1,12 +1,12 @@
-// === Module 5525: getEmoji ===
+// === Module 5528: getEmoji ===
 
-// Module 5525 (getEmoji)
+// Module 5528 (getEmoji)
 import set from "set" /* 2 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4103 */;
-import getEmojiToGroupId from "getEmojiToGroupId" /* 5366 */;
-import MAX_TRAITS from "MAX_TRAITS" /* 5526 */;
-import GuildProfileVisibility from "GuildProfileVisibility" /* 5527 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4104 */;
+import getEmojiToGroupId from "getEmojiToGroupId" /* 5369 */;
+import MAX_TRAITS from "MAX_TRAITS" /* 5529 */;
+import GuildProfileVisibility from "GuildProfileVisibility" /* 5530 */;
 
 function getEmoji(guildId) {
   ({ emojiId, emojiName } = guildId);

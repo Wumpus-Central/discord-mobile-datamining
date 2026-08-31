@@ -1,19 +1,19 @@
-// === Module 14270: RestrictedAccountRedirect ===
+// === Module 14304: RestrictedAccountRedirect ===
 
-// Module 14270 (RestrictedAccountRedirect)
+// Module 14304 (RestrictedAccountRedirect)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import handleOpenEmailVerification from "handleOpenEmailVerification" /* 7713 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14271 */;
+import handleOpenEmailVerification from "handleOpenEmailVerification" /* 7734 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14305 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "markAllUserIdListsStale" /* 4099 */;
-import closure_6 from "mergeGuildAvatar" /* 1923 */;
+import closure_5 from "markAllUserIdListsStale" /* 4100 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticsSections } from "ME" /* 676 */;
-import { SafetySettingsNoticeType } from "SafetyToastType" /* 8616 */;
+import { SafetySettingsNoticeType } from "SafetyToastType" /* 8638 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function RestrictedAccountRedirect() {
@@ -62,8 +62,8 @@ const memoResult = importAllResult.memo(() => {
       obj1 = { text: null, accessibilityLabel: null, onPress: null };
       ({ button: obj6[0], button: obj6[1] } = bannerText);
       obj1[2] = callback;
-      obj[4] = callback(tmp2(4893).Button, obj1);
-      tmp14 = callback(tmp2(5564).TableRow, obj);
+      obj[4] = callback(tmp2(4896).Button, obj1);
+      tmp14 = callback(tmp2(5567).TableRow, obj);
     }
     items2[1] = tmp14;
     obj[1] = items2;

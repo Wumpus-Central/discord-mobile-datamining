@@ -1,9 +1,9 @@
-// === Module 7941: getEphemeralReasonMessage ===
+// === Module 7963: getEphemeralReasonMessage ===
 
-// Module 7941 (getEphemeralReasonMessage)
+// Module 7963 (getEphemeralReasonMessage)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import EphemeralMessageReason from "EphemeralMessageReason" /* 7942 */;
+import EphemeralMessageReason from "EphemeralMessageReason" /* 7964 */;
 
 const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");
 

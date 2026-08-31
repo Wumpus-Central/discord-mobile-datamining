@@ -1,10 +1,10 @@
-// === Module 13384: OnGoingCallTimer ===
+// === Module 13418: OnGoingCallTimer ===
 
-// Module 13384 (OnGoingCallTimer)
+// Module 13418 (OnGoingCallTimer)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import noopAll from "noop" /* 19 */;
-import componentDidMountDefault from "componentDidMount" /* 13385 */;
-import closure_3 from "callConnect" /* 5187 */;
+import componentDidMountDefault from "componentDidMount" /* 13419 */;
+import closure_3 from "callConnect" /* 5190 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

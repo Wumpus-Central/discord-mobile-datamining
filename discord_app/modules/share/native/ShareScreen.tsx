@@ -1,20 +1,20 @@
-// === Module 13572: getAttachmentsRestriction ===
+// === Module 13606: getAttachmentsRestriction ===
 
-// Module 13572 (getAttachmentsRestriction)
+// Module 13606 (getAttachmentsRestriction)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4090 */;
+import createChannelRecord from "createChannelRecord" /* 1391 */;
+import closure_9 from "ensureGuildLoaded" /* 1387 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4091 */;
 import ME from "ME" /* 676 */;
-import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT" /* 11200 */;
-import { UserRowModes } from "UserRowModes" /* 10570 */;
+import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT" /* 11229 */;
+import { UserRowModes } from "UserRowModes" /* 10594 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 import set from "set" /* 500 */;
 
 require = arg1;
@@ -125,7 +125,7 @@ export default function ShareScreen(sharedContent) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -235,7 +235,7 @@ export default function ShareScreen(sharedContent) {
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       }
                     } else {
                       try {
@@ -258,7 +258,7 @@ export default function ShareScreen(sharedContent) {
                               c4 = 3;
                               return { value: false, done: true };
                             } else {
-                              obj1 = callback(13574);
+                              obj1 = callback(13608);
                               obj1 = { attachments: null, channel: null, comment: null };
                               obj1[0] = closure_1_1;
                               obj1[1] = channel;
@@ -287,7 +287,7 @@ export default function ShareScreen(sharedContent) {
                           obj3[4] = closure_1_2;
                           callback2(698).track(closure_3_11.SHARE_MESSAGE_SENT, obj3);
                           c4 = 3;
-                          return { value: "HermesInternal", done: null };
+                          return { value: "HermesInternal", done: "HermesInternal" };
                         }
                       } catch (tmp11) {
                         c4 = tmp;

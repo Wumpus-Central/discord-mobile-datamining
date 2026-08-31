@@ -1,10 +1,10 @@
-// === Module 15933: _fetchNotificationCenterItems ===
+// === Module 15967: _fetchNotificationCenterItems ===
 
-// Module 15933 (_fetchNotificationCenterItems)
+// Module 15967 (_fetchNotificationCenterItems)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getRelativeTimestamp from "getRelativeTimestamp" /* 7333 */;
+import getRelativeTimestamp from "getRelativeTimestamp" /* 7354 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_validate" /* 7331 */;
+import closure_4 from "_validate" /* 7352 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;
@@ -28,7 +28,7 @@ function _fetchNotificationCenterItems() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -96,7 +96,7 @@ function _fetchNotificationCenterItems() {
               c6 = 3;
               c7 = 1;
               let obj6 = { value: null, done: false };
-              obj6[0] = callback(4679).get(obj3);
+              obj6[0] = callback(4681).get(obj3);
               return obj6;
             }
           } else if (2 === tmp7) {
@@ -308,7 +308,7 @@ function _deleteNotificationCenterItem() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -377,7 +377,7 @@ function _deleteNotificationCenterItem() {
           } else {
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp19) {
           closure_3 = tmp19;

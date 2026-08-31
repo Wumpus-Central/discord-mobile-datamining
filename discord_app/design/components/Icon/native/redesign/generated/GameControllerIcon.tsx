@@ -1,10 +1,10 @@
-// === Module 9137: GameControllerIcon ===
+// === Module 9160: GameControllerIcon ===
 
-// Module 9137 (GameControllerIcon)
+// Module 9160 (GameControllerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 7993 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 8015 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

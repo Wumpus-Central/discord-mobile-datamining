@@ -1,13 +1,13 @@
-// === Module 16316: useShouldShowExpiringTrialOfferCard ===
+// === Module 16350: useShouldShowExpiringTrialOfferCard ===
 
-// Module 16316 (useShouldShowExpiringTrialOfferCard)
+// Module 16350 (useShouldShowExpiringTrialOfferCard)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import setDefault from "set" /* 687 */;
-import useCountdownDefault from "useCountdown" /* 7131 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7139 */;
-import closure_3 from "clearDismissUntil" /* 13309 */;
+import useCountdownDefault from "useCountdown" /* 7152 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7160 */;
+import closure_3 from "clearDismissUntil" /* 13343 */;
 import { NoticeTypes } from "ME" /* 676 */;
-import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1925 */;
+import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 
 require = arg1;
 let closure_6 = 10 * setDefault.Millis.SECOND;

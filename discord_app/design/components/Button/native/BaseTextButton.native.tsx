@@ -1,16 +1,16 @@
-// === Module 4894: CollapsingText ===
+// === Module 4897: CollapsingText ===
 
-// Module 4894 (CollapsingText)
+// Module 4897 (CollapsingText)
 import ThemesDefault from "Themes" /* 712 */;
-import IconSizesDefault from "IconSizes" /* 4895 */;
-import styleProperties from "styleProperties" /* 4899 */;
+import IconSizesDefault from "IconSizes" /* 4898 */;
+import styleProperties from "styleProperties" /* 4902 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
-import { LARGE_BUTTON_HEIGHT, LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA" /* 4898 */;
-import importDefaultResult from "module_4186" /* 4186 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
+import { LARGE_BUTTON_HEIGHT, LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA" /* 4901 */;
+import importDefaultResult from "module_4187" /* 4187 */;
 
 require = arg1;
 function CollapsingText(children) {
@@ -148,38 +148,20 @@ let closure_18 = createCacheKey.createStyles((arg0, arg1) => {
 });
 createCacheKey = { sm: null, md: null, lg: null };
 const bound = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT) / 2, 0);
-createCacheKey[0] = { top: bound, left: "Array", right: "text", bottom: bound };
+createCacheKey = { top: bound, left: "Array", right: "accessibilityLabel", bottom: false };
+createCacheKey[3] = bound;
+createCacheKey[0] = createCacheKey;
 const bound1 = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT) / 2, 0);
-createCacheKey[1] = { top: bound1, left: "Array", right: "text", bottom: bound1 };
+createCacheKey = { top: bound1, left: "Array", right: "accessibilityLabel", bottom: false };
+createCacheKey[3] = bound1;
+createCacheKey[1] = createCacheKey;
 const bound2 = Math.max((require("MINIMUM_HIT_AREA").MINIMUM_HIT_AREA - require("MINIMUM_HIT_AREA").LARGE_BUTTON_HEIGHT) / 2, 0);
-createCacheKey[2] = { top: bound2, left: "Array", right: "text", bottom: bound2 };
+let obj4 = { top: bound2, left: "Array", right: "accessibilityLabel", bottom: false };
+obj4[3] = bound2;
+createCacheKey[2] = obj4;
 function getTextPlatformLineHeight(arg0, arg1) {
 
 }
-createCacheKey = {
-  Icon: function TextButtonIcon(source) {
-    let str = source.variant;
-    if (str === undefined) {
-      str = "icon";
-    }
-    let flag = source.disableColor;
-    if (flag === undefined) {
-      flag = true;
-    }
-    const context = importAllResult.useContext(closure_13);
-    let obj = styleProperties;
-    obj = { source: source.source, disableColor: flag, style: obj.useIconSizeStyles(context) };
-    const tmp4 = callback(closure_12, obj);
-    let tmp3Result = tmp4;
-    if ("entity" === str) {
-      obj = { style: null, children: null };
-      obj[0] = tmp2.entityWrapper;
-      obj[1] = tmp4;
-      tmp3Result = callback(closure_6, obj);
-    }
-    return tmp3Result;
-  }
-};
 let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMargin, ref) => {
   ({ text, textElement, size } = iconOpticalOffsetMargin);
   ({ style, pillStyle } = iconOpticalOffsetMargin);
@@ -213,29 +195,25 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
   onPressIn = iconOpticalOffsetMargin.onPressIn;
   const onPressOut = iconOpticalOffsetMargin.onPressOut;
   onLayout = iconOpticalOffsetMargin.onLayout;
-  let tmp7 = onPressOut(onLayout[13])("BaseTextButton");
   if (null != iconOpticalOffsetMargin.textVariant) {
     let textVariant = iconOpticalOffsetMargin.textVariant;
   } else {
-    let obj = onPressIn(tmp6[10]);
+    let obj = onPressIn(onLayout[10]);
     textVariant = obj.getButtonDefaultTextVariant(size);
   }
-  const tmp10 = onPressIn(onLayout[14]).TextStyleSheet[textVariant];
+  const tmp10 = onPressIn(onLayout[13]).TextStyleSheet[textVariant];
   const tmp11 = callback2(size, tmp10.fontSize);
   obj1 = importAllResult;
-  const enabled = importAllResult.useContext(onPressIn(tmp6[15]).AccessibilityPreferencesContext).reducedMotion.enabled;
+  const enabled = importAllResult.useContext(onPressIn(onLayout[14]).AccessibilityPreferencesContext).reducedMotion.enabled;
   let str3 = iconOpticalOffsetMargin.variant;
   if (str3 == null) {
     str3 = "primary";
   }
-  if (tmp7) {
-    tmp7 = "tertiary" === str3;
-  }
-  if (tmp7) {
+  if ("tertiary" === str3) {
     str3 = "secondary";
   }
-  let tmp9Result = tmp9(tmp6[6]);
-  const sharedValue = tmp9Result.useSharedValue(0);
+  let tmp8Result = tmp8(tmp9[6]);
+  const sharedValue = tmp8Result.useSharedValue(0);
   const startsWithResult = str3.startsWith("expressive");
   ref = obj1.useRef(null);
   closure_6 = obj1.useRef({ width: 0, height: 0 });
@@ -272,8 +250,8 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
         obj[2] = nativeEvent.locationY - current.height / 2;
         callback(obj);
       }
-      const result = onPressIn(onLayout[16]).triggerHapticFeedback(onPressIn(onLayout[16]).HapticFeedbackTypes.IMPACT_HEAVY);
-      const obj2 = onPressIn(onLayout[16]);
+      const result = onPressIn(onLayout[15]).triggerHapticFeedback(onPressIn(onLayout[15]).HapticFeedbackTypes.IMPACT_HEAVY);
+      const obj2 = onPressIn(onLayout[15]);
     }
   }, items1);
   callback2 = obj1.useCallback((arg0) => {
@@ -287,12 +265,12 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
         obj.pressed = false;
         return obj;
       });
-      const result = onPressIn(onLayout[16]).triggerHapticFeedback(onPressIn(onLayout[16]).HapticFeedbackTypes.IMPACT_MEDIUM);
-      let obj = onPressIn(onLayout[16]);
+      const result = onPressIn(onLayout[15]).triggerHapticFeedback(onPressIn(onLayout[15]).HapticFeedbackTypes.IMPACT_MEDIUM);
+      let obj = onPressIn(onLayout[15]);
     }
   }, items2);
-  tmp9Result = tmp9(tmp6[12]);
-  const buttonTextColorStyles = tmp9Result.useButtonTextColorStyles(str3);
+  tmp8Result = tmp8(tmp9[12]);
+  const buttonTextColorStyles = tmp8Result.useButtonTextColorStyles(str3);
   if (null == icon) {
     obj = {};
   } else {
@@ -318,7 +296,7 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
     obj2[0] = maxFontSizeMultiplier;
     const items4 = [tmp11.buttonText, tmp10, , , ];
     let androidLineHeight = null;
-    if (tmp9Result1.isAndroid()) {
+    if (tmp8Result1.isAndroid()) {
       androidLineHeight = tmp11.androidLineHeight;
     }
     items4[2] = androidLineHeight;
@@ -329,7 +307,7 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
     textElement = callback(ref, obj2);
     const tmp23 = callback;
     const tmp24 = ref;
-    tmp9Result1 = tmp9(tmp6[11]);
+    tmp8Result1 = tmp8(tmp9[11]);
   }
   const obj3 = { ref };
   let merged = Object.assign(iconOpticalOffsetMargin);
@@ -351,16 +329,16 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
   }
   items5[3] = expressiveButtonContainer;
   obj3.style = items5;
-  let str5 = "box-only";
+  let str4 = "box-only";
   if (!startsWithResult) {
-    str5 = iconOpticalOffsetMargin.pointerEvents;
+    str4 = iconOpticalOffsetMargin.pointerEvents;
   }
-  obj3.pointerEvents = str5;
+  obj3.pointerEvents = str4;
   obj3.pressed = sharedValue;
   obj3.accessibilityRole = str2;
   if (accessibilityLabel == null) {
-    accessibilityLabel = tmp9(tmp6[18]).getNodeText(text);
-    const tmp9Result2 = tmp9(tmp6[18]);
+    accessibilityLabel = tmp8(tmp9[17]).getNodeText(text);
+    const tmp8Result2 = tmp8(tmp9[17]);
   }
   obj3.accessibilityLabel = accessibilityLabel;
   obj3.hitSlop = createCacheKey[size];
@@ -402,9 +380,56 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
   items6[2] = tmp34;
   obj5[1] = items6;
   obj4[8] = closure_8(redux.Provider, obj5);
-  obj3.children = callback(onPressIn(onLayout[19]).ButtonPill, obj4);
-  return callback(onPressIn(onLayout[17]).BaseButton, obj3);
-}), createCacheKey);
+  obj3.children = callback(onPressIn(onLayout[18]).ButtonPill, obj4);
+  return callback(onPressIn(onLayout[16]).BaseButton, obj3);
+}), {
+  Icon: function TextButtonIcon(source) {
+    let str = source.variant;
+    if (str === undefined) {
+      str = "icon";
+    }
+    let flag = source.disableColor;
+    if (flag === undefined) {
+      flag = true;
+    }
+    const context = importAllResult.useContext(closure_13);
+    let obj = styleProperties;
+    obj = { source: source.source, disableColor: flag, style: obj.useIconSizeStyles(context) };
+    const tmp4 = callback(closure_12, obj);
+    let tmp3Result = tmp4;
+    if ("entity" === str) {
+      obj = { style: null, children: null };
+      obj[0] = tmp2.entityWrapper;
+      obj[1] = tmp4;
+      tmp3Result = callback(closure_6, obj);
+    }
+    return tmp3Result;
+  }
+});
+let obj5 = {
+  Icon: function TextButtonIcon(source) {
+    let str = source.variant;
+    if (str === undefined) {
+      str = "icon";
+    }
+    let flag = source.disableColor;
+    if (flag === undefined) {
+      flag = true;
+    }
+    const context = importAllResult.useContext(closure_13);
+    let obj = styleProperties;
+    obj = { source: source.source, disableColor: flag, style: obj.useIconSizeStyles(context) };
+    const tmp4 = callback(closure_12, obj);
+    let tmp3Result = tmp4;
+    if ("entity" === str) {
+      obj = { style: null, children: null };
+      obj[0] = tmp2.entityWrapper;
+      obj[1] = tmp4;
+      tmp3Result = callback(closure_6, obj);
+    }
+    return tmp3Result;
+  }
+};
 let result = require("set").fileFinishedImporting("design/components/Button/native/BaseTextButton.native.tsx");
 
 export const BaseTextButton = merged;

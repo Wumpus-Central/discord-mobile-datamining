@@ -1,8 +1,8 @@
-// === Module 10583: getBotTagTypeFromUser ===
+// === Module 10607: getBotTagTypeFromUser ===
 
-// Module 10583 (getBotTagTypeFromUser)
+// Module 10607 (getBotTagTypeFromUser)
 import set from "set" /* 2 */;
-import ApplicationTypes from "ApplicationTypes" /* 4475 */;
+import ApplicationTypes from "ApplicationTypes" /* 4477 */;
 
 const BotTagTypes = ApplicationTypes.BotTagTypes;
 const result = set.fileFinishedImporting("modules/applications/getBotTagFromUser.tsx");

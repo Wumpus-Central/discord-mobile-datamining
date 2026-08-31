@@ -1,6 +1,6 @@
-// === Module 4354: getPowerupEntitlementPrice ===
+// === Module 4356: getPowerupEntitlementPrice ===
 
-// Module 4354 (getPowerupEntitlementPrice)
+// Module 4356 (getPowerupEntitlementPrice)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/powerups/utils/getPowerupEntitlementPrice.tsx");

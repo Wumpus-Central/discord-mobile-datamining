@@ -1,6 +1,6 @@
-// === Module 1627: KeyboardTypes ===
+// === Module 1626: KeyboardTypes ===
 
-// Module 1627 (KeyboardTypes)
+// Module 1626 (KeyboardTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/keyboard/native/KeyboardTypes.tsx");

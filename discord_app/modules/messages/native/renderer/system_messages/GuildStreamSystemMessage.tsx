@@ -1,13 +1,13 @@
-// === Module 7862: createGuildStreamSystemMessage ===
+// === Module 7884: createGuildStreamSystemMessage ===
 
-// Module 7862 (createGuildStreamSystemMessage)
+// Module 7884 (createGuildStreamSystemMessage)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import StreamIssueReportReasons from "StreamIssueReportReasons" /* 4513 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7816 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7818 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7819 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7835 */;
+import StreamIssueReportReasons from "StreamIssueReportReasons" /* 4515 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7837 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7839 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7841 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7857 */;
 
 const StreamTypes = StreamIssueReportReasons.StreamTypes;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx");

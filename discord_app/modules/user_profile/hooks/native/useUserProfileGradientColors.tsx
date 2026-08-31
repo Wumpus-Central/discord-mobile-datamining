@@ -1,8 +1,8 @@
-// === Module 8856: useUserProfileGradientColors ===
+// === Module 8879: useUserProfileGradientColors ===
 
-// Module 8856 (useUserProfileGradientColors)
+// Module 8879 (useUserProfileGradientColors)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");
@@ -14,8 +14,8 @@ export const useUserProfileGradientColors = function useUserProfileGradientColor
   const items = [overlay];
   const stateFromStores = _require(589).useStateFromStores(items, () => overlay.syncProfileThemeWithUserTheme);
   let obj = _require(589);
-  let obj2 = _require(4173);
-  const profileThemeValues = _require(5940).useProfileThemeValues(obj2.useThemeContext().theme);
+  let obj2 = _require(4174);
+  const profileThemeValues = _require(5943).useProfileThemeValues(obj2.useThemeContext().theme);
   if (stateFromStores) {
     let prop;
     if (!tmp3) {

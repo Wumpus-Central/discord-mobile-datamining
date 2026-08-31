@@ -1,11 +1,11 @@
-// === Module 9581: useCanCreateAnEvent ===
+// === Module 9603: useCanCreateAnEvent ===
 
-// Module 9581 (useCanCreateAnEvent)
+// Module 9603 (useCanCreateAnEvent)
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "comparator" /* 1983 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1983 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_3 from "comparator" /* 1982 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;
+import closure_5 from "createGuildRecordFromRust" /* 1909 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4091 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;

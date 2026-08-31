@@ -1,15 +1,15 @@
-// === Module 9375: makeTwitchRequest ===
+// === Module 9397: makeTwitchRequest ===
 
-// Module 9375 (makeTwitchRequest)
+// Module 9397 (makeTwitchRequest)
 import sendRequest from "sendRequest" /* 530 */;
 import initializeDefault from "initialize" /* 589 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import callbackDefault from "callback" /* 5315 */;
+import callbackDefault from "callback" /* 5318 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5190 */;
-import closure_5 from "initialize" /* 4291 */;
+import closure_4 from "set" /* 5193 */;
+import closure_5 from "initialize" /* 4293 */;
 import { PlatformTypes } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -120,7 +120,7 @@ prototype["_checkTwitch"] = function _checkTwitch(accessToken, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -325,7 +325,7 @@ prototype["_checkYouTube"] = function _checkYouTube(c0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

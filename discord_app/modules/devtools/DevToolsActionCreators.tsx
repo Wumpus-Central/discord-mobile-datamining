@@ -1,8 +1,8 @@
-// === Module 15107: updateDevToolsSettings ===
+// === Module 15140: updateDevToolsSettings ===
 
-// Module 15107 (updateDevToolsSettings)
+// Module 15140 (updateDevToolsSettings)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "initialize" /* 7411 */;
+import closure_2 from "initialize" /* 7432 */;
 
 const result = require("set").fileFinishedImporting("modules/devtools/DevToolsActionCreators.tsx");
 

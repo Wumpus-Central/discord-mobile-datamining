@@ -1,7 +1,7 @@
-// === Module 1625: isMetaQuest ===
+// === Module 1624: isMetaQuest ===
 
-// Module 1625 (isMetaQuest)
-import getConstantsAll from "getConstants" /* 1626 */;
+// Module 1624 (isMetaQuest)
+import getConstantsAll from "getConstants" /* 1625 */;
 import importDefaultResult from "enforcing" /* 670 */;
 
 const isMetaQuestResult = importDefaultResult.isMetaQuest();

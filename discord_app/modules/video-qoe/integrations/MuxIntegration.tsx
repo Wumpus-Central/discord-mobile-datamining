@@ -1,6 +1,6 @@
-// === Module 14673: mapDiscordToMuxMetadata ===
+// === Module 14707: mapDiscordToMuxMetadata ===
 
-// Module 14673 (mapDiscordToMuxMetadata)
+// Module 14707 (mapDiscordToMuxMetadata)
 import set from "set" /* 2 */;
 
 let result = set.fileFinishedImporting("modules/video-qoe/integrations/MuxIntegration.tsx");
@@ -44,7 +44,7 @@ prototype["mapDiscordToMuxMetadata"] = function mapDiscordToMuxMetadata(config, 
   return obj;
 };
 prototype["getAppVersion"] = function getAppVersion() {
-  return "6302";
+  return "6319";
 };
 prototype["getBuildChannel"] = function getBuildChannel() {
   try {

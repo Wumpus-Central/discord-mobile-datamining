@@ -1,13 +1,13 @@
-// === Module 10059: updateStats ===
+// === Module 10082: updateStats ===
 
-// Module 10059 (updateStats)
+// Module 10082 (updateStats)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import openAll from "open" /* 10060 */;
+import openAll from "open" /* 10083 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "mergeGuildAvatar" /* 1923 */;
-import DesktopSources from "DesktopSources" /* 4510 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import DesktopSources from "DesktopSources" /* 4512 */;
 
 const require = arg1;
 function updateStats(arr, arg1, timestamp) {
@@ -203,7 +203,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: null };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: "<string:285213222>" };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -338,7 +338,7 @@ obj = {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(4545).BaseConnectionEvent.Video, (userId) => {
+          replayConnection.on(replayConnection(4547).BaseConnectionEvent.Video, (userId) => {
             let num = arg3;
             obj = closure_1_1(closure_1_3[7]);
             obj = { type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT", mediaEngineConnectionId: replayConnection.mediaEngineConnectionId, userId, videoSsrc: null, streamId: null };

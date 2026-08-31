@@ -1,6 +1,6 @@
-// === Module 4079: isCommunicationDisabled ===
+// === Module 4080: isCommunicationDisabled ===
 
-// Module 4079 (isCommunicationDisabled)
+// Module 4080 (isCommunicationDisabled)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");

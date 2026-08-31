@@ -1,8 +1,8 @@
-// === Module 10933: useCreateThreadViewProps ===
+// === Module 10957: useCreateThreadViewProps ===
 
-// Module 10933 (useCreateThreadViewProps)
-import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10267 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+// Module 10957 (useCreateThreadViewProps)
+import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10291 */;
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/threads/native/useCreateThreadViewProps.tsx");

@@ -1,19 +1,19 @@
-// === Module 16689: FloatingCTA ===
+// === Module 16722: FloatingCTA ===
 
-// Module 16689 (FloatingCTA)
+// Module 16722 (FloatingCTA)
 import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import ManaContext from "ManaContext" /* 4173 */;
-import Stack from "Stack" /* 4891 */;
-import RowButtonWrapper from "RowButtonWrapper" /* 8311 */;
+import ManaContext from "ManaContext" /* 4174 */;
+import Stack from "Stack" /* 4894 */;
+import RowButtonWrapper from "RowButtonWrapper" /* 8333 */;
+import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 10958 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import VoicePanelModes from "VoicePanelModes" /* 11776 */;
-import { CALL_TILE_GUTTER } from "CARD_SIZE" /* 11779 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import VoicePanelModes from "VoicePanelModes" /* 11807 */;
+import { CALL_TILE_GUTTER } from "CARD_SIZE" /* 11810 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function FloatingCTA(trailing) {
@@ -66,7 +66,7 @@ class VoicePanelFloatingCTAContainer {
     closure_11 = memo;
     obj3 = require("useFloatingCTAProps");
     floatingCTAProps = obj3.useFloatingCTAProps(stateFromStores);
-    obj4 = require("module_4186");
+    obj4 = require("module_4187");
     class A {
       constructor() {
         tmp = wrapperSpecs;
@@ -90,7 +90,7 @@ class VoicePanelFloatingCTAContainer {
             const obj = closure_1_0(closure_1_2[18]);
           }
         };
-        obj1 = { state: tmp4, TransitionStates: require("ManaContext").TransitionStates, runOnJS: require("module_4186").runOnJS, cleanUp };
+        obj1 = { state: tmp4, TransitionStates: require("ManaContext").TransitionStates, runOnJS: require("module_4187").runOnJS, cleanUp };
         fn.__closure = obj1;
         fn.__workletHash = 7334460639890;
         fn.__initData = closure_1_14;
@@ -120,7 +120,7 @@ class VoicePanelFloatingCTAContainer {
         return obj;
       }
     }
-    obj = { getControlsDefaultWidth: require("VOICE_PANEL_DRAWER_MAX_WIDTH").getControlsDefaultWidth, windowDimensions, safeArea, state, TransitionStates: require("ManaContext").TransitionStates, controlsSpecs, roundToNearestPixel: require("t"), withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, OPACITY_CHANGE_PHYSICS: closure_12, runOnJS: require("module_4186").runOnJS, cleanUp, wrapperSpecs, UI_SHOW_HIDE_PHYSICS: windowDimensions, gestureState, CALL_TILE_GUTTER: channelId, accessoryHeights };
+    obj = { getControlsDefaultWidth: require("VOICE_PANEL_DRAWER_MAX_WIDTH").getControlsDefaultWidth, windowDimensions, safeArea, state, TransitionStates: require("ManaContext").TransitionStates, controlsSpecs, roundToNearestPixel: require("t"), withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, OPACITY_CHANGE_PHYSICS: closure_12, runOnJS: require("module_4187").runOnJS, cleanUp, wrapperSpecs, UI_SHOW_HIDE_PHYSICS: windowDimensions, gestureState, CALL_TILE_GUTTER: channelId, accessoryHeights };
     A.__closure = obj;
     A.__workletHash = 3338259366067;
     A.__initData = closure_13;
@@ -167,8 +167,8 @@ let closure_14 = { code: "function VoicePanelFloatingCTAContainerTsx2(finished){
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx");
 
 export default VoicePanelFloatingCTAContainer;
-export const getFloatingCTATotalViewHeight = function getFloatingCTATotalViewHeight(chatInputFloating) {
-  return useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, chatInputFloating) + 16;
+export const getFloatingCTATotalViewHeight = function getFloatingCTATotalViewHeight() {
+  return useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT) + 16;
 };
 export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(arg0, arg1, state, cleanUp) {
   let obj = { theme: ThemeTypes.DARK, children: null };

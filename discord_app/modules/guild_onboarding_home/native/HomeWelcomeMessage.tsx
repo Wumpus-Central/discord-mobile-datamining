@@ -1,14 +1,14 @@
-// === Module 16080: HomeWelcomeMessage ===
+// === Module 16114: HomeWelcomeMessage ===
 
-// Module 16080 (HomeWelcomeMessage)
+// Module 16114 (HomeWelcomeMessage)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "mergeGuildAvatar" /* 1923 */;
-import closure_7 from "handleSettingsLoadSuccess" /* 4673 */;
+import closure_5 from "createGuildRecordFromRust" /* 1909 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "handleSettingsLoadSuccess" /* 4675 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);

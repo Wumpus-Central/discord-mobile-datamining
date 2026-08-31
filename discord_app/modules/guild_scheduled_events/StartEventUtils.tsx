@@ -1,11 +1,11 @@
-// === Module 9838: createStageChannelForEvent ===
+// === Module 9861: createStageChannelForEvent ===
 
-// Module 9838 (createStageChannelForEvent)
+// Module 9861 (createStageChannelForEvent)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1395 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1391 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "createGuildRecordFromRust" /* 1909 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1393 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
 const require = arg1;
@@ -39,7 +39,7 @@ function _createStageChannelForEvent() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -64,7 +64,7 @@ function _createStageChannelForEvent() {
               lib2 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -165,7 +165,7 @@ function _preStartEventActions() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -239,7 +239,7 @@ function _setEventAsActive() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -267,7 +267,7 @@ function _setEventAsActive() {
               let guild_id;
               name = 1;
               id = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -340,7 +340,7 @@ function _setEventAsActive() {
               return obj;
             }
             id = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp41) {
           id = tmp;

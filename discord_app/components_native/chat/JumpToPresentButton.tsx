@@ -1,16 +1,16 @@
-// === Module 11770: JumpToPresentButton ===
+// === Module 11801: JumpToPresentButton ===
 
-// Module 11770 (JumpToPresentButton)
+// Module 11801 (JumpToPresentButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4166 */;
+import map from "map" /* 4167 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "updateChatInputContainerHeight" /* 9473 */;
-import { useChatInputContainerHeight as closure_5 } from "updateChatInputContainerHeight" /* 9473 */;
-import closure_6 from "_handleConnectionOpen" /* 5186 */;
-import closure_7 from "reinjectEphemerals" /* 4701 */;
+import closure_4 from "updateChatInputContainerHeight" /* 9495 */;
+import { useChatInputContainerHeight as closure_5 } from "updateChatInputContainerHeight" /* 9495 */;
+import closure_6 from "_handleConnectionOpen" /* 5189 */;
+import closure_7 from "reinjectEphemerals" /* 4703 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 import set from "set" /* 500 */;
 
 require = arg1;
@@ -32,15 +32,13 @@ const result = set.fileFinishedImporting("components_native/chat/JumpToPresentBu
 export default function JumpToPresentButton(channelId) {
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
-  const onJumpToPresent = channelId.onJumpToPresent;
   dependencyMap = undefined;
   let tmp = callback3();
   const tmp2 = callback4(screenIndex);
-  let tmp3Result = dependencyMap;
   let obj = channelId(589);
   const items = [closure_6];
   dependencyMap = obj.useStateFromStores(items, () => connected.isConnected(), []);
-  const tmp7 = callback((showingAutoComplete) => {
+  let tmp5 = callback((showingAutoComplete) => {
     let tmp = closure_2;
     if (tmp) {
       showingAutoComplete = showingAutoComplete.showingAutoComplete;
@@ -55,23 +53,22 @@ export default function JumpToPresentButton(channelId) {
     }
     return tmp;
   });
-  obj1 = channelId(9590);
-  const isVoicePanelMounted = obj1.useIsVoicePanelMounted(channelId);
-  let tmp5 = screenIndex(1367)("JumpToPresentButton");
-  const isVoicePanelOpen = channelId(9590).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(9590);
+  const isVoicePanelMounted = channelId(9612).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(9612);
+  const isVoicePanelOpen = channelId(9612).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(9612);
   const items1 = [closure_7];
   const stateFromStores = channelId(589).useStateFromStores(items1, () => null != closure_1_7.getMessages(channelId).jumpReturnTargetId);
-  if (!tmp7) {
+  if (!tmp5) {
     return null;
   }
   let containerIOS = tmp2;
   if (tmp2 == null) {
     containerIOS = tmp.containerIOS;
   }
-  const intl = tmp6(1236).intl;
+  const intl = tmp3(1236).intl;
   const string = intl.string;
-  const t = tmp6(1236).t;
+  const t = tmp3(1236).t;
   if (stateFromStores) {
     let stringResult = string(t.dpjpOp);
   } else {
@@ -79,24 +76,16 @@ export default function JumpToPresentButton(channelId) {
   }
   obj = { style: items2, children: null };
   items2 = [tmp.container, containerIOS];
-  if (tmp7) {
-    if (tmp5) {
-      obj = { accessibilityLabel: null, icon: null, onPress: null };
-      obj[0] = stringResult;
-      tmp3Result = tmp3(11771);
-      tmp3Result = tmp3(11772);
-      obj[1] = tmp3Result;
-      obj[2] = onJumpToPresent;
-      let tmp13Result = tmp13(tmp3Result, obj);
-    } else {
-      obj1 = { accessibilityLabel: null, onPress: null, icon: null, variant: "primary-overlay" };
-      obj1[0] = stringResult;
-      obj1[1] = onJumpToPresent;
-      obj1[2] = tmp3(11772);
-      tmp13Result = tmp13(tmp6(7952).IconButton, obj1);
-    }
+  if (tmp5) {
+    obj = { accessibilityLabel: null, icon: null, onPress: null };
+    obj[0] = stringResult;
+    obj[1] = screenIndex(11803);
+    obj[2] = channelId.onJumpToPresent;
+    let tmp11Result = tmp11(screenIndex(11802), obj);
+    const tmp15 = screenIndex(11802);
   } else {
-    obj[1] = tmp13(tmp6(11773).MemoedVoicePanelDismissChatButton, {});
-    return tmp13(tmp14, obj);
+    tmp11Result = tmp11(tmp3(11804).MemoedVoicePanelDismissChatButton, {});
   }
+  obj[1] = tmp11Result;
+  return <View style={items2}>{null}</View>;
 };

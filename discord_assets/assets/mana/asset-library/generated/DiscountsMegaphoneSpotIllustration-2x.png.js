@@ -1,6 +1,6 @@
-// === Module 6433: metadata ===
+// === Module 6444: metadata ===
 
-// Module 6433 (metadata)
+// Module 6444 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscountsMegaphoneSpotIllustration-2x.png.js");

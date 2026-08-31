@@ -1,11 +1,11 @@
-// === Module 14113: registerTransport ===
+// === Module 14147: registerTransport ===
 
-// Module 14113 (registerTransport)
+// Module 14147 (registerTransport)
 import applyDefault from "apply" /* 12 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import transformUserDefault from "transformUser" /* 9448 */;
+import transformUserDefault from "transformUser" /* 9470 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4348 */;
+import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4350 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -162,7 +162,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -285,7 +285,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -436,7 +436,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

@@ -1,9 +1,9 @@
-// === Module 11626: useFetchDeveloperActivityShelfItems ===
+// === Module 11657: useFetchDeveloperActivityShelfItems ===
 
-// Module 11626 (useFetchDeveloperActivityShelfItems)
+// Module 11657 (useFetchDeveloperActivityShelfItems)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "initialize" /* 8444 */;
-import { DevShelfFetchState } from "initialize" /* 8444 */;
+import closure_3 from "initialize" /* 8466 */;
+import { DevShelfFetchState } from "initialize" /* 8466 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");

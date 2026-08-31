@@ -1,6 +1,6 @@
-// === Module 11849: getMatch ===
+// === Module 11880: getMatch ===
 
-// Module 11849 (getMatch)
+// Module 11880 (getMatch)
 import set from "set" /* 2 */;
 
 function getMatch(str, arg1, index) {

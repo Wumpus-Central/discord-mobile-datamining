@@ -1,9 +1,9 @@
-// === Module 16691: useControlsTranslation ===
+// === Module 16724: useControlsTranslation ===
 
-// Module 16691 (useControlsTranslation)
+// Module 16724 (useControlsTranslation)
 import closure_3 from "noop" /* 19 */;
-import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 11776 */;
-import { CALL_TILE_GUTTER } from "CARD_SIZE" /* 11779 */;
+import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 11807 */;
+import { CALL_TILE_GUTTER } from "CARD_SIZE" /* 11810 */;
 
 const require = arg1;
 let closure_6 = { code: "function useControlsTranslationTsx1(){const{withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight}=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};}" };

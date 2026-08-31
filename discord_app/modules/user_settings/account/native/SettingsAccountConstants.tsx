@@ -1,6 +1,6 @@
-// === Module 11385: AccountSettingsTabs ===
+// === Module 11414: AccountSettingsTabs ===
 
-// Module 11385 (AccountSettingsTabs)
+// Module 11414 (AccountSettingsTabs)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/account/native/SettingsAccountConstants.tsx");

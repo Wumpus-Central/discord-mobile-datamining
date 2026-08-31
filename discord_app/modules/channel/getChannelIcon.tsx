@@ -1,10 +1,10 @@
-// === Module 9369: getChannelIconURL ===
+// === Module 9391: getChannelIconURL ===
 
-// Module 9369 (getChannelIconURL)
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+// Module 9391 (getChannelIconURL)
+import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
 require = arg1;

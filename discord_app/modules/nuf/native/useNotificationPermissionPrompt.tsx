@@ -1,11 +1,11 @@
-// === Module 16042: useNotificationPermissionPrompt ===
+// === Module 16076: useNotificationPermissionPrompt ===
 
-// Module 16042 (useNotificationPermissionPrompt)
+// Module 16076 (useNotificationPermissionPrompt)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUpdateUser" /* 1384 */;
-import closure_5 from "_handleConnectionOpen" /* 5186 */;
-import closure_6 from "handleRequiredAction" /* 1385 */;
-import closure_7 from "set" /* 11911 */;
+import closure_4 from "handleUpdateUser" /* 1380 */;
+import closure_5 from "_handleConnectionOpen" /* 5189 */;
+import closure_6 from "handleRequiredAction" /* 1381 */;
+import closure_7 from "set" /* 11945 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/nuf/native/useNotificationPermissionPrompt.tsx");
@@ -30,7 +30,7 @@ export default function useNotificationPermissionPrompt() {
     }
   }, items2);
   const obj2 = stateFromStores(589);
-  const guildOpenNudge = stateFromStores(16043).useGuildOpenNudge();
-  const obj3 = stateFromStores(16043);
-  const postCallDisconnectNudge = stateFromStores(16045).usePostCallDisconnectNudge();
+  const guildOpenNudge = stateFromStores(16077).useGuildOpenNudge();
+  const obj3 = stateFromStores(16077);
+  const postCallDisconnectNudge = stateFromStores(16079).usePostCallDisconnectNudge();
 };

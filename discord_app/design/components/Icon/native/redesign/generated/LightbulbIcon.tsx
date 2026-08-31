@@ -1,10 +1,10 @@
-// === Module 15939: LightbulbIcon ===
+// === Module 15973: LightbulbIcon ===
 
-// Module 15939 (LightbulbIcon)
+// Module 15973 (LightbulbIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 15940 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 15974 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

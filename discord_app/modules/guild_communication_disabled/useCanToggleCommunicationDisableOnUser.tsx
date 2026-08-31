@@ -1,13 +1,13 @@
-// === Module 8374: canToggleCommunicationDisableOnUser ===
+// === Module 8396: canToggleCommunicationDisableOnUser ===
 
-// Module 8374 (canToggleCommunicationDisableOnUser)
+// Module 8396 (canToggleCommunicationDisableOnUser)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import applyOverwritesAll from "applyOverwrites" /* 4095 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_6 from "mergeGuildAvatar" /* 1923 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1430 */;
+import applyOverwritesAll from "applyOverwrites" /* 4096 */;
+import closure_4 from "createGuildRecordFromRust" /* 1909 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 
 function canToggleCommunicationDisableOnUser(id, id2, items) {
   let tmp = items;

@@ -1,10 +1,10 @@
-// === Module 6660: GiftTrollIllocon ===
+// === Module 6673: GiftTrollIllocon ===
 
-// Module 6660 (GiftTrollIllocon)
+// Module 6673 (GiftTrollIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6661 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6674 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GiftTrollIllocon.native.tsx");

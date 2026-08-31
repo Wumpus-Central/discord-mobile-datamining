@@ -1,11 +1,11 @@
-// === Module 5018: getGameMentionData ===
+// === Module 5021: getGameMentionData ===
 
-// Module 5018 (getGameMentionData)
+// Module 5021 (getGameMentionData)
 import shallowEqualDefault from "shallowEqual" /* 643 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 5022 */;
-import closure_3 from "handleLoadMessages" /* 4470 */;
-import closure_4 from "set" /* 5019 */;
-import closure_5 from "mergeGuildAvatar" /* 1923 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 5025 */;
+import closure_3 from "handleLoadMessages" /* 4472 */;
+import closure_4 from "set" /* 5022 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_mentions/hooks/useGameMentionData.tsx");

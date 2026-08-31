@@ -1,8 +1,8 @@
-// === Module 8809: GuildVisibility ===
+// === Module 8832: GuildVisibility ===
 
-// Module 8809 (GuildVisibility)
+// Module 8832 (GuildVisibility)
 import set2 from "set" /* 2 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1426 */;
 import ME from "ME" /* 676 */;
 
 ({ GuildFeatures: obj1, BoostedGuildTiers: c3 } = ME);

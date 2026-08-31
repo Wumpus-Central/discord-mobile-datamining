@@ -1,6 +1,6 @@
-// === Module 1369: logger ===
+// === Module 1470: logger ===
 
-// Module 1369 (logger)
+// Module 1470 (logger)
 import closure_2 from "_slicedToArray" /* 32 */;
 import { useEffect } from "noop" /* 19 */;
 

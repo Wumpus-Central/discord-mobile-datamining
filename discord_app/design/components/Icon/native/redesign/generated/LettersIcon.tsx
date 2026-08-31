@@ -1,10 +1,10 @@
-// === Module 12975: LettersIcon ===
+// === Module 13009: LettersIcon ===
 
-// Module 12975 (LettersIcon)
+// Module 13009 (LettersIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 12976 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 13010 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

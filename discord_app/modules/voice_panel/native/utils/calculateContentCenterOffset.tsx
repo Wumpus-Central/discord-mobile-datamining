@@ -1,9 +1,9 @@
-// === Module 16647: EDGE_GUTTER ===
+// === Module 16680: EDGE_GUTTER ===
 
-// Module 16647 (EDGE_GUTTER)
+// Module 16680 (EDGE_GUTTER)
 import set from "set" /* 2 */;
-import tDefault from "t" /* 10668 */;
-import CARD_SIZE from "CARD_SIZE" /* 11779 */;
+import tDefault from "t" /* 10692 */;
+import CARD_SIZE from "CARD_SIZE" /* 11810 */;
 
 const EDGE_GUTTER = CARD_SIZE.EDGE_GUTTER;
 const fn = function t(arg0) {

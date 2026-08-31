@@ -1,14 +1,14 @@
-// === Module 17000: handleVoiceChannelSelect ===
+// === Module 17033: handleVoiceChannelSelect ===
 
-// Module 17000 (handleVoiceChannelSelect)
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4413 */;
-import useStageHasMedia from "useStageHasMedia" /* 5326 */;
-import initializeDefault from "initialize" /* 5451 */;
-import closure_3 from "setContent" /* 4155 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_6 from "handleConnectionOpen" /* 1982 */;
-import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5323 */;
+// Module 17033 (handleVoiceChannelSelect)
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4415 */;
+import useStageHasMedia from "useStageHasMedia" /* 5329 */;
+import initializeDefault from "initialize" /* 5454 */;
+import closure_3 from "setContent" /* 4156 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_6 from "handleConnectionOpen" /* 1981 */;
+import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5326 */;
 
 require = arg1;
 let c8 = false;
@@ -45,15 +45,15 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
           let obj = useStageHasMedia;
           if (obj.getStageHasMedia(channel.id)) {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
-              if (closure_5.can(tmp5(1399).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
+              if (closure_5.can(tmp5(1395).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 obj = { channel: null };
                 obj[0] = channel;
-                ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp5(2010)(5338, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+                ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp5(2009)(5341, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
                 c8 = true;
                 const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
               }
             }
-            tmp5Result = tmp5(9719);
+            tmp5Result = tmp5(9741);
           }
           tmp6 = dependencyMap;
         }

@@ -1,9 +1,9 @@
-// === Module 9426: showActivitiesInvalidPermissionsAlert ===
+// === Module 9448: showActivitiesInvalidPermissionsAlert ===
 
-// Module 9426 (showActivitiesInvalidPermissionsAlert)
+// Module 9448 (showActivitiesInvalidPermissionsAlert)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import setDefault from "set" /* 4822 */;
+import setDefault from "set" /* 4825 */;
 
 const result = set.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");
 

@@ -1,12 +1,12 @@
-// === Module 14166: NativeModules ===
+// === Module 14200: NativeModules ===
 
-// Module 14166 (NativeModules)
-import enforcingDefault from "enforcing" /* 14167 */;
+// Module 14200 (NativeModules)
+import enforcingDefault from "enforcing" /* 14201 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "init" /* 7412 */;
-import closure_6 from "initialize" /* 7411 */;
+import closure_5 from "init" /* 7433 */;
+import closure_6 from "initialize" /* 7432 */;
 import { jsx } from "jsxProd" /* 21 */;
 import set from "set" /* 500 */;
 
@@ -35,7 +35,7 @@ set = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ set = {
           } else {
             arg1.navigateToDevTools();
             v0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp8) {
           v0 = tmp;
@@ -98,10 +98,10 @@ export default function DevToolsLazy() {
     }
   });
   const obj2 = stateFromStores(589);
-  const keyCommands = stateFromStores(14162).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(14196).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(15448).default, {});
+      return jsx(tmp(15481).default, {});
     }
   }
   return null;

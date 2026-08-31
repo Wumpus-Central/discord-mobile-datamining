@@ -1,15 +1,15 @@
-// === Module 7322: createDefaultFieldsSection ===
+// === Module 7343: createDefaultFieldsSection ===
 
-// Module 7322 (createDefaultFieldsSection)
+// Module 7343 (createDefaultFieldsSection)
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1947 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4267 */;
-import WidgetType from "WidgetType" /* 7314 */;
-import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 7323 */;
-import closure_3 from "mergeGuildAvatar" /* 1923 */;
-import { PremiumTypes } from "GuildFeatures" /* 1925 */;
+import DismissibleContent from "DismissibleContent" /* 1373 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+import isPremiumAtLeast from "isPremiumAtLeast" /* 1946 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4268 */;
+import WidgetType from "WidgetType" /* 7335 */;
+import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 7344 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
 require = arg1;
 function createDefaultFieldsSection() {
@@ -249,7 +249,7 @@ prototype["isEqual"] = function isEqual(header) {
             sum = sum + 1;
             num2 = sum;
             flag = true;
-          } else if (tmp16(7323).PersonalWidgetSectionType.FIELDS !== type) {
+          } else if (tmp16(7344).PersonalWidgetSectionType.FIELDS !== type) {
             flag = false;
           }
           tmp16 = require;
@@ -339,7 +339,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
   } else {
     const mapped = sections.map((type) => {
       type = type.type;
-      if (callback(7323).PersonalWidgetSectionType.COVER === type) {
+      if (callback(7344).PersonalWidgetSectionType.COVER === type) {
         let obj = { type: null, title: null, subtitle: null, image: null };
         ({ type: obj2[0], title } = type);
         if (title == null) {
@@ -366,7 +366,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
         }
         obj[3] = tmp5;
         return obj;
-      } else if (tmp(7323).PersonalWidgetSectionType.FIELDS === type) {
+      } else if (tmp(7344).PersonalWidgetSectionType.FIELDS === type) {
         obj = { type: null, fields: null };
         ({ type: obj[0], fields } = type);
         obj[1] = fields.map(closure_9);
@@ -376,7 +376,7 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
     });
     items = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
   }
-  if (!items.some((type) => type.type === callback(7323).PersonalWidgetSectionType.FIELDS)) {
+  if (!items.some((type) => type.type === callback(7344).PersonalWidgetSectionType.FIELDS)) {
     let obj = { type: null, fields: null };
     obj[0] = PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS;
     obj[1] = [];

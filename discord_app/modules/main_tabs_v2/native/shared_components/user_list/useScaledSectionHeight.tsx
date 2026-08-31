@@ -1,9 +1,9 @@
-// === Module 10232: useScaledSectionHeight ===
+// === Module 10256: useScaledSectionHeight ===
 
-// Module 10232 (useScaledSectionHeight)
+// Module 10256 (useScaledSectionHeight)
 import set from "set" /* 2 */;
-import getFontScale from "getFontScale" /* 4900 */;
-import PX_24 from "PX_24" /* 10233 */;
+import getFontScale from "getFontScale" /* 4903 */;
+import PX_24 from "PX_24" /* 10257 */;
 
 ({ USERS_LIST_SECTION_HEIGHT: obj1, USERS_LIST_SECTION_TEXT_HEIGHT: c3 } = PX_24);
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useScaledSectionHeight.tsx");

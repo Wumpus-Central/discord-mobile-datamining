@@ -1,13 +1,13 @@
-// === Module 8977: LinkButton ===
+// === Module 9000: LinkButton ===
 
-// Module 8977 (LinkButton)
-import Text from "Text" /* 4442 */;
+// Module 9000 (LinkButton)
+import Text from "Text" /* 4444 */;
 import closure_3 from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { CHANGELOG_URL } from "CHANGELOG_MODAL_KEY" /* 1981 */;
+import { CHANGELOG_URL } from "CHANGELOG_MODAL_KEY" /* 1980 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function LinkButton(arg0) {
@@ -15,7 +15,7 @@ function LinkButton(arg0) {
   const tmp = callback3();
   obj = {
     onPress() {
-      let obj = callback(4159);
+      let obj = callback(4160);
       obj.openURL(closure_6);
       obj = { cta_type: "profile_bio", target: closure_6 };
       callback(698).track(constants.CHANGE_LOG_CTA_CLICKED, obj);

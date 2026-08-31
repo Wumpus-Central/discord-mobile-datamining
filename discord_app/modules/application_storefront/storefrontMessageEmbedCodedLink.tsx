@@ -1,6 +1,6 @@
-// === Module 7382: makeStorefrontSKUCodedLink ===
+// === Module 7403: makeStorefrontSKUCodedLink ===
 
-// Module 7382 (makeStorefrontSKUCodedLink)
+// Module 7403 (makeStorefrontSKUCodedLink)
 import closure_0 from "_slicedToArray" /* 32 */;
 
 const result = require("set").fileFinishedImporting("modules/application_storefront/storefrontMessageEmbedCodedLink.tsx");

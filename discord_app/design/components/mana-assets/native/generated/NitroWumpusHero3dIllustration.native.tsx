@@ -1,10 +1,10 @@
-// === Module 6824: NitroWumpusHero3dIllustration ===
+// === Module 6841: NitroWumpusHero3dIllustration ===
 
-// Module 6824 (NitroWumpusHero3dIllustration)
+// Module 6841 (NitroWumpusHero3dIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6825 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6842 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroWumpusHero3dIllustration.native.tsx");

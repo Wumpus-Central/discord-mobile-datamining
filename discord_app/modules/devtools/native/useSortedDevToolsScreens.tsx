@@ -1,9 +1,9 @@
-// === Module 15277: getSortedDevToolsScreens ===
+// === Module 15310: getSortedDevToolsScreens ===
 
-// Module 15277 (getSortedDevToolsScreens)
-import updateDevToolsSettings from "updateDevToolsSettings" /* 15107 */;
+// Module 15310 (getSortedDevToolsScreens)
+import updateDevToolsSettings from "updateDevToolsSettings" /* 15140 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "initialize" /* 7411 */;
+import closure_3 from "initialize" /* 7432 */;
 
 require = arg1;
 function getSortedDevToolsScreens() {
@@ -11,7 +11,7 @@ function getSortedDevToolsScreens() {
   {
     sortedScreenKeys = closure_3.sortedScreenKeys;
   }
-  const entries = Object.entries(sortedScreenKeys(15111).DevToolsScreens);
+  const entries = Object.entries(sortedScreenKeys(15144).DevToolsScreens);
   const found = entries.filter((arg0) => {
     [, obj] = arg0;
     return null == obj.predicate || obj.predicate();
@@ -46,7 +46,7 @@ export default function useSortedDevToolsScreens() {
   if (sortedScreenKeys === undefined) {
     sortedScreenKeys = closure_3.sortedScreenKeys;
   }
-  const entries = Object.entries(sortedScreenKeys(15111).DevToolsScreens);
+  const entries = Object.entries(sortedScreenKeys(15144).DevToolsScreens);
   const found = entries.filter((arg0) => {
     [, obj] = arg0;
     return null == obj.predicate || obj.predicate();

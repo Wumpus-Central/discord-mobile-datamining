@@ -1,8 +1,8 @@
-// === Module 14107: transformGuildMember ===
+// === Module 14141: transformGuildMember ===
 
-// Module 14107 (transformGuildMember)
+// Module 14141 (transformGuildMember)
 import set from "set" /* 2 */;
-import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1899 */;
+import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1898 */;
 
 const result = set.fileFinishedImporting("modules/rpc/helpers/transformGuildMember.tsx");
 

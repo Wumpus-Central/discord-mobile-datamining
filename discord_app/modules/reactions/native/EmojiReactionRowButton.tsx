@@ -1,19 +1,18 @@
-// === Module 11243: EmojiPickerRowButton ===
+// === Module 11272: EmojiPickerRowButton ===
 
-// Module 11243 (EmojiPickerRowButton)
+// Module 11272 (EmojiPickerRowButton)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import EmojiTypes from "EmojiTypes" /* 4106 */;
-import PressableBase from "PressableBase" /* 5033 */;
-import EmojiDefault from "Emoji" /* 5550 */;
-import ReactionIcon from "ReactionIcon" /* 8174 */;
+import EmojiTypes from "EmojiTypes" /* 4107 */;
+import PressableBase from "PressableBase" /* 5036 */;
+import EmojiDefault from "Emoji" /* 5553 */;
+import ReactionIcon from "ReactionIcon" /* 8196 */;
 import closure_3 from "noop" /* 19 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1926 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {
@@ -23,14 +22,9 @@ let closure_6 = createCacheKey.createStyles((width) => {
   return obj;
 });
 let closure_7 = createCacheKey.createStyles((width, fontSize, lineHeight) => {
-  let tmp = width;
-  if (arg3) {
-    tmp = lineHeight;
-  }
   obj = { emojiImage: obj, emojiText: null };
   obj = { width, height: width };
-  obj = { lineHeight, fontSize, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: tmp, height: tmp };
-  const merged = Object.assign(tmp2);
+  obj = { lineHeight, fontSize, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: lineHeight, height: lineHeight };
   obj[1] = obj;
   return obj;
 });
@@ -58,12 +52,11 @@ export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
   obj[6] = jsx(ReactionIcon.ReactionIcon, { color: AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
   return jsx(PressableBase.PressableOpacity, { color: AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
 };
-export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiContainerSize) {
-  ({ emoji: animated, emojiSize } = emojiContainerSize);
-  ({ emojiFontSize, emojiLineHeight, onPress, styles } = emojiContainerSize);
-  let getEmojiURL = importDefault;
+export const EmojiReactionRowButton = function EmojiReactionRowButton(emoji) {
+  animated = emoji.emoji;
+  ({ emojiSize, emojiFontSize, emojiLineHeight, onPress, styles } = emoji);
+  const tmp = callback(emoji.emojiContainerSize);
   let obj = dependencyMap;
-  const tmp = callback(emojiContainerSize.emojiContainerSize);
   const memo = React.useMemo(() => ({ foreground: true }), []);
   obj = { androidRippleConfig: memo, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, disabled: null, hitSlop: 4, onPress: null, style: null, children: null };
   const intl = getSystemLocale.intl;
@@ -80,17 +73,17 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiConta
     obj[8] = null;
     return tmp4(PressableBase.PressableOpacity, obj);
   } else {
+    let getEmojiURL = importDefault;
     obj = { textEmojiStyle: null, fastImageStyle: null, name: null, src: null };
     ({ emojiText: obj3[0], emojiImage: obj3[1] } = tmp2);
     let str = "";
-    const emojiURL = EmojiDefault;
     if (null == animated.id) {
       str = animated.surrogates;
     }
     obj[2] = str;
     if (null != animated.id) {
-      const emojiURL1 = getAvatarURLDefault;
-      getEmojiURL = emojiURL1.getEmojiURL;
+      const emojiURL = getEmojiURL(1431);
+      getEmojiURL = emojiURL.getEmojiURL;
       obj = { id: null, animated: null, size: null };
       ({ id: obj[0], animated } = animated);
       obj[1] = animated;
@@ -100,7 +93,8 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiConta
       url = animated.url;
     }
     obj[3] = url;
-    tmp4(emojiURL, obj);
+    tmp4(EmojiDefault, obj);
+    const tmp6 = EmojiDefault;
   }
 };
 export const getEmojiKey = function getEmojiKey(type, arg1) {

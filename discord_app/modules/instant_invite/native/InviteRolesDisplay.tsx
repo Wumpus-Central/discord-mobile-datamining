@@ -1,11 +1,11 @@
-// === Module 10621: InviteRolesDisplay ===
+// === Module 10645: InviteRolesDisplay ===
 
-// Module 10621 (InviteRolesDisplay)
+// Module 10645 (InviteRolesDisplay)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1986 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1985 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 noopAll;
@@ -32,7 +32,7 @@ export default function InviteRolesDisplay(roleIds) {
     obj[2] = tmp.label;
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t.stcSfI);
-    const items2 = [callback(tmp2(4442).Text, obj), ];
+    const items2 = [callback(tmp2(4444).Text, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.rolesRow;
     obj1[1] = stateFromStoresArray.map((id) => closure_1_5(guildId(closure_1_2[8]), { role: id, guildId }, id.id));

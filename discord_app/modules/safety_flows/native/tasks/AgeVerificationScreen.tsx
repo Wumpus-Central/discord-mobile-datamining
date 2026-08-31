@@ -1,12 +1,12 @@
-// === Module 17391: AgeVerificationScreen ===
+// === Module 17424: AgeVerificationScreen ===
 
-// Module 17391 (AgeVerificationScreen)
+// Module 17424 (AgeVerificationScreen)
 import closure_3 from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1923 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ helpLink: { textAlign: "center" } });

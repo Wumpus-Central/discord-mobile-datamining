@@ -1,6 +1,6 @@
-// === Module 9346: TrendingType ===
+// === Module 9368: TrendingType ===
 
-// Module 9346 (TrendingType)
+// Module 9368 (TrendingType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/TrendingType.tsx");

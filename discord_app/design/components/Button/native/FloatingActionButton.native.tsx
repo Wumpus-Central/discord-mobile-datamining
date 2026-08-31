@@ -1,31 +1,19 @@
-// === Module 8931: styles ===
+// === Module 8954: styles ===
 
-// Module 8931 (styles)
+// Module 8954 (styles)
 import ThemesDefault from "Themes" /* 712 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4898 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4901 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 const styles = createCacheKey.createStyles(() => {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = false;
-  }
   let obj = { button: null, iconButtonPill: null };
   obj = {};
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
   obj[0] = obj;
-  obj = { minWidth: MINIMUM_HIT_AREA.FAB_BUTTON_SIZE, minHeight: MINIMUM_HIT_AREA.FAB_BUTTON_SIZE, padding: 0 };
-  if (flag) {
-    obj1 = { borderRadius: null };
-    obj1[0] = ThemesDefault.radii.lg;
-    let obj2 = obj1;
-  } else {
-    obj2 = {};
-  }
-  const merged1 = Object.assign(obj2);
+  obj = { minWidth: MINIMUM_HIT_AREA.FAB_BUTTON_SIZE, minHeight: MINIMUM_HIT_AREA.FAB_BUTTON_SIZE, padding: 0, borderRadius: ThemesDefault.radii.lg };
   obj[1] = obj;
   return obj;
 });
@@ -39,19 +27,19 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
   ({ icon, positionBottom } = positionRight);
   positionRight = positionRight.positionRight;
   const merged = Object.assign(positionRight, Object.create(null));
-  let obj = positionBottom(4186);
+  let obj = positionBottom(4187);
   class F {
     constructor() {
       tmp = positionBottom;
       tmp2 = closure_1_2;
-      obj = positionBottom(closure_1_2[7]);
+      obj = positionBottom(closure_1_2[6]);
       num = positionBottom;
       if (positionBottom == null) {
         num = 16;
       }
       obj = { position: "absolute", bottom: obj.withSpring(num, closure_1_6), right: null };
       tmp3 = closure_1_6;
-      tmpResult = tmp(tmp2[7]);
+      tmpResult = tmp(tmp2[6]);
       num2 = positionRight;
       if (positionRight == null) {
         num2 = 16;
@@ -60,7 +48,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
       return obj;
     }
   }
-  obj = { withSpring: positionBottom(4892).withSpring, positionBottom, DEFAULT_POSITION_OFFSET: 16, SPRING_CONFIG: closure_6, positionRight };
+  obj = { withSpring: positionBottom(4895).withSpring, positionBottom, DEFAULT_POSITION_OFFSET: 16, SPRING_CONFIG: closure_6, positionRight };
   F.__closure = obj;
   F.__workletHash = 10762818944671;
   F.__initData = closure_7;
@@ -78,7 +66,7 @@ export const FloatingActionButton = function FloatingActionButton(positionRight)
     cloneElementResult = validElement.cloneElement(icon, obj2);
   }
   obj1.icon = cloneElementResult;
-  ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = styles(positionRight(1367)("FloatingActionButton")));
-  obj[1] = jsx(positionBottom(7953).BaseIconButton, {});
-  return jsx(positionRight(4186).View, { style: animatedStyle, children: null });
+  ({ button: obj4.style, iconButtonPill: obj4.pillStyle } = styles());
+  obj[1] = jsx(positionBottom(7975).BaseIconButton, {});
+  return jsx(positionRight(4187).View, { style: animatedStyle, children: null });
 };

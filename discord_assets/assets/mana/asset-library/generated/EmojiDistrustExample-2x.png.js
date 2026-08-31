@@ -1,6 +1,6 @@
-// === Module 6457: metadata ===
+// === Module 6470: metadata ===
 
-// Module 6457 (metadata)
+// Module 6470 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiDistrustExample-2x.png.js");

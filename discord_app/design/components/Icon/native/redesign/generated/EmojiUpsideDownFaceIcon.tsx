@@ -1,10 +1,10 @@
-// === Module 14927: EmojiUpsideDownFaceIcon ===
+// === Module 14960: EmojiUpsideDownFaceIcon ===
 
-// Module 14927 (EmojiUpsideDownFaceIcon)
+// Module 14960 (EmojiUpsideDownFaceIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 14928 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 14961 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

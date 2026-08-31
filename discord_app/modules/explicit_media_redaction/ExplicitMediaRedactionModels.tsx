@@ -1,6 +1,6 @@
-// === Module 6108: ContentHarmTypeChannel ===
+// === Module 6111: ContentHarmTypeChannel ===
 
-// Module 6108 (ContentHarmTypeChannel)
+// Module 6111 (ContentHarmTypeChannel)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionModels.tsx");

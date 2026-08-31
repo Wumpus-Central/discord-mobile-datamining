@@ -1,9 +1,9 @@
-// === Module 12210: _initialize ===
+// === Module 12244: _initialize ===
 
-// Module 12210 (_initialize)
+// Module 12244 (_initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4628 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import initializeDefault from "initialize" /* 4630 */;
+import closure_3 from "createGuildRecordFromRust" /* 1909 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 let require = arg1;

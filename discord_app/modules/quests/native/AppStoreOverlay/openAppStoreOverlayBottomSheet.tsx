@@ -1,6 +1,6 @@
-// === Module 11032: openAppStoreOverlayBottomSheet ===
+// === Module 11063: openAppStoreOverlayBottomSheet ===
 
-// Module 11032 (openAppStoreOverlayBottomSheet)
+// Module 11063 (openAppStoreOverlayBottomSheet)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 
@@ -10,7 +10,7 @@ let result = set.fileFinishedImporting("modules/quests/native/AppStoreOverlay/op
 export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(appId) {
   const _require = arg1;
   appId = appId.appId;
-  let obj = appId(4413);
+  let obj = appId(4415);
   obj = {
     metadata: appId,
     onOpen() {
@@ -22,13 +22,14 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
       const ComponentDispatch = callback(closure_1_2[5]).ComponentDispatch;
       ComponentDispatch.dispatch(closure_1_4.QUEST_APP_STORE_OVERLAY_FINISHED);
     },
-    onInstallPress(first, arg1) {
+    onInstallPress(MAIN_CTA, arg1) {
+      closure_2 = MAIN_CTA;
       const result = callback(closure_1_2[6]).setAppStoreOverlayOpen({
         trackOverlayEvent(arg0, arg1) {
-          return callback(arg0, closure_1, callback(closure_1_2[4]).AppStoreOverlayVariant.CUSTOM, arg1);
+          return callback(arg0, closure_1, callback(MAIN_CTA[4]).AppStoreOverlayVariant.CUSTOM, arg1, MAIN_CTA);
         }
       });
     }
   };
-  obj.openLazy(_require(2010)(11033, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
+  obj.openLazy(_require(2009)(11064, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
 };

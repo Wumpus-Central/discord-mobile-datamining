@@ -1,10 +1,10 @@
-// === Module 10109: computeThreadNotificationSetting ===
+// === Module 10132: computeThreadNotificationSetting ===
 
-// Module 10109 (computeThreadNotificationSetting)
-import hasFlag from "hasFlag" /* 1403 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4667 */;
-import closure_4 from "storeThread" /* 4092 */;
+// Module 10132 (computeThreadNotificationSetting)
+import hasFlag from "hasFlag" /* 1399 */;
+import closure_2 from "ensureGuildLoaded" /* 1387 */;
+import closure_3 from "updateUserGuildSettingsInternal" /* 4669 */;
+import closure_4 from "storeThread" /* 4093 */;
 import { ThreadMemberFlags } from "AbortCodes" /* 1235 */;
 import { UserNotificationSettings } from "ME" /* 676 */;
 
@@ -29,11 +29,11 @@ function computeThreadNotificationSetting(channel) {
     if (obj6.hasFlag(flagsResult, ThreadMemberFlags.ALL_MESSAGES)) {
       return tmp8.ALL_MESSAGES;
     } else {
-      let tmp6Result = tmp6(1403);
+      let tmp6Result = tmp6(1399);
       if (tmp6Result.hasFlag(flagsResult, tmp8.ONLY_MENTIONS)) {
         return tmp8.ONLY_MENTIONS;
       } else {
-        tmp6Result = tmp6(1403);
+        tmp6Result = tmp6(1399);
         if (tmp6Result.hasFlag(flagsResult, tmp8.NO_MESSAGES)) {
           return tmp8.NO_MESSAGES;
         } else {

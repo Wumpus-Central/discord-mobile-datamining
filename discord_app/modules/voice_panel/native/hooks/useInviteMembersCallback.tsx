@@ -1,8 +1,8 @@
-// === Module 16568: useInviteMembersCallback ===
+// === Module 16602: useInviteMembersCallback ===
 
-// Module 16568 (useInviteMembersCallback)
+// Module 16602 (useInviteMembersCallback)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

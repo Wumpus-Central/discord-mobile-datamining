@@ -1,55 +1,30 @@
-// === Module 9658: TagListInputTagComponent ===
+// === Module 9680: TagListInputTagComponent ===
 
-// Module 9658 (TagListInputTagComponent)
+// Module 9680 (TagListInputTagComponent)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import Text from "Text" /* 4442 */;
-import PressableBase from "PressableBase" /* 5033 */;
-import useAccessibilityPressDefault from "useAccessibilityPress" /* 9659 */;
+import Text from "Text" /* 4444 */;
+import PressableBase from "PressableBase" /* 5036 */;
+import useAccessibilityPressDefault from "useAccessibilityPress" /* 9681 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles(() => {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = false;
-  }
-  const colors = ThemesDefault.colors;
-  if (flag) {
-    let BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_MOD_SUBTLE;
-    let tmp4 = tmp;
-  } else {
-    BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_SURFACE_HIGH;
-    tmp4 = tmp;
-  }
-  let obj = { backgroundColor: BACKGROUND_SURFACE_HIGH, marginHorizontal: 2, borderRadius: null, borderWidth: null, borderColor: null, paddingHorizontal: null, paddingVertical: null, overflow: "hidden", flexDirection: "row", alignItems: "center", flexShrink: 1 };
-  const radii = tmp4(712).radii;
-  obj[2] = flag ? radii.xs : radii.round;
-  let num;
-  if (flag) {
-    num = 1;
-  }
-  obj[3] = num;
-  let BORDER_SUBTLE;
-  if (flag) {
-    BORDER_SUBTLE = tmp4(712).colors.BORDER_SUBTLE;
-  }
-  obj = { tagWrapper: null, tagText: null, highlightedTagWrapper: null, tagIcon: null, start: BORDER_SUBTLE, end: tmp4(712).space.PX_8 };
-  obj[6] = tmp4(712).space.PX_4;
+  let obj = { tagWrapper: null, tagText: null, highlightedTagWrapper: null, tagIcon: null, start: null, end: null };
+  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, marginHorizontal: 2, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, overflow: "hidden", flexDirection: "row", alignItems: "center", flexShrink: 1 };
   obj[0] = obj;
   obj[1] = { flexShrink: 1 };
-  obj = { backgroundColor: tmp4(712).colors.BACKGROUND_BRAND };
+  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
   obj[2] = obj;
-  obj[3] = { paddingRight: tmp4(712).space.PX_4, marginLeft: 0 };
+  obj[3] = { paddingRight: ThemesDefault.space.PX_4, marginLeft: 0 };
   obj[4] = { marginLeft: 0 };
-  obj1 = { paddingRight: tmp4(712).space.PX_4, marginLeft: 0 };
-  obj[5] = { marginRight: tmp4(712).space.PX_4 };
+  obj1 = { paddingRight: ThemesDefault.space.PX_4, marginLeft: 0 };
+  obj[5] = { marginRight: ThemesDefault.space.PX_4 };
   return obj;
 });
 const result = require("set").fileFinishedImporting("design/components/TagListInput/native/TagListInputTag.native.tsx");
@@ -63,25 +38,25 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp2 = callback2(useIsMobileVisualRefreshExperimentEnabledDefault("TagListInputTag"));
+  const tmp = callback2();
   const intl = getSystemLocale.intl;
   let obj = { text: tag.text };
   const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["0Vb9FQ"], obj);
   ({ onAccessibilityAction, accessibilityActions } = useAccessibilityPressDefault(() => callback("remove"), formatToPlainStringResult));
-  const items = [tmp2.tagWrapper, , , ];
+  const items = [tmp.tagWrapper, , , ];
   let prop;
   if (selected) {
-    prop = tmp2.highlightedTagWrapper;
+    prop = tmp.highlightedTagWrapper;
   }
   items[1] = prop;
   start = undefined;
   if (start) {
-    start = tmp2.start;
+    start = tmp.start;
   }
   items[2] = start;
   end = undefined;
   if (flag) {
-    end = tmp2.end;
+    end = tmp.end;
   }
   obj = {
     style: items,
@@ -98,12 +73,12 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   let tmp10 = null;
   if (null != tag.icon) {
     obj = { style: null, children: null };
-    obj[0] = tmp2.tagIcon;
+    obj[0] = tmp.tagIcon;
     obj[1] = tag.icon;
     tmp10 = callback(View, obj);
   }
   const items1 = [tmp10, ];
-  obj1 = { style: tmp2.tagText, lineClamp: 1, variant: "text-sm/medium", color: null, children: null };
+  obj1 = { style: tmp.tagText, lineClamp: 1, variant: "text-sm/medium", color: null, children: null };
   let str = "text-default";
   if (selected) {
     str = "text-overlay-light";

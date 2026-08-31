@@ -1,31 +1,31 @@
-// === Module 13263: defineSimpleDispatch ===
+// === Module 13297: defineSimpleDispatch ===
 
-// Module 13263 (defineSimpleDispatch)
+// Module 13297 (defineSimpleDispatch)
 import timestampDefault from "timestamp" /* 3 */;
 import serializeDefault from "serialize" /* 9 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _deletePaymentSource from "_deletePaymentSource" /* 4803 */;
-import fetchSubscriptionPlansForSKUAll from "fetchSubscriptionPlansForSKU" /* 6069 */;
-import convertServerThreadMemberDefault from "convertServerThreadMember" /* 7473 */;
-import _fetchProfileAll from "_fetchProfile" /* 8062 */;
-import urlUserId from "urlUserId" /* 8509 */;
-import hydrateGuildAll from "hydrateGuild" /* 13264 */;
-import splitAgeRestrictedActivitiesDefault from "splitAgeRestrictedActivities" /* 13347 */;
+import _deletePaymentSource from "_deletePaymentSource" /* 4805 */;
+import fetchSubscriptionPlansForSKUAll from "fetchSubscriptionPlansForSKU" /* 6072 */;
+import convertServerThreadMemberDefault from "convertServerThreadMember" /* 7494 */;
+import _fetchProfileAll from "_fetchProfile" /* 8084 */;
+import urlUserId from "urlUserId" /* 8531 */;
+import hydrateGuildAll from "hydrateGuild" /* 13298 */;
+import splitAgeRestrictedActivitiesDefault from "splitAgeRestrictedActivities" /* 13381 */;
 import closure_5 from "_objectWithoutProperties" /* 109 */;
-import { createChannelRecordFromServer as closure_6 } from "createChannelRecord" /* 1395 */;
-import closure_7 from "createFromServer" /* 4343 */;
-import closure_8 from "createdAt" /* 1931 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import { ChannelLoader } from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "trackCommunicationDisabled" /* 1993 */;
-import closure_12 from "mergeGuildAvatar" /* 1923 */;
-import closure_13 from "updateVoiceState" /* 4465 */;
-import closure_14 from "addSubscriptionPlan" /* 4113 */;
-import closure_15 from "reset" /* 4114 */;
+import { createChannelRecordFromServer as closure_6 } from "createChannelRecord" /* 1391 */;
+import closure_7 from "createFromServer" /* 4345 */;
+import closure_8 from "createdAt" /* 1930 */;
+import closure_9 from "ensureGuildLoaded" /* 1387 */;
+import { ChannelLoader } from "ensureGuildLoaded" /* 1387 */;
+import closure_11 from "trackCommunicationDisabled" /* 1992 */;
+import closure_12 from "mergeGuildAvatar" /* 1922 */;
+import closure_13 from "updateVoiceState" /* 4467 */;
+import closure_14 from "addSubscriptionPlan" /* 4114 */;
+import closure_15 from "reset" /* 4115 */;
 import { ActivityTypes } from "ME" /* 676 */;
-import importDefaultResult from "flush" /* 13235 */;
+import importDefaultResult from "flush" /* 13269 */;
 
 require = arg1;
 function defineSimpleDispatch(arg0, arg1) {
@@ -107,9 +107,9 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
   ({ roles, nick, avatar, avatar_decoration_data, flags, premium_since, pending, joined_at, communication_disabled_until, unusual_dm_activity_until } = member);
   ({ collectibles, display_name_styles } = member);
   member = member.getMember(guild_id, author.id);
-  obj = obj(1900);
+  obj = obj(1899);
   const result = obj.parseServerUserCollectibles(collectibles);
-  const result1 = obj(1934).parseServerDisplayNameStyles(display_name_styles);
+  const result1 = obj(1933).parseServerDisplayNameStyles(display_name_styles);
   let isEqualResult = null != member && member.nick === nick && member.avatar === avatar;
   if (isEqualResult) {
     isEqualResult = applyDefault.isEqual(member.roles, roles);
@@ -124,8 +124,8 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
     if (avatar_decoration_data == null) {
       tmp9 = null;
     }
-    isEqualResult = obj(1899).isEqualAvatarDecoration(avatarDecoration, tmp9);
-    const tmp2Result = obj(1899);
+    isEqualResult = obj(1898).isEqualAvatarDecoration(avatarDecoration, tmp9);
+    const tmp2Result = obj(1898);
   }
   if (isEqualResult) {
     isEqualResult = member.premiumSince === premium_since;
@@ -548,8 +548,8 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
       Emitter.batched(() => {
         const hydrateReady = closure_1_1(closure_1_3[14]).hydrateReady;
         const measureResult = hydrateReady.measure(() => {
-          obj = callback(13264);
-          return obj.hydrateReadyPayloadPrioritized(obj, obj(13219).socket.identifyStartTime, closure_1);
+          obj = callback(13298);
+          return obj.hydrateReadyPayloadPrioritized(obj, obj(13252).socket.identifyStartTime, closure_1);
         });
         obj = measureResult;
         const private_channels = measureResult.private_channels;
@@ -577,7 +577,7 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
           result1 = closure_1_0(tmp2[18]).b64ToDeclarativeSettingsProto(obj.notification_settings.declarative_settings_proto);
           const obj2 = closure_1_0(tmp2[18]);
         }
-        closure_1_1(closure_1_3[19])("AllGatewayConnectionStores", () => obj(13268));
+        closure_1_1(closure_1_3[19])("AllGatewayConnectionStores", () => obj(13302));
         const dispatchReady = tmp(tmp2[14]).dispatchReady;
         dispatchReady.measure(() => {
           obj = { type: "CONNECTION_OPEN", sessionId: obj.session_id, authSessionIdHash: obj.auth_session_id_hash, staticAuthSessionId: obj.static_client_session_id, user: obj.user, users: obj.users, guilds: closure_2, initialPrivateChannels: obj, unavailableGuilds: closure_1, readState: obj.read_state, userGuildSettings: obj.user_guild_settings, tutorial: obj.tutorial, relationships: null, gameRelationships: null, friendSuggestionCount: null, analyticsToken: null, experiments: null, connectedAccounts: null, guildExperiments: null, apexExperiments: null, requiredAction: null, consents: null, sessions: null, pendingPayments: null, countryCode: null, guildJoinRequests: null, userSettingsProto: null, apiCodeVersion: null, auth: null, notificationSettings: null, geoRestrictedGuilds: null, explicitContentScanVersion: null, failedStates: null, linkedUsers: null, regionalFeatureConfig: null };
@@ -699,9 +699,9 @@ defineSimpleDispatch(["EXPERIMENT_SESSION_OVERRIDE_DELETE"], (experimentName) =>
   obj.dispatch(obj);
 });
 defineSimpleDispatch(["RESUMED"], () => {
-  const localPresenceState = obj(13219).localPresenceState;
+  const localPresenceState = obj(13252).localPresenceState;
   localPresenceState.forceUpdate();
-  const localVoiceState = obj(13219).localVoiceState;
+  const localVoiceState = obj(13252).localVoiceState;
   localVoiceState.forceUpdate();
   obj = { type: "CONNECTION_RESUMED" };
   const obj2 = dispatcherDefault;
@@ -716,8 +716,8 @@ defineSimpleDispatch(["TYPING_START"], (guildId) => {
   if (null != guildId.member) {
     dispatchGuildMemberAdd(guildId.guild_id, guildId.member.user, guildId.member);
   }
-  obj = { type: "TYPING_START", guildId: guildId.guild_id, channelId: guildId.channel_id, userId: guildId.user_id, customTypingIndicatorConfig: obj(1938).parseServerTypingIndicatorStyle(guildId.typing_indicator_style) };
-  const obj2 = obj(1938);
+  obj = { type: "TYPING_START", guildId: guildId.guild_id, channelId: guildId.channel_id, userId: guildId.user_id, customTypingIndicatorConfig: obj(1937).parseServerTypingIndicatorStyle(guildId.typing_indicator_style) };
+  const obj2 = obj(1937);
   const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -1374,10 +1374,10 @@ defineSimpleDispatch(["THREAD_MEMBER_LIST_UPDATE"], (arg0) => {
   });
 });
 defineSimpleDispatch(["GUILD_BAN_ADD", "GUILD_BAN_REMOVE", "GUILD_MEMBER_ADD", "GUILD_MEMBER_UPDATE", "GUILD_MEMBER_REMOVE"], (guildId, type) => {
-  obj = { type, guildId: guildId.guild_id, user: guildId.user, avatar: guildId.avatar, avatarDecoration: guildId.avatar_decoration_data, roles: guildId.roles, nick: guildId.nick, premiumSince: guildId.premium_since, isPending: guildId.pending, joinedAt: guildId.joined_at, communicationDisabledUntil: guildId.communication_disabled_until, unusualDMActivityUntil: guildId.unusual_dm_activity_until, flags: guildId.flags, collectibles: obj(1900).parseServerUserCollectibles(guildId.collectibles), displayNameStyles: null };
-  const obj2 = obj(1900);
-  obj[14] = obj(1934).parseServerDisplayNameStyles(guildId.display_name_styles);
-  const obj3 = obj(1934);
+  obj = { type, guildId: guildId.guild_id, user: guildId.user, avatar: guildId.avatar, avatarDecoration: guildId.avatar_decoration_data, roles: guildId.roles, nick: guildId.nick, premiumSince: guildId.premium_since, isPending: guildId.pending, joinedAt: guildId.joined_at, communicationDisabledUntil: guildId.communication_disabled_until, unusualDMActivityUntil: guildId.unusual_dm_activity_until, flags: guildId.flags, collectibles: obj(1899).parseServerUserCollectibles(guildId.collectibles), displayNameStyles: null };
+  const obj2 = obj(1899);
+  obj[14] = obj(1933).parseServerDisplayNameStyles(guildId.display_name_styles);
+  const obj3 = obj(1933);
   const obj4 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -1874,8 +1874,8 @@ defineSimpleDispatch(["RECENT_MENTION_DELETE"], (id) => {
   });
 });
 defineSimpleDispatch(["SAVED_MESSAGE_CREATE"], (body) => {
-  obj = { type: "SAVED_MESSAGE_CREATE", savedMessage: obj(7551).savedMessageCreateObjectToClient(body) };
-  const obj2 = obj(7551);
+  obj = { type: "SAVED_MESSAGE_CREATE", savedMessage: obj(7572).savedMessageCreateObjectToClient(body) };
+  const obj2 = obj(7572);
   const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -1885,8 +1885,8 @@ defineSimpleDispatch(["SAVED_MESSAGE_CREATE"], (body) => {
   });
 });
 defineSimpleDispatch(["SAVED_MESSAGE_DELETE"], (channelId) => {
-  obj = { type: "SAVED_MESSAGE_DELETE", savedMessageData: obj(7551).savedMessageDeleteObjectToClient(channelId) };
-  const obj2 = obj(7551);
+  obj = { type: "SAVED_MESSAGE_DELETE", savedMessageData: obj(7572).savedMessageDeleteObjectToClient(channelId) };
+  const obj2 = obj(7572);
   const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -1940,7 +1940,7 @@ defineSimpleDispatch(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (cha
   if ("MESSAGE_POLL_VOTE_ADD" === arg1) {
     str = "MESSAGE_REACTION_ADD";
   }
-  obj = { type: str, channelId: channelId.channel_id, messageId: channelId.message_id, userId: channelId.user_id, emoji: obj, reactionType: obj(7454).ReactionTypes.VOTE };
+  obj = { type: str, channelId: channelId.channel_id, messageId: channelId.message_id, userId: channelId.user_id, emoji: obj, reactionType: obj(7475).ReactionTypes.VOTE };
   obj = { id: channelId.answer_id, name: "" };
   const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
@@ -2094,7 +2094,7 @@ defineSimpleDispatch(["USER_PAYMENT_BROWSER_CHECKOUT_DONE"], (loadId) => {
 });
 defineSimpleDispatch(["USER_PAYMENT_CLIENT_ADD"], (arg0) => {
   const _require = arg0;
-  const purchaseTokenHash = _require(4812).getPurchaseTokenHash();
+  const purchaseTokenHash = _require(4814).getPurchaseTokenHash();
   purchaseTokenHash.then((arg0) => {
     const purchase_token_hash = obj.purchase_token_hash;
     if (purchase_token_hash === arg0) {
@@ -2442,9 +2442,9 @@ defineSimpleDispatch(["APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE"], (choices) =>
   });
 });
 defineSimpleDispatch(["INTERACTION_MODAL_CREATE"], (id) => {
-  obj = { type: "INTERACTION_MODAL_CREATE", id: id.id, channelId: id.channel_id, customId: id.custom_id, application: id.application, title: id.title, components: obj(4705).transformComponents(id.components), nonce: null, resolved: null };
+  obj = { type: "INTERACTION_MODAL_CREATE", id: id.id, channelId: id.channel_id, customId: id.custom_id, application: id.application, title: id.title, components: obj(4707).transformComponents(id.components), nonce: null, resolved: null };
   ({ nonce: obj[7], resolved: obj[8] } = id);
-  const obj2 = obj(4705);
+  const obj2 = obj(4707);
   const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -2903,7 +2903,7 @@ defineSimpleDispatch(["NOTIFICATION_SETTINGS_UPDATE"], (declarative_settings_pro
   }
   let result;
   if (null != prop) {
-    obj = obj(13265);
+    obj = obj(13299);
     result = obj.b64ToDeclarativeSettingsProto(declarative_settings_proto.declarative_settings_proto);
   }
   obj = { type: "NOTIFICATION_SETTINGS_UPDATE", settings: obj };
@@ -3078,8 +3078,8 @@ defineSimpleDispatch(["SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE"], (intera
   });
 });
 defineSimpleDispatch(["GUILD_ROOM_CONNECT"], (body, type) => {
-  obj = { type, room: obj(4648).serverGuildRoomToClient(body) };
-  const obj2 = obj(4648);
+  obj = { type, room: obj(4650).serverGuildRoomToClient(body) };
+  const obj2 = obj(4650);
   const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -3099,8 +3099,8 @@ defineSimpleDispatch(["GUILD_ROOM_DISCONNECT"], (userId, type) => {
   });
 });
 defineSimpleDispatch(["GUILD_ROOM_UPDATE"], (body, type) => {
-  obj = { type, room: obj(4648).serverGuildRoomToClient(body) };
-  const obj2 = obj(4648);
+  obj = { type, room: obj(4650).serverGuildRoomToClient(body) };
+  const obj2 = obj(4650);
   const obj3 = dispatcherDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     closure_1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);

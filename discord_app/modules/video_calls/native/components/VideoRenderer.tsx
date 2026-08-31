@@ -1,11 +1,11 @@
-// === Module 9512: ResizeMode ===
+// === Module 9534: ResizeMode ===
 
-// Module 9512 (ResizeMode)
+// Module 9534 (ResizeMode)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 let c4 = importAllResult;
@@ -41,7 +41,7 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
   closure_13 = undefined;
   let memo;
   const tmp2 = onReady();
-  obj = resizeMode(9513);
+  obj = resizeMode(9535);
   const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(userId, { location: "VideoRenderer" });
   let tmp6 = first1(importAllResult.useState(0), 2);
   first = tmp6[0];
@@ -56,15 +56,15 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
   first3 = tmp13[0];
   callback = tmp15;
   [tmp17, c9] = first1(importAllResult.useState(true), 2);
-  first(9514)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
-  onReady = first(9516)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
+  first(9536)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
+  onReady = first(9538)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
   ref = importAllResult.useRef(null);
   ref1 = importAllResult.useRef(null);
   closure_13 = importAllResult.useRef({ width: 0, height: 0 });
   const items = [tmp10[1], tmp13[1]];
   callback = importAllResult.useCallback((nativeEvent) => {
     ({ width, height } = nativeEvent.nativeEvent);
-    const size = resizeMode(1494).getWindowDimensions();
+    const size = resizeMode(1493).getWindowDimensions();
     const bound = Math.min(Math.sqrt(size.width * size.height * 4 / (width * height)), 1);
     callback2(width * bound);
     callback3(height * bound);
@@ -147,7 +147,7 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
     }
     return 0;
   }, items2);
-  obj1 = resizeMode(8549);
+  obj1 = resizeMode(8571);
   const items3 = [first, first1, first2, first3, memo];
   const store = obj1.useStore((orientation) => orientation.orientation);
   const layoutEffect = importAllResult.useLayoutEffect(() => {
@@ -205,9 +205,9 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
   if (tmp17) {
     obj = { animate: true, style: null };
     obj[1] = tmp2.spinner;
-    tmp35 = callback(tmp18(9521), obj);
+    tmp35 = callback(tmp18(9543), obj);
   }
-  const tmp37 = store === resizeMode(8549).OrientationType.PORTRAIT;
+  const tmp37 = store === resizeMode(8571).OrientationType.PORTRAIT;
   const tmp16 = first1(importAllResult.useState(true), 2);
   if (tmp3Result.isAndroid()) {
     obj = { onLayout: null, style: null, children: null };
@@ -229,10 +229,10 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
     obj4[2] = callback;
     obj4[3] = callback1;
     obj4[4] = memo2;
-    const items11 = [callback(tmp18(9524), obj4), tmp35];
+    const items11 = [callback(tmp18(9546), obj4), tmp35];
     obj2[2] = items11;
     obj1[4] = callback2(first2, obj2);
-    const items12 = [callback(tmp18(9522), obj1), ];
+    const items12 = [callback(tmp18(9544), obj1), ];
     const obj5 = { style: null, children: null };
     obj5[0] = memo5;
     let tmp56 = null;
@@ -253,7 +253,7 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
     items12[1] = callback(first2, obj5);
     obj[2] = items12;
     let tmp43Result = callback2(tmp52, obj);
-    const tmp18Result = tmp18(9522);
+    const tmp18Result = tmp18(9544);
     const tmp51 = callback2;
     const tmp54 = callback;
   } else if (flag) {
@@ -275,8 +275,8 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
     obj10[2] = callback;
     obj10[3] = callback1;
     obj10[4] = memo1;
-    obj9[0] = callback(tmp18(9524), obj10);
-    const items13 = [callback(tmp18(4186).View, obj9), ];
+    obj9[0] = callback(tmp18(9546), obj10);
+    const items13 = [callback(tmp18(4187).View, obj9), ];
     let tmp48 = null;
     if (tmp37) {
       let renderTagResult1;
@@ -313,7 +313,7 @@ const memoResult = importAllResult.memo((gestureEnabled) => {
     obj13[2] = callback;
     obj13[3] = callback1;
     obj13[4] = memo1;
-    const items17 = [callback(tmp18(9524), obj13), tmp35];
+    const items17 = [callback(tmp18(9546), obj13), tmp35];
     obj12[2] = items17;
     tmp43Result = callback2(first2, obj12);
   }

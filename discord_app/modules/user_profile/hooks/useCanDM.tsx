@@ -1,11 +1,11 @@
-// === Module 12529: useCanDM ===
+// === Module 12563: useCanDM ===
 
-// Module 12529 (useCanDM)
-import closure_2 from "recountRelationshipTypes" /* 7350 */;
-import closure_3 from "initialize" /* 4091 */;
+// Module 12563 (useCanDM)
+import closure_2 from "recountRelationshipTypes" /* 7371 */;
+import closure_3 from "initialize" /* 4092 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1993 */;
-import closure_6 from "markAllUserIdListsStale" /* 4099 */;
+import closure_5 from "trackCommunicationDisabled" /* 1992 */;
+import closure_6 from "markAllUserIdListsStale" /* 4100 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useCanDM.tsx");
@@ -24,7 +24,7 @@ export default function useCanDM(arg0, arg1) {
     }
     return isLurkingResult;
   });
-  const RestrictedGuildIds = _require(4135).RestrictedGuildIds;
+  const RestrictedGuildIds = _require(4136).RestrictedGuildIds;
   closure_4 = RestrictedGuildIds.useSetting();
   const obj2 = _require(589);
   const items2 = [closure_6, closure_5, closure_2];
@@ -59,7 +59,7 @@ export const canDm = function canDm(userId, guildId) {
   if (isLurkingResult) {
     isLurkingResult = lurking.isLurking(guildId);
   }
-  const RestrictedGuildIds = _require(4135).RestrictedGuildIds;
+  const RestrictedGuildIds = _require(4136).RestrictedGuildIds;
   _require = RestrictedGuildIds.getSetting();
   let isFriendResult = friend.isFriend(userId);
   let tmp8 = !tmp4;
@@ -76,7 +76,7 @@ export const canDm = function canDm(userId, guildId) {
   if (!tmp8) {
     let setting = gameFriendsForUser.getGameFriendsForUser(userId).length > 0;
     if (setting) {
-      const AllowGameFriendDmsInDiscord = _require(4135).AllowGameFriendDmsInDiscord;
+      const AllowGameFriendDmsInDiscord = _require(4136).AllowGameFriendDmsInDiscord;
       setting = AllowGameFriendDmsInDiscord.getSetting();
     }
     tmp8 = setting;

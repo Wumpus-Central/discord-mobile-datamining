@@ -1,6 +1,6 @@
-// === Module 11285: ? ===
+// === Module 11314: ? ===
 
-// Module 11285
+// Module 11314
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/virtual_currency/hooks/index.tsx");

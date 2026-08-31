@@ -1,6 +1,6 @@
-// === Module 1397: GUILD_EVENT_MAX_NAME_LENGTH ===
+// === Module 1393: GUILD_EVENT_MAX_NAME_LENGTH ===
 
-// Module 1397 (GUILD_EVENT_MAX_NAME_LENGTH)
+// Module 1393 (GUILD_EVENT_MAX_NAME_LENGTH)
 import ME from "ME" /* 676 */;
 import setDefault from "set" /* 687 */;
 import set from "set" /* 2 */;

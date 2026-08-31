@@ -1,10 +1,10 @@
-// === Module 6964: SleepingWumpusSpotIllustration ===
+// === Module 6983: SleepingWumpusSpotIllustration ===
 
-// Module 6964 (SleepingWumpusSpotIllustration)
+// Module 6983 (SleepingWumpusSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6965 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6984 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SleepingWumpusSpotIllustration.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 1933: isUserPrimaryGuildEqual ===
+// === Module 1932: isUserPrimaryGuildEqual ===
 
-// Module 1933 (isUserPrimaryGuildEqual)
+// Module 1932 (isUserPrimaryGuildEqual)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_tag/PrimaryGuildUtils.tsx");

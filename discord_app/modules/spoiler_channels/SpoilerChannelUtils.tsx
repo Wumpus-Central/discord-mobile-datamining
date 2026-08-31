@@ -1,8 +1,8 @@
-// === Module 6139: isChannelSpoilerGated ===
+// === Module 6142: isChannelSpoilerGated ===
 
-// Module 6139 (isChannelSpoilerGated)
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "initialize" /* 6140 */;
+// Module 6142 (isChannelSpoilerGated)
+import closure_2 from "ensureGuildLoaded" /* 1387 */;
+import closure_3 from "initialize" /* 6143 */;
 
 const require = arg1;
 function isChannelSpoilerGated(channel) {

@@ -1,6 +1,6 @@
-// === Module 1393: allGuildIds ===
+// === Module 1389: allGuildIds ===
 
-// Module 1393 (allGuildIds)
+// Module 1389 (allGuildIds)
 import initializeDefault from "initialize" /* 589 */;
 import importDefaultResult from "dispatcher" /* 709 */;
 import set from "set" /* 2 */;

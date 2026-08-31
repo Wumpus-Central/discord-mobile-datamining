@@ -1,11 +1,11 @@
-// === Module 7461: updateFromGuild ===
+// === Module 7482: updateFromGuild ===
 
-// Module 7461 (updateFromGuild)
+// Module 7482 (updateFromGuild)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import createChannelRecord from "createChannelRecord" /* 1391 */;
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
 
 function updateFromGuild(threads) {
   threads = threads.threads;

@@ -1,6 +1,6 @@
-// === Module 15264: useMountTimer ===
+// === Module 15297: useMountTimer ===
 
-// Module 15264 (useMountTimer)
+// Module 15297 (useMountTimer)
 import closure_0 from "_slicedToArray" /* 32 */;
 import closure_1 from "noop" /* 19 */;
 

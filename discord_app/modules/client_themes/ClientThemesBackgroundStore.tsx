@@ -1,28 +1,24 @@
-// === Module 4266: isSyncedModeThemesEnabled ===
+// === Module 4267: reset ===
 
-// Module 4266 (isSyncedModeThemesEnabled)
+// Module 4267 (reset)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getThemeForColor from "getThemeForColor" /* 1347 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import DismissibleContent from "DismissibleContent" /* 1377 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4108 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4267 */;
+import DismissibleContent from "DismissibleContent" /* 1373 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4109 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4268 */;
 import closure_5 from "initialize" /* 1303 */;
 import closure_6 from "handleThemeChange" /* 1302 */;
 import closure_7 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
 import closure_8 from "handleConnectionClosedOrResumed" /* 1340 */;
-import { isGuildTextChannelType } from "createChannelRecord" /* 1395 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "mergeGuildAvatar" /* 1923 */;
+import { isGuildTextChannelType } from "createChannelRecord" /* 1391 */;
+import closure_10 from "ensureGuildLoaded" /* 1387 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
 import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_12 } from "ThemeTypes" /* 1348 */;
 import { SystemThemeState } from "SystemThemeState" /* 1305 */;
 
 require = arg1;
-function isSyncedModeThemesEnabled() {
-  return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
-}
 function reset() {
   if (c14) {
     c3 = undefined;
@@ -56,10 +52,10 @@ function handleSelectivelySyncedStoreChange() {
   }
 }
 function handleSyncedModeChange() {
-  return require(1366) /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
+  return require(1366) /* isPerModeThemingActive */.isPerModeThemingActive();
 }
 function handleSameAsDeviceThemeToggle() {
-  return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
+  return true;
 }
 function handleUserSettingsProtoStoreUpdate() {
   const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
@@ -70,27 +66,27 @@ function handleUserSettingsProtoStoreUpdate() {
   }
   if (!result) {
     let tmpResult = tmp(1366);
-    result = tmpResult.isPerModeThemingActive(isSyncedModeThemesEnabled);
+    result = tmpResult.isPerModeThemingActive();
   }
   if (!result) {
-    tmpResult = tmp(4293);
+    tmpResult = tmp(4295);
     tmpResult.setUseSystemTheme(SystemThemeState.OFF);
   }
   if (null != backgroundGradientPresetId) {
-    let tmp11 = null == tmp10;
-    if (!tmp11) {
+    let tmp10 = null == tmp9;
+    if (!tmp10) {
       let id;
       if (user != null) {
         id = user.id;
       }
       let id1;
-      if (tmp10 != null) {
-        id1 = tmp10.id;
+      if (tmp9 != null) {
+        id1 = tmp9.id;
       }
-      tmp11 = id === id1;
+      tmp10 = id === id1;
     }
-    if (!tmp11) {
-      user = tmp10;
+    if (!tmp10) {
+      user = tmp9;
     }
   } else if (null != user) {
     user = undefined;
@@ -150,7 +146,7 @@ prototype["getState"] = function getState() {
 };
 Object.defineProperty(prototype, "gradientPreset", {
   get: function gradientPreset() {
-    if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
+    if (obj.isPerModeThemingActive()) {
       if (c14) {
         let tmp10;
         if (c16) {
@@ -242,7 +238,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDe
               c15 = true;
             }
           }
-          tmp6Result = tmp6(4290);
+          tmp6Result = tmp6(4292);
         }
         obj2 = UNSAFE_isDismissibleContentDismissed;
         tmp6 = require;

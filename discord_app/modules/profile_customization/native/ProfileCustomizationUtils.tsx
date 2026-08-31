@@ -1,10 +1,10 @@
-// === Module 8055: useUserProfileBannerBackgroundColor ===
+// === Module 8077: useUserProfileBannerBackgroundColor ===
 
-// Module 8055 (useUserProfileBannerBackgroundColor)
+// Module 8077 (useUserProfileBannerBackgroundColor)
 import set from "set" /* 2 */;
 import int2hslRaw from "int2hslRaw" /* 688 */;
-import getAvatarURL2 from "getAvatarURL" /* 1435 */;
-import useDominantRGBFromImage from "useDominantRGBFromImage" /* 8056 */;
+import getAvatarURL2 from "getAvatarURL" /* 1431 */;
+import useDominantRGBFromImage from "useDominantRGBFromImage" /* 8078 */;
 
 const result = set.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
 
@@ -48,8 +48,8 @@ export const getAvatarSource = function getAvatarSource(getAvatarURL) {
         obj = {};
         const merged = Object.assign(getAvatarURL);
         obj.avatar = null;
-        userAvatarURL = tmp3(1435).getUserAvatarURL(obj);
-        const tmp3Result = tmp3(1435);
+        userAvatarURL = tmp3(1431).getUserAvatarURL(obj);
+        const tmp3Result = tmp3(1431);
       }
       memoizedImageSourceResult = obj.memoizedImageSource(userAvatarURL);
       tmp3 = require;

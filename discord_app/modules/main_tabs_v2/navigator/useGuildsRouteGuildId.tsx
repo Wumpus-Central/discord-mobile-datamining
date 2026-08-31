@@ -1,8 +1,8 @@
-// === Module 15538: useGuildsRouteGuildId ===
+// === Module 15572: useGuildsRouteGuildId ===
 
-// Module 15538 (useGuildsRouteGuildId)
+// Module 15572 (useGuildsRouteGuildId)
 import set from "set" /* 2 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1500 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
 

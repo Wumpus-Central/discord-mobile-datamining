@@ -1,10 +1,10 @@
-// === Module 14215: useProfileEffectSections ===
+// === Module 14249: useProfileEffectSections ===
 
-// Module 14215 (useProfileEffectSections)
+// Module 14249 (useProfileEffectSections)
 import closure_2 from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7234 */;
-import closure_5 from "map" /* 7250 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7255 */;
+import closure_5 from "map" /* 7271 */;
 
 const require = arg1;
 let obj = { PURCHASE: "purchase", PREMIUM_PURCHASE: "premium_purchase", PREVIEW: "preview" };

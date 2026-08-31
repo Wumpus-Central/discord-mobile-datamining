@@ -1,7 +1,7 @@
-// === Module 16999: prototype ===
+// === Module 17032: prototype ===
 
-// Module 16999 (prototype)
-import initializeDefault from "initialize" /* 5451 */;
+// Module 17032 (prototype)
+import initializeDefault from "initialize" /* 5454 */;
 
 initializeDefault;
 let prototype = function SettingTreeManagerLifecycleManager() {

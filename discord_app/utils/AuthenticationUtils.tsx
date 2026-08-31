@@ -1,9 +1,9 @@
-// === Module 1371: getToken ===
+// === Module 1367: getToken ===
 
-// Module 1371 (getToken)
+// Module 1367 (getToken)
 import set from "set" /* 2 */;
 import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
-import registerAsset from "registerAsset" /* 1372 */;
+import registerAsset from "registerAsset" /* 1368 */;
 
 const result = set.fileFinishedImporting("utils/AuthenticationUtils.tsx");
 

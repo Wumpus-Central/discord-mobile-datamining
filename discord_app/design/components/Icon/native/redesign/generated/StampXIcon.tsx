@@ -1,10 +1,10 @@
-// === Module 11253: StampXIcon ===
+// === Module 11282: StampXIcon ===
 
-// Module 11253 (StampXIcon)
+// Module 11282 (StampXIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 11254 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 11283 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

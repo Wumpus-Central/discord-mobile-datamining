@@ -1,12 +1,12 @@
-// === Module 13982: checkForNewerBuild ===
+// === Module 14016: checkForNewerBuild ===
 
-// Module 13982 (checkForNewerBuild)
+// Module 14016 (checkForNewerBuild)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _checkForNewerBuild from "_checkForNewerBuild" /* 13578 */;
-import UPDATE_CHECK_INTERVAL from "UPDATE_CHECK_INTERVAL" /* 4427 */;
+import _checkForNewerBuild from "_checkForNewerBuild" /* 13612 */;
+import UPDATE_CHECK_INTERVAL from "UPDATE_CHECK_INTERVAL" /* 4429 */;
 
 ({ UPDATE_CONFIG: c3, UPDATE_CHECK_INTERVAL: c4 } = UPDATE_CHECK_INTERVAL);
 let closure_5 = new timestampDefault("MobileNativeUpdateStore");

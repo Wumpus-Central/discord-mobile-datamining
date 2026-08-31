@@ -1,6 +1,6 @@
-// === Module 6845: metadata ===
+// === Module 6862: metadata ===
 
-// Module 6845 (metadata)
+// Module 6862 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PaintPaletteSpotIllustration-2x.png.js");

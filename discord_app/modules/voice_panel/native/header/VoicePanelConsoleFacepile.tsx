@@ -1,14 +1,14 @@
-// === Module 16637: getConsoleInfo ===
+// === Module 16670: getConsoleInfo ===
 
-// Module 16637 (getConsoleInfo)
+// Module 16670 (getConsoleInfo)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9813 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 9830 */;
+import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9836 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 9853 */;
 import closure_3 from "noop" /* 19 */;
 import { PlatformTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function getConsoleInfo(type) {

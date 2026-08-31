@@ -1,26 +1,27 @@
-// === Module 10407: useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds ===
+// === Module 10431: useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds ===
 
-// Module 10407 (useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds)
+// Module 10431 (useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "map" /* 9358 */;
-import closure_3 from "initialize" /* 4469 */;
-import closure_4 from "createUserWidgetFromServer" /* 7313 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "sortActivity" /* 4535 */;
-import closure_7 from "handleUserSettingsStoreUpdate" /* 6040 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "map" /* 9380 */;
+import closure_4 from "initialize" /* 4471 */;
+import closure_5 from "createUserWidgetFromServer" /* 7334 */;
+import closure_6 from "createGuildRecordFromRust" /* 1909 */;
+import closure_7 from "sortActivity" /* 4537 */;
+import closure_8 from "handleUserSettingsStoreUpdate" /* 6043 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/hooks/SocialLayerStorefrontEligibilityHooks.tsx");
 
 export const useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds = function useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds(userIds) {
   userIds = userIds.userIds;
-  let items = [closure_2, closure_7];
+  let items = [closure_3, closure_8];
   const items1 = [userIds];
   return userIds(589).useStateFromStoresArray(items, () => {
     const items = [];
     while (tmp2 !== undefined) {
-      let tmp4 = closure_1_2;
-      let userOutbox = closure_1_2.getUserOutbox(tmp3);
+      let tmp4 = closure_1_3;
+      let userOutbox = closure_1_3.getUserOutbox(tmp3);
       let entries;
       if (userOutbox != null) {
         entries = userOutbox.entries;
@@ -35,12 +36,12 @@ export const useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds = fu
         if (null != item10019) {
           let tmp9 = userIds;
           let tmp10 = closure_1_1;
-          let obj = userIds(closure_1_1[7]);
+          let obj = userIds(closure_1_1[8]);
           let tmp11 = item10019;
           if (obj.isGamingLikeEntry(tmp8)) {
-            let tmp12 = closure_1_7;
+            let tmp12 = closure_1_8;
             let tmp13 = item10019;
-            let applicationIdFromDetectableId = closure_1_7.getApplicationIdFromDetectableId(tmp8.extra.application_id);
+            let applicationIdFromDetectableId = closure_1_8.getApplicationIdFromDetectableId(tmp8.extra.application_id);
             if (null != applicationIdFromDetectableId) {
               let tmp16 = applicationIdFromDetectableId;
               let arr = items.push(tmp15);
@@ -56,20 +57,20 @@ export const useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds = fu
 };
 export const useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds = function useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds(memo) {
   const _require = memo;
-  let items = [closure_4, closure_7];
+  let items = [closure_5, closure_8];
   const items1 = [memo];
   return _require(589).useStateFromStoresArray(items, () => {
     const items = [];
     while (tmp2 !== undefined) {
-      let tmp4 = closure_1_4;
-      let mutualGuilds = closure_1_4.getMutualGuilds(tmp3);
+      let tmp4 = closure_1_5;
+      let mutualGuilds = closure_1_5.getMutualGuilds(tmp3);
       if (null != mutualGuilds) {
         let tmp7 = tmp6;
         let tmp8 = mutualGuilds;
         for (const item10020 of mutualGuilds) {
-          let obj = closure_1_7;
+          let obj = closure_1_8;
           let tmp9 = item10020;
-          let storefrontGuildIds = closure_1_7.getStorefrontGuildIds();
+          let storefrontGuildIds = closure_1_8.getStorefrontGuildIds();
           if (storefrontGuildIds.has(item10020.guild.id)) {
             let tmp10 = item10020;
             let applicationIdFromGuildId = obj.getApplicationIdFromGuildId(tmp9.guild.id);
@@ -88,20 +89,22 @@ export const useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds = func
 };
 export const useUsersPlayingStorefrontEnabledGamesApplicationIds = function useUsersPlayingStorefrontEnabledGamesApplicationIds(userIds) {
   userIds = userIds.userIds;
-  const items = [closure_6, closure_7];
+  let stateFromStoresArray;
+  let slayerStorefrontDevApplicationIdOverride;
+  const items = [closure_7, closure_8];
   const items1 = [userIds];
-  const stateFromStoresArray = userIds(589).useStateFromStoresArray(items, () => {
+  stateFromStoresArray = userIds(stateFromStoresArray[7]).useStateFromStoresArray(items, () => {
     const items = [];
     while (tmp2 !== undefined) {
-      let tmp4 = closure_1_6;
-      let activities = closure_1_6.getActivities(tmp3);
+      let tmp4 = closure_1_7;
+      let activities = closure_1_7.getActivities(tmp3);
       let tmp6 = activities;
       let tmp7 = activities;
       for (const item10017 of activities) {
         if (null != item10017.application_id) {
-          let tmp9 = closure_1_7;
+          let tmp9 = closure_1_8;
           let tmp10 = item10017;
-          let applicationIdFromDetectableId = closure_1_7.getApplicationIdFromDetectableId(tmp8.application_id);
+          let applicationIdFromDetectableId = closure_1_8.getApplicationIdFromDetectableId(tmp8.application_id);
           if (null != applicationIdFromDetectableId) {
             let tmp13 = applicationIdFromDetectableId;
             let arr = items.push(tmp12);
@@ -113,32 +116,38 @@ export const useUsersPlayingStorefrontEnabledGamesApplicationIds = function useU
     }
     return items;
   }, items1);
-  const obj = userIds(589);
-  const slayerStorefrontDevApplicationIdOverride = userIds(10408).useSlayerStorefrontDevApplicationIdOverride();
-  let tmp3 = stateFromStoresArray;
-  if (null != slayerStorefrontDevApplicationIdOverride) {
-    const items2 = [];
-    items2[HermesBuiltin.arraySpread(stateFromStoresArray, 0)] = slayerStorefrontDevApplicationIdOverride;
-    tmp3 = items2;
-  }
-  return tmp3;
+  const obj = userIds(stateFromStoresArray[7]);
+  slayerStorefrontDevApplicationIdOverride = userIds(stateFromStoresArray[9]).useSlayerStorefrontDevApplicationIdOverride();
+  const items2 = [stateFromStoresArray, slayerStorefrontDevApplicationIdOverride];
+  return slayerStorefrontDevApplicationIdOverride.useMemo(() => {
+    if (null != slayerStorefrontDevApplicationIdOverride) {
+      const items = [];
+      items[HermesBuiltin.arraySpread(stateFromStoresArray, 0)] = tmp;
+      let tmp2 = items;
+    } else {
+      tmp2 = stateFromStoresArray;
+    }
+    return tmp2;
+  }, items2);
 };
 export const useAreUsersPlayingStorefrontEnabledGames = function useAreUsersPlayingStorefrontEnabledGames(userIds) {
   userIds = userIds.userIds;
-  let items = [closure_6, closure_7];
+  let stateFromStoresArray;
+  let slayerStorefrontDevApplicationIdOverride;
+  let items = [closure_7, closure_8];
   const items1 = [userIds];
-  const stateFromStoresArray = userIds(589).useStateFromStoresArray(items, () => {
+  stateFromStoresArray = userIds(stateFromStoresArray[7]).useStateFromStoresArray(items, () => {
     const items = [];
     while (tmp2 !== undefined) {
-      let tmp4 = closure_1_6;
-      let activities = closure_1_6.getActivities(tmp3);
+      let tmp4 = closure_1_7;
+      let activities = closure_1_7.getActivities(tmp3);
       let tmp6 = activities;
       let tmp7 = activities;
       for (const item10017 of activities) {
         if (null != item10017.application_id) {
-          let tmp9 = closure_1_7;
+          let tmp9 = closure_1_8;
           let tmp10 = item10017;
-          let applicationIdFromDetectableId = closure_1_7.getApplicationIdFromDetectableId(tmp8.application_id);
+          let applicationIdFromDetectableId = closure_1_8.getApplicationIdFromDetectableId(tmp8.application_id);
           if (null != applicationIdFromDetectableId) {
             let tmp13 = applicationIdFromDetectableId;
             let arr = items.push(tmp12);
@@ -150,18 +159,22 @@ export const useAreUsersPlayingStorefrontEnabledGames = function useAreUsersPlay
     }
     return items;
   }, items1);
-  const obj = userIds(589);
-  const slayerStorefrontDevApplicationIdOverride = userIds(10408).useSlayerStorefrontDevApplicationIdOverride();
-  let arr3 = stateFromStoresArray;
-  if (null != slayerStorefrontDevApplicationIdOverride) {
-    const items2 = [];
-    items2[HermesBuiltin.arraySpread(stateFromStoresArray, 0)] = slayerStorefrontDevApplicationIdOverride;
-    arr3 = items2;
-  }
-  return arr3.length > 0;
+  const obj = userIds(stateFromStoresArray[7]);
+  slayerStorefrontDevApplicationIdOverride = userIds(stateFromStoresArray[9]).useSlayerStorefrontDevApplicationIdOverride();
+  const items2 = [stateFromStoresArray, slayerStorefrontDevApplicationIdOverride];
+  return slayerStorefrontDevApplicationIdOverride.useMemo(() => {
+    if (null != slayerStorefrontDevApplicationIdOverride) {
+      const items = [];
+      items[HermesBuiltin.arraySpread(stateFromStoresArray, 0)] = tmp;
+      let tmp2 = items;
+    } else {
+      tmp2 = stateFromStoresArray;
+    }
+    return tmp2;
+  }, items2).length > 0;
 };
 export const useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds = function useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds() {
-  let items = [closure_3, closure_7];
+  let items = [closure_4, closure_8];
   return initialize.useStateFromStoresArray(items, () => {
     const items = [];
     gamesSeen = gamesSeen.getGamesSeen(false, false);
@@ -183,18 +196,18 @@ export const useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds = func
   });
 };
 export const useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds = function useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds() {
-  const items = [closure_3, closure_7];
+  const items = [closure_4, closure_8];
   return initialize.useStateFromStoresArray(items, () => {
     const items = [];
-    const runningGames = closure_3.getRunningGames();
+    const runningGames = closure_4.getRunningGames();
     const iter = runningGames[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (null != nextResult.id) {
-        let tmp4 = closure_3;
+        let tmp4 = closure_4;
         let tmp5 = nextResult;
-        if (closure_3.isDetectionEnabled(tmp3)) {
+        if (closure_4.isDetectionEnabled(tmp3)) {
           let tmp6 = applicationIdFromDetectableId;
           let tmp7 = nextResult;
           applicationIdFromDetectableId = applicationIdFromDetectableId.getApplicationIdFromDetectableId(tmp3.id);
@@ -210,18 +223,18 @@ export const useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds = fun
   }, []);
 };
 export const useIsCurrentUserPlayingSocialLayerStorefrontGames = function useIsCurrentUserPlayingSocialLayerStorefrontGames() {
-  let items = [closure_3, closure_7];
+  let items = [closure_4, closure_8];
   return initialize.useStateFromStoresArray(items, () => {
     const items = [];
-    const runningGames = closure_3.getRunningGames();
+    const runningGames = closure_4.getRunningGames();
     const iter = runningGames[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (null != nextResult.id) {
-        let tmp4 = closure_3;
+        let tmp4 = closure_4;
         let tmp5 = nextResult;
-        if (closure_3.isDetectionEnabled(tmp3)) {
+        if (closure_4.isDetectionEnabled(tmp3)) {
           let tmp6 = applicationIdFromDetectableId;
           let tmp7 = nextResult;
           applicationIdFromDetectableId = applicationIdFromDetectableId.getApplicationIdFromDetectableId(tmp3.id);
@@ -237,16 +250,16 @@ export const useIsCurrentUserPlayingSocialLayerStorefrontGames = function useIsC
   }, []).length > 0;
 };
 export const useIsCurrentUserInSocialLayerStorefrontGuildsApplicationIds = function useIsCurrentUserInSocialLayerStorefrontGuildsApplicationIds() {
-  let items = [closure_5];
+  let items = [closure_6];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => guildIds.getGuildIds());
   const obj = stateFromStores(589);
-  const items1 = [closure_7];
+  const items1 = [closure_8];
   const items2 = [stateFromStores];
   return stateFromStores(589).useStateFromStoresArray(items1, () => {
     const items = [];
     while (tmp2 !== undefined) {
-      let tmp4 = closure_1_7;
-      let applicationIdFromGuildId = closure_1_7.getApplicationIdFromGuildId(tmp3);
+      let tmp4 = closure_1_8;
+      let applicationIdFromGuildId = closure_1_8.getApplicationIdFromGuildId(tmp3);
       if (null != applicationIdFromGuildId) {
         let tmp7 = applicationIdFromGuildId;
         let arr = items.push(tmp6);

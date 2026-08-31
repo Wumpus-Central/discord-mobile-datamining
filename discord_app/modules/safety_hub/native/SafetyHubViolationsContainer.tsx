@@ -1,21 +1,21 @@
-// === Module 14294: SafetyHubViolationsHeader ===
+// === Module 14328: SafetyHubViolationsHeader ===
 
-// Module 14294 (SafetyHubViolationsHeader)
+// Module 14328 (SafetyHubViolationsHeader)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4442 */;
-import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8635 */;
-import WarningIcon from "WarningIcon" /* 8677 */;
-import renderDefault from "render" /* 9006 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11392 */;
+import Text from "Text" /* 4444 */;
+import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8657 */;
+import WarningIcon from "WarningIcon" /* 8699 */;
+import renderDefault from "render" /* 9029 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11421 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11387 */;
-import SafetyHubView from "SafetyHubView" /* 8636 */;
+import closure_7 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11416 */;
+import SafetyHubView from "SafetyHubView" /* 8658 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function SafetyHubViolationsHeader(count) {
@@ -56,9 +56,9 @@ function SafetyHubViolationsHeader(count) {
   obj1[1] = items4;
   items2[1] = closure_12(closure_6, obj1);
   if (opened) {
-    let ChevronSmallDownIcon = tmp7(11043).ChevronSmallUpIcon;
+    let ChevronSmallDownIcon = tmp7(13197).ChevronSmallUpIcon;
   } else {
-    ChevronSmallDownIcon = tmp7(8875).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp7(8898).ChevronSmallDownIcon;
   }
   const items5 = [tmp.chevron];
   items2[2] = closure_11(ChevronSmallDownIcon, { size: "md", style: items5 });

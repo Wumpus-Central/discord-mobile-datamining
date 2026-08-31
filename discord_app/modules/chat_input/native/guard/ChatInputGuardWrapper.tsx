@@ -1,17 +1,17 @@
-// === Module 11931: ChatInputGuardWrapper ===
+// === Module 11964: ChatInputGuardWrapper ===
 
-// Module 11931 (ChatInputGuardWrapper)
+// Module 11964 (ChatInputGuardWrapper)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "initialize" /* 4091 */;
-import { isThread } from "createChannelRecord" /* 1395 */;
-import closure_5 from "trackCommunicationDisabled" /* 1993 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "recomputeGuild" /* 5322 */;
-import closure_8 from "markAllUserIdListsStale" /* 4099 */;
-import closure_9 from "mergeGuildAvatar" /* 1923 */;
-import { TextAreaCta } from "TextAreaCta" /* 11472 */;
+import closure_3 from "initialize" /* 4092 */;
+import { isThread } from "createChannelRecord" /* 1391 */;
+import closure_5 from "trackCommunicationDisabled" /* 1992 */;
+import closure_6 from "createGuildRecordFromRust" /* 1909 */;
+import closure_7 from "recomputeGuild" /* 5325 */;
+import closure_8 from "markAllUserIdListsStale" /* 4100 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import { TextAreaCta } from "TextAreaCta" /* 11502 */;
 import ME from "ME" /* 676 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_14 } from "PHONE_VERIFICATION_MODAL_KEY" /* 7716 */;
+import { PHONE_VERIFICATION_MODAL_KEY as closure_14 } from "PHONE_VERIFICATION_MODAL_KEY" /* 7737 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

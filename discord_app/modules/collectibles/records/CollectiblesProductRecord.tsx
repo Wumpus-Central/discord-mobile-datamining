@@ -1,11 +1,11 @@
-// === Module 7236: fromServer ===
+// === Module 7257: fromServer ===
 
-// Module 7236 (fromServer)
-import getPricesFromServerDefault from "getPricesFromServer" /* 4491 */;
-import fromServerDefault from "fromServer" /* 7243 */;
+// Module 7257 (fromServer)
+import getPricesFromServerDefault from "getPricesFromServer" /* 4493 */;
+import fromServerDefault from "fromServer" /* 7264 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fromServer" /* 7237 */;
-import createCollectiblesItemsFromServerResponse from "createCollectiblesItemsFromServerResponse" /* 7238 */;
+import closure_4 from "fromServer" /* 7258 */;
+import createCollectiblesItemsFromServerResponse from "createCollectiblesItemsFromServerResponse" /* 7259 */;
 import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "items" /* 678 */;
 import ME from "ME" /* 676 */;
 
@@ -81,7 +81,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
     }
     if (null != collectibles) {
       if (skus.skus.length > 1) {
-        let type = _require(1951).CollectiblesItemType.VARIANTS_GROUP;
+        let type = _require(1950).CollectiblesItemType.VARIANTS_GROUP;
       } else {
         type = collectibles.type;
       }
@@ -90,7 +90,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         obj = {};
       }
       let items = obj.items;
-      obj = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, premiumType: null, items: null, categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: "r", isFirstParty: "function FadeOutLottieAnimationTsx2(finished){const{runOnJS,setIsFadeOut}=this.__closure;if(finished)runOnJS(setIsFadeOut)(false);}", bundledProducts: 25 };
+      obj = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, premiumType: null, items: null, categorySkuId: null, isCategoryReward: null, prices: null, badgeOverride: null, hideBadge: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: null, isFirstParty: null, bundledProducts: null };
       ({ id: obj2[0], id: obj2[1] } = first);
       ({ name: obj2[2], summary: obj2[3], primaryCollectionStyles: obj2[4] } = skus);
       obj[5] = type;
@@ -115,9 +115,11 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
       }
       obj[8] = str;
       obj[9] = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === first.id);
-      ({ prices: obj2[10], previewAssetPaths } = first);
-      obj[11] = previewAssetPaths;
-      let str2 = _require(1951).CollectiblesItemType.VARIANTS_GROUP;
+      obj[10] = first.prices;
+      ({ badgeOverride: obj2[11], hideBadge: obj2[12] } = skus);
+      const previewAssetPaths = first.previewAssetPaths;
+      obj[13] = previewAssetPaths;
+      let str2 = _require(1950).CollectiblesItemType.VARIANTS_GROUP;
       let found;
       if (type === str2) {
         skus = skus.skus;
@@ -137,7 +139,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             }
             ({ items, item } = obj);
             first = closure_1_3(tenantMetadata.selectedOptions, 1)[0];
-            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "e", type: "Array", premiumType: "container", items: "track", categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, googleSkuIds: null, eligibleOffers: null, variants: null, bundledProducts: null, isFirstParty: "embed" };
+            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "bottom", items: 555427409, categorySkuId: 33518086, isCategoryReward: 47513600, prices: -713949184, previewAssets: 1459617794, googleSkuIds: 1912602627, eligibleOffers: 855, variants: 977, bundledProducts: 250226, isFirstParty: 283648 };
             obj[0] = skus.name;
             obj[1] = first.id;
             let str;
@@ -181,11 +183,13 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             let googleSkuIds = tenantMetadata.googleSkuIds;
             if (googleSkuIds == null) {
               obj = {};
+              item = "";
               obj[closure_1_9.MOBILE] = "";
               obj[closure_1_9.MOBILE_PREMIUM_TIER_2] = "";
               googleSkuIds = obj;
             }
             obj[16] = googleSkuIds;
+            obj[17] = tenantMetadata.eligibleOffers;
             obj[20] = collectibles.isFirstParty;
             if (typeof closure_1_10 !== "function") {
               HermesBuiltin.throwTypeError();
@@ -198,7 +202,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         });
         found = str2.filter((arg0) => null != arg0);
       }
-      obj[12] = found;
+      obj[14] = found;
       let googleSkuIds = first.googleSkuIds;
       if (googleSkuIds == null) {
         obj = {};
@@ -207,8 +211,9 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         obj[closure_9.MOBILE_PREMIUM_TIER_2] = "";
         googleSkuIds = obj;
       }
-      obj[13] = googleSkuIds;
-      obj[15] = collectibles.isFirstParty;
+      obj[15] = googleSkuIds;
+      obj[16] = first.eligibleOffers;
+      obj[17] = collectibles.isFirstParty;
       const bundledSkus = first.bundledSkus;
       let found1;
       if (bundledSkus != null) {
@@ -235,7 +240,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         });
         found1 = mapped.filter((arg0) => null != arg0);
       }
-      obj[16] = found1;
+      obj[18] = found1;
       if (typeof CollectiblesProductRecord !== "function") {
         HermesBuiltin.throwTypeError();
       }

@@ -1,7 +1,7 @@
-// === Module 8828: useDefaultVariantIndex ===
+// === Module 8851: useDefaultVariantIndex ===
 
-// Module 8828 (useDefaultVariantIndex)
-import closure_2 from "map" /* 7250 */;
+// Module 8851 (useDefaultVariantIndex)
+import closure_2 from "map" /* 7271 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");
@@ -17,7 +17,7 @@ export const useDefaultVariantIndex = function useDefaultVariantIndex(product) {
       const variants = product.variants;
       num = Math.max(0, variants.findIndex((skuId) => !set.has(skuId.skuId)));
     }
-    tmpResult = _require(7245);
+    tmpResult = _require(7266);
   }
   return num;
 };

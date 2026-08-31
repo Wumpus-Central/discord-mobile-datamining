@@ -1,16 +1,16 @@
-// === Module 1435: getAvatarURL ===
+// === Module 1431: getAvatarURL ===
 
-// Module 1435 (getAvatarURL)
+// Module 1431 (getAvatarURL)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import IntegerDefault from "Integer" /* 14 */;
-import DECORATION_TO_AVATAR_RATIO from "DECORATION_TO_AVATAR_RATIO" /* 1436 */;
-import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
-import handleImageLoad from "handleImageLoad" /* 1469 */;
-import parseDefault from "parse" /* 1484 */;
-import Url from "Url" /* 1489 */;
-import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1898 */;
-import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1899 */;
-import registerAssetDefault from "registerAsset" /* 1902 */;
+import DECORATION_TO_AVATAR_RATIO from "DECORATION_TO_AVATAR_RATIO" /* 1432 */;
+import ensureAvatarSource from "ensureAvatarSource" /* 1434 */;
+import handleImageLoad from "handleImageLoad" /* 1465 */;
+import parseDefault from "parse" /* 1483 */;
+import Url from "Url" /* 1488 */;
+import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1897 */;
+import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1898 */;
+import registerAssetDefault from "registerAsset" /* 1901 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 500 */;
 
@@ -510,7 +510,7 @@ function getEmojiURL(size) {
     const _HermesInternal = HermesInternal;
     const combined = "size=" + obj.getBestMediaProxySize(size.size * handleImageLoad.getDevicePixelRatio(), closure_12);
     try {
-      const enabled = tmp5(1897).getForceSdrEmojisStickersConfig({ location: "getEmojiURL" }).enabled;
+      const enabled = tmp5(1896).getForceSdrEmojisStickersConfig({ location: "getEmojiURL" }).enabled;
       let str6 = "";
       if (enabled) {
         str6 = "&force_sdr=true";
@@ -656,7 +656,7 @@ function getAvatarDecorationURL(canAnimate) {
   if (null != avatarDecoration) {
     if (!obj4.isAvatarDecorationExpired(avatarDecoration)) {
       try {
-        let tmp13Result = tmp13(1901);
+        let tmp13Result = tmp13(1900);
         ({ CollectiblesItemAssetFormat, getCollectiblesItemAssetUrl } = tmp13Result);
         if (flag) {
           let STATIC = CollectiblesItemAssetFormat.ANIMATED;
@@ -688,9 +688,9 @@ function getAvatarDecorationURL(canAnimate) {
               str2 = new URL("" + location.protocol + GLOBAL_ENV.API_ENDPOINT + result);
             }
             const searchParams = str2.searchParams;
-            tmp13Result = tmp13(1469);
+            tmp13Result = tmp13(1465);
             const _HermesInternal3 = HermesInternal;
-            const result1 = searchParams.set("size", "" + tmp13Result.getBestMediaProxySize(size * tmp13(1469).getDevicePixelRatio(), closure_12));
+            const result1 = searchParams.set("size", "" + tmp13Result.getBestMediaProxySize(size * tmp13(1465).getDevicePixelRatio(), closure_12));
             const searchParams2 = str2.searchParams;
             const _HermesInternal4 = HermesInternal;
             const result2 = searchParams2.set("passthrough", "" + flag);

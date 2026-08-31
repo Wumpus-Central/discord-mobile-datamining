@@ -1,10 +1,10 @@
-// === Module 11853: fetch ===
+// === Module 11884: fetch ===
 
-// Module 11853 (fetch)
+// Module 11884 (fetch)
 import sendRequest from "sendRequest" /* 530 */;
-import parseDefault from "parse" /* 1484 */;
+import parseDefault from "parse" /* 1483 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -36,7 +36,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -85,7 +85,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
             if (null == lib) {
               c4 = 0;
               c6 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else if (!closure_3.isCanceled) {
               if (200 === lib.status) {
                 lib(closure_1_0);
@@ -99,7 +99,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
                 if (closure_3.query.attempts > 5) {
                   c4 = 0;
                   c6 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   const _parseInt = parseInt;
                   callback = parseInt(lib.headers["retry-after"]);
@@ -122,7 +122,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
           }
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
         c6 = 3;
       } catch (tmp49) {

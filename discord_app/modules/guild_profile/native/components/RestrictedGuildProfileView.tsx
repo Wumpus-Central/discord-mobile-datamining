@@ -1,16 +1,16 @@
-// === Module 8953: RestrictedGuildProfileView ===
+// === Module 8976: RestrictedGuildProfileView ===
 
-// Module 8953 (RestrictedGuildProfileView)
+// Module 8976 (RestrictedGuildProfileView)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import map from "map" /* 4166 */;
-import useThemeDefault from "useTheme" /* 4381 */;
-import Text from "Text" /* 4442 */;
-import LinearGradientDefault from "LinearGradient" /* 4905 */;
-import GuildIconSizes from "GuildIconSizes" /* 5969 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5969 */;
-import GuildProfileBackground from "GuildProfileBackground" /* 8954 */;
+import map from "map" /* 4167 */;
+import useThemeDefault from "useTheme" /* 4383 */;
+import Text from "Text" /* 4444 */;
+import LinearGradientDefault from "LinearGradient" /* 4908 */;
+import GuildIconSizes from "GuildIconSizes" /* 5972 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5972 */;
+import GuildProfileBackground from "GuildProfileBackground" /* 8977 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

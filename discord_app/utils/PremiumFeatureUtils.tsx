@@ -1,10 +1,10 @@
-// === Module 8160: getUserMaxFileSize ===
+// === Module 8182: getUserMaxFileSize ===
 
-// Module 8160 (getUserMaxFileSize)
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1947 */;
-import closure_2 from "setPremiumTypeActual" /* 1924 */;
+// Module 8182 (getUserMaxFileSize)
+import isPremiumAtLeast from "isPremiumAtLeast" /* 1946 */;
+import closure_2 from "setPremiumTypeActual" /* 1923 */;
 import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1925 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 require = arg1;
 function getUserMaxFileSize(currentUser) {

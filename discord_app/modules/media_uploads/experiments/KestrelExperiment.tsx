@@ -1,8 +1,8 @@
-// === Module 5088: KESTREL_GA_UPLOAD_LIMIT_MB ===
+// === Module 5091: KESTREL_GA_UPLOAD_LIMIT_MB ===
 
-// Module 5088 (KESTREL_GA_UPLOAD_LIMIT_MB)
+// Module 5091 (KESTREL_GA_UPLOAD_LIMIT_MB)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import ApexExperiment from "ApexExperiment" /* 1468 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-04-kestrel", kind: "user", defaultConfig: { enabled: false, threshold: 0 }, variations: { 0: { enabled: false, threshold: 0 }, 1: { enabled: true, threshold: 15 }, 2: { enabled: true, threshold: 20 }, 3: { enabled: true, threshold: 25 } } });
 let closure_1 = ApexExperiment.createApexExperiment({ name: "2026-08-kestrel-ga", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

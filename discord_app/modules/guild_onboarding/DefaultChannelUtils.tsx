@@ -1,10 +1,10 @@
-// === Module 5434: useCanChannelBeDefault ===
+// === Module 5437: useCanChannelBeDefault ===
 
-// Module 5434 (useCanChannelBeDefault)
+// Module 5437 (useCanChannelBeDefault)
 import fromStringAll from "fromString" /* 506 */;
-import applyOverwritesAll from "applyOverwrites" /* 4095 */;
-import closure_3 from "isSubscriptionGated" /* 1984 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import applyOverwritesAll from "applyOverwrites" /* 4096 */;
+import closure_3 from "isSubscriptionGated" /* 1983 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

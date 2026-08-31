@@ -1,12 +1,12 @@
-// === Module 11866: ? ===
+// === Module 11897: ? ===
 
-// Module 11866
+// Module 11897
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11843 */;
-import handleSearchQuery from "handleSearchQuery" /* 11867 */;
-import prototype from "prototype" /* 11842 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 11874 */;
+import handleSearchQuery from "handleSearchQuery" /* 11898 */;
+import prototype from "prototype" /* 11873 */;
 
 const SearchTypes = ME.SearchTypes;
 const result = set.fileFinishedImporting("modules/search/native/SearchPlatformActionCreators.tsx");

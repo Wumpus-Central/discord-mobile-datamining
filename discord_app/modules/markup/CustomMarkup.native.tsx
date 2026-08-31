@@ -1,14 +1,14 @@
-// === Module 4913: createRules ===
+// === Module 4916: createRules ===
 
-// Module 4913 (createRules)
+// Module 4916 (createRules)
 import set from "set" /* 2 */;
-import tDefault from "t" /* 4161 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4436 */;
-import MarkupText from "MarkupText" /* 4437 */;
-import MarkupTextDefault from "MarkupText" /* 4437 */;
-import AST_KEY from "AST_KEY" /* 4914 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 4915 */;
-import parseLinkDefault from "parseLink" /* 4916 */;
+import tDefault from "t" /* 4162 */;
+import get_defaultRulesDefault from "get defaultRules" /* 4438 */;
+import MarkupText from "MarkupText" /* 4439 */;
+import MarkupTextDefault from "MarkupText" /* 4439 */;
+import AST_KEY from "AST_KEY" /* 4917 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 4918 */;
+import parseLinkDefault from "parseLink" /* 4919 */;
 
 function createRules(arg0) {
   let obj = arg1;

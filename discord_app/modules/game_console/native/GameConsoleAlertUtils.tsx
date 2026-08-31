@@ -1,10 +1,10 @@
-// === Module 9820: ? ===
+// === Module 9843: ? ===
 
-// Module 9820
+// Module 9843
 import noopAll from "noop" /* 19 */;
-import _modDef4823 from "module_4823" /* 4823 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import { GAME_CONSOLE_ALERT_MODAL_LOCATION as closure_4 } from "XBOX_URL_BASE" /* 9252 */;
+import _modDef4826 from "module_4826" /* 4826 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4499 */;
+import { GAME_CONSOLE_ALERT_MODAL_LOCATION as closure_4 } from "XBOX_URL_BASE" /* 9274 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -16,7 +16,7 @@ let result = require("set").fileFinishedImporting("modules/game_console/native/G
 export default {
   maybeShowPTTAlert(XBOX) {
     if (mode.getMode() === constants.PUSH_TO_TALK) {
-      if (!obj2.UNSAFE_isDismissibleContentDismissed(_require(1377).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT)) {
+      if (!obj2.UNSAFE_isDismissibleContentDismissed(_require(1373).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT)) {
         let obj = {};
         let intl = tmp10(1236).intl;
         obj[constants2.XBOX] = intl.string(tmp10(1236).t.bVZ7vy);
@@ -43,17 +43,17 @@ export default {
         }
         return resolved;
       }
-      obj2 = _require(4267);
+      obj2 = _require(4268);
     }
     return Promise.resolve();
   },
   showSelfDismissableAlert(reconnectPlatformType) {
     reconnectPlatformType = reconnectPlatformType.reconnectPlatformType;
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
-    let obj = _modDef4823;
+    let obj = _modDef4826;
     obj = { title, body: null, onConfirm: null };
-    obj = { body, errorCodeMessage, dismissCallback: _modDef4823.close };
-    obj[1] = jsx(reconnectPlatformType(9821).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: _modDef4823.close });
+    obj = { body, errorCodeMessage, dismissCallback: _modDef4826.close };
+    obj[1] = jsx(reconnectPlatformType(9844).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: _modDef4826.close });
     obj[2] = function onConfirm() {
       if (null != reconnectPlatformType) {
         const obj = { platformType: null, location: null };

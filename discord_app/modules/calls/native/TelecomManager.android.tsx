@@ -1,28 +1,28 @@
-// === Module 17007: nativeEventEmitter ===
+// === Module 17040: nativeEventEmitter ===
 
-// Module 17007 (nativeEventEmitter)
+// Module 17040 (nativeEventEmitter)
 import timestampDefault from "timestamp" /* 3 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
-import initializeDefault from "initialize" /* 5451 */;
-import enforcingDefault from "enforcing" /* 9393 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9720 */;
-import createSoundForPack from "createSoundForPack" /* 9931 */;
-import enforcingDefault2 from "enforcing" /* 17008 */;
+import isMetaQuest from "isMetaQuest" /* 1624 */;
+import initializeDefault from "initialize" /* 5454 */;
+import enforcingDefault from "enforcing" /* 9415 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9742 */;
+import createSoundForPack from "createSoundForPack" /* 9954 */;
+import enforcingDefault2 from "enforcing" /* 17041 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "Soundpacks" /* 9932 */;
-import closure_6 from "reset" /* 4468 */;
+import closure_5 from "Soundpacks" /* 9955 */;
+import closure_6 from "reset" /* 4470 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "callConnect" /* 5187 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_11 from "DesktopNotificationTypes" /* 10102 */;
-import closure_12 from "createRTCConnection" /* 4520 */;
-import closure_13 from "markAllUserIdListsStale" /* 4099 */;
-import closure_14 from "initialize" /* 4291 */;
-import closure_15 from "mergeGuildAvatar" /* 1923 */;
+import closure_8 from "callConnect" /* 5190 */;
+import closure_9 from "ensureGuildLoaded" /* 1387 */;
+import closure_10 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_11 from "DesktopNotificationTypes" /* 10125 */;
+import closure_12 from "createRTCConnection" /* 4522 */;
+import closure_13 from "markAllUserIdListsStale" /* 4100 */;
+import closure_14 from "initialize" /* 4293 */;
+import closure_15 from "mergeGuildAvatar" /* 1922 */;
 import { ApplicationStreamStates } from "ME" /* 676 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4510 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4512 */;
 
 require = arg1;
 ({ DeviceEventEmitter: c4, NativeEventEmitter } = get_ActivityIndicator);
@@ -354,7 +354,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       self.cancelIncomingCall(self.currentCall.channelId);
     }
     tmp3 = null != self.currentCall && self.currentCall.channelId !== channelId && self.isPendingIncomingCall(self.currentCall);
-    channelName = _require(4640).computeChannelName(channel, closure_15, closure_13);
+    channelName = _require(4642).computeChannelName(channel, closure_15, closure_13);
     let guildId = channel.getGuildId();
     if (guildId == null) {
       guildId = null;
@@ -367,16 +367,16 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
     self.currentCall = obj;
     obj.info("Reporting incoming call to Telecom:", channelId, "callerName:", channelName);
     self.startRingtone();
-    const obj2 = _require(4640);
+    const obj2 = _require(4642);
     let tmp19 = null;
     if (null != guildId) {
       obj = { guildId: null };
       obj[0] = guildId;
       tmp19 = obj;
     }
-    const obj4 = self(17008);
-    const reportIncomingCallResult = self(17008).reportIncomingCall(channelId, channelName, tmp19);
-    self(17008).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const obj4 = self(17041);
+    const reportIncomingCallResult = self(17041).reportIncomingCall(channelId, channelName, tmp19);
+    self(17041).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         closure_1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -385,7 +385,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       closure_1_25.warn("Failed to report incoming call:", arg0);
       self.clearCall(closure_0);
     });
-    const nextPromise = self(17008).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const nextPromise = self(17041).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         closure_1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -399,7 +399,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(17008);
+  obj = self(17041);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj.cancelIncomingCall(channelId).then(() => {
     self.clearCall(closure_0);
@@ -418,8 +418,8 @@ prototype["reconcileTelecomState"] = function reconcileTelecomState() {
   self = this;
   let isEnabledResult = this.isEnabled();
   if (isEnabledResult) {
-    isEnabledResult = self(1625).isMetaQuest();
-    obj = self(1625);
+    isEnabledResult = self(1624).isMetaQuest();
+    obj = self(1624);
   }
   if (isEnabledResult) {
     if (null == self.reconcilePromise) {
@@ -454,7 +454,7 @@ prototype["doReconcile"] = function doReconcile() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -670,7 +670,7 @@ prototype["doReconcile"] = function doReconcile() {
             throwTypeErrorResult = channel;
             if (null == channel) {
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               throwTypeErrorResult = channel;
               throwTypeErrorResult = c2;
@@ -796,7 +796,7 @@ prototype["startCall"] = function startCall(channelId, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -887,7 +887,7 @@ prototype["endCall"] = function endCall(currentCall) {
   const self = this;
   closure_0 = currentCall;
   obj.info("Ending call:", currentCall.channelId);
-  obj = self(17008);
+  obj = self(17041);
   const endCallResult = obj.endCall(currentCall.channelId);
   return obj.endCall(currentCall.channelId).then((arg0) => {
     self.clearCall(currentCall.channelId);
@@ -1043,7 +1043,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(17008);
+            obj = self(17041);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

@@ -1,20 +1,20 @@
-// === Module 17151: Header ===
+// === Module 17184: Header ===
 
-// Module 17151 (Header)
+// Module 17184 (Header)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PressableBase from "PressableBase" /* 5033 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5192 */;
-import XSmallIcon from "XSmallIcon" /* 5516 */;
-import TableRowInner from "TableRowInner" /* 5564 */;
-import request from "request" /* 11096 */;
+import PressableBase from "PressableBase" /* 5036 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5195 */;
+import XSmallIcon from "XSmallIcon" /* 5519 */;
+import TableRowInner from "TableRowInner" /* 5567 */;
+import request from "request" /* 11125 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { PlatformTypes } from "ME" /* 676 */;
-import OperatorTypes from "OperatorTypes" /* 5317 */;
+import OperatorTypes from "OperatorTypes" /* 5320 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function Header(arg0) {
@@ -70,7 +70,7 @@ function Header(arg0) {
       tmp8Result = tmp11;
     }
   } else if (null != platform) {
-    let tmp3Result = tmp3(1435);
+    let tmp3Result = tmp3(1431);
     tmp3Result = tmp3(1363);
     const icon = platform.icon;
     obj1 = { source: null, disableColor: true };
@@ -139,7 +139,7 @@ function BooleanConfigRule(metadataField) {
     }
     closure_3(tmp, num);
   };
-  return closure_12(metadataField(5958).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(5961).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
@@ -191,7 +191,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  let obj = metadataField(17152);
+  let obj = metadataField(17185);
   const realizedOperatorForResult = obj.realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   let value;
@@ -200,7 +200,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let tmpResult = tmp(17152);
+  let tmpResult = tmp(17185);
   str = tmpResult.displayedValueFor(value, realizedOperatorForResult);
   str = str.toString();
   let mapped = React;
@@ -284,7 +284,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       const obj4 = { variant: "text-md/semibold", style: null, children: null };
       obj4[1] = map.appNumericalInputText;
       obj4[2] = fieldText;
-      items1[1] = onInputValueChange(tmp(4442).Text, obj4);
+      items1[1] = onInputValueChange(tmp(4444).Text, obj4);
       obj1[1] = items1;
       tmp21Result = closure_13(tmp22, obj1);
       const tmp21 = closure_13;
@@ -326,7 +326,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       }
       closure_3(tmp3, num);
     };
-    return onInputValueChange(tmp(5958).TableSwitchRow, obj5, metadataField);
+    return onInputValueChange(tmp(5961).TableSwitchRow, obj5, metadataField);
   }
 }
 function BlueskyMetadataRules(arg0) {
@@ -595,7 +595,7 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
     }
     if (configurationItems[0].configuration.connectionType === closure_11) {
       let obj = { hasIcons: true, children: null };
-      obj = { platform: null, integration: "a", applicationId: 1885339651, onRemove: 1945239555, locked: -599457789 };
+      obj = { platform: null, integration: "a", applicationId: true, onRemove: true, locked: true };
       obj[2] = applicationId;
       obj[3] = function onRemove() {
         return onConfigurationChange(null, configurationItems[0].index);

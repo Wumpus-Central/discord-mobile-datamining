@@ -1,14 +1,14 @@
-// === Module 16245: MainTabsEmptyChatPanel ===
+// === Module 16279: MainTabsEmptyChatPanel ===
 
-// Module 16245 (MainTabsEmptyChatPanel)
+// Module 16279 (MainTabsEmptyChatPanel)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import sum from "sum" /* 11060 */;
-import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 16246 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import sum from "sum" /* 11089 */;
+import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 16280 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;

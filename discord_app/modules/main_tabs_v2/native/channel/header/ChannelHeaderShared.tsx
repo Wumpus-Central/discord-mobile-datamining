@@ -1,40 +1,40 @@
-// === Module 12866: TitleWrapper ===
+// === Module 12900: TitleWrapper ===
 
-// Module 12866 (TitleWrapper)
+// Module 12900 (TitleWrapper)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4166 */;
-import Text from "Text" /* 4442 */;
-import computeChannelName from "computeChannelName" /* 4640 */;
-import getChannelIcon from "getChannelIcon" /* 4946 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10586 */;
-import _modDef12868 from "module_12868" /* 12868 */;
+import map from "map" /* 4167 */;
+import Text from "Text" /* 4444 */;
+import computeChannelName from "computeChannelName" /* 4642 */;
+import getChannelIcon from "getChannelIcon" /* 4949 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 8886 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10610 */;
+import registerAssetDefault from "registerAsset" /* 12901 */;
+import _modDef12902 from "module_12902" /* 12902 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "markAllUserIdListsStale" /* 4099 */;
-import closure_7 from "mergeGuildAvatar" /* 1923 */;
-import { getMinHeaderHeight } from "MIN_HEADER_HEIGHT" /* 7555 */;
+import closure_6 from "markAllUserIdListsStale" /* 4100 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function TitleWrapper(headerAccessibilityLabel) {
   ({ children, onPress, titleContentHeight } = headerAccessibilityLabel);
-  importDefault = undefined;
-  const tmp2 = callback3(useIsMobileVisualRefreshExperimentEnabledDefault("ChannelHeaderShared"));
-  [tmp4, c1] = callback(React.useState(undefined), 2);
+  c1 = undefined;
+  const tmp = callback3();
+  [tmp3, c1] = callback(React.useState(undefined), 2);
   [][0] = titleContentHeight;
   callback = React.useCallback((nativeEvent) => {
     _undefined({ borderless: true, radius: nativeEvent.nativeEvent.layout.width });
   }, []);
   if (null == onPress) {
     let obj = { style: null, accessibilityRole: "header", children: null };
-    obj[0] = tmp2.wrapper;
+    obj[0] = tmp.wrapper;
     obj[2] = children;
-    let tmp7Result = callback2(View, obj);
+    let tmp6Result = callback2(View, obj);
   } else {
     obj = titleContentHeight(500);
     let tmp9;
@@ -44,15 +44,15 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj = { onLayout: null, onPress: null, androidRippleConfig: null, accessibilityRole: "header", accessibilityLabel: null, hitSlop: null, style: null, children: null };
     obj[0] = tmp9;
     obj[1] = onPress;
-    obj[2] = tmp4;
+    obj[2] = tmp3;
     obj[4] = headerAccessibilityLabel.headerAccessibilityLabel;
-    obj[5] = tmp6;
-    obj[6] = tmp2.wrapper;
+    obj[5] = tmp5;
+    obj[6] = tmp.wrapper;
     obj[7] = children;
-    tmp7Result = callback2(titleContentHeight(5033).PressableOpacity, obj);
-    const tmp7 = callback2;
+    tmp6Result = callback2(titleContentHeight(5036).PressableOpacity, obj);
+    const tmp6 = callback2;
   }
-  return tmp7Result;
+  return tmp6Result;
 }
 function ChannelTitle(guildId) {
   ({ title, accessibleTitle, subtitle, disableArrow } = guildId);
@@ -60,72 +60,57 @@ function ChannelTitle(guildId) {
     disableArrow = false;
   }
   ({ userId, icon } = guildId);
-  const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("ChannelTitle");
-  const tmp4 = callback3(tmp3);
-  let obj = { style: tmp4.channelContent, children: null };
-  obj = { style: tmp4.nameWithArrow, children: null };
-  let tmp7 = null;
-  if (tmp3) {
-    tmp7 = null;
-    if (null != icon) {
-      tmp7 = icon;
-    }
+  const tmp = callback3();
+  let obj = { style: tmp.channelContent, children: null };
+  obj = { style: tmp.nameWithArrow, children: null };
+  let tmp4 = null;
+  if (null != icon) {
+    tmp4 = icon;
   }
-  const items = [tmp7, , ];
+  const items = [tmp4, , ];
   if (null != userId) {
-    obj = { userId: null, guildId: null, userName: null, variant: null, defaultColor: "mobile-text-heading-primary", lineClamp: 1, style: null, containerStyle: null, accessibilityLabel: null, accessibilityRole: "header", maxFontSizeMultiplier: 2 };
+    obj = { userId: null, guildId: null, userName: null, variant: "redesign/heading-18/semibold", defaultColor: "mobile-text-heading-primary", lineClamp: 1, style: null, containerStyle: null, accessibilityLabel: null, accessibilityRole: "header", maxFontSizeMultiplier: 2 };
     obj[0] = userId;
     obj[1] = guildId.guildId;
     obj[2] = title;
-    let str2 = "heading-lg/bold";
-    if (tmp3) {
-      str2 = "redesign/heading-18/semibold";
-    }
-    obj[3] = str2;
-    ({ channelName: obj4[6], channelNameContainer: obj4[7] } = tmp4);
+    ({ channelName: obj4[6], channelNameContainer: obj4[7] } = tmp);
     obj[8] = accessibleTitle;
-    let tmp8Result = tmp11(tmp(8863), obj);
-    let tmp8 = tmp11;
-    const tmpResult = tmp(8863);
+    let tmp8 = callback2(AVERAGE_FONT_WIDTH_RATIODefault, obj);
+    let tmp5 = callback2;
   } else {
-    tmp8 = closure_9;
-    let str = "heading-lg/bold";
-    if (tmp3) {
-      str = "redesign/heading-18/semibold";
-    }
-    obj1 = { variant: null, color: "mobile-text-heading-primary", lineClamp: 1, style: null, accessibilityLabel: null, accessibilityRole: "header", maxFontSizeMultiplier: 2, children: null };
-    obj1[0] = str;
-    obj1[3] = tmp4.channelName;
+    tmp5 = callback2;
+    obj1 = { variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, accessibilityLabel: null, accessibilityRole: "header", maxFontSizeMultiplier: 2, children: null };
+    obj1[3] = tmp.channelName;
     obj1[4] = accessibleTitle;
     obj1[7] = title;
-    tmp8Result = tmp8(Text.Text, obj1);
+    tmp8 = callback2(Text.Text, obj1);
   }
-  items[1] = tmp8Result;
-  tmp8Result = !disableArrow;
+  items[1] = tmp8;
+  let tmp5Result = !disableArrow;
   if (!disableArrow) {
     const obj2 = { source: null, size: null, style: null };
-    obj2[0] = tmp(12867);
+    obj2[0] = registerAssetDefault;
     obj2[1] = Button.Icon.Sizes.REFRESH_SMALL_16;
-    obj2[2] = tmp4.arrowIcon;
-    tmp8Result = tmp8(Button.Icon, obj2);
+    obj2[2] = tmp.arrowIcon;
+    tmp5Result = tmp5(Button.Icon, obj2);
   }
-  items[2] = tmp8Result;
+  items[2] = tmp5Result;
   obj[1] = items;
-  const items1 = [closure_10(View, obj), ];
-  let tmp8Result1 = null != subtitle;
-  if (tmp8Result1) {
+  const items1 = [closure_9(View, obj), ];
+  tmp5Result = null != subtitle;
+  if (tmp5Result) {
     const obj3 = { style: null, children: null };
-    obj3[0] = tmp4.subTitleContainer;
+    obj3[0] = tmp.subTitleContainer;
     obj3[1] = subtitle;
-    tmp8Result1 = tmp8(tmp6, obj3);
+    tmp5Result = tmp5(tmp3, obj3);
   }
-  items1[1] = tmp8Result1;
+  items1[1] = tmp5Result;
   obj[1] = items1;
-  return closure_10(View, obj);
+  return closure_9(View, obj);
 }
 function GroupDMIcon(channel) {
   const obj = { size: null, channel: null, style: null };
-  const tmp = callback3(useIsMobileVisualRefreshExperimentEnabledDefault("ChannelHeaderShared"));
+  const tmp = callback3();
   obj[0] = Button.AvatarSizes.REFRESH_MEDIUM_32;
   obj[1] = channel.channel;
   obj[2] = tmp.channelIcon;
@@ -143,127 +128,76 @@ function UserAvatar(user) {
   obj[4] = tmp3;
   obj[5] = isMobileOnline;
   obj[6] = isVROnline;
-  obj[7] = callback3(useIsMobileVisualRefreshExperimentEnabledDefault("ChannelHeaderShared")).channelIcon;
-  return closure_9(Button.Avatar, obj);
+  obj[7] = callback3().channelIcon;
+  return closure_8(Button.Avatar, obj);
 }
 function ChannelIconRaw(IconComponent) {
   IconComponent = IconComponent.IconComponent;
-  const tmp2 = useIsMobileVisualRefreshExperimentEnabledDefault("ChannelHeaderShared");
   let obj = map;
   const token = obj.useToken(ThemesDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
   if (null != IconComponent) {
-    obj = { size: null, color: null, style: null };
+    obj = { size: null, color: "icon-strong", style: null };
     obj[0] = token;
-    let str = "text-strong";
-    if (tmp2) {
-      str = "icon-strong";
-    }
-    obj[1] = str;
-    obj = undefined;
-    if (tmp2) {
-      obj = { marginEnd: 4 };
-    }
-    obj[2] = obj;
-    let tmp8Result = callback2(IconComponent, obj);
-    const tmp8 = callback2;
+    obj[2] = { marginEnd: 4 };
+    let tmp6 = callback2(IconComponent, obj);
   } else {
-    obj1 = { size: null, source: null, color: null };
-    obj1[0] = tmp3(1297).Icon.Sizes.SMALL_20;
-    obj1[1] = IconComponent.icon;
-    obj1[2] = tmp5.guildChannelIcon.tintColor;
-    tmp8Result = callback2(tmp3(1297).Icon, obj1);
+    obj = { size: null, source: null, color: null };
+    obj[0] = tmp(1297).Icon.Sizes.SMALL_20;
+    obj[1] = IconComponent.icon;
+    obj[2] = tmp4.guildChannelIcon.tintColor;
+    tmp6 = callback2(tmp(1297).Icon, obj);
   }
-  return tmp8Result;
+  return tmp6;
 }
 function MemberCountText(arg0) {
   ({ presenceCount, memberCount } = arg0);
-  ({ withSeparator, leadingAccessoryWidth } = arg0);
-  const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("ChannelHeaderShared");
   let str = "online";
+  ({ withSeparator, leadingAccessoryWidth } = arg0);
   if (0 === presenceCount) {
     str = "online";
     if (null !== memberCount) {
       str = "total";
     }
   }
-  let obj = { type: str, count: null, color: null, dotContainerWidth: null };
+  const obj = { type: str, count: null, color: "text-subtle", dotContainerWidth: null };
   if ("online" === str) {
     memberCount = presenceCount;
   }
   obj[1] = memberCount;
-  let str2 = "text-muted";
-  if (tmp3) {
-    str2 = "text-subtle";
-  }
-  obj[2] = str2;
-  let tmp9;
-  if (tmp3) {
-    tmp9 = leadingAccessoryWidth;
-  }
-  obj[3] = tmp9;
-  const children = [closure_9(_modDef12868, obj), ];
-  let tmp7Result = null;
+  obj[3] = leadingAccessoryWidth;
+  const children = [closure_8(_modDef12902, obj), ];
+  let tmp4Result = null;
   if (withSeparator) {
-    let str3 = "text-xs/medium";
-    if (tmp3) {
-      str3 = "text-sm/normal";
-    }
-    obj = { variant: null, color: "text-subtle", children: "\u2022" };
-    obj[0] = str3;
-    tmp7Result = tmp7(Text.Text, obj);
+    tmp4Result = tmp4(Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "\u2022" });
   }
-  children[1] = tmp7Result;
-  return closure_10(closure_11, { children });
+  children[1] = tmp4Result;
+  return closure_9(closure_10, { children });
 }
 function ParentChannelSubTitle(channel) {
   channel = channel.channel;
-  const tmp2 = useIsMobileVisualRefreshExperimentEnabledDefault("ChannelHeaderShared");
-  let obj = { lineClamp: 1, accessibilityLabel: null, maxFontSizeMultiplier: 2, variant: null, color: null, style: null, children: null };
+  let obj = { lineClamp: 1, accessibilityLabel: null, maxFontSizeMultiplier: 2, variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
   const intl = getSystemLocale.intl;
   obj = { channelName: null };
-  const tmp3 = callback3(tmp2);
-  const tmp4 = closure_9;
-  const tmp5 = require;
+  const tmp = callback3();
   obj[0] = computeChannelName.computeChannelName(channel, closure_7, closure_6);
   obj[1] = intl.formatToPlainString(getSystemLocale.t.BjYvHO, obj);
-  let str = "text-xs/medium";
-  if (tmp2) {
-    str = "text-sm/medium";
-  }
-  obj[3] = str;
-  let str2 = "text-muted";
-  if (tmp2) {
-    str2 = "text-subtle";
-  }
-  obj[4] = str2;
-  obj[5] = tmp3.parentChannelName;
+  obj[5] = tmp.parentChannelName;
   const obj3 = computeChannelName;
-  const tmp6 = closure_7;
-  const tmp7 = closure_6;
-  obj[6] = computeChannelName.computeChannelName(channel, tmp6, tmp7);
-  return tmp4(Text.Text, obj);
+  obj[6] = computeChannelName.computeChannelName(channel, closure_7, closure_6);
+  return callback2(Text.Text, obj);
 }
 function EmptyIcon() {
-  return callback2(View, { style: callback3(useIsMobileVisualRefreshExperimentEnabledDefault("ChannelHeaderShared")).channelIconWrapper });
+  return callback2(View, { style: callback3().channelIconWrapper });
 }
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles((arg0) => {
-  let obj = { wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 }, channelContent: null, nameWithArrow: null, channelNameContainer: null, channelName: null, arrowIcon: null, channelIcon: null, channelIconWrapper: null, guildChannelIcon: null, subTitleContainer: null, parentChannelName: null };
-  let num;
-  if (arg0) {
-    num = 4;
-  }
-  obj[1] = { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: num };
-  obj[2] = { flexDirection: "row", alignItems: "center", flexShrink: 1 };
-  obj[3] = { flexShrink: 1 };
-  obj = { flexShrink: 1 };
-  const merged = Object.assign(arg0 ? {} : { fontSize: 18, lineHeight: 24 });
-  obj[4] = obj;
+({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
+let closure_11 = createCacheKey.createStyles(() => {
+  let obj = { wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 }, channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 }, nameWithArrow: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, channelNameContainer: { flexShrink: 1 }, channelName: { flexShrink: 1 }, arrowIcon: null, channelIcon: null, channelIconWrapper: null, guildChannelIcon: null, subTitleContainer: null, parentChannelName: null };
   obj = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 };
   obj[5] = obj;
   obj[6] = { marginRight: 12, flexShrink: 0 };
   obj[7] = { width: 32, height: 32, justifyContent: "center", alignItems: "center" };
-  obj[8] = { tintColor: ThemesDefault.colors.TEXT_STRONG };
+  obj = { tintColor: ThemesDefault.colors.TEXT_STRONG };
+  obj[8] = obj;
   obj[9] = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 };
   obj[10] = { lineHeight: 20, flexShrink: 1 };
   return obj;

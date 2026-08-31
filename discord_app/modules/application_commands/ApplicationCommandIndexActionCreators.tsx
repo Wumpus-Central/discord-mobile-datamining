@@ -1,6 +1,6 @@
-// === Module 8096: _fetchApplicationCommandIndex ===
+// === Module 8118: _fetchApplicationCommandIndex ===
 
-// Module 8096 (_fetchApplicationCommandIndex)
+// Module 8118 (_fetchApplicationCommandIndex)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
@@ -25,7 +25,7 @@ function _fetchApplicationCommandIndex() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -56,7 +56,7 @@ function _fetchApplicationCommandIndex() {
                   closure_0 = arg0;
                   c2 = 0;
                   c3 = 0;
-                  return (/* F122541 */ function*() { ... })();
+                  return (/* F122719 */ function*() { ... })();
                 });
                 closure_7 = tmp;
                 const apply = tmp.apply;
@@ -82,8 +82,8 @@ function _fetchApplicationCommandIndex() {
                     if ("application" === type) {
                       channelId = tmp3.applicationId;
                     } else {
-                      lib(1370).assertNever(tmp3);
-                      const obj3 = lib(1370);
+                      lib(1471).assertNever(tmp3);
+                      const obj3 = lib(1471);
                     }
                   }
                 }
@@ -169,7 +169,7 @@ function _fetchApplicationCommandIndex() {
             return obj;
           } else {
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp10) {
           c2 = tmp;

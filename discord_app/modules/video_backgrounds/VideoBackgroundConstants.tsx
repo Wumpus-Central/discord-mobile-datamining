@@ -1,6 +1,6 @@
-// === Module 7706: VideoFilterType ===
+// === Module 7727: VideoFilterType ===
 
-// Module 7706 (VideoFilterType)
+// Module 7727 (VideoFilterType)
 import set from "set" /* 2 */;
 
 let obj = { OPTION_1: 0, [0]: "OPTION_1", OPTION_2: 1, [1]: "OPTION_2", OPTION_3: 2, [2]: "OPTION_3", OPTION_4: 3, [3]: "OPTION_4", OPTION_7: 7, [7]: "OPTION_7", OPTION_8: 8, [8]: "OPTION_8", OPTION_9: 9, [9]: "OPTION_9", OPTION_10: 10, [10]: "OPTION_10" };

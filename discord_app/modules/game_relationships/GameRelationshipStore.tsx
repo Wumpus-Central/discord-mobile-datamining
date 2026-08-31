@@ -1,9 +1,9 @@
-// === Module 7350: recountRelationshipTypes ===
+// === Module 7371: recountRelationshipTypes ===
 
-// Module 7350 (recountRelationshipTypes)
+// Module 7371 (recountRelationshipTypes)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "markAllUserIdListsStale" /* 4099 */;
+import closure_0 from "markAllUserIdListsStale" /* 4100 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 
 function recountRelationshipTypes() {

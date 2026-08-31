@@ -1,6 +1,6 @@
-// === Module 13532: MIDJOURNEY_GUILD_ID ===
+// === Module 13566: MIDJOURNEY_GUILD_ID ===
 
-// Module 13532 (MIDJOURNEY_GUILD_ID)
+// Module 13566 (MIDJOURNEY_GUILD_ID)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingConstants.tsx");

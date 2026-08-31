@@ -1,32 +1,30 @@
-// === Module 14790: useAppearanceSettingTrailing ===
+// === Module 14824: useAppearanceSettingTrailing ===
 
-// Module 14790 (useAppearanceSettingTrailing)
+// Module 14824 (useAppearanceSettingTrailing)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getThemeForColor from "getThemeForColor" /* 1347 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import messagesProxyDefault from "messagesProxy" /* 2568 */;
-import useThemeDefault from "useTheme" /* 4381 */;
-import useActiveThemeType from "useActiveThemeType" /* 7565 */;
-import closure_3 from "isSyncedModeThemesEnabled" /* 4266 */;
+import messagesProxyDefault from "messagesProxy" /* 2569 */;
+import useThemeDefault from "useTheme" /* 4383 */;
+import useActiveThemeType from "useActiveThemeType" /* 7586 */;
+import closure_3 from "reset" /* 4267 */;
 import { ActiveThemeType } from "SystemThemeState" /* 1305 */;
-import createToggle from "createToggle" /* 11006 */;
+import createToggle from "createToggle" /* 11031 */;
 
 require = arg1;
 function useAppearanceSettingTrailing() {
   const tmp = importDefault;
   const tmp3 = useThemeDefault();
-  const tmp4 = useIsMobileVisualRefreshExperimentEnabledDefault("AppearanceSettingTrailing");
   const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
   const obj = initialize;
-  const themeName = getThemeForColor.getThemeName(tmp3, tmp4);
+  const themeName = getThemeForColor.getThemeName(tmp3);
   const obj2 = getThemeForColor;
   const activeThemeType = useActiveThemeType.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
-    const intl2 = tmp5(1236).intl;
+    const intl2 = tmp4(1236).intl;
     return intl2.string(messagesProxyDefault.KSBBpC);
-  } else if (tmp9.CLIENT === activeThemeType) {
+  } else if (tmp8.CLIENT === activeThemeType) {
     let name;
     if (stateFromStores != null) {
       const getName = stateFromStores.getName;
@@ -38,11 +36,11 @@ function useAppearanceSettingTrailing() {
       name = themeName;
     }
     return name;
-  } else if (tmp9.SYSTEM === activeThemeType) {
-    const intl = tmp5(1236).intl;
-    return intl.string(tmp5(1236).t.wFpwSk);
+  } else if (tmp8.SYSTEM === activeThemeType) {
+    const intl = tmp4(1236).intl;
+    return intl.string(tmp4(1236).t.wFpwSk);
   } else {
-    return tmp9.DEFAULT === activeThemeType ? themeName : undefined;
+    return tmp8.DEFAULT === activeThemeType ? themeName : undefined;
   }
   const obj3 = useActiveThemeType;
 }
@@ -59,7 +57,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE,
   getComponent() {
-    return require(14791).default;
+    return require(14825).default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

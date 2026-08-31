@@ -1,9 +1,9 @@
-// === Module 12559: apexExperiment ===
+// === Module 12594: apexExperiment ===
 
-// Module 12559 (apexExperiment)
+// Module 12594 (apexExperiment)
 import set from "set" /* 2 */;
-import usePremiumGroupExperimentDefault from "usePremiumGroupExperiment" /* 12560 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import usePremiumGroupExperimentDefault from "usePremiumGroupExperiment" /* 12595 */;
+import ApexExperiment from "ApexExperiment" /* 1468 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-one-day-fractional-nitro", kind: "user", defaultConfig: false, variations: { 1: true } });
 const result = set.fileFinishedImporting("modules/collectibles/experiments/OneDayFractionalNitroExperiment.tsx");

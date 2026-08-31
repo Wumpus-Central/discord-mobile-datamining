@@ -1,9 +1,9 @@
-// === Module 6211: handleFormClose ===
+// === Module 6214: handleFormClose ===
 
-// Module 6211 (handleFormClose)
+// Module 6214 (handleFormClose)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "mergeGuildAvatar" /* 1923 */;
+import closure_0 from "mergeGuildAvatar" /* 1922 */;
 import { FormStates } from "ME" /* 676 */;
 
 function handleFormClose() {

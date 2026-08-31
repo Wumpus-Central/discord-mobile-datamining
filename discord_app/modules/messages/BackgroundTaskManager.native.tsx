@@ -1,8 +1,8 @@
-// === Module 7447: startBackgroundTask ===
+// === Module 7468: startBackgroundTask ===
 
-// Module 7447 (startBackgroundTask)
+// Module 7468 (startBackgroundTask)
 import set2 from "set" /* 500 */;
-import initializeDefault from "initialize" /* 7448 */;
+import initializeDefault from "initialize" /* 7469 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import set from "set" /* 500 */;
@@ -19,8 +19,8 @@ function startBackgroundTask(arg0) {
       obj = { title: null, content: null, priority: null, type: null, usesGateway: false };
       obj[0] = title;
       obj[1] = content;
-      obj[2] = tmp(7449).ServiceNotificationPriority.MEDIUM;
-      obj[3] = tmp(7449).ServiceNotificationType.FILE_UPLOAD;
+      obj[2] = tmp(7470).ServiceNotificationPriority.MEDIUM;
+      obj[3] = tmp(7470).ServiceNotificationType.FILE_UPLOAD;
       return initializeDefault.addServiceHandler(obj);
     }
   } else {
@@ -59,7 +59,7 @@ function backgroundify(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

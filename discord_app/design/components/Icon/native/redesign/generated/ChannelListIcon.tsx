@@ -1,10 +1,10 @@
-// === Module 17036: ChannelListIcon ===
+// === Module 17069: ChannelListIcon ===
 
-// Module 17036 (ChannelListIcon)
+// Module 17069 (ChannelListIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 17037 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 17070 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

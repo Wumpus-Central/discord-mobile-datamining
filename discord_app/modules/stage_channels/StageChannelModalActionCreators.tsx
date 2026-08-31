@@ -1,15 +1,15 @@
-// === Module 8610: connectToStage ===
+// === Module 8632: connectToStage ===
 
-// Module 8610 (connectToStage)
-import _modDef5320 from "module_5320" /* 5320 */;
-import openStageChannelSettingsAll from "openStageChannelSettings" /* 8611 */;
-import _initializeDefault from "_initialize" /* 12724 */;
+// Module 8632 (connectToStage)
+import _modDef5323 from "module_5323" /* 5323 */;
+import openStageChannelSettingsAll from "openStageChannelSettings" /* 8633 */;
+import _initializeDefault from "_initialize" /* 12759 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "reset" /* 4468 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_9 from "handleConnectionOpen" /* 1982 */;
+import closure_5 from "reset" /* 4470 */;
+import closure_6 from "ensureGuildLoaded" /* 1387 */;
+import closure_7 from "createGuildRecordFromRust" /* 1909 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_9 from "handleConnectionOpen" /* 1981 */;
 
 const require = arg1;
 function connectToStage(channel, flag) {
@@ -18,16 +18,16 @@ function connectToStage(channel, flag) {
   }
   if (!flag) {
     const _require = channel;
-    const canResult = closure_8.can(_require(1399).JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
+    const canResult = closure_8.can(_require(1395).JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
     let tmp6 = !canResult;
     if (canResult) {
       let num = openStageChannelSettingsAll.shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
       if (num) {
-        const result = tmp7(8611).openStageBlockedUsersSheet(channel, () => {
+        const result = tmp7(8633).openStageBlockedUsersSheet(channel, () => {
           closure_1_11(closure_0, true);
         });
         num = 1;
-        const tmp7Result = tmp7(8611);
+        const tmp7Result = tmp7(8633);
       }
       tmp6 = num;
       const obj2 = openStageChannelSettingsAll;
@@ -40,19 +40,19 @@ function connectToStage(channel, flag) {
   _initializeDefault.initialize();
   const obj = closure_9;
   const obj4 = _initializeDefault;
-  const voiceChannel = _modDef5320.selectVoiceChannel(channel.id);
+  const voiceChannel = _modDef5323.selectVoiceChannel(channel.id);
   if (obj.getVoiceChannelId() !== channel.id) {
     return false;
   } else {
     allApplicationStreamsForChannel = allApplicationStreamsForChannel.getAllApplicationStreamsForChannel(channel.id);
     const found = allApplicationStreamsForChannel.find((currentUserActiveStream) => !streamMarkedFull.isStreamMarkedFull(channel(table[13]).encodeStreamKey(currentUserActiveStream)));
     if (null != found) {
-      _require(4629).watchStream(found, { noFocus: true });
-      const obj6 = _require(4629);
+      _require(4631).watchStream(found, { noFocus: true });
+      const obj6 = _require(4631);
     }
     return true;
   }
-  const obj5 = _modDef5320;
+  const obj5 = _modDef5323;
 }
 function connectAndOpen(channel, flag) {
   const _require = channel;
@@ -73,19 +73,19 @@ function connectAndOpen(channel, flag) {
     result = voiceChannelId !== channel.id;
   }
   if (result) {
-    result = _require(12726).shouldShowVoiceChannelChangeConfirmation(channel);
-    const obj = _require(12726);
+    result = _require(12761).shouldShowVoiceChannelChangeConfirmation(channel);
+    const obj = _require(12761);
   }
   if (result) {
-    result = flag2(8611).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(8633).showChannelChangeConfirmationAlert(channel, () => {
       closure_1_11(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(8611);
+    const obj2 = flag2(8633);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(8611).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(8611);
+      flag2(8633).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(8633);
     }
   }
 }
@@ -113,7 +113,7 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -187,7 +187,7 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
               return flag;
             });
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp20) {
           c4 = tmp;

@@ -1,22 +1,22 @@
-// === Module 12151: _uploadContacts ===
+// === Module 12185: _uploadContacts ===
 
-// Module 12151 (_uploadContacts)
+// Module 12185 (_uploadContacts)
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import encodeProperties from "encodeProperties" /* 503 */;
 import initialize from "initialize" /* 589 */;
 import _modDef1208 from "module_1208" /* 1208 */;
-import hasFlag from "hasFlag" /* 1403 */;
-import combinedDefault from "combined" /* 1996 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
-import _modDef4159 from "module_4159" /* 4159 */;
-import _modDef4679 from "module_4679" /* 4679 */;
-import _modDef4689 from "module_4689" /* 4689 */;
-import _requestAndSyncContacts from "_requestAndSyncContacts" /* 12152 */;
+import hasFlag from "hasFlag" /* 1399 */;
+import combinedDefault from "combined" /* 1995 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
+import _modDef4160 from "module_4160" /* 4160 */;
+import _modDef4681 from "module_4681" /* 4681 */;
+import _modDef4691 from "module_4691" /* 4691 */;
+import _requestAndSyncContacts from "_requestAndSyncContacts" /* 12186 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 5190 */;
-import setStoredContacts from "setStoredContacts" /* 12150 */;
-import ContactSyncLandingPage from "ContactSyncLandingPage" /* 12149 */;
+import closure_5 from "set" /* 5193 */;
+import setStoredContacts from "setStoredContacts" /* 12184 */;
+import ContactSyncLandingPage from "ContactSyncLandingPage" /* 12183 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -39,7 +39,7 @@ function _uploadContacts() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -64,7 +64,7 @@ function _uploadContacts() {
               body = undefined;
               c4 = 1;
               c5 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -78,7 +78,7 @@ function _uploadContacts() {
             } else {
               const _JSON = JSON;
               dependencyMap = JSON.parse(callback);
-              let obj7 = flag(4679);
+              let obj7 = flag(4681);
               const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
               obj2[0] = constants2.CONNECTION_SYNC_CONTACTS;
               const obj3 = { friend_list_entries: null, background: null, allowed_in_suggestions: null, include_mutual_friends_count: false };
@@ -192,7 +192,7 @@ export const uploadContacts = function uploadContacts(c3, arg1) {
   return applyArgumentsResult;
 };
 export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
-  let obj = _modDef4679;
+  let obj = _modDef4681;
   obj = { url: closure_12.USER_BULK_RELATIONSHIPS, body: obj, trackedActionData: null, rejectWithError: false };
   obj = { user_ids, token: bulkAddToken };
   obj[2] = { event: encodeProperties.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
@@ -209,7 +209,7 @@ export const adminDeleteContactSync = function adminDeleteContactSync() {
   obj = { url: closure_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
   obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE };
   obj[2] = obj;
-  return _modDef4679.delete(obj);
+  return _modDef4681.delete(obj);
 };
 export const getImageForContactId = function getImageForContactId(closure_0, arg1) {
   let DCDContactSyncManager = NativeModules.DCDContactSyncManager;
@@ -307,9 +307,9 @@ export const getOpenLearnMoreUrl = function getOpenLearnMoreUrl() {
   return combinedDefault.getArticleURL(constants4.CONTACT_SYNC);
 };
 export const handleOpenLearnMoreLink = function handleOpenLearnMoreLink() {
-  const obj = _modDef4159;
+  const obj = _modDef4160;
   obj.openURL(combinedDefault.getArticleURL(constants4.CONTACT_SYNC));
 };
 export const transitionToAddFriendsLandingPage = function transitionToAddFriendsLandingPage() {
-  _modDef4689.popWithKey(closure_9);
+  _modDef4691.popWithKey(closure_9);
 };

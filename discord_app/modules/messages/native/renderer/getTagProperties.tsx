@@ -1,11 +1,11 @@
-// === Module 7888: getTagProperties ===
+// === Module 7910: getTagProperties ===
 
-// Module 7888 (getTagProperties)
+// Module 7910 (getTagProperties)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4439 */;
-import isPublicSystemMessage from "isPublicSystemMessage" /* 7889 */;
-import isCrosspostDefault from "isCrosspost" /* 7891 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4441 */;
+import isPublicSystemMessage from "isPublicSystemMessage" /* 7911 */;
+import isCrosspostDefault from "isCrosspost" /* 7913 */;
 
 const Image = get_ActivityIndicator.Image;
 const MessageTagTypes = MESSAGE_GROUP_SPACING.MessageTagTypes;
@@ -34,7 +34,7 @@ export default function getTagProperties(arg0) {
           const intl = tmp2(1236).intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(tmp4(7893)).uri;
+            uri = Image.resolveAssetSource(tmp4(7915)).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(tmp2(1236).t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = tmp2(1236).intl;
         stringResult2 = intl6.string(tmp2(1236).t.fyE8sH);
       }
-      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "paddingHorizontal", tagType: "set", tagIconUrl: "r", opTagText: "isArray", opTagTextColor: "bm", opTagBackgroundColor: "body" };
+      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "accessibilityLabel", tagType: true, tagIconUrl: true, opTagText: true, opTagTextColor: true, opTagBackgroundColor: true };
       obj[0] = stringResult;
       obj[1] = null;
       obj[2] = flag;
@@ -89,7 +89,7 @@ export default function getTagProperties(arg0) {
       }
       const intl5 = tmp2(1236).intl;
       stringResult3 = intl5.string(tmp2(1236).t["7s687k"]);
-      tmp2Result = tmp2(7889);
+      tmp2Result = tmp2(7911);
     }
   }
   const intl3 = tmp2(1236).intl;

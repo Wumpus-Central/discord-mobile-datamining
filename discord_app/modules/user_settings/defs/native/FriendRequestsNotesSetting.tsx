@@ -1,12 +1,12 @@
-// === Module 15440: toggle ===
+// === Module 15473: toggle ===
 
-// Module 15440 (toggle)
+// Module 15473 (toggle)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
-import MobileUserSettings from "MobileUserSettings" /* 7830 */;
-import apexExperimentDefault from "apexExperiment" /* 13528 */;
-import createToggle from "createToggle" /* 11006 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
+import MobileUserSettings from "MobileUserSettings" /* 7852 */;
+import useHideFriendRequestNotes from "useHideFriendRequestNotes" /* 12576 */;
+import createToggle from "createToggle" /* 11031 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
@@ -15,15 +15,11 @@ const toggle = createToggle.createToggle({
   },
   parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
-    const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
-    return !HideFriendRequestNotes.useSetting();
+    return !useHideFriendRequestNotes.useHideFriendRequestNotes();
   },
   onValueChange(arg0) {
     const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
     return HideFriendRequestNotes.updateSetting(!arg0);
-  },
-  usePredicate() {
-    return apexExperimentDefault.useConfig({ location: "FriendRequestsNotesSetting" }).enabled;
   }
 });
 const obj = {
@@ -33,15 +29,11 @@ const obj = {
   },
   parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
-    const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
-    return !HideFriendRequestNotes.useSetting();
+    return !useHideFriendRequestNotes.useHideFriendRequestNotes();
   },
   onValueChange(arg0) {
     const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
     return HideFriendRequestNotes.updateSetting(!arg0);
-  },
-  usePredicate() {
-    return apexExperimentDefault.useConfig({ location: "FriendRequestsNotesSetting" }).enabled;
   }
 };
 const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsNotesSetting.tsx");

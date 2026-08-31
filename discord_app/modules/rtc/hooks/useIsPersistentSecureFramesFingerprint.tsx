@@ -1,33 +1,29 @@
-// === Module 9786: useIsPersistentSecureFramesFingerprint ===
+// === Module 9809: useIsPersistentSecureFramesFingerprint ===
 
-// Module 9786 (useIsPersistentSecureFramesFingerprint)
+// Module 9809 (useIsPersistentSecureFramesFingerprint)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "createRTCConnection" /* 4520 */;
-import { SECURE_FRAMES_PUBLIC_KEY_VERSION as closure_6 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9780 */;
+import { SECURE_FRAMES_PUBLIC_KEY_VERSION as closure_5 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9802 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsPersistentSecureFramesFingerprint.tsx");
 
 export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSecureFramesFingerprint(userId) {
   userId = userId.userId;
-  let _require = userId;
-  let stateFromStores;
+  closure_0 = userId;
+  const userKey = userId.userKey;
   let callback;
   let callback2;
   let React;
   callback = undefined;
-  const items = [callback];
-  stateFromStores = _require(stateFromStores[5]).useStateFromStores(items, () => callback.getSecureFramesRosterMapEntry(closure_0));
   const loading = callback2(React.useState(true), 2);
   callback = loading[1];
-  let obj = _require(stateFromStores[5]);
-  [tmp4, c3] = callback2(React.useState(false), 2);
+  [tmp3, c3] = callback2(React.useState(false), 2);
   const isOtherUserKeyPersistent = callback2(React.useState(false), 2);
   React = isOtherUserKeyPersistent[1];
-  _require = undefined;
-  _require = callback((arg0, arg1) => {
+  closure_0 = undefined;
+  closure_0 = callback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
     c6 = 0;
@@ -45,7 +41,7 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -67,11 +63,11 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
               closure_4 = undefined;
               closure_1_2(true);
               c5 = 2;
-              closure_2 = closure_2_6;
+              closure_2 = callback;
               c6 = 3;
               c7 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback(stateFromStores[6]).isCurrentUserPublicKeyMatch(closure_2_6);
+              obj1[0] = callback(userKey[4]).isCurrentUserPublicKeyMatch(callback);
               return obj1;
             }
           } else if (1 === tmp8) {
@@ -99,7 +95,7 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
                 return obj2;
               } else {
                 callback2 = arg1;
-                obj1 = callback(stateFromStores[6]);
+                obj1 = callback(userKey[4]);
                 c6 = 4;
                 c7 = 1;
                 const obj3 = { value: null, done: false };
@@ -146,15 +142,15 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
     }
     return applyArgumentsResult;
   }, []);
-  const items1 = [stateFromStores, callback, userId];
+  const items = [userKey, callback, userId];
   const effect = React.useEffect(() => {
-    if (null == stateFromStores) {
+    if (null == userKey) {
       _undefined(false);
       callback2(false);
       callback(false);
     } else {
       callback(closure_0, tmp);
     }
-  }, items1);
+  }, items);
   return { loading: loading[0], isCurrentUserKeyPersistent, isOtherUserKeyPersistent: isOtherUserKeyPersistent[0] };
 };

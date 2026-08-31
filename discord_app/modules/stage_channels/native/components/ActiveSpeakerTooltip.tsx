@@ -1,15 +1,15 @@
-// === Module 10095: ? ===
+// === Module 10118: ? ===
 
-// Module 10095
+// Module 10118
 import ThemesDefault from "Themes" /* 712 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10075 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10098 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getParticipants" /* 4462 */;
+import closure_5 from "getParticipants" /* 4464 */;
 import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
-import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler" /* 10066 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
+import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler" /* 10089 */;
 
 const require = arg1;
 ({ useActiveSpeakerPillScrollHandler: closure_6, useActiveSpeakerPillState: error } = require("useActiveSpeakerPillScrollHandler"));
@@ -34,7 +34,7 @@ const memoResult = importAllResult.memo((channel) => {
     const speakingParticipants = closure_1_5.getSpeakingParticipants(channel.id);
     const items = [speakingParticipants.map((user) => user.user), closure_1_5.getParticipantsVersion(channel.id)];
     return items;
-  }, items1, channel(5340).isVersionEqual), 1)[0];
+  }, items1, channel(5343).isVersionEqual), 1)[0];
   let tmp5 = null;
   if (0 !== first.length) {
     tmp5 = null;
@@ -61,11 +61,11 @@ const memoResult = importAllResult.memo((channel) => {
       const obj5 = { count: null };
       obj5[0] = first.length;
       obj4[3] = intl.format(tmp2(1236).t["+dia6l"], obj5);
-      obj3[1] = callback3(tmp2(4442).Text, obj4);
+      obj3[1] = callback3(tmp2(4444).Text, obj4);
       items2[1] = callback3(View, obj3);
       obj[1] = items2;
       obj[3] = callback4(View, obj);
-      tmp5 = callback3(tmp2(5033).PressableOpacity, obj);
+      tmp5 = callback3(tmp2(5036).PressableOpacity, obj);
       const tmp10 = UserSummaryItemDefault;
     }
   }

@@ -1,11 +1,11 @@
-// === Module 12516: useWishlistSuggestionsDismissibleContent ===
+// === Module 12550: useWishlistSuggestionsDismissibleContent ===
 
-// Module 12516 (useWishlistSuggestionsDismissibleContent)
+// Module 12550 (useWishlistSuggestionsDismissibleContent)
 import setDefault from "set" /* 687 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 7313 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import closure_4 from "createUserWidgetFromServer" /* 7334 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
 
 const require = arg1;
 let closure_6 = 90 * setDefault.Millis.DAY;

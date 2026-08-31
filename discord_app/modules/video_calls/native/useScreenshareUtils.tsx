@@ -1,22 +1,22 @@
-// === Module 9980: stopScreenshare ===
+// === Module 10003: stopScreenshare ===
 
-// Module 9980 (stopScreenshare)
-import inject from "inject" /* 4499 */;
-import isStreamKey from "isStreamKey" /* 4512 */;
-import watchStream from "watchStream" /* 4629 */;
-import contextDefault from "context" /* 5918 */;
-import initializeDefault from "initialize" /* 7448 */;
-import _handleToggleVideo from "_handleToggleVideo" /* 9713 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9720 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 9975 */;
-import useHasVideoPermissionDefault from "useHasVideoPermission" /* 9975 */;
-import apexExperimentDefault from "apexExperiment" /* 9987 */;
+// Module 10003 (stopScreenshare)
+import inject from "inject" /* 4501 */;
+import isStreamKey from "isStreamKey" /* 4514 */;
+import watchStream from "watchStream" /* 4631 */;
+import contextDefault from "context" /* 5921 */;
+import initializeDefault from "initialize" /* 7469 */;
+import _handleToggleVideo from "_handleToggleVideo" /* 9735 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9742 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 9998 */;
+import useHasVideoPermissionDefault from "useHasVideoPermission" /* 9998 */;
+import apexExperimentDefault from "apexExperiment" /* 10010 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "reset" /* 4468 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_4 from "reset" /* 4470 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4499 */;
 import { ApplicationStreamStates } from "ME" /* 676 */;
-import { Features } from "DesktopSources" /* 4510 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4425 */;
+import { Features } from "DesktopSources" /* 4512 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4427 */;
 
 require = arg1;
 function stopScreenshare() {
@@ -24,8 +24,8 @@ function stopScreenshare() {
   voiceEngine.stopBroadcast();
   const currentUserActiveStream = authStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    let tmpResult = tmp(4629);
-    tmpResult = tmp(4512);
+    let tmpResult = tmp(4631);
+    tmpResult = tmp(4514);
     tmpResult.stopStream(tmpResult.encodeStreamKey(currentUserActiveStream));
   }
   const obj = inject;
@@ -103,7 +103,7 @@ export default function useScreenshareUtils(arg0) {
             }
           }
         } else {
-          fn = callback(9713).showScreenshareDisabledAlert;
+          fn = callback(9735).showScreenshareDisabledAlert;
         }
       } else {
         fn = function l() {
@@ -115,17 +115,17 @@ export default function useScreenshareUtils(arg0) {
       }
       obj[3] = fn;
       if (obj2.isMetaQuest()) {
-        tmp19(tmp ? 9992 : 9993);
+        tmp19(tmp ? 10015 : 10016);
       } else {
         if (tmp4) {
-          let tmp20 = 9994;
+          let tmp20 = 10017;
         } else {
-          tmp20 = tmp ? 9995 : 9994;
+          tmp20 = tmp ? 10018 : 10017;
         }
         obj[4] = tmp19(tmp20);
         return obj;
       }
-      obj2 = callback(1625);
+      obj2 = callback(1624);
       tmp11 = closure_1;
       tmp12 = dependencyMap;
       const tmp13 = analyticsLocations;

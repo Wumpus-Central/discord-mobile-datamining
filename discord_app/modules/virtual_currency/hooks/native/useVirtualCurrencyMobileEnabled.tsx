@@ -1,8 +1,8 @@
-// === Module 12741: isVirtualCurrencyEnabled ===
+// === Module 12776: isVirtualCurrencyEnabled ===
 
-// Module 12741 (isVirtualCurrencyEnabled)
+// Module 12776 (isVirtualCurrencyEnabled)
 import set from "set" /* 2 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
+import isMetaQuest from "isMetaQuest" /* 1624 */;
 
 const result = set.fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyMobileEnabled.tsx");
 

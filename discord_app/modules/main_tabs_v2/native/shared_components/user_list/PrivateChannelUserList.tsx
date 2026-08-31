@@ -1,10 +1,10 @@
-// === Module 11692: ? ===
+// === Module 11723: ? ===
 
-// Module 11692
+// Module 11723
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "markAllUserIdListsStale" /* 4099 */;
-import closure_6 from "mergeGuildAvatar" /* 1923 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "markAllUserIdListsStale" /* 4100 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 

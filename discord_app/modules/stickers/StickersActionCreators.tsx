@@ -1,13 +1,13 @@
-// === Module 10317: _fetchStickerPack ===
+// === Module 10341: _fetchStickerPack ===
 
-// Module 10317 (_fetchStickerPack)
+// Module 10341 (_fetchStickerPack)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 5186 */;
-import closure_5 from "_getSystemLocale" /* 1997 */;
-import closure_6 from "handleConnectionOpen" /* 4821 */;
-import closure_7 from "mergeGuildAvatar" /* 1923 */;
-import closure_8 from "loadSavedGuildStickers" /* 5409 */;
+import closure_4 from "_handleConnectionOpen" /* 5189 */;
+import closure_5 from "_getSystemLocale" /* 1996 */;
+import closure_6 from "handleConnectionOpen" /* 4823 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "loadSavedGuildStickers" /* 5412 */;
 import { Endpoints } from "ME" /* 676 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 
@@ -64,7 +64,7 @@ function _fetchStickerPacks() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -93,7 +93,7 @@ function _fetchStickerPacks() {
               sticker_packs = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp6) {
@@ -180,7 +180,7 @@ function _fetchSticker() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -224,7 +224,7 @@ function _fetchSticker() {
               obj4[1] = body;
               obj3.dispatch(obj4);
             } else {
-              obj = body(4818);
+              obj = body(4820);
               if (obj.isStandardSticker(body)) {
                 obj1 = callback2(709);
                 const obj5 = { type: "PACK_STICKER_FETCH_SUCCESS", sticker: null };
@@ -237,7 +237,7 @@ function _fetchSticker() {
               }
             }
             c4 = 3;
-            obj10 = body(4818);
+            obj10 = body(4820);
           }
         } catch (tmp24) {
           c4 = tmp;
@@ -274,7 +274,7 @@ function _fetchGuildStickersWithCreator() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -329,7 +329,7 @@ function _fetchGuildStickersWithCreator() {
             });
             obj.dispatch(obj4);
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp13) {
           c5 = tmp;
@@ -365,7 +365,7 @@ function _deleteGuildSticker() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -400,7 +400,7 @@ function _deleteGuildSticker() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp5) {
           c1 = tmp;
@@ -596,7 +596,7 @@ export const clearStickerPreview = function clearStickerPreview(channelId, draft
 };
 export const favoriteSticker = function favoriteSticker(id) {
   const _require = id;
-  const FrecencyUserSettingsActionCreators = _require(1374).FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _require(1370).FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", (stickerIds) => {
     stickerIds = stickerIds.stickerIds;
     let tmp = stickerIds;
@@ -635,7 +635,7 @@ export const favoriteSticker = function favoriteSticker(id) {
 };
 export const unfavoriteSticker = function unfavoriteSticker(id) {
   const _require = id;
-  const FrecencyUserSettingsActionCreators = _require(1374).FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _require(1370).FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", (stickerIds) => {
     stickerIds = stickerIds.stickerIds;
     stickerIds.stickerIds = stickerIds.filter((arg0) => arg0 !== closure_0);

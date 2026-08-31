@@ -1,13 +1,13 @@
-// === Module 4267: UNSAFE_isDismissibleContentDismissed ===
+// === Module 4268: UNSAFE_isDismissibleContentDismissed ===
 
-// Module 4267 (UNSAFE_isDismissibleContentDismissed)
+// Module 4268 (UNSAFE_isDismissibleContentDismissed)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import setDefault from "set" /* 687 */;
-import isSingleUseDismissibleContent from "isSingleUseDismissibleContent" /* 1378 */;
-import useNewUserDismissibleContent from "useNewUserDismissibleContent" /* 4289 */;
+import isSingleUseDismissibleContent from "isSingleUseDismissibleContent" /* 1374 */;
+import useNewUserDismissibleContent from "useNewUserDismissibleContent" /* 4290 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "handleConnectionOpen" /* 4268 */;
+import closure_5 from "handleConnectionOpen" /* 4269 */;
 
 require = arg1;
 class UNSAFE_isDismissibleContentDismissed {
@@ -138,7 +138,7 @@ function _UNSAFE_markDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -161,7 +161,7 @@ function _UNSAFE_markDismissibleContentAsDismissed() {
               }
               c4 = 1;
               c5 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp5) {
@@ -176,9 +176,9 @@ function _UNSAFE_markDismissibleContentAsDismissed() {
               } else if (callback2(callback, { bypassNewUserCheck: true })) {
                 c5 = 3;
               } else {
-                obj2 = callback(1379);
+                obj2 = callback(1375);
                 const result = obj2.markDismissibleContentAsDismissedPreProcessing(callback, obj1);
-                let obj3 = callback(1374);
+                let obj3 = callback(1370);
                 c4 = 2;
                 c5 = 1;
                 obj3 = { value: null, done: false };
@@ -189,7 +189,7 @@ function _UNSAFE_markDismissibleContentAsDismissed() {
               c5 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
-              obj = callback(1379);
+              obj = callback(1375);
               const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, obj1);
             }
             c5 = 3;
@@ -235,7 +235,7 @@ function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -258,7 +258,7 @@ function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed() {
               }
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -291,7 +291,7 @@ function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed() {
             obj = callback(obj1[6]);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, obj1);
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp26) {
           c6 = tmp;
@@ -331,7 +331,7 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -349,14 +349,14 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
               closure_4 = tmp5;
               closure_3 = tmp2;
               closure_1 = dependencyMap;
-              const guildNextNumTimesDismissed = callback(1379).getGuildNextNumTimesDismissed(callback, closure_1);
-              const obj6 = callback(1379);
-              const result = callback(1379).markDismissibleContentAsDismissedPreProcessing(callback, dependencyMap);
-              const obj7 = callback(1379);
+              const guildNextNumTimesDismissed = callback(1375).getGuildNextNumTimesDismissed(callback, closure_1);
+              const obj6 = callback(1375);
+              const result = callback(1375).markDismissibleContentAsDismissedPreProcessing(callback, dependencyMap);
+              const obj7 = callback(1375);
               c5 = 1;
               c6 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback(1379).UNSAFE_addTimeRecurringGuildDismissedContent(callback, closure_1, guildNextNumTimesDismissed);
+              obj1[0] = callback(1375).UNSAFE_addTimeRecurringGuildDismissedContent(callback, closure_1, guildNextNumTimesDismissed);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -368,10 +368,10 @@ function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = callback(1379);
+            obj = callback(1375);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, closure_1);
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp13) {
           c6 = tmp;
@@ -410,7 +410,7 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -428,13 +428,13 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
               closure_5 = tmp5;
               closure_4 = tmp2;
               closure_1 = closure_3;
-              const guildNextNumTimesDismissed = callback(1379).getGuildNextNumTimesDismissed(callback, dependencyMap);
-              const obj6 = callback(1379);
+              const guildNextNumTimesDismissed = callback(1375).getGuildNextNumTimesDismissed(callback, dependencyMap);
+              const obj6 = callback(1375);
               obj1 = {};
               const merged = Object.assign(closure_3);
               obj1.snowflakeId = closure_1;
-              const result = callback(1379).markDismissibleContentAsDismissedPreProcessing(callback, obj1);
-              const obj9 = callback(1379);
+              const result = callback(1375).markDismissibleContentAsDismissedPreProcessing(callback, obj1);
+              const obj9 = callback(1375);
               c6 = 1;
               c7 = 1;
               const obj2 = { value: null, done: false };
@@ -450,10 +450,10 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
             obj3[0] = arg1;
             return obj3;
           } else {
-            obj = callback(1379);
+            obj = callback(1375);
             const result1 = obj.markDismissibleContentAsDismissedPostProcessing(callback, closure_1);
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp13) {
           c7 = tmp;

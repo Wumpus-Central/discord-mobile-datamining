@@ -1,10 +1,10 @@
-// === Module 15759: getSectionFooterConfig ===
+// === Module 15793: getSectionFooterConfig ===
 
-// Module 15759 (getSectionFooterConfig)
-import computeSubtitle from "computeSubtitle" /* 7220 */;
-import closure_2 from "incrementVersion" /* 5450 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4090 */;
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7226 */;
+// Module 15793 (getSectionFooterConfig)
+import computeSubtitle from "computeSubtitle" /* 7241 */;
+import closure_2 from "incrementVersion" /* 5453 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4091 */;
+import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7247 */;
 import { Permissions } from "ME" /* 676 */;
 
 require = arg1;
@@ -28,18 +28,18 @@ export const getSectionFooterConfig = function getSectionFooterConfig(guildChann
   }
   let tmp6 = !tmp3;
   if (!tmp3) {
-    const tmp7 = section === tmp(7220).SECTION_INDEX_GUILD_ACTIONS;
+    const tmp7 = section === tmp(7241).SECTION_INDEX_GUILD_ACTIONS;
     if (tmp7) {
       tmp6 = tmp7;
     } else {
       if (tmpResult.isFavoritesGuildId(guildChannels.id)) {
         let tmp8 = section !== guildChannels.getSections(false).length - 1;
       } else {
-        tmp8 = section === tmp(7220).SECTION_INDEX_FAVORITES;
+        tmp8 = section === tmp(7241).SECTION_INDEX_FAVORITES;
         if (!tmp8) {
           let tmp10 = optInChannelsEnabled;
           if (tmp10) {
-            let tmp11 = section !== tmp(7220).SECTION_INDEX_UNCATEGORIZED_CHANNELS;
+            let tmp11 = section !== tmp(7241).SECTION_INDEX_UNCATEGORIZED_CHANNELS;
             if (tmp11) {
               let flag2 = section === guildChannels.recentsSectionNumber;
               if (!flag2) {
@@ -53,7 +53,7 @@ export const getSectionFooterConfig = function getSectionFooterConfig(guildChann
           tmp8 = tmp10;
         }
       }
-      tmpResult = tmp(1913);
+      tmpResult = tmp(1912);
     }
   }
   const obj = { hasDivider: tmp6, canHaveVoiceSummary: !(section === computeSubtitle.SECTION_INDEX_GUILD_ACTIONS || section === computeSubtitle.SECTION_INDEX_FAVORITES || section === computeSubtitle.SECTION_INDEX_UNCATEGORIZED_CHANNELS || section === guildChannels.recentsSectionNumber || section === guildChannels.voiceChannelsSectionNumber) };

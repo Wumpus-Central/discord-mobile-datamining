@@ -1,10 +1,10 @@
-// === Module 6842: PaintIllocon ===
+// === Module 6859: PaintIllocon ===
 
-// Module 6842 (PaintIllocon)
+// Module 6859 (PaintIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6843 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6860 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PaintIllocon.native.tsx");

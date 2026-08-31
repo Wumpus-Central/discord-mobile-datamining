@@ -1,13 +1,13 @@
-// === Module 10261: markUnreadBySnowflakeID ===
+// === Module 10285: markUnreadBySnowflakeID ===
 
-// Module 10261 (markUnreadBySnowflakeID)
+// Module 10285 (markUnreadBySnowflakeID)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "storeThread" /* 4092 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "reinjectEphemerals" /* 4701 */;
-import { shouldBadgeMessage } from "generateOldThreadCutoff" /* 4461 */;
-import closure_8 from "mergeGuildAvatar" /* 1923 */;
+import closure_4 from "storeThread" /* 4093 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "reinjectEphemerals" /* 4703 */;
+import { shouldBadgeMessage } from "generateOldThreadCutoff" /* 4463 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -41,7 +41,7 @@ function _markUnreadBySnowflakeID() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -69,7 +69,7 @@ function _markUnreadBySnowflakeID() {
                   channel = 1;
                   c6 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = callback2(7456).unarchiveThread(channel, false);
+                  obj1[0] = callback2(7477).unarchiveThread(channel, false);
                   return obj1;
                 }
               }
@@ -81,7 +81,7 @@ function _markUnreadBySnowflakeID() {
               obj2[1] = obj3;
               HTTP.post(obj2);
               c6 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -103,7 +103,7 @@ function _markUnreadBySnowflakeID() {
             return obj;
           }
           if (!closure_4.hasJoined(callback)) {
-            obj2 = callback2(7456);
+            obj2 = callback2(7477);
             channel = 2;
             c6 = 1;
             const obj5 = { value: null, done: false };

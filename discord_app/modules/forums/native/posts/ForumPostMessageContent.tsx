@@ -1,11 +1,11 @@
-// === Module 11535: ForumPostMessageContent ===
+// === Module 11562: ForumPostMessageContent ===
 
-// Module 11535 (ForumPostMessageContent)
+// Module 11562 (ForumPostMessageContent)
 import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4442 */;
-import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 11536 */;
+import Text from "Text" /* 4444 */;
+import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 11563 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;

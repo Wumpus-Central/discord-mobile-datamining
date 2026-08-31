@@ -1,8 +1,8 @@
-// === Module 16235: useAutoTrackSearchTabCountsViewedAnalytics ===
+// === Module 16269: useAutoTrackSearchTabCountsViewedAnalytics ===
 
-// Module 16235 (useAutoTrackSearchTabCountsViewedAnalytics)
+// Module 16269 (useAutoTrackSearchTabCountsViewedAnalytics)
 import closure_2 from "noop" /* 19 */;
-import { SearchTabs } from "MessageEmbedTypes" /* 7569 */;
+import { SearchTabs } from "MessageEmbedTypes" /* 7590 */;
 
 let result = require("set").fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
 

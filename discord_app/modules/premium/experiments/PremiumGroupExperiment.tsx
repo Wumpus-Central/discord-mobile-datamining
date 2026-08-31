@@ -1,8 +1,8 @@
-// === Module 12560: usePremiumGroupExperiment ===
+// === Module 12595: usePremiumGroupExperiment ===
 
-// Module 12560 (usePremiumGroupExperiment)
+// Module 12595 (usePremiumGroupExperiment)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import ApexExperiment from "ApexExperiment" /* 1468 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2025-12-katsudon", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const result = set.fileFinishedImporting("modules/premium/experiments/PremiumGroupExperiment.tsx");

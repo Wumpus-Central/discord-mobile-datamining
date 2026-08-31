@@ -1,11 +1,11 @@
-// === Module 15752: FavoritesGuildCoachmarkMenuItemContent ===
+// === Module 15786: FavoritesGuildCoachmarkMenuItemContent ===
 
-// Module 15752 (FavoritesGuildCoachmarkMenuItemContent)
-import Layer from "Layer" /* 5905 */;
-import items12 from "items1" /* 10256 */;
+// Module 15786 (FavoritesGuildCoachmarkMenuItemContent)
+import Layer from "Layer" /* 5908 */;
+import items12 from "items1" /* 10280 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "initializeFromUserSettings" /* 1394 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import closure_4 from "initializeFromUserSettings" /* 1390 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
 import { jsx } from "jsxProd" /* 21 */;
 import set from "set" /* 2 */;
 
@@ -33,7 +33,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, callback, callback1];
   const memo = callback.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "VoiceControlToggleNuxActionSheet", onButtonPress: "M2 9H1v1h1V9ZM3 8H2v1h1V8ZM6 8H5v1h1V8ZM10 7H6v1h4V7ZM12 9h-1v1h1V9ZM14 8h-2v1h2V8Z" };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "installation", onButtonPress: null };
     const intl = stateFromStores(markPopoverAsDismissed[8]).intl;
     const tmp4 = shouldShowPopover(markPopoverAsDismissed[9]);
     if (stateFromStores) {

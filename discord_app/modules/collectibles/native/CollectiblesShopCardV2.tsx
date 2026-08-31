@@ -1,15 +1,15 @@
-// === Module 8827: CollectiblesShopCardInternalV2 ===
+// === Module 8850: CollectiblesShopCardInternalV2 ===
 
-// Module 8827 (CollectiblesShopCardInternalV2)
+// Module 8850 (CollectiblesShopCardInternalV2)
 import ThemesDefault from "Themes" /* 712 */;
-import context from "context" /* 8830 */;
+import context from "context" /* 8853 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "handleThemeChange" /* 1302 */;
-import closure_6 from "updateCategoriesAndProducts" /* 7234 */;
+import closure_6 from "updateCategoriesAndProducts" /* 7255 */;
 import items from "items" /* 678 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function CollectiblesShopCardInternalV2(product) {

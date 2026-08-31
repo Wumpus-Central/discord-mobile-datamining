@@ -1,8 +1,8 @@
-// === Module 4559: getMaxSinkValue ===
+// === Module 4561: getMaxSinkValue ===
 
-// Module 4559 (getMaxSinkValue)
+// Module 4561 (getMaxSinkValue)
 import set2 from "set" /* 2 */;
-import DesktopSources from "DesktopSources" /* 4510 */;
+import DesktopSources from "DesktopSources" /* 4512 */;
 
 ({ defaultVideoQualityOptions: c0, VIDEO_QUALITY_FRAMERATE: closure_1, VIDEO_QUALITY_FRAMERATE_MUTED_2: obj1, VIDEO_QUALITY_FRAMERATE_MUTED: c3 } = DesktopSources);
 let MediaSinkWantsLadder;

@@ -1,6 +1,6 @@
-// === Module 15690: GuildPowerupsBoostToUnlockCoachmark ===
+// === Module 15724: GuildPowerupsBoostToUnlockCoachmark ===
 
-// Module 15690 (GuildPowerupsBoostToUnlockCoachmark)
+// Module 15724 (GuildPowerupsBoostToUnlockCoachmark)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
@@ -12,6 +12,6 @@ export default function GuildPowerupsBoostToUnlockCoachmark(powerup) {
   const items = [powerup, markAsDismissed];
   ({ guildId, targetRef } = powerup);
   const memo = React.useMemo(() => ({ type: powerup(closure_1_2[1]).GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK, powerup, markAsDismissed }), items);
-  markAsDismissed(15691)(targetRef, guildId, memo);
+  markAsDismissed(15725)(targetRef, guildId, memo);
   return null;
 };

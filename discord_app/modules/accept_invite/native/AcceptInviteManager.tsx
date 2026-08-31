@@ -1,14 +1,14 @@
-// === Module 16810: prototype ===
+// === Module 16843: prototype ===
 
-// Module 16810 (prototype)
-import initializeDefault from "initialize" /* 5451 */;
+// Module 16843 (prototype)
+import initializeDefault from "initialize" /* 5454 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "trackCommunicationDisabled" /* 1993 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "updateInvite" /* 4430 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4090 */;
-import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 7361 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "trackCommunicationDisabled" /* 1992 */;
+import closure_6 from "createGuildRecordFromRust" /* 1909 */;
+import closure_7 from "updateInvite" /* 4432 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4091 */;
+import { ACCEPT_INVITE_MODAL_KEY } from "ACCEPT_INVITE_MODAL_KEY" /* 7382 */;
 import ME from "ME" /* 676 */;
 
 let require = arg1;
@@ -76,7 +76,7 @@ let prototype = function AcceptInviteManager() {
               applyArgumentsResult(closure_2_2[15]).acceptFriendInvite(invite, obj);
               const obj6 = applyArgumentsResult(closure_2_2[15]);
               const tmp34 = closure_2_2;
-              closure_2_1(closure_2_2[16]).wait(() => set(8804).clearDisplayedInvite());
+              closure_2_1(closure_2_2[16]).wait(() => set(8827).clearDisplayedInvite());
               flag = false;
               const obj8 = closure_2_1(closure_2_2[16]);
             }
@@ -130,7 +130,7 @@ let prototype = function AcceptInviteManager() {
           tmp40 = closure_2_2;
         }
         if (flag2) {
-          closure_2_1(closure_2_2[16]).wait(() => set(8804).clearDisplayedInvite());
+          closure_2_1(closure_2_2[16]).wait(() => set(8827).clearDisplayedInvite());
           flag = false;
           const obj5 = closure_2_1(closure_2_2[16]);
         } else {

@@ -1,6 +1,6 @@
-// === Module 15364: metadata ===
+// === Module 15397: metadata ===
 
-// Module 15364 (metadata)
+// Module 15397 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js");

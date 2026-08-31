@@ -1,6 +1,6 @@
-// === Module 10102: DesktopNotificationTypes ===
+// === Module 10125: DesktopNotificationTypes ===
 
-// Module 10102 (DesktopNotificationTypes)
+// Module 10125 (DesktopNotificationTypes)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 import initializeDefault from "initialize" /* 589 */;

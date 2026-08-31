@@ -1,16 +1,16 @@
-// === Module 16319: UserProfileYourFriendsCard ===
+// === Module 16353: UserProfileYourFriendsCard ===
 
-// Module 16319 (UserProfileYourFriendsCard)
+// Module 16353 (UserProfileYourFriendsCard)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "recomputeAffinities" /* 7351 */;
-import closure_7 from "markAllUserIdListsStale" /* 4099 */;
-import closure_8 from "mergeGuildAvatar" /* 1923 */;
+import closure_6 from "recomputeAffinities" /* 7372 */;
+import closure_7 from "markAllUserIdListsStale" /* 4100 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
@@ -47,9 +47,9 @@ export default function UserProfileYourFriendsCard(arg0) {
   const items1 = [closure_7];
   stateFromStoresArray1 = _require(589).useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
   const obj2 = _require(589);
-  gameRelationshipsByType = _require(12427).useGameRelationshipsByType(RelationshipTypes.FRIEND);
+  gameRelationshipsByType = _require(12461).useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = lib(9877).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = lib(9900).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -61,7 +61,7 @@ export default function UserProfileYourFriendsCard(arg0) {
     const takeResult = found.take(5);
     const tmp3 = closure_1_8;
     const tmp4 = lib;
-    let valueResult = mapped.filter(lib(1370).isNotNullish).value();
+    let valueResult = mapped.filter(lib(1471).isNotNullish).value();
     if (valueResult.length >= 5) {
       dependencyMap(valueResult);
     } else {
@@ -71,11 +71,11 @@ export default function UserProfileYourFriendsCard(arg0) {
       const uniqResult = mapped1.uniq();
       const mapped2 = mapped1.uniq().take(5 - valueResult.length).map(tmp3.getUser);
       const takeResult1 = mapped1.uniq().take(5 - valueResult.length);
-      valueResult = mapped2.filter(tmp4(1370).isNotNullish).value();
+      valueResult = mapped2.filter(tmp4(1471).isNotNullish).value();
       const items = [];
       HermesBuiltin.arraySpread(valueResult, HermesBuiltin.arraySpread(valueResult, 0));
       dependencyMap(items);
-      const iter2 = mapped2.filter(tmp4(1370).isNotNullish);
+      const iter2 = mapped2.filter(tmp4(1471).isNotNullish);
     }
   }, items2);
   const items3 = [first, , ];
@@ -88,7 +88,7 @@ export default function UserProfileYourFriendsCard(arg0) {
         let obj = { style: { transform: items }, children: null };
         obj = { translateX: 4 * (closure_1.length - 1 - arg1) };
         items = [obj];
-        obj = { user: id, guildId: "r", size: "r", cutout: "quests" };
+        obj = { user: id, guildId: "r", size: "Object", cutout: null };
         obj[2] = closure_1_0(closure_1_2[8]).AvatarSizes.XSMALL;
         let tmp3;
         if (arg1 < closure_1.length - 1) {
@@ -111,7 +111,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   obj = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
   const intl2 = _require(1236).intl;
   obj[4] = intl2.string(_require(1236).t.TdEu5X);
-  const items5 = [callback(_require(4442).Text, obj), memo, callback(_require(5968).ChevronSmallRightIcon, { size: "sm" })];
+  const items5 = [callback(_require(4444).Text, obj), memo, callback(_require(5971).ChevronSmallRightIcon, { size: "sm" })];
   obj[5] = items5;
-  return callback2(_require(5033).PressableOpacity, obj);
+  return callback2(_require(5036).PressableOpacity, obj);
 };

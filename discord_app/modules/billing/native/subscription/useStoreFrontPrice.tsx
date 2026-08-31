@@ -1,6 +1,6 @@
-// === Module 8170: useStoreFrontPrice ===
+// === Module 8192: useStoreFrontPrice ===
 
-// Module 8170 (useStoreFrontPrice)
+// Module 8192 (useStoreFrontPrice)
 import closure_2 from "noop" /* 19 */;
 import { PriceSetAssignmentPurchaseTypes as closure_3 } from "ME" /* 676 */;
 
@@ -26,12 +26,12 @@ export default function useStoreFrontPrice(arg0, arg1) {
       if (null == tmp3) {
         priceState = closure_1_4.COUNTRY_PRICE_UNAVAILABLE;
       } else {
-        obj = callback(4108);
+        obj = callback(4109);
         const countryPrices = obj.getCountryPrices(tmp.id, closure_1_3.MOBILE);
         obj = { purchaseType: null, currency: null };
         obj[0] = closure_1_3.MOBILE;
         obj[1] = tmp11.currency;
-        const experimentalGetPriceResult = callback(4108).experimentalGetPrice(tmp.id, obj);
+        const experimentalGetPriceResult = callback(4109).experimentalGetPrice(tmp.id, obj);
         if (countryPrices.countryCode !== tmp11.country) {
           priceState = closure_1_4.MISMATCHING_COUNTRIES;
         } else if (null == experimentalGetPriceResult) {
@@ -40,7 +40,7 @@ export default function useStoreFrontPrice(arg0, arg1) {
           priceState = closure_1_4.PRICE_AVAILABLE;
         }
         const price = experimentalGetPriceResult;
-        const obj2 = callback(4108);
+        const obj2 = callback(4109);
       }
     }
     return { price, priceState };

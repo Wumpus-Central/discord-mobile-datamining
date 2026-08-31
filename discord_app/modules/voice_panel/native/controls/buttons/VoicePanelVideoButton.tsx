@@ -1,15 +1,15 @@
-// === Module 16707: VideoButtonRive ===
+// === Module 16740: VideoButtonRive ===
 
-// Module 16707 (VideoButtonRive)
-import ManaContext from "ManaContext" /* 4173 */;
+// Module 16740 (VideoButtonRive)
+import ManaContext from "ManaContext" /* 4174 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 9474 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4090 */;
-import { Features } from "DesktopSources" /* 4510 */;
+import closure_5 from "initialize" /* 9496 */;
+import closure_6 from "ensureGuildLoaded" /* 1387 */;
+import closure_7 from "createGuildRecordFromRust" /* 1909 */;
+import closure_8 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4091 */;
+import { Features } from "DesktopSources" /* 4512 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -23,9 +23,9 @@ function VideoButtonRive(arg0) {
   }
   obj[1] = str;
   if (isVideoEnabled) {
-    let VideoSlashIcon = tmp3(10131).VideoIcon;
+    let VideoSlashIcon = tmp3(10154).VideoIcon;
   } else {
-    VideoSlashIcon = tmp3(12410).VideoSlashIcon;
+    VideoSlashIcon = tmp3(12444).VideoSlashIcon;
   }
   obj[2] = <VideoSlashIcon color={color} />;
   obj[1] = jsx(ManaContext.CameraRive, { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null });

@@ -1,13 +1,13 @@
-// === Module 16038: ICYMIForumThreadRow ===
+// === Module 16072: ICYMIForumThreadRow ===
 
-// Module 16038 (ICYMIForumThreadRow)
+// Module 16072 (ICYMIForumThreadRow)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "createGuildRecordFromRust" /* 1909 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 15971 */;
+import createICYMIStyles from "createICYMIStyles" /* 16005 */;
 
 const require = arg1;
 class ICYMIForumThreadRow {

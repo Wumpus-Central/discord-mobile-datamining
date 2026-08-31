@@ -1,14 +1,14 @@
-// === Module 15832: ? ===
+// === Module 15866: ? ===
 
-// Module 15832
+// Module 15866
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initializeFromUserSettings" /* 1394 */;
+import closure_5 from "initializeFromUserSettings" /* 1390 */;
 import { FAVORITES } from "ME" /* 676 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -19,21 +19,21 @@ obj = { position: "absolute", top: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_M
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildsBarFavorites() {
-  const tmp3 = markPopoverAsDismissed(1367)("GuildsBarFavorites");
-  let obj = shouldShowPopover(15816);
-  obj1 = shouldShowPopover(10244);
+  let obj = shouldShowPopover(15850);
+  obj1 = shouldShowPopover(10268);
   const isFavoritesGuildSelected = obj1.useIsFavoritesGuildSelected();
   let obj2 = shouldShowPopover(589);
   let items = [closure_5];
   const stateFromStores = obj2.useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
-  ({ badge, unread } = markPopoverAsDismissed(15833)(stateFromStores));
-  const tmp8 = markPopoverAsDismissed(15833)(stateFromStores);
-  ({ badge: badge2, cutouts } = markPopoverAsDismissed(15818)({ mentionCount: badge }));
+  const tmp5 = markPopoverAsDismissed;
+  ({ badge, unread } = markPopoverAsDismissed(15867)(stateFromStores));
+  const tmp6 = markPopoverAsDismissed(15867)(stateFromStores);
+  ({ badge: badge2, cutouts } = markPopoverAsDismissed(15852)({ mentionCount: badge }));
   const ref = importAllResult.useRef(null);
-  const tmp9 = markPopoverAsDismissed(15818)({ mentionCount: badge });
-  const tmp11 = callback();
-  const favoritesIntroPopover = shouldShowPopover(10254).useFavoritesIntroPopover();
+  const tmp7 = markPopoverAsDismissed(15852)({ mentionCount: badge });
+  const tmp9 = callback2();
+  const favoritesIntroPopover = shouldShowPopover(10278).useFavoritesIntroPopover();
   shouldShowPopover = favoritesIntroPopover.shouldShowPopover;
   markPopoverAsDismissed = favoritesIntroPopover.markPopoverAsDismissed;
   const items1 = [shouldShowPopover, markPopoverAsDismissed];
@@ -42,10 +42,10 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
       if (closure_0) {
         callback(closure_1_7.TAKE_ACTION);
       }
-      closure_1_1(closure_1_2[15])(closure_1_6);
+      closure_1_1(closure_1_2[14])(closure_1_6);
     },
     onLongPress() {
-      callback(table[16])();
+      callback(table[15])();
     }
   }), items1);
   const memo1 = importAllResult.useMemo(() => {
@@ -57,44 +57,36 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
     obj[0] = items;
     obj[1] = function onAccessibilityAction(nativeEvent) {
       if (nativeEvent.nativeEvent.actionName === closure_10) {
-        callback(table[16])();
+        callback(table[15])();
       }
     };
     return obj;
   }, []);
   ({ accessibilityActions, onAccessibilityAction } = memo1);
-  obj = { selected: isFavoritesGuildSelected, circle: null, unread: null, styles: null, cutouts: null, overState: "l", config: "ssh", accessibilityActions: "ar", onAccessibilityAction: null, label: null, externalChildren: "function pnpm_timingTs2(){const{Easing,userConfig,toValue,callback,getReduceMotionForAnimation}=this.__closure;var _userConfig;const config={duration:300,easing:Easing.inOut(Easing.quad)};if(userConfig){Object.keys(userConfig).forEach(function(key){return config[key]=userConfig[key];});}function timing(animation,now){const{toValue:toValue,startTime:startTime,startValue:startValue}=animation;const runtime=now-startTime;if(runtime>=config.duration){animation.startTime=0;animation.current=toValue;return true;}const progress=animation.easing(runtime/config.duration);animation.current=startValue+(toValue-startValue)*progress;return false;}function onStart(animation,value,now,previousAnimation){if(previousAnimation&&previousAnimation.type==='timing'&&previousAnimation.toValue===toValue&&previousAnimation.startTime){animation.startTime=previousAnimation.startTime;animation.startValue=previousAnimation.startValue;}else{animation.startTime=now;animation.startValue=value;}animation.current=value;if(typeof config.easing==='object'){animation.easing=config.easing.factory();}else{animation.easing=config.easing;}}return{type:'timing',onFrame:timing,onStart:onStart,progress:0,toValue:toValue,startValue:0,startTime:0,easing:function(){return 0;},current:toValue,callback:callback,reduceMotion:getReduceMotionForAnimation((_userConfig=userConfig)===null||_userConfig===void 0?void 0:_userConfig.reduceMotion)};}", expandedChildren: "function pnpm_timingTs1(toValue,userConfig,callback){const{__DEV__,assertEasingIsWorklet,defineAnimation,Easing,getReduceMotionForAnimation}=this.__closure;if(__DEV__&&userConfig!==null&&userConfig!==void 0&&userConfig.easing){assertEasingIsWorklet(userConfig.easing);}return defineAnimation(toValue,function(){'worklet';const config={duration:300,easing:Easing.inOut(Easing.quad)};if(userConfig){Object.keys(userConfig).forEach(function(key){return config[key]=userConfig[key];});}function timing(animation,now){const{toValue:toValue,startTime:startTime,startValue:startValue}=animation;const runtime=now-startTime;if(runtime>=config.duration){animation.startTime=0;animation.current=toValue;return true;}const progress=animation.easing(runtime/config.duration);animation.current=startValue+(toValue-startValue)*progress;return false;}function onStart(animation,value,now,previousAnimation){if(previousAnimation&&previousAnimation.type==='timing'&&previousAnimation.toValue===toValue&&previousAnimation.startTime){animation.startTime=previousAnimation.startTime;animation.startValue=previousAnimation.startValue;}else{animation.startTime=now;animation.startValue=value;}animation.current=value;if(typeof config.easing==='object'){animation.easing=config.easing.factory();}else{animation.easing=config.easing;}}return{type:'timing',onFrame:timing,onStart:onStart,progress:0,toValue:toValue,startValue:0,startTime:0,easing:function(){return 0;},current:toValue,callback:callback,reduceMotion:getReduceMotionForAnimation(userConfig===null||userConfig===void 0?void 0:userConfig.reduceMotion)};});}", children: "function linear_Pnpm_EasingTs1(t){return t;}" };
-  let tmp19 = !tmp3;
-  const obj4 = shouldShowPopover(10254);
-  const tmp15 = closure_9;
-  if (!tmp3) {
-    tmp19 = !isFavoritesGuildSelected;
-  }
-  obj[1] = tmp19;
-  obj[2] = unread;
-  obj[3] = guildsBarAnimatedWrapperStyles;
-  obj[4] = cutouts;
+  obj = { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: true, accessibilityActions: "list", onAccessibilityAction: null, label: null, externalChildren: null, expandedChildren: null, children: null };
   obj[6] = memo;
   obj[7] = accessibilityActions;
   obj[8] = onAccessibilityAction;
-  let intl = tmp4(1236).intl;
+  const obj4 = shouldShowPopover(10278);
+  const tmp13 = closure_9;
+  let intl = shouldShowPopover(1236).intl;
   obj[9] = intl.string(shouldShowPopover(1236).t.wMWyci);
   obj[10] = badge2;
-  obj[11] = closure_8(shouldShowPopover(15834).HomeDrawerFavoritesRowExpandedChildren, {});
-  const colors = tmp(712).colors;
+  obj[11] = callback(shouldShowPopover(15868).HomeDrawerFavoritesRowExpandedChildren, {});
+  const colors = markPopoverAsDismissed(712).colors;
   obj = { color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj[12] = closure_8(shouldShowPopover(9119).StarIcon, obj);
-  const children = [closure_8(markPopoverAsDismissed(15816), obj), , ];
-  obj1 = { ref, style: tmp11.anchor, pointerEvents: "none", collapsable: false };
-  children[1] = closure_8(View, obj1);
+  obj[12] = callback(shouldShowPopover(9142).StarIcon, obj);
+  const children = [callback(markPopoverAsDismissed(15850), obj), , ];
+  obj1 = { ref, style: tmp9.anchor, pointerEvents: "none", collapsable: false };
+  children[1] = callback(View, obj1);
   if (shouldShowPopover) {
     obj2 = { targetRef: null, markAsDismissed: null };
     obj2[0] = ref;
     obj2[1] = markPopoverAsDismissed;
-    shouldShowPopover = tmp17(tmp(15835), obj2);
+    shouldShowPopover = tmp15(tmp5(15869), obj2);
   }
   children[2] = shouldShowPopover;
-  return tmp15(View, { children });
+  return tmp13(View, { children });
 });
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFavorites.tsx");
 

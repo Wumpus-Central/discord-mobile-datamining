@@ -1,14 +1,14 @@
-// === Module 13236: items ===
+// === Module 13270: items ===
 
-// Module 13236 (items)
+// Module 13270 (items)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 500 */;
-import get from "get" /* 5050 */;
-import supportsZstd from "supportsZstd" /* 13237 */;
-import enforcing from "enforcing" /* 13238 */;
-import _mod13239 from "module_13239" /* 13239 */;
+import get from "get" /* 5053 */;
+import supportsZstd from "supportsZstd" /* 13271 */;
+import enforcing from "enforcing" /* 13272 */;
+import _mod13273 from "module_13273" /* 13273 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const items = [];
@@ -93,7 +93,7 @@ items.push(fn);
 const fn2 = (arg0) => {
   tmp = new tmp(arg0, new.target, tmp, new.target);
   // ThrowIfThisInitialized (0x7c)
-  tmp._pako = _mod13239;
+  tmp._pako = _mod13273;
   tmp._usesZstd = false;
   tmp._zstdDecoder = null;
   tmp._zstdStream = null;
@@ -221,7 +221,7 @@ prototype3["handleFlushEnd"] = function handleFlushEnd(arg0) {
 items.push(fn2);
 const fn3 = () => {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult._pako = _mod13239;
+  applyArgumentsResult._pako = _mod13273;
   return applyArgumentsResult;
 };
 const prototype4 = fn3.prototype;
@@ -286,7 +286,7 @@ prototype5["bindWebSocket"] = function bindWebSocket(_socketId) {
   const isAndroidResult = set2.isAndroid();
   if (supportsZstdResult) {
     if (isAndroidResult) {
-      const _default2 = tmp2(13238).default;
+      const _default2 = tmp2(13272).default;
       if (_default2 != null) {
         const result = _default2.enableZstdStreamSupport(self._socketId);
       }
@@ -295,7 +295,7 @@ prototype5["bindWebSocket"] = function bindWebSocket(_socketId) {
       const result1 = DCDCompressionManager2.enableZstdStreamSupport(self._socketId, 0);
     }
   } else if (isAndroidResult) {
-    const _default = tmp2(13238).default;
+    const _default = tmp2(13272).default;
     if (_default != null) {
       const result2 = _default.enableZlibStreamSupport(self._socketId);
     }
@@ -329,7 +329,7 @@ prototype5["close"] = function close() {
   this._socketId = null;
   if (null !== _socketId) {
     if (obj.isAndroid()) {
-      const _default = tmp(13238).default;
+      const _default = tmp(13272).default;
       if (_default != null) {
         const result = _default.disableZlibStreamSupport(_socketId);
       }

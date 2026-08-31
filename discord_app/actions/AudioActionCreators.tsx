@@ -1,24 +1,24 @@
-// === Module 9720: trackDeviceChanged ===
+// === Module 9742: trackDeviceChanged ===
 
-// Module 9720 (trackDeviceChanged)
+// Module 9742 (trackDeviceChanged)
 import timestampDefault from "timestamp" /* 3 */;
 import debounceDefault from "debounce" /* 636 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isPremiumResolution from "isPremiumResolution" /* 9527 */;
-import snapVolumeToDefault from "snapVolumeToDefault" /* 9722 */;
-import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9724 */;
-import _getFilterBlob from "_getFilterBlob" /* 9725 */;
+import isPremiumResolution from "isPremiumResolution" /* 9549 */;
+import snapVolumeToDefault from "snapVolumeToDefault" /* 9744 */;
+import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9746 */;
+import _getFilterBlob from "_getFilterBlob" /* 9747 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4519 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "createRTCConnection" /* 4520 */;
-import closure_8 from "handleConnectionOpen" /* 1982 */;
-import closure_9 from "mergeGuildAvatar" /* 1923 */;
+import closure_4 from "initialize" /* 4521 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_7 from "createRTCConnection" /* 4522 */;
+import closure_8 from "handleConnectionOpen" /* 1981 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { SoundOutputChannel } from "SoundOutputChannel" /* 9721 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4510 */;
+import { SoundOutputChannel } from "SoundOutputChannel" /* 9743 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4512 */;
 
 require = arg1;
 function trackDeviceChanged(inputDevices, inputDeviceId, found, Video, arg4) {
@@ -619,7 +619,7 @@ obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -639,7 +639,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9724)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
+              obj1[0] = v0(9746)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -656,7 +656,7 @@ obj = {
             obj3[1] = closure_0;
             obj.dispatch(obj3);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp18) {
           dependencyMap = tmp;
@@ -706,7 +706,7 @@ obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -726,7 +726,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9724)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
+              obj1[0] = v0(9746)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -743,7 +743,7 @@ obj = {
             obj3[1] = closure_0;
             obj.dispatch(obj3);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp18) {
           dependencyMap = tmp;

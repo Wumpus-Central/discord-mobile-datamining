@@ -1,6 +1,6 @@
-// === Module 16688: getConsoleColor ===
+// === Module 16721: getConsoleColor ===
 
-// Module 16688 (getConsoleColor)
+// Module 16721 (getConsoleColor)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import ThemesDefault from "Themes" /* 712 */;

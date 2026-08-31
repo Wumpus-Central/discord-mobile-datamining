@@ -1,19 +1,20 @@
-// === Module 14602: EmptyState ===
+// === Module 14636: EmptyState ===
 
-// Module 14602 (EmptyState)
+// Module 14636 (EmptyState)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4442 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6221 */;
-import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression" /* 11274 */;
-import BountiesCtaDescriptionDefault from "BountiesCtaDescription" /* 14618 */;
+import Text from "Text" /* 4444 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6224 */;
+import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression" /* 11303 */;
+import StarfieldBackgroundDefault from "StarfieldBackground" /* 14648 */;
+import ListEdgeSpacerDefault from "ListEdgeSpacer" /* 14653 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "set" /* 7394 */;
-import { BountyCarouselEmptyStateReason as closure_7 } from "QuestsExperimentLocations" /* 5352 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import closure_6 from "set" /* 7415 */;
+import { BountyCarouselEmptyStateReason as closure_7 } from "QuestsExperimentLocations" /* 5355 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function EmptyState(reason) {
@@ -59,10 +60,6 @@ function keyExtractor(id) {
 }
 function QuestHomeBountiesCarousel(bounties) {
   bounties = bounties.bounties;
-  ({ orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel } = bounties);
-  if (showOrbShopPlaceholderCarousel === undefined) {
-    showOrbShopPlaceholderCarousel = false;
-  }
   let ref;
   let first;
   let callback;
@@ -82,21 +79,16 @@ function QuestHomeBountiesCarousel(bounties) {
   let callback7;
   let isInView;
   let tmp = callback4();
-  let tmp2 = obtainableOrbRewards > 0;
-  if (tmp2) {
-    tmp2 = orbShopProducts.length >= bounties(first[18]).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-    let tmp5 = orbShopProducts.length >= bounties(first[18]).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-  }
   ref = first1.useRef(null);
-  const tmp7 = callback(first1.useState(0), 2);
-  first = tmp7[0];
-  callback = tmp7[1];
-  const tmp9 = callback(first1.useState(0), 2);
-  first1 = tmp9[0];
-  closure_5 = tmp9[1];
-  const tmp11 = callback(first1.useState(false), 2);
-  first2 = tmp11[0];
-  closure_7 = tmp11[1];
+  const tmp3 = callback(first1.useState(0), 2);
+  first = tmp3[0];
+  callback = tmp3[1];
+  let tmp5 = callback(first1.useState(0), 2);
+  first1 = tmp5[0];
+  closure_5 = tmp5[1];
+  const tmp7 = callback(first1.useState(false), 2);
+  first2 = tmp7[0];
+  closure_7 = tmp7[1];
   closure_8 = first1.useRef(null);
   callback2 = first1.useRef(false);
   closure_10 = first1.useRef({ parent: { scrollX: 0 }, children: {}, axis: "horizontal" });
@@ -302,8 +294,8 @@ function QuestHomeBountiesCarousel(bounties) {
     const obj6 = ref(first[23]);
     obj6.showModal({ bountyId: bountyId.id, sourceQuestContent: bounties(first[22]).QuestContent.QUEST_HOME_MOBILE_CAROUSEL });
   }, []);
-  const tmp26 = ref(first[29])();
-  isInView = tmp26.isInView;
+  const tmp20 = ref(first[29])();
+  isInView = tmp20.isInView;
   const items6 = [first1, callback7, isInView, first2];
   const items7 = [bounties, callback];
   const callback8 = first1.useCallback((item) => {
@@ -342,22 +334,12 @@ function QuestHomeBountiesCarousel(bounties) {
     return callback4(closure_5, obj);
   }, items7);
   let obj = { style: tmp.container, children: null };
-  obj = { ref: tmp26.containerRef, onLayout: callback1, children: null };
+  obj = { ref: tmp20.containerRef, onLayout: callback1, children: null };
   const memo1 = first1.useMemo(() => ({ isInView, activeIndex: first1, isModalVisible: first2 }), items8);
   obj = { ref, horizontal: true, data: bounties, renderItem: callback8, keyExtractor: callback7, contentContainerStyle: tmp.listContentContainer, snapToOffsets: memo, snapToEnd: false, decelerationRate: "fast", showsHorizontalScrollIndicator: false, ItemSeparatorComponent: callback6, ListFooterComponent: callback2, onScroll: callback3, onScrollBeginDrag: callback4, onMomentumScrollEnd: callback5, scrollEventThrottle: 16, extraData: memo1, CellRendererComponent: callback9 };
   obj[2] = callback2(bounties(first[31]).FlashList, obj);
-  const items9 = [callback2(closure_5, obj), ];
-  let tmp32Result = null;
-  if (tmp2) {
-    obj1 = { orbShopProducts: null, obtainableOrbRewards: null, showOrbShopPlaceholderCarousel: null };
-    obj1[0] = orbShopProducts;
-    obj1[1] = obtainableOrbRewards;
-    obj1[2] = showOrbShopPlaceholderCarousel;
-    tmp32Result = callback2(ref(first[32]), obj1);
-  }
-  items9[1] = tmp32Result;
-  obj[1] = items9;
-  return closure_10(closure_5, obj);
+  obj[1] = callback2(closure_5, obj);
+  return callback2(closure_5, obj);
 }
 let c4 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -374,28 +356,27 @@ let closure_14 = createCacheKey.createStyles(() => {
   obj[3] = { flex: 1, gap: 2 };
   return obj;
 });
-const memoResult = importAllResult.memo(function QuestHomeBounties(arg0) {
-  ({ verticalScrollEnabled, orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel } = arg0);
+const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselConfig) {
+  ({ verticalScrollEnabled, orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel } = shopCarouselConfig);
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  let obj = dependencyMap;
-  obj1 = first(11021);
-  const questHomeBounties = obj1.useQuestHomeBounties().questHomeBounties;
-  const tmp2 = callback4();
+  let obj = first(11046);
+  const questHomeBounties = obj.useQuestHomeBounties().questHomeBounties;
+  const tmp3 = callback4();
   first = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
   if (questHomeBounties.length > 0) {
-    const items = [tmp(1377).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET];
+    const items = [tmp(1373).DismissibleContent.BOUNTIES_NUX_PROMO_SHEET];
     let items1 = items;
   } else {
     items1 = [];
   }
-  let tmpResult = tmp(6216);
-  const tmp3 = callback(tmpResult.useSelectedDismissibleContent(items1), 2);
-  first = tmp3[0];
-  importDefault = tmp5;
+  let tmpResult = tmp(6219);
+  const tmp4 = callback(tmpResult.useSelectedDismissibleContent(items1), 2);
+  first = tmp4[0];
+  importDefault = tmp6;
   dependencyMap = importAllResult.useRef(false);
   const items2 = [first];
   const effect = importAllResult.useEffect(() => {
@@ -408,7 +389,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(arg0) {
       callback(ref[14])();
     }
   }, items2);
-  const items3 = [first, tmp3[1]];
+  const items3 = [first, tmp4[1]];
   const effect1 = importAllResult.useEffect(() => {
     function handleHide(key) {
       if (key.key === handleHide(closure_1_2[14]).PROMO_SHEET_KEY) {
@@ -423,72 +404,79 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(arg0) {
     }
     tmp = ref;
   }, items3);
-  let tmp8 = 0 === questHomeBounties.length;
   tmpResult = tmp(589);
   const items4 = [closure_6];
-  const stateFromStores = tmpResult.useStateFromStores(items4, () => closure_6.areAllBountiesCompleted());
-  let tmp10 = !tmp8;
-  if (!tmp8) {
-    tmp10 = !stateFromStores;
-  }
-  if (tmp10) {
-    tmp10 = obtainableOrbRewards > 0;
-  }
-  if (tmp10) {
-    tmp10 = orbShopProducts.length >= tmp(14604).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-    const tmp11 = orbShopProducts.length >= tmp(14604).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-  }
-  if (!tmp8) {
-    if (!stateFromStores) {
+  ({ placement, buttonVariant } = shopCarouselConfig.shopCarouselConfig);
+  if (0 !== questHomeBounties.length) {
+    if (!tmpResult.useStateFromStores(items4, () => closure_6.areAllBountiesCompleted())) {
       if (verticalScrollEnabled) {
-        obj = { style: null, children: null };
-        obj[0] = tmp2.container;
-        obj = { bounties: null };
-        obj[0] = questHomeBounties;
-        const items5 = [callback2(BountiesCtaDescriptionDefault, obj), ];
-        let tmp17Result = null;
-        if (tmp10) {
-          obj1 = { orbShopProducts: null, obtainableOrbRewards: null, showOrbShopPlaceholderCarousel: null };
-          obj1[0] = orbShopProducts;
-          obj1[1] = obtainableOrbRewards;
-          obj1[2] = showOrbShopPlaceholderCarousel;
-          tmp17Result = tmp17(tmp18(14615), obj1);
+        let tmp12 = "none" !== placement && obtainableOrbRewards > 0;
+        if (tmp12) {
+          tmp12 = orbShopProducts.length >= tmp(14638).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          const tmp13 = orbShopProducts.length >= tmp(14638).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         }
-        items5[1] = tmp17Result;
-        obj[1] = items5;
-        let tmp15Result = closure_10(View, obj);
-        const tmp15 = closure_10;
-        const tmp16 = View;
-        tmp17 = callback2;
-        tmp18 = importDefault;
+        if (!tmp12) {
+          obj = { style: null, children: null };
+          obj[0] = tmp3.container;
+          obj = { bounties: null, shopCarouselButtonVariant: null, footer: null, replaceHeaderMediaWith: null };
+          obj[0] = questHomeBounties;
+          obj[1] = buttonVariant;
+          let tmp24;
+          if ("inside" === placement) {
+            tmp24 = null;
+          }
+          obj[2] = tmp24;
+          let tmp25;
+          if ("replace_media" === placement) {
+            tmp25 = null;
+          }
+          obj[3] = tmp25;
+          const items5 = [callback2(StarfieldBackgroundDefault, obj), ];
+          let tmp26 = null;
+          if ("outside" === placement) {
+            tmp26 = null;
+          }
+          items5[1] = tmp26;
+          obj[1] = items5;
+          return closure_10(View, obj);
+        } else {
+          obj1 = { embedded: null, replacesHeaderMedia: null, listEdgeSpacing: null, orbShopProducts: null, obtainableOrbRewards: null, showOrbShopPlaceholderCarousel: null };
+          obj1[0] = "inside" === placement;
+          obj1[1] = "replace_media" === placement;
+          if ("outside" === placement) {
+            let PX_20 = PX_16;
+          } else {
+            PX_20 = tmp16(712).space.PX_20;
+          }
+          obj1[2] = PX_20;
+          obj1[3] = orbShopProducts;
+          obj1[4] = obtainableOrbRewards;
+          obj1[5] = showOrbShopPlaceholderCarousel;
+          callback2(ListEdgeSpacerDefault, obj1);
+          const tmp15 = callback2;
+          tmp16 = importDefault;
+          const tmp17 = ListEdgeSpacerDefault;
+        }
       } else {
-        const obj2 = { bounties: null, orbShopProducts: null, obtainableOrbRewards: null, showOrbShopPlaceholderCarousel: null };
+        const obj2 = { bounties: null };
         obj2[0] = questHomeBounties;
-        obj2[1] = orbShopProducts;
-        obj2[2] = obtainableOrbRewards;
-        obj2[3] = showOrbShopPlaceholderCarousel;
-        tmp15Result = callback2(QuestHomeBountiesCarousel, obj2);
+        return callback2(QuestHomeBountiesCarousel, obj2);
       }
-      return tmp15Result;
     }
   }
-  const obj3 = { style: tmp2.container, children: null };
+  const obj3 = { style: tmp3.container, children: null };
   if (verticalScrollEnabled) {
-    obj = { bounties: null, isEmptyOrCompleted: null };
-    obj[0] = questHomeBounties;
-    if (!tmp8) {
-      tmp8 = stateFromStores;
-    }
-    obj[1] = tmp8;
-    let tmp20Result = tmp20(BountiesCtaDescriptionDefault, obj);
-    const tmp25 = BountiesCtaDescriptionDefault;
+    const obj4 = { bounties: null, shopCarouselButtonVariant: null, isEmptyOrCompleted: true };
+    obj4[0] = questHomeBounties;
+    obj4[1] = buttonVariant;
+    let tmp27Result = tmp27(StarfieldBackgroundDefault, obj4);
   } else {
-    const obj4 = { reason: null };
-    obj4[0] = tmp8 ? closure_7.EMPTY : closure_7.COMPLETED;
-    tmp20Result = tmp20(EmptyState, obj4);
+    const obj5 = { reason: null };
+    obj5[0] = tmp9 ? closure_7.EMPTY : closure_7.COMPLETED;
+    tmp27Result = tmp27(EmptyState, obj5);
   }
-  obj3[1] = tmp20Result;
-  tmp20Result = tmp20(View, obj3);
+  obj3[1] = tmp27Result;
+  return callback2(View, obj3);
 });
 let result = require("set").fileFinishedImporting("modules/quests/native/QuestHomeBounties.tsx");
 

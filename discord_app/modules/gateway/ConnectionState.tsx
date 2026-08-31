@@ -1,6 +1,6 @@
-// === Module 13234: CLOSED ===
+// === Module 13268: CLOSED ===
 
-// Module 13234 (CLOSED)
+// Module 13268 (CLOSED)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/gateway/ConnectionState.tsx");

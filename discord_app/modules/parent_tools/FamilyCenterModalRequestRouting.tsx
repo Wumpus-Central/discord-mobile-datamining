@@ -1,6 +1,6 @@
-// === Module 11426: getConnectionPrereqTarget ===
+// === Module 11455: getConnectionPrereqTarget ===
 
-// Module 11426 (getConnectionPrereqTarget)
+// Module 11455 (getConnectionPrereqTarget)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function getConnectionPrereqTarget(teen_identity) {
@@ -51,7 +51,7 @@ function _resolveConnectionPrereqTarget() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

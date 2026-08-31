@@ -1,11 +1,11 @@
-// === Module 17357: AVErrorStreamSoundshareFailedDefinition ===
+// === Module 17390: AVErrorStreamSoundshareFailedDefinition ===
 
-// Module 17357 (AVErrorStreamSoundshareFailedDefinition)
-import isStreamKey from "isStreamKey" /* 4512 */;
-import mapped from "mapped" /* 9504 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17349 */;
-import closure_2 from "reset" /* 4468 */;
-import closure_3 from "getHookError" /* 4539 */;
+// Module 17390 (AVErrorStreamSoundshareFailedDefinition)
+import isStreamKey from "isStreamKey" /* 4514 */;
+import mapped from "mapped" /* 9526 */;
+import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17382 */;
+import closure_2 from "reset" /* 4470 */;
+import closure_3 from "getHookError" /* 4541 */;
 import { MediaEngineHookTypes } from "ME" /* 676 */;
 
 require = arg1;

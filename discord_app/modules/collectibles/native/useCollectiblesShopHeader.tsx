@@ -1,18 +1,18 @@
-// === Module 15368: CollectiblesShopHeaderTitle ===
+// === Module 15401: CollectiblesShopHeaderTitle ===
 
-// Module 15368 (CollectiblesShopHeaderTitle)
+// Module 15401 (CollectiblesShopHeaderTitle)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4442 */;
-import ShopIcon from "ShopIcon" /* 11645 */;
+import Text from "Text" /* 4444 */;
+import ShopIcon from "ShopIcon" /* 11676 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1923 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { RewardFilterTypes } from "QuestsExperimentLocations" /* 5352 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8502 */;
+import { RewardFilterTypes } from "QuestsExperimentLocations" /* 5355 */;
+import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8524 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function CollectiblesShopHeaderTitle(currentScreen) {
@@ -50,11 +50,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     const intl = currentScreen(balance[12]).intl;
     obj[0] = intl.string(currentScreen(balance[12]).t["xNiB/O"]);
     obj[1] = function action() {
-      let obj = callback(7233);
+      let obj = callback(7254);
       obj = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [callback2(5938).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM];
+      const items = [callback2(5941).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM];
       obj[0] = items;
-      obj[1] = callback2(5938).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM;
+      obj[1] = callback2(5941).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM;
       obj[2] = constants.FEATURED_PAGE;
       const result = obj.openCollectiblesShopMobile(obj);
     };
@@ -68,11 +68,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     const intl2 = tmp(tmp2[12]).intl;
     obj[0] = intl2.string(currentScreen(balance[12]).t.RSyoZu);
     obj[1] = function action() {
-      let obj = callback(7233);
+      let obj = callback(7254);
       obj = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [callback2(5938).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM];
+      const items = [callback2(5941).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM];
       obj[0] = items;
-      obj[1] = callback2(5938).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM;
+      obj[1] = callback2(5941).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM;
       obj[2] = constants.SHOP_ALL;
       const result = obj.openCollectiblesShopMobile(obj);
     };
@@ -86,11 +86,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     const intl3 = tmp(tmp2[12]).intl;
     obj[0] = intl3.string(currentScreen(balance[12]).t.EBYkzk);
     obj[1] = function action() {
-      let obj = callback(7233);
+      let obj = callback(7254);
       obj = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [callback2(5938).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM];
+      const items = [callback2(5941).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM];
       obj[0] = items;
-      obj[1] = callback2(5938).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM;
+      obj[1] = callback2(5941).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM;
       obj[2] = constants.ORBS;
       const result = obj.openCollectiblesShopMobile(obj);
     };
@@ -218,7 +218,7 @@ export default function useCollectiblesShopHeader() {
   }
   const currentScreen = obj.currentScreen;
   let navigation;
-  navigation = currentScreen(1500).useNavigation();
+  navigation = currentScreen(1499).useNavigation();
   const items = [navigation, currentScreen];
   const layoutEffect = React.useLayoutEffect(() => {
     navigation.setOptions({

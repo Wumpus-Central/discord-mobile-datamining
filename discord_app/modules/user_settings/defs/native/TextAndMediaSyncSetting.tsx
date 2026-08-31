@@ -1,11 +1,11 @@
-// === Module 15003: toggle ===
+// === Module 15036: toggle ===
 
-// Module 15003 (toggle)
+// Module 15036 (toggle)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 8159 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 8181 */;
 import closure_2 from "initialize" /* 1303 */;
-import createToggle from "createToggle" /* 11006 */;
+import createToggle from "createToggle" /* 11031 */;
 
 require = arg1;
 createToggle = {

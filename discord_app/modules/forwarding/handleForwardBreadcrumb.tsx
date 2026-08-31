@@ -1,9 +1,9 @@
-// === Module 11441: _handleForwardBreadcrumb ===
+// === Module 11471: _handleForwardBreadcrumb ===
 
-// Module 11441 (_handleForwardBreadcrumb)
+// Module 11471 (_handleForwardBreadcrumb)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "createGuildRecordFromRust" /* 1909 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -26,7 +26,7 @@ function _handleForwardBreadcrumb() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -71,7 +71,7 @@ function _handleForwardBreadcrumb() {
                 }
               }
               guild = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else if (1 === tmp7) {
             message_id = 0;

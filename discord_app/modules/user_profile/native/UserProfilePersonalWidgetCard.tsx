@@ -1,19 +1,19 @@
-// === Module 8726: PersonalWidgetText ===
+// === Module 8748: PersonalWidgetText ===
 
-// Module 8726 (PersonalWidgetText)
+// Module 8748 (PersonalWidgetText)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ManaContext from "ManaContext" /* 4173 */;
-import preloadDefault from "preload" /* 5458 */;
-import GifTagDefault from "GifTag" /* 8500 */;
-import PersonalWidgetExpandCollapseProvider from "PersonalWidgetExpandCollapseProvider" /* 8727 */;
+import ManaContext from "ManaContext" /* 4174 */;
+import preloadDefault from "preload" /* 5461 */;
+import GifTagDefault from "GifTag" /* 8522 */;
+import PersonalWidgetExpandCollapseProvider from "PersonalWidgetExpandCollapseProvider" /* 8749 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
 import { ThemeTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function PersonalWidgetText(variant) {
@@ -51,7 +51,7 @@ function PersonalWidgetShowMoreButton() {
   const intl = tmp(1236).intl;
   let t = tmp(1236).t;
   obj = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(isExpanded ? t["6MwJo/"] : t.lBeKY2) };
-  t = tmp5(tmp(4442).Text, obj);
+  t = tmp5(tmp(4444).Text, obj);
   obj[4] = t;
   closure_10(closure_5, obj);
 }
@@ -174,7 +174,7 @@ function CoverSection(section) {
         obj6[0] = closure_12;
         obj6[1] = closure_13;
         obj6[2] = tmp15.absoluteFill;
-        tmp24Result = tmp24(tmp14(4905), obj6);
+        tmp24Result = tmp24(tmp14(4908), obj6);
       } else {
         tmp24Result = null;
       }
@@ -185,7 +185,7 @@ function CoverSection(section) {
     if (showGifTag) {
       const obj7 = { style: null };
       obj7[0] = tmp.gifTag;
-      tmp24Result1 = tmp24(tmp14(8500), obj7);
+      tmp24Result1 = tmp24(tmp14(8522), obj7);
     }
     items2[3] = tmp24Result1;
     obj2[1] = items2;
@@ -275,7 +275,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = callback3();
   const tmp5 = disableInteraction;
-  obj[1] = callback2(userId(8042).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj[1] = callback2(userId(8064).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj[2] = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -285,7 +285,7 @@ function UserProfilePersonalWidgetCardContent(style) {
     obj = { userId: null, widget: null };
     obj[0] = userId;
     obj[1] = widget;
-    tmp4Result = tmp4(tmp5(8730), obj);
+    tmp4Result = tmp4(tmp5(8752), obj);
   }
   obj[3] = tmp4Result;
   obj1 = { style: tmp.sectionsContainer, children: null };
@@ -318,7 +318,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items1[1] = tmp4Result;
   obj1[1] = items1;
   obj[4] = closure_11(closure_7, obj1);
-  return callback2(disableInteraction(5965), obj);
+  return callback2(disableInteraction(5968), obj);
 }
 ({ Pressable: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);

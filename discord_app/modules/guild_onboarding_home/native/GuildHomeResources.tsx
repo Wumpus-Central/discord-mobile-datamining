@@ -1,18 +1,18 @@
-// === Module 16084: ResourceChannelRow ===
+// === Module 16118: ResourceChannelRow ===
 
-// Module 16084 (ResourceChannelRow)
+// Module 16118 (ResourceChannelRow)
 import ThemesDefault from "Themes" /* 712 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16078 */;
-import registerAssetDefault from "registerAsset" /* 16086 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16112 */;
+import registerAssetDefault from "registerAsset" /* 16120 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "comparator" /* 1983 */;
-import closure_8 from "reinjectEphemerals" /* 4701 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4090 */;
+import closure_6 from "ensureGuildLoaded" /* 1387 */;
+import closure_7 from "comparator" /* 1982 */;
+import closure_8 from "reinjectEphemerals" /* 4703 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4091 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 function ResourceChannelRow(channelId) {
@@ -31,9 +31,9 @@ function ResourceChannelRow(channelId) {
   const items2 = [closure_8];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => closure_1_8.getMessages(channelId));
   const firstResult = stateFromStores2.first();
-  let obj4 = channelId(7586);
+  let obj4 = channelId(7607);
   const forumPostMediaProperties = obj4.useForumPostMediaProperties(firstResult, false);
-  let obj5 = channelId(7586);
+  let obj5 = channelId(7607);
   let length;
   const firstMediaIsEmbed = obj5.useFirstMediaIsEmbed(firstResult, false);
   if (forumPostMediaProperties != null) {
@@ -43,15 +43,15 @@ function ResourceChannelRow(channelId) {
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  let tmp2Result = tmp2(11521);
+  let tmp2Result = tmp2(11548);
   let flag = tmp2Result.useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(16085)(firstResult);
+  const tmp11 = stateFromStores(16119)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
   const effect = React.useEffect(() => {
     if (dependencyMap) {
-      let obj = stateFromStores(7148);
+      let obj = stateFromStores(7169);
       obj = { channelId: null, after: null, limit: 5 };
       obj[0] = channelId;
       obj[1] = channelId;
@@ -61,7 +61,7 @@ function ResourceChannelRow(channelId) {
   [][0] = stateFromStores;
   if (null != stateFromStores) {
     if (stateFromStores1) {
-      let tmp10Result = tmp10(1435);
+      let tmp10Result = tmp10(1431);
       obj = { channelId: null, icon: null };
       obj[0] = stateFromStores.id;
       obj[1] = icon;
@@ -73,7 +73,7 @@ function ResourceChannelRow(channelId) {
       obj1[0] = tmp.textContent;
       obj2 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
       obj2[2] = channelId.title;
-      const items4 = [callback(tmp2(4442).Text, obj2), , ];
+      const items4 = [callback(tmp2(4444).Text, obj2), , ];
       let tmp19Result = tmp16;
       if (null == description || 0 === description.length) {
         tmp19Result = null != tmp11;
@@ -81,11 +81,11 @@ function ResourceChannelRow(channelId) {
       if (tmp19Result) {
         const obj3 = { variant: "text-sm/normal", color: "text-default", style: null, lineClamp: 3, ellipsizeMode: "tail", children: null };
         obj3[2] = tmp.messageContent;
-        tmp10Result = tmp10(4436);
+        tmp10Result = tmp10(4438);
         obj4 = { guildId: null, channelId: null };
         ({ guild_id: obj15[0], id: obj15[1] } = stateFromStores);
         obj3[5] = tmp10Result.parse(tmp11, true, obj4);
-        tmp19Result = tmp19(tmp2(4442).Text, obj3);
+        tmp19Result = tmp19(tmp2(4444).Text, obj3);
       }
       items4[1] = tmp19Result;
       tmp19Result = !tmp16;
@@ -93,10 +93,10 @@ function ResourceChannelRow(channelId) {
         obj5 = { variant: "text-sm/normal", color: "text-default", style: null, lineClamp: 3, ellipsizeMode: "tail", children: null };
         obj5[2] = tmp.messageContent;
         ({ guild_id: obj18[0], id: obj18[1] } = stateFromStores);
-        obj5[5] = tmp10(4436).parse(description, true, { guildId: null, channelId: null });
-        tmp19Result = tmp19(tmp2(4442).Text, obj5);
+        obj5[5] = tmp10(4438).parse(description, true, { guildId: null, channelId: null });
+        tmp19Result = tmp19(tmp2(4444).Text, obj5);
         const obj6 = { guildId: null, channelId: null };
-        const tmp10Result1 = tmp10(4436);
+        const tmp10Result1 = tmp10(4438);
       }
       items4[2] = tmp19Result;
       obj1[1] = items4;
@@ -130,7 +130,7 @@ function ResourceChannelRow(channelId) {
               obj9[0] = stateFromStores;
               obj9[1] = first;
               obj9[2] = firstMediaIsEmbed;
-              tmp2Result = tmp2(7586);
+              tmp2Result = tmp2(7607);
               if (flag == null) {
                 flag = false;
               }
@@ -141,14 +141,14 @@ function ResourceChannelRow(channelId) {
               }
               obj9[4] = id;
               obj9[5] = tmp.thumbnail;
-              tmp19Result2 = tmp19(tmp2(11521).ForumPostMediaThumbnail, obj9);
+              tmp19Result2 = tmp19(tmp2(11548).ForumPostMediaThumbnail, obj9);
             }
           }
         }
       }
       items5[2] = tmp19Result2;
       obj[2] = items5;
-      return closure_13(tmp2(5033).PressableOpacity, obj);
+      return closure_13(tmp2(5036).PressableOpacity, obj);
     }
   }
   return null;
@@ -177,7 +177,7 @@ export default function GuildHomeResources(guildId) {
     obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
     const intl = guildId(1236).intl;
     obj[2] = intl.string(guildId(1236).t.owvC9U);
-    const items = [callback(guildId(4442).Text, obj), , ];
+    const items = [callback(guildId(4444).Text, obj), , ];
     obj1 = { style: null, source: null };
     obj1[0] = tmp.emptyStateImage;
     obj1[1] = registerAssetDefault;
@@ -192,7 +192,7 @@ export default function GuildHomeResources(guildId) {
     };
     const intl2 = guildId(1236).intl;
     obj2[1] = intl2.string(guildId(1236).t["3iCBUn"]);
-    items[2] = callback(guildId(4893).Button, obj2);
+    items[2] = callback(guildId(4896).Button, obj2);
     obj[1] = items;
     let tmp6 = callback2(closure_4, obj);
   } else {

@@ -1,19 +1,19 @@
-// === Module 17325: getBackoffJitter ===
+// === Module 17358: getBackoffJitter ===
 
-// Module 17325 (getBackoffJitter)
+// Module 17358 (getBackoffJitter)
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5451 */;
-import apexExperiment from "apexExperiment" /* 13277 */;
-import mapDefault from "map" /* 13505 */;
-import ContentInventoryFeature from "ContentInventoryFeature" /* 17327 */;
+import initializeDefault from "initialize" /* 5454 */;
+import apexExperiment from "apexExperiment" /* 13311 */;
+import mapDefault from "map" /* 13539 */;
+import ContentInventoryFeature from "ContentInventoryFeature" /* 17360 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 5186 */;
-import closure_5 from "set" /* 5190 */;
-import closure_6 from "checkIdleAFK" /* 5319 */;
-import closure_7 from "updateImpressionCaches" /* 11447 */;
-import closure_8 from "map" /* 8553 */;
-import { ContentInventoryFeedKey } from "ContentInventoryFeedKey" /* 8575 */;
+import closure_4 from "_handleConnectionOpen" /* 5189 */;
+import closure_5 from "set" /* 5193 */;
+import closure_6 from "checkIdleAFK" /* 5322 */;
+import closure_7 from "updateImpressionCaches" /* 11477 */;
+import closure_8 from "map" /* 8575 */;
+import { ContentInventoryFeedKey } from "ContentInventoryFeedKey" /* 8597 */;
 import { PlatformTypes } from "ME" /* 676 */;
 import apply from "apply" /* 12 */;
 import set from "set" /* 2 */;
@@ -193,7 +193,7 @@ function _fetchInventory() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -224,7 +224,7 @@ function _fetchInventory() {
               c7 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else {
             if (1 === tmp7) {

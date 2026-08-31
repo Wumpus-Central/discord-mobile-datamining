@@ -1,10 +1,10 @@
-// === Module 4299: getGuildIdFromNavigationState ===
+// === Module 4301: getGuildIdFromNavigationState ===
 
-// Module 4299 (getGuildIdFromNavigationState)
-import coerceMainRoute from "coerceMainRoute" /* 4300 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4301 */;
-import contextDefault from "context" /* 4326 */;
-import resolveSavedActiveGuildTheme from "resolveSavedActiveGuildTheme" /* 4327 */;
+// Module 4301 (getGuildIdFromNavigationState)
+import coerceMainRoute from "coerceMainRoute" /* 4302 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4303 */;
+import contextDefault from "context" /* 4328 */;
+import resolveSavedActiveGuildTheme from "resolveSavedActiveGuildTheme" /* 4329 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ME } from "ME" /* 676 */;

@@ -1,14 +1,14 @@
-// === Module 10010: SoundboardVolume ===
+// === Module 10033: SoundboardVolume ===
 
-// Module 10010 (SoundboardVolume)
+// Module 10033 (SoundboardVolume)
 import noopAll from "noop" /* 19 */;
-import combinedDefault from "combined" /* 1996 */;
-import contextDefault from "context" /* 5918 */;
-import VolumeSliderDefault from "VolumeSlider" /* 10007 */;
+import combinedDefault from "combined" /* 1995 */;
+import contextDefault from "context" /* 5921 */;
+import VolumeSliderDefault from "VolumeSlider" /* 10030 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 noopAll;
@@ -18,7 +18,7 @@ const result = require("set").fileFinishedImporting("modules/user_settings/voice
 
 export default function SoundboardVolume() {
   const tmp = callback3();
-  let obj = analyticsLocations(6153);
+  let obj = analyticsLocations(6156);
   const amplitudinalSoundboardVolume = obj.getAmplitudinalSoundboardVolume();
   analyticsLocations = contextDefault().analyticsLocations;
   obj = { title: null, hasIcons: false, children: null };
@@ -28,16 +28,28 @@ export default function SoundboardVolume() {
   const intl2 = analyticsLocations(1236).intl;
   obj[0] = intl2.string(analyticsLocations(1236).t.kbFsAD);
   obj1 = { children: null };
-  const items = [callback(View, { style: tmp.slider, children: callback(VolumeSliderDefault, obj3) }), ];
-  const obj4 = { style: tmp.text, variant: "text-sm/medium", children: null };
+  const obj2 = { style: tmp.slider, children: null };
+  const obj3 = {
+    value: amplitudinalSoundboardVolume,
+    maxVolume: 100,
+    onValueChange(volume) {
+      return analyticsLocations(closure_1_2[11]).updateUserSoundboardVolume(volume, analyticsLocations);
+    },
+    accessibilityLabel: null
+  };
   const intl3 = analyticsLocations(1236).intl;
+  obj3[3] = intl3.string(analyticsLocations(1236).t.kbFsAD);
+  obj2[1] = callback(VolumeSliderDefault, obj3);
+  const items = [callback(View, obj2), ];
+  const obj4 = { style: tmp.text, variant: "text-sm/medium", children: null };
+  const intl4 = analyticsLocations(1236).intl;
   const obj5 = { helpCenterArticle: null };
-  const obj2 = { style: tmp.slider, children: callback(VolumeSliderDefault, obj3) };
+  const tmp3 = VolumeSliderDefault;
   obj5[0] = combinedDefault.getArticleURL(HelpdeskArticles.SOUNDBOARD);
-  obj4[2] = intl3.format(analyticsLocations(1236).t.BPbGq7, obj5);
-  items[1] = callback(analyticsLocations(4442).Text, obj4);
+  obj4[2] = intl4.format(analyticsLocations(1236).t.BPbGq7, obj5);
+  items[1] = callback(analyticsLocations(4444).Text, obj4);
   obj1[0] = items;
   obj[1] = callback2(closure_6, obj1);
-  obj[2] = callback(analyticsLocations(5564).TableRow, obj);
-  return callback(analyticsLocations(10000).UserSettingsTableRowGroup, obj);
+  obj[2] = callback(analyticsLocations(5567).TableRow, obj);
+  return callback(analyticsLocations(10023).UserSettingsTableRowGroup, obj);
 };

@@ -1,8 +1,8 @@
-// === Module 11747: AppLauncherButtonIcon ===
+// === Module 11778: AppLauncherButtonIcon ===
 
-// Module 11747 (AppLauncherButtonIcon)
+// Module 11778 (AppLauncherButtonIcon)
 import noopAll from "noop" /* 19 */;
-import KeyboardTypes from "KeyboardTypes" /* 1627 */;
+import KeyboardTypes from "KeyboardTypes" /* 1626 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -23,12 +23,12 @@ export const AppLauncherButtonIcon = function AppLauncherButtonIcon(style) {
     obj[0] = items1;
     items[1] = obj;
     obj.style = items;
-    let tmp4Result = tmp4(tmp6(10626).PlusLargeIcon, obj);
+    let tmp4Result = tmp4(tmp6(10650).PlusLargeIcon, obj);
   } else {
     obj1 = { style: null };
     obj1[0] = style;
     const merged2 = Object.assign(merged);
-    tmp4Result = tmp4(tmp6(9189).AppsIcon, obj1);
+    tmp4Result = tmp4(tmp6(9211).AppsIcon, obj1);
   }
   obj[1] = tmp4Result;
   return <View style={{ overflow: "hidden" }}>{null}</View>;

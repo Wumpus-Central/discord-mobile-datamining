@@ -1,17 +1,17 @@
-// === Module 12716: SettingsUpsellsTableRow ===
+// === Module 12751: SettingsUpsellsTableRow ===
 
-// Module 12716 (SettingsUpsellsTableRow)
+// Module 12751 (SettingsUpsellsTableRow)
 import ThemesDefault from "Themes" /* 712 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4910 */;
-import SettingsIcon from "SettingsIcon" /* 6205 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 12709 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4913 */;
+import SettingsIcon from "SettingsIcon" /* 6208 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 12744 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "ensureGuildLoaded" /* 1387 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function SettingsUpsellsTableRow(arg0) {
@@ -21,7 +21,7 @@ function SettingsUpsellsTableRow(arg0) {
   const tmp = callback(React.useState(false), 2);
   dependencyMap = tmp[1];
   useMountLayoutEffectDefault(() => {
-    callback2(closure_1_0(8701).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_VIEWED);
+    callback2(closure_1_0(8723).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_VIEWED);
   });
   const obj = {
     title,
@@ -31,7 +31,7 @@ function SettingsUpsellsTableRow(arg0) {
     onPress() {
       callback();
       dependencyMap(true);
-      callback2(closure_1_0(8701).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_APPLY_CLICKED);
+      callback2(closure_1_0(8723).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_APPLY_CLICKED);
     },
     icon: callback2(SettingsIcon.SettingsIcon, {})
   };

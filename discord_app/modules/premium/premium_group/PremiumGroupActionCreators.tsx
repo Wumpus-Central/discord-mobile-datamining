@@ -1,9 +1,9 @@
-// === Module 13080: _fetchPremiumGroupMembership ===
+// === Module 13114: _fetchPremiumGroupMembership ===
 
-// Module 13080 (_fetchPremiumGroupMembership)
+// Module 13114 (_fetchPremiumGroupMembership)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createdAt" /* 1931 */;
-import closure_5 from "createFromServer" /* 13081 */;
+import closure_4 from "createdAt" /* 1930 */;
+import closure_5 from "createFromServer" /* 13115 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -21,7 +21,7 @@ function _fetchPremiumGroupMembership() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -177,7 +177,7 @@ function _inviteUsersToSubscriptionGroup() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -280,7 +280,7 @@ function _removeUserFromSubscriptionGroup() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -379,7 +379,7 @@ function _fetchSubscriptionGroupMembers() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -488,7 +488,7 @@ function _acceptSubscriptionGroupInvite() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -594,7 +594,7 @@ function _removeSubscriptionGroupInvite() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

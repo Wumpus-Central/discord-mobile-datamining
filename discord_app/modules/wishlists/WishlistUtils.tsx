@@ -1,14 +1,14 @@
-// === Module 12432: createNitroSuggestedSku ===
+// === Module 12466: createNitroSuggestedSku ===
 
-// Module 12432 (createNitroSuggestedSku)
+// Module 12466 (createNitroSuggestedSku)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSKUPrice from "useSKUPrice" /* 6043 */;
+import useSKUPrice from "useSKUPrice" /* 6046 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "createFromServer" /* 4489 */;
-import { isCollectiblesWishlistItemRecord as closure_4 } from "createCollectiblesItemFromServerResponse" /* 10398 */;
-import { isPremiumWishlistItemRecord as closure_5, isSKUWishlistItemRecord } from "fromServer" /* 10399 */;
+import closure_3 from "createFromServer" /* 4491 */;
+import { isCollectiblesWishlistItemRecord as closure_4 } from "createCollectiblesItemFromServerResponse" /* 10422 */;
+import { isPremiumWishlistItemRecord as closure_5, isSKUWishlistItemRecord } from "fromServer" /* 10423 */;
 import { SKUProductLines } from "ME" /* 676 */;
-import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1925 */;
+import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/wishlists/WishlistUtils.tsx");

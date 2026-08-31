@@ -1,19 +1,19 @@
-// === Module 10830: handleOutOfSuperReactions ===
+// === Module 10854: handleOutOfSuperReactions ===
 
-// Module 10830 (handleOutOfSuperReactions)
-import asyncRequireImpl from "asyncRequireImpl" /* 2010 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4108 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4413 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4666 */;
-import setDefault from "set" /* 4822 */;
-import registerAssetDefault from "registerAsset" /* 10844 */;
-import registerAssetDefault2 from "registerAsset" /* 10845 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reinjectEphemerals" /* 4701 */;
-import closure_5 from "handleConnectionOpen" /* 4268 */;
-import closure_6 from "mergeGuildAvatar" /* 1923 */;
+// Module 10854 (handleOutOfSuperReactions)
+import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4109 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4415 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4668 */;
+import setDefault from "set" /* 4825 */;
+import registerAssetDefault from "registerAsset" /* 10868 */;
+import registerAssetDefault2 from "registerAsset" /* 10869 */;
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
+import closure_4 from "reinjectEphemerals" /* 4703 */;
+import closure_5 from "handleConnectionOpen" /* 4269 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { EmojiIntention } from "set" /* 1926 */;
+import { EmojiIntention } from "set" /* 1925 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -34,7 +34,7 @@ export const handleOutOfSuperReactions = function handleOutOfSuperReactions(arg0
     if (!obj.isPremium(currentUser)) {
       obj = { onDismiss: null };
       obj[0] = arg0;
-      openLazyResult = ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9053, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
+      openLazyResult = ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9076, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
       const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     }
     return openLazyResult;
@@ -63,7 +63,7 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id,
       if (null != currentUser1) {
         let tmp13Result = tmp13(ReactionTypes[11]);
         if (!tmp13Result.isPremium(currentUser1)) {
-          importDefault(ReactionTypes[12]).openLazy(tmp13(ReactionTypes[14])(ReactionTypes[13], ReactionTypes.paths), "SuperReactionUpsellActionSheet", { onDismiss: "r" });
+          importDefault(ReactionTypes[12]).openLazy(tmp13(ReactionTypes[14])(ReactionTypes[13], ReactionTypes.paths), "SuperReactionUpsellActionSheet", { onDismiss: "Array" });
           const obj3 = importDefault(ReactionTypes[12]);
         }
       }
@@ -152,14 +152,14 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
     obj1[2] = isPoll.emoji;
     const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
     const merged2 = Object.assign(merged);
-    obj6.openLazy(asyncRequireImpl(10831, dependencyMap.paths), "MessageReactions", obj1);
+    obj6.openLazy(asyncRequireImpl(10855, dependencyMap.paths), "MessageReactions", obj1);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
 };
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { messageId: id2, channelId: id, emoji };
-  obj.openLazy(asyncRequireImpl(10843, dependencyMap.paths), "MessagePreviewReactions", obj);
+  obj.openLazy(asyncRequireImpl(10867, dependencyMap.paths), "MessagePreviewReactions", obj);
 };
 export const ADD_REACTION_ICONS = obj;
 export const ADD_REACTION_ICON_COMPONENTS = obj;
@@ -173,7 +173,7 @@ export const handleRemoveAllReactions = function handleRemoveAllReactions(arg0, 
   obj = { variant: "text-md/normal", children: null };
   const intl2 = _require(1236).intl;
   obj[1] = intl2.string(_require(1236).t.VpjOCo);
-  obj[1] = jsx(_require(4442).Text, { variant: "text-md/normal", children: null });
+  obj[1] = jsx(_require(4444).Text, { variant: "text-md/normal", children: null });
   const intl3 = _require(1236).intl;
   obj[2] = intl3.string(_require(1236).t["ETE/oC"]);
   const intl4 = _require(1236).intl;

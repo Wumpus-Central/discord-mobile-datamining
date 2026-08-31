@@ -1,11 +1,11 @@
-// === Module 15397: route ===
+// === Module 15430: route ===
 
-// Module 15397 (route)
+// Module 15430 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import FriendsIcon from "FriendsIcon" /* 4164 */;
-import createToggle from "createToggle" /* 11006 */;
+import FriendsIcon from "FriendsIcon" /* 4165 */;
+import createToggle from "createToggle" /* 11031 */;
 
 obj = {
   useTitle() {
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.CONTENT_AND_SOCIAL,
   getComponent() {
-    return require(15398) /* ContentAndSocialSettings */.default;
+    return require(15431) /* ContentAndSocialSettings */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,10 +1,10 @@
-// === Module 12003: useCanPurchaseBoosts ===
+// === Module 12036: useCanPurchaseBoosts ===
 
-// Module 12003 (useCanPurchaseBoosts)
+// Module 12036 (useCanPurchaseBoosts)
 import initialize from "initialize" /* 589 */;
-import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 7088 */;
-import closure_3 from "mergeGuildAvatar" /* 1923 */;
-import { FractionalPremiumStates } from "GuildFeatures" /* 1925 */;
+import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 7109 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { FractionalPremiumStates } from "GuildFeatures" /* 1924 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");

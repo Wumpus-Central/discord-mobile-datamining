@@ -1,12 +1,12 @@
-// === Module 14352: route ===
+// === Module 14386: route ===
 
-// Module 14352 (route)
+// Module 14386 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 4995 */;
-import MobileUserSettings from "MobileUserSettings" /* 7830 */;
-import createToggle from "createToggle" /* 11006 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 4998 */;
+import MobileUserSettings from "MobileUserSettings" /* 7852 */;
+import createToggle from "createToggle" /* 11031 */;
 
 obj = {
   useTitle() {
@@ -35,7 +35,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.SENSITIVE_MEDIA_FILTERS,
   getComponent() {
-    return require(14353) /* UserSettingsSensitiveContentFilters */.default;
+    return require(14387) /* UserSettingsSensitiveContentFilters */.default;
   }
 };
 const route = createToggle.createRoute(obj);

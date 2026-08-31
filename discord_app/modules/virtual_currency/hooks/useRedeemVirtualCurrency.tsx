@@ -1,6 +1,6 @@
-// === Module 11286: useRedeemVirtualCurrency ===
+// === Module 11315: useRedeemVirtualCurrency ===
 
-// Module 11286 (useRedeemVirtualCurrency)
+// Module 11315 (useRedeemVirtualCurrency)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
@@ -19,7 +19,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   const isSubmitting = callback2(enabled(false), 2);
   callback2 = isSubmitting[1];
   const tmp5 = callback2(enabled(null), 2);
-  enabled = entitlements(11287).useConfig({ location: "orb_checkout_modal" }).enabled;
+  enabled = entitlements(11316).useConfig({ location: "orb_checkout_modal" }).enabled;
   order = undefined;
   if (order != null) {
     order = order.order;
@@ -31,8 +31,8 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   if (order != null) {
     onSignFailure = order.onSignFailure;
   }
-  let obj = entitlements(11287);
-  const orderSigning = _require(11288).useOrderSigning({ order, errorSource: "orb_redeem_orders_api", onSignFailure });
+  let obj = entitlements(11316);
+  const orderSigning = _require(11317).useOrderSigning({ order, errorSource: "orb_redeem_orders_api", onSignFailure });
   const signOrder = orderSigning.signOrder;
   const _reportError = orderSigning.reportError;
   if (enabled) {
@@ -58,7 +58,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -104,7 +104,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
                 closure_3 = arg1;
                 if ("signed" === closure_3.type) {
                   v0 = 2;
-                  obj2 = callback(6055);
+                  obj2 = callback(6058);
                   v02 = 4;
                   c8 = 1;
                   const obj5 = { value: null, done: false };
@@ -136,7 +136,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
               } else {
                 length = arg1;
                 if (0 === length.length) {
-                  const orderProcessingPendingError = new callback(6055).OrderProcessingPendingError();
+                  const orderProcessingPendingError = new callback(6058).OrderProcessingPendingError();
                   throw orderProcessingPendingError;
                 } else {
                   dependencyMap(length);
@@ -181,7 +181,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   closure_9 = tmp11;
   const tmp12 = _reportError((skuId, loadId) => {
     const callback = arg2;
-    let obj = callback(10775);
+    let obj = callback(10799);
     obj = {
       skuId,
       loadId,

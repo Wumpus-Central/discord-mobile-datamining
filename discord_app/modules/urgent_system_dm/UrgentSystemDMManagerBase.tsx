@@ -1,12 +1,12 @@
-// === Module 17011: maybeShowUrgentMessageModal ===
+// === Module 17044: maybeShowUrgentMessageModal ===
 
-// Module 17011 (maybeShowUrgentMessageModal)
-import initializeDefault from "initialize" /* 5451 */;
-import _fetchProfileAll from "_fetchProfile" /* 8062 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "handleConnectionOpen" /* 1982 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
-import { SYSTEM_USER } from "SYSTEM_USER" /* 17012 */;
+// Module 17044 (maybeShowUrgentMessageModal)
+import initializeDefault from "initialize" /* 5454 */;
+import _fetchProfileAll from "_fetchProfile" /* 8084 */;
+import closure_2 from "ensureGuildLoaded" /* 1387 */;
+import closure_3 from "handleConnectionOpen" /* 1981 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { SYSTEM_USER } from "SYSTEM_USER" /* 17045 */;
 import { UserFlags } from "ME" /* 676 */;
 
 function maybeShowUrgentMessageModal(arg0) {

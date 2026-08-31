@@ -1,20 +1,20 @@
-// === Module 14173: ProfileCustomizationSubsection ===
+// === Module 14207: ProfileCustomizationSubsection ===
 
-// Module 14173 (ProfileCustomizationSubsection)
+// Module 14207 (ProfileCustomizationSubsection)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14174 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14232 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14208 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14266 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "_objectWithoutProperties" /* 109 */;
 import closure_7 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_10 from "zustandStore" /* 8972 */;
-import closure_11 from "handleFormOpen" /* 8016 */;
+import closure_10 from "zustandStore" /* 8995 */;
+import closure_11 from "handleFormOpen" /* 8038 */;
 import { ProfileCustomizationSubsection } from "MAX_FAVORITES" /* 685 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 let closure_3 = ["handleSubmit"];
@@ -155,7 +155,7 @@ const memoResult = importAllResult.memo(() => {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -190,7 +190,7 @@ const memoResult = importAllResult.memo(() => {
                   callback(true);
                 }
                 c2 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } catch (tmp9) {
               c2 = tmp;

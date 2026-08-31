@@ -1,9 +1,9 @@
-// === Module 16002: initialize ===
+// === Module 16036: initialize ===
 
-// Module 16002 (initialize)
+// Module 16036 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "createGuildRecordFromRust" /* 1909 */;
 
 const require = arg1;
 let closure_3 = [];

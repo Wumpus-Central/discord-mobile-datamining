@@ -1,15 +1,15 @@
-// === Module 9316: Header ===
+// === Module 9338: Header ===
 
-// Module 9316 (Header)
+// Module 9338 (Header)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import Text from "Text" /* 4442 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1431 */;
+import Text from "Text" /* 4444 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { UserFlags } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;
@@ -34,7 +34,7 @@ export default function Header(accountScopes) {
   let userAvatarSource;
   const applicationIconSource = obj.getApplicationIconSource(obj);
   if (null != user) {
-    let tmp2Result = tmp2(1435);
+    let tmp2Result = tmp2(1431);
     userAvatarSource = tmp2Result.getUserAvatarSource(user);
   }
   obj = { style: tmp.header, children: null };
@@ -58,10 +58,10 @@ export default function Header(accountScopes) {
     const obj10 = { style: null, verified: null };
     obj10[0] = tmp.botTag;
     let hasFlagResult = null != bot.public_flags;
-    tmp2Result = tmp2(8873);
+    tmp2Result = tmp2(8896);
     if (hasFlagResult) {
-      hasFlagResult = tmp9(1403).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
-      const tmp9Result = tmp9(1403);
+      hasFlagResult = tmp9(1399).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
+      const tmp9Result = tmp9(1399);
     }
     obj10[1] = hasFlagResult;
     tmp8Result = tmp8(tmp2Result, obj10);

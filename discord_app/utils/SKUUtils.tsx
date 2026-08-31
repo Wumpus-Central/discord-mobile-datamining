@@ -1,11 +1,11 @@
-// === Module 8782: GameGenres ===
+// === Module 8804: GameGenres ===
 
-// Module 8782 (GameGenres)
+// Module 8804 (GameGenres)
 import set from "set" /* 500 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hooksDefault from "hooks" /* 4044 */;
-import matchPath from "matchPath" /* 4273 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4721 */;
+import hooksDefault from "hooks" /* 4045 */;
+import matchPath from "matchPath" /* 4274 */;
+import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4723 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import ME from "ME" /* 676 */;
 

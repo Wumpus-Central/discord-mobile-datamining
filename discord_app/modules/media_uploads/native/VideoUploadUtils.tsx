@@ -1,6 +1,6 @@
-// === Module 5070: toString ===
+// === Module 5073: toString ===
 
-// Module 5070 (toString)
+// Module 5073 (toString)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;

@@ -1,10 +1,10 @@
-// === Module 6942: ServerIconStarblasterExample ===
+// === Module 6959: ServerIconStarblasterExample ===
 
-// Module 6942 (ServerIconStarblasterExample)
+// Module 6959 (ServerIconStarblasterExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6943 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6960 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconStarblasterExample.native.tsx");

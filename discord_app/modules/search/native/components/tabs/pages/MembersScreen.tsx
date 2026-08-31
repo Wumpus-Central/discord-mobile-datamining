@@ -1,25 +1,25 @@
-// === Module 16199: SearchableMembersScreen ===
+// === Module 16233: SearchableMembersScreen ===
 
-// Module 16199 (SearchableMembersScreen)
-import dismissGlobalKeyboard from "dismissGlobalKeyboard" /* 1892 */;
-import context from "context" /* 5918 */;
-import contextDefault from "context" /* 5918 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5938 */;
-import _modDef11692 from "module_11692" /* 11692 */;
+// Module 16233 (SearchableMembersScreen)
+import dismissGlobalKeyboard from "dismissGlobalKeyboard" /* 1891 */;
+import context from "context" /* 5921 */;
+import contextDefault from "context" /* 5921 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5941 */;
+import _modDef11723 from "module_11723" /* 11723 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 6091 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1993 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "handleConnectionOpen" /* 1982 */;
-import closure_11 from "setAutocompleteOptions" /* 11869 */;
-import closure_12 from "prototype" /* 11842 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7569 */;
-import { SearchResultContentEntityTypes as closure_15 } from "SearchEntrypointAnalyticsLocations" /* 7568 */;
+import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 6094 */;
+import closure_7 from "ensureGuildLoaded" /* 1387 */;
+import closure_8 from "trackCommunicationDisabled" /* 1992 */;
+import closure_9 from "createGuildRecordFromRust" /* 1909 */;
+import closure_10 from "handleConnectionOpen" /* 1981 */;
+import closure_11 from "setAutocompleteOptions" /* 11900 */;
+import closure_12 from "prototype" /* 11873 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7590 */;
+import { SearchResultContentEntityTypes as closure_15 } from "SearchEntrypointAnalyticsLocations" /* 7589 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function SearchableMembersScreen(searchContext) {
@@ -35,8 +35,8 @@ function SearchableMembersScreen(searchContext) {
   let callback;
   let stateFromStores5;
   let stateFromStores6;
-  analyticsLocations = guildId(5918)().analyticsLocations;
-  let obj = searchContext(11843);
+  analyticsLocations = guildId(5921)().analyticsLocations;
+  let obj = searchContext(11874);
   dependencyMap = obj.getSearchContextId(searchContext);
   obj1 = searchContext(647);
   let items = [stateFromStores6];
@@ -57,7 +57,7 @@ function SearchableMembersScreen(searchContext) {
   let tmp4Result = tmp4(647);
   const items3 = [stateFromStores5];
   stateFromStores2 = tmp4Result.useStateFromStores(items3, () => stateFromStores5.getChannelId());
-  tmp4Result = tmp4(16161);
+  tmp4Result = tmp4(16195);
   obj = { placeholderHeight: closure_13, numColumns: 1 };
   fullscreenPlaceholderCount = tmp4Result.useFullscreenPlaceholderCount(obj);
   const tmp = callback();
@@ -68,8 +68,8 @@ function SearchableMembersScreen(searchContext) {
     const guild = callback.getGuild(guildId);
     let guildVisualOwnerId;
     if (null != guild) {
-      guildVisualOwnerId = analyticsLocations(4095).getGuildVisualOwnerId(guild);
-      const obj = analyticsLocations(4095);
+      guildVisualOwnerId = analyticsLocations(4096).getGuildVisualOwnerId(guild);
+      const obj = analyticsLocations(4096);
     }
     return guildVisualOwnerId;
   });
@@ -96,28 +96,28 @@ function SearchableMembersScreen(searchContext) {
   });
   const items6 = [searchContext, first, stateFromStores2, analyticsLocations];
   callback = stateFromStores.useCallback((userId, index) => {
-    let obj = searchContext(1892);
+    let obj = searchContext(1891);
     const result = obj.dismissGlobalKeyboard();
     obj = { searchContext, userId: userId.id, index, entityType: closure_1_15.USER };
-    const result1 = guildId(11863).trackSearchResultClicked(obj);
+    const result1 = guildId(11894).trackSearchResultClicked(obj);
     obj = { userId: userId.id, channelId: null, sourceAnalyticsLocations: null };
     let tmp4 = first;
-    const obj2 = guildId(11863);
+    const obj2 = guildId(11894);
     if (first === stateFromStores2) {
       tmp4 = stateFromStores2;
     }
     obj[1] = tmp4;
     obj[2] = analyticsLocations;
-    guildId(8836)(obj);
+    guildId(8859)(obj);
   }, items6);
   const items7 = [searchContext];
   const items8 = [callback];
   const callback1 = stateFromStores.useCallback((arg0) => {
     ({ user, index } = arg0);
-    let obj = guildId(11863);
+    let obj = guildId(11894);
     obj = { searchContext, userId: user.id, index, entityType: closure_1_15.USER };
     const result = obj.trackSearchResultClicked(obj);
-    const result1 = searchContext(1892).dismissGlobalKeyboard();
+    const result1 = searchContext(1891).dismissGlobalKeyboard();
   }, items7);
   const callback2 = stateFromStores.useCallback((user) => {
     callback(user.user, user.index);
@@ -206,13 +206,13 @@ function SearchableMembersScreen(searchContext) {
     return items;
   }, items13);
   const tmp4Result4 = searchContext(647);
-  const contentContainerStyles = searchContext(16200).useContentContainerStyles();
-  const tmp4Result5 = searchContext(16200);
-  const messageTabCountsErrorText = searchContext(16198).useMessageTabCountsErrorText({ searchContext });
+  const contentContainerStyles = searchContext(16234).useContentContainerStyles();
+  const tmp4Result5 = searchContext(16234);
+  const messageTabCountsErrorText = searchContext(16232).useMessageTabCountsErrorText({ searchContext });
   if (null != messageTabCountsErrorText) {
     obj = { text: null };
     obj[0] = messageTabCountsErrorText;
-    let tmp25 = jsx(tmp2(16153), { text: null });
+    let tmp25 = jsx(tmp2(16187), { text: null });
   } else {
     if (stateFromStores5) {
       if (null != stateFromStores4) {
@@ -222,13 +222,13 @@ function SearchableMembersScreen(searchContext) {
         obj1[2] = stateFromStores4;
         obj1[3] = guildId;
         obj1[5] = tmp.userList;
-        tmp25 = jsx(tmp2(11121), { onUserPress: null, onUserLongPress: null, channelId: null, guildId: null, disableStickySections: true, listStyleOverride: null, isNameplatedList: true, canShowDisplayNameStylesFont: true });
+        tmp25 = jsx(tmp2(11150), { onUserPress: null, onUserLongPress: null, channelId: null, guildId: null, disableStickySections: true, listStyleOverride: null, isNameplatedList: true, canShowDisplayNameStylesFont: true });
       }
     }
     obj2 = { contentContainerStyle: null, data: null };
     obj2[0] = contentContainerStyles.membersContentContainer;
     obj2[1] = memo;
-    tmp25 = jsx(tmp2(16165), { contentContainerStyle: null, data: null });
+    tmp25 = jsx(tmp2(16199), { contentContainerStyle: null, data: null });
   }
   return tmp25;
 }
@@ -256,9 +256,9 @@ function ThreadMembersScreen(searchContext) {
       obj = { channelId: null, guildId: null, onUserPress: null, disableStickySections: true };
       obj[0] = channelId;
       obj[1] = guildId;
-      obj[2] = searchContext(1892).dismissGlobalKeyboard;
-      let tmp7 = jsx(channelId(16201), { channelId: null, guildId: null, onUserPress: null, disableStickySections: true });
-      const tmp6 = channelId(16201);
+      obj[2] = searchContext(1891).dismissGlobalKeyboard;
+      let tmp7 = jsx(channelId(16235), { channelId: null, guildId: null, onUserPress: null, disableStickySections: true });
+      const tmp6 = channelId(16235);
     }
     return tmp7;
   }
@@ -282,7 +282,7 @@ const memoResult = importAllResult.memo(function MembersScreen(searchContext) {
     obj1[0] = searchContext.channelId;
     obj1[2] = tmp.userList;
     obj1[3] = dismissGlobalKeyboard.dismissGlobalKeyboard;
-    obj[1] = jsx(_modDef11692, { channelId: null, disableStickySections: true, listStyleOverride: null, onUserPress: null });
+    obj[1] = jsx(_modDef11723, { channelId: null, disableStickySections: true, listStyleOverride: null, onUserPress: null });
     obj[1] = <View style={null}>{null}</View>;
     return jsx(context.AnalyticsLocationProvider, { style: null, children: null });
   } else if (tmp5.THREAD === type) {

@@ -1,6 +1,6 @@
-// === Module 16344: getGuildPermissionSpec ===
+// === Module 16378: getGuildPermissionSpec ===
 
-// Module 16344 (getGuildPermissionSpec)
+// Module 16378 (getGuildPermissionSpec)
 import set from "set" /* 2 */;
 import sum from "sum" /* 505 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
@@ -646,7 +646,7 @@ export const generateChannelAppsSection = function generateChannelAppsSection(ar
   }
   items[1] = prop;
   items[2] = Permissions.USE_EXTERNAL_APPS;
-  const found = items.filter(_require(1370).isNotNullish);
+  const found = items.filter(_require(1471).isNotNullish);
   _require = arg0;
   obj[1] = found.map((arg0) => table[arg0.toString(arg0)]);
   return obj;

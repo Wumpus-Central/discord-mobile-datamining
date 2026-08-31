@@ -1,10 +1,10 @@
-// === Module 11938: useIsMessageRequestRestrictedViewer ===
+// === Module 11971: useIsMessageRequestRestrictedViewer ===
 
-// Module 11938 (useIsMessageRequestRestrictedViewer)
+// Module 11971 (useIsMessageRequestRestrictedViewer)
 import set from "set" /* 2 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4141 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4148 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4699 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 4142 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4149 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4701 */;
 
 const result = set.fileFinishedImporting("modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx");
 

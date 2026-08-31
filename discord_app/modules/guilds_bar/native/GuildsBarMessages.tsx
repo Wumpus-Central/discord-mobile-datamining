@@ -1,17 +1,16 @@
-// === Module 15829: ? ===
+// === Module 15863: ? ===
 
-// Module 15829
+// Module 15863
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import ChatIcon from "ChatIcon" /* 4985 */;
-import UnreadIndicator from "UnreadIndicator" /* 15816 */;
-import UnreadIndicatorDefault from "UnreadIndicator" /* 15816 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 15818 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 15830 */;
-import HomeDrawerDMsRowDefault from "HomeDrawerDMsRow" /* 15831 */;
-import closure_3 from "handleConnectionOpen" /* 4268 */;
+import ChatIcon from "ChatIcon" /* 4988 */;
+import UnreadIndicator from "UnreadIndicator" /* 15850 */;
+import UnreadIndicatorDefault from "UnreadIndicator" /* 15850 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 15852 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 15864 */;
+import HomeDrawerDMsRowDefault from "HomeDrawerDMsRow" /* 15865 */;
+import closure_3 from "handleConnectionOpen" /* 4269 */;
 import { ME } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
@@ -23,7 +22,6 @@ let closure_6 = {
   }
 };
 const memoResult = importAllResult.memo(function GuildsBarMessages() {
-  const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("GuildsBarMessages");
   let obj = UnreadIndicator;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const items = [closure_3];
@@ -38,23 +36,15 @@ const memoResult = importAllResult.memo(function GuildsBarMessages() {
   const obj2 = initialize;
   ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 }));
   const colors = ThemesDefault.colors;
-  obj = { selected: stateFromStores, circle: null, unread: false, styles: null, cutouts: null, config: null, overState: "y", label: "Grant Channel Access", externalChildren: "Manage Channel Access", expandedChildren: "Guild Scheduled Event Invite Button Embed", children: "REMOVE_AUTOMOD_MESSAGE_NOTICE" };
-  let tmp11 = !tmp3;
-  const tmp7 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
-  const tmp8 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
-  if (!tmp3) {
-    tmp11 = !stateFromStores;
-  }
-  obj[1] = tmp11;
-  obj[3] = guildsBarAnimatedWrapperStyles;
-  obj[4] = cutouts;
-  obj[5] = closure_6;
-  const intl = tmp4(1236).intl;
+  obj = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config: closure_6, overState: "y", label: true, externalChildren: "sm", expandedChildren: "secondary", children: null };
+  const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
+  const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
+  const intl = tmp(1236).intl;
   obj[7] = intl.string(getSystemLocale.t.YUU0RF);
   obj[8] = badge;
   obj[9] = jsx(HomeDrawerDMsRowDefault, {});
-  obj[10] = jsx(ChatIcon.ChatIcon, { color: tmp8 });
-  return jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: null, unread: false, styles: null, cutouts: null, config: null, overState: "y", label: "Grant Channel Access", externalChildren: "Manage Channel Access", expandedChildren: "Guild Scheduled Event Invite Button Embed", children: "REMOVE_AUTOMOD_MESSAGE_NOTICE" });
+  obj[10] = jsx(ChatIcon.ChatIcon, { color: tmp7 });
+  return jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config: closure_6, overState: "y", label: true, externalChildren: "sm", expandedChildren: "secondary", children: null });
 });
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarMessages.tsx");
 

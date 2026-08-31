@@ -1,10 +1,10 @@
-// === Module 12105: useJoinRequestButtonActions ===
+// === Module 12138: useJoinRequestButtonActions ===
 
-// Module 12105 (useJoinRequestButtonActions)
+// Module 12138 (useJoinRequestButtonActions)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "ensureGuildLoaded" /* 1387 */;
 import { Routes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -46,7 +46,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -186,7 +186,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

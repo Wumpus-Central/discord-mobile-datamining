@@ -1,6 +1,6 @@
-// === Module 5348: GuildsNodeType ===
+// === Module 5351: GuildsNodeType ===
 
-// Module 5348 (GuildsNodeType)
+// Module 5351 (GuildsNodeType)
 import set from "set" /* 2 */;
 import apply from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;

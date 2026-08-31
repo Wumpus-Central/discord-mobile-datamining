@@ -1,35 +1,35 @@
-// === Module 9680: usePrimaryActionButtonType ===
+// === Module 9702: usePrimaryActionButtonType ===
 
-// Module 9680 (usePrimaryActionButtonType)
+// Module 9702 (usePrimaryActionButtonType)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import Text from "Text" /* 4442 */;
-import GroupIcon from "GroupIcon" /* 5003 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5969 */;
-import guildEventDetailsParser from "guildEventDetailsParser" /* 9679 */;
-import canEveryoneRoleViewEventDefault from "canEveryoneRoleViewEvent" /* 9681 */;
-import ThrottledButtonDefault from "ThrottledButton" /* 9686 */;
-import getGuildEventImageURLDefault from "getGuildEventImageURL" /* 9688 */;
-import useGuildScheduledEventUserCountDefault from "useGuildScheduledEventUserCount" /* 9689 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import Text from "Text" /* 4444 */;
+import GroupIcon from "GroupIcon" /* 5006 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5972 */;
+import guildEventDetailsParser from "guildEventDetailsParser" /* 9701 */;
+import canEveryoneRoleViewEventDefault from "canEveryoneRoleViewEvent" /* 9703 */;
+import ThrottledButtonDefault from "ThrottledButton" /* 9708 */;
+import getGuildEventImageURLDefault from "getGuildEventImageURL" /* 9710 */;
+import useGuildScheduledEventUserCountDefault from "useGuildScheduledEventUserCount" /* 9711 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "fetchFingerprint" /* 1218 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "trackCommunicationDisabled" /* 1993 */;
-import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_14 from "mergeGuildAvatar" /* 1923 */;
-import scheduledEventSort from "scheduledEventSort" /* 7218 */;
-import closure_17 from "scheduledEventSort" /* 7218 */;
-import { GuildScheduledEventEntityTypes as closure_18 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import closure_10 from "ensureGuildLoaded" /* 1387 */;
+import closure_11 from "trackCommunicationDisabled" /* 1992 */;
+import closure_12 from "createGuildRecordFromRust" /* 1909 */;
+import closure_13 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_14 from "mergeGuildAvatar" /* 1922 */;
+import scheduledEventSort from "scheduledEventSort" /* 7239 */;
+import closure_17 from "scheduledEventSort" /* 7239 */;
+import { GuildScheduledEventEntityTypes as closure_18 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1393 */;
 import ME from "ME" /* 676 */;
 import sum from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function usePrimaryActionButtonType(event, isConnected) {
@@ -134,7 +134,7 @@ class GuildEventJoinAndRSVPAction {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -187,7 +187,7 @@ class GuildEventJoinAndRSVPAction {
               v02 = 0;
               v02(false);
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp32) {
             callback = tmp32;
@@ -509,7 +509,7 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
   dependencyMap = undefined;
   const tmp3 = canEveryoneRoleViewEventDefault(event);
   importDefault = tmp3;
-  let obj = event(9683);
+  let obj = event(9705);
   obj = { guildId: event.guild_id, guildEventId: event.id };
   dependencyMap = obj.SHARE_EVENT_DETAILS_LINK(obj);
   obj = { accessibilityLabel: null, onPress: null, icon: null, variant: "secondary" };
@@ -526,8 +526,8 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
       const obj2 = event(table[23]);
     }
   };
-  obj[2] = importDefault(tmp3 ? 9684 : 4390);
-  return closure_22(event(7952).IconButton, obj);
+  obj[2] = importDefault(tmp3 ? 9706 : 4392);
+  return closure_22(event(7974).IconButton, obj);
 };
 export const GuildEventModeratorAction = function GuildEventModeratorAction(event) {
   event = event.event;
@@ -587,9 +587,9 @@ export const GuildEventIndicateInterestAction = function GuildEventIndicateInter
     str = "tertiary";
   }
   if (first) {
-    let BellIcon = tmp(4397).CheckmarkLargeIcon;
+    let BellIcon = tmp(4399).CheckmarkLargeIcon;
   } else {
-    BellIcon = tmp(9685).BellIcon;
+    BellIcon = tmp(9707).BellIcon;
   }
   obj = { accessibilityRole: "togglebutton", accessibilityState: { checked: first }, accessibilityLabel: null, variant: null, icon: null, text: null, onPress: null, grow: true };
   const intl = tmp(1236).intl;
@@ -618,7 +618,7 @@ export const GuildEventCardImageHeader = function GuildEventCardImageHeader(even
     if (tmp5 > 0) {
       width = tmp5;
     }
-    let obj = _require(1435);
+    let obj = _require(1431);
     obj = { style: null, onLayout: null, children: null };
     obj[0] = tmp.imageHeaderContainer;
     obj[1] = tmp6;
@@ -836,15 +836,15 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
     }
     return closure_1_11.isMember(guild_id, id);
   }, items3);
-  let tmp7 = stateFromStores(4640)(stateFromStores);
-  let obj2 = channel_id(9614);
+  let tmp7 = stateFromStores(4642)(stateFromStores);
+  let obj2 = channel_id(9636);
   const locationFromEvent = obj2.getLocationFromEvent(event);
   if (null == stateFromStores) {
     if (null == locationFromEvent) {
       return null;
     }
   }
-  let tmp2Result = tmp2(9678);
+  let tmp2Result = tmp2(9700);
   const eventLocationIconComponent = tmp2Result.getEventLocationIconComponent(event, stateFromStores, stateFromStores1);
   obj = { style: tmp.channelContainer, children: null };
   let tmp12 = null != eventLocationIconComponent;
@@ -858,7 +858,7 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
   if (null != stateFromStores) {
     obj2 = { channel: null };
     obj2[0] = stateFromStores;
-    let combined = stateFromStores(9364)(obj2);
+    let combined = stateFromStores(9386)(obj2);
   } else if (null != locationFromEvent) {
     const intl = tmp2(1236).intl;
     const _HermesInternal = HermesInternal;
@@ -868,7 +868,7 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
   if (tmp7 == null) {
     let result = null;
     if (null != locationFromEvent) {
-      tmp2Result = tmp2(9679);
+      tmp2Result = tmp2(9701);
       const obj3 = { guildId: null };
       obj3[0] = event.guild_id;
       result = tmp2Result.guildEventLocationParser(locationFromEvent, true, obj3);
@@ -876,7 +876,7 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
     tmp7 = result;
   }
   obj1[4] = tmp7;
-  items4[1] = callback4(channel_id(4442).Text, obj1);
+  items4[1] = callback4(channel_id(4444).Text, obj1);
   obj[1] = items4;
   return closure_23(closure_6, obj);
 };
@@ -896,7 +896,7 @@ export const GuildEventCardSimpleGuildInfo = function GuildEventCardSimpleGuildI
     obj[0] = items2;
     obj = { guild: null, size: null, style: null };
     obj[0] = stateFromStores;
-    obj[1] = tmp2(5969).GuildIconSizes.XSMALL_20;
+    obj[1] = tmp2(5972).GuildIconSizes.XSMALL_20;
     obj[2] = tmp.guildIcon;
     const items3 = [callback4(GuildIconSizesDefault, obj), ];
     obj1 = { style: null, children: null };
@@ -904,7 +904,7 @@ export const GuildEventCardSimpleGuildInfo = function GuildEventCardSimpleGuildI
     const obj2 = { variant: "text-sm/semibold", style: null, children: null };
     obj2[1] = textStyle;
     obj2[2] = stateFromStores.name;
-    obj1[1] = callback4(tmp2(4442).Text, obj2);
+    obj1[1] = callback4(tmp2(4444).Text, obj2);
     items3[1] = callback4(closure_6, obj1);
     obj[1] = items3;
     tmp5 = callback5(closure_6, obj);

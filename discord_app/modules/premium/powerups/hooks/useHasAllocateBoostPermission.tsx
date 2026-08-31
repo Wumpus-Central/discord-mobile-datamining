@@ -1,8 +1,8 @@
-// === Module 12011: useHasAllocateBoostPermission ===
+// === Module 12044: useHasAllocateBoostPermission ===
 
-// Module 12011 (useHasAllocateBoostPermission)
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4090 */;
+// Module 12044 (useHasAllocateBoostPermission)
+import closure_2 from "createGuildRecordFromRust" /* 1909 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4091 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;

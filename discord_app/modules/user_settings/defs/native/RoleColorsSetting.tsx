@@ -1,12 +1,12 @@
-// === Module 14861: useRoleColorSettingValue ===
+// === Module 14894: useRoleColorSettingValue ===
 
-// Module 14861 (useRoleColorSettingValue)
+// Module 14894 (useRoleColorSettingValue)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import setFontSize from "setFontSize" /* 14025 */;
+import setFontSize from "setFontSize" /* 14059 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
-import createToggle from "createToggle" /* 11006 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import createToggle from "createToggle" /* 11031 */;
 
 require = arg1;
 function useRoleColorSettingValue() {

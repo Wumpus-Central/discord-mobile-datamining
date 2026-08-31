@@ -1,10 +1,10 @@
-// === Module 6504: FileUploadSpotIllustration ===
+// === Module 6517: FileUploadSpotIllustration ===
 
-// Module 6504 (FileUploadSpotIllustration)
+// Module 6517 (FileUploadSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6505 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6518 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/FileUploadSpotIllustration.native.tsx");

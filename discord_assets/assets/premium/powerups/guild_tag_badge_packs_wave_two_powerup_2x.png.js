@@ -1,6 +1,6 @@
-// === Module 15695: metadata ===
+// === Module 15729: metadata ===
 
-// Module 15695 (metadata)
+// Module 15729 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/powerups/guild_tag_badge_packs_wave_two_powerup_2x.png.js");

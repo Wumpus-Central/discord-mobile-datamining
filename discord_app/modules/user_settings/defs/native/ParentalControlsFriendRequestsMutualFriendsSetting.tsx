@@ -1,13 +1,13 @@
-// === Module 15426: toggle ===
+// === Module 15459: toggle ===
 
-// Module 15426 (toggle)
+// Module 15459 (toggle)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import hasFlagAll from "hasFlag" /* 1403 */;
-import result2 from "result" /* 14364 */;
+import hasFlagAll from "hasFlag" /* 1399 */;
+import result2 from "result" /* 14398 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "freshTeenActivityWithMap" /* 7229 */;
+import closure_4 from "freshTeenActivityWithMap" /* 7250 */;
 import { FriendSourceFlags } from "ME" /* 676 */;
-import createToggle from "createToggle" /* 11006 */;
+import createToggle from "createToggle" /* 11031 */;
 
 require = arg1;
 createToggle = {
@@ -17,8 +17,8 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsMutualFriendsSettingValue() {
-    const selectedTeenId = controlledSetting(8715).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(14364).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(8737).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(14398).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
     return React.useMemo(() => controlledSetting(closure_1_2[6]).computeFlags(controlledSetting), items).mutualFriends;

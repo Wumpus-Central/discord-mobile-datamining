@@ -1,10 +1,10 @@
-// === Module 7058: VideoCameraSpotIllustration ===
+// === Module 7077: VideoCameraSpotIllustration ===
 
-// Module 7058 (VideoCameraSpotIllustration)
+// Module 7077 (VideoCameraSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 7059 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 7078 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/VideoCameraSpotIllustration.native.tsx");

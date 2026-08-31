@@ -1,10 +1,10 @@
-// === Module 17009: handleChannelDelete ===
+// === Module 17042: handleChannelDelete ===
 
-// Module 17009 (handleChannelDelete)
-import initializeDefault from "initialize" /* 5451 */;
-import withErrorHandlingDefault from "withErrorHandling" /* 7587 */;
+// Module 17042 (handleChannelDelete)
+import initializeDefault from "initialize" /* 5454 */;
+import withErrorHandlingDefault from "withErrorHandling" /* 7608 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
 
 initializeDefault;
 class ThreadManager extends tmp2 {

@@ -1,18 +1,19 @@
-// === Module 4820: handleChanged ===
+// === Module 4822: handleChanged ===
 
-// Module 4820 (handleChanged)
+// Module 4822 (handleChanged)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
+import isDraftCommandValidForText from "isDraftCommandValidForText" /* 4824 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 4821 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "handleConnectionOpen" /* 4823 */;
 
-const require = arg1;
+require = arg1;
 function handleChanged(type) {
-  ({ channelId, draft, draftType } = type);
+  ({ channelId, draft, draftType, command } = type);
   const channel = store2.getChannel(channelId);
   let template;
   if (channel != null) {
@@ -42,15 +43,41 @@ function handleChanged(type) {
         if (draft.length > closure_7) {
           substr = draft.substr(0, tmp16);
         }
+        if (command == null) {
+          command = undefined;
+          if (tmp18 != null) {
+            command = tmp18.command;
+          }
+          let tmp22;
+          if (obj5.isDraftCommandValidForText(command, substr)) {
+            let command1;
+            if (tmp18 != null) {
+              command1 = tmp18.command;
+            }
+            tmp22 = command1;
+          }
+          command = tmp22;
+          obj5 = isDraftCommandValidForText;
+        }
         draft = undefined;
         if (tmp15[draftType] != null) {
           draft = tmp18.draft;
         }
-        if (substr !== draft) {
-          obj1 = { timestamp: null, draft: null };
+        let isEqualResult = substr === draft;
+        if (isEqualResult) {
+          let command2;
+          if (tmp18 != null) {
+            command2 = tmp18.command;
+          }
+          isEqualResult = applyDefault.isEqual(command, command2);
+          const obj6 = applyDefault;
+        }
+        if (!isEqualResult) {
+          obj1 = { timestamp: null, draft: null, command: null };
           const _Date = Date;
           obj1[0] = Date.now();
           obj1[1] = substr;
+          obj1[2] = command;
           tmp15[draftType] = obj1;
         }
       }
@@ -67,10 +94,10 @@ function handleChanged(type) {
     }
     if (null != tmp10[channelId]) {
       delete tmp4[tmp2];
-      if (obj6.isEmpty(tmp11)) {
+      if (obj8.isEmpty(tmp11)) {
         delete tmp[tmp3];
       }
-      obj6 = applyDefault;
+      obj8 = applyDefault;
     }
   }
 }
@@ -219,14 +246,14 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1370).isNotNullish);
+    }).pickBy(_require(1471).isNotNullish);
     const mapped = applyDefault(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1370).isNotNullish).toPairs().map((arg0) => {
+    }).pickBy(_require(1471).isNotNullish).toPairs().map((arg0) => {
       [tmp, ] = arg0;
       return { channelId, timestamp, draft };
     });
@@ -236,7 +263,7 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1370).isNotNullish).toPairs();
+    }).pickBy(_require(1471).isNotNullish).toPairs();
     return mapped.sortBy((timestamp) => -timestamp.timestamp).value();
   }
 };
@@ -257,6 +284,24 @@ prototype["getDraft"] = function getDraft(id, ChannelMessage) {
       }
     }
     return "";
+  }
+};
+prototype["getDraftCommand"] = function getDraftCommand(id, ChannelMessage) {
+  id = store.getId();
+  if (null != id) {
+    let tmp3 = dependencyMap[id];
+    if (null == tmp3) {
+      obj = {};
+      dependencyMap[id] = obj;
+      tmp3 = obj;
+    }
+    let command;
+    if (tmp3[id] != null) {
+      if (tmp6[ChannelMessage] != null) {
+        command = tmp9.command;
+      }
+    }
+    return command;
   }
 };
 prototype["getThreadSettings"] = function getThreadSettings(channelId) {
@@ -505,6 +550,32 @@ obj = {
       }
     }
     return flag;
+  },
+  DRAFT_COMMAND_CLEAR: function handleDraftCommandClear(arg0) {
+    ({ channelId, draftType } = arg0);
+    const id = store.getId();
+    if (null == id) {
+      return false;
+    } else {
+      let tmp3 = dependencyMap[id];
+      if (null == tmp3) {
+        obj = {};
+        dependencyMap[id] = obj;
+        tmp3 = obj;
+      }
+      let tmp6;
+      if (tmp3[channelId] != null) {
+        tmp6 = tmp5[draftType];
+      }
+      let command;
+      if (tmp6 != null) {
+        command = tmp6.command;
+      }
+      if (null != command) {
+        tmp6.command = undefined;
+      }
+      return false;
+    }
   },
   THREAD_SETTINGS_DRAFT_CHANGE: function handleThreadSettingsDraftChanged(arg0) {
     ({ channelId, draft } = arg0);

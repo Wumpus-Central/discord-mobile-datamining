@@ -1,9 +1,9 @@
-// === Module 13257: getCachedPrivateChannelObfuscation ===
+// === Module 13291: getCachedPrivateChannelObfuscation ===
 
-// Module 13257 (getCachedPrivateChannelObfuscation)
+// Module 13291 (getCachedPrivateChannelObfuscation)
 import set from "set" /* 2 */;
-import PRIVATE_CHANNEL_OBFUSCATION_KEY from "PRIVATE_CHANNEL_OBFUSCATION_KEY" /* 13258 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import PRIVATE_CHANNEL_OBFUSCATION_KEY from "PRIVATE_CHANNEL_OBFUSCATION_KEY" /* 13292 */;
+import ApexExperiment from "ApexExperiment" /* 1468 */;
 
 const obj = { 1: null, 2: { enableObfuscation: true, enableIntegrityCheck: false }, 3: { enableObfuscation: true, enableIntegrityCheck: true } };
 obj[3] = { enableObfuscation: false, enableIntegrityCheck: false };

@@ -1,9 +1,9 @@
-// === Module 17340: _fetchBasicGuild ===
+// === Module 17373: _fetchBasicGuild ===
 
-// Module 17340 (_fetchBasicGuild)
+// Module 17373 (_fetchBasicGuild)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getGuild" /* 7811 */;
+import closure_4 from "createGuildRecordFromRust" /* 1909 */;
+import closure_5 from "getGuild" /* 7832 */;
 import { Endpoints } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -27,7 +27,7 @@ function _fetchBasicGuild() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

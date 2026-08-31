@@ -1,15 +1,15 @@
-// === Module 15601: HappeningNowAvatarStack ===
+// === Module 15635: HappeningNowAvatarStack ===
 
-// Module 15601 (HappeningNowAvatarStack)
+// Module 15635 (HappeningNowAvatarStack)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 1997 */;
-import { CHANNEL_SPRING_CONFIG } from "n" /* 9368 */;
+import closure_6 from "_getSystemLocale" /* 1996 */;
+import { CHANNEL_SPRING_CONFIG } from "n" /* 9390 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);

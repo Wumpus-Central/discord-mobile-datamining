@@ -1,9 +1,9 @@
-// === Module 15214: updateClientPremiumTypeOverride ===
+// === Module 15247: updateClientPremiumTypeOverride ===
 
-// Module 15214 (updateClientPremiumTypeOverride)
+// Module 15247 (updateClientPremiumTypeOverride)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import createMessage from "createMessage" /* 7444 */;
-import closure_3 from "mergeGuildAvatar" /* 1923 */;
+import createMessage from "createMessage" /* 7465 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/OverridePremiumTypeActions.tsx");

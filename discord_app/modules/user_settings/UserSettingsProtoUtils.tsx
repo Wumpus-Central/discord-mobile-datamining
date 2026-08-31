@@ -1,6 +1,6 @@
-// === Module 1375: getProtoFieldClass ===
+// === Module 1371: getProtoFieldClass ===
 
-// Module 1375 (getProtoFieldClass)
+// Module 1371 (getProtoFieldClass)
 import set from "set" /* 2 */;
 import b64ToProto from "b64ToProto" /* 1342 */;
 

@@ -1,10 +1,10 @@
-// === Module 15834: HomeDrawerFavoritesRowExpandedChildren ===
+// === Module 15868: HomeDrawerFavoritesRowExpandedChildren ===
 
-// Module 15834 (HomeDrawerFavoritesRowExpandedChildren)
+// Module 15868 (HomeDrawerFavoritesRowExpandedChildren)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4442 */;
-import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 15827 */;
+import Text from "Text" /* 4444 */;
+import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 15861 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

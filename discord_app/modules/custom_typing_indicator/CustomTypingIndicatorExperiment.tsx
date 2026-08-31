@@ -1,8 +1,8 @@
-// === Module 11477: apexExperiment ===
+// === Module 11506: apexExperiment ===
 
-// Module 11477 (apexExperiment)
+// Module 11506 (apexExperiment)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import ApexExperiment from "ApexExperiment" /* 1468 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-07-custom-typing-indicator", defaultConfig: { canSet: false, canView: false, entryPoint: null }, variations: { 0: { canSet: false, canView: false, entryPoint: null }, 1: { canSet: true, canView: true, entryPoint: "settings" }, 2: { canSet: true, canView: true, entryPoint: "profile" }, 3: { canSet: false, canView: true, entryPoint: null } } });
 const result = set.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorExperiment.tsx");

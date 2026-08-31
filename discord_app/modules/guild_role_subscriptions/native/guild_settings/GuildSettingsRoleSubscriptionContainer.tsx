@@ -1,15 +1,15 @@
-// === Module 17249: ApplicationRejectedNotice ===
+// === Module 17282: ApplicationRejectedNotice ===
 
-// Module 17249 (ApplicationRejectedNotice)
+// Module 17282 (ApplicationRejectedNotice)
 import noopAll from "noop" /* 19 */;
-import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 14742 */;
-import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17225 */;
-import useRoleSubscriptionSettingsDisabled from "useRoleSubscriptionSettingsDisabled" /* 17239 */;
+import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 14776 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17258 */;
+import useRoleSubscriptionSettingsDisabled from "useRoleSubscriptionSettingsDisabled" /* 17272 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "createGuildRecordFromRust" /* 1909 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function ApplicationRejectedNotice(guildId) {
@@ -29,16 +29,16 @@ function ApplicationRejectedNotice(guildId) {
   ({ resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = useOnboardingMonetizationEnableFlowDefault(stateFromStores));
   if (null != resubmissionError) {
     obj = { children: null };
-    let tmp9Result = tmp9(11726);
+    let tmp9Result = tmp9(11757);
     obj[0] = resubmissionError.getAnyErrorMessage();
     let tmp14 = callback(tmp9Result, obj);
   } else if (null != requestRejectedNoticeText) {
     obj = { notice: null };
     obj[0] = requestRejectedNoticeText;
-    tmp14 = callback(tmp9(17198), obj);
+    tmp14 = callback(tmp9(17231), obj);
   } else if (tmp13) {
     obj1 = { notice: null };
-    tmp9Result = tmp9(17198);
+    tmp9Result = tmp9(17231);
     const intl3 = tmp2(1236).intl;
     obj1[0] = intl3.string(tmp2(1236).t.MyJpJT);
     tmp14 = callback(tmp9Result, obj1);
@@ -49,22 +49,22 @@ function ApplicationRejectedNotice(guildId) {
     obj2[1] = intl2.string(tmp2(1236).t["YKw/NQ"]);
     obj2[2] = tmp12;
     obj2[3] = tmp11;
-    tmp14 = callback(tmp9(17198), obj2);
-    const tmp9Result1 = tmp9(17198);
+    tmp14 = callback(tmp9(17231), obj2);
+    const tmp9Result1 = tmp9(17231);
   } else if (true === hasItem1) {
     const obj3 = { notice: null };
     const intl = tmp2(1236).intl;
     obj3[0] = intl.string(tmp2(1236).t.e2g9sW);
-    tmp14 = callback(tmp9(17198), obj3);
-    const tmp9Result2 = tmp9(17198);
+    tmp14 = callback(tmp9(17231), obj3);
+    const tmp9Result2 = tmp9(17231);
   } else {
     tmp14 = null;
     if (true === hasItem) {
       const obj4 = { notice: null };
       const intl4 = tmp2(1236).intl;
       obj4[0] = intl4.string(tmp2(1236).t.rxI9sl);
-      tmp14 = callback(tmp9(17198), obj4);
-      const tmp9Result3 = tmp9(17198);
+      tmp14 = callback(tmp9(17231), obj4);
+      const tmp9Result3 = tmp9(17231);
     }
   }
   let tmp24 = null;

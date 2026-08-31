@@ -1,6 +1,6 @@
-// === Module 1906: set ===
+// === Module 1905: set ===
 
-// Module 1906 (set)
+// Module 1905 (set)
 import set from "set" /* 2 */;
 
 const re0 = /input/i;

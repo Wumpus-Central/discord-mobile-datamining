@@ -1,10 +1,10 @@
-// === Module 9589: useVoiceStateForRemoteSession ===
+// === Module 9611: useVoiceStateForRemoteSession ===
 
-// Module 9589 (useVoiceStateForRemoteSession)
+// Module 9611 (useVoiceStateForRemoteSession)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "updateVoiceState" /* 4465 */;
-import closure_4 from "set" /* 4463 */;
+import closure_3 from "updateVoiceState" /* 4467 */;
+import closure_4 from "set" /* 4465 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_console/hooks/useVoiceStateForRemoteSession.tsx");

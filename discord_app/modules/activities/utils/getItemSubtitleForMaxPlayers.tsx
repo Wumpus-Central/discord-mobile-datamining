@@ -1,6 +1,6 @@
-// === Module 11652: getItemSubtitleForMaxPlayers ===
+// === Module 11683: getItemSubtitleForMaxPlayers ===
 
-// Module 11652 (getItemSubtitleForMaxPlayers)
+// Module 11683 (getItemSubtitleForMaxPlayers)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

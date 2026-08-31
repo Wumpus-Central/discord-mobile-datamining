@@ -1,22 +1,22 @@
-// === Module 12207: HubEmailConnectionSubmitSchool ===
+// === Module 12241: HubEmailConnectionSubmitSchool ===
 
-// Module 12207 (HubEmailConnectionSubmitSchool)
+// Module 12241 (HubEmailConnectionSubmitSchool)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import useNavigation from "useNavigation" /* 1500 */;
-import Text from "Text" /* 4442 */;
-import Button2 from "Button" /* 4893 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5559 */;
-import _modDef7651 from "module_7651" /* 7651 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12198 */;
+import useNavigation from "useNavigation" /* 1499 */;
+import Text from "Text" /* 4444 */;
+import Button2 from "Button" /* 4896 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5562 */;
+import _modDef7672 from "module_7672" /* 7672 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12232 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 12190 */;
+import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 12224 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
@@ -57,7 +57,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -192,7 +192,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
       }
     }, 100);
   };
-  items1[2] = callback2(_modDef7651, obj4);
+  items1[2] = callback2(_modDef7672, obj4);
   obj1[1] = items1;
   const items2 = [closure_10(first, obj1), callback2(first, { style: tmp.redesignGrowSpacing }), ];
   const obj7 = { style: tmp.redesignSubmit, children: null };

@@ -1,19 +1,18 @@
-// === Module 8315: Divider ===
+// === Module 8337: Divider ===
 
-// Module 8315 (Divider)
+// Module 8337 (Divider)
 import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import ManaContext from "ManaContext" /* 4173 */;
-import context from "context" /* 5563 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 5940 */;
+import ManaContext from "ManaContext" /* 4174 */;
+import context from "context" /* 5566 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 5943 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 ({ View: c4, StyleSheet: c5, Platform } = get_ActivityIndicator);
-let closure_7 = createCacheKey.createStyles((arg0) => {
+let closure_7 = createCacheKey.createStyles(() => {
   let obj = { divider: {}, dividerOuter: null, dividerHasIcon: null };
   obj = { marginLeft: 0, height: closure_5.hairlineWidth, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: -1 * closure_5.hairlineWidth };
   obj[1] = obj;
@@ -33,7 +32,7 @@ export default function Divider(outer) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const tmp2 = callback(useIsMobileVisualRefreshExperimentEnabledDefault("FormDivider"));
+  const tmp = callback();
   let obj = ManaContext;
   const themeContext = obj.useThemeContext();
   ({ theme, primaryColor } = themeContext);
@@ -41,15 +40,15 @@ export default function Divider(outer) {
   let tmp7 = null;
   if (tmp6) {
     obj = { backgroundColor: null };
-    obj[0] = tmp3(4294).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
+    obj[0] = tmp2(4296).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
     tmp7 = obj;
-    const tmp3Result = tmp3(4294);
+    const tmp2Result = tmp2(4296);
   }
   let tmp10Result = null;
   if (!React.useContext(context.RedesignCompatContext)) {
-    const items = [flag ? tmp2.dividerOuter : tmp2.divider, , , ];
+    const items = [flag ? tmp.dividerOuter : tmp.divider, , , ];
     if (flag2) {
-      flag2 = tmp2.dividerHasIcon;
+      flag2 = tmp.dividerHasIcon;
     }
     obj = { style: null };
     items[1] = flag2;

@@ -1,10 +1,10 @@
-// === Module 5007: AnnouncementsLockIcon ===
+// === Module 5010: AnnouncementsLockIcon ===
 
-// Module 5007 (AnnouncementsLockIcon)
+// Module 5010 (AnnouncementsLockIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 4982 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 4985 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

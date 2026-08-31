@@ -1,11 +1,11 @@
-// === Module 7703: saveProfileAndAccountRequest ===
+// === Module 7724: saveProfileAndAccountRequest ===
 
-// Module 7703 (saveProfileAndAccountRequest)
+// Module 7724 (saveProfileAndAccountRequest)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
-import str2 from "str2" /* 6020 */;
+import str2 from "str2" /* 6023 */;
 
 require = arg1;
 function saveProfileAndAccountRequest(arg0, arg1) {
@@ -37,7 +37,7 @@ function _saveProfileAndAccountRequest() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -63,7 +63,7 @@ function _saveProfileAndAccountRequest() {
               token = undefined;
               token = 1;
               c5 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -170,8 +170,8 @@ export const disableAccount = function disableAccount(password, arg1) {
   const obj3 = sendRequest;
   const tmp2 = arg1 ? closure_4.DELETE_ACCOUNT : closure_4.DISABLE_ACCOUNT;
   return HTTP.post(obj).then(() => {
-    callback2(6017).logoutInternal();
-    const obj = callback2(6017);
+    callback2(6020).logoutInternal();
+    const obj = callback2(6020);
     callback(1222).transitionTo(constants.DEFAULT_LOGGED_OUT);
   });
 };
@@ -217,8 +217,8 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   if (undefined !== typingIndicatorStyle) {
     let result = null;
     if (null != typingIndicatorStyle) {
-      result = avatar(1938).serializeTypingIndicatorStyle(typingIndicatorStyle);
-      const obj3 = avatar(1938);
+      result = avatar(1937).serializeTypingIndicatorStyle(typingIndicatorStyle);
+      const obj3 = avatar(1937);
     }
     obj.typing_indicator_style = result;
   }
@@ -239,11 +239,11 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     obj.push_voip_provider = tmp15;
     obj.push_voip_token = value;
   }
-  obj = { headers: avatarId(5078).buildHeadersForMd5({ [avatar(7704).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 }) };
+  obj = { headers: avatarId(5081).buildHeadersForMd5({ [avatar(7725).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 }) };
   const tmp = avatarId;
   tmp13 = null != tmp12 && null != value;
   tmp15 = closure_8;
-  let tmpResult = avatarId(5078);
+  let tmpResult = avatarId(5081);
   return saveProfileAndAccountRequest(obj, obj).then((arg0) => {
     avatarId(closure_1_2[3]).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
     let tmp4 = null == avatar;

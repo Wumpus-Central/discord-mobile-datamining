@@ -1,27 +1,27 @@
-// === Module 4629: watchStream ===
+// === Module 4631: watchStream ===
 
-// Module 4629 (watchStream)
+// Module 4631 (watchStream)
 import _modDef38 from "module_38" /* 38 */;
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef4459 from "module_4459" /* 4459 */;
-import isStreamKey from "isStreamKey" /* 4512 */;
-import allowChannelAccess from "allowChannelAccess" /* 4632 */;
-import transitionToStreamDefault from "transitionToStream" /* 4688 */;
-import _modDef5320 from "module_5320" /* 5320 */;
-import isPremiumResolution from "isPremiumResolution" /* 9527 */;
+import _modDef4461 from "module_4461" /* 4461 */;
+import isStreamKey from "isStreamKey" /* 4514 */;
+import allowChannelAccess from "allowChannelAccess" /* 4634 */;
+import transitionToStreamDefault from "transitionToStream" /* 4690 */;
+import _modDef5323 from "module_5323" /* 5323 */;
+import isPremiumResolution from "isPremiumResolution" /* 9549 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 4463 */;
-import closure_5 from "initialize" /* 4630 */;
-import closure_6 from "reset" /* 4631 */;
-import closure_7 from "reset" /* 4468 */;
+import closure_4 from "set" /* 4465 */;
+import closure_5 from "initialize" /* 4632 */;
+import closure_6 from "reset" /* 4633 */;
+import closure_7 from "reset" /* 4470 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "handleConnectionOpen" /* 1982 */;
-import closure_12 from "updateVoiceState" /* 4465 */;
+import closure_9 from "ensureGuildLoaded" /* 1387 */;
+import closure_10 from "createGuildRecordFromRust" /* 1909 */;
+import closure_11 from "handleConnectionOpen" /* 1981 */;
+import closure_12 from "updateVoiceState" /* 4467 */;
 import ME from "ME" /* 676 */;
-import { StreamTypes } from "StreamIssueReportReasons" /* 4513 */;
+import { StreamTypes } from "StreamIssueReportReasons" /* 4515 */;
 
 require = arg1;
 function watchStream(stream, forceMultiple) {
@@ -45,8 +45,8 @@ function watchStream(stream, forceMultiple) {
       obj[2] = forceMultiple;
       dispatcherDefault.dispatch(obj);
       if (null != guildId) {
-        const result = tmp12(4643).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
-        const tmp12Result = tmp12(4643);
+        const result = tmp12(4645).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
+        const tmp12Result = tmp12(4645);
       }
       let forceFocus;
       if (forceMultiple != null) {
@@ -64,8 +64,8 @@ function watchStream(stream, forceMultiple) {
         tmp22 = forceMultiple;
       }
       if (!tmp22) {
-        const participant = tmp18(4687).selectParticipant(stream.channelId, encodeStreamKeyResult);
-        const tmp18Result = tmp18(4687);
+        const participant = tmp18(4689).selectParticipant(stream.channelId, encodeStreamKeyResult);
+        const tmp18Result = tmp18(4689);
       }
       const obj3 = dispatcherDefault;
     } else {
@@ -102,7 +102,7 @@ function _fetchStreamPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -125,7 +125,7 @@ function _fetchStreamPreview() {
               dependencyMap = undefined;
               if (c6.shouldFetchPreview(c0, lib, dependencyMap)) {
                 let obj5 = callback;
-                let result = callback(4512);
+                let result = callback(4514);
                 let HTTP = result.encodeStreamKey;
                 if (null != tmp55) {
                   let CALL = closure_1_16.GUILD;
@@ -225,7 +225,7 @@ function _notifyStreamStart() {
       const obj2 = { event: null };
       obj2[0] = callback(503).NetworkActionNames.STREAM_NOTIFY;
       obj1[2] = obj2;
-      yield v0(4679).post(obj1);
+      yield v0(4681).post(obj1);
       if (1 === tmp6) {
         c4 = 0;
         v0 = 3;
@@ -398,15 +398,15 @@ export const stopOwnStream = function stopOwnStream(arg0) {
 export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWatchStream(arg0, streamKey) {
   const _require = arg0;
   id = id.getId();
-  importDefault = _require(4512).decodeStreamKey(streamKey);
+  importDefault = _require(4514).decodeStreamKey(streamKey);
   const voiceChannelId = store2.getVoiceChannelId();
   if (tmp4) {
-    _modDef5320.disconnect();
-    const obj2 = _modDef5320;
+    _modDef5323.disconnect();
+    const obj2 = _modDef5323;
   }
-  let obj = _require(4512);
+  let obj = _require(4514);
   tmp4 = null != voiceChannelId && voiceChannelId !== arg0;
-  _modDef4459.addRecipient(arg0, id, undefined, () => {
+  _modDef4461.addRecipient(arg0, id, undefined, () => {
     const tmp = callback(closure_1_2[26]);
     const call = tmp.call;
     const fn = () => {

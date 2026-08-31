@@ -1,33 +1,54 @@
-// === Module 7818: formatUsernameOnClick ===
+// === Module 7839: formatUsernameOnClick ===
 
-// Module 7818 (formatUsernameOnClick)
-import set from "set" /* 2 */;
+// Module 7839 (formatUsernameOnClick)
+import processColorStrings from "processColorStrings" /* 7838 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7840 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
 
 export default function formatUsernameOnClick(arg0) {
   ({ userId, message, author, roleStyle, messageChannelId } = arg0);
-  const colorString = author.colorString;
-  ({ colorStrings, guildId } = author);
+  ({ colorString, guildId } = author);
   if (userId == null) {
     userId = message.author.id;
   }
-  const obj = { action: "bindUserMenu", userId, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, messageChannelId: null, medium: true };
-  let tmp = null;
+  let obj = processColorStrings;
+  const result = obj.isNativeMessageEligibleForEnhancedRoleColors(guildId, userId);
+  user = user.getUser(userId);
+  if (user == null) {
+    author = null;
+    if (userId === message.author.id) {
+      author = message.author;
+    }
+    user = author;
+  }
+  const displayNameFontIdForMobileUser = createDisplayNameStylesMobile.getDisplayNameFontIdForMobileUser(user, guildId);
+  obj = { action: "bindUserMenu", userId, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, messageChannelId: null, medium: true };
+  let tmp7 = null;
   if ("username" === roleStyle) {
-    tmp = colorString;
+    tmp7 = colorString;
   }
-  obj[2] = tmp;
+  obj[2] = tmp7;
   obj[3] = colorString;
-  let tmp2 = null;
-  if (obj2.isNativeMessageEligibleForEnhancedRoleColors(guildId, userId)) {
-    tmp2 = colorStrings;
+  let colorStrings = null;
+  if (result) {
+    colorStrings = author.colorStrings;
   }
-  obj[4] = tmp2;
+  obj[4] = colorStrings;
   obj[5] = "dot" === roleStyle && null != colorString;
   if (messageChannelId == null) {
     messageChannelId = message.channel_id;
   }
   obj[6] = messageChannelId;
+  if (null != displayNameFontIdForMobileUser) {
+    obj = { fontId: null };
+    obj[0] = displayNameFontIdForMobileUser;
+    obj1 = obj;
+  } else {
+    obj1 = {};
+  }
+  const merged = Object.assign(obj1);
   return obj;
 };

@@ -1,12 +1,12 @@
-// === Module 8929: PressableScale ===
+// === Module 8952: PressableScale ===
 
-// Module 8929 (PressableScale)
-import _mod4186 from "module_4186" /* 4186 */;
-import styleProperties from "styleProperties" /* 4899 */;
+// Module 8952 (PressableScale)
+import _mod4187 from "module_4187" /* 4187 */;
+import styleProperties from "styleProperties" /* 4902 */;
 import closure_3 from "_objectWithoutProperties" /* 109 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
-import importDefaultResult from "module_4186" /* 4186 */;
+import importDefaultResult from "module_4187" /* 4187 */;
 
 require = arg1;
 let closure_2 = ["style"];
@@ -18,7 +18,7 @@ const forwardRefResult = importAllResult.forwardRef((scaleAmountInPx, ref) => {
   }
   ({ onPressIn, onPressOut } = scaleAmountInPx);
   const merged = Object.assign(scaleAmountInPx, Object.create(null));
-  let obj = _mod4186;
+  let obj = _mod4187;
   const sharedValue = obj.useSharedValue(0);
   const buttonPressAnimationProps = styleProperties.useButtonPressAnimationProps(sharedValue, num, scaleAmountInPx.onLayout, onPressIn, onPressOut);
   obj = {};

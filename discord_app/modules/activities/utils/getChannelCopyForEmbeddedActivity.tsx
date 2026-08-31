@@ -1,6 +1,6 @@
-// === Module 9194: getChannelCopyForEmbeddedActivity ===
+// === Module 9216: getChannelCopyForEmbeddedActivity ===
 
-// Module 9194 (getChannelCopyForEmbeddedActivity)
+// Module 9216 (getChannelCopyForEmbeddedActivity)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

@@ -1,16 +1,16 @@
-// === Module 14725: QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED ===
+// === Module 14759: QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED ===
 
-// Module 14725 (QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)
+// Module 14759 (QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)
 import ThemesDefault from "Themes" /* 712 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4892 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4895 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { QuestDockMode } from "QuestsExperimentLocations" /* 5352 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14629 */;
+import { QuestDockMode } from "QuestsExperimentLocations" /* 5355 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14663 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 let c4 = importAllResult;

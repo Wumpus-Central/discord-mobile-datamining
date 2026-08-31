@@ -1,7 +1,7 @@
-// === Module 15938: useNotificationCenterItemAcked ===
+// === Module 15972: useNotificationCenterItemAcked ===
 
-// Module 15938 (useNotificationCenterItemAcked)
-import closure_2 from "handleLoadFinished" /* 15931 */;
+// Module 15972 (useNotificationCenterItemAcked)
+import closure_2 from "handleLoadFinished" /* 15965 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/notification_center/useNotificationCenterItemAcked.tsx");
@@ -14,8 +14,8 @@ export const useNotificationCenterItemAcked = function useNotificationCenterItem
   let tmp4 = !forceUnacked;
   if (!forceUnacked) {
     if (!stateFromStores) {
-      stateFromStores = _require(7333).isRemoteAcked(item, ackedBeforeId);
-      const tmpResult = _require(7333);
+      stateFromStores = _require(7354).isRemoteAcked(item, ackedBeforeId);
+      const tmpResult = _require(7354);
     }
     tmp4 = stateFromStores;
   }

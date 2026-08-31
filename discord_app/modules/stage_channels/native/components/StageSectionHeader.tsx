@@ -1,13 +1,13 @@
-// === Module 10074: StageSectionHeader ===
+// === Module 10097: StageSectionHeader ===
 
-// Module 10074 (StageSectionHeader)
+// Module 10097 (StageSectionHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4186 from "module_4186" /* 4186 */;
-import registerAssetDefault from "registerAsset" /* 5908 */;
+import _modDef4187 from "module_4187" /* 4187 */;
+import registerAssetDefault from "registerAsset" /* 5911 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 noopAll;
@@ -27,7 +27,7 @@ export default function StageSectionHeader(collapsed) {
   const children = collapsed.children;
   ({ label, count, onToggleCollapse } = collapsed);
   const tmp = callback2();
-  let obj = collapsed(4186);
+  let obj = collapsed(4187);
   const fn = function y() {
     let obj = collapsed(closure_1_2[6]);
     let str = "0deg";
@@ -40,7 +40,7 @@ export default function StageSectionHeader(collapsed) {
     obj[0] = items;
     return obj;
   };
-  obj = { withTiming: collapsed(4447).withTiming, collapsed };
+  obj = { withTiming: collapsed(4449).withTiming, collapsed };
   fn.__closure = obj;
   fn.__workletHash = 13855092771739;
   fn.__initData = closure_8;
@@ -48,7 +48,7 @@ export default function StageSectionHeader(collapsed) {
   obj1 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
   let items = [label, " \u2014 ", count];
-  const items1 = [callback(collapsed(4442).Text, { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: items }), , ];
+  const items1 = [callback(collapsed(4444).Text, { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: items }), , ];
   let tmp5Result = null != children;
   if (tmp5Result) {
     const obj2 = { style: null, children: null };
@@ -59,7 +59,7 @@ export default function StageSectionHeader(collapsed) {
   items1[1] = tmp5Result;
   const obj3 = { style: tmp.collapseButton, children: null };
   const obj4 = { style: animatedStyle, children: closure_6(collapsed(1297).Icon, { source: registerAssetDefault, style: tmp.collapseIcon }) };
-  obj3[1] = closure_6(_modDef4186.View, obj4);
+  obj3[1] = closure_6(_modDef4187.View, obj4);
   items1[2] = closure_6(closure_4, obj3);
   obj1[2] = items1;
   obj[1] = callback(closure_3, obj1);

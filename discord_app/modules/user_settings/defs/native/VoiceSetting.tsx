@@ -1,10 +1,10 @@
-// === Module 14775: route ===
+// === Module 14809: route ===
 
-// Module 14775 (route)
+// Module 14809 (route)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_2 from "_detectH265HardwareDecode" /* 4499 */;
 import ME from "ME" /* 676 */;
-import createToggle from "createToggle" /* 11006 */;
+import createToggle from "createToggle" /* 11031 */;
 
 require = arg1;
 ({ InputModes: c3, UserSettingsSections } = ME);
@@ -36,7 +36,7 @@ createToggle = {
 createToggle = {
   route: UserSettingsSections.VOICE,
   getComponent() {
-    return require(14776) /* KrispLogo */.default;
+    return require(14810) /* KrispLogo */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

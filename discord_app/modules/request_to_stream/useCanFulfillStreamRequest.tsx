@@ -1,14 +1,14 @@
-// === Module 11267: canFulfillStreamRequest ===
+// === Module 11296: canFulfillStreamRequest ===
 
-// Module 11267 (canFulfillStreamRequest)
-import closure_2 from "initialize" /* 4469 */;
-import closure_3 from "reset" /* 4468 */;
+// Module 11296 (canFulfillStreamRequest)
+import closure_2 from "initialize" /* 4471 */;
+import closure_3 from "reset" /* 4470 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_8 from "sortActivity" /* 4535 */;
-import closure_9 from "createRTCConnection" /* 4520 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "createGuildRecordFromRust" /* 1909 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_8 from "sortActivity" /* 4537 */;
+import closure_9 from "createRTCConnection" /* 4522 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

@@ -1,13 +1,13 @@
-// === Module 4361: Version ===
+// === Module 4363: Version ===
 
-// Module 4361 (Version)
+// Module 4363 (Version)
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import UrlAll from "Url" /* 1489 */;
-import BUILD_OVERRIDE_TARGET_NAMES from "BUILD_OVERRIDE_TARGET_NAMES" /* 4362 */;
-import parseDefault from "parse" /* 4363 */;
-import getConstants from "getConstants" /* 1626 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
+import UrlAll from "Url" /* 1488 */;
+import BUILD_OVERRIDE_TARGET_NAMES from "BUILD_OVERRIDE_TARGET_NAMES" /* 4364 */;
+import parseDefault from "parse" /* 4365 */;
+import getConstants from "getConstants" /* 1625 */;
 import set from "set" /* 500 */;
 
 let closure_4 = BUILD_OVERRIDE_TARGET_NAMES.BUILD_OVERRIDE_COOKIE_NAME;

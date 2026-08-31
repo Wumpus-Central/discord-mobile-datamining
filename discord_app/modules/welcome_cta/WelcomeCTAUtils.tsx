@@ -1,11 +1,11 @@
-// === Module 7856: pickHelloSticker ===
+// === Module 7878: pickHelloSticker ===
 
-// Module 7856 (pickHelloSticker)
+// Module 7878 (pickHelloSticker)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import trackInviteDefault from "trackInvite" /* 7148 */;
-import closure_2 from "mergeGuildAvatar" /* 1923 */;
-import { WELCOME_STICKERS } from "items" /* 7857 */;
+import trackInviteDefault from "trackInvite" /* 7169 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import { WELCOME_STICKERS } from "items" /* 7879 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("modules/welcome_cta/WelcomeCTAUtils.tsx");

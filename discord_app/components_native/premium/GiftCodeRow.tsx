@@ -1,12 +1,12 @@
-// === Module 13155: handleRevoke ===
+// === Module 13187: handleRevoke ===
 
-// Module 13155 (handleRevoke)
+// Module 13187 (handleRevoke)
 import ThemesDefault from "Themes" /* 712 */;
-import resolveGiftCodeDefault from "resolveGiftCode" /* 8423 */;
+import resolveGiftCodeDefault from "resolveGiftCode" /* 8445 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { AnalyticsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 import importAllResult from "noop" /* 19 */;
 
 let require = arg1;
@@ -54,86 +54,47 @@ prototype["handleRevoke"] = function handleRevoke(code) {
   resolveGiftCodeDefault.revokeGiftCode(code);
 };
 prototype["render"] = function render() {
-  let self = this;
-  self = this;
+  const self = this;
   const tmp = callback2(this.context);
   importDefault = tmp;
   const props = this.props;
   const giftCode = props.giftCode;
-  const isRefreshEnabled = props.isRefreshEnabled;
-  let items = [tmp.giftCodeRow, , ];
-  let giftCodeRowLegacy = null;
-  if (!isRefreshEnabled) {
-    giftCodeRowLegacy = tmp.giftCodeRowLegacy;
-  }
-  items[1] = giftCodeRowLegacy;
+  let items = [tmp.giftCodeRow, ];
   let firstRow = null;
   if (props.isFirst) {
     firstRow = tmp.firstRow;
   }
   let obj = { style: items, children: null };
-  items[2] = firstRow;
-  obj = { style: null, children: null };
-  if (isRefreshEnabled) {
-    obj[0] = tmp.giftCodeInput;
-    obj = { children: null };
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.giftCodeInputContent;
-    const obj2 = { variant: "text-sm/normal", style: null, lineClamp: 1, children: null };
-    obj2[1] = tmp.codeText;
-    let obj9 = giftCode(self[8]);
-    obj2[3] = obj9.getGiftCodeURL(giftCode.code);
-    const items1 = [callback(giftCode(self[11]).Text, obj2), ];
-    let obj3 = { style: null, children: null };
-    const items2 = [, ];
-    ({ buttonContainer: arr5[0], giftCodeShareButton: arr5[1] } = tmp);
-    obj3[0] = items2;
-    const obj4 = { size: "sm", text: null, onPress: null };
-    const intl2 = giftCode(self[13]).intl;
-    obj4[1] = intl2.string(giftCode(self[13]).t.h5EvZM);
-    obj4[2] = self.handleShare;
-    obj3[1] = callback(giftCode(self[12]).Button, obj4);
-    items1[1] = callback(tmp3, obj3);
-    obj1[1] = items1;
-    obj[0] = tmp2(tmp3, obj1);
-    obj[1] = callback(giftCode(self[10]).InputFieldContainer, obj);
-    let tmp2Result = callback(tmp3, obj);
-    let tmp8 = self;
-    let tmp10 = giftCode;
-    let tmp6 = callback;
-  } else {
-    obj[0] = tmp.giftCodeShare;
-    tmp6 = callback;
-    tmp8 = self;
-    const obj5 = { variant: "text-sm/normal", style: null, lineClamp: 1, children: null };
-    obj5[1] = tmp.codeText;
-    obj3 = giftCode(self[8]);
-    obj5[3] = obj3.getGiftCodeURL(giftCode.code);
-    const items3 = [callback(giftCode(self[11]).Text, obj5), ];
-    const obj6 = { style: null, children: null };
-    const items4 = [, ];
-    ({ buttonContainer: arr3[0], giftCodeShareButton: arr3[1] } = tmp);
-    obj6[0] = items4;
-    const obj7 = { size: "sm", text: null, onPress: null };
-    const intl = giftCode(self[13]).intl;
-    obj7[1] = intl.string(giftCode(self[13]).t.h5EvZM);
-    obj7[2] = self.handleShare;
-    obj6[1] = callback(giftCode(self[12]).Button, obj7);
-    items3[1] = callback(tmp3, obj6);
-    obj[1] = items3;
-    tmp2Result = tmp2(tmp3, obj);
-    tmp10 = giftCode;
-  }
-  const items5 = [tmp2Result, ];
-  const obj8 = { style: tmp.subTextRow, children: null };
-  let tmp6Result = null;
+  items[1] = firstRow;
+  obj = { style: tmp.giftCodeInput, children: null };
+  obj = { children: null };
+  obj1 = { style: tmp.giftCodeInputContent, children: null };
+  const obj2 = { variant: "text-sm/normal", style: tmp.codeText, lineClamp: 1, children: null };
+  let obj5 = giftCode(self[8]);
+  obj2[3] = obj5.getGiftCodeURL(giftCode.code);
+  const items1 = [callback(giftCode(self[11]).Text, obj2), ];
+  const obj3 = { style: items2, children: null };
+  items2 = [, ];
+  ({ buttonContainer: arr3[0], giftCodeShareButton: arr3[1] } = tmp);
+  const obj4 = { size: "sm", text: null, onPress: null };
+  const intl = giftCode(self[13]).intl;
+  obj4[1] = intl.string(giftCode(self[13]).t.h5EvZM);
+  obj4[2] = this.handleShare;
+  obj3[1] = callback(giftCode(self[12]).Button, obj4);
+  items1[1] = callback(closure_3, obj3);
+  obj1[1] = items1;
+  obj[0] = closure_7(closure_3, obj1);
+  obj[1] = callback(giftCode(self[10]).InputFieldContainer, obj);
+  const items3 = [callback(closure_3, obj), ];
+  obj5 = { style: tmp.subTextRow, children: null };
+  let tmp5Result = null;
   if (null != giftCode.expiresAt) {
-    obj9 = { variant: "text-xs/normal", color: "text-subtle", children: null };
-    const intl3 = tmp10(tmp8[13]).intl;
-    const obj10 = { hours: null, revokeHook: null };
+    const obj6 = { variant: "text-xs/normal", color: "text-subtle", children: null };
+    const intl2 = tmp6(tmp7[13]).intl;
+    const obj7 = { hours: null, revokeHook: null };
     const expiresAt = giftCode.expiresAt;
-    obj10[0] = expiresAt.diff(importDefault(tmp8[14])(), "h");
-    obj10[1] = function revokeHook(children) {
+    obj7[0] = expiresAt.diff(importDefault(tmp7[14])(), "h");
+    obj7[1] = function revokeHook(children) {
       obj = {
         accessibilityRole: "button",
         onPress() {
@@ -146,12 +107,12 @@ prototype["render"] = function render() {
       ({ expiryText: arr[0], revokeHint: arr[1] } = closure_1);
       return closure_1_6(closure_1_4, obj, arg1);
     };
-    obj9[2] = intl3.format(tmp10(tmp8[13]).t.b1BfWD, obj10);
-    tmp6Result = tmp6(tmp10(tmp8[11]).Text, obj9);
+    obj6[2] = intl2.format(tmp6(tmp7[13]).t.b1BfWD, obj7);
+    tmp5Result = tmp5(tmp6(tmp7[11]).Text, obj6);
   }
-  obj8[1] = tmp6Result;
-  items5[1] = tmp6(closure_3, obj8);
-  obj[1] = items5;
+  obj5[1] = tmp5Result;
+  items3[1] = callback(closure_3, obj5);
+  obj[1] = items3;
   return closure_7(closure_3, obj);
 };
 GiftCodeRow.contextType = require("ManaContext").ThemeContext;

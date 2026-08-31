@@ -1,16 +1,16 @@
-// === Module 16401: PendingSpamMessageRequestRow ===
+// === Module 16435: PendingSpamMessageRequestRow ===
 
-// Module 16401 (PendingSpamMessageRequestRow)
+// Module 16435 (PendingSpamMessageRequestRow)
 import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4910 */;
-import MessageRequestEmptyDefault from "MessageRequestEmpty" /* 16396 */;
-import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 16402 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4913 */;
+import MessageRequestEmptyDefault from "MessageRequestEmpty" /* 16430 */;
+import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 16436 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 function PendingSpamMessageRequestRow(isLastRow) {
@@ -191,17 +191,17 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = callback2();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  let obj = goToMessageRequestPreview(16395);
+  let obj = goToMessageRequestPreview(16429);
   dependencyMap = obj.useSpamMessageRequestCount();
   arr = useSortedSpamMessageRequestsDefault();
-  obj1 = goToMessageRequestPreview(16393);
+  obj1 = goToMessageRequestPreview(16427);
   closure_4 = obj1.useListHasSingleSpamMessageRequest();
   useMountLayoutEffectDefault(() => {
     let obj = lib(698);
     obj = { num_spam_message_requests: dependencyMap };
     obj.track(closure_1_7.SPAM_MESSAGE_REQUESTS_VIEWED, obj);
-    obj = { name: goToMessageRequestPreview(7299).MetricEvents.SPAM_MESSAGE_REQUEST_VIEW };
-    lib(7294).increment(obj);
+    obj = { name: goToMessageRequestPreview(7320).MetricEvents.SPAM_MESSAGE_REQUEST_VIEW };
+    lib(7315).increment(obj);
   });
   if (0 === arr.length) {
     obj = { bodyText: null };
@@ -235,7 +235,7 @@ export default function SpamMessageList(goToMessageRequestPreview) {
         obj = { count: null };
         obj[0] = arr.length;
         obj[2] = intl.format(goToMessageRequestPreview(1236).t.aNh5Kf, obj);
-        obj[1] = closure_1_8(goToMessageRequestPreview(4442).Text, obj);
+        obj[1] = closure_1_8(goToMessageRequestPreview(4444).Text, obj);
         let tmp11Result = closure_1_8(closure_1_5, obj);
       } else {
         obj1 = { messageRequest: null, goToMessageRequestPreview: null, isLastRow: null, hasSingleMessageRequest: null };

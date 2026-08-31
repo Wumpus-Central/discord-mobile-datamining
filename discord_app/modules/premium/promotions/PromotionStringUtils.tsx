@@ -1,13 +1,13 @@
-// === Module 12996: useFormatStringWithCommonPremiumParams ===
+// === Module 13030: useFormatStringWithCommonPremiumParams ===
 
-// Module 12996 (useFormatStringWithCommonPremiumParams)
+// Module 13030 (useFormatStringWithCommonPremiumParams)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1996 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4108 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6046 */;
-import closure_3 from "addSubscriptionPlan" /* 4113 */;
-import GuildFeatures from "GuildFeatures" /* 1925 */;
+import combinedDefault from "combined" /* 1995 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4109 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 6049 */;
+import closure_3 from "addSubscriptionPlan" /* 4114 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 require = arg1;
 ({ PremiumSubscriptionSKUs: c4, SubscriptionPlans: c5 } = GuildFeatures);

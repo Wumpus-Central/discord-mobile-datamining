@@ -1,8 +1,8 @@
-// === Module 12018: useGetGuildPowerupBannerImage ===
+// === Module 12051: useGetGuildPowerupBannerImage ===
 
-// Module 12018 (useGetGuildPowerupBannerImage)
+// Module 12051 (useGetGuildPowerupBannerImage)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");

@@ -1,9 +1,9 @@
-// === Module 5560: getKeyboardDuration ===
+// === Module 5563: getKeyboardDuration ===
 
-// Module 5560 (getKeyboardDuration)
+// Module 5563 (getKeyboardDuration)
 import set from "set" /* 2 */;
-import context from "context" /* 1497 */;
-import computeEntryStateDefault from "computeEntryState" /* 1498 */;
+import context from "context" /* 1496 */;
+import computeEntryStateDefault from "computeEntryState" /* 1497 */;
 
 const result = set.fileFinishedImporting("modules/keyboard/native/useKeyboardDuration.tsx");
 

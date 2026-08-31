@@ -1,10 +1,10 @@
-// === Module 11435: PiggyBankIcon ===
+// === Module 11464: PiggyBankIcon ===
 
-// Module 11435 (PiggyBankIcon)
+// Module 11464 (PiggyBankIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 11436 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 11465 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

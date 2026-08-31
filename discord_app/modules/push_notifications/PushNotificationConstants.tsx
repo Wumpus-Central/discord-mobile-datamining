@@ -1,10 +1,10 @@
-// === Module 6020: str2 ===
+// === Module 6023: str2 ===
 
-// Module 6020 (str2)
+// Module 6023 (str2)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
-import getConstants from "getConstants" /* 1626 */;
-import isMetaQuest from "isMetaQuest" /* 1625 */;
+import getConstants from "getConstants" /* 1625 */;
+import isMetaQuest from "isMetaQuest" /* 1624 */;
 
 getConstants = getConstants.getConstants();
 let str;

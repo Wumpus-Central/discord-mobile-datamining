@@ -1,10 +1,10 @@
-// === Module 6502: FileFolderSpotIllustration ===
+// === Module 6515: FileFolderSpotIllustration ===
 
-// Module 6502 (FileFolderSpotIllustration)
+// Module 6515 (FileFolderSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6503 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6516 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/FileFolderSpotIllustration.native.tsx");

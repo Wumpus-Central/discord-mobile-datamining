@@ -1,10 +1,10 @@
-// === Module 15528: useMainTabsPanelsGesture ===
+// === Module 15562: useMainTabsPanelsGesture ===
 
-// Module 15528 (useMainTabsPanelsGesture)
+// Module 15562 (useMainTabsPanelsGesture)
 import closure_3 from "noop" /* 19 */;
-import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG" /* 11002 */;
+import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG" /* 11027 */;
 import set from "set" /* 500 */;
-import isTimingConfig from "isTimingConfig" /* 15529 */;
+import isTimingConfig from "isTimingConfig" /* 15563 */;
 
 const require = arg1;
 set = set.isAndroid();

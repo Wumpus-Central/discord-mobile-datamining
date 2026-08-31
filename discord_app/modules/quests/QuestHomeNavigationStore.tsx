@@ -1,8 +1,8 @@
-// === Module 11269: zustandStore ===
+// === Module 11298: zustandStore ===
 
-// Module 11269 (zustandStore)
+// Module 11298 (zustandStore)
 import set from "set" /* 2 */;
-import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4312 */;
+import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4314 */;
 
 const zustandStore = defaultStatesAreEqual.createZustandStore(() => ({ sort: null, filter: null, scrollToQuestId: null }));
 const result = set.fileFinishedImporting("modules/quests/QuestHomeNavigationStore.tsx");

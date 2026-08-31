@@ -1,11 +1,11 @@
-// === Module 8869: useDisplayNameStylesEffectDefaultColors ===
+// === Module 8892: useDisplayNameStylesEffectDefaultColors ===
 
-// Module 8869 (useDisplayNameStylesEffectDefaultColors)
+// Module 8892 (useDisplayNameStylesEffectDefaultColors)
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4166 */;
+import map from "map" /* 4167 */;
 import closure_3 from "noop" /* 19 */;
-import items3 from "items3" /* 1935 */;
+import items3 from "items3" /* 1934 */;
 
 require = arg1;
 ({ DISPLAY_NAME_STYLES_GRADIENT_PRESETS: c4, DISPLAY_NAME_STYLES_GUMMY_PRESETS: c5, DISPLAY_NAME_STYLES_PRISM_PRESETS: closure_6 } = items3);

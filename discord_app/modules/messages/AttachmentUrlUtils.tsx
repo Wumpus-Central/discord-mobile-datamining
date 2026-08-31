@@ -1,11 +1,11 @@
-// === Module 9971: isRefreshableAttachmentUrl ===
+// === Module 9994: isRefreshableAttachmentUrl ===
 
-// Module 9971 (isRefreshableAttachmentUrl)
+// Module 9994 (isRefreshableAttachmentUrl)
 import setDefault from "set" /* 687 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import getSizedImageProxyURL from "getSizedImageProxyURL" /* 4480 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
+import getSizedImageProxyURL from "getSizedImageProxyURL" /* 4482 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { ATTACHMENT_PATH_PREFIXES } from "set" /* 4928 */;
+import { ATTACHMENT_PATH_PREFIXES } from "set" /* 4931 */;
 import { Endpoints } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -177,7 +177,7 @@ function _maybeRefreshAttachmentUrl() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

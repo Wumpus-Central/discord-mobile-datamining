@@ -1,16 +1,16 @@
-// === Module 15489: RegisterDisplayName ===
+// === Module 15523: RegisterDisplayName ===
 
-// Module 15489 (RegisterDisplayName)
+// Module 15523 (RegisterDisplayName)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "isRateLimited" /* 14301 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15468 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15469 */;
+import closure_7 from "isRateLimited" /* 14335 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15502 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15503 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: c9 } = useRegistrationUIStore);
@@ -92,7 +92,7 @@ export default function RegisterDisplayName() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -134,7 +134,7 @@ export default function RegisterDisplayName() {
               obj3 = callback(str[15]);
               const result = obj3.handleNextOrSubmitRegistration(callback(str[16]).AuthStates.REGISTER_DISPLAY_NAME, callback, closure_1_4);
               c3 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else if (arg0 === 1) {
             c3 = 3;

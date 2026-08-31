@@ -1,28 +1,28 @@
-// === Module 15793: getMissingFavoriteThreadIds ===
+// === Module 15827: getMissingFavoriteThreadIds ===
 
-// Module 15793 (getMissingFavoriteThreadIds)
+// Module 15827 (getMissingFavoriteThreadIds)
 import create from "create" /* 1306 */;
-import initializeDefault from "initialize" /* 6124 */;
+import initializeDefault from "initialize" /* 6127 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import importDefaultResult1 from "_handleConnectionOpen" /* 5186 */;
-import importDefaultResult from "participantFromServer" /* 1390 */;
-import importDefaultResult3 from "rebuild" /* 5413 */;
-import importDefaultResult4 from "storeThread" /* 4092 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import importDefaultResult5 from "incrementVersion" /* 5450 */;
-import importDefaultResult6 from "ensureGuildLoaded" /* 1391 */;
-import closure_13 from "handleConnectionOpen" /* 7219 */;
-import importDefaultResult7 from "getUncachedChannelPermissions" /* 4090 */;
-import importDefaultResult8 from "generateOldThreadCutoff" /* 4461 */;
-import importDefaultResult9 from "handleConnectionOpen" /* 1982 */;
-import importDefaultResult10 from "updateUserGuildSettingsInternal" /* 4667 */;
-import importDefaultResult11 from "initializeFromUserSettings" /* 1394 */;
-import { createFavoritesGuildChannelRecord as closure_19 } from "createFavoritesGuildChannelRecord" /* 4089 */;
-import importDefaultResult2 from "scheduledEventSort" /* 7218 */;
-import { ChannelListChannelNoticeRow as closure_22 } from "ChannelListGuildActionRow" /* 7226 */;
+import importDefaultResult1 from "_handleConnectionOpen" /* 5189 */;
+import importDefaultResult from "participantFromServer" /* 1386 */;
+import importDefaultResult3 from "rebuild" /* 5416 */;
+import importDefaultResult4 from "storeThread" /* 4093 */;
+import createChannelRecord from "createChannelRecord" /* 1391 */;
+import importDefaultResult5 from "incrementVersion" /* 5453 */;
+import importDefaultResult6 from "ensureGuildLoaded" /* 1387 */;
+import closure_13 from "handleConnectionOpen" /* 7240 */;
+import importDefaultResult7 from "getUncachedChannelPermissions" /* 4091 */;
+import importDefaultResult8 from "generateOldThreadCutoff" /* 4463 */;
+import importDefaultResult9 from "handleConnectionOpen" /* 1981 */;
+import importDefaultResult10 from "updateUserGuildSettingsInternal" /* 4669 */;
+import importDefaultResult11 from "initializeFromUserSettings" /* 1390 */;
+import { createFavoritesGuildChannelRecord as closure_19 } from "createFavoritesGuildChannelRecord" /* 4090 */;
+import importDefaultResult2 from "scheduledEventSort" /* 7239 */;
+import { ChannelListChannelNoticeRow as closure_22 } from "ChannelListGuildActionRow" /* 7247 */;
 import { Permissions } from "sum" /* 505 */;
-import date from "date" /* 1429 */;
+import date from "date" /* 1425 */;
 
 require = arg1;
 function getMissingFavoriteThreadIds(includeLoading) {
@@ -251,7 +251,7 @@ function computeFavoritesState(favoriteChannels) {
           }
           activeJoinedUnreadThreadsForParent = closure_2_6.getActiveJoinedRelevantThreadsForParent(isPrivate.guild_id, isPrivate.id);
         });
-        const found = mapped.filter(favoriteChannels(1370).isNotNullish);
+        const found = mapped.filter(favoriteChannels(1471).isNotNullish);
         const arr = _undefined(12)(items);
         closure_6 = found.sortBy((arg0) => {
           ({ record, position } = arg0);
@@ -276,7 +276,7 @@ function computeFavoritesState(favoriteChannels) {
     },
     set: undefined
   });
-  const favoritesCategories = favoriteChannels(10244).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10268).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -490,19 +490,19 @@ function computeFavoritesState(favoriteChannels) {
     getSections() {
       let length;
       items = [];
-      items[favoriteChannels(7220).SECTION_INDEX_CHANNEL_NOTICES] = items2.length;
+      items[favoriteChannels(7241).SECTION_INDEX_CHANNEL_NOTICES] = items2.length;
       let num = 0;
-      items[favoriteChannels(7220).SECTION_INDEX_GUILD_ACTIONS] = 0;
-      items[favoriteChannels(7220).SECTION_INDEX_FAVORITES] = 0;
-      items[favoriteChannels(7220).SECTION_INDEX_RECENTS] = 0;
-      items[favoriteChannels(7220).SECTION_INDEX_UNCATEGORIZED_CHANNELS] = obj.channelList.length;
+      items[favoriteChannels(7241).SECTION_INDEX_GUILD_ACTIONS] = 0;
+      items[favoriteChannels(7241).SECTION_INDEX_FAVORITES] = 0;
+      items[favoriteChannels(7241).SECTION_INDEX_RECENTS] = 0;
+      items[favoriteChannels(7241).SECTION_INDEX_UNCATEGORIZED_CHANNELS] = obj.channelList.length;
       if (0 < found1.length) {
         do {
           let tmp = favoriteChannels;
           let tmp2 = dependencyMap;
           let _Math = Math;
           let tmp4 = found1;
-          let sum = favoriteChannels(7220).SECTION_INDEX_FIRST_NAMED_CATEGORY + num;
+          let sum = favoriteChannels(7241).SECTION_INDEX_FIRST_NAMED_CATEGORY + num;
           items[sum] = Math.max(1, found1[num].channelList.length);
           num = num + 1;
           length = found1.length;
@@ -511,26 +511,26 @@ function computeFavoritesState(favoriteChannels) {
       return items;
     },
     isPlaceholderRow(arg0, arg1) {
-      let tmp3 = arg0 < favoriteChannels(7220).SECTION_INDEX_FIRST_NAMED_CATEGORY;
+      let tmp3 = arg0 < favoriteChannels(7241).SECTION_INDEX_FIRST_NAMED_CATEGORY;
       if (!tmp3) {
         tmp3 = 0 !== arg1;
       }
       let tmp5 = !tmp3;
       if (!tmp3) {
-        tmp5 = 0 === found1[arg0 - tmp(undefined, 7220).SECTION_INDEX_FIRST_NAMED_CATEGORY].channelList.length;
+        tmp5 = 0 === found1[arg0 - tmp(undefined, 7241).SECTION_INDEX_FIRST_NAMED_CATEGORY].channelList.length;
       }
       return tmp5;
     },
     getCategoryFromSection(arg0) {
-      if (arg0 === favoriteChannels(7220).SECTION_INDEX_UNCATEGORIZED_CHANNELS) {
+      if (arg0 === favoriteChannels(7241).SECTION_INDEX_UNCATEGORIZED_CHANNELS) {
         let tmp4 = obj;
       } else {
-        tmp4 = found1[arg0 - tmp(undefined, 7220).SECTION_INDEX_FIRST_NAMED_CATEGORY];
+        tmp4 = found1[arg0 - tmp(undefined, 7241).SECTION_INDEX_FIRST_NAMED_CATEGORY];
       }
       return tmp4;
     },
     getNamedCategoryFromSection(arg0) {
-      return found1[arg0 - favoriteChannels(undefined, 7220).SECTION_INDEX_FIRST_NAMED_CATEGORY];
+      return found1[arg0 - favoriteChannels(undefined, 7241).SECTION_INDEX_FIRST_NAMED_CATEGORY];
     },
     getChannelFromSectionRow(arg0, arg1) {
       const categoryFromSection = this.getCategoryFromSection(arg0);
@@ -571,7 +571,7 @@ function computeFavoritesState(favoriteChannels) {
             obj = { section: null, row: null };
             let tmp3 = favoriteChannels;
             let tmp4 = dependencyMap;
-            obj[0] = num + favoriteChannels(7220).SECTION_INDEX_UNCATEGORIZED_CHANNELS;
+            obj[0] = num + favoriteChannels(7241).SECTION_INDEX_UNCATEGORIZED_CHANNELS;
             obj[1] = num2;
             let items1 = [obj];
             return items1;
@@ -647,7 +647,7 @@ export const useFavoritesGuildChannelList = function useFavoritesGuildChannelLis
   let hasAccess;
   dependencyMap = undefined;
   let callback;
-  hasAccess = _require(10244).useFavoritesAccess("FavoritesGuildChannelList").hasAccess;
+  hasAccess = _require(10268).useFavoritesAccess("FavoritesGuildChannelList").hasAccess;
   const tmp3 = callback(React.useState(() => closure_1_26(undefined, { withSuggestionsNotice: c0 })), 2);
   dependencyMap = tmp3[1];
   const isConnectedResult = importDefaultResult1.isConnected();
@@ -678,8 +678,8 @@ export const useFavoritesGuildChannelList = function useFavoritesGuildChannelLis
       if (0 === arr.length) {
         const resolved = Promise.resolve();
       } else {
-        const threadsBulk = hasAccess(6124).loadThreadsBulk(arr);
-        const obj2 = hasAccess(6124);
+        const threadsBulk = hasAccess(6127).loadThreadsBulk(arr);
+        const obj2 = hasAccess(6127);
       }
     }
   }, items1);
@@ -690,7 +690,7 @@ export const useFavoritesGuildChannelList = function useFavoritesGuildChannelLis
     hasAccess = getMissingFavoriteThreadIds({ limit: 1, includeLoading: true }).length > 0;
   }
   let flag2 = false;
-  if (memo.getSections().length <= _require(7220).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+  if (memo.getSections().length <= _require(7241).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
     _require = false;
     memo.forEachShownChannel(() => {
       c0 = true;

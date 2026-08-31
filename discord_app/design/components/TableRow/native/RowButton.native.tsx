@@ -1,13 +1,12 @@
-// === Module 8311: RowButtonWrapper ===
+// === Module 8333: RowButtonWrapper ===
 
-// Module 8311 (RowButtonWrapper)
+// Module 8333 (RowButtonWrapper)
 import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import TableRowInner from "TableRowInner" /* 5564 */;
-import TableRowIcon from "TableRowIcon" /* 5570 */;
+import TableRowInner from "TableRowInner" /* 5567 */;
+import TableRowIcon from "TableRowIcon" /* 5573 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 class RowButton {
@@ -26,13 +25,10 @@ class RowButton {
     }
     ({ icon, experimental_withBlurBackground } = global);
     merged = Object.assign(global, Object.create(null));
-    tmp3 = closure_2;
-    tmp2 = closure_1;
-    tmp4 = require("useIsMobileVisualRefreshExperimentEnabled")("RowButton");
-    tmp5 = icon;
+    tmp2 = icon;
     if (null != icon) {
-      tmp6 = closure_3;
-      tmp5 = icon;
+      tmp3 = closure_3;
+      tmp2 = icon;
       if (!closure_3.isValidElement(icon)) {
         str2 = "translucent";
         if (!experimental_withBlurBackground) {
@@ -43,41 +39,31 @@ class RowButton {
           }
           str2 = str3;
         }
-        tmp7 = jsx;
-        tmp8 = closure_0;
+        tmp4 = jsx;
+        tmp5 = closure_0;
+        tmp6 = closure_2;
         obj = { source: null, variant: null };
         obj[0] = icon;
         obj[1] = str2;
-        tmp5 = jsx(require("TableRowIcon").TableRowIcon, obj);
+        tmp2 = jsx(require("TableRowIcon").TableRowIcon, obj);
       }
     }
-    tmp9 = jsx;
-    obj = { isRefreshEnabled: tmp4, experimental_withBlurBackground, onPress: global.onPress, disabled: flag2 };
-    tmp10 = RowButtonWrapper;
+    obj = { experimental_withBlurBackground, onPress: global.onPress, disabled: flag2 };
     merged1 = Object.assign(merged);
-    obj1 = { icon: tmp5, arrow: flag, disabled: flag2, borderRadius: null };
-    xl = undefined;
-    if (tmp4) {
-      xl = require("Themes").radii.xl;
-    }
-    obj1[3] = xl;
+    obj1 = { icon: tmp2, arrow: flag, disabled: flag2, borderRadius: require("Themes").radii.xl };
     merged2 = Object.assign(merged);
-    obj.children = tmp9(require("TableRowInner").TableRowInner, obj1);
-    return tmp9(tmp10, obj);
+    obj.children = jsx(require("TableRowInner").TableRowInner, obj1);
+    return jsx(RowButtonWrapper, obj);
   }
 }
-function RowButtonWrapper(isRefreshEnabled) {
-  let flag = isRefreshEnabled.isRefreshEnabled;
-  if (flag === undefined) {
-    flag = false;
-  }
-  ({ onPress, disabled, children } = isRefreshEnabled);
-  const merged = Object.assign(isRefreshEnabled, Object.create(null));
+function RowButtonWrapper(experimental_withBlurBackground) {
+  ({ onPress, disabled, children } = experimental_withBlurBackground);
+  const merged = Object.assign(experimental_withBlurBackground, Object.create(null));
   let sharedValue;
   dependencyMap = undefined;
   let React;
-  const tmp2 = callback(flag);
-  let obj = merged(4186);
+  const tmp2 = callback();
+  let obj = merged(4187);
   sharedValue = obj.useSharedValue(0);
   const items = [sharedValue];
   dependencyMap = React.useCallback(() => {
@@ -87,7 +73,7 @@ function RowButtonWrapper(isRefreshEnabled) {
   React = React.useCallback(() => {
     const result = sharedValue.set(0);
   }, items1);
-  if (isRefreshEnabled.experimental_withBlurBackground) {
+  if (experimental_withBlurBackground.experimental_withBlurBackground) {
     obj = { shadow: "none", border: "none", start: true, end: true, onPress: null, onPressIn: null, onPressOut: null, style: null, disabled: null };
     obj[4] = onPress;
     obj[5] = function onPressIn(arg0) {
@@ -113,39 +99,23 @@ function RowButtonWrapper(isRefreshEnabled) {
     obj = { pressed: null, children: null };
     obj[0] = sharedValue;
     obj[1] = children;
-    obj.children = jsx(tmp3(8312).BackgroundBlurView, { pressed: null, children: null });
-    return jsx(tmp3(5566).InternalCard, { pressed: null, children: null });
+    obj.children = tmp6(merged(8334).BackgroundBlurView, obj);
+    obj1 = obj;
   } else {
-    let str = "subtle";
-    if (flag) {
-      str = "control-secondary";
-    }
-    let str2 = "control-secondary";
-    if (!flag) {
-      let variant;
-      if (merged != null) {
-        variant = merged.variant;
-      }
-      str2 = variant;
-    }
     obj1 = { shadow: "low", start: true, end: true, onPress: null, style: null, disabled: null };
     obj1[3] = onPress;
     obj1[4] = tmp2.card;
     obj1[5] = disabled;
     const merged2 = Object.assign(merged);
-    obj1.variant = str2;
-    obj1.border = str;
+    obj1.variant = "control-secondary";
+    obj1.border = "control-secondary";
     obj1.children = children;
-    return jsx(tmp3(5566).InternalCard, { shadow: "low", start: true, end: true, onPress: null, style: null, disabled: null });
   }
+  return jsx(merged(5569).InternalCard, obj1);
 }
 let closure_5 = createCacheKey.createStyles(() => {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = false;
-  }
   let obj = { card: null, cardWithBlur: null };
-  obj = { padding: num, borderTopStartRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
+  obj = { borderTopStartRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
   obj[0] = obj;
   obj[1] = { overflow: "hidden" };
   return obj;

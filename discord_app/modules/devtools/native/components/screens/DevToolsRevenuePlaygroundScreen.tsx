@@ -1,29 +1,29 @@
-// === Module 15219: describeServerError ===
+// === Module 15252: describeServerError ===
 
-// Module 15219 (describeServerError)
+// Module 15252 (describeServerError)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import TableRowInner from "TableRowInner" /* 5564 */;
-import TableRowArrow from "TableRowArrow" /* 5571 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5957 */;
-import TableSwitchRow from "TableSwitchRow" /* 5958 */;
-import serializePurchaseResponse from "serializePurchaseResponse" /* 10732 */;
+import TableRowInner from "TableRowInner" /* 5567 */;
+import TableRowArrow from "TableRowArrow" /* 5574 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5960 */;
+import TableSwitchRow from "TableSwitchRow" /* 5961 */;
+import serializePurchaseResponse from "serializePurchaseResponse" /* 10756 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "getCurrentTime" /* 7933 */;
-import closure_8 from "recomputeAffinities" /* 7351 */;
+import closure_7 from "getCurrentTime" /* 7955 */;
+import closure_8 from "recomputeAffinities" /* 7372 */;
 import closure_9 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "handleConnectionOpen" /* 1982 */;
-import closure_12 from "mergeGuildAvatar" /* 1923 */;
-import closure_13 from "getUserAgnosticState" /* 4445 */;
-import { DevSettingsCategory } from "getUserAgnosticState" /* 4445 */;
-import GuildFeatures from "GuildFeatures" /* 1925 */;
+import closure_10 from "ensureGuildLoaded" /* 1387 */;
+import closure_11 from "handleConnectionOpen" /* 1981 */;
+import closure_12 from "mergeGuildAvatar" /* 1922 */;
+import closure_13 from "getUserAgnosticState" /* 4447 */;
+import { DevSettingsCategory } from "getUserAgnosticState" /* 4447 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function describeServerError(status) {
@@ -200,7 +200,7 @@ function FriendAnniversary() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -306,7 +306,7 @@ function FriendAnniversary() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -630,7 +630,7 @@ function FriendAnniversary() {
   return callback3(closure_19, obj9);
 }
 function TrialOfferSheetExample() {
-  let obj = premiumTrialOffer(7139);
+  let obj = premiumTrialOffer(7160);
   premiumTrialOffer = obj.usePremiumTrialOffer();
   obj = {
     label: "Trial Offer Nitro Basic",
@@ -649,9 +649,9 @@ function TrialOfferSheetExample() {
       }
     }
   };
-  items = [closure_17(premiumTrialOffer(5564).TableRow, obj), ];
+  items = [closure_17(premiumTrialOffer(5567).TableRow, obj), ];
   obj = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(5564).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(5567).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -669,7 +669,7 @@ function TrialOfferSheetExample() {
     }
   });
   obj[2] = items;
-  return closure_18(premiumTrialOffer(5957).TableRowGroup, obj);
+  return closure_18(premiumTrialOffer(5960).TableRowGroup, obj);
 }
 function PremiumToggles() {
   let obj = defaultAreStatesEqual;
@@ -713,10 +713,10 @@ function ForceMockIAP() {
   obj[2] = tmp4;
   obj[3] = result;
   obj[4] = function onValueChange(arg0) {
-    callback(15223).toggle("force_mock_iap", arg0);
+    callback(15256).toggle("force_mock_iap", arg0);
     closure_13.persist();
-    const obj = callback(15223);
-    const result = callback2(11295).checkForUpdateAndReload();
+    const obj = callback(15256);
+    const result = callback2(11324).checkForUpdateAndReload();
   };
   return closure_17(TableRowGroupTitle.TableRowGroup, obj);
 }

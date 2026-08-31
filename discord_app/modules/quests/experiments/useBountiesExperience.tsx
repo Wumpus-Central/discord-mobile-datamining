@@ -1,10 +1,10 @@
-// === Module 11052: useBountiesExperience ===
+// === Module 11081: useBountiesExperience ===
 
-// Module 11052 (useBountiesExperience)
+// Module 11081 (useBountiesExperience)
 import set from "set" /* 2 */;
-import apexExperiment from "apexExperiment" /* 11053 */;
-import apexExperiment2 from "apexExperiment" /* 11054 */;
-import apexExperiment3 from "apexExperiment" /* 11055 */;
+import apexExperiment from "apexExperiment" /* 11082 */;
+import apexExperiment2 from "apexExperiment" /* 11083 */;
+import apexExperiment3 from "apexExperiment" /* 11084 */;
 
 const result = set.fileFinishedImporting("modules/quests/experiments/useBountiesExperience.tsx");
 

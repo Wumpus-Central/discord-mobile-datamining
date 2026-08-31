@@ -1,12 +1,12 @@
-// === Module 13650: RowGroup ===
+// === Module 13684: RowGroup ===
 
-// Module 13650 (RowGroup)
+// Module 13684 (RowGroup)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Stack from "Stack" /* 4891 */;
+import Stack from "Stack" /* 4894 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;
@@ -27,7 +27,7 @@ export const RowGroup = function RowGroup(children) {
     if (tmp7) {
       obj = { title: null };
       obj[0] = title;
-      tmp7 = callback(tmp5(5957).TableRowGroupTitle, obj);
+      tmp7 = callback(tmp5(5960).TableRowGroupTitle, obj);
     }
     obj = { direction: "horizontal", spacing: 4, children: null };
     const items = [tmp7, trailing];

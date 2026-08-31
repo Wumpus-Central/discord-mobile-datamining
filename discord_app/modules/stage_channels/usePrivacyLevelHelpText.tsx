@@ -1,12 +1,12 @@
-// === Module 9842: useStagePrivacyLevelSettings ===
+// === Module 9865: useStagePrivacyLevelSettings ===
 
-// Module 9842 (useStagePrivacyLevelSettings)
+// Module 9865 (useStagePrivacyLevelSettings)
 import fromStringAll from "fromString" /* 506 */;
-import combinedDefault from "combined" /* 1996 */;
-import applyOverwritesAll from "applyOverwrites" /* 4095 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4090 */;
+import combinedDefault from "combined" /* 1995 */;
+import applyOverwritesAll from "applyOverwrites" /* 4096 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4091 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
-import { GuildScheduledEventPrivacyLevel as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import { GuildScheduledEventPrivacyLevel as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1393 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;

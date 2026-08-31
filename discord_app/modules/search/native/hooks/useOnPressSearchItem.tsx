@@ -1,15 +1,15 @@
-// === Module 16157: handleVoiceOrStageChannelConnectPress ===
+// === Module 16191: handleVoiceOrStageChannelConnectPress ===
 
-// Module 16157 (handleVoiceOrStageChannelConnectPress)
+// Module 16191 (handleVoiceOrStageChannelConnectPress)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "prototype" /* 11842 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7569 */;
-import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16158 */;
-import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 7568 */;
+import closure_5 from "ensureGuildLoaded" /* 1387 */;
+import closure_6 from "prototype" /* 11873 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7590 */;
+import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16192 */;
+import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 7589 */;
 import ME from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
+import { StaticChannelRoute } from "set" /* 1394 */;
 
 const require = arg1;
 function handleVoiceOrStageChannelConnectPress() {
@@ -40,7 +40,7 @@ function _handleVoiceOrStageChannelConnectPress() {
           obj[0] = openGuildVoiceModal;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -331,7 +331,7 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
 export const useOnPressGroupDMItem = function useOnPressGroupDMItem(searchContext) {
   searchContext = searchContext.searchContext;
   let navigation;
-  navigation = searchContext(1500).useNavigation();
+  navigation = searchContext(1499).useNavigation();
   const items = [navigation, searchContext];
   return React.useCallback((channelId) => {
     searchContext = channelId;
@@ -358,7 +358,7 @@ export const useOnPressGroupDMItem = function useOnPressGroupDMItem(searchContex
 export const useOnPressDMItem = function useOnPressDMItem(searchContext) {
   searchContext = searchContext.searchContext;
   let navigation;
-  navigation = searchContext(1500).useNavigation();
+  navigation = searchContext(1499).useNavigation();
   const items = [navigation, searchContext];
   return React.useCallback((userId) => {
     searchContext = arg1;

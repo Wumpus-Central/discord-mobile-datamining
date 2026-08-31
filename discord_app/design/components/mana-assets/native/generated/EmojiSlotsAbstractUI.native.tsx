@@ -1,10 +1,10 @@
-// === Module 6464: EmojiSlotsAbstractUI ===
+// === Module 6477: EmojiSlotsAbstractUI ===
 
-// Module 6464 (EmojiSlotsAbstractUI)
+// Module 6477 (EmojiSlotsAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6465 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6478 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/EmojiSlotsAbstractUI.native.tsx");

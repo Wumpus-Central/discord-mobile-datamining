@@ -1,11 +1,11 @@
-// === Module 13776: buildZoomedInAnalyticsEvent ===
+// === Module 13810: buildZoomedInAnalyticsEvent ===
 
-// Module 13776 (buildZoomedInAnalyticsEvent)
+// Module 13810 (buildZoomedInAnalyticsEvent)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 7366 */;
-import Opcode from "Opcode" /* 13225 */;
-import noop from "noop" /* 13395 */;
+import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 7387 */;
+import Opcode from "Opcode" /* 13258 */;
+import noop from "noop" /* 13429 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_3 = { Gateway: "gateway", RtcControl: "rtc_control", RemoteAuth: "remote_auth", Spotify: "spotify", Rpc: "rpc", GameServerPing: "game_server_ping" };
@@ -534,7 +534,7 @@ let closure_5 = {
   [AnalyticEvents.WEBSOCKET_MESSAGE_RECEIVED]: (data) => {
     data = data.data;
     if (null == data) {
-      let obj = { message_identity: "unknown", socket_kind: "accessible" };
+      let obj = { message_identity: "unknown", socket_kind: "l" };
     } else {
       const url = data.url;
       let tmp61 = null;

@@ -1,15 +1,15 @@
-// === Module 15535: ? ===
+// === Module 15569: ? ===
 
-// Module 15535
-import ManaContext from "ManaContext" /* 4173 */;
-import getGuildThemeNameDefault from "getGuildThemeName" /* 4296 */;
-import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11022 */;
-import QuestDockMode from "QuestDockMode" /* 14633 */;
-import QuestDockWithGestureAnimationDefault from "QuestDockWithGestureAnimation" /* 14717 */;
-import trackTabPressed from "trackTabPressed" /* 15536 */;
-import LeftPanelContentDefault from "LeftPanelContent" /* 15537 */;
-import _modDef15884 from "module_15884" /* 15884 */;
-import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS" /* 10769 */;
+// Module 15569
+import ManaContext from "ManaContext" /* 4174 */;
+import getGuildThemeNameDefault from "getGuildThemeName" /* 4298 */;
+import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11047 */;
+import QuestDockMode from "QuestDockMode" /* 14667 */;
+import QuestDockWithGestureAnimationDefault from "QuestDockWithGestureAnimation" /* 14751 */;
+import trackTabPressed from "trackTabPressed" /* 15570 */;
+import LeftPanelContentDefault from "LeftPanelContent" /* 15571 */;
+import _modDef15918 from "module_15918" /* 15918 */;
+import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS" /* 10793 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -22,7 +22,7 @@ const memoResult = importAllResult.memo(function GuildsOnly() {
   const tmp4 = getGuildThemeNameDefault();
   let isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   obj = { gradient: tmp4, children: null };
-  const items = [callback(LeftPanelContentDefault, {}), callback(_modDef15884, {}), ];
+  const items = [callback(LeftPanelContentDefault, {}), callback(_modDef15918, {}), ];
   if (isEligibleForQuests) {
     isEligibleForQuests = tmp6(QuestDockWithGestureAnimationDefault, {});
   }

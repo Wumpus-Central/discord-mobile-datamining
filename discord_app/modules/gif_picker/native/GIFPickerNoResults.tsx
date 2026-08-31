@@ -1,12 +1,12 @@
-// === Module 10306: ? ===
+// === Module 10330: ? ===
 
-// Module 10306
+// Module 10330
 import ThemesDefault from "Themes" /* 712 */;
-import useExpressionPickerInsetsDefault from "useExpressionPickerInsets" /* 10291 */;
+import useExpressionPickerInsetsDefault from "useExpressionPickerInsets" /* 10315 */;
 import importAllResult from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -24,7 +24,7 @@ const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionShee
   safeAreaBottomKeyboardAware = useExpressionPickerInsetsDefault({ hasCategories: false }).safeAreaBottomKeyboardAware;
   const items = [safeAreaBottomKeyboardAware];
   const memo = importAllResult.useMemo(() => ({ paddingBottom: safeAreaBottomKeyboardAware, flex: 1 }), items);
-  let obj = safeAreaBottomKeyboardAware(9093);
+  let obj = safeAreaBottomKeyboardAware(9116);
   const searchEmptySource = obj.useSearchEmptySource();
   if (inActionSheet.categoryType === GIFPickerResultTypes.FAVORITES) {
     const intl2 = tmp4(1236).intl;
@@ -33,9 +33,9 @@ const memoResult = importAllResult.memo(function GIFPickerNoResults(inActionShee
     const intl = tmp4(1236).intl;
     stringResult = intl.string(tmp4(1236).t["5dX4UM"]);
   }
-  const modalDismissGuardRefreshControl = safeAreaBottomKeyboardAware(9097).useModalDismissGuardRefreshControl();
+  const modalDismissGuardRefreshControl = safeAreaBottomKeyboardAware(9120).useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp4(5589).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp4(5592).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }

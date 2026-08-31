@@ -1,9 +1,9 @@
-// === Module 11321: GiftIntentType ===
+// === Module 11350: GiftIntentType ===
 
-// Module 11321 (GiftIntentType)
+// Module 11350 (GiftIntentType)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import GuildFeatures from "GuildFeatures" /* 1925 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 const GiftIntentType = GuildFeatures.GiftIntentType;
 const AnalyticsLocations = ME.AnalyticsLocations;

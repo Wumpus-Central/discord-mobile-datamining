@@ -1,10 +1,10 @@
-// === Module 16897: _handleInteractionModalCreate ===
+// === Module 16930: _handleInteractionModalCreate ===
 
-// Module 16897 (_handleInteractionModalCreate)
-import initializeDefault from "initialize" /* 5451 */;
+// Module 16930 (_handleInteractionModalCreate)
+import initializeDefault from "initialize" /* 5454 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4487 */;
-import closure_5 from "deleteNonce" /* 7797 */;
+import closure_4 from "addApplication" /* 4489 */;
+import closure_5 from "deleteNonce" /* 7818 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 let require = arg1;
@@ -26,7 +26,7 @@ function _handleInteractionModalCreate() {
           obj[0] = openInteractionModal;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -63,7 +63,7 @@ function _handleInteractionModalCreate() {
             const obj3 = { type: "interaction_modal", application_id: null };
             obj3[1] = lib.application.id;
             callback(698).track(constants.OPEN_MODAL, obj3);
-            const AndroidPullModeRenderingExperiment = lib(1914).AndroidPullModeRenderingExperiment;
+            const AndroidPullModeRenderingExperiment = lib(1913).AndroidPullModeRenderingExperiment;
             if (AndroidPullModeRenderingExperiment.getCurrentConfig().treatmentId >= 2) {
               callback = (function getInteractionModalDebugData(closure_0) {
                 interactionDebugContext = interactionDebugContext.getInteractionDebugContext(closure_0.nonce);
@@ -114,7 +114,7 @@ function _handleInteractionModalCreate() {
               obj.addBreadcrumb(obj4);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp19) {
           c4 = tmp;

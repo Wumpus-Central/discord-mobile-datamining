@@ -1,6 +1,6 @@
-// === Module 4554: pollConnectionStats ===
+// === Module 4556: pollConnectionStats ===
 
-// Module 4554 (pollConnectionStats)
+// Module 4556 (pollConnectionStats)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -32,7 +32,7 @@ export default function pollConnectionStats(on) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         while (true) {
@@ -68,7 +68,7 @@ export default function pollConnectionStats(on) {
               }
               let num5 = 3;
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else if (1 === tmp5) {
             let tmp14 = closure_4;
@@ -144,9 +144,9 @@ export default function pollConnectionStats(on) {
     return applyArgumentsResult;
   }
   dependencyMap = false;
-  on.on(_require(4545).MediaEngineEvent.Destroy, () => {
+  on.on(_require(4547).MediaEngineEvent.Destroy, () => {
     c1 = true;
     return true;
   });
-  let timerId = setTimeout(pollStats, _require(4555).STATS_INTERVAL);
+  let timerId = setTimeout(pollStats, _require(4557).STATS_INTERVAL);
 };

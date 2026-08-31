@@ -1,9 +1,9 @@
-// === Module 8970: usePendingFolderGuildIds ===
+// === Module 8993: usePendingFolderGuildIds ===
 
-// Module 8970 (usePendingFolderGuildIds)
+// Module 8993 (usePendingFolderGuildIds)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "handleGatewayJoinRequestUpdate" /* 4269 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "handleGatewayJoinRequestUpdate" /* 4270 */;
+import closure_3 from "createGuildRecordFromRust" /* 1909 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guilds_bar/usePendingFolderGuildIds.tsx");

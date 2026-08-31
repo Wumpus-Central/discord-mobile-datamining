@@ -1,12 +1,12 @@
-// === Module 16120: VibegrationsMessageAuthor ===
+// === Module 16154: VibegrationsMessageAuthor ===
 
-// Module 16120 (VibegrationsMessageAuthor)
+// Module 16154 (VibegrationsMessageAuthor)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -30,7 +30,7 @@ export default function VibegrationsMessageAuthor(userId) {
     }
     return userId(closure_1_1[6]).resolveMessageAuthor(userId, user, closure_1_4.getCurrentUser());
   }, items2);
-  userId(4290);
+  userId(4292);
   let tmp8 = null;
   if (null != stateFromStores) {
     obj = { style: null, children: null };
@@ -41,7 +41,7 @@ export default function VibegrationsMessageAuthor(userId) {
     const items3 = [callback(tmp3(1297).Avatar, obj), ];
     obj1 = { variant: "text-xs/semibold", color: "text-muted", children: null };
     obj1[2] = tmp7;
-    items3[1] = callback(tmp3(4442).Text, obj1);
+    items3[1] = callback(tmp3(4444).Text, obj1);
     obj[1] = items3;
     tmp8 = callback2(View, obj);
   }

@@ -1,10 +1,10 @@
-// === Module 8818: toAnnouncementMessages ===
+// === Module 8841: toAnnouncementMessages ===
 
-// Module 8818 (toAnnouncementMessages)
+// Module 8841 (toAnnouncementMessages)
 import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import hasFlag from "hasFlag" /* 4100 */;
-import formatExpirationLabel from "formatExpirationLabel" /* 8075 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1486 */;
+import hasFlag from "hasFlag" /* 4101 */;
+import formatExpirationLabel from "formatExpirationLabel" /* 8097 */;
 
 const isMessageComponentsV2 = hasFlag.isMessageComponentsV2;
 const re4 = /^#{1,3}\s+(.+)$/;
@@ -250,7 +250,7 @@ export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   }
   return result;
 };
-export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c13) {
+export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c12) {
   let str = isDiscordProxiedAssetUrlDefault.toURLSafe(proxyUrl);
   str = null;
   if (null != str) {
@@ -260,9 +260,9 @@ export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c13) {
       const searchParams2 = str.searchParams;
       searchParams2.append("width", arg1.toString());
     }
-    if (null != c13) {
+    if (null != c12) {
       const searchParams3 = str.searchParams;
-      searchParams3.append("height", c13.toString());
+      searchParams3.append("height", c12.toString());
     }
     str = str.toString();
   }

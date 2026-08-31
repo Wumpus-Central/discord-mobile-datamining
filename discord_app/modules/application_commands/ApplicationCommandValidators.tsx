@@ -1,14 +1,14 @@
-// === Module 11662: validateNumericOptionRange ===
+// === Module 11693: validateNumericOptionRange ===
 
-// Module 11662 (validateNumericOptionRange)
+// Module 11693 (validateNumericOptionRange)
 import _modDef38 from "module_38" /* 38 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1956 */;
-import buildCommand from "buildCommand" /* 7213 */;
-import getStringAll from "getString" /* 8385 */;
-import toChoiceBooleanValue from "toChoiceBooleanValue" /* 8387 */;
-import closure_4 from "_getSystemLocale" /* 1997 */;
-import closure_5 from "map" /* 4819 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
+import buildCommand from "buildCommand" /* 7234 */;
+import getStringAll from "getString" /* 8407 */;
+import toChoiceBooleanValue from "toChoiceBooleanValue" /* 8409 */;
+import closure_4 from "_getSystemLocale" /* 1996 */;
+import closure_5 from "map" /* 4821 */;
 
 require = arg1;
 function validateNumericOptionRange(NumberResult, minValue, _8Y5zsp, CyRLmH, VD3Q_S) {
@@ -47,9 +47,9 @@ function validateNumericOptionRange(NumberResult, minValue, _8Y5zsp, CyRLmH, VD3
   }
 }
 let obj = {
-  [arg1(1956).ApplicationCommandOptionType.SUB_COMMAND]: () => ({ success: false }),
-  [arg1(1956).ApplicationCommandOptionType.SUB_COMMAND_GROUP]: () => ({ success: false }),
-  [arg1(1956).ApplicationCommandOptionType.BOOLEAN]: (type) => {
+  [arg1(1955).ApplicationCommandOptionType.SUB_COMMAND]: () => ({ success: false }),
+  [arg1(1955).ApplicationCommandOptionType.SUB_COMMAND_GROUP]: () => ({ success: false }),
+  [arg1(1955).ApplicationCommandOptionType.BOOLEAN]: (type) => {
     if ("text" !== type.type) {
       return { success: false };
     } else {
@@ -59,7 +59,7 @@ let obj = {
       return obj;
     }
   },
-  [arg1(1956).ApplicationCommandOptionType.STRING]: (type, type2, id) => {
+  [arg1(1955).ApplicationCommandOptionType.STRING]: (type, type2, id) => {
     _modDef38(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING, "option type must match validator type");
     type = type.type;
     if ("emoji" === type) {
@@ -72,12 +72,12 @@ let obj = {
     }
     if (null != type2.choices) {
       let obj = { success: null };
-      let tmp3Result = tmp3(8387);
+      let tmp3Result = tmp3(8409);
       obj[0] = null != tmp3Result.findChoiceStringValue(type2.choices, surrogate);
       return obj;
     } else {
       if (type2.autocomplete) {
-        tmp3Result = tmp3(8387);
+        tmp3Result = tmp3(8409);
         if (null != tmp3Result.findAutocompleteChoiceStringValue(id, type2.name, surrogate)) {
           return { success: true };
         }
@@ -143,7 +143,7 @@ let obj = {
     }
     const tmp2 = _modDef38;
   },
-  [arg1(1956).ApplicationCommandOptionType.INTEGER]: (type, type2, id) => {
+  [arg1(1955).ApplicationCommandOptionType.INTEGER]: (type, type2, id) => {
     _modDef38(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.INTEGER, "option type must match validator type");
     let trimmed = null;
     if ("text" === type.type) {
@@ -154,12 +154,12 @@ let obj = {
       if (0 !== trimmed.length) {
         if (null != type2.choices) {
           let obj = { success: null };
-          let tmp3Result = tmp3(8387);
+          let tmp3Result = tmp3(8409);
           obj[0] = null != tmp3Result.findChoiceNumberValue(type2.choices, trimmed);
           return obj;
         } else {
           if (type2.autocomplete) {
-            tmp3Result = tmp3(8387);
+            tmp3Result = tmp3(8409);
             if (null != tmp3Result.findAutocompleteChoiceNumberValue(id, type2.name, trimmed)) {
               return { success: true };
             }
@@ -186,7 +186,7 @@ let obj = {
     }
     return { success: false };
   },
-  [arg1(1956).ApplicationCommandOptionType.NUMBER]: (type, type2, id) => {
+  [arg1(1955).ApplicationCommandOptionType.NUMBER]: (type, type2, id) => {
     _modDef38(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.NUMBER, "option type must match validator type");
     let trimmed = null;
     if ("text" === type.type) {
@@ -197,12 +197,12 @@ let obj = {
       if (0 !== trimmed.length) {
         if (null != type2.choices) {
           let obj = { success: null };
-          let tmp3Result = tmp3(8387);
+          let tmp3Result = tmp3(8409);
           obj[0] = null != tmp3Result.findChoiceNumberValue(type2.choices, trimmed);
           return obj;
         } else {
           if (type2.autocomplete) {
-            tmp3Result = tmp3(8387);
+            tmp3Result = tmp3(8409);
             if (null != tmp3Result.findAutocompleteChoiceNumberValue(id, type2.name, trimmed)) {
               return { success: true };
             }
@@ -227,12 +227,12 @@ let obj = {
     }
     return { success: false };
   },
-  [arg1(1956).ApplicationCommandOptionType.USER]: (type, arg1, id, throwTypeErrorResult) => {
+  [arg1(1955).ApplicationCommandOptionType.USER]: (type, arg1, id, throwTypeErrorResult) => {
     if ("text" === type.type) {
       if (obj2.isSnowflake(type.text)) {
         return { success: true };
       } else {
-        const tmpResult = tmp(8388);
+        const tmpResult = tmp(8410);
         const applicationCommandOption = tmpResult.resolveApplicationCommandOption(type.text, throwTypeErrorResult, id, { allowRoles: false });
         type = undefined;
         if (applicationCommandOption != null) {
@@ -250,12 +250,12 @@ let obj = {
       return obj;
     }
   },
-  [arg1(1956).ApplicationCommandOptionType.CHANNEL]: (type, arg1, id, throwTypeErrorResult) => {
+  [arg1(1955).ApplicationCommandOptionType.CHANNEL]: (type, arg1, id, throwTypeErrorResult) => {
     if ("text" === type.type) {
       if (obj2.isSnowflake(type.text)) {
         return { success: true };
       } else {
-        const applicationCommandOption = tmp(8388).resolveApplicationCommandOption(type.text, throwTypeErrorResult, id);
+        const applicationCommandOption = tmp(8410).resolveApplicationCommandOption(type.text, throwTypeErrorResult, id);
         type = undefined;
         if (applicationCommandOption != null) {
           type = applicationCommandOption.type;
@@ -272,12 +272,12 @@ let obj = {
       return obj;
     }
   },
-  [arg1(1956).ApplicationCommandOptionType.ROLE]: (type, arg1, id, throwTypeErrorResult) => {
+  [arg1(1955).ApplicationCommandOptionType.ROLE]: (type, arg1, id, throwTypeErrorResult) => {
     if ("text" === type.type) {
       if (obj2.isSnowflake(type.text)) {
         return { success: true };
       } else {
-        const tmp3Result = tmp3(8388);
+        const tmp3Result = tmp3(8410);
         const applicationCommandOption = tmp3Result.resolveApplicationCommandOption(type.text, throwTypeErrorResult, id, { allowUsers: false });
         type = undefined;
         if (applicationCommandOption != null) {
@@ -303,12 +303,12 @@ let obj = {
       return obj;
     }
   },
-  [arg1(1956).ApplicationCommandOptionType.MENTIONABLE]: (type, arg1, id, throwTypeErrorResult) => {
+  [arg1(1955).ApplicationCommandOptionType.MENTIONABLE]: (type, arg1, id, throwTypeErrorResult) => {
     if ("text" === type.type) {
       if (obj2.isSnowflake(type.text)) {
         return { success: true };
       } else {
-        const applicationCommandOption = tmp4(8388).resolveApplicationCommandOption(type.text, throwTypeErrorResult, id);
+        const applicationCommandOption = tmp4(8410).resolveApplicationCommandOption(type.text, throwTypeErrorResult, id);
         let tmp10 = null != applicationCommandOption;
         if (tmp10) {
           let tmp11 = "userMention" === applicationCommandOption.type;
@@ -349,7 +349,7 @@ let obj = {
       return obj;
     }
   },
-  [arg1(1956).ApplicationCommandOptionType.ATTACHMENT]: (type, name, channelId, arg3, closure_10) => {
+  [arg1(1955).ApplicationCommandOptionType.ATTACHMENT]: (type, name, channelId, arg3, closure_10) => {
     if ("text" !== type.type) {
       return { success: false };
     } else {

@@ -1,32 +1,32 @@
-// === Module 4701: reinjectEphemerals ===
+// === Module 4703: reinjectEphemerals ===
 
-// Module 4701 (reinjectEphemerals)
+// Module 4703 (reinjectEphemerals)
 import timestampDefault from "timestamp" /* 3 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import mergeMessageDefault from "mergeMessage" /* 5181 */;
-import isIOSPushNotificationRawPayloadFixExperimentEnabled from "isIOSPushNotificationRawPayloadFixExperimentEnabled" /* 5184 */;
-import _handleConnectionOpen from "_handleConnectionOpen" /* 5186 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7292 */;
-import items2 from "items" /* 7525 */;
+import mergeMessageDefault from "mergeMessage" /* 5184 */;
+import isIOSPushNotificationRawPayloadFixExperimentEnabled from "isIOSPushNotificationRawPayloadFixExperimentEnabled" /* 5187 */;
+import _handleConnectionOpen from "_handleConnectionOpen" /* 5189 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7313 */;
+import items2 from "items" /* 7546 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 1985 */;
-import closure_6 from "dropChannelIfEmpty" /* 4702 */;
-import closure_7 from "_getSystemLocale" /* 1997 */;
+import closure_5 from "initialize" /* 1984 */;
+import closure_6 from "dropChannelIfEmpty" /* 4704 */;
+import closure_7 from "_getSystemLocale" /* 1996 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "percentageScrolled" /* 5180 */;
-import closure_11 from "comparator" /* 1983 */;
-import closure_12 from "trackCommunicationDisabled" /* 1993 */;
-import closure_13 from "createGuildRecordFromRust" /* 1910 */;
-import closure_14 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_15 from "markAllUserIdListsStale" /* 4099 */;
-import closure_16 from "handleConnectionOpen" /* 1982 */;
-import closure_17 from "handleConnectionOpen" /* 4268 */;
-import closure_18 from "mergeGuildAvatar" /* 1923 */;
+import closure_9 from "ensureGuildLoaded" /* 1387 */;
+import closure_10 from "percentageScrolled" /* 5183 */;
+import closure_11 from "comparator" /* 1982 */;
+import closure_12 from "trackCommunicationDisabled" /* 1992 */;
+import closure_13 from "createGuildRecordFromRust" /* 1909 */;
+import closure_14 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_15 from "markAllUserIdListsStale" /* 4100 */;
+import closure_16 from "handleConnectionOpen" /* 1981 */;
+import closure_17 from "handleConnectionOpen" /* 4269 */;
+import closure_18 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -80,7 +80,7 @@ function _addPushNotificationMessageIfNotCached() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -98,20 +98,20 @@ function _addPushNotificationMessageIfNotCached() {
               closure_4 = tmp3;
               let orCreate = tmp28;
               orCreate = undefined;
-              const databaseResult = lib(1957).database();
+              const databaseResult = lib(1956).database();
               const basicChannel = closure_1_9.getBasicChannel(closure_0);
               if (null != databaseResult) {
                 if (null != basicChannel) {
                   c5 = 1;
-                  const obj4 = lib(1957);
+                  const obj4 = lib(1956);
                   c6 = 2;
                   c7 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = lib(1957).messages(databaseResult).get(basicChannel.guild_id, tmp35, tmp36.id);
+                  obj1[0] = lib(1956).messages(databaseResult).get(basicChannel.guild_id, tmp35, tmp36.id);
                   return obj1;
                 }
               }
-              const obj9 = lib(1957);
+              const obj9 = lib(1956);
               tmp35 = closure_0;
               tmp36 = lib;
             }
@@ -132,15 +132,15 @@ function _addPushNotificationMessageIfNotCached() {
             }
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
           logger.log("Push notification message not in cache, adding directly", lib.id, lib.channel_id);
-          obj1 = lib(5181);
+          obj1 = lib(5184);
           orCreate = obj1.getOrCreate(closure_0);
-          lib(5181).commit(orCreate.receivePushNotification(lib, dependencyMap));
+          lib(5184).commit(orCreate.receivePushNotification(lib, dependencyMap));
           closure_34.emitChange();
           c7 = 3;
-          const obj3 = lib(5181);
+          const obj3 = lib(5184);
         } catch (tmp27) {
           if (tmp4 === c5) {
             c7 = tmp2;
@@ -191,8 +191,8 @@ function receiveMediaMentionMessage(item10037) {
     const tmp5 = importDefault;
     const mutation = orCreate.receiveMessage(obj, false).mutate({ ready: true });
     const receiveMessageResult = orCreate.receiveMessage(obj, false);
-    tmp5(5181).commit(mutation);
-    const tmp5Result = tmp5(5181);
+    tmp5(5184).commit(mutation);
+    const tmp5Result = tmp5(5184);
   }
 }
 function invalidateInaccessibleMessages(arg0) {
@@ -326,7 +326,7 @@ function handleReaction(optimistic) {
     } else {
       return false;
     }
-    obj4 = _require(4101);
+    obj4 = _require(4102);
   }
   let obj = mergeMessageDefault;
   const tmp = importDefault;
@@ -626,7 +626,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
   },
   LOAD_MESSAGES_SUCCESS_CACHED: function handleLoadMessagesSuccessCached(truncate) {
     ({ channelId, jump, focus, before, after, limit } = truncate);
-    let obj = found(5181);
+    let obj = found(5184);
     const orCreate = obj.getOrCreate(channelId);
     let present;
     if (jump != null) {
@@ -690,7 +690,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
         tmp10 = mutation;
       }
     }
-    found(5181).commit(tmp10);
+    found(5184).commit(tmp10);
   },
   LOCAL_MESSAGES_LOADED: function handleLocalMessagesLoaded(channelId) {
     let obj = mergeMessageDefault;
@@ -758,7 +758,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
         })(channelId, message, isConnectedResult);
       } else {
         logger.log("Inserting message tapped on from a push notification", message.id, message.channel_id);
-        let tmpResult = tmp(5181);
+        let tmpResult = tmp(5184);
         tmpResult.commit(orCreate.receivePushNotification(message, isConnectedResult));
       }
       tmp3Result = isIOSPushNotificationRawPayloadFixExperimentEnabled;
@@ -782,7 +782,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
             removeResult = orCreate.remove(message.nonce);
             set.delete(message.nonce);
           }
-          tmpResult = tmp(5181);
+          tmpResult = tmp(5184);
           tmpResult.commit(removeResult.receiveMessage(message, true === atBottom.isAtBottom(channelId)));
           receiveMediaMentionMessage(message);
           const receiveMessageResult = removeResult.receiveMessage(message, true === atBottom.isAtBottom(channelId));
@@ -840,7 +840,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
     const orCreate = mergeMessageDefault.getOrCreate(message.message.channel_id);
     if (null != orCreate) {
       if (orCreate.has(id)) {
-        let tmpResult = tmp(5181);
+        let tmpResult = tmp(5184);
         tmpResult.commit(orCreate.update(id, (message) => message(closure_1_2[23]).updateMessageRecord(message, message.message)));
         message = message.message;
         const media_mention = message.media_mention;
@@ -850,15 +850,15 @@ const messageStore = new MessageStore(dispatcherDefault, {
         }
         if (null != message_id) {
           if ("content" in message) {
-            tmpResult = tmp(5181);
+            tmpResult = tmp(5184);
             const orCreate1 = tmpResult.getOrCreate(message.media_mention.attachment_id);
             const updateResult1 = orCreate1.update(message.media_mention.message_id, (message) => {
               let obj = message(closure_1_2[23]);
               obj = { content: message.content };
               return obj.updateMessageRecord(message, obj);
             });
-            tmp(5181).commit(updateResult1);
-            const tmpResult1 = tmp(5181);
+            tmp(5184).commit(updateResult1);
+            const tmpResult1 = tmp(5184);
           }
         }
       }
@@ -891,7 +891,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
               attachment_id = mediaMention.attachment_id;
             }
             if (null != attachment_id) {
-              let tmpResult = tmp(5181);
+              let tmpResult = tmp(5184);
               value = tmpResult.get(attachment_id);
               if (null != value) {
                 const mediaMention2 = value.mediaMention;
@@ -900,7 +900,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
                   message_id = mediaMention2.message_id;
                 }
                 if (null != message_id) {
-                  tmpResult = tmp(5181);
+                  tmpResult = tmp(5184);
                   tmpResult.commit(value.remove(message_id));
                   const removeResult = value.remove(message_id);
                 }
@@ -908,7 +908,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
             }
           }
           const removeResult1 = orCreate.remove(id);
-          tmp(5181).commit(removeResult1);
+          tmp(5184).commit(removeResult1);
           set.delete(id);
         } else {
           let id2 = orCreate.getAfter(id);
@@ -928,7 +928,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
     ids = ids.ids;
     let orCreate;
     let mutation;
-    let obj = mutation(5181);
+    let obj = mutation(5184);
     orCreate = obj.getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
@@ -966,10 +966,10 @@ const messageStore = new MessageStore(dispatcherDefault, {
       if (orCreate === removeManyResult) {
         return false;
       } else {
-        let tmp8 = removeManyResult;
+        let tmp3 = removeManyResult;
         if (null != removeManyResult.revealedMessageId) {
           let tmpResult = tmp(12);
-          tmp8 = removeManyResult;
+          tmp3 = removeManyResult;
           if (tmpResult.some(ids, (arg0) => mutation.revealedMessageId === arg0)) {
             let id = removeManyResult.getAfter(removeManyResult.revealedMessageId);
             if (null == id) {
@@ -981,8 +981,8 @@ const messageStore = new MessageStore(dispatcherDefault, {
             mutation = removeManyResult.mutate(obj);
           }
         }
-        tmpResult = tmp(5181);
-        tmpResult.commit(tmp8);
+        tmpResult = tmp(5184);
+        tmpResult.commit(tmp3);
         const item1 = ids.forEach((arg0) => {
           set.delete(arg0);
         });
@@ -1168,7 +1168,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
           const removeResult = orCreate.remove(messageId);
           obj5.delete(messageId);
           const mergeResult = orCreate.remove(messageId).merge(items);
-          tmp2(5181).commit(mergeResult);
+          tmp2(5184).commit(mergeResult);
         }
         const obj = mergeMessageDefault;
         tmp2 = importDefault;

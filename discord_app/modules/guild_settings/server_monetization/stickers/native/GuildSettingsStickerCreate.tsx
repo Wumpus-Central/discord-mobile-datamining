@@ -1,21 +1,21 @@
-// === Module 17094: ? ===
+// === Module 17127: ? ===
 
-// Module 17094
+// Module 17127
 import ThemesDefault from "Themes" /* 712 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5559 */;
-import useInitialValueDefault from "useInitialValue" /* 5906 */;
-import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 9152 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5562 */;
+import useInitialValueDefault from "useInitialValue" /* 5909 */;
+import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 9174 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "getEmojiToGroupId" /* 5366 */;
-import closure_9 from "loadSavedGuildStickers" /* 5409 */;
+import closure_8 from "getEmojiToGroupId" /* 5369 */;
+import closure_9 from "loadSavedGuildStickers" /* 5412 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 1926 */;
-import { MAX_STICKER_FILE_SIZE } from "STICKER_PICKER_TAB_PANEL_ID" /* 4138 */;
+import set from "set" /* 1925 */;
+import { MAX_STICKER_FILE_SIZE } from "STICKER_PICKER_TAB_PANEL_ID" /* 4139 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 let c5 = importAllResult;
@@ -135,7 +135,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -191,7 +191,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
               if ("Cancelled" === errorStr) {
                 errorStr = 0;
                 c5 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else if (null != base64) {
                 if ("image/png" === mimeType) {
                   callback(base64);
@@ -238,7 +238,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -281,7 +281,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
                 }
                 c5 = 0;
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 if (null != c6) {
                   if (null != closure_1_14) {
@@ -304,7 +304,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
                 }
                 c5 = 0;
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
           } else {
@@ -471,23 +471,23 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     obj1[1] = tmp.title;
     const intl = stickerId(1236).intl;
     obj1[2] = intl.string(stickerId(1236).t["9N2OWD"]);
-    const items2 = [callback(stickerId(4442).Text, obj1), , , ];
+    const items2 = [callback(stickerId(4444).Text, obj1), , , ];
     let obj2 = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
     obj2[2] = tmp.description;
     const intl2 = stickerId(1236).intl;
     let obj3 = { fileSize: null };
-    let obj6 = stickerId(4340);
+    let obj6 = stickerId(4342);
     obj3[0] = obj6.formatKbSize(first1, { useKibibytes: true });
     obj2[3] = intl2.format(stickerId(1236).t.hxLviw, obj3);
-    items2[1] = callback(stickerId(4442).Text, obj2);
+    items2[1] = callback(stickerId(4444).Text, obj2);
     let obj4 = { variant: "text-sm/medium", color: "text-muted", style: null, children: null };
     obj4[2] = tmp.help;
     const intl3 = stickerId(1236).intl;
     let obj5 = { articleUrl: null };
-    let tmp14Result = tmp14(1996);
+    let tmp14Result = tmp14(1995);
     obj5[0] = tmp14Result.getArticleURL(first.STICKERS_UPLOAD);
     obj4[3] = intl3.format(stickerId(1236).t.UBj0aX, obj5);
-    items2[2] = callback(stickerId(4442).Text, obj4);
+    items2[2] = callback(stickerId(4444).Text, obj4);
     obj6 = { text: null, onPress: null, variant: null };
     const intl4 = stickerId(1236).intl;
     obj6[0] = intl4.string(stickerId(1236).t.O1REe1);
@@ -498,7 +498,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     }
     const obj7 = { children: null };
     obj6[2] = str;
-    items2[3] = callback(stickerId(4893).Button, obj6);
+    items2[3] = callback(stickerId(4896).Button, obj6);
     obj7[0] = items2;
     tmp23Result = tmp23(closure_16, obj7);
     const tmp26 = closure_16;
@@ -509,14 +509,14 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   const obj9 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.stickerPreviewLabel, children: null };
   const intl5 = stickerId(1236).intl;
   obj9[3] = intl5.string(stickerId(1236).t.gjdiKE);
-  const items4 = [callback(stickerId(4442).Text, obj9), , , , , , ];
+  const items4 = [callback(stickerId(4444).Text, obj9), , , , , , ];
   let obj10 = { style: tmp.stickerPreview, disabled: null != tmp16Result, onPress: handleImagePicker, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl6 = stickerId(1236).intl;
   obj10[4] = intl6.string(stickerId(1236).t.O1REe1);
   if (null != tmp16Result) {
     const obj11 = { sticker: null, size: null, animated: true };
     obj11[0] = tmp16Result;
-    tmp14Result = tmp14(10199);
+    tmp14Result = tmp14(10222);
     obj11[1] = tmp14(712).space.PX_96;
     let tmp32Result = tmp32(tmp14Result, obj11);
   } else if (null != first) {
@@ -527,14 +527,14 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     obj12[1] = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj12);
   } else {
-    tmp32Result = tmp32(tmp31(17096).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(17129).StickerPlusIcon, { size: "lg" });
   }
   obj10[5] = tmp32Result;
-  items4[1] = callback(stickerId(5033).PressableHighlight, obj10);
+  items4[1] = callback(stickerId(5036).PressableHighlight, obj10);
   const obj14 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.stickerPreviewLabel, children: null };
   const intl7 = tmp31(1236).intl;
   obj14[3] = intl7.string(stickerId(1236).t["3BQmiC"]);
-  items4[2] = callback(stickerId(4442).Text, obj14);
+  items4[2] = callback(stickerId(4444).Text, obj14);
   const obj15 = {
     style: tmp.emojiPreview,
     onPress() {
@@ -553,14 +553,14 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       const obj17 = { id: null, animated: null, size: null };
       ({ id: obj23[0], animated: obj23[1] } = first1);
       obj17[2] = c12;
-      emojiURL = tmp14(1435).getEmojiURL(obj17);
-      const tmp14Result2 = tmp14(1435);
+      emojiURL = tmp14(1431).getEmojiURL(obj17);
+      const tmp14Result2 = tmp14(1431);
     }
     obj16[2] = emojiURL;
-    tmp32Result = tmp32(tmp14(5550), obj16);
-    const tmp14Result1 = tmp14(5550);
+    tmp32Result = tmp32(tmp14(5553), obj16);
+    const tmp14Result1 = tmp14(5553);
   } else {
-    tmp32Result = tmp32(tmp31(8174).ReactionIcon, { size: "md", color: "text-subtle" });
+    tmp32Result = tmp32(tmp31(8196).ReactionIcon, { size: "md", color: "text-subtle" });
   }
   const items5 = [tmp32Result, ];
   if (null != first1) {
@@ -570,9 +570,9 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     const intl8 = tmp31(1236).intl;
     combined = intl8.string(tmp31(1236).t.QTK0TJ);
   }
-  items5[1] = callback(stickerId(4442).Text, { variant: "text-md/semibold", color: "input-placeholder-text-default", children: combined });
+  items5[1] = callback(stickerId(4444).Text, { variant: "text-md/semibold", color: "input-placeholder-text-default", children: combined });
   obj15[2] = items5;
-  items4[3] = closure_17(stickerId(5033).PressableHighlight, obj15);
+  items4[3] = closure_17(stickerId(5036).PressableHighlight, obj15);
   const obj18 = { ref: ref1, label: null, placeholder: null, onChange: null, onFocus: null, onSubmitEditing: null, isDisabled: false, isClearable: true, returnKeyType: "next", submitBehavior: "submit" };
   const intl9 = tmp31(1236).intl;
   obj18[1] = intl9.string(stickerId(1236).t["0VRh6n"]);
@@ -590,7 +590,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       current2.scrollToEnd({ animated: true });
     }
   };
-  items4[4] = callback(stickerId(7652).TextInput, obj18);
+  items4[4] = callback(stickerId(7673).TextInput, obj18);
   const obj19 = { ref: ref2, maxLength: 100, label: null, placeholder: null, onChange: null, onFocus: null };
   const intl11 = tmp31(1236).intl;
   obj19[2] = intl11.string(stickerId(1236).t.uGccej);
@@ -598,7 +598,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   obj19[3] = intl12.string(stickerId(1236).t.zwR0fa);
   obj19[4] = tmp8;
   obj19[5] = onFocus;
-  items4[5] = callback(stickerId(7755).TextArea, obj19);
+  items4[5] = callback(stickerId(7776).TextArea, obj19);
   const obj20 = {
     onPress: function handleSave() {
       const self = this;
@@ -623,9 +623,9 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   }
   obj20[2] = str3;
   obj20[3] = !hasUnsavedChanges(false);
-  items4[6] = callback(stickerId(4893).Button, obj20);
+  items4[6] = callback(stickerId(4896).Button, obj20);
   obj8[1] = items4;
-  items3[1] = closure_17(stickerId(4891).Stack, obj8);
+  items3[1] = closure_17(stickerId(4894).Stack, obj8);
   obj[4] = items3;
   return closure_17(c7, obj);
 });

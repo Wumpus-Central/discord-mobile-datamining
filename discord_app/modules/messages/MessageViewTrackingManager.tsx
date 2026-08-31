@@ -1,14 +1,14 @@
-// === Module 10880: getAnalyticsConfig ===
+// === Module 10904: getAnalyticsConfig ===
 
-// Module 10880 (getAnalyticsConfig)
+// Module 10904 (getAnalyticsConfig)
 import set2 from "set" /* 2 */;
 import encodeProperties from "encodeProperties" /* 503 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import privDefault from "priv" /* 1405 */;
-import initializeDefault from "initialize" /* 5451 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5938 */;
+import privDefault from "priv" /* 1401 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1471 */;
+import initializeDefault from "initialize" /* 5454 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5941 */;
 
 function getAnalyticsConfig(type) {
   type = type.type;

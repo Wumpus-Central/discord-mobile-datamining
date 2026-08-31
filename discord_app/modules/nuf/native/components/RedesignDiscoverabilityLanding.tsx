@@ -1,18 +1,18 @@
-// === Module 16962: RedesignDiscoverabilityLanding ===
+// === Module 16995: RedesignDiscoverabilityLanding ===
 
-// Module 16962 (RedesignDiscoverabilityLanding)
+// Module 16995 (RedesignDiscoverabilityLanding)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4442 */;
-import Button from "Button" /* 4893 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5457 */;
-import preloadDefault from "preload" /* 5458 */;
-import registerAssetDefault from "registerAsset" /* 12221 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import Text from "Text" /* 4444 */;
+import Button from "Button" /* 4896 */;
+import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5460 */;
+import preloadDefault from "preload" /* 5461 */;
+import registerAssetDefault from "registerAsset" /* 12255 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;
@@ -57,7 +57,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   const intl4 = getSystemLocale.intl;
   items1[2] = intl4.format(getSystemLocale.t.VcSQ4n, {
     learnMoreHook(children) {
-      return callback2(callback(4442).Text, { onPress: callback(12151).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
+      return callback2(callback(4444).Text, { onPress: callback(12185).handleOpenLearnMoreLink, variant: "text-sm/medium", color: "text-link", children }, arg1);
     }
   });
   obj4[3] = items1;

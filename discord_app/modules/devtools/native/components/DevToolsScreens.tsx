@@ -1,34 +1,34 @@
-// === Module 15111: DevToolsScreens ===
+// === Module 15144: DevToolsScreens ===
 
-// Module 15111 (DevToolsScreens)
+// Module 15144 (DevToolsScreens)
 import noopAll from "noop" /* 19 */;
-import UserExperimentDebugView from "UserExperimentDebugView" /* 11318 */;
-import CommonProperty from "CommonProperty" /* 15112 */;
-import jsx2 from "jsx" /* 15113 */;
-import DevToolsLoggingFlagsScreen from "DevToolsLoggingFlagsScreen" /* 15118 */;
-import CacheLogEntry from "CacheLogEntry" /* 15119 */;
-import PoolIdInput from "PoolIdInput" /* 15120 */;
-import DevToolsPersistedStoresActionSheet from "DevToolsPersistedStoresActionSheet" /* 15146 */;
-import SettingsDesignSystemsScreen from "SettingsDesignSystemsScreen" /* 15147 */;
-import DismissableContentsEmpty from "DismissableContentsEmpty" /* 15148 */;
-import MultiGuildDevTools from "MultiGuildDevTools" /* 15152 */;
-import TestLocaleSelector from "TestLocaleSelector" /* 15155 */;
-import OtaVerificationActionSheet from "OtaVerificationActionSheet" /* 15190 */;
-import DevToolsProfilingScreen from "DevToolsProfilingScreen" /* 15193 */;
-import handleNewUserOnboarding from "handleNewUserOnboarding" /* 15196 */;
-import describeServerError from "describeServerError" /* 15219 */;
-import SurveyOverrideInfoActionSheet from "SurveyOverrideInfoActionSheet" /* 15238 */;
-import fuzzySearchToggle from "fuzzySearchToggle" /* 15239 */;
-import showAgeVerificationTestModal from "showAgeVerificationTestModal" /* 15242 */;
-import Select from "Select" /* 15243 */;
-import DevToolsShopScreen from "DevToolsShopScreen" /* 15250 */;
-import FramePreviewOverrideSection from "FramePreviewOverrideSection" /* 15251 */;
-import SlayerStorefrontDevTools from "SlayerStorefrontDevTools" /* 15253 */;
-import ActionSheetSelector from "ActionSheetSelector" /* 15254 */;
-import DevToolsAccountLinkingScreen from "DevToolsAccountLinkingScreen" /* 15257 */;
-import _mod15258 from "module_15258" /* 15258 */;
-import getSelectedGuildChannel from "getSelectedGuildChannel" /* 15259 */;
-import effectName from "effectName" /* 15260 */;
+import UserExperimentDebugView from "UserExperimentDebugView" /* 11347 */;
+import CommonProperty from "CommonProperty" /* 15145 */;
+import jsx2 from "jsx" /* 15146 */;
+import DevToolsLoggingFlagsScreen from "DevToolsLoggingFlagsScreen" /* 15151 */;
+import CacheLogEntry from "CacheLogEntry" /* 15152 */;
+import PoolIdInput from "PoolIdInput" /* 15153 */;
+import DevToolsPersistedStoresActionSheet from "DevToolsPersistedStoresActionSheet" /* 15179 */;
+import SettingsDesignSystemsScreen from "SettingsDesignSystemsScreen" /* 15180 */;
+import DismissableContentsEmpty from "DismissableContentsEmpty" /* 15181 */;
+import MultiGuildDevTools from "MultiGuildDevTools" /* 15185 */;
+import TestLocaleSelector from "TestLocaleSelector" /* 15188 */;
+import OtaVerificationActionSheet from "OtaVerificationActionSheet" /* 15223 */;
+import DevToolsProfilingScreen from "DevToolsProfilingScreen" /* 15226 */;
+import handleNewUserOnboarding from "handleNewUserOnboarding" /* 15229 */;
+import describeServerError from "describeServerError" /* 15252 */;
+import SurveyOverrideInfoActionSheet from "SurveyOverrideInfoActionSheet" /* 15271 */;
+import fuzzySearchToggle from "fuzzySearchToggle" /* 15272 */;
+import showAgeVerificationTestModal from "showAgeVerificationTestModal" /* 15275 */;
+import Select from "Select" /* 15276 */;
+import DevToolsShopScreen from "DevToolsShopScreen" /* 15283 */;
+import FramePreviewOverrideSection from "FramePreviewOverrideSection" /* 15284 */;
+import SlayerStorefrontDevTools from "SlayerStorefrontDevTools" /* 15286 */;
+import ActionSheetSelector from "ActionSheetSelector" /* 15287 */;
+import DevToolsAccountLinkingScreen from "DevToolsAccountLinkingScreen" /* 15290 */;
+import _mod15291 from "module_15291" /* 15291 */;
+import getSelectedGuildChannel from "getSelectedGuildChannel" /* 15292 */;
+import effectName from "effectName" /* 15293 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -368,14 +368,14 @@ obj[24] = {
   headerTitle: "Performance Testing",
   Icon: require("SpeedometerIcon").SpeedometerIcon,
   render() {
-    return jsx(_mod15258.default, {});
+    return jsx(_mod15291.default, {});
   }
 };
 const obj23 = {
   headerTitle: "Performance Testing",
   Icon: require("SpeedometerIcon").SpeedometerIcon,
   render() {
-    return jsx(_mod15258.default, {});
+    return jsx(_mod15291.default, {});
   }
 };
 obj[25] = {

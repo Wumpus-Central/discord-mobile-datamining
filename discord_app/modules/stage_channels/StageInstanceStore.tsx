@@ -1,10 +1,10 @@
-// === Module 1396: handleStageInstanceCreateOrUpdate ===
+// === Module 1392: handleStageInstanceCreateOrUpdate ===
 
-// Module 1396 (handleStageInstanceCreateOrUpdate)
+// Module 1392 (handleStageInstanceCreateOrUpdate)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1393 */;
 
 function handleStageInstanceCreateOrUpdate(instance) {
   instance = instance.instance;

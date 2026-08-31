@@ -1,10 +1,10 @@
-// === Module 14064: VoiceCapabilities ===
+// === Module 14098: VoiceCapabilities ===
 
-// Module 14064 (VoiceCapabilities)
+// Module 14098 (VoiceCapabilities)
 import set from "set" /* 2 */;
-import set2 from "set" /* 8556 */;
-import RPCCommands from "RPCCommands" /* 14065 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14066 */;
+import set2 from "set" /* 8578 */;
+import RPCCommands from "RPCCommands" /* 14099 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14100 */;
 
 function VoiceCapabilities(boolean) {
   let obj = { available: boolean.boolean().required(), connected: null, participant_updates: null, binary_speaking: null, spatial: null };
@@ -808,7 +808,7 @@ export const RPCCommandSchemas = {
       obj[1] = string.string().min(0).max(1024);
       return obj;
     },
-    response: "r"
+    response: "Array"
   },
   [RPCCommands.RPCCommand.GET_USER]: {
     request(string) {

@@ -1,8 +1,8 @@
-// === Module 12155: _updateDiscoverability ===
+// === Module 12189: _updateDiscoverability ===
 
-// Module 12155 (_updateDiscoverability)
+// Module 12189 (_updateDiscoverability)
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5190 */;
+import closure_4 from "set" /* 5193 */;
 import ME from "ME" /* 676 */;
 
 let closure_0 = arg1;
@@ -24,7 +24,7 @@ function _updateDiscoverability() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -86,21 +86,21 @@ function _updateDiscoverability() {
             obj3[0] = typeof name === "string";
             callback2 = phone;
             if (phone == null) {
-              obj = phone(1403);
+              obj = phone(1399);
               callback2 = obj.hasFlag(dependencyMap, constants2.FIND_BY_PHONE);
             }
             obj3[1] = callback2;
             dependencyMap = callback2;
             if (callback2 == null) {
-              obj1 = phone(1403);
+              obj1 = phone(1399);
               dependencyMap = obj1.hasFlag(dependencyMap, constants2.FIND_BY_EMAIL);
             }
             obj3[2] = dependencyMap;
-            obj2 = phone(12151);
+            obj2 = phone(12185);
             obj3[3] = obj2.isContactSyncEnabled(localAccount.getLocalAccount(constants3.CONTACTS));
             callback2(698).track(constants.USER_DISCOVERY_UPDATED, obj3);
             constants2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp39) {
           constants2 = tmp;
@@ -136,7 +136,7 @@ closure_0 = importDefaultResult((arg0) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -185,7 +185,7 @@ closure_0 = importDefaultResult((arg0) => {
             obj[1] = num4;
             closure_1_1(closure_1_2[5]).track(closure_1_5.NAME_SUBMITTED, obj);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         }
       } catch (tmp18) {
@@ -212,7 +212,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

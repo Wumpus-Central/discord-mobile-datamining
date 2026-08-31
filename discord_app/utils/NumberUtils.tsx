@@ -1,6 +1,6 @@
-// === Module 1898: shortenAndLocalizeNumber ===
+// === Module 1897: shortenAndLocalizeNumber ===
 
-// Module 1898 (shortenAndLocalizeNumber)
+// Module 1897 (shortenAndLocalizeNumber)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

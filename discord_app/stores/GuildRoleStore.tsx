@@ -1,15 +1,15 @@
-// === Module 1986: createGuildRoleRecordFromRust ===
+// === Module 1985: createGuildRoleRecordFromRust ===
 
-// Module 1986 (createGuildRoleRecordFromRust)
+// Module 1985 (createGuildRoleRecordFromRust)
 import set2 from "set" /* 2 */;
 import fromStringAll from "fromString" /* 506 */;
-import isValueEqual from "isValueEqual" /* 1431 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import identity from "identity" /* 1911 */;
-import items from "items" /* 1914 */;
-import GuildRoleRecordTypeTag2 from "GuildRoleRecordTypeTag" /* 1987 */;
-import fromServerArrayAll from "fromServerArray" /* 1988 */;
-import compareGuildRolesAll from "compareGuildRoles" /* 1990 */;
+import isValueEqual from "isValueEqual" /* 1427 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1430 */;
+import identity from "identity" /* 1910 */;
+import items from "items" /* 1913 */;
+import GuildRoleRecordTypeTag2 from "GuildRoleRecordTypeTag" /* 1986 */;
+import fromServerArrayAll from "fromServerArray" /* 1987 */;
+import compareGuildRolesAll from "compareGuildRoles" /* 1989 */;
 
 function createGuildRoleRecordFromRust(permissions) {
   const obj = {};

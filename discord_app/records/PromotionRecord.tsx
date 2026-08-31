@@ -1,9 +1,9 @@
-// === Module 8395: createFromServer ===
+// === Module 8417: createFromServer ===
 
-// Module 8395 (createFromServer)
-import hasFlag from "hasFlag" /* 1403 */;
-import toJSDefault from "toJS" /* 1932 */;
-import closure_2 from "createFromServer" /* 8396 */;
+// Module 8417 (createFromServer)
+import hasFlag from "hasFlag" /* 1399 */;
+import toJSDefault from "toJS" /* 1931 */;
+import closure_2 from "createFromServer" /* 8418 */;
 
 require = arg1;
 toJSDefault;
@@ -166,13 +166,13 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
 };
 Object.defineProperty(prototype, "isBogo", {
   get: function isBogo() {
-    return this.promotionType === require(8422) /* CountryListMode */.PromotionTypes.BOGO;
+    return this.promotionType === require(8444) /* CountryListMode */.PromotionTypes.BOGO;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMarketingMoment", {
   get: function isMarketingMoment() {
-    return this.promotionType === require(8422) /* CountryListMode */.PromotionTypes.MARKETING_MOMENT;
+    return this.promotionType === require(8444) /* CountryListMode */.PromotionTypes.MARKETING_MOMENT;
   },
   set: undefined
 });
@@ -187,15 +187,15 @@ prototype["hasFlag"] = function hasFlag(arg0) {
 };
 prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
   const self = this;
-  if (this.countryListMode === require(8422) /* CountryListMode */.CountryListMode.ALLOWLIST) {
+  if (this.countryListMode === require(8444) /* CountryListMode */.CountryListMode.ALLOWLIST) {
     const allowedCountries = self.allowedCountries;
     return !allowedCountries.includes(arg0);
   } else {
     const promotionType = self.promotionType;
-    if (tmp(8422).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
-      if (tmp(8422).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
-        if (tmp(8422).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
-          if (tmp(8422).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
+    if (tmp(8444).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
+      if (tmp(8444).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
+        if (tmp(8444).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
+          if (tmp(8444).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
             return false;
           }
         }

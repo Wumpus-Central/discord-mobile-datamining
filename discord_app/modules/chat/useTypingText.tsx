@@ -1,8 +1,8 @@
-// === Module 11489: useTypingText ===
+// === Module 11518: useTypingText ===
 
-// Module 11489 (useTypingText)
+// Module 11518 (useTypingText)
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/chat/useTypingText.tsx");

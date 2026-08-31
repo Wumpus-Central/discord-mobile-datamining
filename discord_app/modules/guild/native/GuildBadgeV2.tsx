@@ -1,14 +1,14 @@
-// === Module 8806: GuildBadgeV2 ===
+// === Module 8829: GuildBadgeV2 ===
 
-// Module 8806 (GuildBadgeV2)
+// Module 8829 (GuildBadgeV2)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1297 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import badgeVariants from "badgeVariants" /* 8807 */;
-import BadgeCategory from "BadgeCategory" /* 8808 */;
-import GuildVisibility from "GuildVisibility" /* 8809 */;
+import badgeVariants from "badgeVariants" /* 8830 */;
+import BadgeCategory from "BadgeCategory" /* 8831 */;
+import GuildVisibility from "GuildVisibility" /* 8832 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;
@@ -25,7 +25,7 @@ export default function GuildBadgeV2(arg0) {
   if (null == guild) {
     return null;
   } else {
-    const guildBadgeImageSource = tmp5(8807).getGuildBadgeImageSource(guild, tmp8);
+    const guildBadgeImageSource = tmp5(8830).getGuildBadgeImageSource(guild, tmp8);
     let tmp10 = null;
     if (null != guildBadgeImageSource) {
       const obj = { size: null, source: null, style: null, disableColor: true };

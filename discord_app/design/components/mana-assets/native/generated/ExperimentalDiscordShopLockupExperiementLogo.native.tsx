@@ -1,12 +1,12 @@
-// === Module 6484: ExperimentalDiscordShopLockupExperiementLogo ===
+// === Module 6497: ExperimentalDiscordShopLockupExperiementLogo ===
 
-// Module 6484 (ExperimentalDiscordShopLockupExperiementLogo)
+// Module 6497 (ExperimentalDiscordShopLockupExperiementLogo)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4166 */;
-import metadataDefault from "metadata" /* 6485 */;
+import map from "map" /* 4167 */;
+import metadataDefault from "metadata" /* 6498 */;
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;

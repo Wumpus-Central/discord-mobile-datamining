@@ -1,6 +1,6 @@
-// === Module 7059: metadata ===
+// === Module 7078: metadata ===
 
-// Module 7059 (metadata)
+// Module 7078 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/VideoCameraSpotIllustration-2x.png.js");

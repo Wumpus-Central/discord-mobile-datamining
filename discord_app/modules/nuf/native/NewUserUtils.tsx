@@ -1,18 +1,18 @@
-// === Module 16956: _shouldSkipContactSyncStep ===
+// === Module 16989: _shouldSkipContactSyncStep ===
 
-// Module 16956 (_shouldSkipContactSyncStep)
+// Module 16989 (_shouldSkipContactSyncStep)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef4689 from "module_4689" /* 4689 */;
-import trackNUFStep from "trackNUFStep" /* 12154 */;
-import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 16957 */;
+import _modDef4691 from "module_4691" /* 4691 */;
+import trackNUFStep from "trackNUFStep" /* 12188 */;
+import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 16990 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 15480 */;
-import closure_6 from "set" /* 5190 */;
-import closure_7 from "mergeGuildAvatar" /* 1923 */;
+import closure_5 from "initialize" /* 15514 */;
+import closure_6 from "set" /* 5193 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12149 */;
-import { NotificationAuthorizationStatus as closure_11 } from "NativePermissionStatus" /* 4696 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12183 */;
+import { NotificationAuthorizationStatus as closure_11 } from "NativePermissionStatus" /* 4698 */;
 
 require = arg1;
 function _shouldSkipContactSyncStep() {
@@ -29,7 +29,7 @@ function _shouldSkipContactSyncStep() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -45,13 +45,13 @@ function _shouldSkipContactSyncStep() {
             return obj;
           } else {
             const callback = tmp4;
-            let obj2 = closure_1_0(12151);
+            let obj2 = closure_1_0(12185);
             const result = obj2.isContactSyncAvailable();
             if (result) {
               c1 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(12151).checkContactPermissions();
+              obj1[0] = closure_1_0(12185).checkContactPermissions();
               return obj1;
             } else {
               dependencyMap = 3;
@@ -89,12 +89,12 @@ function lastStepComplete(STEP_GUILD_TEMPLATE) {
   trackNUFStep.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
   const obj = trackNUFStep;
   if (obj2.isModalOpen(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY)) {
-    _modDef4689.popWithKey(tmp(16957).NEW_USER_MODAL_KEY);
-    const obj3 = _modDef4689;
+    _modDef4691.popWithKey(tmp(16990).NEW_USER_MODAL_KEY);
+    const obj3 = _modDef4691;
   }
   let tmpResult = tmp(1222);
   tmpResult.transitionTo(constants.ME, { navigationReplace: true });
-  tmpResult = tmp(12217);
+  tmpResult = tmp(12251);
   const result = tmpResult.setNewUserFlowCompleted();
 }
 function getNextOnboardingStep(flag, first1, first) {
@@ -127,7 +127,7 @@ function _getNextOnboardingStep() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -157,7 +157,7 @@ function _getNextOnboardingStep() {
               transitionStep2 = undefined;
               v0 = 1;
               transitionStep2 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -211,7 +211,7 @@ function _getNextOnboardingStep() {
               return obj5;
             } else if (arg1) {
               callback = dependencyMap;
-              obj3 = flag(12154);
+              obj3 = flag(12188);
               const obj6 = { skip: null };
               obj6[0] = flag;
               obj3.trackNUFStep(closure_3, key, obj6);
@@ -298,7 +298,7 @@ let closure_13 = importDefaultResult(function*() {
       obj[0] = arg1;
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -363,7 +363,7 @@ let closure_14 = importDefaultResult(function*() {
       obj[0] = arg1;
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

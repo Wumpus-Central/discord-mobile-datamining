@@ -1,6 +1,6 @@
-// === Module 15744: getChannelSubtitleData ===
+// === Module 15778: getChannelSubtitleData ===
 
-// Module 15744 (getChannelSubtitleData)
+// Module 15778 (getChannelSubtitleData)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

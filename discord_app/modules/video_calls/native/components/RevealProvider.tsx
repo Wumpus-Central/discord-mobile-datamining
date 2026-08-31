@@ -1,12 +1,12 @@
-// === Module 9467: useRevealProviderValue ===
+// === Module 9489: useRevealProviderValue ===
 
-// Module 9467 (useRevealProviderValue)
-import areParticipantStatesEqualDefault from "areParticipantStatesEqual" /* 9461 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9468 */;
+// Module 9489 (useRevealProviderValue)
+import areParticipantStatesEqualDefault from "areParticipantStatesEqual" /* 9483 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9490 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "setContent" /* 4155 */;
-import closure_5 from "set" /* 4463 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9459 */;
+import closure_4 from "setContent" /* 4156 */;
+import closure_5 from "set" /* 4465 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9481 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -81,13 +81,13 @@ export default function RevealProvider(showStatus) {
   }
   const obj = { value: tmp2, children: null };
   let tmp10 = !reveal;
-  let tmp4Result = tmp4(9469);
+  let tmp4Result = tmp4(9491);
   if (!reveal) {
     tmp10 = !flag;
   }
   const items1 = [closure_10(tmp4Result, { hidden: tmp10, animated: true, barStyle: str }), children, ];
   let tmp12 = !reveal;
-  tmp4Result = tmp4(9471);
+  tmp4Result = tmp4(9493);
   if (!reveal) {
     tmp12 = !prefersDeferringSystemGestures;
   }

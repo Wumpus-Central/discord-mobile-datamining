@@ -1,10 +1,10 @@
-// === Module 12417: getNote ===
+// === Module 12451: getNote ===
 
-// Module 12417 (getNote)
+// Module 12451 (getNote)
 import set2 from "set" /* 2 */;
-import identity from "identity" /* 1911 */;
-import items from "items" /* 1914 */;
-import isValueEqual from "isValueEqual" /* 1431 */;
+import identity from "identity" /* 1910 */;
+import items from "items" /* 1913 */;
+import isValueEqual from "isValueEqual" /* 1427 */;
 
 ({ TypeTag, constructInPlace: c0 } = isValueEqual);
 const LibdiscoreStore = identity.LibdiscoreStore;

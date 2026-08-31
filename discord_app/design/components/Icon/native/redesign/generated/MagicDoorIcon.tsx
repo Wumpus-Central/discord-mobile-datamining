@@ -1,10 +1,10 @@
-// === Module 15138: MagicDoorIcon ===
+// === Module 15171: MagicDoorIcon ===
 
-// Module 15138 (MagicDoorIcon)
+// Module 15171 (MagicDoorIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 15139 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 15172 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

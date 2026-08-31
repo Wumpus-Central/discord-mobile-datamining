@@ -1,9 +1,9 @@
-// === Module 10835: useEmojiColorPalette ===
+// === Module 10859: useEmojiColorPalette ===
 
-// Module 10835 (useEmojiColorPalette)
+// Module 10859 (useEmojiColorPalette)
 import initialize from "initialize" /* 589 */;
-import buildPlatformedThemedEmojiColorPalette from "buildPlatformedThemedEmojiColorPalette" /* 7813 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import buildPlatformedThemedEmojiColorPalette from "buildPlatformedThemedEmojiColorPalette" /* 7834 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
 import closure_3 from "handleThemeChange" /* 1302 */;
 
 require = arg1;

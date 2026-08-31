@@ -1,8 +1,8 @@
-// === Module 15903: ? ===
+// === Module 15937: ? ===
 
-// Module 15903
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
-import { YOU_BAR_SPRING_CONFIG } from "CONNECTION_BANNER_HEIGHT" /* 14632 */;
+// Module 15937
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
+import { YOU_BAR_SPRING_CONFIG } from "CONNECTION_BANNER_HEIGHT" /* 14666 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -14,14 +14,14 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
   let token;
   dependencyMap = undefined;
   ({ nameplate, barWidth } = isQuestRendered);
-  let obj = isQuestRendered(4166);
+  let obj = isQuestRendered(4167);
   token = obj.useToken(token(712).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(14718)(token);
+  const tmp4 = token(14752)(token);
   dependencyMap = tmp4;
   obj1 = isQuestRendered(589);
   const items = [closure_3];
   const stateFromStores = obj1.useStateFromStores(items, () => obj.animateYouBarNameplate);
-  let obj2 = isQuestRendered(4186);
+  let obj2 = isQuestRendered(4187);
   const fn = function p() {
     let obj = isQuestRendered(closure_2[9]);
     if (isQuestRendered) {
@@ -32,7 +32,7 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
     obj = { borderTopRightRadius: obj.withSpring(value, closure_1_4) };
     return obj;
   };
-  obj = { withSpring: isQuestRendered(4892).withSpring, isQuestRendered, questDockAnimatedBorderRadius: tmp4, borderRadius: token, YOU_BAR_SPRING_CONFIG };
+  obj = { withSpring: isQuestRendered(4895).withSpring, isQuestRendered, questDockAnimatedBorderRadius: tmp4, borderRadius: token, YOU_BAR_SPRING_CONFIG };
   fn.__closure = obj;
   fn.__workletHash = 17156260157738;
   fn.__initData = closure_6;
@@ -53,8 +53,8 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
     str = "always";
   }
   obj2[2] = str;
-  obj1[2] = jsx(token(8468), { nameplate, isFocused: true, animate: null });
-  return jsx(token(4186).View, { style: items1, pointerEvents: "none", children: null });
+  obj1[2] = jsx(token(8490), { nameplate, isFocused: true, animate: null });
+  return jsx(token(4187).View, { style: items1, pointerEvents: "none", children: null });
 });
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarNameplate.tsx");
 

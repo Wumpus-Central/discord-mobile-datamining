@@ -1,11 +1,11 @@
-// === Module 16207: BaseMessagesScreen ===
+// === Module 16241: BaseMessagesScreen ===
 
-// Module 16207 (BaseMessagesScreen)
-import _modDef11863 from "module_11863" /* 11863 */;
+// Module 16241 (BaseMessagesScreen)
+import _modDef11894 from "module_11894" /* 11894 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleReaction" /* 6093 */;
-import closure_5 from "prototype" /* 11842 */;
-import { SearchResultContentEntityTypes as closure_6 } from "SearchEntrypointAnalyticsLocations" /* 7568 */;
+import closure_4 from "handleReaction" /* 6096 */;
+import closure_5 from "prototype" /* 11873 */;
+import { SearchResultContentEntityTypes as closure_6 } from "SearchEntrypointAnalyticsLocations" /* 7589 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -114,7 +114,7 @@ export const trackMessageItemPress = function trackMessageItemPress(messageId) {
   messageId = messageId.messageId;
   ({ searchContext, channelId, index } = messageId);
   message = message.getMessage(messageId);
-  let obj = _modDef11863;
+  let obj = _modDef11894;
   obj = { searchContext, channelId, messageId, userId: null, index: null, entityType: null };
   let id;
   if (message != null) {

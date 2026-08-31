@@ -1,21 +1,21 @@
-// === Module 15897: RemoveMultiAccountUserButton ===
+// === Module 15931: RemoveMultiAccountUserButton ===
 
-// Module 15897 (RemoveMultiAccountUserButton)
+// Module 15931 (RemoveMultiAccountUserButton)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "initialize" /* 4291 */;
-import closure_10 from "mergeGuildAvatar" /* 1923 */;
-import { MultiAccountTokenStatus } from "initialize" /* 11915 */;
-import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11916 */;
-import { ManageAccountsScreens } from "ManageAccountsScreens" /* 15898 */;
+import closure_9 from "initialize" /* 4293 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import { MultiAccountTokenStatus } from "initialize" /* 11949 */;
+import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11950 */;
+import { ManageAccountsScreens } from "ManageAccountsScreens" /* 15932 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7769 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 7790 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 function RemoveMultiAccountUserButton(user) {
@@ -35,7 +35,7 @@ function RemoveMultiAccountUserButton(user) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -83,7 +83,7 @@ function RemoveMultiAccountUserButton(user) {
               obj.removeAccount(id.id);
             }
             v02 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp11) {
           v02 = tmp;
@@ -136,8 +136,8 @@ function RemoveMultiAccountUserButton(user) {
     };
     obj = { color: null };
     obj[0] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
-    obj[3] = callback2(tmp(14841).CircleMinusIcon, obj);
-    return callback2(tmp(5033).PressableOpacity, obj);
+    obj[3] = callback2(tmp(14875).CircleMinusIcon, obj);
+    return callback2(tmp(5036).PressableOpacity, obj);
   }
   let obj2 = user(589);
 }
@@ -317,7 +317,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
   let _require;
   c1 = undefined;
   c2 = undefined;
-  let obj = _require(5973);
+  let obj = _require(5976);
   _require = obj.useAccessibilityNativeStackOptions();
   [c1, c2] = callback(importAllResult.useState(false), 2);
   obj = {
@@ -377,14 +377,14 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return obj;
       },
       children() {
-        return callback2(_undefined(15499), {
+        return callback2(_undefined(15533), {
           handleLogin(login, password, undelete) {
-            let obj = callback(6017);
+            let obj = callback(6020);
             obj = { login, password, undelete };
             obj.login(obj);
           },
           onReset(arg0, arg1, arg2) {
-            callback(6017).loginReset(true);
+            callback(6020).loginReset(true);
           }
         });
       }
@@ -395,7 +395,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(7662), { isMultiAccount: true });
+        return callback2(_undefined(7683), { isMultiAccount: true });
       }
     }),
     callback2(closure_20.Screen, {
@@ -404,7 +404,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(15498), { isMultiAccount: true });
+        return callback2(_undefined(15532), { isMultiAccount: true });
       }
     })
   ];

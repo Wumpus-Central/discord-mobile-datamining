@@ -1,9 +1,9 @@
-// === Module 8106: useMessageMaxLength ===
+// === Module 8128: useMessageMaxLength ===
 
-// Module 8106 (useMessageMaxLength)
+// Module 8128 (useMessageMaxLength)
 import initialize from "initialize" /* 589 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4108 */;
-import closure_3 from "mergeGuildAvatar" /* 1923 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4109 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

@@ -1,38 +1,38 @@
-// === Module 12815: createGuildProfileInvite ===
+// === Module 12850: createGuildProfileInvite ===
 
-// Module 12815 (createGuildProfileInvite)
+// Module 12850 (createGuildProfileInvite)
 import ThemesDefault from "Themes" /* 712 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7801 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7822 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_getSystemLocale" /* 1997 */;
-import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 10884 */;
+import closure_4 from "_getSystemLocale" /* 1996 */;
+import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 10908 */;
 import { GuildFeatures } from "ME" /* 676 */;
-import { InviteTypes } from "InviteSendStates" /* 7428 */;
+import { InviteTypes } from "InviteSendStates" /* 7449 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildProfileInvite.tsx");
 
 export const createGuildProfileInvite = function createGuildProfileInvite(invite, closure_2) {
   const tmp3 = getEmbedThemeColorsDefault(closure_2);
-  let obj = id(5525);
+  let obj = id(5528);
   const guildProfileFromInvite = obj.buildGuildProfileFromInvite(invite);
   obj1 = id(1363);
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   let fromGuildProfileResult = null;
   const isThemeDarkResult = obj1.isThemeDark(closure_2);
   if (null != guildProfileFromInvite) {
-    let tmp4Result = tmp4(1430);
+    let tmp4Result = tmp4(1426);
     fromGuildProfileResult = tmp4Result.fromGuildProfile(guildProfileFromInvite);
   }
-  tmp4Result = tmp4(8956);
+  tmp4Result = tmp4(8979);
   let profilePrimaryColor = tmp4Result.getProfilePrimaryColor(guildProfileFromInvite);
   const tmp7 = obj1.isThemeDark(closure_2) ? unsafe_rawColors.PRIMARY_660 : unsafe_rawColors.PRIMARY_160;
   if (profilePrimaryColor == null) {
     profilePrimaryColor = tmp7;
   }
-  const tmp4Result1 = id(8954);
+  const tmp4Result1 = id(8977);
   let memberCount;
-  [tmp11, tmp12] = callback(id(8954).getBackgroundForProfile(closure_2, profilePrimaryColor), 2);
+  [tmp11, tmp12] = callback(id(8977).getBackgroundForProfile(closure_2, profilePrimaryColor), 2);
   if (guildProfileFromInvite != null) {
     memberCount = guildProfileFromInvite.memberCount;
   }
@@ -51,7 +51,7 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
     icon = guildProfileFromInvite.icon;
   }
   if (null != icon) {
-    let tmpResult = tmp(1435);
+    let tmpResult = tmp(1431);
     obj = { id: null, icon: null, canAnimate: true, size: 128 };
     ({ id: obj8[0], icon: obj8[1] } = guildProfileFromInvite);
     const guildIconURL = tmpResult.getGuildIconURL(obj);
@@ -63,8 +63,8 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
     if (str == null) {
       str = "";
     }
-    const acronym = tmp4(1904).getAcronym(str);
-    const tmp4Result2 = tmp4(1904);
+    const acronym = tmp4(1903).getAcronym(str);
+    const tmp4Result2 = tmp4(1903);
   }
   let hasItem;
   if (fromGuildProfileResult != null) {
@@ -78,10 +78,10 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
       customBanner = guildProfileFromInvite.customBanner;
     }
     if (null != customBanner) {
-      tmpResult = tmp(1435);
+      tmpResult = tmp(1431);
       obj = { id: null, splash: null, size: null };
       ({ id: obj10[0], customBanner: obj10[1] } = guildProfileFromInvite);
-      obj[2] = 400 * tmp(1896)();
+      obj[2] = 400 * tmp(1895)();
       const guildDiscoverySplashURL = tmpResult.getGuildDiscoverySplashURL(obj);
       tmp20 = guildDiscoverySplashURL;
     }
@@ -119,32 +119,32 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   }
   let guildProfileCTAType = null;
   if (null != guildProfileFromInvite) {
-    guildProfileCTAType = tmp4(8969).getGuildProfileCTAType(guildProfileFromInvite, invite.code);
-    const tmp4Result3 = tmp4(8969);
+    guildProfileCTAType = tmp4(8992).getGuildProfileCTAType(guildProfileFromInvite, invite.code);
+    const tmp4Result3 = tmp4(8992);
   }
-  if (id(8969).CTATypes.IS_MEMBER === guildProfileCTAType) {
+  if (id(8992).CTATypes.IS_MEMBER === guildProfileCTAType) {
     const intl7 = tmp4(1236).intl;
     let stringResult = intl7.string(tmp4(1236).t.IRoQXr);
-  } else if (tmp4(8969).CTATypes.HAS_APPLICATION === guildProfileCTAType) {
+  } else if (tmp4(8992).CTATypes.HAS_APPLICATION === guildProfileCTAType) {
     const intl6 = tmp4(1236).intl;
     stringResult = intl6.string(tmp4(1236).t["4yfIDk"]);
-  } else if (tmp4(8969).CTATypes.APPLY_TO_JOIN === guildProfileCTAType) {
+  } else if (tmp4(8992).CTATypes.APPLY_TO_JOIN === guildProfileCTAType) {
     const intl5 = tmp4(1236).intl;
     stringResult = intl5.string(tmp4(1236).t["7XdMW2"]);
-  } else if (tmp4(8969).CTATypes.ACCEPT_ROLES === guildProfileCTAType) {
+  } else if (tmp4(8992).CTATypes.ACCEPT_ROLES === guildProfileCTAType) {
     const intl4 = tmp4(1236).intl;
     stringResult = intl4.string(tmp4(1236).t.MMlhsr);
   } else {
-    if (tmp4(8969).CTATypes.LURK_DISCOVERABLE !== guildProfileCTAType) {
-      const JOIN_VIA_INVITE = tmp4(8969).CTATypes.JOIN_VIA_INVITE;
+    if (tmp4(8992).CTATypes.LURK_DISCOVERABLE !== guildProfileCTAType) {
+      const JOIN_VIA_INVITE = tmp4(8992).CTATypes.JOIN_VIA_INVITE;
     }
     const intl3 = tmp4(1236).intl;
     stringResult = intl3.string(tmp4(1236).t.XpeFYr);
   }
   let guildBadgeImageSource;
   if (null != fromGuildProfileResult) {
-    guildBadgeImageSource = tmp4(8807).getGuildBadgeImageSource(fromGuildProfileResult, closure_2);
-    const tmp4Result4 = tmp4(8807);
+    guildBadgeImageSource = tmp4(8830).getGuildBadgeImageSource(fromGuildProfileResult, closure_2);
+    const tmp4Result4 = tmp4(8830);
   }
   let found;
   if (guildProfileFromInvite != null) {
@@ -162,7 +162,7 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   }
   let formatToPlainStringResult2;
   if (null != guildProfileFromInvite) {
-    const tmp4Result5 = tmp4(7429);
+    const tmp4Result5 = tmp4(7450);
     const establishedDate = tmp4Result5.getEstablishedDate(tmp(11).extractTimestamp(guildProfileFromInvite.id), locale.locale);
     const intl8 = tmp4(1236).intl;
     const obj3 = { createdAtDate: null };
@@ -177,7 +177,7 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
         id = invite.guild.id;
         const items = [];
         HermesBuiltin.arraySpread(invite.roles, 0);
-        const sorted = items.sort(tmp4(1990).sortInviteRoles);
+        const sorted = items.sort(tmp4(1989).sortInviteRoles);
         mapped = sorted.map((color) => {
           let obj = id(closure_1_2[20]);
           const result = obj.inviteRoleToDisplayData(id, color);
@@ -249,10 +249,10 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   }
   obj4.type = GUILD;
   obj4.inviteSplash = tmp20;
-  const tmp10 = callback(id(8954).getBackgroundForProfile(closure_2, profilePrimaryColor), 2);
-  obj4.bannerColor = id(7792).processColorOrThrow(tmp11);
-  const tmp4Result6 = id(7792);
-  obj4.bannerColorSecondary = id(7792).processColorOrThrow(tmp12);
+  const tmp10 = callback(id(8977).getBackgroundForProfile(closure_2, profilePrimaryColor), 2);
+  obj4.bannerColor = id(7813).processColorOrThrow(tmp11);
+  const tmp4Result6 = id(7813);
+  obj4.bannerColorSecondary = id(7813).processColorOrThrow(tmp12);
   if (found == null) {
     found = [];
   }
@@ -270,8 +270,8 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   obj4.hasProfileOverflow = tmp42;
   let assetUriForEmbed;
   if (null != guildBadgeImageSource) {
-    assetUriForEmbed = tmp4(7802).getAssetUriForEmbed(guildBadgeImageSource);
-    const tmp4Result8 = tmp4(7802);
+    assetUriForEmbed = tmp4(7823).getAssetUriForEmbed(guildBadgeImageSource);
+    const tmp4Result8 = tmp4(7823);
   }
   obj4.badgeIconUrl = assetUriForEmbed;
   obj4.acceptLabelBackgroundColor = tmp3.colors.acceptLabelGreenBackgroundColor;

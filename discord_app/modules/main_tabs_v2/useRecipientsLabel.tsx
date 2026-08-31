@@ -1,8 +1,8 @@
-// === Module 10587: useRecipientsLabel ===
+// === Module 10611: useRecipientsLabel ===
 
-// Module 10587 (useRecipientsLabel)
+// Module 10611 (useRecipientsLabel)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useRecipientsLabel.tsx");

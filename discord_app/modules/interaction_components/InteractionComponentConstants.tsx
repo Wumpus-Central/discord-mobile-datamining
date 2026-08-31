@@ -1,6 +1,6 @@
-// === Module 7966: TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS ===
+// === Module 7988: TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS ===
 
-// Module 7966 (TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS)
+// Module 7988 (TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/interaction_components/InteractionComponentConstants.tsx");

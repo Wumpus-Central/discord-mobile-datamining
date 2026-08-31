@@ -1,13 +1,13 @@
-// === Module 15237: items ===
+// === Module 15270: items ===
 
-// Module 15237 (items)
+// Module 15270 (items)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 7800 */;
+import items from "items" /* 7821 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
@@ -22,7 +22,7 @@ let closure_9 = found.map((arg0) => {
   [tmp, tmp2] = arg0;
   return { name, value };
 });
-items = [{ label: "Untinted", primary: "dispatch", secondary: "limit" }, ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary) => ({ label: "P" + arg1 + 1, primary: primary.primary, secondary: primary.secondary }))];
+items = [{ label: "Untinted", primary: "sa", secondary: "LengthDelimited" }, ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary) => ({ label: "P" + arg1 + 1, primary: primary.primary, secondary: primary.secondary }))];
 let closure_11 = [24, 48, 72];
 createCacheKey = { wrap: null, contentContainer: null, controlRow: null, grid: null, tile: null, badgeBox: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };

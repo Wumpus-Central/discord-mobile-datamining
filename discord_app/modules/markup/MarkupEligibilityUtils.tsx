@@ -1,6 +1,6 @@
-// === Module 7943: isMessageNewerThanImprovedMarkdownEpoch ===
+// === Module 7965: isMessageNewerThanImprovedMarkdownEpoch ===
 
-// Module 7943 (isMessageNewerThanImprovedMarkdownEpoch)
+// Module 7965 (isMessageNewerThanImprovedMarkdownEpoch)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 

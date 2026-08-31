@@ -1,6 +1,6 @@
-// === Module 11846: handleReset ===
+// === Module 11877: handleReset ===
 
-// Module 11846 (handleReset)
+// Module 11877 (handleReset)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

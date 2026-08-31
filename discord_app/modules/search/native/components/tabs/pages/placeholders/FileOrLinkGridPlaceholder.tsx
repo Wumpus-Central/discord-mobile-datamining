@@ -1,7 +1,7 @@
-// === Module 16181: FileOrLinkGridPlaceholderItem ===
+// === Module 16215: FileOrLinkGridPlaceholderItem ===
 
-// Module 16181 (FileOrLinkGridPlaceholderItem)
-import _modDef4186 from "module_4186" /* 4186 */;
+// Module 16215 (FileOrLinkGridPlaceholderItem)
+import _modDef4187 from "module_4187" /* 4187 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -12,14 +12,14 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
   let width;
   importDefault = undefined;
-  let obj = width(16161);
+  let obj = width(16195);
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
   width = imageStyle.width;
-  const sum = imageStyle.height + 108 * width(4900).useFontScale();
+  const sum = imageStyle.height + 108 * width(4903).useFontScale();
   importDefault = sum;
   const items = [width, sum];
   const memo = React.useMemo(() => ({ width, height: c1 }), items);
-  obj = { style: items1, pointerEvents: "none", children: jsx(width(16182).SearchListCardContainer, { containerStyle: memo }) };
+  obj = { style: items1, pointerEvents: "none", children: jsx(width(16216).SearchListCardContainer, { containerStyle: memo }) };
   items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
-  return jsx(_modDef4186.View, { style: items1, pointerEvents: "none", children: jsx(width(16182).SearchListCardContainer, { containerStyle: memo }) });
+  return jsx(_modDef4187.View, { style: items1, pointerEvents: "none", children: jsx(width(16216).SearchListCardContainer, { containerStyle: memo }) });
 };

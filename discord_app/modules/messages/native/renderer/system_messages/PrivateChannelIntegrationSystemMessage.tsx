@@ -1,11 +1,11 @@
-// === Module 7886: createPrivateChannelIntegrationSystemMessage ===
+// === Module 7908: createPrivateChannelIntegrationSystemMessage ===
 
-// Module 7886 (createPrivateChannelIntegrationSystemMessage)
+// Module 7908 (createPrivateChannelIntegrationSystemMessage)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7816 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7818 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7819 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7837 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7839 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7841 */;
 
 const MessageTypes = ME.MessageTypes;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx");
@@ -26,7 +26,7 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     obj[2] = message.channel_id;
   }
   if (type === MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED) {
-    let tmpResult = tmp(7851);
+    let tmpResult = tmp(7873);
     obj = { application: null, username: null, usernameOnClick: null, applicationNameOnClick: null };
     obj[0] = application;
     obj[1] = messageAuthorWithProcessedColor.nick;
@@ -34,7 +34,7 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     obj[3] = tmp7;
     let privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj);
   } else {
-    tmpResult = tmp(7851);
+    tmpResult = tmp(7873);
     obj1 = { application: null, username: null, usernameOnClick: null, applicationNameOnClick: null };
     obj1[0] = application;
     obj1[1] = messageAuthorWithProcessedColor.nick;

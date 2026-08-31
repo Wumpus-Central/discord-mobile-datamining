@@ -1,7 +1,7 @@
-// === Module 9489: useIsPrivateChannelWithEnabledActivities ===
+// === Module 9511: useIsPrivateChannelWithEnabledActivities ===
 
-// Module 9489 (useIsPrivateChannelWithEnabledActivities)
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
+// Module 9511 (useIsPrivateChannelWithEnabledActivities)
+import closure_2 from "ensureGuildLoaded" /* 1387 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx");

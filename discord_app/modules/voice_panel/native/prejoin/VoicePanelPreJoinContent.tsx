@@ -1,36 +1,36 @@
-// === Module 16672: StreamPreview ===
+// === Module 16705: StreamPreview ===
 
-// Module 16672 (StreamPreview)
+// Module 16705 (StreamPreview)
 import encodeProperties from "encodeProperties" /* 503 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4442 */;
-import setDefault from "set" /* 5971 */;
-import trackImpressionDefault from "trackImpression" /* 8832 */;
-import VoiceBadges from "VoiceBadges" /* 9746 */;
+import Text from "Text" /* 4444 */;
+import setDefault from "set" /* 5974 */;
+import trackImpressionDefault from "trackImpression" /* 8855 */;
+import VoiceBadges from "VoiceBadges" /* 9768 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "participantFromServer" /* 1390 */;
-import closure_7 from "set" /* 4463 */;
-import closure_8 from "init" /* 13319 */;
-import closure_9 from "reset" /* 4468 */;
+import closure_6 from "participantFromServer" /* 1386 */;
+import closure_7 from "set" /* 4465 */;
+import closure_8 from "init" /* 13353 */;
+import closure_9 from "reset" /* 4470 */;
 import closure_10 from "fetchFingerprint" /* 1218 */;
-import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_14 from "handleUpdate" /* 4464 */;
-import closure_15 from "mergeGuildAvatar" /* 1923 */;
-import closure_16 from "updateVoiceState" /* 4465 */;
-import closure_17 from "getVoiceStatesForGuild" /* 4521 */;
-import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 11776 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 11779 */;
+import closure_11 from "ensureGuildLoaded" /* 1387 */;
+import closure_12 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_13 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_14 from "handleUpdate" /* 4466 */;
+import closure_15 from "mergeGuildAvatar" /* 1922 */;
+import closure_16 from "updateVoiceState" /* 4467 */;
+import closure_17 from "getVoiceStatesForGuild" /* 4523 */;
+import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 11807 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 11810 */;
 import ME from "ME" /* 676 */;
-import { VoiceChannelWarningSurfaces as closure_23 } from "GdmWarningMedium" /* 13324 */;
-import { Features } from "DesktopSources" /* 4510 */;
+import { VoiceChannelWarningSurfaces as closure_23 } from "GdmWarningMedium" /* 13358 */;
+import { Features } from "DesktopSources" /* 4512 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function StreamPreview(channelId) {
@@ -132,7 +132,7 @@ function ActivityInfo(activity) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -558,7 +558,7 @@ let closure_34 = importAllResult.memo((blockedUserIds) => {
     }
     obj = { style: null, children: null };
     obj[0] = tmp.blockedMemberWarning;
-    const items = [callback(tmp5(7655).CircleErrorIcon, { color: "text-feedback-warning" }), ];
+    const items = [callback(tmp5(7676).CircleErrorIcon, { color: "text-feedback-warning" }), ];
     obj1 = { variant: "text-sm/bold", color: "interactive-text-active", style: null, children: null };
     obj1[2] = { flexShrink: 1 };
     const items1 = [stringResult1, " ", ];
@@ -566,11 +566,11 @@ let closure_34 = importAllResult.memo((blockedUserIds) => {
     if (null != stringResult) {
       const obj2 = { variant: "heading-sm/semibold", children: null };
       obj2[1] = stringResult;
-      tmp11Result = callback(tmp5(4442).Text, obj2);
+      tmp11Result = callback(tmp5(4444).Text, obj2);
     }
     items1[2] = tmp11Result;
     obj1[3] = items1;
-    items[1] = closure_26(tmp5(4442).Text, obj1);
+    items[1] = closure_26(tmp5(4444).Text, obj1);
     obj[1] = items;
     return closure_26(setDefault, obj);
   }
@@ -698,10 +698,10 @@ let closure_39 = { code: "function VoicePanelPreJoinContentTsx3(){const{windowDi
 let closure_40 = { code: "function VoicePanelPreJoinContentTsx4(finished=false){const{transitionState,TransitionStates,runOnJS,transitionCleanUp}=this.__closure;finished&&transitionState===TransitionStates.YEETED&&runOnJS(transitionCleanUp)();}" };
 let obj4 = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING, marginHorizontal: ThemesDefault.space.PX_16 };
 const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
-  const context = importAllResult.useContext(guildId(11775));
+  const context = importAllResult.useContext(guildId(11806));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(16548)(channelId);
+  const tmp2 = guildId(16582)(channelId);
   dependencyMap = tmp2;
   let obj = channelId(589);
   let items = [closure_17, closure_8, closure_6, closure_12, closure_9];
@@ -746,9 +746,9 @@ const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
       obj[4] = ignoredUsersForVoiceChannel;
       return obj;
     }
-  }, items1, channelId(16675).areVoicePanelPreJoinContentPropsEqual);
+  }, items1, channelId(16708).areVoicePanelPreJoinContentPropsEqual);
   obj = { item: stateFromStores, renderItem };
-  return callback(channelId(4173).TransitionItem, obj);
+  return callback(channelId(4174).TransitionItem, obj);
 });
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinContent.tsx");
 

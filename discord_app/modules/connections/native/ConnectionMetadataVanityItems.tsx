@@ -1,20 +1,20 @@
-// === Module 11108: PaypalVanityTag ===
+// === Module 11137: PaypalVanityTag ===
 
-// Module 11108 (PaypalVanityTag)
+// Module 11137 (PaypalVanityTag)
 import applyDefault from "apply" /* 12 */;
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1898 */;
-import Text from "Text" /* 4442 */;
-import officialApplicationIds from "officialApplicationIds" /* 5316 */;
-import registerAssetDefault from "registerAsset" /* 11109 */;
-import registerAssetDefault2 from "registerAsset" /* 11110 */;
+import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1897 */;
+import Text from "Text" /* 4444 */;
+import officialApplicationIds from "officialApplicationIds" /* 5319 */;
+import registerAssetDefault from "registerAsset" /* 11138 */;
+import registerAssetDefault2 from "registerAsset" /* 11139 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import OperatorTypes from "OperatorTypes" /* 5317 */;
+import OperatorTypes from "OperatorTypes" /* 5320 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function PaypalVanityTag(style) {

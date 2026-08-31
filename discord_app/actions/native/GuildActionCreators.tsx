@@ -1,6 +1,6 @@
-// === Module 17131: batchChannelUpdate ===
+// === Module 17164: batchChannelUpdate ===
 
-// Module 17131 (batchChannelUpdate)
+// Module 17164 (batchChannelUpdate)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;

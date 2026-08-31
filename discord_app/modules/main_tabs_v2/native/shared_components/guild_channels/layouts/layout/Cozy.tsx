@@ -1,8 +1,8 @@
-// === Module 10144: CHANNEL_LIST_STYLES_COZY ===
+// === Module 10167: CHANNEL_LIST_STYLES_COZY ===
 
-// Module 10144 (CHANNEL_LIST_STYLES_COZY)
+// Module 10167 (CHANNEL_LIST_STYLES_COZY)
 import ThemesDefault from "Themes" /* 712 */;
-import importDefaultResult from "merge" /* 10142 */;
+import importDefaultResult from "merge" /* 10165 */;
 
 let obj = { layout: { margin: { marginVertical: 2 }, marginPanels: { marginVertical: 2 }, marginThread: { marginVertical: 2, marginLeft: 76 } }, container: null, category: null, voiceUsers: null, voiceOrStageSummaryRow: null, messagePreview: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, typing: null, separator: null };
 obj = { borderRadius: ThemesDefault.radii.lg, padding: { paddingVertical: 8 }, paddingPanels: { paddingVertical: 8 }, paddingThread: { paddingVertical: 6, paddingLeft: 8 } };

@@ -1,8 +1,8 @@
-// === Module 1949: fromServer ===
+// === Module 1948: fromServer ===
 
-// Module 1949 (fromServer)
-import fromServerDefault from "fromServer" /* 1950 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1951 */;
+// Module 1948 (fromServer)
+import fromServerDefault from "fromServer" /* 1949 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
 
 require = arg1;
 fromServerDefault;

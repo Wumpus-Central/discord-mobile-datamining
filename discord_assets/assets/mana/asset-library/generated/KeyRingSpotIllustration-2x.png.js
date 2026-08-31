@@ -1,6 +1,6 @@
-// === Module 6723: metadata ===
+// === Module 6736: metadata ===
 
-// Module 6723 (metadata)
+// Module 6736 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/KeyRingSpotIllustration-2x.png.js");

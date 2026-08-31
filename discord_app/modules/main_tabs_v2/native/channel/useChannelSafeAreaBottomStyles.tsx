@@ -1,16 +1,16 @@
-// === Module 10932: useChannelSafeAreaBottomStyles ===
+// === Module 10956: useChannelSafeAreaBottomStyles ===
 
-// Module 10932 (useChannelSafeAreaBottomStyles)
+// Module 10956 (useChannelSafeAreaBottomStyles)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 5186 */;
-import closure_5 from "initialize" /* 4091 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_8 from "createRTCConnection" /* 4520 */;
+import closure_4 from "_handleConnectionOpen" /* 5189 */;
+import closure_5 from "initialize" /* 4092 */;
+import closure_6 from "ensureGuildLoaded" /* 1387 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_8 from "createRTCConnection" /* 4522 */;
 import { InputModes } from "ME" /* 676 */;
-import { StaticChannelRoute } from "set" /* 1398 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import { StaticChannelRoute } from "set" /* 1394 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 let closure_11 = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };
@@ -27,12 +27,11 @@ let closure_12 = createCacheKey.createStyles((backgroundColor) => {
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx");
 
 export default function useChannelSafeAreaBottomStyles(arg0) {
+  const refreshToken = _require(stateFromStores[16]).resolveRefreshToken(importDefault(stateFromStores[9]).modules.mobile.CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND);
   let obj = _require(stateFromStores[16]);
-  const refreshToken = _require(stateFromStores[16]).resolveRefreshToken(importDefault(stateFromStores[9]).modules.mobile.CHANNEL_SAFE_AREA_BOTTOM_BACKGROUND, obj.useMobileVisualRefreshConfig({ location: "useChannelSafeAreaBottomStyles" }).chatInputFloating);
-  const obj2 = _require(stateFromStores[16]);
   const tmp2 = callback(_require(stateFromStores[17]).useToken(refreshToken));
   _require = tmp2;
-  const obj3 = _require(stateFromStores[17]);
+  const obj2 = _require(stateFromStores[17]);
   const gradientBottom = _require(stateFromStores[18]).useGradientBottom();
   importDefault = gradientBottom;
   _require = arg0;
@@ -42,7 +41,7 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
   importDefault = null != importDefault(stateFromStores[10])(arg0);
   stateFromStores = importDefault(stateFromStores[11])(arg0).needSubscriptionToAccess;
   React = importDefault(stateFromStores[12])();
-  const obj4 = _require(stateFromStores[18]);
+  const obj3 = _require(stateFromStores[18]);
   const items = [closure_4, closure_6, closure_5, closure_7, closure_8];
   stateFromStores = _require(stateFromStores[13]).useStateFromStores(items, () => {
     const channel = closure_1_6.getChannel(lib);

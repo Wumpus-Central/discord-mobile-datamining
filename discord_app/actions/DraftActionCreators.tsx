@@ -1,6 +1,6 @@
-// === Module 7468: dispatcher ===
+// === Module 7489: dispatcher ===
 
-// Module 7468 (dispatcher)
+// Module 7489 (dispatcher)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
@@ -12,14 +12,19 @@ export default {
     obj = { type: "DRAFT_CLEAR", channelId: id, draftType: ThreadSettings };
     obj.dispatch(obj);
   },
-  saveDraft(id, result, ChannelMessage) {
+  clearDraftCommand(channelId, draftType) {
     let obj = dispatcherDefault;
-    obj = { type: "DRAFT_SAVE", channelId: id, draft: result, draftType: ChannelMessage };
+    obj = { type: "DRAFT_COMMAND_CLEAR", channelId, draftType };
+    obj.dispatch(obj);
+  },
+  saveDraft(id, result, ChannelMessage, toDraftCommandResult) {
+    let obj = dispatcherDefault;
+    obj = { type: "DRAFT_SAVE", channelId: id, draft: result, draftType: ChannelMessage, command: toDraftCommandResult };
     obj.dispatch(obj);
   },
   changeDraft(id, draft, ChannelMessage) {
     let obj = dispatcherDefault;
-    obj = { type: "DRAFT_CHANGE", channelId: id, draft, draftType: ChannelMessage };
+    obj = { type: "DRAFT_CHANGE", channelId: id, draft, draftType: ChannelMessage, command: arg3 };
     obj.dispatch(obj);
   },
   changeThreadSettings(id, draft) {

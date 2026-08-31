@@ -1,12 +1,12 @@
-// === Module 17077: initialize ===
+// === Module 17110: initialize ===
 
-// Module 17077 (initialize)
+// Module 17110 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "prototype" /* 17078 */;
-import closure_1 from "handleConnectionOpen" /* 4268 */;
-import importDefaultResult from "priv" /* 1405 */;
+import closure_0 from "prototype" /* 17111 */;
+import closure_1 from "handleConnectionOpen" /* 4269 */;
+import importDefaultResult from "priv" /* 1401 */;
 
 let closure_2 = {};
 let closure_3 = {};

@@ -1,21 +1,21 @@
-// === Module 16450: ConnectionIcon ===
+// === Module 16484: ConnectionIcon ===
 
-// Module 16450 (ConnectionIcon)
+// Module 16484 (ConnectionIcon)
 import ThemesDefault from "Themes" /* 712 */;
 import isThemeLight from "isThemeLight" /* 1364 */;
-import getAvatarURL from "getAvatarURL" /* 1435 */;
-import IconSizes from "IconSizes" /* 4895 */;
-import IconSizesDefault from "IconSizes" /* 4895 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 5921 */;
-import GameIcon from "GameIcon" /* 5928 */;
-import GameIconDefault from "GameIcon" /* 5928 */;
+import getAvatarURL from "getAvatarURL" /* 1431 */;
+import IconSizes from "IconSizes" /* 4898 */;
+import IconSizesDefault from "IconSizes" /* 4898 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 5924 */;
+import GameIcon from "GameIcon" /* 5931 */;
+import GameIconDefault from "GameIcon" /* 5931 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "addApplication" /* 4487 */;
-import closure_6 from "set" /* 5190 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import closure_5 from "addApplication" /* 4489 */;
+import closure_6 from "set" /* 5193 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1384 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function ConnectionIcon(arg0) {
@@ -207,7 +207,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(5924).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(5927).useGetOrFetchApplication(replacedBy);
   const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {

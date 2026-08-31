@@ -1,9 +1,9 @@
-// === Module 16041: jsx ===
+// === Module 16075: jsx ===
 
-// Module 16041 (jsx)
+// Module 16075 (jsx)
 import noopAll from "noop" /* 19 */;
-import setDefault from "set" /* 5971 */;
-import closure_2 from "module_8531" /* 8531 */;
+import setDefault from "set" /* 5974 */;
+import closure_2 from "module_8553" /* 8553 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -33,5 +33,5 @@ export default function AppFreezer(children) {
   if (!freeze) {
     freeze = flag;
   }
-  return jsx(lockKeys(4841).Freeze, { freeze, placeholder, children: children.children });
+  return jsx(lockKeys(4844).Freeze, { freeze, placeholder, children: children.children });
 };

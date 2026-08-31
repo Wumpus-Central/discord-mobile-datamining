@@ -1,10 +1,10 @@
-// === Module 14339: route ===
+// === Module 14373: route ===
 
-// Module 14339 (route)
+// Module 14373 (route)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "markAllUserIdListsStale" /* 4099 */;
-import createToggle from "createToggle" /* 11006 */;
+import closure_2 from "markAllUserIdListsStale" /* 4100 */;
+import createToggle from "createToggle" /* 11031 */;
 
 require = arg1;
 createToggle = {
@@ -25,7 +25,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.BLOCKED_USERS_V2,
   getComponent() {
-    return require(14340) /* BlockedUsersList */.default;
+    return require(14374) /* BlockedUsersList */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

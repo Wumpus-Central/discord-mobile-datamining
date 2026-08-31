@@ -1,14 +1,14 @@
-// === Module 6034: useCanSeeOnboardingHome ===
+// === Module 6037: useCanSeeOnboardingHome ===
 
-// Module 6034 (useCanSeeOnboardingHome)
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 6035 */;
-import closure_3 from "initialize" /* 1985 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleSettingsLoadSuccess" /* 4673 */;
+// Module 6037 (useCanSeeOnboardingHome)
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1912 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 6038 */;
+import closure_3 from "initialize" /* 1984 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "createGuildRecordFromRust" /* 1909 */;
+import closure_6 from "handleSettingsLoadSuccess" /* 4675 */;
 import ME from "ME" /* 676 */;
-import { ChannelFlags } from "set" /* 1398 */;
+import { ChannelFlags } from "set" /* 1394 */;
 
 require = arg1;
 ({ GuildFeatures: error, ME: closure_8 } = ME);
@@ -113,7 +113,7 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
           }
           return hasItem;
         } else {
-          let result = tmp14(5439).isGuildOnboardingSettingsAvailable(id);
+          let result = tmp14(5442).isGuildOnboardingSettingsAvailable(id);
           if (result) {
             const features = guild.features;
             result = features.has(constants.GUILD_ONBOARDING);

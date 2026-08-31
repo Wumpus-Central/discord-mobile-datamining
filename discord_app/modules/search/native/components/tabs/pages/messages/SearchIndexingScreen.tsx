@@ -1,7 +1,7 @@
-// === Module 16210: SearchIndexingScreen ===
+// === Module 16244: SearchIndexingScreen ===
 
-// Module 16210 (SearchIndexingScreen)
-import _modDef16153 from "module_16153" /* 16153 */;
+// Module 16244 (SearchIndexingScreen)
+import _modDef16187 from "module_16187" /* 16187 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -16,6 +16,6 @@ export default function SearchIndexingScreen(searchContext) {
     obj = { searchContext };
     obj.trackSearchIndexing(obj);
   }, items);
-  const text = searchContext(11843).getIndexingErrorText(searchContext);
-  return jsx(_modDef16153, { text });
+  const text = searchContext(11874).getIndexingErrorText(searchContext);
+  return jsx(_modDef16187, { text });
 };

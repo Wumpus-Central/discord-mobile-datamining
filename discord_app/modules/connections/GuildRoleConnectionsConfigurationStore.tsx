@@ -1,9 +1,9 @@
-// === Module 17126: map ===
+// === Module 17159: map ===
 
-// Module 17126 (map)
+// Module 17159 (map)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "createGuildRecordFromRust" /* 1910 */;
+import closure_0 from "createGuildRecordFromRust" /* 1909 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;

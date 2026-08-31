@@ -1,25 +1,25 @@
-// === Module 6090: handleConnectionOpenOrResumed ===
+// === Module 6093: handleConnectionOpenOrResumed ===
 
-// Module 6090 (handleConnectionOpenOrResumed)
+// Module 6093 (handleConnectionOpenOrResumed)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import _enqueueDefault from "_enqueue" /* 6095 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1912 */;
+import _enqueueDefault from "_enqueue" /* 6098 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "getHash" /* 4359 */;
-import closure_6 from "initialize" /* 4091 */;
-import closure_7 from "upsertAccount" /* 5189 */;
+import closure_5 from "getHash" /* 4361 */;
+import closure_6 from "initialize" /* 4092 */;
+import closure_7 from "upsertAccount" /* 5192 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
-import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 6091 */;
-import closure_10 from "handlePermissionsChange" /* 6092 */;
-import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "handleConnectionOpen" /* 4821 */;
-import closure_13 from "trackCommunicationDisabled" /* 1993 */;
-import closure_14 from "createGuildRecordFromRust" /* 1910 */;
-import closure_15 from "createRTCConnection" /* 4520 */;
-import closure_16 from "markAllUserIdListsStale" /* 4099 */;
-import closure_17 from "handleConnectionOpen" /* 1982 */;
-import closure_18 from "handleConnectionOpen" /* 4268 */;
+import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 6094 */;
+import closure_10 from "handlePermissionsChange" /* 6095 */;
+import closure_11 from "ensureGuildLoaded" /* 1387 */;
+import closure_12 from "handleConnectionOpen" /* 4823 */;
+import closure_13 from "trackCommunicationDisabled" /* 1992 */;
+import closure_14 from "createGuildRecordFromRust" /* 1909 */;
+import closure_15 from "createRTCConnection" /* 4522 */;
+import closure_16 from "markAllUserIdListsStale" /* 4100 */;
+import closure_17 from "handleConnectionOpen" /* 1981 */;
+import closure_18 from "handleConnectionOpen" /* 4269 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -88,7 +88,7 @@ function handleConnectionOpenOrResumed(type) {
       }
     }
     store4.subscribeToGuild(tmp11);
-    obj5 = obj(1913);
+    obj5 = obj(1912);
   }
   obj = {};
   set = new Set(closure_6.lurkingGuildIds());

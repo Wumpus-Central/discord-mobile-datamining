@@ -1,6 +1,6 @@
-// === Module 8053: useAvatarDecorationIfNotExpired ===
+// === Module 8075: useAvatarDecorationIfNotExpired ===
 
-// Module 8053 (useAvatarDecorationIfNotExpired)
+// Module 8075 (useAvatarDecorationIfNotExpired)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { MAX_TIMEOUT_MS } from "ME" /* 676 */;

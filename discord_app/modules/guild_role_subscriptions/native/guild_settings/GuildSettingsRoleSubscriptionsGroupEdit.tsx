@@ -1,12 +1,12 @@
-// === Module 17234: GuildSettingsRoleSubscriptionsGroupEditInner ===
+// === Module 17267: GuildSettingsRoleSubscriptionsGroupEditInner ===
 
-// Module 17234 (GuildSettingsRoleSubscriptionsGroupEditInner)
-import ApplicationRejectedNoticeDefault from "ApplicationRejectedNotice" /* 17249 */;
+// Module 17267 (GuildSettingsRoleSubscriptionsGroupEditInner)
+import ApplicationRejectedNoticeDefault from "ApplicationRejectedNotice" /* 17282 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { ApplicationTypes } from "ApplicationTypes" /* 4475 */;
+import { ApplicationTypes } from "ApplicationTypes" /* 4477 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -97,7 +97,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

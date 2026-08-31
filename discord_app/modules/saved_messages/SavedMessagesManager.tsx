@@ -1,7 +1,7 @@
-// === Module 16993: _refreshSavedMessages ===
+// === Module 17026: _refreshSavedMessages ===
 
-// Module 16993 (_refreshSavedMessages)
-import initializeDefault from "initialize" /* 5451 */;
+// Module 17026 (_refreshSavedMessages)
+import initializeDefault from "initialize" /* 5454 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 let require = arg1;
@@ -19,7 +19,7 @@ function _refreshSavedMessages() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -35,12 +35,12 @@ function _refreshSavedMessages() {
             return obj;
           } else {
             const callback = tmp4;
-            let obj2 = closure_1_0(7546);
+            let obj2 = closure_1_0(7567);
             if (obj2.isForLaterExperimentOn("saved_messages_manager")) {
               dependencyMap = 1;
               c2 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(11222).fetchAndUpdateSavedMessages();
+              obj1[0] = closure_1_0(11251).fetchAndUpdateSavedMessages();
               return obj1;
             } else {
               c2 = 3;
@@ -50,7 +50,7 @@ function _refreshSavedMessages() {
           c2 = 3;
           throw arg1;
         } else if (arg0 !== 2) {
-          obj = callback(16994);
+          obj = callback(17027);
           const result = obj.showOverdueRemindersToast();
         }
         c2 = 3;

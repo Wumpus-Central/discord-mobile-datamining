@@ -1,14 +1,14 @@
-// === Module 9364: getChannelA11yLabel ===
+// === Module 9386: getChannelA11yLabel ===
 
-// Module 9364 (getChannelA11yLabel)
+// Module 9386 (getChannelA11yLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import nameFromUser from "nameFromUser" /* 4290 */;
-import computeChannelName from "computeChannelName" /* 4640 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 4977 */;
-import closure_4 from "markAllUserIdListsStale" /* 4099 */;
-import closure_5 from "mergeGuildAvatar" /* 1923 */;
+import createChannelRecord from "createChannelRecord" /* 1391 */;
+import nameFromUser from "nameFromUser" /* 4292 */;
+import computeChannelName from "computeChannelName" /* 4642 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 4980 */;
+import closure_4 from "markAllUserIdListsStale" /* 4100 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
 const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
@@ -69,15 +69,15 @@ export default function getChannelA11yLabel(mentionCount) {
         const t4 = tmp(1236).t;
         Lo0dCa = unread ? t4["fxxUo/"] : t4.lts3Ld;
       }
-      const intl10 = tmp(1236).intl;
+      const intl11 = tmp(1236).intl;
       obj = { channelName: null, mentionCount: null };
       obj[0] = channelName;
       obj[1] = num;
-      const items = [intl10.formatToPlainString(Lo0dCa, obj), ];
-      const intl11 = tmp(1236).intl;
+      const items = [intl11.formatToPlainString(Lo0dCa, obj), ];
+      const intl12 = tmp(1236).intl;
       obj = { members: null };
       obj[0] = channel.recipients.length + 1;
-      items[1] = intl11.formatToPlainString(tmp(1236).t.CxSA5N, obj);
+      items[1] = intl12.formatToPlainString(tmp(1236).t.CxSA5N, obj);
       let joined = items.join(", ");
     } else if (tmp6.GUILD_STORE === type) {
       let g8ONM0 = tmp(1236).t.Bo4msg;
@@ -137,23 +137,23 @@ export default function getChannelA11yLabel(mentionCount) {
         }
       }
       if (null != voiceChannelStartTime) {
-        const intl17 = tmp(1236).intl;
+        const intl9 = tmp(1236).intl;
         const obj5 = { duration: null };
         const obj6 = { start: null };
         obj6[0] = voiceChannelStartTime;
         const _Date = Date;
-        obj5[0] = tmp(7990).formatActiveA11yTimestamp(obj6, Date.now());
-        items1.push(intl17.formatToPlainString(tmp(1236).t.JQtsGh, obj5));
-        const tmpResult = tmp(7990);
+        obj5[0] = tmp(8012).formatActiveA11yTimestamp(obj6, Date.now());
+        items1.push(intl9.formatToPlainString(tmp(1236).t.JQtsGh, obj5));
+        const tmpResult = tmp(8012);
       }
-      if (tmp15) {
-        const intl9 = tmp(1236).intl;
+      if (tmp17) {
+        const intl10 = tmp(1236).intl;
         const obj7 = { activeActivities: null };
         obj7[0] = activityNames.join(", ");
-        items1.push(intl9.formatToPlainString(tmp(1236).t.LmYuHT, obj7));
+        items1.push(intl10.formatToPlainString(tmp(1236).t.LmYuHT, obj7));
       }
       joined = items1.join(", ");
-      tmp15 = null != activityNames && activityNames.length > 0;
+      tmp17 = null != activityNames && activityNames.length > 0;
     } else if (tmp6.GUILD_STAGE_VOICE === type) {
       g8ONM0 = tmp(1236).t.TPPk2T;
     } else if (THREAD_CHANNEL_TYPES.has(channel.type)) {
@@ -173,11 +173,11 @@ export default function getChannelA11yLabel(mentionCount) {
       const items2 = [joined];
       let items4 = items2;
     } else if (null != g8ONM0) {
-      const intl12 = tmp(1236).intl;
+      const intl13 = tmp(1236).intl;
       const obj8 = { channelName: null, mentionCount: null };
       obj8[0] = channelName;
       obj8[1] = num;
-      const items3 = [intl12.formatToPlainString(g8ONM0, obj8)];
+      const items3 = [intl13.formatToPlainString(g8ONM0, obj8)];
       items4 = items3;
     } else {
       items4 = [];
@@ -186,21 +186,21 @@ export default function getChannelA11yLabel(mentionCount) {
       items4.unshift(stringResult1);
     }
     if (isIncomingCall) {
-      const intl14 = tmp(1236).intl;
-      items4.push(intl14.string(tmp(1236).t["fk1/bX"]));
-    } else if (flag) {
-      const intl13 = tmp(1236).intl;
-      items4.push(intl13.string(tmp(1236).t["NGg/fm"]));
-    }
-    let tmp22 = null != embeddedActivitiesCount;
-    if (tmp22) {
-      tmp22 = embeddedActivitiesCount > 0;
-    }
-    if (tmp22) {
       const intl15 = tmp(1236).intl;
+      items4.push(intl15.string(tmp(1236).t["fk1/bX"]));
+    } else if (flag) {
+      const intl14 = tmp(1236).intl;
+      items4.push(intl14.string(tmp(1236).t["NGg/fm"]));
+    }
+    let tmp24 = null != embeddedActivitiesCount;
+    if (tmp24) {
+      tmp24 = embeddedActivitiesCount > 0;
+    }
+    if (tmp24) {
+      const intl16 = tmp(1236).intl;
       const obj9 = { activitiesCount: null };
       obj9[0] = embeddedActivitiesCount;
-      items4.push(intl15.formatToPlainString(tmp(1236).t.O6PLYd, obj9));
+      items4.push(intl16.formatToPlainString(tmp(1236).t.O6PLYd, obj9));
     }
     if (!isSubscriptionGated) {
       if (null != undefined) {
@@ -211,8 +211,8 @@ export default function getChannelA11yLabel(mentionCount) {
       }
       return items4.join(", ");
     } else {
-      const intl16 = tmp(1236).intl;
-      const string = intl16.string;
+      const intl17 = tmp(1236).intl;
+      const string = intl17.string;
       oj_HOs = tmp(1236).t;
       if (needSubscriptionToAccess) {
         oj_HOs = oj_HOs["oj+HOs"];

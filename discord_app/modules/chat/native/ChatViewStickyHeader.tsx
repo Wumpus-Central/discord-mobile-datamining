@@ -1,17 +1,17 @@
-// === Module 10937: ChatViewStickyHeaderAccountSafetyWarnings ===
+// === Module 10962: ChatViewStickyHeaderAccountSafetyWarnings ===
 
-// Module 10937 (ChatViewStickyHeaderAccountSafetyWarnings)
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10644 */;
-import useStrangerDangerWarning from "useStrangerDangerWarning" /* 10939 */;
-import useLikelyAtoWarning from "useLikelyAtoWarning" /* 10942 */;
-import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 10943 */;
-import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 10956 */;
-import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 10959 */;
-import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 10983 */;
-import OptInChannelBannerDefault from "OptInChannelBanner" /* 10992 */;
+// Module 10962 (ChatViewStickyHeaderAccountSafetyWarnings)
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10668 */;
+import useStrangerDangerWarning from "useStrangerDangerWarning" /* 10964 */;
+import useLikelyAtoWarning from "useLikelyAtoWarning" /* 10967 */;
+import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 10968 */;
+import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 10981 */;
+import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 10984 */;
+import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11008 */;
+import OptInChannelBannerDefault from "OptInChannelBanner" /* 11017 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import { LOCATION_CONTEXT_MOBILE } from "LOCATION_CONTEXT_MOBILE" /* 10938 */;
+import { LOCATION_CONTEXT_MOBILE } from "LOCATION_CONTEXT_MOBILE" /* 10963 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -67,7 +67,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScroll
     if (tmp[0]) {
       let obj = { channel: null };
       obj[0] = channel;
-      tmp8 = callback2(tmp2(10985), obj);
+      tmp8 = callback2(tmp2(11010), obj);
     }
   }
   const items = [tmp8, , , ];
@@ -84,7 +84,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScroll
     obj = { channel: null, clearUnreadsNotice: null };
     obj[0] = channel;
     obj[1] = clearUnreadsNotice;
-    tmp13 = callback2(tmp2(10989), obj);
+    tmp13 = callback2(tmp2(11014), obj);
   }
   obj1 = { children: null };
   items[2] = tmp13;

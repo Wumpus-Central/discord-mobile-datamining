@@ -1,9 +1,9 @@
-// === Module 7779: closeConversationsAndJumpToMessage ===
+// === Module 7800: closeConversationsAndJumpToMessage ===
 
-// Module 7779 (closeConversationsAndJumpToMessage)
+// Module 7800 (closeConversationsAndJumpToMessage)
 import set from "set" /* 2 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4301 */;
-import transitionToChannel from "transitionToChannel" /* 4457 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4303 */;
+import transitionToChannel from "transitionToChannel" /* 4459 */;
 
 const result = set.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorUtils.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 6896: RulebookSpotIllustration ===
+// === Module 6913: RulebookSpotIllustration ===
 
-// Module 6896 (RulebookSpotIllustration)
+// Module 6913 (RulebookSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6897 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6914 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/RulebookSpotIllustration.native.tsx");

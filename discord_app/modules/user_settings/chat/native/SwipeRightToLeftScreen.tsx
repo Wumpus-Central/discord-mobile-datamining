@@ -1,9 +1,9 @@
-// === Module 15006: UserSettingsSwipeRightToLeft ===
+// === Module 15039: UserSettingsSwipeRightToLeft ===
 
-// Module 15006 (UserSettingsSwipeRightToLeft)
-import _modDef14273 from "module_14273" /* 14273 */;
+// Module 15039 (UserSettingsSwipeRightToLeft)
+import _modDef14307 from "module_14307" /* 14307 */;
 import closure_3 from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7830 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 7852 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -15,5 +15,5 @@ export default function UserSettingsSwipeRightToLeft() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(_modDef14273, { node });
+  return jsx(_modDef14307, { node });
 };

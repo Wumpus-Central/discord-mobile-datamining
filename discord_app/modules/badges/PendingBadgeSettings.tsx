@@ -1,11 +1,11 @@
-// === Module 12431: getSavedBadgeSettings ===
+// === Module 12465: getSavedBadgeSettings ===
 
-// Module 12431 (getSavedBadgeSettings)
+// Module 12465 (getSavedBadgeSettings)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isPinnedBadge from "isPinnedBadge" /* 8945 */;
+import isPinnedBadge from "isPinnedBadge" /* 8968 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
-import closure_5 from "initialize" /* 8506 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "initialize" /* 8528 */;
 
 require = arg1;
 function getSavedBadgeSettings() {
@@ -102,7 +102,7 @@ export const setPendingBadgeHiddenBadges = function setPendingBadgeHiddenBadges(
   dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp4 });
 };
 export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "container", pendingBadgeHiddenBadges: "h" });
+  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "bottom", pendingBadgeHiddenBadges: "ct" });
 };
 export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stateFromStoresArray, arg1) {
   ({ pendingBadgeDisplayOrder, pendingBadgeHiddenBadges } = arg1);
@@ -139,7 +139,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
       let tmp11 = item10026;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let obj = set(8945);
+      let obj = set(8968);
       if (obj.isPinnedBadge(item10026.badge_id)) {
         let tmp16 = item10026;
         let arr = items1.push(tmp11);
@@ -210,11 +210,11 @@ export const applyPendingBadgeSettingsToProfileBadges = function applyPendingBad
       let tmp11 = item10027;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let obj = set(8507);
+      let obj = set(8529);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let tmp12Result = tmp12(8945);
+        let tmp12Result = tmp12(8968);
         let tmp16 = profileBadgeId;
         if (!tmp12Result.isPinnedBadge(tmp15)) {
           let tmp17 = profileBadgeId;

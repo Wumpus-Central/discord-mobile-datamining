@@ -1,12 +1,12 @@
-// === Module 15476: trackRegTransition ===
+// === Module 15510: trackRegTransition ===
 
-// Module 15476 (trackRegTransition)
+// Module 15510 (trackRegTransition)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateInvite" /* 4430 */;
-import closure_5 from "getDisplayedInviteCode" /* 8805 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15468 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15469 */;
+import closure_4 from "updateInvite" /* 4432 */;
+import closure_5 from "getDisplayedInviteCode" /* 8828 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15502 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15503 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -151,7 +151,7 @@ export function getTrackRegTransition(closure_0) {
   };
 }
 export const BackButtonWithTracking = function BackButtonWithTracking(arg0) {
-  _require = React.useContext(_require(15466).TrackRegistrationContext);
+  _require = React.useContext(_require(15499).TrackRegistrationContext);
   ({ destinationStep: importDefault, onPress: dependencyMap } = arg0);
   let obj = {};
   const merged = Object.assign(arg0);
@@ -165,7 +165,7 @@ export const BackButtonWithTracking = function BackButtonWithTracking(arg0) {
       tmp();
     }
   };
-  return jsx(_require(5467).HeaderBackButton, {});
+  return jsx(_require(5470).HeaderBackButton, {});
 };
 export const getCommonErrorDetails = function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {

@@ -1,17 +1,17 @@
-// === Module 16855: handleDeletedEntityIds ===
+// === Module 16888: handleDeletedEntityIds ===
 
-// Module 16855 (handleDeletedEntityIds)
+// Module 16888 (handleDeletedEntityIds)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault2 from "initialize" /* 5451 */;
-import getAllDefault from "getAll" /* 7343 */;
-import closure_2 from "getEmojiToGroupId" /* 5366 */;
-import closure_3 from "loadSavedGuildStickers" /* 5409 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1986 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "_handleConnectionOpen" /* 5186 */;
+import initializeDefault2 from "initialize" /* 5454 */;
+import getAllDefault from "getAll" /* 7364 */;
+import closure_2 from "getEmojiToGroupId" /* 5369 */;
+import closure_3 from "loadSavedGuildStickers" /* 5412 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1985 */;
+import closure_6 from "createGuildRecordFromRust" /* 1909 */;
+import closure_7 from "_handleConnectionOpen" /* 5189 */;
 
 function handleDeletedEntityIds(guild_id) {
   importDefault = guild_id;

@@ -1,21 +1,21 @@
-// === Module 4667: updateUserGuildSettingsInternal ===
+// === Module 4669: updateUserGuildSettingsInternal ===
 
-// Module 4667 (updateUserGuildSettingsInternal)
+// Module 4669 (updateUserGuildSettingsInternal)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import hasFlagAll from "hasFlag" /* 1403 */;
-import reset from "reset" /* 4093 */;
-import resetDefault from "reset" /* 4093 */;
-import closure_4 from "initialize" /* 1985 */;
-import closure_5 from "storeThread" /* 4092 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "mergeGuildAvatar" /* 1923 */;
+import hasFlagAll from "hasFlag" /* 1399 */;
+import reset from "reset" /* 4094 */;
+import resetDefault from "reset" /* 4094 */;
+import closure_4 from "initialize" /* 1984 */;
+import closure_5 from "storeThread" /* 4093 */;
+import createChannelRecord from "createChannelRecord" /* 1391 */;
+import closure_8 from "ensureGuildLoaded" /* 1387 */;
+import closure_9 from "createGuildRecordFromRust" /* 1909 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { AccountNotificationFlags } from "AccountNotificationFlags" /* 4102 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4668 */;
+import { AccountNotificationFlags } from "AccountNotificationFlags" /* 4103 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4670 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 import set from "set" /* 2 */;
 
@@ -586,7 +586,7 @@ prototype["getNewForumThreadsCreated"] = function getNewForumThreadsCreated(chan
         if (tmp2Result.hasFlag(tmp.flags, tmp4.NEW_FORUM_THREADS_OFF)) {
           return false;
         }
-        tmp2Result = tmp2(1403);
+        tmp2Result = tmp2(1399);
       }
       obj = hasFlagAll;
       tmp2 = importAll;
@@ -770,7 +770,7 @@ prototype["resolveGuildUnreadSetting"] = function resolveGuildUnreadSetting(guil
       } else {
         ONLY_MENTIONS = UnreadSetting.ONLY_MENTIONS;
       }
-      tmp3Result = tmp3(1403);
+      tmp3Result = tmp3(1399);
     }
     obj = hasFlagAll;
     tmp3 = importAll;

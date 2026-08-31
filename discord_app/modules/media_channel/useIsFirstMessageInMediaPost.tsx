@@ -1,8 +1,8 @@
-// === Module 7799: useIsFirstMessageInMediaPost ===
+// === Module 7820: useIsFirstMessageInMediaPost ===
 
-// Module 7799 (useIsFirstMessageInMediaPost)
+// Module 7820 (useIsFirstMessageInMediaPost)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "ensureGuildLoaded" /* 1387 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/media_channel/useIsFirstMessageInMediaPost.tsx");

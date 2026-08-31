@@ -1,8 +1,8 @@
-// === Module 7891: isCrosspost ===
+// === Module 7913: isCrosspost ===
 
-// Module 7891 (isCrosspost)
+// Module 7913 (isCrosspost)
 import set from "set" /* 2 */;
-import hasFlag from "hasFlag" /* 1403 */;
+import hasFlag from "hasFlag" /* 1399 */;
 import ME from "ME" /* 676 */;
 
 ({ MessageFlags: obj1, MessageReferenceTypes: c3, MessageTypes: c4 } = ME);

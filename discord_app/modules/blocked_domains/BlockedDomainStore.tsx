@@ -1,10 +1,10 @@
-// === Module 8588: isBlockedDomain ===
+// === Module 8610: isBlockedDomain ===
 
-// Module 8588 (isBlockedDomain)
+// Module 8610 (isBlockedDomain)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import isBlockedDomain from "isBlockedDomain" /* 1917 */;
+import isBlockedDomain from "isBlockedDomain" /* 1916 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const prototype = function BlockedDomainStore() {

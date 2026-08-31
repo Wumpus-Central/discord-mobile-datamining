@@ -1,15 +1,17 @@
 // === Module 1352: updateAccessibilityAnnouncerLiveRegionMessage ===
 
 // Module 1352 (updateAccessibilityAnnouncerLiveRegionMessage)
-import { Text } from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import keys from "keys" /* 1353 */;
 import importAllResult from "noop" /* 19 */;
 
-let closure_2 = keys.create(() => ({ message: "disabled", version: false }));
+({ StyleSheet, Text: c0 } = get_ActivityIndicator);
+let closure_2 = keys.create(() => ({ message: "ip", version: false }));
+const styles = StyleSheet.create({ liveRegion: { position: "absolute", top: 0, left: 0, width: 1, height: 1, opacity: 0 } });
 const memoResult = importAllResult.memo(() => {
   const tmp = state();
-  return <Text key={tmp.version} accessibilityLiveRegion="polite" style={{ display: "none" }}>{tmp.message}</Text>;
+  return <closure_0 key={tmp.version} accessibilityLiveRegion="polite" pointerEvents="none" style={liveRegion.liveRegion}>{tmp.message}</closure_0>;
 });
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncerLiveRegion.native.tsx");
 

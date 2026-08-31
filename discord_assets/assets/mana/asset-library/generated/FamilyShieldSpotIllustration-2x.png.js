@@ -1,6 +1,6 @@
-// === Module 6497: metadata ===
+// === Module 6510: metadata ===
 
-// Module 6497 (metadata)
+// Module 6510 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/FamilyShieldSpotIllustration-2x.png.js");

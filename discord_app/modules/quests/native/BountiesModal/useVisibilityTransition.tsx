@@ -1,6 +1,6 @@
-// === Module 14546: useVisibilityTransition ===
+// === Module 14580: useVisibilityTransition ===
 
-// Module 14546 (useVisibilityTransition)
+// Module 14580 (useVisibilityTransition)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 

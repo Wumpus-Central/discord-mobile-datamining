@@ -1,9 +1,9 @@
-// === Module 10927: useChannelSafeAreaHeightSharedValue ===
+// === Module 10951: useChannelSafeAreaHeightSharedValue ===
 
-// Module 10927 (useChannelSafeAreaHeightSharedValue)
+// Module 10951 (useChannelSafeAreaHeightSharedValue)
 import set from "set" /* 2 */;
 
-let closure_3 = { code: "function useChannelSafeAreaHeightSharedValueAndroidTsx1(){const{chatInputFloating,chatInputSpaceBottom,keyboardOpenOrOpening,keyboardWillOpenSharedValue,keyboardOpenedHeight,insets,keyboardTypeSharedValue,KeyboardTypes,customKeyboardSheetHeightSV}=this.__closure;function resolveBottom(bottom){return chatInputFloating?Math.max(bottom,chatInputSpaceBottom):bottom;}if(keyboardOpenOrOpening.get()||keyboardWillOpenSharedValue.get()){const systemKeyboardHeight=keyboardOpenedHeight.get();if(systemKeyboardHeight<=0){return resolveBottom(insets.get().bottom);}return systemKeyboardHeight;}if(keyboardTypeSharedValue.get()===KeyboardTypes.SYSTEM){return resolveBottom(insets.get().bottom);}return customKeyboardSheetHeightSV.get();}" };
+let closure_3 = { code: "function useChannelSafeAreaHeightSharedValueAndroidTsx1(){const{chatInputSpaceBottom,keyboardOpenOrOpening,keyboardWillOpenSharedValue,keyboardOpenedHeight,insets,keyboardTypeSharedValue,KeyboardTypes,customKeyboardSheetHeightSV}=this.__closure;function resolveBottom(bottom){return Math.max(bottom,chatInputSpaceBottom);}if(keyboardOpenOrOpening.get()||keyboardWillOpenSharedValue.get()){const systemKeyboardHeight=keyboardOpenedHeight.get();if(systemKeyboardHeight<=0){return resolveBottom(insets.get().bottom);}return systemKeyboardHeight;}if(keyboardTypeSharedValue.get()===KeyboardTypes.SYSTEM){return resolveBottom(insets.get().bottom);}return customKeyboardSheetHeightSV.get();}" };
 let result = set.fileFinishedImporting("modules/main_tabs_v2/native/channel/useChannelSafeAreaHeightSharedValue.android.tsx");
 
 export default function useChannelSafeAreaHeightSharedValue() {
@@ -22,41 +22,29 @@ export default function useChannelSafeAreaHeightSharedValue() {
   const obj3 = _require(keyboardOpenedHeight[4]);
   const token = _require(keyboardOpenedHeight[5]).useToken(keyboardOpenOrOpening(keyboardOpenedHeight[6]).modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM);
   const obj5 = _require(keyboardOpenedHeight[5]);
-  const chatInputFloating = _require(keyboardOpenedHeight[7]).useMobileVisualRefreshConfig({ location: "ChatInput" }).chatInputFloating;
-  const obj6 = _require(keyboardOpenedHeight[7]);
   const fn = function p() {
     if (!keyboardOpenOrOpening.get()) {
       if (!keyboardWillOpenSharedValue.get()) {
         let value = keyboardTypeSharedValue.get();
-        if (value === store(keyboardOpenedHeight[8]).KeyboardTypes.SYSTEM) {
-          const bottom = store.get().bottom;
-          let bound = bottom;
-          if (chatInputFloating) {
-            const _Math = Math;
-            bound = Math.max(bottom, token);
-          }
-          value = bound;
+        if (value === store(keyboardOpenedHeight[7]).KeyboardTypes.SYSTEM) {
+          const _Math = Math;
+          let bound = Math.max(store.get().bottom, token);
         } else {
-          value = sharedValue.get();
+          bound = sharedValue.get();
         }
-        return value;
+        return bound;
       }
     }
-    let value1 = keyboardOpenedHeight.get();
-    if (value1 <= 0) {
-      const bottom2 = store.get().bottom;
-      let bound1 = bottom2;
-      if (chatInputFloating) {
-        const _Math2 = Math;
-        bound1 = Math.max(bottom2, token);
-      }
-      value1 = bound1;
+    value = keyboardOpenedHeight.get();
+    if (value <= 0) {
+      const _Math2 = Math;
+      value = Math.max(store.get().bottom, token);
     }
-    return value1;
+    return value;
   };
-  obj = { chatInputFloating, chatInputSpaceBottom: token, keyboardOpenOrOpening, keyboardWillOpenSharedValue, keyboardOpenedHeight, insets: tmp, keyboardTypeSharedValue, KeyboardTypes: _require(keyboardOpenedHeight[8]).KeyboardTypes, customKeyboardSheetHeightSV: sharedValue };
+  obj = { chatInputSpaceBottom: token, keyboardOpenOrOpening, keyboardWillOpenSharedValue, keyboardOpenedHeight, insets: tmp, keyboardTypeSharedValue, KeyboardTypes: _require(keyboardOpenedHeight[7]).KeyboardTypes, customKeyboardSheetHeightSV: sharedValue };
   fn.__closure = obj;
-  fn.__workletHash = 5448195636550;
+  fn.__workletHash = 2789486228416;
   fn.__initData = keyboardTypeSharedValue;
   return _require(keyboardOpenedHeight[4]).useDerivedValue(fn);
 };

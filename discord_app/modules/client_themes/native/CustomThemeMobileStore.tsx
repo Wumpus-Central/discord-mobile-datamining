@@ -6,7 +6,6 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import create from "create" /* 1306 */;
 import getThemeForColor from "getThemeForColor" /* 1347 */;
 import isPerModeThemingActive from "isPerModeThemingActive" /* 1366 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import closure_6 from "initialize" /* 1303 */;
 import closure_7 from "handleThemeChange" /* 1302 */;
 import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
@@ -20,10 +19,10 @@ function reset() {
   c5 = undefined;
 }
 function handleSyncedModeChange() {
-  return isPerModeThemingActive.isPerModeThemingActive(isSyncedModeThemesEnabled);
+  return isPerModeThemingActive.isPerModeThemingActive();
 }
 function handleSameAsDeviceThemeToggle() {
-  return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
+  return true;
 }
 function loadFromProtoSettings() {
   if (closure_6.shouldSync("appearance")) {
@@ -65,9 +64,6 @@ function handleSelectivelySyncedUserSettingsUpdate() {
     }
   }
 }
-function isSyncedModeThemesEnabled() {
-  return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
-}
 const PersistedStore = initializeDefault.PersistedStore;
 class CustomThemeMobileStore extends PersistedStore {
 }
@@ -105,13 +101,13 @@ prototype["getState"] = function getState() {
     obj[0] = closure_3;
     obj[1] = closure_4;
   } else {
-    obj = { theme: "Array", customTheme: "ct" };
+    obj = { theme: "cix", customTheme: "id" };
   }
   return obj;
 };
 prototype["getCustomTheme"] = function getCustomTheme() {
   let obj = isPerModeThemingActive;
-  if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
+  if (obj.isPerModeThemingActive()) {
     obj = store;
     const syncedClientTheme = store.getSyncedClientTheme(store.systemTheme);
     let prop;
@@ -145,7 +141,7 @@ prototype["getCustomTheme"] = function getCustomTheme() {
 };
 prototype["getBaseTheme"] = function getBaseTheme() {
   let obj = isPerModeThemingActive;
-  if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
+  if (obj.isPerModeThemingActive()) {
     obj = store;
     const syncedClientTheme = store.getSyncedClientTheme(store.systemTheme);
     let prop;
@@ -184,7 +180,7 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
   if (undefined !== closure_5) {
     return closure_5;
   } else {
-    if (obj5.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
+    if (obj5.isPerModeThemingActive()) {
       let obj = store;
       const syncedClientTheme = store.getSyncedClientTheme(store.systemTheme);
       let prop;
@@ -223,7 +219,7 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
 };
 prototype["hasCustomTheme"] = function hasCustomTheme() {
   let obj = isPerModeThemingActive;
-  if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
+  if (obj.isPerModeThemingActive()) {
     obj = store;
     const syncedClientTheme = store.getSyncedClientTheme(store.systemTheme);
     let prop;

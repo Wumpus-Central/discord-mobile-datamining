@@ -1,12 +1,12 @@
-// === Module 16616: areStableParticipantsEqual ===
+// === Module 16649: areStableParticipantsEqual ===
 
-// Module 16616 (areStableParticipantsEqual)
+// Module 16649 (areStableParticipantsEqual)
 import shallowEqualDefault from "shallowEqual" /* 643 */;
-import closure_3 from "getParticipants" /* 4462 */;
+import closure_3 from "getParticipants" /* 4464 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "mergeGuildAvatar" /* 1923 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4467 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4499 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4469 */;
 
 const require = arg1;
 function areStableParticipantsEqual(arg0, arg1) {
@@ -34,19 +34,19 @@ export default function useStableParticipant(arg0, arg1, arg2) {
       if (null == participant) {
         const user = closure_1_6.getUser(tmp);
         if (null != user) {
-          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_16", ringing: null, hasVideo: 0.272, isSelf: 0.331 };
+          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "ct", ringing: null, hasVideo: 0, isSelf: 1 };
           obj[0] = closure_1_7.USER;
           obj[1] = tmp;
           obj[2] = user;
           const id = closure_1_4.getId();
-          obj[5] = callback(4639).getName(dependencyMap, tmp3, user);
-          const obj5 = callback(4639);
-          obj[6] = callback(8844).getAvatarDecoration(user, dependencyMap);
+          obj[5] = callback(4641).getName(dependencyMap, tmp3, user);
+          const obj5 = callback(4641);
+          obj[6] = callback(8867).getAvatarDecoration(user, dependencyMap);
           obj[10] = user.id === id;
           return obj;
         }
       } else {
-        const tmp15 = callback2(9530)(participant);
+        const tmp15 = callback2(9552)(participant);
         const type = participant.type;
         if (closure_1_7.ACTIVITY === type) {
           obj = { type: null, id: null, applicationId: null };

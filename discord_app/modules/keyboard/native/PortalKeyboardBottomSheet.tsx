@@ -1,17 +1,17 @@
-// === Module 11587: PortalKeyboardBottomSheetHeader ===
+// === Module 11618: PortalKeyboardBottomSheetHeader ===
 
-// Module 11587 (PortalKeyboardBottomSheetHeader)
+// Module 11618 (PortalKeyboardBottomSheetHeader)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4186 from "module_4186" /* 4186 */;
-import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4880 */;
-import TwinButtons from "TwinButtons" /* 8924 */;
+import _modDef4187 from "module_4187" /* 4187 */;
+import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4883 */;
+import TwinButtons from "TwinButtons" /* 8947 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 9593 */;
+import closure_6 from "initialize" /* 9615 */;
 import jsxProd from "jsxProd" /* 21 */;
 import set from "set" /* 500 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function PortalKeyboardBottomSheetHeader(arg0) {
@@ -34,7 +34,7 @@ function PortalKeyboardBackground(arg0) {
   style[0] = style;
   style[1] = callback2().background;
   style[2] = roundingStyle;
-  return callback(_modDef4186.View, { pointerEvents, style });
+  return callback(_modDef4187.View, { pointerEvents, style });
 }
 let c4 = importAllResult;
 ({ Platform, View: c5 } = get_ActivityIndicator);
@@ -89,22 +89,17 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
   let isScreenReaderEnabled;
   let derivedValue;
   let token;
-  let num;
-  let num2;
   let animatedStyle;
-  closure_16 = undefined;
+  closure_14 = undefined;
   let tmp = isScreenReaderEnabled();
   let obj = headerStyle;
   ref = headerStyle.useRef(null);
-  obj1 = animatedIndex(flag[11]);
-  const mobileVisualRefreshConfig = obj1.useMobileVisualRefreshConfig({ location: "AutocompleteWrapper" });
-  const chatInputFloating = mobileVisualRefreshConfig.chatInputFloating;
-  const tmp7 = chatInputRef(flag[12])({ forceMaxHeight, enablePanDownToClose: flag2 });
-  const tmp8 = transitionState === animatedIndex(flag[13]).TransitionStates.YEETED;
-  closure_9 = tmp8;
-  let obj2 = animatedIndex(flag[14]);
-  const bottomSheetImperativeHandle = obj2.useBottomSheetImperativeHandle(ref, ref);
-  let items = [ref, tmp8];
+  const tmp5 = chatInputRef(flag[11])({ forceMaxHeight, enablePanDownToClose: flag2 });
+  const tmp7 = transitionState === animatedIndex(flag[12]).TransitionStates.YEETED;
+  closure_9 = tmp7;
+  obj1 = animatedIndex(flag[13]);
+  const bottomSheetImperativeHandle = obj1.useBottomSheetImperativeHandle(ref, ref);
+  let items = [ref, tmp7];
   const layoutEffect = headerStyle.useLayoutEffect(() => {
     if (closure_9) {
       const current = ref.current;
@@ -113,17 +108,17 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
       }
     }
   }, items);
-  obj = { animatedIndex, bottomSheetRef: ref, containerHeight: tmp7.containerHeight, forceMaxHeight, isYeeted: tmp8, snapPoints: tmp7.snapPoints };
-  chatInputRef(flag[15])(obj);
-  let obj4 = animatedIndex(flag[16]);
+  obj = { animatedIndex, bottomSheetRef: ref, containerHeight: tmp5.containerHeight, forceMaxHeight, isYeeted: tmp7, snapPoints: tmp5.snapPoints };
+  chatInputRef(flag[14])(obj);
+  let obj3 = animatedIndex(flag[15]);
   let items1 = [rendersHandle];
-  const stateFromStores = obj4.useStateFromStores(items1, () => rendersHandle.isOpen());
+  const stateFromStores = obj3.useStateFromStores(items1, () => rendersHandle.isOpen());
   if (flag3) {
-    flag3 = !tmp8;
+    flag3 = !tmp7;
   }
-  let tmp3Result = tmp3(tmp4[9]);
-  isScreenReaderEnabled = tmp3Result.useIsScreenReaderEnabled();
-  let items2 = [chatInputRef, tmp8, onAnimate, onClose, flag];
+  let tmp6Result = tmp6(tmp4[9]);
+  isScreenReaderEnabled = tmp6Result.useIsScreenReaderEnabled();
+  const items2 = [chatInputRef, tmp7, onAnimate, onClose, flag];
   const callback = obj.useCallback((arg0, arg1, arg2, arg3, arg4) => {
     if (closure_9) {
       if (-1 !== arg1) {
@@ -141,15 +136,15 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
         tmp3(arg0, arg1, arg4);
       }
       if (0 === arg0) {
-        if (arg4 !== animatedIndex(flag[17]).ANIMATION_SOURCE.KEYBOARD) {
-          const result = animatedIndex(flag[18]).triggerHapticFeedback(animatedIndex(flag[18]).HapticFeedbackTypes.IMPACT_LIGHT);
-          const obj2 = animatedIndex(flag[18]);
+        if (arg4 !== animatedIndex(flag[16]).ANIMATION_SOURCE.KEYBOARD) {
+          const result = animatedIndex(flag[17]).triggerHapticFeedback(animatedIndex(flag[17]).HapticFeedbackTypes.IMPACT_LIGHT);
+          const obj2 = animatedIndex(flag[17]);
         }
       } else {
         let tmp6 = 1 === arg0 && 0 === arg1;
         if (tmp6) {
-          tmp6 = !animatedIndex(flag[19]).isChannelFocused();
-          const obj = animatedIndex(flag[19]);
+          tmp6 = !animatedIndex(flag[18]).isChannelFocused();
+          const obj = animatedIndex(flag[18]);
         }
         if (tmp6) {
           tmp6 = flag;
@@ -163,25 +158,23 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
       }
     }
   }, items2);
-  tmp3Result = tmp3(tmp4[10]);
-  class U {
+  tmp6Result = tmp6(tmp4[10]);
+  class J {
     constructor() {
       return animatedIndex.get() > 0.975;
     }
   }
-  U.__closure = { animatedIndex };
-  U.__workletHash = 2001839633402;
-  U.__initData = num;
-  derivedValue = tmp3Result.useDerivedValue(U);
-  class W {
-    constructor() {
-      return closure_11.get();
-    }
-  }
-  W.__closure = { isFullyExpanded: derivedValue };
-  W.__workletHash = 9531298805666;
-  W.__initData = num2;
-  class X {
+  J.__closure = { animatedIndex };
+  J.__workletHash = 2001839633402;
+  J.__initData = animatedStyle;
+  derivedValue = tmp6Result.useDerivedValue(J);
+  const fn = function j() {
+    return derivedValue.get();
+  };
+  fn.__closure = { isFullyExpanded: derivedValue };
+  fn.__workletHash = 9531298805666;
+  fn.__initData = closure_14;
+  class Y {
     constructor(arg0, arg1) {
       if (null != ref) {
         tmp = animatedIndex;
@@ -192,28 +185,28 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
           tmp2 = animatedIndex;
           tmp3 = c2;
           obj = animatedIndex(c2[10]);
-          tmp4 = obj.runOnJS(animatedIndex(c2[20]).dismissGlobalKeyboard)();
+          tmp4 = obj.runOnJS(animatedIndex(c2[19]).dismissGlobalKeyboard)();
         }
       }
       return;
     }
   }
-  obj = { forceMaxHeight, runOnJS: tmp3(tmp4[10]).runOnJS, dismissGlobalKeyboard: tmp3(tmp4[20]).dismissGlobalKeyboard };
-  X.__closure = obj;
-  X.__workletHash = 14649856286006;
-  X.__initData = animatedStyle;
-  const animatedReaction = animatedIndex(flag[10]).useAnimatedReaction(W, X);
-  chatInputRef(flag[21])(() => () => {
+  obj = { forceMaxHeight, runOnJS: tmp6(tmp4[10]).runOnJS, dismissGlobalKeyboard: tmp6(tmp4[19]).dismissGlobalKeyboard };
+  Y.__closure = obj;
+  Y.__workletHash = 14649856286006;
+  Y.__initData = closure_15;
+  const animatedReaction = animatedIndex(flag[10]).useAnimatedReaction(fn, Y);
+  chatInputRef(flag[20])(() => () => {
     if (closure_3 != null) {
       tmp();
     }
   });
-  let items3 = [headerStyle, ref, rendersHandle, derivedValue, isScreenReaderEnabled];
+  const items3 = [headerStyle, ref, rendersHandle, derivedValue, isScreenReaderEnabled];
   const callback1 = obj.useCallback((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.pressBehavior = "collapse";
-    return forceMaxHeight(animatedIndex(flag[17]).BottomSheetBackdrop, obj);
+    return forceMaxHeight(animatedIndex(flag[16]).BottomSheetBackdrop, obj);
   }, []);
   const callback2 = obj.useCallback(() => {
     let tmp = null;
@@ -237,110 +230,106 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
     }
     return tmp;
   }, items3);
-  const tmp3Result1 = animatedIndex(flag[10]);
-  token = animatedIndex(flag[22]).useToken(tmp6(tmp4[7]).modules.mobile.MOBILE_KEYBOARD_TOP_BORDER_RADIUS);
-  num = 0;
-  if (chatInputFloating) {
-    num = -1;
-  }
-  num2 = 1;
-  if (chatInputFloating) {
-    num2 = 0;
-  }
-  const tmp3Result2 = animatedIndex(flag[22]);
-  function ee() {
-    const obj = { borderTopLeftRadius: animatedIndex(flag[10]).interpolate(animatedIndex.get(), items, items1, "clamp"), borderTopRightRadius: null };
-    items = [num, num2];
-    items1 = [0, token];
-    const obj2 = animatedIndex(flag[10]);
-    const items2 = [num, num2];
-    const items3 = [0, token];
-    obj[1] = animatedIndex(flag[10]).interpolate(animatedIndex.get(), items2, items3, "clamp");
-    return obj;
-  }
-  obj1 = { interpolate: tmp3(tmp4[10]).interpolate, animatedIndex, cornerRadiusInputStart: num, cornerRadiusInputEnd: num2, cornerRadius: token };
-  ee.__closure = obj1;
-  ee.__workletHash = 6979425892410;
-  ee.__initData = closure_16;
-  animatedStyle = animatedIndex(flag[10]).useAnimatedStyle(ee);
-  let tmp22;
-  if (chatInputFloating) {
-    if (!disableHeaderRoundingAnimation) {
-      tmp22 = animatedStyle;
+  const tmp6Result1 = animatedIndex(flag[10]);
+  token = animatedIndex(flag[21]).useToken(tmp3(tmp4[7]).modules.mobile.MOBILE_KEYBOARD_TOP_BORDER_RADIUS);
+  const tmp6Result2 = animatedIndex(flag[21]);
+  class W {
+    constructor() {
+      obj = { borderTopLeftRadius: null, borderTopRightRadius: null };
+      obj2 = animatedIndex(c2[10]);
+      items = [0];
+      items[1] = closure_12;
+      obj[0] = obj2.interpolate(animatedIndex.get(), [-1, 0], items, "clamp");
+      obj3 = animatedIndex(c2[10]);
+      items1 = [0];
+      items1[1] = closure_12;
+      obj[1] = obj3.interpolate(animatedIndex.get(), [-1, 0], items1, "clamp");
+      return obj;
     }
   }
-  animatedStyle = tmp22;
-  const items4 = [tmp22];
+  obj1 = { interpolate: tmp6(tmp4[10]).interpolate, animatedIndex, cornerRadiusInputStart: -1, cornerRadiusInputEnd: 0, cornerRadius: token };
+  W.__closure = obj1;
+  W.__workletHash = 6979425892410;
+  W.__initData = closure_16;
+  animatedStyle = animatedIndex(flag[10]).useAnimatedStyle(W);
+  let tmp21;
+  if (!disableHeaderRoundingAnimation) {
+    tmp21 = animatedStyle;
+  }
+  animatedStyle = tmp21;
+  const items4 = [tmp21];
   const callback3 = obj.useCallback((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.roundingStyle = animatedStyle;
     return forceMaxHeight(token, obj);
   }, items4);
-  const tmp3Result3 = animatedIndex(flag[10]);
-  ({ left, right } = chatInputRef(flag[23])());
-  const tmp24 = chatInputRef(flag[23])();
-  ({ height, width: width2 } = chatInputRef(flag[24])({ ignoreKeyboard: true }));
+  const tmp6Result3 = animatedIndex(flag[10]);
+  ({ left, right } = chatInputRef(flag[22])());
+  const tmp23 = chatInputRef(flag[22])();
+  ({ height, width: width2 } = chatInputRef(flag[23])({ ignoreKeyboard: true }));
   const callback4 = obj.useCallback((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
-    obj.children = forceMaxHeight(animatedIndex(flag[25]).PortalHost, { name: "expression-footer" });
-    return forceMaxHeight(animatedIndex(flag[17]).BottomSheetFooter, obj);
+    obj.children = forceMaxHeight(animatedIndex(flag[24]).PortalHost, { name: "expression-footer" });
+    return forceMaxHeight(animatedIndex(flag[16]).BottomSheetFooter, obj);
   }, []);
-  const tmp27 = onClose(obj.useState(false), 2);
-  closure_16 = tmp28;
-  const tmp25 = chatInputRef(flag[24])({ ignoreKeyboard: true });
-  function ne() {
+  const tmp26 = onClose(obj.useState(false), 2);
+  closure_14 = tmp27;
+  const tmp24 = chatInputRef(flag[23])({ ignoreKeyboard: true });
+  const fn2 = function $() {
     return Math.max(animatedIndex.get(), 0) > 0;
-  }
-  ne.__closure = { animatedIndex };
-  ne.__workletHash = 8952872079740;
-  ne.__initData = closure_17;
-  function te(arg0, arg1) {
-    if (arg0 !== arg1) {
-      animatedIndex(flag[10]).runOnJS(closure_16)(arg0);
-      const obj = animatedIndex(flag[10]);
+  };
+  fn2.__closure = { animatedIndex };
+  fn2.__workletHash = 8952872079740;
+  fn2.__initData = closure_17;
+  class Z {
+    constructor(arg0, arg1) {
+      if (animatedIndex !== ref) {
+        tmp = animatedIndex;
+        tmp2 = c2;
+        obj = animatedIndex(c2[10]);
+        tmp3 = closure_14;
+        tmp4 = obj.runOnJS(closure_14)(animatedIndex);
+      }
+      return;
     }
   }
-  obj2 = { runOnJS: tmp3(tmp4[10]).runOnJS, setAccessibilityViewIsModal: tmp28 };
-  te.__closure = obj2;
-  te.__workletHash = 16051387075966;
-  te.__initData = closure_18;
-  const animatedReaction1 = animatedIndex(flag[10]).useAnimatedReaction(ne, te);
-  let tmp30 = isScreenReaderEnabled;
+  const tmp6Result4 = animatedIndex(flag[10]);
+  Z.__closure = { runOnJS: animatedIndex(flag[10]).runOnJS, setAccessibilityViewIsModal: tmp26[1] };
+  Z.__workletHash = 16051387075966;
+  Z.__initData = closure_18;
+  const animatedReaction1 = tmp6Result4.useAnimatedReaction(fn2, Z);
+  let tmp29 = isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
-    tmp30 = tmp8;
+    tmp29 = tmp7;
   }
-  const tmp3Result4 = animatedIndex(flag[10]);
-  let tmp33 = null;
-  if (mobileVisualRefreshConfig.enabled) {
-    tmp33 = tmp31;
-  }
-  const obj3 = { gradient: tmp33, children: null };
+  let obj2 = { runOnJS: animatedIndex(flag[10]).runOnJS, setAccessibilityViewIsModal: tmp26[1] };
+  obj3 = { gradient: chatInputRef(flag[25])(), children: null };
   let str;
   if (stateFromStores) {
     str = "no-hide-descendants";
   }
-  obj4 = { importantForAccessibility: str, style: null, pointerEvents: "box-none", children: null };
+  const obj4 = { importantForAccessibility: str, style: null, pointerEvents: "box-none", children: null };
   const items5 = [tmp.container, { marginLeft: left, marginRight: right }, ];
   if (width == null) {
     const _Number = Number;
     width = Number.MAX_SAFE_INTEGER;
   }
-  tmp31 = chatInputRef(flag[26])();
-  const tmp34 = ref;
+  const tmp30 = chatInputRef(flag[25])();
+  const tmp32 = ref;
   items5[2] = { width: Math.min(width, width2 - left - right), height };
   obj4[1] = items5;
-  const obj6 = { ref, animatedIndex, animatedPosition, animationConfigs, onClose, onAnimate: callback, enableContentPanningGesture: !tmp30, enableHandlePanningGesture: !tmp30, handleComponent: callback2, renderFooter: null, backgroundComponent: null, backgroundStyle: null, backdropComponent: null, activeOffsetY: null, handleHeight: null };
+  const obj6 = { ref, animatedIndex, animatedPosition, animationConfigs, onClose, onAnimate: callback, enableContentPanningGesture: !tmp29, enableHandlePanningGesture: !tmp29, handleComponent: callback2, renderFooter: null, backgroundComponent: null, backgroundStyle: null, backdropComponent: null, activeOffsetY: null, handleHeight: null };
   const obj5 = { width: Math.min(width, width2 - left - right), height };
-  const tmp6Result = chatInputRef(flag[17]);
-  let tmp36;
-  if (tmp3Result5.isAndroid()) {
+  const tmp3Result = chatInputRef(flag[16]);
+  let tmp34;
+  if (tmp6Result5.isAndroid()) {
     if (flag3) {
-      tmp36 = callback4;
+      tmp34 = callback4;
     }
   }
-  obj6[9] = tmp36;
+  obj6[9] = tmp34;
   obj6[10] = callback3;
   obj6[11] = tmp.background;
   if (backdropComponent == null) {
@@ -348,20 +337,20 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
   }
   obj6[12] = backdropComponent;
   obj6[13] = [-10, 10];
-  let num3 = 0;
+  let num = 0;
   if (rendersHandle) {
-    num3 = tmp3(tmp4[8]).ACTION_SHEET_DRAG_HANDLE_HEIGHT;
+    num = tmp6(tmp4[8]).ACTION_SHEET_DRAG_HANDLE_HEIGHT;
   }
-  obj6[14] = num3;
-  let merged = Object.assign(tmp7);
+  obj6[14] = num;
+  let merged = Object.assign(tmp5);
   const items6 = [tmp.roundingView, , ];
-  let tmp38 = !disableHeaderRoundingAnimation;
+  let tmp36 = !disableHeaderRoundingAnimation;
   if (!disableHeaderRoundingAnimation) {
-    tmp38 = animatedStyle;
+    tmp36 = animatedStyle;
   }
-  items6[1] = tmp38;
+  items6[1] = tmp36;
   items6[2] = roundingViewStyle;
-  obj6.children = forceMaxHeight(animatedIndex(flag[27]).AccessibilityViewAnimated, {
+  obj6.children = forceMaxHeight(animatedIndex(flag[26]).AccessibilityViewAnimated, {
     nativeID: "portal-keyboard-sheet",
     style: items6,
     onAccessibilityEscape() {
@@ -370,22 +359,22 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
         current.collapse();
       }
     },
-    accessibilityViewIsModal: tmp27[0],
+    accessibilityViewIsModal: tmp26[0],
     children
   });
-  const items7 = [forceMaxHeight(tmp6Result, obj6), , ];
-  let tmp32Result = closure_9;
+  const items7 = [forceMaxHeight(tmp3Result, obj6), , ];
+  let tmp31Result = closure_9;
   if (closure_9) {
-    tmp32Result = flag3;
+    tmp31Result = flag3;
   }
-  if (tmp32Result) {
+  if (tmp31Result) {
     const obj8 = { animatedSheetIndex: null };
     obj8[0] = animatedIndex;
-    tmp32Result = tmp32(tmp6(tmp4[28]), obj8);
+    tmp31Result = tmp31(tmp3(tmp4[27]), obj8);
   }
-  items7[1] = tmp32Result;
-  items7[2] = forceMaxHeight(animatedIndex(flag[29]).NavScrim, {});
+  items7[1] = tmp31Result;
+  items7[2] = forceMaxHeight(animatedIndex(flag[28]).NavScrim, {});
   obj4[3] = items7;
-  obj3[1] = tmp34(chatInputRef(flag[10]).View, obj4);
-  return forceMaxHeight(animatedIndex(flag[13]).ThemeContextProvider, obj3);
+  obj3[1] = tmp32(chatInputRef(flag[10]).View, obj4);
+  return forceMaxHeight(animatedIndex(flag[12]).ThemeContextProvider, obj3);
 });

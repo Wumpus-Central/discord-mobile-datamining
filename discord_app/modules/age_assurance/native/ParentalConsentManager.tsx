@@ -1,9 +1,9 @@
-// === Module 16968: onPostConnectionOpen ===
+// === Module 17001: onPostConnectionOpen ===
 
-// Module 16968 (onPostConnectionOpen)
-import initializeDefault from "initialize" /* 5451 */;
+// Module 17001 (onPostConnectionOpen)
+import initializeDefault from "initialize" /* 5454 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1923 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 let require = arg1;
@@ -38,7 +38,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -85,7 +85,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
                       }
                       let tmp8 = tmp9;
                     } else {
-                      tmp8 = parsed >= 35;
+                      tmp8 = parsed >= 23;
                     }
                     return tmp8;
                   }
@@ -116,7 +116,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
           return obj;
         }
         v0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp9) {
         v0 = tmp;
         throw tmp9;
@@ -204,7 +204,7 @@ prototype["collectAgeSignal"] = function collectAgeSignal() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

@@ -1,9 +1,9 @@
-// === Module 13170: StarsBackgroundSvg ===
+// === Module 13203: StarsBackgroundSvg ===
 
-// Module 13170 (StarsBackgroundSvg)
+// Module 13203 (StarsBackgroundSvg)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 8187 */;
-import inlineStylesDefault from "inlineStyles" /* 8187 */;
+import inlineStyles from "inlineStyles" /* 8209 */;
+import inlineStylesDefault from "inlineStyles" /* 8209 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

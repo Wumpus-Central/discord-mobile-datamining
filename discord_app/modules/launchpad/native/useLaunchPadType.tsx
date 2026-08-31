@@ -1,10 +1,10 @@
-// === Module 11003: useLaunchPadType ===
+// === Module 11028: useLaunchPadType ===
 
-// Module 11003 (useLaunchPadType)
+// Module 11028 (useLaunchPadType)
 import set from "set" /* 2 */;
 import create from "create" /* 1306 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4135 */;
-import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 11002 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4136 */;
+import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 11027 */;
 
 const LaunchPadTypes = LAUNCH_PAD_SPRING_CONFIG.LaunchPadTypes;
 const result = set.fileFinishedImporting("modules/launchpad/native/useLaunchPadType.tsx");

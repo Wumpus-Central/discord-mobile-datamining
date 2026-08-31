@@ -1,15 +1,15 @@
-// === Module 15606: HAPPENING_NOW_CONTENT_HEIGHT ===
+// === Module 15640: HAPPENING_NOW_CONTENT_HEIGHT ===
 
-// Module 15606 (HAPPENING_NOW_CONTENT_HEIGHT)
+// Module 15640 (HAPPENING_NOW_CONTENT_HEIGHT)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 1997 */;
-import closure_7 from "mergeGuildAvatar" /* 1923 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14823 */;
+import closure_6 from "_getSystemLocale" /* 1996 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14857 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 let c3 = importAllResult;

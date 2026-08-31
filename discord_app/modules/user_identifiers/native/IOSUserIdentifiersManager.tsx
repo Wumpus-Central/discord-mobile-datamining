@@ -1,12 +1,12 @@
-// === Module 16913: onPostConnectionOpen ===
+// === Module 16946: onPostConnectionOpen ===
 
-// Module 16913 (onPostConnectionOpen)
+// Module 16946 (onPostConnectionOpen)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import _modDef1208 from "module_1208" /* 1208 */;
-import initializeDefault from "initialize" /* 5451 */;
+import initializeDefault from "initialize" /* 5454 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1923 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 let require = arg1;
@@ -41,7 +41,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -88,7 +88,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
           return obj;
         }
         v0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp9) {
         v0 = tmp;
         throw tmp9;
@@ -110,7 +110,7 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

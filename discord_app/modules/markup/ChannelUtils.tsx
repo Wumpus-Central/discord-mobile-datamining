@@ -1,8 +1,8 @@
-// === Module 4926: isChannelTypeMentionable ===
+// === Module 4929: isChannelTypeMentionable ===
 
-// Module 4926 (isChannelTypeMentionable)
+// Module 4929 (isChannelTypeMentionable)
 import set from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1395 */;
+import createChannelRecord from "createChannelRecord" /* 1391 */;
 
 ({ isGuildSelectableChannelType: c0, isGuildVocalChannelType: closure_1 } = createChannelRecord);
 const result = set.fileFinishedImporting("modules/markup/ChannelUtils.tsx");

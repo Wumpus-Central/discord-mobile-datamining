@@ -1,8 +1,8 @@
-// === Module 12454: useIsMobileWishlistSuggestionsEnabled ===
+// === Module 12488: useIsMobileWishlistSuggestionsEnabled ===
 
-// Module 12454 (useIsMobileWishlistSuggestionsEnabled)
+// Module 12488 (useIsMobileWishlistSuggestionsEnabled)
 import set from "set" /* 2 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import ApexExperiment from "ApexExperiment" /* 1468 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-07-smag-mobile-wishlist-suggestions", kind: "user", defaultConfig: { isEnabled: false }, variations: { 0: { isEnabled: false }, 1: { isEnabled: true } } });
 const result = set.fileFinishedImporting("modules/wishlists/experiments/MobileWishlistSuggestionsExperiment.tsx");

@@ -1,14 +1,14 @@
-// === Module 15302: DemoModal ===
+// === Module 15335: DemoModal ===
 
-// Module 15302 (DemoModal)
-import useAlertStore from "useAlertStore" /* 4824 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4828 */;
-import Button from "Button" /* 4893 */;
+// Module 15335 (DemoModal)
+import useAlertStore from "useAlertStore" /* 4827 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4831 */;
+import Button from "Button" /* 4896 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function DemoModal() {
@@ -24,7 +24,7 @@ function DemoModal() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -56,7 +56,7 @@ function DemoModal() {
           return obj;
         } else {
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp10) {
         c0 = tmp;

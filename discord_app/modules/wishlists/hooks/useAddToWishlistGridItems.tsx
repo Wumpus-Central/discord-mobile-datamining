@@ -1,8 +1,8 @@
-// === Module 12517: useAddToWishlistGridItems ===
+// === Module 12551: useAddToWishlistGridItems ===
 
-// Module 12517 (useAddToWishlistGridItems)
+// Module 12551 (useAddToWishlistGridItems)
 import closure_2 from "noop" /* 19 */;
-import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1925 */;
+import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");

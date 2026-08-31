@@ -1,16 +1,16 @@
-// === Module 12890: BetaTag ===
+// === Module 12924: BetaTag ===
 
-// Module 12890 (BetaTag)
+// Module 12924 (BetaTag)
 import noopAll from "noop" /* 19 */;
 import keys from "keys" /* 691 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4442 */;
-import LinearGradientDefault from "LinearGradient" /* 4905 */;
+import Text from "Text" /* 4444 */;
+import LinearGradientDefault from "LinearGradient" /* 4908 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { Gradients } from "items" /* 7124 */;
+import { Gradients } from "items" /* 7145 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 noopAll;

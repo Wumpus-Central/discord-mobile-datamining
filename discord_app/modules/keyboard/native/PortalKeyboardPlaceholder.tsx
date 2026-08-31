@@ -1,20 +1,20 @@
-// === Module 11755: PortalKeyboardPlaceholderInner ===
+// === Module 11786: PortalKeyboardPlaceholderInner ===
 
-// Module 11755 (PortalKeyboardPlaceholderInner)
+// Module 11786 (PortalKeyboardPlaceholderInner)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import KeyboardTypes from "KeyboardTypes" /* 1627 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1895 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 4310 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5562 */;
-import useGradientBottom from "useGradientBottom" /* 7563 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7665 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
+import KeyboardTypes from "KeyboardTypes" /* 1626 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1628 */;
+import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1894 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 4312 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5565 */;
+import useGradientBottom from "useGradientBottom" /* 7584 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7686 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function PortalKeyboardPlaceholderInner(keyboardType) {
@@ -59,7 +59,7 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
     hairlineWidth1 = tmp6.hairlineWidth;
   }
   container.borderLeftWidth = hairlineWidth1;
-  const APP_LAUNCHER = tmp(1627).KeyboardTypes.APP_LAUNCHER;
+  const APP_LAUNCHER = tmp(1626).KeyboardTypes.APP_LAUNCHER;
   container.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOW;
   let tmpResult = tmp(500);
   if (tmpResult.isIOS()) {

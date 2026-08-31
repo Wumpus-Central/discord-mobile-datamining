@@ -1,12 +1,12 @@
-// === Module 7884: createStageRaiseHandSystemMessage ===
+// === Module 7906: createStageRaiseHandSystemMessage ===
 
-// Module 7884 (createStageRaiseHandSystemMessage)
+// Module 7906 (createStageRaiseHandSystemMessage)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7816 */;
-import closure_3 from "getActiveStageChannelIds" /* 5327 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4090 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7837 */;
+import closure_3 from "getActiveStageChannelIds" /* 5330 */;
+import closure_4 from "ensureGuildLoaded" /* 1387 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4091 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -38,14 +38,14 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     if (participant != null) {
       rtsState = participant.rtsState;
     }
-    canResult = rtsState === tmp(4634).RequestToSpeakStates.REQUESTED_TO_SPEAK;
+    canResult = rtsState === tmp(4636).RequestToSpeakStates.REQUESTED_TO_SPEAK;
   }
   if (canResult) {
     canResult = toISOStringResult === toISOStringResult1;
   }
   obj = { content: null, showInviteToSpeakButton: null, buttonLabel: null, ephemeralIndication: null };
   const intl = tmp(1236).intl;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6(7818)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6(7839)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   obj[0] = intl.formatToParts(getSystemLocale.t.M87x7Y, obj);
   obj[1] = canResult;
   const intl2 = tmp(1236).intl;
@@ -60,14 +60,14 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
       obj3[1] = message;
       obj2[0] = obj3;
       obj1[0] = intl3.formatToParts(tmp(1236).t["qDAX++"], obj2);
-      obj1[1] = tmp6(1996).getArticleURL(constants.EPHEMERAL_MESSAGES);
+      obj1[1] = tmp6(1995).getArticleURL(constants.EPHEMERAL_MESSAGES);
       const intl4 = tmp(1236).intl;
       obj1[2] = intl4.string(tmp(1236).t.htHOrp);
       tmp10 = obj1;
-      const tmp6Result = tmp6(1996);
+      const tmp6Result = tmp6(1995);
     }
   }
   obj[3] = tmp10;
-  const merged = Object.assign(tmp6(7819)(roleStyle));
+  const merged = Object.assign(tmp6(7841)(roleStyle));
   return obj;
 };

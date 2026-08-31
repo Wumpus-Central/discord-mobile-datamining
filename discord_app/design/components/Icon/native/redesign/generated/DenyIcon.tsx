@@ -1,10 +1,10 @@
-// === Module 7785: DenyIcon ===
+// === Module 7806: DenyIcon ===
 
-// Module 7785 (DenyIcon)
+// Module 7806 (DenyIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4165 */;
-import registerAsset from "registerAsset" /* 7786 */;
+import BaseIconImage from "BaseIconImage" /* 4166 */;
+import registerAsset from "registerAsset" /* 7807 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

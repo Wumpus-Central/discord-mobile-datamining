@@ -1,6 +1,6 @@
-// === Module 11369: AutomodTriggerType ===
+// === Module 11398: AutomodTriggerType ===
 
-// Module 11369 (AutomodTriggerType)
+// Module 11398 (AutomodTriggerType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodTriggerType.tsx");

@@ -1,9 +1,9 @@
-// === Module 5559: useSafeAreaInsetsKeyboardAware ===
+// === Module 5562: useSafeAreaInsetsKeyboardAware ===
 
-// Module 5559 (useSafeAreaInsetsKeyboardAware)
+// Module 5562 (useSafeAreaInsetsKeyboardAware)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "subscribeToKeyboardUIStore" /* 1496 */;
+import closure_5 from "subscribeToKeyboardUIStore" /* 1495 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx");

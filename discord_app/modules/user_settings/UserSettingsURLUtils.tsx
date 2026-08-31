@@ -1,9 +1,9 @@
-// === Module 5361: settingsPathToRoute ===
+// === Module 5364: settingsPathToRoute ===
 
-// Module 5361 (settingsPathToRoute)
+// Module 5364 (settingsPathToRoute)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import WebUserSettings from "WebUserSettings" /* 5362 */;
-import keysSorter from "keysSorter" /* 5363 */;
+import WebUserSettings from "WebUserSettings" /* 5365 */;
+import keysSorter from "keysSorter" /* 5366 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { UserSettingsPath } from "MAX_FAVORITES" /* 685 */;
 import ME from "ME" /* 676 */;

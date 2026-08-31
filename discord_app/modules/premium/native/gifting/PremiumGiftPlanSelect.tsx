@@ -1,16 +1,16 @@
-// === Module 10411: items ===
+// === Module 10435: items ===
 
-// Module 10411 (items)
+// Module 10435 (items)
 import nDefault from "n" /* 689 */;
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "initialize" /* 8506 */;
-import closure_10 from "createEmptyPromotionsByType" /* 10412 */;
+import closure_9 from "initialize" /* 8528 */;
+import closure_10 from "createEmptyPromotionsByType" /* 10436 */;
 import { VerticalGradient } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ ActivityIndicator: c5, Pressable: closure_6, View: error, ScrollView: closure_8 } = get_ActivityIndicator);
@@ -532,7 +532,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         const tmp4Result3 = tmp4(tmp2[30]);
       }
     } else {
-      const obj34 = { style: null, guildId: "r", size: "r", user: "quests" };
+      const obj34 = { style: null, guildId: "r", size: "Object", user: null };
       obj34[0] = tmp13.avatar;
       const AvatarSizes = tmp(tmp2[26]).AvatarSizes;
       obj34[2] = tmp65Result ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;

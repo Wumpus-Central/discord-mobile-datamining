@@ -1,17 +1,17 @@
-// === Module 16817: ExistingUserAgeGate ===
+// === Module 16850: ExistingUserAgeGate ===
 
-// Module 16817 (ExistingUserAgeGate)
+// Module 16850 (ExistingUserAgeGate)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleRequiredAction" /* 1385 */;
-import closure_8 from "mergeGuildAvatar" /* 1923 */;
+import closure_7 from "handleRequiredAction" /* 1381 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import result from "result" /* 1221 */;
-import { ExistingUserAgeGateScreens as closure_11 } from "ExistingUserAgeGateScreens" /* 16815 */;
+import { ExistingUserAgeGateScreens as closure_11 } from "ExistingUserAgeGateScreens" /* 16848 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ AgeGateAnalyticAction: c9, AgeGateSource: c10 } = result);
@@ -60,7 +60,7 @@ export default function ExistingUserAgeGate(onSuccess) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -170,7 +170,7 @@ export default function ExistingUserAgeGate(onSuccess) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -215,7 +215,7 @@ export default function ExistingUserAgeGate(onSuccess) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp10) {
           c0 = tmp;
           throw tmp10;

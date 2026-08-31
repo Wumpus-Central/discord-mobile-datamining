@@ -1,13 +1,13 @@
-// === Module 7825: canReactToMessageInternal ===
+// === Module 7847: canReactToMessageInternal ===
 
-// Module 7825 (canReactToMessageInternal)
-import hasFlag from "hasFlag" /* 1403 */;
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4079 */;
-import _modDef7826 from "module_7826" /* 7826 */;
-import closure_3 from "trackCommunicationDisabled" /* 1993 */;
-import closure_4 from "recomputeGuild" /* 5322 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4090 */;
-import closure_6 from "mergeGuildAvatar" /* 1923 */;
+// Module 7847 (canReactToMessageInternal)
+import hasFlag from "hasFlag" /* 1399 */;
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4080 */;
+import _modDef7848 from "module_7848" /* 7848 */;
+import closure_3 from "trackCommunicationDisabled" /* 1992 */;
+import closure_4 from "recomputeGuild" /* 5325 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4091 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -26,7 +26,7 @@ function canReactToMessageInternal(state, getGuildId, items) {
       member = obj2.getMember(guildId, currentUser.id);
     }
   }
-  let tmp6 = _modDef7826(getGuildId) && !getGuildId.isArchivedLockedThread();
+  let tmp6 = _modDef7848(getGuildId) && !getGuildId.isArchivedLockedThread();
   if (tmp6) {
     tmp6 = state.state !== constants.SEND_FAILED;
   }

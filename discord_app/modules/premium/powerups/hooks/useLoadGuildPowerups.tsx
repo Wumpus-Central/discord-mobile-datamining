@@ -1,6 +1,6 @@
-// === Module 11979: useLoadGuildPowerups ===
+// === Module 12012: useLoadGuildPowerups ===
 
-// Module 11979 (useLoadGuildPowerups)
+// Module 12012 (useLoadGuildPowerups)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

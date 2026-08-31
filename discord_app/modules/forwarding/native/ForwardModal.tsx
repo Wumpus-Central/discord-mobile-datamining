@@ -1,20 +1,20 @@
-// === Module 11199: ForwardModal ===
+// === Module 11228: ForwardModal ===
 
-// Module 11199 (ForwardModal)
+// Module 11228 (ForwardModal)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "removePendingListFetch" /* 7288 */;
-import closure_8 from "filterStaffGuild" /* 8552 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "reinjectEphemerals" /* 4701 */;
-import closure_11 from "messages" /* 8577 */;
-import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT" /* 11200 */;
-import { UserRowModes } from "UserRowModes" /* 10570 */;
+import closure_7 from "removePendingListFetch" /* 7309 */;
+import closure_8 from "filterStaffGuild" /* 8574 */;
+import closure_9 from "ensureGuildLoaded" /* 1387 */;
+import closure_10 from "reinjectEphemerals" /* 4703 */;
+import closure_11 from "messages" /* 8599 */;
+import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT" /* 11229 */;
+import { UserRowModes } from "UserRowModes" /* 10594 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -170,7 +170,7 @@ export default function ForwardModal(message) {
             obj[0] = arr;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

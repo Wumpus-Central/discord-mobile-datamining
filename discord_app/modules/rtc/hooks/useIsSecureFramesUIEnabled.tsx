@@ -1,9 +1,9 @@
-// === Module 9797: useIsSecureFramesUIEnabled ===
+// === Module 9820: useIsSecureFramesUIEnabled ===
 
-// Module 9797 (useIsSecureFramesUIEnabled)
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createRTCConnection" /* 4520 */;
-import { END_TO_END_ENCRYPTION_DISABLED as closure_4 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9780 */;
+// Module 9820 (useIsSecureFramesUIEnabled)
+import closure_2 from "ensureGuildLoaded" /* 1387 */;
+import closure_3 from "createRTCConnection" /* 4522 */;
+import { END_TO_END_ENCRYPTION_DISABLED as closure_4 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9802 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");

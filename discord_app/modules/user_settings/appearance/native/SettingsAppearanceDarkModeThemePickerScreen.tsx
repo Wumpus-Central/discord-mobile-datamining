@@ -1,9 +1,9 @@
-// === Module 14836: SettingsAppearanceDarkModeThemePickerScreen ===
+// === Module 14870: SettingsAppearanceDarkModeThemePickerScreen ===
 
-// Module 14836 (SettingsAppearanceDarkModeThemePickerScreen)
+// Module 14870 (SettingsAppearanceDarkModeThemePickerScreen)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ThemeTypesDefault from "ThemeTypes" /* 14795 */;
+import ThemeTypesDefault from "ThemeTypes" /* 14829 */;
 import { SystemTheme } from "SystemThemeState" /* 1305 */;
 import { jsx } from "jsxProd" /* 21 */;
 

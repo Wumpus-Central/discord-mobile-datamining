@@ -1,10 +1,10 @@
-// === Module 9644: ? ===
+// === Module 9666: ? ===
 
-// Module 9644
+// Module 9666
 import encodeProperties from "encodeProperties" /* 503 */;
 import sendRequest from "sendRequest" /* 530 */;
-import _modDef4679 from "module_4679" /* 4679 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4667 */;
+import _modDef4681 from "module_4681" /* 4681 */;
+import closure_3 from "updateUserGuildSettingsInternal" /* 4669 */;
 import ME from "ME" /* 676 */;
 import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 685 */;
 
@@ -65,7 +65,7 @@ export default {
     }
     obj = { url: closure_6.GUILD_CHANNELS(guildId), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const tmp = permissionOverwrites;
-    const tmpResult = permissionOverwrites(4679);
+    const tmpResult = permissionOverwrites(4681);
     obj[3] = {
       event: guildId(503).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
@@ -133,7 +133,7 @@ export default {
     });
   },
   createRoleSubscriptionTemplateChannel(closure_0, name, type, topic) {
-    let obj = _modDef4679;
+    let obj = _modDef4681;
     obj = { url: closure_6.GUILD_CHANNELS(closure_0), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, type, topic };
     obj[3] = {

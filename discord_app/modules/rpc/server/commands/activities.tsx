@@ -1,11 +1,11 @@
-// === Module 14096: ? ===
+// === Module 14130: ? ===
 
-// Module 14096
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9447 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14051 */;
+// Module 14130
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9469 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14085 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14063 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14097 */;
 
 require = arg1;
 ({ RPCCommands, RPCErrors: c4, ApplicationFlags: c5 } = ME);
@@ -35,7 +35,7 @@ obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

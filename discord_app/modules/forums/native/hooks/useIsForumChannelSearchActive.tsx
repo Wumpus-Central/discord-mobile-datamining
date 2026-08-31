@@ -1,14 +1,14 @@
-// === Module 12870: useIsForumChannelSearchActive ===
+// === Module 12904: useIsForumChannelSearchActive ===
 
-// Module 12870 (useIsForumChannelSearchActive)
-import closure_2 from "initialize" /* 7459 */;
+// Module 12904 (useIsForumChannelSearchActive)
+import closure_2 from "initialize" /* 7480 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");
 
 export const useIsForumChannelSearchActive = function useIsForumChannelSearchActive(channelId) {
   const _require = channelId;
-  let canSearchForumPostsByChannelId = _require(12857).useCanSearchForumPostsByChannelId(channelId);
+  let canSearchForumPostsByChannelId = _require(12891).useCanSearchForumPostsByChannelId(channelId);
   _require(589);
   [][0] = channelId;
   if (canSearchForumPostsByChannelId) {

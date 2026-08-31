@@ -1,8 +1,8 @@
-// === Module 11654: useFilterAndSortToOnlyFrecentCommands ===
+// === Module 11685: useFilterAndSortToOnlyFrecentCommands ===
 
-// Module 11654 (useFilterAndSortToOnlyFrecentCommands)
+// Module 11685 (useFilterAndSortToOnlyFrecentCommands)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleUserSettingsProtoStoreChange" /* 8094 */;
+import closure_3 from "handleUserSettingsProtoStoreChange" /* 8116 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useFilterAndSortToOnlyFrecentCommands.tsx");

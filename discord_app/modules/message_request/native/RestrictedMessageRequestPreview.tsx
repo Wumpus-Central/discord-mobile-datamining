@@ -1,15 +1,15 @@
-// === Module 16405: RestrictedMessageRequestPreview ===
+// === Module 16439: RestrictedMessageRequestPreview ===
 
-// Module 16405 (RestrictedMessageRequestPreview)
+// Module 16439 (RestrictedMessageRequestPreview)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "reinjectEphemerals" /* 4701 */;
-import closure_9 from "mergeGuildAvatar" /* 1923 */;
+import closure_7 from "ensureGuildLoaded" /* 1387 */;
+import closure_8 from "reinjectEphemerals" /* 4703 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 const require = arg1;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
@@ -111,21 +111,21 @@ export default function RestrictedMessageRequestPreview(channelId) {
       obj1 = { channel: null, user: null };
       obj1[0] = stateFromStores;
       obj1[1] = stateFromStores1;
-      const items8 = [callback(tmp2(16406), obj1), ];
+      const items8 = [callback(tmp2(16440), obj1), ];
       obj2 = { channelId: null };
       obj2[0] = channelId;
-      items8[1] = callback(tmp2(16408), obj2);
+      items8[1] = callback(tmp2(16442), obj2);
       obj[5] = items8;
       const items9 = [closure_11(closure_5, obj), ];
       const obj3 = { style: null, children: null };
       const items10 = [tmp.footer, ];
       const obj4 = { paddingBottom: null };
-      obj4[0] = tmp2(712).space.PX_8 + ref(1629)().bottom;
+      obj4[0] = tmp2(712).space.PX_8 + ref(1628)().bottom;
       items10[1] = obj4;
       obj3[0] = items10;
       const obj5 = { channel: null };
       obj5[0] = stateFromStores;
-      obj3[1] = callback(tmp2(11937), obj5);
+      obj3[1] = callback(tmp2(11970), obj5);
       items9[1] = callback(first1, obj3);
       obj[1] = items9;
       tmp13Result = tmp13(tmp14, obj);

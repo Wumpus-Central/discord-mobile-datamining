@@ -1,19 +1,19 @@
-// === Module 11637: PlaceholderCommandRow ===
+// === Module 11668: PlaceholderCommandRow ===
 
-// Module 11637 (PlaceholderCommandRow)
+// Module 11668 (PlaceholderCommandRow)
 import ThemesDefault from "Themes" /* 712 */;
-import TableRowInner from "TableRowInner" /* 5564 */;
-import usePlaceholderWidth from "usePlaceholderWidth" /* 11562 */;
-import CommandRowIconDefault from "CommandRowIcon" /* 11613 */;
+import TableRowInner from "TableRowInner" /* 5567 */;
+import usePlaceholderWidth from "usePlaceholderWidth" /* 11593 */;
+import CommandRowIconDefault from "CommandRowIcon" /* 11644 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import getIndexKey from "getIndexKey" /* 8092 */;
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import getIndexKey from "getIndexKey" /* 8114 */;
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1498 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_12 } from "TRUE_OPTION_NAME" /* 4917 */;
+import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_12 } from "TRUE_OPTION_NAME" /* 4920 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4446 */;
+import createCacheKey from "createCacheKey" /* 4448 */;
 
 require = arg1;
 function PlaceholderCommandRow(isFirstRow) {
@@ -93,7 +93,7 @@ class CommandRow {
               obj[0] = isAuthorized;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -141,7 +141,7 @@ class CommandRow {
                   lib();
                 }
                 c3 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } catch (tmp13) {
               c3 = tmp;

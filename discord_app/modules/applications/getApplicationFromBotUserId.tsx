@@ -1,7 +1,7 @@
-// === Module 12098: useGetApplicationFromBotUserId ===
+// === Module 12131: useGetApplicationFromBotUserId ===
 
-// Module 12098 (useGetApplicationFromBotUserId)
-import closure_2 from "createUserWidgetFromServer" /* 7313 */;
+// Module 12131 (useGetApplicationFromBotUserId)
+import closure_2 from "createUserWidgetFromServer" /* 7334 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 
 const require = arg1;

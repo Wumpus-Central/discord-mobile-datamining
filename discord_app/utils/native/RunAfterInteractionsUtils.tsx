@@ -1,6 +1,6 @@
-// === Module 6011: runAfterInteractions ===
+// === Module 6014: runAfterInteractions ===
 
-// Module 6011 (runAfterInteractions)
+// Module 6014 (runAfterInteractions)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
@@ -16,7 +16,7 @@ function runAfterInteractions(arg0, MINUTE) {
     delayedCall.cancel();
     callback();
   });
-  delayedCall = new _require(4330).DelayedCall(num, () => {
+  delayedCall = new _require(4332).DelayedCall(num, () => {
     closure_1.cancel();
     callback();
   });

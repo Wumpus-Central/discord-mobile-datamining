@@ -1,8 +1,8 @@
-// === Module 15245: SelectMenuNativeComponent ===
+// === Module 15278: SelectMenuNativeComponent ===
 
-// Module 15245 (SelectMenuNativeComponent)
+// Module 15278 (SelectMenuNativeComponent)
 import noopAll from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 15246 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 15279 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;

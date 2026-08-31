@@ -1,10 +1,10 @@
-// === Module 6352: CatIllocon ===
+// === Module 6359: CatIllocon ===
 
-// Module 6352 (CatIllocon)
+// Module 6359 (CatIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5458 */;
-import metadataDefault from "metadata" /* 6353 */;
+import preloadDefault from "preload" /* 5461 */;
+import metadataDefault from "metadata" /* 6360 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CatIllocon.native.tsx");

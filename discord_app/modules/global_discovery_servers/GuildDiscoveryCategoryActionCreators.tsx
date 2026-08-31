@@ -1,10 +1,10 @@
-// === Module 15988: _maybeFetchGuildDiscoveryCategories ===
+// === Module 16022: _maybeFetchGuildDiscoveryCategories ===
 
-// Module 15988 (_maybeFetchGuildDiscoveryCategories)
+// Module 16022 (_maybeFetchGuildDiscoveryCategories)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_getSystemLocale" /* 1997 */;
-import closure_5 from "getPrimaryCategories" /* 15989 */;
+import closure_4 from "_getSystemLocale" /* 1996 */;
+import closure_5 from "getPrimaryCategories" /* 16023 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -22,7 +22,7 @@ function _maybeFetchGuildDiscoveryCategories() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -201,7 +201,7 @@ function _saveGuildMetadata() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -242,7 +242,7 @@ function _saveGuildMetadata() {
               let about;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: true };
+              return { value: "Object", done: true };
             }
           } else if (1 === tmp7) {
             if (arg0 === 1) {
@@ -324,7 +324,7 @@ function _saveGuildMetadata() {
             obj7.dispatch(obj6);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp18) {
           c3 = tmp18;

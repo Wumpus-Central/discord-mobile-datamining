@@ -1,11 +1,11 @@
-// === Module 11791: useMemberActionsForChannel ===
+// === Module 11822: useMemberActionsForChannel ===
 
-// Module 11791 (useMemberActionsForChannel)
-import useIsNewMemberDefault from "useIsNewMember" /* 6035 */;
-import closure_3 from "trackCommunicationDisabled" /* 1993 */;
-import closure_4 from "handleSettingsLoadSuccess" /* 4673 */;
-import closure_5 from "set" /* 4674 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4078 */;
+// Module 11822 (useMemberActionsForChannel)
+import useIsNewMemberDefault from "useIsNewMember" /* 6038 */;
+import closure_3 from "trackCommunicationDisabled" /* 1992 */;
+import closure_4 from "handleSettingsLoadSuccess" /* 4675 */;
+import closure_5 from "set" /* 4676 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4079 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");
@@ -88,5 +88,5 @@ export const useAllActionsCompleted = function useAllActionsCompleted(guild_id) 
   if (num == null) {
     num = 0;
   }
-  return _require(1403).hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
+  return _require(1399).hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
 };

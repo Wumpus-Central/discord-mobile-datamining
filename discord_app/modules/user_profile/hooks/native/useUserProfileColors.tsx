@@ -1,71 +1,57 @@
-// === Module 8478: useUserProfileColors ===
+// === Module 8500: useUserProfileColors ===
 
-// Module 8478 (useUserProfileColors)
+// Module 8500 (useUserProfileColors)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4166 */;
-import useThemeDefault from "useTheme" /* 4381 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 5940 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4438 */;
+import map from "map" /* 4167 */;
+import useThemeDefault from "useTheme" /* 4383 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 5943 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4440 */;
 import { ThemeTypes } from "sum" /* 505 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileColors.tsx");
 
-export const useUserProfileColors = function useUserProfileColors(arg0) {
-  ({ theme, primaryColor, secondaryColor } = arg0);
-  const tmp3 = useThemeDefault();
+export const useUserProfileColors = function useUserProfileColors(theme) {
+  ({ primaryColor, secondaryColor } = theme);
+  const tmp2 = useThemeDefault();
   let obj = useProfileThemeValues;
-  const profileThemeValues = obj.useProfileThemeValues(theme);
+  const profileThemeValues = obj.useProfileThemeValues(theme.theme);
   const items = [closure_3];
-  const stateFromStores = initialize.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
-  const tmp7 = useIsMobileVisualRefreshExperimentEnabledDefault("useUserProfileColors");
   obj = { gradientFallbackBackground: null, gradientSecondaryBackground: null, containerBackground: null, containerBorderColor: null, avatarBackground: null, statusBackground: null };
+  const stateFromStores = initialize.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
   const obj2 = initialize;
-  obj[0] = map.useToken(ThemesDefault.colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp3);
+  obj[0] = map.useToken(ThemesDefault.colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp2);
   const obj4 = map;
-  obj[1] = map.useToken(ThemesDefault.colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp3);
+  obj[1] = map.useToken(ThemesDefault.colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp2);
   const obj5 = map;
-  const colors = ThemesDefault.colors;
-  obj[2] = map.useToken(tmp7 ? colors.CARD_MUTED_BG : colors.USER_PROFILE_CONTAINER_BACKGROUND, tmp3);
-  let tmp4Result = tmp4(4166);
-  obj[3] = tmp4Result.useToken(ThemesDefault.colors.BORDER_MUTED, tmp3);
-  tmp4Result = tmp4(4166);
-  obj[4] = tmp4Result.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWER, tmp3);
+  obj[2] = map.useToken(ThemesDefault.colors.CARD_MUTED_BG, tmp2);
   const obj6 = map;
-  obj[5] = map.useToken(ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tmp3);
-  const tmp4Result1 = map;
-  let containerBackground = map.useToken(tmp(712).colors.BACKGROUND_MOD_NORMAL, theme);
-  let containerBackground2 = tmp(712).unsafe_rawColors.OPACITY_WHITE_24;
-  if (theme === ThemeTypes.LIGHT) {
-    if (tmp7) {
-      containerBackground2 = obj.containerBackground;
-    }
-    containerBackground = containerBackground2;
-  } else if (tmp7) {
-    containerBackground = obj.containerBackground;
-  }
+  obj[3] = map.useToken(ThemesDefault.colors.BORDER_MUTED, tmp2);
+  const obj7 = map;
+  obj[4] = map.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWER, tmp2);
+  const obj8 = map;
+  obj[5] = map.useToken(ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tmp2);
   if (null != primaryColor) {
     if (null != secondaryColor) {
       if (null != profileThemeValues) {
         ({ overlay, sectionBox, overlaySyncedWithUserTheme } = profileThemeValues);
-        let tmp8 = overlay;
+        let tmp3Result = tmp3(8088);
+        let tmp7 = overlay;
         if (stateFromStores) {
-          tmp8 = overlaySyncedWithUserTheme;
+          tmp7 = overlaySyncedWithUserTheme;
         }
-        const result = tmp4(8066).calculateOverlayedColor(primaryColor, tmp8);
+        const result = tmp3Result.calculateOverlayedColor(primaryColor, tmp7);
         obj = {};
         const merged = Object.assign(obj);
-        obj.containerBackground = containerBackground;
-        const tmp4Result3 = tmp4(8066);
-        const tmp4Result4 = tmp4(688);
-        obj.gradientSecondaryBackground = tmp4Result4.int2hex(tmp4(8066).calculateOverlayedColor(secondaryColor, overlay));
-        const tmp4Result5 = tmp4(8066);
-        obj.avatarBackground = tmp4(688).int2hex(result);
-        const tmp4Result6 = tmp4(688);
-        const tmp4Result7 = tmp4(688);
-        obj.statusBackground = tmp4Result7.int2hex(tmp4(8066).calculateOverlayedColor(result, sectionBox));
+        obj.containerBackground = tmp6;
+        tmp3Result = tmp3(688);
+        obj.gradientSecondaryBackground = tmp3Result.int2hex(tmp3(8088).calculateOverlayedColor(secondaryColor, overlay));
+        const tmp3Result1 = tmp3(8088);
+        obj.avatarBackground = tmp3(688).int2hex(result);
+        const tmp3Result2 = tmp3(688);
+        const tmp3Result3 = tmp3(688);
+        obj.statusBackground = tmp3Result3.int2hex(tmp3(8088).calculateOverlayedColor(result, sectionBox));
         return obj;
       }
     }

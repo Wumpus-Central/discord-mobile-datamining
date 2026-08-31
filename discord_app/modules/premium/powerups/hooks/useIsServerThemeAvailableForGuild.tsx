@@ -1,9 +1,9 @@
-// === Module 13583: useIsServerThemeAvailableForGuild ===
+// === Module 13617: useIsServerThemeAvailableForGuild ===
 
-// Module 13583 (useIsServerThemeAvailableForGuild)
+// Module 13617 (useIsServerThemeAvailableForGuild)
 import set from "set" /* 2 */;
-import resolveSavedActiveGuildTheme from "resolveSavedActiveGuildTheme" /* 4327 */;
-import experiment from "experiment" /* 4375 */;
+import resolveSavedActiveGuildTheme from "resolveSavedActiveGuildTheme" /* 4329 */;
+import experiment from "experiment" /* 4377 */;
 
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useIsServerThemeAvailableForGuild.tsx");
 

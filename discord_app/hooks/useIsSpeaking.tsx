@@ -1,10 +1,10 @@
-// === Module 9431: useIsSpeaking ===
+// === Module 9453: useIsSpeaking ===
 
-// Module 9431 (useIsSpeaking)
-import closure_2 from "handleSoundCreateOrUpdate" /* 4930 */;
-import closure_3 from "handleConnectionOpen" /* 1982 */;
-import closure_4 from "anyoneHasFlagInContext" /* 5328 */;
-import closure_5 from "updateVoiceState" /* 4465 */;
+// Module 9453 (useIsSpeaking)
+import closure_2 from "handleSoundCreateOrUpdate" /* 4933 */;
+import closure_3 from "handleConnectionOpen" /* 1981 */;
+import closure_4 from "anyoneHasFlagInContext" /* 5331 */;
+import closure_5 from "updateVoiceState" /* 4467 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("hooks/useIsSpeaking.tsx");
